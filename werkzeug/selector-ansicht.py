@@ -21,6 +21,32 @@ REPO_URL = 'https://github.com/Neanderfunk/geraetedaten/blob/main/daten/'
 RANG = {'hoch': 3, 'mittel': 2, 'niedrig': 1}
 
 
+UMLAUTE = [('aussen', 'außen'), ('Aussen', 'Außen'), ('rueck', 'rück'), ('Rueck', 'Rück'),
+           ('gehaeuse', 'gehäuse'), ('Gehaeuse', 'Gehäuse'), ('schluessel', 'schlüssel'),
+           ('Schluessel', 'Schlüssel'), ('loet', 'löt'), ('Loet', 'Löt'), ('luefter', 'lüfter'),
+           ('Luefter', 'Lüfter'), ('fuer ', 'für '), ('Fuer ', 'Für '), ('ueber', 'über'),
+           ('Ueber', 'Über'), ('waerme', 'wärme'), ('Waerme', 'Wärme'), ('kuehl', 'kühl'),
+           ('Kuehl', 'Kühl'), ('haeng', 'häng'), ('unterstuetz', 'unterstütz'), ('geschaetzt', 'geschätzt'),
+           ('hoehe', 'höhe'), ('groesse', 'größe'), ('Groesse', 'Größe'), ('laenge', 'länge'),
+           ('fuehr', 'führ'), ('Fuehr', 'Führ'), ('oeffn', 'öffn'), ('Oeffn', 'Öffn'), ('moeglich', 'möglich'),
+           ('koenn', 'könn'), ('muess', 'müss'), ('waehrend', 'während'), ('naechst', 'nächst'),
+           ('Platinenrueck', 'Platinenrück'), ('Knoepf', 'Knöpf'), ('knoepf', 'knöpf'), ('Abstaend', 'Abständ'),
+           ('abstaend', 'abständ'), ('Gerae', 'Geräte'[:4]), ('gerae', 'gerä'), ('aehnlich', 'ähnlich'),
+           ('spaeter', 'später'), ('frueh', 'früh'), ('Frueh', 'Früh'), ('pruef', 'prüf'), ('Pruef', 'Prüf'),
+           ('zurueck', 'zurück'), ('Zurueck', 'Zurück'), ('drueck', 'drück'), ('Drueck', 'Drück'),
+           ('Stoer', 'Stör'), ('stoer', 'stör'), ('schraeg', 'schräg'), ('Schraeg', 'Schräg'),
+           ('waehl', 'wähl'), ('Waehl', 'Wähl'), ('gross', 'groß'), ('Gross', 'Groß'),
+           ('Hoehe', 'Höhe'), ('koerper', 'körper'), ('bestueck', 'bestück'), ('Bestueck', 'Bestück'),
+           ('zusaetz', 'zusätz'), ('Zusaetz', 'Zusätz'), ('schliess', 'schließ'), ('Schliess', 'Schließ'),
+           ('aendert', 'ändert'), ('Aender', 'Änder'), ('aender', 'änder'), ('saetz', 'sätz')]
+
+
+def deutsch(t):
+    for a, b in UMLAUTE:
+        t = t.replace(a, b)
+    return t
+
+
 def text(w):
     """Beliebigen Wert lesbar machen."""
     if w is None:
@@ -29,8 +55,10 @@ def text(w):
         return 'ja' if w else 'nein'
     if isinstance(w, float):
         return ('%g' % w)
-    if isinstance(w, (int, str)):
-        return str(w).strip()
+    if isinstance(w, int):
+        return str(w)
+    if isinstance(w, str):
+        return deutsch(w.strip())
     if isinstance(w, list):
         return ', '.join(t for t in (text(x) for x in w) if t)
     if isinstance(w, dict):
@@ -116,23 +144,106 @@ def zeile(titel, sel, zusatz=None):
     return z
 
 
-def kombi(titel, teile):
-    """Mehrere Felder zu einer Zeile: teile = [(beschriftung, sel)]."""
+def kombi(titel, teile, trenner='; '):
+    """Mehrere Felder zu einer Zeile. teile = [(form, sel)]: form ist eine
+    Beschriftung vor dem Wert oder eine Funktion Wert -> Text (None = weglassen)."""
+    def anwenden(form, t):
+        if form is None:
+            return None
+        if callable(form):
+            return form(t)
+        return (form + ' ' if form else '') + t
     werte, belege, abw, weitere = [], [], [], []
-    for besch, sel in teile:
+    for form, sel in teile:
         if not sel:
             continue
-        vor = besch + ' ' if besch else ''
-        werte.append(vor + sel['wert'])
+        t = anwenden(form, sel['wert'])
+        if not t:
+            continue
+        werte.append(t)
         belege += sel['belege']
         for a in sel['abweichend']:
-            abw.append({'wert': vor + a['wert'], 'belege': a['belege']})
+            x = anwenden(form, a['wert'])
+            if x:
+                abw.append({'wert': x, 'belege': a['belege']})
         for a in sel.get('weitere', []):
-            weitere.append({'wert': vor + a['wert'], 'belege': a['belege']})
+            x = anwenden(form, a['wert'])
+            if x:
+                weitere.append({'wert': x, 'belege': a['belege']})
     if not werte:
         return None
-    return {'titel': titel, 'wert': '; '.join(werte), 'belege': belege, 'abweichend': abw,
+    return {'titel': titel, 'wert': trenner.join(werte), 'belege': belege, 'abweichend': abw,
             'weitere': weitere}
+
+
+def ja(t):
+    return schluessel(t) in ('ja', 'true', 'yes')
+
+
+def nein(t):
+    return schluessel(t).split(' ')[0].strip('(,;') in ('nein', 'false', 'no', 'keine', 'kein', 'keiner', 'none')
+
+
+def ort(t):
+    k = schluessel(t)
+    innen, aus = 'innen' in k or 'indoor' in k, 'außen' in k or 'outdoor' in k
+    if innen and aus:
+        return 'innen und außen'
+    return 'außen' if aus else ('innen' if innen else t)
+
+
+def poe(t):
+    k = schluessel(t)
+    if nein(t):
+        return 'kein PoE'
+    normen = re.findall(r'802\.3(?:af|at|bt)', k)
+    passiv = 'passiv' in k or 'passive' in k
+    teile = []
+    if normen:
+        teile.append('PoE nach ' + ' oder '.join(dict.fromkeys(normen)))
+    if passiv:
+        teile.append('passives PoE')
+    return ' oder '.join(teile) if teile else t
+
+
+def volt(t):
+    m = re.search(r'(\d+(?:\.\d+)?)(?:\s*(?:-|bis)\s*(\d+(?:\.\d+)?))?', t)
+    if not m:
+        return t
+    return (m.group(1) + (' bis ' + m.group(2) if m.group(2) else '')) + ' V'
+
+
+def generation(std):
+    k = ' ' + re.sub(r'[^a-z]+', ' ', schluessel(std)) + ' '
+    for kurz, gen in (('be', 7), ('ax', 6), ('ac', 5), ('n', 4)):
+        if ' %s ' % kurz in k or re.search(r'11%s\b' % kurz, schluessel(std)):
+            return 'WLAN %d (802.11%s)' % (gen, kurz)
+    if re.search(r'\b[bg]\b', k):
+        return 'älterer Standard (802.11b/g)'
+    return std
+
+
+def streams(t):
+    m = re.search(r'(\d)\s*[x×]\s*(\d)', t) or re.search(r'(\d)t(\d)r', schluessel(t))
+    if m:
+        return '%s×%s' % (m.group(1), m.group(2))
+    m = re.search(r'\d', t)
+    return ('%s Streams' % m.group()) if m else t
+
+
+def mass(t):
+    t = re.sub(r'(\d)\s*[x×*]\s*(?=\d)', r'\1 × ', t)
+    return t if 'mm' in t else t + ' mm'
+
+
+STUFEN = {'reicht': ('reicht', 'genug Speicher für die aktuelle Firmware'),
+          'knapp': ('knapp', 'läuft noch, aber mit wenig Reserve für künftige Versionen'),
+          'sackgasse': ('zu wenig', 'nur noch alte Firmware (Sackgasse)')}
+PASSIV_WARNUNG = ('Passives PoE: Nur mit dem passenden Netzteil oder Injektor betreiben und auf die '
+                  'Spannung achten. Zu viel Spannung kann das Gerät zerstören, ein normaler PoE-Switch '
+                  '(802.3af/at) versorgt es nicht.')
+EINE_BUCHSE = ('Nur eine Netzwerkbuchse: Im Betrieb ist sie der Anschluss ans Internet. Geräte per '
+               'Kabel lassen sich daran nicht anschließen.')
 
 
 def ansicht(d, idx):
@@ -148,60 +259,94 @@ def ansicht(d, idx):
             stufe = 'knapp'
         else:
             stufe = 'sackgasse'
-        oben.append({'titel': 'Firmware-Zukunft', 'stufe': stufe,
-                     'wert': {'reicht': 'reicht für die aktuelle Firmware',
-                              'knapp': 'knapp: läuft, aber wenig Reserve für künftige Versionen',
-                              'sackgasse': 'nur noch alte Firmware (Sackgasse)'}[stufe],
+        kennwort, rest = STUFEN[stufe]
+        oben.append({'titel': 'Speicher für Updates', 'stufe': stufe, 'kennwort': kennwort, 'wert': rest,
                      'erklaerung': '%g MB Flash, %g MB RAM' % (flash, ram),
-                     'belege': (s['flash_mb']['belege'] + s['ram_mb']['belege']),
-                     'abweichend': [{**a, 'wert': 'Flash ' + a['wert'] + ' MB'} for a in s['flash_mb']['abweichend']] + [{**a, 'wert': 'RAM ' + a['wert'] + ' MB'} for a in s['ram_mb']['abweichend']], 'weitere': []})
+                     'belege': s['flash_mb']['belege'] + s['ram_mb']['belege'],
+                     'abweichend': [{**a, 'wert': 'Flash ' + a['wert'] + ' MB'} for a in s['flash_mb']['abweichend']]
+                     + [{**a, 'wert': 'RAM ' + a['wert'] + ' MB'} for a in s['ram_mb']['abweichend']],
+                     'weitere': []})
     a = idx.get(d['image'])
-    if a:
-        oben.append({'titel': 'Installation', 'wert': 'Level %s, Risiko %s, %s' % (
-            a.get('level', '?'), a.get('risiko', '?'), a.get('status', '?')),
-            'belege': [{'quelle': 'anleitung', 'url': a.get('url', ''), 'stand': '', 'sicherheit': 'hoch'}],
-            'abweichend': [], 'weitere': []})
-    aussen = s.get('einsatzort') and 'au' in schluessel(s['einsatzort']['wert'])
-    oben.append(kombi('Einsatzort', [('', s.get('einsatzort'))] +
-                      ([('Schutzart', s.get('ip_schutzart')), ('Betrieb', s.get('temperatur_betrieb'))]
-                       if aussen else [])))
-    oben.append(kombi('Stromversorgung', [
-        ('PoE', s.get('poe_eingang')), ('PoE-Spannung', s.get('poe_spannung_v')),
-        ('Netzteil', s.get('dc_spannung_v') and {**s['dc_spannung_v'], 'wert': s['dc_spannung_v']['wert'] + ' V'}),
-        ('Buchse', s.get('dc_buchse_mass')), ('Netzteil dabei', s.get('netzteil_beiliegend'))]))
+    if a:   # sonst ergaenzt ffnef-geraete.js die Zeile aus anleitungen/index.json
+        oben.append({'titel': 'Installation', 'level': a.get('level', ''), 'risiko': a.get('risiko', ''),
+                     'status': a.get('status', ''), 'wert': a.get('level', ''),
+                     'belege': [{'quelle': 'anleitung', 'url': a.get('url', ''), 'stand': '', 'sicherheit': 'hoch'}],
+                     'abweichend': [], 'weitere': []})
+    eo = s.get('einsatzort')
+    aussen = eo and 'außen' in ort(eo['wert'])
+    oben.append(kombi('Einsatzort', [(ort, eo)] +
+                      ([('Schutzart', s.get('ip_schutzart')), ('Temperatur', s.get('temperatur_betrieb'))]
+                       if aussen else []), trenner=', '))
+    pe = s.get('poe_eingang')
+    passiv = pe and 'passives' in poe(pe['wert'])
+    strom = kombi('Stromversorgung', [
+        (poe, pe),
+        (volt, s.get('poe_spannung_v') if passiv else None),
+        (lambda t: 'Netzteil ' + volt(t), s.get('dc_spannung_v')),
+        (lambda t: 'Hohlstecker ' + mass(t), s.get('dc_buchse_mass')),
+        (lambda t: 'Netzteil liegt bei' if ja(t) else ('ohne Netzteil' if nein(t) else None),
+         s.get('netzteil_beiliegend'))], trenner=', ')
+    if strom and passiv:
+        strom['warnung'] = PASSIV_WARNUNG
+    oben.append(strom)
     oben.append(zeile('Hardware-Version erkennen', s.get('erkennung_typenschild')))
 
-    mitte.append(kombi('WLAN', [
-        ('2.4 GHz', s.get('wlan_24_standard')), ('Streams', s.get('wlan_24_streams')),
-        ('5 GHz', s.get('wlan_5_standard')), ('Streams', s.get('wlan_5_streams')),
-        ('6 GHz', s.get('wlan_6_standard')), ('Klasse', s.get('wlan_klasse'))]))
-    ports = kombi('Anschlüsse', [('', s.get('ports')), ('Anzahl', s.get('ports_anzahl'))])
-    if ports and s.get('nur_eine_buchse') and schluessel(s['nur_eine_buchse']['wert']) == 'ja':
-        ports['warnung'] = 'Nur eine Netzwerkbuchse: Sie ist der Uplink.'
+    def band(name, std, st):
+        if not std or nein(std['wert']) or schluessel(std['wert']) in ('-', '"-"'):
+            return []
+        return [(lambda t: name + ': ' + generation(t), std), (streams, st)]
+    wlan = kombi('WLAN', band('2.4 GHz', s.get('wlan_24_standard'), s.get('wlan_24_streams'))
+                 + band('5 GHz', s.get('wlan_5_standard'), s.get('wlan_5_streams'))
+                 + band('6 GHz', s.get('wlan_6_standard'), s.get('wlan_6_streams'))
+                 + [('Klasse', s.get('wlan_klasse'))], trenner=', ')
+    mitte.append(wlan)
+    ports = kombi('Anschlüsse', [('', s.get('ports')), (lambda t: (t + (' Buchse' if t == '1' else ' Buchsen')) if t.isdigit() else t,
+                                                       s.get('ports_anzahl'))])
+    if ports and s.get('nur_eine_buchse') and ja(s['nur_eine_buchse']['wert']):
+        ports['warnung'] = EINE_BUCHSE
     mitte.append(ports)
-    mitte.append(kombi('Antennen', [('', s.get('antennen_art')), ('Anzahl', s.get('antennen_anzahl')),
-                                    ('Anschluss', s.get('antennen_anschluss')),
-                                    ('je Band', s.get('antennen_je_band'))]))
 
-    for titel, teile in [
-        ('Prozessor', [('', s.get('soc')), ('Kerne', s.get('cpu_kerne')), ('MHz', s.get('cpu_mhz'))]),
-        ('Speicher', [('RAM MB', s.get('ram_mb')), ('Flash MB', s.get('flash_mb')), ('', s.get('flash_typ'))]),
-        ('Leistungsaufnahme', [('typisch W', s.get('leistung_w_typ')), ('max. W', s.get('leistung_w_max'))]),
-        ('Montage', [('', s.get('montage')), ('Löcher', s.get('montageloecher'))]),
-        ('USB', [('', s.get('usb'))]),
-        ('Serielle Konsole', [('', s.get('seriell_zugang')), ('Belegung', s.get('seriell_pinbelegung')),
-                              ('', s.get('seriell_baud')), ('Pegel V', s.get('seriell_pegel_v')),
-                              ('Hinweis', s.get('seriell_hinweis'))]),
-        ('Lüfter', [('', s.get('luefter'))]),
-        ('Reset-Knopf', [('', s.get('reset_knopf'))]),
-        ('LEDs abschaltbar', [('', s.get('led_abschaltbar'))]),
-        ('Abmessungen mm', [('', s.get('abmessungen_mm')), ('Gewicht g', s.get('gewicht_g'))]),
-        ('FCC-ID', [('', s.get('fcc_id'))]),
+    anschl = s.get('antennen_anschluss')
+    def antart(t):
+        k = schluessel(t)
+        if 'abnehmbar' in k or 'detachable' in k or 'rp-sma' in k:
+            return 'extern, abnehmbar' + (' (RP-SMA)' if 'rp-sma' in k or (anschl and 'rp-sma' in schluessel(anschl['wert'])) else '')
+        if 'intern' in k and 'extern' not in k:
+            return 'intern'
+        if 'extern' in k and 'fest' in k and 'intern' not in k:
+            return 'extern, fest'
+        return t
+    mitte.append(kombi('Antennen', [(antart, s.get('antennen_art')),
+                                    (lambda t: t + ' Antennen' if t.isdigit() else t, s.get('antennen_anzahl')),
+                                    ('Aufteilung', s.get('antennen_je_band'))], trenner=', '))
+
+    einheit = lambda e: (lambda t: t + ' ' + e if re.fullmatch(r'[\d.]+', t) else t)
+    for titel, teile, tr in [
+        ('Prozessor', [('', s.get('soc')),
+                       (lambda t: (t + (' Kern' if t == '1' else ' Kerne')) if t.isdigit() else t, s.get('cpu_kerne')),
+                       (None if s.get('soc') and 'mhz' in schluessel(s['soc']['wert']) else einheit('MHz'),
+                        s.get('cpu_mhz'))], ', '),
+        ('Speicher', [(lambda t: 'RAM ' + einheit('MB')(t), s.get('ram_mb')),
+                      (lambda t: 'Flash ' + einheit('MB')(t) + (' (' + s['flash_typ']['wert'] + ')' if s.get('flash_typ') else ''),
+                       s.get('flash_mb'))], ', '),
+        ('Leistungsaufnahme', [(lambda t: 'typisch ' + einheit('W')(t), s.get('leistung_w_typ')),
+                               (lambda t: 'höchstens ' + einheit('W')(t), s.get('leistung_w_max'))], ', '),
+        ('Montage', [('', s.get('montage')), ('Befestigung:', s.get('montageloecher'))], '; '),
+        ('USB', [(lambda t: 'keiner' if nein(t) else t, s.get('usb'))], '; '),
+        ('Serielle Konsole (für Erfahrene)', [
+            (lambda t: re.sub(r'^(\d+)(?:\s*8n1)?$', r'\1 Baud', t, flags=re.I) if t else t, s.get('seriell_baud')),
+            (einheit('V'), s.get('seriell_pegel_v')), ('', s.get('seriell_zugang')),
+            ('Belegung', s.get('seriell_pinbelegung')), ('', s.get('seriell_hinweis'))], '; '),
+        ('Lüfter', [('', s.get('luefter'))], '; '),
+        ('Reset-Knopf', [('', s.get('reset_knopf'))], '; '),
+        ('LEDs abschaltbar', [('', s.get('led_abschaltbar'))], '; '),
+        ('Größe und Gewicht', [(mass, s.get('abmessungen_mm')), (einheit('g'), s.get('gewicht_g'))], ', '),
+        ('FCC-ID', [('', s.get('fcc_id'))], '; '),
     ]:
-        technik.append(kombi(titel, teile))
+        technik.append(kombi(titel, teile, trenner=tr))
 
     links = []
-    for k, name in [('toh_seite', 'OpenWrt-ToH'), ('openwrt_wiki', 'OpenWrt-Wiki'), ('deviwiki', 'DeviWiki'),
+    for k, name in [('toh_seite', 'OpenWrt-Geräteseite'), ('openwrt_wiki', 'OpenWrt-Wiki'), ('deviwiki', 'DeviWiki'),
                     ('wikidevi', 'WikiDevi'), ('hersteller_seite', 'Hersteller'), ('datenblatt', 'Datenblatt')]:
         if s.get(k) and s[k]['wert'].startswith('http'):
             links.append({'name': name, 'url': s[k]['wert']})
