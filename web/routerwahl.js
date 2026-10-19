@@ -19,7 +19,7 @@
   var LEVEL = {
     'L0': 'Einfach hochladen', 'L0.1': 'Hochladen, richtige Datei wählen',
     'L1': 'Zwei Schritte im Browser', 'L2': 'Taste beim Einschalten',
-    'L3': 'Feste Adresse am Rechner', 'L4': 'Netzwerkwerkzeuge',
+    'L3': 'Feste Adresse am Rechner', 'L4': 'Network-Tools',
     'L5': 'Besondere Programme', 'L6': 'Serielles Kabel',
     'L7': 'Gehäuse öffnen', 'L8': 'Löten und Programmer'
   };
@@ -73,7 +73,7 @@
     { titel: 'Installation', filter: [
       { id: 'level', titel: 'Schwierigkeit', typ: 'max',
         werte: [['L1', 'bis L1: nur im Browser'], ['L3', 'bis L3: mit fester Adresse am Rechner'],
-                ['L4', 'bis L4: mit Netzwerkwerkzeugen (TFTP, SSH)'], ['L6', 'bis L6: auch mit seriellem Kabel']] },
+                ['L4', 'bis L4: mit Network-Tools (TFTP, SSH)'], ['L6', 'bis L6: auch mit seriellem Kabel']] },
       { id: 'erprobt', titel: 'von uns am Gerät erprobt', typ: 'ja' },
       { id: 'ohne_bootloader', titel: 'Bootloader bleibt unangetastet', typ: 'ja' }
     ] }
