@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Routerwahl</title>
+    <title>Routerwahl · Freifunk im Neanderland</title>
     <meta name="description" content="Router für Freifunk aussuchen: nach WLAN, Montage, PoE, Speicher und Schwierigkeit der Installation filtern.">
     <link rel="stylesheet" href="routerwahl.css" />
     <link rel="icon" href="router.png" type="image/png">
@@ -13,13 +13,19 @@
       <a href="./"><img src="./router.png" alt="Routerwahl"></a>
       <div class="pane-wrapper">
         <div class="pane" id="finder-pane">
-          <a class="finder-zurueck" href="https://routersoftware.ffnef.de/">Ich habe schon einen Router: zur Firmware</a>
+          <a class="finder-zurueck" href="https://routersoftware.ffnef.de/">Du hast schon einen Router? Zur Firmware</a>
           <h1>Router für Freifunk aussuchen</h1>
           <p>
             Wähle aus, was dein Router können soll. Die Liste zeigt die Geräte,
             für die es unsere Freifunk-Firmware gibt und die alle gewählten
             Merkmale haben. Die Zahl hinter jeder Auswahl sagt, wie viele Geräte
-            übrig blieben, wenn du sie dazunimmst.
+            dann noch passen.
+          </p>
+          <p>
+            Du weißt nicht, wo du anfangen sollst? Nimm bei „Speicher für Updates“
+            die Stufe „reicht“ und bei der Installation „bis L1“. Dann bekommst du
+            Geräte, die lange Updates bekommen und sich im Browser einrichten
+            lassen, neu oder gebraucht.
           </p>
           <div class="finder">
             <aside class="finder-filter" id="finder-filter" aria-label="Merkmale"></aside>
@@ -29,15 +35,15 @@
                 <label>Sortieren:
                   <select id="finder-sortierung">
                     <option value="einfach">am einfachsten zu installieren</option>
-                    <option value="ram">meiste RAM</option>
+                    <option value="ram">am meisten Arbeitsspeicher (RAM)</option>
                     <option value="wlan">neuestes WLAN</option>
-                    <option value="leistung">geringste Leistungsaufnahme</option>
-                    <option value="name">Name</option>
+                    <option value="leistung">geringster Stromverbrauch</option>
+                    <option value="name">Name (A bis Z)</option>
                   </select>
                 </label>
                 <label class="finder-unbekannt">
                   <input type="checkbox" id="finder-unbekannt">
-                  auch Geräte mit fehlenden Angaben zeigen
+                  auch Geräte zeigen, bei denen Angaben fehlen
                 </label>
                 <button type="button" id="finder-leeren">Auswahl zurücksetzen</button>
               </div>

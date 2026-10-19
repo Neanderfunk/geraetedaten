@@ -29,48 +29,62 @@
           alle  = jede gewaehlte Option muss in der Liste sein;
           min/max = Zahl, genau eine Stufe;
           ja/nein = Schalter. */
+  /* Texte: Content, 19.10.2026 (freifunk-content vorschlaege/routerwahl-texte.md). */
   var GRUPPEN = [
     { titel: 'Einsatz', filter: [
       { id: 'einsatz', titel: 'Einsatzort', typ: 'menge', werte: [['innen', 'innen'], ['außen', 'außen']] },
       { id: 'montage', titel: 'Montage', typ: 'menge',
         werte: [['Tisch', 'Tisch'], ['Wand', 'Wand'], ['Decke', 'Decke'], ['Mast', 'Mast']] },
-      { id: 'ip', titel: 'Schutzart', typ: 'min', werte: [['54', 'ab IP54'], ['65', 'ab IP65']] }
+      { id: 'ip', titel: 'Schutz gegen Wetter', typ: 'min',
+        werte: [['54', 'ab IP54 (Spritzwasser)'], ['65', 'ab IP65 (Strahlwasser, staubdicht)']] }
     ] },
     { titel: 'Strom', filter: [
-      { id: 'poe', titel: 'PoE-Eingang', typ: 'menge',
-        werte: [['af', '802.3af'], ['at', '802.3at'], ['bt', '802.3bt'], ['passiv', 'passives PoE'], ['nein', 'kein PoE']] },
+      { id: 'poe', titel: 'Strom über das Netzwerkkabel (PoE)', typ: 'menge',
+        werte: [['af', '802.3af (PoE)'], ['at', '802.3at (PoE+)'], ['bt', '802.3bt (PoE++)'],
+                ['passiv', 'passives PoE'], ['nein', 'kein PoE']] },
       { id: 'netzteil', titel: 'Netzteil liegt bei', typ: 'ja' }
     ] },
     { titel: 'WLAN', filter: [
-      { id: 'wlan', titel: 'Generation', typ: 'min',
-        werte: [['4', 'ab WLAN 4'], ['5', 'ab WLAN 5'], ['6', 'ab WLAN 6'], ['7', 'ab WLAN 7']] },
-      { id: 'baender', titel: 'Bänder', typ: 'alle', werte: [['2.4', '2.4 GHz'], ['5', '5 GHz'], ['6', '6 GHz']] },
-      { id: 'streams', titel: 'Streams', typ: 'min', werte: [['2', 'ab 2×2'], ['3', 'ab 3×3'], ['4', 'ab 4×4']] },
+      { id: 'wlan', titel: 'WLAN-Generation', typ: 'min',
+        werte: [['4', 'ab WLAN 4 (802.11n)'], ['5', 'ab WLAN 5 (802.11ac)'], ['6', 'ab WLAN 6 (802.11ax)'],
+                ['7', 'ab WLAN 7 (802.11be)']] },
+      { id: 'baender', titel: 'Frequenzbänder', typ: 'alle', werte: [['2.4', '2.4 GHz'], ['5', '5 GHz'], ['6', '6 GHz']] },
+      { id: 'streams', titel: 'Datenströme (Streams)', typ: 'min', werte: [['2', 'ab 2×2'], ['3', 'ab 3×3'], ['4', 'ab 4×4']] },
       { id: 'antennen', titel: 'Antennen', typ: 'eins',
-        werte: [['intern', 'intern'], ['extern', 'extern, fest'], ['abnehmbar', 'abnehmbar']] }
+        werte: [['intern', 'intern'], ['extern', 'extern, fest'], ['abnehmbar', 'extern, abnehmbar']] }
     ] },
     { titel: 'Anschlüsse', filter: [
-      { id: 'port_mbit', titel: 'Netzwerk', typ: 'min', werte: [['1000', 'ab 1 Gbit/s'], ['2500', 'ab 2.5 Gbit/s']] },
+      { id: 'port_mbit', titel: 'Geschwindigkeit am Kabel', typ: 'min',
+        werte: [['1000', 'ab 1 Gbit/s'], ['2500', 'ab 2.5 Gbit/s']] },
       { id: 'ports', titel: 'Netzwerkbuchsen', typ: 'min', werte: [['2', 'ab 2'], ['4', 'ab 4']] },
       { id: 'usb', titel: 'USB', typ: 'ja' },
-      { id: 'sfp', titel: 'SFP', typ: 'ja' }
+      { id: 'sfp', titel: 'SFP-Schacht (Glasfaser)', typ: 'ja' }
     ] },
-    { titel: 'Leistung', filter: [
-      { id: 'ram', titel: 'RAM', typ: 'min', werte: [['128', 'ab 128 MB'], ['256', 'ab 256 MB'], ['512', 'ab 512 MB']] },
-      { id: 'flash', titel: 'Flash', typ: 'min', werte: [['16', 'ab 16 MB'], ['128', 'ab 128 MB']] },
+    { titel: 'Leistung und Verbrauch', filter: [
       { id: 'speicher', titel: 'Speicher für Updates', typ: 'eins',
         werte: [['reicht', 'reicht'], ['knapp', 'knapp'], ['zu wenig', 'zu wenig']] },
-      { id: 'kerne', titel: 'Prozessor', typ: 'min', werte: [['2', 'ab 2 Kerne'], ['4', 'ab 4 Kerne']] },
-      { id: 'leistung', titel: 'Leistungsaufnahme', typ: 'max', werte: [['10', 'bis 10 W'], ['15', 'bis 15 W']] },
-      { id: 'luefter', titel: 'ohne Lüfter', typ: 'nein' }
+      { id: 'ram', titel: 'Arbeitsspeicher (RAM)', typ: 'min',
+        werte: [['128', 'ab 128 MB'], ['256', 'ab 256 MB'], ['512', 'ab 512 MB']] },
+      { id: 'flash', titel: 'Flash-Speicher', typ: 'min', werte: [['16', 'ab 16 MB'], ['128', 'ab 128 MB']] },
+      { id: 'kerne', titel: 'Prozessor', typ: 'min', werte: [['2', 'ab 2 Kernen'], ['4', 'ab 4 Kernen']] },
+      { id: 'leistung', titel: 'Stromverbrauch', typ: 'max', werte: [['10', 'bis 10 W'], ['15', 'bis 15 W']] },
+      { id: 'luefter', titel: 'lautlos (ohne Lüfter)', typ: 'nein' }
     ] },
     { titel: 'Installation', filter: [
       { id: 'level', titel: 'Schwierigkeit', typ: 'max',
-        werte: [['L1', 'bis L1 (im Browser)'], ['L3', 'bis L3 (feste Adresse)'], ['L6', 'bis L6 (serielles Kabel)']] },
-      { id: 'erprobt', titel: 'am Gerät erprobt', typ: 'ja' },
-      { id: 'ohne_bootloader', titel: 'ohne Bootloader-Risiko', typ: 'ja' }
+        werte: [['L1', 'bis L1: nur im Browser'], ['L3', 'bis L3: mit fester Adresse am Rechner'],
+                ['L4', 'bis L4: mit Netzwerkwerkzeugen (TFTP, SSH)'], ['L6', 'bis L6: auch mit seriellem Kabel']] },
+      { id: 'erprobt', titel: 'von uns am Gerät erprobt', typ: 'ja' },
+      { id: 'ohne_bootloader', titel: 'Bootloader bleibt unangetastet', typ: 'ja' }
     ] }
   ];
+  var FELDNAMEN = {
+    ram_mb: 'Arbeitsspeicher', flash_mb: 'Flash-Speicher', cpu_mhz: 'Prozessortakt',
+    cpu_kerne: 'Prozessorkerne', poe_spannung_v: 'PoE-Spannung', dc_spannung_v: 'Netzteil-Spannung',
+    ip_schutzart: 'Schutzart', temperatur_betrieb: 'Temperatur', antennen_anzahl: 'Zahl der Antennen',
+    ports_anzahl: 'Zahl der Buchsen', leistung_w_typ: 'Stromverbrauch', leistung_w_max: 'Stromverbrauch',
+    einsatzort: 'Einsatzort', poe_eingang: 'PoE'
+  };
   var ALLE = [];
   GRUPPEN.forEach(function (g) { g.filter.forEach(function (f) { ALLE.push(f); }); });
 
@@ -193,7 +207,7 @@
           return g[f.id] !== null && g[f.id] !== undefined;
         }).length;
         var kopf = el('div', 'finder-titel', f.titel);
-        kopf.appendChild(el('span', 'finder-abdeckung', ' Angaben für ' + bekannt + ' von ' + geraete.length));
+        kopf.appendChild(el('span', 'finder-abdeckung', ' Angaben für ' + bekannt + ' von ' + geraete.length + ' Geräten'));
         block.appendChild(kopf);
         var gewaehlt = wahl[f.id] || [];
         if (f.typ === 'ja' || f.typ === 'nein') {
@@ -237,6 +251,13 @@
     return lab;
   }
 
+  function feldName(k) {
+    if (FELDNAMEN[k]) return FELDNAMEN[k];
+    var basis = k.replace(/_(mb|v|w|mhz|typ|max|betrieb|anzahl)$/, '');
+    for (var i = 0; i < ALLE.length; i++) if (ALLE[i].id === k || ALLE[i].id === basis) return ALLE[i].titel;
+    return k.replace(/_/g, ' ');
+  }
+
   function chips(g) {
     var c = [];
     if (g.wlan) c.push('WLAN ' + g.wlan);
@@ -250,7 +271,7 @@
     if (g.port_mbit) c.push(g.port_mbit >= 1000 ? (g.port_mbit / 1000) + ' Gbit/s' : g.port_mbit + ' Mbit/s');
     if (g.ports) c.push(g.ports === 1 ? '1 Buchse' : g.ports + ' Buchsen');
     if (g.usb) c.push('USB');
-    if (g.leistung) c.push('bis ' + g.leistung + ' W');
+    if (g.leistung) c.push('bis ' + g.leistung + ' W Verbrauch');
     return c;
   }
 
@@ -270,7 +291,7 @@
 
   function listeZeichnen() {
     var treffer = sortieren(filtern(null));
-    $('#finder-anzahl').textContent = treffer.length === 1 ? '1 Gerät' : treffer.length + ' Geräte';
+    $('#finder-anzahl').textContent = treffer.length === 1 ? '1 Gerät passt' : treffer.length + ' Geräte passen';
     var alle = $('#finder-alle');
     if (nurGeraet && !alle) {
       alle = el('button', null, 'Alle Geräte zeigen');
@@ -283,7 +304,7 @@
     ziel.textContent = '';
     if (!treffer.length) {
       ziel.appendChild(el('p', 'finder-nichts',
-        'Kein Gerät hat alle gewählten Merkmale. Nimm ein Merkmal heraus; die Zahlen links zeigen, welches am meisten bringt.'));
+        'Kein Gerät hat alle gewählten Merkmale. Nimm eins heraus: Die Zahl hinter jeder Auswahl zeigt, wie viele Geräte dann passen. Oder lass dir auch Geräte zeigen, bei denen Angaben fehlen.'));
       return;
     }
     treffer.forEach(function (t) {
@@ -304,8 +325,8 @@
       if (g.speicher) {
         var sp = el('p', 'finder-speicher');
         var stufe = g.speicher === 'zu wenig' ? 'sackgasse' : g.speicher;
+        sp.appendChild(document.createTextNode('Speicher für Updates: '));
         sp.appendChild(el('span', 'ffnef-stufe ffnef-stufe-' + stufe, g.speicher));
-        sp.appendChild(document.createTextNode(' Speicher für Updates'));
         rumpf.appendChild(sp);
       }
       if (g.level) {
@@ -317,7 +338,7 @@
       rumpf.appendChild(ul);
       if (t.fehlt.length) rumpf.appendChild(el('p', 'finder-fehlt', 'Nicht bekannt: ' + t.fehlt.join(', ')));
       if (g.unsicher) rumpf.appendChild(el('p', 'finder-unsicher',
-        'Quellen widersprechen sich bei: ' + g.unsicher.join(', ').replace(/_/g, ' ')));
+        'Quellen widersprechen sich bei: ' + g.unsicher.map(feldName).join(', ')));
       var knoepfe = el('p', 'finder-knoepfe');
       if (ort) {
         var a = el('a', 'finder-knopf', 'Firmware');
@@ -340,7 +361,7 @@
         det.textContent = 'Daten ausblenden';
         holen('geraete/' + g.image + '.json', function (d) {
           platz.textContent = '';
-          platz.appendChild(d ? details(d) : el('p', null, 'Die Daten ließen sich nicht laden.'));
+          platz.appendChild(d ? details(d) : el('p', null, 'Die Daten ließen sich nicht laden. Lade die Seite bitte neu.'));
         });
       });
       k.appendChild(rumpf);
@@ -448,7 +469,7 @@
   function los() {
     holen('geraete/facetten.json', function (d) {
       if (!d || !d.geraete) {
-        $('#finder-liste').appendChild(el('p', 'finder-nichts', 'Die Gerätedaten ließen sich nicht laden.'));
+        $('#finder-liste').appendChild(el('p', 'finder-nichts', 'Die Daten ließen sich nicht laden. Lade die Seite bitte neu.'));
         return;
       }
       holen('anleitungen/index.json', function (anl) {
