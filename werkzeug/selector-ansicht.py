@@ -357,7 +357,7 @@ def ansicht(d, idx):
                                (lambda t: 'höchstens ' + einheit('W')(t), s.get('leistung_w_max'))], ', '),
         ('Montage', [('', s.get('montage')), ('Befestigung:', s.get('montageloecher'))], '; '),
         ('USB', [(lambda t: 'keiner' if nein(t) else t, s.get('usb'))], '; '),
-        ('Serielle Konsole (für Erfahrene)', [
+        ('Serielle Konsole', [
             (lambda t: re.sub(r'^(\d+)(?:\s*8n1)?$', r'\1 Baud', t, flags=re.I) if t else t, s.get('seriell_baud')),
             (einheit('V'), s.get('seriell_pegel_v')), ('', s.get('seriell_zugang')),
             ('Belegung', s.get('seriell_pinbelegung')), ('', s.get('seriell_hinweis'))], '; '),
