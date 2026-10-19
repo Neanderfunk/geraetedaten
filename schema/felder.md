@@ -65,6 +65,11 @@ Die Liste ist nicht abschließend. Weitere Kategorien aus Quellen kommen in
 | Verweise | `toh_seite`, `openwrt_wiki`, `deviwiki`, `wikidevi`, `hersteller_seite`, `datenblatt` |
 | Handel | `ean` (je Variante/Region ein Eintrag, 13 Stellen), `amazon_asin` (je Marktplatz, `bemerkung: "amazon.de"`), `geizhals_url` (Permalink `https://geizhals.de/<name>-a<ID>.html`, ohne Suchparameter) |
 
+**Hardware-Versionen:** Bei TP-Link und Mercusys bezeichnet die Stelle nach
+dem Punkt (v1.1, V1.20) nur Firmware- und Bootloader-Stand, die Hardware ist
+gleich; es zählt die Hauptversion. Ausnahme: TP-Link CPE210 v1.1 mit
+signiertem Bootloader in getrennter EU- und US-Fassung (adorfer, 20.10.2026).
+
 **Handel:** Die Felder dienen später für Preisvergleich und Links zu
 Gebrauchtmärkten. Ein Geizhals-Eintrag deckt oft mehrere Hardware-Versionen
 ab; das gehört dann in die `bemerkung`. EAN und ASIN nur übernehmen, wenn

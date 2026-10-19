@@ -396,13 +396,28 @@ def modell_schluessel(image):
     return (best[1]['hersteller'] + '|' + best[1]['modell']) if best else None
 
 
+# Bei TP-Link (und Mercusys) bezeichnet die Stelle nach dem Punkt nur Firmware- und Bootloader-Stand
+# (v1.1, V1.20), die Hardware ist gleich; zaehlt also nur die Hauptversion (adorfer 20.10.2026).
+# Ausnahme: CPE210 v1.1 bekam einen signierten Bootloader mit getrennter EU- und US-Fassung.
+NACHKOMMA_ZAEHLT = {'TP-Link|CPE210'}
+
+
+def hauptversion(v, schluessel):
+    v = v.lower().strip()
+    if schluessel in NACHKOMMA_ZAEHLT:
+        return v
+    return re.sub(r'^(v\d+)\.\d+$', r'\1', v)
+
+
 def versionen_lage(d, s):
     """abgeschlossen: keine andere Hardware-Version bekannt und das Geraet ist eingestellt;
     weitere: es gibt andere Versionen; offen: nur diese bekannt, aber noch im Handel oder unklar."""
     m = re.search(r'-(v\d+(?:\.\d+)?)(?:-|$)', d['image'])
     diese = m.group(1).lower() if m else ''
-    e = VERSIONEN.get(modell_schluessel(d['image']) or '', {})
-    andere = {v.lower() for v in (e.get('bekannt') or []) + (e.get('nicht_unterstuetzt') or [])} - {diese, ''}
+    schl = modell_schluessel(d['image']) or ''
+    e = VERSIONEN.get(schl, {})
+    diese = hauptversion(diese, schl)
+    andere = {hauptversion(v, schl) for v in (e.get('bekannt') or []) + (e.get('nicht_unterstuetzt') or [])} - {diese, ''}
     if andere:
         return 'weitere'
     texte = [str(d.get('roh', {}).get('toh', {}).get('availability', ''))]
