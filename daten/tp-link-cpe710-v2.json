@@ -1,0 +1,1946 @@
+{
+  "image": "tp-link-cpe710-v2",
+  "modell": "TP-Link CPE710 v2",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v1",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Dump enthält nur CPE710 v1 (pid 16968461), keinen v2-Eintrag; v1-Zeile nur in roh.toh_v1",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "16968461"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+      "stand": "Seitenrevision 2026-08-01 08:26",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "v2-Datenseite, im Dump 2026-10-18 noch nicht enthalten"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/tp-link/cpe710_v1",
+      "stand": "Seitenrevision 2026-07-27 06:39",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Gemeinsame Geräteseite, Titel v1; Abschnitt zur gesperrten Stock-Firmware am 2026-04-25 für v2 ergänzt (jehos)"
+    },
+    "openwrt_git": {
+      "url": "https://github.com/openwrt/openwrt/commit/5572e0196a93604716ec36ebb8db6737fc6677aa",
+      "stand": "Commit 2024-10-21 (Autor), gemergt 2024-11-23",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Mainline-Commit; Quelle für Hardware, Flash-Chip, LEDs, TFTP-Recovery"
+    },
+    "openwrt_git_2410": {
+      "url": "https://github.com/openwrt/openwrt/commit/0b4d831886689b55e149e276dbca5b780fb6a00e",
+      "stand": "Backport 24.10, Commit 2024-10-21 (Autor), gemergt 2024-11-28",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/77b198aa7220e7f4902bee009aedd22a1600ed3e/target/linux/ath79/dts/qca9563_tplink_cpe710.dtsi",
+      "stand": "OpenWrt v24.10.8-14-g77b198aa72 (Gluon v2025.1.3), Commit 2024-09-02",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "lokaler Gluon-OpenWrt-Baum firmware-2025.1/gluon/openwrt; Dateien qca9563_tplink_cpe710-v2.dts und qca9563_tplink_cpe710.dtsi"
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/77b198aa7220e7f4902bee009aedd22a1600ed3e/target/linux/ath79/image/generic-tp-link.mk",
+      "stand": "OpenWrt v24.10.8-14-g77b198aa72 (Gluon v2025.1.3)",
+      "abgerufen": "2026-10-20"
+    },
+    "firmware_utils_safeloader": {
+      "url": "https://github.com/openwrt/firmware-utils/blob/950f8340/src/tplink-safeloader.c",
+      "stand": "firmware-utils 2025.08.03~950f8340",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "lokal build_dir/host/firmware-utils-2025.08.03~950f8340/src/tplink-safeloader.c, Eintrag CPE710V2"
+    },
+    "openwrt_pr_16637": {
+      "url": "https://github.com/openwrt/openwrt/pull/16637",
+      "stand": "PR 2024-10-08, geschlossen 2024-11-23 (Kommentare bis 2024-11-25)",
+      "abgerufen": "2026-10-20"
+    },
+    "firmware_utils_pr_36": {
+      "url": "https://github.com/openwrt/firmware-utils/pull/36",
+      "stand": "PR 2024-10-08, gemergt als ca444f1fa5d5 am 2024-10-14",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_issue_20253": {
+      "url": "https://github.com/openwrt/openwrt/issues/20253",
+      "stand": "Issue 2025-10-01 (offen)",
+      "abgerufen": "2026-10-20"
+    },
+    "firmware_utils_pr_52": {
+      "url": "https://github.com/openwrt/firmware-utils/pull/52",
+      "stand": "PR 2025-10-01 (offen)",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.3/targets/ath79-generic",
+      "stand": "Tag v2025.1.3",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_pr_3553": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/3553",
+      "stand": "PR 2025-07-23, gemergt 2025-08-03",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_release_v2025_1": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.3/docs/releases/v2025.1.rst",
+      "stand": "Release Notes Gluon v2025.1 (Tag v2025.1.3)",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_platform_lua": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.3/package/gluon-core/luasrc/usr/lib/lua/gluon/platform.lua",
+      "stand": "Tag v2025.1.3",
+      "abgerufen": "2026-10-20"
+    },
+    "tplink_download_v2": {
+      "url": "https://www.tp-link.com/en/support/download/cpe710/v2/",
+      "stand": "Live-Seite 2026-10-20, neueste Firmware 1.1.3 Build 20251112 (2025-12-01)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Versionsauswahl V2.40, V2, V1; Datenblatt als CPE710(UN)_V2_Datasheet (document/22980), Installation Guide als CPE710(UN)_V2_Installation Guide (document/22983)"
+    },
+    "tplink_download_v240": {
+      "url": "https://www.tp-link.com/en/support/download/cpe710/v2.40/",
+      "stand": "Live-Seite 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "nur Dokumente (CPE710(UN)_V2.40_Installation Guide document/122503, Regulatory document/122177), keine Firmware"
+    },
+    "tplink_datenblatt": {
+      "url": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+      "stand": "PDF 2023-08-28, geändert 2026-09-24",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Seriendatenblatt ohne Versionsangabe, auf TP-Link als CPE710(UN)_V2_Datasheet verlinkt (https://www.tp-link.com/en/document/22980/); CPE710-Spalte per Koordinaten und Bild ausgewertet"
+    },
+    "tplink_installguide": {
+      "url": "https://static.tp-link.com/upload/manual/2026/202605/20260507/7100002869_CPE605%20&%20CPE710_Multi-model_IG_V1.pdf",
+      "stand": "PDF 7100002869 REV2.40.0, erstellt 2026-04-13",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "über https://www.tp-link.com/en/document/22983/ (CPE710(UN)_V2_Installation Guide); Mehrmodell-Anleitung CPE605/CPE710, Bilder zeigen CPE605"
+    },
+    "tplink_produktseite": {
+      "url": "https://www.tp-link.com/de/business-networking/pharos-cpe/cpe710/",
+      "stand": "Live-Seite 2026-10-20 (ohne Datum, Seite als data-version V1 markiert)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Spezifikation ohne Versionsangabe; /en/.../cpe710/v2/ liefert 404"
+    },
+    "fcc_te7cpe710": {
+      "url": "https://fccid.io/TE7CPE710",
+      "stand": "Grant 2020-03-02 (Original Equipment)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Zulassung für CPE710(UN) 1.0 (v1); kein eigener v2-Antrag gefunden"
+    },
+    "fcc_te7cpe710_label": {
+      "url": "https://fccid.io/TE7CPE710/Label/13-Label-and-location-4634389",
+      "stand": "Exhibit 2020-03-02 (Zeichnung CPE710(UN) 1.0, 2019-11-16)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet"
+    },
+    "fcc_te7cpe710_innenfotos": {
+      "url": "https://fccid.io/TE7CPE710/Internal-Photos/18-Internal-Photos-4634388",
+      "stand": "BTL Report 1912C049, PDF 2020-02-14",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "v1-Platine, 14 Fotos als Kontaktabzug ausgewertet; Cache fcc/v1img/"
+    },
+    "fcc_2axj4cpe710": {
+      "url": "https://fccid.io/2AXJ4CPE710",
+      "stand": "Grant 2022-05-28 (Change in identification, Original TE7CPE710)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "nur Umschreibung auf TP-Link Corporation Limited; Label-Zeichnung weiterhin CPE710(UN) 1.0"
+    },
+    "fcc_2axj4cpe710_label": {
+      "url": "https://fccid.io/2AXJ4CPE710/Label/Confidential-LABEL-CPE710-5897913",
+      "stand": "Exhibit 2022-05-28 (Zeichnung CPE710(UN) 1.0, 2022-04-26)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet; Änderungsvermerk: japanische Bänder ergänzt, Innenraum-Hinweis entfernt"
+    },
+    "fcc_te7cpe710v2": {
+      "url": "https://fccid.io/TE7CPE710V2",
+      "stand": "Abfrage 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "\"No exact FCC ID was found\""
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=CPE710&fulltext=1",
+      "stand": "Suche 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "nur Listenseiten (Router-Empfehlungen 2022, OpenWrt-Geräteliste), keine Geräteseite"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/index.php?search=CPE710&fulltext=1",
+      "stand": "Suche 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "keine Geräteseite; Treffer TP-LINK CPE-EAP series, TP-LINK PCB ID"
+    },
+    "wikidevi_cpe_eap_serie": {
+      "url": "https://wikidevi.wi-cat.ru/TP-LINK_CPE-EAP_series",
+      "stand": "Rohtext 2026-10-20 (Revisionsdatum nicht abgefragt)",
+      "abgerufen": "2026-10-20"
+    },
+    "wikidevi_pcb_id": {
+      "url": "https://wikidevi.wi-cat.ru/TP-LINK_PCB_ID",
+      "stand": "Rohtext 2026-10-20 (Revisionsdatum nicht abgefragt)",
+      "abgerufen": "2026-10-20"
+    },
+    "geizhals_webarchiv": {
+      "url": "https://web.archive.org/web/20251123043911/https://geizhals.de/tp-link-pharos-cpe-v128692.html",
+      "stand": "Webarchiv-Snapshot 2025-11-23 04:39",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Varianten-Übersicht TP-Link Pharos CPE (v128692) mit Link auf CPE710; Produktseite selbst nicht archiviert"
+    },
+    "freifunk_forum_suche": {
+      "url": "https://forum.freifunk.net/search.json?q=CPE710",
+      "stand": "Suche 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "nur Treffer 23821 (Bilder für Firmware-Selector), keine Hardware-Daten"
+    }
+  },
+  "roh": {
+    "toh_v1": {
+      "pid": "16968461",
+      "devicetype": "other",
+      "brand": "TP-Link",
+      "model": "CPE710",
+      "version": "v1",
+      "fccid": "https://fcc.io/TE7CPE710",
+      "availability": "Available 2021",
+      "whereavailable": "¿",
+      "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=ac03e246351fbfa98e98f0319cce3a8663f836d3",
+      "supportedsincerel": "22.03.0",
+      "supportedcurrentrel": "23.05.0",
+      "unsupported_functions": "NULL",
+      "target": "ath79",
+      "subtarget": "generic",
+      "packagearchitecture": "mips_24kc",
+      "bootloader": "U-Boot",
+      "cpu": "Qualcomm Atheros QCA9563-AL3A",
+      "cpucores": "1",
+      "cpumhz": "775",
+      "flashmb": "16",
+      "rammb": "128",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "1",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "-",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "Qualcomm Atheros QCA9896",
+      "wlan24ghz": "-",
+      "wlan50ghz": "a/n/ac",
+      "wlancomments": "23dBi high-gain directional 2×2 MIMO antenna and a dedicated metal reflector",
+      "wlandriver": "ath10k,ath10k-ct",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "-",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "¿",
+      "serialconnectionparameters": "¿",
+      "jtag": "¿",
+      "ledcount": "3",
+      "buttoncount": "1",
+      "gpios": "-",
+      "powersupply": "16-27 VDC passive PoE",
+      "devicepage": "toh:tp-link:cpe710_v1",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "CPE710",
+      "gitsearch": "CPE710",
+      "wikideviurl": "NULL",
+      "oemdevicehomepageurl": "https://www.tp-link.com/en/business-networking/outdoor-radio/cpe710/",
+      "firmwareoemstockurl": "https://www.tp-link.com/en/support/download/cpe710/#Firmware",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-tplink_cpe710-v1-squashfs-factory.bin",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-tplink_cpe710-v1-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-tplink_cpe710-v1-squashfs-factory.bin",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-tplink_cpe710-v1-squashfs-sysupgrade.bin",
+      "installationmethods": "GUI OEM",
+      "commentinstallation": "",
+      "recoverymethods": "TFTP generic",
+      "commentrecovery": "",
+      "picture": "media:tplink:cpe710_v1.jpg",
+      "comments": "",
+      "page": "toh:hwdata:tp-link:tp-link_cpe710_v1",
+      "hinweis": "CPE710 v1, nicht v2; einziger CPE710-Eintrag im Dump"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "other",
+      "Brand": "TP-Link",
+      "Model": "CPE710",
+      "Versions": "v2",
+      "FCCID_urls": "http://¿",
+      "Availability_availability": "unknown 2024",
+      "Where available": "¿",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=5572e0196a93604716ec36ebb8db6737fc6677aa",
+      "Supported Since Rel_releasesince": "24.10.0",
+      "Supported Current Rel_releasecurrent": "25.12.1",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "Pharos MAXtream",
+      "Gluon support_gluonsupport": "unknown",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Qualcomm Atheros QCA9563-AL3A",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "775",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Qualcomm Atheros QCA9896",
+      "WLAN 2.4GHz_wlan24": "-",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN 6.0GHz_wlan60": "-",
+      "WLAN 60.0GHz_wlan60g": "-",
+      "WLAN Comments_": "23dBi high-gain directional 2×2 MIMO antenna and a dedicated metal reflector",
+      "WLAN driver_wlan-drivers": "ath10k-ct",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "¿",
+      "Serial connection parameters_serialparam": "¿",
+      "Serial connection voltage_serialvoltage": "¿",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "3",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "¿",
+      "Power Supply": "16-27 VDC passive PoE",
+      "Outdoor_yesno": "Yes",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:tp-link:cpe710_v1",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "CPE710",
+      "Git search_search-gits": "CPE710",
+      "WikiDevi URL_urls": "http://¿",
+      "WikiDevi ID_hwinfo-ids": "",
+      "OEM Device Homepage URL_url": "https://www.tp-link.com/us/business-networking/outdoor-radio/cpe710/",
+      "Firmware OEM Stock URL_url": "https://www.tp-link.com/en/support/download/cpe710/v2/",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.1/targets/ath79/generic/openwrt-25.12.1-ath79-generic-tplink_cpe710-v2-squashfs-factory.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.1/targets/ath79/generic/openwrt-25.12.1-ath79-generic-tplink_cpe710-v2-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-tplink_cpe710-v2-squashfs-factory.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-tplink_cpe710-v2-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "see git-commit",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "see git-commit",
+      "Comment recovery": "",
+      "Picture_img100s": "media:tplink:cpe710_v1.jpg",
+      "Comments_": ""
+    },
+    "openwrt_wiki": {
+      "Einleitung": "TP-Link CPE710 is an outdoor wireless CPE for 5 GHz with one Ethernet port based on the AP152 reference board.",
+      "Antenne": "built-in 23dBi high-gain directional 2×2 MIMO antenna and a dedicated metal reflector, with a beamwidth of 9° (Azimuth) and 7° (Elevation)",
+      "Funk": "MCS 0-9 (256 QAM), up to 867Mbps; DFS channels 36 up to 173 (may vary on each region)",
+      "SoC": "Qualcomm QCA9563-AL3A MIPS 74kc @ 775MHz",
+      "Port/Strom": "one PoE 1Gbps LAN port. Power comes from its external 24V, 0.5A power adapter.",
+      "OEM easy installation": "Apply factory image via web-gui.",
+      "TFTP": "hold reset button while powering on for around 30-40 seconds; device 192.168.0.254; TFTP server 192.168.0.100; recovery.bin; in U-Boot: run flashimg, setenv boot_part 1, saveenv",
+      "Technical Details": "ab Stock-Firmware 1.1.2 Build 20251113 prüft U-Boot RSA-Signaturen; OpenWrt-Images über TFTP abgelehnt; kein Downgrade-Weg bekannt; Warnung: nicht auf 1.1.2 oder neuer aktualisieren",
+      "Tags": "ath79 QCA9563 16Flash 128RAM 1port GigabitEthernet 802.11abgnac outdoor",
+      "Revisionen": "2026-04-25 jehos: \"on CPE710 v2, Firmware version 1.1.2 Build 20251113 and later have a locked bootloader\""
+    },
+    "openwrt_git": {
+      "Titel": "ath79: add support for TP-Link CPE710-v2",
+      "Autor": "Tim Noack",
+      "Beschreibung": "outdoor wireless CPE for 5 GHz with one Ethernet port based on the AP152 reference board. Compared to the CPE710-v1, the only change observed in hardware is that the mdio address of the ethernet physical changed from 0x4 to 0x0.",
+      "SoC": "QCA9563-AL3A MIPS 74kc @ 775MHz, AHB @ 258MHz",
+      "RAM": "128MiB DDR2 @ 650MHz",
+      "Flash": "16MiB SPI NOR Based on the GD25Q128",
+      "Wi-Fi 5Ghz": "ath10k chip (802.11ac for up to 867Mbps on 5GHz wireless data rate), based on the QCA9896",
+      "Ethernet": "one 1GbE port",
+      "Antenne": "23dBi high-gain directional 2×2 MIMO parabolic antenna",
+      "LEDs": "Power, LAN, WLAN5G Blue LEDs",
+      "Flashing": "Flash factory image through stock firmware WEB UI or through TFTP; hold reset button while powering on for around 30-40 seconds; recovery.bin; Stock TFTP server IP 192.168.0.100; device 192.168.0.254",
+      "Links": "https://github.com/openwrt/openwrt/pull/16637; Backport https://github.com/openwrt/openwrt/pull/17097 (0b4d831886)"
+    },
+    "openwrt_dts": {
+      "compatible": "tplink,cpe710-v2, qca,qca9563",
+      "model": "TP-Link CPE710 v2",
+      "phy": "ethernet-phy@0, reset-gpios GPIO 11 active low; eth0 phy-mode sgmii, qca956x-serdes-fixup",
+      "leds": "lan blau GPIO 5 (boot/failsafe/upgrade); wlan5g blau GPIO 1 (phy0tpt)",
+      "keys": "reset GPIO 2 (KEY_RESTART)",
+      "wifi": "pcie wifi@0,0 qcom,ath10k, pre-calibration art 0x5000 (0x2f20), MAC info 0x8",
+      "flash": "jedec,spi-nor 40 MHz; u-boot 0x000000+0x40000 ro, u-boot-env 0x40000+0x10000 ro, partition-table 0x50000+0x10000 ro, info 0x60000+0x10000 ro, firmware 0x70000+0xf50000 (denx,uimage), config 0xfc0000+0x30000 ro, art 0xff0000+0x10000 ro",
+      "label-mac-device": "eth0",
+      "board.d": "01_leds: netdev LAN an eth0; 02_network: wie cpe610/eap225 (Einzelport)"
+    },
+    "openwrt_image_mk": {
+      "define": "Device/tplink_cpe710-v2: $(Device/tplink-safeloader-uimage), SOC qca9563, IMAGE_SIZE 15680k, DEVICE_MODEL CPE710, DEVICE_VARIANT v2, DEVICE_PACKAGES kmod-ath10k-ct ath10k-firmware-qca9888-ct, TPLINK_BOARD_ID CPE710V2"
+    },
+    "firmware_utils_safeloader": {
+      "id": "CPE710V2",
+      "vendor": "CPE710(TP-LINK|UN|AC866-5|00000000):2.0",
+      "support_list": [
+        "CPE710(TP-LINK|UN|AC866-5|00000000):2.0",
+        "CPE710(TP-LINK|EU|AC866-5|45550000):2.0",
+        "CPE710(TP-LINK|US|AC866-5|55530000):2.0",
+        "CPE710(TP-LINK|UN|AC866-5):2.0",
+        "CPE710(TP-LINK|EU|AC866-5):2.0",
+        "CPE710(TP-LINK|US|AC866-5):2.0"
+      ],
+      "soft_ver": "SOFT_VER_NUMERIC(1, 0, 0), soft_ver_compat_level 1",
+      "partitions": "fs-uboot 0x0+0x50000, partition-table 0x50000, default-mac 0x60000, serial-number 0x60100, product-info 0x61100, device-info 0x61400, signature 0x62000, device-id 0x63000, firmware 0x70000+0xf40000, soft-version 0xfb0000, support-list 0xfb1000, user-config 0xfc0000, default-config 0xfd0000, log 0xfe0000, radio 0xff0000"
+    },
+    "openwrt_pr_16637": {
+      "Titel": "ath79: Add support for TP-Link CPE710v2",
+      "Beschreibung": "The v2 uses the same SoC, RAM, Flash, WiFi MAC, etc., as the v1. Differences: MDIO address of the ethernet PHY changed from 0x4 to 0x0; factory image updater requires firmware version > 0.0.X and compatibility level >= 1.",
+      "timnoack 2024-10-08": "I also got pictures of the PCB, including the locations of the UART bootlog pins (no pinheader or test points for them...).",
+      "andyboeh 2024-10-24": "flashed the two devices (both v2) ... put them on a 950m link. They maintain a 260MBit/s link for about 24h now."
+    },
+    "firmware_utils_pr_36": {
+      "Titel": "tplink-safeloader: Add support for CPE710v2",
+      "Ergebnis": "gemergt als ca444f1fa5d5 (svanheule, 2024-10-14)"
+    },
+    "openwrt_issue_20253": {
+      "Titel": "Canadian CPE710 v2 - Hardware not supported",
+      "Kennung": "CPE710(TP-LINK|CA|AC866-5|43410000):2.0",
+      "Fehler": "openwrt-24.10.2-ath79-generic-tplink_cpe710-v2-squashfs-factory.bin: \"Hardware Not Supported\""
+    },
+    "firmware_utils_pr_52": {
+      "Titel": "Add support for a Canadian version of TP-Link CPE710",
+      "Status": "offen seit 2025-10-01"
+    },
+    "gluon_targets": {
+      "device": "device('tp-link-cpe710-v2', 'tplink_cpe710-v2')"
+    },
+    "gluon_pr_3553": {
+      "Titel": "ath79-generic: add support for TP-Link CPE710-v2",
+      "Checkliste": "Web interface, TFTP, sysupgrade, keep/forget, image name tp-link-cpe710-v2, reset to config mode, primary MAC matches label, ports, AP/802.11s/AP+mesh, LEDs, is_outdoor_device, supported_devices.rst: alle abgehakt",
+      "Gerät": "map.chemnitz.freifunk.net Knoten f0090dd0f192 (C-Wuestenrot8Dach)"
+    },
+    "gluon_release_v2025_1": {
+      "Added hardware support": "TP-Link CPE710 v2"
+    },
+    "gluon_platform_lua": {
+      "is_outdoor_device": "tplink,cpe710-v1, tplink,cpe710-v2"
+    },
+    "tplink_download_v2": {
+      "Hardware-Versionen": "V2.40, V2, V1",
+      "Hinweis": "Vx.0 = Vx.6/Vx.8/Vx.9; Vx.x0 = Vx.x6/Vx.x8/Vx.x9",
+      "Dokumente": "CPE710(UN)_V2_Datasheet; Omada AP Installation Guides; Pharos Outdoor Radio Overview of Regulatory Compliance(UN); Outdoor AP Installation Guides; CPE710(UN)_V2_Installation Guide; PharOS(UN)_User Guide_2.2",
+      "Firmware": [
+        "CPE710(UN)_V2_1.1.3 Build 20251112, 2025-12-01, 9.79 MB: Minimum FW 1.1.2 Build 20251113 Rel.54975; irreversible; Encrypted the firmware",
+        "CPE710(UN)_V2_1.1.2 Build 20251113, 2025-12-01, 9.91 MB: irreversible; Pharos Control 2.0.8+",
+        "CPE710(UN)_V2_1.0.3 Build 20230616, 2023-07-06, 9.54 MB (Datei CPE710(UN&US)_2.0)",
+        "CPE710(UN)_V2_1.0.2 Build 20230307, 2023-04-04, 10.05 MB (Datei CPE710_V2&V2.6&V2.8)",
+        "CPE710(UN)_V2_1.0.1 Build 20230222, 2023-03-21, 9.96 MB",
+        "CPE710(UN)_V2_1.0.0 Build 20220929, 2023-01-16, 10.79 MB: The first firmware for CPE710 V2.0/2.6/2.8; For CPE710 2.0/2.6/2.8 only"
+      ],
+      "Control Software": "Pharos Control 2.0.8 (2025-08-15), 2.0.7 (2020-04-20, \"Added supporting CPE710\")"
+    },
+    "tplink_download_v240": {
+      "Dokumente": "CPE710(UN)_V2.40_Installation Guide (document/122503); Pharos Outdoor Radio_Regulatory Compliance (document/122177); Omada AP / Outdoor AP Installation Guides",
+      "Firmware": "keine"
+    },
+    "tplink_datenblatt": {
+      "Name": "5GHz 867Mbps 23dBi Outdoor CPE",
+      "Package Contents": "Outdoor CPE, 24 V Passive PoE Adapter, AC Power Cord, Mounting Kits, Quick Installation Guide",
+      "Processor": "Qualcomm 750 MHz CPU, MIPS 74 Kc",
+      "Memory": "128 MB DDR2 RAM, 16 MB Flash",
+      "Antenna Gain": "23 dBi",
+      "Beamwidth": "9° (Azimuth) / 7° (Elevation)",
+      "Interfaces": "1 10/100/1000 Mbps Shielded Ethernet Port (LAN/POE)",
+      "Hardware Feature": "1 Reset Button",
+      "Power Supply": "24 VDC / 0.5 A Passive PoE (+4,5 pins; -7,8 pins)",
+      "Dimensions (L x W x H)": "207 × 280 × 366 mm",
+      "Protection": "15 kV ESD Protection, 6 kV Lightning Protection",
+      "Enclosure": "Material: Outdoor PC stabilized plastic; Weatherproof: IP65 water and dust proof design",
+      "Wireless Standards": "IEEE 802.11a/n/ac",
+      "Proprietary Protocol": "/",
+      "Frequency": "5.15-5.85 GHz",
+      "Wireless Speed": "Up to 867 Mbps (80 MHz), 400 Mbps (40 MHz), 173.4 Mbps (20 MHz), Dynamic",
+      "Maximum Transmit Power": "27 dBm (Adjustable power by 1 dBm)",
+      "Operation Mode": "AP / Client / AP Router / AP Client Router (WISP Client)",
+      "WAN": "Static / Dynamic / PPPoE (L2TP/PPTP nur andere Modelle)",
+      "Wireless": "Selectable Channel Width 20/40/80 MHz for CPE710; DFS nur CPE710(UN); kein MAXtream",
+      "Certification": "CE, FCC, IP65, IC",
+      "Environment": "Operating -40 °C~70 °C, Storage -40 °C~70 °C, Operating Humidity 10%~90% non-condensing, Storage Humidity 5%~95% non-condensing",
+      "Fußnote 1": "Passive PoE Adapter supports up to 60 meter (200 feet)"
+    },
+    "tplink_installguide": {
+      "Dokument": "7100002869 REV2.40.0, \"CPE605 is used as an example\"",
+      "Package Contents": "Pharos CPE, Center Reflector Panel, Side Reflector Panels (2), Rear Cover, Mounting Bracket, Protective Cap, Hexagon Bolts with Wing Nut and Washer Assemblies (M6x79), Metal Strap, Power Cord, Mounting Bracket (For PoE Adapter), Passive PoE Adapter, Installation Guide, ST3×16 Self-tapping Screws (2), D3×28 Plastic Wall Anchors (2), Four M2.5*8 Combination Screws with M2.5*2 Nuts (Only for CPE710)",
+      "Panel Layout": "LEDs Wireless / Ethernet / Power; RESET 5 s; ETHERNET an PoE-Port des Adapters",
+      "Passive PoE Adapter": "Remote Reset ca. 5 s; Power LED",
+      "Anwendung": "mit Reflektor PtP Langstrecke; ohne Reflektor Feed only mode für Außen-nach-innen-Versorgung",
+      "Ausrichtung": "horizontal bandwidth of CPE605/CPE710 is 7°",
+      "Montage": "Mast 15-70 mm, Metallschelle; Kabel bis 60 m; PoE-Adapter mit Port nach oben an die Wand",
+      "Erdung": "geschirmtes CAT5e mit Beidraht, PoE-Adapter mit Schutzleiter",
+      "Login": "192.168.0.254, Rechner 192.168.0.2-253",
+      "Specifications": "Interface 10/100/1000 (CPE710); Button RESET; Power Supply 24 V passive PoE adapter included; ESD *15 KV; Lightning up to *6 KV; Operating -40 °C to 70 °C; Humidity 10% to 90%; Certification CE, FCC, RoHS, IP65; Antenna Gain 23 dBi; Beamwidth Azimuth 7°, Elevation 9° (CPE710); 11a/n/ac (CPE710)",
+      "MAXtream": "CPE710 does not support MAXtream"
+    },
+    "tplink_produktseite": {
+      "Prozessor": "Qualcomm 750MHz CPU, MIPS 74Kc",
+      "Speicher": "128 MB DDR2 RAM, 16 MB Flash",
+      "Schnittstelle": "1 10/100/1000 Mbps Shielded Ethernet Port (LAN/POE), 1 Reset Button",
+      "Spannungsversorgung": "Passive Power over Ethernet via LAN (+4,5pins; -7,8pins), Voltage range: 16-27V DC",
+      "Energieverbrauch": "7.3 Watts Max (am Netzteil höher je nach Kabellänge)",
+      "Abmessungen (B*T*H)": "366 x 280 x 207 mm",
+      "Antennengewinn": "23 dBi",
+      "Antennenstrahldurchmesser": "9° (Azimuth)/7° (Elevation)",
+      "Schutz": "15 KV ESD, 6 KV Lightning",
+      "Abdeckung": "Outdoor PC stabilized plastic, IP65",
+      "WLAN": "IEEE 802.11a/n/ac, 5.15-5.85 GHz, max. 27 dBm, 20/40/80 MHz, DFS",
+      "PoE-Adapter": "85.8×43.9×29.7 mm; 1 AC Jack with Earth Ground, 1× Gigabit (Power + Data), 1× Gigabit (Data); Remote Reset; LED grün; Eingang 100-240VAC 50/60Hz; Ausgang 24VDC 0.5A Max (+4,5/-7,8, bis 60 m); Effizienz >84.29%; CE/FCC/UL/IC/GS/PSB/SAA/S-Mark/KC-mark",
+      "Zertifizierung": "CE, FCC, IP65, IC",
+      "Verpackungsinhalt": "Outdoor Wireless CPE, 24V 0.5A Passive PoE Adapter, Pole Mounting Kits, AC Power Cord, Installation Guide",
+      "Umgebung": "Betrieb/Lager -40~70 °C, 10-90 % / 5-95 %"
+    },
+    "fcc_te7cpe710": {
+      "Applicant": "TP-Link Technologies Co., Ltd.",
+      "Equipment Class": "NII",
+      "Description": "5GHz 867Mbps 23dBi Outdoor CPE",
+      "Test Firm": "BTL Inc.",
+      "Frequenzen": "5180-5240 MHz 0.6281 W, 5745-5825 MHz 0.6295 W (15E, MO)",
+      "Grant Comments": "802.11a/n/ac device in a 2x2 MIMO configuration; 20, 40 and 80 MHz bandwidth modes",
+      "Exhibits": "User Manual, Internal Photos, External Photos, Label and location, Test Setup Photos, Test Report part1/2, MPE, Block Diagram/Schematics/Operation Description (vertraulich)"
+    },
+    "fcc_te7cpe710_label": {
+      "Zeichnung": "CPE710(UN) 1.0 壳体镭雕 (Gehäuse-Lasergravur), Version A1, 2019-11-16",
+      "Inhalt": "Typenschild 28.53x27.023 mm auf der Unterseite: TP-Link Technologies; 5GHz 867Mbps 23dBi Outdoor CPE; Model: CPE710; Power: 24V ⎓ 0.5A Passive PoE; Default Settings IP 192.168.0.254, admin/admin; CE, EAC, RoHS; FCC ID TE7CPE710",
+      "Hinweis": "Seriennummer und MAC auf separatem Etikett (7210500055, 20×4)",
+      "Gerätehöhe": "188 mm"
+    },
+    "fcc_te7cpe710_innenfotos": {
+      "SoC": "QCA9563-AL3A PK8514Y2 1851 TAIWAN",
+      "WLAN": "QCA9896 1VV NK749M3T",
+      "PHY": "Atheros AR8033-AL1A",
+      "RAM": "Zentel A3R1GE40JBF-8E",
+      "Quarze": "H259D, T400 Me82",
+      "Platine": "1904292710-?.0 Rev1.0sp1; Antennenplatine 180504 CPE610_ANT Rev1.0sp1-B",
+      "Kühlung": "Aluminium-Kühlkörper über SoC/WLAN, Wärmeleitpad, Schirmblech"
+    },
+    "fcc_2axj4cpe710": {
+      "Applicant": "TP-Link Corporation Limited",
+      "Purpose": "Change in identification of presently authorized equipment. Original FCC ID: TE7CPE710 Grant Date: 03/02/2020",
+      "Exhibits": "External Photos, Label, Cover Letters"
+    },
+    "fcc_2axj4cpe710_label": {
+      "Zeichnung": "CPE710(UN) 1.0, Version A3, 2022-04-26, Änderung: japanische Bänder ergänzt, Innenraum-Hinweis entfernt",
+      "Inhalt": "TP-Link Corporation Limited, Hong Kong; IEEE802.11a/n/ac; W52 W53 W56 IP65; 201-190956; IC: 26583-CPE710; FCC ID: 2AXJ4CPE710; R-NZ, UKCA"
+    },
+    "wikidevi_cpe_eap_serie": {
+      "Eintrag": "TP-LINK CPE710 (v1.x) - 5GHz 867Mbps 23dBi Outdoor CPE, FCC ID: TE7CPE710 (2020-03-02)"
+    },
+    "wikidevi_pcb_id": {
+      "Einträge": [
+        "2AXJ4CPE710 (2022-05-28) 5GHz AC867 23dBi Outdoor CPE • CPE710",
+        "TE7CPE710 (2020-03-02) 5GHz 867Mbps 23dBi Outdoor CPE"
+      ]
+    },
+    "geizhals_webarchiv": {
+      "Variantenseite": "TP-Link Pharos CPE (v128692)",
+      "CPE710": "tp-link-pharos-cpe710-a2661954.html, 22 Angebote ab € 73,96",
+      "Geschwister": "CPE210 a1189570, CPE510 a1156684, CPE520 a1970170, CPE605 a2257640, CPE610 a1970108"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "TP-Link",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "CPE710",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Pharos CPE710",
+        "quelle": "tplink_download_v2",
+        "beleg": "https://www.tp-link.com/en/support/download/cpe710/v2/",
+        "stand": "Live-Seite 2026-10-20, neueste Firmware 1.1.3 Build 20251112 (2025-12-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "Produktfamilie Pharos"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "v2",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2.0 (Support-Liste: CPE710(TP-LINK|UN/EU/US|AC866-5):2.0)",
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/950f8340/src/tplink-safeloader.c",
+        "stand": "firmware-utils 2025.08.03~950f8340",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "V2 = V2.0/V2.6/V2.8; daneben V2.40 als eigene Auswahl",
+        "quelle": "tplink_download_v2",
+        "beleg": "https://www.tp-link.com/en/support/download/cpe710/v2/",
+        "stand": "Live-Seite 2026-10-20, neueste Firmware 1.1.3 Build 20251112 (2025-12-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "Erste Firmware \"For CPE710 2.0/2.6/2.8 only\"; V2.40 ohne Firmware gelistet"
+      }
+    ],
+    "varianten": [
+      {
+        "wert": [
+          "2.0 (UN)",
+          "2.0 (EU)",
+          "2.0 (US)"
+        ],
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/950f8340/src/tplink-safeloader.c",
+        "stand": "firmware-utils 2025.08.03~950f8340",
+        "sicherheit": "hoch",
+        "bemerkung": "Support-Liste des Factory-Images; Kanada-Variante CPE710(TP-LINK|CA|AC866-5|43410000):2.0 fehlt"
+      },
+      {
+        "wert": [
+          "V2.0",
+          "V2.6",
+          "V2.8",
+          "V2.40"
+        ],
+        "quelle": "tplink_download_v2",
+        "beleg": "https://www.tp-link.com/en/support/download/cpe710/v2/",
+        "stand": "Live-Seite 2026-10-20, neueste Firmware 1.1.3 Build 20251112 (2025-12-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "TP-Link: Vx.0 = Vx.6/Vx.8/Vx.9; V2.40 eigene Downloadseite ohne Firmware"
+      },
+      {
+        "wert": [
+          "CA 2.0 (CPE710(TP-LINK|CA|AC866-5|43410000):2.0)"
+        ],
+        "quelle": "openwrt_issue_20253",
+        "beleg": "https://github.com/openwrt/openwrt/issues/20253",
+        "stand": "Issue 2025-10-01 (offen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Factory-Image meldet \"Hardware not supported\"; Ergänzung in firmware-utils PR 52 offen"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild auf der Unterseite des runden Gehäusefußes (gelasert), \"Model: CPE710\", \"Power: 24V ⎓ 0.5A Passive PoE\", FCC ID; Seriennummer und MAC auf separatem Aufkleber darunter",
+        "quelle": "fcc_te7cpe710_label",
+        "beleg": "https://fccid.io/TE7CPE710/Label/13-Label-and-location-4634389",
+        "stand": "Exhibit 2020-03-02 (Zeichnung CPE710(UN) 1.0, 2019-11-16)",
+        "sicherheit": "niedrig",
+        "bemerkung": "v1-Zeichnung (CPE710(UN) 1.0); ob/wo v2 die Version \"Ver:2.0\" trägt, nicht belegt"
+      },
+      {
+        "wert": "Stock-Firmware zeigt Hardware-Version in der Geräteinfo (Screenshot im Issue)",
+        "quelle": "openwrt_issue_20253",
+        "beleg": "https://github.com/openwrt/openwrt/issues/20253",
+        "stand": "Issue 2025-10-01 (offen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Screenshot https://github.com/user-attachments/assets/f080b84c-1a5b-467d-a20d-cf2da943a44e nicht ausgewertet"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "TE7CPE710",
+        "quelle": "fcc_te7cpe710",
+        "beleg": "https://fccid.io/TE7CPE710",
+        "stand": "Grant 2020-03-02 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "Zulassung 2020-03-02 für CPE710(UN) 1.0; für v2 keine eigene FCC-ID gefunden"
+      },
+      {
+        "wert": "2AXJ4CPE710",
+        "quelle": "fcc_2axj4cpe710",
+        "beleg": "https://fccid.io/2AXJ4CPE710",
+        "stand": "Grant 2022-05-28 (Change in identification, Original TE7CPE710)",
+        "sicherheit": "hoch",
+        "bemerkung": "2022-05-28 Umschreibung von TE7CPE710 auf TP-Link Corporation Limited; Zeichnung weiterhin CPE710(UN) 1.0"
+      },
+      {
+        "wert": "keine (\"http://¿\")",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "26583-CPE710",
+        "quelle": "fcc_2axj4cpe710_label",
+        "beleg": "https://fccid.io/2AXJ4CPE710/Label/Confidential-LABEL-CPE710-5897913",
+        "stand": "Exhibit 2022-05-28 (Zeichnung CPE710(UN) 1.0, 2022-04-26)",
+        "sicherheit": "hoch",
+        "bemerkung": "Label-Zeichnung CPE710(UN) 1.0, 2022"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "Pharos CPE710",
+          "5GHz 867Mbps 23dBi Outdoor CPE",
+          "CPE710(UN)",
+          "CPE710(EU)",
+          "CPE710(US)"
+        ],
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/950f8340/src/tplink-safeloader.c",
+        "stand": "firmware-utils 2025.08.03~950f8340",
+        "sicherheit": "hoch",
+        "bemerkung": "Namen aus Support-Liste und Datenblatt"
+      },
+      {
+        "wert": [
+          "CPE710(CA)"
+        ],
+        "quelle": "openwrt_issue_20253",
+        "beleg": "https://github.com/openwrt/openwrt/issues/20253",
+        "stand": "Issue 2025-10-01 (offen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Kanada-Variante"
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "unknown 2024",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": "Where available: ¿"
+      },
+      {
+        "wert": "Geizhals: 22 Angebote ab 73,96 € (Pharos CPE710, ohne Versionsangabe)",
+        "quelle": "geizhals_webarchiv",
+        "beleg": "https://web.archive.org/web/20251123043911/https://geizhals.de/tp-link-pharos-cpe-v128692.html",
+        "stand": "Webarchiv-Snapshot 2025-11-23 04:39",
+        "sicherheit": "mittel",
+        "bemerkung": "Stand Snapshot 2025-11-23"
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "erste Firmware 1.0.0 Build 20220929, veröffentlicht 2023-01-16",
+        "quelle": "tplink_download_v2",
+        "beleg": "https://www.tp-link.com/en/support/download/cpe710/v2/",
+        "stand": "Live-Seite 2026-10-20, neueste Firmware 1.1.3 Build 20251112 (2025-12-01)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm Atheros QCA9563-AL3A",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/5572e0196a93604716ec36ebb8db6737fc6677aa",
+        "stand": "Commit 2024-10-21 (Autor), gemergt 2024-11-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9563-AL3A",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9563-AL3A (Chipaufdruck PK8514Y2, 1851)",
+        "quelle": "fcc_te7cpe710_innenfotos",
+        "beleg": "https://fccid.io/TE7CPE710/Internal-Photos/18-Internal-Photos-4634388",
+        "stand": "BTL Report 1912C049, PDF 2020-02-14",
+        "sicherheit": "niedrig",
+        "bemerkung": "v1-Quelle; v2 laut OpenWrt-Commit 5572e019 bis auf die PHY-Adresse gleich"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 775,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/5572e0196a93604716ec36ebb8db6737fc6677aa",
+        "stand": "Commit 2024-10-21 (Autor), gemergt 2024-11-23",
+        "sicherheit": "hoch",
+        "bemerkung": "MIPS 74Kc @ 775 MHz, AHB @ 258 MHz"
+      },
+      {
+        "wert": 775,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 750,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Qualcomm 750 MHz CPU, MIPS 74 Kc\""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "mips_24kc",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": "Paketarchitektur; Kern MIPS 74Kc"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 128,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/5572e0196a93604716ec36ebb8db6737fc6677aa",
+        "stand": "Commit 2024-10-21 (Autor), gemergt 2024-11-23",
+        "sicherheit": "hoch",
+        "bemerkung": "128MiB DDR2 @ 650MHz"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": "128 MB DDR2 RAM"
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR2",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/5572e0196a93604716ec36ebb8db6737fc6677aa",
+        "stand": "Commit 2024-10-21 (Autor), gemergt 2024-11-23",
+        "sicherheit": "hoch",
+        "bemerkung": "650 MHz"
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "Zentel A3R1GE40JBF-8E (DDR2, 1 Gbit)",
+        "quelle": "fcc_te7cpe710_innenfotos",
+        "beleg": "https://fccid.io/TE7CPE710/Internal-Photos/18-Internal-Photos-4634388",
+        "stand": "BTL Report 1912C049, PDF 2020-02-14",
+        "sicherheit": "niedrig",
+        "bemerkung": "v1-Quelle; v2 laut OpenWrt-Commit 5572e019 bis auf die PHY-Adresse gleich; Kapazität aus Teilenummer abgeleitet"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/5572e0196a93604716ec36ebb8db6737fc6677aa",
+        "stand": "Commit 2024-10-21 (Autor), gemergt 2024-11-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/5572e0196a93604716ec36ebb8db6737fc6677aa",
+        "stand": "Commit 2024-10-21 (Autor), gemergt 2024-11-23",
+        "sicherheit": "hoch",
+        "bemerkung": "\"16MiB SPI NOR\""
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "GigaDevice GD25Q128",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/5572e0196a93604716ec36ebb8db6737fc6677aa",
+        "stand": "Commit 2024-10-21 (Autor), gemergt 2024-11-23",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Based on the GD25Q128\""
+      }
+    ],
+    "flash_layout": [
+      {
+        "wert": "u-boot 0x0-0x40000, u-boot-env, partition-table 0x50000, info 0x60000, firmware 0x70000 (0xf50000), config 0xfc0000, art 0xff0000",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/77b198aa7220e7f4902bee009aedd22a1600ed3e/target/linux/ath79/dts/qca9563_tplink_cpe710.dtsi",
+        "stand": "OpenWrt v24.10.8-14-g77b198aa72 (Gluon v2025.1.3), Commit 2024-09-02",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "Yes",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "switch": [
+      {
+        "wert": "kein Switch (leer)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ethernet_phy": [
+      {
+        "wert": "PHY an MDIO-Adresse 0, SGMII, Reset an GPIO 11",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/77b198aa7220e7f4902bee009aedd22a1600ed3e/target/linux/ath79/dts/qca9563_tplink_cpe710.dtsi",
+        "stand": "OpenWrt v24.10.8-14-g77b198aa72 (Gluon v2025.1.3), Commit 2024-09-02",
+        "sicherheit": "hoch",
+        "bemerkung": "v1: Adresse 4"
+      },
+      {
+        "wert": "Qualcomm Atheros AR8033-AL1A",
+        "quelle": "fcc_te7cpe710_innenfotos",
+        "beleg": "https://fccid.io/TE7CPE710/Internal-Photos/18-Internal-Photos-4634388",
+        "stand": "BTL Report 1912C049, PDF 2020-02-14",
+        "sicherheit": "niedrig",
+        "bemerkung": "v1-Quelle; v2 laut OpenWrt-Commit 5572e019 bis auf die PHY-Adresse gleich"
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "Qualcomm Atheros QCA9896 (PCIe, ath10k)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/5572e0196a93604716ec36ebb8db6737fc6677aa",
+        "stand": "Commit 2024-10-21 (Autor), gemergt 2024-11-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9896",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath10k-ct",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kmod-ath10k-ct, ath10k-firmware-qca9888-ct",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/77b198aa7220e7f4902bee009aedd22a1600ed3e/target/linux/ath79/image/generic-tp-link.mk",
+        "stand": "OpenWrt v24.10.8-14-g77b198aa72 (Gluon v2025.1.3)",
+        "sicherheit": "hoch",
+        "bemerkung": "DEVICE_PACKAGES"
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "keins (\"-\")",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "a/n/ac",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "IEEE 802.11a/n/ac",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": "2x2",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/5572e0196a93604716ec36ebb8db6737fc6677aa",
+        "stand": "Commit 2024-10-21 (Autor), gemergt 2024-11-23",
+        "sicherheit": "hoch",
+        "bemerkung": "\"2×2 MIMO\""
+      },
+      {
+        "wert": "2x2",
+        "quelle": "fcc_te7cpe710",
+        "beleg": "https://fccid.io/TE7CPE710",
+        "stand": "Grant 2020-03-02 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant Comments: 802.11a/n/ac 2x2 MIMO; v1-Zulassung"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AC867 (5GHz 867Mbps)",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": "bis 867 Mbps (80 MHz), 400 Mbps (40 MHz), 173,4 Mbps (20 MHz)"
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "20/40/80 MHz (Stock)",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_frequenzen": [
+      {
+        "wert": "5,15-5,85 GHz",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": "je nach Land"
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": "5180-5240 MHz, 5745-5825 MHz",
+        "quelle": "fcc_te7cpe710",
+        "beleg": "https://fccid.io/TE7CPE710",
+        "stand": "Grant 2020-03-02 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "v1-Zulassung, 0,628/0,630 W leitungsgebunden"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": 27,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": "in 1-dB-Schritten einstellbar"
+      }
+    ],
+    "wlan_dfs": [
+      {
+        "wert": "ja (nur CPE710(UN))",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_tdma": [
+      {
+        "wert": "nein (kein Pharos MAXtream)",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "nein (Pharos MAXtream nicht unterstützt)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": "Unsupported Functions"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern fest (Parabol-Reflektor mit Feed-Antenne)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/5572e0196a93604716ec36ebb8db6737fc6677aa",
+        "stand": "Commit 2024-10-21 (Autor), gemergt 2024-11-23",
+        "sicherheit": "hoch",
+        "bemerkung": "\"23dBi high-gain directional 2×2 MIMO parabolic antenna\""
+      },
+      {
+        "wert": "intern fest; Reflektor aus Mittel- und zwei Seitenteilen, vor Ort zu montieren",
+        "quelle": "tplink_installguide",
+        "beleg": "https://static.tp-link.com/upload/manual/2026/202605/20260507/7100002869_CPE605%20&%20CPE710_Multi-model_IG_V1.pdf",
+        "stand": "PDF 7100002869 REV2.40.0, erstellt 2026-04-13",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "keiner",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas \"-\""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/5572e0196a93604716ec36ebb8db6737fc6677aa",
+        "stand": "Commit 2024-10-21 (Autor), gemergt 2024-11-23",
+        "sicherheit": "mittel",
+        "bemerkung": "2×2 MIMO, zwei Polarisationen einer Antenne"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": 23,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 23,
+        "quelle": "tplink_installguide",
+        "beleg": "https://static.tp-link.com/upload/manual/2026/202605/20260507/7100002869_CPE605%20&%20CPE710_Multi-model_IG_V1.pdf",
+        "stand": "PDF 7100002869 REV2.40.0, erstellt 2026-04-13",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "Richtantenne, 9° Azimut / 7° Elevation",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Richtantenne, 9° Azimut / 7° Elevation",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/de/business-networking/pharos-cpe/cpe710/",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum, Seite als data-version V1 markiert)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Richtantenne, Azimut 7° / Elevation 9°",
+        "quelle": "tplink_installguide",
+        "beleg": "https://static.tp-link.com/upload/manual/2026/202605/20260507/7100002869_CPE605%20&%20CPE710_Multi-model_IG_V1.pdf",
+        "stand": "PDF 7100002869 REV2.40.0, erstellt 2026-04-13",
+        "sicherheit": "hoch",
+        "bemerkung": "Widerspruch zum Datenblatt (dort 9° Azimut / 7° Elevation); Text: \"horizontal bandwidth of CPE605/CPE710 is 7°\""
+      }
+    ],
+    "antennen_ohne_reflektor": [
+      {
+        "wert": "ohne Reflektor nutzbar (\"Feed only mode\", Außen-nach-innen-Versorgung)",
+        "quelle": "tplink_installguide",
+        "beleg": "https://static.tp-link.com/upload/manual/2026/202605/20260507/7100002869_CPE605%20&%20CPE710_Multi-model_IG_V1.pdf",
+        "stand": "PDF 7100002869 REV2.40.0, erstellt 2026-04-13",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "ETHERNET (LAN/PoE)",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN, Passive-PoE-Eingang",
+            "geschirmt": true
+          }
+        ],
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": "Ethernet 1Gbit ports: 1"
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": "einziger Port ist zugleich PoE-Eingang"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "passiv",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": "\"24 VDC / 0.5 A Passive PoE\""
+      },
+      {
+        "wert": "passiv",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": "\"16-27 VDC passive PoE\""
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": "24 (Nennwert), Bereich 16-27 VDC",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/de/business-networking/pharos-cpe/cpe710/",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum, Seite als data-version V1 markiert)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Voltage range: 16-27V DC\"; Produktseite ohne Versionsangabe"
+      },
+      {
+        "wert": "16-27",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 24,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "poe_pinbelegung": [
+      {
+        "wert": "+ Pins 4,5; - Pins 7,8",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "poe_strom_a": [
+      {
+        "wert": 0.5,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "poe_kabellaenge_max_m": [
+      {
+        "wert": 60,
+        "quelle": "tplink_installguide",
+        "beleg": "https://static.tp-link.com/upload/manual/2026/202605/20260507/7100002869_CPE605%20&%20CPE710_Multi-model_IG_V1.pdf",
+        "stand": "PDF 7100002869 REV2.40.0, erstellt 2026-04-13",
+        "sicherheit": "hoch",
+        "bemerkung": "bis 60 m Kabel zwischen PoE-Adapter und CPE"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "tplink_installguide",
+        "beleg": "https://static.tp-link.com/upload/manual/2026/202605/20260507/7100002869_CPE605%20&%20CPE710_Multi-model_IG_V1.pdf",
+        "stand": "PDF 7100002869 REV2.40.0, erstellt 2026-04-13",
+        "sicherheit": "hoch",
+        "bemerkung": "Passive PoE Adapter, Netzkabel, Halterung für den Adapter"
+      },
+      {
+        "wert": true,
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/de/business-networking/pharos-cpe/cpe710/",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum, Seite als data-version V1 markiert)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"24V 0.5A Passive PoE Adapter\""
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "Passiver PoE-Adapter: Eingang 100-240 VAC 50/60 Hz, Ausgang 24 VDC 0,5 A (+4,5/-7,8), 2× Gigabit (PoE / LAN), Remote-Reset-Taste, grüne Power-LED, 85,8×43,9×29,7 mm, Wirkungsgrad >84,29 %",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/de/business-networking/pharos-cpe/cpe710/",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum, Seite als data-version V1 markiert)",
+        "sicherheit": "mittel",
+        "bemerkung": "Produktseite ohne Versionsangabe"
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 7.3,
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/de/business-networking/pharos-cpe/cpe710/",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum, Seite als data-version V1 markiert)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"7.3 Watts Max\"; am Netzteil höher je nach Kabellänge; Produktseite ohne Versionsangabe"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "nein (nur PoE)",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "mittel",
+        "bemerkung": "Stromversorgung nur über Passive PoE genannt"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "außen",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": "Outdoor CPE"
+      },
+      {
+        "wert": "außen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: Yes"
+      }
+    ],
+    "ip_schutzart": [
+      {
+        "wert": "IP65",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": "\"IP65 water and dust proof design\""
+      },
+      {
+        "wert": "IP65",
+        "quelle": "tplink_installguide",
+        "beleg": "https://static.tp-link.com/upload/manual/2026/202605/20260507/7100002869_CPE605%20&%20CPE710_Multi-model_IG_V1.pdf",
+        "stand": "PDF 7100002869 REV2.40.0, erstellt 2026-04-13",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_material": [
+      {
+        "wert": "Outdoor PC stabilized plastic",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "-40 bis 70 °C",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_lager": [
+      {
+        "wert": "-40 bis 70 °C",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "Betrieb 10-90 % nicht kondensierend, Lager 5-95 %",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "blitzschutz": [
+      {
+        "wert": "15 kV ESD, 6 kV Blitzschutz; geschirmtes CAT5e mit Beidraht und geerdeter PoE-Adapter empfohlen",
+        "quelle": "tplink_installguide",
+        "beleg": "https://static.tp-link.com/upload/manual/2026/202605/20260507/7100002869_CPE605%20&%20CPE710_Multi-model_IG_V1.pdf",
+        "stand": "PDF 7100002869 REV2.40.0, erstellt 2026-04-13",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Mast (Metallschelle, Mastdurchmesser 15-70 mm), Kugelgelenk-Halterung; PoE-Adapter optional an die Wand",
+        "quelle": "tplink_installguide",
+        "beleg": "https://static.tp-link.com/upload/manual/2026/202605/20260507/7100002869_CPE605%20&%20CPE710_Multi-model_IG_V1.pdf",
+        "stand": "PDF 7100002869 REV2.40.0, erstellt 2026-04-13",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "207 × 280 × 366 (mit Reflektor)",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": "L × B × H"
+      },
+      {
+        "wert": "366 × 280 × 207",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/de/business-networking/pharos-cpe/cpe710/",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum, Seite als data-version V1 markiert)",
+        "sicherheit": "mittel",
+        "bemerkung": "B × T × H"
+      },
+      {
+        "wert": "Gerätekörper 188 hoch",
+        "quelle": "fcc_te7cpe710_label",
+        "beleg": "https://fccid.io/TE7CPE710/Label/13-Label-and-location-4634389",
+        "stand": "Exhibit 2020-03-02 (Zeichnung CPE710(UN) 1.0, 2019-11-16)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Maß aus der Label-Zeichnung, v1"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/5572e0196a93604716ec36ebb8db6737fc6677aa",
+        "stand": "Commit 2024-10-21 (Autor), gemergt 2024-11-23",
+        "sicherheit": "hoch",
+        "bemerkung": "Power, LAN, WLAN5G, alle blau"
+      }
+    ],
+    "leds": [
+      {
+        "wert": "Power, LAN (blau, GPIO 5), WLAN 5 GHz (blau, GPIO 1)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/77b198aa7220e7f4902bee009aedd22a1600ed3e/target/linux/ath79/dts/qca9563_tplink_cpe710.dtsi",
+        "stand": "OpenWrt v24.10.8-14-g77b198aa72 (Gluon v2025.1.3), Commit 2024-09-02",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "ja, am Anschlussfeld des Geräts (5 s = Werkseinstellungen); zusätzlich Remote-Reset am PoE-Adapter (5 s)",
+        "quelle": "tplink_installguide",
+        "beleg": "https://static.tp-link.com/upload/manual/2026/202605/20260507/7100002869_CPE605%20&%20CPE710_Multi-model_IG_V1.pdf",
+        "stand": "PDF 7100002869 REV2.40.0, erstellt 2026-04-13",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, GPIO 2",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/77b198aa7220e7f4902bee009aedd22a1600ed3e/target/linux/ath79/dts/qca9563_tplink_cpe710.dtsi",
+        "stand": "OpenWrt v24.10.8-14-g77b198aa72 (Gluon v2025.1.3), Commit 2024-09-02",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein (passiver Kühlkörper)",
+        "quelle": "fcc_te7cpe710_innenfotos",
+        "beleg": "https://fccid.io/TE7CPE710/Internal-Photos/18-Internal-Photos-4634388",
+        "stand": "BTL Report 1912C049, PDF 2020-02-14",
+        "sicherheit": "niedrig",
+        "bemerkung": "v1-Quelle; v2 laut OpenWrt-Commit 5572e019 bis auf die PHY-Adresse gleich"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen, weder Stiftleiste noch Testpunkte",
+        "quelle": "openwrt_pr_16637",
+        "beleg": "https://github.com/openwrt/openwrt/pull/16637",
+        "stand": "PR 2024-10-08, geschlossen 2024-11-23 (Kommentare bis 2024-11-25)",
+        "sicherheit": "niedrig",
+        "bemerkung": "timnoack (Autor des v2-Supports): \"locations of the UART bootlog pins (no pinheader or test points for them...)\"; Fotos nicht veröffentlicht, Einordnung (Lötpunkte/Bauteilpins) offen"
+      },
+      {
+        "wert": "¿",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial/Parameter/Spannung unbekannt"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/generic",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "tplink_cpe710-v2 (TPLINK_BOARD_ID CPE710V2, IMAGE_SIZE 15680k, tplink-safeloader-uimage)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/77b198aa7220e7f4902bee009aedd22a1600ed3e/target/linux/ath79/image/generic-tp-link.mk",
+        "stand": "OpenWrt v24.10.8-14-g77b198aa72 (Gluon v2025.1.3)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "24.10.0",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.1",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "see git-commit",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": "Recovery ebenfalls \"see git-commit\""
+      },
+      {
+        "wert": "Factory-Image über Stock-Web-UI oder TFTP-Recovery: Reset beim Einschalten 30-40 s halten, Image als recovery.bin, TFTP-Server 192.168.0.100, Gerät 192.168.0.254",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/5572e0196a93604716ec36ebb8db6737fc6677aa",
+        "stand": "Commit 2024-10-21 (Autor), gemergt 2024-11-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Factory-Image verlangt Firmware-Version > 0.0.X und Kompatibilitätsstufe >= 1",
+        "quelle": "openwrt_pr_16637",
+        "beleg": "https://github.com/openwrt/openwrt/pull/16637",
+        "stand": "PR 2024-10-08, geschlossen 2024-11-23 (Kommentare bis 2024-11-25)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_hinweis": [
+      {
+        "wert": "Stock-Firmware ab 1.1.2 Build 20251113 nimmt laut Wiki keine OpenWrt-Images mehr an (Web-UI und TFTP), kein Rückweg bekannt: vor dem Flashen Version prüfen",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/cpe710_v1",
+        "stand": "Seitenrevision 2026-07-27 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "Ergänzung 2026-04-25 ausdrücklich für v2"
+      },
+      {
+        "wert": "Firmware 1.1.2 Build 20251113 und 1.1.3 Build 20251112 (veröffentlicht 2025-12-01): \"This firmware upgrade is irreversible\"; 1.1.3 verschlüsselt",
+        "quelle": "tplink_download_v2",
+        "beleg": "https://www.tp-link.com/en/support/download/cpe710/v2/",
+        "stand": "Live-Seite 2026-10-20, neueste Firmware 1.1.3 Build 20251112 (2025-12-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.tp-link.com/en/support/download/cpe710/v2/",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "label-mac-device = eth0; MAC aus info-Partition Offset 8",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/77b198aa7220e7f4902bee009aedd22a1600ed3e/target/linux/ath79/dts/qca9563_tplink_cpe710.dtsi",
+        "stand": "OpenWrt v24.10.8-14-g77b198aa72 (Gluon v2025.1.3), Commit 2024-09-02",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Primär-MAC stimmt mit Etikett überein (Checkliste abgehakt)",
+        "quelle": "gluon_pr_3553",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/3553",
+        "stand": "PR 2025-07-23, gemergt 2025-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, device('tp-link-cpe710-v2', 'tplink_cpe710-v2'), nicht broken",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.3/targets/ath79-generic",
+        "stand": "Tag v2025.1.3",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "neu in Gluon v2025.1",
+        "quelle": "gluon_release_v2025_1",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.3/docs/releases/v2025.1.rst",
+        "stand": "Release Notes Gluon v2025.1 (Tag v2025.1.3)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "als Außengerät in is_outdoor_device eingetragen",
+        "quelle": "gluon_platform_lua",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.3/package/gluon-core/luasrc/usr/lib/lua/gluon/platform.lua",
+        "stand": "Tag v2025.1.3",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_test": [
+      {
+        "wert": "Checkliste vollständig (Web-UI- und TFTP-Flash, sysupgrade, Reset in Config-Mode, LEDs, 802.11s); Image-Name tp-link-cpe710-v2",
+        "quelle": "gluon_pr_3553",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/3553",
+        "stand": "PR 2025-07-23, gemergt 2025-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": "FreifunkChemnitz (ambassador86), Gerät im Feld"
+      }
+    ],
+    "openwrt_test": [
+      {
+        "wert": "zwei v2 auf 950-m-Strecke, 260 Mbit/s über 24 h",
+        "quelle": "openwrt_pr_16637",
+        "beleg": "https://github.com/openwrt/openwrt/pull/16637",
+        "stand": "PR 2024-10-08, geschlossen 2024-11-23 (Kommentare bis 2024-11-25)",
+        "sicherheit": "niedrig",
+        "bemerkung": "andyboeh, 2024-10-24"
+      }
+    ],
+    "platinen_kennung": [
+      {
+        "wert": "1904292710-?.0 Rev1.0sp1 (Hauptplatine), 180504 CPE610_ANT Rev1.0sp1-B (Antennenplatine)",
+        "quelle": "fcc_te7cpe710_innenfotos",
+        "beleg": "https://fccid.io/TE7CPE710/Internal-Photos/18-Internal-Photos-4634388",
+        "stand": "BTL Report 1912C049, PDF 2020-02-14",
+        "sicherheit": "niedrig",
+        "bemerkung": "v1-Quelle; v2 laut OpenWrt-Commit 5572e019 bis auf die PHY-Adresse gleich"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
+        "stand": "Seitenrevision 2026-08-01 08:26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/tp-link/cpe710_v1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/cpe710_v1",
+        "stand": "Seitenrevision 2026-07-27 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "Seite heißt v1, beschreibt auch v2"
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "keine Geräteseite",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/w/index.php?search=CPE710&fulltext=1",
+        "stand": "Suche 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "keine Geräteseite (Serienliste nennt nur CPE710 v1.x)",
+        "quelle": "wikidevi_cpe_eap_serie",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_CPE-EAP_series",
+        "stand": "Rohtext 2026-10-20 (Revisionsdatum nicht abgefragt)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.tp-link.com/de/business-networking/pharos-cpe/cpe710/",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/de/business-networking/pharos-cpe/cpe710/",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum, Seite als data-version V1 markiert)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
+        "stand": "PDF 2023-08-28, geändert 2026-09-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "forum": [
+      {
+        "wert": "https://github.com/openwrt/openwrt/pull/16637",
+        "quelle": "openwrt_pr_16637",
+        "beleg": "https://github.com/openwrt/openwrt/pull/16637",
+        "stand": "PR 2024-10-08, geschlossen 2024-11-23 (Kommentare bis 2024-11-25)",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt-PR mit Diskussion"
+      }
+    ],
+    "geizhals_url": [
+      {
+        "wert": "https://geizhals.de/tp-link-pharos-cpe710-a2661954.html",
+        "quelle": "geizhals_webarchiv",
+        "beleg": "https://web.archive.org/web/20251123043911/https://geizhals.de/tp-link-pharos-cpe-v128692.html",
+        "stand": "Webarchiv-Snapshot 2025-11-23 04:39",
+        "sicherheit": "mittel",
+        "bemerkung": "Eintrag \"TP-Link Pharos CPE710\" ohne Hardware-Version, deckt vermutlich v1 und v2 ab; Permalink aus archivierter Varianten-Übersicht"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://geizhals.de/tp-link-pharos-cpe710-a2661954.html",
+      "kategorie": "ean",
+      "grund": "EAN nicht gefunden: Geizhals sperrt, Produktseite nicht im Webarchiv; Datenblatt und Produktseite ohne EAN"
+    },
+    {
+      "url": "https://www.amazon.de/s?k=TP-Link+CPE710",
+      "kategorie": "amazon_asin",
+      "grund": "keine Quelle nennt eine ASIN; nicht abgefragt"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/pull/16637#issuecomment-2400258906",
+      "kategorie": "seriell",
+      "grund": "Autor hat Platinenfotos mit Lage der UART-Pins, nicht veröffentlicht; Pinbelegung, Baudrate, Pegel unbekannt"
+    },
+    {
+      "url": "https://www.tp-link.com/en/support/download/cpe710/v2.40/",
+      "kategorie": "hw_version",
+      "grund": "V2.40 existiert (eigene Downloadseite, Installation Guide document/122503), keine Firmware gelistet, nicht in der Support-Liste von tplink-safeloader (nur :2.0): ob das Factory-Image angenommen wird, offen"
+    },
+    {
+      "url": "https://github.com/openwrt/firmware-utils/pull/52",
+      "kategorie": "varianten",
+      "grund": "Kanada-Variante CPE710(CA) 2.0 noch nicht in der Support-Liste"
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/f080b84c-1a5b-467d-a20d-cf2da943a44e",
+      "kategorie": "erkennung_typenschild",
+      "grund": "Screenshot der Stock-Geräteinfo einer CPE710(CA) v2, nicht ausgewertet; Typenschild-Foto einer v2 fehlt"
+    },
+    {
+      "url": "https://fccid.io/TE7CPE710/User-Manual/14-User-Manual-4634396",
+      "kategorie": "handbuch",
+      "grund": "FCC-Handbuch v1 (2,3 MB) nicht ausgewertet"
+    },
+    {
+      "url": "https://fccid.io/TE7CPE710/External-Photos/19-External-Photos-4634387",
+      "kategorie": "fotos",
+      "grund": "Außenfotos v1 nicht ausgewertet"
+    },
+    {
+      "url": "https://www.tp-link.com/en/document/122503/",
+      "kategorie": "hw_version",
+      "grund": "CPE710(UN)_V2.40_Installation Guide nicht geladen"
+    },
+    {
+      "url": "https://forum.openwrt.org/search?q=CPE710",
+      "kategorie": "forum",
+      "grund": "OpenWrt-Forum nicht durchsucht (search.json gemieden)"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-20",
+    "status": "teilweise",
+    "anfragen": 55,
+    "notiz": "Kein ToH-Dump-Eintrag fuer v2 (nur v1, als roh.toh_v1); Live-hwdata v2, OpenWrt-Wiki (Seite cpe710_v1, auch v2), OpenWrt-Commit 5572e019 + Backport, DTS/Image-Makefile/Safeloader aus lokalem Gluon-2025.1-Baum, PR 16637, firmware-utils PR 36/52, Issue 20253 (Kanada-Variante), Gluon-Target/PR 3553/Release Notes v2025.1, TP-Link Downloadseiten V2/V2.40, Seriendatenblatt (als V2 verlinkt), Installation Guide REV2.40.0, Produktseite (V1-markiert), FCC TE7CPE710 und 2AXJ4CPE710 (beide CPE710(UN) 1.0; Label, Innenfotos v1), DeviWiki/WikiDevi ohne Geraeteseite, Geizhals-Permalink aus Webarchiv. Keine eigene FCC-ID fuer v2. Widerspruch Abstrahlwinkel Datenblatt 9/7 vs. Installation Guide 7/9. CPU 775 MHz (Commit) vs. 750 MHz (Datenblatt). Offen: EAN, ASIN, serielle Pinbelegung/Baudrate (UART ohne Stiftleiste/Testpunkte), V2.40 und Kanada-Variante beim Factory-Image. Keine Werkstatt-Protokolle."
+  }
+}
