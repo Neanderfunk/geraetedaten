@@ -238,7 +238,7 @@ def mass(t):
 
 # Speicher fuer Updates. "reichlich" ab 32 MB Flash und 256 MB RAM: Reserve auch fuer kommende
 # Versionen (OpenWrt 25 und folgende) [abgeleitet, Schwelle adorfer/Supernode 19.10.2026].
-STUFEN = {'reichlich': ('reichlich', 'viel Reserve, auch für kommende Firmware-Versionen'),
+STUFEN = {'reichlich': ('reichlich', 'viel Reserve, auch für künftige Versionen'),
           'reicht': ('ausreichend', 'genug Speicher für die aktuelle Firmware'),
           'knapp': ('knapp', 'läuft noch, aber mit wenig Reserve für künftige Versionen'),
           'sackgasse': ('zu wenig', 'nur noch alte Firmware (Sackgasse)')}
