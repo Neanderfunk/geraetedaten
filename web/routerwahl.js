@@ -290,6 +290,10 @@
     if (version && g.versionen !== 'abgeschlossen') p.appendChild(el('span', 'finder-kaufen-hinweis',
       ' Achte beim Kauf auf die Hardware-Version ' + version +
       '. Sie steht auf dem Typenschild; fehlt sie im Angebot, frag nach.'));
+    if (g.nicht_unterstuetzt) p.appendChild(el('span', 'finder-kaufen-hinweis',
+      ' Keine Firmware für ' + g.nicht_unterstuetzt.map(function (n) {
+        return n.version + (n.grund ? ' (' + n.grund + ')' : '');
+      }).join(', ') + '.'));
     return p;
   }
 

@@ -429,6 +429,24 @@ def versionen_lage(d, s):
     return 'offen'
 
 
+def nicht_unterstuetzt(d):
+    """Andere Hardware-Versionen, fuer die es keine Firmware gibt, mit kurzem Grund
+    (aus versionen-anzeige.json des Selectors: Handpflege und OpenWrt-ToH)."""
+    m = re.search(r'-(v\d+(?:\.\d+)?)(?:-|$)', d['image'])
+    schl = modell_schluessel(d['image']) or ''
+    diese = hauptversion(m.group(1), schl) if m else ''
+    aus, gesehen = [], set()
+    for b in VERSIONEN.get(schl, {}).get('belege') or []:
+        # kurz: 'art' aus der ToH-Liste, sonst der erste Satz des handgepflegten Grunds
+        grund = b.get('art') or re.split(r'\.\s', re.sub(r'^Grund:\s*', '', b.get('grund') or ''))[0].rstrip('.')
+        for v in b.get('nicht_unterstuetzt') or []:
+            v = hauptversion(v, schl)
+            if v and v != diese and v not in gesehen:
+                gesehen.add(v)
+                aus.append({'version': v, 'grund': grund})
+    return sorted(aus, key=lambda x: [int(n) for n in re.findall(r'\d+', x['version'])])
+
+
 def facetten(d):
     """Maschinenlesbare Werte fuer die Geraetesuche. None = unbekannt.
     'unsicher' nennt Felder, bei denen sich Quellen widersprechen."""
@@ -536,6 +554,7 @@ def facetten(d):
     lu = s.get('luefter')
     fa['luefter'] = (False if nein(lu['wert']) else True if ja(lu['wert']) else None) if lu else None
     fa['versionen'] = versionen_lage(d, s)
+    fa['nicht_unterstuetzt'] = nicht_unterstuetzt(d) or None
     gz = s.get('geizhals_url')
     fa['geizhals'] = gz['wert'] if gz and gz['wert'].startswith('https://geizhals.') else None
     fa['unsicher'] = sorted(set(unsicher)) or None
