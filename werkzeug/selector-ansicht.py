@@ -249,6 +249,19 @@ EINE_BUCHSE = ('Nur eine Netzwerkbuchse: Im Betrieb ist sie der Anschluss ans In
                'Kabel lassen sich daran nicht anschließen.')
 
 
+def sd_karte(s):
+    """Startet das Geraet von einer Speicherkarte (Raspberry Pi, NanoPi ...)? Dann zaehlt der
+    winzige Onboard-Flash fuer den Bootloader nicht, der Platz fuer die Firmware ist frei waehlbar."""
+    sel = s.get('flash_typ')
+    if not sel:
+        return False
+    texte = [sel['wert']] + [a['wert'] for a in sel['abweichend'] + sel.get('weitere', [])]
+    return any(re.search(r'\b(micro)?sd(hc|xc)?\b|sd-karte|speicherkarte', schluessel(t)) for t in texte)
+
+
+KARTE_MB = 32768   # Platzhalter fuer "Speicherkarte": groesser als jeder Onboard-Flash
+
+
 def speicherstufe(flash, ram):
     if flash >= 32 and ram >= 256:
         return 'reichlich'
@@ -265,13 +278,16 @@ def ansicht(d, idx):
     oben, mitte, technik = [], [], []
 
     ram, flash = zahl(s.get('ram_mb')), zahl(s.get('flash_mb'))
+    karte = sd_karte(s)
+    if karte:
+        flash = KARTE_MB
     if ram and flash:
         stufe = speicherstufe(flash, ram)
         kennwort, rest = STUFEN[stufe]
         oben.append({'titel': 'Speicher für Updates', 'stufe': stufe, 'kennwort': kennwort, 'wert': rest,
-                     'erklaerung': '%g MB Flash, %g MB RAM' % (flash, ram),
-                     'belege': s['flash_mb']['belege'] + s['ram_mb']['belege'],
-                     'abweichend': [{**a, 'wert': 'Flash ' + a['wert'] + ' MB'} for a in s['flash_mb']['abweichend']]
+                     'erklaerung': ('Speicherkarte, %g MB RAM' % ram) if karte else ('%g MB Flash, %g MB RAM' % (flash, ram)),
+                     'belege': (s['flash_typ']['belege'] if karte else s['flash_mb']['belege']) + s['ram_mb']['belege'],
+                     'abweichend': ([] if karte else [{**a, 'wert': 'Flash ' + a['wert'] + ' MB'} for a in s['flash_mb']['abweichend']])
                      + [{**a, 'wert': 'RAM ' + a['wert'] + ' MB'} for a in s['ram_mb']['abweichend']],
                      'weitere': []})
     a = idx.get(d['image'])
@@ -404,7 +420,8 @@ def facetten(d):
                 st.append(int(m.group(1)))
     fa['streams'] = max(st) if st else None
     fa['ram'] = zahl(s.get('ram_mb'))
-    fa['flash'] = zahl(s.get('flash_mb'))
+    fa['sd'] = sd_karte(s) or None
+    fa['flash'] = KARTE_MB if fa['sd'] else zahl(s.get('flash_mb'))
     if fa['ram'] and fa['flash']:
         fa['speicher'] = STUFEN[speicherstufe(fa['flash'], fa['ram'])][0]
     else:

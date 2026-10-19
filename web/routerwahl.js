@@ -266,7 +266,8 @@
     if (g.wlan) c.push('WLAN ' + g.wlan);
     if (g.streams) c.push(g.streams + '×' + g.streams);
     if (g.ram) c.push(g.ram + ' MB RAM');
-    if (g.flash) c.push(g.flash + ' MB Flash');
+    if (g.sd) c.push('Speicherkarte');
+    else if (g.flash) c.push(g.flash + ' MB Flash');
     if (g.einsatz) c.push(g.einsatz.join(' und '));
     if (g.montage) c.push(g.montage.join(', '));
     if (g.poe && g.poe.indexOf('nein') < 0) c.push('PoE ' + g.poe.map(function (p) {
