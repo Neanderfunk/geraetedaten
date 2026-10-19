@@ -381,6 +381,39 @@ def ansicht(d, idx):
             'technik': [z for z in technik if z], 'links': links}
 
 
+VERSIONEN = {}   # 'Hersteller|Modell' -> {'bekannt': [...], 'nicht_unterstuetzt': [...]} aus dem Selector
+MODELLE = {}     # image -> {'hersteller', 'modell', ...} aus quellen/selector-modelle-*.json
+
+
+def modell_schluessel(image):
+    if image in MODELLE:
+        m = MODELLE[image]
+        return m['hersteller'] + '|' + m['modell']
+    best = None
+    for basis, m in MODELLE.items():
+        if image.startswith(basis + '-') and (not best or len(basis) > len(best[0])):
+            best = (basis, m)
+    return (best[1]['hersteller'] + '|' + best[1]['modell']) if best else None
+
+
+def versionen_lage(d, s):
+    """abgeschlossen: keine andere Hardware-Version bekannt und das Geraet ist eingestellt;
+    weitere: es gibt andere Versionen; offen: nur diese bekannt, aber noch im Handel oder unklar."""
+    m = re.search(r'-(v\d+(?:\.\d+)?)(?:-|$)', d['image'])
+    diese = m.group(1).lower() if m else ''
+    e = VERSIONEN.get(modell_schluessel(d['image']) or '', {})
+    andere = {v.lower() for v in (e.get('bekannt') or []) + (e.get('nicht_unterstuetzt') or [])} - {diese, ''}
+    if andere:
+        return 'weitere'
+    texte = [str(d.get('roh', {}).get('toh', {}).get('availability', ''))]
+    sel = s.get('verfuegbarkeit')
+    if sel:
+        texte += [sel['wert']] + [a['wert'] for a in sel['abweichend'] + sel.get('weitere', [])]
+    if any(re.search(r'discontinued|eingestellt|\beol\b|end of life', t, re.I) for t in texte):
+        return 'abgeschlossen'
+    return 'offen'
+
+
 def facetten(d):
     """Maschinenlesbare Werte fuer die Geraetesuche. None = unbekannt.
     'unsicher' nennt Felder, bei denen sich Quellen widersprechen."""
@@ -487,6 +520,7 @@ def facetten(d):
     fa['leistung'] = zahl(s.get('leistung_w_max'))
     lu = s.get('luefter')
     fa['luefter'] = (False if nein(lu['wert']) else True if ja(lu['wert']) else None) if lu else None
+    fa['versionen'] = versionen_lage(d, s)
     gz = s.get('geizhals_url')
     fa['geizhals'] = gz['wert'] if gz and gz['wert'].startswith('https://geizhals.') else None
     fa['unsicher'] = sorted(set(unsicher)) or None
@@ -497,7 +531,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--index', help='anleitungen/html/index.json aus gluon-rampe-installer')
     ap.add_argument('--aus', default=os.path.join(WURZEL, 'ausgabe', 'selector'))
+    ap.add_argument('--versionen', default=os.path.expanduser(
+        '~/projekte/freifunk/scratch/fsc/ffnef/versionen-anzeige.json'),
+        help='versionen-anzeige.json aus firmware-selector-config')
     a = ap.parse_args()
+    if os.path.exists(a.versionen):
+        VERSIONEN.update(json.load(open(a.versionen, encoding='utf-8')).get('geraete', {}))
+    md = sorted(glob.glob(os.path.join(WURZEL, 'quellen', 'selector-modelle-*.json')))
+    if md:
+        MODELLE.update(json.load(open(md[-1], encoding='utf-8'))['modelle'])
     idx = {}
     if a.index:
         for e in json.load(open(a.index, encoding='utf-8')):

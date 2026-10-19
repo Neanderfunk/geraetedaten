@@ -286,7 +286,8 @@
       a.target = '_blank';
       p.appendChild(a);
     });
-    if (version) p.appendChild(el('span', 'finder-kaufen-hinweis',
+    /* Gibt es nur diese Version und ist das Geraet eingestellt, hilft der Hinweis niemandem. */
+    if (version && g.versionen !== 'abgeschlossen') p.appendChild(el('span', 'finder-kaufen-hinweis',
       ' Achte beim Kauf auf die Hardware-Version ' + version +
       '. Sie steht auf dem Typenschild; fehlt sie im Angebot, frag nach.'));
     return p;
