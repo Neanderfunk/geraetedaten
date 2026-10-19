@@ -8,6 +8,18 @@ DC-Buchse, Leistung), innen oder außen, Montage, serielle Konsole.
 
 **Stand:** Aufbau ab 19.10.2026, zuerst ein Pilot mit 10 Geräten.
 
+## Welche Geräte?
+
+[GERAETE.md](GERAETE.md) listet alle Geräte, für die wir Images bauen, nach
+Hersteller, mit Link auf den Eintrag in `daten/` oder einem Link „anlegen“
+mit fertiger Vorlage. Die Liste erzeugt `werkzeug/geraeteliste.py` aus den
+Image-Namen des Firmware-Servers und den Modellnamen des Firmware-Selectors
+(beides unter `quellen/`).
+
+**Mithelfen ist willkommen:** Daten zu einem Gerät ergänzen oder neu
+anlegen, per Pull Request. Wichtig ist nur: jeder Wert mit Quelle und Link,
+nichts geraten. Aufbau in [schema/felder.md](schema/felder.md).
+
 ## Grundsätze
 
 - Ein Eintrag je Gluon-Image-Name (`daten/<image>.json`).
