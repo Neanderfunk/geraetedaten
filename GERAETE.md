@@ -292,7 +292,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
 | MR70X v1 | `mercusys-mr70x-v1` | [erfasst](daten/mercusys-mr70x-v1.json): 91 Felder, 14 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/mercusys-mr70x-v1.html) | recommended |
-| MR90X v1 | `mercusys-mr90x-v1` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=mercusys-mr90x-v1.json&value=%7B%0A%20%22image%22%3A%20%22mercusys-mr90x-v1%22%2C%0A%20%22modell%22%3A%20%22Mercusys%20MR90X%20v1%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  | recommended |
+| MR90X v1 | `mercusys-mr90x-v1` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=mercusys-mr90x-v1.json&value=%7B%0A%20%22image%22%3A%20%22mercusys-mr90x-v1%22%2C%0A%20%22modell%22%3A%20%22Mercusys%20MR90X%20v1%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) | [L5](https://routersoftware.ffnef.de/anleitungen/de/mercusys-mr90x-v1.html) | recommended |
 
 ## Mikrotik
 
