@@ -1,0 +1,3741 @@
+{
+  "image": "zyxel-nwa50ax",
+  "modell": "Zyxel NWA50AX",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Zeile pid 23157572 aus quellen/quellen-toh-2026-10-18.tsv.gz (alle 74 Spalten). Vorbelegung hatte 2 Kandidaten (NWA50AX pid 23157572, NWA50AX Pro pid 32866353); passend ist NWA50AX (ramips/mt7621), die Pro ist ein anderes Geraet (mediatek/filogic, eigenes Gluon-Image zyxel-nwa50ax-pro). Dump aelter als Datenseite (FCC-Link NCC statt FCC, Release 23.05.0 statt 25.12.4, Power Supply leer)"
+    },
+    "toh_seite": {
+      "url": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+      "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Datenseite per ?do=export_raw, Revisionsliste per ?do=revisions. Feld 'Supported Current Rel' nennt 25.12.4, obwohl die letzte Revision 'Update for 25.12.2' bzw. 2026-05-30 ist (so in der Rohquelle)"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/zyxel/nwa50ax",
+      "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Geraeteseite per ?do=export_raw; vorletzte Revision 2026-05-27 (cweiske1, Supported Versions). Flash-Layout, TFTP-Werte, Netzwerk-/Knopf-Tabellen sind noch FIXME-Vorlagen; keine echten Fotos ausser Uebersichtsbild"
+    },
+    "openwrt_commit": {
+      "url": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+      "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Support-Commit 'ramips: add support for ZyXEL NWA50AX / NWA55AXE' (in ToH als git.openwrt.org-Link), per GitHub .patch geladen"
+    },
+    "openwrt_dts_main": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_zyxel_nwa-ax.dtsi",
+      "stand": "OpenWrt main am 2026-10-19, letzter Commit an der dtsi 1180dd6b vom 2025-08-13 (Rosen Penev, \"mt7621: zyxel nwa-ax: set mac address in dts\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per raw.githubusercontent.com geladen, dazu https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_zyxel_nwa50ax.dts; Commit-Historie per GitHub-API (3 letzte Commits)"
+    },
+    "openwrt_image_main": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+      "stand": "OpenWrt main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Device/zyxel_nwa-ax und Device/zyxel_nwa50ax"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=NWA50AX&fulltext=1",
+      "stand": "Volltextsuche am 2026-10-19 ohne Treffer",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Keine Geraeteseite: Volltextsuche 'NWA50AX' ohne Treffer, ZyXEL_NWA50AX?action=raw 404, allpages-Praefix 'ZyXEL NWA' listet nur aeltere Modelle (bis NWA5123-NI)"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+      "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Rohtext per index.php?title=ZyXEL_NWA50AX&action=raw, Revisionen per api.php; Seite angelegt/aktualisiert von Olek210 2024-12-27"
+    },
+    "fccid": {
+      "url": "https://fccid.io/I8811AXAP22A",
+      "stand": "Grant 2021-05-07 (Application 2021-05-03), Short-Term-Confidentiality bis 2021-11-03",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Dokumentliste und Grant gelesen; FCC-Modell 11AXAP22A, Pruefung Sporton International (Hsinchu). FCC-ID laut ToH-Seite und WikiDevi"
+    },
+    "fcc_handbuch": {
+      "url": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-1-5231166",
+      "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021 (PDF 2021-04-22, Exhibit 5231166)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 4237633 Byte (sha256 153e09ef692a576f...), 226 Seiten, Text per pdftotext"
+    },
+    "fcc_handbuch2": {
+      "url": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-2-5231167",
+      "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021, Teil 2 (PDF 2021-04-22, Exhibit 5231167)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 639199 Byte (sha256 fe02cbdcbbe7fe17...), 30 Seiten (Anhang Legal/Index)"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/I8811AXAP22A/Label/Label-Info-5231172",
+      "stand": "Exhibit 5231172 (PDF 2021-04-22)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 31056 Byte; zeigt nur 'Label Location <Back of the EUT>' mit Platzhalter 'Label Here', kein Etiketteninhalt"
+    },
+    "fcc_rf_exposure": {
+      "url": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+      "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 267639 Byte, 8 Seiten; Antennen- und Zubehoerangaben"
+    },
+    "fcc_aussenfotos": {
+      "url": "https://fccid.io/I8811AXAP22A/External-Photos/External-Photos-5231162",
+      "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231162)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 518100 Byte (sha256 b9a8ea7fab060277...), 6 Seiten, 11 Fotos (Geraet, Anschlussfeld, Netzteil mit Typenschild, Stecker) abgelesen"
+    },
+    "fcc_innenfotos": {
+      "url": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+      "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 2038646 Byte (sha256 d969fb8e5c1083c2...), 18 Seiten, 36 Fotos 800x600 abgelesen (Chipaufdrucke, Platine, Kuehlblech)"
+    },
+    "hersteller_seite": {
+      "url": "https://www.zyxel.com/global/en/products/wireless/nwa50ax/specifications",
+      "stand": "Webseite ohne Datumsangabe, Stand Abruf 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Specifications-Tab der Produktseite (global/en); ToH verlinkt https://www.zyxel.com/de/de/products/wireless/80211ax-wifi-6-dual-radio-poe-access-point-nwa50ax, Weiterleitung auf /global/en/products/wireless/nwa50ax. Produkttitel dort 'AX1800 4-Stream WiFi 6 Dual-Radio NebulaFlex Access Point'"
+    },
+    "hersteller_download": {
+      "url": "https://www.zyxel.com/global/en/support/download?model=nwa50ax",
+      "stand": "Webseite, neuester Eintrag User's Guide V7.12_Ed1 vom 2026-08-03",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Downloadliste (Datenblatt, QSG, User's Guide, Firmware-Release-Notes, Zertifikate)"
+    },
+    "datenblatt": {
+      "url": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+      "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 317159 Byte (sha256 2047a0a4e63965c7...), 4 Seiten; Werte identisch mit Specifications-Tab der Herstellerseite"
+    },
+    "quick_start_guide": {
+      "url": "https://download.zyxel.com/NWA50AX/quick_start_guide/NWA50AX_008.pdf",
+      "stand": "QSG Version 008 (NWA50AX_web_QSG_20250416_v08, PDF 2025-04-16, Last-Modified 2025-04-25)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 39598748 Byte (sha256 f797973b5a6ad79d...): Groesse war vor dem Laden unbekannt, liegt ueber der 10-MB-Grenze; Text als Pfade (pdftotext leer), nur Inhaltsverzeichnis und Abschnitt Hardware Connections als Bild abgelesen. Zweiter Lauf 2026-10-19: Abschnitt Mounting Options (Wall/Ceiling, T-bar, Desk) aus der bereits lokal liegenden Kopie per pdftoppm gerendert und abgelesen, kein erneuter Download"
+    },
+    "antennen_matrix": {
+      "url": "https://download.zyxel.com/NWA50AX/antenna_specification_matrix/NWA50AX_1.pdf",
+      "stand": "Antenna Specification Matrix Version 1 (PDF 2022-03-03, Last-Modified 2022-03-07)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 4664195 Byte, 11 Seiten, Sammeldokument mehrerer Zyxel-APs; Spalte 'NWA90AX/NWA50AX'"
+    },
+    "gluon": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.3/targets/ramips-mt7621",
+      "stand": "lokaler Checkout firmware-2025.1/gluon, v2025.1.3 (e2fe4b52, 2026-08-18)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "lokal gelesen, kein Netzabruf"
+    },
+    "hersteller_handbuch_web": {
+      "url": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+      "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "HTML-Fassung des User's Guide V7.12 (PDF NWA50AX-UG.pdf ist 14.9 MB und wurde deshalb nicht geladen). Gelesen: Kapitel h_Intro, h_Hardware, h_System unter /NWA50AX/user_guide_web/NWA30-50-55-90_7-40/. Das Handbuch deckt NWA50AX, NWA90AX, NWA55AXE, NWA50AX PRO, NWA55AX PRO, NWA90AX PRO und WiFi-7-Modelle ab; Port-Tabelle gilt gemeinsam fuer NWA50AX/NWA90AX/NWA50AX PRO/NWA90AX PRO"
+    },
+    "datenblatt_v3": {
+      "url": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_3.pdf",
+      "stand": "Datasheet NWA50AX Version 3 (Fusszeile 11/11/21, PDF 2021-11-11, Last-Modified 2021-11-25)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "aeltere Datenblattfassung, PDF 288195 Byte, 4 Seiten; NWA50AX_1.pdf liefert nur 114 Byte (kein PDF)"
+    },
+    "connect_test": {
+      "url": "https://www.connect.de/vergleich/wi-fi-6-router-zyxel-nwa50ax-test-review-3202346-9380.html",
+      "stand": "Artikel vom 29.3.2022 (Hannes Ruegheimer), connect Praxistest",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Fachzeitschrift; Messwert Leistungsaufnahme mit mitgeliefertem Steckernetzteil"
+    },
+    "zyxel_community_15328": {
+      "url": "https://community.zyxel.com/en/discussion/15328/nwa50ax-poe-voltage",
+      "stand": "Thread vom 2022-12-15, letzte Antwort 2024-03-25 (Zyxel_Kay, Zyxel Employee)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Zyxel-Community; Antworten von Zyxel-Mitarbeitern"
+    },
+    "zyxel_community_12454": {
+      "url": "https://community.zyxel.com/en/discussion/12454/nwa50ax-nwa210ax-questions",
+      "stand": "Thread vom 2022-01-12 bis 2022-05-15 (Fragesteller undsie, Antworten Zyxel_Silvia/Zyxel_Dick/Zyxel_CSO)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per Community-API (/api/v2/discussions/12454 und /api/v2/comments?discussionID=12454) gelesen; gefunden ueber /api/v2/search?query=NWA50AX PoE af"
+    },
+    "zyxel_community_suche": {
+      "url": "https://community.zyxel.com/api/v2/search?query=NWA50AX%20802.3af&limit=30",
+      "stand": "Suchergebnis am 2026-10-19 (Beitraege 2022-2026)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Treffer u. a. Kommentar 49089 (2023-03-01, GS1920-24HP), Kommentar 48989 (2023-02-24, GS1900-8HP)"
+    },
+    "openwrt_forum_158629": {
+      "url": "https://forum.openwrt.org/t/performance-of-zyxel-nwa50ax/158629",
+      "stand": "Thread 2023-04-24 bis 2023-06-02, 16 Beitraege",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per /t/158629.json gelesen"
+    },
+    "openwrt_forum_233589": {
+      "url": "https://forum.openwrt.org/t/install-openwrt-on-zyxel-nwa50ax/233589",
+      "stand": "Thread 2025-06-02 bis 2025-06-03, 4 Beitraege",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per /t/233589.json gelesen"
+    },
+    "fcc_testbericht_24": {
+      "url": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+      "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 2573066 Byte (sha256 0ff013a7e9a99272...), 132 Seiten, Sporton; PDF ueber .../Test-Report-2-4G-5231152.pdf (ViewExhibitReport.cfm liefert nur eine HTML-Huelle)"
+    },
+    "fcc_testaufbau_24": {
+      "url": "https://fccid.io/I8811AXAP22A/Test-Setup-Photos/Tsup-2-4G-5231147",
+      "stand": "Test Photos Appendix H (PDF 2021-04-19, Exhibit 5231147)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 299421 Byte, 3 Seiten; nur Aufbau-Fotos aus Entfernung, kein Etikett erkennbar"
+    },
+    "fccid_ncc": {
+      "url": "https://fccid.io/NCC/CCAF21LP0660T1",
+      "stand": "NCC-Zulassung vom 2021-04-26 (Quelle NCC_DATASET_5996)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Dokumente (Appearance photo.pdf, Testberichte, Zertifikat) bei fccid.io nur \"Queued\", nicht abrufbar"
+    },
+    "zyxel_zert_lvd": {
+      "url": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-02-00773.PDF",
+      "stand": "CoC for LVD, Wendell Electrical Testing Lab., Testbericht WL20K2703-L0 vom 2021-04-26",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 144635 Byte, 1 Seite"
+    },
+    "zyxel_zert_ised": {
+      "url": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-03-00523.pdf",
+      "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO, 2021-05-03",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 216441 Byte, 3 Seiten"
+    },
+    "zyxel_zert_ncc": {
+      "url": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-03-00524.pdf",
+      "stand": "NCC-Typzulassung CCAF21LP0660T1 (Sporton/耕興), 110年4月26日 = 2021-04-26, PDF 2021-06-02",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 1234704 Byte, 2 Seiten Scan, als Bild abgelesen (chinesisch)"
+    },
+    "zyxel_zert_wifi": {
+      "url": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-05-00092.pdf",
+      "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 76664 Byte, 3 Seiten"
+    },
+    "zyxel_zert_japan": {
+      "url": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-03-00630.zip",
+      "stand": "Japan-Typzertifikat 020-230119 vom 2023-05-26 (TACOYAKI, Inc.)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "ZIP 560159 Byte mit 23041804-0_Zyxel_NWA50AX_19_CRT.PDF (2.4 GHz) und _19-03_CRT.PDF (5 GHz)"
+    },
+    "zyxel_zert_fcc_grants": {
+      "url": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-03-00522.zip",
+      "stand": "ZIP mit FCC_GRANT DTS.PDF und FCC_GRANT NII.PDF (2021-05-11)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Inhalt deckt sich mit fccid-Grant, nur gelistet"
+    },
+    "zyxel_eu_doc": {
+      "url": "https://download.zyxel.com/NWA50AX/declaration/NWA50AX_006.214-01-01341.zip",
+      "stand": "EU DoC vom 2025-09-18, ErP Information 20250918, UK PSTI SoC vom 2025-07-18, REACH DoC 20250718, PPWR DoC (2026-08-04), Safety Warnings 20240117",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "ZIP 3534531 Byte, 6 PDFs (Pfade mit Backslash)"
+    },
+    "zyxel_bsmi_doc": {
+      "url": "https://download.zyxel.com/NWA50AX/declaration/NWA50AX_002.214-01-01455.zip",
+      "stand": "BSMI DoC und TW RoHS DoC (Dateien 2024-12-23/27)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "BSMI DoC ist reiner Scan ohne Text, nicht ausgewertet; TW RoHS DoC ohne Hardwaredaten"
+    },
+    "zyxel_mysupport": {
+      "url": "https://mysupport.zyxel.com/hc/en-us/articles/4416989548178-Access-Point-NWA50-55AXEE-90AX-110AX-210AX-Differences-in-Hardware-and-Features",
+      "stand": "nicht lesbar (HTTP 403, Cloudflare)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Artikel \"Differences in Hardware and Features\" NWA50/55AXE/90AX/110AX/210AX, blockiert"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "23157572",
+      "devicetype": "WiFi AP",
+      "brand": "ZyXEL",
+      "model": "NWA50AX",
+      "version": "NULL",
+      "fccid": "https://fccid.io/NCC/CCAF21LP0660T1",
+      "availability": "Available 2023",
+      "whereavailable": "notebooksbilliger.de,alternate.de,amazon.de",
+      "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+      "supportedsincerel": "22.03.2",
+      "supportedcurrentrel": "23.05.0",
+      "unsupported_functions": "NULL",
+      "target": "ramips",
+      "subtarget": "mt7621",
+      "packagearchitecture": "mipsel_24kc",
+      "bootloader": "U-Boot",
+      "cpu": "MediaTek MT7621AT",
+      "cpucores": "2",
+      "cpumhz": "880",
+      "flashmb": "128NAND",
+      "rammb": "256",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "1",
+      "ethernet2_5gports": "-",
+      "ethernet5gports": "-",
+      "ethernet10gports": "-",
+      "sfp_ports": "-",
+      "sfp_plus_ports": "-",
+      "switch": "-",
+      "vlan": "¿",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "MediaTek MT7915 DBDC",
+      "wlan24ghz": "b/g/n/ax",
+      "wlan50ghz": "a/n/ac/ax",
+      "wlancomments": "",
+      "wlandriver": "mt76",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "-",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "115200 / 8N1",
+      "jtag": "¿",
+      "ledcount": "1",
+      "buttoncount": "1",
+      "gpios": "-",
+      "powersupply": "¿",
+      "devicepage": "",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "NWA50AX",
+      "gitsearch": "NWA50AX",
+      "wikideviurl": "http://¿",
+      "oemdevicehomepageurl": "https://www.zyxel.com/de/de/products/wireless/80211ax-wifi-6-dual-radio-poe-access-point-nwa50ax",
+      "firmwareoemstockurl": "https://www.zyxel.com/de/de/support/download?model=nwa50ax",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ramips/mt7621/openwrt-23.05.0-ramips-mt7621-zyxel_nwa50ax-squashfs-factory.bin",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ramips/mt7621/openwrt-23.05.0-ramips-mt7621-zyxel_nwa50ax-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-zyxel_nwa50ax-squashfs-factory.bin",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-zyxel_nwa55axe-squashfs-factory.bin",
+      "installationmethods": "GUI OEM,see git-commit",
+      "commentinstallation": "",
+      "recoverymethods": "unknown",
+      "commentrecovery": "",
+      "picture": "media:example:genericrouter1.png",
+      "comments": "",
+      "page": "toh:hwdata:zyxel:zyxel_nwa50ax"
+    },
+    "toh_seite": {
+      "Device Type_devicetype": "WiFi AP",
+      "Brand": "ZyXEL",
+      "Model": "NWA50AX",
+      "Versions": "",
+      "FCCID_urls": "https://fccid.io/I8811AXAP22A",
+      "Availability_availability": "Available 2026",
+      "Where available": "notebooksbilliger.de,alternate.de,amazon.de",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+      "Supported Since Rel_releasesince": "22.03.2",
+      "Supported Current Rel_releasecurrent": "25.12.4",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "ramips",
+      "Subtarget": "mt7621",
+      "Package architecture_pkg-arch": "mipsel_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "MediaTek MT7621AT",
+      "CPU Cores_numcores_": "2",
+      "CPU MHz": "880",
+      "Flash MB_mbflashs": "128NAND",
+      "RAM MB_mbram": "256",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "-",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "MediaTek MT7915",
+      "WLAN 2.4GHz_wlan24": "b/g/n/ax",
+      "WLAN 5.0GHz_wlan50": "a/n/ac/ax",
+      "WLAN 6.0GHz_wlan60": "-",
+      "WLAN 60.0GHz_wlan60g": "-",
+      "WLAN Comments_": "DBDC",
+      "WLAN driver_wlan-drivers": "mt76",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "1",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "12 VDC, 1.5A or PoE (802.3at)",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:zyxel:nwa50ax",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "NWA50AX",
+      "Git search_search-gits": "NWA50AX",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+      "WikiDevi ID_hwinfo-ids": "ZyXEL_NWA50AX",
+      "OEM Device Homepage URL_url": "https://www.zyxel.com/de/de/products/wireless/80211ax-wifi-6-dual-radio-poe-access-point-nwa50ax",
+      "Firmware OEM Stock URL_url": "https://www.zyxel.com/de/de/support/download?model=nwa50ax",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.4/targets/ramips/mt7621/openwrt-25.12.4-ramips-mt7621-zyxel_nwa50ax-squashfs-factory.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.4/targets/ramips/mt7621/openwrt-25.12.4-ramips-mt7621-zyxel_nwa50ax-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-zyxel_nwa50ax-squashfs-factory.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-zyxel_nwa55axe-squashfs-factory.bin",
+      "Installation method(s)_method-installations": "GUI OEM, U-Boot TFTP + serial recovery, see git-commit",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "U-Boot TFTP + serial recovery, see git-commit",
+      "Comment recovery": "",
+      "Picture_img100s": "media:zyxel:nwa50ax:zyxel_nwa50ax.png",
+      "Comments_": ""
+    },
+    "openwrt_wiki": {
+      "Einleitung": "The Zyxel NWA50AX is an IEEE 802.11ax gigabit PoE  MediaTek-based access point. Like many business class APs, it is designed for wall/ceiling mount, and includes a 12v1.5A power supply, and also PoE support, along side an easily accessible console port, reset button and multi-color LED.",
+      "Supported Versions": "The NWA90AX is hardware-wise identical to the NWA50AX.",
+      "Installation": [
+        "1. Boot the device. The device is booting when amber-green fast blinking, this takes a while. The device is ready when the LED is green solid, green slow blinking, or amber-green slow blinking.",
+        "2. By default, the device acquires a DHCP address.",
+        "3. Navigate to the device web interface. Default username is 'admin', default password is '1234'. It may require you to change the password on boot.",
+        "If the default password does not work, the device may have already been configured. Reset the device by poking the reset hole on the back for ~10s, until the LED blinks red.",
+        "You can skip as much of the setup wizard as possible.",
+        "5. Check the firmware slot, see the NWA50AX Pro installation note.",
+        "NWA50AX has two firmware slots. OpenWRT only installs when the current slot is 1. Installation will fail if on the wrong slot and the device will reboot into the current firmware.",
+        "In the downloaded .tar.bz2, in debug/diag_zysh_system/diag_zysh_system.dbg (text file, open with any text editor), you want to see 'Current Image num : 1'. If it says 'Current Image num : 0', you need to change the slot.",
+        "The slot can be changed by flashing the vendor firmware, even the same installed version.",
+        "6. Navigate to maintenance (wrench iron) -> File Manager -> Firmware Package. Select the OpenWRT factory .bin for upload, and upload.",
+        "If you get 'Warning ULCGI unalbe to parse CGI query!', that is the filename of the image being uploaded is too long. Consider renaming the image to 'factory.bin'",
+        "If you get 'Firmware upload in progress -- Do not turn off the power or reset the EnterpeiseWLAN.', the file is flashing and the device will reboot.",
+        "7. If the flash failed, the device will blink amber/green during boot, like the stock firmware. If the flash succeeded, the device will blink green during boot.",
+        "Check the firmware slot if the device rebooted into the stock firmware.",
+        "8. Unlike the stock firmware, OpenWRT is NOT configured to be a DHCP client by default, and instead is set up like a router. Wireless AP is disabled by default. You will need to connect to the device via the Ethernet port to configure it."
+      ],
+      "Flash Layout": "FIXME (nicht ausgefuellt)",
+      "TFTP": "Installing via TFTP requires console access, and initiating it via uboot before the unit initiates normal boot within 3 seconds. A consoled-port is labeled and readily available on the packaging. Tabelle: Bootloader tftp server IPv4 address = Set in bootloader with atna-command. Example atna 192.168.42.1; Bootloader MAC address = FILL-IN; Firmware tftp image = Latest OpenWrt release (NOTE: Name must contain \"tftp\"); TFTP transfer window = FILL-IN; TFTP window start = FILL-IN; TFTP client required IP address = Set in bootloader with atns-command. Example atns 192.168.42.42. Sequenz: atna 192.168.42.1 / atns 192.168.42.42 / atna firmware.bin / atnz / (wait) / atrs",
+      "Debricking": "100% reliable debricking can be done via TFTP, but requires console access. It needs to be initiated in uboot before the unit initiates normal boot. A console-port is labeled and readily available on the packaging. (gleiche Tabelle/Sequenz wie TFTP)",
+      "Network interfaces / Switch Ports / Buttons": "FIXME-Vorlagen mit EXAMPLE-Werten, nicht geraetespezifisch",
+      "Opening the case": "FIXME (nicht ausgefuellt)",
+      "Serial": "Unusually, this device has an externally accessible serial port which is 3.3v \"logic level\" UART (not RS232). This takes the form of standard 2.54mm (0.1 inch) spaced header pins, which can be used with 2.54mm \"dupont\" style female plugs. Remove the soft plastic dust plug next to the Ethernet port. Pin 1: 3.3v OUTPUT (\"▲\" is printed on the case next to this pin). Pin 2: Transmit data from AP. Pin 3: Receive data to AP. Pin 4: GND/reference. ... The 3.3v output pin should only be connected to adapters which require a voltage input from the target device ... if in doubt, leave pin 1 unconnected.",
+      "Serial connection parameters": "115200, 8N1, 3.3V",
+      "JTAG": "keine Angaben",
+      "Hardware mods": "None so far.",
+      "OEM bootlog (Auszug)": [
+        "U-Boot 2018.09 (Jan 22 2021 - 07:42:43 +0000)",
+        "CPU:   MediaTek MT7621AT ver 1, eco 3",
+        "Clocks: CPU: 880MHz, DDR: 600MHz (1200MT/s), Bus: 220MHz, XTAL: 40MHz",
+        "Model: MediaTek MT7621 reference board (NAND)",
+        "DRAM:  256 MiB",
+        "NAND:  128 MiB",
+        "Initializing NMBM ... NMBM has been successfully attached",
+        "Warning: eth@1e100000 (eth0) using random MAC address - fa:26:d7:78:e2:6c",
+        "Zyxel version:V1.03",
+        "Hit any key to stop autoboot:  0",
+        "Loading FIT image at offset 0x180000 to memory 0x83000000",
+        "Description:  MIPS OpenWrt Linux-4.4.198",
+        "Description:  MIPS OpenWrt mt7621-rfb-ax-nmbm device tree blob",
+        "Linux version 4.4.198 (jenkins@TWPCZT01055-110) (gcc version 5.4.0 (LEDE GCC 5.4.0 r48+2-a5857a0e) ) #0 SMP Fri Nov 4 07:51:19 UTC 2022",
+        "CPU0 revision is: 0001992f (MIPS 1004Kc)",
+        "MIPS: machine is MediaTek MT7621 RFB (802.11ax, NAND with NMBM)",
+        "CPU Clock: 1000MHz",
+        "zyUMAC_wal_attach: num_radios 2",
+        "Welcome to NWA50AX"
+      ],
+      "OpenWrt bootlog": "nicht vorhanden (Platzhalter)",
+      "Tags": "ramips mt7621 128nand 256ram 1port gigabitethernet"
+    },
+    "openwrt_commit": {
+      "Subject": "ramips: add support for ZyXEL NWA50AX / NWA55AXE",
+      "Author": "David Bauer <mail@david-bauer.net>",
+      "Date": "Fri, 27 May 2022 17:48:06 +0200",
+      "CPU": "Mediatek MT7621",
+      "RAM": "256M DDR3",
+      "FLASH": "128M NAND",
+      "ETH": "1x Gigabit Ethernet",
+      "WiFi": "Mediatek MT7915 (2.4/5GHz 802.11ax 2x2 DBDC)",
+      "BTN": "1x Reset (NWA50AX only)",
+      "LED": "1x Multi-Color (NWA50AX only)",
+      "UART Console": "NWA50AX: Available below the rubber cover next to the ethernet port. NWA55AXE: Available on the board when disassembling the device. Settings: 115200 8N1. Layout: <12V> <LAN> GND-RX-TX-VCC. Logic-Level is 3V3. Don't connect VCC to your UART adapter!",
+      "Installation Web-UI": "Upload the Factory image using the devices Web-Interface. As the device uses a dual-image partition layout, OpenWrt can only installed on Slot A. This requires the current active image prior flashing the device to be on Slot B. If the currently installed image is started from Slot A, the device will flash OpenWrt to Slot B. OpenWrt will panic upon first boot in this case and the device will return to the ZyXEL firmware upon next boot. If this happens, first install a ZyXEL firmware upgrade of any version and install OpenWrt after that.",
+      "Installation TFTP": "This installation routine is especially useful in case unknown device password (NWA55AXE lacks reset button) / bricked device. Attach to the UART console header of the device. Interrupt the boot procedure by pressing Enter. The bootloader has a reduced command-set available from CLI, but more commands can be executed by abusing the atns command. Boot a OpenWrt initramfs image available on a TFTP server at 192.168.1.66. Rename the image to owrt.bin: atnf owrt.bin / atna 192.168.1.88 / atns \"192.168.1.66; tftpboot; bootm\". Upon booting, set the booted image to the correct slot: zyxel-bootconfig /dev/mtd10 get-status / zyxel-bootconfig /dev/mtd10 set-image-status 0 valid / zyxel-bootconfig /dev/mtd10 set-active-image 0. Copy the OpenWrt ramboot-factory image to the device using scp. Write the factory image to NAND and reboot the device: mtd write ramboot-factory.bin firmware / reboot",
+      "Dateien": [
+        "package/utils/zyxel-bootconfig/*",
+        "scripts/mkits-zyxel-fit.sh",
+        "target/linux/ramips/dts/mt7621_zyxel_nwa-ax.dtsi",
+        "target/linux/ramips/dts/mt7621_zyxel_nwa50ax.dts",
+        "target/linux/ramips/dts/mt7621_zyxel_nwa55axe.dts",
+        "target/linux/ramips/image/mt7621.mk",
+        "target/linux/ramips/mt7621/base-files/etc/board.d/02_network",
+        "target/linux/ramips/mt7621/base-files/etc/hotplug.d/ieee80211/10_fix_wifi_mac",
+        "target/linux/ramips/mt7621/base-files/lib/upgrade/platform.sh"
+      ]
+    },
+    "openwrt_dts_main": {
+      "compatible": "zyxel,nwa50ax, mediatek,mt7621-soc",
+      "model": "Zyxel NWA50AX",
+      "leds": {
+        "red:system": "gpio 6 active-high",
+        "green:system": "gpio 7 active-high",
+        "blue:system": "gpio 8 active-high"
+      },
+      "led-aliases": {
+        "led-boot": "green",
+        "led-failsafe": "red",
+        "led-running": "green",
+        "led-upgrade": "red"
+      },
+      "keys": {
+        "reset": "gpio 30 active-low, KEY_RESTART"
+      },
+      "nand": "mediatek,nmbm; bmt-max-ratio 15; bmt-max-reserved-blocks 64; remap-range 0x0-0x980000, 0x2980000-0x7800000",
+      "partitionen": [
+        "u-boot 0x0 size 0x80000 ro",
+        "u-boot-env 0x80000 size 0x80000 ro",
+        "factory 0x100000 size 0x80000 ro (eeprom@0 0xe00, precal@e10 0x19c10)",
+        "firmware 0x180000 size 0x2800000 (kernel 0x0 size 0x800000, ubi 0x800000 size 0x2000000)",
+        "zy_firmware_1 0x2980000 size 0x2800000 ro",
+        "zy_rootfs_data 0x5180000 size 0x1400000 ro",
+        "zy_logs 0x6580000 size 0xd00000 ro",
+        "myzyxel 0x7280000 size 0x480000 ro",
+        "bootconfig 0x7700000 size 0x80000",
+        "mrd 0x7780000 size 0x80000 ro (macaddr@1fff8, mac-base)"
+      ],
+      "wlan": "pcie1 wifi@0,0 mediatek,mt76, band@0 und band@1 (DBDC), MAC aus mrd+0/+1",
+      "ethernet": "gmac0 MAC aus mrd; switch0 port@4 label lan; pinctrl mdio + rgmii1; uart3 und rgmii2 als GPIO",
+      "commits_dtsi": [
+        "1180dd6bf7 2025-08-13 Rosen Penev: mt7621: zyxel nwa-ax: set mac address in dts",
+        "f955716341 2025-06-07 Rosen Penev: ramips: fix wifi nodes to upstream standards",
+        "01996b785d 2024-02-17 Shiji Yang: ramips: clean up useless dts partition labels"
+      ]
+    },
+    "openwrt_image_main": {
+      "Device/zyxel_nwa-ax": "$(Device/nand); DEVICE_VENDOR := Zyxel; KERNEL_SIZE := 8192k; DEVICE_PACKAGES := kmod-mt7915-firmware zyxel-bootconfig; KERNEL := kernel-bin | lzma | fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb; IMAGES += factory.bin ramboot-factory.bin; IMAGE/factory.bin := append-kernel | pad-to $$(KERNEL_SIZE) | append-ubi | zyxel-nwa-fit; IMAGE/ramboot-factory.bin := append-kernel | pad-to $$(KERNEL_SIZE) | append-ubi",
+      "Device/zyxel_nwa50ax": "$(Device/zyxel_nwa-ax); DEVICE_MODEL := NWA50AX; DEVICE_ALT0_VENDOR := Zyxel; DEVICE_ALT0_MODEL := NWA90AX"
+    },
+    "deviwiki": {
+      "ergebnis": "keine Geraeteseite, Suche ohne Treffer"
+    },
+    "wikidevi": {
+      "brand": "ZyXEL",
+      "model": "NWA50AX",
+      "revision": "(NebulaFlex)",
+      "series": "AX1800",
+      "manuf_country": "China",
+      "is_manuf": "No",
+      "availability": "now",
+      "fcc_date": "05/07/2021",
+      "fcc_id": "I8811AXAP22A",
+      "ic_id": "2468C-11AXAP22A",
+      "type": "access point",
+      "pwr_v": "12",
+      "pwr_amp": "1.5",
+      "pwr_conn": "barrel",
+      "pwr_poe": "af/at",
+      "cpu1_brand": "MediaTek",
+      "cpu1_model": "MT7621AT",
+      "cpu1_cspeed": "880",
+      "cpu1_cores": "2",
+      "fla1": "128",
+      "fla1_brand": "Macronix",
+      "fla1_model": "MX30LF1G28AD-TI",
+      "ram1": "256",
+      "ram1_brand": "Nanya",
+      "ram1_model": "NT5CC128M16JR-EK",
+      "wi1_chip1_brand": "MediaTek",
+      "wi1_chip1_model": "MT7915DAN",
+      "wi1_chip2_brand": "MediaTek",
+      "wi1_chip2_model": "MT7975DN",
+      "wi1_802dot11_protocols": "bgn+ax",
+      "wi1_ant_conn": "U.FL (internal)",
+      "wi1_txchains": "2",
+      "wi1_rxchains": "2",
+      "wi1_sstreams": "2",
+      "wi2_chip1_brand": "MediaTek",
+      "wi2_chip1_model": "MT7915DAN",
+      "wi2_chip2_brand": "MediaTek",
+      "wi2_chip2_model": "MT7975DN",
+      "wi2_802dot11_protocols": "an+ac+ax",
+      "wi2_ant_conn": "U.FL (internal)",
+      "wi2_txchains": "2",
+      "wi2_rxchains": "2",
+      "wi2_sstreams": "2",
+      "eth_cpu": "true",
+      "lan_speed": "1GbE",
+      "lan_ports": "1",
+      "flags": "Wi-Fi 6, HEW80, MU-MIMO, WPA3",
+      "tp_firmware": "OpenWrt",
+      "802dot11_protocols": "abgn+ac+ax",
+      "_Durchsatzbox": "574 Mbps - 2SS 2.4GHz 802.11ax (40MHz chan., 1024QAM); 1201 Mbps - 2SS 5GHz 802.11ax (80MHz chan., 1024QAM) = AX1800 class",
+      "_TagLine": "AX1800 Wi-Fi 6 Dual-Radio NebulaFlex Access Point",
+      "_ProductPage": "https://www.zyxel.com/global/en/products/wireless/ax1800-wifi-6-dual-radio-nebulaflex-access-point-nwa50ax",
+      "_SeeAlso_802.11ax": "ZyXEL NWA50AX, NWA50AX PRO (AX3000), NWA55AXE (Outdoor, AX1800), NWA90AX (AX1800), NWA90AX PRO, NWA110AX, NWA210AX, NWA220AX-6E"
+    },
+    "fccid": {
+      "Grantee Code": "I88",
+      "Product Code": "11AXAP22A",
+      "Applicant": "ZyXEL Communications Corporation, No.2, Industry East Road IX, Science Park Hsinchu, Taiwan",
+      "Equipment Class": "DTS - Digital Transmission System (und 15E UNII)",
+      "Device Description": "802.11ax (WiFi 6) Dual-Radio PoE Access Point",
+      "Model": "11AXAP22A",
+      "Test Firm": "Sporton International Inc. Hsinhua Laboratory",
+      "TCB": "Timco Engineering, Inc.",
+      "Date of Grant": "05/07/2021",
+      "Application Dated": "05/03/2021",
+      "Short-Term Confidentiality Date": "11/03/2021",
+      "Long-Term Confidentiality": "Yes",
+      "Composite Device": "Yes",
+      "Modular Equipment": "Does not apply",
+      "Frequenzen und Leistung (W, conducted max)": {
+        "2412-2462 MHz (15C)": "0.457",
+        "5180-5240 MHz (15E)": "0.478",
+        "5260-5320 MHz (15E)": "0.244",
+        "5500-5720 MHz (15E)": "0.248",
+        "5745-5825 MHz (15E)": "0.607"
+      },
+      "Grant Comments": "Power listed is maximum power conducted. Professional or OEM installation required. Device operates with specific antennas in MIMO configurations as described in this filing. The antennas use for this device must be installed to provide a separation distance of at least 21cm from all persons ... This device has 20, and 40 MHz bandwidth modes.",
+      "Exhibits": [
+        "User Manual pt 1 (Users Manual) 2021-11-03 PDF 4 MB",
+        "User Manual pt 2 (Users Manual) 2021-11-03 PDF 624.2 KB",
+        "Internal Photos 2021-11-03 PDF 1.9 MB",
+        "External Photos 2021-11-03 PDF 506 KB",
+        "Label Info (ID Label/Location Info) 2021-05-07 PDF 30.3 KB",
+        "Tsup 2.4G (Test Setup Photos) 2021-11-03 PDF 292.4 KB",
+        "Tsup 5G (Test Setup Photos) 2021-11-03 PDF 292.4 KB",
+        "Tsup DFS (Test Setup Photos) 2021-11-03 PDF 74.3 KB",
+        "Test Report 2.4G 2021-05-07 PDF 2.5 MB",
+        "Test Report 5G 2021-05-07 PDF 5.2 MB",
+        "Test Report DFS 2021-05-07 PDF 1.5 MB",
+        "SDoC Attestation Letter 2021-05-07 PDF 107.7 KB",
+        "SDoc Attestation Letter 2021-05-07 PDF 107.7 KB",
+        "Confidentiality Letter 2021-05-07 PDF 135.1 KB",
+        "POA Letter 2021-05-07 PDF 108.7 KB",
+        "Professional Installation Letter 2021-05-07 PDF 130.9 KB",
+        "TPC Declaration Letter 2021-05-07 PDF 130.3 KB",
+        "MPE Report (RF Exposure Info) 2021-05-07 PDF 261.4 KB",
+        "Block Diagram (Metadata only) PDF 14.6 KB",
+        "Schematics (Metadata only) PDF 589 KB",
+        "Operational Description (Metadata only) PDF 39.1 KB",
+        "SW Op Desc (Metadata only, SDR Software/Security Inf) PDF 74.7 KB"
+      ],
+      "Applications": [
+        "NUoRXFQUnGrsft6ewTNZEQ== 2021-05-07 Original Equipment",
+        "FNzP8joP9U2OOJubRVMWeQ== 2021-05-07 Original Equipment"
+      ]
+    },
+    "fcc_handbuch": {
+      "Titel": "User's Guide NWA50AX 802.11ax (WiFi6) Dual-Radio PoE Access Point, Version 6.20 Edition 1, 4/2021",
+      "Default Login": "Management IP: DHCP-assigned IP oder http://192.168.1.2; User Name admin; Password 1234",
+      "Product Feature Table": {
+        "Supported Wireless Standards": "IEEE 802.11a/b/g/n/ac/ax",
+        "Supported Frequency Bands": "2.4 GHz, 5 GHz",
+        "Available Security Modes": "None, WEP, WPA2-MIX, WPA2-PSK, WPA2-PSK-MIX, Enhanced-open, WPA3-personal",
+        "Number of SSID Profiles": "64",
+        "Number of Wireless Radios": "2",
+        "Monitor Mode & Rogue APs Containment": "No",
+        "Rogue AP Detection": "Yes",
+        "WDS - Root AP & Repeater Modes": "Yes",
+        "Tunnel Forwarding Mode": "No",
+        "Layer-2 Isolation": "No",
+        "Supported PoE Standards": "IEEE 802.3at",
+        "Power Detection": "Yes",
+        "External Antennas": "No",
+        "Internal Antennas": "Yes",
+        "Antenna Switch": "No",
+        "Console Port": "4-Pin Serial",
+        "LED Locator": "Yes",
+        "LED Suppression": "Yes",
+        "AC (AP Controller) Discovery": "No",
+        "NebulaFlex PRO": "No",
+        "NCC Discovery": "Yes",
+        "802.11r Fast Roaming Support": "Yes",
+        "802.11k/v Assisted Roaming": "Yes",
+        "Bluetooth Low Energy (BLE)": "No",
+        "USB Port for BLE": "No",
+        "Ethernet Storm Control": "No",
+        "Grounding": "No",
+        "Power Jack": "Yes",
+        "Maximum number of log messages": "512 event logs"
+      },
+      "LED-Tabelle": [
+        "Amber/Green: blinks amber 1 s and green 1 s alternatively = booting up or connecting with NCC",
+        "Amber/Green: blinks alternatively 3 times then solid green 3 s = discovering NCC or AC",
+        "Amber/Green: blinks alternatively 2 times then solid green 3 s = managed by AC but uplink disconnected",
+        "Green slow blinking (1 s on/1 s off) = wireless disabled/failed, default wireless settings, or NCC managed but not registered",
+        "Green steady = ready, wireless active and/or clients connected",
+        "Bright Blue steady = wireless active, no clients",
+        "Blue slow blinking = DFS Channel Availability Check",
+        "Red on = boot failure / system failure",
+        "Red fast blinking (50 ms) = firmware upgrade",
+        "Red slow blinking (3 times, off 3 s) = uplink disconnected in standalone mode"
+      ],
+      "Reset": "If you press the RESET button on the back of the Zyxel Device, the Zyxel Device sets the configuration to its default values and then reboots. ... Press the RESET button and hold it until the Power LED begins to blink. (This usually takes about ten seconds.)",
+      "Power troubleshooting": "Make sure you are using the power adapter included with the Zyxel Device or a PoE power injector/switch."
+    },
+    "fcc_handbuch2": {
+      "RED max RF power (NWA50AX)": "2400-2483.5 MHz: 99.77 mW; 5150-5350 MHz: 199.07 mW; 5470-5725 MHz: 997.70 mW",
+      "RED Hinweise": "If this device for operation in the band 5150-5350 MHz, it is for indoor use only. This equipment should be installed and operated with a minimum distance of 20 cm between the radio equipment and your body.",
+      "FCC Hinweis": "This transmitter must be at least 21 cm from the user and must not be co-located or operating in conjunction with any other antenna or transmitter."
+    },
+    "fcc_label": {
+      "Inhalt": "Label Location <Back of the EUT>, 'Label Here' (Platzhalter)"
+    },
+    "fcc_rf_exposure": {
+      "Report No.": "FA0D1029",
+      "Issued Date": "Apr. 29, 2021",
+      "Test Lab": "Sporton International Inc. Hsinchu Laboratory",
+      "2.4GHz WLAN": "2400-2483.5 MHz, Betrieb 2412-2462 MHz; 802.11b DSSS, g/n OFDM, VHT 256QAM, ax OFDMA bis 1024QAM",
+      "5GHz WLAN": "5150-5250/5250-5350/5470-5725/5725-5850 MHz, Betrieb 5180-5240/5260-5320/5500-5720/5745-5825 MHz; a/n/ac/ax bis 1024QAM",
+      "Antennen": [
+        {
+          "Ant.": 1,
+          "Port": 1,
+          "Brand": "LYNwave",
+          "Model": "MLX21M-221AA0-A",
+          "Type": "PIFA",
+          "Connector": "I-PEX",
+          "Gain 2.4GHz dBi": 3.4,
+          "Gain 5GHz dBi": 4.5
+        },
+        {
+          "Ant.": 2,
+          "Port": 2,
+          "Brand": "LYNwave",
+          "Model": "MLX21M-221AA0-A",
+          "Type": "PIFA",
+          "Connector": "I-PEX",
+          "Gain 2.4GHz dBi": 3.1,
+          "Gain 5GHz dBi": 4.2
+        }
+      ],
+      "MIMO": "2.4 GHz b/g/n/VHT/ax 2TX/2RX, 5 GHz a/n/ac/ax 2TX/2RX, Port 1 und 2 gleichzeitig",
+      "Accessories": "Adapter DVE DSA-18PFCA-12 120150, INPUT 100-240V~ 50/60Hz 0.6A, OUTPUT 12.0V 1.5A 18.0W; Plug*1",
+      "MPE-Abstand": "21 cm"
+    },
+    "fcc_aussenfotos": {
+      "Seite 1-3": "Geraet von oben/schraeg, quadratisches weisses Gehaeuse mit ZYXEL-Aufdruck und LED-Leiste an einer Ecke; Unterseite mit Montageplatte",
+      "Seite 4": "Anschlussfeld in Vertiefung: 'DC 12V' (Hohlbuchse), 'UPLINK' (RJ45, gelb), 'CONSOLE' mit '▲' (4-polige Stiftleiste hinter Schlitz); ueber der Konsole eine kleine Oeffnung",
+      "Seite 4-6 Adapter": "Steckernetzteil 'Switching Adapter MODEL: DSA-18PFCA-12 120150, INPUT: 100-240V~ 50/60Hz 0.6A, OUTPUT: +12.0V 1.5A, EFFICIENCY LEVEL VI', Polaritaetssymbol Minus aussen / Plus innen, Hersteller Dee Van Electronics (Longchuan) / DEE VAN ENTERPRISE CO., LTD., Made in China; Stecker 'Plug' mit US-Flachstiften"
+    },
+    "fcc_innenfotos": {
+      "Chips": {
+        "SoC": "MEDIATEK MT7621AT 2040-AMTH",
+        "RAM": "NANYA NT5CC128M16JR-EK (1931)",
+        "Flash": "MXIC MX30LF1G28AD-TI (S203724, 8H270300A2)",
+        "WLAN": "MEDIATEK MT7915DAN 2040-BXDAL",
+        "WLAN-Frontend": "MEDIATEK MT7975DN 2040-AJCAL (zweimal unter Abschirmungen)",
+        "PoE-PD": "TI TPS23754 (41TG4 C82R)",
+        "Ethernet-Uebertrager": "U-TRON 2041P GSC-24598-R",
+        "weitere": "zwei QFN '8H1 676E 4036' (U21/U23, vermutlich FEM, unbestimmt), U-TRON EPS1388, Quarze 40.0 MHz"
+      },
+      "Antennen": "zwei Antennen auf Metallplatte 'LYNwave.com 01-7421', Koax mit I-PEX-Steckern an JA2/JA3",
+      "Kuehlung": "Aluminium-Kuehlplatte mit Waermeleitpads ueber Abschirmungen, kein Luefter",
+      "Platine": "Aufdruck oben '1244-01001257-51Z_ES' (unscharf abgelesen), CE- und FCC-Logo",
+      "Konsole": "4-polige gewinkelte Stiftleiste am Platinenrand neben RJ45 und Hohlbuchse",
+      "Taster": "Taster am Platinenrand (vermutlich Reset, nicht beschriftet erkennbar)"
+    },
+    "hersteller_seite": {
+      "Titel": "NWA50AX | AX1800 4-Stream WiFi 6 Dual-Radio NebulaFlex Access Point",
+      "Wireless": {
+        "Standard": "IEEE 802.11 ax/ac/n/g/b/a",
+        "MIMO": "MU-MIMO",
+        "Wireless speed": "2.4GHz: 575 Mbps; 5GHz: 1200 Mbps",
+        "Frequency band": "2.4 GHz: USA (FCC) 2.412-2.462 GHz, Europe (ETSI) 2.412-2.472 GHz; 5 GHz: USA (FCC) 5.15-5.35 GHz, 5.470-5.850 GHz; European (ETSI) 5.15-5.35 GHz, 5.470-5.725 GHz",
+        "Bandwidth": "20-, 40-, 80-MHz",
+        "Conducted typical transmit output power *1": "US (2.4GHz/5GHz): 23/26 dBm; EU (2.4GHz/5GHz): 20/25 dBm"
+      },
+      "RF Design": {
+        "Antenna type": "Internal Antenna",
+        "Antenna gain": "2.4 GHz: 3 dBi, 2x2:2SS; 5 GHz: 4 dBi, 2x2:2SS",
+        "Minimum receive sensitivity": "Min. Rx sensitivity up to -99 dBm"
+      },
+      "WLAN Feature": {
+        "Band steering": "Yes",
+        "WDS/Mesh *2": "Yes",
+        "Fast roaming": "Pre-authentication, PMK caching, and 802.11r/k/v",
+        "DCS": "Yes",
+        "Load balancing": "No"
+      },
+      "Security": {
+        "Encryption": "WPA Personal, WPA2 Personal, WPA3 Personal",
+        "Authentication": "No",
+        "Access management": "L2-isolation, MAC filtering, Rogue AP detection(V6.29)"
+      },
+      "Networking": {
+        "IPv6": "Yes",
+        "VLANs": "Yes",
+        "WMM": "Yes",
+        "U-APSD": "Yes"
+      },
+      "Management": {
+        "Operating mode": "Nebula cloud managed, Standalone",
+        "ZON Utility": "Discovery of Zyxel switches, APs and gateways; Centralized and batch configurations: IP configuration, IP renew, Device reboot, Device locating, Web GUI access, Firmware upgrade, Password configuration",
+        "Web UI/CLI": "Yes",
+        "SNMP": "NO"
+      },
+      "Physical Specifications": {
+        "Item Dimensions (WxDxH)": "140 x 140 x 37.5 mm / 5.51 x 5.51 x 1.48 in",
+        "Item Weight": "290 g / 0.64 lb",
+        "Packing Dimensions": "240 x 155 x 60 mm",
+        "Packing Weight": "600 g / 1.32 lb",
+        "Included accessories": "Power adapter, Mount plate, Mounting screws",
+        "MTBF (hr)": "1,010,980"
+      },
+      "Physical Interfaces": {
+        "Ethernet port": "1 x 10/100/1000M LAN",
+        "Power": "Power Adapter: AC 100 - 240V - 50/60 Hz 0.3A; Output: DC +12V 1.5A; PoE (802.3at): power draw 16 W"
+      },
+      "Environmental Specifications": {
+        "Operating Temperature": "0°C to 50°C / 32°F to 122°F",
+        "Operating Humidity": "10% to 90% (non-condensing)",
+        "Storage Temperature": "-40°C to 70°C / -40°F to 158°F",
+        "Storage Humidity": "10% to 90% (non-condensing)"
+      },
+      "Certifications": {
+        "Radio": "FCC Part 15C, FCC Part 15E, ETSI EN 300 328, EN 301 893, LP0002, EN 60601-1-2",
+        "EMC": "FCC Part 15B, EN 301 489-1, EN 301 489-17, EN55022, EN55024, EN61000-3-2/-3, BSMI CNS13438",
+        "Safety": "EN 60950-1, IEC 60950-1, BSMI CNS14336-1"
+      },
+      "Fussnoten": "*1 Conducted typical transmit output power excludes antenna gain. For total (EIRP) transmit power, add antenna gain. *2 WDS, ZyMesh, Smart Mesh and Industry's Open Mesh, Easy Mesh are different mesh systems that do not work with one another."
+    },
+    "hersteller_download": {
+      "Firmware": [
+        "7.12(ABYW.0)C0 2026-07-29",
+        "7.10(ABYW.4)C0 2026-01-21",
+        "7.10(ABYW.3)C0 2025-07-25"
+      ],
+      "User's Guide": "V7.12_Ed1 2026-08-03 (https://download.zyxel.com/NWA50AX/user_guide/NWA50AX-UG.pdf)",
+      "CLI Reference Guide": "https://download.zyxel.com/NWA50AX/cli_reference_guide/NWA50AX_V7.12.pdf",
+      "Quick Start Guide": "008, 2025-04-25",
+      "Datasheet": "7, 2023-04-19",
+      "Antenna Specification Matrix": "1, 2022-03-07",
+      "Certification": [
+        "NCC RF (Chinese) 2021-06-04",
+        "NWA50AX_001.351-02-00773.PDF",
+        "NWA50AX_001.351-03-00522.zip",
+        "NWA50AX_001.351-03-00523.pdf",
+        "NWA50AX_001.351-03-00524.pdf",
+        "NWA50AX_001.351-03-00630.zip",
+        "NWA50AX_001.351-05-00092.pdf"
+      ],
+      "Declaration": "NWA50AX_002.214-01-01455.zip"
+    },
+    "datenblatt": {
+      "Model": "NWA50AX",
+      "Product name": "802.11ax (WiFi 6) Dual-Radio PoE Access Point",
+      "Werbetext": "Dual-radio (dual 2x2) 802.11ax AP; Supporting both local GUI management and Nebula Cloud networking management; built-in 4G/5G interference filters",
+      "Spezifikationen": "identisch mit roh.hersteller_seite (Wireless, RF Design, WLAN Feature, Security, Management, Physical Specifications, Physical Interfaces, Environmental, Certifications)",
+      "Power": "Power adapter: AC 100 - 240 V - 50/60 Hz 0.3 A; Output: DC +12 V 1.5 A; PoE (802.3at): power draw 16 W",
+      "Fusszeile": "All specifications are subject to change without notice. 04/23"
+    },
+    "quick_start_guide": {
+      "Titel": "NWA50AX 802.11ax (WiFi6) Dual-Radio PoE Access Point, Quick Start Guide",
+      "Inhalt": "Video Tutorials; Hardware Connections; Management Options (Nebula App, Nebula Web Portal, Web Configurator); Mounting Options (Wall / Ceiling Mounting, T-bar Ceiling Mounting, Desk Placement); Support Information",
+      "Hardware Connections": "Wait until the LED blinks green. Connect the UPLINK port to a router with Internet access. If you are not using PoE, connect the Zyxel Device power socket to an appropriate power source. (Bild: Power Outlet ODER PoE Switch, Router)",
+      "Etikett-Skizze": "Etikett mit QR-Code auf der Unterseite, daneben Beschriftungen CONSOLE, LAN/UPLINK/PoE und RESET",
+      "Mounting Options": {
+        "Wall / Ceiling Mounting": {
+          "Einleitung": "The mounting kit is for wall or ceiling mounting. You need to choose how you want to mount your Zyxel Device first.",
+          "1-a Wall mounting": "Drill two holes for the screw anchors (A), 62.4 mm apart. Insert the screw anchors into the wall.",
+          "1-b Ceiling mounting": "Drill two holes for the screw anchors (A), 62.4 mm or 70.1 mm apart. Insert the screw anchors into the ceiling.",
+          "Duebel (A)": "x2, Skizze: Laenge 30, Durchmesser 8.00, Unit: mm",
+          "2": "Install two mounting screws through the holes on the bracket (B) into the plugs/anchors to secure the bracket to the wall/ceiling. Make sure the screws are snugly and securely fastened to the wall/ceiling.",
+          "Schrauben": "x2, Skizze: Laenge 23, Kopf 8.00, Unit: mm",
+          "3": "After the bracket is attached to the wall/ceiling, slide the Zyxel Device onto the bracket until it clicks into place.",
+          "Skizze Rueckseite": "Anschlussfeld mit DC-Buchse, RJ45 und 4-poliger Konsole"
+        },
+        "T-bar Ceiling Mounting": {
+          "Hinweis": "Clips (ACCESORY-ZZ0105F) are sold separately.",
+          "1": "Attach two clips to the ceiling grids as shown.",
+          "2": "Install two screws to secure the bracket to the clips.",
+          "Schrauben": "x2, Skizze: Laenge 6.3, Kopf 5.70, Unit: mm",
+          "3": "Slide the Zyxel Device onto the bracket until it clicks into the place."
+        },
+        "Desk Placement": {
+          "1": "Remove the adhesive backing from the rubber pad.",
+          "2": "Align and attach the rubber pad to the gray square to stabilize the Zyxel Device.",
+          "3": "Place the Zyxel Device on the desk."
+        },
+        "Support Information": "EU https://support.zyxel.eu; USA +1 800 255 4101 support@zyxel.com; Taiwan +886 2 2739 9889 retail@zyxel.com.tw; Zyxel Community https://community.zyxel.com. EU Importer Zyxel Networks A/S, Gladsaxevej 378, 2. th. 2860 Soeborg, Denmark; UK Importer Zyxel Networks UK, Wokingham; US Importer Zyxel Communications, Inc, Anaheim. Copyright 2025"
+      }
+    },
+    "antennen_matrix": {
+      "Model": "NWA90AX/NWA50AX",
+      "Space": "Embedded",
+      "2400-2500 MHz": "Gain 3 dBi, VSWR 2:1 Max., Polarization Vertical & Horizontal",
+      "5150-5825 MHz": "Gain 4 dBi, VSWR 2:1 Max., Polarization Vertical & Horizontal",
+      "Hinweis": "Most Zyxel Wireless LAN APs are designed for ceiling-mount typically at heights of 3 to 5 meters; if this is not allowed due to environment restrictions, wall-mount installation is recommended for better performance. Diagramme E-Plane/H-Plane nur als Grafik"
+    },
+    "gluon": {
+      "Zeile": "device('zyxel-nwa50ax', 'zyxel_nwa50ax')",
+      "Abschnitt": "-- Zyxel in targets/ramips-mt7621",
+      "Optionen": "keine (factory und sysupgrade, nicht broken)",
+      "Nachbar": "device('zyxel-nwa55axe', 'zyxel_nwa55axe', {broken = true, -- Missing LED / Reset button}); Pro-Variante als zyxel-nwa50ax-pro in targets/mediatek-filogic"
+    },
+    "hersteller_handbuch_web": {
+      "Abgedeckte Modelle": "WiFi 6: NWA50AX, NWA90AX, NWA55AXE, NWA50AX PRO, NWA55AX PRO, NWA90AX PRO; WiFi 7: NWA30BE, NWA50BE, NWA55BE, NWA90BE, NWA50BE PRO, NWA90BE PRO, NWA50BE MAX, NWA90BE MAX",
+      "WiFi 6 Models Comparison Table (Spalte NWA50ax)": {
+        "Supported WiFi Standards": "IEEE 802.11a, IEEE802.11b, IEEE 802.11g, IEEE 802.11n, IEEE 802.11ac, IEEE802.11ax",
+        "Multi-Link Operation (MLO)": "No",
+        "Supported Frequency Bands": "2.4 GHz, 5 GHz",
+        "Supported Channel Width": "2.4G: 20 / 40 MHz; 5G: 20 / 40 / 80 MHz",
+        "Available Security Modes": "None / Enhanced-open / WEP / WPA2-MIX-Personal / WPA3-Personal",
+        "Number of SSID Profiles": "64",
+        "Number of WiFi Radios": "2",
+        "Security Profile Radius Settings": "No",
+        "Security Profile Enterprise Authentication Settings": "No",
+        "Rogue AP Detection": "Yes",
+        "WDS (Wireless Distribution System) - Root AP & Repeater Modes": "Yes",
+        "Wireless Bridge": "No",
+        "Layer-2 Isolation": "Yes",
+        "Supported PoE Standards": "IEEE 802.3at",
+        "Power Detection": "No",
+        "External Antennas": "No",
+        "Internal Antennas": "Yes",
+        "Console Port": "4-Pin Serial",
+        "Reset button": "Yes",
+        "LED Locator": "Yes",
+        "LED Suppression": "Yes",
+        "APC (AP Controller) Discovery": "No",
+        "NCC Discovery": "Yes",
+        "802.11r Fast Roaming Support": "Yes",
+        "802.11k/v Assisted Roaming": "Yes",
+        "Ethernet Storm Control": "No",
+        "Grounding": "No",
+        "Power Jack": "Yes",
+        "Maximum number of log messages": "512 event logs",
+        "Latest Firmware Version Supported": "7.12"
+      },
+      "Spalte NWA90ax (Vergleich)": "wie NWA50ax, aber Security Modes mit WPA3 Personal & Enterprise, Radius/Enterprise Settings Yes",
+      "LEDs (NWA50AX, NWA90AX, NWA50AX PRO, NWA90AX PRO)": [
+        "Amber/Green blinkt abwechselnd 300 ms: booting up",
+        "Amber/Green blinkt abwechselnd 1 s: discovering the NCC",
+        "Amber/Green 3x abwechselnd, dann 3 s gruen: managed by NCC, fails to connect, reconnecting",
+        "Green slow blinking (1 s on/1 s off): wireless disabled/failed, default WiFi settings und/oder NCC-verwaltet aber nicht registriert",
+        "Green steady: ready, wireless active, clients connected",
+        "Bright Blue steady: wireless active, no clients",
+        "White slow blinking (100 ms je Sekunde): Locator LED, 1-60 min, Vorgabe 10 min",
+        "Blue slow blinking (1x, 1 s aus): DFS Channel Availability Check",
+        "Red on: boot failure/system failure",
+        "Red fast blinking (50 ms): firmware upgrade",
+        "Red slow blinking (3x, 3 s aus): uplink disconnected"
+      ],
+      "Ports and Buttons (NWA50AX, NWA90AX, NWA50AX PRO, NWA90AX PRO)": {
+        "Ausrichtung": "Place the Zyxel Device with the ports facing you and the wall mounting holes at the top.",
+        "POWER": "Connect the power adapter and press the ON/OFF button to start the device",
+        "UPLINK": "Connect the port to a router, a switch, or another access point (AP) to connect the Zyxel Device to the backbone of your network.",
+        "LAN": "Connect computers or other Ethernet devices to Ethernet ports for Internet access. (gemeinsame Tabelle fuer vier Modelle; NWA50AX hat laut Datenblatt nur einen Port)",
+        "CONSOLE": "You can use the console port to manage the Zyxel Device using CLI commands ... Speed 115200 bps, Data Bits 8, Parity None, Stop Bit 1, Flow Control Off",
+        "RESET": "Press the button for more than 5 seconds to return the Zyxel Device to the factory defaults."
+      },
+      "Starting and Stopping": "Using the RESET button: If you press the RESET button on the back of the Zyxel Device, the Zyxel Device sets the configuration to its default values and then reboots.",
+      "PoE": "Tabelle der PoE-Normen: 802.3af Type 1 Class 0-3 15.4 W 44-57 V; 802.3at Type 2 Class 4 30 W 50-57 V; 802.3bt Type 3 Class 5,6 60 W 50-57 V. \"To view the Zyxel Device's supported PoE standards, see Zyxel Device Product Feature Comparison.\"",
+      "System > Power Mode": "Force override the power mode to full power: Select this checkbox if you are using a PoE injector that does not support PoE negotiation. Otherwise, the Zyxel Device cannot draw full power from the power sourcing equipment. Enable this power mode to improve the Zyxel Device's performance in this situation. Ensure that the power sourcing equipment can supply enough power to the AP to avoid abnormal system reboots. Only enable this if you are using a passive PoE injector that is not IEEE 802.3at/bt compliant but can still provide full power."
+    },
+    "datenblatt_v3": {
+      "Produktname": "802.11ax (WiFi 6) Dual-Radio PoE Access Point",
+      "Maximum data rate": "1775 Mbps (v7: 1800 Mbps)",
+      "Conducted typical transmit output power (2.4/5 GHz)": "US 23/26 dBm, EU 20/25 dBm",
+      "Antenna type": "2x2 + 2x2 MIMO embedded antenna",
+      "Antenna gain": "2.4 GHz 3 dBi, 5 GHz 4 dBi",
+      "WDS/Mesh": "Yes",
+      "Fast roaming": "Yes",
+      "Access management": "MAC filtering/ Rogue AP detection",
+      "Operating mode": "Cloud managed / standalone",
+      "Management": "u. a. Zyxel Wireless Optimizer WiFi AP planning; SNMP NO",
+      "Item Dimensions (WxDxH)": "140 x 140 x 37.5 mm / 5.51 x 5.51 x 1.48 in.",
+      "Item Weight": "290 g / 0.64 lb.",
+      "Packing Dimensions (WxDxH)": "240 x 155 x 60 mm / 9.45 x 6.10 x 2.36 in.",
+      "Packing Weight": "600 g / 1.32 lb.",
+      "Included accessories": "Power adapter; Mount plate; Mounting screws",
+      "Power": "Input: AC 100 - 240V - 50/60 Hz 0.3A; Output: DC +12V 1.5A; PoE (802.3at): power draw 16 W",
+      "Operating Temperature": "0°C to 50°C/32°F to 122°F",
+      "Operating Humidity": "10% to 90% (non-condensing)",
+      "Storage Temperature": "-40°C to 70°C/-40°F to 158°F",
+      "Storage Humidity": "10% to 90% (non-condensing)",
+      "Radio": "FCC Part 15C, FCC Part 15E; ETSI EN 300 328, EN 301 893; LP0002, EN 60601-1-2",
+      "Fusszeile": "Copyright 2021 ... 11/11/21"
+    },
+    "connect_test": {
+      "Titel": "Zyxel NWA50AX im Praxis-Test",
+      "Urteil": "HOME-connect-Praxistest-Urteil: befriedigend",
+      "PoE": "Entsprechende Switches oder PoE-Injektoren muessen dem Standard 802.3at folgen.",
+      "Leistungsaufnahme": "Im Betrieb mit dem mitgelieferten Steckernetzteil haben wir eine recht geringe Leistungsaufnahme von 7,5 Watt gemessen.",
+      "Abmessungen B x H x T": "14,0 x 14,0 x 3,8 cm",
+      "Stromversorgung, mittlere gemessene Leistungsaufnahme": "Steckernetzteil 230 Volt (12 V/1,5 A), 7,5 Watt",
+      "WLAN-Standards": "Wi-Fi 6 (802.11ax), Dualband 2,4+5 GHz 2x2 MIMO, max. 1200 Mbit/s auf 5 GHz; max. 574 Mbit/s auf 2,4 GHz; WPA3/WPA2/WPA",
+      "WLAN-Funktionen": "WDS (Wireless Distribution System) / Mesh, Autokanal, manuelle Leistungsanpassung, MAC-Filter, Einrichtung mehrerer VLANs und Gastnetze moeglich",
+      "Lieferumfang": "Router, Netzteil, 1,5 m Wandhalterung, Montagematerial, Kurzanleitung (so in der Quelle)",
+      "Garantie": "2 Jahre Herstellergarantie",
+      "Messwerte iPerf": "2,4 GHz Download 186 Mbit/s, Upload 167 Mbit/s; 5 GHz Download 523 Mbit/s, Upload 476 Mbit/s"
+    },
+    "zyxel_community_15328": {
+      "Frage (dsl, 2022-12-15)": "to use a passive PoE injector rather than power adapter for my NWA50AX, which voltage shall be used? The same 12.0V as on the included adapter?",
+      "Antwort Zyxel_Kay (2022-12-15, Accepted)": "For NWA50AX, its needed voltage is 12V for input, as the adapter show. The PoE requirement for NWA50AX, you may refer to the datasheet here: NWA50AX_6.pdf. Besides, you may consider Zyxel PoE injector PoE12-30W.",
+      "Antwort Zyxel_Kay (2024-03-25)": "The NWA50AX requires a PoE power of up to 16W. The PoE injector, the PoE12-30W, supports the IEEE 802.3at standard and offers up to 30 watts of power budget, which is more than sufficient for the NWA50AX access point."
+    },
+    "zyxel_community_12454": {
+      "Frage Q06 (undsie, 2022-01-12)": "POE: I have used the following to power the AP: Ubiquiti U-POE-AT - limited power; shopdelta Produkt 17194 - limited power; Mikrotik RB960PGS 48V/2.5A adapter - normal power (if I recall right); If I enable \"Force override the power mode to full power\" the AP works ok ... The same POE adapters work ok on the NWA50AX.",
+      "Hinweis": "Die Q06-Frage betrifft den NWA210AX; fuer den NWA50AX meldet der Fragesteller Betrieb ohne Einschraenkung an denselben Injektoren",
+      "Antwort Zyxel_Silvia (2022-01-13)": "when AP in the limited power mode, it will use less antenna to transfer and receive. We suggest you to use the original factory adapter",
+      "Antwort Zyxel_Silvia (2022-02-23)": "We check your Mikrotik injector is using passive PoE. This is the reason why it shows limited power; it provides AF power capability by default, but if it has the ability to provide AT power, we suggest to use force override the power. ... NWA210AX is 4x4 antenna design, it has array gain 3dB and the antenna gain is 3 dB higher than NWA50AX ... the maximum NWA50AX throughput can reach 75~85MB/s",
+      "Antwort Zyxel_Silvia (2022-01-21)": "NWA50AX is design for SB and SOHO ... So, NWA50AX has omni-directional antenna and bigger TX power to have bigger coverage.",
+      "undsie (2022-04-18)": "I can confirm the wifi is going off when shutting down the AP from the menu. Power consumption is ~3W",
+      "Zyxel_Dick (2022-04-13)": "Date code NWA50AX_625P8-DF-2022-04-13.zip behebt: SSID bleibt nach Shutdown aktiv"
+    },
+    "zyxel_community_suche": {
+      "Kommentar 49089 (Zyxel, 2023-03-01)": "No matter which version of GS1920-24HP, they both support IEEE 802.3af and IEEE 802.3at, and be able to power up the NWA50AX.",
+      "Kommentar 48989 (Nutzer, 2023-02-24)": "I ordered a NWA50AX ... I attached it to the switch [GS1900-8HP] and it powered up just fine via POE!",
+      "Discussion 16089 (2023-02-24)": "Thinking of buying nwa50ax access points that use PoE (802.3at): power draw 16 W"
+    },
+    "openwrt_forum_158629": {
+      "Beitrag 2 (Big-Szu, 2023-04-25)": "The device works good and is stable ... I use Ubiquity POE adapter and it's hassle free; iperf 5 GHz 255 Mbit/s, 2.4 GHz 183 Mbit/s",
+      "Beitrag 11 (netnet, 2023-05-19)": "I am not having success with my NWA50AX with 22.03.5; had to roll back to 22.03.4"
+    },
+    "openwrt_forum_233589": {
+      "Beitrag 1 (kroon040, 2025-06-02)": "On the console (serial an ssh tried). show version: Zyxel Communications Corp. model : NWA50AX firmware version: V7.10(ABYW.1) build date : 2025-01-03. Bootloader-Befehl atds: Image0 status :success, Image1 status :success, Boot Image :Image0"
+    },
+    "fcc_testbericht_24": {
+      "Report No.": "FR0D1029AA, Version 01, Issued Date Apr. 29, 2021, Sporton International Inc. Hsinchu Laboratory",
+      "RF General Information": "2400-2483.5 MHz; b/g/n HT20/VHT20/ax HEW20 Kanaele 1-11 (2412-2462); HT40/VHT40/HEW40 Kanaele 3-9 (2422-2452); alle Modi 2TX",
+      "Antenna Information": [
+        {
+          "Ant.": 1,
+          "Port": 1,
+          "Brand": "LYNwave",
+          "Model Name": "MLX21M-221AA0-A",
+          "Antenna Type": "PIFA",
+          "Connector": "I-PEX",
+          "Gain 2.4GHz (dBi)": 3.4,
+          "Gain 5GHz (dBi)": 4.5
+        },
+        {
+          "Ant.": 2,
+          "Port": 2,
+          "Brand": "LYNwave",
+          "Model Name": "MLX21M-221AA0-A",
+          "Antenna Type": "PIFA",
+          "Connector": "I-PEX",
+          "Gain 2.4GHz (dBi)": 3.1,
+          "Gain 5GHz (dBi)": 4.2
+        }
+      ],
+      "Antenna Note": "For WLAN 2.4GHz and 5GHz (2TX/2RX): Port 1 and Port 2 can be used as transmitting/receiving antenna and could transmit/receive simultaneously.",
+      "EUT Power Type": "From Power Adapter or PoE",
+      "Beamforming Function": "With beamforming / Without beamforming, For IEEE 802.11n/ax/VHT in 2.4GHz and IEEE 802.11n/ac/ax in 5GHz",
+      "Function": "Point-to-multipoint",
+      "Test Software Version": "QATool_Dbg (ver 0.0.2.29)",
+      "Test Voltage": "120 V / 60 Hz",
+      "Testmodi AC-Leitung": "1 EUT with Adapter; 2 EUT with PoE",
+      "Hinweise": "1. The manufacturer declared that the console port can not be used by the end-user. 2. The PoE is for measurement only, would not be marketed.",
+      "Support Unit PoE": "GLP PE-1000IAF",
+      "Accessories Adapter": "DVE DSA-18PFCA-12 120150, INPUT: 100-240V ~ 50/60Hz, 0.6A, OUTPUT: 12.0V, 1.5A, 18.0W; Other: Plug*1",
+      "Kabel": "Power cable 1.5 m / 1.8 m, RJ-45 cable 10 m und 1 m (je Aufbau)",
+      "Power Setting 2.4 GHz": "802.11b 16-19.5, 802.11g 14-20, HEW20 13-19, HEW40 12.5-14.5 (je nach Kanal)",
+      "Maximum Conducted Output Power (Average, Summe)": "802.11b 26.60 dBm (0.45709 W); 802.11g 25.74 dBm (0.37497 W); HEW20 25.12 dBm (0.32509 W); HEW40 20.59 dBm (0.11455 W); HEW20-BF/HEW40-BF wie ohne BF",
+      "Appendix H": "Testaufbau-Fotos als eigenes Exhibit (Tsup)"
+    },
+    "fcc_testaufbau_24": {
+      "Inhalt": "1. Conducted Emissions Test Configuration (Mode 2, Front/Rear View); 2. Radiated Emissions 30MHz-1GHz (Mode 3) und Above 1GHz (Front/Rear View)",
+      "Beobachtung": "Geraet liegt auf dem Tisch, Etikett nicht lesbar"
+    },
+    "fccid_ncc": {
+      "Certification Number": "CCAF21LP0660T1",
+      "Equipment Type": "LP",
+      "Device Name": "802.11ax (WiFi 6) 雙頻POE無線網路接取器",
+      "Brand": "ZYXEL",
+      "Model": "NWA50AX",
+      "Applicant": "合勤科技股份有限公司",
+      "Certification Body": "耕興股份有限公司",
+      "Approval Date": "2021-04-26",
+      "Validity": "Y",
+      "Source": "NCC_DATASET_5996",
+      "Dokumente": "Certificate_NWA50AX_E.pdf, Appearance photo.pdf, DFS Test Report.pdf, MPE Test Report.pdf, RF Test Report_2.4G.pdf, RF Test Report_5G.pdf (alle \"Queued\")"
+    },
+    "zyxel_zert_lvd": {
+      "Titel": "CoC for LVD, According to Low Voltage Directive 2014/35/EU",
+      "Product": "802.11ax (WiFi 6) Dual-Radio PoE Access Point",
+      "Type Designation": "NWA50AX",
+      "Applicant": "Zyxel Communications Corporation, Hsinchu Science Park, Taiwan",
+      "Standards": "IEC 62368-1:2014 (Second Edition), EN 62368-1:2014, EN 62368-1:2014/AC:2015, EN 62368-1:2014/A11:2017",
+      "Test Report No": "WL20K2703-L0, Issued Date April 26, 2021",
+      "Pruefstelle": "Wendell Electrical Testing Lab., New Taipei City"
+    },
+    "zyxel_zert_ised": {
+      "Certification No.": "IC: 2468C-11AXAP22A",
+      "Job Number": "2070-21",
+      "Datum": "May 3, 2021",
+      "Tested By": "Sporton International Inc. (Company No. 4086D)",
+      "Type of Equipment": "Spread Spectrum/Digital Device (2400-2483.5 MHz), Local Area Network (LAN) Device, WLAN",
+      "Type of Service": "New Certification (Single)",
+      "HVIN": "NWA50AX",
+      "FVIN": "N/A",
+      "PMN": "NWA50AX",
+      "HMN": "N/A",
+      "Frequenzen/Leistung/Antenne": [
+        "2412-2462 MHz 15M9G1D 0.457 W PIFA/Max gain 3.4dBi",
+        "2412-2462 MHz 23M9D1D 0.375 W PIFA/Max gain 3.4dBi",
+        "2422-2452 MHz 37M7D1D 0.115 W PIFA/Max gain 3.4dBi",
+        "5210 MHz 76M8D1D 0.070 W PIFA/Max gain 4.5dBi",
+        "5260-5320 MHz 18M9D1D 0.067 W",
+        "5270-5310 MHz 37M5D1D 0.067 W",
+        "5290 MHz 76M8D1D 0.067 W",
+        "5510-5550 MHz 37M6D1D 0.224 W",
+        "5670-5710 MHz 37M6D1D 0.248 W",
+        "5530 MHz 76M9D1D 0.114 W",
+        "5690 MHz 72M9D1D 0.233 W",
+        "5755-5795 MHz 46M4D1D 0.607 W",
+        "5775 MHz 77M1D1D 0.325 W (alle 5 GHz: PIFA/Max gain 4.5dBi)"
+      ],
+      "Spezifikation": "RSS-247 Issue 2 Feb.2017; RSS-102 Issue 5; RSS-Gen Issue 5"
+    },
+    "zyxel_zert_ncc": {
+      "Titel": "電信管制射頻器材型式認證證明 (NCC)",
+      "Antragsteller": "合勤科技股份有限公司",
+      "Geraet": "802.11ax (WiFi 6) 雙頻 POE 無線網路接取器",
+      "Marke": "ZYXEL",
+      "Modell": "NWA50AX",
+      "Pruefdatum": "110年4月26日",
+      "Zulassungsnummer": "CCAF21LP0660T1",
+      "Zubehoer (Anmerkung)": "Netzteil DVE DSA-18PFCA-12 120150, 電源線, 配件 Plug"
+    },
+    "zyxel_zert_wifi": {
+      "Certification ID": "WFA126044",
+      "Date of Certification": "July 27, 2023",
+      "Company": "Zyxel Networks Corporation",
+      "Product Name": "802.11ax (WiFi 6) Dual-Radio PoE Access Point",
+      "Product Model Variant": "NWA50AX",
+      "Model Number": "NWA90AX",
+      "Category": "Routers / Access Point for Home or Small Office (Wireless Router)",
+      "Role": "Access Point",
+      "Wi-Fi Component Operating System": "Linux Kernel 4.4.198",
+      "Wi-Fi Component Firmware": "V6.29",
+      "RF Architecture": "2.4 GHz Tx 2 Rx 2; 5 GHz Tx 2 Rx 2",
+      "Certifications": "2.4 GHz Spectrum Capabilities (20/40 MHz), 5 GHz Spectrum Capabilities (20/40/80 MHz), Wi-Fi CERTIFIED 6, a, ac, b, g, n, WMM, Wi-Fi Agile Multiband, Protected Management Frames, WPA2-Personal 2021-01, WPA3-Personal 2022-06, WPA-Personal",
+      "Wi-Fi 6 Merkmale": "DL MU-MIMO, DL OFDMA, UL OFDMA, Individual Target Wake Time, MCS 10-11 Rx/Tx, SU beamformer u. a."
+    },
+    "zyxel_zert_japan": {
+      "Certified number": "020-230119",
+      "Certified date": "2023/5/26",
+      "Model name": "NWA50AX or NWA90AX",
+      "Zertifizierer": "TACOYAKI, Inc.",
+      "2.4 GHz (Art. 2 Abs. 1 Nr. 19)": "G1D/D1D 2412-2472 MHz (13 Kanaele) 0.00748 W/MHz; D1D,G1D 2422-2462 MHz (9 Kanaele) 0.00374 W/MHz",
+      "5 GHz (Art. 2 Abs. 1 Nr. 19-3)": "5.18-5.32 GHz 0.003548 W/MHz; 5.19/5.23/5.27/5.31 GHz 0.001774 W/MHz; 5.21/5.29 GHz 0.000887 W/MHz; 5.5-5.72 GHz 0.0092-0.00991 W/MHz; 5.51-5.71 GHz (40 MHz) 0.00475-0.005 W/MHz; 5.53/5.61/5.69 GHz 0.0025 W/MHz"
+    },
+    "zyxel_eu_doc": {
+      "EU DoC (2025-09-18)": {
+        "Product": "802.11ax (WiFi 6) Dual-Radio PoE Access Point",
+        "Model": "NWA50AX",
+        "Hersteller/Importeur": "Zyxel Networks Corporation / Zyxel Communications Corporation, Hsinchu; Gladsaxevej 378, 2860 Soeborg, Denmark",
+        "Normen": "RED 2014/53/EU: EN 62368-1, EN 18031-1:2024, EN 55032, EN 55035, EN 61000-3-2/-3, EN 62311, EN 50385, EN 301 489-1/-17, EN 300 328 V2.1.1, EN 301 893 V2.1.1; 93/42/EEC EN 60601-1-2:2015; 2009/125/EC EN 50563; (EU)2023/826 EN 50564; RoHS EN IEC 63000",
+        "Abstand": "minimum distance of 20 cm",
+        "Maximum RF power": "2400-2483.5 MHz 99.77 mW; 5150-5350 MHz 199.07 mW; 5470-5725 MHz 997.70 mW"
+      },
+      "ErP Information (20250918)": {
+        "Verordnung (EU) 2023/826": {
+          "Off mode": "N/A",
+          "Network standby (Wireless 5G)": "4.14 W",
+          "Network standby (All port)": "4.47 W",
+          "The period to network standby": "< 1 min"
+        },
+        "Supported Accessory": "DSA-18PFCA-12 120150, Input: 100-240V ~ 50/60Hz 0.6A, Output: 12.0V 1.5A 18.0W, DEE VAN ENTERPRISE CO., LTD",
+        "Verordnung (EU) 2019/1782 (Netzteil)": {
+          "Input voltage": "AC 230V",
+          "Input AC frequency": "50 Hz",
+          "Output voltage": "DC 12V",
+          "Output current": "1.5 A",
+          "Output power": "18 W",
+          "Average active efficiency": "87.483 %",
+          "Efficiency at low load": "82.914%",
+          "No-load power consumption": "0.0668 W"
+        }
+      },
+      "UK PSTI SoC (2025-07-18)": "Product type Access Point, Model NWA50AX; The security support period is December 31,2025. Extended support may be provided after the stated date.",
+      "Safety Warnings (20240117)": "Do not use the device outside, and make sure all the connections are indoors. ... Please refer to the label on the back of the device, datasheet or box information for power rating of the device and operating temperature. This device is restricted to indoor use when operating in the 5150 to 5350 MHz frequency range.",
+      "REACH DoC / PPWR DoC": "nur Stoff-/Verpackungserklaerungen, keine Hardwaredaten"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Zyxel",
+        "quelle": "openwrt_image_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "OpenWrt main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ZyXEL",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ZyXEL Communications Corporation",
+        "quelle": "fccid",
+        "beleg": "https://fccid.io/I8811AXAP22A",
+        "stand": "Grant 2021-05-07 (Application 2021-05-03), Short-Term-Confidentiality bis 2021-11-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "NWA50AX",
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NWA50AX",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Zyxel NWA50AX",
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_zyxel_nwa-ax.dtsi",
+        "stand": "OpenWrt main am 2026-10-19, letzter Commit an der dtsi 1180dd6b vom 2025-08-13 (Rosen Penev, \"mt7621: zyxel nwa-ax: set mac address in dts\")",
+        "sicherheit": "mittel",
+        "bemerkung": "model-String im DTS"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Modellname NWA50AX; keine Hardware-Versionen gefuehrt (ToH 'Versions' leer). Nicht verwechseln mit 'NWA50AX Pro' (MT7981, 2.5G-Port, eigenes Image zyxel-nwa50ax-pro)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump hat zwei Zeilen: NWA50AX (pid 23157572) und NWA50AX Pro (pid 32866353)"
+      },
+      {
+        "wert": "NWA90AX ist laut Wiki hardwaregleich und nutzt dasselbe Image",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Etikett auf der Unterseite (Rueckseite) des Geraets, Inhalt im FCC-Exhibit nicht gezeigt",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/I8811AXAP22A/Label/Label-Info-5231172",
+        "stand": "Exhibit 5231172 (PDF 2021-04-22)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Etikett auf der Rueckseite enthaelt Leistungsangabe und Betriebstemperatur",
+        "quelle": "zyxel_eu_doc",
+        "beleg": "https://download.zyxel.com/NWA50AX/declaration/NWA50AX_006.214-01-01341.zip",
+        "stand": "EU DoC vom 2025-09-18, ErP Information 20250918, UK PSTI SoC vom 2025-07-18, REACH DoC 20250718, PPWR DoC (2026-08-04), Safety Warnings 20240117",
+        "sicherheit": "mittel",
+        "bemerkung": "Safety Warnings: \"refer to the label on the back of the device ... for power rating of the device and operating temperature\""
+      },
+      {
+        "wert": "Pflichtangaben auf dem Etikett: \"IC: 2468C-11AXAP22A\" und Modellnummer",
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-03-00523.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO, 2021-05-03",
+        "sicherheit": "mittel",
+        "bemerkung": "Auflage der Zulassung, kein Foto"
+      },
+      {
+        "wert": "FCC-Pruefmuster ohne sichtbares Etikett auf der Unterseite",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/External-Photos/External-Photos-5231162",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231162)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Vorserienmuster, Seite 1 der Aussenfotos (lokale Kopie erneut angesehen)"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "I8811AXAP22A",
+        "quelle": "fccid",
+        "beleg": "https://fccid.io/I8811AXAP22A",
+        "stand": "Grant 2021-05-07 (Application 2021-05-03), Short-Term-Confidentiality bis 2021-11-03",
+        "sicherheit": "hoch",
+        "bemerkung": "FCC-Modell 11AXAP22A"
+      },
+      {
+        "wert": "I8811AXAP22A",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "I8811AXAP22A",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://fccid.io/NCC/CCAF21LP0660T1 (Taiwan-NCC-ID CCAF21LP0660T1, keine FCC-ID)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "aeltere Angabe im Dump, auf der Datenseite 2026-05-30 durch FCC-ID ersetzt"
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "2468C-11AXAP22A",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2468C-11AXAP22A",
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-03-00523.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO, 2021-05-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ncc_id": [
+      {
+        "wert": "CCAF21LP0660T1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "aus FCCID-Link des Dumps (fccid.io/NCC/...)"
+      },
+      {
+        "wert": "CCAF21LP0660T1",
+        "quelle": "zyxel_zert_ncc",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-03-00524.pdf",
+        "stand": "NCC-Typzulassung CCAF21LP0660T1 (Sporton/耕興), 110年4月26日 = 2021-04-26, PDF 2021-06-02",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "CCAF21LP0660T1",
+        "quelle": "fccid_ncc",
+        "beleg": "https://fccid.io/NCC/CCAF21LP0660T1",
+        "stand": "NCC-Zulassung vom 2021-04-26 (Quelle NCC_DATASET_5996)",
+        "sicherheit": "hoch",
+        "bemerkung": "Approval 2021-04-26"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "NWA90AX"
+        ],
+        "quelle": "openwrt_image_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "OpenWrt main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "DEVICE_ALT0_MODEL := NWA90AX"
+      },
+      {
+        "wert": [
+          "NWA90AX"
+        ],
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "'hardware-wise identical'"
+      },
+      {
+        "wert": [
+          "11AXAP22A"
+        ],
+        "quelle": "fccid",
+        "beleg": "https://fccid.io/I8811AXAP22A",
+        "stand": "Grant 2021-05-07 (Application 2021-05-03), Short-Term-Confidentiality bis 2021-11-03",
+        "sicherheit": "hoch",
+        "bemerkung": "FCC-Modellbezeichnung"
+      },
+      {
+        "wert": [
+          "AX1800 4-Stream WiFi 6 Dual-Radio NebulaFlex Access Point"
+        ],
+        "quelle": "hersteller_seite",
+        "beleg": "https://www.zyxel.com/global/en/products/wireless/nwa50ax/specifications",
+        "stand": "Webseite ohne Datumsangabe, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Produkttitel"
+      },
+      {
+        "wert": [
+          "802.11ax (WiFi 6) Dual-Radio PoE Access Point"
+        ],
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "Produktname"
+      },
+      {
+        "wert": [
+          "NWA90AX"
+        ],
+        "quelle": "zyxel_zert_wifi",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-05-00092.pdf",
+        "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+        "sicherheit": "hoch",
+        "bemerkung": "Product Model Variant NWA50AX, Model Number NWA90AX"
+      },
+      {
+        "wert": [
+          "NWA90AX"
+        ],
+        "quelle": "zyxel_zert_japan",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-03-00630.zip",
+        "stand": "Japan-Typzertifikat 020-230119 vom 2023-05-26 (TACOYAKI, Inc.)",
+        "sicherheit": "hoch",
+        "bemerkung": "Model name \"NWA50AX or NWA90AX\""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog 'MT7621AT ver 1, eco 3'"
+      },
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufdruck 2040-AMTH"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 880,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 880,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 880,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "U-Boot 'CPU: 880MHz'; Stock-Kernel meldet 'CPU Clock: 1000MHz'"
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "mipsel_24kc",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Paketarchitektur"
+      },
+      {
+        "wert": "MIPS 1004Kc",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog CPU0 revision"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 256,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 256,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": "DDR3"
+      },
+      {
+        "wert": 256,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Nanya NT5CC128M16JR-EK"
+      },
+      {
+        "wert": 256,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "U-Boot 'DRAM: 256 MiB'"
+      },
+      {
+        "wert": 256,
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+        "sicherheit": "mittel",
+        "bemerkung": "Chip NANYA NT5CC128M16JR-EK (DDR3, 2 Gbit, abgeleitet aus Teilenummer)"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 128,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "'128NAND'"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Macronix MX30LF1G28AD-TI"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "U-Boot 'NAND: 128 MiB'"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_zyxel_nwa-ax.dtsi",
+        "stand": "OpenWrt main am 2026-10-19, letzter Commit an der dtsi 1180dd6b vom 2025-08-13 (Rosen Penev, \"mt7621: zyxel nwa-ax: set mac address in dts\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt nutzt davon nur firmware 0x2800000 (40 MiB: 8 MiB Kernel + 32 MiB UBI); Rest Zyxel-Partitionen (zy_firmware_1, zy_rootfs_data, zy_logs, myzyxel)"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NAND",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NAND",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NAND (SLC, Macronix MX30LF1G28AD-TI)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+        "sicherheit": "mittel",
+        "bemerkung": "Chipaufdruck"
+      },
+      {
+        "wert": "NAND mit NMBM (MediaTek Bad-Block-Management)",
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_zyxel_nwa-ax.dtsi",
+        "stand": "OpenWrt main am 2026-10-19, letzter Commit an der dtsi 1180dd6b vom 2025-08-13 (Rosen Penev, \"mt7621: zyxel nwa-ax: set mac address in dts\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": [
+          "MediaTek MT7915"
+        ],
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": "WLAN Comments 'DBDC'"
+      },
+      {
+        "wert": [
+          "MediaTek MT7915 DBDC"
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "MediaTek MT7915DAN",
+          "MediaTek MT7975DN"
+        ],
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "MediaTek MT7915DAN",
+          "MediaTek MT7975DN"
+        ],
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+        "sicherheit": "mittel",
+        "bemerkung": "Chipaufdrucke"
+      },
+      {
+        "wert": [
+          "Mediatek MT7915"
+        ],
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": "2.4/5GHz 802.11ax 2x2 DBDC"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "mt76",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "mt76 (kmod-mt7915-firmware)",
+        "quelle": "openwrt_image_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "OpenWrt main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "b/g/n/ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "b/g/n/ax",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "bgn+ax",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n/ax",
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n/ax",
+        "quelle": "zyxel_zert_wifi",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-05-00092.pdf",
+        "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+        "sicherheit": "hoch",
+        "bemerkung": "Wi-Fi CERTIFIED 6, b, g, n; 20/40 MHz"
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": "2x2:2",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": "txchains 2, rxchains 2, sstreams 2"
+      },
+      {
+        "wert": "2x2:2SS",
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2TX/2RX",
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2x2",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": "DBDC"
+      },
+      {
+        "wert": 2,
+        "quelle": "zyxel_zert_wifi",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-05-00092.pdf",
+        "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+        "sicherheit": "hoch",
+        "bemerkung": "2.4 GHz Tx 2 Rx 2"
+      },
+      {
+        "wert": 2,
+        "quelle": "fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "hoch",
+        "bemerkung": "alle Modi 2TX/2RX"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "a/n/ac/ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "a/n/ac/ax",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "an+ac+ax",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac/ax",
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac/ax",
+        "quelle": "zyxel_zert_wifi",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-05-00092.pdf",
+        "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+        "sicherheit": "hoch",
+        "bemerkung": "Wi-Fi CERTIFIED 6, a, ac, n; 20/40/80 MHz"
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": "2x2:2",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2x2:2SS",
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2TX/2RX",
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2x2",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "zyxel_zert_wifi",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-05-00092.pdf",
+        "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+        "sicherheit": "hoch",
+        "bemerkung": "5 GHz Tx 2 Rx 2"
+      }
+    ],
+    "wlan_6_standard": [
+      {
+        "wert": "keins",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": "WLAN 6.0GHz '-'"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AX1800",
+        "quelle": "hersteller_seite",
+        "beleg": "https://www.zyxel.com/global/en/products/wireless/nwa50ax/specifications",
+        "stand": "Webseite ohne Datumsangabe, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "2.4 GHz 575 Mbps, 5 GHz 1200 Mbps"
+      },
+      {
+        "wert": "AX1800",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": "series=AX1800, 574 + 1201 Mbps"
+      },
+      {
+        "wert": "AX1800 (Datenrate 1775 Mbps)",
+        "quelle": "datenblatt_v3",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_3.pdf",
+        "stand": "Datasheet NWA50AX Version 3 (Fusszeile 11/11/21, PDF 2021-11-11, Last-Modified 2021-11-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "v7 nennt 1800 Mbps"
+      }
+    ],
+    "wlan_kanalbreite_mhz": [
+      {
+        "wert": "20/40/80",
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "kein 160 MHz"
+      },
+      {
+        "wert": "20/40 (2.4 GHz-Grant)",
+        "quelle": "fccid",
+        "beleg": "https://fccid.io/I8811AXAP22A",
+        "stand": "Grant 2021-05-07 (Application 2021-05-03), Short-Term-Confidentiality bis 2021-11-03",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant-Kommentar 'This device has 20, and 40 MHz bandwidth modes'"
+      },
+      {
+        "wert": {
+          "2.4": [
+            20,
+            40
+          ],
+          "5": [
+            20,
+            40,
+            80
+          ]
+        },
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "2.4": [
+            20,
+            40
+          ],
+          "5": [
+            20,
+            40,
+            80
+          ]
+        },
+        "quelle": "zyxel_zert_wifi",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-05-00092.pdf",
+        "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": {
+          "US": {
+            "2.4": 23,
+            "5": 26
+          },
+          "EU": {
+            "2.4": 20,
+            "5": 25
+          }
+        },
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "conducted typical, ohne Antennengewinn"
+      },
+      {
+        "wert": {
+          "2412-2462": "0.457 W",
+          "5180-5240": "0.478 W",
+          "5260-5320": "0.244 W",
+          "5500-5720": "0.248 W",
+          "5745-5825": "0.607 W"
+        },
+        "quelle": "fccid",
+        "beleg": "https://fccid.io/I8811AXAP22A",
+        "stand": "Grant 2021-05-07 (Application 2021-05-03), Short-Term-Confidentiality bis 2021-11-03",
+        "sicherheit": "hoch",
+        "bemerkung": "maximum conducted laut Grant"
+      },
+      {
+        "wert": {
+          "2400-2483.5": "99.77 mW",
+          "5150-5350": "199.07 mW",
+          "5470-5725": "997.70 mW"
+        },
+        "quelle": "fcc_handbuch2",
+        "beleg": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-2-5231167",
+        "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021, Teil 2 (PDF 2021-04-22, Exhibit 5231167)",
+        "sicherheit": "hoch",
+        "bemerkung": "EU-Konformitaetsangabe 'maximum RF power'"
+      },
+      {
+        "wert": {
+          "2.4_summe_average": {
+            "11b": 26.6,
+            "11g": 25.74,
+            "HEW20": 25.12,
+            "HEW40": 20.59
+          }
+        },
+        "quelle": "fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "hoch",
+        "bemerkung": "Maximum Conducted Output Power (FCC), beide Ketten zusammen"
+      },
+      {
+        "wert": {
+          "EU_mW": {
+            "2400-2483.5": 99.77,
+            "5150-5350": 199.07,
+            "5470-5725": 997.7
+          }
+        },
+        "quelle": "zyxel_eu_doc",
+        "beleg": "https://download.zyxel.com/NWA50AX/declaration/NWA50AX_006.214-01-01341.zip",
+        "stand": "EU DoC vom 2025-09-18, ErP Information 20250918, UK PSTI SoC vom 2025-07-18, REACH DoC 20250718, PPWR DoC (2026-08-04), Safety Warnings 20240117",
+        "sicherheit": "hoch",
+        "bemerkung": "maximum RF power laut EU DoC 2025-09-18 (EIRP)"
+      },
+      {
+        "wert": {
+          "US": {
+            "2.4": 23,
+            "5": 26
+          },
+          "EU": {
+            "2.4": 20,
+            "5": 25
+          }
+        },
+        "quelle": "datenblatt_v3",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_3.pdf",
+        "stand": "Datasheet NWA50AX Version 3 (Fusszeile 11/11/21, PDF 2021-11-11, Last-Modified 2021-11-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "conducted typical"
+      },
+      {
+        "wert": {
+          "IC_W": {
+            "2412-2462": 0.457,
+            "5755-5795": 0.607
+          }
+        },
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-03-00523.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO, 2021-05-03",
+        "sicherheit": "hoch",
+        "bemerkung": "Hoechstwerte aus der ISED-Tabelle"
+      }
+    ],
+    "frequenzen_5ghz": [
+      {
+        "wert": "ETSI 5.15-5.35 GHz, 5.470-5.725 GHz; FCC 5.15-5.35, 5.470-5.850 GHz",
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "5150-5350 MHz nur innen (EU)",
+        "quelle": "fcc_handbuch2",
+        "beleg": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-2-5231167",
+        "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021, Teil 2 (PDF 2021-04-22, Exhibit 5231167)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-1-5231166",
+        "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021 (PDF 2021-04-22, Exhibit 5231166)",
+        "sicherheit": "hoch",
+        "bemerkung": "BLE 'No'"
+      },
+      {
+        "wert": "nein",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": "'-'"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "Internal antenna"
+      },
+      {
+        "wert": "intern",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-1-5231166",
+        "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021 (PDF 2021-04-22, Exhibit 5231166)",
+        "sicherheit": "hoch",
+        "bemerkung": "External Antennas No, Internal Antennas Yes"
+      },
+      {
+        "wert": "intern (U.FL)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "intern, PIFA mit I-PEX-Stecker",
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "keine abnehmbaren",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas '-'"
+      },
+      {
+        "wert": "intern",
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": "External Antennas No, Internal Antennas Yes"
+      },
+      {
+        "wert": "intern, 2x2 + 2x2 MIMO embedded antenna",
+        "quelle": "datenblatt_v3",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_3.pdf",
+        "stand": "Datasheet NWA50AX Version 3 (Fusszeile 11/11/21, PDF 2021-11-11, Last-Modified 2021-11-25)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "intern, 2x PIFA LYNwave MLX21M-221AA0-A",
+        "quelle": "fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "I-PEX (intern)",
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U.FL (internal)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "I-PEX (intern)",
+        "quelle": "fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": "2x LYNwave MLX21M-221AA0-A"
+      },
+      {
+        "wert": 2,
+        "quelle": "fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "hoch",
+        "bemerkung": "je Antenne dualband (2.4 und 5 GHz)"
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "dualband (beide Antennen fuer 2.4 und 5 GHz)",
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": "Port 1 und 2 fuer beide Baender"
+      },
+      {
+        "wert": "dualband",
+        "quelle": "fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "hoch",
+        "bemerkung": "jede PIFA mit Gewinn fuer 2.4 und 5 GHz"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4": 3,
+          "5": 4
+        },
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "2.4": 3,
+          "5": 4
+        },
+        "quelle": "antennen_matrix",
+        "beleg": "https://download.zyxel.com/NWA50AX/antenna_specification_matrix/NWA50AX_1.pdf",
+        "stand": "Antenna Specification Matrix Version 1 (PDF 2022-03-03, Last-Modified 2022-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "Ant1": {
+            "2.4": 3.4,
+            "5": 4.5
+          },
+          "Ant2": {
+            "2.4": 3.1,
+            "5": 4.2
+          }
+        },
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": "Herstellerangabe im FCC-Bericht"
+      },
+      {
+        "wert": {
+          "Ant1": {
+            "2.4": 3.4,
+            "5": 4.5
+          },
+          "Ant2": {
+            "2.4": 3.1,
+            "5": 4.2
+          }
+        },
+        "quelle": "fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "hoch",
+        "bemerkung": "herstellerdeklariert"
+      },
+      {
+        "wert": {
+          "2.4": 3.4,
+          "5": 4.5
+        },
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-03-00523.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO, 2021-05-03",
+        "sicherheit": "hoch",
+        "bemerkung": "Max gain"
+      },
+      {
+        "wert": {
+          "2.4": 3,
+          "5": 4
+        },
+        "quelle": "datenblatt_v3",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_3.pdf",
+        "stand": "Datasheet NWA50AX Version 3 (Fusszeile 11/11/21, PDF 2021-11-11, Last-Modified 2021-11-25)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "eingebaut, Polarisation vertikal und horizontal, fuer Deckenmontage in 3-5 m ausgelegt",
+        "quelle": "antennen_matrix",
+        "beleg": "https://download.zyxel.com/NWA50AX/antenna_specification_matrix/NWA50AX_1.pdf",
+        "stand": "Antenna Specification Matrix Version 1 (PDF 2022-03-03, Last-Modified 2022-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "Diagramme nur als Grafik, nicht ausgewertet"
+      },
+      {
+        "wert": "rund (omni-directional)",
+        "quelle": "zyxel_community_12454",
+        "beleg": "https://community.zyxel.com/en/discussion/12454/nwa50ax-nwa210ax-questions",
+        "stand": "Thread vom 2022-01-12 bis 2022-05-15 (Fragesteller undsie, Antworten Zyxel_Silvia/Zyxel_Dick/Zyxel_CSO)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Zyxel_Silvia: \"NWA50AX has omni-directional antenna\""
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "UPLINK",
+            "geschwindigkeit": "10/100/1000 Mbit/s",
+            "rolle": "einziger Ethernet-Port, PoE-Eingang"
+          }
+        ],
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "1 x 10/100/1000M LAN"
+      },
+      {
+        "wert": [
+          {
+            "name": "UPLINK",
+            "geschwindigkeit": "1 Gbit/s",
+            "rolle": "einziger Port"
+          }
+        ],
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/External-Photos/External-Photos-5231162",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231162)",
+        "sicherheit": "hoch",
+        "bemerkung": "Beschriftung am Anschlussfeld"
+      },
+      {
+        "wert": [
+          {
+            "name": "lan",
+            "geschwindigkeit": "1 Gbit/s",
+            "rolle": "einziger Port (switch0 port@4)"
+          }
+        ],
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_zyxel_nwa-ax.dtsi",
+        "stand": "OpenWrt main am 2026-10-19, letzter Commit an der dtsi 1180dd6b vom 2025-08-13 (Rosen Penev, \"mt7621: zyxel nwa-ax: set mac address in dts\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "Ethernet",
+            "geschwindigkeit": "1 Gbit/s"
+          }
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Ethernet 1Gbit ports 1"
+      },
+      {
+        "wert": "UPLINK (Port zu Router/Switch), CONSOLE, RESET, POWER",
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "mittel",
+        "bemerkung": "gemeinsame Tabelle fuer NWA50AX/NWA90AX/NWA50AX PRO/NWA90AX PRO nennt zusaetzlich LAN"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "datenblatt_v3",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_3.pdf",
+        "stand": "Datasheet NWA50AX Version 3 (Fusszeile 11/11/21, PDF 2021-11-11, Last-Modified 2021-11-25)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "ein Ethernet-Port, daneben DC-Buchse und Konsole"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "'-'"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "USB ports '-'"
+      },
+      {
+        "wert": "nein",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-1-5231166",
+        "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021 (PDF 2021-04-22, Exhibit 5231166)",
+        "sicherheit": "hoch",
+        "bemerkung": "USB Port for BLE 'No'"
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "'-'"
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "802.3at",
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "PoE (802.3at): power draw 16 W; ob 802.3af-Speisung reicht, sagt keine Quelle"
+      },
+      {
+        "wert": "802.3at",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-1-5231166",
+        "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021 (PDF 2021-04-22, Exhibit 5231166)",
+        "sicherheit": "hoch",
+        "bemerkung": "Supported PoE Standards IEEE 802.3at"
+      },
+      {
+        "wert": "802.3at",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": "'12 VDC, 1.5A or PoE (802.3at)'"
+      },
+      {
+        "wert": "af/at",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": "pwr_poe=af/at"
+      },
+      {
+        "wert": "PoE-PD-Controller TI TPS23754",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+        "sicherheit": "mittel",
+        "bemerkung": "Chipaufdruck"
+      },
+      {
+        "wert": "802.3at",
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": "Supported PoE Standards IEEE 802.3at; Power Detection No (V6.20-Handbuch: Yes)"
+      },
+      {
+        "wert": "802.3at",
+        "quelle": "datenblatt_v3",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_3.pdf",
+        "stand": "Datasheet NWA50AX Version 3 (Fusszeile 11/11/21, PDF 2021-11-11, Last-Modified 2021-11-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "PoE (802.3at): power draw 16 W"
+      },
+      {
+        "wert": "802.3at",
+        "quelle": "connect_test",
+        "beleg": "https://www.connect.de/vergleich/wi-fi-6-router-zyxel-nwa50ax-test-review-3202346-9380.html",
+        "stand": "Artikel vom 29.3.2022 (Hannes Ruegheimer), connect Praxistest",
+        "sicherheit": "mittel",
+        "bemerkung": "Switches oder PoE-Injektoren muessen 802.3at folgen"
+      },
+      {
+        "wert": "802.3at (PoE12-30W empfohlen, 16 W Bedarf)",
+        "quelle": "zyxel_community_15328",
+        "beleg": "https://community.zyxel.com/en/discussion/15328/nwa50ax-poe-voltage",
+        "stand": "Thread vom 2022-12-15, letzte Antwort 2024-03-25 (Zyxel_Kay, Zyxel Employee)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "PoE (Adapter oder PoE geprueft)",
+        "quelle": "fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "hoch",
+        "bemerkung": "EUT Power Type From Power Adapter or PoE; Pruef-Injektor GLP PE-1000IAF (Norm des Injektors nicht angegeben)"
+      },
+      {
+        "wert": "lief an Zyxel GS1900-8HP und laut Zyxel an GS1920-24HP (af/at-Switches)",
+        "quelle": "zyxel_community_suche",
+        "beleg": "https://community.zyxel.com/api/v2/search?query=NWA50AX%20802.3af&limit=30",
+        "stand": "Suchergebnis am 2026-10-19 (Beitraege 2022-2026)",
+        "sicherheit": "niedrig",
+        "bemerkung": "belegt nicht, dass reine 802.3af-Speisung genuegt"
+      },
+      {
+        "wert": "lief an Ubiquiti U-POE-AT und anderen Injektoren ohne \"limited power\"",
+        "quelle": "zyxel_community_12454",
+        "beleg": "https://community.zyxel.com/en/discussion/12454/nwa50ax-nwa210ax-questions",
+        "stand": "Thread vom 2022-01-12 bis 2022-05-15 (Fragesteller undsie, Antworten Zyxel_Silvia/Zyxel_Dick/Zyxel_CSO)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Nutzerangabe; \"limited power\" trat am NWA210AX auf, nicht am NWA50AX"
+      }
+    ],
+    "poe_ausgang": [
+      {
+        "wert": "nein",
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "nur ein Port"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "ja, Hohlbuchse 'DC 12V'",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/External-Photos/External-Photos-5231162",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231162)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja (Power Jack Yes)",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-1-5231166",
+        "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021 (PDF 2021-04-22, Exhibit 5231166)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "barrel",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja (Power Jack Yes)",
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "dc_polaritaet": [
+      {
+        "wert": "Plus innen, Minus aussen",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/External-Photos/External-Photos-5231162",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231162)",
+        "sicherheit": "mittel",
+        "bemerkung": "Polaritaetssymbol auf dem mitgelieferten Netzteil (Foto abgelesen)"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 12,
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/External-Photos/External-Photos-5231162",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231162)",
+        "sicherheit": "hoch",
+        "bemerkung": "Beschriftung 'DC 12V'"
+      },
+      {
+        "wert": 12,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "zyxel_community_15328",
+        "beleg": "https://community.zyxel.com/en/discussion/15328/nwa50ax-poe-voltage",
+        "stand": "Thread vom 2022-12-15, letzte Antwort 2024-03-25 (Zyxel_Kay, Zyxel Employee)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"its needed voltage is 12V for input, as the adapter show\""
+      },
+      {
+        "wert": 12,
+        "quelle": "datenblatt_v3",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_3.pdf",
+        "stand": "Datasheet NWA50AX Version 3 (Fusszeile 11/11/21, PDF 2021-11-11, Last-Modified 2021-11-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "Output: DC +12V 1.5A"
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 1.5,
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "Netzteilausgang"
+      },
+      {
+        "wert": 1.5,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.5,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.5,
+        "quelle": "datenblatt_v3",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_3.pdf",
+        "stand": "Datasheet NWA50AX Version 3 (Fusszeile 11/11/21, PDF 2021-11-11, Last-Modified 2021-11-25)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "Included accessories: Power adapter"
+      },
+      {
+        "wert": true,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "'includes a 12v1.5A power supply'"
+      },
+      {
+        "wert": true,
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": "Zubehoer im Pruefling"
+      },
+      {
+        "wert": true,
+        "quelle": "datenblatt_v3",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_3.pdf",
+        "stand": "Datasheet NWA50AX Version 3 (Fusszeile 11/11/21, PDF 2021-11-11, Last-Modified 2021-11-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "Included accessories: Power adapter"
+      },
+      {
+        "wert": true,
+        "quelle": "connect_test",
+        "beleg": "https://www.connect.de/vergleich/wi-fi-6-router-zyxel-nwa50ax-test-review-3202346-9380.html",
+        "stand": "Artikel vom 29.3.2022 (Hannes Ruegheimer), connect Praxistest",
+        "sicherheit": "mittel",
+        "bemerkung": "Lieferumfang: Netzteil"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "AC 100-240 V 50/60 Hz 0.3 A; DC +12 V 1.5 A",
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DVE DSA-18PFCA-12 120150, 100-240 V~ 50/60 Hz 0.6 A, 12.0 V 1.5 A 18.0 W",
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": "Eingangsstrom 0.6 A statt 0.3 A wie im Datenblatt"
+      },
+      {
+        "wert": "Steckernetzteil DSA-18PFCA-12 120150 (Dee Van), +12.0 V 1.5 A, Effizienzklasse VI, US-Flachstecker im Pruefmuster",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/External-Photos/External-Photos-5231162",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231162)",
+        "sicherheit": "mittel",
+        "bemerkung": "Foto abgelesen; EU-Stecker nicht belegt"
+      },
+      {
+        "wert": "DVE DSA-18PFCA-12 120150, INPUT 100-240V ~ 50/60Hz 0.6A, OUTPUT 12.0V 1.5A 18.0W",
+        "quelle": "fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DSA-18PFCA-12 120150, Input 100-240V ~ 50/60Hz 0.6A, Output 12.0V 1.5A 18.0W; Effizienz 87.483 %, Leerlauf 0.0668 W",
+        "quelle": "zyxel_eu_doc",
+        "beleg": "https://download.zyxel.com/NWA50AX/declaration/NWA50AX_006.214-01-01341.zip",
+        "stand": "EU DoC vom 2025-09-18, ErP Information 20250918, UK PSTI SoC vom 2025-07-18, REACH DoC 20250718, PPWR DoC (2026-08-04), Safety Warnings 20240117",
+        "sicherheit": "hoch",
+        "bemerkung": "ErP Information 20250918"
+      },
+      {
+        "wert": "Input: AC 100 - 240V - 50/60 Hz 0.3A; Output: DC +12V 1.5A",
+        "quelle": "datenblatt_v3",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_3.pdf",
+        "stand": "Datasheet NWA50AX Version 3 (Fusszeile 11/11/21, PDF 2021-11-11, Last-Modified 2021-11-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "Eingangsstrom 0.3 A wie in v7"
+      },
+      {
+        "wert": "DVE DSA-18PFCA-12 120150",
+        "quelle": "zyxel_zert_ncc",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-03-00524.pdf",
+        "stand": "NCC-Typzulassung CCAF21LP0660T1 (Sporton/耕興), 110年4月26日 = 2021-04-26, PDF 2021-06-02",
+        "sicherheit": "hoch",
+        "bemerkung": "Zubehoer in der NCC-Zulassung"
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 16,
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "PoE (802.3at): power draw 16 W"
+      },
+      {
+        "wert": 16,
+        "quelle": "datenblatt_v3",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_3.pdf",
+        "stand": "Datasheet NWA50AX Version 3 (Fusszeile 11/11/21, PDF 2021-11-11, Last-Modified 2021-11-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "PoE (802.3at): power draw 16 W"
+      },
+      {
+        "wert": 16,
+        "quelle": "zyxel_community_15328",
+        "beleg": "https://community.zyxel.com/en/discussion/15328/nwa50ax-poe-voltage",
+        "stand": "Thread vom 2022-12-15, letzte Antwort 2024-03-25 (Zyxel_Kay, Zyxel Employee)",
+        "sicherheit": "mittel",
+        "bemerkung": "Zyxel-Mitarbeiter: \"requires a PoE power of up to 16W\""
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor 'No'"
+      },
+      {
+        "wert": "innen",
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "mittel",
+        "bemerkung": "Betrieb 0-50 °C, kein IP-Schutz angegeben; Outdoor-Schwestermodell ist NWA55AXE"
+      },
+      {
+        "wert": "innen",
+        "quelle": "zyxel_eu_doc",
+        "beleg": "https://download.zyxel.com/NWA50AX/declaration/NWA50AX_006.214-01-01341.zip",
+        "stand": "EU DoC vom 2025-09-18, ErP Information 20250918, UK PSTI SoC vom 2025-07-18, REACH DoC 20250718, PPWR DoC (2026-08-04), Safety Warnings 20240117",
+        "sicherheit": "hoch",
+        "bemerkung": "Safety Warnings: \"Do not use the device outside, and make sure all the connections are indoors.\""
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 50 °C",
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "Luftfeuchte 10-90 % nicht kondensierend; Lagerung -40 bis 70 °C"
+      },
+      {
+        "wert": "0 bis 50 °C",
+        "quelle": "datenblatt_v3",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_3.pdf",
+        "stand": "Datasheet NWA50AX Version 3 (Fusszeile 11/11/21, PDF 2021-11-11, Last-Modified 2021-11-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "Luftfeuchte 10-90 % nicht kondensierend; Lagerung -40 bis 70 °C"
+      }
+    ],
+    "montage": [
+      {
+        "wert": [
+          "Wand",
+          "Decke",
+          "T-Bar-Decke",
+          "Tisch"
+        ],
+        "quelle": "quick_start_guide",
+        "beleg": "https://download.zyxel.com/NWA50AX/quick_start_guide/NWA50AX_008.pdf",
+        "stand": "QSG Version 008 (NWA50AX_web_QSG_20250416_v08, PDF 2025-04-16, Last-Modified 2025-04-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "Mounting Options"
+      },
+      {
+        "wert": [
+          "Wand",
+          "Decke"
+        ],
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "'designed for wall/ceiling mount'"
+      },
+      {
+        "wert": "Montageplatte und Schrauben beiliegend",
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "Wand",
+          "Decke",
+          "T-Bar-Decke (Clips ACCESORY-ZZ0105F separat)",
+          "Tisch (Gummipad)"
+        ],
+        "quelle": "quick_start_guide",
+        "beleg": "https://download.zyxel.com/NWA50AX/quick_start_guide/NWA50AX_008.pdf",
+        "stand": "QSG Version 008 (NWA50AX_web_QSG_20250416_v08, PDF 2025-04-16, Last-Modified 2025-04-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "Wandhalterung (B) zum Aufschieben, rastet ein"
+      },
+      {
+        "wert": "Ports zeigen zum Betrachter, Wandmontageloecher oben (Ausrichtung laut Port-Tabelle)",
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Wandhalterung im Lieferumfang",
+        "quelle": "connect_test",
+        "beleg": "https://www.connect.de/vergleich/wi-fi-6-router-zyxel-nwa50ax-test-review-3202346-9380.html",
+        "stand": "Artikel vom 29.3.2022 (Hannes Ruegheimer), connect Praxistest",
+        "sicherheit": "mittel",
+        "bemerkung": "\"1,5 m Wandhalterung\" (so in der Quelle)"
+      },
+      {
+        "wert": "Mount plate, Mounting screws im Lieferumfang",
+        "quelle": "datenblatt_v3",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_3.pdf",
+        "stand": "Datasheet NWA50AX Version 3 (Fusszeile 11/11/21, PDF 2021-11-11, Last-Modified 2021-11-25)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "140 x 140 x 37.5",
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "B x T x H; Verpackung 240 x 155 x 60"
+      },
+      {
+        "wert": "140 x 140 x 37.5",
+        "quelle": "datenblatt_v3",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_3.pdf",
+        "stand": "Datasheet NWA50AX Version 3 (Fusszeile 11/11/21, PDF 2021-11-11, Last-Modified 2021-11-25)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "140 x 140 x 38",
+        "quelle": "connect_test",
+        "beleg": "https://www.connect.de/vergleich/wi-fi-6-router-zyxel-nwa50ax-test-review-3202346-9380.html",
+        "stand": "Artikel vom 29.3.2022 (Hannes Ruegheimer), connect Praxistest",
+        "sicherheit": "mittel",
+        "bemerkung": "14,0 x 14,0 x 3,8 cm"
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 290,
+        "quelle": "datenblatt",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "stand": "Datasheet NWA50AX Version 7 (Fusszeile 04/23, PDF 2023-04-17/18, Last-Modified 2023-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "Verpackt 600 g"
+      },
+      {
+        "wert": 290,
+        "quelle": "datenblatt_v3",
+        "beleg": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_3.pdf",
+        "stand": "Datasheet NWA50AX Version 3 (Fusszeile 11/11/21, PDF 2021-11-11, Last-Modified 2021-11-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "Verpackung 600 g"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+        "sicherheit": "mittel",
+        "bemerkung": "kein Luefter, passiv ueber Aluminiumplatte mit Waermeleitpads"
+      }
+    ],
+    "kuehlung": [
+      {
+        "wert": "passiv, Aluminium-Kuehlplatte mit Waermeleitpads",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "leds": [
+      {
+        "wert": "1 Mehrfarben-LED (rot/gruen/blau)",
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_zyxel_nwa-ax.dtsi",
+        "stand": "OpenWrt main am 2026-10-19, letzter Commit an der dtsi 1180dd6b vom 2025-08-13 (Rosen Penev, \"mt7621: zyxel nwa-ax: set mac address in dts\")",
+        "sicherheit": "mittel",
+        "bemerkung": "red:system gpio6, green:system gpio7, blue:system gpio8"
+      },
+      {
+        "wert": "1",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": "LED count"
+      },
+      {
+        "wert": "1x Multi-Color",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "eine LED: amber/gruen/blau/rot je Zustand",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-1-5231166",
+        "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021 (PDF 2021-04-22, Exhibit 5231166)",
+        "sicherheit": "hoch",
+        "bemerkung": "Tabelle 6"
+      },
+      {
+        "wert": "eine mehrfarbige System-LED (amber/gruen/blau/weiss/rot)",
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "ja (Stock-Firmware: LED Suppression)",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-1-5231166",
+        "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021 (PDF 2021-04-22, Exhibit 5231166)",
+        "sicherheit": "hoch",
+        "bemerkung": "unter OpenWrt GPIO-LEDs, per Konfiguration steuerbar"
+      },
+      {
+        "wert": true,
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": "LED Suppression Yes"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "ja, Loch auf der Rueckseite, ca. 10 s bis LED rot blinkt (Werksreset Stock)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, RESET-Taste auf der Rueckseite; etwa zehn Sekunden halten, bis die Power-LED blinkt",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-1-5231166",
+        "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021 (PDF 2021-04-22, Exhibit 5231166)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, gpio 30 (KEY_RESTART)",
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_zyxel_nwa-ax.dtsi",
+        "stand": "OpenWrt main am 2026-10-19, letzter Commit an der dtsi 1180dd6b vom 2025-08-13 (Rosen Penev, \"mt7621: zyxel nwa-ax: set mac address in dts\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1 Taster",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Button count 1"
+      },
+      {
+        "wert": "RESET-Beschriftung neben dem Etikett auf der Unterseite",
+        "quelle": "quick_start_guide",
+        "beleg": "https://download.zyxel.com/NWA50AX/quick_start_guide/NWA50AX_008.pdf",
+        "stand": "QSG Version 008 (NWA50AX_web_QSG_20250416_v08, PDF 2025-04-16, Last-Modified 2025-04-25)",
+        "sicherheit": "mittel",
+        "bemerkung": "Skizze"
+      },
+      {
+        "wert": "ja; laenger als 5 Sekunden druecken = Werkseinstellungen; RESET auf der Rueckseite",
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": "V6.20-Handbuch nennt etwa zehn Sekunden bis die LED blinkt"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "aussen zugaenglich",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "2.54-mm-Stiftleiste unter weichem Kunststoffstopfen neben dem Ethernet-Port"
+      },
+      {
+        "wert": "aussen zugaenglich",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": "'below the rubber cover next to the ethernet port'"
+      },
+      {
+        "wert": "aussen zugaenglich",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/External-Photos/External-Photos-5231162",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231162)",
+        "sicherheit": "hoch",
+        "bemerkung": "Beschriftung 'CONSOLE ▲' im Anschlussfeld"
+      },
+      {
+        "wert": "aussen zugaenglich (Console Port 4-Pin Serial)",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-1-5231166",
+        "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021 (PDF 2021-04-22, Exhibit 5231166)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "aussen zugaenglich (CONSOLE-Port am Anschlussfeld, 4-Pin Serial)",
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "aussen zugaenglich (Skizze Anschlussfeld: DC-Buchse, RJ45, 4-polige Konsole)",
+        "quelle": "quick_start_guide",
+        "beleg": "https://download.zyxel.com/NWA50AX/quick_start_guide/NWA50AX_008.pdf",
+        "stand": "QSG Version 008 (NWA50AX_web_QSG_20250416_v08, PDF 2025-04-16, Last-Modified 2025-04-25)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "Pin 1 (▲) 3.3 V Ausgang, Pin 2 TX (vom AP), Pin 3 RX (zum AP), Pin 4 GND",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Pin 1 nicht anschliessen"
+      },
+      {
+        "wert": "von DC-/LAN-Seite her: GND - RX - TX - VCC",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": "VCC nicht anschliessen; Reihenfolge passt zur Wiki-Angabe (▲ = VCC am aeusseren Ende)"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "115200 8N1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1, Flow Control Off",
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "U-Boot-Abbruch per Enter; reduzierter Befehlssatz, weitere Befehle ueber 'atns \"...; tftpboot; bootm\"'",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot-Abbruch innerhalb 3 s noetig (atna/atns/atnz/atrs)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Konsole laut Hersteller nicht fuer Endnutzer vorgesehen",
+        "quelle": "fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"The manufacturer declared that the console port can not be used by the end-user.\""
+      },
+      {
+        "wert": "Stock-CLI per Konsole mit Login; Bootloader-Befehl atds zeigt Image0/Image1 und Boot Image",
+        "quelle": "openwrt_forum_233589",
+        "beleg": "https://forum.openwrt.org/t/install-openwrt-on-zyxel-nwa50ax/233589",
+        "stand": "Thread 2025-06-02 bis 2025-06-03, 4 Beitraege",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "FCC-Innenfotos zeigen zweischaliges Gehaeuse, Platine unter Aluminiumplatte verschraubt",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Anleitung zum Oeffnen fehlt (Wiki FIXME)"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ramips/mt7621",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ramips/mt7621",
+        "quelle": "openwrt_image_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "OpenWrt main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Device zyxel_nwa50ax"
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "22.03.2",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Commit a0b7fef0 (2022-05-27)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.4",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "23.05.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "veraltet im Dump"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "Yes",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, factory und sysupgrade, nicht broken",
+        "quelle": "gluon",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.3/targets/ramips-mt7621",
+        "stand": "lokaler Checkout firmware-2025.1/gluon, v2025.1.3 (e2fe4b52, 2026-08-18)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot 2018.09 (Jan 22 2021), Zyxel version V1.03",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog"
+      },
+      {
+        "wert": "Zyxel-Bootloader mit Dual-Image (atds: Image0/Image1, Boot Image)",
+        "quelle": "openwrt_forum_233589",
+        "beleg": "https://forum.openwrt.org/t/install-openwrt-on-zyxel-nwa50ax/233589",
+        "stand": "Thread 2025-06-02 bis 2025-06-03, 4 Beitraege",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Web-UI der Stock-Firmware mit factory.bin; nur wenn aktiver Slot 1 (B) ist, sonst erst Zyxel-Firmware flashen; Dateiname kurz halten (factory.bin)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Web-UI: OpenWrt nur auf Slot A; aktiver Slot muss vorher B sein. TFTP ueber Konsole: initramfs owrt.bin von 192.168.1.66, dann zyxel-bootconfig und mtd write ramboot-factory.bin",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "GUI OEM, U-Boot TFTP + serial recovery, see git-commit",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_login": [
+      {
+        "wert": "admin / 1234, DHCP oder 192.168.1.2",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-1-5231166",
+        "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021 (PDF 2021-04-22, Exhibit 5231166)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.zyxel.com/de/de/support/download?model=nwa50ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://www.zyxel.com/global/en/support/download?model=nwa50ax",
+        "quelle": "hersteller_download",
+        "beleg": "https://www.zyxel.com/global/en/support/download?model=nwa50ax",
+        "stand": "Webseite, neuester Eintrag User's Guide V7.12_Ed1 vom 2026-08-03",
+        "sicherheit": "hoch",
+        "bemerkung": "neueste Firmware 7.12(ABYW.0)C0 vom 2026-07-29"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Seitenrevision 2026-05-30 11:06 (djfe, \"replace NCC with FCC id link, availability, current release, update installation/recovery method, wikidevi\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.zyxel.com/de/de/products/wireless/80211ax-wifi-6-dual-radio-poe-access-point-nwa50ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa50ax",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://www.zyxel.com/global/en/products/wireless/nwa50ax",
+        "quelle": "hersteller_seite",
+        "beleg": "https://www.zyxel.com/global/en/products/wireless/nwa50ax/specifications",
+        "stand": "Webseite ohne Datumsangabe, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+        "quelle": "hersteller_download",
+        "beleg": "https://www.zyxel.com/global/en/support/download?model=nwa50ax",
+        "stand": "Webseite, neuester Eintrag User's Guide V7.12_Ed1 vom 2026-08-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montageloecher": [
+      {
+        "wert": {
+          "anzahl": 2,
+          "abstand_wand_mm": 62.4,
+          "abstand_decke_mm": [
+            62.4,
+            70.1
+          ],
+          "duebel": "2x, 8.00 x 30 mm",
+          "schrauben": "2x, 23 mm lang, Kopf 8.00 mm",
+          "t_bar_schrauben": "2x, 6.3 mm lang, Kopf 5.70 mm"
+        },
+        "quelle": "quick_start_guide",
+        "beleg": "https://download.zyxel.com/NWA50AX/quick_start_guide/NWA50AX_008.pdf",
+        "stand": "QSG Version 008 (NWA50AX_web_QSG_20250416_v08, PDF 2025-04-16, Last-Modified 2025-04-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "Bohrabstand der Halterung; Masse aus den Skizzen (\"Unit: mm\")"
+      }
+    ],
+    "leistung_w_typ": [
+      {
+        "wert": 7.5,
+        "quelle": "connect_test",
+        "beleg": "https://www.connect.de/vergleich/wi-fi-6-router-zyxel-nwa50ax-test-review-3202346-9380.html",
+        "stand": "Artikel vom 29.3.2022 (Hannes Ruegheimer), connect Praxistest",
+        "sicherheit": "mittel",
+        "bemerkung": "gemessen, \"mittlere gemessene Leistungsaufnahme\" mit mitgeliefertem 12-V-Netzteil an 230 V"
+      },
+      {
+        "wert": {
+          "network_standby_wireless_5g": 4.14,
+          "network_standby_all_port": 4.47
+        },
+        "quelle": "zyxel_eu_doc",
+        "beleg": "https://download.zyxel.com/NWA50AX/declaration/NWA50AX_006.214-01-01341.zip",
+        "stand": "EU DoC vom 2025-09-18, ErP Information 20250918, UK PSTI SoC vom 2025-07-18, REACH DoC 20250718, PPWR DoC (2026-08-04), Safety Warnings 20240117",
+        "sicherheit": "hoch",
+        "bemerkung": "ErP-Angabe nach (EU) 2023/826, Network standby, nicht Volllast"
+      },
+      {
+        "wert": "~3 W nach Shutdown ueber das Menue (WLAN aus)",
+        "quelle": "zyxel_community_12454",
+        "beleg": "https://community.zyxel.com/en/discussion/12454/nwa50ax-nwa210ax-questions",
+        "stand": "Thread vom 2022-01-12 bis 2022-05-15 (Fragesteller undsie, Antworten Zyxel_Silvia/Zyxel_Dick/Zyxel_CSO)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Nutzerangabe 2022-04-18"
+      }
+    ],
+    "poe_hinweis": [
+      {
+        "wert": "Schalter \"Force override the power mode to full power\" fuer Injektoren ohne PoE-Aushandlung (passiv), sonst zieht das Geraet nicht die volle Leistung",
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": "Configuration > System > Power Mode, Sammelhandbuch"
+      },
+      {
+        "wert": "im Limited-Power-Modus nutzt der AP weniger Antennen (Ketten)",
+        "quelle": "zyxel_community_12454",
+        "beleg": "https://community.zyxel.com/en/discussion/12454/nwa50ax-nwa210ax-questions",
+        "stand": "Thread vom 2022-01-12 bis 2022-05-15 (Fragesteller undsie, Antworten Zyxel_Silvia/Zyxel_Dick/Zyxel_CSO)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Zyxel_Silvia 2022-01-13, im Thread zu NWA50AX/NWA210AX, Aussage allgemein"
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": "keine passive Spannung angegeben; Zyxel nennt nur 802.3at und 12 V fuer die DC-Buchse",
+        "quelle": "zyxel_community_15328",
+        "beleg": "https://community.zyxel.com/en/discussion/15328/nwa50ax-poe-voltage",
+        "stand": "Thread vom 2022-12-15, letzte Antwort 2024-03-25 (Zyxel_Kay, Zyxel Employee)",
+        "sicherheit": "mittel",
+        "bemerkung": "Frage nach passiver PoE-Spannung beantwortet mit \"12V for input, as the adapter show\" (gemeint ist die DC-Buchse)"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "keine Revision gefuehrt; HVIN NWA50AX",
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-03-00523.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO, 2021-05-03",
+        "sicherheit": "hoch",
+        "bemerkung": "ISED Hardware Version Id Number = NWA50AX, FVIN N/A; keine Revisionskennung"
+      }
+    ],
+    "japan_zert": [
+      {
+        "wert": "020-230119",
+        "quelle": "zyxel_zert_japan",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-03-00630.zip",
+        "stand": "Japan-Typzertifikat 020-230119 vom 2023-05-26 (TACOYAKI, Inc.)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typzertifikat 2.4 und 5 GHz"
+      }
+    ],
+    "wifi_alliance_id": [
+      {
+        "wert": "WFA126044",
+        "quelle": "zyxel_zert_wifi",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-05-00092.pdf",
+        "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_sicherheitsupdates_bis": [
+      {
+        "wert": "2025-12-31 (UK PSTI, Verlaengerung moeglich)",
+        "quelle": "zyxel_eu_doc",
+        "beleg": "https://download.zyxel.com/NWA50AX/declaration/NWA50AX_006.214-01-01341.zip",
+        "stand": "EU DoC vom 2025-09-18, ErP Information 20250918, UK PSTI SoC vom 2025-07-18, REACH DoC 20250718, PPWR DoC (2026-08-04), Safety Warnings 20240117",
+        "sicherheit": "hoch",
+        "bemerkung": "UK PSTI SoC 2025-07-18"
+      }
+    ],
+    "stock_os": [
+      {
+        "wert": "Linux Kernel 4.4.198, Firmware V6.29 (zum Zertifizierungszeitpunkt)",
+        "quelle": "zyxel_zert_wifi",
+        "beleg": "https://download.zyxel.com/NWA50AX/certification/NWA50AX_001.351-05-00092.pdf",
+        "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-5G-5231171",
+      "kategorie": "funk",
+      "grund": "Testbericht 5 GHz (5.2 MB) nicht geladen"
+    },
+    {
+      "url": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-DFS-5231169",
+      "kategorie": "funk",
+      "grund": "DFS-Testbericht (1.5 MB) nicht geladen"
+    },
+    {
+      "url": "https://fccid.io/I8811AXAP22A/Test-Setup-Photos/Tsup-2-4G-5231147",
+      "kategorie": "fotos",
+      "grund": "Tsup-2-4G ausgewertet (kein Etikett sichtbar); Tsup-5G-5231164 und Tsup-DFS-5231165 nicht ausgewertet"
+    },
+    {
+      "url": "https://fccid.io/I8811AXAP22A",
+      "kategorie": "schaltplan",
+      "grund": "Block Diagram, Schematics, Operational Description, SW Op Desc nur 'Metadata only' (vertraulich)"
+    },
+    {
+      "url": "https://fccid.io/I8811AXAP22A/Label/Label-Info-5231172",
+      "kategorie": "typenschild",
+      "grund": "Label-Exhibit zeigt nur Platzhalter; Foto eines echten Typenschilds fehlt (z. B. fuer Erkennung NWA50AX vs. NWA90AX/Pro)"
+    },
+    {
+      "url": "https://download.zyxel.com/NWA50AX/user_guide/NWA50AX-UG.pdf",
+      "kategorie": "handbuch",
+      "grund": "PDF V7.12 ist 14.9 MB (ueber 10-MB-Grenze), nicht geladen; Inhalt ersatzweise aus der HTML-Fassung (Intro, Hardware, System) gelesen"
+    },
+    {
+      "url": "https://openwrt.org/toh/zyxel/nwa50ax",
+      "kategorie": "dc_buchse",
+      "grund": "Mass der DC-Hohlbuchse in keiner Quelle; auch Wiki-Abschnitte Flash Layout, TFTP-Werte, Opening the case, Fotos sind FIXME; zweiter Lauf: auch Datenblatt v3, Handbuch 7.12, FCC-Testbericht, ErP-Netzteildaten nennen kein Steckermass"
+    },
+    {
+      "url": "https://forum.openwrt.org/search?q=NWA50AX",
+      "kategorie": "forum",
+      "grund": "Forum-Suche nicht genutzt; zweiter Lauf: Threads 158629 und 233589 per JSON gelesen, weitere Threads (161084, 157722, 167599, 252339) nicht gelesen"
+    },
+    {
+      "url": "https://openwrt.org/toh/zyxel/nwa50ax_pro",
+      "kategorie": "installation",
+      "grund": "Wiki verweist fuer Installationshinweise (Slot-Wechsel) auf die NWA50AX-Pro-Seite, nicht abgerufen"
+    },
+    {
+      "url": "https://download.zyxel.com/NWA50AX/datasheet/NWA50AX_7.pdf",
+      "kategorie": "poe",
+      "grund": "802.3af-Tauglichkeit weiter offen: Zyxel nennt in Datenblatt v3/v7, Handbuch 6.20/7.12 und Community nur 802.3at (16 W); Handbuch 7.12 kennt einen reduzierten Leistungsmodus (\"Force override ... full power\"), Zyxel-Mitarbeiter: im Limited-Power-Modus weniger Antennen; ein Bericht mit reiner af-Speisung fehlt"
+    },
+    {
+      "url": "https://fccid.io/NCC/CCAF21LP0660T1",
+      "kategorie": "fotos",
+      "grund": "NCC-Dokumente (Appearance photo.pdf u. a.) bei fccid.io nur \"Queued\"; spaeter erneut pruefen (evtl. Typenschildfoto)"
+    },
+    {
+      "url": "https://mysupport.zyxel.com/hc/en-us/articles/4416989548178-Access-Point-NWA50-55AXEE-90AX-110AX-210AX-Differences-in-Hardware-and-Features",
+      "kategorie": "hardware",
+      "grund": "Zyxel-Artikel zu Hardwareunterschieden NWA50AX/55AXE/90AX/110AX/210AX, HTTP 403 (Cloudflare)"
+    },
+    {
+      "url": "https://download.zyxel.com/NWA50AX/declaration/NWA50AX_002.214-01-01455.zip",
+      "kategorie": "zulassung",
+      "grund": "BSMI DoC (Taiwan) ist ein Scan ohne Textebene, nicht abgelesen"
+    },
+    {
+      "url": "https://fccid.io/I8811AXAP22A/External-Photos/External-Photos-5231162",
+      "kategorie": "dc_buchse",
+      "grund": "Steckermass des Netzteils DVE DSA-18PFCA-12 120150 weder auf dem Netzteil-Typenschild (Seite 5) noch in den Texten; ein Datenblatt des Netzteils mit Steckerangabe wurde nicht gefunden"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "lauf": 2,
+    "status": "teilweise",
+    "anfragen": 41,
+    "notiz": "Zweiter Lauf. QSG-Montage aus lokaler Kopie (Bohrabstand Wand 62.4 mm, Decke 62.4 oder 70.1 mm, Duebel 8x30, Schrauben 23 mm, T-Bar-Clips ACCESORY-ZZ0105F separat). Neu: Web-Handbuch 7.12 (Intro/Hardware/System: Reset >5 s, Konsole 115200 8N1, Power Detection No, Power-Mode-Override), Datenblatt v3, connect-Test (7.5 W gemessen mit Netzteil), ErP-Info (Network standby 4.14/4.47 W), EU DoC, UK PSTI (Support bis 2025-12-31), FCC-Testbericht 2.4 GHz (Antennen LYNwave PIFA I-PEX, Netzteil 0.6 A, Pruef-PoE GLP PE-1000IAF), Tsup 2.4G, Zertifikate LVD/ISED (HVIN NWA50AX)/NCC/Wi-Fi (2x2 beide Baender, NWA90AX)/Japan, Zyxel-Community (3 Threads), OpenWrt-Forum (2 Threads). Offen: 802.3af-Tauglichkeit, DC-Steckermass, Typenschildfoto. Blockiert: mysupport.zyxel.com 403, html.duckduckgo.com 202. Grosse PDFs nicht geladen: User Guide V7.12 (14.9 MB)."
+  },
+  "lauf_historie": [
+    {
+      "datum": "2026-10-19",
+      "status": "teilweise",
+      "anfragen": 31,
+      "notiz": "ToH-Vorbelegung mit 2 Kandidaten, NWA50AX (pid 23157572) passt, NWA50AX Pro ist ein anderes Geraet. ToH-Datenseite neuer als Dump (FCC-ID I8811AXAP22A statt NCC-Link, 25.12.4, Power Supply). OpenWrt-Wiki, Support-Commit, DTS/Makefile aus main, WikiDevi-Seite ausgewertet; DeviWiki ohne Seite. FCC: Grant, Handbuch 6.20 (2 Teile), Label, MPE-Bericht, Aussen- und Innenfotos ausgewertet (Chips MT7621AT, MT7915DAN+MT7975DN, MX30LF1G28AD 128 MB NAND, Nanya DDR3 256 MB, PoE-PD TPS23754, kein Luefter). Zyxel: Spezifikationsseite, Downloadliste, Datenblatt v7 (04/23), Antennenmatrix, QSG teilweise. QSG war 39.6 MB (ueber 10-MB-Grenze, Groesse vorher unbekannt). 4 Fehlanfragen an fccid.io (302 ohne -L). Widersprueche: Netzteil-Eingangsstrom 0.3 A (Datenblatt) vs 0.6 A (FCC-Netzteil), Antennengewinn 3/4 dBi (Zyxel) vs 3.4/4.5 bzw. 3.1/4.2 dBi (FCC), PoE 802.3at (Zyxel) vs af/at (WikiDevi). Offen: DC-Buchsenmass, Typenschildfoto, 802.3af-Tauglichkeit, Montagemasse.",
+      "lauf": 1
+    }
+  ]
+}
