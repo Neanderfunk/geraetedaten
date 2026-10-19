@@ -1,0 +1,2731 @@
+{
+  "image": "tp-link-eap615-wall-v1",
+  "modell": "TP-Link EAP615-Wall v1",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "18927350",
+      "bemerkung": "Dump-Zeile aelter als Live-Seite (supportedcurrentrel 23.05.0, packagearchitecture mips_24kc)"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall?do=export_raw",
+      "stand": "Seitenrevision 2026-03-27 17:17",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Live-Seite: aktuell 25.12.2, mipsel_24kc, Switch \"MediaTek MT7530\", Serial 3.3 V, Outdoor No, Gluon support unknown, WLAN 6 GHz -"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/tp-link/eap615-wall?do=export_raw",
+      "stand": "Seitenrevision 2026-09-25 09:27",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_wiki_foto_uart": {
+      "url": "https://openwrt.org/_media/media/tplink/eap615-uart_jtag.jpeg",
+      "stand": "Wiki-Foto (Datum unbekannt, Seite verlinkt es seit vor 2024)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "als Bild ausgewertet; Beschriftung 3V3/GND/RX/TX und JTAG-Punkte im Foto eingezeichnet"
+    },
+    "openwrt_git": {
+      "url": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+      "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_tplink_eap615-wall-v1.dts",
+      "stand": "Branch main am 2026-10-19 (letzte Aenderung 339e8fa25b, 2026-03-17)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_fixes": {
+      "url": "https://github.com/openwrt/openwrt/commit/e5d8f5fd693e439d5dcb86dd015309ca223846a6",
+      "stand": "Commits 28a88ff7e6 (2025-07-16), e2d823d068 (2025-10-23), e5d8f5fd69 (2026-03-22)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Kernel-6.12-Bootloop (LZMA) und Initramfs-Ladeadresse; Issues #19403, #22505"
+    },
+    "openwrt_issue_22505": {
+      "url": "https://github.com/openwrt/openwrt/issues/22505",
+      "stand": "Issue 2026-03-19, geschlossen 2026-03-22",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Nutzer mit PCB-Version 1.20; Hersteller-Bootlog als Anhang"
+    },
+    "openwrt_issue_22505_bootlog": {
+      "url": "https://github.com/user-attachments/files/26124540/bootlog-vendor.txt",
+      "stand": "Anhang zu Issue #22505 (2026-03-19), Stock-Kernel vom 2025-09-03, U-Boot 2018.09 vom 2025-07-18",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Hersteller-Bootlog einer V1.20"
+    },
+    "firmware_utils_safeloader": {
+      "url": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+      "stand": "Branch master am 2026-10-19 (EAP615-Eintrag: 57d0e315cd 2022-01-27, compat_level 2 seit d87b6c4b64 2023-11-22)",
+      "abgerufen": "2026-10-19"
+    },
+    "firmware_utils_pr79": {
+      "url": "https://github.com/openwrt/firmware-utils/pull/79",
+      "stand": "PR offen, eroeffnet 2026-09-25, zuletzt 2026-09-29",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "\"tplink-safeloader: add support for EAP615-Wall v1.20\", nicht gemergt"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ramips-mt7621",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "device('tp-link-eap615-wall-v1', 'tplink_eap615-wall-v1'), ohne broken; in v2023.2 enthalten, in v2023.1.4 nicht"
+    },
+    "gluon_pr_2914": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/2914",
+      "stand": "PR 2023-06-04, gemergt 2023-07-11 (Commit b6088de)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_forum_114761": {
+      "url": "https://forum.openwrt.org/t/eap615-wall-do-you-know-what-chipset-it-is/114761",
+      "stand": "Thread 2021-12-16 bis 2022-04-06 (12 Beitraege)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_forum_173424": {
+      "url": "https://forum.openwrt.org/t/eap615-wall-installation-fails-with-failed-to-check-for-new-update/173424",
+      "stand": "Thread 2023-10-04 bis 2024-02-20 (20 Beitraege)",
+      "abgerufen": "2026-10-19"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=EAP615&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine Geraeteseite; nur zwei Listen-Seiten (Rev. 2022-05-24) mit Rotlink \"TP-Link EAP615-Wall v1\""
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/api.php?action=query&list=search&srsearch=EAP615&format=json",
+      "stand": "Suche 2026-10-19 (0 Treffer)",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc": {
+      "url": "https://fccid.io/2AXJ4EAP615WALL",
+      "stand": "Grant 2021-08-19 (Original Equipment), C2PC 2025-12-31",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/2AXJ4EAP615WALL/Label/25-Label-and-location-5398025",
+      "stand": "Exhibit 2021-08-19 (PDF 2021-03-30)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Zeichnung (US-Etikett) als Text, Lage-Foto als Bild ausgewertet"
+    },
+    "fcc_handbuch": {
+      "url": "https://fccid.io/2AXJ4EAP615WALL/User-Manual/14-Users-Manual1-Rev1-5398033",
+      "stand": "Exhibit 2021-08-19 (PDF 2021-08-13/18)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Sammel-Regulatory-Compliance fuer viele EAPs, EAP615-Wall-Abschnitte ausgewertet"
+    },
+    "fcc_userguide": {
+      "url": "https://fccid.io/2AXJ4EAP615WALL/User-Manual/14-Users-Manual2-5398034",
+      "stand": "Exhibit 2021-08-19 (User Guide 1910012995 REV4.7.0, Juli 2021)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "generisches Omada-EAP-Handbuch, nur Standard-IP/Zugang entnommen"
+    },
+    "fcc_innenfotos_2021": {
+      "url": "https://fccid.io/2AXJ4EAP615WALL/Internal-Photos/18-Internal-Photos-5398024",
+      "stand": "Report 2105C001, PDF 2021-08-09",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "13 Fotos 826x620 als Bild ausgewertet; Cache fcc/intimg/"
+    },
+    "fcc_aussenfotos_2021": {
+      "url": "https://fccid.io/2AXJ4EAP615WALL/External-Photos/19-External-Photos-5398023",
+      "stand": "PDF 2021-08-09",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "als Bild ausgewertet; Cache fcc/extimg/"
+    },
+    "fcc_c2pc_brief": {
+      "url": "https://fccid.io/2AXJ4EAP615WALL/Letter/EAP615-Wall-FCC-C2PC-Declaration-Letter-8949490",
+      "stand": "Brief 2025-10-16 (PDF 2025-12-17), Exhibit 2025-12-31",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_innenfotos_2025": {
+      "url": "https://fccid.io/2AXJ4EAP615WALL/Internal-Photos/2508TW0116-UI-Internal-Photograph-8949494",
+      "stand": "Report 2508TW0116-UI, PDF 2025-10-22, Exhibit 2025-12-31",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "8 Fotos 1126x843 als Bild ausgewertet; Cache fcc/int2025/"
+    },
+    "tplink_produktseite": {
+      "url": "https://www.omadanetworks.com/en/business-networking/omada-wifi-wall-plate/eap615-wall/",
+      "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Weiterleitung von https://www.tp-link.com/en/business-networking/omada-sdn-access-point/eap615-wall/"
+    },
+    "tplink_support": {
+      "url": "https://support.omadanetworks.com/en/product/eap615-wall/",
+      "stand": "Live-Seite 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Versionsauswahl V1 und V1.20 (Vorauswahl V1.20)"
+    },
+    "tplink_datenblatt_v120": {
+      "url": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+      "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "verlinkt als https://support.omadanetworks.com/en/document/106969/"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "18927350",
+      "devicetype": "WiFi AP",
+      "brand": "TP-Link",
+      "model": "EAP615-Wall",
+      "version": "v1",
+      "fccid": "https://fcc.io/2AXJ4EAP615WALL",
+      "availability": "Available 2021",
+      "whereavailable": "¿",
+      "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+      "supportedsincerel": "22.03.0",
+      "supportedcurrentrel": "23.05.0",
+      "unsupported_functions": "NULL",
+      "target": "ramips",
+      "subtarget": "mt7621",
+      "packagearchitecture": "mips_24kc",
+      "bootloader": "U-Boot",
+      "cpu": "MediaTek MT7621AT",
+      "cpucores": "2",
+      "cpumhz": "880",
+      "flashmb": "16",
+      "rammb": "128",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "4",
+      "ethernet2_5gports": "-",
+      "ethernet5gports": "-",
+      "ethernet10gports": "-",
+      "sfp_ports": "-",
+      "sfp_plus_ports": "-",
+      "switch": "MediaTek MT7621AT (mt7530, DSA)",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "PoE PSE out/passthrough on one port.",
+      "wlanhardware": "MediaTek MT7905DAN,MediaTek MT7975DN",
+      "wlan24ghz": "b/g/n/ax",
+      "wlan50ghz": "a/n/ac/ax",
+      "wlancomments": "2x2 MU-MIMO, OFDMA",
+      "wlandriver": "mt76",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "-",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "115200 / 8N1",
+      "jtag": "Yes",
+      "ledcount": "1",
+      "buttoncount": "2",
+      "gpios": "-",
+      "powersupply": "PoE 802.3at",
+      "devicepage": "toh:tp-link:eap615-wall",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "https://forum.openwrt.org/t/eap615-wall-do-you-know-what-chipset-it-is/114761",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "EAP615-Wall",
+      "gitsearch": "EAP615-Wall",
+      "wikideviurl": "NULL",
+      "oemdevicehomepageurl": "https://www.tp-link.com/us/business-networking/omada-sdn-access-point/eap615-wall/",
+      "firmwareoemstockurl": "https://www.tp-link.com/us/support/download/eap615-wall/",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ramips/mt7621/openwrt-23.05.0-ramips-mt7621-tplink_eap615-wall-v1-squashfs-factory.bin",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ramips/mt7621/openwrt-23.05.0-ramips-mt7621-tplink_eap615-wall-v1-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-tplink_eap615-wall-v1-squashfs-factory.bin",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-tplink_eap615-wall-v1-squashfs-sysupgrade.bin",
+      "installationmethods": "see git-commit",
+      "commentinstallation": "rename image to shorter name, e.g. firmware.bin",
+      "recoverymethods": "see git-commit",
+      "commentrecovery": "",
+      "picture": "media:tplink:eap615-wall-scale.jpg",
+      "comments": "",
+      "page": "toh:hwdata:tp-link:tp-link_eap615-wall"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi AP",
+      "Brand": "TP-Link",
+      "Model": "EAP615-Wall",
+      "Versions": "v1",
+      "FCCID_urls": "https://fcc.io/2AXJ4EAP615WALL",
+      "Availability_availability": "Available 2021",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+      "Supported Since Rel_releasesince": "22.03.0",
+      "Supported Current Rel_releasecurrent": "25.12.2",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "unknown",
+      "Target_target": "ramips",
+      "Subtarget": "mt7621",
+      "Package architecture_pkg-arch": "mipsel_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "MediaTek MT7621AT",
+      "CPU Cores_numcores_": "2",
+      "CPU MHz": "880",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "4",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "MediaTek MT7530",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "PoE PSE out/passthrough on one port.",
+      "WLAN Hardwares": "MediaTek MT7905DAN, MediaTek MT7975DN",
+      "WLAN 2.4GHz_wlan24": "b/g/n/ax",
+      "WLAN 5.0GHz_wlan50": "a/n/ac/ax",
+      "WLAN 6.0GHz_wlan60": "-",
+      "WLAN 60.0GHz_wlan60g": "-",
+      "WLAN Comments_": "2x2 MU-MIMO, OFDMA",
+      "WLAN driver_wlan-drivers": "mt76",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "Yes",
+      "LED count_numled": "1",
+      "Button count_numbutton": "2",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "PoE 802.3at",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:tp-link:eap615-wall",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "https://forum.openwrt.org/t/eap615-wall-do-you-know-what-chipset-it-is/114761",
+      "Forum search_search-forums": "EAP615-Wall",
+      "Git search_search-gits": "EAP615-Wall",
+      "WikiDevi URL_urls": "",
+      "WikiDevi ID_hwinfo-ids": "",
+      "OEM Device Homepage URL_url": "https://www.tp-link.com/us/business-networking/omada-sdn-access-point/eap615-wall/",
+      "Firmware OEM Stock URL_url": "https://www.tp-link.com/us/support/download/eap615-wall/",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/ramips/mt7621/openwrt-25.12.2-ramips-mt7621-tplink_eap615-wall-v1-squashfs-factory.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/ramips/mt7621/openwrt-25.12.2-ramips-mt7621-tplink_eap615-wall-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-tplink_eap615-wall-v1-squashfs-factory.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-tplink_eap615-wall-v1-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "see git-commit",
+      "Comment installation": "rename image to shorter name, e.g. firmware.bin",
+      "Recovery method(s)_method-recoverys": "see git-commit",
+      "Comment recovery": "",
+      "Picture_img100s": "media:tplink:eap615-wall-scale.jpg",
+      "Comments_": ""
+    },
+    "openwrt_wiki": {
+      "einleitung": "The EAP615-Wall v1 is an IEEE 802.11ax gigabit PoE+ (802.3af/at) MediaTek-based wall-mount access point. The reverse (back) side of the device has a single PoE+ input ethernet jack. The bottom has three additional ethernet jacks with one providing pass-through PoE output.",
+      "lan_switch": {
+        "ETH0 (PoE-in)": "lan0",
+        "ETH1": "lan1",
+        "ETH2": "lan2",
+        "ETH3 (PoE-out)": "lan3"
+      },
+      "wifi_paths": {
+        "radio0": "1e140000.pcie/pci0000:00/0000:00:01.0/0000:02:00.0 (2g)",
+        "radio1": "1e140000.pcie/pci0000:00/0000:00:01.0/0000:02:00.0+1 (5g)"
+      },
+      "poe_passthrough": "uci gpio_switch, gpio_pin=poe-passthrough, value=1",
+      "installation_ssh": "SSH einschalten, ssh -o HostKeyAlgorithms=+ssh-rsa -o ConnectTimeout=30 admin@192.168.0.254 'cliclientd stopcs'; Factory-Image als factory.bin ueber Web-UI; Fallback-IP 192.168.0.254",
+      "installation_seriell": "Solder TTL header. Pinout: 1: TX, 2: RX, 3: GND, 4: VCC, with pin 1 closest to ETH1. Baud rate 115200; tftpboot 0x84000000 ...initramfs-kernel.bin; bootm; dann sysupgrade",
+      "hinweis_failed_update": "Stock 1.1.7: aeltere Factory-Images (23.05.2 und frueher) scheitern mit \"Failed to check for new update\"; 24.10.0 geht",
+      "hinweis_cliclientd": "cliclientd fehlt evtl. in neueren Firmwares; Umweg ueber packet-capture dokumentiert",
+      "zerlegen": "2 Schrauben, keine versteckten Schrauben, keine Garantiesiegel; starke Schnapphaken; zwei HF-Abschirmungen (WLAN unten, CPU oben), unter der CPU-Abschirmung JTAG",
+      "rettung": "OEM-Rettungspartition (Stock-Firmware mit kurzem Dateinamen, ~16 Zeichen)",
+      "flash_chip": "XMC XM25QH128A, SO-8 208mil, 3.3 V SPI",
+      "bauteile": {
+        "U15": "Silan SD4923E PoE-PD-Controller",
+        "U40": "SCT2A23A 100V Step-Down 48V->12V",
+        "U12": "Pericom PT7A7514WE Spannungsueberwachung 2.93V + Watchdog (nahe seriellen Pins, Unterseite)",
+        "Q7": "CEM6405 P-Kanal-MOSFET 60V, schaltet PoE-Passthrough LAN3",
+        "weitere": "TPS562208/TPS564208 Step-Down"
+      },
+      "flash_upgrade": "32MB mit Macronix MX25L25645GM2I-08G erfolgreich (eigenes DTS noetig), nicht MX25L25673",
+      "gpio_oem": {
+        "led_sys": "led low 12",
+        "btn_reset": "btn low 8",
+        "btn_led": "btn low 10",
+        "poe_port3": "gpo high 7"
+      },
+      "oem_bootlog": {
+        "kernel": "Linux 4.4.198 (2021-08-23)",
+        "machine": "MediaTek MT7621 RFB (802.11ax,SNOR)",
+        "cpu": "MIPS 1004Kc, 4 CPUs (2 Kerne x 2 VPE)",
+        "memory": "131072K",
+        "flash": "m25p80 spi32766.0: xm25qh128a (16384 Kbytes)",
+        "eth": "zufaellige MAC",
+        "wlan_fw": "t-neptune-mp-mt7915-2045-MT7915_MP_7_4_2045-20210407121900"
+      },
+      "openwrt_bootlog": {
+        "kernel": "Linux 5.10.119 (2022-06-03)",
+        "machine": "TP-Link EAP615-Wall v1"
+      },
+      "tags": "ramips mt7621 2core 16flash 128ram 4port GigabitEthernet PoE 802.11ax InternalAntenna vlan 2button wall_embedded"
+    },
+    "openwrt_wiki_foto_uart": {
+      "uart": "4 Durchkontaktierungen, beschriftet 3V3, GND, RX, TX; R2-R5 darunter",
+      "jtag": "JTDI, JTMS, JTDO, CLK (Siebdruck) bzw. TDI/TMS/TDO/TCK-Punkte unter der Abschirmung"
+    },
+    "openwrt_git": {
+      "titel": "ramips: support TP-Link EAP615-Wall",
+      "autor": "Stijn Tintel",
+      "hardware": {
+        "SoC": "MediaTek MT7621AT",
+        "RAM": "128MiB",
+        "Flash": "16MiB SPI-NOR",
+        "Ethernet": "4x GbE; Back: ETH0 (PoE-PD); Bottom: ETH1, ETH2, ETH3 (PoE passthrough)",
+        "WiFi": "MT7905DAN/MT7975DN 2.4/5 GHz 2T2R",
+        "LEDS": "1x white",
+        "Buttons": "1x LED, 1x reset"
+      },
+      "mac": "Stock nutzt zufaellige Ethernet-MAC; OpenWrt nutzt Etikett-MAC fuer Ethernet und WLAN, nicht inkrementiert, lokal verwaltete Ableitungen",
+      "installation": "SSH, cliclientd stopcs, Factory-Image via Web-UI; oder Bootloader: TTL-Header einloeten (1 TX, 2 RX, 3 GND, 4 VCC, Pin 1 nahe ETH1, 115200), tftpboot 0x84000000, bootm, sysupgrade",
+      "dateien": [
+        "target/linux/ramips/dts/mt7621_tplink_eap615-wall-v1.dts",
+        "target/linux/ramips/image/mt7621.mk",
+        "target/linux/ramips/mt7621/base-files/etc/board.d/02_network"
+      ]
+    },
+    "openwrt_dts": {
+      "compatible": "tplink,eap615-wall-v1",
+      "model": "TP-Link EAP615-Wall v1",
+      "bootargs": "console=ttyS0,115200",
+      "led": "status weiss GPIO 12 active low",
+      "keys": {
+        "led": "GPIO 10 KEY_LIGHTS_TOGGLE",
+        "reset": "GPIO 8 KEY_RESTART"
+      },
+      "gpio_export": "poe-passthrough GPIO 7 active high, output 0",
+      "flash": "jedec,spi-nor 20 MHz",
+      "partitionen": {
+        "u-boot": "0x0-0x80000 ro",
+        "partition-table": "0x80000 +0x10000 ro",
+        "product-info": "0x90000 +0x10000 ro (MAC @8)",
+        "firmware": "0xa0000 +0xcf0000 (denx,fit)",
+        "user-config": "0xd90000 +0x60000 ro",
+        "mutil-log": "0xf30000 +0x80000 ro",
+        "oops": "0xfb0000 +0x40000 ro",
+        "radio": "0xff0000 +0x10000 ro (EEPROM 0xe00)"
+      },
+      "wlan": "PCIe1 mediatek,mt76, band0/band1 MAC aus product-info, disable-radar-background",
+      "ethernet": "gmac1 = lan0 (PHY0), switch0 port1 lan3, port2 lan2, port3 lan1",
+      "label_mac": "gmac0"
+    },
+    "openwrt_image_mk": {
+      "Device": "tplink_eap615-wall-v1",
+      "DEVICE_MODEL": "EAP615-Wall",
+      "DEVICE_VARIANT": "v1",
+      "DEVICE_PACKAGES": "kmod-mt7915-firmware -uboot-envtools",
+      "TPLINK_BOARD_ID": "EAP615-WALL-V1",
+      "KERNEL_LOADADDR": "0x82000000",
+      "IMAGE_SIZE": "13248k",
+      "basis": "dsa-migration, tplink-safeloader"
+    },
+    "openwrt_git_fixes": {
+      "28a88ff7e6": "fix bootloop by reducing LZMA dictionary (-d22), Kernel 6.12, Issue #19403",
+      "e2d823d068": "fix LZMA decompression error: Kernel-Ladeadresse verschoben",
+      "e5d8f5fd69": "fix initramfs kernel loadaddr, Issue #22505"
+    },
+    "openwrt_issue_22505": {
+      "titel": "ramips: EAP615-Wall fails to boot",
+      "inhalt": "TFTP-Boot von 25.12.0/25.12.1 haengt nach Device Tree; 24.10.5 geht; Stock-UI meldet \"Failed to check for new update\" ([NM_Error] image size is wrong); PCB version is 1.20; mit Patch (Initramfs-Ladeadresse) bootet es"
+    },
+    "openwrt_issue_22505_bootlog": {
+      "stage1": "MT7621 stage1 code Dec 16 2019",
+      "ddr": "XTAL 40 MHz, DDR-1200 MHz, DDR3",
+      "uboot": "U-Boot SPL/U-Boot 2018.09 (Jul 18 2025), jenkins-PROJECT_MTK_UBOOT-97",
+      "cpu": "MediaTek MT7621AT ver 1, eco 3, 880 MHz",
+      "dram": "128 MiB",
+      "flash": "xm25qh128c, 64 KiB Erase, 16 MiB",
+      "konsole": "uartlite0@1e000c00; Kernel console=ttyS0,115200",
+      "bootmenue": "1 Startup system, 2 Upgrade firmware, 3 Upgrade bootloader, 4 Upgrade bootloader (advanced), 5 Load image, 0 U-Boot console",
+      "reset": "reset button is not pressed for 10s",
+      "kernel": "Linux 4.4.198 (2025-09-03)",
+      "machine": "MediaTek MT7621 RFB (802.11ax,SNOR)",
+      "mtd": {
+        "u-boot": "0x0-0xa0000",
+        "os-image": "0xa0000-0x420000",
+        "rootfs": "0x420000-0xfb0000",
+        "oops": "0xfb0000-0xff0000",
+        "radio": "0xff0000-0x1000000"
+      },
+      "wlan": "mt7915"
+    },
+    "firmware_utils_safeloader": {
+      "id": "EAP615-WALL-V1",
+      "soft_ver_compat_level": 2,
+      "support_list": [
+        "EAP615-Wall(TP-Link|UN|AX1800-D):1.0",
+        "EAP615-Wall(TP-Link|CA|AX1800-D):1.0",
+        "EAP615-Wall(TP-Link|JP|AX1800-D):1.0"
+      ],
+      "partitionen_stock": {
+        "fs-uboot": "0x00000 +0x80000",
+        "partition-table": "0x80000 +0x02000",
+        "default-mac": "0x90000 +0x01000",
+        "support-list": "0x91000 +0x00100",
+        "product-info": "0x91100 +0x00400",
+        "soft-version": "0x92000 +0x00100",
+        "os-image": "0xa0000 +0x380000",
+        "file-system": "0x420000 +0x970000",
+        "user-config": "0xd90000 +0x60000",
+        "mutil-log": "0xf30000 +0x80000",
+        "oops": "0xfb0000 +0x40000",
+        "radio": "0xff0000 +0x10000"
+      },
+      "d87b6c4b64": "compat_level 1 -> 2 fuer neuere Stock-Firmware (Forum 173424/13)"
+    },
+    "firmware_utils_pr79": {
+      "titel": "tplink-safeloader: add support for EAP615-Wall v1.20",
+      "status": "offen",
+      "inhalt": "Stock 1.5.10 Build 20250903 auf V1.20 prueft SupportList (product-info \"EAP615-Wall(TP-Link|UN|AX1800-D):1.20\", Fehler 50003) und soft-version mit addiHardwareVer (CUR 0x2) und secureVer; PR ergaenzt 1.20-Eintraege und 20-Byte-soft-version; auf Geraet verifiziert; vorhandene OpenWrt-Firmware laeuft auf V1.20"
+    },
+    "gluon_targets": {
+      "zeile": "device('tp-link-eap615-wall-v1', 'tplink_eap615-wall-v1')",
+      "v2023.1.4": "nicht enthalten",
+      "v2023.2": "enthalten"
+    },
+    "gluon_pr_2914": {
+      "titel": "ramips-mt7621: Add support for TP-Link EAP615-Wall",
+      "autor": "citronalco",
+      "checkliste": {
+        "flashbar": "ssh (cliclientd) + Web-UI",
+        "sysupgrade": "ja",
+        "image_name": "tp-link-eap615-wall-v1",
+        "reset_config_mode": "ja",
+        "mac_etikett": "ja",
+        "alle_ports": "ja",
+        "port_zuordnung": "ja",
+        "wlan_ap_mesh": "ja",
+        "led": "Power-LED, Config-Mode-Blinken ja; keine Funk-/Port-LEDs",
+        "outdoor": "N/A, indoor device"
+      },
+      "kommentare": "zunaechst broken wegen Mesh-Warnungen, nach Test stabil, broken entfernt; 2 Wochen stabil im Betrieb"
+    },
+    "openwrt_forum_114761": {
+      "#2": "MT7621 + MT7905 + MT7975 (FCC-Innenfotos)",
+      "#7": "OEM- und OpenWrt-Bootlog; 128MB RAM begrenzt Clientzahl",
+      "#10": "Front-LED-Steuerung geht nicht (Snapshot 2022-04)"
+    },
+    "openwrt_forum_173424": {
+      "#1": "Firmware 1.1.7 Build 20230602, Hardware version 1.0: Installation scheitert mit \"Failed to check for new update\"",
+      "#3": "Firmware 1.1.3 Build 20220921: Installation per Web-UI geht",
+      "#13": "nur compat_level anheben reicht",
+      "#16-18": "Downgrade auf 1.1.6 per Rettung fuehrte zu Bootloop; Master-Image half"
+    },
+    "deviwiki": {
+      "treffer": [
+        "List of Wireless Routers recommended for OpenWrt in 2022: | [[TP-Link EAP615-Wall v1]] || WiFi AP || MediaTek MT7621AT || 16/128 || b/g/n/ax+a/n/ac/ax",
+        "Full List of OpenWrt supported devices: dieselbe Zeile"
+      ]
+    },
+    "wikidevi": {
+      "totalhits": 0
+    },
+    "fcc": {
+      "FCC ID": "2AXJ4EAP615WALL",
+      "Grantee Code": "2AXJ4",
+      "Product Code": "EAP615WALL",
+      "Applicant": "TP-Link Corporation Limited",
+      "Equipment": "AX1800 Wall Plate Wi-Fi 6 Access Point",
+      "Test Firm": "MRT Technology (Suzhou) Co., Ltd.",
+      "Frequenzen": [
+        {
+          "bereich": "2412-2462 MHz",
+          "zweck": "Original Equipment",
+          "datum": "2021-08-19"
+        },
+        {
+          "bereich": "5180-5240 MHz",
+          "zweck": "Original Equipment",
+          "datum": "2021-08-19"
+        },
+        {
+          "bereich": "5745-5825 MHz",
+          "zweck": "Class II permissive change",
+          "datum": "2025-12-31"
+        }
+      ],
+      "Composite Device": "Yes",
+      "Long-Term Confidentiality": "Yes",
+      "Exhibits": [
+        "Users Manual1 Rev1 (2021, 1.4 MB)",
+        "Users Manual2 (2021, 5.7 MB)",
+        "Overview of Regulatory Compliance REV2.2.0 (2025, 950 KB)",
+        "Internal Photos 2021 (3.2 MB) und 2025 (1.5 MB)",
+        "External Photos 2021 (841 KB) und 2025 (955 KB)",
+        "Label and location (2021, 358 KB)",
+        "Test Setup Photos 2021/2025",
+        "Test Reports 2.4G (4 Teile), 5G Band 1/4 (3 Teile), C2PC 5G (3 Teile) + DFS",
+        "MPE 2021, RF Exposure Report 2025",
+        "Block Diagram, Schematics, Operational Description: vertraulich"
+      ]
+    },
+    "fcc_label": {
+      "Model": "EAP615-Wall",
+      "Power": "802.3at PoE(42.5-57V 0.6A)",
+      "IC": "26583-EAP615WALL",
+      "FCC ID": "2AXJ4EAP615WALL",
+      "Zeile2": "Model:EAP615-Wall(US) S/N:XXXXXXXXXXXXX Ver:1.0 MAC:XX-XX-XX-XX-XX-XX SSID:TP-LINK_2.4GHz_XXXXXX SSID:TP-LINK_5GHz_XXXXXX",
+      "Default Access": "http://tplinkeap.net, admin/admin",
+      "Groesse": "78.5*18.5mm",
+      "Lagefoto": "Rueckseite mit ETH0-Buchse"
+    },
+    "fcc_handbuch": {
+      "Modelle": "EAP115-Wall / EAP225-Wall / EAP230-Wall / EAP235-Wall / EAP615-Wall (Class B, ohne Netzteil)",
+      "Frequenz_max_Leistung": "2412-2472MHz (20dBm), 5180-5240MHz (23dBm)",
+      "Einschraenkung": "5150-5350 MHz in EU/EFTA nur innen",
+      "Montage": "86 mm/EU/US-Unterputzdose, 2-4 Schrauben ANSI B1.1 4#, 6# oder 8#, laenger als 10 mm"
+    },
+    "fcc_userguide": {
+      "Dokument": "User Guide for TP-Link Omada Access Points 1910012995 REV4.7.0, July 2021",
+      "Fallback-IP": "192.168.0.254",
+      "Zugang": "admin/admin",
+      "PoE Out": "Management > LAN Port Config (nur bestimmte Geraete)"
+    },
+    "fcc_innenfotos_2021": {
+      "Report": "2105C001",
+      "SoC": "MEDIATEK MT7621DAT 2049-ZAMSH",
+      "WLAN": [
+        "MEDIATEK MT7905DAN 2049-BXDSL",
+        "MEDIATEK MT7975DN 2050-AJCSL"
+      ],
+      "Antennen": "Leiterplattenantennen \"Ant. 1\", \"Ant. 2\" mit Messbuchsen JH1/JH2",
+      "Platine": "Siebdruck TOP/BOTTOM, Kennung \"201013620wall-1.0 Rev1.0sp2\" (unsicher gelesen), UL E248237 KB-6160",
+      "Abschirmungen": "Abschirmblech/Kuehlblech ueber SoC-Bereich, Abschirmrahmen mit zwei Fenstern",
+      "Ethernet": "3 Buchsen an einer Schmalseite, 1 mittig auf der Gegenseite",
+      "Pads": "4 unbestueckte Pads am Platinenrand (Seite BOTTOM) neben 8-poligem IC",
+      "Luefter": "keiner sichtbar"
+    },
+    "fcc_aussenfotos_2021": {
+      "Vorderseite": "tp-link-Logo, LED-Oeffnung",
+      "Rueckseite": "Montageplatte, mittige Buchse \"ETH0 (PoE IN)\"",
+      "Unterseite": "RESET (Loch), ETH1, ETH2, ETH3 (PoE OUT)"
+    },
+    "fcc_c2pc_brief": {
+      "Datum": "2025-10-16",
+      "Inhalt": "Open the NII-2a/-2c bands and Beamforming function Via software and we attest that there is no hardware change to this EUT.",
+      "SDR": "Non-SDR device"
+    },
+    "fcc_innenfotos_2025": {
+      "Report": "2508TW0116-UI",
+      "SoC": "MEDIATEK MT7621DAT 2519-ZAMAH",
+      "WLAN": [
+        "MEDIATEK MT7905DAN 2522-BXDAL",
+        "MEDIATEK MT7975DN 2520-AJCAL"
+      ],
+      "Antennen": "zwei Leiterplattenantennen, markiert \"Wi-Fi 2.4G/5G Antenna\""
+    },
+    "tplink_produktseite": {
+      "Interface": "Uplink: 1x Gigabit Ethernet Port; Downlink: 3x Gigabit Ethernet Ports (One port supports PoE pass-through.)",
+      "Physical Security Lock": "Yes",
+      "Button": "Reset",
+      "Power Supply": "802.3af/at PoE",
+      "PoE Out": "Passthrough (Pins 1,2+; 3,6-); requires 802.3at PoE input; max 13 W (EU) / 12 W (US)",
+      "Max. Power Consumption": "EU: 10W (802.3at PoE, PoE Out off); US: 11.5W (802.3at PoE, PoE Out off)",
+      "Dimensions": "143 x 86 x 19.7 mm",
+      "Antenna": "2.4 GHz: 2x 3 dBi; 5 GHz: 2x 4 dBi",
+      "Mounting": "Wall Plate Mounting",
+      "Signal Rate": "5 GHz: 1201 Mbps; 2.4 GHz: 574 Mbps",
+      "Wireless Standards": "IEEE 802.11ax/ac/n/g/b/a",
+      "Transmission Power": "CE: 7-24 dBm (2.4 GHz, 5 GHz U-NII-1/2A/2C, EIRP); FCC: 4-21 dBm (2.4 GHz, 5 GHz U-NII-1/2A/2C/3)",
+      "Coverage": "50 m2",
+      "Concurrent Clients": "120+",
+      "SSIDs": "16 (8 je Band)",
+      "Package Content": "EAP615-Wall, Installation Guide, Mounting Kit",
+      "Environment": "Betrieb 0-40 C, Lager -40-70 C, Feuchte 10-90 % / 5-90 % nicht kondensierend",
+      "Certification": "CE, FCC",
+      "LED ON/OFF Control": "Yes",
+      "SSH": "Yes"
+    },
+    "tplink_support": {
+      "Versionen": [
+        "V1",
+        "V1.20"
+      ],
+      "Vorauswahl": "V1.20",
+      "Versionsregel": "Vx.0 = Vx.6/Vx.8/Vx.9; Vx.x0 = Vx.x6/Vx.x8/Vx.x9 (V1.20 = V1.26/V1.28/V1.29)",
+      "Highlights": "4x Gigabit (1 Uplink + 3 Downlink), 574 + 1201 Mbps, 802.3at/af PoE, 86mm/EU/US-Unterputzdose",
+      "Datenblatt": "EAP615-Wall_V1.20_Datasheet (09-25-2025)"
+    },
+    "tplink_datenblatt_v120": {
+      "Wi-Fi Standards": "5 GHz: IEEE 802.11a/n/ac/ax; 2.4 GHz: IEEE 802.11b/g/n/ax",
+      "Spatial Streams": "2.4 GHz: 2x2 UL/DL MU-MIMO, 2 SS; 5 GHz: 2x2 UL/DL MU-MIMO, 2 SS",
+      "Frequency Bands": "2.400-2.4835 GHz; 5.150-5.250 U-NII-1; 5.250-5.350 U-NII-2A; 5.470-5.725 U-NII-2C; 5.725-5.850 U-NII-3/ISM",
+      "Bandwidth": "2.4 GHz: 20/40 MHz; 5 GHz: 20/40/80 MHz",
+      "Data Rate": "2.4 GHz: 8.6-574 Mbps (MCS0-11, NSS 1-2, HE20/40); 5 GHz: 8.6-1201 Mbps (HE20/40/80)",
+      "Others": "OFDMA, 1024-QAM, TWT, MRC, TxBF, WPA3, DFS, CDD, CSD, STBC, LDPC",
+      "Antenna": "2.4 GHz: 2 x 3 dBi (peak gain), internal omnidirectional; 5 GHz: 2 x 4 dBi (peak gain), internal omnidirectional",
+      "Interfaces": "Uplink: 1x 10/100/1000 Mbps RJ45, PoE In; Downlink: 3x 10/100/1000 Mbps RJ45, one port PoE OUT",
+      "Memory": "Flash: 128Mbit; DRAM: 1024Mbit",
+      "Button": "1x Reset (>5 s = Werkseinstellungen), 1x LED Button",
+      "Indicator": "1x white LED on the front: Power-on, Firmware-Init/Upgrade, Error",
+      "MTBF": "EU: 820865 h, US: 805533 h bei 25 C",
+      "Power Supply Input": "802.3at PoE+: 42.5-57 V/0.6 A, or 802.3af PoE: 36-57 V/0.35 A",
+      "Power Supply Output": "US: Passive POE 41.5-55 V/0.29 A; EU: Passive POE 41.5-55 V/0.32 A",
+      "Power Consumption": "802.3af/at PoE: 11.5 W (PoE out not included), 2x2 + 2x2; Idle 4.16 W",
+      "Surge": "Ethernet Ports: +/-2 kV",
+      "ESD": "Air +/-8 kV, Contact +/-4 kV",
+      "Max TX Power": "CE (EIRP): 2.4 GHz 20 dBm; 5 GHz 23 dBm U-NII-1/2A, 24 dBm U-NII-2C; FCC (conducted): 21 dBm alle Baender",
+      "Min TX Power": "CE 7 dBm; FCC 4 dBm",
+      "Power increment": "1 dBm",
+      "Temperature": "Betrieb 0-40 C; Lager -40-70 C",
+      "Humidity": "Betrieb 10-90 %; Lager 5-90 % nicht kondensierend",
+      "Altitude": "bis 2000 m",
+      "Dimensions": "Main Unit 143 x 86 x 19.7 mm; Shipping 139 x 127 x 55 mm",
+      "Weight": "Main Unit 0.22 kg; Bracket 0.007 kg; Shipping 0.336 kg",
+      "Mounting": "Wall Plate Mounting (Kits included)"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "TP-Link",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TP-Link (TP-Link Corporation Limited)",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL",
+        "stand": "Grant 2021-08-19 (Original Equipment), C2PC 2025-12-31",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "EAP615-Wall",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "EAP615-Wall",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "EAP615-Wall",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Label/25-Label-and-location-5398025",
+        "stand": "Exhibit 2021-08-19 (PDF 2021-03-30)",
+        "sicherheit": "hoch",
+        "bemerkung": "Etikett \"Model: EAP615-Wall\""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": "AX1800 Wall Plate Wi-Fi 6 Access Point",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL",
+        "stand": "Grant 2021-08-19 (Original Equipment), C2PC 2025-12-31",
+        "sicherheit": "hoch",
+        "bemerkung": "Gerätebeschreibung FCC und Etikett"
+      },
+      {
+        "wert": "Omada EAP615-Wall, AX1800 Wall Plate WiFi 6 Access Point",
+        "quelle": "tplink_support",
+        "beleg": "https://support.omadanetworks.com/en/product/eap615-wall/",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "EAP615-Wall(US)",
+          "EAP615-Wall(EU)"
+        ],
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Label/25-Label-and-location-5398025",
+        "stand": "Exhibit 2021-08-19 (PDF 2021-03-30)",
+        "sicherheit": "hoch",
+        "bemerkung": "US auf Etikettzeichnung; EU/US-Varianten laut Produktseite/Datenblatt (Leistungsaufnahme, PoE-Ausgang)"
+      },
+      {
+        "wert": [
+          "EAP615-Wall(TP-Link|UN|AX1800-D)",
+          "EAP615-Wall(TP-Link|CA|AX1800-D)",
+          "EAP615-Wall(TP-Link|JP|AX1800-D)"
+        ],
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+        "stand": "Branch master am 2026-10-19 (EAP615-Eintrag: 57d0e315cd 2022-01-27, compat_level 2 seit d87b6c4b64 2023-11-22)",
+        "sicherheit": "mittel",
+        "bemerkung": "Support-List-Kennungen des OpenWrt-Factory-Images (jeweils :1.0)"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "1.0",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Label/25-Label-and-location-5398025",
+        "stand": "Exhibit 2021-08-19 (PDF 2021-03-30)",
+        "sicherheit": "hoch",
+        "bemerkung": "Etikettzeichnung \"Model:EAP615-Wall(US) ... Ver:1.0\""
+      },
+      {
+        "wert": [
+          "V1",
+          "V1.20"
+        ],
+        "quelle": "tplink_support",
+        "beleg": "https://support.omadanetworks.com/en/product/eap615-wall/",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Versionsauswahl; laut Seite V1.0 = V1.6/V1.8/V1.9 und V1.20 = V1.26/V1.28/V1.29"
+      },
+      {
+        "wert": "1.20",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "Datenblatt ausdrücklich für V1.20"
+      },
+      {
+        "wert": "1.0",
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+        "stand": "Branch master am 2026-10-19 (EAP615-Eintrag: 57d0e315cd 2022-01-27, compat_level 2 seit d87b6c4b64 2023-11-22)",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt-Factory-Image nennt nur Version 1.0 (UN/CA/JP)"
+      },
+      {
+        "wert": "1.20",
+        "quelle": "firmware_utils_pr79",
+        "beleg": "https://github.com/openwrt/firmware-utils/pull/79",
+        "stand": "PR offen, eroeffnet 2026-09-25, zuletzt 2026-09-29",
+        "sicherheit": "mittel",
+        "bemerkung": "product-info einer V1.20: \"EAP615-Wall(TP-Link|UN|AX1800-D):1.20\"; Stock-Firmware 1.5.10 lehnt das Factory-Image ab (Fehler 50003, addiHardwareVer 0x2), PR offen"
+      },
+      {
+        "wert": "1.20",
+        "quelle": "openwrt_issue_22505",
+        "beleg": "https://github.com/openwrt/openwrt/issues/22505",
+        "stand": "Issue 2026-03-19, geschlossen 2026-03-22",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"PCB version is 1.20\"; OpenWrt läuft nach Fix e5d8f5fd (Initramfs per TFTP)"
+      },
+      {
+        "wert": "1.0",
+        "quelle": "openwrt_forum_173424",
+        "beleg": "https://forum.openwrt.org/t/eap615-wall-installation-fails-with-failed-to-check-for-new-update/173424",
+        "stand": "Thread 2023-10-04 bis 2024-02-20 (20 Beitraege)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Stock-Statusseite \"Hardware version: 1.0\" bei Firmware 1.1.7 (Gerät gekauft 2023-10)"
+      },
+      {
+        "wert": "v1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Etikett: \"Model: EAP615-Wall\", \"Power: 802.3at PoE(42.5-57V 0.6A)\", FCC ID 2AXJ4EAP615WALL, IC 26583-EAP615WALL, \"Model:EAP615-Wall(US)\" mit \"Ver:1.0\", S/N, MAC, zwei SSIDs, Zugang http://tplinkeap.net admin/admin",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Label/25-Label-and-location-5398025",
+        "stand": "Exhibit 2021-08-19 (PDF 2021-03-30)",
+        "sicherheit": "hoch",
+        "bemerkung": "Etikettzeichnung 78.5 × 18.5 mm; Lage-Foto zeigt die Rückseite (Wandseite) mit ETH0, das Etikett ist darauf nicht erkennbar"
+      },
+      {
+        "wert": "Versionsangabe \"Ver:\" auf dem Etikett; V1.20 kann als 1.26/1.28/1.29 aufgedruckt sein",
+        "quelle": "tplink_support",
+        "beleg": "https://support.omadanetworks.com/en/product/eap615-wall/",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Hinweis zur Versionszählung auf der Support-Seite (Dokument https://support.omadanetworks.com/en/document/14139/ nicht abgerufen)"
+      },
+      {
+        "wert": "Stock-Weboberfläche zeigt \"Hardware version: 1.0\"",
+        "quelle": "openwrt_forum_173424",
+        "beleg": "https://forum.openwrt.org/t/eap615-wall-installation-fails-with-failed-to-check-for-new-update/173424",
+        "stand": "Thread 2023-10-04 bis 2024-02-20 (20 Beitraege)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "2AXJ4EAP615WALL",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL",
+        "stand": "Grant 2021-08-19 (Original Equipment), C2PC 2025-12-31",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2AXJ4EAP615WALL",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2AXJ4EAP615WALL",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Label/25-Label-and-location-5398025",
+        "stand": "Exhibit 2021-08-19 (PDF 2021-03-30)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "26583-EAP615WALL",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Label/25-Label-and-location-5398025",
+        "stand": "Exhibit 2021-08-19 (PDF 2021-03-30)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Available 2021",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "lieferbar; aktuelle Hardware V1.20 (Datenblatt 2025-09)",
+        "quelle": "tplink_support",
+        "beleg": "https://support.omadanetworks.com/en/product/eap615-wall/",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "FCC-Zulassung 2021-08-19",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL",
+        "stand": "Grant 2021-08-19 (Original Equipment), C2PC 2025-12-31",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7621DAT",
+        "quelle": "fcc_innenfotos_2021",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Internal-Photos/18-Internal-Photos-5398024",
+        "stand": "Report 2105C001, PDF 2021-08-09",
+        "sicherheit": "hoch",
+        "bemerkung": "Aufdruck \"MT7621DAT 2049-ZAMSH\"; Widerspruch zu MT7621AT in Commit/ToH"
+      },
+      {
+        "wert": "MediaTek MT7621DAT",
+        "quelle": "fcc_innenfotos_2025",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Internal-Photos/2508TW0116-UI-Internal-Photograph-8949494",
+        "stand": "Report 2508TW0116-UI, PDF 2025-10-22, Exhibit 2025-12-31",
+        "sicherheit": "hoch",
+        "bemerkung": "Aufdruck \"MT7621DAT 2519-ZAMAH\""
+      },
+      {
+        "wert": "MediaTek MT7621AT ver 1, eco 3",
+        "quelle": "openwrt_issue_22505_bootlog",
+        "beleg": "https://github.com/user-attachments/files/26124540/bootlog-vendor.txt",
+        "stand": "Anhang zu Issue #22505 (2026-03-19), Stock-Kernel vom 2025-09-03, U-Boot 2018.09 vom 2025-07-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "U-Boot-Ausgabe einer V1.20 (Softwarekennung)"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog: \"Brought up 4 CPUs\" (2 Kerne, je 2 Threads, MIPS 1004Kc)"
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 880,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 880,
+        "quelle": "openwrt_issue_22505_bootlog",
+        "beleg": "https://github.com/user-attachments/files/26124540/bootlog-vendor.txt",
+        "stand": "Anhang zu Issue #22505 (2026-03-19), Stock-Kernel vom 2025-09-03, U-Boot 2018.09 vom 2025-07-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "U-Boot \"CPU: 880MHz, DDR: 1200MHz\" (V1.20)"
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "MIPS 1004Kc (mipsel)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog \"CPU0 revision is: 0001992f (MIPS 1004Kc)\""
+      },
+      {
+        "wert": "mipsel_24kc",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Seitenrevision 2026-03-27 17:17",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt-Paketarchitektur"
+      },
+      {
+        "wert": "mips_24kc",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "Dump-Wert, Live-Seite korrigiert auf mipsel_24kc"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 128,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "\"DRAM: 1024Mbit\""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog \"memory: 08000000\""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_issue_22505_bootlog",
+        "beleg": "https://github.com/user-attachments/files/26124540/bootlog-vendor.txt",
+        "stand": "Anhang zu Issue #22505 (2026-03-19), Stock-Kernel vom 2025-09-03, U-Boot 2018.09 vom 2025-07-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "U-Boot \"DRAM: 128 MiB\" (V1.20)"
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR3",
+        "quelle": "openwrt_issue_22505_bootlog",
+        "beleg": "https://github.com/user-attachments/files/26124540/bootlog-vendor.txt",
+        "stand": "Anhang zu Issue #22505 (2026-03-19), Stock-Kernel vom 2025-09-03, U-Boot 2018.09 vom 2025-07-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"Apply DDR3 Setting\", DDR-1200Mhz (V1.20)"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": "\"16MiB SPI-NOR\""
+      },
+      {
+        "wert": 16,
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Flash: 128Mbit\""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_issue_22505_bootlog",
+        "beleg": "https://github.com/user-attachments/files/26124540/bootlog-vendor.txt",
+        "stand": "Anhang zu Issue #22505 (2026-03-19), Stock-Kernel vom 2025-09-03, U-Boot 2018.09 vom 2025-07-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"SF: Detected xm25qh128c ... total 16 MiB\" (V1.20)"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": "SPI-NOR"
+      },
+      {
+        "wert": "NOR",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_tplink_eap615-wall-v1.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Aenderung 339e8fa25b, 2026-03-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "jedec,spi-nor, 20 MHz"
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "XMC XM25QH128A (SO-8, 208 mil)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": "auch im OEM-Bootlog: \"m25p80 spi32766.0: xm25qh128a (16384 Kbytes)\""
+      },
+      {
+        "wert": "XMC XM25QH128C",
+        "quelle": "openwrt_issue_22505_bootlog",
+        "beleg": "https://github.com/user-attachments/files/26124540/bootlog-vendor.txt",
+        "stand": "Anhang zu Issue #22505 (2026-03-19), Stock-Kernel vom 2025-09-03, U-Boot 2018.09 vom 2025-07-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "V1.20, U-Boot-Erkennung \"xm25qh128c\""
+      }
+    ],
+    "platinen_kennung": [
+      {
+        "wert": "201013620wall-1.0 Rev1.0sp2 (Seiten TOP/BOTTOM)",
+        "quelle": "fcc_innenfotos_2021",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Internal-Photos/18-Internal-Photos-5398024",
+        "stand": "Report 2105C001, PDF 2021-08-09",
+        "sicherheit": "niedrig",
+        "bemerkung": "aus unscharfem Foto gelesen, Zeichen nicht sicher"
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "switch": [
+      {
+        "wert": "MediaTek MT7621AT (mt7530, DSA)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7530",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Seitenrevision 2026-03-27 17:17",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "im SoC (switch0 Ports 1-3 = lan3/lan2/lan1, ETH0 über gmac1/PHY0 = lan0)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_tplink_eap615-wall-v1.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Aenderung 339e8fa25b, 2026-03-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "MediaTek MT7905DAN + MT7975DN",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7905DAN/MT7975DN (2.4/5 GHz, 2T2R)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7905DAN + MT7975DN",
+        "quelle": "fcc_innenfotos_2021",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Internal-Photos/18-Internal-Photos-5398024",
+        "stand": "Report 2105C001, PDF 2021-08-09",
+        "sicherheit": "hoch",
+        "bemerkung": "Aufdrucke \"MT7905DAN 2049-BXDSL\", \"MT7975DN 2050-AJCSL\""
+      },
+      {
+        "wert": "MediaTek MT7905DAN + MT7975DN",
+        "quelle": "fcc_innenfotos_2025",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Internal-Photos/2508TW0116-UI-Internal-Photograph-8949494",
+        "stand": "Report 2508TW0116-UI, PDF 2025-10-22, Exhibit 2025-12-31",
+        "sicherheit": "hoch",
+        "bemerkung": "Aufdrucke \"MT7905DAN 2522-BXDAL\", \"MT7975DN 2520-AJCAL\""
+      },
+      {
+        "wert": "MediaTek MT7621 + MT7905 + MT7975",
+        "quelle": "openwrt_forum_114761",
+        "beleg": "https://forum.openwrt.org/t/eap615-wall-do-you-know-what-chipset-it-is/114761",
+        "stand": "Thread 2021-12-16 bis 2022-04-06 (12 Beitraege)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "mt76",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "mt76 (MT7915-Familie, kmod-mt7915-firmware, DBDC an einem PCIe-Gerät)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "b/g/n/ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n/ax",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": "2T2R"
+      },
+      {
+        "wert": 2,
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "2×2 MU-MIMO, 2 Spatial Streams"
+      },
+      {
+        "wert": "2x2 MU-MIMO",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "a/n/ac/ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac/ax",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": "2T2R"
+      },
+      {
+        "wert": 2,
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "2×2 MU-MIMO, 2 Spatial Streams"
+      },
+      {
+        "wert": "2x2 MU-MIMO",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_6_standard": [
+      {
+        "wert": "keins",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Seitenrevision 2026-03-27 17:17",
+        "sicherheit": "mittel",
+        "bemerkung": "WLAN 6.0GHz: -"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AX1800",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL",
+        "stand": "Grant 2021-08-19 (Original Equipment), C2PC 2025-12-31",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AX1800 (574 + 1201 Mbit/s)",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AX1800",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": {
+          "2.4": "20/40 MHz",
+          "5": "20/40/80 MHz"
+        },
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": [
+          "2412-2462 MHz",
+          "5180-5240 MHz"
+        ],
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL",
+        "stand": "Grant 2021-08-19 (Original Equipment), C2PC 2025-12-31",
+        "sicherheit": "hoch",
+        "bemerkung": "Original-Grant 2021-08-19"
+      },
+      {
+        "wert": "5745-5825 MHz",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL",
+        "stand": "Grant 2021-08-19 (Original Equipment), C2PC 2025-12-31",
+        "sicherheit": "hoch",
+        "bemerkung": "C2PC 2025-12-31"
+      },
+      {
+        "wert": "U-NII-2A/2C und Beamforming per Software freigeschaltet, \"no hardware change\"",
+        "quelle": "fcc_c2pc_brief",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Letter/EAP615-Wall-FCC-C2PC-Declaration-Letter-8949490",
+        "stand": "Brief 2025-10-16 (PDF 2025-12-17), Exhibit 2025-12-31",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": {
+          "2.4_ce_eirp": 20,
+          "5_ce_eirp_unii1_2a": 23,
+          "5_ce_eirp_unii2c": 24,
+          "2.4_fcc_leitung": 21,
+          "5_fcc_leitung": 21
+        },
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "Maximalwerte, MIMO kombiniert"
+      },
+      {
+        "wert": {
+          "2412-2472 MHz": 20,
+          "5180-5240 MHz": 23
+        },
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/User-Manual/14-Users-Manual1-Rev1-5398033",
+        "stand": "Exhibit 2021-08-19 (PDF 2021-08-13/18)",
+        "sicherheit": "hoch",
+        "bemerkung": "EU-Angabe 2021"
+      }
+    ],
+    "wlan_bekannte_probleme": [
+      {
+        "wert": "Hintergrund-Radarerkennung (DFS background) im DTS abgeschaltet",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_tplink_eap615-wall-v1.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Aenderung 339e8fa25b, 2026-03-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "mediatek,disable-radar-background"
+      },
+      {
+        "wert": "802.11s-Mesh: Kernel-Warnungen und schwankende Bitraten beobachtet, danach als stabil bewertet (2 Wochen im Betrieb)",
+        "quelle": "gluon_pr_2914",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2914",
+        "stand": "PR 2023-06-04, gemergt 2023-07-11 (Commit b6088de)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "\"internal omnidirectional antennas\""
+      },
+      {
+        "wert": "intern (Leiterplattenantennen ANT1/ANT2 mit Messbuchse)",
+        "quelle": "fcc_innenfotos_2021",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Internal-Photos/18-Internal-Photos-5398024",
+        "stand": "Report 2105C001, PDF 2021-08-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "intern (Leiterplattenantennen, markiert \"Wi-Fi 2.4G/5G Antenna\")",
+        "quelle": "fcc_innenfotos_2025",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Internal-Photos/2508TW0116-UI-Internal-Photograph-8949494",
+        "stand": "Report 2508TW0116-UI, PDF 2025-10-22, Exhibit 2025-12-31",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "keine abnehmbaren",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": {
+          "2.4": 2,
+          "5": 2
+        },
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "fcc_innenfotos_2025",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Internal-Photos/2508TW0116-UI-Internal-Photograph-8949494",
+        "stand": "Report 2508TW0116-UI, PDF 2025-10-22, Exhibit 2025-12-31",
+        "sicherheit": "mittel",
+        "bemerkung": "zwei Leiterplattenantennen, jede als 2.4G/5G markiert"
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "dualband",
+        "quelle": "fcc_innenfotos_2025",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Internal-Photos/2508TW0116-UI-Internal-Photograph-8949494",
+        "stand": "Report 2508TW0116-UI, PDF 2025-10-22, Exhibit 2025-12-31",
+        "sicherheit": "mittel",
+        "bemerkung": "Markierung \"Wi-Fi 2.4G/5G Antenna\" an beiden Antennen"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4": 3,
+          "5": 4
+        },
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "Spitzengewinn je Einzelantenne"
+      },
+      {
+        "wert": {
+          "2.4": 3,
+          "5": 4
+        },
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.omadanetworks.com/en/business-networking/omada-wifi-wall-plate/eap615-wall/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "rund (omnidirektional)",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "ETH0 (PoE IN)",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "Uplink, PoE-Eingang",
+            "lage": "Rückseite (Wandseite)"
+          },
+          {
+            "name": "ETH1",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "Downlink",
+            "lage": "Unterseite"
+          },
+          {
+            "name": "ETH2",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "Downlink",
+            "lage": "Unterseite"
+          },
+          {
+            "name": "ETH3 (PoE OUT)",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "Downlink, PoE-Ausgang (Passthrough)",
+            "lage": "Unterseite"
+          }
+        ],
+        "quelle": "fcc_aussenfotos_2021",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/External-Photos/19-External-Photos-5398023",
+        "stand": "PDF 2021-08-09",
+        "sicherheit": "hoch",
+        "bemerkung": "Beschriftungen ETH0 (PoE IN), ETH1, ETH2, ETH3 (PoE OUT) am Gehäuse; Geschwindigkeit aus Datenblatt"
+      },
+      {
+        "wert": "1× 10/100/1000 Uplink (PoE In) + 3× 10/100/1000 Downlink (einer mit PoE OUT)",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "4× GbE: hinten ETH0 (PoE-PD), unten ETH1, ETH2, ETH3 (PoE passthrough)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "ETH0": "lan0",
+          "ETH1": "lan1",
+          "ETH2": "lan2",
+          "ETH3": "lan3"
+        },
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt-Schnittstellennamen (DSA)"
+      },
+      {
+        "wert": "4x 1G",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 4,
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "sfp": [
+      {
+        "wert": 0,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "keiner",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "keins",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "keins",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "802.3af/802.3at",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "802.3at: 42.5-57 V / 0.6 A, 802.3af: 36-57 V / 0.35 A; PoE-Ausgang braucht 802.3at-Speisung (Produktseite)"
+      },
+      {
+        "wert": "802.3at",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Label/25-Label-and-location-5398025",
+        "stand": "Exhibit 2021-08-19 (PDF 2021-03-30)",
+        "sicherheit": "hoch",
+        "bemerkung": "Etikett \"802.3at PoE(42.5-57V 0.6A)\""
+      },
+      {
+        "wert": "802.3af/802.3at",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.omadanetworks.com/en/business-networking/omada-wifi-wall-plate/eap615-wall/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.3at",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "\"PoE 802.3at\""
+      },
+      {
+        "wert": "802.3af/802.3at",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": "\"gigabit PoE+ (802.3af/at)\""
+      },
+      {
+        "wert": "PoE-PD an ETH0",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": "42.5-57 (802.3at), 36-57 (802.3af)",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "42.5-57",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Label/25-Label-and-location-5398025",
+        "stand": "Exhibit 2021-08-19 (PDF 2021-03-30)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "poe_strom_a": [
+      {
+        "wert": {
+          "802.3at": 0.6,
+          "802.3af": 0.35
+        },
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 0.6,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Label/25-Label-and-location-5398025",
+        "stand": "Exhibit 2021-08-19 (PDF 2021-03-30)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "poe_ausgang": [
+      {
+        "wert": "ja, ETH3, Passthrough; Ausgang passiv 41.5-55 V (US 0.29 A, EU 0.32 A)",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, Passthrough (Pins 1,2+; 3,6-), max. 13 W (EU) bzw. 12 W (US), nur bei 802.3at-Eingang",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.omadanetworks.com/en/business-networking/omada-wifi-wall-plate/eap615-wall/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, ETH3 (PoE OUT)",
+        "quelle": "fcc_aussenfotos_2021",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/External-Photos/19-External-Photos-5398023",
+        "stand": "PDF 2021-08-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, ETH3, per GPIO 7 geschaltet; in OpenWrt standardmäßig aus (gpio-export poe-passthrough = 0)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_tplink_eap615-wall-v1.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Aenderung 339e8fa25b, 2026-03-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "Einschalten per uci gpio_switch laut Wiki"
+      },
+      {
+        "wert": "ja, über P-Kanal-MOSFET CEM6405 (Q7)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": false,
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.omadanetworks.com/en/business-networking/omada-wifi-wall-plate/eap615-wall/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Lieferumfang: EAP615-Wall, Installation Guide, Mounting Kit"
+      },
+      {
+        "wert": false,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/User-Manual/14-Users-Manual1-Rev1-5398033",
+        "stand": "Exhibit 2021-08-19 (PDF 2021-08-13/18)",
+        "sicherheit": "hoch",
+        "bemerkung": "geführt unter \"Class B EAP with no adapter\""
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": false,
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "mittel",
+        "bemerkung": "Datenblatt nennt nur PoE als Versorgung; Außenfotos zeigen keine DC-Buchse"
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 11.5,
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "802.3af/at ohne PoE-Ausgang, beide Funkteile 2×2"
+      },
+      {
+        "wert": {
+          "EU": 10,
+          "US": 11.5
+        },
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.omadanetworks.com/en/business-networking/omada-wifi-wall-plate/eap615-wall/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "802.3at, PoE Out aus"
+      }
+    ],
+    "leistung_w_typ": [
+      {
+        "wert": 4.16,
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "Leerlauf (Idle mode, PoE)"
+      }
+    ],
+    "poe_bauteile": [
+      {
+        "wert": "PoE-PD-Controller Silan SD4923E (U15), 100-V-Abwärtswandler SCT2A23A (U40) 48 V -> 12 V",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Seitenrevision 2026-03-27 17:17",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "gluon_pr_2914",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2914",
+        "stand": "PR 2023-06-04, gemergt 2023-07-11 (Commit b6088de)",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"N/A, indoor device\""
+      },
+      {
+        "wert": "innen (Wandplatte)",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "Betriebstemperatur 0-40 °C, Montage auf Unterputzdose"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.omadanetworks.com/en/business-networking/omada-wifi-wall-plate/eap615-wall/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_lager": [
+      {
+        "wert": "-40 bis 70 °C",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "Betrieb 10-90 %, Lager 5-90 %, nicht kondensierend",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "blitzschutz": [
+      {
+        "wert": "Überspannung Ethernet-Ports ±2 kV; ESD ±8 kV Luft, ±4 kV Kontakt",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Wand (Wandplatte, Montagesatz beiliegend)",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Wand auf 86-mm-/EU-/US-Unterputzdose, 2-4 Schrauben ANSI B1.1 #4/#6/#8, länger als 10 mm",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/User-Manual/14-Users-Manual1-Rev1-5398033",
+        "stand": "Exhibit 2021-08-19 (PDF 2021-08-13/18)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Wand",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": "Tag wall_embedded"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "143 × 86 × 19.7",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "143 × 86 × 19.7",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.omadanetworks.com/en/business-networking/omada-wifi-wall-plate/eap615-wall/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 220,
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "Gerät; Halterung 7 g, Versandeinheit 336 g"
+      }
+    ],
+    "gehaeuse_material": [
+      {
+        "wert": "Kunststoff",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "2 Schrauben lösen, dann starke Schnapphaken mit Kunststoffwerkzeug/Karten lösen (lange Seiten zuerst, dann Seite mit den LAN-Ports); keine versteckten Schrauben, keine Garantiesiegel",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "diebstahlschutz": [
+      {
+        "wert": "Physical Security Lock: ja",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.omadanetworks.com/en/business-networking/omada-wifi-wall-plate/eap615-wall/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luefter": [
+      {
+        "wert": false,
+        "quelle": "fcc_innenfotos_2021",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Internal-Photos/18-Internal-Photos-5398024",
+        "stand": "Report 2105C001, PDF 2021-08-09",
+        "sicherheit": "mittel",
+        "bemerkung": "auf den Innenfotos kein Lüfter; nicht ausdrücklich angegeben"
+      },
+      {
+        "wert": false,
+        "quelle": "fcc_innenfotos_2025",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Internal-Photos/2508TW0116-UI-Internal-Photograph-8949494",
+        "stand": "Report 2508TW0116-UI, PDF 2025-10-22, Exhibit 2025-12-31",
+        "sicherheit": "mittel",
+        "bemerkung": "auf den Innenfotos kein Lüfter"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": "1× weiß"
+      },
+      {
+        "wert": 1,
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "weiß, vorn"
+      },
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": true,
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "1× LED-Taste"
+      },
+      {
+        "wert": true,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_tplink_eap615-wall-v1.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Aenderung 339e8fa25b, 2026-03-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "LED-Taste GPIO 10 als KEY_LIGHTS_TOGGLE"
+      },
+      {
+        "wert": "LED-Taste unter OpenWrt anfangs ohne Funktion",
+        "quelle": "openwrt_forum_114761",
+        "beleg": "https://forum.openwrt.org/t/eap615-wall-do-you-know-what-chipset-it-is/114761",
+        "stand": "Thread 2021-12-16 bis 2022-04-06 (12 Beitraege)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beitrag 2022-04-06 (Snapshot)"
+      }
+    ],
+    "knopf_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": "1× LED, 1× Reset"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "Unterseite links neben ETH1, versenkt (Beschriftung RESET)",
+        "quelle": "fcc_aussenfotos_2021",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/External-Photos/19-External-Photos-5398023",
+        "stand": "PDF 2021-08-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "länger als 5 s drücken = Werkseinstellungen (Stock)",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "vorhanden, GPIO 8 (KEY_RESTART), nutzbar für Failsafe/Gluon-Config-Mode",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_tplink_eap615-wall-v1.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Aenderung 339e8fa25b, 2026-03-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "bringt das Gerät in den Gluon-Konfigurationsmodus",
+        "quelle": "gluon_pr_2914",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2914",
+        "stand": "PR 2023-06-04, gemergt 2023-07-11 (Commit b6088de)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Checkliste abgehakt"
+      },
+      {
+        "wert": "Stock-U-Boot prüft Reset-Taste 10 s beim Start (\"reset button is not pressed for 10s\")",
+        "quelle": "openwrt_issue_22505_bootlog",
+        "beleg": "https://github.com/user-attachments/files/26124540/bootlog-vendor.txt",
+        "stand": "Anhang zu Issue #22505 (2026-03-19), Stock-Kernel vom 2025-09-03, U-Boot 2018.09 vom 2025-07-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "V1.20"
+      }
+    ],
+    "mtbf_h": [
+      {
+        "wert": {
+          "EU": 820865,
+          "US": 805533
+        },
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "bei 25 °C"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte (Stiftleiste muss eingelötet werden)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Solder TTL header\""
+      },
+      {
+        "wert": "innen Lötpunkte: 4 unbestückte Durchkontaktierungen im Bestückungsrahmen am Platinenrand neben der SoC-Abschirmung",
+        "quelle": "openwrt_wiki_foto_uart",
+        "beleg": "https://openwrt.org/_media/media/tplink/eap615-uart_jtag.jpeg",
+        "stand": "Wiki-Foto (Datum unbekannt, Seite verlinkt es seit vor 2024)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "innen Lötpunkte (Stiftleiste einlöten oder Stifte ohne Löten andrücken)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "innen Lötpunkte: 4 unbestückte Pads am Rand der Platinenseite \"BOTTOM\" neben U12",
+        "quelle": "fcc_innenfotos_2021",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Internal-Photos/18-Internal-Photos-5398024",
+        "stand": "Report 2105C001, PDF 2021-08-09",
+        "sicherheit": "niedrig",
+        "bemerkung": "auf dem Foto nicht beschriftet; Lage passt zur Wiki-Angabe \"U12 (near serial pins on bottom side)\""
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "1: TX, 2: RX, 3: GND, 4: VCC; Pin 1 am nächsten zu ETH1",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1: TX, 2: RX, 3: GND, 4: VCC; Pin 1 am nächsten zu ETH1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TX, RX, GND, 3V3 (Reihenfolge im Foto von außen nach innen)",
+        "quelle": "openwrt_wiki_foto_uart",
+        "beleg": "https://openwrt.org/_media/media/tplink/eap615-uart_jtag.jpeg",
+        "stand": "Wiki-Foto (Datum unbekannt, Seite verlinkt es seit vor 2024)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Seitenrevision 2026-03-27 17:17",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_wiki_foto_uart",
+        "beleg": "https://openwrt.org/_media/media/tplink/eap615-uart_jtag.jpeg",
+        "stand": "Wiki-Foto (Datum unbekannt, Seite verlinkt es seit vor 2024)",
+        "sicherheit": "mittel",
+        "bemerkung": "Pad beschriftet 3V3"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "115200 8N1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_tplink_eap615-wall-v1.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Aenderung 339e8fa25b, 2026-03-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "console=ttyS0,115200"
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_issue_22505_bootlog",
+        "beleg": "https://github.com/user-attachments/files/26124540/bootlog-vendor.txt",
+        "stand": "Anhang zu Issue #22505 (2026-03-19), Stock-Kernel vom 2025-09-03, U-Boot 2018.09 vom 2025-07-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "Stock-Kernel console=ttyS0,115200 (V1.20)"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "Boot durch Tastendruck während des Starts unterbrechen; dann tftpboot 0x84000000 + bootm",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Warnung: \"env default -a; saveenv\" hat ein Gerät (soft) gebrickt",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Stock-U-Boot 2018.09 der V1.20 hat ein Boot-Menü (Startup, Upgrade firmware, Load image, U-Boot console)",
+        "quelle": "openwrt_issue_22505_bootlog",
+        "beleg": "https://github.com/user-attachments/files/26124540/bootlog-vendor.txt",
+        "stand": "Anhang zu Issue #22505 (2026-03-19), Stock-Kernel vom 2025-09-03, U-Boot 2018.09 vom 2025-07-18",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "jtag": [
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Lötpunkte JTDI/JTMS/JTDO/CLK unter der SoC-Abschirmung (Abschirmung muss ab)",
+        "quelle": "openwrt_wiki_foto_uart",
+        "beleg": "https://openwrt.org/_media/media/tplink/eap615-uart_jtag.jpeg",
+        "stand": "Wiki-Foto (Datum unbekannt, Seite verlinkt es seit vor 2024)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ramips/mt7621",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ramips/mt7621",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "tplink_eap615-wall-v1",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "TPLINK_BOARD_ID EAP615-WALL-V1, IMAGE_SIZE 13248k, tplink-safeloader"
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "22.03.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Commit a1b8a4d7 (2022-01-27/2022-02-27)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.2",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Seitenrevision 2026-03-27 17:17",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "23.05.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "veralteter Dump-Wert"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot 2018.09 (Build 2025-07-18)",
+        "quelle": "openwrt_issue_22505_bootlog",
+        "beleg": "https://github.com/user-attachments/files/26124540/bootlog-vendor.txt",
+        "stand": "Anhang zu Issue #22505 (2026-03-19), Stock-Kernel vom 2025-09-03, U-Boot 2018.09 vom 2025-07-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "V1.20"
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Stock-Weboberfläche: SSH einschalten, per SSH \"cliclientd stopcs\", Factory-Image mit kurzem Namen (z. B. factory.bin) hochladen; alternativ seriell + TFTP-Initramfs, dann sysupgrade",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": "Stock 1.1.7 nimmt alte Images (<= 23.05.2) nicht an; cliclientd fehlt in neueren Stock-Firmwares (Wiki nennt Umweg); Rettungspartition der Stock-Firmware vorhanden"
+      },
+      {
+        "wert": "Stock-Weboberfläche nach \"cliclientd stopcs\" oder Bootloader/TFTP",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "V1.20 mit Stock 1.5.x: Factory-Image wird abgelehnt (SupportList nur 1.0)",
+        "quelle": "firmware_utils_pr79",
+        "beleg": "https://github.com/openwrt/firmware-utils/pull/79",
+        "stand": "PR offen, eroeffnet 2026-09-25, zuletzt 2026-09-29",
+        "sicherheit": "mittel",
+        "bemerkung": "PR 79 offen"
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.tp-link.com/us/support/download/eap615-wall/",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://support.omadanetworks.com/en/product/eap615-wall/",
+        "quelle": "tplink_support",
+        "beleg": "https://support.omadanetworks.com/en/product/eap615-wall/",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "OpenWrt nutzt die Etikett-MAC für Ethernet und WLAN (lokal verwaltete Ableitungen für weitere Schnittstellen); Stock nutzt für Ethernet eine Zufalls-MAC",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a1b8a4d7b3ff3fa671623e2bccafd43a3c141e07",
+        "stand": "Commit 2022-01-27 (Autor), committet 2022-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Primär-MAC entspricht dem Etikett",
+        "quelle": "gluon_pr_2914",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2914",
+        "stand": "PR 2023-06-04, gemergt 2023-07-11 (Commit b6088de)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Checkliste abgehakt"
+      }
+    ],
+    "standard_zugang": [
+      {
+        "wert": "Fallback-IP 192.168.0.254 (DHCP-Client), admin/admin",
+        "quelle": "fcc_userguide",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/User-Manual/14-Users-Manual2-5398034",
+        "stand": "Exhibit 2021-08-19 (User Guide 1910012995 REV4.7.0, Juli 2021)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "http://tplinkeap.net, admin/admin",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Label/25-Label-and-location-5398025",
+        "stand": "Exhibit 2021-08-19 (PDF 2021-03-30)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, tp-link-eap615-wall-v1, ab Gluon v2023.2, nicht broken",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ramips-mt7621",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "unknown",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Seitenrevision 2026-03-27 17:17",
+        "sicherheit": "niedrig",
+        "bemerkung": "Feld der ToH-Seite nicht gepflegt"
+      }
+    ],
+    "varianten": [
+      {
+        "wert": "Hardware V1 (1.0, auch 1.6/1.8/1.9) und V1.20 (auch 1.26/1.28/1.29)",
+        "quelle": "tplink_support",
+        "beleg": "https://support.omadanetworks.com/en/product/eap615-wall/",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Regionen UN/CA/JP im OpenWrt-Image; EU/US mit unterschiedlicher Leistungsangabe/PoE-Ausgangsleistung",
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+        "stand": "Branch master am 2026-10-19 (EAP615-Eintrag: 57d0e315cd 2022-01-27, compat_level 2 seit d87b6c4b64 2023-11-22)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "V1.20 mit gleichen Chips (MT7621DAT, MT7905DAN, MT7975DN), Flash XM25QH128C 16 MiB, 128 MiB DDR3; OpenWrt läuft, nur Factory-Installation über Stock-UI offen",
+        "quelle": "openwrt_issue_22505_bootlog",
+        "beleg": "https://github.com/user-attachments/files/26124540/bootlog-vendor.txt",
+        "stand": "Anhang zu Issue #22505 (2026-03-19), Stock-Kernel vom 2025-09-03, U-Boot 2018.09 vom 2025-07-18",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Fotos 2025 zeigen dieselben Chips mit Datumscodes 2519-2522",
+        "quelle": "fcc_innenfotos_2025",
+        "beleg": "https://fccid.io/2AXJ4EAP615WALL/Internal-Photos/2508TW0116-UI-Internal-Photograph-8949494",
+        "stand": "Report 2508TW0116-UI, PDF 2025-10-22, Exhibit 2025-12-31",
+        "sicherheit": "hoch",
+        "bemerkung": "C2PC-Brief: keine Hardwareänderung"
+      }
+    ],
+    "bekannte_probleme": [
+      {
+        "wert": "Kernel 6.12: Bootloop \"lzma compressed: uncompress error 1\", behoben (28a88ff7 2025-07, e2d823d0 2025-10); Initramfs in 25.12.0/25.12.1 nicht bootbar, behoben in e5d8f5fd (2026-03-22, 25.12.2)",
+        "quelle": "openwrt_git_fixes",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e5d8f5fd693e439d5dcb86dd015309ca223846a6",
+        "stand": "Commits 28a88ff7e6 (2025-07-16), e2d823d068 (2025-10-23), e5d8f5fd69 (2026-03-22)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Stock-Firmware 1.1.7 lehnte Factory-Images bis 23.05.2 ab (\"Failed to check for new update\"); behoben durch compat_level 2",
+        "quelle": "openwrt_forum_173424",
+        "beleg": "https://forum.openwrt.org/t/eap615-wall-installation-fails-with-failed-to-check-for-new-update/173424",
+        "stand": "Thread 2023-10-04 bis 2024-02-20 (20 Beitraege)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Flash-Partitionen user-config/mutil-log/oops/radio fest; radio enthält Kalibrierdaten (vor Eingriffen sichern)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap615-wall",
+        "stand": "Seitenrevision 2026-09-25 09:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.omadanetworks.com/en/business-networking/omada-wifi-wall-plate/eap615-wall/",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.omadanetworks.com/en/business-networking/omada-wifi-wall-plate/eap615-wall/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://www.tp-link.com/us/business-networking/omada-sdn-access-point/eap615-wall/",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "quelle": "tplink_datenblatt_v120",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2025/202509/20250925/Datasheet_EAP615-Wall%201.20.pdf",
+        "stand": "PDF 2025-09-23, Dokument EAP615-Wall_V1.20_Datasheet vom 2025-09-25",
+        "sicherheit": "hoch",
+        "bemerkung": "nur V1.20"
+      }
+    ],
+    "forum": [
+      {
+        "wert": [
+          "https://forum.openwrt.org/t/eap615-wall-do-you-know-what-chipset-it-is/114761",
+          "https://forum.openwrt.org/t/eap615-wall-installation-fails-with-failed-to-check-for-new-update/173424"
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap615-wall",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://github.com/openwrt/firmware-utils/pull/79",
+      "kategorie": "hw_version",
+      "grund": "V1.20 (Stock 1.5.x) nimmt das OpenWrt-Factory-Image nicht an, bis der PR gemergt ist; Status verfolgen. Danach Gluon-Factory-Image fuer V1.20 pruefen"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/issues/22505",
+      "kategorie": "seriell_zugang",
+      "grund": "Issue enthaelt zwei Fotos einer V1.20-Platine (user-attachments), nicht ausgewertet: Lage der seriellen Pads auf V1.20 bestaetigen"
+    },
+    {
+      "url": "https://support.omadanetworks.com/en/document/14139/",
+      "kategorie": "erkennung_typenschild",
+      "grund": "TP-Link-Anleitung zum Finden der Hardware-Version; Foto des echten EAP615-Wall-Etiketts und genaue Lage fehlen noch"
+    },
+    {
+      "url": "https://fccid.io/2AXJ4EAP615WALL/User-Manual/EAP615WALL-Overview-of-Regulatory-Compliance-REV2-2-0-8949498",
+      "kategorie": "wlan_sendeleistung_dbm",
+      "grund": "Regulatory Compliance REV2.2.0 (2025, 950 KB) nicht ausgewertet; evtl. neue EU-Leistungswerte nach C2PC"
+    },
+    {
+      "url": "https://fccid.io/2AXJ4EAP615WALL/RF-Exposure-Info/13-FCC-MPE-5398027",
+      "kategorie": "antennen_gewinn_dbi",
+      "grund": "MPE-Bericht 2021 (195 KB): Antennengewinn je Antenne/Band laut Pruefbericht"
+    },
+    {
+      "url": "https://fccid.io/2AXJ4EAP615WALL/External-Photos/2508TW0116-UE-External-Photograph-8949493",
+      "kategorie": "led_abschaltbar",
+      "grund": "Aussenfotos 2025 (955 KB) nicht ausgewertet; Lage der LED-Taste ist noch nicht belegt"
+    },
+    {
+      "url": "https://support.omadanetworks.com/en/product/eap615-wall/",
+      "kategorie": "datenblatt",
+      "grund": "Datenblatt fuer Hardware V1 (1.0) nicht gefunden, nur V1.20; Firmware-Liste je Version (V1 vs V1.20) nicht abgerufen (dynamisch geladen)"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 53,
+    "notiz": "ToH-Dump + Live-hwdata, OpenWrt-Wiki (Rev. 2026-09-25) inkl. UART-Foto, Commit a1b8a4d7, DTS/Image-Makefile, Fix-Commits 2025/2026, tplink-safeloader + offener PR 79 (V1.20), Issue 22505 mit V1.20-Hersteller-Bootlog, Gluon (ab v2023.2, PR 2914), OpenWrt-Forum 114761/173424, DeviWiki/WikiDevi (keine Geraeteseite), FCC 2AXJ4EAP615WALL (Etikett, Regulatory, User Guide, Innenfotos 2021+2025, Aussenfotos 2021, C2PC-Brief), Omada-Produktseite, Support-Seite (V1, V1.20), Datenblatt V1.20. Innengeraet Wandplatte, nur PoE 802.3af/at (Etikett 802.3at 42.5-57 V 0.6 A), kein Netzteil, 4x GbE (ETH0 PoE-In hinten, ETH1-3 unten, ETH3 PoE-Passthrough passiv), 2x2 AX auf beiden Baendern, interne Leiterplattenantennen, 128 MB RAM, 16 MB SPI-NOR. Seriell: 4 unbestueckte Loetpunkte (1 TX, 2 RX, 3 GND, 4 VCC, Pin 1 nahe ETH1), 115200, 3.3 V. Widerspruch SoC MT7621AT (Commit/ToH) vs. Aufdruck MT7621DAT (FCC-Fotos). Offen: V1.20-Factory-Install (PR 79), Etikettfoto/-lage, LED-Tasten-Lage. Keine Werkstatt-Protokolle."
+  }
+}

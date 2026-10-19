@@ -1,0 +1,2736 @@
+{
+  "image": "tp-link-eap225-outdoor-v3",
+  "modell": "TP-Link EAP225-Outdoor v3",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "20779626"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3?do=export_raw",
+      "stand": "Seitenrevision 2026-03-19 05:49",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Live-Seite neuer als Dump: FCC-ID-Feld 2AXJ4EAP225OD (bei fccid.io kein exakter Treffer, gemeint ist 2AXJ4EAP225ODV3), seit 23.05.0, aktuell 25.12.1, Treiber ath9k/ath10k-ct, LED count 2, Serial 3.3 V, Outdoor Yes, PHY RTL8211FS"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/tp-link/eap225?do=export_raw",
+      "stand": "Seitenrevision 2026-10-06 07:02",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Gemeinsame Seite der EAP225-Serie (v1-v4, Outdoor, Wall); enthält einen OEM-Seriell-Bootlog von EAP225-Outdoor v3.0 und Warnungen zu v3.20/Firmware 5.2.4 (2026-07)"
+    },
+    "openwrt_git_v3": {
+      "url": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+      "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+      "abgerufen": "2026-10-19",
+      "titel": "ath79: support for TP-Link EAP225-Outdoor v3"
+    },
+    "openwrt_git_v1": {
+      "url": "https://github.com/openwrt/openwrt/commit/4f86edf477edbc0f20b5a49a69f658fa82158284",
+      "stand": "Commit 2020-07-07 (Autor), gemergt 2020-11-23",
+      "abgerufen": "2026-10-19",
+      "titel": "ath79: support for TP-Link EAP225-Outdoor v1",
+      "bemerkung": "nur Vergleich; v3-Commit übernimmt den Text fast wörtlich"
+    },
+    "openwrt_git_phy": {
+      "url": "https://github.com/openwrt/openwrt/commit/7bf73e270e7f1704b21860712820dcf12b593e91",
+      "stand": "Commit 2022-06-27",
+      "abgerufen": "2026-10-19",
+      "titel": "kernel: backport RTL8211F clkout-disable patch"
+    },
+    "openwrt_git_mac": {
+      "url": "https://github.com/openwrt/openwrt/commit/c527073b38bed10479ed258f964a2948d78c6624",
+      "stand": "Commit 2024-01-21 (Autor), gemergt 2024-01-23",
+      "abgerufen": "2026-10-19",
+      "titel": "ath79: fix mac address on eap2x5-1port devices"
+    },
+    "openwrt_git_compat": {
+      "url": "https://github.com/openwrt/openwrt/commit/f403824a6fde7c06c7ea7af5a81b0971fce714a1",
+      "stand": "Commit 2024-03-23",
+      "abgerufen": "2026-10-19",
+      "titel": "firmware-utils: update to git HEAD (u. a. c1e06da tplink-safeloader: bump EAP225-V3 compat_level)"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=eap225-outdoor+repo:openwrt/openwrt",
+      "stand": "Suchergebnis 2026-10-19 (16 Commits, neuester 2024-03-23)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_tplink_eap225-outdoor-v3.dts",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "dateien": [
+        "qca9563_tplink_eap225-outdoor-v3.dts",
+        "qca9563_tplink_eap2x5-1port.dtsi"
+      ]
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-tp-link.mk",
+      "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-09-22)",
+      "abgerufen": "2026-10-19"
+    },
+    "firmware_utils_safeloader": {
+      "url": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+      "stand": "Branch master am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_commit": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/3fdf6f677a4b31de6ac1d7f84db4581c0aef96cd",
+      "stand": "Commit 2023-11-02 (PR #3033 vom 2023-10-25)",
+      "abgerufen": "2026-10-19",
+      "titel": "ath79-generic: add support for TP-Link EAP225-Outdoor v3 (#3033)",
+      "pr": "https://github.com/freifunk-gluon/gluon/pull/3033"
+    },
+    "gluon_release_v2023_2": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/docs/releases/v2023.2.rst",
+      "stand": "Release Notes Gluon v2023.2 (Branch main am 2026-10-19)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "zusätzlich geprüft: targets/ath79-generic im Tag v2023.2 enthält das Gerät"
+    },
+    "openwrt_forum_123132": {
+      "url": "https://forum.openwrt.org/t/support-for-tp-link-eap225-outdoor-v3/123132",
+      "stand": "Thread 2022-03-19 bis 2026-08-01 (171 Beiträge, alle geladen, per Stichwortsuche ausgewertet)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Beiträge 1-20 per /t/123132.json, Rest per /t/123132/posts.json?post_ids[]"
+    },
+    "deviwiki_suche": {
+      "url": "https://deviwiki.com/w/index.php?search=EAP225-Outdoor&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Nur Seite TP-LINK_EAP225-Outdoor (beschreibt v1, FCC TE7EAP225OD 2017, AR8033); keine v3-Seite"
+    },
+    "deviwiki_v1": {
+      "url": "https://deviwiki.com/wiki/TP-LINK_EAP225-Outdoor",
+      "stand": "Seitenrevision 2019-07-05T02:51:32Z",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "beschreibt EAP225-Outdoor v1 (FCC 2017-12-13, AR8033); Werte nur als Vergleich, nicht für v3 übernommen"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/api.php?action=query&list=allpages&apprefix=TP-LINK_EAP225",
+      "stand": "Seitenliste 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Seiten: TP-LINK EAP225-Outdoor (v1, Spiegel der DeviWiki-Seite, nicht geladen), EAP225 v1.x/v3.x/v5.x; keine Outdoor-v3-Seite"
+    },
+    "fcc_v3": {
+      "url": "https://fccid.io/2AXJ4EAP225ODV3",
+      "stand": "Grant 2022-05-09 (Change in identification, Original TE7EAP225OD)",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_v3_label": {
+      "url": "https://fccid.io/2AXJ4EAP225ODV3/Label/4-Label-and-location-Rev1-5865360",
+      "stand": "Exhibit 2022-05-09 (Zeichnung EAP225-Outdoor(EU) 3.0 vom 2022-02-15)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Lasergravur am Gehäuse (\"壳体镭雕\"), 20.696 x 59.379 mm; als Bild ausgewertet (400 dpi Ausschnitt)"
+    },
+    "fcc_orig": {
+      "url": "https://fccid.io/TE7EAP225OD",
+      "stand": "Grants 2017-12-13 (Original) und 2022-05-08 (Class II permissive change)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Die v3 wurde 2022 als Class II permissive change unter TE7EAP225OD zugelassen und am 2022-05-09 auf 2AXJ4EAP225ODV3 umgeschrieben; Dokumente von 2022 = v3, von 2017 = v1"
+    },
+    "fcc_c2pc_brief": {
+      "url": "https://fccid.io/TE7EAP225OD/Letter/10-Class-II-permissive-change-format-letter-FCC-Rev1-5864354",
+      "stand": "Brief 2022-05-07, Exhibit 2022-05-08",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_mpe_2022": {
+      "url": "https://fccid.io/TE7EAP225OD/RF-Exposure-Info/17-MPE-Report-R01-5864924",
+      "stand": "BTL-FCCP-3-2204C180 R01, 2022-05-09",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_innenfotos_2022": {
+      "url": "https://fccid.io/TE7EAP225OD/Internal-Photos/13-Internal-Photos-5864357",
+      "stand": "Projekt 2204C180, PDF 2022-05-05/06",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "5 Seiten, 7 Fotos 1574x1180, als Bild ausgewertet; Cache fcc/intphoto2022.pdf, fcc/int22/"
+    },
+    "fcc_aussenfotos_2022": {
+      "url": "https://fccid.io/TE7EAP225OD/External-Photos/14-External-Photos-5864356",
+      "stand": "Projekt 2204C180, PDF 2022-05-06",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "5 Seiten, 9 Fotos inkl. PoE-Adapter und Netzkabel, als Bild ausgewertet; Cache fcc/ext22/"
+    },
+    "fcc_testbericht_24_2022": {
+      "url": "https://fccid.io/TE7EAP225OD/Test-Report/5-Test-Report-WLAN-2-4G-R01-5864348",
+      "stand": "BTL-FCCP-1-2204C180 R01, 2022-05-07",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "43 Seiten, nur Abschnitt 2.1 (EUT) und Antennen ausgewertet"
+    },
+    "fcc_handbuch_2017": {
+      "url": "https://fccid.io/TE7EAP225OD/User-Manual/TE7EAP225OD-User-manual-1201-3674825",
+      "stand": "PDF 2017-09-11 (Exhibit 2017-12-13)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "reines Software-Handbuch der EAP-Serie (v1-Zeit), keine Hardwaredaten zum Outdoor-Modell"
+    },
+    "tplink_produktseite_v3": {
+      "url": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+      "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Versionsauswahl: V1, V3, V3.20"
+    },
+    "tplink_produktseite_v320": {
+      "url": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3.20/",
+      "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Abschnitt HARDWARE FEATURES bis OTHERS textgleich mit /v3/"
+    },
+    "tplink_support": {
+      "url": "https://support.omadanetworks.com/en/product/eap225-outdoor/",
+      "stand": "Live-Seite 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "https://www.tp-link.com/en/support/download/eap225-outdoor/v3/ leitet hierher um; Vorauswahl V4; Dokumentliste wird per JavaScript geladen (Installationsanleitung nicht erreichbar)"
+    },
+    "tplink_datenblatt": {
+      "url": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20&%20Wi-Fi%205%20Outdoor%20AP.pdf",
+      "stand": "PDF erstellt 2023-11-07, geändert 2024-03-11 (Omada-Liste 2024-03-13)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Seriendatenblatt Wi-Fi 4 & Wi-Fi 5 Outdoor AP (EAP225-Outdoor, EAP113-Outdoor, EAP110-Outdoor), ohne Hardwareversion"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "20779626",
+      "devicetype": "WiFi AP",
+      "brand": "TP-Link",
+      "model": "EAP225-Outdoor",
+      "version": "v3",
+      "fccid": "http://¿",
+      "availability": "Available 2022",
+      "whereavailable": "amazon.de",
+      "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+      "supportedsincerel": "",
+      "supportedcurrentrel": "snapshot",
+      "unsupported_functions": "NULL",
+      "target": "ath79",
+      "subtarget": "generic",
+      "packagearchitecture": "mips_24kc",
+      "bootloader": "¿",
+      "cpu": "Qualcomm Atheros QCA9563",
+      "cpucores": "1",
+      "cpumhz": "750",
+      "flashmb": "16",
+      "rammb": "128",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "1",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "¿",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "Qualcomm Atheros QCA9563,Qualcomm Atheros QCA9886",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "a/n/ac",
+      "wlancomments": "2x2 MU-MIMO",
+      "wlandriver": "ath9k,ath10k,ath10k-ct",
+      "detachableantennas": "2",
+      "bluetooth": "-",
+      "usbports": "-",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "115200 / 8N1",
+      "jtag": "No",
+      "ledcount": "¿",
+      "buttoncount": "1",
+      "gpios": "¿",
+      "powersupply": "24V passive PoE, 802.3af/at PoE",
+      "devicepage": "toh:tp-link:eap225",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "https://forum.openwrt.org/t/support-for-tp-link-eap225-outdoor-v3/123132",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "EAP225 Outdoor v3",
+      "gitsearch": "EAP225-Outdoor v3",
+      "wikideviurl": "http://¿",
+      "oemdevicehomepageurl": "https://www.tp-link.com/us/business-networking/ceiling-mount-access-point/eap225-outdoor/",
+      "firmwareoemstockurl": "https://www.tp-link.com/us/support/download/eap225-outdoor/v3/#Firmware",
+      "firmwareopenwrtinstallurl": "http://¿",
+      "firmwareopenwrtupgradeurl": "http://¿",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-tplink_eap225-outdoor-v3-squashfs-factory.bin",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-tplink_eap225-outdoor-v3-squashfs-sysupgrade.bin",
+      "installationmethods": "see git-commit",
+      "commentinstallation": "",
+      "recoverymethods": "see git-commit",
+      "commentrecovery": "",
+      "picture": "media:tplink:tplink-eap225-outdoor-v3.jpg",
+      "comments": "",
+      "page": "toh:hwdata:tp-link:tp-link_eap225-outdoor_v3"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi AP",
+      "Brand": "TP-Link",
+      "Model": "EAP225-Outdoor",
+      "Versions": "v3",
+      "FCCID_urls": "https://fcc.io/2AXJ4EAP225OD",
+      "Availability_availability": "Available 2022",
+      "Where available": "amazon.de",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+      "Supported Since Rel_releasesince": "23.05.0",
+      "Supported Current Rel_releasecurrent": "25.12.1",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "unknown",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "¿",
+      "CPU": "Qualcomm Atheros QCA9563",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "750",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "Realtek RTL8211FS GbE Phy",
+      "WLAN Hardwares": "Qualcomm Atheros QCA9563, Qualcomm Atheros QCA9886",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN Comments_": "MIMO 2x2:2 2.4Ghz, MIMO 2x2:2 5Ghz",
+      "WLAN driver_wlan-drivers": "ath9k, ath10k-ct",
+      "Detachable Antennas_numdetachantenna": "2",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "No",
+      "LED count_numled": "2",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "24V passive PoE, 802.3af/at PoE",
+      "Outdoor_yesno": "Yes",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:tp-link:eap225",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "https://forum.openwrt.org/t/support-for-tp-link-eap225-outdoor-v3/123132",
+      "Forum search_search-forums": "EAP225 Outdoor v3",
+      "Git search_search-gits": "EAP225-Outdoor v3",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/TP-LINK_EAP225-Outdoor",
+      "WikiDevi ID_hwinfo-ids": "TP-LINK_EAP225-Outdoor",
+      "OEM Device Homepage URL_url": "https://www.tp-link.com/br/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+      "Firmware OEM Stock URL_url": "https://www.tp-link.com/br/support/download/eap225-outdoor/v3/",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.1/targets/ath79/generic/openwrt-25.12.1-ath79-generic-tplink_eap225-outdoor-v3-squashfs-factory.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.1/targets/ath79/generic/openwrt-25.12.1-ath79-generic-tplink_eap225-outdoor-v3-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-tplink_eap225-outdoor-v3-squashfs-factory.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-tplink_eap225-outdoor-v3-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "see git-commit",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "see git-commit",
+      "Comment recovery": "",
+      "Picture_img100s": "media:tplink:tplink-eap225-outdoor-v3.jpg",
+      "Comments_": ""
+    },
+    "openwrt_wiki": {
+      "einleitung": "The EAP 225 series are dual-band devices for different environments. The Outdoor and Wall models can only be powered by 802.3af/at PoE (48 V DC). The other models can also be powered via a 12V DC power supply.",
+      "installation_eap225_v3plus_outdoor": [
+        "The EAP225-Outdoor, EAP225-Wall v2, EAP225 v3, and later models can be installed via the web interface after disabling Firmware Signature Check.",
+        "Upgrade the firmware to version v5.0.3, which fixes a bug that may cause the EAP to reboot abnormally during firmware upgrading and cause the device to brick",
+        "Enable the SSH-Server via the web interface (fallback IPv4 192.168.0.254); ssh into the target device and run 'cliclientd stopcs' to disable Firmware Signature Check",
+        "upload the factory image via the web interface, rename the firmware to something with less than 63 characters length",
+        "After the successfull update, the device can be reached at the default ip address 192.168.1.1"
+      ],
+      "warnung_2026_06": "CRITICAL BRICK RISK (v5.1.1) - June 2026: Flashing directly from stock firmware v5.1.1 will brick the device. You must upgrade to v5.1.11 before installing OpenWrt. Tested only on EAP225 v3.0 Outdoor.",
+      "warnung_2026_07": "newer EAP225-Outdoor v3 APs are v3.20 hardware revision shipped with a 5.2.4 firmware which has a limited CLI. 'cliclientd stopcs' is not recognized anymore. At the moment, it's impossible to install OpenWRT at all, neither downgrade to 5.1.11 TP-Link firmware.",
+      "hinweis_v320_aussehen": "These new APs come in a new package that is bright green with dull green. The AP itself has Omada written on it instead of tp-link.",
+      "hinweis_2026_09": "Workaround für EAP615-Wall beschrieben, auf EAP225 ungetestet (Inhalt bewusst nicht übernommen: Umgehung einer Hersteller-Schutzfunktion)",
+      "failsafe": "Repower the router, the LED will stay bright a few seconds, then it will start flashing slowly: press the button repeatedly until the LED is flashing fast (beschrieben für EAP225-Wall, 'should work for all the EAP225 Serie devices')",
+      "zurueck_zur_stock_firmware": "aus Backup (mtdblock3 kernel + mtdblock4 rootfs zusammengefügt als sysupgrade) oder per tplink-safeloader -z aus TP-Link-Firmware",
+      "oem_bootlog_v3_0": {
+        "titel": "OEM serial boot log (sanitized; EAP225-Outdoor v3.0)",
+        "u_boot": "U-Boot 1.1.4--LSDK-10.2-00082-4-gfc48af86 (Nov 14 2021 - 12:06:52)",
+        "board": "board956x - Dragonfly 1.0",
+        "ddr": "ath_ddr_initial_config(287): (ddr2 init)",
+        "takte": "ath_sys_frequency: cpu 775 ddr 650 ahb 258; ref_clk 25000000",
+        "ram": "128 MB",
+        "flash_uboot": "Flash Manuf Id 0x1c, DeviceId0 0x70, DeviceId1 0x18; flash size 16MB, sector count = 256",
+        "flash_kernel": "m25p80 spi0.0: found en25q128a, expected m25p80; en25q128a (16384 Kbytes)",
+        "autoboot": "Hit Ctrl+B to stop autoboot:  2  1  0",
+        "cpu": "CPU revision is: 00019750 (MIPS 74Kc); SoC: Qualcomm Atheros QCA956X rev 0",
+        "clocks": "CPU:775.000MHz, DDR:650.000MHz, AHB:258.333MHz, Ref:25.000MHz",
+        "kernel": "Linux version 3.3.8 (tplink@sohoiapbuild) (gcc version 4.3.3 (GCC) ) #1 Wed Jul 9 18:28:11 CST 2025",
+        "cmdline": "console=ttyS0,115200 root=31:04 rootfstype=squashfs init=/init mtdparts=spi0.0:128k(u-boot),64k(pation-table),64k(product-info),1536k(kernel),13568k(rootfs),192k(config),...",
+        "mtd": "u-boot 0x0-0x20000, pation-table 0x20000-0x30000, product-info 0x30000-0x40000, kernel 0x40000-0x1c0000, rootfs 0x1c0000-0xf00000, config 0xf00000-0xf30000, mutil-log 0xf30000-0xfb0000, oops 0xfb0000-0xff0000, ART 0xff0000-0x1000000",
+        "phy": "eth0: connected to PHY at ag71xx-mdio.0:06 [uid=001cc916, driver=RealTek 8211FS-CG PHY]",
+        "machine": "MIPS: machine is Qualcomm Atheros AP152 reference board",
+        "productinfo": "EAP225-Outdoor(TP-Link|UN|AC1200-D):3.0",
+        "busybox": "BusyBox v1.20.2 (2025-07-09 18:32:46 CST)"
+      },
+      "tags": "ath79 QCA9563 16flash 128ram gigabitethernet 802.11abgnac PoE ceiling outdoor wall_embedded"
+    },
+    "openwrt_git_v3": {
+      "titel": "ath79: support for TP-Link EAP225-Outdoor v3",
+      "autor": "Paul Maruhn (Co-developed-by Philipp Rothmann; Tested-by Tido Klaassen; Signed-off-by Nick Hainke)",
+      "text": "This model is almost identical to the EAP225-Outdoor v1. Major difference is the RTL8211FS PHY Chipset.",
+      "SoC": "QCA9563 @ 775MHz",
+      "Memory": "128MiB DDR2",
+      "Flash": "16MiB SPI-NOR",
+      "Wireless 2.4GHz (SoC)": "b/g/n 2x2",
+      "Wireless 5GHz (QCA9886)": "a/n/ac 2x2 MU-MIMO",
+      "Ethernet (RTL8211FS)": "1× 1GbE, PoE",
+      "Flashing instructions": "ssh into target device with recent (>= v1.6.0) firmware; run `cliclientd stopcs`; upload factory image via web interface",
+      "Debricking": "To recover the device, you need access to the serial port. This requires fine soldering to test points, or the use of probe pins. Open the case and solder wires to the test points: RXD, TXD and TPGND4. Use a 3.3V UART, 115200 baud, 8n1. Interrupt bootloader by holding ctrl+B during boot; upload initramfs via built-in tftp client (tftp 0x80800000 initramfs.bin; bootelf $fileaddr), then sysupgrade",
+      "MAC addresses": "MAC address (as on device label) is stored in device info partition at an offset of 8 bytes. ath9k device has same address as ethernet, ath10k uses address incremented by 1.",
+      "dateien": [
+        "target/linux/ath79/dts/qca9563_tplink_eap225-outdoor-v3.dts (neu)",
+        "target/linux/ath79/generic/base-files/etc/board.d/02_network",
+        "target/linux/ath79/image/generic-tp-link.mk"
+      ]
+    },
+    "openwrt_git_v1": {
+      "text": "TP-Link EAP225-Outdoor v1 is an AC1200 (802.11ac Wave-2) pole or wall mount access point. Debricking requires access to the serial port, which is non-trivial.",
+      "Ethernet (AR8033)": "1× 1GbE, PoE",
+      "UART": "UART access tested by forum user arinc9."
+    },
+    "openwrt_git_phy": {
+      "text": "This phy reset is required to have a working ethernet on the TP-Link EAP225-Outdoor v3 and EAP225 v4 after a reboot. Otherwise the ethernet port will only function properly on cold boots.",
+      "tested_by": "Andre Klärner # EAP225-Outdoor v3"
+    },
+    "openwrt_git_mac": {
+      "text": "Commit e816591e226a (\"ath79: qca: convert to nvmem-layout\") mistakenly switched the source of the mac address from the 'info' to 'art' partition. ... tested to fix the problem for eap225-outdoor-v3"
+    },
+    "openwrt_git_compat": {
+      "text": "c1e06da tplink-safeloader: bump EAP225-V3 compat_level"
+    },
+    "openwrt_dts": {
+      "compatible": "tplink,eap225-outdoor-v3, qca,qca9563",
+      "model": "TP-Link EAP225-Outdoor v3",
+      "include": "qca9563_tplink_eap2x5-1port.dtsi (-> qca956x.dtsi)",
+      "leds": "status grün GPIO 7 (active low, default on; boot/running), status amber GPIO 9 (active low; failsafe/upgrade)",
+      "taste": "Reset button, KEY_RESTART, GPIO 2 active low, debounce 60",
+      "eth0": "phy-handle phy6 (MDIO-Adresse 6), phy-mode sgmii, qca956x-serdes-fixup, MAC aus info@0x8",
+      "mdio_pins": "GPIO 10 MDIO, GPIO 8 MDC",
+      "wmac": "ath9k, MAC info@0x8 (+0), Kalibrierung art@0x1000 (0x440)",
+      "pcie_wifi": "qcom,ath10k, MAC info@0x8 +1, pre-calibration art@0x5000 (0x2f20)",
+      "spi_flash": "jedec,spi-nor, 25 MHz",
+      "partitionen": "u-boot 0x000000-0x020000 (ro), partition-table 0x020000 (0x10000, ro), info 0x030000 (0x10000, ro), firmware 0x040000 (0xd80000, openwrt,elf), config 0xdc0000 (0x30000, ro), [df0000-f30000 undefined in vendor firmware], log 0xf30000 (0xc0000, ro), art 0xff0000 (0x10000, ro)"
+    },
+    "openwrt_image_mk": {
+      "Device/tplink_eap225-outdoor-v3": "$(Device/tplink-eap2x5); SOC := qca9563; IMAGE_SIZE := 13824k; DEVICE_MODEL := EAP225-Outdoor; DEVICE_VARIANT := v3; DEVICE_PACKAGES := kmod-ath10k-ct ath10k-firmware-qca9888-ct; TPLINK_BOARD_ID := EAP225-V3",
+      "Device/tplink-eap2x5": "$(Device/tplink-safeloader); LOADER_TYPE := elf; KERNEL := kernel-bin | append-dtb | lzma | loader-kernel; IMAGE/factory.bin := append-rootfs | tplink-safeloader factory | pad-extra 128"
+    },
+    "firmware_utils_safeloader": {
+      "id": "EAP225-V3",
+      "kommentar": "Firmware layout for the EAP225 v3 ... EAP225-Outdoor v3",
+      "support_list": [
+        "EAP225(TP-Link|UN|AC1350-D):3.0",
+        "EAP225(TP-Link|UN|AC1350-D):3.20",
+        "EAP225(TP-Link|UN|AC1350-D):4.0 CA",
+        "EAP225-Outdoor(TP-Link|UN|AC1200-D):1.0",
+        "EAP225-Outdoor(TP-Link|UN|AC1200-D):3.0 CA,JP"
+      ],
+      "soft_ver_compat_level": 2,
+      "partitionen": "fs-uboot 0x00000/0x20000, partition-table 0x20000/0x02000, default-mac 0x30000/0x01000, support-list 0x31000/0x00100, product-info 0x31100/0x00400, soft-version 0x32000/0x00100, firmware 0x40000/0xd80000, user-config 0xdc0000/0x30000, mutil-log 0xf30000/0x80000, oops 0xfb0000/0x40000, radio 0xff0000/0x10000"
+    },
+    "gluon_targets": {
+      "eintrag": "device('tp-link-eap225-outdoor-v3', 'tplink_eap225-outdoor-v3', { packages = ATH10K_PACKAGES_QCA9888, })"
+    },
+    "gluon_commit": {
+      "dateien": [
+        "docs/user/supported_devices.rst: EAP225-Outdoor (v1, v3)",
+        "package/gluon-core/.../platform.lua: is_outdoor_device += tplink,eap225-outdoor-v3",
+        "targets/ath79-generic"
+      ],
+      "pr_checkliste": "Web interface: direct vendor firmware to Gluon untested (device was originally flashed from vendor fw to vanilla OpenWrt); TFTP untested; sysupgrade ok; Reset/WPS button returns device into config mode; Primary MAC matches label; all network ports; Wireless AP+mesh on all radios; Power/system LED lit and config-mode blink; No radio LED available; No switch LED available; outdoor: is_outdoor_device"
+    },
+    "gluon_release_v2023_2": {
+      "Added hardware support / TP-Link": "EAP225-Outdoor v3"
+    },
+    "openwrt_forum_123132": {
+      "#1 yksflip 2022-03-19": "EAP225-outdoor-v3 ... very similar to the eap225 outdoor v1 ... tplink webinterface rejects the openwrt image v1 ... /proc/mtd identical to v1 ... ethernet chip which is in v3 RTL8211",
+      "#3 svanheule 2022-03-20": "The 5GHz radio, LED GPIOs, and button GPIO all appear to be identical. ... TP-Link switched to a unified firmware for EAP225 v3/v3.20/v4 and EAP225-Outdoor v1/v3 (SupportList ... EAP225-Outdoor(TP-Link|UN|AC1200-D):3.0)",
+      "#8 yksflip 2022-04-13": "got the phy working: Setting the phy register to the correct value for the rtl8211s was the solution; adjusted the partition scheme to fit the oem bootlog; TP-Link published GPL sources",
+      "#10 andyduncan 2022-04-23": "stock firmware 5.0.7 would not flash (stuck at 25%), after installing 5.0.6 and cliclientd stopcs it worked",
+      "#27 svanheule 2022-05-27": "firmware-utils updated: EAP225-Outdoor v3 (and EAP225 v4) images use the EAP225-V3 board ID",
+      "#32 svanheule 2022-06-13": "partition layouts are identical; unified firmware for EAP225 v3, v3.20, EAP225-Outdoor v1, EAP225 v4, EAP225-Outdoor v3",
+      "#38 paddybk 2022-06-19": "Toggling gpio11 on eap225-outdoor-v3 seems not to change anything.",
+      "#75 klaernie 2022-07-15": "the only holes are the antenna connectors, sealed with o-rings. Remove the antennas, peel the secondary rubber stickers, unscrew the nut around the antenna connector, then the entire PCB slides out. Remove the o-rings before pushing the PCB back in.",
+      "#111 Nyshan 2023-06-24": "Remove the antennas, unscrew the securing nuts on the antenna connectors, push on the antenna connectors until the PCB slides out. Four pads labelled Ground, Vcc(?), Tx and Rx.",
+      "#113 Nyshan 2023-06-27": "with serial: tftp initramfs to 0x80800000, bootelf, then sysupgrade",
+      "#146 kdawgforever 2023-12-31": "I have a v3.8 and get a \"bad file\" error",
+      "#147 svanheule 2024-01-16": "patched 23.05.2 image that only bumps the firmware compatibility level",
+      "#175/#176 lecbee 2026-07": "stock firmware 5.2.4 Build 20251024; downgrade to 5.1.11 refused; TP-Link support: downgrade not possible",
+      "#177 lecbee 2026-07-20": "new hardware revision v3.20 (support.omadanetworks.com); for v3 downloads 5.1.11, 5.2.2, 5.2.3; for v3.20 no download; device is 3.20 with 5.2.4",
+      "#178 lecbee 2026-08-01": "According to the TP-Link firmware download page, there is now again a new hardware revision: V4",
+      "tx_power": "Beiträge 2023: 5-GHz-Standard 22 dBm, TP-Link-Support nennt 22 dBm als Maximum"
+    },
+    "deviwiki_v1": {
+      "brand": "TP-LINK",
+      "model": "EAP225",
+      "revision": "-Outdoor",
+      "fcc_date": "12/13/2017",
+      "manuf_country": "China",
+      "type": "outdoor access point",
+      "fcc_id": "TE7EAP225OD",
+      "ic_id": "8853A-EAP225OD",
+      "pwr_poe": "af, ns",
+      "cpu1": "Qualcomm Atheros QCA9563 (QCA9563-AL3A, PK712CPY, 1712, TAIWAN), 750 MHz",
+      "ram1": "128 MB ESMT M14D1G1664A-2.5B",
+      "wi1": "QCA9563, bgn, RP-SMA, 2x2 chains, sstreams 3",
+      "wi2": "QCA9886 (Q, QCA9886, 0VV, NE714WXZ, E071404), an+ac, RP-SMA, 2x2, 2 streams",
+      "eth": "eth_cpu=true; AR8033 (AR8033-AL1A, NJ647227, 1647, CHINA); lan 1x 1G",
+      "flags": "Wave2, MU-MIMO",
+      "default_user": "admin",
+      "default_pass": "admin",
+      "tagline": "AC1200 Wireless MU-MIMO Gigabit Intdoor/Outdoor Access Point",
+      "text": "Only two tx/rx chains and spatial streams of the QCA9563 CPU's three appear to be implemented."
+    },
+    "wikidevi": {
+      "seiten": [
+        "TP-LINK EAP225-Outdoor",
+        "TP-LINK EAP225 v1.x",
+        "TP-LINK EAP225 v3.x",
+        "TP-LINK EAP225 v5.x"
+      ]
+    },
+    "fcc_v3": {
+      "FCC ID": "2AXJ4EAP225ODV3",
+      "Grantee": "TP-Link Corporation Limited (2AXJ4)",
+      "Product Code": "EAP225ODV3",
+      "Equipment Class": "AC1200 Wireless MU-MIMO Gigabit Indoor/Outdoor Access Point (DTS/NII)",
+      "Test Firm": "BTL Inc.",
+      "Application Purpose": "Change in identification of presently authorized equipment. Original FCC ID: TE7EAP225OD Grant Date: 05/08/2022",
+      "Final Action Date": "2022-05-09",
+      "Frequenzen/Leistung": "2412-2462 MHz 0.805 W (15C); 5180-5240 MHz 0.372 W (15E); 5745-5825 MHz 0.292 W (15E); Grant Notes CC, MO",
+      "Grant Comments": "Power output is conducted. ... This device supports 20 and 40 MHz bandwidth modes and contains 5 GHz transmitter.",
+      "Exhibits": [
+        "5. External Photos Rev1 (2022-05-09, 1.2 MB)",
+        "4. Label and location Rev1 (2022-05-09, 1.7 MB)",
+        "2. Agency Authorization Letter",
+        "6. Request for FCC Change ID 1/2"
+      ],
+      "Hinweis": "fccid.io/2AXJ4EAP225OD (Wert aus OpenWrt-hwdata) liefert keinen exakten Treffer, nur Vorschläge 2AXJ4EAP225ODV3 und TE7EAP225OD"
+    },
+    "fcc_v3_label": {
+      "PDF-Titel": "EAP225-Outdoor(EU)3.0_壳体镭雕 (Gehäuse-Lasergravur)",
+      "Zeichnung": "Datum 2022-02-15, Version A7, Änderung: 删除IC ID的空格 (Leerzeichen in IC-ID entfernt), Größe Gravur 20.696*59.379mm, Logo-Gravur 25.41*8.017 mm Pantone 6C",
+      "Gravurtext": "tp-link | Omada; AC1200 Wireless MU-MIMO Gigabit Indoor/Outdoor Access Point; Model: EAP225-Outdoor; Power: 24V ⎓ 0.5A Passive PoE; PoE: 36-57V ⎓ 0.35A 802.3af; Default Access: http://tplinkeap.net Username: admin Password: admin; MADE IN CHINA; IEEE802.11b/g/n; IEEE802.11a/n/ac; W52 W53 W56; IP65; IC: 26583-EAP225ODV3; HVIN: EAP225-OutdoorV3; FCC ID: 2AXJ4EAP225ODV3; R 201-210699; この製品のW52/W53バンドは屋内においてのみ使用可能です",
+      "Lage": "Gravur auf der Gehäuseseite neben dem Anschlussfach (Zeichnung Seite 1, Foto Seite 2 'label location')",
+      "Hardwareversion": "nicht in der Gravur enthalten"
+    },
+    "fcc_orig": {
+      "FCC ID": "TE7EAP225OD",
+      "Grantee": "TP-Link Technologies Co., Ltd.",
+      "Anträge": [
+        "2017-12-13 Original Equipment (2x)",
+        "2022-05-08 Class II permissive change (2x)"
+      ],
+      "Exhibits_2022": [
+        "13. Internal Photos (2.1 MB)",
+        "14. External Photos (1.2 MB)",
+        "6. Test setup photos",
+        "5. Test Report_WLAN 2.4G R01",
+        "5. Test Report_WLAN 5G R01",
+        "10. Class II permissive change format letter",
+        "11. FCC Wi-Fi Channel 12 and 13 Declaration Letter",
+        "12. Non-SDR Cover Letter",
+        "17. MPE Report R01",
+        "8. Block Diagram (vertraulich)",
+        "9. Schematics (vertraulich)",
+        "7. Operation Description (vertraulich)"
+      ],
+      "Exhibits_2017": [
+        "User manual_1201 (3.5 MB)",
+        "Internal photo",
+        "External photo",
+        "Label and location",
+        "RF test reports 2.4/5 GHz",
+        "MPE Test Report",
+        "Antenna spec. (vertraulich)"
+      ]
+    },
+    "fcc_c2pc_brief": {
+      "Betreff": "Requesting Class II permissive change for FCC ID: TE7EAP225OD, original granted on 12/13/2017",
+      "Änderungen": "1. Changed the PHY chip. 2. Changed the power supply, the isolated POE circuit is changed to non-isolated POE, adjusted DC-DC.",
+      "Datum": "2022-05-07"
+    },
+    "fcc_mpe_2022": {
+      "Report": "BTL-FCCP-3-2204C180 R01",
+      "Test Model": "EAP225-Outdoor",
+      "Test Sample": "Engineering Sample",
+      "Antennen_2.4GHz": "2x tp-link P/N 3101501275, Dipole, RP-SMA-F, 3.36 dBi",
+      "Antennen_5GHz": "2x tp-link P/N 3101501275, Dipole, RP-SMA-F, 5.19 dBi (UNII-1), 4.56 dBi (UNII-3)",
+      "Beamforming Gain": "3 dB",
+      "Elevation >30° Max Gain": "-2.22 dBi",
+      "Betriebsarten": "2TX (Ant. 1 + Ant. 2) für 11b/g/n und 11a/n/ac VHT20/40/80"
+    },
+    "fcc_testbericht_24_2022": {
+      "Report": "BTL-FCCP-1-2204C180 R01",
+      "Equipment": "AC1200 Wireless MU-MIMO Gigabit Indoor/Outdoor Access Point",
+      "Test Model": "EAP225-Outdoor",
+      "Power Source": "Supplied from PoE Adapter. Model: TL-POE2412G",
+      "Power Rating": "I/P: 100-240V~ 50/60Hz 0.4A O/P: 24.0V 0.5A",
+      "Operation Frequency": "2412 MHz ~ 2462 MHz",
+      "Bit Rate": "11b bis 11 Mbps, 11g bis 54 Mbps, 11n bis 300 Mbps"
+    },
+    "fcc_innenfotos_2022": {
+      "Platine": "eine lange schmale Platine, an einem Ende 2 RP-SMA-Buchsen (Antennen), am anderen Ende eine RJ45-Buchse; Abschirmblech über dem HF-Teil; Platine steckt in einem Kunststoffrohr mit Endkappe",
+      "Platinenkennung": "2111032225OD-3.0 Rev1.0SP1 (Lesung aus Foto, Ziffernfolge nicht sicher)",
+      "SoC": "Qualcomm QCA9563-AL3A, PK127... 2127 TAIWAN",
+      "WLAN_5GHz": "Qualcomm QCA9886 0VV (unter Abschirmung)",
+      "RAM": "ESMT M14D1G1664A AZS1 -2.5B (DDR2, 1 Gbit)",
+      "Flash": "SOIC-8 U29 nahe SoC, Aufdruck \"P17A 7514WE 0XRKW\" (Hersteller aus dem Aufdruck nicht erkennbar)",
+      "PHY": "Realtek RTL8211FS (unter Abschirmrahmen nahe RJ45), Quarz 25.000 MHz",
+      "Seriell": "4 Durchkontaktierungen am Platinenrand neben dem SoC, Siebdruck TXD, RXD, GND, VDD; keine Stiftleiste bestückt, Löcher mit Lot/Lotresten",
+      "Netzteil": "DC-DC-Wandler (Drosseln 2R2, 3R3, 470), Elkos 470 µF 16 V",
+      "Lüfter": "keiner sichtbar"
+    },
+    "fcc_aussenfotos_2022": {
+      "Gehäuse": "weißes längliches Gehäuse, Anschlussfach mit Abdeckung am unteren Ende",
+      "Anschlussfach": "eine RJ45-Buchse, daneben Taste mit Beschriftung RESET",
+      "Antennen": "2 weiße Stabantennen, abschraubbar, RP-SMA (vergoldete Buchsen am oberen Ende)",
+      "PoE-Adapter": "TP-Link Adapter mit RJ45-Buchsen LAN und POE, Netzeingang Kleeblatt-Buchse (IEC C6), dazu kurzes Netzkabel mit US-Stecker"
+    },
+    "tplink_produktseite_v3": {
+      "Interface": "1× Gigabit Ethernet (RJ-45) Port (Support 802.3af/at PoE (Alternative A) and Passive PoE)",
+      "Button": "Reset",
+      "Power Supply": "802.3af PoE; 24V Passive PoE (+4,5pins; -7,8pins. PoE Adapter Included - For Dry Indoor Use Only)",
+      "Max. Power Consumption": "10.5W",
+      "Dimensions ( W x D x H )": "1.8 × 1.1 × 8.5 in (46 × 26.7 × 214.9 mm) (without antenna & mounting kit)",
+      "Antenna": "2 Dual-Band Omni Antennas (External Detachable); 2.4 GHz: 2× 3 dBi; 5 GHz: 2× 5 dBi",
+      "Weatherproof Enclosure": "IP65",
+      "Mounting": "Pole/Wall Mounting (Kits included)",
+      "Wireless Standards": "IEEE 802.11a/b/g/n/ac",
+      "Frequency": "2.4GHz, 5GHz",
+      "Signal Rate": "802.11ac: 6.5 Mbps to 867 Mbps (MCS0-MCS9, NSS = 1 to 2 VHT20/40/80); 802.11n: 6.5 Mbps to 300 Mbps (MCS0-MCS15, HT 20/40); 802.11g/a: 6-54 Mbps; 802.11b: 1-11 Mbps",
+      "Wireless Functions": "Multiple SSIDs (Up to 16 SSIDs, 8 for each band), MU-MIMO, Beamforming, Band Steering, Omada Mesh, Seamless Roaming, Airtime Fairness ...",
+      "Transmission Power": "CE: (leer); FCC: (leer)",
+      "Certification": "CE, FCC",
+      "Package Content": "Access Point EAP225-Outdoor; Passive PoE Adapter; Power Cord; Mounting Kits; Installation Guide; Waterproof Ruber Insert; Waterproof Antenna",
+      "Environment": "Operating Temperature: -30–70 ℃; Storage Temperature: -40–70 ℃; Operating Humidity: 10–90% RH non-condensing; Storage Humidity: 5–90% RH non-condensing",
+      "Werbetext": "AC1200 Wave 2 with Mesh Technology; Simultaneous 300 Mbps on 2.4 GHz and 867 Mbps on 5 GHz; dimension 8.5 × 1.8 × 1.1 in (215 × 46 × 27 mm); supports both 802.3af PoE and Passive PoE ... powered by a PoE switch or the provided PoE adapter; installed on a wall or to a pole with the mounting kits provided",
+      "Versionen": "EAP225-Outdoor V1, V3, V3.20"
+    },
+    "tplink_produktseite_v320": {
+      "Hardware/Wireless/Others": "textgleich mit tplink_produktseite_v3"
+    },
+    "tplink_support": {
+      "Versionsauswahl": "V4 (vorausgewählt); laut Forum #177 gibt es Downloads für V3 (5.1.11, 5.2.2, 5.2.3), für V3.20 keine",
+      "Hinweis Versionen": "Vx.0 = Vx.6/Vx.8/Vx.9 (eg: V1.0=V1.6/V1.8/V1.9); Vx.x0 = Vx.x6/Vx.x8/Vx.x9 (eg: V1.20=V1.26/V1.28/V1.29); Vx.30 = Vx.32/Vx.33",
+      "Dokumente": "Wi-Fi 4 & Wi-Fi 5 Outdoor AP_Datasheet (03-13-2024)"
+    },
+    "tplink_datenblatt": {
+      "Model": "EAP225-Outdoor",
+      "Name": "AC1200 Wireless MU-MIMO Gigabit Indoor/Outdoor Access Point",
+      "LAN Interfaces": "1 x Gigabit Ethernet Port",
+      "Wi-Fi Standards": "IEEE 802.11 b/g/n/ac",
+      "Maximum Data Rate": "300 Mbps (2.4 GHz) + 867 Mbps (5 GHz)",
+      "Wireless Client Capacity": "220+",
+      "Antennas": "2 Dual-Band Omni Antennas (External Detachable); 2.4 GHz: 3 dBi; 5 GHz: 5 dBi",
+      "Transmit Power": "CE: < 20 dBm (2.4 GHz, EIRP), < 27 dBm (5 GHz, EIRP); FCC: < 23 dBm (2.4 GHz), < 22 dBm (5 GHz)",
+      "Multiple SSIDs": "16 (8 for each band)",
+      "LED ON/OFF Control": "ja",
+      "SNMP": "v1, v2c",
+      "Power Supply": "802.3af PoE or 24 V Passive PoE (+4,5 pins; -7,8 pins. PoE Adapter Included)",
+      "Maximum Power Consumption": "10.5W",
+      "Reset": "ja",
+      "Mounting": "Pole/Wall mouting (Kits included)",
+      "Certifications": "CE, FCC, RoHS",
+      "Dimensions (W x D x H)": "214.9 x 46 x 26.7 mm",
+      "Environment": "Operating Temperature: -30 °C–70 °C; Storage Temperature: -40 °C–70 °C; Operating Humidity: 10%–90% non-condensing; Storage Humidity: 5%–90% non-condensing",
+      "Seite 1": "Antenna Radiation Patterns EAP225-Outdoor (Diagramm, nicht ausgewertet)"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "TP-Link",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TP-Link",
+        "quelle": "fcc_v3",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3",
+        "stand": "Grant 2022-05-09 (Change in identification, Original TE7EAP225OD)",
+        "sicherheit": "hoch",
+        "bemerkung": "Grantee TP-Link Corporation Limited (Hongkong); Original TE7EAP225OD: TP-Link Technologies Co., Ltd."
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "EAP225-Outdoor",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "EAP225-Outdoor",
+        "quelle": "fcc_v3_label",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3/Label/4-Label-and-location-Rev1-5865360",
+        "stand": "Exhibit 2022-05-09 (Zeichnung EAP225-Outdoor(EU) 3.0 vom 2022-02-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gravur \"Model: EAP225-Outdoor\""
+      },
+      {
+        "wert": "EAP225-Outdoor",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "AC1200 Wireless MU-MIMO Gigabit Indoor/Outdoor Access Point"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "v3",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "3.0",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog: productinfo \"EAP225-Outdoor(TP-Link|UN|AC1200-D):3.0\""
+      },
+      {
+        "wert": "3.0",
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+        "stand": "Branch master am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Support-Liste des OpenWrt-Factory-Images: \"EAP225-Outdoor(TP-Link|UN|AC1200-D):3.0 CA,JP\"; 3.20 steht für das Outdoor-Modell NICHT in der Liste (nur für EAP225 indoor)"
+      },
+      {
+        "wert": "3.0",
+        "quelle": "fcc_v3_label",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3/Label/4-Label-and-location-Rev1-5865360",
+        "stand": "Exhibit 2022-05-09 (Zeichnung EAP225-Outdoor(EU) 3.0 vom 2022-02-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Zeichnung \"EAP225-Outdoor(EU) 3.0\", HVIN EAP225-OutdoorV3"
+      },
+      {
+        "wert": "V3 und V3.20",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Versionsauswahl V1, V3, V3.20 (Spezifikation textgleich); V3.20 nicht in der OpenWrt-Support-Liste"
+      },
+      {
+        "wert": "3.20 (neuere Geräte)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "Warnung 2026-07: neuere EAP225-Outdoor v3 sind Hardware v3.20 mit Firmware 5.2.4, OpenWrt-Installation derzeit nicht möglich"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Lasergravur am Gehäuse neben dem Anschlussfach: \"Model: EAP225-Outdoor\", \"HVIN: EAP225-OutdoorV3\", FCC ID 2AXJ4EAP225ODV3, IC 26583-EAP225ODV3",
+        "quelle": "fcc_v3_label",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3/Label/4-Label-and-location-Rev1-5865360",
+        "stand": "Exhibit 2022-05-09 (Zeichnung EAP225-Outdoor(EU) 3.0 vom 2022-02-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Die Gravur enthält keine Unterversion (3.0/3.20); v1 trägt FCC ID TE7EAP225OD"
+      },
+      {
+        "wert": "Versionsangabe Vx.6/Vx.8/Vx.9 entspricht Vx.0, Vx.x6/x8/x9 entspricht Vx.x0",
+        "quelle": "tplink_support",
+        "beleg": "https://support.omadanetworks.com/en/product/eap225-outdoor/",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "z. B. V3.8 = V3.0 (Forum #146 nennt ein Gerät \"v3.8\"), V3.26 = V3.20 [abgeleitet aus der TP-Link-Regel]"
+      },
+      {
+        "wert": "v3.20: Verpackung hellgrün/mattgrün, auf dem Gerät steht \"Omada\" statt \"tp-link\"",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "Angabe Wiki 2026-07, ohne Foto"
+      },
+      {
+        "wert": "Unterscheidung zu v1: v3 hat Realtek-PHY RTL8211FS, v1 Atheros AR8033",
+        "quelle": "openwrt_forum_123132",
+        "beleg": "https://forum.openwrt.org/t/support-for-tp-link-eap225-outdoor-v3/123132",
+        "stand": "Thread 2022-03-19 bis 2026-08-01 (171 Beiträge, alle geladen, per Stichwortsuche ausgewertet)",
+        "sicherheit": "niedrig",
+        "bemerkung": "nur nach Öffnen bzw. im Bootlog (Beitrag #1, #3)"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "2AXJ4EAP225ODV3",
+        "quelle": "fcc_v3",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3",
+        "stand": "Grant 2022-05-09 (Change in identification, Original TE7EAP225OD)",
+        "sicherheit": "hoch",
+        "bemerkung": "Umschreibung 2022-05-09 von TE7EAP225OD"
+      },
+      {
+        "wert": "2AXJ4EAP225ODV3",
+        "quelle": "fcc_v3_label",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3/Label/4-Label-and-location-Rev1-5865360",
+        "stand": "Exhibit 2022-05-09 (Zeichnung EAP225-Outdoor(EU) 3.0 vom 2022-02-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TE7EAP225OD",
+        "quelle": "fcc_orig",
+        "beleg": "https://fccid.io/TE7EAP225OD",
+        "stand": "Grants 2017-12-13 (Original) und 2022-05-08 (Class II permissive change)",
+        "sicherheit": "hoch",
+        "bemerkung": "Original-ID (v1 2017); v3 dort als Class II permissive change 2022-05-08"
+      },
+      {
+        "wert": "2AXJ4EAP225OD",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "niedrig",
+        "bemerkung": "unvollständig; fccid.io findet keinen exakten Treffer"
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "26583-EAP225ODV3",
+        "quelle": "fcc_v3_label",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3/Label/4-Label-and-location-Rev1-5865360",
+        "stand": "Exhibit 2022-05-09 (Zeichnung EAP225-Outdoor(EU) 3.0 vom 2022-02-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": "EAP225-Outdoor(TP-Link|UN|AC1200-D):3.0",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "Produktinfo im Flash (Bootlog)"
+      },
+      {
+        "wert": "EAP225-Outdoor(TP-Link|UN|AC1200-D):3.0 CA,JP",
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+        "stand": "Branch master am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Regionalvarianten CA und JP in der Support-Liste"
+      },
+      {
+        "wert": "EAP225-Outdoor(EU) 3.0; HVIN EAP225-OutdoorV3; AC1200 Wireless MU-MIMO Gigabit Indoor/Outdoor Access Point",
+        "quelle": "fcc_v3_label",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3/Label/4-Label-and-location-Rev1-5865360",
+        "stand": "Exhibit 2022-05-09 (Zeichnung EAP225-Outdoor(EU) 3.0 vom 2022-02-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "OpenWrt-Profil tplink_eap225-outdoor-v3, Board-ID EAP225-V3 (gemeinsam mit EAP225 v3/v4 und EAP225-Outdoor v1)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-tp-link.mk",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-09-22)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Available 2022",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "where available: amazon.de"
+      },
+      {
+        "wert": "neu verkaufte Geräte 2026 als v3.20 bzw. V4",
+        "quelle": "openwrt_forum_123132",
+        "beleg": "https://forum.openwrt.org/t/support-for-tp-link-eap225-outdoor-v3/123132",
+        "stand": "Thread 2022-03-19 bis 2026-08-01 (171 Beiträge, alle geladen, per Stichwortsuche ausgewertet)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beiträge #177 (2026-07-20), #178 (2026-08-01)"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm Atheros QCA9563",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9563",
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm QCA9563-AL3A",
+        "quelle": "fcc_innenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/Internal-Photos/13-Internal-Photos-5864357",
+        "stand": "Projekt 2204C180, PDF 2022-05-05/06",
+        "sicherheit": "hoch",
+        "bemerkung": "Aufdruck"
+      },
+      {
+        "wert": "Qualcomm Atheros QCA956X rev 0",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog; U-Boot \"board956x - Dragonfly 1.0\", Linux-Board AP152"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 750,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 750,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 775,
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 775,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog \"CPU:775.000MHz, DDR:650.000MHz, AHB:258.333MHz\""
+      },
+      {
+        "wert": 750,
+        "quelle": "deviwiki_v1",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_EAP225-Outdoor",
+        "stand": "Seitenrevision 2019-07-05T02:51:32Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "v1-Seite"
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "mips_24kc",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt-Paketarchitektur"
+      },
+      {
+        "wert": "MIPS 74Kc",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog \"CPU revision is: 00019750 (MIPS 74Kc)\""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 128,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": "128MiB DDR2"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "U-Boot \"128 MB\", Kernel \"memory: 08000000\""
+      },
+      {
+        "wert": 128,
+        "quelle": "fcc_innenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/Internal-Photos/13-Internal-Photos-5864357",
+        "stand": "Projekt 2204C180, PDF 2022-05-05/06",
+        "sicherheit": "hoch",
+        "bemerkung": "ESMT M14D1G1664A = 1 Gbit x16 DDR2 [Umrechnung abgeleitet]"
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR2",
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DDR2",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "\"ddr2 init\", DDR 650 MHz"
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "ESMT M14D1G1664A AZS1 -2.5B",
+        "quelle": "fcc_innenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/Internal-Photos/13-Internal-Photos-5864357",
+        "stand": "Projekt 2204C180, PDF 2022-05-05/06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ESMT M14D1G1664A-2.5B",
+        "quelle": "deviwiki_v1",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_EAP225-Outdoor",
+        "stand": "Seitenrevision 2019-07-05T02:51:32Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "v1-Seite, gleicher Baustein"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": "16MiB SPI-NOR"
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "U-Boot \"Flash: 16 MB\"; Kernel \"en25q128a (16384 Kbytes)\""
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR",
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": "SPI-NOR"
+      },
+      {
+        "wert": "NOR",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_tplink_eap225-outdoor-v3.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "jedec,spi-nor, 25 MHz"
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "EON EN25Q128A",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog: \"Flash Manuf Id 0x1c, DeviceId0 0x70, DeviceId1 0x18\" und \"found en25q128a\"; Herstellername EON aus JEDEC-ID 0x1c [abgeleitet]"
+      },
+      {
+        "wert": "SOIC-8 U29, Aufdruck \"P17A 7514WE 0XRKW\"",
+        "quelle": "fcc_innenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/Internal-Photos/13-Internal-Photos-5864357",
+        "stand": "Projekt 2204C180, PDF 2022-05-05/06",
+        "sicherheit": "hoch",
+        "bemerkung": "Hersteller nicht ablesbar; Abgleich mit dem Bootlog-Baustein offen"
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "Qualcomm Atheros QCA9563, Qualcomm Atheros QCA9886",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9563 (2.4 GHz, im SoC), QCA9886 (5 GHz)",
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9563-AL3A, QCA9886 0VV",
+        "quelle": "fcc_innenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/Internal-Photos/13-Internal-Photos-5864357",
+        "stand": "Projekt 2204C180, PDF 2022-05-05/06",
+        "sicherheit": "hoch",
+        "bemerkung": "Aufdrucke"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath9k, ath10k, ath10k-ct",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath9k, ath10k-ct",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath10k-ct",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-tp-link.mk",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-09-22)",
+        "sicherheit": "hoch",
+        "bemerkung": "DEVICE_PACKAGES kmod-ath10k-ct ath10k-firmware-qca9888-ct"
+      },
+      {
+        "wert": "ath10k (ATH10K_PACKAGES_QCA9888)",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "b/g/n",
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "IEEE802.11b/g/n",
+        "quelle": "fcc_v3_label",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3/Label/4-Label-and-location-Rev1-5865360",
+        "stand": "Exhibit 2022-05-09 (Zeichnung EAP225-Outdoor(EU) 3.0 vom 2022-02-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": "2x2"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "mittel",
+        "bemerkung": "MIMO 2x2:2 2.4Ghz"
+      },
+      {
+        "wert": 2,
+        "quelle": "fcc_mpe_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/RF-Exposure-Info/17-MPE-Report-R01-5864924",
+        "stand": "BTL-FCCP-3-2204C180 R01, 2022-05-09",
+        "sicherheit": "hoch",
+        "bemerkung": "2TX (Ant. 1 + Ant. 2)"
+      },
+      {
+        "wert": 2,
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "802.11n bis 300 Mbps (MCS0-MCS15)"
+      },
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump: \"2x2 MU-MIMO\" (Gesamtangabe)"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "a/n/ac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "a/n/ac",
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "IEEE802.11a/n/ac",
+        "quelle": "fcc_v3_label",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3/Label/4-Label-and-location-Rev1-5865360",
+        "stand": "Exhibit 2022-05-09 (Zeichnung EAP225-Outdoor(EU) 3.0 vom 2022-02-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": "2x2 MU-MIMO"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "mittel",
+        "bemerkung": "MIMO 2x2:2 5Ghz"
+      },
+      {
+        "wert": 2,
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "NSS = 1 to 2, bis 867 Mbps"
+      },
+      {
+        "wert": 2,
+        "quelle": "fcc_mpe_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/RF-Exposure-Info/17-MPE-Report-R01-5864924",
+        "stand": "BTL-FCCP-3-2204C180 R01, 2022-05-09",
+        "sicherheit": "hoch",
+        "bemerkung": "2TX"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AC1200",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AC1200",
+        "quelle": "fcc_v3",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3",
+        "stand": "Grant 2022-05-09 (Change in identification, Original TE7EAP225OD)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AC1200",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "productinfo AC1200-D"
+      }
+    ],
+    "wlan_wave2": [
+      {
+        "wert": "ja",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"AC1200 Wave 2\", MU-MIMO"
+      },
+      {
+        "wert": "ja",
+        "quelle": "openwrt_git_v1",
+        "beleg": "https://github.com/openwrt/openwrt/commit/4f86edf477edbc0f20b5a49a69f658fa82158284",
+        "stand": "Commit 2020-07-07 (Autor), gemergt 2020-11-23",
+        "sicherheit": "niedrig",
+        "bemerkung": "v1-Commit: \"802.11ac Wave-2\"; v3 laut v3-Commit fast identisch"
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "2.4 GHz: 20/40 MHz; 5 GHz: 20/40/80 MHz",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "5 GHz VHT20/40/80",
+        "quelle": "fcc_mpe_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/RF-Exposure-Info/17-MPE-Report-R01-5864924",
+        "stand": "BTL-FCCP-3-2204C180 R01, 2022-05-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": "2412-2462 MHz; 5180-5240 MHz; 5745-5825 MHz",
+        "quelle": "fcc_v3",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3",
+        "stand": "Grant 2022-05-09 (Change in identification, Original TE7EAP225OD)",
+        "sicherheit": "hoch",
+        "bemerkung": "keine UNII-2/2e in der FCC-Zulassung"
+      },
+      {
+        "wert": "Japan: W52, W53, W56",
+        "quelle": "fcc_v3_label",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3/Label/4-Label-and-location-Rev1-5865360",
+        "stand": "Exhibit 2022-05-09 (Zeichnung EAP225-Outdoor(EU) 3.0 vom 2022-02-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "W52/W53 laut Gravur nur innen"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": "CE: < 20 (2.4 GHz, EIRP), < 27 (5 GHz, EIRP); FCC: < 23 (2.4 GHz), < 22 (5 GHz)",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20&%20Wi-Fi%205%20Outdoor%20AP.pdf",
+        "stand": "PDF erstellt 2023-11-07, geändert 2024-03-11 (Omada-Liste 2024-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "FCC leitungsgebunden: 0.805 W (2.4 GHz), 0.372 W (5180-5240), 0.292 W (5745-5825)",
+        "quelle": "fcc_v3",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3",
+        "stand": "Grant 2022-05-09 (Change in identification, Original TE7EAP225OD)",
+        "sicherheit": "hoch",
+        "bemerkung": "Summenleistung laut Grant, Umrechnung ca. 29.1 / 25.7 / 24.7 dBm [abgeleitet]"
+      },
+      {
+        "wert": "Stock-Firmware 5 GHz Standard 22 dBm",
+        "quelle": "openwrt_forum_123132",
+        "beleg": "https://forum.openwrt.org/t/support-for-tp-link-eap225-outdoor-v3/123132",
+        "stand": "Thread 2022-03-19 bis 2026-08-01 (171 Beiträge, alle geladen, per Stichwortsuche ausgewertet)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beiträge 2023"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "extern abnehmbar",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "2 Dual-Band Omni Antennas (External Detachable)"
+      },
+      {
+        "wert": "extern abnehmbar",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas: 2"
+      },
+      {
+        "wert": "extern abnehmbar",
+        "quelle": "fcc_aussenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/External-Photos/14-External-Photos-5864356",
+        "stand": "Projekt 2204C180, PDF 2022-05-06",
+        "sicherheit": "hoch",
+        "bemerkung": "2 Stabantennen auf vergoldeten Schraubbuchsen"
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "RP-SMA",
+        "quelle": "fcc_mpe_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/RF-Exposure-Info/17-MPE-Report-R01-5864924",
+        "stand": "BTL-FCCP-3-2204C180 R01, 2022-05-09",
+        "sicherheit": "hoch",
+        "bemerkung": "Connector RP-SMA-F (Buchse am Gerät)"
+      },
+      {
+        "wert": "RP-SMA",
+        "quelle": "deviwiki_v1",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_EAP225-Outdoor",
+        "stand": "Seitenrevision 2019-07-05T02:51:32Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "v1-Seite"
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "fcc_mpe_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/RF-Exposure-Info/17-MPE-Report-R01-5864924",
+        "stand": "BTL-FCCP-3-2204C180 R01, 2022-05-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "dualband",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "2 Dual-Band Omni Antennas"
+      },
+      {
+        "wert": "dualband",
+        "quelle": "fcc_mpe_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/RF-Exposure-Info/17-MPE-Report-R01-5864924",
+        "stand": "BTL-FCCP-3-2204C180 R01, 2022-05-09",
+        "sicherheit": "hoch",
+        "bemerkung": "dieselbe Antenne P/N 3101501275 für 2.4 und 5 GHz"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": "2.4 GHz: 3; 5 GHz: 5",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2.4 GHz: 3; 5 GHz: 5",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20&%20Wi-Fi%205%20Outdoor%20AP.pdf",
+        "stand": "PDF erstellt 2023-11-07, geändert 2024-03-11 (Omada-Liste 2024-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2.4 GHz: 3.36; 5 GHz: 5.19 (UNII-1), 4.56 (UNII-3)",
+        "quelle": "fcc_mpe_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/RF-Exposure-Info/17-MPE-Report-R01-5864924",
+        "stand": "BTL-FCCP-3-2204C180 R01, 2022-05-09",
+        "sicherheit": "hoch",
+        "bemerkung": "Herstellerangabe im FCC-Bericht; oberhalb 30° Elevation max. -2.22 dBi"
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "rund (Omni)",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Dipol",
+        "quelle": "fcc_mpe_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/RF-Exposure-Info/17-MPE-Report-R01-5864924",
+        "stand": "BTL-FCCP-3-2204C180 R01, 2022-05-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "Ethernet (RJ-45)",
+            "geschwindigkeit_mbit": 1000,
+            "rolle": "Uplink/PoE-Eingang"
+          }
+        ],
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "802.3af/at PoE (Alternative A) und Passive PoE"
+      },
+      {
+        "wert": [
+          {
+            "name": "eth0",
+            "geschwindigkeit_mbit": 1000,
+            "rolle": "PoE-Eingang"
+          }
+        ],
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": "Ethernet (RTL8211FS): 1× 1GbE, PoE"
+      },
+      {
+        "wert": [
+          {
+            "name": "RJ45 im Anschlussfach",
+            "rolle": "einzige Buchse"
+          }
+        ],
+        "quelle": "fcc_aussenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/External-Photos/14-External-Photos-5864356",
+        "stand": "Projekt 2204C180, PDF 2022-05-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "eth0",
+            "rolle": "einziger Port"
+          }
+        ],
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/3fdf6f677a4b31de6ac1d7f84db4581c0aef96cd",
+        "stand": "Commit 2023-11-02 (PR #3033 vom 2023-10-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "PR #3033: all network ports supported, correct port assignment"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "1x 1 Gbit"
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20&%20Wi-Fi%205%20Outdoor%20AP.pdf",
+        "stand": "PDF erstellt 2023-11-07, geändert 2024-03-11 (Omada-Liste 2024-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ethernet_phy": [
+      {
+        "wert": "Realtek RTL8211FS",
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": "SGMII, MDIO-Adresse 6"
+      },
+      {
+        "wert": "Realtek RTL8211FS",
+        "quelle": "fcc_innenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/Internal-Photos/13-Internal-Photos-5864357",
+        "stand": "Projekt 2204C180, PDF 2022-05-05/06",
+        "sicherheit": "hoch",
+        "bemerkung": "Aufdruck"
+      },
+      {
+        "wert": "RealTek 8211FS-CG",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog uid=001cc916"
+      },
+      {
+        "wert": "gegenüber v1 geänderter PHY-Chip",
+        "quelle": "fcc_c2pc_brief",
+        "beleg": "https://fccid.io/TE7EAP225OD/Letter/10-Class-II-permissive-change-format-letter-FCC-Rev1-5864354",
+        "stand": "Brief 2022-05-07, Exhibit 2022-05-08",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": "ja",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja",
+        "quelle": "fcc_aussenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/External-Photos/14-External-Photos-5864356",
+        "stand": "Projekt 2204C180, PDF 2022-05-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "1 Port"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "mittel",
+        "bemerkung": "SFP ports: -"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "usbports: -"
+      },
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "802.3af; passiv 24 V",
+        "quelle": "fcc_v3_label",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3/Label/4-Label-and-location-Rev1-5865360",
+        "stand": "Exhibit 2022-05-09 (Zeichnung EAP225-Outdoor(EU) 3.0 vom 2022-02-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gravur \"Power: 24V ⎓ 0.5A Passive PoE\" und \"PoE: 36-57V ⎓ 0.35A 802.3af\""
+      },
+      {
+        "wert": "802.3af; passiv 24 V",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20&%20Wi-Fi%205%20Outdoor%20AP.pdf",
+        "stand": "PDF erstellt 2023-11-07, geändert 2024-03-11 (Omada-Liste 2024-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": "+4,5 / -7,8"
+      },
+      {
+        "wert": "802.3af/at; passiv 24 V",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Interface: \"Support 802.3af/at PoE (Alternative A) and Passive PoE\"; Power Supply nennt nur 802.3af PoE"
+      },
+      {
+        "wert": "802.3af/at; passiv 24 V",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "\"24V passive PoE, 802.3af/at PoE\""
+      },
+      {
+        "wert": "802.3af/at (48 V)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "niedrig",
+        "bemerkung": "Seiteneinleitung: Outdoor/Wall \"can only be powered by 802.3af/at PoE (48 V DC)\" - widerspricht Gravur und Datenblatt (passiv 24 V)"
+      }
+    ],
+    "poe_isolierung": [
+      {
+        "wert": "nicht isoliert",
+        "quelle": "fcc_c2pc_brief",
+        "beleg": "https://fccid.io/TE7EAP225OD/Letter/10-Class-II-permissive-change-format-letter-FCC-Rev1-5864354",
+        "stand": "Brief 2022-05-07, Exhibit 2022-05-08",
+        "sicherheit": "hoch",
+        "bemerkung": "gegenüber v1 geändert: \"the isolated POE circuit is changed to non-isolated POE, adjusted DC-DC\""
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": "passiv 24; 802.3af 36-57",
+        "quelle": "fcc_v3_label",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3/Label/4-Label-and-location-Rev1-5865360",
+        "stand": "Exhibit 2022-05-09 (Zeichnung EAP225-Outdoor(EU) 3.0 vom 2022-02-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "passiv 24",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20&%20Wi-Fi%205%20Outdoor%20AP.pdf",
+        "stand": "PDF erstellt 2023-11-07, geändert 2024-03-11 (Omada-Liste 2024-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "passiv 24",
+        "quelle": "fcc_testbericht_24_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/Test-Report/5-Test-Report-WLAN-2-4G-R01-5864348",
+        "stand": "BTL-FCCP-1-2204C180 R01, 2022-05-07",
+        "sicherheit": "hoch",
+        "bemerkung": "Testaufbau mit Adapter TL-POE2412G 24.0 V 0.5 A"
+      }
+    ],
+    "poe_strom_a": [
+      {
+        "wert": "passiv 0.5; 802.3af 0.35",
+        "quelle": "fcc_v3_label",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3/Label/4-Label-and-location-Rev1-5865360",
+        "stand": "Exhibit 2022-05-09 (Zeichnung EAP225-Outdoor(EU) 3.0 vom 2022-02-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "poe_pinbelegung": [
+      {
+        "wert": "passiv: + Pins 4,5 / - Pins 7,8; 802.3af/at Alternative A",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "passiv: + Pins 4,5 / - Pins 7,8",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20&%20Wi-Fi%205%20Outdoor%20AP.pdf",
+        "stand": "PDF erstellt 2023-11-07, geändert 2024-03-11 (Omada-Liste 2024-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": "ja (Passive PoE Adapter + Netzkabel)",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Adapter \"For Dry Indoor Use Only\""
+      },
+      {
+        "wert": "ja",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20&%20Wi-Fi%205%20Outdoor%20AP.pdf",
+        "stand": "PDF erstellt 2023-11-07, geändert 2024-03-11 (Omada-Liste 2024-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": "PoE Adapter Included"
+      },
+      {
+        "wert": "ja",
+        "quelle": "fcc_aussenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/External-Photos/14-External-Photos-5864356",
+        "stand": "Projekt 2204C180, PDF 2022-05-06",
+        "sicherheit": "hoch",
+        "bemerkung": "Adapter und Netzkabel im Fotosatz"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "TL-POE2412G: Eingang 100-240 V~ 50/60 Hz 0.4 A, Ausgang 24.0 V ⎓ 0.5 A",
+        "quelle": "fcc_testbericht_24_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/Test-Report/5-Test-Report-WLAN-2-4G-R01-5864348",
+        "stand": "BTL-FCCP-1-2204C180 R01, 2022-05-07",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Adapter mit RJ45 \"LAN\" und \"POE\", Netzeingang Kleeblatt-Buchse (IEC C6)",
+        "quelle": "fcc_aussenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/External-Photos/14-External-Photos-5864356",
+        "stand": "Projekt 2204C180, PDF 2022-05-06",
+        "sicherheit": "hoch",
+        "bemerkung": "Steckerform aus Foto"
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 10.5,
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 10.5,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20&%20Wi-Fi%205%20Outdoor%20AP.pdf",
+        "stand": "PDF erstellt 2023-11-07, geändert 2024-03-11 (Omada-Liste 2024-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "nein",
+        "quelle": "fcc_aussenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/External-Photos/14-External-Photos-5864356",
+        "stand": "Projekt 2204C180, PDF 2022-05-06",
+        "sicherheit": "hoch",
+        "bemerkung": "nur RJ45 und Reset im Anschlussfach"
+      },
+      {
+        "wert": "nein",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "\"The other models can also be powered via a 12V DC power supply\" - Outdoor nicht"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "außen",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Indoor/Outdoor Access Point\", IP65"
+      },
+      {
+        "wert": "außen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: Yes"
+      },
+      {
+        "wert": "außen",
+        "quelle": "fcc_v3_label",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3/Label/4-Label-and-location-Rev1-5865360",
+        "stand": "Exhibit 2022-05-09 (Zeichnung EAP225-Outdoor(EU) 3.0 vom 2022-02-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "IP65-Symbol, \"Indoor/Outdoor\""
+      },
+      {
+        "wert": "außen",
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/3fdf6f677a4b31de6ac1d7f84db4581c0aef96cd",
+        "stand": "Commit 2023-11-02 (PR #3033 vom 2023-10-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon is_outdoor_device (Outdoor-Modus: 5-GHz-Kanäle für außen)"
+      }
+    ],
+    "ip_schutzart": [
+      {
+        "wert": "IP65",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "IP65",
+        "quelle": "fcc_v3_label",
+        "beleg": "https://fccid.io/2AXJ4EAP225ODV3/Label/4-Label-and-location-Rev1-5865360",
+        "stand": "Exhibit 2022-05-09 (Zeichnung EAP225-Outdoor(EU) 3.0 vom 2022-02-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "abdichtung": [
+      {
+        "wert": "einzige Öffnungen sind die Antennenbuchsen, mit O-Ringen gedichtet; Anschlussfach mit Gummi-Einsatz",
+        "quelle": "openwrt_forum_123132",
+        "beleg": "https://forum.openwrt.org/t/support-for-tp-link-eap225-outdoor-v3/123132",
+        "stand": "Thread 2022-03-19 bis 2026-08-01 (171 Beiträge, alle geladen, per Stichwortsuche ausgewertet)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beitrag #75; Lieferumfang laut TP-Link \"Waterproof Ruber Insert\""
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "-30 bis 70 °C",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "-30 bis 70 °C",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20&%20Wi-Fi%205%20Outdoor%20AP.pdf",
+        "stand": "PDF erstellt 2023-11-07, geändert 2024-03-11 (Omada-Liste 2024-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_lager": [
+      {
+        "wert": "-40 bis 70 °C",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "-40 bis 70 °C",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20&%20Wi-Fi%205%20Outdoor%20AP.pdf",
+        "stand": "PDF erstellt 2023-11-07, geändert 2024-03-11 (Omada-Liste 2024-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "Betrieb 10-90 % nicht kondensierend, Lager 5-90 % nicht kondensierend",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Mast / Wand",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Pole/Wall Mounting (Kits included)"
+      },
+      {
+        "wert": "Mast / Wand",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20&%20Wi-Fi%205%20Outdoor%20AP.pdf",
+        "stand": "PDF erstellt 2023-11-07, geändert 2024-03-11 (Omada-Liste 2024-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": "Kits included"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "214.9 x 46 x 26.7",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "ohne Antennen und Halterung"
+      },
+      {
+        "wert": "214.9 x 46 x 26.7",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20&%20Wi-Fi%205%20Outdoor%20AP.pdf",
+        "stand": "PDF erstellt 2023-11-07, geändert 2024-03-11 (Omada-Liste 2024-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_material": [
+      {
+        "wert": "Kunststoff, weiß",
+        "quelle": "fcc_innenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/Internal-Photos/13-Internal-Photos-5864357",
+        "stand": "Projekt 2204C180, PDF 2022-05-05/06",
+        "sicherheit": "hoch",
+        "bemerkung": "Rohrgehäuse mit Endkappe, aus Fotos"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "fcc_innenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/Internal-Photos/13-Internal-Photos-5864357",
+        "stand": "Projekt 2204C180, PDF 2022-05-05/06",
+        "sicherheit": "hoch",
+        "bemerkung": "kein Lüfter auf den Innenfotos, passiv gekühlt"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "mittel",
+        "bemerkung": "LED count 2"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_tplink_eap225-outdoor-v3.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Status grün (GPIO 7) und Status amber (GPIO 9); ob zwei getrennte LEDs oder eine Zweifarb-LED, sagt die DTS nicht"
+      },
+      {
+        "wert": 1,
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/3fdf6f677a4b31de6ac1d7f84db4581c0aef96cd",
+        "stand": "Commit 2023-11-02 (PR #3033 vom 2023-10-25)",
+        "sicherheit": "mittel",
+        "bemerkung": "PR #3033: nur Power/System-LED, keine Funk- oder Port-LEDs"
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "ja (Stock-Firmware)",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20&%20Wi-Fi%205%20Outdoor%20AP.pdf",
+        "stand": "PDF erstellt 2023-11-07, geändert 2024-03-11 (Omada-Liste 2024-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": "LED ON/OFF Control"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "im Anschlussfach neben der RJ45-Buchse, beschriftet RESET",
+        "quelle": "fcc_aussenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/External-Photos/14-External-Photos-5864356",
+        "stand": "Projekt 2204C180, PDF 2022-05-06",
+        "sicherheit": "hoch",
+        "bemerkung": "erst nach Abnehmen der Fachabdeckung erreichbar"
+      },
+      {
+        "wert": "vorhanden, GPIO 2 (KEY_RESTART)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_tplink_eap225-outdoor-v3.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "führt in den Gluon-Konfigurationsmodus",
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/3fdf6f677a4b31de6ac1d7f84db4581c0aef96cd",
+        "stand": "Commit 2023-11-02 (PR #3033 vom 2023-10-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "PR-Checkliste #3033"
+      },
+      {
+        "wert": "1 Taste",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "buttoncount 1"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte",
+        "quelle": "fcc_innenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/Internal-Photos/13-Internal-Photos-5864357",
+        "stand": "Projekt 2204C180, PDF 2022-05-05/06",
+        "sicherheit": "hoch",
+        "bemerkung": "4 Durchkontaktierungen am Platinenrand neben dem SoC, Siebdruck TXD, RXD, GND, VDD, keine Stiftleiste; im FCC-Muster mit Lot/Lotresten"
+      },
+      {
+        "wert": "innen Lötpunkte",
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": "\"fine soldering to test points, or the use of probe pins\"; Text aus dem v1-Commit übernommen"
+      },
+      {
+        "wert": "innen Lötpunkte",
+        "quelle": "openwrt_forum_123132",
+        "beleg": "https://forum.openwrt.org/t/support-for-tp-link-eap225-outdoor-v3/123132",
+        "stand": "Thread 2022-03-19 bis 2026-08-01 (171 Beiträge, alle geladen, per Stichwortsuche ausgewertet)",
+        "sicherheit": "niedrig",
+        "bemerkung": "#111: \"four pads labelled Ground, Vcc(?), Tx and Rx\"; Platine muss aus dem Gehäuse gezogen werden"
+      },
+      {
+        "wert": "vorhanden",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial: Yes"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "TXD, RXD, GND, VDD",
+        "quelle": "fcc_innenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/Internal-Photos/13-Internal-Photos-5864357",
+        "stand": "Projekt 2204C180, PDF 2022-05-05/06",
+        "sicherheit": "hoch",
+        "bemerkung": "Reihenfolge am Platinenrand laut Siebdruck; Pin 1 nicht markiert erkennbar"
+      },
+      {
+        "wert": "RXD, TXD, TPGND4",
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": "Masse am Testpunkt TPGND4 (Angabe aus v1-Commit übernommen)"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog console=ttyS0,115200"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "U-Boot mit Strg+B beim Start anhalten; initramfs per TFTP nach 0x80800000, bootelf, dann sysupgrade",
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Ladeadresse 0x81000000 funktioniert nicht, 0x80800000 verwenden",
+        "quelle": "openwrt_forum_123132",
+        "beleg": "https://forum.openwrt.org/t/support-for-tp-link-eap225-outdoor-v3/123132",
+        "stand": "Thread 2022-03-19 bis 2026-08-01 (171 Beiträge, alle geladen, per Stichwortsuche ausgewertet)",
+        "sicherheit": "niedrig",
+        "bemerkung": "#112/#113"
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "Antennen abschrauben, Gummiaufkleber abziehen, Muttern an den Antennenbuchsen lösen, Platine an den Buchsen aus dem Rohrgehäuse schieben; O-Ringe vorher abnehmen",
+        "quelle": "openwrt_forum_123132",
+        "beleg": "https://forum.openwrt.org/t/support-for-tp-link-eap225-outdoor-v3/123132",
+        "stand": "Thread 2022-03-19 bis 2026-08-01 (171 Beiträge, alle geladen, per Stichwortsuche ausgewertet)",
+        "sicherheit": "niedrig",
+        "bemerkung": "#75 (klaernie, Tester des PHY-Commits), #111"
+      }
+    ],
+    "platinen_kennung": [
+      {
+        "wert": "2111032225OD-3.0 Rev1.0SP1",
+        "quelle": "fcc_innenfotos_2022",
+        "beleg": "https://fccid.io/TE7EAP225OD/Internal-Photos/13-Internal-Photos-5864357",
+        "stand": "Projekt 2204C180, PDF 2022-05-05/06",
+        "sicherheit": "hoch",
+        "bemerkung": "Lesung aus Foto, Ziffernfolge nicht sicher"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/generic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath79/generic",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-tp-link.mk",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-09-22)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "tplink_eap225-outdoor-v3",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-tp-link.mk",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-09-22)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "23.05.0",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "mittel",
+        "bemerkung": "Commit 7e4de89 gemergt 2022-06-22"
+      },
+      {
+        "wert": "Commit 7e4de89",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "supportedsincerel im Dump leer"
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.1",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "snapshot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump-Stand"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot 1.1.4 (LSDK-10.2, gebaut 2021-11-14)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog v3.0"
+      },
+      {
+        "wert": "unbekannt",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "¿"
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Web-Oberfläche der Stock-Firmware nach Abschalten der Signaturprüfung per SSH (cliclientd stopcs); Stock-Firmware v5.1.1 vorher auf 5.1.11 bringen; v3.20 mit Firmware 5.2.4 derzeit nicht installierbar",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "Warnungen 2026-06/2026-07"
+      },
+      {
+        "wert": "SSH mit Firmware ab v1.6.0, cliclientd stopcs, Factory-Image über die Web-Oberfläche",
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "see git-commit",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Gluon direkt aus Stock-Firmware ungetestet; Gerät im PR war vorher mit OpenWrt geflasht",
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/3fdf6f677a4b31de6ac1d7f84db4581c0aef96cd",
+        "stand": "Commit 2023-11-02 (PR #3033 vom 2023-10-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "PR-Checkliste #3033"
+      }
+    ],
+    "factory_kompatibilitaet": [
+      {
+        "wert": "soft_ver_compat_level 2",
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+        "stand": "Branch master am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "seit 2024-03 (Commit c1e06da); ältere Factory-Images wurden von neuerer Stock-Firmware abgelehnt (Forum #146/#147)"
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.tp-link.com/br/support/download/eap225-outdoor/v3/",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://support.omadanetworks.com/en/product/eap225-outdoor/",
+        "quelle": "tplink_support",
+        "beleg": "https://support.omadanetworks.com/en/product/eap225-outdoor/",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Ziel der Umleitung von /en/support/download/eap225-outdoor/v3/"
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "Label-MAC = Ethernet = 2.4 GHz (ath9k); 5 GHz (ath10k) = Label-MAC + 1",
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": "info-Partition Offset 8"
+      },
+      {
+        "wert": "Primäre MAC entspricht dem Label",
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/3fdf6f677a4b31de6ac1d7f84db4581c0aef96cd",
+        "stand": "Commit 2023-11-02 (PR #3033 vom 2023-10-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "PR-Checkliste"
+      },
+      {
+        "wert": "Fehler 2024-01 behoben: MAC wurde zeitweise aus falscher Partition gelesen",
+        "quelle": "openwrt_git_mac",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c527073b38bed10479ed258f964a2948d78c6624",
+        "stand": "Commit 2024-01-21 (Autor), gemergt 2024-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, ab Gluon v2023.2",
+        "quelle": "gluon_release_v2023_2",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/docs/releases/v2023.2.rst",
+        "stand": "Release Notes Gluon v2023.2 (Branch main am 2026-10-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "Image tp-link-eap225-outdoor-v3"
+      },
+      {
+        "wert": "ja",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Paket ATH10K_PACKAGES_QCA9888"
+      },
+      {
+        "wert": "unknown",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Seitenrevision 2026-03-19 05:49",
+        "sicherheit": "niedrig",
+        "bemerkung": "Feld \"Gluon support\" nicht gepflegt"
+      }
+    ],
+    "varianten": [
+      {
+        "wert": "3.0 (UN, CA, JP); v1 1.0 mit gleichem Image-Layout (eigenes OpenWrt-Profil)",
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+        "stand": "Branch master am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "V1, V3, V3.20",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "V4 neu 2026-08",
+        "quelle": "openwrt_forum_123132",
+        "beleg": "https://forum.openwrt.org/t/support-for-tp-link-eap225-outdoor-v3/123132",
+        "stand": "Thread 2022-03-19 bis 2026-08-01 (171 Beiträge, alle geladen, per Stichwortsuche ausgewertet)",
+        "sicherheit": "niedrig",
+        "bemerkung": "#178; eigenes Gerät, nicht dieses Image"
+      },
+      {
+        "wert": "v3 gegenüber v1: anderer PHY-Chip, PoE nicht isoliert, DC-DC angepasst",
+        "quelle": "fcc_c2pc_brief",
+        "beleg": "https://fccid.io/TE7EAP225OD/Letter/10-Class-II-permissive-change-format-letter-FCC-Rev1-5864354",
+        "stand": "Brief 2022-05-07, Exhibit 2022-05-08",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "fast identisch mit EAP225-Outdoor v1, Hauptunterschied PHY RTL8211FS",
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7e4de89e631aaf56be5375662b7d5ed0f27e26f6",
+        "stand": "Commit 2022-03-22 (Autor), gemergt 2022-06-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "bekannte_probleme": [
+      {
+        "wert": "Ethernet nach Warmstart ohne PHY-Reset tot (nur Kaltstart ok) - im Kernel-Backport 2022-06 behoben",
+        "quelle": "openwrt_git_phy",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7bf73e270e7f1704b21860712820dcf12b593e91",
+        "stand": "Commit 2022-06-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MAC-Adresse 2023/24 aus falscher Partition - 2024-01 behoben",
+        "quelle": "openwrt_git_mac",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c527073b38bed10479ed258f964a2948d78c6624",
+        "stand": "Commit 2024-01-21 (Autor), gemergt 2024-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Stock 5.1.1 -> OpenWrt bricht das Gerät; v3.20/5.2.4 nicht installierbar, Downgrade gesperrt",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": "Stand 2026-07"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/tp-link/eap225",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/eap225",
+        "stand": "Seitenrevision 2026-10-06 07:02",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "https://deviwiki.com/wiki/TP-LINK_EAP225-Outdoor",
+        "quelle": "deviwiki_v1",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_EAP225-Outdoor",
+        "stand": "Seitenrevision 2019-07-05T02:51:32Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "nur v1"
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/TP-LINK_EAP225-Outdoor",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap225-outdoor_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "im hwdata-Eintrag verlinkt; Seite beschreibt v1"
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "quelle": "tplink_produktseite_v3",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3.20/",
+        "quelle": "tplink_produktseite_v320",
+        "beleg": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3.20/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20&%20Wi-Fi%205%20Outdoor%20AP.pdf",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20&%20Wi-Fi%205%20Outdoor%20AP.pdf",
+        "stand": "PDF erstellt 2023-11-07, geändert 2024-03-11 (Omada-Liste 2024-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "forum": [
+      {
+        "wert": "https://forum.openwrt.org/t/support-for-tp-link-eap225-outdoor-v3/123132",
+        "quelle": "openwrt_forum_123132",
+        "beleg": "https://forum.openwrt.org/t/support-for-tp-link-eap225-outdoor-v3/123132",
+        "stand": "Thread 2022-03-19 bis 2026-08-01 (171 Beiträge, alle geladen, per Stichwortsuche ausgewertet)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://support.omadanetworks.com/en/product/eap225-outdoor/",
+      "kategorie": "montage",
+      "grund": "Hardware-Installationsanleitung V3 (Lage LED, Reset, Erdung, Halterung) - Dokumentliste lädt nur per JavaScript, PDF-Link nicht ermittelt"
+    },
+    {
+      "url": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3.20/",
+      "kategorie": "hw_version",
+      "grund": "v3.20: Hardwareunterschiede zu v3.0 unbekannt; steht nicht in der Support-Liste von tplink-safeloader (EAP225-V3) und wird laut Wiki 2026-07 mit gesperrter Firmware 5.2.4 ausgeliefert"
+    },
+    {
+      "url": "https://fccid.io/TE7EAP225OD/Test-Report/5-Test-Report-WLAN-5G-R01-5864361",
+      "kategorie": "wlan_sendeleistung_dbm",
+      "grund": "5-GHz-Testbericht 2022 (1.9 MB) nicht ausgewertet"
+    },
+    {
+      "url": "https://fccid.io/TE7EAP225OD/Test-Setup-Photos/6-Test-setup-photos-5864362",
+      "kategorie": "gehaeuse",
+      "grund": "Testaufbau-Fotos 2022 nicht ausgewertet"
+    },
+    {
+      "url": "https://openwrt.org/_media/media/tplink/tplink-eap225-outdoor-v3.jpg",
+      "kategorie": "erkennung_typenschild",
+      "grund": "ToH-Bild nicht ausgewertet"
+    },
+    {
+      "url": "https://fccid.io/TE7EAP225OD/Internal-Photos/13-Internal-Photos-5864357",
+      "kategorie": "flash_chip",
+      "grund": "Aufdruck des SOIC-8 (U29) \"P17A 7514WE\" passt nicht erkennbar zu EON EN25Q128A aus dem Wiki-Bootlog; Hersteller offen"
+    },
+    {
+      "url": "https://www.tp-link.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v3/",
+      "kategorie": "gewicht_g",
+      "grund": "Gewicht in keiner ausgewerteten Quelle"
+    },
+    {
+      "url": "https://openwrt.org/toh/tp-link/eap225",
+      "kategorie": "poe_eingang",
+      "grund": "Wiki-Einleitung nennt für Outdoor nur 802.3af/at (48 V); Gravur/Datenblatt zusätzlich passiv 24 V. Ebenso 802.3at: Produktseite/ToH ja, Gravur/Datenblatt nur 802.3af"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 47,
+    "notiz": "ToH-Dump + Live-hwdata, OpenWrt-Wiki (EAP225-Serie, OEM-Bootlog v3.0), OpenWrt-Commits (v3, v1, PHY-Reset, MAC-Fix, compat-level), DTS/dtsi/Image-Makefile/tplink-safeloader, Gluon-Target/Commit/PR/Release v2023.2, OpenWrt-Forum 123132 komplett, DeviWiki/WikiDevi (nur v1-Seite), FCC 2AXJ4EAP225ODV3 (Grant, Gravur-Label) und TE7EAP225OD (C2PC-Brief, MPE, Innen-/Außenfotos 2022, 2.4-GHz-Testbericht), TP-Link Produktseiten v3/v3.20, Omada-Supportseite, Seriendatenblatt 2024. Keine Werkstatt-Protokolle vorhanden. Widersprüche: CPU 750 (ToH) vs. 775 MHz (Commit/Bootlog); PoE 802.3af (Gravur/Datenblatt) vs. 802.3af/at (Produktseite/ToH) vs. nur 802.3af/at 48 V (Wiki-Einleitung). Offen: Installationsanleitung, v3.20-Unterschiede, Flash-Aufdruck, Gewicht."
+  }
+}
