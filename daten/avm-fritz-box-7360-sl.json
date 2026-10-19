@@ -1,0 +1,2287 @@
+{
+  "image": "avm-fritz-box-7360-sl",
+  "modell": "AVM FRITZ!Box 7360 SL",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15676666"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl?do=export_raw",
+      "stand": "Seitenrevision 2025-11-17 02:36",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Live-Seite neuer als Dump: aktuell 24.10.4 (Dump 23.05.2), Gluon support Yes, Gerätetyp Modem, Outdoor No, Installation nur EVA FTP (Dump: fritzflash, EVA FTP)"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/avm/fritz.box.wlan.7360?do=export_raw",
+      "stand": "Seitenrevision 2024-07-01 13:27",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Gemeinsame Seite 7360 SL und 7360 v1; Serial-Abschnitt leer; OpenWrt-Bootlog von einem SL (\"FRITZ7360SL - 1&1 HomeServer\", LEDE 17.01-Zeit)"
+    },
+    "openwrt_wiki_rev2021": {
+      "url": "https://openwrt.org/toh/avm/fritz.box.wlan.7360?rev=1615645567&do=export_raw",
+      "stand": "Seitenrevision 2021-03-13 14:26",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "ältere Revision mit Hinweis zum irq144-WLAN-Fehler, am 2021-03-14 wieder entfernt"
+    },
+    "openwrt_wiki_v2": {
+      "url": "https://openwrt.org/toh/avm/avm_fritz_box_7360_v2?do=export_raw",
+      "stand": "Live-Seite 2026-10-19 (Revision nicht abgefragt)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "nur zur Abgrenzung gelesen (7360 v2 = anderes Image); kein Serial-Abschnitt"
+    },
+    "openwrt_git_support": {
+      "url": "https://github.com/openwrt/openwrt/commit/bf007a480a46a9fa843765a54fc2f8aa32b2683f",
+      "stand": "Commit 2016-06-11 (Autor), gemergt 2016-06-13",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=7360+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-19 (9 Treffer zu \"7360\", 4 zu \"fritz7360sl\", 1 zu \"7360SL\")",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts",
+      "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-04-11, 03eef0f18b)",
+      "abgerufen": "2026-10-19",
+      "dateien": [
+        "vr9_avm_fritz7360sl.dts",
+        "vr9_avm_fritz736x.dtsi"
+      ]
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/image/vr9.mk",
+      "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-10-11, 7f434d332a)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_board_network": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/xrx200/base-files/etc/board.d/02_network",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_issue_8833": {
+      "url": "https://github.com/openwrt/openwrt/issues/8833",
+      "stand": "Issue 2021-05-27, geschlossen 2022-05-24 (104 Kommentare, nicht alle gelesen)",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/lantiq-xrx200",
+      "stand": "Branch main am 2026-10-19 (letzte Änderung 2025-07-23); identisch in v2025.1.x und v2023.2.x",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_commit_40ef705": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/40ef70534d",
+      "stand": "Commit 2019-12-09 (Autor), gemergt 2019-12-12",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_commit_e4ec16d": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/e4ec16d9cd",
+      "stand": "Commit 2022-09-18 (Autor), gemergt 2022-10-18",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_commit_b359ed1": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/b359ed1887b7485f93e7525ef52b29353ec63a0e",
+      "stand": "Commit 2019-11-06; Taster \"phone\" in v2025.1.x weiterhin in 50-gluon-setup-mode",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_supported_devices": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/docs/user/supported_devices.rst",
+      "stand": "Branch v2025.1.x am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_020_interfaces": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/package/gluon-core/luasrc/lib/gluon/upgrade/020-interfaces",
+      "stand": "Branch v2025.1.x am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "fritz_tools": {
+      "url": "https://github.com/freifunk-darmstadt/fritz-tools/blob/master/fritzflash.py",
+      "stand": "letzte Änderung 2022-04-04 (5e2037bb71)",
+      "abgerufen": "2026-10-19"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+      "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+      "abgerufen": "2026-10-19"
+    },
+    "wikidevi_v1": {
+      "url": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+      "stand": "Seitenrevision 2021-01-21T03:33:53Z",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "FRITZ!Box 7360 v1 läuft mit demselben Gluon-Image (Alias avm-fritz-box-7360-v1); Werte gelten nicht zwingend für die SL"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/wiki/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+      "stand": "Seitenrevision 2019-07-05T04:01:26Z",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "inhaltsgleich mit WikiDevi-Spiegel, nur ohne series=N300; zusätzlich Seiten 7360 v1 und 7360 EWE vorhanden (nicht geladen)"
+    },
+    "avm_handbuch": {
+      "url": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+      "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+      "abgerufen": "2026-10-19"
+    },
+    "avm_download": {
+      "url": "https://download.avm.de/fritzbox/fritzbox-7360-sl/deutschland/fritz.os/",
+      "stand": "Verzeichnis 07-Sep-2023, info_de.txt: FRITZ!OS 6.35, Release-Datum 04.09.2023",
+      "abgerufen": "2026-10-19"
+    },
+    "freifunk_forum_23802": {
+      "url": "https://forum.freifunk.net/t/freifunk-auf-fb-7360/23802",
+      "stand": "Thread 2023-07-05 bis 2023-07-17 (9 Beiträge, alle gelesen)",
+      "abgerufen": "2026-10-19"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "15676666",
+      "devicetype": "WiFi Router",
+      "brand": "AVM",
+      "model": "FRITZ!Box 7360 SL",
+      "version": "NULL",
+      "fccid": "NULL",
+      "availability": "Discontinued",
+      "whereavailable": "",
+      "supportedsincecommit": "https://git.lede-project.org/?p=source.git;a=commit;h=bf007a480a46a9fa843765a54fc2f8aa32b2683f",
+      "supportedsincerel": "17.01.0",
+      "supportedcurrentrel": "23.05.2",
+      "unsupported_functions": "DECT",
+      "target": "lantiq",
+      "subtarget": "xrx200",
+      "packagearchitecture": "mips_24kc",
+      "bootloader": "Adam2",
+      "cpu": "Lantiq XWAY VRX288",
+      "cpucores": "2",
+      "cpumhz": "500",
+      "flashmb": "16,32",
+      "rammb": "128",
+      "ethernet100mports": "2",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "2",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "Lantiq GSWIP (built-in SoC switch)",
+      "vlan": "Yes",
+      "modem": "VDSL2",
+      "commentsnetworkports": "",
+      "wlanhardware": "Atheros AR928 -BL1A",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "-",
+      "wlancomments": "",
+      "wlandriver": "ath9k",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "2x 2.0",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "1,POTS,DECT",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "38400 / 8N1",
+      "jtag": "¿",
+      "ledcount": "5",
+      "buttoncount": "3",
+      "gpios": "-",
+      "powersupply": "12 VDC, 1.4 A",
+      "devicepage": "toh:avm:fritz.box.wlan.7360",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "https://forum.openwrt.org/viewtopic.php?id=59549",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "Fritz 7360",
+      "gitsearch": "7360SL",
+      "wikideviurl": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+      "oemdevicehomepageurl": "http://avm.de/service/fritzbox/fritzbox-7360/uebersicht/",
+      "firmwareoemstockurl": "ftp://ftp.avm.de/fritz.box/fritzbox.fon_wlan_7360/",
+      "firmwareopenwrtinstallurl": "NULL",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.2/targets/lantiq/xrx200/openwrt-23.05.2-lantiq-xrx200-avm_fritz7360sl-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "NULL",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/lantiq/xrx200/openwrt-lantiq-xrx200-avm_fritz7360sl-squashfs-sysupgrade.bin",
+      "installationmethods": "fritzflash,EVA FTP",
+      "commentinstallation": "",
+      "recoverymethods": "EVA FTP",
+      "commentrecovery": "",
+      "picture": "media:avm:fritzbox_7360:fritzbox_7360_sl_general_view.png",
+      "comments": "DECT IP telephony, there is also a V1 and a V2, ADSL2, ADSL2+, VDSL capable; See also https://boxmatrix.info/wiki/FRITZ!Box_Fon_WLAN_7360_SL",
+      "page": "toh:hwdata:avm:avm_fritz_box_7360sl"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "Modem",
+      "Brand": "AVM",
+      "Model": "FRITZ!Box 7360 SL",
+      "Versions": "",
+      "FCCID_urls": "",
+      "Availability_availability": "Discontinued",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.lede-project.org/?p=source.git;a=commit;h=bf007a480a46a9fa843765a54fc2f8aa32b2683f",
+      "Supported Since Rel_releasesince": "17.01.0",
+      "Supported Current Rel_releasecurrent": "24.10.4",
+      "Unsupported Functions_unsupporteds": "DECT",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "lantiq",
+      "Subtarget": "xrx200",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "Adam2",
+      "CPU": "Lantiq XWAY VRX288",
+      "CPU Cores_numcores_": "2",
+      "CPU MHz": "500",
+      "Flash MB_mbflashs": "16, 32",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "2",
+      "Ethernet 1Gbit ports_numethport": "2",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "Lantiq GSWIP (built-in SoC switch)",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "VDSL2",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Atheros AR928 -BL1A",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "-",
+      "WLAN Comments_": "",
+      "WLAN driver_wlan-drivers": "ath9k",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "¿",
+      "USB ports_port-usbs": "2x 2.0",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "1, POTS, DECT",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "38400 / 8N1",
+      "Serial connection voltage_serialvoltage": "¿",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "5",
+      "Button count_numbutton": "3",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "12 VDC, 1.4A",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:avm:fritz.box.wlan.7360",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "https://forum.openwrt.org/viewtopic.php?id=59549",
+      "Forum search_search-forums": "Fritz 7360",
+      "Git search_search-gits": "7360SL",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+      "WikiDevi ID_hwinfo-id": "AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+      "OEM Device Homepage URL_url": "http://avm.de/service/fritzbox/fritzbox-7360/uebersicht/",
+      "Firmware OEM Stock URL_url": "ftp://ftp.avm.de/fritz.box/fritzbox.fon_wlan_7360/",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/24.10.4/targets/lantiq/xrx200/openwrt-24.10.4-lantiq-xrx200-avm_fritz7360sl-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/24.10.4/targets/lantiq/xrx200/openwrt-24.10.4-lantiq-xrx200-avm_fritz7360sl-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/lantiq/xrx200/openwrt-lantiq-xrx200-avm_fritz7360sl-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/lantiq/xrx200/openwrt-lantiq-xrx200-avm_fritz7360sl-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "EVA FTP",
+      "Recovery method(s)_method-recoverys": "EVA FTP",
+      "Picture_img100s": "media:avm:fritzbox_7360:fritzbox_7360_sl_general_view.png",
+      "Comments_": "DECT IP telephony, there is also a V1 and a V2, ADSL2, ADSL2+, VDSL capable; See also https://boxmatrix.info/wiki/FRITZ!Box_Fon_WLAN_7360_SL"
+    },
+    "openwrt_wiki": {
+      "Warnung": "Not all FRITZ!Box 7360 v1 and SL models are properly labeled. Make sure to verify your model with HWRevision",
+      "Supported Versions": {
+        "Version/Model": "v1",
+        "Launch Date": "2010",
+        "S/N": "D303.400.30.xxx.xxx",
+        "OpenWrt/LEDE Version Supported": "L: 17.01, O: WIP",
+        "Model Specific Notes": "1&1 (1und1)"
+      },
+      "Hardware Highlights": {
+        "CPU": "2x MIPS 34Kc 5.6",
+        "Flash": "16MB",
+        "Ram": "128MB",
+        "Network": "2x 1000M (eth0, eth1) & 2x 100M (eth2, eth3)",
+        "USB": "Yes (2x 2.0)",
+        "Serial": "Yes",
+        "JTag": "?",
+        "DSL": "VDSL2 + ADSL2+"
+      },
+      "DECT": "DECT does not work and is not supported due to missing PIGLET and DECT Driver (AVM driver is closed source)",
+      "Telefon": "Phone works only via SIP with asterisk or another SIP package",
+      "Installation": "EVA FTP: ftp 192.168.178.1, Name adam2 / Passwort adam2, quote GETENV HWRevision, bin, passiv, quote MEDIA FLSH, put <sysupgrade.bin> mtd1; FTP nur in den ersten Sekunden nach dem Einschalten; ggf. LAN 3 statt LAN 1 versuchen; Info-LED leuchtet rot während des Flashens; danach IP 192.168.1.1; mtd3 und mtd4 nicht löschen",
+      "HWRevision": "181 = SL, 183 = v1 (ggf. quote MEDIA FLSH vor bin), 196 = v2 (eigene Anleitung); v1-FRITZ!OS-Versionsnummer beginnt mit 111, v2 mit 124",
+      "WLAN": "WLAN-Taster einige Sekunden drücken oder uci set wireless.radio0.disabled='0'; uci commit",
+      "Telnet": "#96*7* aktiviert telnetd, #96*8* deaktiviert (FRITZ!OS)",
+      "VDSL": "Vectoring nur mit zusätzlicher DSL-Firmware (vr9-B-dsl.bin aus FRITZ!OS-Image)",
+      "USB-Mobilfunk": "3G/UMTS-USB-Sticks unter OpenWrt nutzbar",
+      "Serial": "(Abschnitt leer)",
+      "JTAG": "(nur Verweis auf generische JTAG-Seite)",
+      "Hardware Unbricking": "A common issue with these devices is a hardware brick (LEDs remain off, device drawing current) caused by faulty ceramic capacitors on the 12v input line, near the regulators. Check these three capacitors for low-impedance and remove / replace (Foto sebastianschaper.net)",
+      "Troubleshooting": "OpenWrt 21.02 switch issues: incorrect link speeds on LAN 1&2 and LAN 3&4 and absence of traffic (issue 8833); Poor NAT performance ~30-40 Mbit/s on WAN port in 1 WAN / 3 LAN setup, resolved by Software flow offloading",
+      "Bootlog (Auszug)": {
+        "machine": "FRITZ7360SL - 1&1 HomeServer",
+        "SoC": "xRX200 rev 1.2",
+        "CPU": "MIPS 34Kc, CPU Clock: 500MHz, 1 secondary CPU",
+        "RAM": "memory: 08000000 @ 00000000 (128 MB), mem=126M",
+        "Kernel command line": "console=ttyLTQ0,115200 mem=126M vpe1_load_addr=0x87e00000 vpe1_mem=2M maxvpes=1 maxtcs=1 nosmp",
+        "Flash": "lantiq nor flash device: 01000000; ltq_nor: Found 1 x16 devices at 0x0 in 16-bit bank. Manufacturer ID 0x0000c2 Chip ID 0x00227e",
+        "Partitionen": "urlader 0x0-0x20000, firmware 0x20000-0xf80000, tffs (1) 0xf80000-0xfc0000, tffs (2) 0xfc0000-0x1000000",
+        "PHYs": "Atheros 8030 (phy 0:00, 0:01), Lantiq XWAY VR9 GPHY 11G v1.4 (phy 0:11, 0:13)",
+        "WLAN": "pci 168c:002e, Atheros AR9287 Rev:2, EEPROM regdomain 0x8114, Country DE; eeprom contains invalid mac address (zufällige MAC)",
+        "CPU-Temperatur": "68.0 °C (ltq-cputemp beim Boot)",
+        "USB": "2x dwc2 DWC OTG Controller, je 1 Port"
+      },
+      "Tags": "lantiq VRX288 16flash 128ram 4port gigabitethernet VDSL2 Adam2"
+    },
+    "openwrt_wiki_rev2021": {
+      "Hinweis": "Wifi unstable/slow (irq144 bug) due wrong value in vr9_avm_fritz7360sl.dts. Alexander 'lynxis' mentioned: pcie-rst {lantiq,pins = \"io38\";} -> should be \"io21\" (like in GLP sources)."
+    },
+    "openwrt_wiki_v2": {
+      "Abgrenzung": "7360 v2: HWRevision 196, 32 MB Flash, eigenes Image avm_fritz7360-v2",
+      "Opening the case (v2)": "remove front rubber feet, remove 4 screws, gently lift top front (middle)"
+    },
+    "openwrt_git_support": {
+      "Titel": "lantiq: Add Support for Fritz!Box 7360 SL",
+      "Text": "lantiq: Add Support for Fritz!Box 7360 SL\n\nSigned-off-by: Sebastian Ortwein <krone@animeland.de>\nTested-by: Guido Lipke <lipkegu@gmail.com>",
+      "Autor": "John Crispin",
+      "Dateien": [
+        "target/linux/lantiq/base-files/etc/board.d/02_network",
+        "target/linux/lantiq/dts/FRITZ7360SL.dts",
+        "target/linux/lantiq/image/Makefile",
+        "target/linux/lantiq/xrx200/config-default",
+        "target/linux/lantiq/xrx200/profiles/avm.mk"
+      ]
+    },
+    "openwrt_git_suche": {
+      "Treffer": [
+        "bf007a480a 2016-06-11 lantiq: Add Support for Fritz!Box 7360 SL",
+        "a20616863d 2016-11-26 lantiq: use ath9k device tree bindings binding/owl-loader",
+        "7dd42d610d 2016-12-21 lantiq: add FRITZ7360SL phy reset gpios",
+        "ea9b71e5b1 2016-12-22 lantiq: drop the FRITZ7360SL led-dsl alias",
+        "78bebe680f 2020-04-03 lantiq/xrx200: add support for the Fritzbox 7360v2",
+        "0962baae4e 2020-05-18 lantiq: fritz 7360 v2: rename device before it will be used",
+        "bf5d800578 2020-05-18 lantiq: fritz 7360 v2: remove additional supported devices",
+        "d5a148f5c8 2020-07-20 lantiq/xrx200: make WLAN button responsive on Fritzbox 7360 & 7362",
+        "3154537864 2022-01-14 lantiq: flag FritzBox 7360 family buttons active-low",
+        "56cd49bdc8 2022-03-18 lantiq: fritz736x: Move GPIO resets to the inidvidual board.dts files",
+        "c2d1c32d1e 2023-03-13 lantiq: xrx200: convert FritzBox 7360v2's wifi to nvmem"
+      ]
+    },
+    "openwrt_dts": {
+      "model": "AVM FRITZ!Box 7360 SL",
+      "compatible": "avm,fritz7360sl, avm,fritz736x, lantiq,xway, lantiq,vr9",
+      "bootargs": "console=ttyLTQ0,115200",
+      "memory": "reg <0x0 0x8000000> (128 MB)",
+      "flash": "lantiq,nor, bank-width 2, reg 0x1000000 (16 MB); Partitionen urlader 0x0 (0x20000, read-only), firmware 0x20000 (0xf60000), tffs (1) 0xf80000, tffs (2) 0xfc0000",
+      "nvmem": "WLAN-Kalibrierung urlader 0x985 (0x3d8), MAC urlader 0xa91",
+      "mac": "eth0 = MAC(0xa91) -2, ppe = MAC(0xa91) +1",
+      "keys": "dect: GPIO 1 active-low KEY_PHONE; wifi: GPIO 29 active-low KEY_RFKILL (gpio-keys-polled)",
+      "leds": "power green GPIO32, power red GPIO33, fon GPIO38, info green GPIO47, info red GPIO34, wlan GPIO36, dect GPIO35",
+      "led-aliases": "boot/running = power green, failsafe/upgrade = power red, dsl = info green, wifi = wlan",
+      "switch": "gswip: port0 lan3 rmii phy0 (0x00), port1 lan4 rmii phy1 (0x01), port2 lan2 internal phy11 (GPHY), port4 lan1 internal phy13 (GPHY); gphy0/gphy1 GPHY_MODE_GE",
+      "phy-reset": "phy0 GPIO37, phy1 GPIO44 (active-low)",
+      "pcie": "pcie0 gpio-reset GPIO21; pinmux pcie-rst io21",
+      "wifi": "compatible pci168c,002e",
+      "usb": "usb_phy0, usb_phy1, usb0, usb1 aktiviert"
+    },
+    "openwrt_image_mk": {
+      "Device/avm_fritz7360sl": "$(Device/dsa-migration) $(Device/AVM); DEVICE_MODEL := FRITZ!Box 7360 SL; IMAGE_SIZE := 15744k; DEVICE_PACKAGES := kmod-ath9k kmod-owl-loader wpad-basic-mbedtls kmod-usb-dwc2 fritz-tffs xrx200-rev1.1-phy11g-firmware xrx200-rev1.2-phy11g-firmware; SUPPORTED_DEVICES += FRITZ7360SL",
+      "Device/AVM": "KERNEL := kernel-bin | append-dtb | lzma | eva-image; IMAGE/sysupgrade.bin := append-kernel | pad-to 64k | append-avm-fakeroot | append-rootfs | pad-rootfs | check-size | append-metadata"
+    },
+    "openwrt_board_network": {
+      "interfaces": "ucidef_set_interface_lan \"lan1 lan2 lan3 lan4\" (kein WAN-Port)",
+      "dsl": "annex b (Gruppe mit avm,fritz7360sl)",
+      "wan_mac": "macaddr_add $(mtd_get_mac_binary urlader 0xa91) 1"
+    },
+    "openwrt_issue_8833": {
+      "Titel": "FS#3832 - [Regression] xrx200 switch affecting AVM Fritz!Box 7362SL",
+      "Status": "closed 2022-05-24",
+      "Text": "with OpenWrt 21.02.0 only the two gigabit ports work. Port 3+4 are dead. (OpenWrt-Wiki der 7360 verweist für die 7360 auf dieses Issue)"
+    },
+    "gluon_targets": {
+      "device": "device('avm-fritz-box-7360-sl', 'avm_fritz7360sl', { factory = false, aliases = {'avm-fritz-box-7360-v1'}, })",
+      "target_packages": "entfernt: ltq-vdsl-vr9-vectoring-fw-installer, kmod-ltq-vdsl-vr9-mei, kmod-ltq-vdsl-vr9, kmod-ltq-atm-vr9, kmod-ltq-ptm-vr9, kmod-ltq-deu-vr9, ltq-vdsl-vr9-app, dsl-vrx200-firmware-xdsl-a, dsl-vrx200-firmware-xdsl-b-patch, ppp-mod-pppoa, ltq-dsl-base",
+      "v2": "device('avm-fritz-box-7360-v2', 'avm_fritz7360-v2', { factory = false })"
+    },
+    "gluon_commit_40ef705": {
+      "Titel": "lantiq-xrx200: add support for AVM FRITZ!Box 7360 (v1, v2) and 7360 SL",
+      "Autor": "Dark4MD",
+      "Doku": "FRITZ!Box 7360 (v1, v2) [#avmflash]_ [#lan_as_wan]_; FRITZ!Box 7360 SL [#avmflash]_ [#lan_as_wan]_",
+      "device": "device('avm-fritz-box-7360-sl', 'avm_fritz7360sl', { factory = false, aliases = {'avm-fritz-box-7360-v1', 'avm-fritz-box-7360-v2'} })"
+    },
+    "gluon_commit_e4ec16d": {
+      "Titel": "xrx200: migrate fritz7360-v2 using incorrect image",
+      "Text": "Migrate AVM FRITZ!Box 7360 v2 boards flashed with the incorrect v1 image to use the newly added v2 target image during the next upgrade. Using the v2 target image allows the boards to read the TFFS partition, which is misaligned when using the v1 image.",
+      "Erkennung": "urlader 0x580: Version 00000003, memsize 08000000, flashsize 02000000 (32 MB) = 7360 v2, 01000000 (16 MB) = unverändert (SL/v1)"
+    },
+    "gluon_commit_b359ed1": {
+      "Titel": "gluon-setup-mode: add DECT button to enter setup mode",
+      "Text": "many AVM devices do not have RESET/WPS buttons. So use the otherwise unused DECT/PHONE button to boot the device into setup mode.",
+      "v2025.1.x": "if [ \"$BUTTON\" = wps ] || [ \"$BUTTON\" = reset ] || [ \"$BUTTON\" = phone ]; then"
+    },
+    "gluon_supported_devices": {
+      "Eintrag": "FRITZ!Box 7360 SL [#avmflash]_ [#lan_as_wan]_; FRITZ!Box 7360 (v1, v2) [#avmflash]_ [#lan_as_wan]_",
+      "avmflash": "For instructions on how to flash AVM devices, visit https://fritz-tools.readthedocs.io",
+      "lan_as_wan": "All LAN ports on this device are used as WAN."
+    },
+    "gluon_020_interfaces": {
+      "Logik": "keine Sonderbehandlung für avm,fritz7360sl (nur avm,fritz7430 und arcadyan,vgv7510kw22-nor im Target lantiq/xrx200); ohne WAN-Port: sysconfig.single_ifname = lan_ifname (lan1 lan2 lan3 lan4)"
+    },
+    "fritz_tools": {
+      "181": "gluon avm-fritz-box-7360-sl-sysupgrade.bin / openwrt avm_fritz7360sl-squashfs-sysupgrade.bin",
+      "183": "gluon avm-fritz-box-7360-v1-sysupgrade.bin / openwrt avm_fritz7360sl-squashfs-sysupgrade.bin",
+      "196": "gluon avm-fritz-box-7360-v2-sysupgrade.bin / openwrt avm_fritz7360sl-squashfs-sysupgrade.bin",
+      "Erkennung": "liest HWRevision aus der EVA-Umgebung"
+    },
+    "wikidevi": {
+      "brand": "AVM",
+      "model": "FRITZ!Box 7360",
+      "revision": "SL (HW181)",
+      "series": "N300",
+      "ean": "4022265155239",
+      "asin": "B008K2WQF2;DE;,B0072Q559G;DE;",
+      "is_manuf": "No",
+      "availability": "now",
+      "est_release_date": "03/27/2012",
+      "type": "wireless router, dsl modem",
+      "pwr_v": "12",
+      "pwr_amp": "1.4",
+      "pwr_conn": "barrel",
+      "cpu1_brand": "Lantiq",
+      "cpu1_model": "PSB 80920;XWAY VRX288, PSB 80920 EL, V1.1;",
+      "cpu1_cspeed": "500",
+      "cpu1_cores": "2",
+      "fla1": "16",
+      "fla1_brand": "Spansion",
+      "fla1_model": "S29GL128P90TFCR1",
+      "ram1": "128",
+      "ram1_brand": "Winbond",
+      "ram1_model": "W971GG6JB-25",
+      "expansion_if_types": "USB 2.0",
+      "expansion_usb_num": "1",
+      "wi1_chip1_brand": "Atheros",
+      "wi1_chip1_model": "AR9287",
+      "wi1_802dot11_protocols": "bgn",
+      "wi1_txchains": "2",
+      "wi1_rxchains": "2",
+      "wi1_sstreams": "2",
+      "eth_cpu": "true",
+      "eth_chip2_brand": "Atheros",
+      "eth_chip2_model": "AR8030",
+      "eth_chip3_brand": "Atheros",
+      "eth_chip3_model": "AR8030",
+      "sw_cpu": "true",
+      "lan_speed": "100M",
+      "lan_ports": "4",
+      "flags": "ADSL2+, DECT,",
+      "802dot11_protocols": "bgn",
+      "default_ssid": "FRITZ!Box Fon WLAN 7360 SL",
+      "default_ssid_regex": "^FRITZ!Box Fon WLAN 7360 SL$",
+      "Text": "This device has two 10/100 Mbit Ethernet ports and two 10/100/1000 Mbit Ethernet ports. (VDSL/ADSL, DECT-Basis, Media Server); boxmatrix: mips34_16MB_vdsl_dect441_2eth_2geth_1ab_2usb_host_wlan11n_30806"
+    },
+    "wikidevi_v1": {
+      "brand": "AVM",
+      "model": "FRITZ!Box 7360",
+      "revision": "v1 (HW196)",
+      "series": "N300",
+      "ean": "4023125027833",
+      "asin": "B008BYZ2AK",
+      "is_manuf": "No",
+      "availability": "now",
+      "est_release_date": "02/2012",
+      "type": "wireless router, dsl modem, analog phone gateway,",
+      "pwr_v": "12",
+      "pwr_amp": "1.4",
+      "pwr_conn": "barrel",
+      "pwr_barrel_outer": "5.5",
+      "pwr_barrel_inner": "2.5",
+      "pwr_barrel_len": "9.5",
+      "cpu1_brand": "Lantiq",
+      "cpu1_model": "PSB80920;PSB80920 V1.2, XWAY VRX288;",
+      "cpu1_cspeed": "500",
+      "cpu1_cores": "2",
+      "fla1": "16",
+      "fla1_brand": "Macronix",
+      "fla1_model": "MX29GL128FHT2I-90G",
+      "ram1": "128",
+      "ram1_brand": "Winbond",
+      "ram1_model": "W971GG6KB-25",
+      "expansion_if_types": "USB 2.0",
+      "expansion_usb_num": "2",
+      "wi1_chip1_brand": "Atheros",
+      "wi1_chip1_model": "AR9287",
+      "wi1_802dot11_protocols": "bgn",
+      "wi1_ant_conn": "U.FL",
+      "wi1_txchains": "2",
+      "wi1_rxchains": "2",
+      "wi1_sstreams": "2",
+      "eth_cpu": "true",
+      "eth_chip2_brand": "Atheros",
+      "eth_chip2_model": "AR8030-A",
+      "eth_chip3_brand": "Atheros",
+      "eth_chip3_model": "AR8030-A",
+      "sw_cpu": "true",
+      "lan_speed": "1GbE",
+      "lan_ports": "2",
+      "wan_speed": "100M",
+      "wan_ports": "2",
+      "addl_chips": "xDSL AFE;Lantiq;PSB 80190;PSB 80190 V, V1.1, XWAY VRX208;1; ,,, POTS/PSTN (DAA) Chip;Silicon Labs;IA3222B;;1; ,,, POTS/PSTN (DAA) Chip;Silicon Labs;IA3223A;;1; ,,, DECT Chip;Dialog;SC14441B;;1;",
+      "flags": "ADSL2+, VDSL, DECT, VoIP,",
+      "802dot11_protocols": "bgn",
+      "default_ssid": "FRITZ!Box 7360",
+      "default_ssid_regex": "^FRITZ!Box 7360$",
+      "default_ip": "192.168.178.1",
+      "Externals": "1x Combined FXO (POTS/PSTN, pins 3 and 6) and DSL (pins 4 and 5) port with 8P8C connector; 1x FXS port (FON 1) with 6P4C connector; 4x Ethernet: 2x Fast Ethernet (10/100), 2x Gigabit Ethernet (10/100/1000)",
+      "Internals": "Two-part plastic clamshell, with 4x T9 screws, 2 to the rear, 2 under the forward LRF, and one clip center-front. No further tooled disassembly required. There are 2x U.FL connectors on the cicuit board for the WiFi (not for DECT) antennae.",
+      "Spannungen intern": "TI TPS65252: +3.3 V, +1.05 V; Buck: +1.85 V; Buck: +5 V; Boost: +18.75 V",
+      "See also": "7360 SL (HW181), 7360 EWE (HW183), 7360 v1 (HW183), 7360 v2 (HW196)",
+      "Bilder": "PCB top, PCB bottom (\"enhanced\")"
+    },
+    "deviwiki": {
+      "brand": "AVM",
+      "model": "FRITZ!Box 7360",
+      "revision": "SL (HW181)",
+      "ean": "4022265155239",
+      "asin": "B008K2WQF2;DE;,B0072Q559G;DE;",
+      "est_release_date": "03/27/2012",
+      "is_manuf": "No",
+      "availability": "now",
+      "type": "wireless router, dsl modem",
+      "pwr_v": "12",
+      "pwr_amp": "1.4",
+      "pwr_conn": "barrel",
+      "cpu1_brand": "Lantiq",
+      "cpu1_model": "PSB 80920;XWAY VRX288, PSB 80920 EL, V1.1;",
+      "cpu1_cspeed": "500",
+      "cpu1_cores": "2",
+      "fla1": "16",
+      "fla1_brand": "Spansion",
+      "fla1_model": "S29GL128P90TFCR1",
+      "ram1": "128",
+      "ram1_brand": "Winbond",
+      "ram1_model": "W971GG6JB-25",
+      "expansion_if_types": "USB 2.0",
+      "expansion_usb_num": "1",
+      "wi1_chip1_brand": "Atheros",
+      "wi1_chip1_model": "AR9287",
+      "wi1_802dot11_protocols": "bgn",
+      "wi1_txchains": "2",
+      "wi1_rxchains": "2",
+      "wi1_sstreams": "2",
+      "eth_cpu": "true",
+      "eth_chip2_brand": "Atheros",
+      "eth_chip2_model": "AR8030",
+      "eth_chip3_brand": "Atheros",
+      "eth_chip3_model": "AR8030",
+      "sw_cpu": "true",
+      "lan_speed": "100M",
+      "lan_ports": "4",
+      "flags": "ADSL2+, DECT,",
+      "802dot11_protocols": "bgn",
+      "default_ssid": "FRITZ!Box Fon WLAN 7360 SL",
+      "default_ssid_regex": "^FRITZ!Box Fon WLAN 7360 SL$"
+    },
+    "avm_handbuch": {
+      "Anschlüsse": "DSL/TEL (ADSL2+ und VDSL); FON 1 (TAE- und RJ11-Buchse, nur eine gleichzeitig); LAN 1 - LAN 4: LAN 1 - LAN 2 Gigabit-Ethernet (10/100/1000 Base-T), LAN 3 - LAN 4 Ethernet (10/100 Base-T); 2 USB 2.0-Buchsen; WLAN-Basisstation 802.11b/g/n 2.4 GHz; DECT-Basisstation bis 6 Schnurlostelefone",
+      "Taster": "zwei Taster auf der Geräteoberseite: WLAN (an/aus, WPS) und DECT (Anmelden, Suchen)",
+      "LEDs": "fünf: Power/DSL, Fon, DECT, WLAN, Info (Info blinkt rot bei Fehler)",
+      "Lieferumfang": "FRITZ!Box 7360 SL, ein Netzteil, ein Netzwerkkabel, ein DSL-Kabel (grau), eine Kurzanleitung",
+      "Internetanschluss": "ADSL/ADSL2/ADSL2+ nach 1TR112 bzw. ITU G.992.1/.3/.5 (Annex B oder J), VDSL2 nach 1TR112 bzw. ITU G.993.2 inkl. G.vector, Kabelmodem, USB-Modem (UMTS/HSPA), anderer Internetzugang",
+      "Handhabung": "aufstellen oder aufhängen; Bohrschablone S. 192; trockener, staubfreier Ort ohne direkte Sonneneinstrahlung; ideal: Wandmontage mit Anschlusskabeln nach unten; Geräteunterseite kann sich erwärmen",
+      "Stromversorgung": "mitgeliefertes Netzteil in Steckdose; nur dieses Netzteil verwenden; kein Ein-/Ausschalter",
+      "USB": "zwei USB-Anschlüsse (zwei USB-Host-Controller USB 2.0); Gesamtstrom für Geräte ohne eigene Stromversorgung max. 500 mA; bis zu vier USB-Speicher",
+      "Technische Daten Geräteeigenschaften": "Abmessungen (B x H x T): circa 226 x 47 x 160 mm; Betriebstemperatur 0 °C - +40 °C; Lagertemperatur -20 °C - +70 °C; relative Luftfeuchtigkeit Betrieb 10 % - 90 %, Lager 5 % - 95 %; Betriebsspannung 230 V / 50 Hz; maximale Leistungsaufnahme 14 W; durchschnittliche Leistungsaufnahme 8 W - 11 W (DSL aktiv, WLAN an ohne Clients, DECT an mit einem Telefon, ein LAN-Gerät ohne Datenübertragung)",
+      "Werkseinstellungen": "über Benutzeroberfläche oder am Telefon #991*15901590*, Hörer abheben und auflegen",
+      "WLAN-Schlüssel": "vorgegebener Netzwerkschlüssel auf der Geräteunterseite",
+      "Bohrschablone": "S. 192, Maß 178 mm"
+    },
+    "avm_download": {
+      "Datei": "FRITZ.Box_Fon_WLAN_7360_SL.AnnexB.109.06.35.image (16609280 Bytes, 07-Sep-2023)",
+      "Produkt": "FRITZ!Box Fon WLAN 7360 SL",
+      "Version": "FRITZ!OS 6.35",
+      "Release-Datum": "04.09.2023",
+      "Hinweis": "Diese Update-Datei ist nur für FRITZ!Box Fon WLAN 7360 SL geeignet!"
+    },
+    "freifunk_forum_23802": {
+      "Kernaussage": "Gluon auf der 7360 möglich, aber nicht gleichzeitig mit dem eingebauten VDSL-Modem (AVM-DSL-Treiber Binärblobs, in Gluon nicht implementiert) (wusel); \"Die Fritz!Box 7360 ist ok, aber von der Freifunkleistung recht betagt.\" (Djfe)"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "AVM",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AVM",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": "AVM GmbH"
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "FRITZ!Box 7360 SL",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "FRITZ!Box Fon WLAN 7360 SL",
+        "quelle": "avm_download",
+        "beleg": "https://download.avm.de/fritzbox/fritzbox-7360-sl/deutschland/fritz.os/",
+        "stand": "Verzeichnis 07-Sep-2023, info_de.txt: FRITZ!OS 6.35, Release-Datum 04.09.2023",
+        "sicherheit": "hoch",
+        "bemerkung": "Produktname in info_de.txt"
+      },
+      {
+        "wert": "FRITZ!Box 7360 SL",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AVM FRITZ!Box 7360 SL",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-04-11, 03eef0f18b)",
+        "sicherheit": "hoch",
+        "bemerkung": "model im DTS"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "keine Versionen (ToH 'Versions' leer)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "HWRevision 181 = 7360 SL; 183 = 7360 v1 (läuft mit diesem Image); 196 = 7360 v2 (eigenes Image)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": "Abfrage per EVA-FTP: quote GETENV HWRevision"
+      },
+      {
+        "wert": "181 -> avm-fritz-box-7360-sl, 183 -> avm-fritz-box-7360-v1, 196 -> avm-fritz-box-7360-v2",
+        "quelle": "fritz_tools",
+        "beleg": "https://github.com/freifunk-darmstadt/fritz-tools/blob/master/fritzflash.py",
+        "stand": "letzte Änderung 2022-04-04 (5e2037bb71)",
+        "sicherheit": "mittel",
+        "bemerkung": "Zuordnung in fritzflash.py"
+      },
+      {
+        "wert": "Image gilt für 7360 SL und, über Alias avm-fritz-box-7360-v1, für 7360 v1; 7360 v2 hat ein eigenes Image",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/lantiq-xrx200",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2025-07-23); identisch in v2025.1.x und v2023.2.x",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "SL (HW181)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "v1 (HW196)",
+        "quelle": "wikidevi_v1",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+        "stand": "Seitenrevision 2021-01-21T03:33:53Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "Widerspruch: Infobox nennt HW196, dieselbe Seite listet unter 'See also' v1 = HW183 und v2 = HW196; OpenWrt-Wiki und fritzflash: v1 = 183"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Nicht alle 7360 v1 und SL sind richtig beschriftet; Modell vor dem Flashen per EVA-FTP 'quote GETENV HWRevision' prüfen (181 = SL, 183 = v1, 196 = v2). Unter FRITZ!OS: Versionsnummer der FRITZ!OS-Datei beginnt bei v1 mit 111, bei v2 mit 124",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": "Warnkasten und Schritt 3 der Flash-Anleitung"
+      },
+      {
+        "wert": "Update-Datei der SL heißt FRITZ.Box_Fon_WLAN_7360_SL...109.06.35 (Versionsnummer beginnt mit 109)",
+        "quelle": "avm_download",
+        "beleg": "https://download.avm.de/fritzbox/fritzbox-7360-sl/deutschland/fritz.os/",
+        "stand": "Verzeichnis 07-Sep-2023, info_de.txt: FRITZ!OS 6.35, Release-Datum 04.09.2023",
+        "sicherheit": "mittel",
+        "bemerkung": "Präfix aus dem Dateinamen abgelesen"
+      },
+      {
+        "wert": "7360 v2 unterscheidet sich durch 32 MB Flash (urlader-Feld flashsize 0x02000000), SL/v1 haben 16 MB",
+        "quelle": "gluon_commit_e4ec16d",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/e4ec16d9cd",
+        "stand": "Commit 2022-09-18 (Autor), gemergt 2022-10-18",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon migriert v2-Geräte, die mit dem v1/SL-Image geflasht wurden"
+      },
+      {
+        "wert": "Standard-SSID \"FRITZ!Box Fon WLAN 7360 SL\"",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": "v1: \"FRITZ!Box 7360\""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "1&1 HomeServer"
+        ],
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog \"MIPS: machine is FRITZ7360SL - 1&1 HomeServer\"; Versionstabelle \"1&1 (1und1)\"; Bild fritzbox_7360_sl_1_1-home-server"
+      },
+      {
+        "wert": [
+          "FRITZ!Box Fon WLAN 7360 SL"
+        ],
+        "quelle": "avm_download",
+        "beleg": "https://download.avm.de/fritzbox/fritzbox-7360-sl/deutschland/fritz.os/",
+        "stand": "Verzeichnis 07-Sep-2023, info_de.txt: FRITZ!OS 6.35, Release-Datum 04.09.2023",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "avm-fritz-box-7360-v1 (Gluon-Alias, FRITZ!Box 7360 v1)"
+        ],
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/lantiq-xrx200",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2025-07-23); identisch in v2025.1.x und v2023.2.x",
+        "sicherheit": "hoch",
+        "bemerkung": "gleiches Image"
+      },
+      {
+        "wert": [
+          "FRITZ!Box Fon WLAN 7360 EWE (HW183, Weiterleitung auf v1-Seite)"
+        ],
+        "quelle": "wikidevi_v1",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+        "stand": "Seitenrevision 2021-01-21T03:33:53Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "betrifft v1, nicht SL"
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Discontinued",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "now",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "Stand 2021, überholt"
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "03/27/2012",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": "est_release_date"
+      },
+      {
+        "wert": "2010",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "niedrig",
+        "bemerkung": "Tabelle Supported Versions, Zeile v1"
+      },
+      {
+        "wert": "02/2012",
+        "quelle": "wikidevi_v1",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+        "stand": "Seitenrevision 2021-01-21T03:33:53Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "7360 v1"
+      }
+    ],
+    "ean": [
+      {
+        "wert": "4022265155239",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "4023125027833",
+        "quelle": "wikidevi_v1",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+        "stand": "Seitenrevision 2021-01-21T03:33:53Z",
+        "sicherheit": "mittel",
+        "bemerkung": "7360 v1"
+      }
+    ],
+    "seriennummer_schema": [
+      {
+        "wert": "D303.400.30.xxx.xxx",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "niedrig",
+        "bemerkung": "Tabelle Supported Versions, Zeile v1"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Lantiq XWAY VRX288",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Lantiq PSB 80920 (XWAY VRX288, PSB 80920 EL, V1.1)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "xRX200 rev 1.2",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog"
+      },
+      {
+        "wert": "Lantiq VR9 (lantiq,vr9)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-04-11, 03eef0f18b)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "MIPS 34Kc mit MT: zwei VPEs"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": "\"2x MIPS 34Kc\"; Bootlog: 1 secondary CPU"
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 500,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 500,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog \"CPU Clock: 500MHz\""
+      },
+      {
+        "wert": 500,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "mips_24kc",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Paketarchitektur; CPU-Kern ist MIPS 34Kc"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 128,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": "Hardware Highlights; Bootlog memory 0x08000000"
+      },
+      {
+        "wert": 128,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-04-11, 03eef0f18b)",
+        "sicherheit": "hoch",
+        "bemerkung": "memory reg 0x8000000"
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "Winbond W971GG6JB-25",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Winbond W971GG6KB-25",
+        "quelle": "wikidevi_v1",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+        "stand": "Seitenrevision 2021-01-21T03:33:53Z",
+        "sicherheit": "mittel",
+        "bemerkung": "7360 v1"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": "16, 32",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "ToH nennt zwei Werte; 32 MB hat laut OpenWrt/Gluon nur die 7360 v2 (eigenes Image)"
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": "Hardware Highlights; Bootlog 01000000"
+      },
+      {
+        "wert": 16,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-04-11, 03eef0f18b)",
+        "sicherheit": "hoch",
+        "bemerkung": "flash reg 0x1000000; IMAGE_SIZE 15744k"
+      },
+      {
+        "wert": 16,
+        "quelle": "gluon_commit_e4ec16d",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/e4ec16d9cd",
+        "stand": "Commit 2022-09-18 (Autor), gemergt 2022-10-18",
+        "sicherheit": "hoch",
+        "bemerkung": "urlader flashsize 0x01000000 = SL/v1"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR (parallel, CFI, 16 Bit)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-04-11, 03eef0f18b)",
+        "sicherheit": "hoch",
+        "bemerkung": "compatible lantiq,nor, bank-width 2"
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "Spansion S29GL128P90TFCR1",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Hersteller-ID 0xc2, Chip-ID 0x227e (JEDEC-ID 0xc2 = Macronix)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog eines 7360 SL (1&1 HomeServer); widerspricht WikiDevi-SL (Spansion)"
+      },
+      {
+        "wert": "Macronix MX29GL128FHT2I-90G",
+        "quelle": "wikidevi_v1",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+        "stand": "Seitenrevision 2021-01-21T03:33:53Z",
+        "sicherheit": "mittel",
+        "bemerkung": "7360 v1"
+      }
+    ],
+    "switch": [
+      {
+        "wert": "Lantiq GSWIP (built-in SoC switch)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Lantiq GSWIP im SoC, DSA",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-04-11, 03eef0f18b)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ethernet_phy": [
+      {
+        "wert": "LAN 1/LAN 2: interne Lantiq-GPHY (Gigabit, GPHY_MODE_GE); LAN 3/LAN 4: Atheros AR8030 über RMII (100 Mbit/s)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-04-11, 03eef0f18b)",
+        "sicherheit": "hoch",
+        "bemerkung": "port4=lan1 phy13, port2=lan2 phy11, port0=lan3 phy0, port1=lan4 phy1; PHY-Reset GPIO37/GPIO44"
+      },
+      {
+        "wert": "2x Atheros AR8030",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2x Atheros AR8030-A",
+        "quelle": "wikidevi_v1",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+        "stand": "Seitenrevision 2021-01-21T03:33:53Z",
+        "sicherheit": "mittel",
+        "bemerkung": "7360 v1"
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "Atheros AR928 -BL1A",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "so im ToH"
+      },
+      {
+        "wert": "Atheros AR9287 Rev:2",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog, PCI 168c:002e"
+      },
+      {
+        "wert": "Atheros AR9287",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "PCI 168c:002e (AR9287)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-04-11, 03eef0f18b)",
+        "sicherheit": "hoch",
+        "bemerkung": "compatible pci168c,002e; Kalibrierdaten aus urlader 0x985"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath9k",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath9k mit owl-loader",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/image/vr9.mk",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-10-11, 7f434d332a)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n, bis 300 Mbit/s",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": "2x2:2",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": "txchains 2, rxchains 2, sstreams 2"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "keins (\"-\")",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "keins, nur 2.4 GHz",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "N300",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": "series=N300"
+      }
+    ],
+    "wlan_regdomain": [
+      {
+        "wert": "EEPROM regdomain 0x8114, Country DE",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog ath9k"
+      }
+    ],
+    "wlan_standard_aus": [
+      {
+        "wert": "Funktioniert WLAN nicht: WLAN-Taster einige Sekunden drücken oder uci set wireless.radio0.disabled='0'",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": "betrifft OpenWrt, nicht Gluon"
+      }
+    ],
+    "wlan_hinweis": [
+      {
+        "wert": "WLAN instabil/langsam (irq144) durch falschen PCIe-Reset-Pin io38 statt io21 im DTS",
+        "quelle": "openwrt_wiki_rev2021",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360?rev=1615645567",
+        "stand": "Seitenrevision 2021-03-13 14:26",
+        "sicherheit": "niedrig",
+        "bemerkung": "Hinweis 2021 wieder entfernt"
+      },
+      {
+        "wert": "PCIe-Reset auf io21/GPIO21 gesetzt",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-04-11, 03eef0f18b)",
+        "sicherheit": "hoch",
+        "bemerkung": "der 2021 gemeldete Fehler ist im aktuellen DTS nicht mehr vorhanden"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "keine abnehmbaren Antennen (\"-\")",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "intern, 2 U.FL-Buchsen auf der Platine für WLAN",
+        "quelle": "wikidevi_v1",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+        "stand": "Seitenrevision 2021-01-21T03:33:53Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "Angabe für 7360 v1; für die SL nicht eigens belegt"
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "U.FL (intern)",
+        "quelle": "wikidevi_v1",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+        "stand": "Seitenrevision 2021-01-21T03:33:53Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "7360 v1"
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "wikidevi_v1",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+        "stand": "Seitenrevision 2021-01-21T03:33:53Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "2 U.FL-Buchsen für WLAN (nicht DECT), 7360 v1"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "LAN 1",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN"
+          },
+          {
+            "name": "LAN 2",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN"
+          },
+          {
+            "name": "LAN 3",
+            "geschwindigkeit": "10/100",
+            "rolle": "LAN"
+          },
+          {
+            "name": "LAN 4",
+            "geschwindigkeit": "10/100",
+            "rolle": "LAN"
+          },
+          {
+            "name": "DSL/TEL",
+            "geschwindigkeit": "ADSL2+/VDSL2",
+            "rolle": "WAN über Modem (unter Gluon nicht nutzbar)"
+          },
+          {
+            "name": "FON 1 (TAE und RJ11)",
+            "geschwindigkeit": "-",
+            "rolle": "analoges Telefon, unter OpenWrt nicht unterstützt"
+          }
+        ],
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "lan1",
+            "geschwindigkeit": "1000M",
+            "rolle": "lan"
+          },
+          {
+            "name": "lan2",
+            "geschwindigkeit": "1000M",
+            "rolle": "lan"
+          },
+          {
+            "name": "lan3",
+            "geschwindigkeit": "100M",
+            "rolle": "lan"
+          },
+          {
+            "name": "lan4",
+            "geschwindigkeit": "100M",
+            "rolle": "lan"
+          }
+        ],
+        "quelle": "openwrt_board_network",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/xrx200/base-files/etc/board.d/02_network",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "kein WAN-Port; Geschwindigkeiten aus DTS"
+      },
+      {
+        "wert": [
+          {
+            "name": "lan1-lan4",
+            "geschwindigkeit": "2x 1000M, 2x 100M",
+            "rolle": "alle als WAN (Gluon lan_as_wan)"
+          }
+        ],
+        "quelle": "gluon_supported_devices",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/docs/user/supported_devices.rst",
+        "stand": "Branch v2025.1.x am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "\"All LAN ports on this device are used as WAN.\""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 4,
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": "vier RJ45-Netzwerkanschlüsse"
+      },
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "2x 100M + 2x 1G"
+      },
+      {
+        "wert": 4,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": "lan_ports=4, lan_speed=100M"
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": "vier LAN-Buchsen"
+      },
+      {
+        "wert": false,
+        "quelle": "gluon_020_interfaces",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/package/gluon-core/luasrc/lib/gluon/upgrade/020-interfaces",
+        "stand": "Branch v2025.1.x am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon fasst lan1-lan4 zu einem gemeinsamen Interface zusammen (single_ifname), es gibt keinen getrennten WAN-Port"
+      }
+    ],
+    "gluon_portrollen": [
+      {
+        "wert": "kein eigener WAN-Port; Gluon behandelt lan1 lan2 lan3 lan4 als ein Interface (single), laut Doku alle LAN-Ports als WAN",
+        "quelle": "gluon_020_interfaces",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/package/gluon-core/luasrc/lib/gluon/upgrade/020-interfaces",
+        "stand": "Branch v2025.1.x am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "keine Sonderbehandlung für avm,fritz7360sl"
+      }
+    ],
+    "ethernet_hinweis": [
+      {
+        "wert": "OpenWrt 21.02: Switch-Fehler, LAN 3/LAN 4 ohne Verkehr bzw. falsche Linkgeschwindigkeiten; schwache NAT-Leistung (~30-40 Mbit/s) ohne Software Flow Offloading",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": "Troubleshooting-Abschnitt"
+      },
+      {
+        "wert": "Issue zum xrx200-Switch-Fehler (100M-Ports 3+4 tot ab 21.02) geschlossen am 2022-05-24",
+        "quelle": "openwrt_issue_8833",
+        "beleg": "https://github.com/openwrt/openwrt/issues/8833",
+        "stand": "Issue 2021-05-27, geschlossen 2022-05-24 (104 Kommentare, nicht alle gelesen)",
+        "sicherheit": "mittel",
+        "bemerkung": "Issue betrifft 7362 SL, OpenWrt-Wiki der 7360 verweist darauf"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein (\"-\")",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Seitenrevision 2025-11-17 02:36",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump: \"¿\""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "2x USB 2.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2x USB 2.0 (zwei Host-Controller); zusammen max. 500 mA für Geräte ohne eigene Stromversorgung",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2 USB-Controller (dwc2) aktiv",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-04-11, 03eef0f18b)",
+        "sicherheit": "hoch",
+        "bemerkung": "usb0/usb1, Bootlog: je 1 Port"
+      },
+      {
+        "wert": "1x USB 2.0",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "expansion_usb_num=1, widerspricht Handbuch"
+      },
+      {
+        "wert": "2x USB 2.0",
+        "quelle": "wikidevi_v1",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+        "stand": "Seitenrevision 2021-01-21T03:33:53Z",
+        "sicherheit": "mittel",
+        "bemerkung": "7360 v1"
+      }
+    ],
+    "modem": [
+      {
+        "wert": "VDSL2",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ADSL/ADSL2/ADSL2+ (Annex B oder J) und VDSL2 (ITU G.993.2) inkl. G.vector",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "unter Gluon nicht nutzbar: DSL-Pakete im Target entfernt",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/lantiq-xrx200",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2025-07-23); identisch in v2025.1.x und v2023.2.x",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Vectoring unter OpenWrt nur mit zusätzlicher DSL-Firmware aus dem FRITZ!OS-Image",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "telefonie": [
+      {
+        "wert": "1, POTS, DECT; nicht unterstützt: DECT",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1 a/b-Port (TAE und RJ11), DECT-Basis für bis zu 6 Schnurlostelefone",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DECT unter OpenWrt nicht unterstützt (geschlossener AVM-Treiber); Telefonie nur per SIP",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "mittel",
+        "bemerkung": "Strom nur über das mitgelieferte Netzteil; PoE nicht erwähnt"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "ja, Hohlstecker (barrel)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": "pwr_conn=barrel"
+      }
+    ],
+    "dc_buchse_mass": [
+      {
+        "wert": "5.5x2.5 (Länge 9.5 mm)",
+        "quelle": "wikidevi_v1",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+        "stand": "Seitenrevision 2021-01-21T03:33:53Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "Angabe für 7360 v1; für die SL nicht belegt"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 12,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Power Supply 12 VDC, 1.4 A"
+      },
+      {
+        "wert": 12,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "wikidevi_v1",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+        "stand": "Seitenrevision 2021-01-21T03:33:53Z",
+        "sicherheit": "mittel",
+        "bemerkung": "7360 v1"
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 1.4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.4,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": "Lieferumfang: ein Netzteil; nur dieses verwenden"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "Steckernetzteil, Betriebsspannung 230 V / 50 Hz",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": "Ausgangswerte nicht im Handbuch"
+      },
+      {
+        "wert": "12 V DC, 1.4 A",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_typ": [
+      {
+        "wert": 8,
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": "durchschnittlich 8 W - 11 W (DSL aktiv, WLAN an ohne Clients, DECT mit einem Telefon, ein LAN-Gerät)"
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 14,
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": "trockener, staubfreier Ort ohne direkte Sonneneinstrahlung"
+      },
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Seitenrevision 2025-11-17 02:36",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_lager": [
+      {
+        "wert": "-20 bis 70 °C",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "Betrieb 10-90 %, Lager 5-95 %",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Tisch oder Wand (Kabel nach unten empfohlen)",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montageloecher": [
+      {
+        "wert": "Bohrschablone im Handbuch S. 192 mit Maß 178 mm",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "mittel",
+        "bemerkung": "Lochanzahl aus dem Text nicht lesbar"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "226 x 160 x 47 (B x T x H)",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": "Handbuch: B x H x T circa 226 x 47 x 160 mm"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-04-11, 03eef0f18b)",
+        "sicherheit": "niedrig",
+        "bemerkung": "kein Lüfter im DTS; Handbuch nennt nur Luftzirkulation"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 5,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": "Power/DSL, Fon, DECT, WLAN, Info"
+      }
+    ],
+    "leds": [
+      {
+        "wert": "Power (grün/rot), Fon, Info (grün/rot), WLAN, DECT",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-04-11, 03eef0f18b)",
+        "sicherheit": "hoch",
+        "bemerkung": "Info grün = DSL-LED-Alias"
+      }
+    ],
+    "tasten": [
+      {
+        "wert": "zwei Taster auf der Oberseite: WLAN (auch WPS) und DECT",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DECT (GPIO 1, KEY_PHONE) und WLAN (GPIO 29, KEY_RFKILL)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-04-11, 03eef0f18b)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Button count 3; widerspricht Handbuch und DTS (2)"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "nein; Gluon-Setup-Mode über den DECT-Taster",
+        "quelle": "gluon_commit_b359ed1",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/b359ed1887b7485f93e7525ef52b29353ec63a0e",
+        "stand": "Commit 2019-11-06; Taster \"phone\" in v2025.1.x weiterhin in 50-gluon-setup-mode",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon reagiert auf den Taster \"phone\" (DTS: dect, KEY_PHONE)"
+      },
+      {
+        "wert": "nein; Werkseinstellungen unter FRITZ!OS per Telefon #991*15901590*",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "38400 8N1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Bezug (Bootloader oder System) nicht angegeben"
+      },
+      {
+        "wert": "115200",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-04-11, 03eef0f18b)",
+        "sicherheit": "hoch",
+        "bemerkung": "bootargs console=ttyLTQ0,115200 (OpenWrt-Kernel)"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "Seriell laut Hardware-Tabelle vorhanden, Abschnitt \"Serial\" aber leer: keine Lage, keine Pinbelegung",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "Zweiteilige Kunststoffschale, 4 Torx-T9-Schrauben (2 hinten, 2 unter den vorderen Gummifüßen) und ein Clip vorn in der Mitte",
+        "quelle": "wikidevi_v1",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+        "stand": "Seitenrevision 2021-01-21T03:33:53Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Angabe für 7360 v1"
+      }
+    ],
+    "hardware_defekt_hinweis": [
+      {
+        "wert": "Häufiger Hardware-Defekt: Gerät bleibt dunkel, nimmt aber Strom auf; Ursache defekte Keramikkondensatoren am 12-V-Eingang nahe den Spannungsreglern (drei Stück prüfen, ersetzen)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": "Abschnitt Hardware Unbricking, mit Foto"
+      }
+    ],
+    "cpu_temperatur": [
+      {
+        "wert": "68 °C beim Booten",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "niedrig",
+        "bemerkung": "Bootlog ltq-cputemp, Einzelwert"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "lantiq/xrx200",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "avm_fritz7360sl (IMAGE_SIZE 15744k, Device/AVM, dsa-migration, SUPPORTED_DEVICES FRITZ7360SL)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/image/vr9.mk",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-10-11, 7f434d332a)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "17.01.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "LEDE-Commit bf007a48 vom 2016-06-11 (\"lantiq: Add Support for Fritz!Box 7360 SL\")",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/bf007a480a46a9fa843765a54fc2f8aa32b2683f",
+        "stand": "Commit 2016-06-11 (Autor), gemergt 2016-06-13",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "23.05.2",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "24.10.4",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Seitenrevision 2025-11-17 02:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "Adam2",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ADAM2 FTP Server (EVA)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": "FTP-Sitzung in der Anleitung"
+      }
+    ],
+    "installation": [
+      {
+        "wert": "fritzflash, EVA FTP",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "EVA FTP",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Seitenrevision 2025-11-17 02:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "EVA-FTP auf 192.168.178.1 (adam2/adam2) in den ersten Sekunden nach dem Einschalten; quote MEDIA FLSH; put <sysupgrade.bin> mtd1; Info-LED rot während des Schreibens; ggf. LAN 3 statt LAN 1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "fritz-tools (fritzflash)",
+        "quelle": "gluon_supported_devices",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/docs/user/supported_devices.rst",
+        "stand": "Branch v2025.1.x am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Fußnote avmflash"
+      }
+    ],
+    "recovery": [
+      {
+        "wert": "EVA FTP",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "ftp://ftp.avm.de/fritz.box/fritzbox.fon_wlan_7360/",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Verzeichnis der 7360 (v1), nicht der SL"
+      },
+      {
+        "wert": "https://download.avm.de/fritzbox/fritzbox-7360-sl/deutschland/fritz.os/",
+        "quelle": "avm_download",
+        "beleg": "https://download.avm.de/fritzbox/fritzbox-7360-sl/deutschland/fritz.os/",
+        "stand": "Verzeichnis 07-Sep-2023, info_de.txt: FRITZ!OS 6.35, Release-Datum 04.09.2023",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_version": [
+      {
+        "wert": "FRITZ!OS 6.35 (109.06.35), Release 04.09.2023",
+        "quelle": "avm_download",
+        "beleg": "https://download.avm.de/fritzbox/fritzbox-7360-sl/deutschland/fritz.os/",
+        "stand": "Verzeichnis 07-Sep-2023, info_de.txt: FRITZ!OS 6.35, Release-Datum 04.09.2023",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "MAC aus urlader 0xa91; LAN -2, PPE +1",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2026-04-11, 03eef0f18b)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WAN-MAC = urlader 0xa91 +1",
+        "quelle": "openwrt_board_network",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/xrx200/base-files/etc/board.d/02_network",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, device('avm-fritz-box-7360-sl', 'avm_fritz7360sl', {factory = false, aliases = {'avm-fritz-box-7360-v1'}}), nicht broken; in v2023.2.x und v2025.1.x",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/lantiq-xrx200",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung 2025-07-23); identisch in v2025.1.x und v2023.2.x",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "seit Commit 2019-12-09, damals mit Aliasen für 7360 v1 und v2",
+        "quelle": "gluon_commit_40ef705",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/40ef70534d",
+        "stand": "Commit 2019-12-09 (Autor), gemergt 2019-12-12",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "7360 v2 hat inzwischen ein eigenes Image; v2-Geräte mit dem v1/SL-Image werden beim nächsten Update umgestellt",
+        "quelle": "gluon_commit_e4ec16d",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/e4ec16d9cd",
+        "stand": "Commit 2022-09-18 (Autor), gemergt 2022-10-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_hinweis": [
+      {
+        "wert": "fritzflash ordnet HWRevision 196 (7360 v2) beim OpenWrt-Namen noch avm_fritz7360sl zu; Gluon-Name korrekt avm-fritz-box-7360-v2",
+        "quelle": "fritz_tools",
+        "beleg": "https://github.com/freifunk-darmstadt/fritz-tools/blob/master/fritzflash.py",
+        "stand": "letzte Änderung 2022-04-04 (5e2037bb71)",
+        "sicherheit": "mittel",
+        "bemerkung": "Stand fritzflash.py 2022-04-04"
+      },
+      {
+        "wert": "DSL-Modem nicht zusammen mit Gluon nutzbar; \"von der Freifunkleistung recht betagt\"",
+        "quelle": "freifunk_forum_23802",
+        "beleg": "https://forum.freifunk.net/t/freifunk-auf-fb-7360/23802",
+        "stand": "Thread 2023-07-05 bis 2023-07-17 (9 Beiträge, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+        "stand": "Seitenrevision 2024-07-01 13:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2021-01-20T16:49:56Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "https://deviwiki.com/wiki/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/AVM_FRITZ!Box_Fon_WLAN_7360_SL",
+        "stand": "Seitenrevision 2019-07-05T04:01:26Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "http://avm.de/service/fritzbox/fritzbox-7360/uebersicht/",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Seite der 7360, nicht der SL; nicht abgerufen"
+      },
+      {
+        "wert": "https://avm.de/service/fritzbox/fritzbox-7360-sl/uebersicht/",
+        "quelle": "wikidevi_v1",
+        "beleg": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+        "stand": "Seitenrevision 2021-01-21T03:33:53Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "Link auf der v1-Seite; nicht abgerufen"
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+        "stand": "PDF erstellt 2015-01-27, geändert 2016-06-11 (Stichworte \"06/2016, FRITZ!OS 6.20\"), Server Last-Modified 2018-12-03",
+        "sicherheit": "hoch",
+        "bemerkung": "Handbuch mit Technischen Daten (Kap. 29)"
+      }
+    ],
+    "forum": [
+      {
+        "wert": "https://forum.freifunk.net/t/freifunk-auf-fb-7360/23802",
+        "quelle": "freifunk_forum_23802",
+        "beleg": "https://forum.freifunk.net/t/freifunk-auf-fb-7360/23802",
+        "stand": "Thread 2023-07-05 bis 2023-07-17 (9 Beiträge, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://forum.openwrt.org/viewtopic.php?id=59549",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "altes Forum, Link vermutlich tot; nicht abgerufen"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+      "kategorie": "seriell_zugang",
+      "grund": "Serial-Abschnitt leer; Lage (Stiftleiste/Lötpunkte) und Pinbelegung der seriellen Konsole nirgends gefunden; ToH nennt nur 38400 8N1"
+    },
+    {
+      "url": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+      "kategorie": "seriell_zugang",
+      "grund": "PCB-Fotos (top/bottom) der v1 nicht ausgewertet; könnten Seriell-Lötpunkte und U.FL-Antennen zeigen"
+    },
+    {
+      "url": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+      "kategorie": "dc_buchse_mass",
+      "grund": "Hohlstecker 5.5x2.5 nur für v1 angegeben; für die SL und das Netzteil-Typenschild (Polarität, Modell) nicht belegt"
+    },
+    {
+      "url": "https://openwrt.org/toh/avm/fritz.box.wlan.7360",
+      "kategorie": "antennen_art",
+      "grund": "Antennen intern nur über WikiDevi-v1 (U.FL) belegt; für die SL kein Platinenfoto ausgewertet"
+    },
+    {
+      "url": "https://assets.avm.de/files/docs/fritzbox/fritzbox-7360-sl/fritzbox-7360-sl_man_de_DE.pdf",
+      "kategorie": "montageloecher",
+      "grund": "Bohrschablone S. 192 nur als Text (178 mm) gelesen; Lochanzahl/Lage als Bild nicht ausgewertet"
+    },
+    {
+      "url": "https://avm.de/service/fritzbox/fritzbox-7360-sl/uebersicht/",
+      "kategorie": "hersteller_seite",
+      "grund": "AVM-Serviceseite der SL nicht abgerufen; fritz.com-Wissensdatenbank liefert nur JavaScript-Seite ohne Inhalt"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/issues/8833",
+      "kategorie": "ethernet_hinweis",
+      "grund": "104 Kommentare nicht gelesen; ob die Lösung die 7360 SL (LAN 3/LAN 4) einschließt, nicht geprüft"
+    },
+    {
+      "url": "https://wikidevi.wi-cat.ru/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
+      "kategorie": "hw_version",
+      "grund": "Infobox nennt v1 = HW196, Seitenende und OpenWrt-Wiki/fritzflash nennen v1 = 183, v2 = 196; Widerspruch nicht aufgelöst (BoxMatrix gesperrt)"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 54,
+    "notiz": "ToH-Dump + Live-hwdata, OpenWrt-Wiki (Hardware-Tabelle, Flash-Anleitung mit HWRevision 181/183/196, Unbricking-Kondensatoren, Troubleshooting, OpenWrt-Bootlog eines SL), ältere Wiki-Revision (irq144), OpenWrt-Commits (Support bf007a48, Suche), DTS/dtsi, vr9.mk, board.d, Issue 8833, Gluon-Target (Alias 7360-v1, DSL-Pakete entfernt), Gluon-Commits 40ef705/e4ec16d/b359ed1, supported_devices (lan_as_wan), 020-interfaces (single), fritzflash.py, WikiDevi SL und v1, DeviWiki SL, AVM-Handbuch (Technische Daten: 226x160x47 mm, 0-40 °C, 14 W max, 8-11 W typ, 2x USB, LAN 1/2 Gigabit, LAN 3/4 100 Mbit), AVM-Download (FRITZ!OS 6.35 = 109.06.35), Freifunk-Forum 23802. Keine FCC-ID (EU-Gerät), kein Werkstatt-Protokoll (Treffer in chronik.md nur URL-Ziffern). Widersprüche: Flash-Chip Spansion (WikiDevi) vs. Macronix-ID 0xc2 (Bootlog), USB 1 (WikiDevi) vs. 2 (Handbuch/DTS), Tasten 3 (ToH) vs. 2 (Handbuch/DTS), Seriell 38400 (ToH) vs. 115200 (DTS), Flash 16,32 (ToH, v2 eingemischt) vs. 16, v1 = HW183 vs. HW196 (WikiDevi-Infobox). Offen: Lage/Pinbelegung der seriellen Konsole, Hohlstecker-Maß der SL, Antennen intern nur für v1 belegt."
+  }
+}

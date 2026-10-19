@@ -479,7 +479,12 @@ def main():
     os.makedirs(a.aus, exist_ok=True)
     liste, fac = {}, {}
     for p in sorted(glob.glob(os.path.join(WURZEL, 'daten', '*.json'))):
-        d = json.load(open(p, encoding='utf-8'))
+        try:   # waehrend eines Laufs kann eine Datei gerade halb geschrieben sein
+            d = json.load(open(p, encoding='utf-8'))
+            d['image']
+        except (ValueError, KeyError, TypeError) as e:
+            print('uebersprungen (unvollstaendig):', os.path.basename(p), e)
+            continue
         v = ansicht(d, idx)
         v.update({'image': d['image'], 'quelle': 'https://github.com/Neanderfunk/geraetedaten',
                   'lizenz': 'CC BY-SA 4.0'})

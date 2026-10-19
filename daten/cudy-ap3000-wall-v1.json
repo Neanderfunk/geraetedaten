@@ -1,0 +1,1812 @@
+{
+  "image": "cudy-ap3000-wall-v1",
+  "modell": "Cudy AP3000 Wall v1",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_wall_v1",
+      "stand": "Dump 2026-10-18 (kein Eintrag); Datenseite existiert nicht (\"This topic does not exist yet\")",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "bemerkung": "toh_suche.py: nur andere Cudy-Modelle (WR1000, X6, WR1300, WR3000, WR2100) mit Score <= 0.63, kein AP3000 Wall"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/start?do=search&q=ap3000*&sf=1",
+      "stand": "Wiki-Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine Geraeteseite fuer AP3000 Wall; Treffer nur toh:cudy:ap3000_outdoor und Release-Changelogs"
+    },
+    "openwrt_pr": {
+      "url": "https://github.com/openwrt/openwrt/pull/21266",
+      "stand": "PR 2025-12-24 (DerekDenk), gemergt 2026-01-02; 4 Kommentare bis 2025-12-31",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per GitHub-API; Kommentare nur zu Rebase/Signoff, keine Hardwaredetails"
+    },
+    "openwrt_commit": {
+      "url": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+      "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_pr_2512": {
+      "url": "https://github.com/openwrt/openwrt/pull/21890",
+      "stand": "PR 2026-02-06, gemergt 2026-02-07 (Commit 45788a48c7)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Backport nach openwrt-25.12"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
+      "stand": "Branch main am 2026-10-19; Historie: afad4c71f8 (2025-12-31), 53fa04d261 (2026-04-27, mtd-eeprom -> nvmem)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Inhalt aus dem Backport-Patch in gluon-patches-hardware (Stand afad4c71f) gelesen"
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_board_d": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/filogic/base-files/etc/board.d/02_network",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "03_gpio_switches in main ohne Eintrag fuer ap3000wall"
+    },
+    "openwrt_profiles": {
+      "url": "https://downloads.openwrt.org/releases/25.12.6/targets/mediatek/filogic/profiles.json",
+      "stand": "OpenWrt 25.12.6 r33311-981c978eff (Build 2026-10-17)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_profiles_24": {
+      "url": "https://downloads.openwrt.org/releases/24.10.8/targets/mediatek/filogic/profiles.json",
+      "stand": "OpenWrt 24.10.8 r29233-443ec4032a",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "kein Profil cudy_ap3000wall-v1 (nur ap3000-v1, ap3000outdoor-v1)"
+    },
+    "gluon_target": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/mediatek-filogic",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "upstream kein Eintrag cudy-ap3000-wall-v1; GitHub-Suche im Gluon-Repo: 0 Treffer"
+    },
+    "neanderfunk_patches": {
+      "url": "/home/adorfer/projekte/freifunk/neanderfunk/gluon-patches-hardware/devices/cudy-ap3000-wall-v1/README.md",
+      "stand": "gluon-patches-hardware Commit 9263f24 vom 2026-10-01 (Geraeteverzeichnis), apply.sh 188dff9 vom 2026-10-16",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "nicht oeffentlich; Backport afad4c71f nach OpenWrt 24.10 fuer Gluon v2025.1.x, dazu devices/neue-geraete-2026-10.md"
+    },
+    "werkstatt": {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/cudy-installation.md",
+      "stand": "routerwerkstatt Commit a9781bd vom 2026-10-15 (Text Stand 08.10.2026)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "nicht oeffentlich; dazu docs/long-term-todo.md (798c337, 2026-10-08): \"Bisher nur Probelauf (fuzzprobe), kein Build mit Geraet, keine Hardware\" - keine eigene Messung vorhanden"
+    },
+    "ffnef_cudy_spiegel": {
+      "url": "https://firmware.ffnef.de/other/cudy-mirror-20261015/uebersicht.json",
+      "stand": "Spiegel 2026-10-15",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "aus Cache des Laufs cudy-ap3000-outdoor-v1 vom selben Tag (l2-ffnef-spiegel-uebersicht.json)"
+    },
+    "hersteller": {
+      "url": "https://www.cudy.com/products/ap3000-wall-1-0",
+      "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Spezifikationen aus der HTML-Seite (Hardware/Software Specs), Tags aus products/ap3000-wall-1-0.json"
+    },
+    "hersteller_downloads": {
+      "url": "https://www.cudy.com/pages/download-center/ap3000-wall-1-0",
+      "stand": "Abruf 2026-10-19; neueste Firmware 2.5.15 vom 09-Jul-2026",
+      "abgerufen": "2026-10-19"
+    },
+    "hersteller_datenblatt": {
+      "url": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+      "stand": "PDF erstellt 2025-05-27",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "5 Seiten"
+    },
+    "hersteller_kurzanleitung": {
+      "url": "https://www.cudy.com/cdn/shop/files/AP3000Wall_AP1300Wall_Quick_Installation_Guide-EN.pdf?v=2201761749262502505",
+      "stand": "PDF 2025-03-06",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "gemeinsame Anleitung AP1300 Wall / AP3000 Wall; Seite 2 als Bild ausgewertet (Uebersicht, Montage)"
+    },
+    "hersteller_regulatorik": {
+      "url": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_AP3000_Wall.pdf?v=11155424484355112634",
+      "stand": "PDF 2025-05-23, FCC-Teil Issue Date 2025-4-25",
+      "abgerufen": "2026-10-19"
+    },
+    "hersteller_ce_erklaerung": {
+      "url": "https://www.cudy.com/cdn/shop/files/CE_DOC_AP3000_Wall.pdf?v=861708117217300720",
+      "stand": "Ausstellungsdatum 2025-4-24 (PDF 2025-04-25)",
+      "abgerufen": "2026-10-19"
+    },
+    "hersteller_psti": {
+      "url": "https://www.cudy.com/cdn/shop/files/Statements_of_PSTI_Compliance_AP3000_Wall.pdf?v=7364354879121879685",
+      "stand": "Ausstellungsdatum 2025-4-22",
+      "abgerufen": "2026-10-19"
+    },
+    "hersteller_lieferumfang_bild": {
+      "url": "https://cdn.shopify.com/s/files/1/0673/4748/0820/files/AP3000Wall_REV1.0_c0d8951b-02d8-43ef-8188-fd03e6f2e785.jpg?v=1749088353",
+      "stand": "Bild v=1749088353 (2025-06-05)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Produktbild REV1.0 (Geraet, Montageplatte, Karton, Anleitung, Schrauben/Duebel), als Bild ausgewertet"
+    },
+    "hersteller_faq_openwrt": {
+      "url": "https://www.cudy.com/en-us/blogs/faq/openwrt-software-download",
+      "stand": "Artikel 2023-09-01; \"Important Notice\" 2025-11-24, \"Update\" 2025-12-24",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "aus Cache des Laufs cudy-ap3000-outdoor-v1 vom selben Tag; nur Haupttext"
+    },
+    "hersteller_eol_liste": {
+      "url": "https://www.cudy.com/collections/end-of-life-products",
+      "stand": "Shopify-Collection, Abruf 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "aus Cache des Laufs cudy-ap3000-outdoor-v1; kein AP3000-Modell gelistet"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=AP3000+Wall&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine Treffer"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/index.php?search=AP3000+Wall&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "nur Cudy AP1200 Outdoor, AP1300 Outdoor, AP3000 Outdoor, AP3000 - keine Seite fuer AP3000 Wall"
+    },
+    "fccid_suche": {
+      "url": "https://fccid.io/search?q=%22Wall-Plate%22+Cudy",
+      "stand": "Volltextsuche 2026-10-19 (23 Treffer, Cudy: MS01, AP01, LTOD, M3600, RT01, MS30)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine FCC-ID fuer AP3000 Wall; Grantee-Liste 2APRG (Cache Lauf ap3000-outdoor, neuester Antrag 2026-03-01) ebenfalls ohne Wall-Geraet"
+    }
+  },
+  "roh": {
+    "toh": {
+      "eintrag": "kein Eintrag im Dump 2026-10-18",
+      "kandidaten_toh_suche": [
+        "Cudy WR1000 v1 (0.63)",
+        "Cudy X6 v1,v1.1 (0.63)",
+        "Cudy WR1300 v1 (0.63)",
+        "Cudy WR3000 v1 (0.63)",
+        "Cudy WR2100 (0.33)",
+        "Cudy WR1300 v2,v3 (0.03)"
+      ],
+      "datenseite": "toh:hwdata:cudy:cudy_ap3000_wall_v1 - This topic does not exist yet"
+    },
+    "openwrt_commit": {
+      "subject": "mediatek: filogic: add support for Cudy AP3000 Wall v1",
+      "SoC": "MediaTek MT7981b",
+      "RAM": "256MiB",
+      "Flash": "spi-nand spi0.0: 128 MiB",
+      "Wifi": "MediaTek MT7981 2x2 DBDC 802.11ax 2T2R (2.4 / 5)",
+      "LEDs": "1 LED in two colors (red & white)",
+      "Buttons": "1 reset, 1 led on/off",
+      "Ethernet": "5x 1GbE",
+      "Power": "PoE powered (standalone)",
+      "Installation": "The stock firmware is a customized variant of OpenWrt, which implements a signature check that only allows flashing official firmware. Cudy offers intermediate OpenWrt firmware images on their website [1][2] which do not implement the signature check. After flashing the intermediate image the upstream official OpenWrt image can be installed.",
+      "Recovery": "The stock firmware can be recovered via TFTP using the U-Boot based boot loader[3]. Set up a TFTP server on your computer with IP 192.168.1.88/24 serving the stock firmware from Cudy's website renamed to \"recovery.bin\". Press and hold the reset button while powering on the device, wait for the TFTP server to send the recovery.bin file, then release the reset button. The router will take a couple of minutes to reboot and set up the stock firmware.",
+      "links": [
+        "https://www.cudy.com/blogs/faq/openwrt-software-download",
+        "https://drive.google.com/drive/folders/1BKVarlwlNxf7uJUtRhuMGUqeCa5KpMnj",
+        "https://www.cudy.com/en-us/blogs/faq/how-to-recovery-the-cudy-router-from-openwrt-firmware-to-cudy-official-firmware"
+      ],
+      "author": "Derek Denk <derek.denk@live.com>",
+      "committer_signoff": "Hauke Mehrtens",
+      "link": "https://github.com/openwrt/openwrt/pull/21266"
+    },
+    "openwrt_pr": {
+      "titel": "mediatek: filogic: add support for Cudy AP3000 Wall",
+      "kommentare": [
+        "2025-12-25 DerekDenk: Squashed commits ...",
+        "2025-12-27 DerekDenk: Updated for build using main branch ... Original PR was building on 24.10 branch.",
+        "2025-12-31 DerekDenk: Rebased and added full description to commit message ...",
+        "2025-12-31 DerekDenk: Fixed author/signoff email mismatch ..."
+      ]
+    },
+    "openwrt_dts": {
+      "datei": "target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
+      "model": "Cudy AP3000 Wall v1",
+      "compatible": "cudy,ap3000wall-v1, mediatek,mt7981",
+      "aliases": {
+        "label-mac-device": "&gmac0",
+        "led-boot": "white:status",
+        "led-failsafe": "red:status",
+        "led-running": "white:status",
+        "led-upgrade": "red:status",
+        "serial0": "&uart0"
+      },
+      "chosen_stdout_path": "serial0:115200n8",
+      "gpio_keys": {
+        "reset": "pio 1 active low, KEY_RESTART",
+        "lights_toggle": "pio 35 active low, KEY_LIGHTS_TOGGLE"
+      },
+      "gpio_leds": {
+        "red:status": "pio 4 active low (LED_FUNCTION_POWER)",
+        "white:status": "pio 10 active low (LED_FUNCTION_STATUS)"
+      },
+      "gpio_export": {
+        "poe-passthrough": "pio 12 active high, output 0"
+      },
+      "watchdog_hw": "linux,wdt-gpio pio 6, hw_algo level, hw_margin_ms 10000, always-running",
+      "eth": "gmac0 2500base-x fixed-link 2500 -> MT7531 Switch (mdio reg 31, reset pio 39, irq pio 38)",
+      "switch_ports": {
+        "port@0": "lan1",
+        "port@1": "lan2",
+        "port@2": "lan3",
+        "port@3": "lan4",
+        "port@4": "lan5",
+        "port@6": "cpu (gmac0, 2500base-x)"
+      },
+      "spi_nand": "spi0, spi-nand, 52 MHz, Quad (tx/rx bus width 4), mediatek,nmbm, bmt-max-reserved-blocks 64",
+      "partitionen": {
+        "BL2": "0x0 +0x100000 ro",
+        "u-boot-env": "0x100000 +0x80000 ro",
+        "Factory": "0x180000 +0x200000 ro (eeprom 0x0 0x1000)",
+        "bdinfo": "0x380000 +0x40000 ro (macaddr @0xde00, mac-base)",
+        "FIP": "0x3c0000 +0x200000 ro",
+        "ubi": "0x5c0000 +0x4000000 (64 MiB)"
+      },
+      "wifi": "status okay, eeprom aus Factory"
+    },
+    "openwrt_image_mk": {
+      "DEVICE_VENDOR": "Cudy",
+      "DEVICE_MODEL": "AP3000 Wall",
+      "DEVICE_VARIANT": "v1",
+      "DEVICE_DTS": "mt7981b-cudy-ap3000wall-v1",
+      "SUPPORTED_DEVICES": "R68",
+      "UBINIZE_OPTS": "-E 5",
+      "BLOCKSIZE": "128k",
+      "PAGESIZE": "2048",
+      "IMAGE_SIZE": "65536k",
+      "KERNEL_IN_UBI": "1",
+      "IMAGE/sysupgrade.bin": "sysupgrade-tar | append-metadata",
+      "DEVICE_PACKAGES": "kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware"
+    },
+    "openwrt_board_d": {
+      "02_network": "cudy,ap3000wall-v1) ucidef_set_interface_lan \"lan1 lan2 lan3 lan4 lan5\"",
+      "11_fix_wifi_mac": "cudy,ap3000wall-v1 in derselben Gruppe wie ap3000outdoor-v1/ap3000-v1",
+      "03_gpio_switches": "kein Eintrag"
+    },
+    "openwrt_profiles": {
+      "version": "25.12.6",
+      "arch_packages": "aarch64_cortex-a53",
+      "target": "mediatek/filogic",
+      "profil": "cudy_ap3000wall-v1",
+      "supported_devices": [
+        "cudy,ap3000wall-v1",
+        "R68"
+      ],
+      "file_size_limits_image": 67108864,
+      "images": [
+        "initramfs-kernel.bin 9062312 B",
+        "squashfs-sysupgrade.bin 9410842 B"
+      ]
+    },
+    "neanderfunk_patches": {
+      "gluon_eintrag": "device('cudy-ap3000-wall-v1', 'cudy_ap3000wall-v1', { factory = false, })",
+      "quelle": "afad4c71f (main), 45788a48c7 (25.12, ab v25.12.0-rc5 in den Releases) [geprueft]",
+      "anpassung": "#include \"mt7981.dtsi\" statt mt7981b.dtsi (24.10-Name)",
+      "flashen": "Cudy-Zwischenfirmware ueber die Stock-Weboberflaeche, danach sysupgrade. Rueckweg: TFTP-Server 192.168.1.88, recovery.bin, Reset beim Einschalten halten.",
+      "offen_portrollen": "board.d setzt nur lan1 ... lan5 ohne WAN. Gluon macht daraus eine single-Schnittstelle mit Rolle uplink auf allen fuenf Ports [abgeleitet]. Welcher Port PoE-In ist, steht nicht im Commit.",
+      "offen_poe_passthrough": "DTS exportiert GPIO 12 als poe-passthrough mit Startwert 0, aber ohne 03_gpio_switches-Eintrag gibt es kein system.poe_passthrough, Gluons poe_passthrough = true wirkt also nicht [abgeleitet]; upstream ebenso [geprueft].",
+      "uebersicht": "neue-geraete-2026-10.md: \"bereit; Portrollen und PoE-Passthrough offen\"; Reihenfolge 5300, M3000-v2-YT8821 (5600) setzt AP3000 Wall voraus"
+    },
+    "werkstatt": {
+      "cudy_installation_tabelle": "| AP3000 Wall v1 ² | cudy-ap3000-wall.bin | AP3000 Wall 1.0.zip | 376d404fd1535cc51168e365e2374427 |",
+      "fussnote_2": "Erst mit Gluon 2025.1.",
+      "long_term_todo": "Teil B, Backport aus OpenWrt 25.12: ... AP3000 Wall (Portrollen offen) ... Bisher nur Probelauf (fuzzprobe), kein Build mit Geraet, keine Hardware."
+    },
+    "ffnef_cudy_spiegel": {
+      "gluon_name": "cudy-ap3000-wall",
+      "datei": "cudy-ap3000-wall.bin",
+      "groesse": 14945878,
+      "md5": "376d404fd1535cc51168e365e2374427",
+      "cudy_eintrag": "AP3000 Wall 1.0.zip",
+      "cudy_dateiname": "cudy_ap3000wall-v1-sysupgrade_20251119.bin",
+      "bemerkung": "erst mit Gluon 2025.1, noch nicht in devices.js"
+    },
+    "hersteller": {
+      "titel": "AX3000 Wall-Plate Wi-Fi 6 Access Point, AP3000 Wall 1.0",
+      "product_type": "AP",
+      "tags": "48V Passive PoE, 802.3af/at/bt, Gigabit",
+      "beschreibung": "An in-wall WiFi 6 AP with a built-in 5-GbE switch ideal for covering a room or ensuite in hospitality environments. One PoE output allows for connecting an IP phone or other PSE-enabled devices.",
+      "highlights": [
+        "1.3 GHz Dual-Core CPU",
+        "2402 Mbps + 574 Mbps Wi-Fi",
+        "1× GbE PoE In, 1× GbE PoE Out, 3× GbE",
+        "802.3at/af, Passive PoE",
+        "PoE Passthrough",
+        "Watchdog, Schedule Reboot",
+        "Multi-AP Management",
+        "Captive Portal, Multi-SSID",
+        "Covers 60 m² (650 ft²)",
+        "60 Connected Devices"
+      ],
+      "Model Version": "AP3000 Wall 1.0",
+      "CPU Details": "1.3 GHz Dual-Core CPU",
+      "Flash/ROM": "128 MB (1 Gbit) NAND",
+      "DDR/RAM": "256 MB (2 Gbit) DDR3",
+      "5 GHz Wi-Fi Speed": "2402Mbps",
+      "2.4 GHz Wi-Fi Speed": "574 Mbps",
+      "5 GHz Wi-Fi Streams": "2 Spatial Streams with 3T3R",
+      "2.4 GHz Wi-Fi Streams": "2 Spatial Streams",
+      "Wi-Fi Antennas": "3× Internal",
+      "FEM or PA/LNA": "5 GHz: 3× Internal, 2.4 GHz: 2× Internal",
+      "Beamforming": "(ohne Wert)",
+      "Range Performance": "Max: 80 m (262 ft)",
+      "Wall Performance": "Two wooden walls with thickness / One concrete wall with thickness (Werte fehlen auf der Seite)",
+      "Gigabit RJ45 Ports": "5",
+      "Ethernet Notes": "ETH0: PoE In, LAN1: PoE OUT* (*See Power Section)",
+      "LED": "System",
+      "Physical Buttons": "Reset Button, LED On/Off Button (Configurable to control LED and Wi-Fi)",
+      "Power Input Type": "PoE via Ethernet Port",
+      "Power Methods": "802.3at/af PoE; Passive PoE",
+      "Power Input": "PoE on ETH0: 802.3at/af; Passive PoE on ETH0: 48V⎓",
+      "Power Output": "PoE on LAN1: PoE Passthrough (the output voltage equals the input voltage range 42.5–57V)",
+      "Max Power Consumption (W)": "12W (48V PoE)",
+      "Idle Power Consumption (W)": "5W (48V PoE)",
+      "Max Power Output (W)": "13.5W",
+      "Note": "The PoE output requires a 802.3at or higher PoE input and must be enabled on the configuration page.",
+      "Feature-Text PoE": "Powered via 802.3at/af PoE, and features PoE passthrough support for downstream IP phones or other devices. (Note: To ensure stable operation, use a power source compliant with 802.3at or higher. Insufficient power may cause system reboots.)",
+      "Feature-Text Montage": "Fits perfectly in a standard electrical box.",
+      "Advanced": "Hardware Watchdog",
+      "EMC": "ESD: Contact: 4kV; Air: 8kV",
+      "Environment": "Operating Temperature: 0 ℃ ~ 40 ℃ (14 ℉ ~149 ℉); Storage Temperature: -40 ℃ ~ 70 ℃ (-40 ℉ ~ 158 ℉); Operating Humidity: 10% ~ 90% non-condensing; Storage Humidity: 5% ~ 90% non-condensing",
+      "Certifications": "FCC, CE",
+      "Installation": "Wall-mount",
+      "Dimension": "143×86×27.6 mm (5.63×3.39×1.09 inches)",
+      "Product Weight": "298.6 g (10.53 oz.)",
+      "Package Content": "AP3000 Wall, Mounting Kit, Installation Guide",
+      "Retail Package Weight": "EU: 400.5 g",
+      "Retail Package Dimension": "152×39.5×90 mm",
+      "Units per Carton": "30",
+      "Carton Net Weight": "EU: 12.0 kg",
+      "Carton Gross Weight": "EU: 12.4 kg",
+      "Carton Dimension": "32.8×22×29.6 cm",
+      "Compatible Products": "C200P 1.0, C500P 1.0",
+      "Compatible Accessories": "POE200 2.0, POE300 2.0, POE400 2.0, POE350 2.0, POE200H 1.0, POE400X 2.0, POE350 3.0, POE400 3.0, POE300 3.0, POE52-30W 1.0, POE48-18W 1.0",
+      "Wi-Fi Standards": "Wi-Fi 6",
+      "Max Wi-Fi Modulation": "1024-QAM",
+      "Wi-Fi Efficiency": "OFDMA, MU-MIMO, BSS Color",
+      "Max Capacity": "256",
+      "Recommended Client Upper Limit": "60",
+      "Wi-Fi Channel Width": "Auto/20/40/80/160 MHz",
+      "Wi-Fi Security": "WPA/WPA2/WPA3",
+      "Multi-SSID (Max Number)": "8 SSIDs (Up to 4 SSIDs on each band), VLAN Support",
+      "Operation Modes": "Access Point",
+      "Mesh": "Cudy Mesh",
+      "Mesh Backhaul": "Wireless Backhaul, Wired Backhaul",
+      "DHCP": "Server",
+      "IP Versions": "IPv4",
+      "IGMP": "IGMP Snooping",
+      "Local Control Method": "Config Web Page, App Control",
+      "Remote Control Method": "Config Page via HTTPS, App Control",
+      "Firmware Upgrade": "Local Update, App (Over the Air), Online Update",
+      "Reliability": "Timed Reboot, Backup and Restore",
+      "Diagnostic Tools": "Diagnosis, Ping, Traceroute, NSLookup, System Log",
+      "Coverage": "Covers up to 60 m² (650 ft²)"
+    },
+    "hersteller_datenblatt": {
+      "Highlights": [
+        "1.3 GHz Dual-Core CPU",
+        "4-Stream Dual-Band Wi-Fi 6",
+        "2402 Mbps + 574 Mbps Wi-Fi",
+        "1× GbE PoE In, 1× GbE PoE Out, 3× GbE",
+        "802.3at, 802.3af (No PoE-Out)",
+        "Watchdog, Schedule Reboot",
+        "Covers 60 m² (650 ft²)",
+        "60 Connected Devices"
+      ],
+      "Seite 1": "4 Gigabit LAN Ports; PoE Passthrough Available (One port with PoE Passthrough ...); 1x Gigabit PoE-IN Port; 3x Gigabit LAN Ports; 1x Gigabit LAN Port with PoE Passthrough; Reset Button",
+      "Chipset": "MT7981BA",
+      "CPU Details": "1.3 GHz Dual-Core CPU",
+      "Flash/ROM": "128 MB (1 Gbit) NAND",
+      "DDR/RAM": "256 MB (2 Gbit) DDR3",
+      "5 GHz Wi-Fi Speed": "2402Mbps",
+      "2.4 GHz Wi-Fi Speed": "574 Mbps",
+      "5 GHz Wi-Fi Streams": "2T2R (2×2 MIMO) with an Extra Stream",
+      "2.4 GHz Wi-Fi Streams": "2T2R (2x2 MIMO)",
+      "Wi-Fi Antennas": "3× Internal",
+      "5 GHz Antenna Gain Max": "7.08dBi (US), 6.52dBi (EU)",
+      "2.4 GHz Antenna Gain Max": "3.17dBi",
+      "FEM or PA/LNA": "5 GHz: 3× Internal; 2.4 GHz: 2× Internal",
+      "Beamforming": "True",
+      "Range Performance": "Max: 80 m (262 ft)",
+      "Wall Performance": "Two wooden walls with thickness < 10 cm (4''); One concrete wall with thickness < 20 cm (7'')",
+      "Gigabit RJ45 Ports": "5",
+      "Ethernet Notes": "The port on the back accepts PoE powering. One port on the front bottom supports PoE passthrough",
+      "LED": "System",
+      "Physical Buttons": "Reset Button; LED On/Off Button",
+      "Power Input": "PoE via Ethernet Port",
+      "Power Methods": "Passive PoE; 802.3at/af PoE",
+      "Passive PoE": "48V",
+      "Max Power Consumption (W)": "12 W (48 V PoE)",
+      "Idle Power Consumption (W)": "5 W (48 V PoE)",
+      "Advanced": "Hardware Watchdog",
+      "EMS": "ESD: Contact: 4kV; Air: 8kV",
+      "Environment": "Operating Temperature: 0 ℃ ~ 40 ℃ (14 ℉ ~149 ℉); Storage Temperature: -40 ℃ ~ 70 ℃; Operating Humidity: 10% ~ 90% non-condensing; Storage Humidity: 5% ~ 90% non-condensing",
+      "Certifications": "FCC, CE",
+      "Installation": "Wall-mount",
+      "Dimension": "143×86×27.6 mm",
+      "Retail Package Dimension": "152×39.5×90 mm",
+      "Units per Carton": "30",
+      "Carton Dimension": "33.1×22×29.6 cm",
+      "Package Content": "AP3000 Wall, Mounting Kit, Installation Guide",
+      "Max Wi-Fi Channel Width": "160 MHz",
+      "Multi-Band Backhaul": "True",
+      "Wake on LAN": "True",
+      "LED Control": "True"
+    },
+    "hersteller_kurzanleitung": {
+      "titel": "Quick Installation Guide, Wall-Plate Wi-Fi Access Point, AP1300 Wall | AP3000 Wall",
+      "LED Button": "By default, only to turn on/off the LED. When it works as a standalone AP, Wi-Fi control can be enabled on its management web page. Then Wi-Fi and LED control will synchronize.",
+      "PoE IN Port": "To connect a PoE adapter/switch for power supply.",
+      "LAN Port": "To connect a device via an Ethernet cable for Gigabit Internet access.",
+      "Reset Button": "Press 2 seconds to restore factory defaults.",
+      "LED Status": {
+        "Off": "(Symbol)",
+        "Red Flashing": "(Symbol)",
+        "Red On": "(Symbol)",
+        "White Flashing": "(Symbol)",
+        "White On": "(Symbol)",
+        "Red and White alternate": "(Symbol Upgrade)"
+      },
+      "Uebersichtsbild": "LED Button oben, LED vorne, PoE-IN Port auf der Rueckseite (in der Aussparung der Montageplatte), LAN Ports (4) unten, Reset Button unten rechts neben den LAN-Ports",
+      "Montage": "1A mit Unterputzdose (Schrauben M4 35mm x3 aus Lieferumfang, sonst die der Dose); 1B ohne Dose: Bohrer 6 mm, Duebel x3, Schrauben 3# 25mm x3; 2 PoE-Kabel an Rueckseite; 3 Geraet einhaengen, nach unten schieben, mit M3 6mm sichern",
+      "Schrauben": "M4 35mm x3, 6# 32T x3, Duebel x3, 3# 25mm x3, M3 6mm x2",
+      "Stock-Zugang": "https://cudyap.net (or 192.168.10.254); default SSID printed on the product label",
+      "Hinweis": "If the AP was configured before, please reset it to the factory defaults."
+    },
+    "hersteller_regulatorik": {
+      "Product name": "AX3000 Wall-Plate Wi-Fi 6 Access Point",
+      "Model Number": "AP3000 Wall",
+      "FCC": "Part 15, keine FCC-ID genannt, Issue Date 2025-4-25",
+      "CE Max Power": {
+        "2400-2483.5 MHz": "20dBm",
+        "5150-5250 MHz": "23dBm",
+        "5250-5350 MHz": "23dBm",
+        "5470-5725 MHz": "30dBm"
+      },
+      "National Restrictions": "This device may only be used indoors in all EU member states and EFTA countries, and Northern Ireland.",
+      "UKCA": "This device may only be used indoors in Great Britain.",
+      "RF Exposure": "20 cm",
+      "Safety": "Operation Temperature: 0° C to +40° C",
+      "Anatel": "Hinweistext ohne Zulassungsnummer"
+    },
+    "hersteller_ce_erklaerung": {
+      "Product Name": "AX3000 Wall-Plate Wi-Fi 6 Access Point",
+      "Model Number": "AP3000 Wall",
+      "Date of issue": "2025-4-24",
+      "Normen": "EN 55032, EN 55035, EN IEC 61000-3-2/-3, EN IEC 62368-1:2020+A11:2020, ETSI EN 301 489-1/-3/-17, ETSI EN 300 328 V2.2.2, ETSI EN 301 893 V2.1.1, ETSI EN 300 440 V2.2.1, EN 50385, EN IEC 62311, EN 62232"
+    },
+    "hersteller_psti": {
+      "Product Name": "AX3000 Wall-Plate Wi-Fi 6 Access Point",
+      "Model Number": "AP3000 Wall",
+      "Product Version": "V1",
+      "Support": "The defined support period will end in 2 years after the product's last end-of-life date.",
+      "Date of issue": "2025-4-22"
+    },
+    "hersteller_downloads": {
+      "firmware": [
+        {
+          "version": "2.5.15",
+          "datum": "09-Jul-2026",
+          "datei": "AP3000WALL-R68-2.5.15-20260706-134803-sysupgrade.zip",
+          "groesse": "14.2 MB",
+          "notes": "enterprise wireless encryption; rate limit; client hostname; Port VLAN; Mesh topology view, uplink node selection, wired-only backhaul; RSSI/roaming threshold; security fixes"
+        },
+        {
+          "version": "2.4.4",
+          "datum": "19-Aug-2025",
+          "datei": "AP3000WALL-R68-2.4.4-20250815-110453-sysupgrade.zip",
+          "groesse": "13.4 MB",
+          "notes": "Cudy AP Controller; captive portal; SSID VLAN; bug fixes"
+        },
+        {
+          "version": "2.3.13",
+          "datum": "05-Mar-2025",
+          "datei": "AP3000WALL-R68-2.3.13-20250415-101311-sysupgrade.zip",
+          "groesse": "13.1 MB",
+          "notes": "First firmware released."
+        }
+      ],
+      "dokumente": [
+        "Datasheet",
+        "Installation Guide (English)",
+        "Installation Guide (Multilingual)",
+        "Regulatory Compliance",
+        "CE Doc",
+        "PSTI Doc"
+      ],
+      "gpl": {
+        "version": "21.02",
+        "datum": "16-Apr-2024",
+        "url": "https://drive.google.com/file/d/1HpW6RmxYH1o3ax1G89e9qtUGPgpzNtQY/view?usp=drive_link"
+      }
+    },
+    "hersteller_faq_openwrt": {
+      "Important Notice 2025-11-24": "Cudy AX3000 series routers manufactured starting in November 2025 (... SN code start with 2543 or later. 2543 in the SN means the 43th week in the year 2025) use the new Flash F50L1G41LC. Upgrading to older versions of OpenWrt intermediate firmware or OpenWrt firmware will prevent the device from booting. ... If the device is detected to be using the new Flash, it will not be able to upgrade to older firmware versions 2.3.X or earlier.",
+      "Affected models": "AP3000 Outdoor 1.0, AP3000 Wall 1.0, M3000 1.0/2.0, TR3000 1.0, WR3000E 1.0, WR3000H 1.0, WR3000S 1.0, and WR3000P 1.0.",
+      "Update 2025-12-24": "The OpenWrt forum has merged the patch which supports the new Flash F50L1G41LC and update the OpenWrt firmware to the version 24.10.5.",
+      "alt": "If the SN code is less than 2543. It uses the old flash. There is no such problem."
+    },
+    "hersteller_lieferumfang_bild": {
+      "inhalt": "Geraet (Ports unten beschriftet \"1⚡ 2 3 4\"), Montageplatte mit Pfeil UP und Aussparung, Karton (\"1+4 Gigabit Ports\", \"PoE Passthrough Available\"), Quick Installation Guide, Schrauben und Duebel",
+      "netzteil": "keines abgebildet"
+    },
+    "fccid_suche": {
+      "ergebnis": "keine FCC-ID fuer AP3000 Wall"
+    },
+    "deviwiki": {
+      "ergebnis": "There were no results matching the query."
+    },
+    "wikidevi": {
+      "ergebnis": "keine Seite AP3000 Wall"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Cudy",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": "Shenzhen Cudy Technology Co., Ltd."
+      },
+      {
+        "wert": "Cudy",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "AP3000 Wall",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": "Produktname \"AX3000 Wall-Plate Wi-Fi 6 Access Point\""
+      },
+      {
+        "wert": "AP3000 Wall",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "DEVICE_MODEL"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "1.0",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Model Version: AP3000 Wall 1.0\""
+      },
+      {
+        "wert": "V1",
+        "quelle": "hersteller_psti",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Statements_of_PSTI_Compliance_AP3000_Wall.pdf?v=7364354879121879685",
+        "stand": "Ausstellungsdatum 2025-4-22",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Product Version: V1\""
+      },
+      {
+        "wert": "v1",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "DEVICE_VARIANT"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Modell \"AP3000 Wall\", Version 1.0; Flash-Variante an der Seriennummer: SN ab 2543 (KW 43/2025) = neuer Flash ESMT F50L1G41LC, darunter alter Flash",
+        "quelle": "hersteller_faq_openwrt",
+        "beleg": "https://www.cudy.com/en-us/blogs/faq/openwrt-software-download",
+        "stand": "Artikel 2023-09-01; \"Important Notice\" 2025-11-24, \"Update\" 2025-12-24",
+        "sicherheit": "hoch",
+        "bemerkung": "AP3000 Wall 1.0 ausdrücklich unter \"Affected models\"; neue Geräte brauchen OpenWrt >= 24.10.5 bzw. Zwischenfirmware 20251119, Stock-Downgrade auf 2.3.X gesperrt"
+      },
+      {
+        "wert": "Board-ID R68 (Stock-Firmware AP3000WALL-R68-..., OpenWrt SUPPORTED_DEVICES R68)",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/pages/download-center/ap3000-wall-1-0",
+        "stand": "Abruf 2026-10-19; neueste Firmware 2.5.15 vom 09-Jul-2026",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "nicht verwechseln: AP3000E Wall 1.0 (86-mm-Unterputzformat) und AP1300 Wall 1.0 (gleiche Kurzanleitung, gleiches Gehäuse) sind andere Geräte",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/search/suggest.json?q=AP3000%20Wall&resources%5Btype%5D=product",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "mittel",
+        "bemerkung": "Cudy-Shopsuche \"AP3000 Wall\" liefert ap3000-wall-1-0, ap3000e-wall-1-0, ap1300-wall-1-0; Kurzanleitung gilt für AP1300 Wall | AP3000 Wall"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": "AX3000 Wall-Plate Wi-Fi 6 Access Point",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "R68 (Board-ID)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "SUPPORTED_DEVICES"
+      }
+    ],
+    "ce_konformitaet": [
+      {
+        "wert": "RED 2014/53/EU u. a., Erklärung vom 2025-04-24",
+        "quelle": "hersteller_ce_erklaerung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/CE_DOC_AP3000_Wall.pdf?v=861708117217300720",
+        "stand": "Ausstellungsdatum 2025-4-24 (PDF 2025-04-25)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "MediaTek MT7981BA",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Chipset MT7981BA\""
+      },
+      {
+        "wert": "MediaTek MT7981b",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": "1.3 GHz Dual-Core"
+      },
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 1300,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1300,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "aarch64_cortex-a53",
+        "quelle": "openwrt_profiles",
+        "beleg": "https://downloads.openwrt.org/releases/25.12.6/targets/mediatek/filogic/profiles.json",
+        "stand": "OpenWrt 25.12.6 r33311-981c978eff (Build 2026-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "arch_packages"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 256,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "RAM: 256MiB"
+      },
+      {
+        "wert": 256,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": "256 MB (2 Gbit) DDR3"
+      },
+      {
+        "wert": 256,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR3",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 128,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"spi-nand spi0.0: 128 MiB\" (Bootlog-Zeile im Commit)"
+      },
+      {
+        "wert": 128,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": "128 MB (1 Gbit) NAND"
+      },
+      {
+        "wert": 128,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
+        "stand": "Branch main am 2026-10-19; Historie: afad4c71f8 (2025-12-31), 53fa04d261 (2026-04-27, mtd-eeprom -> nvmem)",
+        "sicherheit": "mittel",
+        "bemerkung": "nutzbar unter OpenWrt: ubi-Partition 0x4000000 = 64 MiB, IMAGE_SIZE 65536k; die Bauteilgröße ist 128 MiB"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NAND (SPI-NAND)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
+        "stand": "Branch main am 2026-10-19; Historie: afad4c71f8 (2025-12-31), 53fa04d261 (2026-04-27, mtd-eeprom -> nvmem)",
+        "sicherheit": "hoch",
+        "bemerkung": "spi-nand, Quad-SPI, NMBM"
+      },
+      {
+        "wert": "NAND",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "ESMT F50L1G41LC bei Seriennummer ab 2543; älterer Chip nicht benannt",
+        "quelle": "hersteller_faq_openwrt",
+        "beleg": "https://www.cudy.com/en-us/blogs/faq/openwrt-software-download",
+        "stand": "Artikel 2023-09-01; \"Important Notice\" 2025-11-24, \"Update\" 2025-12-24",
+        "sicherheit": "mittel",
+        "bemerkung": "nur der neue Chip ist namentlich genannt"
+      }
+    ],
+    "flash_layout": [
+      {
+        "wert": "BL2 1 MiB, u-boot-env 512 KiB, Factory 2 MiB, bdinfo 256 KiB, FIP 2 MiB, ubi 64 MiB (ab 0x5c0000)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
+        "stand": "Branch main am 2026-10-19; Historie: afad4c71f8 (2025-12-31), 53fa04d261 (2026-04-27, mtd-eeprom -> nvmem)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "MediaTek MT7981 (DBDC, im SoC integriert)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "Front-End-Module laut Hersteller: 5 GHz 3x, 2.4 GHz 2x intern"
+      },
+      {
+        "wert": "MT7981BA",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "mittel",
+        "bemerkung": "nur Chipsatz genannt"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "mt7915e (kmod-mt7915e, mt7981-firmware, mt7981-wo-firmware)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11ax (Wi-Fi 6)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"802.11ax 2T2R (2.4 / 5)\""
+      },
+      {
+        "wert": "Wi-Fi 6",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11ax (Wi-Fi 6)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Wi-Fi 6",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "2x2 2T2R"
+      },
+      {
+        "wert": 2,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": "2T2R (2x2 MIMO)"
+      },
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "2x2 2T2R"
+      },
+      {
+        "wert": 2,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": "\"2T2R (2×2 MIMO) with an Extra Stream\""
+      },
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"2 Spatial Streams with 3T3R\""
+      }
+    ],
+    "wlan_5_ketten": [
+      {
+        "wert": "2T2R",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2T2R + zusätzlicher Pfad (\"Extra Stream\")",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "3T3R",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": "Widerspruch Herstellerseite (3T3R) gegen Commit (2T2R); 3 FEM für 5 GHz laut Hersteller"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AX3000",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": "2402 Mbps (5 GHz) + 574 Mbps (2.4 GHz)"
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "20/40/80/160 MHz",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_modulation": [
+      {
+        "wert": "1024-QAM",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": {
+          "2.4": 20,
+          "5150-5350": 23,
+          "5470-5725": 30
+        },
+        "quelle": "hersteller_regulatorik",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_AP3000_Wall.pdf?v=11155424484355112634",
+        "stand": "PDF 2025-05-23, FCC-Teil Issue Date 2025-4-25",
+        "sicherheit": "hoch",
+        "bemerkung": "maximale Sendeleistung laut CE-Abschnitt"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": "3× Internal"
+      },
+      {
+        "wert": "intern",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 3,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4": 3.17,
+          "5": 6.52,
+          "5_us": 7.08
+        },
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": "5 GHz: 7.08 dBi (US), 6.52 dBi (EU)"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "ETH0",
+            "geschwindigkeit": "1000",
+            "rolle": "PoE-In, Rückseite"
+          },
+          {
+            "name": "LAN1 (1⚡)",
+            "geschwindigkeit": "1000",
+            "rolle": "LAN, PoE-Ausgang (Passthrough), unten"
+          },
+          {
+            "name": "LAN2",
+            "geschwindigkeit": "1000",
+            "rolle": "LAN, unten"
+          },
+          {
+            "name": "LAN3",
+            "geschwindigkeit": "1000",
+            "rolle": "LAN, unten"
+          },
+          {
+            "name": "LAN4",
+            "geschwindigkeit": "1000",
+            "rolle": "LAN, unten"
+          }
+        ],
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": "Lage aus Datenblatt (\"port on the back accepts PoE powering\", \"one port on the front bottom supports PoE passthrough\") und Kurzanleitung"
+      },
+      {
+        "wert": "5x 1GbE",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "lan1..lan5 am MT7531-Switch, alle als LAN, keine WAN-Rolle; Zuordnung lanN zu Buchse nicht dokumentiert",
+        "quelle": "openwrt_board_d",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/filogic/base-files/etc/board.d/02_network",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon v2025.1 (Neanderfunk-Backport): single-Schnittstelle, Rolle uplink auf allen fünf Ports [abgeleitet]"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 5,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "switch_chip": [
+      {
+        "wert": "MediaTek MT7531 (2500base-x zur CPU)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
+        "stand": "Branch main am 2026-10-19; Historie: afad4c71f8 (2025-12-31), 53fa04d261 (2026-04-27, mtd-eeprom -> nvmem)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja (DSA-Switch)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
+        "stand": "Branch main am 2026-10-19; Historie: afad4c71f8 (2025-12-31), 53fa04d261 (2026-04-27, mtd-eeprom -> nvmem)",
+        "sicherheit": "mittel",
+        "bemerkung": "Stock: SSID-VLAN, Port-VLAN ab 2.5.15"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "keine",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "mittel",
+        "bemerkung": "Schnittstellenliste nennt nur 5 RJ45; DTS ohne USB-Knoten"
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "802.3af/802.3at oder passiv 48 V",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"PoE on ETH0: 802.3at/af; Passive PoE on ETH0: 48V\"; für stabilen Betrieb 802.3at oder höher empfohlen (zu wenig Leistung kann Neustarts verursachen)"
+      },
+      {
+        "wert": "802.3af/802.3at oder passiv 48 V",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": "Highlight \"802.3at, 802.3af (No PoE-Out)\": mit 802.3af kein PoE-Ausgang"
+      },
+      {
+        "wert": "802.3af/at/bt, passiv 48 V",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "mittel",
+        "bemerkung": "nur Shop-Tags (\"48V Passive PoE, 802.3af/at/bt\"); Spezifikation nennt bt nicht"
+      },
+      {
+        "wert": "PoE (Norm nicht genannt)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"PoE powered (standalone)\""
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": 48,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": "Passive PoE 48V"
+      },
+      {
+        "wert": 48,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": "Passive PoE on ETH0: 48V; Verbrauch bei 48 V angegeben"
+      }
+    ],
+    "poe_ausgang": [
+      {
+        "wert": "ja, LAN1, Passthrough (Ausgangsspannung = Eingangsspannung 42.5-57 V), max. 13.5 W; nur bei 802.3at-Eingang oder höher und nach Einschalten in der Weboberfläche",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "über GPIO 12 (gpio-export \"poe-passthrough\", Startwert aus)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
+        "stand": "Branch main am 2026-10-19; Historie: afad4c71f8 (2025-12-31), 53fa04d261 (2026-04-27, mtd-eeprom -> nvmem)",
+        "sicherheit": "hoch",
+        "bemerkung": "kein 03_gpio_switches-Eintrag, also kein uci system.poe_passthrough"
+      },
+      {
+        "wert": "unter Gluon nicht schaltbar, bleibt aus",
+        "quelle": "neanderfunk_patches",
+        "beleg": "/home/adorfer/projekte/freifunk/neanderfunk/gluon-patches-hardware/devices/cudy-ap3000-wall-v1/README.md",
+        "stand": "gluon-patches-hardware Commit 9263f24 vom 2026-10-01 (Geraeteverzeichnis), apply.sh 188dff9 vom 2026-10-16",
+        "sicherheit": "mittel",
+        "bemerkung": "[abgeleitet] laut README; upstream ebenso [geprüft]"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "nein",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Power Input Type: PoE via Ethernet Port\"; keine DC-Buchse in Spezifikation oder Kurzanleitung"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": false,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": "Lieferumfang: AP3000 Wall, Mounting Kit, Installation Guide"
+      },
+      {
+        "wert": false,
+        "quelle": "hersteller_lieferumfang_bild",
+        "beleg": "https://cdn.shopify.com/s/files/1/0673/4748/0820/files/AP3000Wall_REV1.0_c0d8951b-02d8-43ef-8188-fd03e6f2e785.jpg?v=1749088353",
+        "stand": "Bild v=1749088353 (2025-06-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "kein Netzteil/PoE-Injektor abgebildet"
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 12,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": "bei 48 V PoE, ohne PoE-Ausgang"
+      },
+      {
+        "wert": 12,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_typ": [
+      {
+        "wert": 5,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": "Leerlauf bei 48 V PoE"
+      },
+      {
+        "wert": 5,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "hersteller_regulatorik",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_AP3000_Wall.pdf?v=11155424484355112634",
+        "stand": "PDF 2025-05-23, FCC-Teil Issue Date 2025-4-25",
+        "sicherheit": "hoch",
+        "bemerkung": "\"may only be used indoors in all EU member states and EFTA countries\""
+      },
+      {
+        "wert": "innen",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": "Unterputz-/Wandplatte für Zimmer (Hotel, Wohnung, Büro)"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": "Fahrenheit-Angabe 14-149 °F passt nicht zu 0-40 °C (Druckfehler)"
+      },
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "hersteller_regulatorik",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_AP3000_Wall.pdf?v=11155424484355112634",
+        "stand": "PDF 2025-05-23, FCC-Teil Issue Date 2025-4-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_lager": [
+      {
+        "wert": "-40 bis 70 °C",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "Betrieb 10-90 %, Lager 5-90 %, nicht kondensierend",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Wand: auf Unterputzdose (Schrauben M4 35 mm) oder direkt mit Dübeln (Bohrer 6 mm, Schrauben 3# 25 mm); Gerät auf Montageplatte eingehängt, mit 2 Schrauben M3 6 mm gesichert",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000Wall_AP1300Wall_Quick_Installation_Guide-EN.pdf?v=2201761749262502505",
+        "stand": "PDF 2025-03-06",
+        "sicherheit": "hoch",
+        "bemerkung": "Hersteller: \"Fits perfectly in a standard electrical box\"; Lochbild der Platte nicht vermaßt"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "143 × 86 × 27.6",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "143 × 86 × 27.6",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 298.6,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leds": [
+      {
+        "wert": "1 LED zweifarbig rot/weiß (red:status, white:status)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
+        "stand": "Branch main am 2026-10-19; Historie: afad4c71f8 (2025-12-31), 53fa04d261 (2026-04-27, mtd-eeprom -> nvmem)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "System-LED vorne; LED-Knopf schaltet LED (optional auch WLAN)",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000Wall_AP1300Wall_Quick_Installation_Guide-EN.pdf?v=2201761749262502505",
+        "stand": "PDF 2025-03-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "ja, LED-Taste oben (unter OpenWrt KEY_LIGHTS_TOGGLE, GPIO 35)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
+        "stand": "Branch main am 2026-10-19; Historie: afad4c71f8 (2025-12-31), 53fa04d261 (2026-04-27, mtd-eeprom -> nvmem)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, LED On/Off Button",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "knoepfe": [
+      {
+        "wert": "Reset, LED an/aus",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Reset (unten), LED-Taste (oben)",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000Wall_AP1300Wall_Quick_Installation_Guide-EN.pdf?v=2201761749262502505",
+        "stand": "PDF 2025-03-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "unten rechts neben den LAN-Buchsen, von außen erreichbar; Stock: 2 s drücken = Werkseinstellungen",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000Wall_AP1300Wall_Quick_Installation_Guide-EN.pdf?v=2201761749262502505",
+        "stand": "PDF 2025-03-06",
+        "sicherheit": "hoch",
+        "bemerkung": "Lage aus Übersichtsbild der Kurzanleitung"
+      },
+      {
+        "wert": "GPIO 1, KEY_RESTART",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
+        "stand": "Branch main am 2026-10-19; Historie: afad4c71f8 (2025-12-31), 53fa04d261 (2026-04-27, mtd-eeprom -> nvmem)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Reset beim Einschalten halten = TFTP-Recovery",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "watchdog": [
+      {
+        "wert": "Hardware-Watchdog über GPIO 6 (linux,wdt-gpio, 10 s, always-running) plus SoC-Watchdog",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
+        "stand": "Branch main am 2026-10-19; Historie: afad4c71f8 (2025-12-31), 53fa04d261 (2026-04-27, mtd-eeprom -> nvmem)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Hardware Watchdog",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
+        "stand": "Branch main am 2026-10-19; Historie: afad4c71f8 (2025-12-31), 53fa04d261 (2026-04-27, mtd-eeprom -> nvmem)",
+        "sicherheit": "hoch",
+        "bemerkung": "stdout-path serial0:115200n8 (uart0)"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "UART0 aktiv, Lage und Pinbelegung in keiner Quelle",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
+        "stand": "Branch main am 2026-10-19; Historie: afad4c71f8 (2025-12-31), 53fa04d261 (2026-04-27, mtd-eeprom -> nvmem)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "Hersteller: nicht öffnen (\"Do not attempt to disassemble\")",
+        "quelle": "hersteller_regulatorik",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_AP3000_Wall.pdf?v=11155424484355112634",
+        "stand": "PDF 2025-05-23, FCC-Teil Issue Date 2025-4-25",
+        "sicherheit": "niedrig",
+        "bemerkung": "Standard-Sicherheitshinweis, keine Anleitung zum Öffnen"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "mediatek/filogic",
+        "quelle": "openwrt_profiles",
+        "beleg": "https://downloads.openwrt.org/releases/25.12.6/targets/mediatek/filogic/profiles.json",
+        "stand": "OpenWrt 25.12.6 r33311-981c978eff (Build 2026-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "mediatek/filogic",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "main: Commit afad4c71f (gemergt 2026-01-02); Release 25.12 (Backport 45788a48c7, ab 25.12.0-rc5)",
+        "quelle": "openwrt_pr_2512",
+        "beleg": "https://github.com/openwrt/openwrt/pull/21890",
+        "stand": "PR 2026-02-06, gemergt 2026-02-07 (Commit 45788a48c7)",
+        "sicherheit": "hoch",
+        "bemerkung": "nicht in 24.10.x"
+      },
+      {
+        "wert": "25.12.6 enthält Profil cudy_ap3000wall-v1; 24.10.8 nicht",
+        "quelle": "openwrt_profiles",
+        "beleg": "https://downloads.openwrt.org/releases/25.12.6/targets/mediatek/filogic/profiles.json",
+        "stand": "OpenWrt 25.12.6 r33311-981c978eff (Build 2026-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_support_commit": [
+      {
+        "wert": "afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.6",
+        "quelle": "openwrt_profiles",
+        "beleg": "https://downloads.openwrt.org/releases/25.12.6/targets/mediatek/filogic/profiles.json",
+        "stand": "OpenWrt 25.12.6 r33311-981c978eff (Build 2026-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "upstream nein",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/mediatek-filogic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon main ohne Eintrag"
+      },
+      {
+        "wert": "Neanderfunk Gluon v2025.1.x per Backport (gluon-patches-hardware, Gerät cudy-ap3000-wall-v1, factory = false); nur Probelauf, kein Build mit Gerät",
+        "quelle": "neanderfunk_patches",
+        "beleg": "/home/adorfer/projekte/freifunk/neanderfunk/gluon-patches-hardware/devices/cudy-ap3000-wall-v1/README.md",
+        "stand": "gluon-patches-hardware Commit 9263f24 vom 2026-10-01 (Geraeteverzeichnis), apply.sh 188dff9 vom 2026-10-16",
+        "sicherheit": "hoch",
+        "bemerkung": "Portrollen und PoE-Passthrough offen"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot (mit BL2/FIP, ATF)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"U-Boot based boot loader\"; Partitionen BL2, FIP im DTS"
+      }
+    ],
+    "stock_os": [
+      {
+        "wert": "Cudy-Firmware auf OpenWrt-Basis mit Signaturprüfung",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "GPL-Quellen OpenWrt 21.02",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/pages/download-center/ap3000-wall-1-0",
+        "stand": "Abruf 2026-10-19; neueste Firmware 2.5.15 vom 09-Jul-2026",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.cudy.com/pages/download-center/ap3000-wall-1-0",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/pages/download-center/ap3000-wall-1-0",
+        "stand": "Abruf 2026-10-19; neueste Firmware 2.5.15 vom 09-Jul-2026",
+        "sicherheit": "hoch",
+        "bemerkung": "neueste 2.5.15 (09-Jul-2026), AP3000WALL-R68-2.5.15-20260706-134803-sysupgrade.zip"
+      }
+    ],
+    "stock_ip": [
+      {
+        "wert": "192.168.10.254 (https://cudyap.net)",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000Wall_AP1300Wall_Quick_Installation_Guide-EN.pdf?v=2201761749262502505",
+        "stand": "PDF 2025-03-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Cudy-Zwischenfirmware über die Stock-Weboberfläche, danach OpenWrt-sysupgrade",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Zwischenfirmware cudy-ap3000-wall.bin (= Cudy cudy_ap3000wall-v1-sysupgrade_20251119.bin, MD5 376d404fd1535cc51168e365e2374427) aus dem Neanderfunk-Spiegel, dann Gluon-sysupgrade; erst mit Gluon 2025.1",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/cudy-installation.md",
+        "stand": "routerwerkstatt Commit a9781bd vom 2026-10-15 (Text Stand 08.10.2026)",
+        "sicherheit": "hoch",
+        "bemerkung": "Tabelle \"Welche Zwischenfirmware für welches Modell\", Fußnote ²"
+      },
+      {
+        "wert": "bei neuem Flash (SN ab 2543) nur die neue Zwischenfirmware (Cudy, Google Drive, ab November 2025); ältere Zwischenfirmware und OpenWrt < 24.10.5 starten dort nicht",
+        "quelle": "hersteller_faq_openwrt",
+        "beleg": "https://www.cudy.com/en-us/blogs/faq/openwrt-software-download",
+        "stand": "Artikel 2023-09-01; \"Important Notice\" 2025-11-24, \"Update\" 2025-12-24",
+        "sicherheit": "hoch",
+        "bemerkung": "Dateidatum 20251119 laut Neanderfunk-Spiegel"
+      }
+    ],
+    "recovery": [
+      {
+        "wert": "TFTP: Rechner 192.168.1.88/24, Datei recovery.bin (Stock-Firmware), Reset beim Einschalten halten bis zum Download",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9",
+        "stand": "Commit 2025-12-30/31 (Autor Derek Denk), gemergt 2026-01-02 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "mac_schema": [
+      {
+        "wert": "Label-MAC = gmac0 aus bdinfo @0xde00 (mac-base); WLAN-MACs per 11_fix_wifi_mac abgeleitet (wie AP3000/AP3000 Outdoor)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
+        "stand": "Branch main am 2026-10-19; Historie: afad4c71f8 (2025-12-31), 53fa04d261 (2026-04-27, mtd-eeprom -> nvmem)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "im Cudy-Shop seit 2024-03-05; erste Firmware 2.3.13 vom 05-Mar-2025; nicht in der EOL-Liste (Stand 2026-10-19)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_support_ende": [
+      {
+        "wert": "2 Jahre nach dem letzten EOL-Datum (noch nicht EOL)",
+        "quelle": "hersteller_psti",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Statements_of_PSTI_Compliance_AP3000_Wall.pdf?v=7364354879121879685",
+        "stand": "Ausstellungsdatum 2025-4-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-wall-1-0",
+        "stand": "Shopify-Produkt angelegt 2024-03-05, geaendert 2026-10-20 (UTC+8)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301",
+        "stand": "PDF erstellt 2025-05-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/2APRG",
+      "kategorie": "fcc_id",
+      "grund": "keine FCC-ID: Volltextsuche \"Wall-Plate\" Cudy und Grantee-Liste 2APRG ohne AP3000 Wall, Regulatory-PDF nennt keine ID - nur am Typenschild ablesbar; damit auch keine FCC-Innenfotos"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/filogic/base-files/etc/board.d/02_network",
+      "kategorie": "ports",
+      "grund": "Zuordnung DSA-Port lan1..lan5 zu den Buchsen (ETH0 PoE-In hinten, LAN1-4 unten) nicht dokumentiert; für Gluon-Portrollen (wan = PoE-In) am Gerät messen"
+    },
+    {
+      "url": "/home/adorfer/projekte/freifunk/neanderfunk/gluon-patches-hardware/devices/cudy-ap3000-wall-v1/README.md",
+      "kategorie": "poe_ausgang",
+      "grund": "PoE-Passthrough unter OpenWrt/Gluon nur per GPIO 12 (kein gpio_switch); Verhalten nicht am Gerät geprüft"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
+      "kategorie": "seriell_zugang",
+      "grund": "UART0 115200n8 laut DTS, aber Lage, Pinbelegung und ob Stiftleiste bestückt in keiner Quelle; keine Platinenfotos (kein FCC-Eintrag, kein Wiki)"
+    },
+    {
+      "url": "https://www.cudy.com/products/ap3000-wall-1-0",
+      "kategorie": "luefter",
+      "grund": "keine Quelle nennt Lüfter oder lüfterlos"
+    },
+    {
+      "url": "https://forum.openwrt.org/search?q=%22AP3000%20Wall%22",
+      "kategorie": "forum_thread",
+      "grund": "OpenWrt-Forum nicht durchsucht (search.json drosselt mit 429); Erfahrungsberichte/Bootlogs offen"
+    },
+    {
+      "url": "https://drive.google.com/file/d/1HpW6RmxYH1o3ax1G89e9qtUGPgpzNtQY/view?usp=drive_link",
+      "kategorie": "gpl",
+      "grund": "GPL-Quellen 21.02 (Board R68) nicht ausgewertet"
+    },
+    {
+      "url": "https://www.cudy.com/cdn/shop/files/AP3000Wall_AP1300Wall_Quick_Installation_Guide.pdf?v=823576969950964982",
+      "kategorie": "montage",
+      "grund": "mehrsprachige Kurzanleitung nicht geladen (englische Fassung ausgewertet)"
+    },
+    {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/cudy-installation.md",
+      "kategorie": "werkstatt",
+      "grund": "keine eigene Messung: laut long-term-todo nur Probelauf, keine Hardware; Typenschildfoto, Bootlog (Flash-Chip), Portzuordnung am Testplatz offen"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_wall_v1",
+      "kategorie": "toh_seite",
+      "grund": "OpenWrt-ToH hat noch keine Datenseite für das Gerät"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 40,
+    "notiz": "Nicht im ToH-Dump, keine ToH-Datenseite, keine Wiki-, DeviWiki-, WikiDevi- oder FCC-Eintraege. Hauptquellen: OpenWrt-Commit afad4c71f/DTS (main, 25.12; nicht 24.10), Cudy-Datenblatt, Produktseite, Kurzanleitung, Regulatorik/CE/PSTI, Cudy-FAQ (Flashwechsel SN ab 2543 betrifft AP3000 Wall 1.0). Innengeraet, Wandplatte, nur PoE (802.3af/at oder passiv 48 V, kein Netzteil), 5x GbE (ETH0 PoE-In hinten, 4 LAN unten, LAN1 PoE-Passthrough), 256 MB RAM, 128 MB NAND (OpenWrt nutzt 64 MiB ubi). Widerspruch 5 GHz 2T2R (Commit/Datenblatt) vs 3T3R (Produktseite). Neanderfunk: Backport in gluon-patches-hardware, keine Hardware, keine Messung. Offen: Seriell-Lage/Pinbelegung, Portzuordnung, Luefter."
+  }
+}

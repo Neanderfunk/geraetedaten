@@ -1,0 +1,3160 @@
+{
+  "image": "cudy-m3000-v1",
+  "modell": "Cudy M3000 v1/v2 (mit RTL8221B)",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "bemerkung": "Kein Eintrag im lokalen Dump (toh_suche.py fand nur WR1000/X6/WR1300/WR3000/WR2100; der Dump enthält nur 7 Cudy-Zeilen). Daten deshalb aus der Live-Seite, siehe openwrt_hwdata."
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1?do=export_raw",
+      "stand": "Seitenrevision 2026-08-21 06:37",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Letzte Änderung raylynnknight \"Update for 25.12.5\"; davor wfgriffin88 2026-03-27/2026-03-24. Versions-Feld: \"v1, v2 (old variant)\"."
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/cudy/m3000?do=export_raw",
+      "stand": "Seitenrevision 2026-08-05 07:39",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Gemeinsame Seite M3000 v1/v2; Abschnitte Serial, Fotos, Flash-Layout, Buttons sind FIXME-Vorlagen ohne echte Werte."
+    },
+    "openwrt_git_support": {
+      "url": "https://github.com/openwrt/openwrt/commit/20e4a18feb3f766b0f6ebec1afc154b345398a7a",
+      "stand": "Commit 2024-01-12 (Autor), gemergt 2024-05-11",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_mac_a55ab9e": {
+      "url": "https://github.com/openwrt/openwrt/commit/a55ab9e1343e85021253e9c55f67adf33ad68f09",
+      "stand": "Commit 2024-05-17 (Autor), gemergt 2024-05-25",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_mac_687a253": {
+      "url": "https://github.com/openwrt/openwrt/commit/687a2535d55f84a0daa2038b7e8736313cb2804e",
+      "stand": "Commit 2026-01-15 (Autor), gemergt 2026-01-18",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_yt8821": {
+      "url": "https://github.com/openwrt/openwrt/commit/45b51ebaff51d2a49d149e9011717abb1b032683",
+      "stand": "Commit 2026-03-02 (Autor), gemergt 2026-03-14",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Commit für die Variante mit Motorcomm YT8821 (anderes Image), nennt aber die gemeinsame Hardware und den UART-Weg"
+    },
+    "openwrt_git_v1v2": {
+      "url": "https://github.com/openwrt/openwrt/commit/51abd131d1acaaf7f7eb487376309ce52b814f81",
+      "stand": "Commit 2026-03-03 (Autor), gemergt 2026-03-14",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_ubootmod": {
+      "url": "https://github.com/openwrt/openwrt/commit/6a08c6594989ab13e773f60b2a18df930ced73c9",
+      "stand": "Commit 2026-05-09 (Autor), gemergt 2026-07-01",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=m3000+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-19 (8 Commits, neuester 2026-07-01)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-m3000.dtsi",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "dateien": [
+        "mt7981b-cudy-m3000.dtsi",
+        "mt7981b-cudy-m3000-v1.dtsi",
+        "mt7981b-cudy-m3000-v1.dts"
+      ]
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_02_network": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/filogic/base-files/etc/board.d/02_network",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_v23_05_4": {
+      "url": "https://github.com/openwrt/openwrt/blob/v23.05.4/target/linux/mediatek/image/filogic.mk",
+      "stand": "Tag v23.05.4",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "cudy_m3000-v1 in filogic.mk von v23.05.4 vorhanden, in v23.05.3 nicht"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/mediatek-filogic",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "device('cudy-m3000-v1', 'cudy_m3000-v1', {factory = false}); in Tag v2025.1.1 vorhanden, in v2025.1 und v2023.2.6 nicht"
+    },
+    "gluon_pr_3663": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/3663",
+      "stand": "PR 2026-01-11, gemergt 2026-01-25",
+      "abgerufen": "2026-10-19"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+      "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+      "abgerufen": "2026-10-19"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=Cudy+M3000&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Keine Seite: https://deviwiki.com/wiki/Cudy_M3000 liefert 404, Volltextsuche \"Cudy M3000\" ohne Treffer"
+    },
+    "fcc": {
+      "url": "https://fccid.io/2APRGMS30",
+      "stand": "Grant 2024-07-01 (BTL-Projekt 2403G073)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Prüfmuster weiß (= M3000 2.0) und schwarz (= M3000 1.0) auf den Außenfotos; Innenfotos von einem Gerät mit RTL8221B"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/2APRGMS30/Label/Label-Location-7431506",
+      "stand": "PDF 2024-03-05 (Etikettvorlage M3000_W(REV1.0), Stand Vorlage V2 vom \"2023-02-29\")",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_handbuch": {
+      "url": "https://fccid.io/2APRGMS30/User-Manual/User-Manual-7439537",
+      "stand": "PDF erstellt 2024-01-16, geändert 2024-06-27 (Regulatory Issue Date 2024-05-11)",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_innenfotos": {
+      "url": "https://fccid.io/2APRGMS30/Internal-Photos/Internal-Photos-7431508",
+      "stand": "PDF 2024-06-06 (BTL-Projekt 2403G073)",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_aussenfotos": {
+      "url": "https://fccid.io/2APRGMS30/External-Photos/External-Photos-7431509",
+      "stand": "PDF 2024-06-07 (BTL-Projekt 2403G073)",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_antenne_24": {
+      "url": "https://fccid.io/2APRGMS30/Test-Report/Antenna-Specification-1-7431234",
+      "stand": "Approval Sheet V1.0, Produktionsdatum 2023-05-25",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_antenne_5": {
+      "url": "https://fccid.io/2APRGMS30/Test-Report/5G-WLAN-Antenna-Specification-7431471",
+      "stand": "Approval Sheet V1.0, Produktionsdatum 2023-05-25",
+      "abgerufen": "2026-10-19"
+    },
+    "cudy_produktseite_v1": {
+      "url": "https://www.cudy.com/products/m3000-1-0",
+      "stand": "Seite am 2026-10-19 (Produkt angelegt 2023-11-20)",
+      "abgerufen": "2026-10-19"
+    },
+    "cudy_produktseite_v2": {
+      "url": "https://www.cudy.com/products/m3000-2-0",
+      "stand": "Seite am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Hardware-Specs identisch mit 1.0 bis auf \"5 GHz Wi-Fi Streams: 2 Spatial Streams\" (1.0: \"with 3T3R\")"
+    },
+    "cudy_datenblatt": {
+      "url": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+      "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+      "abgerufen": "2026-10-19"
+    },
+    "cudy_download": {
+      "url": "https://www.cudy.com/pages/download-center/m3000-1-0",
+      "stand": "Seite am 2026-10-19 (neueste Firmware 2.5.28 vom 2026-08-14)",
+      "abgerufen": "2026-10-19"
+    },
+    "cudy_faq_openwrt": {
+      "url": "https://www.cudy.com/blogs/faq/openwrt-software-download",
+      "stand": "Hinweis 2025-11-24, Update 2025-12-24",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_forum_213882": {
+      "url": "https://forum.openwrt.org/t/openwrt-support-and-reviews-for-cudy-m3000-router/213882",
+      "stand": "Thread 2024-10-24 bis 2026-05-30",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "26 Beiträge, 20 geladen"
+    },
+    "openwrt_forum_231357": {
+      "url": "https://forum.openwrt.org/t/mediatek-filogic-add-support-for-cudy-m3000-v2/231357",
+      "stand": "Thread 2025-05-01 bis 2025-05-10",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_forum_247083": {
+      "url": "https://forum.openwrt.org/t/cudy-m3000-with-motorcomm-phy-how-to-fix-it/247083",
+      "stand": "Thread, abgerufen 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_forum_249734": {
+      "url": "https://forum.openwrt.org/t/802-11s-mode-missing-on-cudy-m3000/249734",
+      "stand": "Thread 2026-05-04 bis 2026-05-11",
+      "abgerufen": "2026-10-19"
+    },
+    "werkstatt_cudy_installation": {
+      "url": "router-werkstatt/docs/cudy-installation.md",
+      "stand": "Commit a9781bd vom 2026-10-15 (Tabelle Stand 15.10.2026)",
+      "abgerufen": "2026-10-19"
+    },
+    "werkstatt_rtl8221b": {
+      "url": "router-werkstatt/docs/rtl8221b-2g5-wan-intern.md",
+      "stand": "Commit 998ec38 vom 2026-10-16 (Tabelle Stand 14.09.2026)",
+      "abgerufen": "2026-10-19"
+    },
+    "werkstatt_erstinstallation": {
+      "url": "router-werkstatt/docs/erstinstallation-ohne-factory.md",
+      "stand": "Commit 0d84e25 vom 2026-10-10",
+      "abgerufen": "2026-10-19"
+    }
+  },
+  "roh": {
+    "toh": {
+      "treffer": null,
+      "hinweis": "Kein Eintrag im Dump 2026-10-18",
+      "kandidaten_toh_suche": [
+        "Cudy WR1000 v1",
+        "Cudy X6 v1,v1.1",
+        "Cudy WR1300 v1",
+        "Cudy WR3000 v1",
+        "Cudy WR2100",
+        "Cudy WR1300 v2,v3"
+      ]
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi Router",
+      "Brand": "Cudy",
+      "Model": "M3000",
+      "Versions": "v1, v2 (old variant)",
+      "FCCID_urls": "https://fcc.io/2APRGMS30",
+      "Availability_availability": "Available 2024",
+      "Where available": "amazon.com",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=20e4a18feb3f766b0f6ebec1afc154b345398a7a",
+      "Supported Since Rel_releasesince": "23.05.4",
+      "Supported Current Rel_releasecurrent": "25.12.5",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "mediatek",
+      "Subtarget": "filogic",
+      "Package architecture_pkg-arch": "aarch64_cortex-a53",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "MediaTek MT7981BA",
+      "CPU Cores_numcores_": "2",
+      "CPU MHz": "1300",
+      "Flash MB_mbflashs": "128NAND",
+      "RAM MB_mbram": "256",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "1",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "-",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "Realtek RTL8221B 2.5Gbe Phy",
+      "WLAN Hardwares": "MediaTek MT7981BA, MediaTek MT7976CN",
+      "WLAN 2.4GHz_wlan24": "b/g/n/ax",
+      "WLAN 5.0GHz_wlan50": "a/n/ac/ax",
+      "WLAN 6.0GHz_wlan60": "-",
+      "WLAN 60.0GHz_wlan60g": "-",
+      "WLAN Comments_": "2.4GHz: 2x2:2 MIMO, 5GHz: 2X3:2 MIMO",
+      "WLAN driver_wlan-drivers": "mt76",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "No",
+      "LED count_numled": "1",
+      "Button count_numbutton": "2",
+      "GPIOs_numgpio": "¿",
+      "Power Supply": "12 VDC, 1A via barrel",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:cudy:m3000",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "M3000",
+      "Git search_search-gits": "M3000",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+      "WikiDevi ID_hwinfo-ids": "Cudy_M3000",
+      "OEM Device Homepage URL_url": "https://www.cudy.com/products/m3000-1-0",
+      "Firmware OEM Stock URL_url": "https://www.cudy.com/pages/download-center/m3000-1-0",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/mediatek/filogic/openwrt-25.12.5-mediatek-filogic-cudy_m3000-v1-initramfs-kernel.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/mediatek/filogic/openwrt-25.12.5-mediatek-filogic-cudy_m3000-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-cudy_m3000-v1-initramfs-kernel.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-cudy_m3000-v1-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "see git-commit",
+      "Comment installation": "Need a signed OpenWrt intermediary image from Cudy before installing official OpenWrt image.  See Device Page for more info.",
+      "Recovery method(s)_method-recoverys": "see git-commit",
+      "Comment recovery": "",
+      "Picture_img100s": "media:cudy:cudy-m3000v1-front.png",
+      "Comments_": "V1 has black case -but- V2 has white case.  Not tri-band, best with wired backhaul.  Finally, some newer V2 variant is using a different 2.5G PHY chip \"Motorcomm YT8821\" as its WAN port.   See Device Page for more info."
+    },
+    "openwrt_wiki": {
+      "einleitung": "Cudy M3000 is a WiFi-6 Mesh system having 1x2.5 Gigabit port + 1x1 Gigabit port. It may be sold in solo, two-pack or three-pack bundle. Sometimes, the selling name includes AX3000 like in \"Cudy AX3000 Whole Home Mesh WiFi System M3000\".",
+      "v1": "M3000 V1 model is in black color but has already reached EOL.",
+      "v2": "M3000 V2 model is in white color and is still available for sale. There are two variants of V2 model, distinguished by the 2.5g PHY chip being used in the WAN port.",
+      "phy_unterscheidung": "If you have a black color V1 model, then it has Realtek RTL8221B PHY chip. If you have a white color V2 model, you can determine the 2.5g PHY chip model based on instructions per commit message 45b51eb (System Log nach rtl8221b bzw. yt8821 durchsuchen).",
+      "yt8821_hinweis": "As of Jan 2026, a new variant of M3000 V2 device was shipped with new WAN PHY chip (Motorcomm YT8821 2.5GbE). This new variant is ONLY supported in version 25.12.1 and Main Snapshot ... PR 22259 & PR 22423.",
+      "oem_easy_installation": "Reset router to factory defaults; Cudy-signed OpenWrt image (Google Drive oder Cudy-Support); http://192.168.10.1/, Passwort setzen; http://192.168.10.1/cgi-bin/luci/admin/panel -> Firmware -> Cudy-signiertes Image hochladen -> Proceed; danach 192.168.1.1, offizielles sysupgrade-Image flashen",
+      "tftp": "FIXME-Vorlage, keine Werte",
+      "serial": "FIXME-Vorlage, nur EXAMPLE 115200, 8N1, 3.3V",
+      "notes": [
+        "https://forum.openwrt.org/t/openwrt-support-and-reviews-for-cudy-m3000-router/213882",
+        "https://forum.openwrt.org/t/mediatek-filogic-add-support-for-cudy-m3000-v2/231357",
+        "https://forum.openwrt.org/t/cudy-m3000-with-motorcomm-phy-how-to-fix-it/247083",
+        "https://forum.openwrt.org/t/802-11s-mode-missing-on-cudy-m3000/249734",
+        "https://github.com/openwrt/openwrt/pull/23274 (U-Boot layout, merged in main)"
+      ],
+      "tags": "U-boot mediatek filogic 2core ARMv8 MT7981 \"no switch\" 2port 2.5GigabitEthernet GigabitEthernet 2WNIC 2x2 802.11bgn 802.11anac 802.11ax wifi6 InternalAntenna 256ram 128NAND hwVLAN 0USB serial 12v_powered"
+    },
+    "openwrt_git_support": {
+      "sha": "20e4a18feb3f766b0f6ebec1afc154b345398a7a",
+      "autor": "Leon M. Busch-George",
+      "autor_datum": "2024-01-12T15:10:40Z",
+      "commit_datum": "2024-05-11T15:18:51Z",
+      "nachricht": "mediatek: filogic: add support for Cudy M3000 v1\n\nHardware:\n  SoC:     MT7981b\n  RAM:     256 MB\n  Flash:   128 MB SPI NAND\n  Ethernet:\n    1x 2.5Gbps (rtl8221b)\n    1x 1Gbps (integrated phy)\n  WiFi:    2x2 MT7981\n  Buttons: Reset, WPS\n  LED:     1x multicolor\n\nSolder on UART:\n  - remove rubber ring on the bottom\n  - remove screws\n  - pull up the cylinder, maybe help by push on an ethernet socket with a screwdriver\n  - remove the (3) screws holding the board in the frame\n  - remove the board from the frame to get to the screws for the silver, flat heat shield\n  - remove the (3) screws holding the heat shield\n  - solder UART pins to the back of the board\n    - make sure to have the pins point out on side with the black, finned heat spread\n    - the markings for the pins are going to be below the silver heat shield\n    - Vcc is not needed\n\nIf you don't intend on using the UART outside of the installation process, you might not\nwant to solder:\n\n  - carefully scrape off the thin layer of epoxy on the holes (not the copper)\n  - place your pin header with the UART attached in the holes\n  - the pins, starting with the one closest to the socket:\n    - Vcc (not required)\n    - GND\n    - RX\n    - TX\n  - either wedge the header or hold it with your fingers so that the pins stay in contact with the board\n\nInstallation (UART):\n  - attach an Ethernet cable to the 1Gbps port (black) on the router\n  - hold the reset button while powering the router\n  - press CTRL-C or wait for the timeout to get to the U-Boot prompt\n  - prepare a TFTP server on the network to supply ..-initramfs-kernel.bin\n  - use 'tftpboot' in the U-Boot shell to pull the image\n  - boot the image using 'bootm'\n  - push the ..-sysupgrade to the router using your preferred method\n  - perform the upgrade with 'sysupgrade -n'\n\nThere is a recovery mechanism that involves fetching a file called 'recovery.bin' but that is not understood yet.\n\nSigned-off-by: Leon M. Busch-George <leon@georgemail.eu>",
+      "dateien": [
+        "target/linux/mediatek/base-files/lib/preinit/05_set_preinit_iface",
+        "target/linux/mediatek/dts/mt7981b-cudy-m3000-v1.dts",
+        "target/linux/mediatek/filogic/base-files/etc/board.d/02_network",
+        "target/linux/mediatek/filogic/base-files/etc/hotplug.d/ieee80211/11_fix_wifi_mac",
+        "target/linux/mediatek/image/filogic.mk"
+      ]
+    },
+    "openwrt_git_mac_a55ab9e": {
+      "sha": "a55ab9e1343e85021253e9c55f67adf33ad68f09",
+      "autor": "Leon M. Busch-George",
+      "autor_datum": "2024-05-17T18:10:25Z",
+      "commit_datum": "2024-05-25T10:41:26Z",
+      "nachricht": "mediatek: filogic: prevent faulty mac address assignment\n\nThe vendor U-Boot on the Cudy M3000 and the Yuncore AX835 assign random\nmac addresses on boot and set the 'local-mac-address' property which\nprevents Openwrt from assigning the correct address from evmem.\n\nThis patch removes the alias for ethernet0 so that U-Boot doesn't add the\nproperty, removes the workaround from 02_network, and adds back the nvmem\ndefinition for the M3000.\n\nSigned-off-by: Leon M. Busch-George <leon@georgemail.eu>",
+      "dateien": [
+        "target/linux/mediatek/dts/mt7981b-cudy-m3000-v1.dts",
+        "target/linux/mediatek/dts/mt7981b-yuncore-ax835.dts",
+        "target/linux/mediatek/filogic/base-files/etc/board.d/02_network"
+      ]
+    },
+    "openwrt_git_mac_687a253": {
+      "sha": "687a2535d55f84a0daa2038b7e8736313cb2804e",
+      "autor": "Maximilian Baumgartner",
+      "autor_datum": "2026-01-15T22:46:46Z",
+      "commit_datum": "2026-01-18T10:36:17Z",
+      "nachricht": "mediatek: fix gmac definition for cudy m3000\n\nThe gmac definition has an offset of 1 compared to the label MAC.\nFixes: a55ab9e1343e85021253e9c55f67adf33ad68f09 (\"mediatek: filogic: prevent faulty mac address assignment\")\n\nSigned-off-by: Maximilian Baumgartner <aufhaxer@googlemail.com>\nLink: https://github.com/openwrt/openwrt/pull/21560\nSigned-off-by: Robert Marko <robimarko@gmail.com>",
+      "dateien": [
+        "target/linux/mediatek/dts/mt7981b-cudy-m3000-v1.dts"
+      ]
+    },
+    "openwrt_git_yt8821": {
+      "sha": "45b51ebaff51d2a49d149e9011717abb1b032683",
+      "autor": "Jakub Vaněk",
+      "autor_datum": "2026-03-02T20:14:28Z",
+      "commit_datum": "2026-03-14T00:40:32Z",
+      "nachricht": "mediatek: filogic: add support for Cudy M3000 w/ YT8821 PHY\n\nThe hardware is very close the the Cudy M3000 v1 (see commit\n20e4a18feb3f). However, the Motorcomm YT8821 PHY is tricky\nto support because of a MDIO address collision within the router.\n\nSpecification:\n - MT7981BA CPU: dual-core ARM Cortex-A53 @ 1.3 GHz\n - 256 MiB RAM\n - 128 MiB SPI NAND\n - Ethernet:\n   - 1x 1GbE LAN port driven by the internal MT7981 PHY\n   - 1x 2.5GbE WAN port driven by the Motorcomm YT8821\n - WiFi:\n   - MT7981BA 2.4 GHz WiFi with 2x2:2 MIMO\n   - MT7981BA 5 GHz WiFi with 2x3:2 MIMO\n - Buttons: Reset, WPS\n - LED: 1x combined red/white\n\nHow to know if you have the a router with the YT8821 PHY:\n - Boot the router into the vendor's firmware. Go to Diagnostic Tools\n   -> System Log. Try searching for \"rtl8221b\".\n - If there are some matches, you have the Cudy M3000 router with\n   the Realtek PHY and you should NOT use the device defined in this\n   commit. Instead, you should use the device defined in\n   mt7981b-cudy-m3000-v1.dts.\n - If there are no matches, try searching for \"yt8821\". If that\n   matches something, you have the Cudy M3000 with the Motorcomm PHY\n   and you should use this device tree\n   (mt7981b-cudy-m3000-v2-yt8821.dts).\n - If even the yt8821 string did not match anything, then something\n   is wrong. Rebooting the router might help (the system log would\n   be refreshed).\n\nInstallation via the Cudy web UI:\n - Download the signed intermediary firmware from\n   https://drive.google.com/drive/folders/1BKVarlwlNxf7uJUtRhuMGUqeCa5KpMnj\n - Flash the intermediary firmware using the Cudy web UI\n - Connect a PC/laptop to the \"1Gbps LAN\" port\n - Open http://192.168.1.1 in your browser, log in\n   (the password should be empty)\n - Flash your desired OpenWrt firmware via LuCI\n - The router should reboot into the desired firmware\n\nHow to access UART (citing from 20e4a18feb3f):\n - remove rubber ring on the bottom\n - remove screws\n - pull up the cylinder, maybe help by push on an ethernet socket\n   with a screwdriver\n - remove the (3) screws holding the board in the frame\n - remove the board from the frame to get to the screws for the\n   silver, flat heat shield\n - remove the (3) screws holding the heat shield\n - solder UART pins to the back of the board\n   - make sure to have the pins point out on side with the black,\n     finned heat spread\n   - the markings for the pins are going to be below the silver heat\n     shield\n   - Vcc is not needed\n - the UART parameters are 115200 baud, 8n1\n\nInstallation via UART (citing from 20e4a18feb3f):\n - attach an Ethernet cable to the \"1Gbps LAN\" port on the router\n - hold the reset button while powering the router\n - press CTRL-C or wait for the timeout to get to the U-Boot prompt\n - prepare a TFTP server on the network to supply ..-initramfs-kernel.bin\n - use 'tftpboot 0x46000000 ..-initramfs-kernel.bin' in the U-Boot\n   shell to pull the image (change the file name accordingly)\n - boot the image using 'bootm 0x46000000'\n - push the ..-sysupgrade to the router using your preferred method\n - perform the upgrade with 'sysupgrade -n'\n\nSigned-off-by: Jakub Vaněk <linuxtardis@gmail.com>\nLink: https://github.com/openwrt/openwrt/pull/22259\nSigned-off-by: Hauke Mehrtens <hauke@hauke-m.de>",
+      "dateien": [
+        "target/linux/mediatek/base-files/lib/preinit/05_set_preinit_iface",
+        "target/linux/mediatek/dts/mt7981b-cudy-m3000-v1.dts",
+        "target/linux/mediatek/dts/mt7981b-cudy-m3000-v2-yt8821.dts",
+        "target/linux/mediatek/dts/mt7981b-cudy-m3000.dtsi",
+        "target/linux/mediatek/filogic/base-files/etc/board.d/02_network",
+        "target/linux/mediatek/filogic/base-files/etc/hotplug.d/ieee80211/11_fix_wifi_mac",
+        "target/linux/mediatek/image/filogic.mk"
+      ]
+    },
+    "openwrt_git_v1v2": {
+      "sha": "51abd131d1acaaf7f7eb487376309ce52b814f81",
+      "autor": "Jakub Vaněk",
+      "autor_datum": "2026-03-03T21:41:28Z",
+      "commit_datum": "2026-03-14T00:40:32Z",
+      "nachricht": "mediatek: filogic: rename Cudy M3000 v1 to v1/v2\n\nThe Cudy M3000 v1/v2 seem to have mostly identical hardware.\nThe M3000 v1 OpenWrt images work on the M3000 v2 (excluding\nthe v2 parts with a different PHY). Cudy also distributes one\nfirmware image that supports both routers.\n\nRename the human-readable device variant to \"v1/v2\" to match this.\nDon't change the compatible property as that hooks into the\nattended sysupgrade process.\n\nThe recent flash and PHY changes don't seem to be related to the v1/v2\nsplit. There exist M3000 v2 with the Realtek PHY, see e.g.\nhttps://github.com/openwrt/openwrt/pull/21584#issuecomment-3864992555\n\nSigned-off-by: Jakub Vaněk <linuxtardis@gmail.com>\nLink: https://github.com/openwrt/openwrt/pull/22259\nSigned-off-by: Hauke Mehrtens <hauke@hauke-m.de>",
+      "dateien": [
+        "target/linux/mediatek/dts/mt7981b-cudy-m3000-v1.dts",
+        "target/linux/mediatek/image/filogic.mk"
+      ]
+    },
+    "openwrt_git_ubootmod": {
+      "sha": "6a08c6594989ab13e773f60b2a18df930ced73c9",
+      "autor": "Dmitry Mostovoy",
+      "autor_datum": "2026-05-09T15:56:40Z",
+      "commit_datum": "2026-07-01T07:32:36Z",
+      "nachricht": "mediatek: add cudy m3000-v1 ubootmod\n\nRAM: ESMT M15T2G16128A-DEB DDR3 1866 MT/s\n\nThis allows us to use the full size of nand,\nwhich extends ubi size from 64Mb to 122.25Mb.\n\n1. Log in to the device and backup all the partitions,\nespecially unique \"Factory\" and \"bdinfo\" partitions\nfrom System -> Backup / Flash Firmware -> Save mtdblock contents.\n2. Install kmod-mtd-rw to unlock mtd partitions for writing\n  apk update && apk add kmod-mtd-rw && insmod mtd-rw i_want_a_brick=1\n\n3. Write new OpenWrt (U-Boot Layout) \"BL2\" and \"FIP\":\n  mtd -e BL2 write openwrt-mediatek-filogic-cudy_m3000-v1-ubootmod-preloader.bin BL2\n  mtd -e FIP write openwrt-mediatek-filogic-cudy_m3000-v1-ubootmod-bl31-uboot.fip FIP\n4. Set static IP on your PC: \"192.168.1.254\", gateway \"192.168.1.1\"\n5. Serve openwrt-mediatek-filogic-cudy_m3000-v1-ubootmod-initramfs-recovery.itb\nusing TFTP server.\n6. Connect Router LAN with PC LAN.\n7. Cut off the power and re-engage, wait for TFTP recovery to complete.\n8. After OpenWrt initramfs recovery has booted,\nclean \"/dev/mtd5\" ubi partition to utilize maximum of free space:\n  ubidetach -p /dev/mtd5; ubiformat /dev/mtd5 -y; ubiattach -p /dev/mtd5\n  ubimkvol /dev/ubi0 -n 0 -N ubootenv -s 128KiB\n  ubimkvol /dev/ubi0 -n 1 -N ubootenv2 -s 128KiB\n9. Perform sysupgrade.\n\nSigned-off-by: Dmitry Mostovoy <stavultras@gmail.com>\nLink: https://github.com/openwrt/openwrt/pull/23274\nSigned-off-by: Jonas Jelonek <jelonek.jonas@gmail.com>",
+      "dateien": [
+        "package/boot/uboot-mediatek/Makefile",
+        "package/boot/uboot-mediatek/patches/468-add-cudy_m3000-v1.patch",
+        "package/boot/uboot-tools/uboot-envtools/files/mediatek_filogic",
+        "target/linux/mediatek/dts/mt7981b-cudy-m3000-v1-ubootmod.dts",
+        "target/linux/mediatek/dts/mt7981b-cudy-m3000-v1.dts",
+        "target/linux/mediatek/dts/mt7981b-cudy-m3000-v1.dtsi",
+        "target/linux/mediatek/dts/mt7981b-cudy-m3000.dtsi",
+        "target/linux/mediatek/filogic/base-files/etc/board.d/02_network",
+        "target/linux/mediatek/filogic/base-files/etc/hotplug.d/ieee80211/11_fix_wifi_mac",
+        "target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh",
+        "target/linux/mediatek/image/filogic.mk"
+      ]
+    },
+    "openwrt_git_suche": [
+      {
+        "sha": "395252be087b",
+        "datum": "2026-07-01",
+        "titel": "mediatek: add cudy m3000-v2-yt8821 ubootmod"
+      },
+      {
+        "sha": "6a08c6594989",
+        "datum": "2026-07-01",
+        "titel": "mediatek: add cudy m3000-v1 ubootmod"
+      },
+      {
+        "sha": "51abd131d1ac",
+        "datum": "2026-03-14",
+        "titel": "mediatek: filogic: rename Cudy M3000 v1 to v1/v2"
+      },
+      {
+        "sha": "8ef564bcda6d",
+        "datum": "2026-03-14",
+        "titel": "kernel: add patch for YT8821 address collision"
+      },
+      {
+        "sha": "45b51ebaff51",
+        "datum": "2026-03-14",
+        "titel": "mediatek: filogic: add support for Cudy M3000 w/ YT8821 PHY"
+      },
+      {
+        "sha": "687a2535d55f",
+        "datum": "2026-01-18",
+        "titel": "mediatek: fix gmac definition for cudy m3000"
+      },
+      {
+        "sha": "a55ab9e1343e",
+        "datum": "2024-05-25",
+        "titel": "mediatek: filogic: prevent faulty mac address assignment"
+      },
+      {
+        "sha": "20e4a18feb3f",
+        "datum": "2024-05-11",
+        "titel": "mediatek: filogic: add support for Cudy M3000 v1"
+      }
+    ],
+    "openwrt_dts": {
+      "model": "Cudy M3000 v1/v2",
+      "compatible": "cudy,m3000-v1, mediatek,mt7981",
+      "stdout_path": "serial0:115200n8",
+      "label_mac_device": "gmac0",
+      "gpio_keys": {
+        "reset": "pio 1, KEY_RESTART",
+        "wps": "pio 0, KEY_WPS_BUTTON"
+      },
+      "leds": {
+        "internet-white (led_status, boot/failsafe/running/upgrade)": "pio 10",
+        "internet-red": "pio 4",
+        "wan (grün)": "pio 5",
+        "lan (grün)": "pio 9"
+      },
+      "gmac0": "phy-mode 2500base-x, phy-handle wan_phy (ethernet-phy-ieee802.3-c45, MDIO-Adresse 1, Reset pio 39, IRQ pio 38), MAC bdinfo 0xde00 +0",
+      "gmac1": "phy-mode gmii, int_gbe_phy, MAC bdinfo 0xde00 +1",
+      "spi_nand": "spi-nand, 52 MHz, Quad; NMBM aktiv (bmt-max-reserved-blocks 64)",
+      "partitionen": {
+        "BL2": "0x0-0x100000 (ro)",
+        "u-boot-env": "0x100000, 0x80000",
+        "Factory": "0x180000, 0x200000 (ro, WLAN-EEPROM)",
+        "bdinfo": "0x380000, 0x40000 (ro, MAC 0xde00)",
+        "FIP": "0x3c0000, 0x200000 (ro)",
+        "ubi": "0x5c0000, 0x4000000 (64 MiB)"
+      },
+      "watchdog": "okay"
+    },
+    "openwrt_image_mk": {
+      "Device/cudy_m3000-v1": {
+        "DEVICE_VENDOR": "Cudy",
+        "DEVICE_MODEL": "M3000",
+        "DEVICE_VARIANT": "v1/v2",
+        "DEVICE_DTS": "mt7981b-cudy-m3000-v1",
+        "SUPPORTED_DEVICES": "+= R37",
+        "BLOCKSIZE": "128k",
+        "PAGESIZE": "2048",
+        "IMAGE_SIZE": "65536k",
+        "KERNEL_IN_UBI": "1",
+        "IMAGES": "sysupgrade.bin",
+        "DEVICE_PACKAGES": "kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware"
+      },
+      "Device/cudy_m3000-v1-ubootmod": {
+        "DEVICE_VARIANT": "v1/v2 (OpenWrt U-Boot layout)",
+        "IMAGES": "sysupgrade.itb",
+        "UBOOTENV_IN_UBI": "1"
+      },
+      "Device/cudy_m3000-v2-yt8821": {
+        "DEVICE_VARIANT": "v2 with Motorcomm YT8821",
+        "SUPPORTED_DEVICES": "+= R37",
+        "IMAGE_SIZE": "65536k"
+      },
+      "Device/cudy_m3000-v2-yt8821-ubootmod": {
+        "DEVICE_VARIANT": "v2 with Motorcomm YT8821 (OpenWrt U-Boot layout)",
+        "DEVICE_PACKAGES": "... kmod-phy-motorcomm"
+      }
+    },
+    "openwrt_02_network": {
+      "cudy,m3000-v1": "ucidef_set_interfaces_lan_wan eth1 eth0 (LAN = eth1 = gmac1 interner GbE-PHY, WAN = eth0 = gmac0 2.5G-PHY)"
+    },
+    "gluon_targets": {
+      "device": "cudy-m3000-v1",
+      "openwrt_profil": "cudy_m3000-v1",
+      "factory": false,
+      "erstes_release": "v2025.1.1 (veröffentlicht 2026-05-04)",
+      "commit": "a8b0eb3baaa4 (2026-01-23), Merge dbacb7fab85a (PR #3663, 2026-01-25)"
+    },
+    "gluon_pr_3663": {
+      "titel": "mediatek-filogic: add support for Cudy M3000 v1",
+      "autor": "mbaumga",
+      "erstellt": "2026-01-11T21:57:32Z",
+      "gemergt": "2026-01-25T22:35:44Z",
+      "checkliste": "- [X] Must be flashable from vendor firmware\r\n  - [ ] Web interface\r\n  - [ ] TFTP\r\n  - [X] Other: Web Based via Intermediate Firmware. [German Instructions](https://forum.darmstadt.freifunk.net/t/installation-cudy-tr3000/1010) | [English Instructions](https://openwrt.org/toh/cudy/tr3000#oem_easy_installation) (Similar to TR3000 v1)\r\n- [X] Must support upgrade mechanism\r\n  - [X] Must have working sysupgrade\r\n    - [X] Must keep/forget configuration (`sysupgrade [-n]`, `firstboot`)\r\n  - [X] Gluon profile name matches autoupdater image name\r\n        (`lua -e 'print(require(\"platform_info\").get_image_name())'`)\r\n- [X] Reset/WPS/... button must return device into config mode\r\n- [-] Primary MAC address should match address on device label (or packaging) (Currently off by +1)\r\n      (https://gluon.readthedocs.io/en/latest/dev/hardware.html#hardware-support-in-packages)\r\n  - When re-adding a device that was supported by an earlier version of Gluon, a\r\n    factory reset must be performed before checking the primary MAC address, as\r\n    the setting from the old version is not reset otherwise.\r\n- Wired network\r\n  - [X] should support all network ports on the device\r\n  - [X] must have correct port assignment (WAN/LAN)\r\n    - if there are multiple ports but no WAN port:\r\n      - the PoE input should be WAN, all other ports LAN\r\n      - otherwise the first port should be declared as WAN, all other ports LAN\r\n- Wireless network (if applicable)\r\n  - [X] Association with AP must be possible on all radios\r\n  - [X] Association with 802.11s mesh must work on all radios \r\n  - [X] AP+mesh mode must work in parallel on all radios\r\n- LED mapping\r\n  - Power/system LED\r\n    - [X] Lit while the device is on\r\n    - [X] Should display config mode blink sequence \r\n          (https://gluon.readthedocs.io/en/latest/features/configmode.html)\r\n  - Radio LEDs\r\n    - [-] Should map to their respective radio\r\n    - [-] Should show activity\r\n  - Switch port LEDs\r\n    - [-] Should map to their respective port (or switch, if only one led present) \r\n    - [-] Should show link state and activity\r\n- Outdoor devices only:\r\n  - [-] Added board name to `is_outdoor_device` function in `package/gluon-core/luasrc/usr/lib/lua/gluon/platform.lua`\r\n- Cellular devices only:\r\n  - [-] Added board name to `is_cellular_device` function in `package/gluon-core/luasrc/usr/lib/lua/gluon/platform.lua`\r\n  - [-] Added board name with modem setup function `setup_ncm_qmi` to `package/gluon-core/luasrc/lib/gluon/upgrade/250-cellular`\r\n- Docs:\r\n  - [X] Added Device to `docs/user/supported_devices.rst`",
+      "diskussion": "mbaumga 2026-01-11: MAC off by +1 wie beim AP1300 Outdoor; rotanid: gmac-Zeilen im DTS vertauscht; mbaumga: nach Tausch passt WAN-MAC zum Label; Upstream-Fix openwrt PR 21560 (gemergt, nach 25.12 und 24.10 rückportiert)"
+    },
+    "wikidevi": {
+      "brand": "Cudy",
+      "model": "M3000",
+      "revision": "(Rev1.0)",
+      "series": "AX3000",
+      "manuf_country": "China",
+      "is_manuf": "No",
+      "availability": "now",
+      "fcc_date": "07/01/2024",
+      "fcc_id": "2APRGMS30",
+      "ic_id": "28108-MS30",
+      "type": "wireless router, wireless system, mesh node",
+      "pwr_v": "12",
+      "pwr_amp": "1",
+      "pwr_conn": "barrel",
+      "cpu1_brand": "MediaTek",
+      "cpu1_model": "MT7981BA",
+      "cpu1_cspeed": "1.3 GHz",
+      "cpu1_cores": "2",
+      "fla1": "128",
+      "fla1_brand": "ESMT",
+      "fla1_model": "F50L1G41LB-104",
+      "ram1": "256",
+      "ram1_brand": "ESMT",
+      "ram1_model": "M15T2G16128A-DEB",
+      "serial": "yes,, 4-pin header,, 3.3V TTL,, (115200 8N1),, J6",
+      "wi1_chip1_brand": "MediaTek",
+      "wi1_chip1_model": "MT7981BA",
+      "wi1_chip2_brand": "MediaTek",
+      "wi1_chip2_model": "MT7976CN",
+      "wi1_802dot11_protocols": "bgn+ax",
+      "wi1_ant_conn": "U.FL (internal)",
+      "wi1_txchains": "2",
+      "wi1_rxchains": "2",
+      "wi1_sstreams": "2",
+      "wi2_chip1_brand": "MediaTek",
+      "wi2_chip1_model": "MT7981BA",
+      "wi2_chip2_brand": "MediaTek",
+      "wi2_chip2_model": "MT7976CN",
+      "wi2_802dot11_protocols": "an+ac+ax",
+      "wi2_ant_conn": "U.FL (internal)",
+      "wi2_txchains": "2",
+      "wi2_rxchains": "3",
+      "wi2_sstreams": "2",
+      "eth_cpu": "true",
+      "eth_chip2_brand": "Realtek",
+      "eth_chip2_model": "RTL8221B",
+      "sw_cpu": "true",
+      "lan_speed": "1GbE",
+      "lan_ports": "1",
+      "wan_speed": "2.5GbE",
+      "wan_ports": "1",
+      "flags": "Wi-Fi 6, HEW160, MU-MIMO, WPA3, Mesh, heatsink",
+      "802dot11_protocols": "abgn+ac+ax",
+      "default_ssid": "Cudy-XXXX, Cudy-XXXX-5G",
+      "default_ssid_regex": "^Cudy-[A-F0-9}{4}$,,, ^Cudy-[A-F0-9]{4}-5G$",
+      "default_ip": "192.168.10.1",
+      "default_pass": "admin",
+      "oui_eth": "B4:4B:D6",
+      "oui": "B4:4B:D6"
+    },
+    "deviwiki": {
+      "treffer": null,
+      "hinweis": "Seite Cudy_M3000 404, Volltextsuche ohne Treffer"
+    },
+    "fcc": {
+      "fcc_id": "2APRGMS30",
+      "grantee": "Shenzhen Cudy Technology Co., Ltd. (2APRG)",
+      "product_code": "MS30",
+      "bezeichnung": "AX3000 Whole-Home Wi-Fi 6 Mesh System with 2.5G Port",
+      "testlabor": "BTL Inc.",
+      "tcb": "Timco Engineering, Inc.",
+      "grant_datum": "2024-07-01",
+      "antrag_datum": "2024-06-27",
+      "zweck": "Original Equipment",
+      "frequenzen_ausgang_w": {
+        "2412-2462 MHz": "0.3811 (15C)",
+        "5180-5240 MHz": "0.3681 (15E)",
+        "5260-5320 MHz": "0.092 (15E)",
+        "5500-5700 MHz": "0.0908 (15E)",
+        "5745-5825 MHz": "0.3681 (15E)"
+      },
+      "grant_kommentar": "Power listed is conducted. ... separation distance of at least 25cm ... Device supports 20, 40 and 80MHz bandwidths.",
+      "langzeit_vertraulich": "Ja (Blockschaltbild, Schaltplan, Operational Description, Software security nur Metadaten)",
+      "composite_device": "Yes",
+      "dokumente": [
+        "User Manual 2024-07-01 (942.2 KB / 941.4 KB)",
+        "Internal Photos (4.9 MB)",
+        "External Photos (1.8 MB)",
+        "Label Location (912.6 KB, zweimal)",
+        "Test Setup Photos (1.4 MB), Test Setup Photos_DFS (301.2 KB)",
+        "2.4G Report_1/_2/_3 (5.2/5.3/1.1 MB)",
+        "5G WLAN Antenna Specification (530 KB)",
+        "5G WLAN Test Report Part 1-4 (5.2/5.3/5.4/1.9 MB)",
+        "Antenna Specification_1 (558.4 KB), Antenna Specification_2 (479.3 KB)",
+        "DFS Report Part 1/2 (5.4/1.1 MB)",
+        "Attestation Statements, SDOC, US Agent, Authority, Confidentiality, WIFI Channel 12 and 13 Declaration",
+        "MPE Report (158.7 KB)",
+        "Block Diagram, Schematic, Operational Description, Software security (nur Metadaten)"
+      ]
+    },
+    "fcc_label": {
+      "dateiname": "壳体标贴,银河,Cudy,M3000_W(REV1.0),53.5x27.5mm,80g艾利铜版纸+雾膜.单黑印刷[ZC].pdf",
+      "text": "AX3000 Whole-Home Wi-Fi 6 Mesh System with 2.5G Port / Model: M3000 / Default Access: http://cudy.net/ / Management IP: 192.168.10.1 / Power: 12V 1A / IC: 28108-MS30 / FCC ID: 2APRGMS30 / 5GHz Wi-Fi: Cudy-xxxx-5G / 2.4GHz Wi-Fi: Cudy-xxxx / Password: xxxxxxxx / MAC: B44BD6200054 / SN: M3000221700001 EU1.0",
+      "vorlage": "M3000产品标贴, 物料号 820200140, 53.5x27.5mm, V2(删除管理密码，新增IC认证号) [V2: Admin-Passwort entfernt, IC-Nummer ergänzt]",
+      "lage": "Unterseite (Foto Seite 2: weißes Gerät, Etikett im runden Bodenteil)"
+    },
+    "fcc_handbuch": {
+      "titel": "Quick Installation Guide M3000, AX3000 Whole-Home Wi-Fi 6 Mesh System with 2.5G Port (Druck-Nr. 810600230)",
+      "anschluss": "Port 1 des Mesh-Geräts an Modem/Wanddose; Satellit per Kabel: Port 2 des Hauptgeräts an Port 1 des Satelliten",
+      "led": "System-LED: aus / rot blinkend / rot / weiß blinkend / weiß (fertig = dauerhaft weiß)",
+      "knoepfe": "Pair, RESET",
+      "netzteil": "I.T.E. Power Supply DSA-12PF11-12 FUS 120100",
+      "ce_max_leistung": {
+        "2400-2483.5 MHz": "20 dBm",
+        "5150-5250 MHz": "23 dBm",
+        "5250-5350 MHz": "23 dBm",
+        "5470-5725 MHz": "30 dBm"
+      },
+      "einsatz": "This device may only be used indoors in all EU member states and EFTA countries, and Northern Ireland.",
+      "rf_abstand": "20 cm"
+    },
+    "fcc_innenfotos": {
+      "aufbau": "Platine in Kunststoffrahmen im Rundgehäuse, Bodendeckel; 2 Abschirmhauben (silber) auf einer Seite, schwarzer Kühlkörper auf der anderen",
+      "antennen": "5G Ant. 1-3 und 2.4G Ant. 1-2 als Leiterplattenantennen mit Koaxkabel (weiß und schwarz), seitlich im Rahmen",
+      "soc": "MEDIATEK MT7981BA (Aufdruck 2321-AWSH)",
+      "ram": "ESMT M15T2G16128A-DEB (Aufdruck M15T2G16128A 2EB)",
+      "flash": "ESMT F50L1G41LB (U6, Aufdruck F50L1G41LB 2336)",
+      "wlan_rf": "U4 MediaTek MT7976CN (Aufdruck schlecht lesbar)",
+      "phy": "U15 neben der RJ45-Buchse, Realtek-Logo, Typ auf dem Foto nicht sicher lesbar",
+      "uart": "J6: 4 Durchkontaktierungen, unbestückt, Beschriftung TX RX GND VCC, Pin 1 (eckiges Pad) = TX, neben der Abschirmhaube SH1",
+      "luefter": "keiner zu sehen"
+    },
+    "fcc_aussenfotos": {
+      "geraete": "weißes Gerät (Seite 2, 4) und schwarzes Gerät mit rotem Ring oben (Seite 3)",
+      "rueckseite": "von oben nach unten: runder Knopf mit Ketten-Symbol (Pair/WPS), Reset-Loch \"RESET\", weiße RJ45 \"1Gbps LAN\" (Nr. 2), rote RJ45 \"2.5Gbps WAN\" (Nr. 1), runde DC-Buchse",
+      "etikett_weiss": "cudy AX3000 Whole-Home Wi-Fi 6 Mesh System with 2.5G Port / Model: M3000 / Default Access: http://cudy.net/ / Management IP: 192.168.10.1 / Password: admin / Power: 12V 1A / FCC ID: 2APRGMS30 / 5GHz Wi-Fi: Cudy-800E-5G / 2.4GHz Wi-Fi: Cudy-800E / MAC: 80AFCA30800E / SN: M3000240800102 US2.0",
+      "netzteil": "DEE VAN Switching Adapter, Model DSA-12PF11-12 FUS 120100, Input 100-240V~ 50/60Hz 0.3A, Output +12.0V 1.0A 12.0W, US-Stecker, Rundstecker"
+    },
+    "fcc_antenne_24": {
+      "hersteller": "Shenzhen South Star Technology",
+      "teilenummer": "3.N101.1077",
+      "spezifikation": "2.4G, 3.8dBi",
+      "gewinn_dbi_2400_2500": "3.80-4.25",
+      "material": "PCB",
+      "kabel": "1.37mm weiß",
+      "vswr": "<=2",
+      "impedanz": "50 Ohm",
+      "betriebstemperatur": "-30 bis +65 °C"
+    },
+    "fcc_antenne_5": {
+      "spezifikation": "5G, 5.05dBi",
+      "gewinn_dbi_5150_5850": "4.99-5.55",
+      "kabel": "1.37mm schwarz"
+    },
+    "cudy_produktseite_v1": {
+      "titel": "AX3000 2.5G Mesh Wi-Fi 6 System, M3000 1.0",
+      "beschreibung": "A mesh WiFi 6 system with five antennas ... Suitable for internet access up to 2.5 Gbps.",
+      "Model Version": "M3000 1.0",
+      "CPU Details": "1.3 GHz Dual-Core, ARM Cortex-A53",
+      "Flash/ROM": "128 MB (1 Gbit) NAND",
+      "DDR/RAM": "256 MB (2 Gbit) DDR3",
+      "5 GHz Wi-Fi Speed": "2402 Mbps",
+      "2.4 GHz Wi-Fi Speed": "574 Mbps",
+      "5 GHz Wi-Fi Streams": "2 Spatial Streams with 3T3R",
+      "2.4 GHz Wi-Fi Streams": "2 Spatial Streams",
+      "Wi-Fi Antennas": "5× Internal",
+      "FEM or PA/LNA": "5 GHz: 3× Internal, 2.4 GHz: 2× Internal",
+      "Beamforming": "ja",
+      "Range Performance": "Max: 220 m (722 ft)",
+      "Wall Performance": "Two wooden walls with thickness / One concrete wall with thickness",
+      "Indoor Coverage Reference": "2 Pack: 200 m² (2100 sq ft), 3 Pack: 270 m² (2900 sq ft)",
+      "2.5G RJ45 Ports": "1",
+      "Gigabit RJ45 Ports": "1",
+      "Ethernet Notes": "The 2.5G port is the WAN port, the Gigabit port is LAN port",
+      "LED": "System, Speed/Link/ACT of Ethernet Port",
+      "Physical Buttons": "WPS Button, Reset Button",
+      "Power Input Type": "DC Jack",
+      "Power Methods": "DC",
+      "Power Input": "12V⎓1A",
+      "Max Power Consumption (W)": "11.5W",
+      "Idle Power Consumption (W)": "4.2W",
+      "Power Adapter In the Box": "Input: 100-240V~, 50/60Hz, Output: 12V⎓1A",
+      "Environment": "Operating Temperature: 0 ℃ ~ 40 ℃; Storage Temperature: -40 ℃ ~ 70 ℃; Humidity: 10% ~ 90% non-condensing; Storage Humidity: 5% ~ 95% non-condensing",
+      "Certifications": "FCC, CE",
+      "Installation": "Desktop",
+      "Dimension": "Φ110×154.5 mm",
+      "Product Weight": "360 g (12.7 oz.)",
+      "Package Content": "M3000, Power Adapter, Ethernet Cable, Installation Guide",
+      "Retail Package Weight": "1-Pack 680 g, 2-Pack 1100 g, 3-Pack 1500 g / 1827 g",
+      "Retail Package Dimension": "1-Pack 145×130×265 mm, 2-Pack 330×130×265 mm, 3-Pack 380×130×265 mm",
+      "Units per Carton": "1-Pack 16, 2-Pack 8, 3-Pack 4",
+      "Wi-Fi Standards": "Wi-Fi 6",
+      "Max Wi-Fi Modulation": "1024-QAM",
+      "Wi-Fi Efficiency": "OFDMA, MU-MIMO, BSS Color",
+      "Max Capacity": "512",
+      "Recommended Client Upper Limit": "200",
+      "Wi-Fi Channel Width": "Auto/20/40/80/160 MHz",
+      "Wi-Fi Security": "WPA/WPA2/WPA3",
+      "Operation Modes": "Wi-Fi Router, Access Point, Range Extender, WISP, Client",
+      "Mesh": "Cudy Mesh",
+      "Mesh Backhaul": "Wireless Backhaul, Wired Backhaul",
+      "IP Versions": "IPv4/IPv6"
+    },
+    "cudy_produktseite_v2": {
+      "Model Version": "M3000 2.0",
+      "5 GHz Wi-Fi Streams": "2 Spatial Streams",
+      "sonst": "übrige Hardware-Specs wortgleich mit M3000 1.0"
+    },
+    "cudy_datenblatt": {
+      "titel": "Datasheet AX3000 2.5G Whole-Whole Mesh Wi-Fi 6 System | M3000",
+      "CPU Details": "1.3 GHz Dual-Core, ARM Cortex-A53",
+      "Flash/ROM": "128 MB (1 Gbit) NAND",
+      "DDR/RAM": "256 MB (2 Gbit) DDR3",
+      "5 GHz Wi-Fi Streams": "2T2R (2×2 MIMO)",
+      "2.4 GHz Wi-Fi Streams": "2T2R (2×2 MIMO)",
+      "Wi-Fi Antennas": "5× Internal",
+      "5 GHz Antenna Gain Max": "5.1dBi",
+      "2.4 GHz Antenna Gain Max": "4.2dBi",
+      "FEM or PA/LNA": "5 GHz: 2× Internal, 2.4 GHz: 2× Internal",
+      "Beamforming": "True",
+      "Range Performance": "Max: 220 m (722 ft)",
+      "Wall Performance": "Two wooden walls with thickness < 10 cm, One concrete wall < 20 cm or two concrete walls < 10 cm",
+      "Indoor Coverage Reference": "2 Pack: 200 m² (2150 sq ft), 3 Pack: 270 m² (2900 sq ft)",
+      "2.5G RJ45 Ports": "1",
+      "Gigabit RJ45 Ports": "1",
+      "Ethernet Notes": "The 2.5G port is the WAN port, the Gigabit port is LAN port",
+      "LED": "System, Speed/Link/ACT of Ethernet Port",
+      "Physical Buttons": "WPS Button, Reset Button",
+      "Power Input": "DC Jack",
+      "Power Methods": "DC",
+      "DC": "12V 1A",
+      "Power Adapter": "Input: 100 ~ 240 V, 50/60 Hz AC, Output: 12V 1A DC",
+      "Max Power Consumption (W)": "11.5W",
+      "Idle Power Consumption (W)": "4.2W",
+      "Environment": "Operating 0-40 ℃, Storage -40-70 ℃, Humidity 10-90% non-condensing, Storage Humidity 5-95%",
+      "Certifications": "FCC, CE",
+      "Installation": "Desktop",
+      "Dimension": "Φ110×154.5 mm",
+      "Product Weight": "360 g",
+      "Package Content": "M3000, Power Adapter, Ethernet Cable, Installation Guide",
+      "Highlights": "1.3 GHz Dual-Core CPU; 4-Stream Dual-Band Wi-Fi 6; 2402 Mbps + 574 Mbps; 200 Connected Devices; Fast Roaming; Cudy Mesh, VPN Server and Client; Multi-Band Simultaneous Backhaul; Cudy App, Cloud Control; TR069/TR098/TR181/TR111; Highest 160 MHz Bandwidth"
+    },
+    "cudy_download": {
+      "firmware": [
+        {
+          "version": "2.5.28",
+          "datum": "2026-08-14",
+          "datei": "M3000-R37-2.5.28-20260807-120317-sysupgrade.zip",
+          "groesse": "17.6 MB"
+        },
+        {
+          "version": "2.5.25",
+          "datum": "2026-08-04",
+          "datei": "M3000-R37-2.5.25-20260730-183859-sysupgrade.zip",
+          "groesse": "17.7 MB"
+        },
+        {
+          "version": "2.5.10",
+          "datum": "2026-05-13",
+          "datei": "M3000-R37-2.5.10-20260507-143749-sysupgrade.zip",
+          "groesse": "16.9 MB"
+        },
+        {
+          "version": "2.4.19",
+          "datum": "2025-09-05",
+          "datei": "M3000-R37-2.4.19-20250828-183718-sysupgrade.zip",
+          "groesse": "16.0 MB"
+        },
+        {
+          "version": "2.4.8",
+          "datum": "2025-06-16",
+          "datei": "M3000-R37-2.4.8-20250611-171419-sysupgrade.zip",
+          "groesse": "16.1 MB"
+        },
+        {
+          "version": "2.4.3",
+          "datum": "2025-05-12",
+          "datei": "M3000-R37-2.4.3-20250507-170405-sysupgrade.zip",
+          "groesse": "16.1 MB"
+        },
+        {
+          "version": "2.3.8",
+          "datum": "2025-02-10",
+          "datei": "M3000-R37-2.3.8-20250206-164327-sysupgrade.zip",
+          "groesse": "16.1 MB"
+        },
+        {
+          "version": "2.2.6",
+          "datum": "2024-08-29",
+          "datei": "M3000-R37-2.2.6-20240826-031230-sysupgrade.zip",
+          "groesse": "15.6 MB"
+        },
+        {
+          "version": "2.0.0",
+          "datum": "2024-03-01",
+          "datei": "M3000-R37-2.0.0-20240301-032130-sysupgrade.zip",
+          "groesse": "15.3 MB"
+        }
+      ],
+      "dokumente": "Datasheet (M3000_V1.0_Datasheet.pdf), Installation Guide (English)",
+      "board_kennung": "R37 (Dateinamen, entspricht SUPPORTED_DEVICES += R37 in OpenWrt)"
+    },
+    "cudy_faq_openwrt": {
+      "hinweis_2025_11_24": "Cudy AX3000 series routers manufactured starting in November 2025 (SN code start with 2543 or later. 2543 in the SN means the 43th week in the year 2025) use the new Flash F50L1G41LC. Upgrading to older versions of OpenWrt intermediate firmware or OpenWrt firmware will prevent the device from booting. ... If the SN code is less than 2543. It uses the old flash.",
+      "betroffene_modelle": "AP3000 Outdoor 1.0, AP3000 Wall 1.0, M3000 1.0/2.0, TR3000 1.0, WR3000E 1.0, WR3000H 1.0, WR3000S 1.0, WR3000P 1.0",
+      "update_2025_12_24": "OpenWrt hat den Patch für F50L1G41LC übernommen; OpenWrt 24.10.5 oder neuer verwenden",
+      "zwischenfirmware": "Download OpenWrt Firmware to Remove Signature Check: Google Drive",
+      "bedingung": "This file can only be used when your router works under Cudy web UI."
+    },
+    "openwrt_forum_213882": {
+      "titel": "OpenWrt Support and Reviews for Cudy M3000 Router",
+      "beitraege_gesamt": 26,
+      "erstellt": "2024-10-24",
+      "letzter_beitrag": "2026-05-30",
+      "beitraege_geladen": 20,
+      "beitraege": [
+        {
+          "nr": 1,
+          "user": "a-z",
+          "datum": "2024-10-24",
+          "text": "Hi everyone,\nI've come across the Cudy M3000 router, which supports WiFi 6 (AX), and I noticed that it's now listed in the OpenWrt Table of Hardware (ToH) as supported. However, I haven't been able to find any guides or documentation on how to flash OpenWrt onto it. Does anyone know if there's a detailed guide available for this model?\nAdditionally, I've tried searching for reviews online, including Reddit and YouTube, but there seem to be very few comprehensive reviews, especially in English. Most videos are either in another language or too brief, without much discussion on the hardware or performance of the device. It all feels a bit unclear.\nDoes anyone here have experience with the Cudy M3000? I'm considering purchasing two of these routers to use as dumb Access Points with WiFi 6 support. I'd love to hear your thoughts on the hardware and its performance, especially in an OpenWrt setup.\nThanks in advance for your help!"
+        },
+        {
+          "nr": 2,
+          "user": "anon63541380",
+          "datum": "2024-10-24",
+          "text": "Tried internet search?\n  \n      \n\n      Cudy\n  \n\n  \n    \n\nOpenWrt Software Download\n\n  Warnings This webpage lists software of devices which support OpenWrt system, before download and install the software, please note that OpenWrt Project is a Linux operating system targeting embedded devices. Instead of trying to create a single,..."
+        },
+        {
+          "nr": 3,
+          "user": "a-z",
+          "datum": "2024-10-24",
+          "text": "Yep, tried that and came here asking for some advice. Unfortunately, most of what I found was either for other Cudy models like the AC1200, AX1500 (WR1500), RE3000, etc., or vague advice about removing signature checks that doesn’t really apply to the M3000.\nI even came across people trying to flash other models like the WR3000 and running into issues like invalid files or having to use emergency recovery modes. That’s why I’m asking here for anyone with actual experience to the M3000."
+        },
+        {
+          "nr": 4,
+          "user": "anon63541380",
+          "datum": "2024-10-24",
+          "text": "Cudy offers 100% accurate instructions along with signed sysupgrade to install clean OpenWRT in place of their firmware. If clear written instructions from OEM are not clear to you, probably do not install anything."
+        },
+        {
+          "nr": 5,
+          "user": "frollic",
+          "datum": "2024-10-24",
+          "text": "The instruction's very simple, taken from the URL @anon63541380 previously posted -\nDownload OpenWrt Firmware to Remove Signature Check: Drive\n\nOpenWrt Firmware Finder (Not Released by Cudy): OpenWrt Firmware Selector \n\nWhich part's unclear ?"
+        },
+        {
+          "nr": 6,
+          "user": "a-z",
+          "datum": "2024-10-24",
+          "text": "Thanks, ebrada and frolic .\nI appreciate the links and instructions, but just to clarify I’m not struggling with the flashing process itself. My main goal is to hear from people who have actually used the Cudy M3000 and successfully flashed OpenWrt on it, to get a sense of the device’s performance and any specific issues they might have faced.\nIf anyone has firsthand experience with the M3000 especially regarding its use as a dumb access point with OpenWrt. I’d really appreciate your feedback. That’s the kind of insight I’m looking for before deciding to buy."
+        },
+        {
+          "nr": 7,
+          "user": "anon63541380",
+          "datum": "2024-10-24",
+          "text": "There is a vendor supported initial install file in a zip archive on the linked google drive.\nThen the OpenWRT sysupgrade file https://firmware-selector.openwrt.org/?version=23.05.5&target=mediatek%2Ffilogic&id=cudy_m3000-v1\nYou upload cudy's file as upgrade to cudy firmware updater\nThen on fresh but a bit aged OpenWRT upload 23.05.5 sysupgrade EDIT: dont keep settings.\nAll done?"
+        },
+        {
+          "nr": 8,
+          "user": "anon63541380",
+          "datum": "2024-10-24",
+          "text": "There is no specific extra requirements for Dumb AP, normally one would put something overpowered like M3000 to do SQM and full speed NAT next to internet connection, then add coverage area with previous AP."
+        },
+        {
+          "nr": 9,
+          "user": "HugoBAF",
+          "datum": "2024-11-05",
+          "text": "I have also only recently come across with Cudy brand and I immediately ordered one WR3000 precisely with the purpose to become a \"dumb\" Wifi 6 AP with multiple SSIDs related to multiple VLANs. On paper these M3000 seem even better for that purpose but I am also struggling a lot to get reviews of these equipments. In youtube I found a few videos but they are not in English or any language that I know (I think they are from Bangladesh?). The other \"product reviews\" that I found are from distributors from South Africa or similar, so not the most detailed or factual reviews out there.\nIt would be nice to have a detailed review of Cudy WR3000 or M3000 running vanilla Openwrt so we could have a glance of performance and stability.\nOn paper these are awesome for populating the house with roaming Wifi 6 \"dumb\" APs."
+        },
+        {
+          "nr": 10,
+          "user": "HugoBAF",
+          "datum": "2024-11-08",
+          "text": "Yesterday received the unit (WR3000 V1) and just replaced my AP (Router RT-AC57U, also have a RT-AC58U as well) and even when comparing to the ISP's WIFI 6 router the coverage is impressive! I get full internet speed (500mbps) with 5GHz everywhere in the house! For sure way better than both my Asus routers.\nSo far I am running stock firmware just to get an idea of its performance/functionalities and stability. Later on I will install vanilla openwrt and run AP with VLANs. I will let you know what I think of it."
+        },
+        {
+          "nr": 11,
+          "user": "a-z",
+          "datum": "2024-11-12",
+          "text": "thank you for posting. I couldn't find the two kit combo device so I should get a notification when is on stock but I will try to do some testing. On paper looks nice but yeah but using it in a production environment is really different.\nlet us know when you do the firmware upgrade, double check the comments on their website."
+        },
+        {
+          "nr": 12,
+          "user": "HugoBAF",
+          "datum": "2024-11-12",
+          "text": "Already did the firmware upgrade, but for now I am still running no VLANs and no multiple SSIDs. Basically having the configuration exactly the same as before, with 1 SSID for 2.4GHz and another one for 5GHz.\nThe firmware update itself was really smooth, with no issues besides the system detecting a virus inside the zip file the OEM provides (I believe under developer folder).\nWhat I noticed is that the range/bandwidth is not as good as the OEM stock firmware. I don't have any scientific metric to back this statement, but I have tested with my Poco F5 as I had tested with the Stock firmware and I noticed a small difference. One thing that had huge impact in the client connection speed was to activate the \"Coverage cell density\" to Normal for instance (comes disabled by default). Enabling this option to any of the options (Normal, High, Very High) did increase connection output to my mobile.\nSo far I am pleased with the performance and had no issues at all, but I will let you know when paring VLANs with different SSIDs (after all that was the main purpose of getting this AP)."
+        },
+        {
+          "nr": 13,
+          "user": "Underworld",
+          "datum": "2024-11-13",
+          "text": "If you are still looking for review with the stock fw, you can check here: https://4pda.to/2023/11/25/420817/obzor_cudy_wr3000_100_gb_za_15_minut_po_wi_fi_a_vam_slabo/. It is ruasian, but google can help.\nI have however zero problems with mine and OpenWrt.\nKr\nK"
+        },
+        {
+          "nr": 14,
+          "user": "Pulver",
+          "datum": "2024-11-13",
+          "text": "I have two thats been running OpenWRT for a couple of months now, one radio as AP and the other as a 802.11s (Mesh) backhaul.\nIMG_20931536×2048 184 KB\nIf you want to see the inside of the router there is a review here in a language I dont understand"
+        },
+        {
+          "nr": 15,
+          "user": "a-z",
+          "datum": "2024-11-13",
+          "text": "There is package that you can install to see if there is any issues or something with the device, mostly people use it to check the stability of the wifi channels and devices.\nluci-app-statistics\n\nand maybe do a perf3 speed test. I ordered the kit but still need to wait until there is some stock so I can do test too.\nhttps://openwrt.org/docs/guide-user/luci/luci_app_statistics"
+        },
+        {
+          "nr": 16,
+          "user": "a-z",
+          "datum": "2024-11-13",
+          "text": "My plan is to use them as dumb access points but also for VLANs and different SSIDs too."
+        },
+        {
+          "nr": 17,
+          "user": "a-z",
+          "datum": "2024-11-21",
+          "text": "I wanted to ask you do you use DAWN or 802.11r for transition? how do yo use the the router and the AP on the wireless band."
+        },
+        {
+          "nr": 18,
+          "user": "diepeterpan",
+          "datum": "2025-05-26",
+          "text": "Just a silly question, if this device has a 128 MiB SPI NAND why is ubi limited to 64 MiB?  Is the layout definition not incorrect in limiting it to 64 MiB - https://github.com/openwrt/openwrt/blob/1df56d02cfe369cd1bfa61ddb009d645bbb6cadf/target/linux/mediatek/dts/mt7981b-cudy-m3000-v1.dts#L8\n\t\t\tpartition@5c0000 {\n\t\t\t\tlabel = \"ubi\";\n\t\t\t\treg = <0x05c0000 0x4000000>;\n\nCompared to the xiaomi-redmi-router-ax6s which also only have a 128 MiB but in its layout allocate all of the remainder of the nand to ubi - https://github.com/openwrt/openwrt/blob/1df56d02cfe369cd1bfa61ddb009d645bbb6cadf/target/linux/mediatek/dts/mt7622-xiaomi-redmi-router-ax6s.dts#L13\n\t\t\tpartition@340000 {\n\t\t\t\tlabel = \"ubi\";\n\t\t\t\treg = <0x340000 0x7280000>;\n\t\t\t\tcompatible = \"linux,ubi\";"
+        },
+        {
+          "nr": 19,
+          "user": "frollic",
+          "datum": "2025-05-26",
+          "text": "depends on the flash layout, read the AX6S' wiki page, to understand why they differ.\nno one will stop you from submitting a ubootmod flash layout PR, similar to the one pending for the TR3000 - https://github.com/openwrt/openwrt/pull/17712."
+        },
+        {
+          "nr": 20,
+          "user": "a-z",
+          "datum": "2025-10-20",
+          "text": "Hey @HugoBAF is been almost a year, how is behaving your device? the WR3000 V1"
+        }
+      ]
+    },
+    "openwrt_forum_231357": {
+      "titel": "Mediatek/filogic: add support for Cudy M3000 v2",
+      "beitraege_gesamt": 12,
+      "erstellt": "2025-05-01",
+      "letzter_beitrag": "2025-05-10",
+      "beitraege_geladen": 13,
+      "beitraege": [
+        {
+          "nr": 1,
+          "user": "MMALI3287",
+          "datum": "2025-05-01",
+          "text": "Description\nThe Cudy M3000 v2 is a newer hardware revision that is currently unable to flash either stock Cudy or OpenWrt images due to a board-ID mismatch in U-Boot checks. All attempts (stock web-UI, sysupgrade, or OpenWrt factory images) end with “Not applicable” or “installation failed” errors, indicating that no V2 board definition exists in the OpenWrt tree\n\nHardware Details\n\nModel: Cudy M3000 v2\nSoC: MediaTek MT7981BA (A53-based)\nRAM/Flash: 256 MB RAM, 256 MB SPI NAND\nEthernet: 1×2.5 Gbit WAN + 3×1 Gbit LAN\nWi-Fi: 2×2 802.11ax (2.4 + 5 GHz)\n\n\nCurrent Support Status\n\nOpenWrt support only exists for M3000 v1\nAttempts to flash V2 via the stock web UI fail\nOpenWrt factory images likewise refuse to install\n\n\nPlease let me know any further hardware IDs or logs needed to complete the V2 board support PR.\nThank you!"
+        },
+        {
+          "nr": 2,
+          "user": "psherman",
+          "datum": "2025-05-01",
+          "text": "You will likely need to do most of the work yourself since you have a unit in hand. You can follow this guide, and feel free to ask questions if/when you get stuck.\n\n  \n      \n\n      openwrt.org\n  \n\n  \n    \n\n[OpenWrt Wiki] Adding new device support"
+        },
+        {
+          "nr": 3,
+          "user": "hecatae",
+          "datum": "2025-05-02",
+          "text": "MMALI3287:\n\nCudy M3000 v2\n\n\nHave you tried the initramfs for the M3000 v1 over tftpboot?"
+        },
+        {
+          "nr": 4,
+          "user": "gameinn",
+          "datum": "2025-05-02",
+          "text": "Ugh I thought Cudy was someone who would just have one revision. I hope this is the only change."
+        },
+        {
+          "nr": 5,
+          "user": "MMALI3287",
+          "datum": "2025-05-02",
+          "text": "Apologies, but I don’t feel confident enough to do this on my own"
+        },
+        {
+          "nr": 6,
+          "user": "MMALI3287",
+          "datum": "2025-05-02",
+          "text": "Sorry, I am not sure what that is or how to do it"
+        },
+        {
+          "nr": 7,
+          "user": "hecatae",
+          "datum": "2025-05-02",
+          "text": "From what I can see on the specification difference, the main thing is the V1 has 128 nand and the V2 has 256 nand.\nTherefore if you can connect UART following the V1 instructions you should be able to boot the V1 initramfs kernel bin file via tftpboot and confirm if everything works apart from the storage space.\nClick the supported since link for details\n  \n      \n\n      openwrt.org\n  \n\n  \n    \n\n[OpenWrt Wiki] Techdata: Cudy M3000 v1"
+        },
+        {
+          "nr": 8,
+          "user": "HugoBAF",
+          "datum": "2025-05-04",
+          "text": "I also picked these M3000 V2 due to the color (I prefer white with no red on top) but apparently they don't even have a Cuddy OpenWRT firmware available. Wasn't expecting that. AX3000 all have the same CPU (WR3000, M3000, and so on) so I was not expecting this outcome. Let's wait a bit until/if Cudy releases this firmware and OpenWRT as well."
+        },
+        {
+          "nr": 9,
+          "user": "hecatae",
+          "datum": "2025-05-04",
+          "text": "Sorry I don't think you understand, someone with the hardware needs to test and add the device.\n\n  \n      \n\n      openwrt.org\n  \n\n  \n    \n\n[OpenWrt Wiki] Adding new device support\n\n\n\n  \n\n  \n    \n    \n  \n\n  \n\n\nOpenwrt is developed by volunteers, so if you're not willing to add the device, it's not going to be added until someone with the hardware decides to get it done."
+        },
+        {
+          "nr": 10,
+          "user": "HugoBAF",
+          "datum": "2025-05-05",
+          "text": "I understand and am aware of that. The thing is just because I have the hardware does not necessarily mean I have the time and knowledge to do what is needed to Add this new device. I think I can help with some tasks but doubt it I will be able to develop it myself.\nI believe the first step would come from Cudy: if they can create the first OpenWRT firmware that allows the vanilla version of OpenWRT it would simplify the firmware change. I already sent a comment on Cudy website regarding that."
+        },
+        {
+          "nr": 11,
+          "user": "HugoBAF",
+          "datum": "2025-05-06",
+          "text": "This morning I got a reply from Cudy stating \"The firmware of M3000 V1 and V2 are the same. So the OpenWrt firmware are also the same. Please use V1 firmware for you router. No problem.\"\nJust now I tried to flash initial firmware from Cudy (cudy_m3000-v1-sysupgrade.bin) and vanilla OpenWrt (openwrt-24.10.1-mediatek-filogic-cudy_m3000-v1-squashfs-sysupgrade.bin) and went just fine. It seems to be working as expected."
+        },
+        {
+          "nr": 12,
+          "user": "MMALI3287",
+          "datum": "2025-05-10",
+          "text": "Thank you for letting us know that"
+        },
+        {
+          "nr": 13,
+          "user": "system",
+          "datum": "2025-05-20",
+          "text": "This topic was automatically closed 10 days after the last reply. New replies are no longer allowed."
+        }
+      ]
+    },
+    "openwrt_forum_247083": {
+      "titel": "Cudy M3000 with Motorcomm PHY -- how to fix it",
+      "beitraege_gesamt": 9,
+      "erstellt": "2026-03-01",
+      "letzter_beitrag": "2026-03-03",
+      "beitraege_geladen": 10,
+      "beitraege": [
+        {
+          "nr": 1,
+          "user": "linuxtardis",
+          "datum": "2026-03-01",
+          "text": "Hello,\nI am seeking feedback on how to best add support for the new Cudy M3000 with the Motorcomm YT8821 PHY on its WAN port. The current situation is that I understand why the 2.5G WAN port behaves unreliably and have one possible fix ready as a PR (beware of the giant message history). However, I am not sure which approach is best for OpenWrt.\nEDIT: Some additional context that I forgot to add: an older hardware revision of the Cudy M3000 is already supported by OpenWrt. That hardware revision had a different PHY chip on the WAN port (RTL8221B-VB-CG).\nBackground\nThe 2.5G WAN port in the new Cudy M3000 is connected to the Motorcomm YT8821 PHY. The PHY is not working reliably because there is an address conflict on the router's MDIO bus.\n\n\nThere is an internal GbE PHY in the MT7981B SoC (this PHY is connected to the LAN port). This PHY always listens on MDIO address 0.\n\n\nThen there is the external YT8821 PHY. This PHY is strapped to listen on MDIO address 1, but the PHY also listens on address 0 by default (Motorcomm considers that address a broadcast address by default).\n\n\nThe result is that the YT8821 reacts to commands intended for the internal MT7981B PHY and this messes up its internal state. For example, it only runs at 100 Mbps on 1 Gbps links. Another example is that calling \"ip link set dev eth1 down\" (e.g. bringing down the LAN port) brings down the WAN port as well.\nThe canonical way of fixing this is to reconfigure one internal register in the YT8821 such that the"
+        },
+        {
+          "nr": 2,
+          "user": "anon63541380",
+          "datum": "2026-03-01",
+          "text": "So you actually have not tried the PR and are proposing to replace it with 5-stage bootloader chain?"
+        },
+        {
+          "nr": 3,
+          "user": "linuxtardis",
+          "datum": "2026-03-01",
+          "text": "Hello, I don't understand - I have authored the PR and I have tested it on a M3000 that I have bought. The PR does fix the issue on the actual router. The problem with that is that we cannot be sure that it will always work. The situation with the PR is the following:\n\nThe kernel detects both the MT7981B internal PHY and the YT8821\nThe kernel does some basic configuration of the MT7981B internal PHY. The MDIO commands it issues are interpreted by both the MT7981B PHY and the YT8821 PHY. These commands do not corrupt the YT8821 state badly enough that it needs to be hard-reset.\nThen the kernel configures the YT8821 PHY, including the disabling of the broadcast address\nFinally the kernel brings up more of the MT7981B PHY. This involves some MDIO commands that would break the YT8821 if it had been still listening on the MDIO address 0.\n\nThe problem is that there is a window of time where the YT8821 accepts commands that it shouldn't. It doesn't appear to be a problem in practise now (the PHY does achieve stable gigabit speeds with that patch)."
+        },
+        {
+          "nr": 4,
+          "user": "enmaskarado",
+          "datum": "2026-03-01",
+          "text": "I ported a similar device, Cudy TR3000 (with the RTL8221B) to OpenWrt.\nReading #21584, looks like the solution 1 show similar results to the RTL8221B without the recent fixes, this was a very miserable experience for me and I think this solution is unacceptable for M3000 users.\nPorting TR3000, I didn't think much of the fact that it wasn't partitioned properly. To partition it properly (and upgrading from 40 MB of free space to 110 MB), you need a new bootloader, and the people who made https://github.com/openwrt/openwrt/commit/6f8c58bfd8f380dfdc1d89aab29fdcdfde0ee65b did just that on a new DTS.\nPersonally, I would have preferred to repair the partitions in TR3000 on my initial commit even if that forced users to update their bootloader just to install OpenWrt. But yes, the loss of the signed TFTP Cudy recovery is not great.\n\nI’m interested on the solution 3, I think it’s the lesser evil. Solution 4 looks good too, but i don’t know how “easy“ is to do it. A lot of old MIPS devices (tp-link, etc) use a 2nd stage bootloader trying to skip u-boot bugs.\n\n\n\n linuxtardis:\n\nHow should new users know which one to pick, though?\n\n\nI think a Cudy engineer told us how to identify a new change on TR3000 using the serial number (i don’t remember if it was a new motorcomm phy or a flash change). Maybe someone at support {at} cudy dot com knows more."
+        },
+        {
+          "nr": 5,
+          "user": "bevanweiss",
+          "datum": "2026-03-02",
+          "text": "linuxtardis:\n\nI initially thought that this could be fixed in the kernel. I prototyped some patches and sent them to LKML, but the patches do not fit nicely into mainline\n\n\nDo you have a reference to this?\nAnd a reference to the YT8821 PHY Datasheet?\nIt does sound like perhaps the Motorcomm PHY should be held in reset until it is init'd, by which stage hopefully the internal PHY has reduced its conversations..."
+        },
+        {
+          "nr": 6,
+          "user": "linuxtardis",
+          "datum": "2026-03-02",
+          "text": "Sure:\n\nsimple patch: https://lore.kernel.org/all/d3bb9c36-5a0e-4339-901d-2dd21bdba395@gmail.com/\nmore complex patch: https://lore.kernel.org/all/20260228232241.1274236-1-linuxtardis@gmail.com/\n\nI also have the YT8821 datasheet, but I had to fill my personal information on the Motorcomm website to download it and it looks watermarked. I therefore don't want to share it in full. However, the relevant sections are:\nobrazek938×273 43.6 KB\nobrazek924×371 51.2 KB\nThe YT8821 cannot be easily held in reset until initialized. The Linux PHY core will deassert the reset line early (when the PHY is registered). This is what creates the problematic time window for the simple patch. However, what I can do is to toggle the reset line twice in yt8821_config_init() to achieve the same effect.\nEDIT: The effect is not entirely the same, though. If there is a time when the YT8821 is out of reset, not yet reconfigured to not listen on address 0 and the kernel is configuring the MT7981B PHY, bad things might still happen to the MT7981B PHY. The YT8821 could be responding to MDIO reads and causing collisions even for the MT7981B driver (it could read incorrect register values). In practice it did not appear to be happening. I am not sure why, perhaps the MT7981B MDIO bus controller gives priority to the internal PHY."
+        },
+        {
+          "nr": 7,
+          "user": "linuxtardis",
+          "datum": "2026-03-02",
+          "text": "The comment history under the linked PR documents the investigations. Comment https://github.com/openwrt/openwrt/pull/21584#issuecomment-3923563367 is when I realized the issue is due to an address conflict."
+        },
+        {
+          "nr": 9,
+          "user": "linuxtardis",
+          "datum": "2026-03-02",
+          "text": "enmaskarado:\n\nReading #21584, looks like the solution 1 show similar results to the RTL8221B without the recent fixes, this was a very miserable experience for me and I think this solution is unacceptable for M3000 users.\n\n\nI am curious - which comment are you referring to? The PR went through multiple iterations as I was trying to find out what is wrong with the YT8821. (yeah, turning a single PR into a ~200 comment thread perhaps wasn't a great idea). The current revision seems to work OK: https://github.com/openwrt/openwrt/pull/21584#issuecomment-3941232307"
+        },
+        {
+          "nr": 10,
+          "user": "linuxtardis",
+          "datum": "2026-03-03",
+          "text": "Hello, I decided to go with your suggestion and so I created the PR https://github.com/openwrt/openwrt/pull/22259 . Thank you!"
+        },
+        {
+          "nr": 11,
+          "user": "system",
+          "datum": "2026-03-13",
+          "text": "This topic was automatically closed 10 days after the last reply. New replies are no longer allowed."
+        }
+      ]
+    },
+    "openwrt_forum_249734": {
+      "titel": "802.11s mode missing on Cudy M3000",
+      "beitraege_gesamt": 12,
+      "erstellt": "2026-05-04",
+      "letzter_beitrag": "2026-05-11",
+      "beitraege_geladen": 13,
+      "beitraege": [
+        {
+          "nr": 1,
+          "user": "deavmi",
+          "datum": "2026-05-04",
+          "text": "Hi all,\nA little bit of a silly question as I thought these devices would support it, or at least the drivers available in OpenWRT 25 would be exposing it (compared to devices where I have seen it).\nThe Cudy M300 - does it support putting the WiFi card into 802.11s mode? As I am not seeing the option.\nUpdate: It seems it is available on Cudy’s own OpenWRT firmware but not the later one? Maybe firmware 23 is what I need although the [M3000 page](https://openwrt.org/toh/cudy/m3000#network_interfaces) says otherwise it seems and only mentions OpenWRT 25. Although I see it says supported since 23, maybe I need to stay on 23?\nStruggling to find it on the releases.openwt.org repo though…\nUpdate 2: It’s getting late here   however I found it for 24 release and flashed it now - ==just thought I would mention that 25 doesn’t have the needed 802.11s support=="
+        },
+        {
+          "nr": 2,
+          "user": "Bartvz",
+          "datum": "2026-05-05",
+          "text": "Did you install the correct wpad variant?\nSee: https://openwrt.org/docs/guide-user/network/wifi/mesh/802-11s"
+        },
+        {
+          "nr": 3,
+          "user": "misterb",
+          "datum": "2026-05-05",
+          "text": "I have successfully used 802.11s mesh on a pair of Cudy M3000s. I uninstalled wpad-basic-mbedtls and replaced it with wpad-openssl and then followed the instructions in this post https://forum.openwrt.org/t/creating-an-ieee-802-11s-mesh-from-scratch/208332"
+        },
+        {
+          "nr": 4,
+          "user": "deavmi",
+          "datum": "2026-05-05",
+          "text": "Do you recall what version you were running. The 802.11s options are still present in the 24.x series (which I downgraded to). 25.x seems like it doesn’t."
+        },
+        {
+          "nr": 5,
+          "user": "deavmi",
+          "datum": "2026-05-05",
+          "text": "I have never had to install such a package - is that only for when you want the encryption support?"
+        },
+        {
+          "nr": 6,
+          "user": "misterb",
+          "datum": "2026-05-05",
+          "text": "24.10.x. I haven't yet upgraded to 25."
+        },
+        {
+          "nr": 7,
+          "user": "Bartvz",
+          "datum": "2026-05-05",
+          "text": "Nope, it is also for stuff like RADIUS, roaming and mesh."
+        },
+        {
+          "nr": 8,
+          "user": "deavmi",
+          "datum": "2026-05-06",
+          "text": "Although that makes sense I will say one thing. The support was there when I flashed and when I updated one of the packages was the mediatek driver I am sure that made the option disappear.\nWhen I re flashed (to get back to the pre-package upgraded state then it was fine.\nThere may very well be an upstream problem. But the 802.11s support is in the driver package? If not then why did it disappear when I upgraded - also wpad was installed…"
+        },
+        {
+          "nr": 9,
+          "user": "deavmi",
+          "datum": "2026-05-06",
+          "text": "Mmmh, yes.\nI think I updated Mediatek driver that is the only package (of all those that had updates available) that would make it disappear.\nRolled back to prior package update and it is there now."
+        },
+        {
+          "nr": 10,
+          "user": "Bartvz",
+          "datum": "2026-05-06",
+          "text": "You never should update your packages because it might lead to breakages.\nAlso, sometimes things move around. Since I do not use mesh I can't say for sure but I thought that for mesh support you always had to change your wpad package. Anyways, with the firmware selector it is easy to make a custom build with the version you want.\nAfterwards use owut or attended-sysupgrade to update your packages and/or OpenWRT version."
+        },
+        {
+          "nr": 11,
+          "user": "bluewavenet",
+          "datum": "2026-05-06",
+          "text": "deavmi:\n\nThe Cudy M300 - does it support putting the WiFi card into 802.11s mode?\n\n\nYes, and it always has.\nNote: The latest stable version of OpenWrt at the time of writing is 25.12.3 and I would recommend reflashing with this using one if the numerous ways you will find described on this forum.\nAs @Bartvz says:\n\n\n\n Bartvz:\n\nYou never should update your packages because it might lead to breakages.\n\n\nInstead, \"upgrade\" the entire operating system.\nNote: You do need at least wpad-mesh-mbedtls for the mesh as it gives you encryption on the air.\nWhy would you use encryption on your access points and then leave the mesh backhaul unencrypted?\nI would recommend the full version ie wpad-mbedtls on this device as you are very far from a problem with free space.\nYou can go for the openssl version (wpad-openssl) if you really want to, but there is little reason to do so."
+        },
+        {
+          "nr": 12,
+          "user": "deavmi",
+          "datum": "2026-05-11",
+          "text": "It was simply for testing, it's not long term but the encryption (or lakc\nthereof) was not the issue"
+        },
+        {
+          "nr": 13,
+          "user": "system",
+          "datum": "2026-05-21",
+          "text": "This topic was automatically closed 10 days after the last reply. New replies are no longer allowed."
+        }
+      ]
+    },
+    "werkstatt_cudy_installation": {
+      "abschnitt": "Welche Zwischenfirmware für welches Modell",
+      "zeile": "M3000 v1 | cudy-m3000.bin | M3000 1.0_2.0.zip | 2bcdf420444309bdef463dd278d15ba4",
+      "spiegel": "https://firmware.ffnef.de/other/cudy-mirror-20261015/zwischenfirmware/",
+      "hinweise": "Freifunk-Firmware als sysupgrade, nicht factory; Modell und Version auf dem Aufkleber unter dem Gerät; Seriennummer ab 2543: neuer Flash, nur Zwischenfirmware vom 19.11.2025 aus dem Spiegel",
+      "offen": "M3000 v2 mit YT8821 (braucht in 2025.1 ein eigenes Image; ob die Zwischenfirmware M3000_1.0_2.0 dazu passt, ist ungeklärt)"
+    },
+    "werkstatt_rtl8221b": {
+      "abschnitt": "Welche Geräte wir haben (Karte, 14.09.2026)",
+      "zeile": "Cudy M3000 v1 | 0 Knoten | RTL8221B oder Motorcomm YT8821 (je nach Revision, Forum)",
+      "weitere": "ethtool vorübergehend in den Images u. a. für M3000 v1 (Firmware 8b8041b); OpenWrt 82b69dfaf6ca (interrupt-parent <&pio> für TR3000/M3000) geparkt; M3000 v2 mit RTL8221B: PHY teils nicht erkannt (openwrt#21051); Gerät mit RTL8221B im Labor fehlt"
+    },
+    "werkstatt_erstinstallation": {
+      "abschnitt": "Aufstellung nach Installationsweg / A: Cudy",
+      "zeile": "A - Hersteller-Zwischenfirmware, signiert: alle Cudy ... M3000 - automatisierbar: nein",
+      "flash": "Abschnitt \"Der wichtigere Befund: neuer Flash-Chip\": F50L1G41LC in 2023.2 seit 09.09.2026 rückportiert, in 2025.1 per backport-6.6/422-Patch"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Cudy",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Shenzhen Cudy Technology Co., Ltd.",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2APRGMS30",
+        "stand": "Grant 2024-07-01 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "M3000",
+        "quelle": "cudy_produktseite_v1",
+        "beleg": "https://www.cudy.com/products/m3000-1-0",
+        "stand": "Seite am 2026-10-19 (Produkt angelegt 2023-11-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "Verkaufsname \"AX3000 2.5G Mesh Wi-Fi 6 System, M3000 1.0\""
+      },
+      {
+        "wert": "M3000",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGMS30/Label/Label-Location-7431506",
+        "stand": "PDF 2024-03-05 (Etikettvorlage M3000_W(REV1.0), Stand Vorlage V2 vom \"2023-02-29\")",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild: \"Model: M3000\""
+      },
+      {
+        "wert": "M3000",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "1.0 und 2.0 (beide mit Realtek RTL8221B)",
+        "quelle": "openwrt_git_v1v2",
+        "beleg": "https://github.com/openwrt/openwrt/commit/51abd131d1acaaf7f7eb487376309ce52b814f81",
+        "stand": "Commit 2026-03-03 (Autor), gemergt 2026-03-14",
+        "sicherheit": "mittel",
+        "bemerkung": "Commit benennt das Image in \"v1/v2\" um: v1/v2 weitgehend gleiche Hardware, v1-Images laufen auf v2 (außer v2 mit anderem PHY); compatible bleibt cudy,m3000-v1"
+      },
+      {
+        "wert": "v1, v2 (old variant)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "V1 schwarz (EOL), V2 weiß; V2 in zwei Varianten nach 2.5G-PHY (RTL8221B / YT8821)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/m3000",
+        "stand": "Seitenrevision 2026-08-05 07:39",
+        "sicherheit": "mittel",
+        "bemerkung": "Dieses Image passt für V1 und für V2 mit RTL8221B; V2 mit Motorcomm YT8821 braucht cudy-m3000-v2-with-motorcomm-yt8821"
+      },
+      {
+        "wert": "M3000 1.0 und M3000 2.0",
+        "quelle": "cudy_produktseite_v1",
+        "beleg": "https://www.cudy.com/products/m3000-1-0",
+        "stand": "Seite am 2026-10-19 (Produkt angelegt 2023-11-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "zwei Produktseiten (m3000-1-0, m3000-2-0) mit gleichen Hardware-Specs; Download-Center und Zwischenfirmware \"M3000 1.0_2.0\" gemeinsam"
+      },
+      {
+        "wert": "1.0 und 2.0",
+        "quelle": "openwrt_forum_231357",
+        "beleg": "https://forum.openwrt.org/t/mediatek-filogic-add-support-for-cudy-m3000-v2/231357",
+        "stand": "Thread 2025-05-01 bis 2025-05-10",
+        "sicherheit": "niedrig",
+        "bemerkung": "Antwort des Cudy-Supports laut HugoBAF (#11): \"The firmware of M3000 V1 and V2 are the same\"; v1-Images liefen auf seinem V2"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild auf der Unterseite; Version als Zusatz hinter der Seriennummer (Beispiel \"SN: M3000240800102 US2.0\" am weißen Gerät)",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/External-Photos/External-Photos-7431509",
+        "stand": "PDF 2024-06-07 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": "Foto des FCC-Prüfmusters (weiß = 2.0); Region und Version stehen hinter der SN"
+      },
+      {
+        "wert": "Etikettvorlage: \"SN: M3000221700001 EU1.0\"",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGMS30/Label/Label-Location-7431506",
+        "stand": "PDF 2024-03-05 (Etikettvorlage M3000_W(REV1.0), Stand Vorlage V2 vom \"2023-02-29\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Mustertext der Vorlage, nicht von einem realen Gerät"
+      },
+      {
+        "wert": "Farbe: V1 schwarz (mit rotem Ring oben), V2 weiß",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/m3000",
+        "stand": "Seitenrevision 2026-08-05 07:39",
+        "sicherheit": "mittel",
+        "bemerkung": "roter Ring am schwarzen Gerät: FCC-Außenfotos Seite 3"
+      },
+      {
+        "wert": "Das Typenschild unterscheidet RTL8221B und YT8821 nicht: in der Cudy-Firmware unter Diagnostic Tools -> System Log nach \"rtl8221b\" suchen; Treffer = dieses Image, nur \"yt8821\" = YT8821-Image",
+        "quelle": "openwrt_git_yt8821",
+        "beleg": "https://github.com/openwrt/openwrt/commit/45b51ebaff51d2a49d149e9011717abb1b032683",
+        "stand": "Commit 2026-03-02 (Autor), gemergt 2026-03-14",
+        "sicherheit": "mittel",
+        "bemerkung": "laut OpenWrt-Wiki kam die YT8821-Variante etwa ab Januar 2026 in den Handel"
+      },
+      {
+        "wert": "Modell und Version auf dem Aufkleber unter dem Gerät",
+        "quelle": "werkstatt_cudy_installation",
+        "beleg": "router-werkstatt/docs/cudy-installation.md",
+        "stand": "Commit a9781bd vom 2026-10-15 (Tabelle Stand 15.10.2026)",
+        "sicherheit": "hoch",
+        "bemerkung": "Abschnitt \"Das brauchst du\""
+      },
+      {
+        "wert": "Seriennummer mit Jahr und Woche (z. B. 2543 = Woche 43/2025); ab 2543 neuer Flash F50L1G41LC",
+        "quelle": "cudy_faq_openwrt",
+        "beleg": "https://www.cudy.com/blogs/faq/openwrt-software-download",
+        "stand": "Hinweis 2025-11-24, Update 2025-12-24",
+        "sicherheit": "hoch",
+        "bemerkung": "Cudy beschreibt es für den TR3000 (\"SN code start with 2543\"); beim M3000 steht die Zahl hinter \"M3000\" (Beispiel M3000 2408 00102)"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "2APRGMS30",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2APRGMS30",
+        "stand": "Grant 2024-07-01 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2APRGMS30",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2APRGMS30",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "28108-MS30",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGMS30/Label/Label-Location-7431506",
+        "stand": "PDF 2024-03-05 (Etikettvorlage M3000_W(REV1.0), Stand Vorlage V2 vom \"2023-02-29\")",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "28108-MS30",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": "AX3000 Whole-Home Wi-Fi 6 Mesh System with 2.5G Port",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2APRGMS30",
+        "stand": "Grant 2024-07-01 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AX3000 2.5G Mesh Wi-Fi 6 System",
+        "quelle": "cudy_produktseite_v1",
+        "beleg": "https://www.cudy.com/products/m3000-1-0",
+        "stand": "Seite am 2026-10-19 (Produkt angelegt 2023-11-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MS30 (FCC-Produktcode)",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2APRGMS30",
+        "stand": "Grant 2024-07-01 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "R37 (Board-Kennung der Cudy-Firmware)",
+        "quelle": "cudy_download",
+        "beleg": "https://www.cudy.com/pages/download-center/m3000-1-0",
+        "stand": "Seite am 2026-10-19 (neueste Firmware 2.5.28 vom 2026-08-14)",
+        "sicherheit": "hoch",
+        "bemerkung": "Dateinamen M3000-R37-...; OpenWrt SUPPORTED_DEVICES += R37"
+      },
+      {
+        "wert": "Cudy M3000 v1/v2 (OpenWrt-Modellname)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-m3000.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "V1 EOL, V2 erhältlich",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/m3000",
+        "stand": "Seitenrevision 2026-08-05 07:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Available 2024",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "FCC-Zulassung 2024-07-01",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2APRGMS30",
+        "stand": "Grant 2024-07-01 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Produktseite M3000 1.0 angelegt 2023-11-20",
+        "quelle": "cudy_produktseite_v1",
+        "beleg": "https://www.cudy.com/products/m3000-1-0",
+        "stand": "Seite am 2026-10-19 (Produkt angelegt 2023-11-20)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Shopify created_at"
+      },
+      {
+        "wert": "erste Cudy-Firmware 2.0.0 vom 2024-03-01",
+        "quelle": "cudy_download",
+        "beleg": "https://www.cudy.com/pages/download-center/m3000-1-0",
+        "stand": "Seite am 2026-10-19 (neueste Firmware 2.5.28 vom 2026-08-14)",
+        "sicherheit": "mittel",
+        "bemerkung": "älteste gelistete Firmware"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "MediaTek MT7981BA",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7981BA",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/Internal-Photos/Internal-Photos-7431508",
+        "stand": "PDF 2024-06-06 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": "Chipaufdruck auf dem Foto"
+      },
+      {
+        "wert": "MediaTek MT7981BA",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7981b",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/20e4a18feb3f766b0f6ebec1afc154b345398a7a",
+        "stand": "Commit 2024-01-12 (Autor), gemergt 2024-05-11",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 1300,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1300,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "aarch64_cortex-a53",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ARM Cortex-A53",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 256,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 256,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": "256 MB (2 Gbit) DDR3"
+      },
+      {
+        "wert": 256,
+        "quelle": "cudy_produktseite_v2",
+        "beleg": "https://www.cudy.com/products/m3000-2-0",
+        "stand": "Seite am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "auch für M3000 2.0"
+      },
+      {
+        "wert": 256,
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/20e4a18feb3f766b0f6ebec1afc154b345398a7a",
+        "stand": "Commit 2024-01-12 (Autor), gemergt 2024-05-11",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 256,
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/Internal-Photos/Internal-Photos-7431508",
+        "stand": "PDF 2024-06-06 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": "ESMT M15T2G16128A = 2 Gbit DDR3"
+      },
+      {
+        "wert": 256,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR3",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DDR3 1866 MT/s",
+        "quelle": "openwrt_git_ubootmod",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6a08c6594989ab13e773f60b2a18df930ced73c9",
+        "stand": "Commit 2026-05-09 (Autor), gemergt 2026-07-01",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "ESMT M15T2G16128A-DEB",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ESMT M15T2G16128A",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/Internal-Photos/Internal-Photos-7431508",
+        "stand": "PDF 2024-06-06 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ESMT M15T2G16128A-DEB",
+        "quelle": "openwrt_git_ubootmod",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6a08c6594989ab13e773f60b2a18df930ced73c9",
+        "stand": "Commit 2026-05-09 (Autor), gemergt 2026-07-01",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 128,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": "128NAND"
+      },
+      {
+        "wert": 128,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": "128 MB (1 Gbit) NAND"
+      },
+      {
+        "wert": 128,
+        "quelle": "cudy_produktseite_v2",
+        "beleg": "https://www.cudy.com/products/m3000-2-0",
+        "stand": "Seite am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "auch für M3000 2.0"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/20e4a18feb3f766b0f6ebec1afc154b345398a7a",
+        "stand": "Commit 2024-01-12 (Autor), gemergt 2024-05-11",
+        "sicherheit": "mittel",
+        "bemerkung": "128 MB SPI NAND"
+      },
+      {
+        "wert": 128,
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/Internal-Photos/Internal-Photos-7431508",
+        "stand": "PDF 2024-06-06 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": "ESMT F50L1G41LB = 1 Gbit"
+      },
+      {
+        "wert": 128,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 256,
+        "quelle": "openwrt_forum_231357",
+        "beleg": "https://forum.openwrt.org/t/mediatek-filogic-add-support-for-cudy-m3000-v2/231357",
+        "stand": "Thread 2025-05-01 bis 2025-05-10",
+        "sicherheit": "niedrig",
+        "bemerkung": "Erstbeitrag behauptet für V2 256 MB NAND und 3x 1G LAN; widerspricht Cudy-Produktseite M3000 2.0 (128 MB, 1 LAN) - vermutlich falsch"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NAND (SPI-NAND)",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/20e4a18feb3f766b0f6ebec1afc154b345398a7a",
+        "stand": "Commit 2024-01-12 (Autor), gemergt 2024-05-11",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NAND",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "ESMT F50L1G41LB",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/Internal-Photos/Internal-Photos-7431508",
+        "stand": "PDF 2024-06-06 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ESMT F50L1G41LB-104",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ESMT F50L1G41LC bei Seriennummer ab 2543 (Produktion ab November 2025)",
+        "quelle": "cudy_faq_openwrt",
+        "beleg": "https://www.cudy.com/blogs/faq/openwrt-software-download",
+        "stand": "Hinweis 2025-11-24, Update 2025-12-24",
+        "sicherheit": "hoch",
+        "bemerkung": "M3000 1.0/2.0 ausdrücklich betroffen; braucht OpenWrt >= 24.10.5 bzw. Gluon mit Rückportierung und die neue Zwischenfirmware"
+      }
+    ],
+    "flash_nutzbar_mb": [
+      {
+        "wert": 64,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-m3000.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "UBI-Partition 0x4000000 im Cudy-Layout (dieses Image); IMAGE_SIZE 65536k"
+      },
+      {
+        "wert": 122.25,
+        "quelle": "openwrt_git_ubootmod",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6a08c6594989ab13e773f60b2a18df930ced73c9",
+        "stand": "Commit 2026-05-09 (Autor), gemergt 2026-07-01",
+        "sicherheit": "mittel",
+        "bemerkung": "nur mit OpenWrt-U-Boot-Layout (cudy_m3000-v1-ubootmod), das Gluon nicht baut"
+      }
+    ],
+    "switch": [
+      {
+        "wert": "kein Switch-Chip (2 getrennte MACs)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-m3000.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "-",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "MediaTek MT7981BA, MediaTek MT7976CN",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7981BA + MT7976CN (beide Bänder)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "mt76",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kmod-mt7915e, kmod-mt7981-firmware, mt7981-wo-firmware",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n/ax",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n/ax",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": "2x2:2 MIMO"
+      },
+      {
+        "wert": 2,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": "2T2R"
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": "2 Tx, 2 Rx"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac/ax",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac/ax",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": "\"2X3:2 MIMO\" (2 Tx, 3 Rx)"
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": "2 Tx, 3 Rx, 2 Streams"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_git_yt8821",
+        "beleg": "https://github.com/openwrt/openwrt/commit/45b51ebaff51d2a49d149e9011717abb1b032683",
+        "stand": "Commit 2026-03-02 (Autor), gemergt 2026-03-14",
+        "sicherheit": "mittel",
+        "bemerkung": "\"5 GHz WiFi with 2x3:2 MIMO\""
+      },
+      {
+        "wert": 2,
+        "quelle": "cudy_produktseite_v1",
+        "beleg": "https://www.cudy.com/products/m3000-1-0",
+        "stand": "Seite am 2026-10-19 (Produkt angelegt 2023-11-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"2 Spatial Streams with 3T3R\""
+      },
+      {
+        "wert": 2,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": "\"2T2R (2×2 MIMO)\" - widerspricht 3T3R der Produktseite; 3 5-GHz-Antennen auf den FCC-Innenfotos"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AX3000",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": "2402 Mbps (5 GHz) + 574 Mbps (2.4 GHz)"
+      },
+      {
+        "wert": "AX3000",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "20/40/80/160 MHz",
+        "quelle": "cudy_produktseite_v1",
+        "beleg": "https://www.cudy.com/products/m3000-1-0",
+        "stand": "Seite am 2026-10-19 (Produkt angelegt 2023-11-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "20/40/80 MHz",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2APRGMS30",
+        "stand": "Grant 2024-07-01 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant-Kommentar \"Device supports 20, 40 and 80MHz bandwidths\" (US-Zulassung)"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": "CE-Maximum: 2.4 GHz 20 dBm; 5150-5350 MHz 23 dBm; 5470-5725 MHz 30 dBm",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/2APRGMS30/User-Manual/User-Manual-7439537",
+        "stand": "PDF erstellt 2024-01-16, geändert 2024-06-27 (Regulatory Issue Date 2024-05-11)",
+        "sicherheit": "hoch",
+        "bemerkung": "Angaben aus dem CE-Abschnitt der Regulatory-Seiten"
+      },
+      {
+        "wert": "FCC leitungsgebunden: 2.4 GHz 0.3811 W (25.8 dBm); 5180-5240 und 5745-5825 MHz 0.3681 W (25.7 dBm); 5260-5320 MHz 0.092 W; 5500-5700 MHz 0.0908 W",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2APRGMS30",
+        "stand": "Grant 2024-07-01 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": "dBm aus Watt umgerechnet"
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": "2412-2462, 5180-5240, 5260-5320, 5500-5700, 5745-5825 MHz",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2APRGMS30",
+        "stand": "Grant 2024-07-01 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": "5× Internal"
+      },
+      {
+        "wert": "intern",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/Internal-Photos/Internal-Photos-7431508",
+        "stand": "PDF 2024-06-06 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": "Leiterplattenantennen mit Koaxkabel im Gehäuserahmen"
+      },
+      {
+        "wert": "intern",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/m3000",
+        "stand": "Seitenrevision 2026-08-05 07:39",
+        "sicherheit": "mittel",
+        "bemerkung": "Tag InternalAntenna"
+      },
+      {
+        "wert": "intern (U.FL)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "U.FL (intern)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Koaxkabel 1.37 mm an der Platine",
+        "quelle": "fcc_antenne_24",
+        "beleg": "https://fccid.io/2APRGMS30/Test-Report/Antenna-Specification-1-7431234",
+        "stand": "Approval Sheet V1.0, Produktionsdatum 2023-05-25",
+        "sicherheit": "hoch",
+        "bemerkung": "Steckerform im Approval Sheet nicht genannt"
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 5,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/Internal-Photos/Internal-Photos-7431508",
+        "stand": "PDF 2024-06-06 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": "5G Ant. 1-3, 2.4G Ant. 1-2"
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "getrennt (2× 2.4 GHz, 3× 5 GHz)",
+        "quelle": "cudy_produktseite_v1",
+        "beleg": "https://www.cudy.com/products/m3000-1-0",
+        "stand": "Seite am 2026-10-19 (Produkt angelegt 2023-11-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "getrennt (2× 2.4 GHz, 3× 5 GHz)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/Internal-Photos/Internal-Photos-7431508",
+        "stand": "PDF 2024-06-06 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": "2.4 GHz 4.2, 5 GHz 5.1 (Maximum)",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2.4 GHz 3.8 (Spezifikation; gemessen 3.80-4.25)",
+        "quelle": "fcc_antenne_24",
+        "beleg": "https://fccid.io/2APRGMS30/Test-Report/Antenna-Specification-1-7431234",
+        "stand": "Approval Sheet V1.0, Produktionsdatum 2023-05-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "5 GHz 5.05 (Spezifikation; gemessen 4.99-5.55)",
+        "quelle": "fcc_antenne_5",
+        "beleg": "https://fccid.io/2APRGMS30/Test-Report/5G-WLAN-Antenna-Specification-7431471",
+        "stand": "Approval Sheet V1.0, Produktionsdatum 2023-05-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "1 / 2.5Gbps WAN (rote Buchse)",
+            "geschwindigkeit": "2500",
+            "rolle": "WAN",
+            "phy": "Realtek RTL8221B"
+          },
+          {
+            "name": "2 / 1Gbps LAN (weiße Buchse)",
+            "geschwindigkeit": "1000",
+            "rolle": "LAN",
+            "phy": "MT7981 intern"
+          }
+        ],
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/External-Photos/External-Photos-7431509",
+        "stand": "PDF 2024-06-07 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": "Beschriftung auf der Rückseite des weißen Geräts; beim schwarzen Gerät laut Commit 20e4a18 \"1Gbps port (black)\""
+      },
+      {
+        "wert": "1× 2.5G RJ45 (WAN), 1× Gigabit RJ45 (LAN)",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1× 1 Gbit, 1× 2.5 Gbit",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": "Realtek RTL8221B 2.5Gbe Phy"
+      },
+      {
+        "wert": "eth0 = gmac0 2500base-x (WAN), eth1 = gmac1 interner GbE-PHY (LAN)",
+        "quelle": "openwrt_02_network",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/filogic/base-files/etc/board.d/02_network",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "phy_2g5": [
+      {
+        "wert": "Realtek RTL8221B",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Realtek RTL8221B",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Realtek RTL8221B",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/20e4a18feb3f766b0f6ebec1afc154b345398a7a",
+        "stand": "Commit 2024-01-12 (Autor), gemergt 2024-05-11",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Realtek (Logo auf U15)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/Internal-Photos/Internal-Photos-7431508",
+        "stand": "PDF 2024-06-06 (BTL-Projekt 2403G073)",
+        "sicherheit": "mittel",
+        "bemerkung": "Typenaufdruck auf dem Foto nicht sicher lesbar"
+      },
+      {
+        "wert": "RTL8221B oder Motorcomm YT8821 je nach Revision",
+        "quelle": "werkstatt_rtl8221b",
+        "beleg": "router-werkstatt/docs/rtl8221b-2g5-wan-intern.md",
+        "stand": "Commit 998ec38 vom 2026-10-16 (Tabelle Stand 14.09.2026)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Abschnitt \"Welche Geräte wir haben\"; Angabe dort aus dem Forum, keine eigene Messung; YT8821-Geräte brauchen das andere Image"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": "USB ports: -; Wiki-Tag 0USB"
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": "Power Methods: DC, Power Input: DC Jack"
+      },
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": "Power Supply: 12 VDC, 1A via barrel"
+      }
+    ],
+    "poe_ausgang": [
+      {
+        "wert": "nein",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": "nicht erwähnt, nur DC"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "ja (runde Hohlbuchse unten an der Rückseite)",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/External-Photos/External-Photos-7431509",
+        "stand": "PDF 2024-06-07 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja (DC Jack)",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja (barrel)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 12,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGMS30/Label/Label-Location-7431506",
+        "stand": "PDF 2024-03-05 (Etikettvorlage M3000_W(REV1.0), Stand Vorlage V2 vom \"2023-02-29\")",
+        "sicherheit": "hoch",
+        "bemerkung": "Power: 12V 1A"
+      },
+      {
+        "wert": 12,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 1,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGMS30/Label/Label-Location-7431506",
+        "stand": "PDF 2024-03-05 (Etikettvorlage M3000_W(REV1.0), Stand Vorlage V2 vom \"2023-02-29\")",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": "Package Content: M3000, Power Adapter, Ethernet Cable, Installation Guide"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "100-240 V AC, 50/60 Hz -> 12 V DC 1 A",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DEE VAN DSA-12PF11-12 FUS 120100: 100-240 V~ 0.3 A, +12.0 V 1.0 A 12.0 W",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/External-Photos/External-Photos-7431509",
+        "stand": "PDF 2024-06-07 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": "US-Ausführung mit US-Stecker; EU-Netzteil nicht belegt"
+      },
+      {
+        "wert": "I.T.E. Power Supply DSA-12PF11-12 FUS 120100",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/2APRGMS30/User-Manual/User-Manual-7439537",
+        "stand": "PDF erstellt 2024-01-16, geändert 2024-06-27 (Regulatory Issue Date 2024-05-11)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 11.5,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_typ": [
+      {
+        "wert": 4.2,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": "Idle Power Consumption"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": "Installation: Desktop; Betrieb 0-40 °C"
+      },
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/2APRGMS30/User-Manual/User-Manual-7439537",
+        "stand": "PDF erstellt 2024-01-16, geändert 2024-06-27 (Regulatory Issue Date 2024-05-11)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"may only be used indoors in all EU member states\""
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_lager": [
+      {
+        "wert": "-40 bis 70 °C",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "10-90 % nicht kondensierend (Lager 5-95 %)",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Tisch",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": "Installation: Desktop; stehender Zylinder"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "Ø110 × 154.5",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 360,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/Internal-Photos/Internal-Photos-7431508",
+        "stand": "PDF 2024-06-06 (BTL-Projekt 2403G073)",
+        "sicherheit": "mittel",
+        "bemerkung": "auf den Innenfotos kein Lüfter, passive Kühlung (Abschirmhauben, schwarzer Rippenkühlkörper); Datenblatt nennt keinen Lüfter"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": "user-konfigurierbar"
+      },
+      {
+        "wert": "System-LED (rot/weiß) plus Link/ACT der Ethernet-Ports",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "4 GPIO-LEDs: internet weiß, internet rot, wan grün, lan grün",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-m3000.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1× mehrfarbig (rot/weiß)",
+        "quelle": "openwrt_git_yt8821",
+        "beleg": "https://github.com/openwrt/openwrt/commit/45b51ebaff51d2a49d149e9011717abb1b032683",
+        "stand": "Commit 2026-03-02 (Autor), gemergt 2026-03-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "knoepfe": [
+      {
+        "wert": "WPS/Pair (runder Knopf mit Ketten-Symbol) und Reset",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/External-Photos/External-Photos-7431509",
+        "stand": "PDF 2024-06-07 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Reset (GPIO 1), WPS (GPIO 0)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-m3000.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "Rückseite, versenktes Loch \"RESET\" über den Netzwerkbuchsen (Stift nötig)",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/External-Photos/External-Photos-7431509",
+        "stand": "PDF 2024-06-07 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Reset hält beim Einschalten U-Boot an (UART-Installation)",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/20e4a18feb3f766b0f6ebec1afc154b345398a7a",
+        "stand": "Commit 2024-01-12 (Autor), gemergt 2024-05-11",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Reset/WPS bringt das Gerät in den Config Mode",
+        "quelle": "gluon_pr_3663",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/3663",
+        "stand": "PR 2026-01-11, gemergt 2026-01-25",
+        "sicherheit": "mittel",
+        "bemerkung": "Checkliste im Gluon-PR abgehakt"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte (J6, 4 Durchkontaktierungen, unbestückt)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/Internal-Photos/Internal-Photos-7431508",
+        "stand": "PDF 2024-06-06 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": "Foto Seite 11: J6 mit Siebdruck TX RX GND VCC neben der Abschirmhaube SH1"
+      },
+      {
+        "wert": "innen Lötpunkte: Stiftleiste auf der Platinenrückseite einlöten oder in die Löcher klemmen; dünne Lackschicht über den Löchern vorher abkratzen",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/20e4a18feb3f766b0f6ebec1afc154b345398a7a",
+        "stand": "Commit 2024-01-12 (Autor), gemergt 2024-05-11",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "innen Stiftleiste (4-polig)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"yes,, 4-pin header,, 3.3V TTL,, (115200 8N1),, J6\"; widerspricht dem FCC-Foto (unbestückt)"
+      },
+      {
+        "wert": "ja",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "J6: Pin 1 (eckiges Pad) TX, RX, GND, VCC",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGMS30/Internal-Photos/Internal-Photos-7431508",
+        "stand": "PDF 2024-06-06 (BTL-Projekt 2403G073)",
+        "sicherheit": "hoch",
+        "bemerkung": "Siebdruck auf der Platine"
+      },
+      {
+        "wert": "ab dem Pin, der der Buchse am nächsten ist: Vcc (nicht nötig), GND, RX, TX",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/20e4a18feb3f766b0f6ebec1afc154b345398a7a",
+        "stand": "Commit 2024-01-12 (Autor), gemergt 2024-05-11",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_git_yt8821",
+        "beleg": "https://github.com/openwrt/openwrt/commit/45b51ebaff51d2a49d149e9011717abb1b032683",
+        "stand": "Commit 2026-03-02 (Autor), gemergt 2026-03-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-m3000.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "stdout-path serial0:115200n8"
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "Markierungen liegen unter dem silbernen flachen Hitzeschild; Stifte so einlöten, dass sie zur Seite mit dem schwarzen Rippenkühlkörper zeigen; Vcc nicht anschließen",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/20e4a18feb3f766b0f6ebec1afc154b345398a7a",
+        "stand": "Commit 2024-01-12 (Autor), gemergt 2024-05-11",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "Gummiring unten abziehen, Schrauben lösen, Zylinder nach oben abziehen (evtl. mit Schraubendreher gegen eine Netzwerkbuchse drücken), 3 Schrauben Platine im Rahmen, Platine heraus, 3 Schrauben silbernes Hitzeschild",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/20e4a18feb3f766b0f6ebec1afc154b345398a7a",
+        "stand": "Commit 2024-01-12 (Autor), gemergt 2024-05-11",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "mediatek/filogic",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "mediatek/filogic",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "cudy_m3000-v1",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "weitere Profile: cudy_m3000-v1-ubootmod, cudy_m3000-v2-yt8821(-ubootmod)"
+      },
+      {
+        "wert": "cudy_m3000-v1",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/mediatek-filogic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "23.05.4",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "23.05.4",
+        "quelle": "openwrt_v23_05_4",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v23.05.4/target/linux/mediatek/image/filogic.mk",
+        "stand": "Tag v23.05.4",
+        "sicherheit": "mittel",
+        "bemerkung": "in v23.05.3 noch nicht"
+      },
+      {
+        "wert": "Commit 20e4a18 vom 2024-05-11 (main)",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/20e4a18feb3f766b0f6ebec1afc154b345398a7a",
+        "stand": "Commit 2024-01-12 (Autor), gemergt 2024-05-11",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.5",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Cudy-U-Boot; alternativ OpenWrt-U-Boot (ubootmod) mit TFTP-Recovery",
+        "quelle": "openwrt_git_ubootmod",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6a08c6594989ab13e773f60b2a18df930ced73c9",
+        "stand": "Commit 2026-05-09 (Autor), gemergt 2026-07-01",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Cudy-signierte OpenWrt-Zwischenfirmware über die Cudy-Weboberfläche, danach Gluon-sysupgrade (kein factory-Image)",
+        "quelle": "werkstatt_cudy_installation",
+        "beleg": "router-werkstatt/docs/cudy-installation.md",
+        "stand": "Commit a9781bd vom 2026-10-15 (Tabelle Stand 15.10.2026)",
+        "sicherheit": "hoch",
+        "bemerkung": "Zwischenfirmware \"M3000 1.0_2.0.zip\", im Spiegel cudy-m3000.bin, MD5 2bcdf420444309bdef463dd278d15ba4"
+      },
+      {
+        "wert": "Weg A (Hersteller-Zwischenfirmware, signiert), nicht automatisierbar",
+        "quelle": "werkstatt_erstinstallation",
+        "beleg": "router-werkstatt/docs/erstinstallation-ohne-factory.md",
+        "stand": "Commit 0d84e25 vom 2026-10-10",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Zwischenfirmware nur, wenn das Gerät unter der Cudy-Oberfläche läuft; ab SN 2543 nur die neue Zwischenfirmware",
+        "quelle": "cudy_faq_openwrt",
+        "beleg": "https://www.cudy.com/blogs/faq/openwrt-software-download",
+        "stand": "Hinweis 2025-11-24, Update 2025-12-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "http://192.168.10.1/ -> /cgi-bin/luci/admin/panel -> Firmware: Zwischenfirmware; dann 192.168.1.1 und sysupgrade",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/m3000",
+        "stand": "Seitenrevision 2026-08-05 07:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "UART: Reset beim Einschalten halten, U-Boot, tftpboot 0x46000000 initramfs, bootm, dann sysupgrade -n; Kabel am 1Gbps-LAN-Port",
+        "quelle": "openwrt_git_yt8821",
+        "beleg": "https://github.com/openwrt/openwrt/commit/45b51ebaff51d2a49d149e9011717abb1b032683",
+        "stand": "Commit 2026-03-02 (Autor), gemergt 2026-03-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "factory = false",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/mediatek-filogic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.cudy.com/pages/download-center/m3000-1-0",
+        "quelle": "cudy_download",
+        "beleg": "https://www.cudy.com/pages/download-center/m3000-1-0",
+        "stand": "Seite am 2026-10-19 (neueste Firmware 2.5.28 vom 2026-08-14)",
+        "sicherheit": "hoch",
+        "bemerkung": "neueste 2.5.28 vom 2026-08-14 (M3000-R37-2.5.28-...-sysupgrade.zip)"
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "Label-MAC = WAN (gmac0) seit Fix 687a2535 (Januar 2026); vorher um +1 verschoben",
+        "quelle": "openwrt_git_mac_687a253",
+        "beleg": "https://github.com/openwrt/openwrt/commit/687a2535d55f84a0daa2038b7e8736313cb2804e",
+        "stand": "Commit 2026-01-15 (Autor), gemergt 2026-01-18",
+        "sicherheit": "mittel",
+        "bemerkung": "laut Gluon-PR 3663 nach 25.12 und 24.10 rückportiert"
+      },
+      {
+        "wert": "Primäre MAC war in Gluon um +1 verschoben, nach Upstream-Fix passend zum Label",
+        "quelle": "gluon_pr_3663",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/3663",
+        "stand": "PR 2026-01-11, gemergt 2026-01-25",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Cudy-U-Boot setzt zufällige MACs; Workaround durch Entfernen des ethernet0-Alias",
+        "quelle": "openwrt_git_mac_a55ab9e",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a55ab9e1343e85021253e9c55f67adf33ad68f09",
+        "stand": "Commit 2024-05-17 (Autor), gemergt 2024-05-25",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, upstream ab v2025.1.1 (mediatek-filogic, cudy-m3000-v1, factory = false); nicht in v2025.1 und v2023.2.x",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/mediatek-filogic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Yes",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Checkliste: sysupgrade, 802.11s-Mesh auf allen Radios, AP+Mesh parallel, Ports WAN/LAN korrekt, Config-Mode-Blinken",
+        "quelle": "gluon_pr_3663",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/3663",
+        "stand": "PR 2026-01-11, gemergt 2026-01-25",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "varianten": [
+      {
+        "wert": "v1 schwarz (RTL8221B) und v2 weiß mit RTL8221B: dieses Image; v2 weiß mit Motorcomm YT8821 (ab etwa Januar 2026): Gluon cudy-m3000-v2-with-motorcomm-yt8821 / OpenWrt cudy_m3000-v2-yt8821",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/m3000",
+        "stand": "Seitenrevision 2026-08-05 07:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "OpenWrt-U-Boot-Layout cudy_m3000-v1-ubootmod (UBI 122.25 MB), nicht in Gluon",
+        "quelle": "openwrt_git_ubootmod",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6a08c6594989ab13e773f60b2a18df930ced73c9",
+        "stand": "Commit 2026-05-09 (Autor), gemergt 2026-07-01",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Flash F50L1G41LB bis SN < 2543, F50L1G41LC ab SN 2543",
+        "quelle": "cudy_faq_openwrt",
+        "beleg": "https://www.cudy.com/blogs/faq/openwrt-software-download",
+        "stand": "Hinweis 2025-11-24, Update 2025-12-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "bekannte_probleme": [
+      {
+        "wert": "Cudy-Layout nutzt nur 64 MB des 128-MB-NAND für UBI",
+        "quelle": "openwrt_forum_213882",
+        "beleg": "https://forum.openwrt.org/t/openwrt-support-and-reviews-for-cudy-m3000-router/213882",
+        "stand": "Thread 2024-10-24 bis 2026-05-30",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beitrag #18 diepeterpan; Abhilfe nur per ubootmod"
+      },
+      {
+        "wert": "802.11s fehlte nach einem einzelnen Paket-Update (Mediatek-Treiber) unter OpenWrt 25.x; mit frischem Image wieder da",
+        "quelle": "openwrt_forum_249734",
+        "beleg": "https://forum.openwrt.org/t/802-11s-mode-missing-on-cudy-m3000/249734",
+        "stand": "Thread 2026-05-04 bis 2026-05-11",
+        "sicherheit": "niedrig",
+        "bemerkung": "kein Hardware-Problem: andere Nutzer betreiben 802.11s auf dem M3000, Gluon-PR bestätigt Mesh"
+      },
+      {
+        "wert": "RTL8221B-2.5G-WAN-Hänger auf MT7981 (bei TR3000/WR3000H beobachtet); M3000 v2 mit RTL8221B: PHY teils nicht erkannt (openwrt#21051)",
+        "quelle": "werkstatt_rtl8221b",
+        "beleg": "router-werkstatt/docs/rtl8221b-2g5-wan-intern.md",
+        "stand": "Commit 998ec38 vom 2026-10-16 (Tabelle Stand 14.09.2026)",
+        "sicherheit": "niedrig",
+        "bemerkung": "kein M3000 im Neanderfunk-Netz (0 Knoten), nicht am Gerät nachgeprüft"
+      },
+      {
+        "wert": "Ältere Zwischenfirmware bootet Geräte mit F50L1G41LC (SN ab 2543) nicht",
+        "quelle": "cudy_faq_openwrt",
+        "beleg": "https://www.cudy.com/blogs/faq/openwrt-software-download",
+        "stand": "Hinweis 2025-11-24, Update 2025-12-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_m3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:37",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/cudy/m3000",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/m3000",
+        "stand": "Seitenrevision 2026-08-05 07:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_M3000",
+        "stand": "Seitenrevision 2024-12-08T23:00:13Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.cudy.com/products/m3000-1-0",
+        "quelle": "cudy_produktseite_v1",
+        "beleg": "https://www.cudy.com/products/m3000-1-0",
+        "stand": "Seite am 2026-10-19 (Produkt angelegt 2023-11-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://www.cudy.com/products/m3000-2-0",
+        "quelle": "cudy_produktseite_v2",
+        "beleg": "https://www.cudy.com/products/m3000-2-0",
+        "stand": "Seite am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/M3000_V1.0_Datasheet.pdf?v=8550990040687753136",
+        "stand": "PDF ohne Datum (M3000_V1.0_Datasheet.pdf), am 2026-10-19 verlinkt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "forum": [
+      {
+        "wert": "https://forum.openwrt.org/t/openwrt-support-and-reviews-for-cudy-m3000-router/213882",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/m3000",
+        "stand": "Seitenrevision 2026-08-05 07:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://forum.openwrt.org/t/cudy-m3000-with-motorcomm-phy-how-to-fix-it/247083",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/m3000",
+        "stand": "Seitenrevision 2026-08-05 07:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/2APRGMS30/External-Photos/External-Photos-7431509",
+      "kategorie": "dc_buchse_mass",
+      "grund": "Hohlstecker-Maß in keiner Quelle genannt; Netzteil-Foto zeigt Rundstecker ohne Maßangabe"
+    },
+    {
+      "url": "https://fccid.io/2APRGMS30/Test-Report/Antenna-Specification-2-7431235",
+      "kategorie": "antennen_gewinn_dbi",
+      "grund": "zweites Antennen-Approval-Sheet (479 KB) nicht ausgewertet"
+    },
+    {
+      "url": "https://fccid.io/2APRGMS30/Test-Report/2-4G-Report-1-7431231",
+      "kategorie": "wlan_sendeleistung_dbm",
+      "grund": "Testberichte 2.4G/5G (je ~5 MB, über 10 MB zusammen) mit Leistung je Kette nicht ausgewertet"
+    },
+    {
+      "url": "https://fccid.io/2APRGMS30/RF-Exposure-Info/MPE-Report-7431511",
+      "kategorie": "antennen_gewinn_dbi",
+      "grund": "MPE-Bericht mit Antennengewinn je Band nicht gelesen"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/213882.json",
+      "kategorie": "forum",
+      "grund": "Beiträge 21-26 des Review-Threads nicht geladen"
+    },
+    {
+      "url": "https://www.hkepc.com/21349/3_%E6%94%AF%E8%A3%9D%E5%8F%AA%E9%9C%80_HK$1,379__CUDY_AX3000_Dual_Band_2.5G_Wi-Fi_6_Mesh",
+      "kategorie": "gehaeuse_oeffnen",
+      "grund": "Zerlege-Review (chinesisch), im Forum #14 verlinkt; Innenansicht des schwarzen Geräts"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/pull/21584#issuecomment-3864992555",
+      "kategorie": "hw_version",
+      "grund": "Beleg für M3000 v2 mit Realtek-PHY; Etikett/SN-Bereich der YT8821-Geräte offen"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/issues/21051",
+      "kategorie": "bekannte_probleme",
+      "grund": "RTL8221B auf M3000 v2 teils nicht erkannt - Stand und Abhilfe prüfen"
+    },
+    {
+      "url": "https://openwrt.org/toh/cudy/m3000",
+      "kategorie": "erkennung_typenschild",
+      "grund": "Etikett eines schwarzen M3000 1.0 (Versionszusatz hinter der SN) in keiner Quelle lesbar; FCC-Foto Seite 3 zu klein"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "fertig",
+    "anfragen": 52,
+    "notiz": "ToH-Dump ohne Eintrag (nur Live-hwdata, Rev. 2026-08-21), OpenWrt-Wiki (Rev. 2026-08-05), OpenWrt-Commits 20e4a18/a55ab9e/687a253/45b51eb/51abd13/6a08c65 + Suche, DTS/dtsi, filogic.mk, 02_network, v23.05.4; Gluon-Target (ab v2025.1.1) und PR 3663; WikiDevi (Rev. 2024-12-08); DeviWiki ohne Seite; FCC 2APRGMS30 (Grant, Label, Handbuch, Innen-/Außenfotos ausgewertet inkl. UART J6, Antennen-Approval-Sheets 2.4/5 GHz); Cudy-Produktseiten 1.0/2.0, Datenblatt, Download-Center, OpenWrt-FAQ (Flash F50L1G41LC ab SN 2543); OpenWrt-Forum 213882/231357/247083/249734; Werkstatt cudy-installation, rtl8221b-2g5-wan-intern, erstinstallation-ohne-factory. Image gilt für M3000 1.0 (schwarz) und 2.0 (weiß) mit RTL8221B, nicht für 2.0 mit YT8821. Widersprüche: 5-GHz-Ketten (2T2R Datenblatt vs. 3T3R Produktseite vs. 2x3:2 ToH), UART bestückt (WikiDevi) vs. unbestückt (FCC-Foto), Kanalbreite 160 (Cudy) vs. 80 MHz (FCC-Grant), Forum-Behauptung 256 MB Flash für V2. Offen: DC-Steckermaß, Etikett schwarzes 1.0, FCC-Testberichte."
+  }
+}

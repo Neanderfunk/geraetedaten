@@ -1,0 +1,2605 @@
+{
+  "image": "avm-fritz-wlan-repeater-300e",
+  "modell": "AVM FRITZ!WLAN Repeater 300E",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15676678"
+    },
+    "toh_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e?do=export_raw",
+      "stand": "Seitenrevision 2026-03-08 17:09",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Live-Seite neuer als Dump: aktuell 25.12.0 (Dump 23.05.0), Gluon support Yes, VLAN Yes, Outdoor No, Installation nur 'EVA FTP' (Dump: 'fritzflash,EVA FTP'), Ethernet 100M/2.5G/5G/10G/SFP '-' statt '¿'; keine Device Page eingetragen"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/start?do=search&q=300E&sf=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Keine Geräteseite (hwdata 'Device Page' leer); Volltextsuche findet nur Changelogs 18.06.0-rc1/rc2 und 19.07.0(-rc1)"
+    },
+    "openwrt_commit_ar71xx": {
+      "url": "https://github.com/openwrt/openwrt/commit/e7cd6f5d66b827e31cfa7e7bc019ac1b86aac770",
+      "stand": "Commit 2016-12-30 (Autor Mathias Kresin), gemergt 2017-06-24",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_commit_ath79": {
+      "url": "https://github.com/openwrt/openwrt/commit/75ed56a08a4ce978323259a59a8f45ceed511584",
+      "stand": "Commit 2018-03-02 (Autor Mathias Kresin), gemergt 2018-05-17",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_commit_sysupgrade": {
+      "url": "https://github.com/openwrt/openwrt/commit/49ff00db340ea017c266ba37546c71209cfe3e26",
+      "stand": "Commit 2020-02-13 (Autor Adrian Schmutzler)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_commit_labelmac": {
+      "url": "https://github.com/openwrt/openwrt/commit/6eb39e4a1d85b10d3fbdfef7bbeddf3726c26b33",
+      "stand": "Commit 2025-12-04 (Autor Rosen Penev), gemergt 2026-05-10",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_commitsuche": {
+      "url": "https://api.github.com/search/commits?q=fritz300e+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-19: 5 Treffer ('fritz300e'), 4 Treffer ('\"Repeater 300E\"')",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar7242_avm_fritz300e.dts",
+      "stand": "letzter Commit 6eb39e4a1d85b10d3fbdfef7bbeddf3726c26b33 vom 2026-05-10 (Branch main)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic.mk",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_02_network": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/generic/base-files/etc/board.d/02_network",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_01_leds": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/generic/base-files/etc/board.d/01_leds",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_target": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_commit_ar71xx": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/656230a79f6e7a1b8ffaec56216849f301bfed46",
+      "stand": "Commit 2018-12-29 (Martin Weinelt, PR #1604)",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_commit_ath79": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/0cd7af9b52ffce244f321654fcd89925efac1551",
+      "stand": "Commit 2022-07-08 (Steffen Förster, PR #2406)",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_pr_2406": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/2406",
+      "stand": "PR 2022-03-13 bis 2022-07-08 (gemergt), Kommentare bis 2022-06-15",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PR-Text mit Device-Integration-Checkliste und Diskussion"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=Repeater+300E&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Keine Seite; Suche 'Repeater 300E' nur 'Full List of OpenWrt supported devices', Suche 'FRITZ!WLAN' ohne 300E, AVM_FRITZ!WLAN_Repeater_300E?action=raw 404"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/index.php?search=Repeater+300E&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Keine Treffer; Suche 'FRITZ!WLAN' listet nur Repeater 1200/1200 AX/3000, keine 300E-Seite"
+    },
+    "fcc": {
+      "url": "https://fccid.io/",
+      "stand": "nicht abgefragt",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Keine FCC-ID in ToH, Handbuch oder Herstellerseite; Gerät nur für EU/CH/NO/LI/IS vorgesehen (Länderhinweis Handbuch)"
+    },
+    "avm_techdaten": {
+      "url": "http://web.archive.org/web/20150103031134/http://avm.de/produkte/fritzwlan/fritzwlan-repeater-300e/technische-daten/",
+      "stand": "Wayback-Snapshot 2015-01-03",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Herstellerseite heute 404 (avm.de -> fritz.com); Archivfassung per Wayback (id_-Rohfassung) ausgewertet"
+    },
+    "avm_handbuch": {
+      "url": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf",
+      "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "live auf assets.avm.de, 814 KB"
+    },
+    "avm_kurzanleitung": {
+      "url": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_qig_de_DE.pdf",
+      "stand": "Kurzanleitung Stand 11/2013 (411301005), PDF 2013-11-08, 8 Seiten",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "live auf assets.avm.de, 2 MB"
+    },
+    "avm_download": {
+      "url": "https://download.avm.de/fritzwlan/fritzwlan-repeater-300e/",
+      "stand": "Verzeichnis 2023-09-13/15 (FRITZ!OS 6.34)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Verzeichnisse deutschland/ und other/ je mit fritz.os/ und recover/"
+    },
+    "avm_fritzos_info": {
+      "url": "https://download.avm.de/fritzwlan/fritzwlan-repeater-300e/deutschland/fritz.os/info_de.txt",
+      "stand": "FRITZ!OS 6.34, Release-Datum 2023-09-04, Datei 2023-09-13",
+      "abgerufen": "2026-10-19"
+    },
+    "avm_recover": {
+      "url": "https://download.avm.de/fritzwlan/fritzwlan-repeater-300e/deutschland/recover/",
+      "stand": "Datei 2023-09-15 (FRITZ.Box_WLAN_Repeater_300E.06.34.recover-image.exe)",
+      "abgerufen": "2026-10-19"
+    },
+    "fritz_psp": {
+      "url": "https://fritz.com/apps/psp-plugin?ilvySlug=FRITZ-WLAN-Repeater-300E&language=de&market=de",
+      "stand": "2026-10-19: 404 'No mappings found'",
+      "abgerufen": "2026-10-19"
+    },
+    "wayback_cdx": {
+      "url": "http://web.archive.org/cdx/search/cdx?url=assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/&matchType=prefix&collapse=urlkey",
+      "stand": "Abfrage 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "4 Dokumente: _ce_en_GB.pdf (2020, live 404), _man_de_DE.pdf, _qig_de_DE.pdf, _qig_en_GB.pdf (8 MB, 2025)"
+    },
+    "werkstatt": {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erstinstallation-ohne-factory.md",
+      "stand": "Stand 2026-09-09 (Gluon v2023.2.x), letzter Commit 0d84e25 vom 2026-10-10, als abgelöst markiert",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Abschnitt 'Aufstellung nach Installationsweg', Zeile 'G - AVM EVA (fritz-tools)'; nur Einordnung, keine Messung am Gerät"
+    },
+    "freifunk_forum_24123": {
+      "url": "https://forum.freifunk.net/t/24123",
+      "stand": "Thread 2024-06-19 bis 2024-06-20 (2 Beiträge)",
+      "abgerufen": "2026-10-19"
+    },
+    "freifunk_forum_suche": {
+      "url": "https://forum.freifunk.net/search.json?q=300E",
+      "stand": "Suche 2026-10-19 (18 Themen, keine Hardwaredetails)",
+      "abgerufen": "2026-10-19"
+    },
+    "boxmatrix": {
+      "url": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+      "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "boxmatrix.info selbst gesperrt und nicht angefragt; Archivfassung über web.archive.org gelesen. Abschnitte Overview, Part-Numbers, Versions, Interfaces, Casing, Hardware, Environment, Fact-Box"
+    },
+    "boxmatrix_psu": {
+      "url": "http://web.archive.org/web/20220925023335/https://boxmatrix.info/wiki/PSU-300E",
+      "stand": "Wayback-Snapshot 2022-09-25 (Index-Stand 2022-09-24)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Archivfassung, boxmatrix.info selbst nicht angefragt"
+    },
+    "boxmatrix_typenschild": {
+      "url": "http://web.archive.org/web/20230401003847/https://boxmatrix.info/w/images/thumb/5/57/FRITZ%21WLAN_Repeater_300E_2000-2499.2_Typenschild.jpg/460px-FRITZ%21WLAN_Repeater_300E_2000-2499.2_Typenschild.jpg",
+      "stand": "Foto Typenschild Gerät 2000-2499.2 (SNr. C061.401.00, Serial-Date 2012-02-06), Wayback-Snapshot 2023-04-01",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Vorschaubild 460 px aus BoxMatrix-Versions-Abschnitt (Bildquelle laut JPEG-Kommentar Freetz-Wiki); zweites Typenschildbild (2000-2499) im Archiv leer"
+    },
+    "whmf": {
+      "url": "http://web.archive.org/web/20170910063130/http://www.wehavemorefun.de:80/fritzbox/FRITZ!WLAN_Repeater_300E",
+      "stand": "Seitenrevision oldid=95469 vom 2012-04-25, Wayback-Snapshot 2017-09-10",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Alt-Wiki wehavemorefun.de (Vorläufer von BoxMatrix), Archivfassung; Abschnitte Schnittstellen, Demontage, Hardware, Environment"
+    },
+    "freetz_config": {
+      "url": "https://github.com/Freetz-NG/freetz-ng/blob/master/config/.img/separate/0300--DE--06_2X.in",
+      "stand": "Branch master, letzter Commit der Datei 14b181ca vom 2026-08-27",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "auch 0300--EN--06_2X.in (Branding avme, Sprachen de/en/es/fr/it/pl) gelesen"
+    },
+    "freetz_firmwares": {
+      "url": "https://github.com/Freetz-NG/freetz-ng/blob/master/docs/FIRMWARES.md",
+      "stand": "Branch master am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Abschnitt Fritz!Repeater"
+    },
+    "fritz_tools_pr3": {
+      "url": "https://github.com/freifunk-gluon/fritz-tools/pull/3",
+      "stand": "PR 2018-12-22 (Martin Weinelt), gemergt 2018-12-22",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PR-Text mit fritzflash-Ausgabe und EVA-Bootloader-Environment eines echten Geräts"
+    },
+    "gluon_pr_1604": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/1604",
+      "stand": "PR 2018-12-22 bis 2018-12-29 (gemergt), Kommentare bis 2018-12-23",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PR-Text mit uci-Ausgabe und vollständiger iw-phy-Ausgabe eines laufenden Geräts (Freifunk Darmstadt)"
+    },
+    "gluon_selector_pr76": {
+      "url": "https://github.com/freifunk-gluon/gluon-firmware-selector/pull/76",
+      "stand": "PR 2019-01-04, gemergt 2019-01-04",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dtsi_ar724x": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar724x.dtsi",
+      "stand": "letzter Commit 731318667d8b vom 2024-07-04 (Branch main)",
+      "abgerufen": "2026-10-19"
+    },
+    "avm_techdaten_2014": {
+      "url": "http://web.archive.org/web/20140614010631/http://avm.de/produkte/fritzwlan/fritzwlan-repeater-300e/technische-daten/",
+      "stand": "Wayback-Snapshot 2014-06-14",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "ältester Snapshot der deutschen Seite Technische Daten, zum Gewichtsvergleich"
+    },
+    "avm_techdaten_en": {
+      "url": "http://web.archive.org/web/20140707052417/http://en.avm.de/products/fritzwlan/fritzwlan-repeater-300e/technical-data/",
+      "stand": "Wayback-Snapshot 2014-07-07",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "englische Seite Technical data (international)"
+    },
+    "github_suche": {
+      "url": "https://api.github.com/search/issues?q=fritz300e",
+      "stand": "Suche 2026-10-19: 24 Treffer (fritz300e), 31 Treffer (\"Repeater 300E\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "daraus PR 1604, fritz-tools PR 3, Selector PR 76 ausgewertet"
+    },
+    "freifunk_forum_suche2": {
+      "url": "https://forum.freifunk.net/search.json?q=fritz300e",
+      "stand": "Suche 2026-10-19: fritz300e 1 Thema (21260, nur Target-Liste), \"Repeater 300E seriell\" 0 Treffer",
+      "abgerufen": "2026-10-19"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "15676678",
+      "devicetype": "Range Extender",
+      "brand": "AVM",
+      "model": "FRITZ!WLAN Repeater 300E",
+      "version": "NULL",
+      "fccid": "NULL",
+      "availability": "Discontinued",
+      "whereavailable": "",
+      "supportedsincecommit": "https://git.lede-project.org/?p=source.git;a=commit;h=e7cd6f5d66b827e31cfa7e7bc019ac1b86aac770",
+      "supportedsincerel": "18.06.0",
+      "supportedcurrentrel": "23.05.0",
+      "unsupported_functions": "NULL",
+      "target": "ar71xx-ath79",
+      "subtarget": "generic",
+      "packagearchitecture": "mips_24kc",
+      "bootloader": "EVA",
+      "cpu": "Atheros AR7242",
+      "cpucores": "1",
+      "cpumhz": "400",
+      "flashmb": "16",
+      "rammb": "64",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "1",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "-",
+      "vlan": "¿",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "Atheros AR9382",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "a/n",
+      "wlancomments": "",
+      "wlandriver": "ath9k",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "-",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "¿",
+      "serialconnectionparameters": "¿",
+      "jtag": "¿",
+      "ledcount": "8",
+      "buttoncount": "1",
+      "gpios": "-",
+      "powersupply": "230 VAC, 50 Hz, 5W",
+      "devicepage": "",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "FRITZ!WLAN Repeater 300E",
+      "gitsearch": "FRITZ!WLAN Repeater 300E",
+      "wikideviurl": "NULL",
+      "oemdevicehomepageurl": "https://avm.de/service/fritzwlan/fritzwlan-repeater-300e/uebersicht/",
+      "firmwareoemstockurl": "https://avm.de/service/downloads/?product=FRITZ%2521WLAN%2BRepeater%2B300E",
+      "firmwareopenwrtinstallurl": "NULL",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-avm_fritz300e-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "NULL",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-avm_fritz300e-squashfs-sysupgrade.bin",
+      "installationmethods": "fritzflash,EVA FTP",
+      "commentinstallation": "",
+      "recoverymethods": "NULL",
+      "commentrecovery": "",
+      "picture": "media:example:genericrouter1.png",
+      "comments": "",
+      "page": "toh:hwdata:avm:avm_fritz_wlan_repeater_300e"
+    },
+    "toh_hwdata": {
+      "Device Type_devicetype": "Range Extender",
+      "Brand": "AVM",
+      "Model": "FRITZ!WLAN Repeater 300E",
+      "Versions": "",
+      "FCCID_urls": "",
+      "Availability_availability": "Discontinued",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.lede-project.org/?p=source.git;a=commit;h=e7cd6f5d66b827e31cfa7e7bc019ac1b86aac770",
+      "Supported Since Rel_releasesince": "18.06.0",
+      "Supported Current Rel_releasecurrent": "25.12.0",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "EVA",
+      "CPU": "Atheros AR7242",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "400",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "64",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "-",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Atheros AR9382",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n",
+      "WLAN Comments_": "",
+      "WLAN driver_wlan-drivers": "ath9k",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "¿",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "¿",
+      "Serial connection parameters_serialparam": "¿",
+      "Serial connection voltage_serialvoltage": "¿",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "8",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "230 VAC, 50Hz, 5W",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "FRITZ!WLAN Repeater 300E",
+      "Git search_search-gits": "FRITZ!WLAN Repeater 300E",
+      "WikiDevi URL_urls": "",
+      "WikiDevi ID_hwinfo-id": "",
+      "OEM Device Homepage URL_url": "https://avm.de/service/fritzwlan/fritzwlan-repeater-300e/uebersicht/",
+      "Firmware OEM Stock URL_url": "https://avm.de/service/downloads/?product=FRITZ%2521WLAN%2BRepeater%2B300E",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/generic/openwrt-25.12.0-ath79-generic-avm_fritz300e-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/generic/openwrt-25.12.0-ath79-generic-avm_fritz300e-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-avm_fritz300e-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-avm_fritz300e-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "EVA FTP",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "",
+      "Comment recovery": "",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "openwrt_commit_ar71xx": {
+      "titel": "ar71xx: add AVM FRITZ!WLAN Repeater 300E support",
+      "SoC": "AR7242 (Virian 400MHz)",
+      "RAM": "64 MB DDR (W9751G6JB-25)",
+      "Flash": "16MB SPI flash (S25FL129PIF)",
+      "WiFi": "AR9382 (2.4/5GHz) + 2x SE2595L",
+      "LAN": "1x1000M (PEF7071V)",
+      "Installation": "To install LEDE via EVA bootloader, a FTP connection need to be established to 192.168.178.1 within the first seconds after power on: quote USER adam2 / quote PASS adam2 / binary / debug / passive / quote MEDIA FLSH / put lede-ar71xx-generic-fritz300e-squashfs-sysupgrade.bin mtd1",
+      "dateien": [
+        "include/image-commands.mk",
+        "target/linux/ar71xx/files/arch/mips/ath79/mach-fritz300e.c",
+        "target/linux/ar71xx/image/generic.mk",
+        "..."
+      ]
+    },
+    "openwrt_commit_ath79": {
+      "titel": "ath79: add AVM FRITZ!WLAN Repeater 300E",
+      "text": "No known issues, everything works fine."
+    },
+    "openwrt_commit_sysupgrade": {
+      "titel": "ath79: enable forceless sysupgrade from ar71xx on fritz300e",
+      "text": "This adds the ar71xx board name to the SUPPORTED_DEVICES on ath79, so forceless sysupgrade on this device becomes possible."
+    },
+    "openwrt_commit_labelmac": {
+      "titel": "ath79: fritz300e: awk-1137c: remove label-mac-device",
+      "text": "This is already done in userspace. In addition, it's hard to do in nvmem as they rely on non standard locations."
+    },
+    "openwrt_dts": {
+      "compatible": "avm,fritz300e, qca,ar7242",
+      "model": "AVM FRITZ!WLAN Repeater 300E",
+      "keys": "wps: KEY_WPS_BUTTON, GPIO 12 active low",
+      "leds": "power (grün, GPIO 13), lan (grün, GPIO 15), wlan (grün, GPIO 16, Trigger phy0tpt); ath9k-GPIO: rssi0..rssi4 (grün, ath9k-GPIO 10/4/6/7/5)",
+      "eth-phy-reset": "GPIO 11, startup-delay 300 ms",
+      "flash": "jedec,spi-nor, 25 MHz; Partitionen urloader 0x0-0x20000 (ro), firmware 0x20000 Größe 0xee0000 (avm,eva-firmware), tffs (1) 0xf00000 (ro), tffs (2) 0xf80000 (ro)",
+      "pcie": "ath9k pci168c,0030, qca,no-eeprom",
+      "ethernet": "mdio0 phy0 reg 0, phy-mode rgmii; eth0 rgmii, pll-data 0x16000000 0x00000101 0x00001313"
+    },
+    "openwrt_image_mk": {
+      "Device": "avm_fritz300e",
+      "Basis": "Device/avm: KERNEL kernel-bin | append-dtb | lzma | eva-image; DEVICE_PACKAGES fritz-tffs",
+      "SOC": "ar7242",
+      "IMAGE_SIZE": "15232k",
+      "DEVICE_MODEL": "FRITZ!WLAN Repeater 300E",
+      "DEVICE_PACKAGES": "rssileds kmod-phy-intel-xway -swconfig",
+      "SUPPORTED_DEVICES": "fritz300e",
+      "Images": "nur sysupgrade.bin (kein factory)"
+    },
+    "openwrt_02_network": {
+      "interfaces": "ucidef_set_interface_lan \"eth0\" (gemeinsamer Zweig mit anderen Ein-Port-Geräten)",
+      "macs": "lan_mac = fritz_tffs -n maca aus 'tffs (1)'; label_mac = fritz_tffs -n macwlan aus 'tffs (1)'"
+    },
+    "openwrt_01_leds": {
+      "lan": "netdev green:lan eth0",
+      "rssi": "rssimon wlan0; green:rssi0..rssi4 bei 1/20/40/60/80 %"
+    },
+    "gluon_target": {
+      "eintrag": "device('avm-fritz-wlan-repeater-300e', 'avm_fritz300e', { factory = false, })"
+    },
+    "gluon_commit_ar71xx": {
+      "titel": "ar71xx: add support for FRITZ!Repeater 300E (#1604)",
+      "dateien": [
+        "docs/index.rst",
+        "targets/ar71xx-generic"
+      ]
+    },
+    "gluon_commit_ath79": {
+      "titel": "ath79-generic: add AVM FRITZ!WLAN Repeater 300E support (#2406)",
+      "Spezifikation": "SoC AR7242 (Virian 400MHz); RAM 64 MB DDR (W9751G6JB-25); Flash 16MB SPI flash (S25FL129PIF); WiFi AR9382 (2.4/5GHz) + 2x SE2595L; LAN 1x1000M (PEF7071V)",
+      "dateien": [
+        "docs/user/supported_devices.rst",
+        "targets/ath79-generic"
+      ]
+    },
+    "gluon_pr_2406": {
+      "autor": "ambassador86",
+      "testgeraet": "https://map.chemnitz.freifunk.net/#!v:m;n:BC0543DBD8BD",
+      "text": "The device has only one dual band radio and prefers the 5GHz band as described in the gluon documentation. The only RJ45 connector works as WAN.",
+      "checkliste": "flashbar per fritz flash tools; sysupgrade, keep/forget config, autoupdate ok; WPS-Taste -> Config-Mode; primäre MAC = Label; alle Ports, WAN-Zuordnung; AP und 802.11s-Mesh auf allen Radios parallel; Power-LED an + Config-Mode-Blinkfolge; Radio-LED Aktivität; Port-LED Link/Aktivität (alle abgehakt)",
+      "kommentar_migration_2022-04-09": "migration worked fine ... If you migrate the node it sticks to the 2,4GHz band ... the primary mac address remains lowercase which is different when you install ath79 directly.",
+      "kommentar_blocktrron_2022-04-22": "This is a bug in iwinfo ... Gluons preference is to assign multi-band radios to 2.4 GHz preferably.",
+      "kommentar_AiyionPrime_2022-03-16": "ar71xx-Altimage für Migrationstest: http://firmware.ffh.zone/vH21/sysupgrade/gluon-ffh-vH21-avm-fritz-wlan-repeater-300e-sysupgrade.bin"
+    },
+    "avm_techdaten": {
+      "Highlights": [
+        "Erhöht schnell und einfach die Reichweite gängiger WLAN-Netze",
+        "WLAN N bis 300 MBit/s im 2,4- oder 5-GHz-Band für schnelle, kabellose Verbindungen",
+        "Kompatibel zu den Funkstandards 802.11n/g/b/a",
+        "Am Gigabit-LAN-Anschluss verbundene Geräte (Drucker, Player u. a.) erhalten WLAN-Funktion",
+        "LAN-Brücke: Verbindung mit dem LAN-Anschluss eines Routers per Netzwerkkabel",
+        "Übernahme der WLAN-Verschlüsselung (WPA2, WPA, WEP)",
+        "WPS (Wi-Fi Protected Setup) – einfache und sichere WLAN-Einrichtung per Knopfdruck",
+        "Besonders kompakte Bauweise, geringer Verbrauch",
+        "Assistent für einfache Einrichtung"
+      ],
+      "Features": [
+        "Vergrößert die Reichweite eines WLAN-Netzes",
+        "WLAN 802.11n mit bis zu 300 MBit/s für schnelle kabellose Verbindungen",
+        "Frequenzband 2,4 GHz und 5 GHz",
+        "Unterstützt die WLAN-Funknetze 802.11n (300 MBit/s brutto), 802.11g/a (54 MBit/s) und 802.11b (11 MBit/s)",
+        "Gigabit-LAN-Anschluss: Verbundene Geräte (Computer, Drucker, Audio-Video-Zuspieler u. a.) erhalten WLAN-Funktion",
+        "Lässt sich alternativ per Kabelverbindung an einen Router anschließen (LAN-Brücke)",
+        "Verschlüsselung mit WPA2 (802.11i), alternativ WPA und WEP (128/64)",
+        "Sichere WLAN-Einrichtung per Knopfdruck über WPS (Wi-Fi Protected Setup)",
+        "Kompatibel zu allen gängigen Routern mit den WLAN-Standards n, b, g und a, kein WDS erforderlich",
+        "Kompakte Bauweise, Betrieb an jeder 230-V-Steckdose möglich",
+        "Browser- und Software-Assistent für einfache Einrichtung",
+        "Anzeige für Verbindungsqualität und Status",
+        "Unterstützt das Internetprotokoll IPv6"
+      ],
+      "Anschlüsse und Schnittstellen": [
+        "Anbindung ans Stromnetz mit 230 V, 50 Hz an Steckdose (Euro-Stecker, EN 50075)",
+        "WLAN Access Point: 802.11n (300 MBit/s), 802.11g/a (54 MBit/s) und 802.11b (11 MBit/s)",
+        "WLAN: 2,4 GHz und 5 GHz",
+        "Gigabit-Netzwerk-Anschluss (10/100/1000 MBit/s)"
+      ],
+      "Geräteeigenschaften": [
+        "Abmessungen (B x H x T): ca. 76 x 101 x 76 mm",
+        "Gewicht: ca. 150 g",
+        "Gesamtleistungsaufnahme: ca. 5 Watt"
+      ],
+      "Garantie": "5 Jahre Herstellergarantie",
+      "Artikelnummer": "20002499"
+    },
+    "avm_handbuch": {
+      "Physikalische Eigenschaften (9.1)": [
+        "Abmessungen (B x H x T): cirka 76 x 101 x 76 mm",
+        "Betriebsspannung: 230 Volt / 50 Hertz",
+        "Gesamtleistungsaufnahme: cirka 5 Watt",
+        "Gewicht: cirka 120 g",
+        "Antennen: zwei Dualband-Antennen",
+        "Ethernet: Netzwerkanschluss über RJ45-Buchse (Gigabit-Ethernet, 10/100/1000 Base-T)",
+        "WLAN: IEEE 802.11n, kompatibel zu IEEE 802.11a/g/b",
+        "WLAN: WPA, WPA2 (802.11i)",
+        "WLAN: 2,4 GHz max. 100 mW / 5 GHz max. 200 mW",
+        "WLAN: Übertragungsrate bis zu 300 Mbit/s (brutto)",
+        "Betriebstemperatur: 0 °C – +40 °C"
+      ],
+      "Benutzeroberfläche und Anzeige (9.2)": [
+        "Einstellungen und Statusmeldungen im Internetbrowser",
+        "'WPS'-Taster zum Steuern von WLAN, WPS und Zurücksetzen der Einstellungen",
+        "LED-Anzeige für Informationen zu Verbindung, Aktivität und Status"
+      ],
+      "Taster (1.3)": "ein Taster auf der Vorderseite: WLAN ein/aus mind. 1 s, WPS-Schnellverbindung mind. 6 s, Werkseinstellungen mind. 15 s",
+      "Leuchtdioden (1.3)": "bis zu 5 LEDs Signalstärke (blinken: keine Verbindung zur Basis); Power (blinkt: Start/Firmware-Update, leuchtet: betriebsbereit); WLAN; LAN (leuchtet: Netzwerkverbindung); alle blinken: Werkseinstellungen werden geladen",
+      "Lieferumfang (1.2)": [
+        "FRITZ!WLAN Repeater 300E",
+        "eine gedruckte Kurzanleitung",
+        "ein LAN-Kabel (Netzwerkkabel)"
+      ],
+      "Sicherheit und Handhabung (2.2)": [
+        "nur innerhalb von Gebäuden verwenden",
+        "Gehäuse nicht öffnen",
+        "in leicht erreichbare Steckdose an trockenem, staubfreiem Ort ohne direkte Sonneneinstrahlung stecken",
+        "während Gewitter vom Stromnetz trennen"
+      ],
+      "LAN-Anschluss (5)": "an der Geräteunterseite ein LAN-Anschluss",
+      "Bedienoberfläche": "fritz.repeater",
+      "CE-Konformitätserklärung": "1999/5/EG, 2009/125/EG, 2011/65/EU; EN 60950-1:2006/A1:2010, EN 55024:2010, EN 301 489-1 V1.9.2, EN 301 489-17 V2.2.1, EN 300 328 V1.7.1, EN 301 893 V1.7.1, EN 62311:2008; Berlin 05.02.2014",
+      "Länderhinweis": "Verwendung in allen Ländern der EU sowie CH, NO, LI, IS; Betrieb 5150-5350 MHz nur in geschlossenen Räumen",
+      "Hersteller": "AVM GmbH, Alt-Moabit 95, D-10559 Berlin",
+      "Support (10, S. 38)": "genaue Gerätebezeichnung auf der Geräteunter- oder Geräterückseite; Seriennummer auf der Geräteunterseite"
+    },
+    "avm_kurzanleitung": {
+      "Systemvoraussetzungen": "WLAN-Basisstation nach IEEE 802.11b/g/a/n, 2,4 oder 5 GHz, DHCP",
+      "Gerätemerkmale": "WPS-Taster (Schnellverbindung, WLAN ein/aus, Werkseinstellungen); Statusanzeige (Qualität des WLAN-Funksignals, Verbindungszustände); LAN-Buchse; WLAN 802.11n im 2,4 oder 5 GHz-Band",
+      "Lieferumfang": "FRITZ!WLAN Repeater 300E, gedruckte Kurzanleitung, Netzwerkkabel (LAN-Kabel)",
+      "Betriebsarten": "WLAN-Brücke (voreingestellt), LAN-Brücke",
+      "Dokumentnummer": "411301005, Stand 11/2013"
+    },
+    "avm_download": {
+      "deutschland/fritz.os": "FRITZ.Box_WLAN_Repeater_300E-06.34.image (8458240 Bytes, 2023-09-13), info_de.txt",
+      "deutschland/recover": "FRITZ.Box_WLAN_Repeater_300E.06.34.recover-image.exe (8253440 Bytes, 2023-09-15)",
+      "other": "fritz.os/ und recover/ (international, en-de-es-it-fr-pl)"
+    },
+    "avm_fritzos_info": {
+      "Produkt": "FRITZ!WLAN Repeater 300E",
+      "Version": "FRITZ!OS 6.34",
+      "Release-Datum": "04.09.2023",
+      "Verbesserungen": "6.34 Stabilität und Sicherheit; 6.33 Schwäche der Schlüsselaushandlung bei WPA2 behoben; 6.30 u. a. WLAN-Autokanal ohne DFS (LAN-Brücke), DFS-Wartezeit-Meldungen"
+    },
+    "werkstatt": {
+      "Zeile": "| G - AVM EVA (fritz-tools) | 4 | ath79-generic | FRITZ!Box 4020, Repeater 300E/450E/1750E | Werkzeug vorhanden |",
+      "Kontext": "Geräte mit factory = false im Gluon-Baum; Weg G = Installation über AVM-EVA-Bootloader mit fritz-tools"
+    },
+    "freifunk_forum_24123": {
+      "frage": "Fritz!Repeater 300E mit Gluon - wie wieder deinstallieren?",
+      "antwort": "Recovery-Image unter download.avm.de/fritzwlan/fritzwlan-repeater-300e/deutschland/recover/; ob über das Interface einspielbar, unbekannt"
+    },
+    "boxmatrix": {
+      "Box-Model": "FRITZ!WLAN Repeater 300E - Nick: 300e",
+      "Aliases": "FRITZ!WLAN Repeater (RecName)",
+      "Sales": "Introduced 2011-03-01 (CeBIT 2011), Market 2011-04-06, Price 89 Euro",
+      "Network": "WLAN 300 Mbps a b g n - MIMO 2x2 @ 2.4 GHz or 5 GHz - Gbit-Ports 1",
+      "Memory": "RAM 64 MB - S-Flash 16 MB",
+      "CPU": "Virian @ 400 MHz - MIPS32 24Kc - CPU-Cores 1",
+      "HWRevision": "173 - HWSubRevision 2",
+      "ProductID": "Fritz_Box_Neon",
+      "Install-Type": "mips24_16MB_1eth_wlan_repeater_osprey_64972",
+      "Brandings": "avme, avm - Languages de, en, es, fr, it, pl",
+      "Countries": "at, au, be, ch, cy, cz, de, dk, ee, es, fi, fr, gr, hr, hu, ie, il, int, is, it, lu, lv, me, mk, na, nl, no, nz, pl, pt, si, sk, th, uk, za",
+      "System": "Kernel 2.6.32.61 - uClibc 0.9.33.2 - BusyBox 1.20.2 - Bootloader 2133, 2183 - Size 128 KB",
+      "Part-Numbers": "20002499 (GTIN 4023125024993, Märkte de/nl/se) und 20002500 (GTIN 4023125025006, international); Icecat-Datum 2011-04-03 bzw. 2012-01-12; EOM 2015-03-31, EOS 2015-06-30",
+      "Versions": [
+        "Part-Nr 2000-2499, Owner Dr. Harald Karcher, Serial B152.380.00.xxx.xxx, Serial-Date 2011-04-12, HWRevision 173, HWSubRevision X, Branding avm, Colour red/white",
+        "Part-Nr 2000-2499.2, Owner Janus, Serial C061.401.00.xxx.xxx, Serial-Date 2012-02-06, HWRevision 173, HWSubRevision 2, Branding avm, Annex Ohne, Colour red/white",
+        "Part-Nr 2000-2499, Owner Markus154, HWRevision 173, HWSubRevision X, Colour red/white"
+      ],
+      "Interfaces Front side": "Signal - 5x LED WLAN signal meter (gn); Power - LED (gn); WLAN - LED (gn); LAN - LED (gn); WPS - WLAN-Button - to enable/disable WLAN and start WPS",
+      "Interfaces Back side": "Power - Euro-Plug 230V AC, 5VA",
+      "Interfaces Bottom side": "LAN - RJ-45 - Ethernet 10/100/1000MBit",
+      "Interfaces Internal": "no RS232 as we know it; JTAG - 2x 7-pin 1.27mm pitch JTAG-Interface - PCB bottom side, not drilled; 2x WLAN - Hirose - connecting 2 PCB-Trace WLAN 2.4/5GHz antennas",
+      "Casing": "Group FWR-Casing; Dimensions 101 x 76 x 76 mm; Screws 4; Orient P; Wallmount 2-way; Designer Constin 2008",
+      "Hardware": "SoC AR7242-AH1A (Virian, 400MHz MIPS32 24Kc); RAM W9751G6JB-25 (DDR2-800, 64MB); Flash S25FL129PIF (Spansion Serial-Flash 104MHz, 16MB); WLAN 1x AR9382-AL1H (Osprey, 802.11 a/b/g/n 2x2 2.4/5GHz) + 2x SE2595L (Skyworks Frontend/PA 2.4/5GHz); LAN PEF7071V V1.3 (Lantiq 1-port GbE PHY); Trafo LFE9120-R (Delta); PSU STN1NK80Z (ST N-MOSFET 800V) + L6565D (ST Switching Power-Supply Controller)",
+      "Environment (bootenv)": "HWRevision 173, HWSubRevision 2, ProductID Fritz_Box_Neon, bootloaderVersion 1.1183, bootserport tty0, cpufrequency 400000000, firmware_info 101.05.09, firmware_version avm (int: avme), flashsize nor_size=0x0 sflash_size=16MB nand_size=0MB, memsize 0x04000000, modetty0 38400,n,8,1,hw, modetty1 38400,n,8,1,hw, mtd1 0x9F020000,0x9FF00000 (15232 KB), mtd2 0x9F000000,0x9F020000 (128 KB), mtd3 0x9FF00000,0x9FF80000 (512 KB), mtd4 0x9FF80000,0xA0000000 (512 KB), my_ipaddress 192.168.178.1, prompt Eva_AVM, urlader-version 2183",
+      "Power-Supply": "PSU-300E (Power-Type AC, 230 V, 5 VA, Power-Euro)",
+      "Fact-Box (Auszug)": "Casing-Colour red/white; WLAN-Antenna PCB-Trace WLAN 2.4/5GHz; WLAN-Hirose 2; WLAN-Intern 2; JTAG-2x7 true; Misc-LEDs 5xMeter:gn; Gluon (tested with fritz-tools); OpenWRT 24.10.0; Support eos; Sales sold"
+    },
+    "boxmatrix_psu": {
+      "Model": "PSU-300E - Nick p300e",
+      "Vendor": "AVM",
+      "Type": "switch - Location int (eingebaut)",
+      "Input": "AC, 230-230 V, 50-50 Hz, Current-Max 22 mA, Power-Max 5 VA",
+      "Output": "DC, Voltage 0 V, Current 0 mA (nicht erfasst)",
+      "Compatibility": "FRITZ!WLAN Repeater 300E (de)"
+    },
+    "boxmatrix_typenschild": {
+      "Aufdruck": "FRITZ!WLAN Repeater 300E / SNr.: C061.401.00.(verpixelt) / MAC C0:25:06:(verpixelt) / WLAN-Netzwerkschlüssel: (Ziffernfeld) / Input:230V/~/50Hz/5W / AVM-Logo / 2D-Code (verpixelt)",
+      "Hardware-Revision auf dem Schild": "keine"
+    },
+    "whmf": {
+      "Übersicht": "vorgestellt März 2011, Marktstart April 2011, 89 Euro UVP; WLAN-Repeater für die Steckdose mit GBit-Port",
+      "Modell": "FRITZ!WLAN Repeater 300E - fritz.repeater",
+      "Netzwerk": "1x LAN 1GBit/s, WLAN 802.11 a/b/g/n 2.4/5GHz bis 300Mbit/s",
+      "Speicher": "16MB Flash, 64MB RAM",
+      "Hardware": "HWR 173",
+      "Inst-Type": "mips24_16MB_1eth_wlan_repeater_osprey_64972",
+      "ProductID": "Fritz_Box_Neon",
+      "Firmware": "5.09 auf 400MHz Virian - Branding avm",
+      "Linux": "Kernel 2.6.32.41 - uClibc 0.9.32 - BusyBox 1.18.5 - Urlader 2183",
+      "Besonderheiten": "Virian SoC von Atheros und 2-stream Version des Osprey PCIe",
+      "Artikel-Nummern": "2000-2499: 101.05.09 - Kein Annex - DE - AVM (Stand 25.04.2012)",
+      "Versionen": [
+        "2000-2499 (Markus154), HWRevision TODO, Farbe weiss/rot",
+        "2000-2499.2 (Janus), Serien-Nr C061.401.00.xxx.xxx, HWRevision 173, HWSubRevision 2, Annex Ohne, Farbe weiss/rot"
+      ],
+      "Schnittstellen Frontseite": "3x LED - Power - WLAN - LAN; 5x LED - Empfangspegel; 1x WLAN-Taster",
+      "Schnittstellen Rückseite": "Euro-Stecker 230V AC",
+      "Schnittstellen Intern": "2x WLAN-N-Antenne dual band",
+      "Schnittstellen Platine": "4-pol Serielle Konsole - RM 2.54 - Gebohrt aber nicht bestückt; 2x7-pol EJTAG Interface - RM 1.27 - Platinenunterseite",
+      "Demontage": "4 Torx T6 Schrauben an der Unterseite lösen; Deckel abheben; Platine lässt sich einfach herausheben; Achtung: Teile der Platine führen die Netzspannung! Kondensatoren könnten gefährliche Restspannung erhalten.",
+      "Hardware-Bauteile": "CPU AR7242-AH1A (Virian 400MHz); Flash S25FL129PIF (16MB); RAM W9751G6JB-25 (64MB); WLAN AR9382-AL1H + 2x SE2595L; PHY PEF7071V V1.3",
+      "Environment": "wie BoxMatrix: HWRevision 173, HWSubRevision 2, bootserport tty0, modetty0/modetty1 38400,n,8,1,hw, firmware_info 101.05.09, urlader-version 2183",
+      "Modifikationen": "Freetz: zur Zeit keine Unterstützung; OpenWrt: keine spezifische Seite (Stand 2012)"
+    },
+    "freetz_config": {
+      "FREETZ_AVM_PROP_NAME": "FRITZ!WLAN Repeater 300E",
+      "FREETZ_AVM_PROP_MAJOR": "101",
+      "FREETZ_AVM_PROP_HWREV": "173",
+      "FREETZ_AVM_PROP_PRODUKT": "Fritz_Box_Neon",
+      "FREETZ_AVM_SERIAL_CONSOLE_DEVICE": "/dev/ttyS0",
+      "Kernel/Libc": "AVM-Kernel 2.6.32.61, uClibc 0.9.33, squashfs 3 LZMA big endian, MIPS BE, Firmware-Layout 1",
+      "Brandings": "DE: avm; EN: avme mit Sprachen de, en, es, fr, it, pl"
+    },
+    "freetz_firmwares": {
+      "Eintrag": "Fritz!WLAN Repeater 300E (UNTESTED): 101.06.34 rev38815 {GER}, 101.06.34 rev38815 {INT}"
+    },
+    "fritz_tools_pr3": {
+      "titel": "fritzflash: Add Repeater 300E image auto-selection",
+      "text": "Flashing worked just fine. (fritzflash-Ausgabe: Autodiscovery 192.168.178.1, Image avm-fritz-wlan-repeater-300e-sysupgrade.bin, danach Config-Mode unter http://192.168.1.1/)",
+      "EVA-Environment": "HWRevision 173, HWSubRevision 2, ProductID Fritz_Box_Neon, bootloaderVersion 1.1183, bootserport tty0, cpufrequency 400000000, firmware_info 101.06.30, firmware_version avm, flashsize nor_size=0x0 sflash_size=16MB nand_size=0MB, memsize 0x04000000, modetty0 38400,n,8,1,hw, modetty1 38400,n,8,1,hw, mtd1 0x9F020000,0x9FF00000, mtd2 0x9F000000,0x9F020000, mtd3 0x9FF00000,0x9FF80000, mtd4 0x9FF80000,0xA0000000, my_ipaddress 192.168.178.1, prompt Eva_AVM, req_fullrate_freq 200000000, sysfrequency 200000000, urlader-version 2183, usb_device_name USB DSL Device, usb_manufacturer_name AVM (MAC-Adressen und Schlüssel des Testgeräts weggelassen)"
+    },
+    "gluon_pr_1604": {
+      "titel": "ar71xx: add support for FRITZ!Repeater 300E",
+      "text": "Slight issue: The radio is dualband and is currently autoconfigured for 5 GHz. We are lacking a sane default and/or a toggle.",
+      "uci": "radio0 mac80211, hwmode 11a, path pci0000:00/0000:00:00.0, htmode HT20, channel 48",
+      "iw phy": "Available Antennas: TX 0x3 RX 0x3; Configured Antennas: TX 0x3 RX 0x3; Band 1 und Band 2: Capabilities 0x11ef (RX LDPC, HT20/HT40, RX HT20/HT40 SGI, TX STBC, RX STBC 1-stream), HT TX/RX MCS rate indexes supported: 0-15; Regdomain DE: 2412-2472 MHz 20 dBm, 5180-5320 MHz 20 dBm, 5500-5700 MHz 24 dBm, 5745-5825 MHz 13 dBm; interface combinations #{ AP, mesh point } <= 8, #channels <= 1",
+      "checkliste": "flashbar per FTP (fritzflash), sysupgrade/keep/forget, autoupdate, Ports, AP+Mesh, LEDs, Reset/WPS -> Config-Mode, primäre MAC = Label: alle abgehakt",
+      "kommentare": "blocktrron 2018-12-23: Patch zur Verteilung von Dualband-Radios; rotanid 2018-12-23: Vorgabe sollte 2.4 GHz sein"
+    },
+    "gluon_selector_pr76": {
+      "titel": "Add support for FRITZ!WLAN Repeater 300E",
+      "kommentar_blocktrron_2019-01-04": "Good point using the 450E image as only the signal bar marking looks to be different."
+    },
+    "openwrt_dtsi_ar724x": {
+      "chosen": "bootargs = \"console=ttyS0,115200\""
+    },
+    "avm_techdaten_en": {
+      "Highlights": "Wireless N with up to 300 Mbit/s in the 2.4 GHz or 5 GHz band; gigabit LAN port; LAN bridge (network port or powerline); WPS; especially compact design",
+      "Ports and Interfaces": "Connection to mains with 230 V, 50 Hz to outlet (Euro socket, EN 50075); 802.11n (300 Mbit/s), 802.11g (54 Mbit/s), 802.11b (11 Mbit/s); 2,4 GHz and 5 GHz",
+      "Device properties": "Dimensions (W x H x D): approx. 76 x 101 x 76 mm; Weight: approx. 150 g; Total power consumption: approx. 5 Watt",
+      "Warranty": "5-year manufacturer’s warranty",
+      "Article number": "20002500"
+    },
+    "avm_techdaten_2014": {
+      "Geräteeigenschaften": "Abmessungen (B x H x T): ca. 76 x 101 x 76 mm; Gewicht: ca. 150 g; Gesamtleistungsaufnahme: ca. 5 Watt"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "AVM",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AVM GmbH, Berlin",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=42",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "FRITZ!WLAN Repeater 300E",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "FRITZ!WLAN Repeater 300E",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "FRITZ!WLAN Repeater 300E",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar7242_avm_fritz300e.dts",
+        "stand": "letzter Commit 6eb39e4a1d85b10d3fbdfef7bbeddf3726c26b33 vom 2026-05-10 (Branch main)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": "FRITZ!Repeater 300E",
+        "quelle": "gluon_commit_ar71xx",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/656230a79f6e7a1b8ffaec56216849f301bfed46",
+        "stand": "Commit 2018-12-29 (Martin Weinelt, PR #1604)",
+        "sicherheit": "mittel",
+        "bemerkung": "Commit-Titel"
+      },
+      {
+        "wert": "fritz300e (ar71xx-Boardname), avm_fritz300e (ath79-Profil), avm,fritz300e (compatible)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "FRITZ.Box_WLAN_Repeater_300E (Dateiname der AVM-Firmware)",
+        "quelle": "avm_download",
+        "beleg": "https://download.avm.de/fritzwlan/fritzwlan-repeater-300e/",
+        "stand": "Verzeichnis 2023-09-13/15 (FRITZ!OS 6.34)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Fritz_Box_Neon (AVM-ProductID), Nick 300e, FRITZ!WLAN Repeater (RecName)",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Freetz-Typ 0300, Firmware-Major 101 (FRITZ!OS-Versionen 101.xx.yy)",
+        "quelle": "freetz_config",
+        "beleg": "https://github.com/Freetz-NG/freetz-ng/blob/master/config/.img/separate/0300--DE--06_2X.in",
+        "stand": "Branch master, letzter Commit der Datei 14b181ca vom 2026-08-27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "artikelnummer": [
+      {
+        "wert": "20002499",
+        "quelle": "avm_techdaten",
+        "beleg": "http://web.archive.org/web/20150103031134/http://avm.de/produkte/fritzwlan/fritzwlan-repeater-300e/technische-daten/",
+        "stand": "Wayback-Snapshot 2015-01-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "20002499 (DE, GTIN 4023125024993) und 20002500 (international, GTIN 4023125025006)",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "20002500",
+        "quelle": "avm_techdaten_en",
+        "beleg": "http://web.archive.org/web/20140707052417/http://en.avm.de/products/fritzwlan/fritzwlan-repeater-300e/technical-data/",
+        "stand": "Wayback-Snapshot 2014-07-07",
+        "sicherheit": "hoch",
+        "bemerkung": "englische Herstellerseite (international)"
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "nicht mehr erhältlich (Discontinued)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "nicht mehr erhältlich (Discontinued)",
+        "quelle": "toh_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Seitenrevision 2026-03-08 17:09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "vorgestellt 2011-03-01 (CeBIT 2011), im Handel ab 2011-04-06 für 89 Euro; Produktionsende 2015-03-31, Support-Ende (EOS) 2015-06-30",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Atheros AR7242",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Atheros AR7242 (Virian)",
+        "quelle": "openwrt_commit_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e7cd6f5d66b827e31cfa7e7bc019ac1b86aac770",
+        "stand": "Commit 2016-12-30 (Autor Mathias Kresin), gemergt 2017-06-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ar7242",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Atheros/Qualcomm AR7242-AH1A (Virian)",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 400,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 400,
+        "quelle": "openwrt_commit_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e7cd6f5d66b827e31cfa7e7bc019ac1b86aac770",
+        "stand": "Commit 2016-12-30 (Autor Mathias Kresin), gemergt 2017-06-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 400,
+        "quelle": "fritz_tools_pr3",
+        "beleg": "https://github.com/freifunk-gluon/fritz-tools/pull/3",
+        "stand": "PR 2018-12-22 (Martin Weinelt), gemergt 2018-12-22",
+        "sicherheit": "mittel",
+        "bemerkung": "cpufrequency 400000000"
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "mips_24kc",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 64,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "openwrt_commit_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e7cd6f5d66b827e31cfa7e7bc019ac1b86aac770",
+        "stand": "Commit 2016-12-30 (Autor Mathias Kresin), gemergt 2017-06-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "toh_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Seitenrevision 2026-03-08 17:09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "W9751G6JB-25 DDR2"
+      },
+      {
+        "wert": 64,
+        "quelle": "fritz_tools_pr3",
+        "beleg": "https://github.com/freifunk-gluon/fritz-tools/pull/3",
+        "stand": "PR 2018-12-22 (Martin Weinelt), gemergt 2018-12-22",
+        "sicherheit": "mittel",
+        "bemerkung": "memsize 0x04000000 im EVA-Environment"
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "W9751G6JB-25",
+        "quelle": "openwrt_commit_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e7cd6f5d66b827e31cfa7e7bc019ac1b86aac770",
+        "stand": "Commit 2016-12-30 (Autor Mathias Kresin), gemergt 2017-06-24",
+        "sicherheit": "hoch",
+        "bemerkung": "laut Commit 'DDR'"
+      },
+      {
+        "wert": "Winbond W9751G6JB-25 (DDR2-800, 64 MB)",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_commit_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e7cd6f5d66b827e31cfa7e7bc019ac1b86aac770",
+        "stand": "Commit 2016-12-30 (Autor Mathias Kresin), gemergt 2017-06-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "toh_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Seitenrevision 2026-03-08 17:09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "S25FL129PIF"
+      },
+      {
+        "wert": 16,
+        "quelle": "fritz_tools_pr3",
+        "beleg": "https://github.com/freifunk-gluon/fritz-tools/pull/3",
+        "stand": "PR 2018-12-22 (Martin Weinelt), gemergt 2018-12-22",
+        "sicherheit": "mittel",
+        "bemerkung": "flashsize sflash_size=16MB im EVA-Environment"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_commit_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e7cd6f5d66b827e31cfa7e7bc019ac1b86aac770",
+        "stand": "Commit 2016-12-30 (Autor Mathias Kresin), gemergt 2017-06-24",
+        "sicherheit": "hoch",
+        "bemerkung": "'16MB SPI flash'"
+      },
+      {
+        "wert": "NOR (SPI, jedec,spi-nor)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar7242_avm_fritz300e.dts",
+        "stand": "letzter Commit 6eb39e4a1d85b10d3fbdfef7bbeddf3726c26b33 vom 2026-05-10 (Branch main)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "S25FL129PIF",
+        "quelle": "openwrt_commit_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e7cd6f5d66b827e31cfa7e7bc019ac1b86aac770",
+        "stand": "Commit 2016-12-30 (Autor Mathias Kresin), gemergt 2017-06-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Spansion S25FL129PIF (Serial-Flash 104 MHz, 16 MB)",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "switch": [
+      {
+        "wert": "kein Switch",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "switch '-'"
+      },
+      {
+        "wert": "kein Switch, einzelner PHY Lantiq PEF7071V an eth0 (RGMII)",
+        "quelle": "openwrt_commit_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e7cd6f5d66b827e31cfa7e7bc019ac1b86aac770",
+        "stand": "Commit 2016-12-30 (Autor Mathias Kresin), gemergt 2017-06-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kein Switch (-swconfig), PHY-Treiber kmod-phy-intel-xway",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "unbekannt",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "'¿' im Dump"
+      },
+      {
+        "wert": "ja",
+        "quelle": "toh_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Seitenrevision 2026-03-08 17:09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "Atheros AR9382",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Atheros AR9382 (2.4/5 GHz) + 2x SE2595L",
+        "quelle": "openwrt_commit_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e7cd6f5d66b827e31cfa7e7bc019ac1b86aac770",
+        "stand": "Commit 2016-12-30 (Autor Mathias Kresin), gemergt 2017-06-24",
+        "sicherheit": "hoch",
+        "bemerkung": "SE2595L = Front-End-Module"
+      },
+      {
+        "wert": "ath9k über PCIe (pci168c,0030), ohne eigenes EEPROM",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar7242_avm_fritz300e.dts",
+        "stand": "letzter Commit 6eb39e4a1d85b10d3fbdfef7bbeddf3726c26b33 vom 2026-05-10 (Branch main)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AR9382-AL1H (Osprey, 2x2) + 2x Skyworks SE2595L (Frontend/PA 2.4/5 GHz)",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AR9382-AL1H + 2x SE2595L (2-stream-Version des Osprey PCIe)",
+        "quelle": "whmf",
+        "beleg": "http://web.archive.org/web/20170910063130/http://www.wehavemorefun.de:80/fritzbox/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=95469 vom 2012-04-25, Wayback-Snapshot 2017-09-10",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath9k",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_radios": [
+      {
+        "wert": 1,
+        "quelle": "gluon_pr_2406",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2406",
+        "stand": "PR 2022-03-13 bis 2022-07-08 (gemergt), Kommentare bis 2022-06-15",
+        "sicherheit": "hoch",
+        "bemerkung": "\"only one dual band radio\": entweder 2.4 GHz oder 5 GHz, nicht beide gleichzeitig"
+      },
+      {
+        "wert": 1,
+        "quelle": "avm_techdaten",
+        "beleg": "http://web.archive.org/web/20150103031134/http://avm.de/produkte/fritzwlan/fritzwlan-repeater-300e/technische-daten/",
+        "stand": "Wayback-Snapshot 2015-01-03",
+        "sicherheit": "hoch",
+        "bemerkung": "\"WLAN N bis 300 MBit/s im 2,4- oder 5-GHz-Band\""
+      },
+      {
+        "wert": 1,
+        "quelle": "avm_kurzanleitung",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_qig_de_DE.pdf",
+        "stand": "Kurzanleitung Stand 11/2013 (411301005), PDF 2013-11-08, 8 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "\"WLAN 802.11n im 2,4 oder 5 GHz-Band\""
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar7242_avm_fritz300e.dts",
+        "stand": "letzter Commit 6eb39e4a1d85b10d3fbdfef7bbeddf3726c26b33 vom 2026-05-10 (Branch main)",
+        "sicherheit": "mittel",
+        "bemerkung": "nur ein WLAN-Gerät (ath9k am PCIe)"
+      },
+      {
+        "wert": 1,
+        "quelle": "gluon_pr_1604",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/1604",
+        "stand": "PR 2018-12-22 bis 2018-12-29 (gemergt), Kommentare bis 2018-12-23",
+        "sicherheit": "mittel",
+        "bemerkung": "nur radio0 (PCIe), unter ar71xx-Gluon zunächst auf 5 GHz (Kanal 48) gesetzt; #channels <= 1"
+      },
+      {
+        "wert": 1,
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "\"MIMO 2x2 @ 2.4 GHz or 5 GHz\""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11n, kompatibel a/g/b",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=35",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11n, kompatibel a/g/b",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=35",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=35",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: 300 Mbit/s brutto bei 802.11n und 'zwei Dualband-Antennen'; Streamzahl selbst nicht genannt"
+      },
+      {
+        "wert": 2,
+        "quelle": "gluon_pr_1604",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/1604",
+        "stand": "PR 2018-12-22 bis 2018-12-29 (gemergt), Kommentare bis 2018-12-23",
+        "sicherheit": "mittel",
+        "bemerkung": "iw phy eines laufenden Geräts: Antennas TX 0x3 RX 0x3, MCS 0-15 in Band 1 (2.4 GHz)"
+      },
+      {
+        "wert": 2,
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "MIMO 2x2 @ 2.4 GHz or 5 GHz; AR9382-AL1H 2x2"
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=35",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: 300 Mbit/s brutto bei 802.11n und 'zwei Dualband-Antennen'; Streamzahl selbst nicht genannt"
+      },
+      {
+        "wert": 2,
+        "quelle": "gluon_pr_1604",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/1604",
+        "stand": "PR 2018-12-22 bis 2018-12-29 (gemergt), Kommentare bis 2018-12-23",
+        "sicherheit": "mittel",
+        "bemerkung": "iw phy eines laufenden Geräts: Antennas TX 0x3 RX 0x3, MCS 0-15 in Band 2 (5 GHz)"
+      },
+      {
+        "wert": 2,
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "MIMO 2x2 @ 2.4 GHz or 5 GHz; AR9382-AL1H 2x2"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "802.11n bis 300 Mbit/s brutto (je nach gewähltem Band)",
+        "quelle": "avm_techdaten",
+        "beleg": "http://web.archive.org/web/20150103031134/http://avm.de/produkte/fritzwlan/fritzwlan-repeater-300e/technische-daten/",
+        "stand": "Wayback-Snapshot 2015-01-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": {
+          "2.4 GHz": 20,
+          "5 GHz": 23
+        },
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=35",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Original: 2,4 GHz max. 100 mW / 5 GHz max. 200 mW (umgerechnet)"
+      }
+    ],
+    "wlan_frequenzen": [
+      {
+        "wert": "5150-5350 MHz nur in geschlossenen Räumen",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=42",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Länderhinweis EU"
+      }
+    ],
+    "wlan_bekannte_probleme": [
+      {
+        "wert": "Gluon belegt das eine Dualband-Radio vorzugsweise mit 2.4 GHz; 5 GHz nur bei Umstellung, dann kein 2.4 GHz",
+        "quelle": "gluon_pr_2406",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2406",
+        "stand": "PR 2022-03-13 bis 2022-07-08 (gemergt), Kommentare bis 2022-06-15",
+        "sicherheit": "mittel",
+        "bemerkung": "blocktrron 2022-04-22: \"Gluons preference is to assign multi-band radios to 2.4 GHz preferably\""
+      },
+      {
+        "wert": "nach Migration ar71xx -> ath79 blieb das Radio auf 2.4 GHz (iwinfo-Fehler); primäre MAC in Kleinbuchstaben",
+        "quelle": "gluon_pr_2406",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2406",
+        "stand": "PR 2022-03-13 bis 2022-07-08 (gemergt), Kommentare bis 2022-06-15",
+        "sicherheit": "niedrig",
+        "bemerkung": "Test ambassador86 2022-04-09"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "nicht abnehmbar",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "detachableantennas '-'"
+      },
+      {
+        "wert": "nicht abnehmbar",
+        "quelle": "toh_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Seitenrevision 2026-03-08 17:09",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas '-'"
+      },
+      {
+        "wert": "intern",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "2 PCB-Trace-Antennen 2.4/5 GHz, über Hirose-Stecker mit der Platine verbunden"
+      },
+      {
+        "wert": "intern",
+        "quelle": "whmf",
+        "beleg": "http://web.archive.org/web/20170910063130/http://www.wehavemorefun.de:80/fritzbox/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=95469 vom 2012-04-25, Wayback-Snapshot 2017-09-10",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Intern: 2x WLAN-N-Antenne dual band\""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=35",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "\"zwei Dualband-Antennen\""
+      },
+      {
+        "wert": 2,
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "WLAN-Hirose 2, WLAN-Intern 2"
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "dualband",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=35",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "\"zwei Dualband-Antennen\""
+      },
+      {
+        "wert": "dualband",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "PCB-Trace WLAN 2.4/5GHz"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "geschwindigkeit": "10/100/1000",
+            "lage": "Geräteunterseite",
+            "rolle": "LAN-Anschluss bzw. Uplink in Betriebsart LAN-Brücke"
+          }
+        ],
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=19",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "Gigabit-Netzwerk-Anschluss"
+          }
+        ],
+        "quelle": "avm_techdaten",
+        "beleg": "http://web.archive.org/web/20150103031134/http://avm.de/produkte/fritzwlan/fritzwlan-repeater-300e/technische-daten/",
+        "stand": "Wayback-Snapshot 2015-01-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x 1 Gbit/s",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "eth0",
+            "geschwindigkeit": "1000",
+            "rolle": "LAN (OpenWrt-Vorgabe)"
+          }
+        ],
+        "quelle": "openwrt_02_network",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/generic/base-files/etc/board.d/02_network",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "RJ45",
+            "rolle": "WAN (Gluon)"
+          }
+        ],
+        "quelle": "gluon_pr_2406",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2406",
+        "stand": "PR 2022-03-13 bis 2022-07-08 (gemergt), Kommentare bis 2022-06-15",
+        "sicherheit": "mittel",
+        "bemerkung": "\"The only RJ45 connector works as WAN.\""
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "geschwindigkeit": "10/100/1000",
+            "lage": "Unterseite",
+            "anschluss": "RJ-45"
+          }
+        ],
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=35",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_commit_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e7cd6f5d66b827e31cfa7e7bc019ac1b86aac770",
+        "stand": "Commit 2016-12-30 (Autor Mathias Kresin), gemergt 2017-06-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "Gbit-Ports 1"
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=19",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "einzige Buchse ist der LAN-Anschluss; Strom über eingebauten Netzstecker"
+      },
+      {
+        "wert": true,
+        "quelle": "gluon_pr_2406",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2406",
+        "stand": "PR 2022-03-13 bis 2022-07-08 (gemergt), Kommentare bis 2022-06-15",
+        "sicherheit": "mittel",
+        "bemerkung": "\"The only RJ45 connector\""
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "toh_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Seitenrevision 2026-03-08 17:09",
+        "sicherheit": "mittel",
+        "bemerkung": "SFP ports '-'"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "usbports '-'"
+      },
+      {
+        "wert": "nein",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "USB-Host: -"
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stromversorgung": [
+      {
+        "wert": "Steckergerät: steckt direkt in einer 230-V-Steckdose (Euro-Stecker, EN 50075), 230 V / 50 Hz",
+        "quelle": "avm_techdaten",
+        "beleg": "http://web.archive.org/web/20150103031134/http://avm.de/produkte/fritzwlan/fritzwlan-repeater-300e/technische-daten/",
+        "stand": "Wayback-Snapshot 2015-01-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "230 V / 50 Hz, Gerät wird in die Steckdose gesteckt",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=35",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "230 VAC, 50 Hz, 5 W",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "eingebautes Schaltnetzteil, Euro-Stecker 230 V AC an der Rückseite, 5 VA",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "PSU-300E"
+      },
+      {
+        "wert": "Input: 230V/~/50Hz/5W",
+        "quelle": "boxmatrix_typenschild",
+        "beleg": "http://web.archive.org/web/20230401003847/https://boxmatrix.info/w/images/thumb/5/57/FRITZ%21WLAN_Repeater_300E_2000-2499.2_Typenschild.jpg/460px-FRITZ%21WLAN_Repeater_300E_2000-2499.2_Typenschild.jpg",
+        "stand": "Foto Typenschild Gerät 2000-2499.2 (SNr. C061.401.00, Serial-Date 2012-02-06), Wayback-Snapshot 2023-04-01",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild"
+      },
+      {
+        "wert": "Euro-Stecker 230V AC an der Rückseite",
+        "quelle": "whmf",
+        "beleg": "http://web.archive.org/web/20170910063130/http://www.wehavemorefun.de:80/fritzbox/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=95469 vom 2012-04-25, Wayback-Snapshot 2017-09-10",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Connection to mains with 230 V, 50 Hz to outlet (Euro socket, EN 50075)",
+        "quelle": "avm_techdaten_en",
+        "beleg": "http://web.archive.org/web/20140707052417/http://en.avm.de/products/fritzwlan/fritzwlan-repeater-300e/technical-data/",
+        "stand": "Wayback-Snapshot 2014-07-07",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=35",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: Stromversorgung laut Hersteller nur über 230-V-Netzstecker, PoE nirgends erwähnt"
+      },
+      {
+        "wert": "nein",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: Schnittstellenliste nennt als Stromanschluss nur den Euro-Stecker, PoE nicht genannt"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "nein",
+        "quelle": "avm_techdaten",
+        "beleg": "http://web.archive.org/web/20150103031134/http://avm.de/produkte/fritzwlan/fritzwlan-repeater-300e/technische-daten/",
+        "stand": "Wayback-Snapshot 2015-01-03",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: Netzstecker im Gehäuse (Euro-Stecker), keine Netzteilbuchse genannt"
+      },
+      {
+        "wert": "nein",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: Schnittstellenliste (Front, Rückseite, Unterseite, intern) ohne DC-Buchse; Netzteil eingebaut"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": "nein, Netzteil eingebaut (Steckergerät)",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=6",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Lieferumfang: Repeater, Kurzanleitung, LAN-Kabel"
+      },
+      {
+        "wert": "nein, Netzteil eingebaut (PSU-300E, Schaltnetzteil)",
+        "quelle": "boxmatrix_psu",
+        "beleg": "http://web.archive.org/web/20220925023335/https://boxmatrix.info/wiki/PSU-300E",
+        "stand": "Wayback-Snapshot 2022-09-25 (Index-Stand 2022-09-24)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_typ": [
+      {
+        "wert": 5,
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=35",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Gesamtleistungsaufnahme: cirka 5 Watt\""
+      },
+      {
+        "wert": 5,
+        "quelle": "avm_techdaten",
+        "beleg": "http://web.archive.org/web/20150103031134/http://avm.de/produkte/fritzwlan/fritzwlan-repeater-300e/technische-daten/",
+        "stand": "Wayback-Snapshot 2015-01-03",
+        "sicherheit": "hoch",
+        "bemerkung": "\"ca. 5 Watt\""
+      },
+      {
+        "wert": 5,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "powersupply '230 VAC, 50 Hz, 5W'"
+      },
+      {
+        "wert": 5,
+        "quelle": "avm_techdaten_en",
+        "beleg": "http://web.archive.org/web/20140707052417/http://en.avm.de/products/fritzwlan/fritzwlan-repeater-300e/technical-data/",
+        "stand": "Wayback-Snapshot 2014-07-07",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Total power consumption: approx. 5 Watt\""
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=10",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "\"nur innerhalb von Gebäuden\""
+      },
+      {
+        "wert": "innen",
+        "quelle": "toh_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Seitenrevision 2026-03-08 17:09",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: Steckergerät mit Euro-Stecker, kein Außengehäuse"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=35",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Steckdose (Steckergerät)",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=10",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "trockener, staubfreier Ort ohne direkte Sonne, leicht erreichbare Steckdose"
+      },
+      {
+        "wert": "Steckdose (Steckergerät); BoxMatrix: Orient P, Wallmount 2-way",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "Bedeutung von \"Wallmount 2-way\" auf der Seite nicht erklärt"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": {
+          "b": 76,
+          "h": 101,
+          "t": 76
+        },
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=35",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "cirka"
+      },
+      {
+        "wert": {
+          "b": 76,
+          "h": 101,
+          "t": 76
+        },
+        "quelle": "avm_techdaten",
+        "beleg": "http://web.archive.org/web/20150103031134/http://avm.de/produkte/fritzwlan/fritzwlan-repeater-300e/technische-daten/",
+        "stand": "Wayback-Snapshot 2015-01-03",
+        "sicherheit": "hoch",
+        "bemerkung": "ca."
+      },
+      {
+        "wert": {
+          "b": 76,
+          "h": 101,
+          "t": 76
+        },
+        "quelle": "avm_techdaten_en",
+        "beleg": "http://web.archive.org/web/20140707052417/http://en.avm.de/products/fritzwlan/fritzwlan-repeater-300e/technical-data/",
+        "stand": "Wayback-Snapshot 2014-07-07",
+        "sicherheit": "hoch",
+        "bemerkung": "approx."
+      },
+      {
+        "wert": "101 x 76 x 76",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "Reihenfolge der Maße auf der Seite nicht benannt"
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 120,
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=35",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "cirka; Widerspruch zur Produktseite (150 g)"
+      },
+      {
+        "wert": 150,
+        "quelle": "avm_techdaten",
+        "beleg": "http://web.archive.org/web/20150103031134/http://avm.de/produkte/fritzwlan/fritzwlan-repeater-300e/technische-daten/",
+        "stand": "Wayback-Snapshot 2015-01-03",
+        "sicherheit": "hoch",
+        "bemerkung": "ca.; Widerspruch zum Handbuch (120 g)"
+      },
+      {
+        "wert": 150,
+        "quelle": "avm_techdaten_en",
+        "beleg": "http://web.archive.org/web/20140707052417/http://en.avm.de/products/fritzwlan/fritzwlan-repeater-300e/technical-data/",
+        "stand": "Wayback-Snapshot 2014-07-07",
+        "sicherheit": "hoch",
+        "bemerkung": "approx.; auch englische Herstellerseite 150 g, Handbuch 120 g"
+      },
+      {
+        "wert": 150,
+        "quelle": "avm_techdaten_2014",
+        "beleg": "http://web.archive.org/web/20140614010631/http://avm.de/produkte/fritzwlan/fritzwlan-repeater-300e/technische-daten/",
+        "stand": "Wayback-Snapshot 2014-06-14",
+        "sicherheit": "hoch",
+        "bemerkung": "ältester deutscher Snapshot, ebenfalls 150 g"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 8,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 8,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar7242_avm_fritz300e.dts",
+        "stand": "letzter Commit 6eb39e4a1d85b10d3fbdfef7bbeddf3726c26b33 vom 2026-05-10 (Branch main)",
+        "sicherheit": "mittel",
+        "bemerkung": "Power, LAN, WLAN + 5 Signalstärke-LEDs (rssi0-4, am ath9k)"
+      },
+      {
+        "wert": "Power, WLAN, LAN, bis zu 5 Signalstärke-LEDs",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=8",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "5 Signalstärke-LEDs + Power, WLAN, LAN (alle grün)",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "kein eigener Reset-Knopf; ein Taster 'WPS' vorne: 1 s WLAN aus/ein, 6 s WPS, 15 s Werkseinstellungen",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=7",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ein Taster (wps, GPIO 12)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar7242_avm_fritz300e.dts",
+        "stand": "letzter Commit 6eb39e4a1d85b10d3fbdfef7bbeddf3726c26b33 vom 2026-05-10 (Branch main)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WPS-Taste bringt den Knoten in den Config-Mode",
+        "quelle": "gluon_pr_2406",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2406",
+        "stand": "PR 2022-03-13 bis 2022-07-08 (gemergt), Kommentare bis 2022-06-15",
+        "sicherheit": "mittel",
+        "bemerkung": "Checkliste 'wpsbutton must return device into config mode' abgehakt"
+      },
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "buttoncount"
+      },
+      {
+        "wert": "ein Taster (WPS/WLAN) an der Vorderseite",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "\"WPS - WLAN-Button - to enable/disable WLAN and start WPS\""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "Hersteller: Gehäuse nicht öffnen (Steckergerät mit 230 V innen)",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=10",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "4 Torx-T6-Schrauben an der Unterseite lösen, Deckel abheben, Platine lässt sich herausheben; Teile der Platine führen Netzspannung, Kondensatoren können Restspannung halten",
+        "quelle": "whmf",
+        "beleg": "http://web.archive.org/web/20170910063130/http://www.wehavemorefun.de:80/fritzbox/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=95469 vom 2012-04-25, Wayback-Snapshot 2017-09-10",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "4 Schrauben, Gehäusegruppe FWR-Casing (Design Constin 2008)",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/generic",
+        "quelle": "toh_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Seitenrevision 2026-03-08 17:09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ar71xx-ath79/generic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath79/generic (seit 2018), vorher ar71xx/generic",
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/75ed56a08a4ce978323259a59a8f45ceed511584",
+        "stand": "Commit 2018-03-02 (Autor Mathias Kresin), gemergt 2018-05-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "avm_fritz300e",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "18.06.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ar71xx-Commit gemergt 2017-06-24, ath79-Commit gemergt 2018-05-17",
+        "quelle": "openwrt_commit_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e7cd6f5d66b827e31cfa7e7bc019ac1b86aac770",
+        "stand": "Commit 2016-12-30 (Autor Mathias Kresin), gemergt 2017-06-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "23.05.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "25.12.0",
+        "quelle": "toh_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Seitenrevision 2026-03-08 17:09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_image_max_kb": [
+      {
+        "wert": 15232,
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "IMAGE_SIZE"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "EVA",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "EVA (Partition urloader 0x0-0x20000)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar7242_avm_fritz300e.dts",
+        "stand": "letzter Commit 6eb39e4a1d85b10d3fbdfef7bbeddf3726c26b33 vom 2026-05-10 (Branch main)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "EVA (AVM-Urlader), urlader-version 2183, bootloaderVersion 1.1183; Prompt Eva_AVM, IP 192.168.178.1",
+        "quelle": "fritz_tools_pr3",
+        "beleg": "https://github.com/freifunk-gluon/fritz-tools/pull/3",
+        "stand": "PR 2018-12-22 (Martin Weinelt), gemergt 2018-12-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Bootloader 2133, 2183 (128 KB)",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "EVA-FTP: in den ersten Sekunden nach dem Einschalten FTP auf 192.168.178.1, USER/PASS adam2, binary, passive, quote MEDIA FLSH, put <sysupgrade.bin> mtd1",
+        "quelle": "openwrt_commit_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e7cd6f5d66b827e31cfa7e7bc019ac1b86aac770",
+        "stand": "Commit 2016-12-30 (Autor Mathias Kresin), gemergt 2017-06-24",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "fritzflash, EVA FTP",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "EVA FTP",
+        "quelle": "toh_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Seitenrevision 2026-03-08 17:09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "fritz flash tools (Gluon-Checkliste)",
+        "quelle": "gluon_pr_2406",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2406",
+        "stand": "PR 2022-03-13 bis 2022-07-08 (gemergt), Kommentare bis 2022-06-15",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Weg G: AVM-EVA mit fritz-tools, Werkzeug vorhanden; kein Factory-Image",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erstinstallation-ohne-factory.md",
+        "stand": "Stand 2026-09-09 (Gluon v2023.2.x), letzter Commit 0d84e25 vom 2026-10-10, als abgelöst markiert",
+        "sicherheit": "hoch",
+        "bemerkung": "Einordnung aus dem Gluon-Baum (factory = false), keine Messung"
+      },
+      {
+        "wert": "nur sysupgrade-Image, kein Factory-Image (factory = false)",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "fritzflash (fritz-tools): Autodiscovery auf 192.168.178.1 nach Stromtrennung, Image-Auswahl automatisch, danach Config-Mode unter http://192.168.1.1/",
+        "quelle": "fritz_tools_pr3",
+        "beleg": "https://github.com/freifunk-gluon/fritz-tools/pull/3",
+        "stand": "PR 2018-12-22 (Martin Weinelt), gemergt 2018-12-22",
+        "sicherheit": "mittel",
+        "bemerkung": "Test Freifunk Darmstadt 2018"
+      }
+    ],
+    "recovery": [
+      {
+        "wert": "AVM-Recovery-Programm für Windows: FRITZ.Box_WLAN_Repeater_300E.06.34.recover-image.exe",
+        "quelle": "avm_recover",
+        "beleg": "https://download.avm.de/fritzwlan/fritzwlan-repeater-300e/deutschland/recover/",
+        "stand": "Datei 2023-09-15 (FRITZ.Box_WLAN_Repeater_300E.06.34.recover-image.exe)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Rückweg zu Stock: AVM-Recovery-Image genannt, Einspielweg ungeprüft",
+        "quelle": "freifunk_forum_24123",
+        "beleg": "https://forum.freifunk.net/t/24123",
+        "stand": "Thread 2024-06-19 bis 2024-06-20 (2 Beiträge)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://download.avm.de/fritzwlan/fritzwlan-repeater-300e/deutschland/fritz.os/",
+        "quelle": "avm_download",
+        "beleg": "https://download.avm.de/fritzwlan/fritzwlan-repeater-300e/",
+        "stand": "Verzeichnis 2023-09-13/15 (FRITZ!OS 6.34)",
+        "sicherheit": "hoch",
+        "bemerkung": "FRITZ!OS 6.34 vom 2023-09-04"
+      },
+      {
+        "wert": "letzte AVM-Firmware 101.06.34 (rev38815), DE und INT",
+        "quelle": "freetz_firmwares",
+        "beleg": "https://github.com/Freetz-NG/freetz-ng/blob/master/docs/FIRMWARES.md",
+        "stand": "Branch master am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Freetz-Unterstützung als UNTESTED markiert"
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "Label-MAC = 'macwlan' aus tffs (1); LAN-MAC = 'maca'",
+        "quelle": "openwrt_02_network",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/generic/base-files/etc/board.d/02_network",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "primäre MAC stimmt mit dem Aufkleber überein",
+        "quelle": "gluon_pr_2406",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2406",
+        "stand": "PR 2022-03-13 bis 2022-07-08 (gemergt), Kommentare bis 2022-06-15",
+        "sicherheit": "mittel",
+        "bemerkung": "Checkliste abgehakt"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, Image avm-fritz-wlan-repeater-300e, factory = false (nur sysupgrade)",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath79-generic seit Gluon-Commit 0cd7af9b (2022-07-08)",
+        "quelle": "gluon_commit_ath79",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/0cd7af9b52ffce244f321654fcd89925efac1551",
+        "stand": "Commit 2022-07-08 (Steffen Förster, PR #2406)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ar71xx-generic seit Gluon-Commit 656230a7 (2018-12-29)",
+        "quelle": "gluon_commit_ar71xx",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/656230a79f6e7a1b8ffaec56216849f301bfed46",
+        "stand": "Commit 2018-12-29 (Martin Weinelt, PR #1604)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja",
+        "quelle": "toh_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Seitenrevision 2026-03-08 17:09",
+        "sicherheit": "mittel",
+        "bemerkung": "Gluon support: Yes"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://avm.de/service/fritzwlan/fritzwlan-repeater-300e/uebersicht/",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_wlan_repeater_300e",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "heute 404 (Weiterleitung fritz.com)"
+      },
+      {
+        "wert": "http://web.archive.org/web/20150103031134/http://avm.de/produkte/fritzwlan/fritzwlan-repeater-300e/technische-daten/",
+        "quelle": "avm_techdaten",
+        "beleg": "http://web.archive.org/web/20150103031134/http://avm.de/produkte/fritzwlan/fritzwlan-repeater-300e/technische-daten/",
+        "stand": "Wayback-Snapshot 2015-01-03",
+        "sicherheit": "hoch",
+        "bemerkung": "Archivfassung der Seite Technische Daten"
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Handbuch mit Kapitel 9 Technische Daten (PDF-Seite 35)"
+      },
+      {
+        "wert": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_qig_de_DE.pdf",
+        "quelle": "avm_kurzanleitung",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_qig_de_DE.pdf",
+        "stand": "Kurzanleitung Stand 11/2013 (411301005), PDF 2013-11-08, 8 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Kurzanleitung"
+      }
+    ],
+    "forum": [
+      {
+        "wert": "https://forum.freifunk.net/t/24123",
+        "quelle": "freifunk_forum_24123",
+        "beleg": "https://forum.freifunk.net/t/24123",
+        "stand": "Thread 2024-06-19 bis 2024-06-20 (2 Beiträge)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "nur eine Hardware bekannt: AVM-HWRevision 173 (HWSubRevision 2)",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "drei erfasste Geräte (Serial-Date 2011-04-12 und 2012-02-06) alle HWRevision 173"
+      },
+      {
+        "wert": "HWRevision 173, HWSubRevision 2",
+        "quelle": "fritz_tools_pr3",
+        "beleg": "https://github.com/freifunk-gluon/fritz-tools/pull/3",
+        "stand": "PR 2018-12-22 (Martin Weinelt), gemergt 2018-12-22",
+        "sicherheit": "mittel",
+        "bemerkung": "EVA-Environment eines geflashten Geräts (Freifunk Darmstadt)"
+      },
+      {
+        "wert": "HWREV 173",
+        "quelle": "freetz_config",
+        "beleg": "https://github.com/Freetz-NG/freetz-ng/blob/master/config/.img/separate/0300--DE--06_2X.in",
+        "stand": "Branch master, letzter Commit der Datei 14b181ca vom 2026-08-27",
+        "sicherheit": "mittel",
+        "bemerkung": "einzige HWRevision für dieses Modell in Freetz-NG"
+      },
+      {
+        "wert": "HWR 173",
+        "quelle": "whmf",
+        "beleg": "http://web.archive.org/web/20170910063130/http://www.wehavemorefun.de:80/fritzbox/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=95469 vom 2012-04-25, Wayback-Snapshot 2017-09-10",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild-Aufdruck: \"FRITZ!WLAN Repeater 300E\", SNr., MAC (C0:25:06:...), WLAN-Netzwerkschlüssel, \"Input:230V/~/50Hz/5W\", AVM-Logo; keine Hardware-Revision aufgedruckt",
+        "quelle": "boxmatrix_typenschild",
+        "beleg": "http://web.archive.org/web/20230401003847/https://boxmatrix.info/w/images/thumb/5/57/FRITZ%21WLAN_Repeater_300E_2000-2499.2_Typenschild.jpg/460px-FRITZ%21WLAN_Repeater_300E_2000-2499.2_Typenschild.jpg",
+        "stand": "Foto Typenschild Gerät 2000-2499.2 (SNr. C061.401.00, Serial-Date 2012-02-06), Wayback-Snapshot 2023-04-01",
+        "sicherheit": "hoch",
+        "bemerkung": "Foto des Typenschilds; HWRevision nur im Bootloader-Environment (EVA) sichtbar"
+      },
+      {
+        "wert": "genaue Gerätebezeichnung auf der Geräteunter- oder Geräterückseite, Seriennummer auf der Geräteunterseite",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=38",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Artikel-Nr. 2000-2499 bzw. 2000-2499.2 (zwei erfasste Ausführungen, beide HWRevision 173); Seriennummern beginnen B152.380.00 (2011) bzw. C061.401.00 (2012); Gehäuse weiß/rot",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Gehäuse wie FRITZ!WLAN Repeater 450E, nur die Markierung der Signalstärke-Anzeige unterscheidet sich",
+        "quelle": "gluon_selector_pr76",
+        "beleg": "https://github.com/freifunk-gluon/gluon-firmware-selector/pull/76",
+        "stand": "PR 2019-01-04, gemergt 2019-01-04",
+        "sicherheit": "niedrig",
+        "bemerkung": "Kommentar blocktrron; Selector nutzt deshalb das 450E-Bild"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "keine",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: Länderliste (at ... za, int) ohne us/ca; Handbuch nur EU/CH/NO/LI/IS; ToH fccid leer"
+      }
+    ],
+    "region": [
+      {
+        "wert": "international: Länderliste at, au, be, ch, cy, cz, de, dk, ee, es, fi, fr, gr, hr, hu, ie, il, int, is, it, lu, lv, me, mk, na, nl, no, nz, pl, pt, si, sk, th, uk, za; Brandings avm (DE) und avme (international)",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "widerspricht nicht dem Handbuch (DE-Fassung nennt nur EU/CH/NO/LI/IS)"
+      },
+      {
+        "wert": "EU sowie CH, NO, LI, IS",
+        "quelle": "avm_handbuch",
+        "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf#page=42",
+        "stand": "Handbuch Version 2014.02, PDF erstellt 2014-02-21, geändert 2014-03-21, 46 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Länderhinweis der deutschen Fassung"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "eingebautes Schaltnetzteil (ST L6565D + STN1NK80Z); Eingang 230 V AC, 50 Hz, max. 22 mA, max. 5 VA; Ausgangsspannung nicht erfasst",
+        "quelle": "boxmatrix_psu",
+        "beleg": "http://web.archive.org/web/20220925023335/https://boxmatrix.info/wiki/PSU-300E",
+        "stand": "Wayback-Snapshot 2022-09-25 (Index-Stand 2022-09-24)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 5,
+        "quelle": "boxmatrix_typenschild",
+        "beleg": "http://web.archive.org/web/20230401003847/https://boxmatrix.info/w/images/thumb/5/57/FRITZ%21WLAN_Repeater_300E_2000-2499.2_Typenschild.jpg/460px-FRITZ%21WLAN_Repeater_300E_2000-2499.2_Typenschild.jpg",
+        "stand": "Foto Typenschild Gerät 2000-2499.2 (SNr. C061.401.00, Serial-Date 2012-02-06), Wayback-Snapshot 2023-04-01",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild \"Input:230V/~/50Hz/5W\""
+      },
+      {
+        "wert": 5,
+        "quelle": "boxmatrix_psu",
+        "beleg": "http://web.archive.org/web/20220925023335/https://boxmatrix.info/wiki/PSU-300E",
+        "stand": "Wayback-Snapshot 2022-09-25 (Index-Stand 2022-09-24)",
+        "sicherheit": "mittel",
+        "bemerkung": "Power-Max 5 VA, 22 mA bei 230 V"
+      }
+    ],
+    "gehaeuse_farbe": [
+      {
+        "wert": "weiß/rot",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "Casing-Colour red/white"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: vollständige Bauteil- und Schnittstellenliste ohne Lüfter; 5-W-Steckergerät"
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "ja (AVM-Firmware: Seite System > Anzeige zum Deaktivieren der LEDs)",
+        "quelle": "whmf",
+        "beleg": "http://web.archive.org/web/20170910063130/http://www.wehavemorefun.de:80/fritzbox/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=95469 vom 2012-04-25, Wayback-Snapshot 2017-09-10",
+        "sicherheit": "niedrig",
+        "bemerkung": "gilt für FRITZ!OS, nicht für Gluon"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte",
+        "quelle": "whmf",
+        "beleg": "http://web.archive.org/web/20170910063130/http://www.wehavemorefun.de:80/fritzbox/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=95469 vom 2012-04-25, Wayback-Snapshot 2017-09-10",
+        "sicherheit": "mittel",
+        "bemerkung": "\"4-pol Serielle Konsole - RM 2.54 - Gebohrt aber nicht bestückt\": Stiftleiste muss eingelötet werden; Gehäuse öffnen, Platine führt Netzspannung"
+      },
+      {
+        "wert": "keine serielle Schnittstelle bekannt (\"no RS232 as we know it\")",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "Widerspruch zu whmf (4-pol, gebohrt, unbestückt); BoxMatrix nennt nur JTAG"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 38400,
+        "quelle": "fritz_tools_pr3",
+        "beleg": "https://github.com/freifunk-gluon/fritz-tools/pull/3",
+        "stand": "PR 2018-12-22 (Martin Weinelt), gemergt 2018-12-22",
+        "sicherheit": "mittel",
+        "bemerkung": "EVA-Bootloader: modetty0/modetty1 38400,n,8,1,hw, bootserport tty0"
+      },
+      {
+        "wert": 38400,
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": "bootenv modetty0 38400,n,8,1,hw (Bootloader/AVM-Firmware)"
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_dtsi_ar724x",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar724x.dtsi",
+        "stand": "letzter Commit 731318667d8b vom 2024-07-04 (Branch main)",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt/Gluon-Kernel: bootargs console=ttyS0,115200 (gemeinsame dtsi für AR724x, nicht gerätespezifisch gemessen)"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "Bootloader EVA meldet sich mit 38400 Baud 8N1 (modetty0), OpenWrt-Kernel mit 115200 Baud auf ttyS0; AVM-Firmware nutzt /dev/ttyS0",
+        "quelle": "freetz_config",
+        "beleg": "https://github.com/Freetz-NG/freetz-ng/blob/master/config/.img/separate/0300--DE--06_2X.in",
+        "stand": "Branch master, letzter Commit der Datei 14b181ca vom 2026-08-27",
+        "sicherheit": "mittel",
+        "bemerkung": "FREETZ_AVM_SERIAL_CONSOLE_DEVICE /dev/ttyS0; Baudraten aus fritz_tools_pr3 und openwrt_dtsi_ar724x"
+      }
+    ],
+    "jtag": [
+      {
+        "wert": "2x7-polig, Raster 1.27 mm, Platinenunterseite, nicht gebohrt/bestückt",
+        "quelle": "boxmatrix",
+        "beleg": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=147429 (Modding-Index 2025-05-26), Wayback-Snapshot 2025-10-28",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2x7-pol EJTAG, RM 1.27, Platinenunterseite",
+        "quelle": "whmf",
+        "beleg": "http://web.archive.org/web/20170910063130/http://www.wehavemorefun.de:80/fritzbox/FRITZ!WLAN_Repeater_300E",
+        "stand": "Seitenrevision oldid=95469 vom 2012-04-25, Wayback-Snapshot 2017-09-10",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://forum.openwrt.org/search?q=fritz300e",
+      "kategorie": "seriell",
+      "grund": "Serielle Konsole: keine Quelle (ToH '¿', kein Wiki, Commits ohne UART-Angabe). Lage, Bestückung, Pinbelegung und Baudrate offen; OpenWrt-Forum-Suche (search.json gemieden) nicht ausgewertet",
+      "status": "teilweise 2026-10-19",
+      "ergebnis": "whmf: 4-pol, RM 2.54, gebohrt, unbestückt; BoxMatrix: \"no RS232 as we know it\"; Baud EVA 38400, OpenWrt 115200. Pinbelegung weiter offen. forum.openwrt.org/search liefert mit Nicht-Mozilla-UA nur Platzhalterseite"
+    },
+    {
+      "url": "https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+      "kategorie": "seriell",
+      "grund": "BoxMatrix hat zu AVM-Geräten meist Platinen-/Seriell-Angaben; Host gesperrt, nicht abgefragt",
+      "status": "erledigt 2026-10-19",
+      "ergebnis": "Archivfassung (Wayback 2025-10-28) ausgewertet: HWRevision 173, Interfaces, JTAG, keine RS232 bekannt; siehe Quelle boxmatrix"
+    },
+    {
+      "url": "https://osp.avm.de/fritzwlan/fritzwlan-repeater-300e/",
+      "kategorie": "hardware",
+      "grund": "AVM-GPL-Quellen (Kernel-Konfiguration, ggf. HWRevision), nicht abgefragt"
+    },
+    {
+      "url": "https://web.archive.org/web/2020/https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_ce_en_GB.pdf",
+      "kategorie": "datenblatt",
+      "grund": "Konformitätserklärung en_GB (2020, live 404), nicht ausgewertet"
+    },
+    {
+      "url": "https://web.archive.org/web/2025/https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_qig_en_GB.pdf",
+      "kategorie": "datenblatt",
+      "grund": "englische Kurzanleitung 8 MB (Wayback 2025-04-15), nicht ausgewertet"
+    },
+    {
+      "url": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf",
+      "kategorie": "typenschild",
+      "grund": "Woran man das Gerät/die Hardware-Revision am Gehäuse erkennt (Typenschild-Lage, HW-Revision), steht in keiner Quelle; ToH 'Versions' leer, keine Revisionen bekannt",
+      "status": "erledigt 2026-10-19",
+      "ergebnis": "Typenschild-Foto (BoxMatrix, Wayback) und Handbuch S. 38: Schild an der Unterseite, keine HW-Revision aufgedruckt; nur HWRevision 173 bekannt"
+    },
+    {
+      "url": "https://assets.avm.de/files/docs/fritzwlan/fritzwlan-repeater-300e/fritzwlan-repeater-300e_man_de_DE.pdf",
+      "kategorie": "luefter",
+      "grund": "Lüfter in keiner Quelle erwähnt (Feld weggelassen)",
+      "status": "teilweise 2026-10-19",
+      "ergebnis": "kein Lüfter in Bauteil- und Schnittstellenlisten von BoxMatrix/whmf; nur abgeleitet (sicherheit niedrig)"
+    },
+    {
+      "url": "http://web.archive.org/web/20150103031134/http://avm.de/produkte/fritzwlan/fritzwlan-repeater-300e/technische-daten/",
+      "kategorie": "gewicht",
+      "grund": "Gewicht widersprüchlich: Produktseite 150 g, Handbuch 120 g; 2. Lauf: deutsche (2014-06) und englische (2014-07) Produktseite ebenfalls 150 g, BoxMatrix ohne Gewicht"
+    },
+    {
+      "url": "http://web.archive.org/web/20170910063130/http://www.wehavemorefun.de:80/fritzbox/FRITZ!WLAN_Repeater_300E",
+      "kategorie": "seriell",
+      "grund": "Pinbelegung der 4-poligen Lötpunkte (RM 2.54) offen; PCB-Fotos (BildO..BildS, Bild1..Bild9) im Archiv nur als 120-px-Vorschau, Vollbild BildO 404"
+    },
+    {
+      "url": "http://web.archive.org/web/20251028155153/https://boxmatrix.info/wiki/FRITZ!WLAN_Repeater_300E",
+      "kategorie": "seriell",
+      "grund": "PCB-Fotos front/back der drei Versionen (Freetz-Wiki-Quelle) nicht ausgewertet; könnten Lage der 4-pol-Lötpunkte zeigen"
+    },
+    {
+      "url": "https://www.ip-phone-forum.de/",
+      "kategorie": "seriell",
+      "grund": "IPPF-Threads zum 300E (serielle Konsole, Platine) wahrscheinlich, Host liefert 403"
+    },
+    {
+      "url": "http://objects.icecat.biz/objects/mmo_12346216_1593776586_9486_22833.pdf",
+      "kategorie": "datenblatt",
+      "grund": "Handbuch international (Link aus BoxMatrix-Fact-Box), nicht abgefragt (Icecat-Umfeld)"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 92,
+    "notiz": "ToH-Dump + Live-hwdata (Rev. 2026-03-08), OpenWrt-Commits ar71xx (Kresin 2016/2017) und ath79 (2018) samt Folgecommits, DTS/generic.mk/02_network/01_leds (main), Gluon-Target (factory=false), Gluon-Commits ar71xx 2018 / ath79 2022 und PR #2406 (Checkliste, ein Dualband-Radio, RJ45 = WAN), AVM-Technikseite (Wayback 2015), AVM-Handbuch 2014.02 und Kurzanleitung 11/2013 (live assets.avm.de), AVM-Download/FRITZ!OS 6.34/Recover, Werkstatt-Dokument (Weg G), Freifunk-Forum. Kein OpenWrt-Wiki, keine DeviWiki/WikiDevi-Seite, keine FCC-ID. Kernpunkte: Steckergerät 230 V innen (0-40 °C, ca. 5 W, kein PoE/kein Netzteil), 1x Gigabit-RJ45 an der Unterseite, AR7242/AR9382, 64 MB RAM / 16 MB NOR, nur EIN Dualband-Radio (2.4 ODER 5 GHz; Gluon nimmt 2.4 GHz), zwei Dualband-Antennen nicht abnehmbar, WPS-Taster als einzige Taste (Config-Mode), 8 LEDs. Offen: serielle Konsole komplett, Typenschild/HW-Revision, Gewicht widersprüchlich (120/150 g).",
+    "lauf2": {
+      "datum": "2026-10-19",
+      "anfragen": 42,
+      "notiz": "Zweiter Anlauf mit anderen Wegen: Freetz-NG (HWREV 173, Fritz_Box_Neon, ttyS0), Gluon-PR 1604 (iw phy: 2x2 auf beiden Bändern), fritz-tools PR 3 (EVA-Environment, 38400 Baud), Selector-PR 76, ar724x.dtsi (115200), AVM-Technikseiten DE 2014 und EN 2014 (Gewicht wieder 150 g, int. Artikelnummer 20002500), BoxMatrix und wehavemorefun nur als Wayback-Archiv (boxmatrix.info selbst nicht angefragt), Typenschild-Foto. Neue Kernpunkte: einzige bekannte HW-Revision 173; Typenschild an der Unterseite ohne Revisionsangabe; Antennen intern (2x PCB-Trace über Hirose); eingebautes Schaltnetzteil 230 V/5 VA; seriell laut whmf 4-pol RM 2.54 gebohrt aber unbestückt (BoxMatrix: keine RS232 bekannt), EVA 38400 Baud, OpenWrt 115200; JTAG 2x7 1.27 mm unten; Gehäuse 4x Torx T6, Netzspannung auf der Platine. Keine FCC-ID (kein US-Markt). Offen: serielle Pinbelegung, Gewicht 120/150 g."
+    }
+  }
+}

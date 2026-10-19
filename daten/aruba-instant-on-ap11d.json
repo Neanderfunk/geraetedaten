@@ -1,0 +1,2361 @@
+{
+  "image": "aruba-instant-on-ap11d",
+  "modell": "Aruba Instant On AP11D",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15680478",
+      "bemerkung": "Kein eigener ToH-Eintrag für den Instant On AP11D. Übernommen ist die Zeile des Aruba AP-303H, auf dessen Image Gluon den AP11D abbildet (Alias). toh_suche lieferte 6 Aruba-Kandidaten mit gleichem Score; AP-303H ist der passende."
+    },
+    "toh_seite": {
+      "url": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h?do=export_raw",
+      "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Datenseite AP-303H; Rohtext und Revisionsliste heute vom parallelen Lauf aruba-ap-303h abgerufen und aus dessen Cache übernommen. Neuer als der Dump: aktuell 24.10.5, WLAN-Treiber ath10k-ct, 4 Gbit-Ports, Outdoor No"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/aruba/ap-303h?do=export_raw",
+      "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Geräteseite AP-303H, nennt im ersten Absatz den Instant On AP11D als günstigere Version derselben Plattform. Rohtext aus Cache des Laufs aruba-ap-303h (heute abgerufen). Wiki-Suche nach AP11D (https://openwrt.org/start?do=search&q=AP11D) findet nur diese Seite"
+    },
+    "openwrt_commit": {
+      "url": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+      "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Support-Commit AP-303H, per gh api geladen"
+    },
+    "openwrt_commits": {
+      "url": "https://github.com/search?q=repo%3Aopenwrt%2Fopenwrt+AP-303H&type=commits",
+      "stand": "GitHub-Commitsuche \"AP-303H\": 7 Treffer 2020-01-12 bis 2024-09-14",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Liste und Nachrichten aus Cache des Laufs aruba-ap-303h; eigene Suchen \"AP11D\" und \"Instant On\" in openwrt/openwrt: 0 Treffer"
+    },
+    "openwrt_dts_main": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4029-ap-303h.dts",
+      "stand": "OpenWrt main, letzter Commit an der Datei ed21d383 vom 2026-07-22 (Julius Bairaktaris)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Inhalt gegen frischen Abruf verglichen (identisch)"
+    },
+    "openwrt_image_main": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/image/generic.mk",
+      "stand": "OpenWrt main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Device/aruba_ap-303h; kein DEVICE_ALT-Eintrag für Instant On AP11D"
+    },
+    "gluon_target": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ipq40xx-generic",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "device('aruba-ap-303h', 'aruba_ap-303h', {factory = false, aliases = {'aruba-instant-on-ap11d'}})"
+    },
+    "gluon_commit": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/2302",
+      "stand": "PR #2302 (bdobe) 2021-08-19, gemergt 2021-09-01 als a492e629",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Titel \"ipq40xx: add support for Aruba AP-303H / Instant ON AP11D\"; Checkliste und 2 Kommentare gelesen; laut GitHub-Codesuche in docs/releases/v2022.1.rst genannt"
+    },
+    "werkstatt": {
+      "url": "router-werkstatt/docs/ap11-ap303-bootloader.md",
+      "stand": "Dokument Stand 16.10.2026",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Abschnitt \"Zwei Regeln\": AP11D gehört zur Hardware des AP-303H; AP11/AP-303-Bootloaderdatei nicht für AP11D"
+    },
+    "rampe_anleitungen": {
+      "url": "rampe-anleitungen/anleitungen/zusatz/aruba-instant-on-ap11d.md",
+      "stand": "lokaler Klon am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "eigener Anleitungstext (Content), Abschnitt \"Vorher prüfen\"; dazu docs/GERAETE.md Zeile AP11D"
+    },
+    "fccid": {
+      "url": "https://fccid.io/Q9DAPINH303",
+      "stand": "Grant 2017-01-11 (Original Equipment), Class-III-Änderung 2017-05-18",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "FCC-ID des AP-303H (Regulatory Model APINH303). Eine eigene FCC-ID für den AP11D gibt es unter Q9D nicht (Liste https://fccid.io/Q9D: nur APIN0303, APINH303, APINP303 u. a.); dass der AP11D unter APINH303 läuft, sagt nur der Katalog shumoku"
+    },
+    "fcc_handbuch": {
+      "url": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+      "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 1712649 Byte, 11 Seiten, Text per pdftotext; beschreibt AP-303H, nicht AP11D"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/Q9DAPINH303/Label/Label-3252185",
+      "stand": "Exhibit 2017-01-11, Zeichnung 4012123-01 \"LBL, ARUBA, BASE AGENCY, AP-303H\"",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 601051 Byte, Text per pdftotext"
+    },
+    "fcc_innenfotos": {
+      "url": "https://fccid.io/Q9DAPINH303/Internal-Photos/Internal-Photos-3252184",
+      "stand": "Exhibit 2017-07-08 (PDF 2016-12-16, 6 Seiten, 10 Fotos)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 4051288 Byte; Fotos nur 383-576 px breit, als Bild ausgewertet; Cache fcc/int/"
+    },
+    "fcc_aussenfotos": {
+      "url": "https://fccid.io/Q9DAPINH303/External-Photos/External-Photos-3252183",
+      "stand": "Exhibit 2017-07-08 (PDF 2016-12-16, 4 Seiten, 6 Fotos)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 1622433 Byte, als Bild ausgewertet; Cache fcc/ext/"
+    },
+    "fcc_rf_exposure": {
+      "url": "https://fccid.io/Q9DAPINH303/RF-Exposure-Info/RF-Exposure-Report-3334552",
+      "stand": "MiCOM Labs HWPD85-MPE All Bands Rev A vom 2017-03-27 (Exhibit 2017-05-18)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 4 Seiten"
+    },
+    "fcc_testbericht_5g": {
+      "url": "https://fccid.io/Q9DAPINH303/Test-Report/Test-Report-1-of-3-Master-3334554",
+      "stand": "MiCOM Labs HWPD85-U12_Master Rev A vom 2017-03-14 (Exhibit 2017-05-18)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 22 Seiten, Abschnitte 5.1-5.5 (EUT, Antennen, Ports) gelesen"
+    },
+    "fcc_testbericht_24g": {
+      "url": "https://fccid.io/Q9DAPINH303/Test-Report/2-4G-WiFi-Test-Report-1-of-3-3252256",
+      "stand": "MiCOM Labs, Issue Date 2016-12-01 (Exhibit 2017-01-11)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF 931506 Byte, Abschnitte 5.1-5.5 gelesen"
+    },
+    "shumoku_katalog": {
+      "url": "https://github.com/konoe-akitoshi/shumoku/blob/165513e518b95621a80841f5086e5f5e2294d6b0/libs/@shumoku/catalog/data/hardware/hpe/aruba-instant-on-ap11x/aruba-instant-on-ap11d.yaml",
+      "stand": "Commit 165513e5 (Stand der GitHub-Codesuche 2026-10-19)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Fremder Hardware-Katalog (Netzplan-Werkzeug), nennt als Quelle https://www.arubainstanton.com/products/access-points/ap11d/ (bei uns 403). Einzige gefundene Quelle mit AP11D-eigenen Angaben, daher niedrig"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=AP11D&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine Treffer, auch nicht für APINH303"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/index.php?search=AP11D&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine Treffer"
+    },
+    "ffda_wiki": {
+      "url": "https://github.com/freifunk-darmstadt/projects/wiki",
+      "stand": "Wiki-Repo (git clone --depth 1) am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "nur Seite Aruba AP11, keine Seite zu AP11D/AP-303H"
+    },
+    "freifunk_forum": {
+      "url": "https://forum.freifunk.net/search.json?q=AP11D",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "nur Thread 23821 (fehlende Selector-Bilder), keine Hardwaredaten; ebenso Suche AP-303H"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "15680478",
+      "devicetype": "WiFi AP",
+      "brand": "Aruba",
+      "model": "AP-303H",
+      "version": "NULL",
+      "fccid": "http://¿",
+      "availability": "Available 2019",
+      "whereavailable": "",
+      "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+      "supportedsincerel": "21.02.0",
+      "supportedcurrentrel": "22.03.5",
+      "unsupported_functions": "NULL",
+      "target": "ipq40xx",
+      "subtarget": "generic",
+      "packagearchitecture": "arm_cortex-a7_neon-vfpv4",
+      "bootloader": "U-Boot",
+      "cpu": "Qualcomm IPQ4029",
+      "cpucores": "4",
+      "cpumhz": "716",
+      "flashmb": "128NAND",
+      "rammb": "512",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "-",
+      "ethernet2_5gports": "-",
+      "ethernet5gports": "-",
+      "ethernet10gports": "-",
+      "sfp_ports": "-",
+      "sfp_plus_ports": "-",
+      "switch": "Qualcomm QCA8075",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "POE out on E3 with GPIO",
+      "wlanhardware": "Qualcomm IPQ4029",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "a/n/ac",
+      "wlancomments": "",
+      "wlandriver": "ath10k",
+      "detachableantennas": "-",
+      "bluetooth": "BLE",
+      "usbports": "1x 2.0",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "9600 / 8N1",
+      "jtag": "",
+      "ledcount": "3",
+      "buttoncount": "1",
+      "gpios": "-",
+      "powersupply": "48 VDC, PoE 802.3af/at",
+      "devicepage": "toh:aruba:ap-303h",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "AP-303H",
+      "gitsearch": "AP-303H",
+      "wikideviurl": "NULL",
+      "oemdevicehomepageurl": "https://www.arubanetworks.com/products/wireless/access-points/remote-hospitality-access-points/303h-series/",
+      "firmwareoemstockurl": "",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/22.03.5/targets/ipq40xx/generic/openwrt-22.03.5-ipq40xx-generic-aruba_ap-303h-initramfs-fit-uImage.itb",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/22.03.5/targets/ipq40xx/generic/openwrt-22.03.5-ipq40xx-generic-aruba_ap-303h-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-aruba_ap-303h-initramfs-fit-uImage.itb",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-aruba_ap-303h-squashfs-sysupgrade.bin",
+      "installationmethods": "U-Boot TFTP + serial recovery,see git-commit",
+      "commentinstallation": "",
+      "recoverymethods": "U-Boot TFTP + serial recovery",
+      "commentrecovery": "",
+      "picture": "media:example:genericrouter1.png",
+      "comments": "",
+      "page": "toh:hwdata:aruba:aruba_ap-303h"
+    },
+    "toh_seite": {
+      "Device Type_devicetype": "WiFi AP",
+      "Brand": "Aruba",
+      "Model": "AP-303H",
+      "Versions": "",
+      "FCCID_urls": "https://fccid.io/Q9DAPINH303",
+      "Availability_availability": "Available 2019",
+      "Where available": "ebay.com",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+      "Supported Since Rel_releasesince": "21.02.0",
+      "Supported Current Rel_releasecurrent": "24.10.5",
+      "Unsupported Functions_unsupporteds": "USB, Bluetooth",
+      "Gluon support_gluonsupport": "unknown",
+      "Target_target": "ipq40xx",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "arm_cortex-a7_neon-vfpv4",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Qualcomm Atheros IPQ4029",
+      "CPU Cores_numcores_": "4",
+      "CPU MHz": "716",
+      "Flash MB_mbflashs": "128NAND",
+      "RAM MB_mbram": "512",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "4",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "Qualcomm Atheros QCA8075",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "POE out on E3 with GPIO",
+      "WLAN Hardwares": "Qualcomm Atheros IPQ4029",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN Comments_": "",
+      "WLAN driver_wlan-drivers": "ath10k-ct",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "BLE",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "1x 2.0",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "USB works in recent snapshots, but not in 23.05.3",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "9600 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "",
+      "LED count_numled": "3",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "48 VDC, PoE 802.3af/at",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "-",
+      "Wireguard performance": "-",
+      "Device Page_page": "toh:aruba:ap-303h",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "AP-303H",
+      "Git search_search-gits": "AP-303H",
+      "WikiDevi URL_urls": "",
+      "WikiDevi ID_hwinfo-id": "",
+      "OEM Device Homepage URL_url": "https://www.arubanetworks.com/products/wireless/access-points/remote-hospitality-access-points/303h-series/",
+      "Firmware OEM Stock URL_url": "",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/24.10.4/targets/ipq40xx/generic/openwrt-24.10.4-ipq40xx-generic-aruba_ap-303h-initramfs-uImage.itb",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/24.10.4/targets/ipq40xx/generic/openwrt-24.10.4-ipq40xx-generic-aruba_ap-303h-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-aruba_ap-303h-initramfs-fit-uImage.itb",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-aruba_ap-303h-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "U-Boot TFTP + serial recovery, see git-commit",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "U-Boot TFTP + serial recovery",
+      "Comment recovery": "",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "openwrt_wiki": {
+      "einleitung": "The Aruba AP-303H is a Qualcomm based dual-radio 802.11ac Wave 2 2x2:2 hospitality and branch AP with internal antennas, three Gigabit Ethernet ports, PoE out and USB host interface. Supports wall-box and desk mount deployments. The Aruba Instant On AP11D is a cheaper version of this device based on the same platform and the OpenWrt firmware for AP-303H can also be flashed onto the AP11D.",
+      "lan_switch": "==== LAN switch ====\n\nThe device has four switch ports. E0/PT you can use on the back of the device or below of the device\n\n^ Port             ^ Switch Port   ^\n| E0/PT (PoE-in)    | lan0          |\n| E1                | lan1          |\n| E2                | lan2          |\n| E3    (PoE-out)   | lan3          |\n\nNote that for bridged AP configuration use 'wan' not 'lan0'\n\n  $ uci add_list network.@device[0].ports='wan'",
+      "flash_layout": "===== Flash Layout =====\n\n<code>\nroot@Aruba-303H:~# cat /proc/mtd \ndev:    size   erasesize  name\nmtd0: 00040000 00010000 \"sbl1\"\nmtd1: 00020000 00010000 \"mibib\"\nmtd2: 00060000 00010000 \"qsee\"\nmtd3: 00010000 00010000 \"cdt\"\nmtd4: 00010000 00010000 \"ddrparams\"\nmtd5: 00010000 00010000 \"appsblenv\"\nmtd6: 00100000 00010000 \"appsbl\"\nmtd7: 00010000 00010000 \"ART\"\nmtd8: 00170000 00010000 \"osss\"\nmtd9: 00010000 00010000 \"pds\"\nmtd10: 00010000 00010000 \"apcd\"\nmtd11: 00010000 00010000 \"mfginfo\"\nmtd12: 00010000 00010000 \"fcache\"\nmtd13: 00010000 00010000 \"u-boot-env-bak\"\nmtd14: 00040000 00010000 \"u-boot-env\"\nmtd15: 02000000 00020000 \"aos0\"\nmtd16: 02000000 00020000 \"ubi\"\nmtd17: 04000000 00020000 \"aruba-ubifs\"\n</code>",
+      "gehaeuse_oeffnen": "==== Opening the case ====\n\n-> [[:docs:guide-user:warranty|Warranty]]\n\nTo open the case, peel off the 4 white rubber feet and remove the torx T8 screws. There are no clips and the case separates easily.\n\nWhen reassembling, be careful not to pinch the two antenna wires.\n\n{{:media:aruba:aruba_303h_case_open.jpg?400|}}\n{{:media:aruba:aruba_303h_power_bottom.jpg?400|}}\n{{:media:aruba:aruba_303h_power_top.jpg?400|}}\n{{:media:aruba:aruba_303h_main_pcb_top.jpg?400|}}\n{{:media:aruba:aruba_303h_serial_console.jpg?400|}}\n{{:media:aruba:aruba_303h_serial_console_zoom.png?400|}}",
+      "serielle_konsole": "==== Serial Console ====\nThe 5-pin Micro-B connector located on the back of this device. Use an AP-CBL-SERU cable for direct\nmanagement of this device when connected to a laptop or serial console. For pin-out details see below.\n\n{{:media:aruba:consolearuba303h.png?200|}}\n{{:media:aruba:ap-303h-console-cable-2.jpg?800|}}\n{{:media:aruba:ap-303h-console-cable-3.jpeg?180|}}\n\n^ Console connection parameters\\\\ for Aruba AP-303H  | 9600, 8N1 |\n\nThe AP-303H is a little picky about drive strength on the console port. Some FTDI cables that work with e.g. a Raspberry Pi do not work with this device. In that case, you will be able to read boot messages on the console port, but you will not be able to interrupt APBoot by pressing Enter. An FTDI-style cable that can drive 3.3V @ 1 mA should work.\n\nWhen shopping for knock-off console cables, look for cables that specifically mention compatibility with Aruba APs.",
+      "oem_bootlog_kopf": "APBoot 2.1.4.13 (build 59885)\nBuilt: 2017-05-31 at 12:00:36\n\nModel: AP-303H\nDRAM:  512 MiB\nFlash: Detected MX25L3205D: total 4 MiB\nNAND:  Detected MX35LFxGE4AB: total 128 MiB\nPower: 802.3at POE\nNet:   eth0\nRadio: ipq4029#0, ipq4029#1\nReset: warm\nFIPS:  passed ",
+      "back_to_stock": "===== Back to stock =====\n\nTo go back to the stock firmware, simply reset the bootcmd in the\nbootloader to the original value:\n\n  $ setenv bootcmd \"boot\"\n  $ saveenv\n  $ boot\n  \nIf you are getting  <color #ed1c24>ls: ubi?: No such file or directory[   20.509806] UBIFS error (pid 1143): ubifs_mount: cannot open \"/dev/ubifs\", error -22\nGet the stock firmware from https://networkingsupport.hpe.com/globalsearch#q=8.7.1.6&tab=Software&firstResult=10 and place if TFTP root\n\n  $ upgrade os 1 192.168.1.75:ArubaInstant_Ursa_8.7.1.6_81786\n  $ setenv bootcmd \"boot\"\n  $ saveenv\n  $ boot\n\nif getting below error,\nUBIFS error\ncannot open \"/dev/ubifs\"\nMounting ubifs failed\n\n  $ factory_reset\n  $ boot\n  \nFactory credential is admin/SERIALNUMBEROFAP"
+    },
+    "openwrt_commit": {
+      "sha": "c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+      "autor": {
+        "name": "David Bauer",
+        "email": "mail@david-bauer.net",
+        "date": "2020-01-11T23:36:42Z"
+      },
+      "nachricht": "ipq40xx: add support for Aruba AP-303H\n\nThe Aruba AP-303H is the hospitality version of the Aruba AP-303 with a\nPOE-passthrough enabled ethernet switch instead of a sigle PHY.\n\nHardware\n--------\n\nSoC:   Qualcomm IPQ4029\nRAM:   512M DDR3\nFLASH: - 128MB SPI-NAND (Macronix)\n       - 4MB SPI-NOR (Macronix MX25R3235F)\nTPM:   Atmel AT97SC3203\nBLE:   Texas Instruments CC2540T\n       attached to ttyMSM1\nETH:   Qualcomm QCA8075\nLED:   WiFi (amber / green)\n       System (red / green /amber)\n       PSE (green)\nBTN:   Reset\nUSB:   USB 2.0\n\nTo connect to the serial console, you can solder to the labled pads next\nto the USB port or use your Aruba supplied UARt adapter.\n\nDo NOT plug a standard USB cable into the Console labled USB-port!\nAruba/HPE simply put UART on the micro-USB pins. You can solder yourself\nan adapter cable:\n\nVCC - NC\n D+ - TX\n D- - RX\nGND - GND\n\nThe console setting in bootloader and OS is 9600 8N1. Voltage level is\n3.3V.\n\nTo enable a full list of commands in the U-Boot \"help\" command, execute\nthe literal \"diag\" command.\n\nInstallation\n------------\n\n1. Get the OpenWrt initramfs image. Rename it to ipq40xx.ari and put it\n   into the TFTP server root directory. Configure the TFTP server to\n   be reachable at 192.168.1.75/24. Connect the machine running the TFTP\n   server to the E0 (!) ethernet port of the access point, as it only\n   tries to pull from the WAN port.\n\n2. Connect to the serial console. Interrupt autobooting by pressing\n   Enter when prompted.\n\n3. Configure the bootargs and bootcmd for OpenWrt.\n   $ setenv bootargs_openwrt \"setenv bootargs console=ttyMSM0,9600n8\"\n   $ setenv nandboot_openwrt \"run bootargs_openwrt; ubi part aos1;\n     ubi read 0x85000000 kernel; set fdt_high 0x87000000;\n     bootm 0x85000000\"\n   $ setenv ramboot_openwrt \"run bootargs_openwrt;\n     setenv ipaddr 192.168.1.105; setenv serverip 192.168.1.75;\n     netget; set fdt_high 0x87000000; bootm\"\n   $ setenv bootcmd \"run nandboot_openwrt\"\n   $ saveenv\n\n4. Load OpenWrt into RAM:\n   $ run ramboot_openwrt\n\n5. After OpenWrt booted, transfer the OpenWrt sysupgrade image to the\n   /tmp folder on the device. You will need to plug into E1-E3 ports of\n   the access point to reach OpenWrt, as E0 is the WAN port of the\n   device.\n\n6. Flash OpenWrt:\n   $ ubidetach -p /dev/mtd16\n   $ ubiformat /dev/mtd16\n   $ sysupgrade -n /tmp/openwrt-sysupgrade.bin\n\nTo go back to the stock firmware, simply reset the bootcmd in the\nbootloader to the original value:\n\n  $ setenv bootcmd \"boot\"\n  $ saveenv\n\nSigned-off-by: David Bauer <mail@david-bauer.net>",
+      "dateien": [
+        "target/linux/ipq40xx/base-files/etc/board.d/02_network",
+        "target/linux/ipq40xx/base-files/etc/hotplug.d/firmware/11-ath10k-caldata",
+        "target/linux/ipq40xx/base-files/lib/upgrade/platform.sh",
+        "target/linux/ipq40xx/files-4.19/arch/arm/boot/dts/qcom-ipq4029-ap-303h.dts",
+        "target/linux/ipq40xx/image/Makefile",
+        "target/linux/ipq40xx/patches-4.19/901-arm-boot-add-dts-files.patch"
+      ]
+    },
+    "openwrt_commits": {
+      "liste": [
+        "7",
+        "026fbd65\t2024-04-26\tRyan Salsbury\tipq40xx: fix USB on Aruba AP-303H",
+        "b40cc46c\t2024-09-14\tDavid Bauer\tipq40xx: add PoE passthrough GPIO",
+        "4c5cb588\t2024-04-26\tRyan Salsbury\tipq40xx: use nvmem ethernet MACs on Aruba AP-303H",
+        "3195a992\t2022-12-21\tNick Hainke\tipq40xx: convert Aruba AP-303H to DSA and enable target again",
+        "47da1786\t2024-04-29\tRyan Salsbury\tipq40xx: fix I2C pin config on Aruba AP-303H",
+        "1036545b\t2022-12-29\tBjoern Dobe\tipq40xx: fix wlan mac address for Aruba AP-303H",
+        "c6e972c8\t2020-01-12\tDavid Bauer\tipq40xx: add support for Aruba AP-303H"
+      ],
+      "nachrichten": "=== 026fbd65\n026fbd650a58c22512ca64e85ccb5b318af3aaa7\nipq40xx: fix USB on Aruba AP-303H\n\nEnable USB 3.0 controller, disable USB 2.0 controller.\n\nThe USB 2.0 port on the AP-303H is actually connected to the USB 3.0\ncontroller's HS phy. Enable the HS phy only, since the SS lanes are not\nbrought out to the connector.\n\nSigned-off-by: Ryan Salsbury <ryanrs@gmail.com>\ntarget/linux/ipq40xx/files-6.6/arch/arm/boot/dts/qcom/qcom-ipq4029-ap-303h.dts\n=== b40cc46c\nb40cc46cc882ff97f2752e7837173ffc9f884eb9\nipq40xx: add PoE passthrough GPIO\n\nAdd the GPIO pin of the PoE passthrough switch on the Aruba AP-303H.\nPower is activated when the pin is low. It enables a PSE chip, so power\nis only supplied to downstream devices when they are 802.3af/at\ncompliant devices.\n\nEnsure you use a sufficient power supply when chaining a consuming\ndevice after the AP.\n\nSigned-off-by: David Bauer <mail@david-bauer.net>\ntarget/linux/ipq40xx/base-files/etc/board.d/03_gpio_switches\n=== 4c5cb588\n4c5cb5880573b7e39a205f220f4f569db542973d\nipq40xx: use nvmem ethernet MACs on Aruba AP-303H\n\nUse NVMEM to assign \"factory sticker\" MAC address to WAN ethernet\ninterface. Set LAN address to sticker + 1.\n\nSigned-off-by: Ryan Salsbury <ryanrs@gmail.com>\ntarget/linux/ipq40xx/files-6.6/arch/arm/boot/dts/qcom/qcom-ipq4029-ap-303h.dts\n=== 3195a992\n3195a992d6f635ad82dbe39ee584571371334450\nipq40xx: convert Aruba AP-303H to DSA and enable target again\n\nThe target was disabled since noone did the DSA conversion. Add the\nconversion and enable it again.\n\nTested-by: John Walshaw <jjw@myself.com>\nSigned-off-by: Bjoern Dobe <bjoern@dobecom.de>\nSigned-off-by: Nick Hainke <vincent@systemli.org>\ntarget/linux/ipq40xx/base-files/etc/board.d/02_network target/linux/ipq40xx/files/arch/arm/boot/dts/qcom-ipq4029-ap-303h.dts target/linux/ipq40xx/image/generic.mk\n=== 47da1786\n47da1786e9554ee68e32287c747fd88bee539d53\nipq40xx: fix I2C pin config on Aruba AP-303H\n\nTurn on SoC pull-ups on I2C pins, since there are no discrete pull-up\nresistors on the bus.\n\nIncrease clock to 400 kHz. Both chips on the bus support 400 kHz. I\ntested the ISL28022 at 4,000 reads/sec and didn't see any garbled output\nor bus hangs, even with SoC drive strength reduced to 2 for the test.\n\nSigned-off-by: Ryan Salsbury <ryanrs@gmail.com>\nLink: https://github.com/openwrt/openwrt/pull/15334\nSigned-off-by: Robert Marko <robimarko@gmail.com>\ntarget/linux/ipq40xx/files-6.6/arch/arm/boot/dts/qcom/qcom-ipq4029-ap-303h.dts\n=== 1036545b\n1036545b0026dbf30da0c805d9c639bb688fa8e5\nipq40xx: fix wlan mac address for Aruba AP-303H\n\nAssigns the correct mac address from nvmen to the wlan interfaces.\nThis Mac address corresponds to the label \"Wireless MAC\" on the device\nand the stock firmware.\nRemoves duplicate entry of calibration variant for both radios.\n\nFixes: cfc13c44595d (\"ipq40xx: utilize nvmem-cells for macs & (pre-)calibration data\")\nReviewed-by: Robert Marko <robimarko@gmail.com>\nSigned-off-by: Bjoern Dobe <bjoern@dobecom.de>\ntarget/linux/ipq40xx/files/arch/arm/boot/dts/qcom-ipq4029-ap-303h.dts"
+    },
+    "openwrt_dts_main": {
+      "model": "Aruba AP-303H",
+      "compatible": "aruba,ap-303h",
+      "memory": "reg = <0x80000000 0x10000000> (256 MiB im DTS; Bootlog/Commit nennen 512 MiB)",
+      "gpio_kommentar": "/*\n\t * In addition to the Pins listed below,\n\t * the following GPIOs have \"features\":\n\t * 39 - out - active low to force HW reset\n\t * 32 - out - active low to reset TPM\n\t * 43 - out - active low to reset BLE radio\n\t * 41 - out - pulse to set warm reset status\n\t * 34 - out - active low to enable PSE port\n\t * 22 - in  - active low when 802.3at powered\n\t * 29 - in  - active high when DC powered\n\t * 40 - in  - active low when reset due to cold HW reset\n\t * 30 - in  - active low when USB overcurrent detected\n\t * 35 - in  - interrupt line for power monitor chip\n\t * 31 - in  - active low when PSE port active\n\t */",
+      "leds": "leds {\n\t\tcompatible = \"gpio-leds\";\n\n\t\twifi_green {\n\t\t\tlabel = \"green:wifi\";\n\t\t\tgpios = <&tlmm 27 GPIO_ACTIVE_HIGH>;\n\t\t\tlinux,default-trigger = \"phy0tpt\";\n\t\t};\n\n\t\twifi_amber {\n\t\t\tlabel = \"amber:wifi\";\n\t\t\tgpios = <&tlmm 28 GPIO_ACTIVE_HIGH>;\n\t\t\tlinux,default-trigger = \"phy1tpt\";\n\t\t};\n\n\t\tpse {\n\t\t\tlabel = \"green:pse\";\n\t\t\tgpios = <&tlmm 42 GPIO_ACTIVE_HIGH>;\n\t\t};\n\n\t\tled_system_red: system_red {\n\t\t\tlabel = \"red:system\";\n\t\t\tgpios = <&tlmm 25 GPIO_ACTIVE_HIGH>;\n\t\t};\n\n\t\tled_system_green: system_green {\n\t\t\tlabel = \"green:system\";\n\t\t\tgpios = <&tlmm 24 GPIO_ACTIVE_HIGH>;\n\t\t};\n\n\t\tled_system_amber: system_amber {\n\t\t\tlabel = \"amber:system\";\n\t\t\tgpios = <&tlmm 26 GPIO_ACTIVE_HIGH>;\n\t\t};\n\t};",
+      "keys": "keys {\n\t\tcompatible = \"gpio-keys\";\n\n\t\treset {\n\t\t\tlabel = \"Reset button\";\n\t\t\tgpios = <&tlmm 18 GPIO_ACTIVE_LOW>;\n\t\t\tlinux,code = <KEY_RESTART>;\n\t\t};\n\t};",
+      "i2c": "TPM Atmel AT97SC3203 @0x29, Power-Monitor ISL28022 @0x40 (beide ohne Treiber)",
+      "switchports": "swport2 lan1, swport3 lan2, swport4 lan3, swport5 wan (MAC mfginfo 0x1d)",
+      "wifi": "wifi0/wifi1 precal aus ART 0x1000/0x5000, calibration-variant Aruba-AP-303, MAC mfginfo 0x45",
+      "usb": "usb3 aktiv, nur HS-PHY"
+    },
+    "openwrt_image_main": "define Device/aruba_glenmorangie\n\t$(call Device/FitImageLzma)\n\tDEVICE_VENDOR := Aruba\n\tSOC := qcom-ipq4029\nendef\n\ndefine Device/aruba_ap-303h\n\t$(call Device/aruba_glenmorangie)\n\tDEVICE_MODEL := AP-303H\n\tDEVICE_DTS_CONFIG := Aberlour@1\nendef\nTARGET_DEVICES += aruba_ap-303h",
+    "gluon_target": "device('aruba-ap-303h', 'aruba_ap-303h', {\n\tfactory = false,\n\taliases = {'aruba-instant-on-ap11d'},\n})",
+    "gluon_commit": {
+      "pr_titel": "ipq40xx: add support for Aruba AP-303H / Instant ON AP11D",
+      "autor": "bdobe",
+      "erstellt": "2021-08-19T18:16:17Z",
+      "gemergt": "2021-09-01T21:31:02Z",
+      "commit": "a492e629f8647ea3cb72213e11c940c681f1229b",
+      "nachricht": "ipq40xx: add support for Aruba AP-303H / Instant ON AP11D (#2302)\n\n- [x] must be flashable from vendor firmware\r\n  - [ ] webinterface\r\n  - [ ] tftp\r\n  - [x] other: Console port available. Manufacturer specific cable required.\r\n        Tutorial in OpenWRT commit message https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0\r\n- [x] must support upgrade mechanism\r\n  - [x] must have working sysupgrade\r\n    - [x] must keep/forget configuration (if applicable)\r\n      *think `sysupgrade [-n]` or `firstboot`*\r\n  - [x] must have working autoupdate\r\n        root@Aruba-AP-303H:~# lua -e 'print(require(\"platform_info\").get_image_name())'\r\n        aruba-ap-303h\r\n- [x] reset/wps/phone button must return device into config mode\r\n- [x] primary mac should match address on device label (or packaging) (https://gluon.readthedocs.io/en/latest/dev/hardware.html#notes)\r\n- wired network\r\n  - [x] should support all network ports on the device\r\n  - [x] must have correct port assignment (WAN/LAN)\r\n- wifi (if applicable)\r\n  - [x] association with AP must be possible on all radios\r\n  - [x] association with 802.11s mesh must be working on all radios\r\n  - [x] ap/mesh mode must work in parallel on all radios\r\n- led mapping\r\n  - power/sys led (_critical, because led definitions are setup on firstboot only_)\r\n    - [x] lit while the device is on\r\n    - [x] should display config mode blink sequence\r\n(https://gluon.readthedocs.io/en/latest/features/configmode.html)\r\n  - radio leds\r\n    - [x] should map to their respective radio\r\n    - [x] should show activity\r\n  - switchport leds\r\n    - [x] should map to their respective port (or switch, if only one led present)\r\n    - [x] should show link state and activity\r\n- outdoor devices only\r\n  - [ ] added board name to `is_outdoor_device` function in `package/gluon-core/luasrc/usr/lib/lua/gluon/platform.lua`\r\n- ToDo (upstream):\r\n  - enable PoE pass through on interface E3\r\n        system.poe_passthrough=gpio_switch\r\n        system.poe_passthrough.name='PoE Passthrough'\r\n        system.poe_passthrough.gpio_pin='446'\r\n        system.poe_passthrough.value='0' (0 is active)",
+      "kommentare": [
+        {
+          "von": "mweinelt",
+          "am": "2021-09-01T13:59:21Z",
+          "text": "LGTM. One question: Is the default port mapping on this device sensible?"
+        },
+        {
+          "von": "bdobe",
+          "am": "2021-09-01T17:54:17Z",
+          "text": "For me the port mapping is reasonable. It is like a router with 3 LAN Ports. The power supply comes with PoE over the WAN port. "
+        }
+      ]
+    },
+    "werkstatt": {
+      "datei": "router-werkstatt/docs/ap11-ap303-bootloader.md",
+      "abschnitt": "Zwei Regeln",
+      "text": "Nur für AP11 und AP-303. AP11D gehört zur Hardware des AP-303H, AP17 hat eigene. Wer die Datei dort schreibt, macht das Gerät ohne Programmer unbrauchbar. adorfer vermutet, dass die übrigen Cloud-Geräte des Herstellers dieselbe Sperre haben; belegt ist das nicht, deshalb steht auf deren Seiten nur ein Hinweis mit der Bitte um Rückmeldung."
+    },
+    "rampe_anleitungen": {
+      "datei": "rampe-anleitungen/anleitungen/zusatz/aruba-instant-on-ap11d.md",
+      "text": "## Vorher prüfen\n\n- Der Instant On AP11D ist technisch ein Aruba AP-303H. Die\n  Freifunk-Firmware ist für beide dieselbe; manche Communities bieten sie nur\n  unter dem Namen AP-303H an.\n- Nicht verwechseln mit dem [Instant On AP11](aruba-instant-on-ap11.md) ohne\n  \"D\", dem Gerät für Decke oder Wand mit einer Netzwerkbuchse. Der braucht\n  andere Dateien.\n- Wir vermuten, dass neuere AP11D denselben gesperrten Bootloader haben wie\n  neuere Instant On AP11. Rückmeldungen dazu haben wir noch keine. Kommt in\n  Schritt 7 `Unknown command 'bootm'`, schreib uns bitte, damit wir es\n  belegen können. Der ältere Bootloader von der AP11-Seite passt **nicht**\n  zum AP11D.",
+      "geraete_md": "| Aruba Instant On AP11D (Alias von aruba-ap-303h) | `aruba-instant-on-ap11d` | ipq40xx-generic | K4 | Alias: Image aus devices/aruba-ap-303h.sh; ob apboot gesperrt ist wie beim AP11: offen |"
+    },
+    "fccid": {
+      "grantee": "Q9D Hewlett Packard Enterprise Company",
+      "product_code": "APINH303",
+      "equipment_class": "802.11 a/b/g/n/ac Wireless Access Point",
+      "test_firm": "MiCOM Labs",
+      "grants": [
+        {
+          "frequenz": "2402-2480 MHz",
+          "zweck": "Original Equipment",
+          "datum": "2017-01-11"
+        },
+        {
+          "frequenz": "5180-5240 MHz",
+          "zweck": "Original Equipment",
+          "datum": "2017-01-11"
+        },
+        {
+          "frequenz": "5180-5240 MHz",
+          "zweck": "Class III permissive change to software defined radio",
+          "datum": "2017-05-18"
+        }
+      ],
+      "exhibits": "User Manual (1 of 2) 2017-09-23 1.6 MB; User Manual (2 of 2) 2017-09-23 3.8 MB; User Manual 1 2017-07-08 1.3 MB; User Manual 2 2017-07-08 3.8 MB; Internal Photos 2017-07-08 3.9 MB; External Photos 2017-07-08 1.5 MB; Label 2017-01-11 587 KB; Test Setup Photos 2017-09-23 393 KB und 2017-07-08 1.1 MB; Test Reports 2017-05-18 (Master, Conducted, Radiated, DFS); 2.4G WiFi Test Report 1-3, BLE Test Report, NII Test Report 1-3 (2017-01-11); RF Exposure 2017-05-18 und 2017-01-11; Block Diagram, Schematics: Metadata only",
+      "q9d_liste_303": [
+        "Q9DAPIN0303",
+        "Q9DAPINH303",
+        "Q9DAPINP303",
+        "Q9DASIN0303"
+      ]
+    },
+    "fcc_handbuch": {
+      "titel": "Aruba 303H Series Hospitality Access Point Installation Guide, 0511xxx-01, November 2016",
+      "faehigkeiten": [],
+      "lieferumfang": [
+        "AP-303H Access Point",
+        "Single gang wall-box mounting bracket",
+        "(2x) #6-32 slotted screws",
+        "T8H Torx security screw"
+      ],
+      "konsole": "The 5-pin USB Micro-B connector located on the back of the access point allows for direct management of the device when connected to a laptop or serial console. Pin-out: 1 NC, 2 RX, 3 TX, 4 GND, 5 GND",
+      "ethernet": "E0 bottom, 10/100/1000 Base-T, uplink, 802.3af/802.3at PD. E1-E3 bottom, 10/100/1000 Base-T downlink. E3 PoE-out, up to 13W when in 802.3at PoE mode or powered by DC. Back panel: E0 (57V 600mA), PT",
+      "usb": "USB port compatible with cellular modems and BLE dongles, up to 5W/1A",
+      "seite": "AC/DC power socket (48V 600mA), USB port, Reset button, Security Screw Lock",
+      "taster": "push button on the right side: factory reset when held during power-on; during operation toggles system status LED",
+      "strom": "single 48V DC power connector, AP-AC-48V36C (sold separately). PoE-in E0 802.3at (preferred) or 802.3af (optional). With 802.3at or DC: PoE-out on E3, max 15W. DC preferred when both present, hitless fail-over.",
+      "elektrisch": [
+        " 100/1000 Base-T auto-sensing Ethernet RJ45 interface",
+        " IEEE 802.3u (100 Base-T). IEEE 802.3ab (1000 Base-T)",
+        " Power over Ethernet IEEE 802.3at 56VDC (nominal) and 802.3af 48VDC (maximum).",
+        " 48VDC power interference, support powering through an AC-to-DC power adapter (AP-AC-48V36C)",
+        " Maximum power consumption with a full PoE-PSE and USB load: 25W (PoE) or 31W (DC)",
+        "If a power adapter other than the Aruba-approved adapter is used in the US or Canada, it should be NRTL listed,",
+        "without an output rated 48VDC, minimum 2A, marked “LPS” and “Class 2”, and suitable for plugging into a"
+      ],
+      "umgebung": "Operating 0°C to +40°C, humidity 5% to 93% non-condensing; storage -40°C to +70°C",
+      "regulatorisch": "The regulatory model name for AP-303H/IAP-303H access point is APINH303. Min. distance 27 cm. 5.15-5.25 GHz indoor only. Expected Service Life 10 years.",
+      "montage": "single-gang wall box bracket; desk mount with AP-303H-MNTW (sold separately); oriented vertically with Ethernet ports facing downward",
+      "led_system": [
+        "Off Device is powered off",
+        "Green/solid Device is ready; fully functional",
+        "Green/blinking1 Device is booting; not ready",
+        "Green/flashing2 Device is ready; uplink negotiated at suboptimal speed (<1Gbps)",
+        "Amber/solid Device is ready; operating in power-save mode",
+        "Amber/flashing Device is ready; operating in power-save mode, with uplink negotiated at",
+        "Red/solid Error condition",
+        "Off Meets one of the following conditions:",
+        "Green/solid Both radios enabled in access mode",
+        "Green/blinking1 One radio enabled in access mode; one radio",
+        "Amber/solid Both radios enabled in monitor mode",
+        "Amber/flashing Device ready; operating in power-save mode, with uplink negotiated at",
+        "Off Meets one of the following conditions:",
+        "Green/solid Link established at max speed (1Gbps)",
+        "Amber/solid Link established at reduced speed (10/100Mbps)",
+        "Off Access point not supplying PoE, or powered off",
+        "Green/solid Access point supplying power to a connected device"
+      ]
+    },
+    "fcc_label": {
+      "zeichnung": "4012123-01 LBL, ARUBA, BASE AGENCY, AP-303H",
+      "text": [
+        "Manufacturer Hewlett Packard Enterprise Company",
+        "HPE, Postfach 0001,1122 Wien, Austria",
+        "APINH303",
+        "IC: 4675A-APINH303",
+        "FCC ID: Q9DAPINH303",
+        "CAN ICES-3 (B)/NMB-3(B)"
+      ],
+      "groesse": "115 mm x 18 mm"
+    },
+    "fcc_innenfotos": {
+      "bildtitel": [
+        "Cover Removed",
+        "Rear Housing Removed",
+        "Shields Removed",
+        "PCB - Antenna Removed",
+        "Power Board Removed",
+        "Shield Removed",
+        "Bottom of Power Board",
+        "Bottom - Power Board",
+        "Antenna - Front",
+        "Antenna - Rear"
+      ],
+      "beobachtungen": [
+        "Zwei Platinen: Hauptplatine und darauf gesteckte Netzteilplatine (Aufdruck BY100PWB-1.6 bzw. BY100B-1.6 auf der Hauptplatine)",
+        "Hauptplatine: Block mit vier RJ45 an einer Kante, auf der anderen Seite zwei einzelne RJ45 (E0/PT der Rückseite) mit Übertragern HN2470CG, HN4821CG, HN2468CG",
+        "Große Abschirmhaube über SoC-Bereich, kleinere Haube; Kupferflächen-Antennen an der Platinenkante",
+        "USB-A-Buchse, Micro-USB-Buchse und mehrere unbestückte bzw. bestückte Stiftleisten-Reihen (3-4 Pins) nahe USB; Beschriftung bei der Auflösung nicht lesbar",
+        "Antennenträger aus Blech mit zwei Blechantennen und zwei U.FL-Kabeln (schwarz, grau)",
+        "Kein Lüfter"
+      ]
+    },
+    "fcc_aussenfotos": {
+      "bildtitel": [
+        "Top / Front View",
+        "Bottom / Rear View",
+        "Right Side View",
+        "Left Side View",
+        "Bottom View",
+        "Top View"
+      ],
+      "beobachtungen": [
+        "Front: Aruba-Logo, drei LEDs, Aufkleber \"REMOVE THIS ENTIRE LABEL\" mit SN, MAC, BLE MAC",
+        "Rückseite: Rippen, zwei Schlüssellöcher, Micro-USB oben mittig mit Warnsymbol, zwei RJ45, Zulassungsetikett links",
+        "Seite: runde DC-Buchse, USB-A, kleines Reset-Loch",
+        "Unterseite: vier RJ45, Farbmarkierung grau/blau/blau/rot"
+      ]
+    },
+    "fcc_rf_exposure": {
+      "bericht": "HWPD85-MPE All Bands Rev A, 27th March 2017",
+      "tabelle": [
+        {
+          "band_mhz": "5150-5250",
+          "gain_dbi": 7.6,
+          "peak_dbm": 16.78
+        },
+        {
+          "band_mhz": "5250-5350",
+          "gain_dbi": 7.6,
+          "peak_dbm": 19.4
+        },
+        {
+          "band_mhz": "5725-5850",
+          "gain_dbi": 7.6,
+          "peak_dbm": 21.38
+        },
+        {
+          "band_mhz": "5470-5725",
+          "gain_dbi": 7.6,
+          "peak_dbm": 20.16
+        },
+        {
+          "band_mhz": "2400-2483.5",
+          "gain_dbi": 6.2,
+          "peak_dbm": 15.1
+        }
+      ],
+      "hinweis": "Total Gain (dBi) = Beamforming Gain + Antenna Gain"
+    },
+    "fcc_testbericht_5g": {
+      "bericht": "HWPD85-U12_Master Rev A, Issue Date 14th March 2017",
+      "eut_eingang": "31st October 2016",
+      "einheiten": 2,
+      "location_for_use": "Indoor",
+      "rated_input": "AC/ DC adaptor (adaptor NOT sold with unit) 48Vdc",
+      "temperatur": "Declared Range 0°C to 40°C",
+      "abmessungen": "86mm x 40mm x 150mm",
+      "gewicht": "0.31kg",
+      "hardware_rev": "1",
+      "software_rev": "RF Test: QDART 1.0.36; DFS Test: 6.5.2.0 Build 58043",
+      "seriennummern": [
+        "CNC7K2R07K",
+        "CNC7K2R00F"
+      ],
+      "antennen": [
+        {
+          "typ": "integral",
+          "hersteller": "Aruba",
+          "familie": "Metal sheet PCB",
+          "gain_dbi": 4.6,
+          "bf_gain_dbi": 3.0,
+          "dir_bw": 360,
+          "band_mhz": "5250-5350"
+        },
+        {
+          "typ": "integral",
+          "hersteller": "Aruba",
+          "familie": "Metal sheet PCB",
+          "gain_dbi": 4.6,
+          "bf_gain_dbi": 3.0,
+          "dir_bw": 360,
+          "band_mhz": "5470-5725"
+        }
+      ],
+      "io_ports": "Ethernet, Max Cable 100, 3 Ports, nicht geschirmt, RJ45"
+    },
+    "fcc_testbericht_24g": {
+      "issue_date": "1st December 2016",
+      "location_for_use": "Indoor",
+      "modi": "802.11b; 802.11g; 802.11n HT-20; 802.11n HT-40",
+      "rated_input": "AC/ DC adaptor (adaptor NOT sold with unit) 48Vdc",
+      "temperatur": "Declared Range 0°C to 40°C",
+      "abmessungen": "150mm x 86mm x 38mm",
+      "gewicht": "0.26kg (0.60lbs)",
+      "hardware_rev": "1",
+      "antennen": [
+        {
+          "typ": "integral",
+          "hersteller": "Aruba",
+          "familie": "Metal sheet PCB",
+          "gain_dbi": 3.2,
+          "bf_gain_dbi": 3.0,
+          "dir_bw": 360,
+          "band_mhz": "2400-2483.5"
+        }
+      ],
+      "io_ports": "Ethernet, Max Cable 100, 3 Ports, nicht geschirmt, RJ45"
+    },
+    "shumoku_katalog": "# Aruba Instant On AP11D — WiFi 5 desk/wall AP with PoE passthrough\n# Source: https://www.arubainstanton.com/products/access-points/ap11d/\n# Note: E3 port provides PoE-out (802.3af, 15.4W) only when powered via 802.3at.\n# Regulatory model: APINH303.\nid: hpe/aruba-instant-on-ap11x/aruba-instant-on-ap11d\nlabel: Aruba Instant On AP11D\nextends: hpe/aruba-instant-on-ap11x\nspec:\n  kind: hardware\n  type: access-point\n  vendor: hpe\n  model: aruba-instant-on-ap11d\ntags: [desktop, poe-consumer, poe-passthrough, apinh303]\nproperties:\n  power:\n    max_draw_w: 27.4\n    poe_in:\n      standard: \"802.3at\"\n      class: 4\n      max_draw_w: 27.4\n    poe_out:\n      standard: \"802.3af\"\n      budget_w: 15.4\n      max_per_port_w: 15.4\n      ports: 1\n  wireless:\n    standard: wifi-5\n    radios: 2\n    mimo: \"2x2\"\n    bands: [\"2.4ghz\", \"5ghz\"]\n    antenna_type: internal\n  ports:\n    downlink:\n      - { names: [\"E1\", \"E2\"], speed: \"1g\", connectors: [rj45] }\n      - { names: [\"E3\"], speed: \"1g\", connectors: [rj45], poe: true }\n    uplink:\n      - { names: [\"E0/PT\"], speed: \"1g\", connectors: [rj45] }\n  physical:\n    form_factor: desktop\n    dimensions_mm: { w: 86, d: 150, h: 40 }\n    weight_g: 313\n    mounting: [desk, wall]\n"
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Aruba",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ipq40xx-generic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon-Modellname \"Aruba Instant On AP11D\" (Selector-Modellliste)"
+      },
+      {
+        "wert": "Hewlett Packard Enterprise Company",
+        "quelle": "fccid",
+        "beleg": "https://fccid.io/Q9DAPINH303",
+        "stand": "Grant 2017-01-11 (Original Equipment), Class-III-Änderung 2017-05-18",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "Instant ON AP11D",
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2302",
+        "stand": "PR #2302 (bdobe) 2021-08-19, gemergt 2021-09-01 als a492e629",
+        "sicherheit": "mittel",
+        "bemerkung": "PR-Titel \"Aruba AP-303H / Instant ON AP11D\""
+      },
+      {
+        "wert": "Instant On AP11D",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "\"The Aruba Instant On AP11D is a cheaper version of this device\""
+      },
+      {
+        "wert": "Aruba Instant On AP11D",
+        "quelle": "shumoku_katalog",
+        "beleg": "https://github.com/konoe-akitoshi/shumoku/blob/165513e518b95621a80841f5086e5f5e2294d6b0/libs/@shumoku/catalog/data/hardware/hpe/aruba-instant-on-ap11x/aruba-instant-on-ap11d.yaml",
+        "stand": "Commit 165513e5 (Stand der GitHub-Codesuche 2026-10-19)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "Aruba AP-303H"
+        ],
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "günstigere Version derselben Plattform, OpenWrt-Firmware des AP-303H lässt sich auf den AP11D flashen"
+      },
+      {
+        "wert": [
+          "Aruba AP-303H"
+        ],
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/ap11-ap303-bootloader.md",
+        "stand": "Dokument Stand 16.10.2026",
+        "sicherheit": "hoch",
+        "bemerkung": "\"AP11D gehört zur Hardware des AP-303H\""
+      },
+      {
+        "wert": [
+          "aruba-ap-303h (Gluon-Image, AP11D ist Alias)"
+        ],
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ipq40xx-generic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "Aruba AP-303H"
+        ],
+        "quelle": "rampe_anleitungen",
+        "beleg": "rampe-anleitungen/anleitungen/zusatz/aruba-instant-on-ap11d.md",
+        "stand": "lokaler Klon am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "\"technisch ein Aruba AP-303H\"; manche Communities bieten die Firmware nur unter AP-303H an"
+      },
+      {
+        "wert": [
+          "AP-303H",
+          "IAP-303H",
+          "APINH303 (Regulatory Model)"
+        ],
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"The regulatory model name for AP-303H/IAP-303H access point is APINH303\"; Beleg gilt für den AP-303H (APINH303); AP11D laut OpenWrt-Wiki, Gluon und Werkstatt gleiche Plattform, eigenes AP11D-Datenblatt nicht erreicht"
+      },
+      {
+        "wert": [
+          "APINH303 (Regulatory Model)"
+        ],
+        "quelle": "shumoku_katalog",
+        "beleg": "https://github.com/konoe-akitoshi/shumoku/blob/165513e518b95621a80841f5086e5f5e2294d6b0/libs/@shumoku/catalog/data/hardware/hpe/aruba-instant-on-ap11x/aruba-instant-on-ap11d.yaml",
+        "stand": "Commit 165513e5 (Stand der GitHub-Codesuche 2026-10-19)",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"Regulatory model: APINH303\""
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "AP11D (mit D) hat mehrere Netzwerkbuchsen und ist für Tisch/Wanddose; der Instant On AP11 ohne D ist ein Decken-/Wandgerät mit einer Netzwerkbuchse und braucht andere Dateien",
+        "quelle": "rampe_anleitungen",
+        "beleg": "rampe-anleitungen/anleitungen/zusatz/aruba-instant-on-ap11d.md",
+        "stand": "lokaler Klon am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Verwechslungsgefahr AP11 / AP11D"
+      },
+      {
+        "wert": "Behördenetikett am Gehäuseboden (\"BASE AGENCY\"): \"APINH303\", \"IC: 4675A-APINH303\", \"FCC ID: Q9DAPINH303\", Hersteller Hewlett Packard Enterprise Company",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/Q9DAPINH303/Label/Label-3252185",
+        "stand": "Exhibit 2017-01-11, Zeichnung 4012123-01 \"LBL, ARUBA, BASE AGENCY, AP-303H\"",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": "Rückseite: Etikett mit Zulassungsangaben links, zwei RJ45 (E0, PT), Micro-USB-Konsole oben mittig, zwei Schlüssellöcher; Unterseite vier RJ45 (E0 grau, E1/E2 blau, E3 rot); Seite: runde DC-Buchse, USB-A, Reset-Loch; Front: abziehbarer Aufkleber mit SN, MAC und BLE MAC",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/Q9DAPINH303/External-Photos/External-Photos-3252183",
+        "stand": "Exhibit 2017-07-08 (PDF 2016-12-16, 4 Seiten, 6 Fotos)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": "Rückseite eingeprägt \"E0 57V 600mA\" und \"PT\"; Seite \"48V 600mA\" an der DC-Buchse",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": "APBoot meldet \"Model: AP-303H\"",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog eines AP-303H; was ein AP11D hier meldet, ist nicht belegt"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "Q9DAPINH303",
+        "quelle": "fccid",
+        "beleg": "https://fccid.io/Q9DAPINH303",
+        "stand": "Grant 2017-01-11 (Original Equipment), Class-III-Änderung 2017-05-18",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": "Q9DAPINH303",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+        "sicherheit": "mittel",
+        "bemerkung": "FCCID_urls des AP-303H"
+      },
+      {
+        "wert": "Q9DAPINH303",
+        "quelle": "shumoku_katalog",
+        "beleg": "https://github.com/konoe-akitoshi/shumoku/blob/165513e518b95621a80841f5086e5f5e2294d6b0/libs/@shumoku/catalog/data/hardware/hpe/aruba-instant-on-ap11x/aruba-instant-on-ap11d.yaml",
+        "stand": "Commit 165513e5 (Stand der GitHub-Codesuche 2026-10-19)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus \"Regulatory model: APINH303\" (Grantee Q9D)"
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "4675A-APINH303",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/Q9DAPINH303/Label/Label-3252185",
+        "stand": "Exhibit 2017-01-11, Zeichnung 4012123-01 \"LBL, ARUBA, BASE AGENCY, AP-303H\"",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm IPQ4029",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm IPQ4029",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros IPQ4029",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "qcom-ipq4029",
+        "quelle": "openwrt_image_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/image/generic.mk",
+        "stand": "OpenWrt main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "SOC in Device/aruba_glenmorangie"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog \"SMP: Total of 4 processors activated\""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 716,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 716,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "arm_cortex-a7_neon-vfpv4",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Paketarchitektur"
+      },
+      {
+        "wert": "ARMv7",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog \"CPU: ARMv7 Processor [410fc075]\""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 512,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": "\"RAM: 512M DDR3\""
+      },
+      {
+        "wert": 512,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 512,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 512,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog \"DRAM: 512 MiB\""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 128,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": "128 MB SPI-NAND (Macronix) plus 4 MB SPI-NOR (Macronix MX25R3235F)"
+      },
+      {
+        "wert": 128,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "\"128NAND\""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog: \"Flash: Detected MX25L3205D: total 4 MiB\", \"NAND: Detected MX35LFxGE4AB: total 128 MiB\""
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NAND (SPI) plus NOR (SPI, 4 MB)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NOR (jedec,spi-nor, Bootloader/ART/mfginfo) und SPI-NAND (UBI)",
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4029-ap-303h.dts",
+        "stand": "OpenWrt main, letzter Commit an der Datei ed21d383 vom 2026-07-22 (Julius Bairaktaris)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "Qualcomm IPQ4029 (integriert)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros IPQ4029",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ipq4029#0, ipq4029#1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog \"Radio:\""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath10k",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump"
+      },
+      {
+        "wert": "ath10k-ct",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Live-Datenseite"
+      },
+      {
+        "wert": "ath10k, calibration-variant \"Aruba-AP-303\"",
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4029-ap-303h.dts",
+        "stand": "OpenWrt main, letzter Commit an der Datei ed21d383 vom 2026-07-22 (Julius Bairaktaris)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n (HT20/HT40)",
+        "quelle": "fcc_testbericht_24g",
+        "beleg": "https://fccid.io/Q9DAPINH303/Test-Report/2-4G-WiFi-Test-Report-1-of-3-3252256",
+        "stand": "MiCOM Labs, Issue Date 2016-12-01 (Exhibit 2017-01-11)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": "2x2",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "\"dual-radio 802.11ac Wave 2 2x2:2\""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac (bis VHT80)",
+        "quelle": "fcc_testbericht_5g",
+        "beleg": "https://fccid.io/Q9DAPINH303/Test-Report/Test-Report-1-of-3-Master-3334554",
+        "stand": "MiCOM Labs HWPD85-U12_Master Rev A vom 2017-03-14 (Exhibit 2017-05-18)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": "2x2",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "\"dual-radio 802.11ac Wave 2 2x2:2\""
+      }
+    ],
+    "wlan_wave2": [
+      {
+        "wert": true,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "\"802.11ac Wave 2\""
+      }
+    ],
+    "frequenzen_5ghz": [
+      {
+        "wert": [
+          "5150-5250 MHz",
+          "5250-5350 MHz",
+          "5470-5725 MHz",
+          "5725-5850 MHz"
+        ],
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/Q9DAPINH303/RF-Exposure-Info/RF-Exposure-Report-3334552",
+        "stand": "MiCOM Labs HWPD85-MPE All Bands Rev A vom 2017-03-27 (Exhibit 2017-05-18)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Bänder (USA); FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "BLE, Texas Instruments CC2540T an ttyMSM1",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "BLE",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "BLE, unter OpenWrt nicht unterstützt",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Unsupported Functions \"USB, Bluetooth\""
+      },
+      {
+        "wert": "integriertes BLE-Funkmodul",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "tpm": [
+      {
+        "wert": "Atmel AT97SC3203",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Atmel AT97SC3203 an I2C 0x29 (kein Treiber)",
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4029-ap-303h.dts",
+        "stand": "OpenWrt main, letzter Commit an der Datei ed21d383 vom 2026-07-22 (Julius Bairaktaris)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "\"internal antennas\""
+      },
+      {
+        "wert": "intern",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "detachableantennas \"-\""
+      },
+      {
+        "wert": "intern (integral, Metallblech/PCB)",
+        "quelle": "fcc_testbericht_5g",
+        "beleg": "https://fccid.io/Q9DAPINH303/Test-Report/Test-Report-1-of-3-Master-3334554",
+        "stand": "MiCOM Labs HWPD85-U12_Master Rev A vom 2017-03-14 (Exhibit 2017-05-18)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": "intern: zwei Blechantennen auf einem Träger mit U.FL-Kabeln (schwarz/grau) plus Kupferflächen-Antennen auf der Hauptplatine",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/Q9DAPINH303/Internal-Photos/Internal-Photos-3252184",
+        "stand": "Exhibit 2017-07-08 (PDF 2016-12-16, 6 Seiten, 10 Fotos)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4 GHz": 3.2
+        },
+        "quelle": "fcc_testbericht_24g",
+        "beleg": "https://fccid.io/Q9DAPINH303/Test-Report/2-4G-WiFi-Test-Report-1-of-3-3252256",
+        "stand": "MiCOM Labs, Issue Date 2016-12-01 (Exhibit 2017-01-11)",
+        "sicherheit": "mittel",
+        "bemerkung": "plus 3.0 dBi Beamforming-Gewinn; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": {
+          "5 GHz": 4.6
+        },
+        "quelle": "fcc_testbericht_5g",
+        "beleg": "https://fccid.io/Q9DAPINH303/Test-Report/Test-Report-1-of-3-Master-3334554",
+        "stand": "MiCOM Labs HWPD85-U12_Master Rev A vom 2017-03-14 (Exhibit 2017-05-18)",
+        "sicherheit": "mittel",
+        "bemerkung": "plus 3.0 dBi Beamforming-Gewinn (5250-5350 und 5470-5725 MHz); FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": {
+          "2.4 GHz": 6.2,
+          "5 GHz": 7.6
+        },
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/Q9DAPINH303/RF-Exposure-Info/RF-Exposure-Report-3334552",
+        "stand": "MiCOM Labs HWPD85-MPE All Bands Rev A vom 2017-03-27 (Exhibit 2017-05-18)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Total Gain = Beamforming Gain + Antenna Gain\"; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "rund (360°)",
+        "quelle": "fcc_testbericht_5g",
+        "beleg": "https://fccid.io/Q9DAPINH303/Test-Report/Test-Report-1-of-3-Master-3334554",
+        "stand": "MiCOM Labs HWPD85-U12_Master Rev A vom 2017-03-14 (Exhibit 2017-05-18)",
+        "sicherheit": "mittel",
+        "bemerkung": "Dir BW 360 in beiden Berichten; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "E0",
+            "geschwindigkeit": "10/100/1000 Mbit/s",
+            "rolle": "Uplink (WAN), PoE-PD 802.3af/at, unten (und auf der Rückseite)"
+          },
+          {
+            "name": "E1",
+            "geschwindigkeit": "10/100/1000 Mbit/s",
+            "rolle": "LAN (Downlink), unten"
+          },
+          {
+            "name": "E2",
+            "geschwindigkeit": "10/100/1000 Mbit/s",
+            "rolle": "LAN (Downlink), unten"
+          },
+          {
+            "name": "E3",
+            "geschwindigkeit": "10/100/1000 Mbit/s",
+            "rolle": "LAN (Downlink), unten, PoE-out"
+          },
+          {
+            "name": "PT",
+            "geschwindigkeit": "",
+            "rolle": "Durchreiche auf der Rückseite (Pass-Through), nicht Teil der vier aktiven Ports"
+          }
+        ],
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"four active Ethernet ports (E0-E3)\"; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": [
+          {
+            "name": "E0/PT",
+            "rolle": "PoE-in, OpenWrt lan0 bzw. seit DSA \"wan\""
+          },
+          {
+            "name": "E1",
+            "rolle": "lan1"
+          },
+          {
+            "name": "E2",
+            "rolle": "lan2"
+          },
+          {
+            "name": "E3",
+            "rolle": "lan3, PoE-out"
+          }
+        ],
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "\"E0/PT you can use on the back of the device or below of the device\""
+      },
+      {
+        "wert": [
+          {
+            "name": "wan",
+            "geschwindigkeit": "1 Gbit/s",
+            "rolle": "swport5, MAC vom Etikett"
+          },
+          {
+            "name": "lan1",
+            "geschwindigkeit": "1 Gbit/s",
+            "rolle": "swport2"
+          },
+          {
+            "name": "lan2",
+            "geschwindigkeit": "1 Gbit/s",
+            "rolle": "swport3"
+          },
+          {
+            "name": "lan3",
+            "geschwindigkeit": "1 Gbit/s",
+            "rolle": "swport4"
+          }
+        ],
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4029-ap-303h.dts",
+        "stand": "OpenWrt main, letzter Commit an der Datei ed21d383 vom 2026-07-22 (Julius Bairaktaris)",
+        "sicherheit": "mittel",
+        "bemerkung": "Switch QCA8075 über PSGMII"
+      },
+      {
+        "wert": "TFTP-Abruf nur über E0 (WAN); OpenWrt danach über E1-E3 erreichbar",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "wie ein Router mit 3 LAN-Ports, Strom per PoE am WAN-Port",
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2302",
+        "stand": "PR #2302 (bdobe) 2021-08-19, gemergt 2021-09-01 als a492e629",
+        "sicherheit": "mittel",
+        "bemerkung": "Kommentar bdobe 2021-09-01"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 4,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Ethernet 1Gbit ports 4, Switch QCA8075"
+      },
+      {
+        "wert": 0,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump: ethernet1gports \"-\", widerspricht Live-Datenseite (4)"
+      },
+      {
+        "wert": 4,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "aktive Ports E0-E3, dazu PT-Durchreiche; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": 4,
+        "quelle": "shumoku_katalog",
+        "beleg": "https://github.com/konoe-akitoshi/shumoku/blob/165513e518b95621a80841f5086e5f5e2294d6b0/libs/@shumoku/catalog/data/hardware/hpe/aruba-instant-on-ap11x/aruba-instant-on-ap11d.yaml",
+        "stand": "Commit 165513e5 (Stand der GitHub-Codesuche 2026-10-19)",
+        "sicherheit": "niedrig",
+        "bemerkung": "E0/PT, E1, E2, E3"
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": false,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "switch": [
+      {
+        "wert": "Qualcomm QCA8075",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm QCA8075",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": {
+          "anzahl": 1,
+          "version": "USB 2.0",
+          "bauform": "Typ A, Seite",
+          "leistung": "bis 5 W / 1 A"
+        },
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "für Mobilfunkmodems und BLE-Dongles; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": {
+          "anzahl": 1,
+          "version": "USB 2.0"
+        },
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "anzahl": 1,
+          "version": "USB 2.0"
+        },
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+        "sicherheit": "mittel",
+        "bemerkung": "\"USB works in recent snapshots, but not in 23.05.3\""
+      },
+      {
+        "wert": "unter OpenWrt erst ab Commit 026fbd65 (2024-04-26) nutzbar: Port hängt am HS-PHY des USB-3.0-Controllers",
+        "quelle": "openwrt_commits",
+        "beleg": "https://github.com/search?q=repo%3Aopenwrt%2Fopenwrt+AP-303H&type=commits",
+        "stand": "GitHub-Commitsuche \"AP-303H\": 7 Treffer 2020-01-12 bis 2024-09-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "anzahl": 1,
+          "bauform": "Typ A, Seite neben DC-Buchse"
+        },
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/Q9DAPINH303/External-Photos/External-Photos-3252183",
+        "stand": "Exhibit 2017-07-08 (PDF 2016-12-16, 4 Seiten, 6 Fotos)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "802.3at (bevorzugt), 802.3af möglich",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "an E0; bei 802.3af Stromsparmodus (System-LED amber) und kein PoE-out; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": "802.3af/at",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "powersupply \"48 VDC, PoE 802.3af/at\""
+      },
+      {
+        "wert": "802.3at",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog \"Power: 802.3at POE\""
+      },
+      {
+        "wert": "802.3at, Klasse 4",
+        "quelle": "shumoku_katalog",
+        "beleg": "https://github.com/konoe-akitoshi/shumoku/blob/165513e518b95621a80841f5086e5f5e2294d6b0/libs/@shumoku/catalog/data/hardware/hpe/aruba-instant-on-ap11x/aruba-instant-on-ap11d.yaml",
+        "stand": "Commit 165513e5 (Stand der GitHub-Codesuche 2026-10-19)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": {
+          "802.3at": "56 V nominal",
+          "802.3af": "48 V"
+        },
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "Wortlaut \"802.3at 56VDC (nominal) and 802.3af 48VDC (maximum)\"; Rückseite eingeprägt \"57V 600mA\" an E0; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "poe_ausgang": [
+      {
+        "wert": "ja, E3 (PSE), nur bei Speisung über 802.3at oder DC; max. 15 W (an anderer Stelle \"up to 13W\")",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": "ja, E3 per GPIO schaltbar",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "\"POE out on E3 with GPIO\""
+      },
+      {
+        "wert": "GPIO-Schalter poe_passthrough (Commit b40cc46c, 2024-09-14): Pin low = an; schaltet einen PSE-Chip, also nur für 802.3af/at-Geräte",
+        "quelle": "openwrt_commits",
+        "beleg": "https://github.com/search?q=repo%3Aopenwrt%2Fopenwrt+AP-303H&type=commits",
+        "stand": "GitHub-Commitsuche \"AP-303H\": 7 Treffer 2020-01-12 bis 2024-09-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Ein-/Ausschalten per GPIO 546 (OpenWrt 24.10) bzw. 446 (bis 23.05), Wert 0 = an",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "unter Gluon offen (ToDo upstream, GPIO 446)",
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2302",
+        "stand": "PR #2302 (bdobe) 2021-08-19, gemergt 2021-09-01 als a492e629",
+        "sicherheit": "mittel",
+        "bemerkung": "Stand 2021"
+      },
+      {
+        "wert": "802.3af, 15.4 W, 1 Port (E3), nur bei Speisung über 802.3at",
+        "quelle": "shumoku_katalog",
+        "beleg": "https://github.com/konoe-akitoshi/shumoku/blob/165513e518b95621a80841f5086e5f5e2294d6b0/libs/@shumoku/catalog/data/hardware/hpe/aruba-instant-on-ap11x/aruba-instant-on-ap11d.yaml",
+        "stand": "Commit 165513e5 (Stand der GitHub-Codesuche 2026-10-19)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": true,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "eine 48-V-DC-Buchse an der Seite (Figure 6); Installationsschritt 10 nennt dagegen \"DC power socket located on the bottom\"; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": true,
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/Q9DAPINH303/External-Photos/External-Photos-3252183",
+        "stand": "Exhibit 2017-07-08 (PDF 2016-12-16, 4 Seiten, 6 Fotos)",
+        "sicherheit": "mittel",
+        "bemerkung": "runde Buchse an der Seite neben USB-A; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 48,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": 48,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "powersupply \"48 VDC, PoE 802.3af/at\""
+      },
+      {
+        "wert": 48,
+        "quelle": "fcc_testbericht_5g",
+        "beleg": "https://fccid.io/Q9DAPINH303/Test-Report/Test-Report-1-of-3-Master-3334554",
+        "stand": "MiCOM Labs HWPD85-U12_Master Rev A vom 2017-03-14 (Exhibit 2017-05-18)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"AC/ DC adaptor (adaptor NOT sold with unit) 48Vdc\"; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 0.6,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufdruck \"48V 600mA\" an der DC-Buchse; Fremdnetzteil in USA/Kanada laut Handbuch mindestens 2 A, LPS, Class 2; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": false,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "Lieferumfang AP-303H: Gerät, Wanddosen-Halter, 2 Schrauben #6-32, Torx-T8H-Sicherungsschraube; Netzteil AP-AC-48V36C separat; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": false,
+        "quelle": "fcc_testbericht_5g",
+        "beleg": "https://fccid.io/Q9DAPINH303/Test-Report/Test-Report-1-of-3-Master-3334554",
+        "stand": "MiCOM Labs HWPD85-U12_Master Rev A vom 2017-03-14 (Exhibit 2017-05-18)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"adaptor NOT sold with unit\"; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "Aruba AP-AC-48V36C (48 V), separat erhältlich",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": {
+          "PoE": 25,
+          "DC": 31
+        },
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "mit voller PoE-out- und USB-Last; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": 27.4,
+        "quelle": "shumoku_katalog",
+        "beleg": "https://github.com/konoe-akitoshi/shumoku/blob/165513e518b95621a80841f5086e5f5e2294d6b0/libs/@shumoku/catalog/data/hardware/hpe/aruba-instant-on-ap11x/aruba-instant-on-ap11d.yaml",
+        "stand": "Commit 165513e5 (Stand der GitHub-Codesuche 2026-10-19)",
+        "sicherheit": "niedrig",
+        "bemerkung": "max_draw_w"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "fcc_testbericht_5g",
+        "beleg": "https://fccid.io/Q9DAPINH303/Test-Report/Test-Report-1-of-3-Master-3334554",
+        "stand": "MiCOM Labs HWPD85-U12_Master Rev A vom 2017-03-14 (Exhibit 2017-05-18)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Location for use: Indoor\"; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": "innen",
+        "quelle": "fcc_testbericht_24g",
+        "beleg": "https://fccid.io/Q9DAPINH303/Test-Report/2-4G-WiFi-Test-Report-1-of-3-3252256",
+        "stand": "MiCOM Labs, Issue Date 2016-12-01 (Exhibit 2017-01-11)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Location for use: Indoor\"; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": "innen",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor \"No\""
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C, 5-93 % rel. Feuchte nicht kondensierend",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "Lagerung -40 bis 70 °C; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "fcc_testbericht_5g",
+        "beleg": "https://fccid.io/Q9DAPINH303/Test-Report/Test-Report-1-of-3-Master-3334554",
+        "stand": "MiCOM Labs HWPD85-U12_Master Rev A vom 2017-03-14 (Exhibit 2017-05-18)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "montage": [
+      {
+        "wert": [
+          "Wand (auf Unterputzdose, Halter beiliegend)",
+          "Tisch (mit Kit AP-303H-MNTW, separat)"
+        ],
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "senkrecht, Ports nach unten; Halter mit T8H-Torx-Sicherungsschraube; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": [
+          "Wanddose",
+          "Tisch"
+        ],
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Supports wall-box and desk mount deployments\""
+      },
+      {
+        "wert": [
+          "Tisch",
+          "Wand"
+        ],
+        "quelle": "shumoku_katalog",
+        "beleg": "https://github.com/konoe-akitoshi/shumoku/blob/165513e518b95621a80841f5086e5f5e2294d6b0/libs/@shumoku/catalog/data/hardware/hpe/aruba-instant-on-ap11x/aruba-instant-on-ap11d.yaml",
+        "stand": "Commit 165513e5 (Stand der GitHub-Codesuche 2026-10-19)",
+        "sicherheit": "niedrig",
+        "bemerkung": "form_factor desktop"
+      },
+      {
+        "wert": "Rückseite mit zwei Schlüssellöchern und Rippen",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/Q9DAPINH303/External-Photos/External-Photos-3252183",
+        "stand": "Exhibit 2017-07-08 (PDF 2016-12-16, 4 Seiten, 6 Fotos)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "86 x 40 x 150",
+        "quelle": "fcc_testbericht_5g",
+        "beleg": "https://fccid.io/Q9DAPINH303/Test-Report/Test-Report-1-of-3-Master-3334554",
+        "stand": "MiCOM Labs HWPD85-U12_Master Rev A vom 2017-03-14 (Exhibit 2017-05-18)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": "150 x 86 x 38",
+        "quelle": "fcc_testbericht_24g",
+        "beleg": "https://fccid.io/Q9DAPINH303/Test-Report/2-4G-WiFi-Test-Report-1-of-3-3252256",
+        "stand": "MiCOM Labs, Issue Date 2016-12-01 (Exhibit 2017-01-11)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": "86 x 150 x 40",
+        "quelle": "shumoku_katalog",
+        "beleg": "https://github.com/konoe-akitoshi/shumoku/blob/165513e518b95621a80841f5086e5f5e2294d6b0/libs/@shumoku/catalog/data/hardware/hpe/aruba-instant-on-ap11x/aruba-instant-on-ap11d.yaml",
+        "stand": "Commit 165513e5 (Stand der GitHub-Codesuche 2026-10-19)",
+        "sicherheit": "niedrig",
+        "bemerkung": "B x T x H"
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 310,
+        "quelle": "fcc_testbericht_5g",
+        "beleg": "https://fccid.io/Q9DAPINH303/Test-Report/Test-Report-1-of-3-Master-3334554",
+        "stand": "MiCOM Labs HWPD85-U12_Master Rev A vom 2017-03-14 (Exhibit 2017-05-18)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": 260,
+        "quelle": "fcc_testbericht_24g",
+        "beleg": "https://fccid.io/Q9DAPINH303/Test-Report/2-4G-WiFi-Test-Report-1-of-3-3252256",
+        "stand": "MiCOM Labs, Issue Date 2016-12-01 (Exhibit 2017-01-11)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"0.26kg (0.60lbs)\"; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": 313,
+        "quelle": "shumoku_katalog",
+        "beleg": "https://github.com/konoe-akitoshi/shumoku/blob/165513e518b95621a80841f5086e5f5e2294d6b0/libs/@shumoku/catalog/data/hardware/hpe/aruba-instant-on-ap11x/aruba-instant-on-ap11d.yaml",
+        "stand": "Commit 165513e5 (Stand der GitHub-Codesuche 2026-10-19)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "luefter": [
+      {
+        "wert": false,
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/Q9DAPINH303/Internal-Photos/Internal-Photos-3252184",
+        "stand": "Exhibit 2017-07-08 (PDF 2016-12-16, 6 Seiten, 10 Fotos)",
+        "sicherheit": "mittel",
+        "bemerkung": "kein Lüfter auf den Fotos; Hauptplatine plus aufgesteckte Netzteilplatine, Abschirmbleche; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "kuehlung": [
+      {
+        "wert": "passiv",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/Q9DAPINH303/Internal-Photos/Internal-Photos-3252184",
+        "stand": "Exhibit 2017-07-08 (PDF 2016-12-16, 6 Seiten, 10 Fotos)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": "passiv; Rückseite kann nach längerem Betrieb heiß werden",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "leds": [
+      {
+        "wert": [
+          "WiFi (amber/grün)",
+          "System (rot/grün/amber)",
+          "PSE (grün)"
+        ],
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "green:wifi (phy0tpt)",
+          "amber:wifi (phy1tpt)",
+          "green:pse",
+          "red:system",
+          "green:system",
+          "amber:system"
+        ],
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4029-ap-303h.dts",
+        "stand": "OpenWrt main, letzter Commit an der Datei ed21d383 vom 2026-07-22 (Julius Bairaktaris)",
+        "sicherheit": "mittel",
+        "bemerkung": "Boot/Running grün, Failsafe rot, Upgrade amber"
+      },
+      {
+        "wert": [
+          "System Status",
+          "Radio Status",
+          "PoE-PSE Status",
+          "Network Status an E1-E3"
+        ],
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": 3,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+        "sicherheit": "mittel",
+        "bemerkung": "LED count"
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": true,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "Aruba-Firmware: kurzer Druck auf den Taster schaltet die System-LED aus/an; LED-Modus aus per Software; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "rechte Seite, versenkt, Büroklammer nötig",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "Aruba-Firmware: beim Einschalten gedrückt halten = Werksreset; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": "Loch an der Seite neben USB-A",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/Q9DAPINH303/External-Photos/External-Photos-3252183",
+        "stand": "Exhibit 2017-07-08 (PDF 2016-12-16, 4 Seiten, 6 Fotos)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": "GPIO18 active low, KEY_RESTART",
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4029-ap-303h.dts",
+        "stand": "OpenWrt main, letzter Commit an der Datei ed21d383 vom 2026-07-22 (Julius Bairaktaris)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "führt in den Config Mode",
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2302",
+        "stand": "PR #2302 (bdobe) 2021-08-19, gemergt 2021-09-01 als a492e629",
+        "sicherheit": "mittel",
+        "bemerkung": "Checkliste \"reset/wps/phone button must return device into config mode\" abgehakt"
+      },
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "buttoncount"
+      }
+    ],
+    "kensington": [
+      {
+        "wert": "kein Kensington; Sicherung am Wandhalter mit Torx-T8H-Schraube (\"Security Screw Lock\")",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "außen zugänglich",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": "Micro-USB-Buchse \"Console\" trägt UART, Aruba-Kabel oder selbstgebautes Kabel; alternativ beschriftete Lötpunkte innen neben dem USB-Port"
+      },
+      {
+        "wert": "innen Lötpunkte",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": "\"solder to the labled pads next to the USB port\""
+      },
+      {
+        "wert": "außen zugänglich",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "5-poliger Micro-B auf der Rückseite, Kabel AP-CBL-SERU"
+      },
+      {
+        "wert": "außen zugänglich",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "Console Port, 5-pin USB Micro-B auf der Rückseite; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      },
+      {
+        "wert": "außen zugänglich",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/Q9DAPINH303/External-Photos/External-Photos-3252183",
+        "stand": "Exhibit 2017-07-08 (PDF 2016-12-16, 4 Seiten, 6 Fotos)",
+        "sicherheit": "mittel",
+        "bemerkung": "Micro-USB oben mittig auf der Rückseite, hinter dem Wandhalter; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": {
+          "VCC": "nicht verbunden",
+          "D+": "TX",
+          "D-": "RX",
+          "GND": "GND"
+        },
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": "Pins der Micro-USB-Buchse; keinen normalen USB-Stecker einstecken"
+      },
+      {
+        "wert": {
+          "1": "NC",
+          "2": "RX",
+          "3": "TX",
+          "4": "GND",
+          "5": "GND"
+        },
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
+        "stand": "Exhibit 2017-09-23; Aruba 303H Series Installation Guide 0511xxx-01 November 2016 (PDF geändert 2017-01-05)",
+        "sicherheit": "mittel",
+        "bemerkung": "USB-Micro-B-Pinnummern (2 = D-, 3 = D+), passt zum Commit; FCC-Unterlagen des AP-303H (APINH303). AP11D laut OpenWrt-Wiki/Gluon/Werkstatt gleiche Plattform; ob das AP11D-Gehäuse/die Bestückung abweicht, ist nicht belegt"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 9600,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1 in Bootloader und OS"
+      },
+      {
+        "wert": 9600,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "\"9600 / 8N1\""
+      },
+      {
+        "wert": 9600,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "Konsole ist wählerisch bei der Treiberstärke: manche FTDI-Kabel lesen nur mit, APBoot lässt sich dann nicht per Enter unterbrechen; Kabel mit 3.3 V @ 1 mA oder ausdrücklich Aruba-kompatible Kabel nehmen",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "\"diag\" in APBoot schaltet die volle Befehlsliste frei",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Die AP11/AP-303-Bootloaderdatei (ap303-loader-2.5.0.2.bin) nicht auf den AP11D schreiben: macht das Gerät ohne Programmer unbrauchbar",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/ap11-ap303-bootloader.md",
+        "stand": "Dokument Stand 16.10.2026",
+        "sicherheit": "hoch",
+        "bemerkung": "Abschnitt \"Zwei Regeln\""
+      },
+      {
+        "wert": "Vermutung: neuere AP11D haben denselben gesperrten Bootloader wie neuere AP11 (\"Unknown command 'bootm'\"); keine Rückmeldung bisher",
+        "quelle": "rampe_anleitungen",
+        "beleg": "rampe-anleitungen/anleitungen/zusatz/aruba-instant-on-ap11d.md",
+        "stand": "lokaler Klon am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "unbelegt, als Vermutung gekennzeichnet"
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "4 weiße Gummifüße abziehen, darunter Torx-T8-Schrauben; keine Clips; beim Zusammenbau die zwei Antennenkabel nicht einklemmen",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "AP-303H"
+      }
+    ],
+    "mac_adressen": [
+      {
+        "wert": "Etiketten-MAC = WAN (mfginfo 0x1d), LAN = Etikett + 1; WLAN-MAC = \"Wireless MAC\" vom Etikett (mfginfo 0x45)",
+        "quelle": "openwrt_commits",
+        "beleg": "https://github.com/search?q=repo%3Aopenwrt%2Fopenwrt+AP-303H&type=commits",
+        "stand": "GitHub-Commitsuche \"AP-303H\": 7 Treffer 2020-01-12 bis 2024-09-14",
+        "sicherheit": "mittel",
+        "bemerkung": "Commits 4c5cb588 (2024-04-26) und 1036545b (2022-12-29)"
+      },
+      {
+        "wert": "primäre MAC passt zum Etikett",
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2302",
+        "stand": "PR #2302 (bdobe) 2021-08-19, gemergt 2021-09-01 als a492e629",
+        "sicherheit": "mittel",
+        "bemerkung": "Checkliste abgehakt"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ipq40xx/generic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ipq40xx/generic, Profil aruba_ap-303h (DEVICE_DTS_CONFIG Aberlour@1)",
+        "quelle": "openwrt_image_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/image/generic.mk",
+        "stand": "OpenWrt main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "21.02.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Commit c6e972c8"
+      },
+      {
+        "wert": "Target nach DSA-Umbau wieder aktiviert (Commit 3195a992, 2022-12-21)",
+        "quelle": "openwrt_commits",
+        "beleg": "https://github.com/search?q=repo%3Aopenwrt%2Fopenwrt+AP-303H&type=commits",
+        "stand": "GitHub-Commitsuche \"AP-303H\": 7 Treffer 2020-01-12 bis 2024-09-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "24.10.5",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "22.03.5",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, als Alias aruba-instant-on-ap11d des Images aruba-ap-303h, nur sysupgrade (factory = false)",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ipq40xx-generic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, seit PR #2302 (gemergt 2021-09-01)",
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2302",
+        "stand": "PR #2302 (bdobe) 2021-08-19, gemergt 2021-09-01 als a492e629",
+        "sicherheit": "mittel",
+        "bemerkung": "Release-Notes v2022.1 nennen den AP11D (GitHub-Codesuche)"
+      },
+      {
+        "wert": "unknown",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Feld Gluon support der Datenseite nicht gepflegt"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "APBoot 2.1.4.13 (build 59885, 2017-05-31)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog AP-303H"
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Nur über serielle Konsole: initramfs als ipq40xx.ari per TFTP (Server 192.168.1.75/24) an E0; in APBoot bootargs/bootcmd setzen (nandboot_openwrt, ubi part aos1), run ramboot_openwrt; dann über E1-E3 sysupgrade nach ubidetach -p /dev/mtd16 und ubiformat /dev/mtd16",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e972c8772a628a1a2f2e5590d7c6f4acef9ab0",
+        "stand": "Commit c6e972c8, Autor 2020-01-11 (David Bauer), eingespielt 2020-01-14",
+        "sicherheit": "mittel",
+        "bemerkung": "Rückweg: setenv bootcmd \"boot\""
+      },
+      {
+        "wert": "kein Web-Interface/TFTP-Weg, Konsole mit Herstellerkabel nötig, Anleitung im OpenWrt-Commit",
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2302",
+        "stand": "PR #2302 (bdobe) 2021-08-19, gemergt 2021-09-01 als a492e629",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot TFTP + serial recovery",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://networkingsupport.hpe.com/globalsearch#q=8.7.1.6&tab=Software&firstResult=10",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "ArubaInstant_Ursa_8.7.1.6 für den AP-303H; Instant-On-Firmware des AP11D nicht genannt"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Seitenrevision 2026-01-19 05:23 (phinn, \"[Data entry] update version\")",
+        "sicherheit": "mittel",
+        "bemerkung": "AP-303H, kein eigener AP11D-Eintrag"
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/aruba/ap-303h",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/aruba/ap-303h",
+        "stand": "Seitenrevision 2026-09-07 18:37 (simtcrom, \"[Back to stock]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "AP-303H-Seite, nennt AP11D"
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.arubanetworks.com/products/wireless/access-points/remote-hospitality-access-points/303h-series/",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "AP-303H, nicht abgerufen"
+      },
+      {
+        "wert": "https://www.arubainstanton.com/products/access-points/ap11d/",
+        "quelle": "shumoku_katalog",
+        "beleg": "https://github.com/konoe-akitoshi/shumoku/blob/165513e518b95621a80841f5086e5f5e2294d6b0/libs/@shumoku/catalog/data/hardware/hpe/aruba-instant-on-ap11x/aruba-instant-on-ap11d.yaml",
+        "stand": "Commit 165513e5 (Stand der GitHub-Codesuche 2026-10-19)",
+        "sicherheit": "niedrig",
+        "bemerkung": "AP11D; 403 (Akamai)"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://www.arubainstanton.com/products/access-points/ap11d/",
+      "kategorie": "datenblatt",
+      "grund": "AP11D-eigenes Datenblatt/Produktseite (Instant On) nicht erreichbar: 403 Akamai. Offen: Lieferumfang (Netzteil?), ob USB-Port und PoE-out beim AP11D vorhanden/aktiv sind, Abmessungen, Leistungsaufnahme"
+    },
+    {
+      "url": "https://fccid.io/Q9DAPINH303",
+      "kategorie": "erkennung_typenschild",
+      "grund": "Typenschild eines echten AP11D nicht gesehen: dass er als APINH303 / FCC ID Q9DAPINH303 läuft, belegt nur der Katalog shumoku (niedrig). Foto des AP11D-Etiketts oder Instant-On-Installationsanleitung nötig"
+    },
+    {
+      "url": "https://github.com/freifunk-darmstadt/projects/wiki/90-%E2%80%90-Hardware-%E2%80%90-Aruba-AP11",
+      "kategorie": "seriell",
+      "grund": "Ob neuere AP11D wie neuere AP11 einen gesperrten APBoot haben (\"Unknown command 'bootm'\"), ist nicht belegt (Werkstatt/RAMpe: Vermutung, Rückmeldung erbeten). Bootlog eines AP11D fehlt (Model-Zeile, APBoot-Version)"
+    },
+    {
+      "url": "https://fccid.io/Q9DAPINH303/Internal-Photos/Internal-Photos-3252184",
+      "kategorie": "seriell_pinbelegung",
+      "grund": "Commit nennt beschriftete Lötpunkte neben dem USB-Port; Belegung und Lage stehen in keiner Quelle, FCC-Fotos zu klein (max. 576 px). Wiki-Bilder aruba_303h_serial_console(_zoom) auf https://openwrt.org/toh/aruba/ap-303h nicht geladen"
+    },
+    {
+      "url": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-2-of-2-3334545",
+      "kategorie": "handbuch",
+      "grund": "User Manual 2 of 2 (3.8 MB) sowie User Manual 1/2 vom 2017-07-08 (1.3/3.8 MB) nicht ausgewertet (vermutlich Regulatory-/Sprachteile)"
+    },
+    {
+      "url": "https://openwrt.org/toh/aruba/ap-303h",
+      "kategorie": "dc_buchse_mass",
+      "grund": "Maß und Polarität der 48-V-DC-Buchse nennt keine hier gelesene Quelle; Wiki-Fotos aruba_303h_power_bottom/top nicht geladen. Der parallel entstandene Eintrag daten/aruba-ap-303h.json nennt 3.5x1.35 aus dem AP-303H-Datenblatt a00059878ENW (Wayback) - dort prüfen und für den AP11D bestätigen"
+    },
+    {
+      "url": "https://www.arubanetworks.com/products/wireless/access-points/remote-hospitality-access-points/303h-series/",
+      "kategorie": "datenblatt",
+      "grund": "Hersteller-Datenblatt AP-303H hier nicht abgerufen (arubanetworks.com 403); Werte stammen aus FCC-Unterlagen. Der Eintrag daten/aruba-ap-303h.json hat das Datenblatt a00059878ENW (2024) über Wayback ausgewertet (u. a. Bestellnummern JY678A ff.)"
+    },
+    {
+      "url": "https://forum.openwrt.org/search?q=AP11D",
+      "kategorie": "forum",
+      "grund": "OpenWrt-Forumsthreads zu AP11D/AP-303H nicht gefunden (search.json gemieden); Thread-IDs unbekannt"
+    },
+    {
+      "url": "https://fccid.io/Q9DAPINH303/Test-Setup-Photos/Test-Setup-Photos-3334546",
+      "kategorie": "fcc",
+      "grund": "Test-Setup-Fotos, BLE- und NII-Testberichte nicht ausgewertet"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
+      "kategorie": "hw_version",
+      "grund": "Keine Hardware-Versionen bekannt (Versions leer, FCC Hardware Rev 1 für APINH303); ob es AP11D-Revisionen gibt, nennt keine Quelle"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 37,
+    "blockaden": [
+      {
+        "host": "www.arubainstanton.com",
+        "code": "403 (Akamai Access Denied)",
+        "datum": "2026-10-19"
+      },
+      {
+        "host": "www.mojeek.com",
+        "code": "Captcha (JavaScript-Challenge)",
+        "datum": "2026-10-19"
+      },
+      {
+        "host": "forum.openwrt.org",
+        "code": "Sperrseite \"This is not the content you are looking for\" bei Crawler-UA (HTML-Suche)",
+        "datum": "2026-10-19"
+      }
+    ],
+    "notiz": "Kein ToH-Eintrag und keine OpenWrt-Unterstützung unter dem Namen AP11D: Gluon bildet aruba-instant-on-ap11d als Alias auf aruba-ap-303h ab (PR #2302, 2021), das OpenWrt-Wiki nennt den AP11D eine günstigere Version des AP-303H, die Werkstatt ebenso. Alle Hardwarewerte stammen daher aus AP-303H-Quellen (ToH-Zeile pid 15680478, Datenseite, Wiki, Commit c6e972c8 und Folgecommits, DTS, FCC APINH303: Handbuch, Label, Innen-/Außenfotos, RF-Exposure, 2.4- und 5-GHz-Testbericht) und sind bei FCC-Belegen auf mittel gesetzt. AP11D-eigene Angaben nur aus einem Fremdkatalog (shumoku, niedrig), Instant-On-Seite 403. Widersprüche: Gewicht 310/260 g, Höhe 40/38 mm, PoE-out 13/15 W, DC-Buchse Seite/Unterseite, ToH-Dump 0 Gbit-Ports vs. Datenseite 4, DTS-Memory 256 MiB vs. 512 MiB. Wiki und ToH-Datenseite aus dem Cache des parallelen Laufs aruba-ap-303h (heute abgerufen)."
+  }
+}

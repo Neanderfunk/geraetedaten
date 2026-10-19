@@ -1,0 +1,3273 @@
+{
+  "image": "cudy-wr3000h-v1",
+  "modell": "Cudy WR3000H v1",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_wr3000h_v1",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "bemerkung": "Kein Eintrag für WR3000H im Dump (toh_suche.py: nur Cudy WR3000 v1, WR1000, WR1300, X6, WR2100 als Kandidaten). Datenseite toh/hwdata/cudy/cudy_wr3000h_v1 und cudy_wr3000h live abgefragt: 'This topic does not exist yet'. Die ToH-Tabellen auf der Wiki-Seite bleiben dadurch leer."
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/cudy/wr3000h_1?do=export_raw",
+      "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Gerätewiki; Hardware-Tabellen kommen aus der (fehlenden) ToH-Datenseite. Enthält OEM- und OpenWrt-Bootlog (alte HW-Revision, jakubvanek 2026-01-18)"
+    },
+    "openwrt_wiki_wr3000s": {
+      "url": "https://openwrt.org/toh/cudy/wr3000s_v1?do=export_raw",
+      "stand": "Abruf 2026-10-19 (Revision nicht abgefragt; Text nennt Stand September 2026)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Schwestermodell; laut WR3000H-Wiki gleiche Seriell-Belegung. Erklärt den Datumscode in der Seriennummer."
+    },
+    "openwrt_commit": {
+      "url": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+      "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Erstunterstützung, PR #17458"
+    },
+    "openwrt_commit_c45": {
+      "url": "https://github.com/openwrt/openwrt/commit/dcc5587374ace475cc2f2a94afd1c51e10946c3d",
+      "stand": "Commit dcc55873 vom 2025-01-31",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "WAN-PHY als C45 statt C22, PR #17739"
+    },
+    "openwrt_commit_portreihenfolge": {
+      "url": "https://github.com/openwrt/openwrt/commit/887cab883bc4b3e104b70e74af775522d060e1d4",
+      "stand": "Commit 887cab88 vom 2025-11-09 (Autor Thibaut VARÈNE 2025-10-24)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "LAN-Port-Namen umgedreht, PR #20528"
+    },
+    "openwrt_commit_motorcomm": {
+      "url": "https://github.com/openwrt/openwrt/commit/dbafbab8769b92c8466ea83400280b4f549ace71",
+      "stand": "Commit dbafbab8 vom 2026-01-12 (Autor Andrew MacIntyre 2025-12-30)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "kmod-phy-motorcomm in DEVICE_PACKAGES, PR #21399"
+    },
+    "openwrt_commit_phydetect": {
+      "url": "https://github.com/openwrt/openwrt/commit/02f0efd60b423b4ce9b996f7c986dd68965a50d4",
+      "stand": "Commit 02f0efd6 vom 2026-01-12 (Autor Jakub Vaněk 2026-01-04)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PHY-Reset-GPIO auf MDIO-Bus-Ebene, PR #21399"
+    },
+    "openwrt_commit_2410_backport": {
+      "url": "https://github.com/openwrt/openwrt/commit/09e56437e8be4e0d85ab5697ec7a12b463a05397",
+      "stand": "Backport 09e56437/bed6f08c in openwrt-24.10 vom 2026-02-07",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Backports beider Motorcomm-Commits nach openwrt-24.10 (PR #21531); dazu kmod-Commit https://github.com/openwrt/openwrt/commit/8d407de4910712213afff1919830b3fe5c33e1b4"
+    },
+    "openwrt_commit_ubootmod": {
+      "url": "https://github.com/openwrt/openwrt/commit/eb6dd61a8d4d8a6ffcb5a64642ee2be46233259d",
+      "stand": "Commit eb6dd61a vom 2026-03-27 (Autor Dmitry Mostovoy 2026-02-09)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Variante cudy_wr3000h-v1-ubootmod (OpenWrt-U-Boot-Layout), PR #21943"
+    },
+    "openwrt_commit_dtsi": {
+      "url": "https://github.com/openwrt/openwrt/commit/54febbc55bb0526d51f7064a585029f8be48affd",
+      "stand": "Commit 54febbc5 vom 2025-06-05",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "gemeinsame DTSI WR3000H/WR3000S, PR #18619"
+    },
+    "openwrt_pr_20962": {
+      "url": "https://github.com/openwrt/openwrt/pull/20962",
+      "stand": "PR geschlossen 2025-11-28",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Backport ESMT F50L1G41LC (neuer Flash bei Cudy ab November 2025)"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=wr3000h+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-19 (15 Commits, neuester 2026-09-24)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dtsi",
+      "stand": "Branch main am 2026-10-19 (letzte Änderung der .dtsi: eb6dd61a vom 2026-03-27)",
+      "abgerufen": "2026-10-19",
+      "weitere": [
+        "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dts",
+        "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-wr3000-nand.dtsi"
+      ]
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_release_pruefung": {
+      "url": "https://github.com/openwrt/openwrt/blob/v24.10.2/target/linux/mediatek/image/filogic.mk",
+      "stand": "Tags v24.10.0, v24.10.1, v24.10.2 am 2026-10-19 geprüft",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Device/cudy_wr3000h-v1 fehlt in v24.10.0 und v24.10.1, vorhanden in v24.10.2"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/mediatek-filogic",
+      "stand": "Branches main und v2025.1.x am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "device('cudy-wr3000h-v1', 'cudy_wr3000h-v1', {factory = false}); nicht in v2025.1 und v2023.2.x, vorhanden ab Tag v2025.1.1"
+    },
+    "gluon_commit": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/42592634abc17ee2e4df1e3c4169a1638384adf8",
+      "stand": "Commit 42592634 vom 2026-01-18 (Adorfer, PR #3672)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Commit-Titel nennt irrtümlich ramips-mt7621, geändert wird targets/mediatek-filogic"
+    },
+    "forum_support": {
+      "url": "https://forum.openwrt.org/t/support-for-cudy-wr3000h/217336",
+      "stand": "Thread 2024-12-03 bis 2025-01-20 (56 Beiträge)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Portierung durch juampe; 4199 Aufrufe"
+    },
+    "forum_platinenfoto": {
+      "url": "https://forum.openwrt.org/uploads/default/original/3X/d/c/dc72ef010c94f328c737b21900db2ae0b5f2e25b.jpeg",
+      "stand": "Beitrag #3 vom 2024-12-18 (juampe)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Platinenunterseite mit beschrifteten Seriell-Lötpunkten; vom Wiki verlinkt; geladen und abgelesen"
+    },
+    "hersteller": {
+      "url": "https://www.cudy.com/products/wr3000h-1-0",
+      "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Spezifikationstabelle (Hardware/Software Specs) aus dem HTML gelesen"
+    },
+    "hersteller_downloads": {
+      "url": "https://www.cudy.com/pages/download-center/wr3000h-1-0",
+      "stand": "Abruf 2026-10-19; neueste Firmware 2.5.30 vom 01-Sep-2026",
+      "abgerufen": "2026-10-19"
+    },
+    "hersteller_datenblatt": {
+      "url": "https://www.cudy.com/cdn/shop/files/WR3000H_V1.0_Datasheet_d5d223e9-7f79-44c6-b5ca-8eb008e18179.pdf?v=962701812697552135",
+      "stand": "PDF ohne Datumsangabe (WR3000H_V1.0_Datasheet), Abruf 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "hersteller_kurzanleitung": {
+      "url": "https://www.cudy.com/cdn/shop/files/WR3000H_Quick_Installation_Guide-EN.pdf?v=10056773179281538794",
+      "stand": "PDF ohne Datumsangabe, Dokumentnummer 810600274",
+      "abgerufen": "2026-10-19"
+    },
+    "hersteller_ce_erklaerung": {
+      "url": "https://www.cudy.com/cdn/shop/files/CE_DOC_WR3000H.pdf?v=16355996678955581230",
+      "stand": "Ausstellungsdatum 2024-04-02",
+      "abgerufen": "2026-10-19"
+    },
+    "hersteller_regulatorik": {
+      "url": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_WR3000H_BOM.pdf?v=8914547868736247511",
+      "stand": "Ausstellungsdatum 2024-05-11",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Datei 'Regulatory_Compliance_WR3000H_BOM' (Titel im PDF: 'Regulatory Compliance_WR3000H 无BOM')"
+    },
+    "fccid": {
+      "url": "https://fccid.io/2APRGWR3000H",
+      "stand": "Grant 2025-05-26 (BTL-Projekt 2502C176)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Testlabor BTL Inc. (Dongguan); Exhibit-Liste gelesen"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/2APRGWR3000H/Label/ID-Label-Location-Info-8304202",
+      "stand": "Exhibit 2025-05-26 (PDF erstellt 2025-05-09, Etikettvorlage datiert 2025/03/17)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Etikettvorlage 88.7×44.7 mm mit SN-Schema und Foto der Etikettlage"
+    },
+    "fcc_handbuch_1": {
+      "url": "https://fccid.io/2APRGWR3000H/User-Manual/Users-Manual-1-8304203",
+      "stand": "Exhibit 2025-05-26 (PDF erstellt 2024-08-13, geändert 2024-09-06)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Kurzanleitung (QIG) 810600274"
+    },
+    "fcc_handbuch_2": {
+      "url": "https://fccid.io/2APRGWR3000H/User-Manual/Users-Manual-2-8304204",
+      "stand": "Exhibit 2025-05-26 (Issue Date 2025-05-09)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Regulatory Compliance (Fassung mit Netzteil TPA259-18120-US)"
+    },
+    "fcc_innenfotos": {
+      "url": "https://fccid.io/2APRGWR3000H/Internal-Photos/Internal-Photos-1-8304205",
+      "stand": "Exhibit 2025-05-26 (PDF erstellt 2025-05-19, BTL-Projekt 2502C176)",
+      "abgerufen": "2026-10-19",
+      "weitere": [
+        "https://fccid.io/2APRGWR3000H/Internal-Photos/Internal-Photos-2-8304206"
+      ],
+      "bemerkung": "Teil 1 (8 Seiten) und Teil 2 (2 Seiten) geladen und abgelesen"
+    },
+    "fcc_rf_exposure": {
+      "url": "https://fccid.io/2APRGWR3000H/RF-Exposure-Info/RF-Exposure-Info-8304237",
+      "stand": "Bericht BTL-FCCP-4-2502C176 R00 vom 2025-05-13",
+      "abgerufen": "2026-10-19"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=WR3000H&fulltext=1",
+      "stand": "Suche 2026-10-19: keine Treffer",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Volltextsuche nach WR3000H ohne Ergebnis"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+      "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Rohtext per index.php?title=Cudy_WR3000H&action=raw"
+    },
+    "werkstatt": {
+      "url": "router-werkstatt/docs/validierung/cudy-wr3000h-v1-2026-10-16.md",
+      "stand": "Protokoll 2026-10-16",
+      "abgerufen": "2026-10-19",
+      "sicherheit": "hoch",
+      "bemerkung": "Eigene Erprobung am Testplatz grw (S/N WR3000H251300817 EU1.0, Woche 13/2025, alter Flash)"
+    },
+    "werkstatt_rtl8221b": {
+      "url": "router-werkstatt/docs/rtl8221b-2g5-wan-intern.md",
+      "stand": "Nachtrag 2026-10-16 (Lasttest)",
+      "abgerufen": "2026-10-19",
+      "sicherheit": "hoch",
+      "bemerkung": "Lasttest 2.5G-WAN am selben Gerät, Gluon 2025.1"
+    },
+    "werkstatt_installation": {
+      "url": "router-werkstatt/docs/cudy-installation.md",
+      "stand": "Stand der Tabelle 2026-10-15",
+      "abgerufen": "2026-10-19",
+      "sicherheit": "hoch",
+      "bemerkung": "Zwischenfirmware-Tabelle Cudy"
+    },
+    "werkstatt_fotos": {
+      "url": "privat/bilder/2026-10-16_1521_cudy-wr3000h-typenschild-testplatz.webp",
+      "stand": "Fotos 2026-10-16 12:24 und 15:21",
+      "abgerufen": "2026-10-19",
+      "sicherheit": "hoch",
+      "weitere": [
+        "privat/bilder/2026-10-16_1224_cudy-wr3000h-ports-testplatz.webp",
+        "privat/bilder/2026-10-16_1611_openwrt-luci-falsches-image-wr3000h-auf-wr3000.png"
+      ],
+      "bemerkung": "Typenschild und Rückseite des Testgeräts selbst abgelesen"
+    }
+  },
+  "roh": {
+    "toh": {
+      "eintrag": null,
+      "hinweis": "kein Eintrag für Cudy WR3000H im ToH-Dump 2026-10-18",
+      "kandidaten_toh_suche": [
+        {
+          "score": 0.8,
+          "pid": "32827805",
+          "brand": "Cudy",
+          "model": "WR3000",
+          "version": "v1",
+          "page": "toh:hwdata:cudy:cudy_wr3000_v1"
+        },
+        {
+          "score": 0.8,
+          "pid": "15679417",
+          "brand": "Cudy",
+          "model": "WR1000",
+          "version": "v1"
+        },
+        {
+          "score": 0.8,
+          "pid": "20915156",
+          "brand": "Cudy",
+          "model": "X6",
+          "version": "v1,v1.1"
+        },
+        {
+          "score": 0.8,
+          "pid": "23733210",
+          "brand": "Cudy",
+          "model": "WR1300",
+          "version": "v1"
+        },
+        {
+          "score": 0.5,
+          "pid": "15676798",
+          "brand": "Cudy",
+          "model": "WR2100",
+          "version": "NULL"
+        },
+        {
+          "score": 0.2,
+          "pid": "23767952",
+          "brand": "Cudy",
+          "model": "WR1300",
+          "version": "v2,v3"
+        }
+      ],
+      "live_datenseiten": {
+        "toh:hwdata:cudy:cudy_wr3000h_v1": "does not exist yet",
+        "toh:hwdata:cudy:cudy_wr3000h": "does not exist yet"
+      }
+    },
+    "openwrt_wiki": {
+      "titel": "Cudy WR3000H v1",
+      "einleitung": "The Cudy WR3000H is a Wifi6 Router with 1x2.5 Gb WAN and 4x 1Gb LAN Ports build around 64-bit Cortex-A53 SoC (Filogic 820 1.3GHz dual-core processor). It has a small form factor and 4 antennas. It is very similar to the [[:toh:cudy:wr3000s_v1|Cudy WR3000S]] router: **The main difference is a 2.5 Gbit WAN port**, whereas the WR3000S has only a 1 Gbit WAN port. There is also a power button.",
+      "hinweis_flash_2543": "As of Nov 2025: a new variant of WR3000H v1 (starting with serial number 2543 or later) was shipped with a new flash chip ESMT F50L1G41LC. This new variant is ONLY supported in version [[:releases:24.10:changelog-24.10.5#targetmediatek_17_changes|24.10.5]] or later.  See [[https://github.com/openwrt/openwrt/pull/20962|PR #20962]] and [[https://forum.openwrt.org/t/cudy-started-using-a-new-flash-chip-in-their-ax3000-devices-its-currently-unsupported/243547|OpenWrt Forum thread]], and also [[https://www.cudy.com/blogs/faq/openwrt-software-download|Cudy Transition Firmware download page]].",
+      "hinweis_phy_yt8821": "As of Jan 2026: another new variant of WR3000H v1 was discovered using a different PHY chip (**Motorcomm YT8821 2.5GbE**) as its WAN port.  This new variant is ONLY supported in version [[:releases:24.10:changelog-24.10.6#targetmediatek_8_changes|24.10.6]] ; [[:releases:25.12:changelog-25.12.0-rc3#targetmediatek_8_changes|25.12.0-rc3]] and Main Snapshot branch by incorporating commits to include the ''kmod-phy-motorcomm'' driver.",
+      "hinweis_v2": "It would have been wiser for Cudy to release a v2 version of this device rather than changing the hardware without notifying buyers & users. See more in commit messages: ''[[https://github.com/openwrt/openwrt/commit/8d407de4910712213afff1919830b3fe5c33e1b4|8d407de]]'' , ''[[https://github.com/openwrt/openwrt/commit/09e56437e8be4e0d85ab5697ec7a12b463a05397|09e5643]]'' and ''[[https://github.com/openwrt/openwrt/commit/bed6f08c36f85479448af23a0ce4ca00dd09fa8e|bed6f08]]''",
+      "hinweis_ubootmod": "Starting with 25.12.4 a **ubootmod version** is proposed. This mod unlocks the extra memory available, allowing using more packages and advanced features. **It is not necessary for basic use of the router, and should only be considered for advanced users**. Furthermore, returning to default setup requires a serial link and advanced skills. Information on how to install in the [[https://github.com/openwrt/openwrt/commit/0bcdcf67d7a59eb0ab9fab677fcfe765872f7d46|original commit]].",
+      "oem_webui_installation": [
+        "1) Download the appropriate Cudy-signed OpenWrt image from the Cudy's [[https://drive.google.com/drive/folders/1BKVarlwlNxf7uJUtRhuMGUqeCa5KpMnj?usp=sharing|Google Disk]]",
+        "2) Download the latest OpenWrt stable **sysupgrade** image [[https://downloads.openwrt.org/releases/25.12.2/targets/mediatek/filogic/openwrt-25.12.2-mediatek-filogic-cudy_wr3000h-v1-squashfs-sysupgrade.bin]]",
+        "3) Power on the router, proceed with the basic setup via GUI (available at [[http://192.168.10.1]])",
+        "4) Once completed, go to the \"Advanced Settings\" > \"Firmware\". Flash the signed Cudy-signed OpenWrt image. Wait for the router to reboot.",
+        "5) Once rebooted, open LuCi UI (available at [[http://192.168.1.1]]). Go to \"System\" > \"Backup / Flash firmware\". Flash the OpenWrt sysupgrade image. **DO NOT** keep settings, so uncheck the box during flash."
+      ],
+      "seriell": "**PLEASE NOTE:** there's no header on the board, you will have to solder the wires for your 3.3V UART adapter to the board. Pinout is identical to the [[:toh:cudy:wr3000s_v1|Cudy WR3000S]]. Solder points can be found at the back side of the PCB and each of them is clearly marked (see [[https://forum.openwrt.org/uploads/default/original/3X/d/c/dc72ef010c94f328c737b21900db2ae0b5f2e25b.jpeg|this image]] for reference).",
+      "seriell_parameter": "Serial connection parameters for Cudy WR3000H 1: 115200, 8N1, 3.3V (Abschnitt auskommentiert)",
+      "flash_layout_proc_mtd": [
+        "mtd0: 00100000 00020000 \"BL2\"",
+        "mtd1: 00080000 00020000 \"u-boot-env\"",
+        "mtd2: 00200000 00020000 \"Factory\"",
+        "mtd3: 00040000 00020000 \"bdinfo\"",
+        "mtd4: 00200000 00020000 \"FIP\"",
+        "mtd5: 04000000 00020000 \"ubi\""
+      ],
+      "easy_recovery": "Cudy have published a generic guide on how to recover a device when it gets soft bricked, make sure you serve the device specific image via TFTP. https://www.cudy.com/en-us/blogs/faq/how-to-recovery-the-cudy-router-from-openwrt-firmware-to-cudy-official-firmware",
+      "debricking": "https://forum.openwrt.org/t/support-for-cudy-wr3000h/217336/49 (Windows-specific), Backups der Original-Partitionen nötig",
+      "basic_configuration": "Hardware offloading works with this device (tested with 1GB/s FTTH).",
+      "oem_tftp_installation": "per initial commit: serial, reset gedrückt halten bis U-Boot-Shell, TFTP-Server 192.168.1.88, Datei cudy3000h.bin, tftpboot 0x46000000 cudy3000h.bin; bootm 0x46000000",
+      "fotos": [
+        "media:cudy:cudy-wr3000h-front.webp",
+        "media:cudy:cudy-wr3000h-back.webp",
+        "media:cudy:cudy-wr3000h-v1_pcb_top.jpg",
+        "media:cudy:cudy-wr3000h-v1_pcb_bottom.jpg"
+      ],
+      "gehaeuse_oeffnen": "FIXME (nicht ausgefüllt)",
+      "knoepfe": "Vorlage nicht ausgefüllt",
+      "oem_bootlog_auszug": {
+        "bl2": "NOTICE:  BL2: v2.7(release):cdafd41cf6, Built : 08:26:26, Sep  5 2024",
+        "emi": "NOTICE:  EMI: Using DDR3 settings / Detected DRAM size: 256MB",
+        "cpu": "NOTICE:  CPU: MT7981 (1298MHz)",
+        "nand_bl2": "NOTICE:  SPI_NAND Detected ID 0xc8 / Page size 2048, Block size 131072, size 134217728",
+        "uboot": "U-Boot 2022.07-rc3 (Sep 05 2024 - 08:26:26 +0000), Build: jenkins-WR3000H-11",
+        "uboot_model": "Model: mt7981-rfb",
+        "kernel": "Linux version 5.4.246 (jenkins@release_server) (gcc version 8.4.0 (OpenWrt GCC 8.4.0 2.3.10)) #0 SMP Thu May 15 02:34:12 2025",
+        "machine": "Machine model: MediaTek MT7981 RFB/R63",
+        "nand_kernel": "spi-nand spi0.0: GigaDevice SPI NAND was found. Flash Model: F50L1G41LB, ID: C801 / 128 MiB, block size: 128 KiB, page size: 2048, OOB size: 64",
+        "memory": "Memory: 230716K/258048K available"
+      },
+      "openwrt_bootlog_auszug": {
+        "kernel": "Linux version 6.6.119 ... OpenWrt GCC 13.3.0 r29087-d9c5716d1d ... #0 SMP Wed Dec 17 21:08:22 2025",
+        "machine": "Machine model: Cudy WR3000H v1",
+        "cpu_bl2": "NOTICE:  CPU: MT7981 (1300MHz)",
+        "memory": "Memory: 239816K/262144K available",
+        "wan_phy": "mtk_soc_eth 15100000.ethernet wan: PHY [mdio-bus:06] driver [RTL8221B-VB-CG 2.5Gbps PHY (C45)] (irq=POLL)",
+        "lan": "mt7530-mdio mdio-bus:1f lan1..lan4"
+      },
+      "notes": [
+        "https://forum.openwrt.org/t/support-for-cudy-wr3000h/217336/",
+        "https://forum.openwrt.org/t/cudy-started-using-a-new-flash-chip-in-their-ax3000-devices-its-currently-unsupported/243547",
+        "https://github.com/openwrt/openwrt/pull/22625 (U-Boot layout image for Cudy WR3000P/H/S/E v1)"
+      ],
+      "tags": "U-boot mediatek filogic 2core ARMv8 MT7981 2.5GigabitEthernet GigabitEthernet 5port 2WNIC 2x2 802.11bgn 802.11anac 802.11ax wifi6 4ant NonDetachableAntenna 256ram 128NAND hwVLAN 0USB serial 12v_powered",
+      "revisionen_auszug": [
+        "2026/05/14 11:00 [Installation] ubootmod badulesia (current)",
+        "2026/05/13 05:27 Update Infobox wfgriffin88",
+        "2026/04/27 01:12 [Photos] rcalpha",
+        "2026/04/14 15:36 [Installation] update to OpenWrt 25.12.2 sysupgrade bin URL wfgriffin88",
+        "2026/01/18 00:42 Added OEM boot log for the old HW revision jakubvanek",
+        "2026/01/13 11:45 [Installation] warning about new WAN chip. badulesia",
+        "2025/11/28 10:31 [Installation] warning info badulesia"
+      ]
+    },
+    "openwrt_wiki_wr3000s": {
+      "datumscode": "**Reading the date code:** Cudy's notice explains that \"2543\" in the serial number means 2025, week 43. Cudy uses two serial number formats. On serials starting with ''S000'' (as on 2026-built units), characters 9 to 12 read as YYWW: for example ''S000xxxx2611xxxxx'' was built in 2026, week 11. Older labels have serials starting with ''WR3000S'' (see the Bottom photo under [[#photos|Photos]]); there the YYWW should follow the model name, as on WR3000H serials (''WR3000H2543...''), but this was not checked on a WR3000S. Both positions are inferred from a few units; Cudy does not document them. If in doubt, treat the unit as a new-flash unit. The OpenWrt boot log does not tell the two chips apart: the kernel prints only \"ESMT SPI NAND was found\", without the LB/LC suffix. The stock firmware's serial boot log does name the part (see the OEM bootlog below: \"Flash Model: F50L1G41LB, ID: C801\"). According to the kernel patch that added the LC, it reports manufacturer ID 0x8C where the LB reports 0xC8, so the \"SPI_NAND Detected ID\" line that BL2 prints on the serial console should also differ (not verified on an LC unit).",
+      "flash_hinweis": "As of Nov 2025: a //new variant// of WR3000S v1 (serial number date code 2543 or later, see below) was shipped with a new flash chip ESMT F50L1G41LC. This new variant is ONLY supported in version [[releases:24.10:changelog-24.10.5#targetmediatek_17_changes|24.10.5]] or later. See [[https://github.com/openwrt/openwrt/pull/20962|PR #20962]] for more information. If you are installing the latest version, OpenWrt itself is of no concern anymore, but a new-flash unit also needs the **current** Cudy-signed image (as of September 2026, the ''20251119'' build, see below). According to Cudy's notice on its Transition Firmware download page (linked below), the older Cudy-signed images will not boot on it, and stock 2.3.x or older must not be installed on it. The notice says newer stock releases will refuse that downgrade, but units can ship with older stock firmware (a 2026-built unit came with 2.4.6, built in May 2025), so do not rely on the refusal.",
+      "seriell_parameter": "Serial connection parameters for Cudy WR3000S v1 | 115200, 8N1, 3.3V",
+      "seriell_text": "Serial pins labeled on the bottom of the PCB, labelling is on the top of the PCB under the heatsink. Unless you have a reason to do so, do not connect the VCC/3.3V pin, only ground, TX, and RX are usually needed.",
+      "seriell_foto": "media:cudy:wr3000s:cudy_wr3000s_v1_uart.jpg",
+      "zwischenfirmware_wr3000s": "In the Drive folder take ''WR3000S 1.0.zip'' and **unzip it**: upload the ''.bin'' file inside, not the ''.zip''. As of September 2026 the file is ''cudy_wr3000s-v1-sysupgrade_20251119.bin'' (14,945,872 bytes, MD5 ''403e276f74fd29917fd4260294d1a137''). This build also supports the new F50L1G41LC flash, and once flashed it identifies as \"OpenWrt 23.05-SNAPSHOT-CUDY\". The WR3000H, WR3000P and WR3000S files of that date have exactly the same size and names that differ by one letter, so check the MD5 before flashing. Comments of August 2026 on Cudy's Transition Firmware download page (linked in the info box above) report \"File is invalid\" when uploading an S intermediate. One was on a 2026-built unit, and the file's MD5 was not given. Another poster quoted this MD5 and later reported that the same Drive file was accepted on a retry. Cudy support's advice was to upload the unzipped ''.bin'' and, if the router is part of a Cudy mesh, to reset it to factory defaults and power off the other mesh units first. On a 2026-built unit with stock firmware 2.4.6, the unzipped ''.bin'' was accepted without problems."
+    },
+    "openwrt_commit": {
+      "sha": "9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+      "autor": "Juan Pedro Paredes Caballero",
+      "autor_datum": "2024-12-07T13:20:31Z",
+      "committer_datum": "2025-01-12T16:08:02Z",
+      "nachricht": "mediatek: filogic: Add support for cudy wr3000h\n\nThe manufacturer Cudy usually releases signed openwrt firmware, to\nfacilitate the migration from the proprietary version to the official\nversions of openwrt. In contact with the manufacturer tells me that only\nreleases the firmware of the WR3000H if and only if\nthere is an official version. With this proposal I pretend to have an\ninitial operative version so that they do their part, and facilitate to\nthe users the possibility of using openwrt. In the present state, it is\nonly possible to use this firmware by uploading and installing it with\nUART connection.\n\nAX3000 2.5G Dual Band Wi-Fi 6 Mesh Router (WR3000H)\n\nHardware\n--------\nMediaTek MT7981 WiSoC\n256MB DDR3 RAM\n128MB SPI-NAND (XMC XM25QH128C)\nMediaTek MT7981 2x2 DBDC 802.11ax 2T2R (2.4 / 5)\n4 LAN MediaTek MT7531 PHY\n1 WAN RTL8221B-VB-CG 2.5Gbps PHY (C22)\n2 Radios MT7976CN\nUART: 115200 8N1 3.3V\n\nMAC:\nLAN MAC: label mac\nWAN MAC: label mac + 1\n2.4G MAC: label mac\n5G MAC: label mac + 1 with LA bit set\n\nInstallation\n------------\n\n1. Connect to the serial port as described in the \"Hardware\" section.\n\n2. Power on the device + press reset pin. Keep pressing reset pin to\n   enter the U-Boot shell (The recovery.bin image load process must fail).\n\n3. Download the OpenWrt initramfs image. Place it on an TFTP server\n   connected to the Cudy LAN ports. Make sure the server is reachable at\n   192.168.1.88. Rename the image to \"cudy3000h.bin\"\n\n4. Download and boot the OpenWrt initramfs image.\n\n   $ tftpboot 0x46000000 cudy3000h.bin; bootm 0x46000000\n\n5. IMPORTANT: Make backup from original firmware. System -> Backup\n   /Flash Firmware -> Save mtdblock contents. All mtdblock one by one,\nkeep unaltered (BL2, u-boot-env, Factory, bdinfo, FIP, and ubi).\n\n6. Transfer the OpenWrt sysupgrade image to the device using scp.\n   Install with sysupgrade.\n\nWarning for BL2 and U-BOOT developers\n-------------------------------------\nThe nand partition layout from vendor is slightly diferent from \"standard\".\nThe FIP partition starts at 0x3c0000 be carefull with BL2 to BL31.\nThe UBI partition start at 0x5c0000 be carefull.\nDO NOT OVERWRITE bdinfo partition it contains hardware MAC definition\nLayout is start-end (not start size)\n  - 0x000000000000-0x000007800000 : \"nmbm0\"\n          - 0x000000000000-0x000000100000 : \"bl2\"\n          - 0x000000100000-0x000000180000 : \"u-boot-env\"\n          - 0x000000180000-0x000000380000 : \"factory\"\n          - 0x000000380000-0x0000003c0000 : \"bdinfo\"\n          - 0x0000003c0000-0x0000005c0000 : \"fip\"\n          - 0x0000005c0000-0x0000045c0000 : \"ubi\"\nALLWAYS for U-BOOT operations check this\nsetenv mtdids nmbm0=nmbm0\nsetenv mtdparts nmbm0:1024k(bl2),512k(u-boot-env),2048k(factory),256k(bdinfo),2048k(fip),65536k(ubi)\n\nSigned-off-by: Juan Pedro Paredes Caballero <juanpedro.paredes@gmail.com>\nLink: https://github.com/openwrt/openwrt/pull/17458\nSigned-off-by: Hauke Mehrtens <hauke@hauke-m.de>",
+      "dateien": [
+        "target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dts",
+        "target/linux/mediatek/filogic/base-files/etc/board.d/01_leds",
+        "target/linux/mediatek/filogic/base-files/etc/hotplug.d/ieee80211/11_fix_wifi_mac",
+        "target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh",
+        "target/linux/mediatek/image/filogic.mk"
+      ]
+    },
+    "openwrt_commit_c45": {
+      "sha": "dcc5587374ace475cc2f2a94afd1c51e10946c3d",
+      "autor": "Juan Pedro Paredes Caballero",
+      "autor_datum": "2025-01-26T19:23:09Z",
+      "committer_datum": "2025-01-31T09:46:26Z",
+      "nachricht": "mediatek: filogic: fix 2.5G phy compatible for WR3000H\n\nFollowing the initial support of the Cudy WR3000H with PHY C22 for the 2.5G WAN\ninterface, several improvements fixing issues with RealTek RTL8221B PHYs have\nbeen merged.\nTherefore we can now bring the DT in line with other equipment and declare the\n2.5G WAN PHY as C45.\n\nFixes: 9d66b8b (\"mediatek: filogic: Add support for cudy wr3000h\")\nSigned-off-by: Juan Pedro Paredes Caballero <juanpedro.paredes@gmail.com>\nLink: https://github.com/openwrt/openwrt/pull/17739\n[reword commit description]\nSigned-off-by: Álvaro Fernández Rojas <noltari@gmail.com>",
+      "dateien": [
+        "target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dts"
+      ]
+    },
+    "openwrt_commit_portreihenfolge": {
+      "sha": "887cab883bc4b3e104b70e74af775522d060e1d4",
+      "autor": "Thibaut VARÈNE",
+      "autor_datum": "2025-10-24T09:27:59Z",
+      "committer_datum": "2025-11-09T22:07:59Z",
+      "nachricht": "mediatek/filogic: fix Cudy WR3000H ethernet port order\n\nThe ports are physically labelled in reverse order on the device.\nThis patch aligns logical names with physical ones.\nLED order on front of device is correct after this patch.\n\nFixes: 9d66b8b312fb6a4087244ee3ee10e1ba1623df81\nSigned-off-by: Thibaut VARÈNE <hacks@slashdirt.org>\nLink: https://github.com/openwrt/openwrt/pull/20528\nSigned-off-by: Hauke Mehrtens <hauke@hauke-m.de>",
+      "dateien": [
+        "target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dts"
+      ]
+    },
+    "openwrt_commit_motorcomm": {
+      "sha": "dbafbab8769b92c8466ea83400280b4f549ace71",
+      "autor": "Andrew MacIntyre",
+      "autor_datum": "2025-12-30T01:22:41Z",
+      "committer_datum": "2026-01-12T23:18:04Z",
+      "nachricht": "mediatek: add Motorcomm PHY driver to Cudy WR3000H\n\nRecent Cudy WR3000H v1 units have a Motorcomm YT8821 2.5G PHY for\nthe WAN interface instead of the RTL8221B PHY used in earlier units,\nso add kmod-phy-motorcomm to be able to use it.\n\nSigned-off-by: Andrew MacIntyre <andymac@pcug.org.au>\n[linuxtardis@gmail.com: slightly reworded the commit description]\nSigned-off-by: Jakub Vaněk <linuxtardis@gmail.com>\nLink: https://github.com/openwrt/openwrt/pull/21399\nSigned-off-by: Hauke Mehrtens <hauke@hauke-m.de>",
+      "dateien": [
+        "target/linux/mediatek/image/filogic.mk"
+      ]
+    },
+    "openwrt_commit_phydetect": {
+      "sha": "02f0efd60b423b4ce9b996f7c986dd68965a50d4",
+      "autor": "Jakub Vaněk",
+      "autor_datum": "2026-01-04T23:10:46Z",
+      "committer_datum": "2026-01-12T23:18:04Z",
+      "nachricht": "mediatek: fix PHY autodetection on Cudy WR3000H\n\nNewer Cudy WR3000H units have a Motorcomm YT8821 PHY instead of a\nRealtek PHY on the WAN port. Before this commit, the Motorcomm PHY\ncould not be autodetected by the kernel -- the PHY would show up as\njust a generic clause 45 PHY and the proper driver would not be loaded.\n\nThe cause of the detection failure likely was that the YT8821 PHY was\nheld in reset during PHY detection. To fix this, move the reset GPIO\ndefinition to the MDIO bus level. This reset line is deasserted before\nthe autodetection process, see also [1]. With this change, both Realtek\nand Motorcomm PHYs can be supported with a single device tree.\n\n[1]: https://lore.kernel.org/all/20251119134750.394655-1-horatiu.vultur@microchip.com/\n\nSigned-off-by: Jakub Vaněk <linuxtardis@gmail.com>\nLink: https://github.com/openwrt/openwrt/pull/21399\nSigned-off-by: Hauke Mehrtens <hauke@hauke-m.de>",
+      "dateien": [
+        "target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dts"
+      ]
+    },
+    "openwrt_commit_2410_backport": {
+      "09e56437": {
+        "sha": "09e56437e8be4e0d85ab5697ec7a12b463a05397",
+        "autor": "Andrew MacIntyre",
+        "autor_datum": "2025-12-30T01:22:41Z",
+        "committer_datum": "2026-02-07T15:33:07Z",
+        "nachricht": "mediatek: add Motorcomm PHY driver to Cudy WR3000H\n\nRecent Cudy WR3000H v1 units have a Motorcomm YT8821 2.5G PHY for\nthe WAN interface instead of the RTL8221B PHY used in earlier units,\nso add kmod-phy-motorcomm to be able to use it.\n\nSigned-off-by: Andrew MacIntyre <andymac@pcug.org.au>\n[linuxtardis@gmail.com: slightly reworded the commit description]\nSigned-off-by: Jakub Vaněk <linuxtardis@gmail.com>\nLink: https://github.com/openwrt/openwrt/pull/21399\n(cherry picked from commit dbafbab8769b92c8466ea83400280b4f549ace71)\nSigned-off-by: Jakub Vaněk <linuxtardis@gmail.com>\nLink: https://github.com/openwrt/openwrt/pull/21531\nSigned-off-by: Hauke Mehrtens <hauke@hauke-m.de>",
+        "dateien": [
+          "target/linux/mediatek/image/filogic.mk"
+        ]
+      },
+      "bed6f08c": {
+        "sha": "bed6f08c36f85479448af23a0ce4ca00dd09fa8e",
+        "autor": "Jakub Vaněk",
+        "autor_datum": "2026-01-04T23:10:46Z",
+        "committer_datum": "2026-02-07T15:33:07Z",
+        "nachricht": "mediatek: fix PHY autodetection on Cudy WR3000H\n\nNewer Cudy WR3000H units have a Motorcomm YT8821 PHY instead of a\nRealtek PHY on the WAN port. Before this commit, the Motorcomm PHY\ncould not be autodetected by the kernel -- the PHY would show up as\njust a generic clause 45 PHY and the proper driver would not be loaded.\n\nThe cause of the detection failure likely was that the YT8821 PHY was\nheld in reset during PHY detection. To fix this, move the reset GPIO\ndefinition to the MDIO bus level. This reset line is deasserted before\nthe autodetection process, see also [1]. With this change, both Realtek\nand Motorcomm PHYs can be supported with a single device tree.\n\n[1]: https://lore.kernel.org/all/20251119134750.394655-1-horatiu.vultur@microchip.com/\n\nSigned-off-by: Jakub Vaněk <linuxtardis@gmail.com>\nLink: https://github.com/openwrt/openwrt/pull/21399\n(cherry picked from commit 02f0efd60b423b4ce9b996f7c986dd68965a50d4)\nSigned-off-by: Jakub Vaněk <linuxtardis@gmail.com>\nLink: https://github.com/openwrt/openwrt/pull/21531\nSigned-off-by: Hauke Mehrtens <hauke@hauke-m.de>",
+        "dateien": [
+          "target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dts"
+        ]
+      },
+      "8d407de4": {
+        "sha": "8d407de4910712213afff1919830b3fe5c33e1b4",
+        "autor": "Andrew MacIntyre",
+        "autor_datum": "2025-12-29T12:38:10Z",
+        "committer_datum": "2026-01-12T23:19:52Z",
+        "nachricht": "kernel: add kmod-phy-motorcomm\n\nThe Motorcomm YT8821 2.5G PHY is being used in some devices as an\nalternative to devices like the RTL8221B.  Package it as a kmod\nso it can be used as a device package rather than requiring changes\nto the target kernel config.\n\nSigned-off-by: Andrew MacIntyre <andymac@pcug.org.au>\nLink: https://github.com/openwrt/openwrt/pull/21399\nSigned-off-by: Hauke Mehrtens <hauke@hauke-m.de>\n(cherry picked from commit 96a133737433eca069e26b1730ea5a895b8f2fd8)",
+        "dateien": [
+          "package/kernel/linux/modules/netdevices.mk"
+        ]
+      }
+    },
+    "openwrt_commit_ubootmod": {
+      "sha": "eb6dd61a8d4d8a6ffcb5a64642ee2be46233259d",
+      "autor": "Dmitry Mostovoy",
+      "autor_datum": "2026-02-09T16:43:41Z",
+      "committer_datum": "2026-03-27T10:27:39Z",
+      "nachricht": "mediatek: add cudy wr3000h-v1 ubootmod\n\nThis allows us to use the full size of nand,\nwhich extends ubi size from 64Mb to 122.25Mb.\n\n1. Log in to the device and backup all the partitions,\nespecially unique \"Factory\" and \"bdata\" partitions\nfrom System -> Backup / Flash Firmware -> Save mtdblock contents.\n2. Install kmod-mtd-rw to unlock mtd partitions for writing\n  apk update && apk add kmod-mtd-rw && insmod mtd-rw i_want_a_brick=1\n\n3. Write new OpenWrt (U-Boot Layout) \"BL2\" and \"FIP\":\n  mtd -e BL2 write openwrt-mediatek-filogic-cudy_wr3000h-v1-ubootmod-preloader.bin BL2\n  mtd -e FIP write openwrt-mediatek-filogic-cudy_wr3000h-v1-ubootmod-bl31-uboot.fip FIP\n4. Set static IP on your PC: \"192.168.1.254\", gateway \"192.168.1.1\"\n5. Serve openwrt-mediatek-filogic-cudy_wr3000h-v1-ubootmod-initramfs-recovery.itb\nusing TFTP server.\n6. Connect Router LAN with PC LAN.\n7. Cut off the power and re-engage, wait for TFTP recovery to complete.\n8. After OpenWrt initramfs recovery has booted,\nclean \"/dev/mtd5\" ubi partition to utilize maximum of free space:\n  ubidetach -p /dev/mtd5; ubiformat /dev/mtd5 -y; ubiattach -p /dev/mtd5\n  ubimkvol /dev/ubi0 -n 0 -N ubootenv -s 128KiB\n  ubimkvol /dev/ubi0 -n 1 -N ubootenv2 -s 128KiB\n9. Perform sysupgrade.\n\nSigned-off-by: Dmitry Mostovoy <stavultras@gmail.com>\nLink: https://github.com/openwrt/openwrt/pull/21943\nSigned-off-by: Robert Marko <robimarko@gmail.com>",
+      "dateien": [
+        "package/boot/uboot-mediatek/Makefile",
+        "package/boot/uboot-mediatek/patches/468-add-cudy_wr3000h-v1.patch",
+        "package/boot/uboot-tools/uboot-envtools/files/mediatek_filogic",
+        "target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1-ubootmod.dts",
+        "target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dts",
+        "target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dtsi",
+        "target/linux/mediatek/filogic/base-files/etc/board.d/01_leds",
+        "target/linux/mediatek/filogic/base-files/etc/hotplug.d/ieee80211/11_fix_wifi_mac",
+        "target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh",
+        "target/linux/mediatek/image/filogic.mk"
+      ]
+    },
+    "openwrt_commit_dtsi": {
+      "sha": "54febbc55bb0526d51f7064a585029f8be48affd",
+      "autor": "Roland Reinl",
+      "autor_datum": "2025-04-27T11:43:40Z",
+      "committer_datum": "2025-06-05T19:13:24Z",
+      "nachricht": "mediatek: Create common DTSI for WR3000H and WR3000S\n\nThis change moves common elements of the WR3000H and the WR3000S to mt7981b-cudy-wr3000-nand.dtsi.\nThis will simplify adding of new similar devices, for exapmle WR3000E.\n\nSigned-off-by: Roland Reinl <reinlroland+github@gmail.com>\nLink: https://github.com/openwrt/openwrt/pull/18619\nSigned-off-by: Hauke Mehrtens <hauke@hauke-m.de>",
+      "dateien": [
+        "target/linux/mediatek/dts/mt7981b-cudy-wr3000-nand.dtsi",
+        "target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dts",
+        "target/linux/mediatek/dts/mt7981b-cudy-wr3000s-v1.dts"
+      ]
+    },
+    "openwrt_pr_20962": {
+      "titel": "kernel: mtd: spinand: esmt: add support for F50L1G41LC",
+      "erstellt": "2025-11-27T20:38:32Z",
+      "geschlossen": "2025-11-28T22:58:57Z",
+      "text": "Backport upstream patch to add support for the ESMT F50L1G41LC flash chip. It is used in multiple Cudy products manufactured starting November 2025.\r\n\r\n24.10 PR: https://github.com/openwrt/openwrt/pull/20963"
+    },
+    "openwrt_git_suche": {
+      "anzahl": 15,
+      "commits": [
+        {
+          "sha": "9d66b8b312fb",
+          "datum": "2025-01-12",
+          "autor": "Juan Pedro Paredes Caballero",
+          "titel": "mediatek: filogic: Add support for cudy wr3000h"
+        },
+        {
+          "sha": "0f8a5a5fd692",
+          "datum": "2025-01-18",
+          "autor": "Hauke Mehrtens",
+          "titel": "mediatek: filogic: Cudy WR3000H: Fix SUPPORTED_DEVICES"
+        },
+        {
+          "sha": "4c380d0f25f8",
+          "datum": "2025-01-23",
+          "autor": "Chukun Pan",
+          "titel": "mediatek: use standard PHY reset bindings for Cudy WR3000H"
+        },
+        {
+          "sha": "dcc5587374ac",
+          "datum": "2025-01-31",
+          "autor": "Juan Pedro Paredes Caballero",
+          "titel": "mediatek: filogic: fix 2.5G phy compatible for WR3000H"
+        },
+        {
+          "sha": "54febbc55bb0",
+          "datum": "2025-06-05",
+          "autor": "Roland Reinl",
+          "titel": "mediatek: Create common DTSI for WR3000H and WR3000S"
+        },
+        {
+          "sha": "04e9d154f209",
+          "datum": "2025-09-07",
+          "autor": "Michal Halva",
+          "titel": "mediatek: filogic: add support for Cudy WR3000P v1"
+        },
+        {
+          "sha": "887cab883bc4",
+          "datum": "2025-11-09",
+          "autor": "Thibaut VARÈNE",
+          "titel": "mediatek/filogic: fix Cudy WR3000H ethernet port order"
+        },
+        {
+          "sha": "dbafbab8769b",
+          "datum": "2026-01-13",
+          "autor": "Andrew MacIntyre",
+          "titel": "mediatek: add Motorcomm PHY driver to Cudy WR3000H"
+        },
+        {
+          "sha": "02f0efd60b42",
+          "datum": "2026-01-13",
+          "autor": "Jakub Vaněk",
+          "titel": "mediatek: fix PHY autodetection on Cudy WR3000H"
+        },
+        {
+          "sha": "31f30f5a6cff",
+          "datum": "2026-02-04",
+          "autor": "Anton Danilov",
+          "titel": "mediatek: add Motorcomm PHY support to Cudy AP3000 v1"
+        },
+        {
+          "sha": "eb6dd61a8d4d",
+          "datum": "2026-03-27",
+          "autor": "Dmitry Mostovoy",
+          "titel": "mediatek: add cudy wr3000h-v1 ubootmod"
+        },
+        {
+          "sha": "ed4015375355",
+          "datum": "2026-05-10",
+          "autor": "Mikhail Zhilkin",
+          "titel": "mediatek: cudy nand: fix wrong nmbm configuration"
+        },
+        {
+          "sha": "baa020f6bfee",
+          "datum": "2026-06-16",
+          "autor": "Ryan Leung",
+          "titel": "uboot-mediatek: enable true RNG driver for recently added devices"
+        },
+        {
+          "sha": "33fed216c1db",
+          "datum": "2026-08-29",
+          "autor": "Ivan Rainbolt",
+          "titel": "mediatek: filogic: drop bogus WAN and LAN LEDs on Cudy WR3000P v1"
+        },
+        {
+          "sha": "bafaf2665a7f",
+          "datum": "2026-09-24",
+          "autor": "Ivan Rainbolt",
+          "titel": "mediatek: filogic: light the Internet LED on Cudy WR3000S v1"
+        }
+      ]
+    },
+    "openwrt_dts": {
+      "mt7981b-cudy-wr3000h-v1.dts": "// SPDX-License-Identifier: (GPL-2.0 OR MIT)\n\n/dts-v1/;\n\n#include \"mt7981b-cudy-wr3000h-v1.dtsi\"\n\n/ {\n\tmodel = \"Cudy WR3000H v1\";\n\tcompatible = \"cudy,wr3000h-v1\", \"mediatek,mt7981\";\n};\n\n&spi_nand {\n\tmediatek,nmbm;\n\tmediatek,bmt-max-ratio = <1>;\n\tmediatek,bmt-max-reserved-blocks = <64>;\n};\n",
+      "mt7981b-cudy-wr3000h-v1.dtsi": "// SPDX-License-Identifier: (GPL-2.0 OR MIT)\n\n/dts-v1/;\n\n#include \"mt7981b-cudy-wr3000-nand.dtsi\"\n\n/ {\n\taliases {\n\t\tlabel-mac-device = &gmac0;\n\t\tled-boot = &led_status;\n\t\tled-failsafe = &led_status;\n\t\tled-running = &led_status;\n\t\tled-upgrade = &led_status;\n\t\tserial0 = &uart0;\n\t};\n\n\tleds {\n\t\tcompatible = \"gpio-leds\";\n\n\t\tled_status: led-status {\n\t\t\tfunction = LED_FUNCTION_STATUS;\n\t\t\tcolor = <LED_COLOR_ID_WHITE>;\n\t\t\tgpios = <&pio 5 GPIO_ACTIVE_LOW>;\n\t\t};\n\n\t\tled-internet {\n\t\t\tfunction = LED_FUNCTION_WAN_ONLINE;\n\t\t\tcolor = <LED_COLOR_ID_WHITE>;\n\t\t\tgpios = <&pio 11 GPIO_ACTIVE_LOW>;\n\t\t};\n\n\t\tled-wps {\n\t\t\tfunction = LED_FUNCTION_WPS;\n\t\t\tcolor = <LED_COLOR_ID_WHITE>;\n\t\t\tgpios = <&pio 9 GPIO_ACTIVE_LOW>;\n\t\t};\n\n\t\tled-wlan2g {\n\t\t\tfunction = LED_FUNCTION_WLAN_2GHZ;\n\t\t\tcolor = <LED_COLOR_ID_WHITE>;\n\t\t\tgpios = <&pio 6 GPIO_ACTIVE_LOW>;\n\t\t\tlinux,default-trigger = \"phy0tpt\";\n\t\t};\n\n\t\tled-wlan5g {\n\t\t\tfunction = LED_FUNCTION_WLAN_5GHZ;\n\t\t\tcolor = <LED_COLOR_ID_WHITE>;\n\t\t\tgpios = <&pio 7 GPIO_ACTIVE_LOW>;\n\t\t\tlinux,default-trigger = \"phy1tpt\";\n\t\t};\n\n\t\tled-lan1 {\n\t\t\tfunction = LED_FUNCTION_LAN;\n\t\t\tfunction-enumerator = <1>;\n\t\t\tcolor = <LED_COLOR_ID_WHITE>;\n\t\t\tgpios = <&pio 8 GPIO_ACTIVE_LOW>;\n\t\t};\n\n\t\tled-lan2 {\n\t\t\tfunction = LED_FUNCTION_LAN;\n\t\t\tfunction-enumerator = <2>;\n\t\t\tcolor = <LED_COLOR_ID_WHITE>;\n\t\t\tgpios = <&pio 10 GPIO_ACTIVE_LOW>;\n\t\t};\n\n\t\tled-lan3 {\n\t\t\tfunction = LED_FUNCTION_LAN;\n\t\t\tfunction-enumerator = <3>;\n\t\t\tcolor = <LED_COLOR_ID_WHITE>;\n\t\t\tgpios = <&pio 12 GPIO_ACTIVE_LOW>;\n\t\t};\n\n\t\tled-lan4 {\n\t\t\tfunction = LED_FUNCTION_LAN;\n\t\t\tfunction-enumerator = <4>;\n\t\t\tcolor = <LED_COLOR_ID_WHITE>;\n\t\t\tgpios = <&pio 13 GPIO_ACTIVE_LOW>;\n\t\t};\n\n\t\tled-wan {\n\t\t\tfunction = LED_FUNCTION_WAN;\n\t\t\tcolor = <LED_COLOR_ID_WHITE>;\n\t\t\tgpios = <&pio 35 GPIO_ACTIVE_LOW>;\n\t\t};\n\t};\n};\n\n&eth {\n\tgmac1: mac@1 {\n\t\tcompatible = \"mediatek,eth-mac\";\n\t\treg = <1>;\n\t\tphy-mode = \"2500base-x\";\n\t\tphy-handle = <&phy6>;\n\t\tnvmem-cell-names = \"mac-address\";\n\t\tnvmem-cells = <&macaddr_bdinfo_de00 1>;\n\t\tlabel = \"wan\";\n\t};\n};\n\n&mdio_bus {\n\t/* We need to have the reset GPIO on the MDIO bus node,\n\t * otherwise the PHY would be held in reset during PHY detection */\n\treset-gpios = <&pio 3 GPIO_ACTIVE_LOW>;\n\treset-delay-us = <100000>;\n\treset-post-delay-us = <100000>;\n\n\tphy6: ethernet-phy@6 {\n\t\t/* Either Realtek RTL8221B-VB-CG or Motorcomm YT8821,\n\t\t * depending on HW revision */\n\t\tcompatible = \"ethernet-phy-ieee802.3-c45\";\n\t\treg = <6>;\n\t};\n};\n\n&switch {\n\tports {\n\t\t#address-cells = <1>;\n\t\t#size-cells = <0>;\n\n\t\tport@0 {\n\t\t\treg = <0>;\n\t\t\tlabel = \"lan4\";\n\t\t};\n\n\t\tport@1 {\n\t\t\treg = <1>;\n\t\t\tlabel = \"lan3\";\n\t\t};\n\n\t\tport@2 {\n\t\t\treg = <2>;\n\t\t\tlabel = \"lan2\";\n\t\t};\n\n\t\tport@3 {\n\t\t\treg = <3>;\n\t\t\tlabel = \"lan1\";\n\t\t};\n\n\t\tport@6 {\n\t\t\treg = <6>;\n\t\t\tlabel = \"cpu\";\n\t\t\tethernet = <&gmac0>;\n\t\t\tphy-mode = \"2500base-x\";\n\n\t\t\tfixed-link {\n\t\t\t\tspeed = <2500>;\n\t\t\t\tfull-duplex;\n\t\t\t\tpause;\n\t\t\t};\n\t\t};\n\t};\n};\n\n",
+      "mt7981b-cudy-wr3000-nand.dtsi": "// SPDX-License-Identifier: (GPL-2.0 OR MIT)\n\n#include <dt-bindings/leds/common.h>\n#include \"mt7981b.dtsi\"\n\n/ {\n\tchosen {\n\t\tstdout-path = \"serial0:115200n8\";\n\t};\n\n\tgpio-keys {\n\t\tcompatible = \"gpio-keys\";\n\n\t\treset {\n\t\t\tlabel = \"reset\";\n\t\t\tlinux,code = <KEY_RESTART>;\n\t\t\tgpios = <&pio 1 GPIO_ACTIVE_LOW>;\n\t\t};\n\n\t\twps {\n\t\t\tlabel = \"wps\";\n\t\t\tlinux,code = <KEY_WPS_BUTTON>;\n\t\t\tgpios = <&pio 0 GPIO_ACTIVE_LOW>;\n\t\t};\n\t};\n};\n\n&uart0 {\n\tstatus = \"okay\";\n};\n\n&watchdog {\n\tstatus = \"okay\";\n};\n\n&eth {\n\tpinctrl-names = \"default\";\n\tpinctrl-0 = <&mdio_pins>;\n\tstatus = \"okay\";\n\n\tgmac0: mac@0 {\n\t\tcompatible = \"mediatek,eth-mac\";\n\t\treg = <0>;\n\t\tphy-mode = \"2500base-x\";\n\n\t\tnvmem-cell-names = \"mac-address\";\n\t\tnvmem-cells = <&macaddr_bdinfo_de00 0>;\n\n\t\tfixed-link {\n\t\t\tspeed = <2500>;\n\t\t\tfull-duplex;\n\t\t\tpause;\n\t\t};\n\t};\n};\n\n&mdio_bus {\n\tswitch: switch@1f {\n\t\tcompatible = \"mediatek,mt7531\";\n\t\treg = <31>;\n\t\treset-gpios = <&pio 39 GPIO_ACTIVE_HIGH>;\n\t\tinterrupt-controller;\n\t\t#interrupt-cells = <1>;\n\t\tinterrupt-parent = <&pio>;\n\t\tinterrupts = <38 IRQ_TYPE_LEVEL_HIGH>;\n\t};\n};\n\n&spi0 {\n\tpinctrl-names = \"default\";\n\tpinctrl-0 = <&spi0_flash_pins>;\n\tstatus = \"okay\";\n\n\tspi_nand: flash@0 {\n\t\tcompatible = \"spi-nand\";\n\t\treg = <0>;\n\t\tspi-max-frequency = <52000000>;\n\n\t\tspi-cal-enable;\n\t\tspi-cal-mode = \"read-data\";\n\t\tspi-cal-datalen = <7>;\n\t\tspi-cal-data = /bits/ 8 <0x53 0x50 0x49 0x4E 0x41 0x4E 0x44>;\n\t\tspi-cal-addrlen = <5>;\n\t\tspi-cal-addr = /bits/ 32 <0x0 0x0 0x0 0x0 0x0>;\n\n\t\tspi-tx-bus-width = <4>;\n\t\tspi-rx-bus-width = <4>;\n\n\t\tpartitions {\n\t\t\tcompatible = \"fixed-partitions\";\n\t\t\t#address-cells = <1>;\n\t\t\t#size-cells = <1>;\n\n\t\t\tpartition@0 {\n\t\t\t\tlabel = \"BL2\";\n\t\t\t\treg = <0x00000 0x0100000>;\n\t\t\t\tread-only;\n\t\t\t};\n\n\t\t\tpartition@100000 {\n\t\t\t\tlabel = \"u-boot-env\";\n\t\t\t\treg = <0x0100000 0x0080000>;\n\t\t\t\tread-only;\n\t\t\t};\n\n\t\t\tpartition@180000 {\n\t\t\t\tlabel = \"Factory\";\n\t\t\t\treg = <0x180000 0x0200000>;\n\t\t\t\tread-only;\n\n\t\t\t\tnvmem-layout {\n\t\t\t\t\tcompatible = \"fixed-layout\";\n\t\t\t\t\t#address-cells = <1>;\n\t\t\t\t\t#size-cells = <1>;\n\n\t\t\t\t\teeprom_factory_0: eeprom@0 {\n\t\t\t\t\t\treg = <0x0 0x1000>;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\n\t\t\tpartition@380000 {\n\t\t\t\tlabel = \"bdinfo\";\n\t\t\t\treg = <0x380000 0x0040000>;\n\t\t\t\tread-only;\n\n\t\t\t\tnvmem-layout {\n\t\t\t\t\tcompatible = \"fixed-layout\";\n\t\t\t\t\t#address-cells = <1>;\n\t\t\t\t\t#size-cells = <1>;\n\n\t\t\t\t\tmacaddr_bdinfo_de00: macaddr@de00 {\n\t\t\t\t\t\tcompatible = \"mac-base\";\n\t\t\t\t\t\treg = <0xde00 0x6>;\n\t\t\t\t\t\t#nvmem-cell-cells = <1>;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\n\t\t\tpartition@3c0000 {\n\t\t\t\tlabel = \"FIP\";\n\t\t\t\treg = <0x3c0000 0x0200000>;\n\t\t\t\tread-only;\n\t\t\t};\n\n\t\t\tubi: partition@5c0000 {\n\t\t\t\tlabel = \"ubi\";\n\t\t\t\treg = <0x5c0000 0x4000000>;\n\t\t\t\tcompatible = \"linux,ubi\";\n\t\t\t};\n\t\t};\n\t};\n};\n\n&pio {\n\tspi0_flash_pins: spi0-pins {\n\t\tmux {\n\t\t\tfunction = \"spi\";\n\t\t\tgroups = \"spi0\", \"spi0_wp_hold\";\n\t\t};\n\t\tconf-pu {\n\t\t\tpins = \"SPI0_CS\", \"SPI0_HOLD\", \"SPI0_WP\";\n\t\t\tdrive-strength = <MTK_DRIVE_8mA>;\n\t\t\tbias-pull-up = <MTK_PUPD_SET_R1R0_11>;\n\t\t};\n\n\t\tconf-pd {\n\t\t\tpins = \"SPI0_CLK\", \"SPI0_MOSI\", \"SPI0_MISO\";\n\t\t\tdrive-strength = <MTK_DRIVE_8mA>;\n\t\t\tbias-pull-down = <MTK_PUPD_SET_R1R0_11>;\n\t\t};\n\t};\n};\n\n&wifi {\n\tstatus = \"okay\";\n\tnvmem-cells = <&eeprom_factory_0>;\n\tnvmem-cell-names = \"eeprom\";\n};\n"
+    },
+    "openwrt_image_mk": {
+      "cudy_wr3000h-v1": "define Device/cudy_wr3000h-v1\n  DEVICE_VENDOR := Cudy\n  DEVICE_MODEL := WR3000H\n  DEVICE_VARIANT := v1\n  DEVICE_DTS := mt7981b-cudy-wr3000h-v1\n  DEVICE_DTS_DIR := ../dts\n  SUPPORTED_DEVICES += R63\n  UBINIZE_OPTS := -E 5\n  BLOCKSIZE := 128k\n  PAGESIZE := 2048\n  IMAGE_SIZE := 65536k\n  KERNEL_IN_UBI := 1\n  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata\n  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware kmod-phy-motorcomm\nendef\nTARGET_DEVICES += cudy_wr3000h-v1",
+      "cudy_wr3000h-v1-ubootmod": "define Device/cudy_wr3000h-v1-ubootmod\n  DEVICE_VENDOR := Cudy\n  DEVICE_MODEL := WR3000H\n  DEVICE_VARIANT := v1 (OpenWrt U-Boot layout)\n  DEVICE_DTS := mt7981b-cudy-wr3000h-v1-ubootmod\n  DEVICE_DTS_DIR := ../dts\n  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware kmod-phy-motorcomm\n  UBINIZE_OPTS := -E 5\n  BLOCKSIZE := 128k\n  PAGESIZE := 2048\n  KERNEL_IN_UBI := 1\n  UBOOTENV_IN_UBI := 1\n  IMAGES := sysupgrade.itb\n  KERNEL_INITRAMFS_SUFFIX := -recovery.itb\n  KERNEL := kernel-bin | libdeflate-gzip\n  KERNEL_INITRAMFS := kernel-bin | lzma | \\\n\tfit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb with-initrd | pad-to 64k\n  IMAGE/sysupgrade.itb := append-kernel | \\\n\tfit gzip $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb external-static-with-rootfs | append-metadata\n  ARTIFACTS := preloader.bin bl31-uboot.fip\n  ARTIFACT/preloader.bin := mt7981-bl2 cudy-ddr3\n  ARTIFACT/bl31-uboot.fip := mt7981-bl31-uboot cudy_wr3000h-v1\nendef\nTARGET_DEVICES += cudy_wr3000h-v1-ubootmod"
+    },
+    "openwrt_release_pruefung": {
+      "v24.10.0": "nicht enthalten",
+      "v24.10.1": "nicht enthalten",
+      "v24.10.2": "enthalten"
+    },
+    "gluon_targets": {
+      "main": "device('cudy-wr3000h-v1', 'cudy_wr3000h-v1', {\n\tfactory = false,\n})",
+      "v2025.1.x": "device('cudy-wr3000h-v1', 'cudy_wr3000h-v1', {\n\tfactory = false,\n})",
+      "v2025.1": "nicht enthalten",
+      "v2025.1.1": "enthalten",
+      "v2023.2.x": "nicht enthalten",
+      "releases": {
+        "v2025.1": "2025-12-31",
+        "v2025.1.1": "2026-05-04",
+        "v2025.1.2": "2026-08-11",
+        "v2025.1.3": "2026-08-18"
+      }
+    },
+    "gluon_commit": {
+      "sha": "42592634abc17ee2e4df1e3c4169a1638384adf8",
+      "autor": "Adorfer",
+      "datum": "2026-01-18T16:29:30Z",
+      "titel": "ramips-mt7621: Add Cudy WR3000h (v1.0) 2.5G WAN model (#3672)",
+      "dateien": [
+        "docs/user/supported_devices.rst",
+        "targets/mediatek-filogic"
+      ],
+      "supported_devices_rst": "mediatek-filogic / Cudy: + WR3000h (v1)"
+    },
+    "forum_support": {
+      "titel": "Support for Cudy WR3000H",
+      "beitraege": 56,
+      "erstellt": "2024-12-03",
+      "letzter": "2025-01-10",
+      "aufrufe": 4199,
+      "auszug": [
+        {
+          "nr": 1,
+          "datum": "2024-12-03",
+          "nutzer": "juampe",
+          "text": "I have a WR3000H and It appears to be a OpenWRT \"with a skin\" Official firmware https://www.cudy.com/pages/download-center/wr3000h-1-0 https://www.cudy.com/products/wr3000h-1-0 There are support for WR3000 and I can see there are a snapshot of WR3000S The models WR3000H WR3000P and WR3000S are different from vendor firwmare prespective. But have the same chasis. Boot System log https://pastebin.com/z7QPJqM0"
+        },
+        {
+          "nr": 2,
+          "datum": "2024-12-03",
+          "nutzer": "zekica",
+          "text": "This appears similar to WR3000S, but with 2.5Gbps wan port. Adding support for this device would probably go something like: purchase it solder a serial ttl connectors and connect a USB to ttl and try booting wr3000s ramfs image via tftp without touching the flash memory and see what works decomplie the binary flattened device tree from their image and see what the difference is with other WR3000 devices make a new .dts for it and try building an image fix small things: eth interface names, leds... make a pull request"
+        },
+        {
+          "nr": 3,
+          "datum": "2024-12-18",
+          "nutzer": "juampe",
+          "text": "Hi all, at this time the WR3000H was disasembled and I conected some wires to serial pins via a USB serial. This is the board for reference. Serial 8N1 115200 IMG_20241218_154633 1920×1442 301 KB"
+        },
+        {
+          "nr": 4,
+          "datum": "2024-12-18",
+          "nutzer": "juampe",
+          "text": "With the serial connected I got 2 outputs from serial log, one in the normal mode https://pastebin.com/xvNuKM4Y and the other in the TFTP mode https://pastebin.com/nL2a04Li (pressing reset for serveral seconds in power on). I try to upload via tftp the openwrt-mediatek-filogic-cudy_wr3000h-v1-initramfs-kernel.bin file renamed as recovery.bin, but it does nothing. Some hint to enter u-boot command line?"
+        },
+        {
+          "nr": 12,
+          "datum": "2024-12-18",
+          "nutzer": "juampe",
+          "text": "Well the ethernet ports work but are displaced, i.e. the logical WAN port (gray cable) is mapped on the physical LAN1 and the physical WAN port does not work (green cable), physical W4321 mapped logically to X321W, where X does not work. The iw list is as follows https://pastebin.com/zqfj11NE IMG_20241218_212812 1920×840 87.4 KB"
+        },
+        {
+          "nr": 14,
+          "datum": "2024-12-18",
+          "nutzer": "badulesia",
+          "text": "Good news, you are working great. X is the 2.5G eth which need a new package to work. WR3000S does not have it. Any clue on the motherboard about the chip?"
+        },
+        {
+          "nr": 28,
+          "datum": "2024-12-20",
+          "nutzer": "juampe",
+          "text": "Can you do a lsmod in their stock rom? No but i can mount rootfs. I think that the main hardware is enbedded in kernel. (Keep in mind I'm not familitar with in enbeeded linux, an I have to search where is each thing, and how to handle It :P) [Sure I need to read some additional docs] root@OpenWrt:/# cat /proc/mtd dev: size erasesize name mtd0: 00100000 00020000 \"BL2\" mtd1: 00080000 00020000 \"u-boot-env\" mtd2: 00200000 00020000 \"Factory\" mtd3: 00040000 00020000 \"bdinfo\" mtd4: 00200000 00020000 \"FIP\" mtd5: 04000000 00020000 \"ubi\" root@OpenWrt:/# mount -o ro /dev/ubiblock0_1 /rootfs/ root@OpenWrt"
+        },
+        {
+          "nr": 32,
+          "datum": "2024-12-21",
+          "nutzer": "juampe",
+          "text": "A walkthough into the firmware (to someone need it in the future) binwalk WR3000H-R63-2.2.7-20240906-085755-sysupgrade.bin DECIMAL HEXADECIMAL DESCRIPTION -------------------------------------------------------------------------------- 511733 0x7CEF5 CRC32 polynomial table, little endian 560494 0x88D6E LZO compressed data 604921 0x93AF9 Flattened device tree, size: 7664 bytes, version: 17 2099200 0x200800 Flattened device tree, size: 17696044 bytes, version: 17 2099360 0x2008A0 UBI erase count header, version: 1, EC: 0x0, VID header offset: 0x800, data offset: 0x1000 Extract data binwalk -e WR"
+        },
+        {
+          "nr": 35,
+          "datum": "2024-12-22",
+          "nutzer": "juampe",
+          "text": "Now inside cudy I can check that /sys/firmware/devicetree/base has the same structure as your gist The modules related with mediatek root@WR3000H:/sys/firmware/devicetree/base# lsmod |grep mt conninfra 167936 1 mt_wifi mt_wifi 10264576 5 mtk_warp_proxy mtk_warp 368640 1 mtk_warp_proxy mtk_warp_proxy 16384 0 mtkhnat 196608 2 mt_wifi,mtk_warp"
+        },
+        {
+          "nr": 38,
+          "datum": "2024-12-22",
+          "nutzer": "juampe",
+          "text": "Diferential clues, about how many interrupts uses earch fw root@WR3000H:/proc# cat interrupts CPU0 CPU1 3: 222630 136425 GICv3 30 Level arch_timer 7: 2495 52461 GICv3 237 Level 0000:00:00.0 9: 1852 0 GICv3 243 Level ccif_wo_isr 11: 0 0 GICv3 142 Level wdt_bark 12: 21628 0 GICv3 155 Level ttyS0 56: 2 0 mt-eint 38 Level gsw@0 75: 38190 0 GICv3 221 Level 15100000.ethernet 80: 22365 2 GICv3 229 Level 15100000.ethernet 81: 0 0 GICv3 230 Level 15100000.ethernet 87: 691827 0 GICv3 172 Level 1100a000.spi 88: 0 0 GICv3 173 Level 1100b000.spi 89: 27 0 GICv3 205 Level xhci-hcd:usb1 IPI0: 39493 376918 Res"
+        },
+        {
+          "nr": 48,
+          "datum": "2024-12-23",
+          "nutzer": "juampe",
+          "text": "GAME OVER Playing with u-boot echo -e \"/dev/ubi0_0\\t0x0\\t0x20000\\t0x20000\" > /etc/fw_env.config fw_printenv root@OpenWrt:~# fw_printenv Warning: Bad CRC, using default environment bootcmd=run distro_bootcmd bootdelay=2 baudrate=115200 loadaddr=0x0 mtdids= mtdparts= bootm_size=0x10000000 eth6addr=02:00:11:22:33:47 ethaddr=02:00:11:22:33:44 fdt_addr_r=0xc00000 ipaddr=192.0.2.1 kernel_addr_r=0x1000000 pxefile_addr_r=0x2000 ramdisk_addr_r=0x2000000 scriptaddr=0x1000 stderr=serial,vidconsole stdin=serial stdout=serial,vidconsole fw_setenv bootcmd MT7981> printenv baudrate=115200 bootdelay=2 bootmenu_0=Startup system (Default)=mtkboardboot bootmenu_1=Upgrade firmware=mtkupgrade fw bootmenu_2=Upgrade ATF BL2=mtkupgrade bl2 bootmenu_3=Upgrade ATF FIP=mtkupgrade fip bootmenu_4=Upgrade single image=mtkupgrade simg bootmenu_5=Load image=mtkload ethaddr=be:8f:0b:62:d1:c8 fdtcontroladdr=4ffc3a00 ipaddr=192.168.1.112 loadaddr=0x46000000 mtdids=nmbm0=nmbm0 mtdparts=nmbm0:1024k(bl2),512k(u-boot-env),2048k(factory),256k(bdinfo),2048k(fip),65536k(ubi) netmask=255.255.255.0 serverip=192.168.1.88 stderr=serial@11002000 stdin=serial@11002000 stdout=serial@11002000 Input U-Boot's IP address: 192.168.1.112 Input TFTP server's IP address: 192.168.1.88 Input IP netmask: 255.255.255.0 Input file name: cudy.bin Using ethernet@15100000 device TFTP from server 192.168.1.88; our IP address is 192.168.1.112 Filename 'cudy.bin'. Load address: 0x46000000 Loading: ####################################.... done"
+        },
+        {
+          "nr": 49,
+          "datum": "2024-12-23",
+          "nutzer": "juampe",
+          "text": "DEBRICK TO BASIC STOCK Program to boot https://github.com/981213/mtk_uartboot/releases mt7981-ram-ddr3-bl2.bin from compile openwrt cudy-bl2.bin dump from mtd0 cudy-fip.bin dump from mtd4 PS> .\\mtk_uartboot.exe -s COM3 -a -p .\\mt7981-ram-ddr3-bl2.bin -f .\\cudy-fip.bin MT7981> tftp ${loadaddr} cudy-bl2.bin nand erase 0x000000000000 0x000000100000 nand write.e ${loadaddr} 0x000000000000 0x000000100000 tftp ${loadaddr} cudy-fip.bin nand erase 0x0000003c0000 0x0000005c0000 nand write.e ${loadaddr} 0x0000003c0000 0x0000005c0000 nand erase 0x000000100000 0x000000180000 nand erase 0x000000180000 0x000000380000 nand erase 0x000000380000 0x0000003c0000 nand erase 0x0000005c0000 0x0000045c0000 reset keep press reset (until all led flash-one led keep-one led keep,one led flash) -> TFTP recovery.bin(WR3000H-R63-2.2.7-20240906-085755-sysupgrade.bin) (192.168.0.88->192.168.112) *** Upgrading oem fit Firmware *** Using ethernet@15100000 device TFTP from server 192.168.1.88; our IP address is 192.168.1.112 Filename 'recovery.bin'. Load address: 0x46000000 Loading: ###################################... done Bytes transferred = 19664413 (12c0e1d hex) rsa verify ok ## Copying 'ubi' subimage from FIT image at 46200800 ... crc32+ Erasing from 0x0 to 0x10bffff, size 0x10c0000 ... OK Writing from 0x462008a0 to 0x0, size 0x10c0000 ... OK Verifying from 0x0 to 0x10bffff, size 0x10c0000 ... OK *** oem fit Firmware upgrade completed! *** Rebooting ... resetting ..."
+        },
+        {
+          "nr": 50,
+          "datum": "2024-12-30",
+          "nutzer": "juampe",
+          "text": "juampe: nand erase 0x000000100000 0x000000180000 nand erase 0x000000180000 0x000000380000 nand erase 0x000000380000 0x0000003c0000 nand erase 0x0000005c0000 0x0000045c0000 OMG nand erased too much instead of size, I use end of partition. Now the sizes were correct and I got Original firmware from backup setenv mtdids nmbm0=nmbm0 setenv mtdparts nmbm0:1024k(bl2),512k(u-boot-env),2048k(factory),256k(bdinfo),2048k(fip),65536k(ubi) setenv ethaddr be:8f:0b:62:d1:c8 setenv ipaddr 192.168.1.112 setenv loadaddr 0x46000000 setenv netmask 255.255.255.0 setenv serverip 192.168.1.88 setenv stderr serial@11002000 setenv stdin serial@11002000 setenv stdout serial@11002000 tftp ${loadaddr} cudy-bl2.bin;nand erase 0x000000000000 0x3a2e0;nand write.e ${loadaddr} 0x000000000000 0x3a2e0 tftp ${loadaddr} cudy-ubootenv.bin;nand erase 0x000000100000 0x80000;nand write.e ${loadaddr} 0x000000100000 0x80000 tftp ${loadaddr} cudy-factory.bin;nand erase 0x000000180000 0x20000;nand write.e ${loadaddr} 0x000000180000 0x20000 tftp ${loadaddr} cudy-bdinfo.bin;nand erase 0x000000380000 0x40000;nand write.e ${loadaddr} 0x000000380000 0x40000 tftp ${loadaddr} cudy-fip.bin;nand erase 0x0000003c0000 0xb0a80;nand write.e ${loadaddr} 0x0000003c0000 0xb0a80 tftp ${loadaddr} cudy-ubi.bin;nand erase 0x0000005c0000 0x4000000;nand write.e ${loadaddr} 0x0000005c0000 0x4000000"
+        },
+        {
+          "nr": 52,
+          "datum": "2025-01-02",
+          "nutzer": "juampe",
+          "text": "OMG it was really fun! Now it's working! I wrote to cudy support and they send me the original DTS https://pastebin.com/ekAe6ZVp I'ts not different from the decompiled version from @zekica but it help me to got more perspective and make leds work properly adn add some gpio. This issue https://github.com/openwrt/openwrt/issues/15093 put me in the right way to get link up and ethtool proper detection and later to get gmac1 working with it 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1000 [0/91991] link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo valid_lft forever preferred_lft forever inet6 ::1/128 scope host valid_lft forever preferred_lft forever 2: lan: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1504 qdisc mq state UP qlen 1000 link/ether 80:af:ca:5f:2f:8c brd ff:ff:ff:ff:ff:ff inet6 fe80::82af:caff:fe5f:2f8c/64 scope link valid_lft forever preferred_lft forever 3: wan: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP qlen 1000 link/ether 80:af:ca:5f:2f:8d brd ff:ff:ff:ff:ff:ff inet 192.168.0.207/24 brd 192.168.0.255 scope global wan valid_lft forever preferred_lft forever inet6 fddf:aaaa:aaaa:0:82af:caff:fe5f:2f8d/64 scope global noprefixroute valid_lft forever preferred_lft 604797sec inet6 fddf:aaaa:aaaa::93c/128 scope global dynamic noprefixroute valid_lft 43187sec preferred_lft 43187sec inet6 fe80::82af:caff:fe5f:2f8d/64 scope link valid_lft forever preferred_lft forever 4: lan1@lan: <BROADCAST,MULTIC"
+        },
+        {
+          "nr": 53,
+          "datum": "2025-01-02",
+          "nutzer": "juampe",
+          "text": "Pull request sent to upstream https://github.com/openwrt/openwrt/pull/17458 Thanks to all, and happy new year."
+        },
+        {
+          "nr": 55,
+          "datum": "2025-01-10",
+          "nutzer": "juampe",
+          "text": "Add a fix to make sysupgrade works ok with ubi partition in platform.sh cudy,wr3000h-v1) CI_UBIPART=\"ubi\" nand_do_upgrade \"$1\" ;;"
+        }
+      ]
+    },
+    "forum_platinenfoto": {
+      "bild": "IMG_20241218_154633 1920×1442, Platinenunterseite",
+      "seriell_beschriftung": "TP42 = TX (über R1030), TP43 = RX (über R1031), TP44 = GND, TP45 = 3V3; vier runde Lötpunkte ohne Stiftleiste, Beschriftung im Bestückungsdruck",
+      "sonstiges": "Platine ohne Lüfter-Anschluss erkennbar; 11 LEDs an der Vorderkante; Gehäuseteile entfernt"
+    },
+    "hersteller": {
+      "titel": "AX3000 2.5G Mesh Wi-Fi 6 Router, WR3000H 1.0",
+      "kurztext": "A WiFi 6 router with 2.5 Gbps internet connectivity, ideal for multi-gig home internet, connecting a large number of devices, and reducing latency.",
+      "werbetext": [
+        "The advanced 4-nm dual-core CPU ... A 128 MB ROM allows more software features, and 256 MB RAM connects more clients.",
+        "Five streams—3 in 5 GHz and 2 in 2.4 GHz—enhance the agility to navigate signals through obstacles.",
+        "In addition to the 2T2R structure, one aditional 5 GHz stream enhance the agility to navigate signals through obstacles.",
+        "Designed to connect 200 devices, with a maximum capacity of 512 devices"
+      ],
+      "hardware_specs": {
+        "Model Version": "WR3000H 1.0",
+        "CPU Details": "1.3 GHz Dual-Core, ARM Cortex-A53",
+        "Flash/ROM": "128 MB (1 Gbit) NAND",
+        "DDR/RAM": "256 MB (2 Gbit) DDR3",
+        "5 GHz Wi-Fi Speed": "2402 Mbps",
+        "2.4 GHz Wi-Fi Speed": "574 Mbps",
+        "5 GHz Wi-Fi Streams": "2 Spatial Streams with 3T3R",
+        "2.4 GHz Wi-Fi Streams": "2 Spatial Streams",
+        "Wi-Fi Antennas": "4× Fixed",
+        "FEM or PA/LNA": "5 GHz: 3× Internal, 2.4 GHz: 2× Internal",
+        "Beamforming": "ja",
+        "Range Performance": "Max: 220 m (722 ft)",
+        "2.5G RJ45 Ports": "1",
+        "Gigabit RJ45 Ports": "4",
+        "Ethernet Notes": "The 2.5G port is WAN port, the Gigabit ports are LAN ports",
+        "LED": "System, Internet, WPS, 2.4 GHz Wi-Fi, 5 GHz Wi-Fi, WAN, LAN",
+        "Physical Buttons": "Power On/Off Button, WPS Button, Reset Button",
+        "Power Input Type": "DC Jack",
+        "Power Methods": "DC",
+        "Power Input": "12V⎓1.5A",
+        "Max Power Consumption (W)": "12W",
+        "Idle Power Consumption (W)": "4.5w",
+        "Power Adapter In the Box": "Input: 100-240V~, 50/60Hz; Output: 12V⎓1.5A",
+        "Environment": "Operating Temperature: 0 ℃ ~ 40 ℃ (32 ℉ ~104 ℉); Storage Temperature: -40 ℃ ~ 70 ℃ (-40 ℉ ~ 158 ℉); Humidity: 10% ~ 90% non-condensing; Storage Humidity: 5% ~ 95% non-condensing",
+        "Certifications": "FCC, CE",
+        "Installation": "Desktop, Wall-mount",
+        "Dimension": "Main Part: 173×123.8×33 mm (6.81×4.87×1.3 inches); Antenna: 171 mm (6.73 inches)",
+        "Product Weight": "347.6 g (12.26 oz.)",
+        "Package Content": "WR3000H, Power Adapter, Ethernet Cable, Installation Guide",
+        "Retail Package Weight": "EU: 787.5 g (27.78 oz.)",
+        "Retail Package Dimension": "304×268×54 mm",
+        "Units per Carton": "20",
+        "Carton Dimension": "55.6×55.5×32.5 cm",
+        "Carton Gross Weight": "EU: 17.1 kg",
+        "Carton Net Weight": "EU: 15.8 kg"
+      },
+      "software_specs": {
+        "Wi-Fi Standards": "Wi-Fi 6",
+        "Separate Client": "ja",
+        "Max Wi-Fi Modulation": "1024-QAM",
+        "Wi-Fi Efficiency": "OFDMA, MU-MIMO, BSS Color",
+        "Max Capacity": "512",
+        "Recommended Client Upper Limit": "200",
+        "Wi-Fi Channel Width": "Auto/20/40/80/160 MHz",
+        "Wi-Fi Security": "WPA/WPA2/WPA3",
+        "Guest Network": "2.4 GHz, 5 GHz",
+        "Operation Modes": "Wi-Fi Router, Access Point, Range Extender, WISP, Client",
+        "Mesh": "Cudy Mesh",
+        "Mesh Backhaul": "Wireless Backhaul, Wired Backhaul",
+        "WAN Mode": "DHCP, Static IP, PPPOE, PPTP, L2TP",
+        "IP Versions": "IPv4/IPv6",
+        "IPv6 Protocols": "Relay, Dynamic (SLAAC/DHCPv6), Static (Fixed IP), Passthrough, 464XLAT, MAP-E, DS-Lite",
+        "IPTV/VLAN": "Bridge, Tag VLAN, VoIP VLAN, IPTV VLAN",
+        "VPN Server": "WireGuard, OpenVPN, IPsec, Zerotier, PPTP, L2TP",
+        "VPN Client": "WireGuard, OpenVPN, IPsec, Zerotier, PPTP, L2TP",
+        "VPN Performance": "OpenVPN Client (UL/DL): 90 / 120 Mbps; OpenVPN Server (UL/DL): 180 / 160 Mbps; WireGuard Client (UL/DL): 224 / 230 Mbps; WireGuard Server (UL/DL): 360 / 314 Mbps",
+        "System": "LED Control",
+        "Remote Control Method": "Config Page via HTTPS, App Control, TR069/TR098/TR111/TR143/TR181",
+        "Firmware Upgrade": "Local Update, App (Over the Air), Online Update"
+      },
+      "bilder": [
+        "https://cdn.shopify.com/s/files/1/0673/4748/0820/files/WR3000H-A_21215563-30b4-44c4-a477-6361a75db052.png?v=1717136740",
+        "https://cdn.shopify.com/s/files/1/0673/4748/0820/files/WR3000H-B.png?v=1717136740",
+        "https://cdn.shopify.com/s/files/1/0673/4748/0820/files/WR3000H_1.0_-package-content.jpg?v=1741055483"
+      ]
+    },
+    "hersteller_downloads": {
+      "firmware": [
+        {
+          "version": "2.5.30",
+          "datum": "01-Sep-2026",
+          "datei": "WR3000H-R63-2.5.30-20260825-161645-sysupgrade.zip",
+          "groesse": "17.5 MB",
+          "notiz": "Ad Shield (AdGuard DNS), Surfshark VPN, Mesh-Topologie, Speed limits, WoL, WPS abschaltbar, High-contrast mode, Sicherheitsfixes"
+        },
+        {
+          "version": "2.4.5",
+          "datum": "16-May-2025",
+          "datei": "WR3000H-R63-2.4.5-20250515-105059-sysupgrade.zip",
+          "groesse": "15.9 MB",
+          "notiz": "APP 1.3, Mesh/Extender-Verbesserungen"
+        },
+        {
+          "version": "2.3.7",
+          "datum": "24-Jan-2025",
+          "datei": "WR3000H-R63-2.3.7-20250120-184423-sysupgrade.zip",
+          "groesse": "15.9 MB",
+          "notiz": "WAN als LAN im WISP-Modus"
+        },
+        {
+          "version": "2.2.7",
+          "datum": "12-Sep-2024",
+          "datei": "WR3000H-R63-2.2.7-20240906-085755-sysupgrade.zip",
+          "groesse": "15.7 MB",
+          "notiz": "Parental Control"
+        },
+        {
+          "version": "2.1.16",
+          "datum": "22-Jul-2024",
+          "datei": "WR3000H-R63-2.1.16-20240719-080823-sysupgrade.zip",
+          "groesse": "15.5 MB",
+          "notiz": "First released firmware."
+        }
+      ],
+      "dokumente": [
+        "Datasheet",
+        "Installation Guide (Multilingual)",
+        "Installation Guide (English)",
+        "Regulatory Compliance",
+        "CE Doc",
+        "PSTI Doc"
+      ],
+      "gpl": "21.02, 16-Apr-2024",
+      "psti_url": "https://www.cudy.com/cdn/shop/files/Statements_of_PSTI_Compliance_WR3000H.pdf?v=5246876630483620283",
+      "qig_mehrsprachig_url": "https://www.cudy.com/cdn/shop/files/WR3000H_Quick_Installation_Guide.pdf?v=8486385759030526475"
+    },
+    "hersteller_datenblatt": {
+      "Processor": "1.3GHz Dual-core ARM Cortex A53",
+      "ROM / Flash": "128 MB Nand Flash",
+      "RAM / DDR": "256 MB DDR3",
+      "Ethernet Port": "1 × 2.5Gbps WAN Port (PoE-IN Optional, See WR3000P); 4 × Gigabit LAN Ports",
+      "USB": "1 × USB 2.0 (Optional, See WR3000P)",
+      "Antennas": "4 × 5dBi Antennas",
+      "Buttons": "1 × Power ON/OFF Button, 1 × Reset Button, 1 × WPS(Mesh) Button",
+      "LEDs": "Power, Internet, 2.4G Wi-Fi, 5G Wi-Fi, WPS, WAN, LAN, VPN, USB (Optional)",
+      "Power Supply Options": "12V / 1.5A; 802.3at/af PoE via WAN (Optional, See WR3000P); 48~57V Passive PoE via WAN (Optional, See WR3000P)",
+      "Wi-Fi Specs": "AX3000 Wi-Fi 6",
+      "Wi-Fi Frequency": "2.4 GHz, 5 GHz",
+      "Wi-Fi Speed": "Up to 574 Mbps on 2.4GHz, Up to 2402 Mbps on 5GHz",
+      "Wi-Fi Standards": "IEEE 802.11ax/n/b/g 2.4 GHz, IEEE 802.11ax/ac/n/a 5 GHz",
+      "Wi-Fi Bandwidth": "20/40/80/160 MHz",
+      "Encryptions": "WPA-PSK, WPA2-PSK, WPA-PSK/WPA2-PSK, WPA3, WPA2-PSK/WPA3",
+      "Features": "DL/UL MU-MIMO, DL/UL OFDMA, Beamforming",
+      "Mesh Technology": "Cudy Whole Home Mesh, Easymesh R3*",
+      "CWMP": "TR069 / TR098 / TR111 / TR181",
+      "Product Dimensions": "173×123.8×33 mm (6.81×4.87×1.3\")",
+      "Package Dimensions": "304×268×54 mm",
+      "Contents": "1 × Wi-Fi Router, 1 × Power Adapter, 1 × Ethernet Cable (1 meter), 1 × Quick Installation Guide",
+      "Weight": "787.5 g (27.78 oz.) (Paket)",
+      "Environmental Requirements": "Operating Temperature: 0 °C ~ 40 °C; Storage Temperature: -40 °C 70 °C; Operating Humidity: 10% ~ 90% non-condensing; Storage Humidity: 5% ~ 95% non-condensing",
+      "Carton": "55.6×55.5×32.5 cm, 20 Units, GW 17.1 kg; NW: 5.8 kg (34.83 lbs) [sic]",
+      "Ordering info": {
+        "WR3000H_EU": "EU-Plug(Type C); 2.4 GHz Band 1~13; 5 GHz 36/40/44/48, 52/56/60/64, 100-140",
+        "WR3000H_US": "US-Plug(Type A); 2.4 GHz Band 1~11; 5 GHz 36-48, 52-64, 100-116, 132-140, 149-165"
+      }
+    },
+    "hersteller_kurzanleitung": {
+      "dokumentnummer": "810600274",
+      "schritte": "1 Modem aus; 2 Cudy-WAN an ISP-Modem; 3 Modem an, 2 min warten; 4 Netzteil an Router, warten bis 'System'-LED dauerhaft leuchtet; 5 per WLAN (SSID/Passwort auf der Unterseite) oder LAN; 6 http://cudy.net/ oder http://192.168.10.1/, Administrator-Passwort anlegen; 7 Quick Setup (Mode, Timezone, WAN, Wireless, Summary)",
+      "rueckseite_grafik": "von links: DC-Buchse, Power-Taster, (Reset/WPS), 2.5G WAN, 4× LAN"
+    },
+    "hersteller_ce_erklaerung": {
+      "Product Name": "AX3000 2.5G Mesh Wi-Fi 6 Router",
+      "Model Number": "WR3000H",
+      "Trademark": "Cudy",
+      "Directives": "2014/53/EU, 2011/65/EU, (EU) 2015/863",
+      "Standards": "EN 55032:2015+A1:2020; EN IEC 61000-3-2:2019+A1:2021; EN 61000-3-3:2013+A2:2021; EN 55035:2017+A11:2020; ETSI EN 301 489-1 V2.2.3; ETSI EN 301 489-17 V3.2.4; ETSI EN 301 489-3 V2.3.2; ETSI EN 300 328 V2.2.2; ETSI EN 301 893 V2.11 (2017-05); EN 50385:2017; EN IEC 62311:2020; EN 62232:2017; EN IEC 62368-1:2020+A11:2020; IEC 62321-x",
+      "Date of issue": "2024-4-2",
+      "Place": "Shenzhen, China",
+      "Verantwortlich": "Sun Qiaoyun, Regulatory Compliance Manager"
+    },
+    "hersteller_regulatorik": {
+      "I.T.E. Power Supply": "TPA259-18120-US-22087",
+      "Issue Date": "2024-05-11",
+      "Operating Frequency (Maximum transmitted power)": {
+        "2400 MHz - 2483.5 MHz": "20dBm",
+        "5150 MHz - 5250 MHz": "23dBm",
+        "5250 MHz - 5350 MHz": "23dBm",
+        "5470 MHz - 5725 MHz": "30dBm"
+      },
+      "National Restrictions": "This device may only be used indoors in all EU member states and EFTA countries, and Northern Ireland.",
+      "UKCA": "This device may only be used indoors in Great Britain.",
+      "Safety": "Operation Temperature: 0° C to +40° C; Use only power supplies which are provided by manufacturer",
+      "Label": "The product label can be found at the bottom of the product and its I.T.E. power supply.",
+      "Symbole": "Class II equipment, Energy efficiency Marking, Direct current, Polarity of DC power connector, For indoor use only, Caution, Operator's manual, Recycling",
+      "Industry Canada": "CAN ICES-3 (B)/NMB-3(B)"
+    },
+    "fccid": {
+      "FCC ID": "2APRGWR3000H",
+      "Produkt": "AX3000 2.5G Mesh Wi-Fi 6 Router",
+      "Grantee": "Shenzhen Cudy Technology Co., Ltd. (2APRG)",
+      "Test Firm": "BTL Inc. (Dongguan)",
+      "Latest application date": "2025-05-26",
+      "Operating Frequencies": [
+        {
+          "bereich": "2412-2462 MHz",
+          "zweck": "Original Equipment",
+          "datum": "2025-05-26"
+        },
+        {
+          "bereich": "5180-5240 MHz",
+          "zweck": "Original Equipment",
+          "datum": "2025-05-26"
+        }
+      ],
+      "Exhibits": [
+        "Users Manual-1 (PDF 198 KB)",
+        "Users Manual-2 (PDF 562.9 KB)",
+        "Internal Photos-1 (PDF 5 MB)",
+        "Internal Photos-2 (PDF 1.9 MB)",
+        "External Photos (PDF 4 MB)",
+        "ID Label/Location Info (PDF 1.5 MB)",
+        "Test Setup Photos (PDF 1.5 MB)",
+        "Antenna Specification--WR3000H-RLAN 5G 1 (PDF 1 MB)",
+        "Antenna Specification--WR3000H-RLAN 5G 2 (PDF 724.1 KB)",
+        "Antenna Specification-AR3000-2.4G (PDF 995.3 KB)",
+        "Antenna Specification-WR3000H-WLAN 2.4G (PDF 1.1 MB)",
+        "Antenna Specification-WR3000S-RLAN-5G",
+        "Test Report 1-3",
+        "Test Report NII-1..4",
+        "Test Report DFS",
+        "RF Exposure Info",
+        "WiFi Channels 12/13 Declaration letter",
+        "Confidentiality",
+        "Declaration of authorization",
+        "Attestation Statements",
+        "US Agent Letter"
+      ],
+      "verwandte_grants_2APRG": {
+        "2APRGWR3000SE": "2025-03-18 AX3000 Gigabit Mesh Wi-Fi 6 Router",
+        "2APRGMS30": "2024-07-01",
+        "2APRGAP01": "2024-03-22"
+      }
+    },
+    "fcc_label": {
+      "vorlage": "cudy / Model: WR3000H / AX3000 2.5G Mesh Wi-Fi 6 Router / Web: http://cudy.net/ IP: 192.168.10.1 Power: 12V⎓1.5A / ADD: 7/F, Lepu Tower (West), 66 Xingke Rd, Nanshan, Shenzhen, China / MFR: Shenzhen Cudy Technology Co., Ltd. / FCC ID: 2APRGWR3000H / IC: 28108-WR3000H / CAN ICES(B)/NMB(B)",
+      "druckbeispiel": "2.4G SSID: Cudy-XXXX, 5G SSID: Cudy-XXXX-5G, Password, MAC (Barcode), SN: MMMMMXXYY00001 XX4.0 (Barcode Code128)",
+      "sn_schema": "SN: MMMMM (产品系列名 Produktserie) XX (生产年份 Produktionsjahr) YY (生产周 Produktionswoche) 00001 (生产序列号 laufende Nummer) EU1.0 (国家码+硬件版本号 Ländercode + Hardwareversion)",
+      "etikett": "Materialnummer 820200374, 88.7×44.7 mm, weiß, Produktversion V1.0, Designer Shannon, Datum 2025/03/17, Material 128g, Rückseite AW5200-TDS",
+      "lage": "Foto: Etikett auf der Unterseite (Label location)"
+    },
+    "fcc_handbuch_1": {
+      "inhalt": "Quick Installation Guide AX3000 2.5G Mesh Wi-Fi 6 Router WR3000H, Dokumentnummer 810600274, EU Declaration, WEEE, GPL-Hinweis"
+    },
+    "fcc_handbuch_2": {
+      "Adapter": "TPA259-18120-US",
+      "Issue Date": "2025-05-09",
+      "Operating Frequency (Maximum transmitted power)": "2400-2483.5 MHz: 20dBm; 5150-5250 MHz: 23dBm; 5250-5350 MHz: 23dBm; 5470-5725 MHz: 30dBm",
+      "National Restrictions": "This device may only be used indoors in all EU member states and EFTA countries, and Northern Ireland."
+    },
+    "fcc_innenfotos": {
+      "seiten": "Page 1-13 (Teil 1: 1, 6-11; Teil 2: 12-13)",
+      "antennen_zuordnung": "Seite 7: 5G WIFI Ant.1, 2.4G WIFI Ant.1, 5G WIFI Ant.2, 2.4G WIFI Ant.2&5G Ant.3 (vier Antennen an den Ecken)",
+      "seite_6": "Netzwerkkabel (beiliegend)",
+      "seite_8_9": "Platine Ober- und Unterseite mit Abschirmblechen/Kühlkörper; Unterseite zeigt vier unbestückte Lötpunkte in der Mitte (wie Forenfoto TP42-TP45)",
+      "seite_10": "LAN-Übertrager JXD 2430, blaue Ethernet-Buchse (2.5G WAN)",
+      "seite_11": "MediaTek-Switch-Chip unter Abschirmrahmen (Aufdruck bei der Auflösung nur als MEDIATEK ... lesbar)",
+      "seite_12": "RAM ESMT M15T2G16128A -DEB ASR1 P4FH616 415; MediaTek-SoC unter Abschirmrahmen",
+      "seite_13": "QFN-Baustein mit Realtek-Logo (Aufdruck nicht lesbar) nahe der Ethernet-Seite",
+      "luefter": "kein Lüfter auf den Fotos"
+    },
+    "fcc_rf_exposure": {
+      "Report No.": "BTL-FCCP-4-2502C176",
+      "Test Model": "WR3000H",
+      "Series Model": "N/A",
+      "Date of Receipt": "Feb. 21, 2025",
+      "Date of Test": "Feb. 26, 2025 ~ Apr. 27, 2025",
+      "Issued Date": "May 13, 2025",
+      "Test Sample": "Engineering Sample No.: DG20250221202",
+      "antennen_2_4ghz": [
+        {
+          "ant": 1,
+          "brand": "WR3000H",
+          "typ": "Dipole",
+          "anschluss": "IPEX",
+          "gewinn_dbi": 5.17
+        },
+        {
+          "ant": 2,
+          "brand": "WR3000S",
+          "typ": "Dipole",
+          "anschluss": "IPEX",
+          "gewinn_dbi": 5.49
+        }
+      ],
+      "antennen_5ghz": [
+        {
+          "ant": 1,
+          "brand": "WR3000H",
+          "typ": "Dipole",
+          "anschluss": "IPEX",
+          "gewinn_dbi": 5.31
+        },
+        {
+          "ant": 2,
+          "brand": "WR3000S",
+          "typ": "Dipole",
+          "anschluss": "IPEX",
+          "gewinn_dbi": 5.81
+        },
+        {
+          "ant": 3,
+          "brand": "WR3000H",
+          "typ": "Dipole",
+          "anschluss": "IPEX",
+          "gewinn_dbi": 5.44
+        }
+      ],
+      "beamforming_gain_dbi": 4.5,
+      "ergebnis_2_4ghz": "Directional gain 5.49 dBi, Max. Output Power 24.66 dBm (292.4152 mW), S 0.20604 mW/cm2",
+      "ergebnis_5ghz": "Directional gain 5.81 dBi, Max. Output Power 28.63 dBm (729.4575 mW), S 0.55329 mW/cm2",
+      "abstand": "20 cm"
+    },
+    "deviwiki": {
+      "suche": "WR3000H",
+      "ergebnis": "keine Treffer (mw-search-nonefound)"
+    },
+    "wikidevi": {
+      "infobox": {
+        "brand": "Cudy",
+        "model": "WR3000",
+        "revision": "H (REV1.0)",
+        "series": "AX3000",
+        "ean": "6971690793227",
+        "asin": "B0CYT61NFZ",
+        "manuf_country": "China",
+        "is_manuf": "Yes",
+        "est_release_date": "03/2024",
+        "pcb_id": "300100191",
+        "type": "wireless router",
+        "pwr_v": "12",
+        "pwr_amp": "1.5",
+        "pwr_conn": "barrel",
+        "pwr_barrel_outer": "5.5",
+        "pwr_barrel_inner": "2.1",
+        "pwr_barrel_len": "9.5",
+        "cpu1_brand": "MediaTek",
+        "cpu1_model": "MT7981BA",
+        "cpu1_cspeed": "1.3 GHz",
+        "cpu1_cores": "2",
+        "fla1": "128",
+        "fla1_brand": "ESMT",
+        "fla1_model": "F50L1G41LB-104YG2M",
+        "ram1": "256",
+        "ram1_brand": "ESMT",
+        "ram1_model": "M15T2G16128A-DEB",
+        "wi1_chip1_brand": "MediaTek",
+        "wi1_chip1_model": "MT7981BA",
+        "wi1_chip2_brand": "MediaTek",
+        "wi1_chip2_model": "MT7976CN",
+        "wi1_802dot11_protocols": "bgn+ax",
+        "wi1_ant_conn": "U.FL (internal)",
+        "wi1_txchains": "2",
+        "wi1_rxchains": "2",
+        "wi1_sstreams": "2",
+        "wi2_chip1_brand": "MediaTek",
+        "wi2_chip1_model": "MT7981BA",
+        "wi2_chip2_brand": "MediaTek",
+        "wi2_chip2_model": "MT7976CN",
+        "wi2_802dot11_protocols": "an+ac+ax",
+        "wi2_ant_conn": "U.FL (internal)",
+        "wi2_txchains": "2",
+        "wi2_rxchains": "3",
+        "wi2_sstreams": "2",
+        "eth_cpu": "true",
+        "eth_chip2_brand": "Realtek",
+        "eth_chip2_model": "RTL8221B",
+        "sw_brand": "MediaTek",
+        "sw_model": "MT7531AE",
+        "lan_speed": "1GbE",
+        "lan_ports": "4",
+        "wan_speed": "2.5GbE",
+        "wan_ports": "1",
+        "flags": "Wi-Fi 6, Mesh, WPA3, power switch",
+        "stock_boot": "U-Boot",
+        "stock_os": "Linux;5.4.26;OpenWrt 21.02-SNAPSHOT;",
+        "802dot11_protocols": "abgn+ac+ax",
+        "default_ssid": "Cudy-XXXX, Cudy-XXXX-5G",
+        "default_ssid_regex": "^Cudy-[A-F0-9}{4}$,,, ^Cudy-[A-F0-9]{4}-5G$",
+        "default_ip": "192.168.10.1",
+        "oui": "80:AF:CA",
+        "oui_eth": "80:AF:CA"
+      },
+      "hardware_specification": [
+        "CPU: MediaTek MT7981BA @1.3GHz (Filogic 820), Dual-core ARM (Cortex-A53)",
+        "Flash: 128MB (SPI NAND) @104MHz",
+        "Memory: 256MB (DDR3L) SDRAM",
+        "Wi-Fi: MediaTek MT7981BA/MT7976CN, 802.11abgn/ac/ax Dual Band (2.4/5GHz), 2×2 2.4GHz + 3×3 5GHz (2×2 + Zero-wait DFS)",
+        "Network: 1x 2.5GbE, 4x 1GbE ports",
+        "Power Source: 12V/1A via barrel"
+      ],
+      "raten": "574 Mbps - 2SS 2.4GHz 802.11ax (40MHz); 2402 Mbps - 2SS 5GHz 802.11ax (160MHz) = AX3000 class",
+      "bilder": [
+        "File:Cudy WR3000H Top+Heatsink.jpeg",
+        "File:Cudy WR3000H Top.jpeg",
+        "File:Cudy WR3000H Bottom.jpeg",
+        "File:Cudy WR3000H Internal.jpeg"
+      ],
+      "revisionen": [
+        "386169 2024-10-21T13:49:57Z Omega",
+        "386165 2024-10-21T13:10:14Z Omega",
+        "386141 2024-10-20T02:37:23Z Rayknight"
+      ]
+    },
+    "werkstatt": {
+      "geraet": "Cudy WR3000H v1, Testplatz grw, ohne Aufkleber; Ausgangszustand Gluon v2023.2.6+ 26091920sta (dias-80afcab1a4f8, nef-21_dias)",
+      "typenschild": "S/N WR3000H251300817 EU1.0 (Woche 13/2025, vor 2543 = alter Flash)",
+      "verkabelung": "2.5G WAN -> ETH1 (Bruecke Hausnetz), LAN 2 -> ETH2 (enp3s0, TFTP)",
+      "rueckweg_tftp": "Stock WR3000H-R63-2.5.30-20260825-161645-sysupgrade.zip, .bin 21761565 Bytes als recovery.bin; PC 192.168.1.88/24; Reset vor Strom gehalten: U-Boot fragt als 192.168.1.112 nach recovery.bin (blksize 1468), ~alle 10-18 s, solange Reset gehalten; LEDs je Runde einmal alle kurz an (~0.5 s), kein Blinken; danach Stock 192.168.10.1, DHCP, Web-UI verlangt neues Admin-Passwort",
+      "erstinstallation_teil1": "Stock 2.5.30: Allgemeine Einstellungen -> Firmware -> Lokales Update; Zwischenfirmware cudy-wr3000h.bin MD5 1c9321928f7da093cd2b8631d3554743, 14945872 B; Firmware-Seite zeigt Hardware WR3000H V1.0; LEDs: Lauflicht beim Schreiben, kurz schnelles Blinken, dann Start; LuCI unter 192.168.1.1 nach < 1 min, Login mit leerem Passwort",
+      "erstinstallation_teil2": "LuCI-Sysupgrade gluon-nef-21_dias-26100702bro-cudy-wr3000h-v1-sysupgrade.bin (8.92 MiB) ohne 'Einstellungen beibehalten'; Knoten direkt in Betrieb, gluon-v2025.1.3-5-g0ad3ad5+, Hostname dias-WR3000H-a4f8",
+      "ergebnis": "Anleitung cudy-wr3000h-v1 komplett durchlaufen (Rückweg, Teil 1, Teil 2): funktioniert; gilt nur für S/N vor 2543",
+      "falsches_image": "Gluon-WR3000H-Image auf einem WR3000 v1 in der Zwischenfirmware: LuCI lehnt ab ('Device cudy,wr3000-v1 not supported by this image ... Supported devices: cudy,wr3000h-v1 R63')"
+    },
+    "werkstatt_rtl8221b": {
+      "dmesg": "wan: PHY [mdio-bus:06] driver [RTL8221B-VB-CG 2.5Gbps PHY (C45)] (irq=POLL)",
+      "gluon": "gluon-v2025.1.3-5, 26100702bro, Kernel 6.6.151",
+      "lasttest": [
+        {
+          "runde": 1,
+          "art": "Knoten sendet",
+          "dauer_min": 30,
+          "durchsatz_mbit": "2338 TX",
+          "tx_timeout": 0,
+          "load1_max": 3.2,
+          "soc_max_c": 66.6
+        },
+        {
+          "runde": 2,
+          "art": "Knoten empfängt",
+          "dauer_min": 25,
+          "durchsatz_mbit": "1503 RX",
+          "tx_timeout": 0,
+          "load1_max": 6.8,
+          "soc_max_c": 67.1,
+          "bemerkung": "Abbruch durch eigenen Watchdog"
+        },
+        {
+          "runde": 3,
+          "art": "beide Richtungen",
+          "dauer_min": 30,
+          "durchsatz_mbit": "1017 TX + 1102 RX",
+          "tx_timeout": 0,
+          "load1_max": 8.4,
+          "soc_max_c": 67.7
+        }
+      ],
+      "ergebnis": "kein TX-Timeout, kein eth_tx_stall, Link durchgehend 2500/Full; mehrere Boots mit gestecktem WAN-Kabel, Link jedes Mal sofort da",
+      "feld": "4 Geräte im Feld (Dialprax 01-04, 14_bar); Dialprax 01: 30 Boots in 7 Tagen ohne Firmwarewechsel (25122513sta), Ursache offen; 02-04 stabil",
+      "phy_typen": "WR3000H v1 hat RTL8221B, neuere WR3000H- und M3000-Revisionen teils Motorcomm YT8821",
+      "dts_hinweis": "WR3000H: RTL8221B am WAN plus MT7531 für die LAN-Ports (patches/devices/add-cudy-3000-openwrt.patch)"
+    },
+    "werkstatt_installation": {
+      "tabelle": "WR3000H v1 | cudy-wr3000h.bin | WR3000H 1.0.zip | 1c9321928f7da093cd2b8631d3554743",
+      "flash_hinweis": "Bei einigen Modellen baut Cudy seit Ende 2025 einen anderen Flash-Chip ein (Seriennummer ab 2543); mit einer älteren Zwischenfirmware startet so ein Gerät nicht mehr. Für diese Modelle liegt im Spiegel die Fassung vom 19.11.2025.",
+      "freifunk_image": "Variante sysupgrade, nicht factory"
+    },
+    "werkstatt_fotos": {
+      "typenschild": "cudy AX3000 2.5G Mesh Wi-Fi 6 Router; Model: WR3000H; Power: 12V⎓1.5A; Web: http://cudy.net/; IP: 192.168.10.1; MAC: 80AFCAB1A4F8; SN: WR3000H251300817 EU1.0; SSIDs Cudy-A4F8(-5G); Symbole CE, EAC, FC, UKCA, Recycling, TP BY, R-NZ, Haus (indoor), Warnung, Handbuch; keine FCC-ID/IC-Nummer aufgedruckt (EU-Gerät); zwei Schlüssellöcher zur Wandmontage links und rechts neben dem Etikett; Lüftungsschlitze",
+      "rueckseite": "von links: DC-Buchse (Polaritätssymbol, Ausschnitt), Taster ON/OFF, versenkter RESET, Taster WPS, 2.5G WAN (blaue Buchse), 4× LAN (Beschriftung 1-4 oberhalb)"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Cudy (Shenzhen Cudy Technology Co., Ltd.)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Shenzhen Cudy Technology Co., Ltd.",
+        "quelle": "fccid",
+        "beleg": "https://fccid.io/2APRGWR3000H",
+        "stand": "Grant 2025-05-26 (BTL-Projekt 2502C176)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "WR3000H (AX3000 2.5G Mesh Wi-Fi 6 Router)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AX3000 2.5G Dual Band Wi-Fi 6 Mesh Router (WR3000H)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Cudy WR3000H v1",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dtsi",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung der .dtsi: eb6dd61a vom 2026-03-27)",
+        "sicherheit": "hoch",
+        "bemerkung": "model-String im DTS"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "1.0",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Model Version WR3000H 1.0; einzige Version im Download-Center"
+      },
+      {
+        "wert": "EU1.0",
+        "quelle": "werkstatt_fotos",
+        "beleg": "privat/bilder/2026-10-16_1521_cudy-wr3000h-typenschild-testplatz.webp",
+        "stand": "Fotos 2026-10-16 12:24 und 15:21",
+        "sicherheit": "hoch",
+        "bemerkung": "Suffix der Seriennummer auf dem Typenschild; Stock-Firmware zeigt 'Hardware WR3000H V1.0'"
+      },
+      {
+        "wert": "V1.0",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGWR3000H/Label/ID-Label-Location-Info-8304202",
+        "stand": "Exhibit 2025-05-26 (PDF erstellt 2025-05-09, Etikettvorlage datiert 2025/03/17)",
+        "sicherheit": "hoch",
+        "bemerkung": "Etikettvorlage: Produktversion V1.0; Suffix der SN = Ländercode + Hardwareversion"
+      },
+      {
+        "wert": "v1 (mindestens drei Bauzustände: Ursprung ESMT F50L1G41LB + RTL8221B; ab S/N 2543 Flash F50L1G41LC; ab etwa Januar 2026 WAN-PHY Motorcomm YT8821)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "Cudy hat die Hardware-Version trotz Bauteilwechsel nicht erhöht"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild auf der Unterseite: 'Model: WR3000H'; Seriennummer beginnt mit WR3000H, dann Jahr (2 Stellen) und Woche (2 Stellen), laufende Nummer, Suffix EU1.0 (Beispiel WR3000H251300817 EU1.0 = 2025, Woche 13)",
+        "quelle": "werkstatt_fotos",
+        "beleg": "privat/bilder/2026-10-16_1521_cudy-wr3000h-typenschild-testplatz.webp",
+        "stand": "Fotos 2026-10-16 12:24 und 15:21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "SN-Schema MMMMM + XX (Produktionsjahr) + YY (Produktionswoche) + 00001 (laufende Nummer) + EU1.0 (Ländercode + Hardwareversion)",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGWR3000H/Label/ID-Label-Location-Info-8304202",
+        "stand": "Exhibit 2025-05-26 (PDF erstellt 2025-05-09, Etikettvorlage datiert 2025/03/17)",
+        "sicherheit": "hoch",
+        "bemerkung": "Etikettvorlage aus dem FCC-Antrag"
+      },
+      {
+        "wert": "Datumscode 2543 oder später in der Seriennummer = neuer Flash ESMT F50L1G41LC (braucht OpenWrt ab 24.10.5 und Cudy-Zwischenfirmware ab 19.11.2025)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "Datumscode-Lesart beim WR3000S-Wiki beschrieben (Position bei WR3000H-Seriennummern dort nur abgeleitet)"
+      },
+      {
+        "wert": "Neuer Flash ab Seriennummer 2543; alte Zwischenfirmware startet auf solchen Geräten nicht",
+        "quelle": "werkstatt_installation",
+        "beleg": "router-werkstatt/docs/cudy-installation.md",
+        "stand": "Stand der Tabelle 2026-10-15",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WAN-PHY-Variante (RTL8221B oder YT8821) ist am Typenschild nicht erkennbar",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: keine Quelle nennt ein äußeres Merkmal; im Betrieb per dmesg ('PHY [mdio-bus:06] driver ...')"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "2APRGWR3000H",
+        "quelle": "fccid",
+        "beleg": "https://fccid.io/2APRGWR3000H",
+        "stand": "Grant 2025-05-26 (BTL-Projekt 2502C176)",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant 2025-05-26 (Antrag deutlich nach Marktstart 2024)"
+      },
+      {
+        "wert": "2APRGWR3000H",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGWR3000H/Label/ID-Label-Location-Info-8304202",
+        "stand": "Exhibit 2025-05-26 (PDF erstellt 2025-05-09, Etikettvorlage datiert 2025/03/17)",
+        "sicherheit": "hoch",
+        "bemerkung": "auf der US-Etikettvorlage; auf dem EU-Testgerät nicht aufgedruckt"
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "28108-WR3000H",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGWR3000H/Label/ID-Label-Location-Info-8304202",
+        "stand": "Exhibit 2025-05-26 (PDF erstellt 2025-05-09, Etikettvorlage datiert 2025/03/17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ean": [
+      {
+        "wert": "6971690793227",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "asin": [
+      {
+        "wert": "B0CYT61NFZ",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "AX3000 2.5G Mesh Wi-Fi 6 Router",
+          "R63 (Cudy-Board-Kennung, Firmware WR3000H-R63-…)",
+          "cudy,wr3000h-v1"
+        ],
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "SUPPORTED_DEVICES += R63"
+      },
+      {
+        "wert": [
+          "WR3000H 1.0",
+          "WR3000H_EU",
+          "WR3000H_US"
+        ],
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR3000H_V1.0_Datasheet_d5d223e9-7f79-44c6-b5ca-8eb008e18179.pdf?v=962701812697552135",
+        "stand": "PDF ohne Datumsangabe (WR3000H_V1.0_Datasheet), Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Bestellvarianten nach Steckertyp"
+      }
+    ],
+    "verwandte_modelle": [
+      {
+        "wert": "WR3000S v1 (gleiches Gehäuse, 1G-WAN), WR3000P v1 (PoE-Eingang, USB), WR3000E; Images nicht austauschbar",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "WR3000H-Image auf WR3000 v1 wird von LuCI abgelehnt (werkstatt_fotos)"
+      },
+      {
+        "wert": "Datenblatt nennt PoE-Eingang und USB als 'Optional, See WR3000P'",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR3000H_V1.0_Datasheet_d5d223e9-7f79-44c6-b5ca-8eb008e18179.pdf?v=962701812697552135",
+        "stand": "PDF ohne Datumsangabe (WR3000H_V1.0_Datasheet), Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "03/2024",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": "est_release_date"
+      },
+      {
+        "wert": "Produktseite angelegt 2024-03-05; erste Firmware 2.1.16 vom 22-Jul-2024",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/pages/download-center/wr3000h-1-0",
+        "stand": "Abruf 2026-10-19; neueste Firmware 2.5.30 vom 01-Sep-2026",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "zertifizierungen": [
+      {
+        "wert": "FCC, CE",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "CE-Konformitätserklärung vom 2024-04-02 (RED 2014/53/EU, RoHS)",
+        "quelle": "hersteller_ce_erklaerung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/CE_DOC_WR3000H.pdf?v=16355996678955581230",
+        "stand": "Ausstellungsdatum 2024-04-02",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "MediaTek MT7981B (Filogic 820)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dtsi",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung der .dtsi: eb6dd61a vom 2026-03-27)",
+        "sicherheit": "hoch",
+        "bemerkung": "DTS mt7981b-…; Filogic 820 laut Wiki"
+      },
+      {
+        "wert": "MediaTek MT7981",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7981BA",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MT7981 (Filogic 820)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "Tag 2core"
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 1300,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "1.3 GHz"
+      },
+      {
+        "wert": 1298,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog BL2 'CPU: MT7981 (1298MHz)', OpenWrt-Bootlog 1300MHz"
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "ARM Cortex-A53, 64 bit (aarch64)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "64-bit Cortex-A53, ARMv8",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 256,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "256 MB (2 Gbit) DDR3"
+      },
+      {
+        "wert": 256,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 256,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog 'Detected DRAM size: 256MB'"
+      },
+      {
+        "wert": 256,
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGWR3000H/Internal-Photos/Internal-Photos-2-8304206",
+        "stand": "Exhibit 2025-05-26 (PDF erstellt 2025-05-19, BTL-Projekt 2502C176)",
+        "sicherheit": "hoch",
+        "bemerkung": "Chip M15T2G16128A (2 Gbit)"
+      },
+      {
+        "wert": 256,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR3",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DDR3",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog 'EMI: Using DDR3 settings'"
+      },
+      {
+        "wert": "DDR3L",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "ESMT M15T2G16128A-DEB",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGWR3000H/Internal-Photos/Internal-Photos-2-8304206",
+        "stand": "Exhibit 2025-05-26 (PDF erstellt 2025-05-19, BTL-Projekt 2502C176)",
+        "sicherheit": "hoch",
+        "bemerkung": "Aufdruck 'ESMT M15T2G16128A -DEB ASR1 P4FH616 415' (Seite 12)"
+      },
+      {
+        "wert": "ESMT M15T2G16128A-DEB",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 128,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "128 MB (1 Gbit) NAND"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog '128 MiB, block size: 128 KiB, page size: 2048'"
+      },
+      {
+        "wert": 128,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NAND (SPI-NAND)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "SPI-NAND",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dtsi",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung der .dtsi: eb6dd61a vom 2026-03-27)",
+        "sicherheit": "hoch",
+        "bemerkung": "compatible = \"spi-nand\", NMBM"
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "ESMT F50L1G41LB",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog 'Flash Model: F50L1G41LB, ID: C801' (Herstellertreiber meldet 'GigaDevice'); alte HW-Revision"
+      },
+      {
+        "wert": "ESMT F50L1G41LB-104YG2M",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ESMT F50L1G41LC (Geräte ab S/N 2543, ab November 2025)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ESMT F50L1G41LC, in mehreren Cudy-Produkten ab November 2025",
+        "quelle": "openwrt_pr_20962",
+        "beleg": "https://github.com/openwrt/openwrt/pull/20962",
+        "stand": "PR geschlossen 2025-11-28",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "XMC XM25QH128C",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Widerspruch: Commit nennt diesen Chip zu '128MB SPI-NAND', Bootlog und WikiDevi zeigen ESMT F50L1G41LB"
+      }
+    ],
+    "flash_layout": [
+      {
+        "wert": "BL2 1 MiB @0x0, u-boot-env 512 KiB @0x100000, Factory 2 MiB @0x180000, bdinfo 256 KiB @0x380000 (MAC-Adressen), FIP 2 MiB @0x3c0000, ubi 64 MiB @0x5c0000",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dtsi",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung der .dtsi: eb6dd61a vom 2026-03-27)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ubootmod-Variante nutzt den ganzen NAND: ubi 122.25 MiB statt 64 MiB; Rückweg nur mit serieller Konsole",
+        "quelle": "openwrt_commit_ubootmod",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb6dd61a8d4d8a6ffcb5a64642ee2be46233259d",
+        "stand": "Commit eb6dd61a vom 2026-03-27 (Autor Dmitry Mostovoy 2026-02-09)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "MediaTek MT7981B (WLAN-MAC/BB integriert) + MT7976CN (Funk-Frontend)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "mittel",
+        "bemerkung": "Commit: '2 Radios MT7976CN'"
+      },
+      {
+        "wert": "MediaTek MT7981BA + MT7976CN",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "mt7915e (kmod-mt7915e, kmod-mt7981-firmware, mt7981-wo-firmware)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n/ax",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR3000H_V1.0_Datasheet_d5d223e9-7f79-44c6-b5ca-8eb008e18179.pdf?v=962701812697552135",
+        "stand": "PDF ohne Datumsangabe (WR3000H_V1.0_Datasheet), Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n/ax",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "2 Spatial Streams"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "mittel",
+        "bemerkung": "2T2R"
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": "2 TX / 2 RX"
+      }
+    ],
+    "wlan_24_ketten": [
+      {
+        "wert": "2T2R",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2 Antennen (2.4 GHz)",
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/2APRGWR3000H/RF-Exposure-Info/RF-Exposure-Info-8304237",
+        "stand": "Bericht BTL-FCCP-4-2502C176 R00 vom 2025-05-13",
+        "sicherheit": "hoch",
+        "bemerkung": "2 Antennen in der MPE-Rechnung"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac/ax",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR3000H_V1.0_Datasheet_d5d223e9-7f79-44c6-b5ca-8eb008e18179.pdf?v=962701812697552135",
+        "stand": "PDF ohne Datumsangabe (WR3000H_V1.0_Datasheet), Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac/ax",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "2 Spatial Streams with 3T3R"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "mittel",
+        "bemerkung": "2T2R"
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_ketten": [
+      {
+        "wert": "3T3R",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "'5 GHz: 3× Internal' FEM/PA"
+      },
+      {
+        "wert": "3 Antennen (5 GHz)",
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/2APRGWR3000H/RF-Exposure-Info/RF-Exposure-Info-8304237",
+        "stand": "Bericht BTL-FCCP-4-2502C176 R00 vom 2025-05-13",
+        "sicherheit": "hoch",
+        "bemerkung": "NANT=3"
+      },
+      {
+        "wert": "2T2R",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "mittel",
+        "bemerkung": "Widerspruch zu Hersteller/FCC"
+      },
+      {
+        "wert": "2T3R",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": "Widerspruch: tx 2, rx 3; Text '2×2 + Zero-wait DFS'"
+      }
+    ],
+    "wlan_6_standard": [
+      {
+        "wert": "kein 6-GHz-Band",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR3000H_V1.0_Datasheet_d5d223e9-7f79-44c6-b5ca-8eb008e18179.pdf?v=962701812697552135",
+        "stand": "PDF ohne Datumsangabe (WR3000H_V1.0_Datasheet), Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Wi-Fi Frequency: 2.4 GHz, 5 GHz"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AX3000",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "574 Mbps (2.4 GHz) + 2402 Mbps (5 GHz)"
+      },
+      {
+        "wert": "AX3000",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "20/40/80/160 MHz",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_modulation": [
+      {
+        "wert": "1024-QAM, OFDMA, MU-MIMO, BSS Color, Beamforming",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": {
+          "2.4 GHz": 20,
+          "5150-5250 MHz": 23,
+          "5250-5350 MHz": 23,
+          "5470-5725 MHz": 30
+        },
+        "quelle": "hersteller_regulatorik",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_WR3000H_BOM.pdf?v=8914547868736247511",
+        "stand": "Ausstellungsdatum 2024-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": "EU-Höchstwerte laut Konformitätstext"
+      },
+      {
+        "wert": {
+          "2.4 GHz": 24.66,
+          "5 GHz": 28.63
+        },
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/2APRGWR3000H/RF-Exposure-Info/RF-Exposure-Info-8304237",
+        "stand": "Bericht BTL-FCCP-4-2502C176 R00 vom 2025-05-13",
+        "sicherheit": "hoch",
+        "bemerkung": "FCC, max. Ausgangsleistung (gesamt) für die MPE-Rechnung"
+      }
+    ],
+    "wlan_kanaele": [
+      {
+        "wert": "EU: 2.4 GHz 1-13; 5 GHz 36-64, 100-140",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR3000H_V1.0_Datasheet_d5d223e9-7f79-44c6-b5ca-8eb008e18179.pdf?v=962701812697552135",
+        "stand": "PDF ohne Datumsangabe (WR3000H_V1.0_Datasheet), Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Bestellvariante WR3000H_EU"
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": "2412-2462 MHz, 5180-5240 MHz",
+        "quelle": "fccid",
+        "beleg": "https://fccid.io/2APRGWR3000H",
+        "stand": "Grant 2025-05-26 (BTL-Projekt 2502C176)",
+        "sicherheit": "mittel",
+        "bemerkung": "nur diese Bereiche in der fccid.io-Übersicht; Testberichte NII-1..4 und DFS vorhanden (nicht ausgewertet)"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "extern fest",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Wi-Fi Antennas: 4× Fixed"
+      },
+      {
+        "wert": "extern fest (nicht abnehmbar)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "Tag NonDetachableAntenna"
+      },
+      {
+        "wert": "extern fest, innen per IPEX/U.FL an der Platine",
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/2APRGWR3000H/RF-Exposure-Info/RF-Exposure-Info-8304237",
+        "stand": "Bericht BTL-FCCP-4-2502C176 R00 vom 2025-05-13",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "innen IPEX (U.FL), außen kein Anschluss",
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/2APRGWR3000H/RF-Exposure-Info/RF-Exposure-Info-8304237",
+        "stand": "Bericht BTL-FCCP-4-2502C176 R00 vom 2025-05-13",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U.FL (internal)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 4,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGWR3000H/Internal-Photos/Internal-Photos-1-8304205",
+        "stand": "Exhibit 2025-05-26 (PDF erstellt 2025-05-19, BTL-Projekt 2502C176)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "Tag 4ant"
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "gemischt: 2× nur 5 GHz, 1× nur 2.4 GHz, 1× Dualband (2.4G Ant.2 & 5G Ant.3)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGWR3000H/Internal-Photos/Internal-Photos-1-8304205",
+        "stand": "Exhibit 2025-05-26 (PDF erstellt 2025-05-19, BTL-Projekt 2502C176)",
+        "sicherheit": "hoch",
+        "bemerkung": "Beschriftung im FCC-Innenfoto Seite 7"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": 5,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR3000H_V1.0_Datasheet_d5d223e9-7f79-44c6-b5ca-8eb008e18179.pdf?v=962701812697552135",
+        "stand": "PDF ohne Datumsangabe (WR3000H_V1.0_Datasheet), Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "4 × 5dBi Antennas"
+      },
+      {
+        "wert": {
+          "2.4 GHz": [
+            5.17,
+            5.49
+          ],
+          "5 GHz": [
+            5.31,
+            5.81,
+            5.44
+          ]
+        },
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/2APRGWR3000H/RF-Exposure-Info/RF-Exposure-Info-8304237",
+        "stand": "Bericht BTL-FCCP-4-2502C176 R00 vom 2025-05-13",
+        "sicherheit": "hoch",
+        "bemerkung": "Dipole; Beamforming-Gewinn 4.5 dBi zusätzlich"
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "Dipol",
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/2APRGWR3000H/RF-Exposure-Info/RF-Exposure-Info-8304237",
+        "stand": "Bericht BTL-FCCP-4-2502C176 R00 vom 2025-05-13",
+        "sicherheit": "hoch",
+        "bemerkung": "Richtcharakteristik nicht ausgewertet (Antennenspezifikationen offen)"
+      }
+    ],
+    "antennen_laenge_mm": [
+      {
+        "wert": 171,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "WAN",
+            "geschwindigkeit": "2.5G",
+            "rolle": "WAN",
+            "phy": "RTL8221B-VB-CG oder Motorcomm YT8821"
+          },
+          {
+            "name": "LAN 1-4",
+            "geschwindigkeit": "1G",
+            "rolle": "LAN",
+            "phy": "MT7531-Switch"
+          }
+        ],
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dtsi",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung der .dtsi: eb6dd61a vom 2026-03-27)",
+        "sicherheit": "hoch",
+        "bemerkung": "Port-Reihenfolge seit 887cab88 (2025-11-09) wie aufgedruckt (vorher vertauscht)"
+      },
+      {
+        "wert": "1× 2.5G RJ45 (WAN), 4× Gigabit RJ45 (LAN)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1× 2.5G WAN (blaue Buchse), 4× LAN",
+        "quelle": "werkstatt_fotos",
+        "beleg": "privat/bilder/2026-10-16_1224_cudy-wr3000h-ports-testplatz.webp",
+        "stand": "Fotos 2026-10-16 12:24 und 15:21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x 2.5GbE WAN, 4x 1GbE LAN",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 5,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "Tag 5port"
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "switch_chip": [
+      {
+        "wert": "MediaTek MT7531",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dtsi",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung der .dtsi: eb6dd61a vom 2026-03-27)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7531AE",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wan_phy": [
+      {
+        "wert": "Realtek RTL8221B-VB-CG (2.5G, C45)",
+        "quelle": "werkstatt_rtl8221b",
+        "beleg": "router-werkstatt/docs/rtl8221b-2g5-wan-intern.md",
+        "stand": "Nachtrag 2026-10-16 (Lasttest)",
+        "sicherheit": "hoch",
+        "bemerkung": "dmesg am eigenen Gerät (S/N 2513…)"
+      },
+      {
+        "wert": "Realtek RTL8221B-VB-CG (frühe Geräte) oder Motorcomm YT8821 (neuere Geräte)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dtsi",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung der .dtsi: eb6dd61a vom 2026-03-27)",
+        "sicherheit": "hoch",
+        "bemerkung": "DTS-Kommentar 'depending on HW revision'"
+      },
+      {
+        "wert": "Motorcomm YT8821 bei 'recent' Geräten, vorher RTL8221B",
+        "quelle": "openwrt_commit_motorcomm",
+        "beleg": "https://github.com/openwrt/openwrt/commit/dbafbab8769b92c8466ea83400280b4f549ace71",
+        "stand": "Commit dbafbab8 vom 2026-01-12 (Autor Andrew MacIntyre 2025-12-30)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Realtek RTL8221B",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Baustein mit Realtek-Logo auf der Platine",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGWR3000H/Internal-Photos/Internal-Photos-2-8304206",
+        "stand": "Exhibit 2025-05-26 (PDF erstellt 2025-05-19, BTL-Projekt 2502C176)",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufdruck nicht lesbar; FCC-Muster vom Februar 2025"
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja (DSA, MT7531)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "Tag hwVLAN"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "keins",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Schnittstellenliste ohne USB; Datenblatt: USB nur WR3000P"
+      },
+      {
+        "wert": "keins",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "Tag 0USB"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "keins",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "nur RJ45-Ports"
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power Methods: DC"
+      },
+      {
+        "wert": "nein (PoE-Eingang nur beim WR3000P)",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR3000H_V1.0_Datasheet_d5d223e9-7f79-44c6-b5ca-8eb008e18179.pdf?v=962701812697552135",
+        "stand": "PDF ohne Datumsangabe (WR3000H_V1.0_Datasheet), Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "ja, DC-Hohlstecker (Rückseite links)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power Input Type: DC Jack"
+      },
+      {
+        "wert": "ja, Hohlstecker",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_buchse_mass": [
+      {
+        "wert": "5.5x2.1",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": "Länge 9.5 mm"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 12,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "werkstatt_fotos",
+        "beleg": "privat/bilder/2026-10-16_1521_cudy-wr3000h-typenschild-testplatz.webp",
+        "stand": "Fotos 2026-10-16 12:24 und 15:21",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild"
+      },
+      {
+        "wert": 12,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "Tag 12v_powered"
+      },
+      {
+        "wert": 12,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 1.5,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.5,
+        "quelle": "werkstatt_fotos",
+        "beleg": "privat/bilder/2026-10-16_1521_cudy-wr3000h-typenschild-testplatz.webp",
+        "stand": "Fotos 2026-10-16 12:24 und 15:21",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild"
+      },
+      {
+        "wert": 1.5,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": "Infobox pwr_amp"
+      },
+      {
+        "wert": 1.0,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Widerspruch im selben Artikel: Fließtext 'Power Source: 12V/1A via barrel'"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": true,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR3000H_V1.0_Datasheet_d5d223e9-7f79-44c6-b5ca-8eb008e18179.pdf?v=962701812697552135",
+        "stand": "PDF ohne Datumsangabe (WR3000H_V1.0_Datasheet), Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "Eingang 100-240 V~ 50/60 Hz, Ausgang 12 V 1.5 A",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "US-Netzteil TPA259-18120-US-22087 (I.T.E. Power Supply)",
+        "quelle": "hersteller_regulatorik",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_WR3000H_BOM.pdf?v=8914547868736247511",
+        "stand": "Ausstellungsdatum 2024-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": "EU-Netzteil nicht genannt"
+      },
+      {
+        "wert": "US-Adapter TPA259-18120-US",
+        "quelle": "fcc_handbuch_2",
+        "beleg": "https://fccid.io/2APRGWR3000H/User-Manual/Users-Manual-2-8304204",
+        "stand": "Exhibit 2025-05-26 (Issue Date 2025-05-09)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "netzschalter": [
+      {
+        "wert": "ja, Taster ON/OFF an der Rückseite",
+        "quelle": "werkstatt_fotos",
+        "beleg": "privat/bilder/2026-10-16_1224_cudy-wr3000h-ports-testplatz.webp",
+        "stand": "Fotos 2026-10-16 12:24 und 15:21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, Power On/Off Button",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 12,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_typ": [
+      {
+        "wert": 4.5,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Idle Power Consumption"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "hersteller_regulatorik",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_WR3000H_BOM.pdf?v=8914547868736247511",
+        "stand": "Ausstellungsdatum 2024-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": "'may only be used indoors in all EU member states'; Symbol 'For indoor use only'"
+      },
+      {
+        "wert": "innen",
+        "quelle": "werkstatt_fotos",
+        "beleg": "privat/bilder/2026-10-16_1521_cudy-wr3000h-typenschild-testplatz.webp",
+        "stand": "Fotos 2026-10-16 12:24 und 15:21",
+        "sicherheit": "hoch",
+        "bemerkung": "Haus-Symbol (indoor) auf dem Typenschild"
+      },
+      {
+        "wert": "innen (Tisch/Wand)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR3000H_V1.0_Datasheet_d5d223e9-7f79-44c6-b5ca-8eb008e18179.pdf?v=962701812697552135",
+        "stand": "PDF ohne Datumsangabe (WR3000H_V1.0_Datasheet), Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_lager": [
+      {
+        "wert": "-40 bis 70 °C",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "Betrieb 10-90 %, Lager 5-95 %, nicht kondensierend",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": [
+          "Tisch",
+          "Wand"
+        ],
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Installation: Desktop, Wall-mount"
+      }
+    ],
+    "montageloecher": [
+      {
+        "wert": "zwei Schlüssellöcher an der Unterseite (links und rechts vom Typenschild)",
+        "quelle": "werkstatt_fotos",
+        "beleg": "privat/bilder/2026-10-16_1521_cudy-wr3000h-typenschild-testplatz.webp",
+        "stand": "Fotos 2026-10-16 12:24 und 15:21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "zwei Aufhängelöcher an der Unterseite sichtbar",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGWR3000H/Label/ID-Label-Location-Info-8304202",
+        "stand": "Exhibit 2025-05-26 (PDF erstellt 2025-05-09, Etikettvorlage datiert 2025/03/17)",
+        "sicherheit": "mittel",
+        "bemerkung": "Foto der Etikettlage"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "173×123.8×33 (ohne Antennen; Antenne 171)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "173×123.8×33",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR3000H_V1.0_Datasheet_d5d223e9-7f79-44c6-b5ca-8eb008e18179.pdf?v=962701812697552135",
+        "stand": "PDF ohne Datumsangabe (WR3000H_V1.0_Datasheet), Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 347.6,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Paket EU 787.5 g"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGWR3000H/Internal-Photos/Internal-Photos-1-8304205",
+        "stand": "Exhibit 2025-05-26 (PDF erstellt 2025-05-19, BTL-Projekt 2502C176)",
+        "sicherheit": "mittel",
+        "bemerkung": "kein Lüfter auf den Innenfotos, nur Kühlkörper/Abschirmbleche"
+      },
+      {
+        "wert": "nein",
+        "quelle": "forum_platinenfoto",
+        "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/c/dc72ef010c94f328c737b21900db2ae0b5f2e25b.jpeg",
+        "stand": "Beitrag #3 vom 2024-12-18 (juampe)",
+        "sicherheit": "niedrig",
+        "bemerkung": "kein Lüfteranschluss auf der Platinenunterseite erkennbar"
+      }
+    ],
+    "leds": [
+      {
+        "wert": "System, Internet, WPS, 2.4 GHz Wi-Fi, 5 GHz Wi-Fi, WAN, LAN",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Power, Internet, 2.4G Wi-Fi, 5G Wi-Fi, WPS, WAN, LAN, VPN, USB (Optional)",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR3000H_V1.0_Datasheet_d5d223e9-7f79-44c6-b5ca-8eb008e18179.pdf?v=962701812697552135",
+        "stand": "PDF ohne Datumsangabe (WR3000H_V1.0_Datasheet), Abruf 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Sammeldatenblatt; VPN/USB-LED im DTS nicht vorhanden"
+      },
+      {
+        "wert": "weiß: status (GPIO5), internet (11), wps (9), wlan2g (6), wlan5g (7), lan1-4 (8, 10, 12, 13), wan (35)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dtsi",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung der .dtsi: eb6dd61a vom 2026-03-27)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "Stock-Firmware: ja (LED Control)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "OpenWrt: einzelne GPIO-LEDs, per sysfs/uci schaltbar",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dtsi",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung der .dtsi: eb6dd61a vom 2026-03-27)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus gpio-leds im DTS, nicht erprobt"
+      }
+    ],
+    "knoepfe": [
+      {
+        "wert": "Power On/Off, WPS, Reset",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "reset (GPIO1), wps (GPIO0); Netzschalter ohne GPIO",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dtsi",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung der .dtsi: eb6dd61a vom 2026-03-27)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "Rückseite, versenkt (Loch 'RESET' zwischen ON/OFF und WPS), mit Stift erreichbar",
+        "quelle": "werkstatt_fotos",
+        "beleg": "privat/bilder/2026-10-16_1224_cudy-wr3000h-ports-testplatz.webp",
+        "stand": "Fotos 2026-10-16 12:24 und 15:21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Reset vor dem Einschalten gedrückt halten: U-Boot-TFTP-Recovery (recovery.bin)",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/validierung/cudy-wr3000h-v1-2026-10-16.md",
+        "stand": "Protokoll 2026-10-16",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "'there's no header on the board, you will have to solder the wires'; Lötpunkte auf der Platinenunterseite, beschriftet"
+      },
+      {
+        "wert": "innen Lötpunkte: TP42-TP45 auf der Platinenunterseite, ohne Stiftleiste",
+        "quelle": "forum_platinenfoto",
+        "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/c/dc72ef010c94f328c737b21900db2ae0b5f2e25b.jpeg",
+        "stand": "Beitrag #3 vom 2024-12-18 (juampe)",
+        "sicherheit": "mittel",
+        "bemerkung": "Serienwiderstände R1030/R1031 sind bestückt"
+      },
+      {
+        "wert": "innen Lötpunkte: vier unbestückte Pads in Platinenmitte (Unterseite)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGWR3000H/Internal-Photos/Internal-Photos-1-8304205",
+        "stand": "Exhibit 2025-05-26 (PDF erstellt 2025-05-19, BTL-Projekt 2502C176)",
+        "sicherheit": "mittel",
+        "bemerkung": "gleiche Lage wie im Forenfoto; Beschriftung bei der Auflösung nicht lesbar"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "TP42 TX, TP43 RX, TP44 GND, TP45 3V3",
+        "quelle": "forum_platinenfoto",
+        "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/c/dc72ef010c94f328c737b21900db2ae0b5f2e25b.jpeg",
+        "stand": "Beitrag #3 vom 2024-12-18 (juampe)",
+        "sicherheit": "mittel",
+        "bemerkung": "Bestückungsdruck; Richtung TX/RX aus Sicht des Routers"
+      },
+      {
+        "wert": "wie WR3000S",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "forum_support",
+        "beleg": "https://forum.openwrt.org/t/support-for-cudy-wr3000h/217336",
+        "stand": "Thread 2024-12-03 bis 2025-01-20 (56 Beiträge)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beitrag #3"
+      },
+      {
+        "wert": "115200",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-wr3000h-v1.dtsi",
+        "stand": "Branch main am 2026-10-19 (letzte Änderung der .dtsi: eb6dd61a vom 2026-03-27)",
+        "sicherheit": "hoch",
+        "bemerkung": "stdout-path = serial0:115200n8"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "3V3 nicht anschließen, nur GND, TX, RX (Hinweis beim baugleichen WR3000S)",
+        "quelle": "openwrt_wiki_wr3000s",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000s_v1",
+        "stand": "Abruf 2026-10-19 (Revision nicht abgefragt; Text nennt Stand September 2026)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: WR3000H-Wiki verweist für die Belegung auf den WR3000S"
+      },
+      {
+        "wert": "U-Boot-Shell nur, wenn das TFTP-Laden von recovery.bin fehlschlägt (Reset beim Einschalten halten)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "mediatek/filogic",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "cudy_wr3000h-v1 (dazu cudy_wr3000h-v1-ubootmod)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "main seit Commit 9d66b8b3 vom 2025-01-12",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "erstes Release 24.10.2 (nicht in 24.10.0/24.10.1)",
+        "quelle": "openwrt_release_pruefung",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v24.10.2/target/linux/mediatek/image/filogic.mk",
+        "stand": "Tags v24.10.0, v24.10.1, v24.10.2 am 2026-10-19 geprüft",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Geräte mit Flash F50L1G41LC (S/N ab 2543) ab 24.10.5; Geräte mit YT8821 ab 24.10.6 bzw. 25.12.0-rc3",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_support_commit": [
+      {
+        "wert": "9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "Wiki verlinkt 25.12.2 (sysupgrade)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "Revision 2026-04-14"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "Gluon main seit 2026-01-18 (Commit 42592634, PR #3672), erstes Release v2025.1.1; factory = false (nur sysupgrade)",
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/42592634abc17ee2e4df1e3c4169a1638384adf8",
+        "stand": "Commit 42592634 vom 2026-01-18 (Adorfer, PR #3672)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "v2025.1.x ja, v2025.1 nein, v2023.2.x nein",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/mediatek-filogic",
+        "stand": "Branches main und v2025.1.x am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Neanderfunk-Image gluon-nef-21_dias-26100702bro-cudy-wr3000h-v1-sysupgrade.bin (Gluon v2025.1.3-5) installiert und in Betrieb; vorher lief ein Neanderfunk-2023.2.6-Image",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/validierung/cudy-wr3000h-v1-2026-10-16.md",
+        "stand": "Protokoll 2026-10-16",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot 2022.07-rc3 (Build jenkins-WR3000H-11, 2024-09-05), ATF BL2/BL31 v2.7",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog alte HW-Revision"
+      },
+      {
+        "wert": "U-Boot",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_os": [
+      {
+        "wert": "Cudy-Firmware auf OpenWrt-Basis, Kernel 5.4.246",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog; Linux 5.4.246, OpenWrt GCC 8.4.0"
+      },
+      {
+        "wert": "Linux 5.4.26, OpenWrt 21.02-SNAPSHOT",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "GPL-Code 21.02",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/pages/download-center/wr3000h-1-0",
+        "stand": "Abruf 2026-10-19; neueste Firmware 2.5.30 vom 01-Sep-2026",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.cudy.com/pages/download-center/wr3000h-1-0",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/pages/download-center/wr3000h-1-0",
+        "stand": "Abruf 2026-10-19; neueste Firmware 2.5.30 vom 01-Sep-2026",
+        "sicherheit": "hoch",
+        "bemerkung": "neueste 2.5.30 vom 01-Sep-2026 (WR3000H-R63-2.5.30-20260825-161645-sysupgrade.zip)"
+      }
+    ],
+    "stock_ip": [
+      {
+        "wert": "192.168.10.1 (http://cudy.net/)",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGWR3000H/Label/ID-Label-Location-Info-8304202",
+        "stand": "Exhibit 2025-05-26 (PDF erstellt 2025-05-09, Etikettvorlage datiert 2025/03/17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "192.168.10.1",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/validierung/cudy-wr3000h-v1-2026-10-16.md",
+        "stand": "Protokoll 2026-10-16",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_passwort": [
+      {
+        "wert": "keins: beim ersten Aufruf eigenes Administrator-Passwort anlegen",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR3000H_Quick_Installation_Guide-EN.pdf?v=10056773179281538794",
+        "stand": "PDF ohne Datumsangabe, Dokumentnummer 810600274",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Stock 2.5.30 verlangt nach Recovery ein neues Admin-Passwort, kein Login mit admin",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/validierung/cudy-wr3000h-v1-2026-10-16.md",
+        "stand": "Protokoll 2026-10-16",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Cudy-signierte OpenWrt-Zwischenfirmware über die Stock-Weboberfläche, danach OpenWrt-sysupgrade ohne Einstellungen",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Zwischenfirmware cudy-wr3000h.bin (MD5 1c9321928f7da093cd2b8631d3554743, 14945872 B) per 'Lokales Update', danach Gluon-sysupgrade in LuCI ohne 'Einstellungen beibehalten'; erprobt",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/validierung/cudy-wr3000h-v1-2026-10-16.md",
+        "stand": "Protokoll 2026-10-16",
+        "sicherheit": "hoch",
+        "bemerkung": "erprobt nur für S/N vor 2543"
+      },
+      {
+        "wert": "ursprünglich nur per serieller Konsole + TFTP (initramfs cudy3000h.bin, Server 192.168.1.88)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "recovery": [
+      {
+        "wert": "TFTP: PC 192.168.1.88/24, Datei recovery.bin (Cudy-Firmware entpackt), Reset vor dem Einschalten halten; Router holt als 192.168.1.112",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/validierung/cudy-wr3000h-v1-2026-10-16.md",
+        "stand": "Protokoll 2026-10-16",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TFTP recovery.bin (192.168.1.88 -> 192.168.1.112), nimmt nur signierte Cudy-Images ('rsa verify ok')",
+        "quelle": "forum_support",
+        "beleg": "https://forum.openwrt.org/t/support-for-cudy-wr3000h/217336",
+        "stand": "Thread 2024-12-03 bis 2025-01-20 (56 Beiträge)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beitrag #49"
+      }
+    ],
+    "mac_schema": [
+      {
+        "wert": "LAN = Label-MAC, WAN = Label-MAC + 1, 2.4 GHz = Label-MAC, 5 GHz = Label-MAC + 1 mit LA-Bit; Quelle Partition bdinfo @0xde00",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+        "stand": "Commit 9d66b8b3 vom 2025-01-12 (Autor Juan Pedro Paredes Caballero 2024-12-07)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "varianten": [
+      {
+        "wert": [
+          "Ursprung: Flash ESMT F50L1G41LB, WAN-PHY RTL8221B",
+          "ab S/N 2543 (Nov. 2025): Flash ESMT F50L1G41LC",
+          "ab etwa Januar 2026: WAN-PHY Motorcomm YT8821"
+        ],
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "S/N ab 2543 neuer Flash, 2026 neuer WAN-PHY",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/validierung/cudy-wr3000h-v1-2026-10-16.md",
+        "stand": "Protokoll 2026-10-16",
+        "sicherheit": "hoch",
+        "bemerkung": "Befund 4 im Protokoll (aus OpenWrt-Wiki übernommen)"
+      }
+    ],
+    "bekannte_probleme": [
+      {
+        "wert": "Ein Feldgerät (Dialprax 01) mit 30 Neustarts in 7 Tagen, Ursache offen; Lasttest am Testgerät mit Gluon 2025.1 ohne TX-Stall",
+        "quelle": "werkstatt_rtl8221b",
+        "beleg": "router-werkstatt/docs/rtl8221b-2g5-wan-intern.md",
+        "stand": "Nachtrag 2026-10-16 (Lasttest)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Port-Namen vor 887cab88 (2025-11-09) gegenüber Aufdruck vertauscht",
+        "quelle": "openwrt_commit_portreihenfolge",
+        "beleg": "https://github.com/openwrt/openwrt/commit/887cab883bc4b3e104b70e74af775522d060e1d4",
+        "stand": "Commit 887cab88 vom 2025-11-09 (Autor Thibaut VARÈNE 2025-10-24)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_gemessen": [
+      {
+        "wert": "SoC max. 67.7 °C bei 30 min Volllast (2.5G WAN beidseitig)",
+        "quelle": "werkstatt_rtl8221b",
+        "beleg": "router-werkstatt/docs/rtl8221b-2g5-wan-intern.md",
+        "stand": "Nachtrag 2026-10-16 (Lasttest)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "durchsatz_gemessen": [
+      {
+        "wert": "2.5G-WAN: 2338 Mbit/s senden, 1503 Mbit/s empfangen, 1017+1102 Mbit/s beidseitig (HTTP, 4 Ströme)",
+        "quelle": "werkstatt_rtl8221b",
+        "beleg": "router-werkstatt/docs/rtl8221b-2g5-wan-intern.md",
+        "stand": "Nachtrag 2026-10-16 (Lasttest)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr3000h_1",
+        "stand": "Seitenrevision 2026-05-14 11:00 (badulesia)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "keine (Datenseite toh/hwdata/cudy/cudy_wr3000h_v1 existiert nicht)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr3000h_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR3000H",
+        "stand": "Revision 386169 vom 2024-10-21T13:49:57Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.cudy.com/products/wr3000h-1-0",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr3000h-1-0",
+        "stand": "Shopify updated_at 2026-10-20T02:07:47+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://www.cudy.com/cdn/shop/files/WR3000H_V1.0_Datasheet_d5d223e9-7f79-44c6-b5ca-8eb008e18179.pdf?v=962701812697552135",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR3000H_V1.0_Datasheet_d5d223e9-7f79-44c6-b5ca-8eb008e18179.pdf?v=962701812697552135",
+        "stand": "PDF ohne Datumsangabe (WR3000H_V1.0_Datasheet), Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "forum_thread": [
+      {
+        "wert": "https://forum.openwrt.org/t/support-for-cudy-wr3000h/217336",
+        "quelle": "forum_support",
+        "beleg": "https://forum.openwrt.org/t/support-for-cudy-wr3000h/217336",
+        "stand": "Thread 2024-12-03 bis 2025-01-20 (56 Beiträge)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_wr3000h_v1",
+      "kategorie": "toh",
+      "grund": "ToH-Datenseite fehlt (auch nicht im Dump 2026-10-18); Wiki-Tabellen für WR3000H bleiben leer"
+    },
+    {
+      "url": "https://fccid.io/2APRGWR3000H/External-Photos/External-Photos-8304207",
+      "kategorie": "dc_polaritaet/rueckseite",
+      "grund": "Außenfotos (4 MB) nicht geladen; DC-Polarität und Gehäuse-Unterseite"
+    },
+    {
+      "url": "https://fccid.io/2APRGWR3000H/Test-Report/Antenna-Specification-WR3000H-WLAN-2-4G-8304231",
+      "kategorie": "antennen_charakteristik",
+      "grund": "Antennenspezifikationen (5 PDFs) nicht geladen; Gewinne stehen schon im RF-Exposure-Bericht, Richtdiagramme offen"
+    },
+    {
+      "url": "https://fccid.io/2APRGWR3000H/Test-Report/Test-Report-NII-1-8304232",
+      "kategorie": "wlan_sendeleistung",
+      "grund": "FCC-Testberichte (1-3, NII-1..4, DFS) nicht geladen; Leistung je Kette und genaue 5-GHz-Bereiche"
+    },
+    {
+      "url": "https://fccid.io/2APRGWR3000H/Test-Setup-Photos/Test-Setup-Photos-8304208",
+      "kategorie": "netzteil",
+      "grund": "Testaufbau-Fotos nicht geladen (evtl. Netzteil-Typenschild)"
+    },
+    {
+      "url": "https://www.cudy.com/cdn/shop/files/WR3000H_Quick_Installation_Guide.pdf?v=8486385759030526475",
+      "kategorie": "leds/netzteil_eu",
+      "grund": "mehrsprachige Kurzanleitung nicht geladen; LED-Tabelle (in der EN-Fassung nur Grafik) und ggf. EU-Netzteil"
+    },
+    {
+      "url": "https://www.cudy.com/cdn/shop/files/Statements_of_PSTI_Compliance_WR3000H.pdf?v=5246876630483620283",
+      "kategorie": "hersteller_support_ende",
+      "grund": "PSTI-Erklärung (Support-Zeitraum) nicht geladen"
+    },
+    {
+      "url": "https://openwrt.org/_media/media/cudy/cudy-wr3000h-v1_pcb_top.jpg",
+      "kategorie": "platine",
+      "grund": "Wiki-Platinenfotos (Ober-/Unterseite) nicht geladen"
+    },
+    {
+      "url": "https://wikidevi.wi-cat.ru/File:Cudy_WR3000H_Bottom.jpeg",
+      "kategorie": "platine",
+      "grund": "WikiDevi-Platinenfotos nicht geladen"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/cudy-started-using-a-new-flash-chip-in-their-ax3000-devices-its-currently-unsupported/243547",
+      "kategorie": "varianten",
+      "grund": "Thread zum neuen Flash nicht gelesen; ob sich F50L1G41LC- oder YT8821-Geräte außen erkennen lassen, ist offen"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/pull/22625",
+      "kategorie": "flash_layout",
+      "grund": "PR zum U-Boot-Layout für WR3000P/H/S/E nicht ausgewertet"
+    },
+    {
+      "url": "https://pastebin.com/ekAe6ZVp",
+      "kategorie": "dts_hersteller",
+      "grund": "Original-DTS von Cudy (Forum #52), nicht geladen"
+    },
+    {
+      "url": "https://openwrt.org/toh/cudy/wr3000h_1",
+      "kategorie": "gehaeuse_oeffnen",
+      "grund": "Abschnitt 'Opening the case' im Wiki nicht ausgefüllt"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/commit/9d66b8b312fb6a4087244ee3ee10e1ba1623df81",
+      "kategorie": "flash_chip",
+      "grund": "Commit nennt 'XMC XM25QH128C' als 128-MB-SPI-NAND, widerspricht Bootlog (ESMT F50L1G41LB)"
+    },
+    {
+      "url": "https://www.cudy.com/blogs/faq/openwrt-software-download",
+      "kategorie": "installation",
+      "grund": "Stand der Cudy-Zwischenfirmware für YT8821-Geräte nicht geprüft"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 62,
+    "notiz": "Kein ToH-Eintrag (Dump und Live-Datenseite fehlen). Ausgewertet: OpenWrt-Wiki (Rev. 2026-05-14) und WR3000S-Wiki, Commits (Support, C45, Port-Reihenfolge, Motorcomm, ubootmod, DTSI), DTS/filogic.mk main, Release-Prüfung 24.10.x, Gluon-Targets/Commit, Forum-Thread 217336 mit Platinenfoto (Seriell TP42-45), Cudy-Produktseite, Download-Center, Datenblatt, Kurzanleitung, CE, Regulatorik, FCC 2APRGWR3000H (Label, Handbücher, Innenfotos, RF-Exposure), WikiDevi; DeviWiki ohne Treffer; eigene Werkstatt-Protokolle und Fotos. Widersprüche: 5-GHz-Ketten (Hersteller/FCC 3, Commit 2T2R, WikiDevi 2T3R), Flash-Chip im Commit, DC-Strom bei WikiDevi. EU-Netzteilmodell und DC-Polarität offen. wikidevi.wi-cat.ru-Suche sehr langsam (abgebrochen), Rohtext-Abruf ging."
+  }
+}

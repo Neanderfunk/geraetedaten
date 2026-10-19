@@ -1,0 +1,2927 @@
+{
+  "image": "cudy-ap3000-v1",
+  "modell": "Cudy AP3000 v1",
+  "quellen": {
+    "toh": {
+      "url": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "kein Eintrag im Dump: toh_suche.py liefert fuer cudy-ap3000-v1 nur WR1000, X6, WR1300, WR3000, WR2100. Daten deshalb von der ToH-Datenseite (toh_seite)"
+    },
+    "toh_seite": {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+      "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per ?do=export_raw, Revisionen per ?do=revisions"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/cudy/ap3000_v1",
+      "stand": "Seitenrevision 2026-08-28 22:26 (dotsam)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per ?do=export_raw; Revision 2026-01-08 (adorfer) ergaenzte den Alias AP3000_P"
+    },
+    "openwrt_wiki_foto_platine": {
+      "url": "https://openwrt.org/_media/media/cudy/ap3000-v1_pcb_front_without_heatsink.jpeg",
+      "stand": "Foto auf der Wiki-Seite (Upload-Datum nicht ermittelt; Seite Stand 2026-08-28)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "2810x2903 JPEG, angesehen und Ausschnitte vergroessert (J6, SW2, Flash, PHY, Platinenaufdruck)"
+    },
+    "openwrt_wiki_foto_typenschild": {
+      "url": "https://openwrt.org/_media/media/cudy/ap3000-v1_label.jpeg",
+      "stand": "Foto auf der Wiki-Seite (Upload-Datum nicht ermittelt; Seite Stand 2026-08-28)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "1280x960 JPEG, S/N und MAC geschwaerzt"
+    },
+    "openwrt_commit": {
+      "url": "https://github.com/openwrt/openwrt/commit/6992d6e51af34603de099d7bbe9d7e848f109e22",
+      "stand": "Commit 6992d6e5 vom 2024-12-10 (Maxim Anisimov), gemergt 2024-12-22",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per gh api; Dateien: DTS, 02_network, 11_fix_wifi_mac, filogic.mk"
+    },
+    "openwrt_pr_17225": {
+      "url": "https://github.com/openwrt/openwrt/pull/17225",
+      "stand": "PR 2024-12-10 (Linaro1985), gemergt 2024-12-22; 15 Kommentare bis 2025-08-14",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per gh api (pulls/17225, issues/17225/comments)"
+    },
+    "openwrt_commit_yt8821": {
+      "url": "https://github.com/openwrt/openwrt/commit/31f30f5a6cffa2046328a933ed8063e9f8fc30b2",
+      "stand": "Commit 31f30f5a vom 2026-01-29 (Anton Danilov), gemergt 2026-02-03 (PR 21776)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_pr_21776": {
+      "url": "https://github.com/openwrt/openwrt/pull/21776",
+      "stand": "PR 2026-01-29 (grinderz), gemergt 2026-02-03; keine Kommentare",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_commit_kmod_motorcomm": {
+      "url": "https://github.com/openwrt/openwrt/commit/8d407de4910712213afff1919830b3fe5c33e1b4",
+      "stand": "Commit 8d407de4 vom 2025-12-29 (Andrew MacIntyre), gemergt 2026-01-12 (Cherry-Pick von 96a13373)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000-v1.dts",
+      "stand": "Branch main am 2026-10-19; neuester Commit der Datei 31f30f5a (2026-02-03)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Historie: 6992d6e5 (2024-12-22), ab375a34 (2025-01-23), a387c621 (2025-05-26), 0883bb7d (2025-11-27), 31f30f5a (2026-02-03)"
+    },
+    "openwrt_git_lokal": {
+      "url": "/home/adorfer/projekte/freifunk/firmware-2025.1/gluon/openwrt",
+      "stand": "lokaler OpenWrt-Checkout des Gluon-2025.1-Baums (Branch patched)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "nicht oeffentlich (lokaler Pfad); enthaelt 5774c8b316 \"mediatek: add Motorcomm PHY support to Cudy AP3000 v1\", filogic.mk mit kmod-phy-motorcomm"
+    },
+    "gluon_upstream": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/mediatek-filogic",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per gh api: kein Eintrag cudy-ap3000-v1 (nur cudy-ap3000-outdoor-v1)"
+    },
+    "gluon_lokal": {
+      "url": "/home/adorfer/projekte/freifunk/firmware-2025.1/gluon/targets/mediatek-filogic",
+      "stand": "Gluon v2025.1.3 mit Neanderfunk-Patches (lokaler Checkout firmware-2025.1/gluon)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "nicht oeffentlich; Arbeitsbaum-Diff ergaenzt device('cudy-ap3000-v1', 'cudy_ap3000-v1', { factory = false }); FirmwareConfigs-2025.1/docs/migration-2025.1-targets.md fuehrt cudy-ap3000-v1 als eigenen Zusatz"
+    },
+    "forum_210028": {
+      "url": "https://forum.openwrt.org/t/support-for-cudy-ap3000-indoor/210028",
+      "stand": "Thread 2024-09-10 bis 2026-02-27 (37 Beitraege, alle gelesen)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per /t/210028.json und /t/210028/posts.json"
+    },
+    "forum_245491": {
+      "url": "https://forum.openwrt.org/t/cudy-ap3000-v1-indoor-wan-motorcomm-yt8821-support/245491",
+      "stand": "Thread 2026-01-21 bis 2026-01-29, geschlossen 2026-02-11 (10 Beitraege)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per /t/245491.json; Fotos im Thread nicht geladen"
+    },
+    "gist_pktpls": {
+      "url": "https://gist.github.com/pktpls/a51c61194f8036d173b04a699e1f3ced",
+      "stand": "Gist 2024-10-21 (pktpls): Bootloader-Log, Hersteller-kmsg, OpenWrt-logread",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per gh api; aus Forum 210028 Beitrag 21"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+      "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per ?action=raw, Revision per api.php"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=Cudy+AP3000&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "kein Treffer"
+    },
+    "fcc": {
+      "url": "https://fccid.io/2APRGAP01",
+      "stand": "Grant 2024-03-22 (Original Equipment, TCB Kiwa Nederland), Antrag 2024-03-21",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Product Code AP01, \"AX3000 Ceiling Mount Wi-Fi 6 Access Point with 2.5G Port\"; Schematics, Block Diagram, Operational Description langfristig vertraulich (nur Metadaten)"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/2APRGAP01/Label/ID-Label-Location-Info-7189219",
+      "stand": "Exhibit 2024-03-22 (Zeichnung Cudy V1 vom 2023-08-17, PDF 2024-03-07)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "2 Seiten, als Bild ausgewertet"
+    },
+    "fcc_handbuch": {
+      "url": "https://fccid.io/2APRGAP01/User-Manual/Users-Manual-7189166",
+      "stand": "Exhibit 2024-03-22 (Quick Installation Guide 810600195, PDF 2024-03-05, geaendert 2024-03-21)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "pdftotext"
+    },
+    "fcc_innenfotos": {
+      "url": "https://fccid.io/2APRGAP01/Internal-Photos/Internal-Photos-7189218",
+      "stand": "Exhibit 2024-03-22 (BTL Projekt 2310G131C, PDF 2024-03-07)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "10 Seiten, Bilder extrahiert und angesehen"
+    },
+    "fcc_mpe": {
+      "url": "https://fccid.io/2APRGAP01/RF-Exposure-Info/MPE-Report-7189188",
+      "stand": "BTL-FCCP-4-2311G131C, PDF 2024-03-19",
+      "abgerufen": "2026-10-19"
+    },
+    "hersteller": {
+      "url": "https://www.cudy.com/products/ap3000-1-0",
+      "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Produkt-JSON (.json) und HTML-Seite mit Spezifikationstabelle"
+    },
+    "hersteller_datenblatt": {
+      "url": "https://www.cudy.com/cdn/shop/files/AP3000_AP3000_P_1.0_Datasheet_20250207.pdf?v=16540237407190805563",
+      "stand": "Dateiname 20250207, PDF erstellt 2026-02-05; 7 Seiten",
+      "abgerufen": "2026-10-19"
+    },
+    "hersteller_downloads": {
+      "url": "https://www.cudy.com/pages/download-center/ap3000-1-0",
+      "stand": "Abruf 2026-10-19; neueste Firmware 2.5.15 vom 07-Jul-2026",
+      "abgerufen": "2026-10-19"
+    },
+    "werkstatt_validierung": {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+      "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "nicht oeffentlich (git.ideenwerk.me/neanderfunk/routerwerkstatt); eigenes Geraet, Typenschild AP3000 EU1.0"
+    },
+    "werkstatt_doku": {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/cudy-installation.md",
+      "stand": "routerwerkstatt Commit a9781bd vom 2026-10-15",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "nicht oeffentlich; dazu docs/validierung/README.md (7b5fffa, 2026-10-17) und docs/erstinstallation-ohne-factory.md"
+    }
+  },
+  "roh": {
+    "toh": {
+      "eintrag": null,
+      "kandidaten": [
+        "Cudy WR1000 v1",
+        "Cudy X6 v1,v1.1",
+        "Cudy WR1300 v1",
+        "Cudy WR3000 v1",
+        "Cudy WR2100",
+        "Cudy WR1300 v2,v3"
+      ]
+    },
+    "toh_seite": {
+      "Device Type_devicetype": "WiFi AP",
+      "Brand": "Cudy",
+      "Model": "AP3000",
+      "Versions": "v1",
+      "FCCID_urls": "https://fcc.io/2APRGAP01",
+      "Availability_availability": "Available 2024",
+      "Where available": "amazon.com",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=6992d6e51af34603de099d7bbe9d7e848f109e22",
+      "Supported Since Rel_releasesince": "24.10.0",
+      "Supported Current Rel_releasecurrent": "25.12.5",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "OpenWrt Failsafe mode via IPv4",
+      "Gluon support_gluonsupport": "unknown",
+      "Target_target": "mediatek",
+      "Subtarget": "filogic",
+      "Package architecture_pkg-arch": "aarch64_cortex-a53",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "MediaTek MT7981BA",
+      "CPU Cores_numcores_": "2",
+      "CPU MHz": "1300",
+      "Flash MB_mbflashs": "256NAND",
+      "RAM MB_mbram": "512",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "-",
+      "Ethernet 2.5Gbit ports_numethport": "1",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "-",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "Realtek RTL8221B 2.5GbE PHY -or- Motorcomm YT8821 2.5GbE PHY",
+      "WLAN Hardwares": "MediaTek MT7981BA, MediaTek MT7976CN",
+      "WLAN 2.4GHz_wlan24": "b/g/n/ax",
+      "WLAN 5.0GHz_wlan50": "a/n/ac/ax",
+      "WLAN 6.0GHz_wlan60": "-",
+      "WLAN 60.0GHz_wlan60g": "-",
+      "WLAN Comments_": "2.4GHz: 2x2:2 MIMO, 5GHz: 2x3:2 MIMO",
+      "WLAN driver_wlan-drivers": "mt76",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "3",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "¿",
+      "Power Supply": "12 VDC, 1.5A via barrel, or 802.3af/at PoE",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:cudy:ap3000_v1",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "AP3000",
+      "Git search_search-gits": "AP3000",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+      "WikiDevi ID_hwinfo-ids": "Cudy_AP3000",
+      "OEM Device Homepage URL_url": "https://www.cudy.com/products/ap3000-1-0",
+      "Firmware OEM Stock URL_url": "https://www.cudy.com/pages/download-center/ap3000-1-0",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/mediatek/filogic/openwrt-25.12.5-mediatek-filogic-cudy_ap3000-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/mediatek/filogic/openwrt-25.12.5-mediatek-filogic-cudy_ap3000-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-cudy_ap3000-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-cudy_ap3000-v1-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "TFTP generic, GUI OEM, see devicepage",
+      "Comment installation": "Need a signed OpenWrt from cudy before installing official OpenWrt image.  TFTP upload is also possible after OEM firmware version 2.47+",
+      "Recovery method(s)_method-recoverys": "TFTP generic, see devicepage, see git-commit",
+      "Comment recovery": "OEM firmware version 2.47+ provides TFPTD function from U-boot.  Recommend to upgrade OEM firmware for TFTP access.  Alternatively, recovery can be achieved via serial console by opening the case.",
+      "Picture_img100s": "media:cudy:ap3000-v1_top_view.png, media:cudy:ap3000-v1_side_view.png",
+      "Comments_": "A new variant of AP3000 v1 has been discovered with a different 2.5GbE network PHY chip \"Motorcomm YT8821\" .  See Device Page for more info."
+    },
+    "openwrt_wiki": {
+      "hinweis_neue_variante": "As of Jan 2026, a new variant of AP3000 device was shipped with a different PHY chip (Motorcomm YT8821 2.5GbE) as its only LAN port. This new variant is ONLY supported in version equals or later than 24.10.6 ; 25.12.0-rc5 and Main Snapshot branch (kmod-phy-motorcomm). Commits 8d407de, 31f30f5",
+      "beschreibung": "Indoor Wifi6 Ceiling / Wall Access Point with 1x 2.5GB LAN Port. 2 antennas for the 2.4GHz band and 3 antennas for the 5GHz band. Power: 12V DC (1.5A), 802.3at (PoE+) as well as passive PoE. Alias Cudy AP3000_P",
+      "flash_layout": {
+        "mtd0": "00100000 bl2",
+        "mtd1": "00080000 u-boot-env",
+        "mtd2": "00200000 factory",
+        "mtd3": "00040000 bdinfo",
+        "mtd4": "00200000 fip",
+        "mtd5": "04000000 ubi"
+      },
+      "oem_installation": "Cudy-signed OpenWrt image (Google Drive oder Support); Browser http://192.168.10.254/; Passwort setzen; /cgi-bin/luci/admin/panel (neuer: /cgi-bin/luci/admin/setup); Firmware; Image hochladen; danach 192.168.1.1 und OpenWrt-sysupgrade. Fuer YT8821: Zwischenfirmware 20260224 (GitHub-Kommentare PR 22259 #4060724997 / #4060854613)",
+      "tftp": "TFTP is only available since Stock Firmware Version 2.4.7 (28-Jan-2026); IP 192.168.1.88; recovery.bin; Reset halten, einschalten; Geraet 192.168.1.112",
+      "uboot_env_vor_247": {
+        "baudrate": "115200",
+        "bootdelay": "2",
+        "ethact": "ethernet@15100000",
+        "ipaddr": "192.168.1.112",
+        "serverip": "192.168.1.88",
+        "loadaddr": "0x46000000"
+      },
+      "failsafe": "only working with IPv6 (link-local); no IPv4 address on lan in failsafe",
+      "netzwerk": {
+        "br-lan": "192.168.1.1/24",
+        "eth0": "2.5GBit Ethernet LAN Port, part of br-lan",
+        "radio0": "2.4GHz, Disabled",
+        "radio1": "5GHz, Disabled"
+      },
+      "switch": "The device has no switch ports",
+      "buttons": {
+        "Reset": "reset"
+      },
+      "fotos": [
+        "AP3000-v1_front.jpeg",
+        "AP3000-v1_label.jpeg",
+        "AP3000-v1_bottom_with_ports.jpeg",
+        "AP3000-v1_pcb_front_with_heatsink.jpeg",
+        "AP3000-v1_pcb_front_without_heatsink.jpeg"
+      ],
+      "notes": [
+        "https://forum.openwrt.org/t/support-for-cudy-ap3000-indoor/210028",
+        "https://forum.openwrt.org/t/cudy-ap3000-v1-indoor-wan-motorcomm-yt8821-support/245491"
+      ],
+      "tags": "U-boot Mediatek filogic MT7981 2core 2.5GigabitEthernet 1port \"no switch\" wlan 2WNIC 2x2 802.11bgn 802.11anac 802.11ax wifi6 512RAM 256NAND 0usb 12v_powered PoE ceiling ARMv8 cortexa53 crypto"
+    },
+    "openwrt_wiki_foto_platine": {
+      "J6": "4 Durchkontaktierungen ohne Stiftleiste, Bestueckungsdruck TX, RX, GND, VCC; Pin 1 (eckig) = TX",
+      "SW2": "Taster direkt neben der DC-Buchse",
+      "U6": "ESMT F50L2G41XA -104, Datumscode 2504",
+      "platinenaufdruck": "30010142 REV1.1",
+      "ethernet": "eine RJ45-Buchse, daneben unbestueckter Footprint mit 8 Loechern (R?/J?), Magnetics JXD QG2438S",
+      "antennen": "5 U.FL-Kabel (2 weiss, 3 schwarz)"
+    },
+    "openwrt_wiki_foto_typenschild": {
+      "kopf": "AX3000 Ceiling Mount Wi-Fi 6 Access Point with 2.5G Port",
+      "model": "AP3000",
+      "poe": "802.3at",
+      "passive_poe": "48V/0.32A",
+      "power": "12V 1.5A",
+      "default_access": "http://cudyap.net/",
+      "management_ip": "192.168.10.254",
+      "ssid": "Cudy-C3D7-5G / Cudy-C3D7",
+      "sn": "AP3000_ (Rest geschwaerzt)",
+      "version": "EU1.0",
+      "ic": "28108-AP01",
+      "can": "ICES-3(B)/NMB-3(B)",
+      "fccid": "2APRGAP01",
+      "zeichen": "CE, UKCA, FCC, EAC, R-NZ, RoHS, WEEE",
+      "gehaeuse": ">ABS<"
+    },
+    "openwrt_commit": {
+      "message": "mediatek/filogic: add support for Cudy AP3000 v1. Hardware: SoC MT7981b; RAM 512 MB; Flash 256 MB SPI NAND; Ethernet 1x2.5Gbps (rtl8221b); WiFi 2x2 MT7981; Button Reset; LED 1x multicolor. Installation: only via transition firmware, requested by email to support@cudy.com",
+      "filogic_mk": {
+        "DEVICE_VENDOR": "Cudy",
+        "DEVICE_MODEL": "AP3000",
+        "DEVICE_VARIANT": "v1",
+        "SUPPORTED_DEVICES": "R49",
+        "UBINIZE_OPTS": "-E 5",
+        "BLOCKSIZE": "128k",
+        "PAGESIZE": "2048",
+        "IMAGE_SIZE": "65536k",
+        "KERNEL_IN_UBI": "1",
+        "IMAGE/sysupgrade.bin": "sysupgrade-tar | append-metadata",
+        "DEVICE_PACKAGES": "kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware"
+      },
+      "02_network": "wie cudy,ap3000outdoor-v1 (eine Schnittstelle)",
+      "11_fix_wifi_mac": "addr aus bdinfo 0xde00; PHY0 = addr, PHY1 = macaddr_setbit_la(addr+1)"
+    },
+    "openwrt_pr_17225": {
+      "Linaro1985_2024-12-14": "There is also no way to install the image via uboot since realtek phy is not supported",
+      "majkonthebike_2024-12-18": "reason why they didn't add recovery with ethernet is purely because they got cheap board with design for two ethernets and didn't populate the elements for eth integrated in cpu",
+      "majkonthebike_2024-12-28": "After flashing newest snapshot link only connects at 2.5Gig - fix: ethtool -s eth0 autoneg on",
+      "penalte_2025-01-10": "24.10: Wi-Fi occasionally disconnects for a second every couple of hours (IPTV freeze)",
+      "danpawlik_2025-04-24": "Zwischenfirmware per Mail an support@cudy.com anfordern, cudy_ap3000-v1-sysupgrade-cudy-transformation-image.zip angehaengt",
+      "hugomon_2025-08-14": "Using OpenWrt 24.10.2, eth0 connects to 1Gb port flawless"
+    },
+    "openwrt_commit_yt8821": {
+      "message": "Newer Cudy AP3000 v1 routers feature a Motorcomm YT8821 PHY instead of the Realtek PHY. On the AP3000, the changes allow the PHY to be autodetected.",
+      "dateien": [
+        "mt7981b-cudy-ap3000-v1.dts",
+        "filogic.mk"
+      ]
+    },
+    "openwrt_pr_21776": {
+      "motorcomm_hinweis": "Currently, the transitional firmware from Cudy does not support Motorcomm PHY; you will need to connect via serial port to enable Wi-Fi and flash OpenWRT.",
+      "erkennung": "with this line in logs you have Realtek PHY: rtl8221b phy init (VERID=6b90)",
+      "getestet": "device on both chips"
+    },
+    "openwrt_commit_kmod_motorcomm": {
+      "message": "kernel: add kmod-phy-motorcomm - Motorcomm YT8821 2.5G PHY as alternative to RTL8221B"
+    },
+    "openwrt_dts": {
+      "model": "Cudy AP3000 v1",
+      "compatible": "cudy,ap3000-v1, mediatek,mt7981",
+      "serial": "uart0, stdout-path serial0:115200n8",
+      "button_reset": "GPIO 1, active low, KEY_RESTART",
+      "leds": {
+        "led-0": "rot, wlan 2.4 GHz, GPIO 4, phy0tpt",
+        "led-1": "blau, wlan 5 GHz, GPIO 10, phy1tpt",
+        "led-2": "amber, status (boot/failsafe/running/upgrade), GPIO 11"
+      },
+      "watchdog": "linux,wdt-gpio GPIO 6, hw_algo level, 10000 ms, always-running",
+      "ethernet": "gmac0 2500base-x, phy@1 (c45), MDIO-Reset GPIO 39, IRQ GPIO 38; Either Realtek RTL8221B-VB-CG or Motorcomm YT8821",
+      "flash": "spi_nand ESMT F50L2G41XA (256M), 52 MHz quad, NMBM",
+      "mac": "label-mac-device gmac0, bdinfo 0xde00"
+    },
+    "openwrt_git_lokal": {
+      "filogic_mk_DEVICE_PACKAGES": "kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware kmod-phy-motorcomm",
+      "commit": "5774c8b316 mediatek: add Motorcomm PHY support to Cudy AP3000 v1"
+    },
+    "gluon_upstream": {
+      "targets_mediatek_filogic": "kein cudy-ap3000-v1; Cudy-Commits bis 2026-01-23 (M3000), AP3000 Outdoor seit 6b80b580 (2024-12-27)"
+    },
+    "gluon_lokal": {
+      "definition": "device('cudy-ap3000-v1', 'cudy_ap3000-v1', { factory = false, })",
+      "quelle": "Arbeitsbaum-Diff gegen v2025.1.3"
+    },
+    "forum_210028": {
+      "fire58_2024-09-10": "Model Version AP3000 1.0, CPU MT7981BA 1.3 GHz Dual-Core, Flash 256 MB (2 Gbit) NAND, RAM 512 MB (4 Gbit) DDR4, 2.5G wie TR3000",
+      "M10_2024-09-10": "Cudy hat keine Recovery (kein Ethernet im U-Boot); einziger Weg initramfs per kermit/seriell, dann sysupgrade",
+      "M10_2024-09-10b": "fuer RJ45/Uebertrager/Widerstaende der eingebauten Gigabit-Schnittstelle (vom Bootloader unterstuetzt) gespart",
+      "fire58_2024-10-03": "Cudy-Support 2024-08-26: keine Recovery-Methode fuer AP3000, darum keine Zwischenfirmware; 2.2.7 am 2024-09-20",
+      "pktpls_2024-10-09": "U-Boot handelt keinen Ethernet-Link aus, loadx laeuft in Timeout; neue Hersteller-Firmware aendert U-Boot nicht (Build Sep 01 2023)",
+      "pktpls_2024-10-10": "mit screen, loadx und exec !! sx initramfs.bin gebootet und geflasht; Link fest auf 2.5 Gbps",
+      "pktpls_2024-10-21": "drei LEDs, nur rot genutzt; Reset im Betrieb geht (firstboot+reboot), Reset beim Booten (Failsafe) reagiert nicht",
+      "fire58_2024-10-23": "Cudy schickte die Zwischenfirmware (ohne Netz-Recovery)",
+      "M10_2024-11-05": "Probleme mit DHCP-Client auf eth unter Snapshot/24.10, unter 23.05.5 ok",
+      "Falco_2025-08-28": "geflasht ueber Cudy-Image per WLAN, dann 192.168.1.1 und OpenWrt ohne Einstellungen; works quite well, gute Reichweite",
+      "grinderz_2026-02-27": "Cudy hat TFTP-Recovery im neuesten Firmware-Update repariert: U-Boot 2022.07-rc3 (Jan 15 2026), Build jenkins-mtk_mt7981_ac_c200-72; Geraet fragt als 192.168.1.112 nach C0A80170.img"
+    },
+    "forum_245491": {
+      "grinderz_2026-01-21": "Cudy AP3000 v1 Serial: AP3000_P2540; mit Snapshot + kmod-phy-motorcomm kein Link; MMD-ID 0x4f51 0xea19 (YT8821); Zugang nur per UART, WLAN per UART aktiviert",
+      "andyboeh_2026-01-21": "AP3000 is a ceiling mounted AP with a single LAN port and a RTL8221B PHY; you're the first to encounter an AP3000 with a new PHY",
+      "grinderz_2026-01-25": "DTS gepatcht, Port geht; PR 21776"
+    },
+    "gist_pktpls": {
+      "bl2": "BL2 v2.7(release):c416e80cad, Built 07:34:59 Sep 1 2023; EMI DDR4; Detected DRAM size 512MB; CPU MT7981 (1300MHz); SPI_NAND ID 0x2c",
+      "uboot": "U-Boot 2022.07-rc3 (Sep 01 2023 - 07:34:59 +0000), Build: jenkins-AP3000-19; Model mt7981-rfb; DRAM 512 MiB; Micron SPI NAND 256 MiB, block 128 KiB, page 2048, OOB 128; ethernet@15100000 random MAC",
+      "hersteller_kernel": "Linux 5.4.219 (gcc 8.4.0, OpenWrt GCC), Machine model MediaTek MT7981 RFB/R49; spi-nand Micron MT29F2G01ABAGD ID 2C24; mtk-wdt timeout 31 s; xhci-mtk vorhanden (kein USB-Anschluss belegt)"
+    },
+    "wikidevi": {
+      "brand": "Cudy",
+      "model": "AP3000",
+      "revision": "(Rev1.0)",
+      "series": "AX3000",
+      "manuf_country": "China",
+      "is_manuf": "No",
+      "availability": "now",
+      "fcc_date": "03/22/2024",
+      "fcc_id": "2APRGAP01",
+      "type": "access point",
+      "pwr_v": "12",
+      "pwr_amp": "1.5",
+      "pwr_conn": "barrel",
+      "pwr_poe": "at/af",
+      "cpu1_brand": "MediaTek",
+      "cpu1_model": "MT7981BA",
+      "cpu1_cspeed": "1.3 GHz",
+      "cpu1_cores": "2",
+      "fla1": "256",
+      "fla1_brand": "ESMT",
+      "fla1_model": "F50L2G41XA-104",
+      "ram1": "512",
+      "ram1_brand": "ESMT",
+      "ram1_model": "M16U4G16256A-QLB",
+      "serial": "yes,, 4-pin header,, 3.3V TTL,, (115200 8N1),, J6",
+      "wi1_chip1_brand": "MediaTek",
+      "wi1_chip1_model": "MT7981BA",
+      "wi1_chip2_brand": "MediaTek",
+      "wi1_chip2_model": "MT7976CN",
+      "wi1_802dot11_protocols": "bgn+ax",
+      "wi1_ant_conn": "U.FL (internal)",
+      "wi1_txchains": "2",
+      "wi1_rxchains": "2",
+      "wi1_sstreams": "2",
+      "wi2_chip1_brand": "MediaTek",
+      "wi2_chip1_model": "MT7981BA",
+      "wi2_chip2_brand": "MediaTek",
+      "wi2_chip2_model": "MT7976CN",
+      "wi2_802dot11_protocols": "an+ac+ax",
+      "wi2_ant_conn": "U.FL (internal)",
+      "wi2_txchains": "2",
+      "wi2_rxchains": "3",
+      "wi2_sstreams": "2",
+      "eth_cpu": "true",
+      "eth_chip2_brand": "Realtek",
+      "eth_chip2_model": "RTL8221B",
+      "lan_speed": "2.5GbE",
+      "lan_ports": "1",
+      "flags": "Wi-Fi 6, HEW160, MU-MIMO, WPA3, Mesh, heatsink",
+      "stock_boot": "U-Boot",
+      "stock_os": "Linux",
+      "tp_firmware": "OpenWrt",
+      "802dot11_protocols": "abgn+ac+ax",
+      "default_ssid": "Cudy-AP3000",
+      "default_ip": "192.168.10.254",
+      "default_pass": "admin",
+      "oui": "80:AF:CA",
+      "oui_eth": "80:AF:CA",
+      "width": "\"50%\" valign=\"top\" align=\"left\"|"
+    },
+    "deviwiki": {
+      "ergebnis": "Suche \"Cudy AP3000\" ohne Treffer (mw-search-nonefound)"
+    },
+    "fcc": {
+      "grantee": "Shenzhen Cudy Technology Co., Ltd. (2APRG)",
+      "product_code": "AP01",
+      "beschreibung": "AX3000 Ceiling Mount Wi-Fi 6 Access Point with 2.5G Port",
+      "test_firm": "BTL Inc.",
+      "tcb": "Kiwa Nederland B.V.",
+      "final_action": "2024-03-22",
+      "frequenzen_ausgang_w": {
+        "2412-2462 MHz": 0.43,
+        "5180-5240 MHz": 0.36,
+        "5250 MHz": 0.23,
+        "5260-5320 MHz": 0.17,
+        "5500-5700 MHz": 0.23,
+        "5570 MHz": 0.23,
+        "5745-5825 MHz": 0.59
+      },
+      "grant_kommentar": "Power Output is conducted; 23 cm Abstand; 20/40 MHz bandwidth modes",
+      "composite_device": "Yes",
+      "long_term_confidentiality": "Yes",
+      "exhibits": [
+        "Users Manual (1007 KB)",
+        "Internal Photos (2.2 MB)",
+        "External Photos (554 KB)",
+        "ID Label/Location Info (639 KB)",
+        "Test Setup Photos DFS/NII",
+        "Antenna Specification part1-5",
+        "Test Report DFS, DTS-1..3, NII-1..4",
+        "Attestation Statements, US Agent",
+        "Cover Letters",
+        "MPE Report",
+        "Block Diagram (vertraulich)",
+        "Schematics (vertraulich)",
+        "Operational Description (vertraulich)",
+        "Software Security U-NII (vertraulich)"
+      ]
+    },
+    "fcc_label": {
+      "text": "AX3000 Ceiling Mount Wi-Fi 6 Access Point with 2.5G Port; Model: AP3000; Power: 12V 1.5A; PoE: 802.3at; Passive PoE: 48V/0.32A; Default Access http://cudyap.net/; Management IP 192.168.10.254; Password admin; FCC ID: 2APRGAP01",
+      "zeichnung": "Material 820200115, Format 59.8x53.5 mm, Version V1, Ausgabe 2023-08-17",
+      "lage": "Unterseite, Mitte der Montageflaeche; RJ45 und DC-Buchse in einer Nische am Rand, dazwischen kleines Loch"
+    },
+    "fcc_handbuch": {
+      "dokument": "810600195 Quick Installation Guide AP3000 (REV1.0), englisch",
+      "strom": "Method 1 Power Adapter an DC POWER; Method 2 PoE-Switch; Method 3 PoE-Adapter (\"provided\")",
+      "led": "Off, Red, Blue, Flashing blue, Yellow, Flashing yellow, Red/blue/yellow alternate, Red and blue alternate",
+      "zugang": "http://cudyap.net/, Passwort admin; braucht DHCP-Server im Netz",
+      "links": [
+        "https://www.cudy.com/filedownload/679240 (Hardware Installation)",
+        "https://www.cudy.com/filedownload/795129 (Datasheet)"
+      ]
+    },
+    "fcc_innenfotos": {
+      "platine": "quadratische Platine mit Kuehlkoerper, Abschirmrahmen ueber SoC/RAM und WLAN-Teil",
+      "soc": "MEDIATEK MT7981BA 2322-AMSH",
+      "ram": "ESMT M16U4G16256A AZZ1 -QLB",
+      "antennen": "5 PCB-Antennen an Kabeln (Beschriftung 2.4G WIFI Ant.1/2, 5G WIFI Ant.1/2/3)",
+      "j6": "4 unbestueckte Durchkontaktierungen neben dem Elko",
+      "ethernet": "unbestueckter zweiter RJ45-Footprint neben der Buchse; Magnetics JXD",
+      "luefter": "keiner sichtbar"
+    },
+    "fcc_mpe": {
+      "antennen_24": [
+        {
+          "ant": 1,
+          "pn": "3.N101.1160",
+          "typ": "PCB",
+          "gain_dbi": 4.32
+        },
+        {
+          "ant": 2,
+          "pn": "3.N101.1161",
+          "typ": "PCB",
+          "gain_dbi": 4.89
+        }
+      ],
+      "antennen_5": [
+        {
+          "ant": 1,
+          "pn": "3.N101.1162",
+          "typ": "PCB",
+          "gain_dbi": 5.27
+        },
+        {
+          "ant": 2,
+          "pn": "3.N101.1163",
+          "typ": "PCB",
+          "gain_dbi": 5.69
+        },
+        {
+          "ant": 3,
+          "pn": "3.N101.1164",
+          "typ": "PCB",
+          "gain_dbi": 4.68
+        }
+      ],
+      "richtgewinn": {
+        "2.4 MIMO": 7.62,
+        "2.4 BF": 7.89,
+        "5 MIMO": 9.99,
+        "5 BF": 8.69
+      },
+      "max_ausgang_dbm": {
+        "2.4": 26.37,
+        "2.4 BF": 24.53,
+        "5": 26.0,
+        "5 BF": 25.52
+      },
+      "hinweis_5ghz": "Any one of the three antennas is used as an intelligent switching antenna, and the antenna data stream is NSS2",
+      "abstand_cm": 23
+    },
+    "hersteller": {
+      "titel": "AX3000 2.5G Wi-Fi 6 Access Point, AP3000 1.0 / AP3000_P 1.0",
+      "tags": "Ceiling-Mount AP, Indoor AP, Wall-Mount AP",
+      "varianten": [
+        "Adapter not Included (AP3000)",
+        "PoE Adapter Included (AP3000_P)"
+      ],
+      "highlights": [
+        "1.3 GHz Dual-Core CPU",
+        "512 MB RAM",
+        "4-Stream Dual-Band Wi-Fi 6",
+        "2402 Mbps + 574 Mbps Wi-Fi",
+        "1x Shielded 2.5GbE PoE IN",
+        "802.3at, Passive PoE, DC",
+        "Watchdog, Schedule Reboot",
+        "150 Connected Devices",
+        "Covers 130 m2 (1,400 ft2)",
+        "Multi-AP Management"
+      ],
+      "werbetext_strom": "Supports 802.3at/af PoE, 48-57V Passive PoE, 12-48V DC Power input. Please note: DC adapter is not included in the package.",
+      "werbetext_antennen": "5 Antennas and 3+2 Structure",
+      "Model Version": "AP3000 1.0",
+      "CPU Details": "1.3 GHz Dual-Core CPU",
+      "Flash/ROM": "256 MB (2 Gbit) NAND",
+      "DDR/RAM": "512 MB (4 Gbit) DDR4",
+      "5 GHz Wi-Fi Speed": "2402Mbps",
+      "2.4 GHz Wi-Fi Speed": "574 Mbps",
+      "5 GHz Wi-Fi Streams": "2 Spatial Streams with 3T3R",
+      "2.4 GHz Wi-Fi Streams": "2 Spatial Streams",
+      "Wi-Fi Antennas": "5x Internal",
+      "FEM or PA/LNA": "5 GHz: 3x External, 2.4 GHz: 2x External",
+      "Beamforming": "ja",
+      "Range Performance": "Max: 200 m (656 ft)",
+      "2.5G RJ45 Ports": "1",
+      "Ethernet Notes": "ETH0: PoE In",
+      "LED": "System",
+      "Physical Buttons": "Reset Button",
+      "Power Input Type": "DC Jack; PoE via Ethernet Port",
+      "Power Methods": "DC; 802.3at/af PoE; Passive PoE",
+      "Power Input": "DC: 12V 1.5A; Passive PoE: 48-57V; PoE: 802.3at/af",
+      "Max Power Consumption (W)": "12W (48V PoE), 12W (DC)",
+      "Idle Power Consumption (W)": "6.1W (48V PoE), 6.1W (DC)",
+      "Power Adapter In the Box": "AP3000 | No adapter in the box; AP3000_P | PoE adapter: Input 100-240 V, 50/60 Hz AC, Output 48V Passive PoE",
+      "Reliability": "Hardware Watchdog",
+      "EMC": "ESD: Contact 4kV; Air 8kV",
+      "Environment": "Operating -10..60 C; Storage -40..70 C; Operating Humidity 10-90% non-condensing; Storage Humidity 5-90% non-condensing",
+      "Certifications": "FCC, CE",
+      "Installation": "Wall-mount, Ceiling-mount",
+      "Dimension": "Ø231.9x57.1 mm",
+      "Product Weight": "EU: 489.6 g (auch mit PoE-Adapter _P angegeben)",
+      "Package Content": "AP3000, Mounting Kit, Installation Guide, PoE Adapter (_P Model Only), Ethernet Cable (_P Model Only)",
+      "Retail Package": "283x238x68 mm; 850.9 g (EU), 1015 g (_P)",
+      "Units per Carton": "20",
+      "Compatible Products": "C200P 1.0, C500P 1.0",
+      "Compatible Accessories": "POE200H 1.0, POE52-30W 1.0, POE48-18W 1.0",
+      "Wi-Fi Standards": "Wi-Fi 6",
+      "Max Wi-Fi Modulation": "1024-QAM",
+      "Wi-Fi Efficiency": "OFDMA, MU-MIMO, BSS Color",
+      "Max Capacity": "256",
+      "Recommended Client Upper Limit": "150",
+      "Wi-Fi Channel Width": "Auto/20/40/80/160 MHz",
+      "Wi-Fi Security": "WPA/WPA2/WPA3",
+      "Multi-SSID": "8 SSIDs (bis 4 je Band), VLAN Support",
+      "WPS": "ja",
+      "Operation Modes": "Wi-Fi Router, Access Point, Range Extender, WISP, Client",
+      "Mesh": "Cudy Mesh, Wireless/Wired Backhaul, Multi-Band Backhaul"
+    },
+    "hersteller_datenblatt": {
+      "modell": "AP3000/AP3000_P",
+      "5 GHz Wi-Fi Streams": "3T3R (3x3 MIMO)",
+      "2.4 GHz Wi-Fi Streams": "2T2R (2x2 MIMO)",
+      "Wi-Fi Antennas": "5x Internal",
+      "FEM or PA/LNA": "5 GHz: 2x External; 2.4 GHz: 2x Internal",
+      "Wall Performance": "Two wooden walls < 10 cm or one concrete wall < 20 cm or two concrete walls < 10 cm",
+      "Interfaces": "1x 2.5G RJ45 (Accepts PoE powering); LED System; Reset Button",
+      "bildbeschriftung_unterseite": "2.5 Gbps Ethernet Port (PoE IN)  RESET  DC",
+      "Package Content": "AP3000, Mounting Kit, Ethernet Cable, Installation Guide",
+      "Power": "DC Jack, PoE via Ethernet Port; DC 12V 1.5A; Passive PoE 48-57V; PoE 802.3at/af; max 12 W, idle 6.1 W",
+      "Software": "LED Control; TR069/TR098/TR111/TR181; Timed Reboot; Captive Portal; VPN (WireGuard, OpenVPN, IPsec, Zerotier, PPTP, L2TP)"
+    },
+    "hersteller_downloads": {
+      "firmware": [
+        {
+          "version": "2.5.15",
+          "datum": "07-Jul-2026",
+          "datei": "AP3000-R49-2.5.15-20260706-140559-sysupgrade.zip",
+          "groesse": "16.9 MB"
+        },
+        {
+          "version": "2.4.7",
+          "datum": "28-Jan-2026",
+          "datei": "AP3000-R49-2.4.7-20260115-152710-sysupgrade.zip",
+          "groesse": "16.2 MB",
+          "notiz": "Add the firmware recovery via TFTPD function"
+        },
+        {
+          "version": "2.4.6",
+          "datum": "23-Oct-2025",
+          "datei": "AP3000-R49-2.4.6-20251023-141351-sysupgrade.zip",
+          "groesse": "16.2 MB"
+        },
+        {
+          "version": "2.4.4",
+          "datum": "12-Aug-2025",
+          "datei": "AP3000-R49-2.4.4-20250808-093007-sysupgrade.zip",
+          "groesse": "16.2 MB"
+        },
+        {
+          "version": "2.4.3",
+          "datum": "05-Aug-2025",
+          "datei": "AP3000-R49-2.4.3-20250730-193932-sysupgrade.zip",
+          "groesse": "16.2 MB",
+          "notiz": "AP Controller, Multi-SSID, Captive Portal, SSID-VLAN"
+        },
+        {
+          "version": "2.2.7",
+          "datum": "20-Sep-2024",
+          "datei": "AP3000-R49-2.2.7-20240911-151101-sysupgrade.zip",
+          "groesse": "15.8 MB"
+        },
+        {
+          "version": "2.1.11",
+          "datum": "21-Jun-2024",
+          "datei": "AP3000-R49-2.1.11-20240611-100909-sysupgrade.zip",
+          "groesse": "16.4 MB",
+          "notiz": "kein Standardpasswort mehr (ETSI EN 303 645)"
+        },
+        {
+          "version": "1.16.4",
+          "datum": "08-Sep-2023",
+          "datei": "AP3000-R49-1.16.4-20230901-075212-sysupgrade.zip",
+          "groesse": "14.9 MB"
+        }
+      ],
+      "dokumente": [
+        "AP3000_AP3000_P_1.0_Datasheet_20250207.pdf",
+        "AP_Quick_Installation_Instructions-EN.pdf",
+        "AP_Quick_Installation_Instructions.pdf",
+        "Hardware_Installation_Guide.pdf",
+        "Regulatory_Compliance_AP3000.pdf",
+        "CE_DOC_AP3000.pdf",
+        "Statements_of_PSTI_Compliance_AP3000.pdf"
+      ],
+      "gpl": "21.02 (16-Apr-2024)"
+    },
+    "werkstatt_validierung": {
+      "datei": "docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+      "typenschild": "AP3000 EU1.0, S/N AP3000 2535... (Woche 35/2025), MAC 80:AF:CA:E4:71:64, Management-IP 192.168.10.254, cudyap.net, eine 2.5G-Buchse mit PoE (802.3at/48 V passiv) bzw. 12 V Netzteil",
+      "flash_umstellung": "AP3000 innen laut Cudy-Notice nicht von der Flash-Umstellung betroffen",
+      "befunde_vorab": "Anleitung nannte 192.168.10.1, richtig 192.168.10.254; nur EINE Buchse; Reset beim Einschalten: LED orange/rot abwechselnd, kein TFTP-RRQ, nur DHCP-Discover alle 3 s",
+      "teil1": "Stock 2.4.4-20250808-093007; cudy-ap3000.bin MD5 7023a3bd44e4ae0bf09de4ed9cb44335, 14945870 B; LEDs beim Schreiben rot/gruen/blau/orange, dann bunt, dann violett-weiss",
+      "teil2": "LuCI OpenWrt 23.05-SNAPSHOT-CUDY r23001+886, Kernel 5.15.158; gluon-nef-21_dias-26100702bro-cudy-ap3000-v1-sysupgrade.bin, 8.89 MiB, Einstellungen nicht behalten",
+      "ergebnis": "online als dias-AP3000-7164, gluon-v2025.1.3-5-g0ad3ad5+; eth0 2500 FDX Uplink/VPN; radio0 Kanal 9 HE20, radio1 Kanal 44 HE80; Statusseite \"486 MiB/256 MiB\"",
+      "poe": "2.5G-Link auch ueber LANCOM-PoE-Injektor nach 802.3af (aktiv)",
+      "nachtrag_18_10": "Setup-Mode antwortet als 192.168.1.1 und sendet RAs; DHCP-OFFER nicht beobachtet (keine Anfrage im Netz) - unbelegt"
+    },
+    "werkstatt_doku": {
+      "tabelle": "AP3000 v1 | cudy-ap3000.bin | AP3000 V1.0.zip | 7023a3bd44e4ae0bf09de4ed9cb44335",
+      "hinweis": "Zwischenfirmware fuer AP3000 v1 kam 2025 per Mail vom Cudy-Support (d7e8c124...); seit 24.02.2026 neuere oeffentlich (7023a3bd..., Datei ..._20260224.bin)",
+      "erstinstallation_ohne_factory": "Gruppe A - Hersteller-Zwischenfirmware, signiert (alle Cudy, darunter AP3000)"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Cudy",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Shenzhen Cudy Technology Co., Ltd."
+      },
+      {
+        "wert": "Cudy",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "AP3000",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Titel \"AX3000 2.5G Wi-Fi 6 Access Point, AP3000 1.0 / AP3000_P 1.0\""
+      },
+      {
+        "wert": "AP3000",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGAP01/Label/ID-Label-Location-Info-7189219",
+        "stand": "Exhibit 2024-03-22 (Zeichnung Cudy V1 vom 2023-08-17, PDF 2024-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild-Zeichnung \"Model: AP3000\""
+      },
+      {
+        "wert": "AP3000",
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild am eigenen Gerät"
+      },
+      {
+        "wert": "AP3000",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "1.0",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Model Version \"AP3000 1.0\""
+      },
+      {
+        "wert": "EU1.0",
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild \"AP3000 EU1.0\""
+      },
+      {
+        "wert": "EU1.0",
+        "quelle": "openwrt_wiki_foto_typenschild",
+        "beleg": "https://openwrt.org/_media/media/cudy/ap3000-v1_label.jpeg",
+        "stand": "Foto auf der Wiki-Seite (Upload-Datum nicht ermittelt; Seite Stand 2026-08-28)",
+        "sicherheit": "mittel",
+        "bemerkung": "Feld rechts unter der S/N"
+      },
+      {
+        "wert": "v1",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "Versions: v1"
+      },
+      {
+        "wert": "Rev1.0",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": "revision=(Rev1.0)"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Rundes Typenschild in der Mitte der Unterseite (Montageseite). Zeile \"Model: AP3000\"; die Version steht als \"EU1.0\" rechts neben bzw. unter der Seriennummer (S/N beginnt mit \"AP3000\").",
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": "eigenes Gerät: \"AP3000 EU1.0, S/N AP3000 2535...\" (Woche 35/2025)"
+      },
+      {
+        "wert": "Typenschild unten mittig zwischen den Halteschlitzen; Kopf \"AX3000 Ceiling Mount Wi-Fi 6 Access Point with 2.5G Port\", \"Model: AP3000\", \"PoE: 802.3at\", \"Passive PoE: 48V/0.32A\", \"Power: 12V 1.5A\", \"SN: AP3000_...\" mit \"EU1.0\", \"FCCID: 2APRGAP01\", \"IC: 28108-AP01\".",
+        "quelle": "openwrt_wiki_foto_typenschild",
+        "beleg": "https://openwrt.org/_media/media/cudy/ap3000-v1_label.jpeg",
+        "stand": "Foto auf der Wiki-Seite (Upload-Datum nicht ermittelt; Seite Stand 2026-08-28)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Typenschild an der Unterseite (Montageplatte), Zeichnung 59.8x53.5 mm; ohne eigenes Versionsfeld in der FCC-Zeichnung",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGAP01/Label/ID-Label-Location-Info-7189219",
+        "stand": "Exhibit 2024-03-22 (Zeichnung Cudy V1 vom 2023-08-17, PDF 2024-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "Seite 2 \"label location\""
+      }
+    ],
+    "erkennung_phy_variante": [
+      {
+        "wert": "Zwei Bestückungen unter derselben Bezeichnung AP3000 v1: ältere mit Realtek RTL8221B, neuere (ab etwa Januar 2026 gemeldet) mit Motorcomm YT8821. Am Gehäuse nicht zu unterscheiden; auf der Cudy-Firmware zeigt das Log bei Realtek \"rtl8221b phy init (VERID=6b90)\".",
+        "quelle": "openwrt_pr_21776",
+        "beleg": "https://github.com/openwrt/openwrt/pull/21776",
+        "stand": "PR 2026-01-29 (grinderz), gemergt 2026-02-03; keine Kommentare",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "YT8821-Gerät mit Seriennummer \"AP3000_P2540\" (AP3000_P, Woche 40/2025)",
+        "quelle": "forum_245491",
+        "beleg": "https://forum.openwrt.org/t/cudy-ap3000-v1-indoor-wan-motorcomm-yt8821-support/245491",
+        "stand": "Thread 2026-01-21 bis 2026-01-29, geschlossen 2026-02-11 (10 Beitraege)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Einzelfall; ab welcher Seriennummer gewechselt wurde, ist nicht belegt"
+      },
+      {
+        "wert": "Neue Variante (\"As of Jan 2026\") mit YT8821 braucht OpenWrt ab 24.10.6 bzw. 25.12.0-rc5 und die Cudy-Zwischenfirmware vom 20260224",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/ap3000_v1",
+        "stand": "Seitenrevision 2026-08-28 22:26 (dotsam)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "2APRGAP01",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2APRGAP01",
+        "stand": "Grant 2024-03-22 (Original Equipment, TCB Kiwa Nederland), Antrag 2024-03-21",
+        "sicherheit": "hoch",
+        "bemerkung": "Product Code AP01"
+      },
+      {
+        "wert": "2APRGAP01",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGAP01/Label/ID-Label-Location-Info-7189219",
+        "stand": "Exhibit 2024-03-22 (Zeichnung Cudy V1 vom 2023-08-17, PDF 2024-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2APRGAP01",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": "fcc_date=03/22/2024"
+      },
+      {
+        "wert": "2APRGAP01",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCCID_urls https://fcc.io/2APRGAP01"
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "28108-AP01",
+        "quelle": "openwrt_wiki_foto_typenschild",
+        "beleg": "https://openwrt.org/_media/media/cudy/ap3000-v1_label.jpeg",
+        "stand": "Foto auf der Wiki-Seite (Upload-Datum nicht ermittelt; Seite Stand 2026-08-28)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"IC: 28108-AP01\" auf dem Typenschild"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "AP3000_P"
+        ],
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "AP3000_P = gleiches Gerät mit PoE-Adapter und Ethernet-Kabel im Karton"
+      },
+      {
+        "wert": [
+          "AP3000_P"
+        ],
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/ap3000_v1",
+        "stand": "Seitenrevision 2026-08-28 22:26 (dotsam)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"shop listings often call the device with an additional letter P, so 'Cudy AP3000_P' is just an alias\""
+      },
+      {
+        "wert": [
+          "AP01"
+        ],
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2APRGAP01",
+        "stand": "Grant 2024-03-22 (Original Equipment, TCB Kiwa Nederland), Antrag 2024-03-21",
+        "sicherheit": "hoch",
+        "bemerkung": "FCC-Produktcode/Modell im Antrag"
+      },
+      {
+        "wert": [
+          "R49"
+        ],
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6992d6e51af34603de099d7bbe9d7e848f109e22",
+        "stand": "Commit 6992d6e5 vom 2024-12-10 (Maxim Anisimov), gemergt 2024-12-22",
+        "sicherheit": "mittel",
+        "bemerkung": "Cudy-Boardname: SUPPORTED_DEVICES += R49; Stock-Dateien AP3000-R49-...; Hersteller-Kernel \"MediaTek MT7981 RFB/R49\""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "MediaTek MT7981BA",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7981BA",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7981B",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6992d6e51af34603de099d7bbe9d7e848f109e22",
+        "stand": "Commit 6992d6e5 vom 2024-12-10 (Maxim Anisimov), gemergt 2024-12-22",
+        "sicherheit": "mittel",
+        "bemerkung": "\"SoC: MT7981b\""
+      },
+      {
+        "wert": "MediaTek MT7981BA",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGAP01/Internal-Photos/Internal-Photos-7189218",
+        "stand": "Exhibit 2024-03-22 (BTL Projekt 2310G131C, PDF 2024-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "Aufdruck \"MEDIATEK MT7981BA 2322-AMSH\" unter dem Abschirmrahmen"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "1.3 GHz Dual-Core CPU"
+      },
+      {
+        "wert": 2,
+        "quelle": "gist_pktpls",
+        "beleg": "https://gist.github.com/pktpls/a51c61194f8036d173b04a699e1f3ced",
+        "stand": "Gist 2024-10-21 (pktpls): Bootloader-Log, Hersteller-kmsg, OpenWrt-logread",
+        "sicherheit": "hoch",
+        "bemerkung": "Hersteller-kmsg \"Brought up 1 node, 2 CPUs\""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 1300,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1300,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1300,
+        "quelle": "gist_pktpls",
+        "beleg": "https://gist.github.com/pktpls/a51c61194f8036d173b04a699e1f3ced",
+        "stand": "Gist 2024-10-21 (pktpls): Bootloader-Log, Hersteller-kmsg, OpenWrt-logread",
+        "sicherheit": "hoch",
+        "bemerkung": "BL2 \"CPU: MT7981 (1300MHz)\""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "aarch64_cortex-a53",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "ARMv8 Cortex-A53"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 512,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "512 MB (4 Gbit) DDR4"
+      },
+      {
+        "wert": 512,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_AP3000_P_1.0_Datasheet_20250207.pdf?v=16540237407190805563",
+        "stand": "Dateiname 20250207, PDF erstellt 2026-02-05; 7 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 512,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6992d6e51af34603de099d7bbe9d7e848f109e22",
+        "stand": "Commit 6992d6e5 vom 2024-12-10 (Maxim Anisimov), gemergt 2024-12-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 512,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 512,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 512,
+        "quelle": "gist_pktpls",
+        "beleg": "https://gist.github.com/pktpls/a51c61194f8036d173b04a699e1f3ced",
+        "stand": "Gist 2024-10-21 (pktpls): Bootloader-Log, Hersteller-kmsg, OpenWrt-logread",
+        "sicherheit": "hoch",
+        "bemerkung": "BL2 \"Detected DRAM size: 512MB\", U-Boot \"DRAM: 512 MiB\""
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR4",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DDR4",
+        "quelle": "gist_pktpls",
+        "beleg": "https://gist.github.com/pktpls/a51c61194f8036d173b04a699e1f3ced",
+        "stand": "Gist 2024-10-21 (pktpls): Bootloader-Log, Hersteller-kmsg, OpenWrt-logread",
+        "sicherheit": "hoch",
+        "bemerkung": "BL2 \"EMI: Using DDR4 settings\""
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "ESMT M16U4G16256A-QLB",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ESMT M16U4G16256A (-QLB)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGAP01/Internal-Photos/Internal-Photos-7189218",
+        "stand": "Exhibit 2024-03-22 (BTL Projekt 2310G131C, PDF 2024-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "Aufdruck neben dem SoC"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 256,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "256 MB (2 Gbit) NAND"
+      },
+      {
+        "wert": 256,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6992d6e51af34603de099d7bbe9d7e848f109e22",
+        "stand": "Commit 6992d6e5 vom 2024-12-10 (Maxim Anisimov), gemergt 2024-12-22",
+        "sicherheit": "mittel",
+        "bemerkung": "256 MB SPI NAND"
+      },
+      {
+        "wert": 256,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "256NAND"
+      },
+      {
+        "wert": 256,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 256,
+        "quelle": "gist_pktpls",
+        "beleg": "https://gist.github.com/pktpls/a51c61194f8036d173b04a699e1f3ced",
+        "stand": "Gist 2024-10-21 (pktpls): Bootloader-Log, Hersteller-kmsg, OpenWrt-logread",
+        "sicherheit": "hoch",
+        "bemerkung": "\"256 MiB, block size: 128 KiB, page size: 2048\""
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NAND (SPI)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6992d6e51af34603de099d7bbe9d7e848f109e22",
+        "stand": "Commit 6992d6e5 vom 2024-12-10 (Maxim Anisimov), gemergt 2024-12-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NAND",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "ESMT F50L2G41XA",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000-v1.dts",
+        "stand": "Branch main am 2026-10-19; neuester Commit der Datei 31f30f5a (2026-02-03)",
+        "sicherheit": "mittel",
+        "bemerkung": "DTS-Kommentar \"ESMT F50L2G41XA (256M)\""
+      },
+      {
+        "wert": "ESMT F50L2G41XA-104",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ESMT F50L2G41XA",
+        "quelle": "openwrt_wiki_foto_platine",
+        "beleg": "https://openwrt.org/_media/media/cudy/ap3000-v1_pcb_front_without_heatsink.jpeg",
+        "stand": "Foto auf der Wiki-Seite (Upload-Datum nicht ermittelt; Seite Stand 2026-08-28)",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufdruck \"F50L2G41XA -104 ... 2504\" (U6)"
+      },
+      {
+        "wert": "Micron MT29F2G01ABAGD",
+        "quelle": "gist_pktpls",
+        "beleg": "https://gist.github.com/pktpls/a51c61194f8036d173b04a699e1f3ced",
+        "stand": "Gist 2024-10-21 (pktpls): Bootloader-Log, Hersteller-kmsg, OpenWrt-logread",
+        "sicherheit": "hoch",
+        "bemerkung": "Hersteller-kmsg 2024 \"Micron SPI NAND was found. Flash Model: MT29F2G01ABAGD, ID: 2C24\" - also mindestens zwei Flash-Bestückungen"
+      }
+    ],
+    "flash_layout": [
+      {
+        "wert": "bl2 1 MiB, u-boot-env 512 KiB, factory 2 MiB, bdinfo 256 KiB, fip 2 MiB, ubi 64 MiB",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/ap3000_v1",
+        "stand": "Seitenrevision 2026-08-28 22:26 (dotsam)",
+        "sicherheit": "mittel",
+        "bemerkung": "/proc/mtd; DTS gleich; NMBM aktiv"
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "MediaTek MT7981BA (im SoC) + MT7976CN",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7981BA + MT7976CN",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MT7981 (2x2)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6992d6e51af34603de099d7bbe9d7e848f109e22",
+        "stand": "Commit 6992d6e5 vom 2024-12-10 (Maxim Anisimov), gemergt 2024-12-22",
+        "sicherheit": "mittel",
+        "bemerkung": "\"WiFi: 2x2 MT7981\""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "mt76 (kmod-mt7915e, mt7981-firmware)",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n/ax",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n/ax",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Wi-Fi 6",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac/ax",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac/ax",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Wi-Fi 6",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "2 Spatial Streams"
+      },
+      {
+        "wert": 2,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_AP3000_P_1.0_Datasheet_20250207.pdf?v=16540237407190805563",
+        "stand": "Dateiname 20250207, PDF erstellt 2026-02-05; 7 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "2T2R (2x2 MIMO)"
+      },
+      {
+        "wert": 2,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "2x2:2"
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "fcc_mpe",
+        "beleg": "https://fccid.io/2APRGAP01/RF-Exposure-Info/MPE-Report-7189188",
+        "stand": "BTL-FCCP-4-2311G131C, PDF 2024-03-19",
+        "sicherheit": "hoch",
+        "bemerkung": "2TX (Ant. 1 + Ant. 2)"
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"2 Spatial Streams with 3T3R\""
+      },
+      {
+        "wert": 2,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"5GHz: 2x3:2 MIMO\""
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": "sstreams=2, txchains=2, rxchains=3"
+      },
+      {
+        "wert": 2,
+        "quelle": "fcc_mpe",
+        "beleg": "https://fccid.io/2APRGAP01/RF-Exposure-Info/MPE-Report-7189188",
+        "stand": "BTL-FCCP-4-2311G131C, PDF 2024-03-19",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Any one of the three antennas is used as an intelligent switching antenna, and the antenna data stream is NSS2\""
+      },
+      {
+        "wert": 3,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_AP3000_P_1.0_Datasheet_20250207.pdf?v=16540237407190805563",
+        "stand": "Dateiname 20250207, PDF erstellt 2026-02-05; 7 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Datenblatt nennt \"3T3R (3x3 MIMO)\" - widerspricht Produktseite, FCC und WikiDevi (2 Streams, dritte Antenne umschaltbar)"
+      }
+    ],
+    "wlan_5_ketten": [
+      {
+        "wert": "3T3R",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2T3R",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "3 Antennen, je 2 aktiv (Umschaltantenne)",
+        "quelle": "fcc_mpe",
+        "beleg": "https://fccid.io/2APRGAP01/RF-Exposure-Info/MPE-Report-7189188",
+        "stand": "BTL-FCCP-4-2311G131C, PDF 2024-03-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_ketten": [
+      {
+        "wert": "2T2R",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_AP3000_P_1.0_Datasheet_20250207.pdf?v=16540237407190805563",
+        "stand": "Dateiname 20250207, PDF erstellt 2026-02-05; 7 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AX3000",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "2402 Mbps (5 GHz) + 574 Mbps (2.4 GHz)"
+      },
+      {
+        "wert": "AX3000",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "20/40/80/160 MHz (5 GHz)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "20/40 MHz (2.4 GHz)",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2APRGAP01",
+        "stand": "Grant 2024-03-22 (Original Equipment, TCB Kiwa Nederland), Antrag 2024-03-21",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant-Kommentar \"This device has 20/40 MHz bandwidth modes\""
+      }
+    ],
+    "wlan_modulation": [
+      {
+        "wert": "1024-QAM",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": {
+          "2.4 GHz": 26.37,
+          "5 GHz": 26.0
+        },
+        "quelle": "fcc_mpe",
+        "beleg": "https://fccid.io/2APRGAP01/RF-Exposure-Info/MPE-Report-7189188",
+        "stand": "BTL-FCCP-4-2311G131C, PDF 2024-03-19",
+        "sicherheit": "hoch",
+        "bemerkung": "FCC, leitungsgebunden, Summe MIMO ohne Beamforming; mit Beamforming 24.53 / 25.52 dBm"
+      },
+      {
+        "wert": {
+          "2412-2462 MHz": 26.33,
+          "5180-5240 MHz": 25.56,
+          "5745-5825 MHz": 27.71
+        },
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2APRGAP01",
+        "stand": "Grant 2024-03-22 (Original Equipment, TCB Kiwa Nederland), Antrag 2024-03-21",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant-Ausgangsleistung 0.43 / 0.36 / 0.59 W, hier in dBm umgerechnet; US-Werte, nicht EU"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "5x Internal"
+      },
+      {
+        "wert": "intern (U.FL)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "intern: 5 Leiterplatten-Antennen am Kabel mit U.FL",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGAP01/Internal-Photos/Internal-Photos-7189218",
+        "stand": "Exhibit 2024-03-22 (BTL Projekt 2310G131C, PDF 2024-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "U.FL (intern)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U.FL (intern)",
+        "quelle": "openwrt_wiki_foto_platine",
+        "beleg": "https://openwrt.org/_media/media/cudy/ap3000-v1_pcb_front_without_heatsink.jpeg",
+        "stand": "Foto auf der Wiki-Seite (Upload-Datum nicht ermittelt; Seite Stand 2026-08-28)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 5,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/ap3000_v1",
+        "stand": "Seitenrevision 2026-08-28 22:26 (dotsam)",
+        "sicherheit": "mittel",
+        "bemerkung": "2 für 2.4 GHz, 3 für 5 GHz"
+      },
+      {
+        "wert": 5,
+        "quelle": "fcc_mpe",
+        "beleg": "https://fccid.io/2APRGAP01/RF-Exposure-Info/MPE-Report-7189188",
+        "stand": "BTL-FCCP-4-2311G131C, PDF 2024-03-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "getrennt: 2x 2.4 GHz, 3x 5 GHz",
+        "quelle": "fcc_mpe",
+        "beleg": "https://fccid.io/2APRGAP01/RF-Exposure-Info/MPE-Report-7189188",
+        "stand": "BTL-FCCP-4-2311G131C, PDF 2024-03-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "getrennt: 2x 2.4 GHz, 3x 5 GHz",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/ap3000_v1",
+        "stand": "Seitenrevision 2026-08-28 22:26 (dotsam)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4 GHz": [
+            4.32,
+            4.89
+          ],
+          "5 GHz": [
+            5.27,
+            5.69,
+            4.68
+          ]
+        },
+        "quelle": "fcc_mpe",
+        "beleg": "https://fccid.io/2APRGAP01/RF-Exposure-Info/MPE-Report-7189188",
+        "stand": "BTL-FCCP-4-2311G131C, PDF 2024-03-19",
+        "sicherheit": "hoch",
+        "bemerkung": "PCB-Antennen 3.N101.1160/1161 (2.4) und 3.N101.1162/1163/1164 (5); Richtgewinn MIMO 7.62 / 9.99 dBi"
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "rund (Deckenmontage, interne PCB-Antennen)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus Bauform; Hersteller nennt nur \"Covers 130 m2\""
+      }
+    ],
+    "wlan_fem": [
+      {
+        "wert": "5 GHz: 3x extern, 2.4 GHz: 2x extern",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Zeile \"FEM or PA/LNA\" der Produktseite"
+      },
+      {
+        "wert": "5 GHz: 2x extern, 2.4 GHz: 2x intern",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_AP3000_P_1.0_Datasheet_20250207.pdf?v=16540237407190805563",
+        "stand": "Dateiname 20250207, PDF erstellt 2026-02-05; 7 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Widerspruch zur Produktseite"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "ETH0",
+            "geschwindigkeit": "2.5G",
+            "rolle": "einzige Buchse, PoE in",
+            "geschirmt": true
+          }
+        ],
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"1x Shielded 2.5GbE PoE IN\""
+      },
+      {
+        "wert": [
+          {
+            "name": "eth0",
+            "geschwindigkeit": "2.5G",
+            "rolle": "unter Gluon Uplink (WAN)"
+          }
+        ],
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": "Statusseite \"eth0 2500 FDX Uplink/VPN\""
+      },
+      {
+        "wert": [
+          {
+            "name": "eth0",
+            "geschwindigkeit": "2.5G",
+            "rolle": "LAN (br-lan)"
+          }
+        ],
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/ap3000_v1",
+        "stand": "Seitenrevision 2026-08-28 22:26 (dotsam)",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt-Vorgabe: Teil von br-lan"
+      },
+      {
+        "wert": "1x 2.5G",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"AP3000 hat nur EINE Buchse\"; Gluon legt sie auf Uplink"
+      },
+      {
+        "wert": true,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ethernet_phy": [
+      {
+        "wert": "Realtek RTL8221B-VB-CG oder Motorcomm YT8821 (je nach Bestückung)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000-v1.dts",
+        "stand": "Branch main am 2026-10-19; neuester Commit der Datei 31f30f5a (2026-02-03)",
+        "sicherheit": "mittel",
+        "bemerkung": "phy@1 an MDIO, Reset GPIO 39; per Autodetect"
+      },
+      {
+        "wert": "Realtek RTL8221B oder Motorcomm YT8821",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Realtek RTL8221B",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": "Stand 2024, vor der YT8821-Variante"
+      },
+      {
+        "wert": "Realtek RTL8221B",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6992d6e51af34603de099d7bbe9d7e848f109e22",
+        "stand": "Commit 6992d6e5 vom 2024-12-10 (Maxim Anisimov), gemergt 2024-12-22",
+        "sicherheit": "mittel",
+        "bemerkung": "\"1x2.5Gbps (rtl8221b)\""
+      }
+    ],
+    "ethernet_autoneg": [
+      {
+        "wert": "Mit frühen 24.10-Snapshots blieb der Link auf 2.5G und handelte nicht auf 1G herunter (Abhilfe ethtool -s eth0 autoneg on); mit 24.10.2 lief eth0 an einem 1G-Port",
+        "quelle": "openwrt_pr_17225",
+        "beleg": "https://github.com/openwrt/openwrt/pull/17225",
+        "stand": "PR 2024-12-10 (Linaro1985), gemergt 2024-12-22; 15 Kommentare bis 2025-08-14",
+        "sicherheit": "niedrig",
+        "bemerkung": "Kommentare majkonthebike 2024-12-28, hugomon 2025-08-14"
+      },
+      {
+        "wert": "2.5G-Link (2500 FDX) auch über einen alten LANCOM-PoE-Injektor nach 802.3af",
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "switch_chip": [
+      {
+        "wert": "keiner",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "Switch: -; Wiki: \"The device has no switch ports\""
+      }
+    ],
+    "sfp": [
+      {
+        "wert": 0,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "keine",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "USB ports: -; Tag 0usb"
+      }
+    ],
+    "modem": [
+      {
+        "wert": "keins",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": [
+          "802.3af",
+          "802.3at",
+          "passiv"
+        ],
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power Methods \"802.3at/af PoE; Passive PoE\""
+      },
+      {
+        "wert": [
+          "802.3at",
+          "passiv"
+        ],
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGAP01/Label/ID-Label-Location-Info-7189219",
+        "stand": "Exhibit 2024-03-22 (Zeichnung Cudy V1 vom 2023-08-17, PDF 2024-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild \"PoE: 802.3at  Passive PoE: 48V/0.32A\""
+      },
+      {
+        "wert": [
+          "802.3af",
+          "802.3at"
+        ],
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"802.3af/at PoE\""
+      },
+      {
+        "wert": [
+          "802.3af",
+          "802.3at"
+        ],
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": "pwr_poe=at/af"
+      },
+      {
+        "wert": [
+          "802.3af"
+        ],
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": "lief am ca. 15 Jahre alten LANCOM-PoE-Injektor nach 802.3af (aktiv), mit 2.5G-Link"
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": "48-57 (passiv)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Passive PoE: 48-57V\""
+      },
+      {
+        "wert": "48 (passiv, 0.32 A)",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGAP01/Label/ID-Label-Location-Info-7189219",
+        "stand": "Exhibit 2024-03-22 (Zeichnung Cudy V1 vom 2023-08-17, PDF 2024-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "48 (passiv, 0.32 A)",
+        "quelle": "openwrt_wiki_foto_typenschild",
+        "beleg": "https://openwrt.org/_media/media/cudy/ap3000-v1_label.jpeg",
+        "stand": "Foto auf der Wiki-Seite (Upload-Datum nicht ermittelt; Seite Stand 2026-08-28)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "ja",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power Input Type: DC Jack"
+      },
+      {
+        "wert": "ja",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"12 VDC, 1.5A via barrel\""
+      },
+      {
+        "wert": "ja, neben der RJ45-Buchse in der Anschlussnische",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGAP01/Label/ID-Label-Location-Info-7189219",
+        "stand": "Exhibit 2024-03-22 (Zeichnung Cudy V1 vom 2023-08-17, PDF 2024-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "Foto Seite 2"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 12,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_AP3000_P_1.0_Datasheet_20250207.pdf?v=16540237407190805563",
+        "stand": "Dateiname 20250207, PDF erstellt 2026-02-05; 7 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "DC: 12V 1.5A"
+      },
+      {
+        "wert": 12,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGAP01/Label/ID-Label-Location-Info-7189219",
+        "stand": "Exhibit 2024-03-22 (Zeichnung Cudy V1 vom 2023-08-17, PDF 2024-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power: 12V 1.5A"
+      },
+      {
+        "wert": 12,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "12-48",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Werbetext \"12-48V DC Power input\" - widerspricht der Spezifikationstabelle derselben Seite (12V 1.5A)"
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 1.5,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_AP3000_P_1.0_Datasheet_20250207.pdf?v=16540237407190805563",
+        "stand": "Dateiname 20250207, PDF erstellt 2026-02-05; 7 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.5,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGAP01/Label/ID-Label-Location-Info-7189219",
+        "stand": "Exhibit 2024-03-22 (Zeichnung Cudy V1 vom 2023-08-17, PDF 2024-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.5,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": "AP3000: nein; AP3000_P: PoE-Adapter (48 V passiv) und Ethernet-Kabel",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"AP3000 | No adapter in the box\"; \"Please note: DC adapter is not included\""
+      },
+      {
+        "wert": "Lieferumfang: AP3000, Mounting Kit, Ethernet Cable, Installation Guide",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_AP3000_P_1.0_Datasheet_20250207.pdf?v=16540237407190805563",
+        "stand": "Dateiname 20250207, PDF erstellt 2026-02-05; 7 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Liste ohne _P-Unterscheidung; Netzteil nicht genannt"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "AP3000_P: PoE-Adapter Input 100-240 V~ 50/60 Hz, Output 48 V passives PoE",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 12,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "12 W (48 V PoE) und 12 W (DC)"
+      }
+    ],
+    "leistung_w_typ": [
+      {
+        "wert": 6.1,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Idle Power Consumption 6.1 W"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Tags \"Indoor AP, Ceiling-Mount AP, Wall-Mount AP\""
+      },
+      {
+        "wert": "innen",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/ap3000_v1",
+        "stand": "Seitenrevision 2026-08-28 22:26 (dotsam)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Indoor Wifi6 Ceiling / Wall Access Point\""
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "-10 bis 60 °C",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_lager": [
+      {
+        "wert": "-40 bis 70 °C",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "Betrieb 10-90 %, Lager 5-90 %, nicht kondensierend",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": [
+          "Decke",
+          "Wand"
+        ],
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Mounting Kit im Lieferumfang"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "Ø231.9×57.1",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 489.6,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "EU"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGAP01/Internal-Photos/Internal-Photos-7189218",
+        "stand": "Exhibit 2024-03-22 (BTL Projekt 2310G131C, PDF 2024-03-07)",
+        "sicherheit": "mittel",
+        "bemerkung": "auf den Innenfotos kein Lüfter, Kühlkörper auf der Platine, Gehäuse mit Lüftungsschlitzen"
+      },
+      {
+        "wert": "passiv (Kühlkörper)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Flag \"heatsink\""
+      }
+    ],
+    "leds": [
+      {
+        "wert": "1 System-LED (mehrfarbig)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "LED: System"
+      },
+      {
+        "wert": "1x mehrfarbig",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6992d6e51af34603de099d7bbe9d7e848f109e22",
+        "stand": "Commit 6992d6e5 vom 2024-12-10 (Maxim Anisimov), gemergt 2024-12-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "3 GPIO-LEDs: rot (2.4 GHz), blau (5 GHz), gelb/amber (Status)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000-v1.dts",
+        "stand": "Branch main am 2026-10-19; neuester Commit der Datei 31f30f5a (2026-02-03)",
+        "sicherheit": "mittel",
+        "bemerkung": "eine Lichtstelle, drei Farben"
+      },
+      {
+        "wert": "Farben: aus, rot, blau, blau blinkend, gelb, gelb blinkend, rot/blau/gelb im Wechsel, rot/blau im Wechsel",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/2APRGAP01/User-Manual/Users-Manual-7189166",
+        "stand": "Exhibit 2024-03-22 (Quick Installation Guide 810600195, PDF 2024-03-05, geaendert 2024-03-21)",
+        "sicherheit": "hoch",
+        "bemerkung": "Tabelle \"LED and Button\" (Bedeutung nur als Bild)"
+      },
+      {
+        "wert": "Beim Flashen rot, grün, blau, orange im Wechsel, dann buntes Blinken, dann violett-weiß; Reset beim Einschalten: orange/rot abwechselnd",
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "ja (Stock: LED Control)",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_AP3000_P_1.0_Datasheet_20250207.pdf?v=16540237407190805563",
+        "stand": "Dateiname 20250207, PDF erstellt 2026-02-05; 7 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "knoepfe": [
+      {
+        "wert": "1 (Reset)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "an der Unterseite in der Anschlussnische zwischen RJ45- und DC-Buchse",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_AP3000_P_1.0_Datasheet_20250207.pdf?v=16540237407190805563",
+        "stand": "Dateiname 20250207, PDF erstellt 2026-02-05; 7 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Bildbeschriftung \"2.5 Gbps Ethernet Port (PoE IN)  RESET  DC\""
+      },
+      {
+        "wert": "SW2 direkt neben der DC-Buchse auf der Platine",
+        "quelle": "openwrt_wiki_foto_platine",
+        "beleg": "https://openwrt.org/_media/media/cudy/ap3000-v1_pcb_front_without_heatsink.jpeg",
+        "stand": "Foto auf der Wiki-Seite (Upload-Datum nicht ermittelt; Seite Stand 2026-08-28)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "von außen erreichbar; Reset beim Einschalten getestet",
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "watchdog": [
+      {
+        "wert": "Hardware-Watchdog an GPIO 6 (linux,wdt-gpio, 10 s)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000-v1.dts",
+        "stand": "Branch main am 2026-10-19; neuester Commit der Datei 31f30f5a (2026-02-03)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Hardware Watchdog",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "nötig für die serielle Konsole",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"recovery can be achieved via serial console by opening the case\""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte (J6, 4 Durchkontaktierungen, unbestückt)",
+        "quelle": "openwrt_wiki_foto_platine",
+        "beleg": "https://openwrt.org/_media/media/cudy/ap3000-v1_pcb_front_without_heatsink.jpeg",
+        "stand": "Foto auf der Wiki-Seite (Upload-Datum nicht ermittelt; Seite Stand 2026-08-28)",
+        "sicherheit": "mittel",
+        "bemerkung": "J6 zwischen Abschirmung und Elko, ohne Stiftleiste"
+      },
+      {
+        "wert": "innen Lötpunkte (4 Durchkontaktierungen, unbestückt)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2APRGAP01/Internal-Photos/Internal-Photos-7189218",
+        "stand": "Exhibit 2024-03-22 (BTL Projekt 2310G131C, PDF 2024-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "gleiche Stelle auf dem FCC-Foto ohne Kühlkörper"
+      },
+      {
+        "wert": "innen Stiftleiste (4-polig, J6)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"4-pin header,, 3.3V TTL,, (115200 8N1),, J6\"; ob bestückt, steht nicht da"
+      },
+      {
+        "wert": "innen (Gehäuse öffnen)",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "TX, RX, GND, VCC (Pin 1 = TX, eckiges Pad)",
+        "quelle": "openwrt_wiki_foto_platine",
+        "beleg": "https://openwrt.org/_media/media/cudy/ap3000-v1_pcb_front_without_heatsink.jpeg",
+        "stand": "Foto auf der Wiki-Seite (Upload-Datum nicht ermittelt; Seite Stand 2026-08-28)",
+        "sicherheit": "mittel",
+        "bemerkung": "Bestückungsdruck an J6"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "115200 / 8N1"
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000-v1.dts",
+        "stand": "Branch main am 2026-10-19; neuester Commit der Datei 31f30f5a (2026-02-03)",
+        "sicherheit": "mittel",
+        "bemerkung": "stdout-path serial0:115200n8"
+      },
+      {
+        "wert": 115200,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/ap3000_v1",
+        "stand": "Seitenrevision 2026-08-28 22:26 (dotsam)",
+        "sicherheit": "mittel",
+        "bemerkung": "U-Boot env baudrate=115200"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "U-Boot vor Stock 2.4.7 bekommt keinen Ethernet-Link; Image nur per loadx/sx (XMODEM) über die Konsole, dann sysupgrade",
+        "quelle": "forum_210028",
+        "beleg": "https://forum.openwrt.org/t/support-for-cudy-ap3000-indoor/210028",
+        "stand": "Thread 2024-09-10 bis 2026-02-27 (37 Beitraege, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beiträge 14/15 pktpls (2024-10)"
+      },
+      {
+        "wert": "Bei YT8821-Geräten mit alter Zwischenfirmware ohne Link: per UART WLAN einschalten und flashen",
+        "quelle": "openwrt_pr_21776",
+        "beleg": "https://github.com/openwrt/openwrt/pull/21776",
+        "stand": "PR 2026-01-29 (grinderz), gemergt 2026-02-03; keine Kommentare",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "mediatek/filogic",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "mediatek/filogic (cudy_ap3000-v1)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6992d6e51af34603de099d7bbe9d7e848f109e22",
+        "stand": "Commit 6992d6e5 vom 2024-12-10 (Maxim Anisimov), gemergt 2024-12-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "24.10.0",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "Supported Since Rel"
+      },
+      {
+        "wert": "YT8821-Variante erst ab 24.10.6 bzw. 25.12.0-rc5",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/ap3000_v1",
+        "stand": "Seitenrevision 2026-08-28 22:26 (dotsam)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_support_commit": [
+      {
+        "wert": "6992d6e51af34603de099d7bbe9d7e848f109e22",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6992d6e51af34603de099d7bbe9d7e848f109e22",
+        "stand": "Commit 6992d6e5 vom 2024-12-10 (Maxim Anisimov), gemergt 2024-12-22",
+        "sicherheit": "hoch",
+        "bemerkung": "PR 17225, gemergt 2024-12-22"
+      },
+      {
+        "wert": "31f30f5a6cffa2046328a933ed8063e9f8fc30b2",
+        "quelle": "openwrt_commit_yt8821",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31f30f5a6cffa2046328a933ed8063e9f8fc30b2",
+        "stand": "Commit 31f30f5a vom 2026-01-29 (Anton Danilov), gemergt 2026-02-03 (PR 21776)",
+        "sicherheit": "hoch",
+        "bemerkung": "YT8821-Autodetect, PR 21776"
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.5",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_einschraenkungen": [
+      {
+        "wert": "Failsafe nur per IPv6 (Link-Local), IPv4 im Failsafe geht nicht",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/ap3000_v1",
+        "stand": "Seitenrevision 2026-08-28 22:26 (dotsam)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "OpenWrt Failsafe mode via IPv4",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "Unsupported Functions"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "nicht in Gluon upstream (main ohne cudy-ap3000-v1)",
+        "quelle": "gluon_upstream",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/mediatek-filogic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Neanderfunk-Zusatz: device('cudy-ap3000-v1', 'cudy_ap3000-v1', factory = false)",
+        "quelle": "gluon_lokal",
+        "beleg": "/home/adorfer/projekte/freifunk/firmware-2025.1/gluon/targets/mediatek-filogic",
+        "stand": "Gluon v2025.1.3 mit Neanderfunk-Patches (lokaler Checkout firmware-2025.1/gluon)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "läuft: Gluon 2025.1 (gluon-v2025.1.3-5-g0ad3ad5+, 26100702bro, Domain nef-21_dias) über Stock 2.4.4 -> Cudy-Zwischenfirmware -> sysupgrade",
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "unknown",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "Gluon support: unknown"
+      }
+    ],
+    "gluon_lokal_openwrt_yt8821": [
+      {
+        "wert": "YT8821-Unterstützung im lokalen OpenWrt-Baum vorhanden (Backport 5774c8b316, DEVICE_PACKAGES mit kmod-phy-motorcomm)",
+        "quelle": "openwrt_git_lokal",
+        "beleg": "/home/adorfer/projekte/freifunk/firmware-2025.1/gluon/openwrt",
+        "stand": "lokaler OpenWrt-Checkout des Gluon-2025.1-Baums (Branch patched)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot 2022.07-rc3 (Sep 01 2023, Build jenkins-AP3000-19), BL2 v2.7",
+        "quelle": "gist_pktpls",
+        "beleg": "https://gist.github.com/pktpls/a51c61194f8036d173b04a699e1f3ced",
+        "stand": "Gist 2024-10-21 (pktpls): Bootloader-Log, Hersteller-kmsg, OpenWrt-logread",
+        "sicherheit": "hoch",
+        "bemerkung": "Stand Stock bis 2.4.6"
+      },
+      {
+        "wert": "U-Boot 2022.07-rc3 (Jan 15 2026, Build jenkins-mtk_mt7981_ac_c200-72) mit TFTP-Recovery",
+        "quelle": "forum_210028",
+        "beleg": "https://forum.openwrt.org/t/support-for-cudy-ap3000-indoor/210028",
+        "stand": "Thread 2024-09-10 bis 2026-02-27 (37 Beitraege, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beitrag 38 grinderz, nach Stock 2.4.7"
+      },
+      {
+        "wert": "U-Boot",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_os": [
+      {
+        "wert": "Cudy-Firmware auf OpenWrt-Basis (Linux 5.4.219)",
+        "quelle": "gist_pktpls",
+        "beleg": "https://gist.github.com/pktpls/a51c61194f8036d173b04a699e1f3ced",
+        "stand": "Gist 2024-10-21 (pktpls): Bootloader-Log, Hersteller-kmsg, OpenWrt-logread",
+        "sicherheit": "hoch",
+        "bemerkung": "Hersteller-kmsg 2024"
+      },
+      {
+        "wert": "2.4.4-20250808-093007 ab Werk (Gerät S/N 2535...)",
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.cudy.com/pages/download-center/ap3000-1-0",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/pages/download-center/ap3000-1-0",
+        "stand": "Abruf 2026-10-19; neueste Firmware 2.5.15 vom 07-Jul-2026",
+        "sicherheit": "hoch",
+        "bemerkung": "neueste 2.5.15 (07-Jul-2026); TFTP-Recovery ab 2.4.7 (28-Jan-2026)"
+      }
+    ],
+    "stock_ip": [
+      {
+        "wert": "192.168.10.254 (http://cudyap.net/)",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/2APRGAP01/Label/ID-Label-Location-Info-7189219",
+        "stand": "Exhibit 2024-03-22 (Zeichnung Cudy V1 vom 2023-08-17, PDF 2024-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "Management IP auf dem Typenschild"
+      },
+      {
+        "wert": "192.168.10.254",
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": "nicht 192.168.10.1; AP holt sich ab Werk selbst per DHCP eine Adresse"
+      },
+      {
+        "wert": "192.168.10.254",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Cudy-signierte OpenWrt-Zwischenfirmware über die Stock-Oberfläche (Firmware-Seite), danach sysupgrade-Image (kein factory)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/ap3000_v1",
+        "stand": "Seitenrevision 2026-08-28 22:26 (dotsam)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Teil 1: Stock 2.4.4 -> cudy-ap3000.bin aus dem Neanderfunk-Spiegel (MD5 7023a3bd44e4ae0bf09de4ed9cb44335, Fassung 20260224); Teil 2: LuCI (OpenWrt 23.05-SNAPSHOT-CUDY) -> Gluon-sysupgrade, Einstellungen nicht behalten",
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Zwischenfirmware: AP3000 V1.0.zip, MD5 7023a3bd...; für YT8821-Geräte ist die Fassung 20260224 nötig",
+        "quelle": "werkstatt_doku",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/cudy-installation.md",
+        "stand": "routerwerkstatt Commit a9781bd vom 2026-10-15",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TFTP ab Stock 2.4.7: Rechner 192.168.1.88, Datei recovery.bin, Reset halten und einschalten, Gerät 192.168.1.112",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/ap3000_v1",
+        "stand": "Seitenrevision 2026-08-28 22:26 (dotsam)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "recovery": [
+      {
+        "wert": "TFTP erst ab Stock 2.4.7 (neuer U-Boot); davor nur seriell",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/ap3000_v1",
+        "stand": "Seitenrevision 2026-08-28 22:26 (dotsam)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "bei Stock 2.4.4 kein TFTP-RRQ am Testplatz (Reset beim Einschalten: LED orange/rot, nur DHCP-Discover)",
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2.4.7 Release Note: \"Add the firmware recovery via TFTPD function\"",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/pages/download-center/ap3000-1-0",
+        "stand": "Abruf 2026-10-19; neueste Firmware 2.5.15 vom 07-Jul-2026",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "mac_schema": [
+      {
+        "wert": "Basis-MAC aus bdinfo 0xde00 (= Label-MAC, gmac0); WLAN 2.4 = Basis, 5 GHz = Basis+1 mit LA-Bit",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6992d6e51af34603de099d7bbe9d7e848f109e22",
+        "stand": "Commit 6992d6e5 vom 2024-12-10 (Maxim Anisimov), gemergt 2024-12-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "OUI 80:AF:CA",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "80:AF:CA:E4:71:64 (eigenes Gerät)",
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Available 2024",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "im Shop gelistet (AP3000 und AP3000_P)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:35 (raylynnknight); angelegt 2025-03-03 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/cudy/ap3000_v1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/ap3000_v1",
+        "stand": "Seitenrevision 2026-08-28 22:26 (dotsam)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP3000",
+        "stand": "Revision 387029 vom 2024-12-29T12:00:33Z (Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.cudy.com/products/ap3000-1-0",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap3000-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://www.cudy.com/cdn/shop/files/AP3000_AP3000_P_1.0_Datasheet_20250207.pdf?v=16540237407190805563",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_AP3000_P_1.0_Datasheet_20250207.pdf?v=16540237407190805563",
+        "stand": "Dateiname 20250207, PDF erstellt 2026-02-05; 7 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "forum_thread": [
+      {
+        "wert": "https://forum.openwrt.org/t/support-for-cudy-ap3000-indoor/210028",
+        "quelle": "forum_210028",
+        "beleg": "https://forum.openwrt.org/t/support-for-cudy-ap3000-indoor/210028",
+        "stand": "Thread 2024-09-10 bis 2026-02-27 (37 Beitraege, alle gelesen)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://forum.openwrt.org/t/cudy-ap3000-v1-indoor-wan-motorcomm-yt8821-support/245491",
+        "quelle": "forum_245491",
+        "beleg": "https://forum.openwrt.org/t/cudy-ap3000-v1-indoor-wan-motorcomm-yt8821-support/245491",
+        "stand": "Thread 2026-01-21 bis 2026-01-29, geschlossen 2026-02-11 (10 Beitraege)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "einsatz_erfahrung": [
+      {
+        "wert": "Am Testplatz: Gluon 2025.1 online, Uplink per VPN, radio0 Kanal 9 HE20, radio1 Kanal 44 HE80; Setup-Mode antwortet als 192.168.1.1 auf der einzigen Buchse (ob er dort DHCP verteilt: unbelegt)",
+        "quelle": "werkstatt_validierung",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/validierung/cudy-ap3000-v1-2026-10-17.md",
+        "stand": "routerwerkstatt Commit 1ca9cbe vom 2026-10-18 (Test 17.10.2026 am Testplatz grw, Nachtrag 18.10.)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Nutzer berichtet OpenWrt-Betrieb \"works quite well\", gute Reichweite",
+        "quelle": "forum_210028",
+        "beleg": "https://forum.openwrt.org/t/support-for-cudy-ap3000-indoor/210028",
+        "stand": "Thread 2024-09-10 bis 2026-02-27 (37 Beitraege, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beitrag 37 Falco, 2025-08-28"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/2APRGAP01/External-Photos/External-Photos-7189217",
+      "kategorie": "reset_knopf",
+      "grund": "Aussenfotos (554 KB) nicht geladen; Lage des Reset-Tasters nur aus Datenblatt-Bildbeschriftung und Platinenfoto"
+    },
+    {
+      "url": "https://www.cudy.com/cdn/shop/files/Hardware_Installation_Guide.pdf?v=13798974507187339699",
+      "kategorie": "montage",
+      "grund": "Montageanleitung (Decke/Wand, Bohrbild) nicht ausgewertet"
+    },
+    {
+      "url": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_AP3000.pdf?v=18245315201562431031",
+      "kategorie": "wlan_sendeleistung_dbm",
+      "grund": "EU-Sendeleistung je Band steht vermutlich hier, nicht ausgewertet"
+    },
+    {
+      "url": "https://www.cudy.com/cdn/shop/files/CE_DOC_AP3000.pdf?v=5988115672029700479",
+      "kategorie": "ce_konformitaet",
+      "grund": "CE-Erklaerung nicht geladen"
+    },
+    {
+      "url": "https://fccid.io/2APRGAP01",
+      "kategorie": "dc_buchse_mass",
+      "grund": "Hohlstecker-Mass (z. B. 5.5x2.1) in keiner Quelle; Schematics vertraulich"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/cudy-ap3000-v1-indoor-wan-motorcomm-yt8821-support/245491",
+      "kategorie": "erkennung_phy_variante",
+      "grund": "ab welcher Seriennummer Cudy auf YT8821 umstellte, ist offen (einziger Beleg: AP3000_P2540 = YT8821); am eigenen Geraet (S/N 2535) per logread/dmesg pruefbar"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/pull/22259#issuecomment-4060724997",
+      "kategorie": "installation",
+      "grund": "Kommentare zur Zwischenfirmware 20260224 fuer YT8821 nicht gelesen"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/support-for-cudy-ap3000-indoor/210028",
+      "kategorie": "einsatz_erfahrung",
+      "grund": "verlinkter Thread \"Cudy ap3000 v1 bad wifi performance\" nicht gelesen"
+    },
+    {
+      "url": "https://fccid.io/2APRGAP01/Test-Report/Antenna-Specification-part1-7189189",
+      "kategorie": "antennen_charakteristik",
+      "grund": "Antennen-Datenblaetter (5 Teile, je ~1.2 MB) mit Richtdiagrammen nicht ausgewertet"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "fertig",
+    "anfragen": 33,
+    "notiz": "Kein ToH-Dump-Eintrag; ToH-Datenseite und Wiki (mit Revisionen), Platinen- und Typenschildfoto aus dem Wiki, OpenWrt-Commits 6992d6e5/31f30f5a/8d407de4 mit PRs, DTS main, Forum 210028 (komplett) und 245491, Gist pktpls (Boot-Logs), WikiDevi, FCC 2APRGAP01 (Uebersicht, Typenschild, Handbuch, Innenfotos, MPE), Cudy-Produktseite, Datenblatt 2026-02, Downloadseite, Gluon upstream (ohne AP3000 v1) und lokal (Neanderfunk-Zusatz), eigenes Werkstatt-Protokoll 17.10.2026. Wichtig: zwei PHY-Bestueckungen (RTL8221B / YT8821) und zwei Flash-Bestueckungen (ESMT / Micron) unter v1; TFTP-Recovery erst ab Stock 2.4.7; serielle Konsole J6 als unbestueckte Loetpunkte (TX, RX, GND, VCC)."
+  }
+}
