@@ -290,11 +290,12 @@
     if (version && g.versionen !== 'abgeschlossen') p.appendChild(el('span', 'finder-kaufen-hinweis',
       ' Achte beim Kauf auf die Hardware-Version ' + version +
       '. Sie steht auf dem Typenschild; fehlt sie im Angebot, frag nach.'));
-    /* "Keine Firmware" klaenge, als haette das Geraet gar keine (Content). */
+    /* "Keine Firmware" klaenge, als haette das Geraet gar keine (Content).
+       "noch nicht in unserer Freifunk-Firmware" steht dann schon im Satz. */
     if (g.nicht_unterstuetzt) g.nicht_unterstuetzt.forEach(function (n) {
       p.appendChild(el('span', 'finder-kaufen-hinweis',
         ' Für ' + n.version + ' gibt es keine Freifunk-Firmware' +
-        (n.grund ? ' (' + n.grund + ')' : '') + '.'));
+        (n.grund ? ' (' + n.grund.replace(/^noch nicht in unserer Freifunk-Firmware, /, '') + ')' : '') + '.'));
     });
     return p;
   }
