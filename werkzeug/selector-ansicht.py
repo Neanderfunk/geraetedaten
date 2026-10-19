@@ -357,6 +357,116 @@ def ansicht(d, idx):
             'technik': [z for z in technik if z], 'links': links}
 
 
+def facetten(d):
+    """Maschinenlesbare Werte fuer die Geraetesuche. None = unbekannt.
+    'unsicher' nennt Felder, bei denen sich Quellen widersprechen."""
+    f, q = d.get('felder', {}), d.get('quellen', {})
+    s = {k: auswahl(v, q, k in FAKT) for k, v in f.items()}
+    unsicher = []
+
+    def alle(k):
+        sel = s.get(k)
+        if not sel:
+            return []
+        if sel['abweichend']:
+            unsicher.append(k)
+        return [sel['wert']] + [a['wert'] for a in sel['abweichend']]
+
+    def gen(t):
+        m = re.search(r'WLAN (\d)', generation(t))
+        return int(m.group(1)) if m else None
+
+    fa = {}
+    gens, baender = [], []
+    for band, k in (('2.4', 'wlan_24_standard'), ('5', 'wlan_5_standard'), ('6', 'wlan_6_standard')):
+        sel = s.get(k)
+        if sel and not nein(sel['wert']) and schluessel(sel['wert']).strip('"()- '):
+            g = gen(sel['wert'])
+            if g or band != '6':
+                baender.append(band)
+                if g:
+                    gens.append(g)
+    fa['wlan'] = max(gens) if gens else None
+    fa['baender'] = baender or None
+    st = []
+    for k in ('wlan_24_streams', 'wlan_5_streams', 'wlan_6_streams'):
+        for t in alle(k)[:1]:
+            m = re.search(r'(\d)', t)
+            if m:
+                st.append(int(m.group(1)))
+    fa['streams'] = max(st) if st else None
+    fa['ram'] = zahl(s.get('ram_mb'))
+    fa['flash'] = zahl(s.get('flash_mb'))
+    if fa['ram'] and fa['flash']:
+        fa['speicher'] = ('reicht' if fa['flash'] >= 16 and fa['ram'] >= 128 else
+                          'knapp' if fa['flash'] >= 8 and fa['ram'] >= 64 else 'zu wenig')
+    else:
+        fa['speicher'] = None
+    fa['kerne'] = zahl(s.get('cpu_kerne'))
+    ein = set()
+    for t in alle('einsatzort'):
+        o = ort(t)
+        if 'innen' in o:
+            ein.add('innen')
+        if 'außen' in o:
+            ein.add('außen')
+    fa['einsatz'] = sorted(ein) or None
+    mon = set()
+    for t in alle('montage') + alle('montageloecher'):
+        k = schluessel(t)
+        for wort, wert in (('tisch', 'Tisch'), ('desk', 'Tisch'), ('wand', 'Wand'), ('wall', 'Wand'),
+                           ('decke', 'Decke'), ('ceiling', 'Decke'), ('mast', 'Mast'), ('pole', 'Mast')):
+            if wort in k:
+                mon.add(wert)
+    fa['montage'] = sorted(mon) or None
+    ip = None
+    for t in alle('ip_schutzart')[:1]:
+        m = re.search(r'IP\s*([0-9X])([0-9X])', t.upper())
+        if m:
+            ip = [0 if m.group(1) == 'X' else int(m.group(1)), 0 if m.group(2) == 'X' else int(m.group(2))]
+    fa['ip'] = ip
+    pe = set()
+    for t in alle('poe_eingang'):
+        k = schluessel(t)
+        if nein(t):
+            pe.add('nein')
+        for n in ('af', 'at', 'bt'):
+            if '802.3' + n in k:
+                pe.add(n)
+        if 'passiv' in k or 'passive' in k:
+            pe.add('passiv')
+    fa['poe'] = sorted(pe) or None
+    nb = s.get('netzteil_beiliegend')
+    fa['netzteil'] = (True if ja(nb['wert']) else False if nein(nb['wert']) else None) if nb else None
+    sp = []
+    for t in alle('ports') + alle('ports_anzahl'):
+        k = schluessel(t)
+        for muster, mbit in ((r'10\s*g', 10000), (r'2[.,]5\s*g', 2500), (r'\b1\s*g|1000|gbit|gbe', 1000),
+                             (r'\b100\b|10/100|fast', 100)):
+            if re.search(muster, k):
+                sp.append(mbit)
+                break
+    fa['port_mbit'] = max(sp) if sp else None
+    fa['ports'] = zahl(s.get('ports_anzahl'))
+    u = s.get('usb')
+    fa['usb'] = (False if nein(u['wert']) else True) if u else None
+    sf = s.get('sfp')
+    fa['sfp'] = (False if nein(sf['wert']) or schluessel(sf['wert']) == '0' else True) if sf else None
+    an = s.get('antennen_art')
+    if an:
+        k = schluessel(an['wert'])
+        fa['antennen'] = ('abnehmbar' if ('abnehmbar' in k or 'detachable' in k or 'rp-sma' in k) else
+                          'intern' if ('intern' in k and 'extern' not in k) else
+                          'extern' if 'extern' in k else None)
+    else:
+        fa['antennen'] = None
+    fa['leistung'] = zahl(s.get('leistung_w_max'))
+    lu = s.get('luefter')
+    fa['luefter'] = (False if nein(lu['wert']) else True if ja(lu['wert']) else None) if lu else None
+    fa['unsicher'] = sorted(set(unsicher)) or None
+    return fa
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--index', help='anleitungen/html/index.json aus gluon-rampe-installer')
@@ -367,7 +477,7 @@ def main():
         for e in json.load(open(a.index, encoding='utf-8')):
             idx[e['gluon_name']] = e
     os.makedirs(a.aus, exist_ok=True)
-    liste = {}
+    liste, fac = {}, {}
     for p in sorted(glob.glob(os.path.join(WURZEL, 'daten', '*.json'))):
         d = json.load(open(p, encoding='utf-8'))
         v = ansicht(d, idx)
@@ -376,9 +486,13 @@ def main():
         with open(os.path.join(a.aus, d['image'] + '.json'), 'w', encoding='utf-8') as fh:
             json.dump(v, fh, ensure_ascii=False, separators=(',', ':'))
         liste[d['image']] = {'modell': v['modell'], 'stand': v['stand']}
+        fac[d['image']] = dict(modell=v['modell'], **facetten(d))
     with open(os.path.join(a.aus, 'index.json'), 'w', encoding='utf-8') as fh:
         json.dump({'quelle': 'https://github.com/Neanderfunk/geraetedaten', 'lizenz': 'CC BY-SA 4.0',
                    'geraete': liste}, fh, ensure_ascii=False, indent=1)
+    with open(os.path.join(a.aus, 'facetten.json'), 'w', encoding='utf-8') as fh:
+        json.dump({'quelle': 'https://github.com/Neanderfunk/geraetedaten', 'lizenz': 'CC BY-SA 4.0',
+                   'geraete': fac}, fh, ensure_ascii=False, separators=(',', ':'))
     print(a.aus, len(liste), 'Geraete')
 
 
