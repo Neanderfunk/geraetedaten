@@ -261,6 +261,36 @@
     return k.replace(/_/g, ' ');
   }
 
+  /* Kaufen und Preise: Geizhals-Permalink, wenn bekannt, sonst Suche; eBay und Kleinanzeigen
+     immer als Suche. Gesucht wird ohne Hardware-Version, weil Angebote sie selten nennen;
+     die Version steht deshalb als Hinweis dabei. */
+  function suchname(modell) {
+    return modell.replace(/\s+\(.*\)$/, '').replace(/\s+v\d+(\.\d+)?(\s.*)?$/i, '').trim();
+  }
+  function kaufLinks(g) {
+    var name = suchname(g.modell);
+    var version = (/\s(v\d+(\.\d+)?)\b/i.exec(g.modell) || [])[1];
+    var p = el('p', 'finder-kaufen');
+    p.appendChild(document.createTextNode('Preise und gebraucht: '));
+    var ziele = [
+      ['Geizhals', g.geizhals || 'https://geizhals.de/?fs=' + encodeURIComponent(name) + '&hloc=de'],
+      ['eBay', 'https://www.ebay.de/sch/i.html?_nkw=' + encodeURIComponent(name)],
+      ['Kleinanzeigen', 'https://www.kleinanzeigen.de/s-' +
+        encodeURIComponent(name.toLowerCase().replace(/[^a-z0-9äöüß]+/g, '-').replace(/^-|-$/g, '')) + '/k0']
+    ];
+    ziele.forEach(function (z, i) {
+      if (i) p.appendChild(document.createTextNode(' · '));
+      var a = el('a', null, z[0]);
+      a.href = z[1];
+      a.rel = 'noopener noreferrer';
+      a.target = '_blank';
+      p.appendChild(a);
+    });
+    if (version) p.appendChild(el('span', 'finder-kaufen-hinweis',
+      ' Beim Kauf auf die Hardware-Version ' + version + ' achten.'));
+    return p;
+  }
+
   function chips(g) {
     var c = [];
     if (g.wlan) c.push('WLAN ' + g.wlan);
@@ -343,6 +373,7 @@
       if (t.fehlt.length) rumpf.appendChild(el('p', 'finder-fehlt', 'Nicht bekannt: ' + t.fehlt.join(', ')));
       if (g.unsicher) rumpf.appendChild(el('p', 'finder-unsicher',
         'Quellen widersprechen sich bei: ' + g.unsicher.map(feldName).join(', ')));
+      rumpf.appendChild(kaufLinks(g));
       var knoepfe = el('p', 'finder-knoepfe');
       if (ort) {
         var a = el('a', 'finder-knopf', 'Firmware');

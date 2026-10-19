@@ -487,6 +487,8 @@ def facetten(d):
     fa['leistung'] = zahl(s.get('leistung_w_max'))
     lu = s.get('luefter')
     fa['luefter'] = (False if nein(lu['wert']) else True if ja(lu['wert']) else None) if lu else None
+    gz = s.get('geizhals_url')
+    fa['geizhals'] = gz['wert'] if gz and gz['wert'].startswith('https://geizhals.') else None
     fa['unsicher'] = sorted(set(unsicher)) or None
     return fa
 
