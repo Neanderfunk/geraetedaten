@@ -1,0 +1,2487 @@
+{
+  "image": "ubiquiti-unifi-swiss-army-knife-ultra",
+  "modell": "Ubiquiti UniFi Swiss Army Knife Ultra (UK-Ultra)",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "bemerkung": "Kein Eintrag im Dump (toh_suche.py liefert nur andere UniFi-Modelle mit Score 0.33; grep nach UK-Ultra/Swiss ohne Treffer), obwohl die hwdata-Seite seit 2024-03-15 existiert; Werte deshalb aus der Live-Seite (openwrt_hwdata)"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra?do=export_raw",
+      "stand": "Seitenrevision 2026-03-15 03:24",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Angelegt 2024-03-15 (raylynnknight), zuletzt \"Update for 25.12.0\"; Versions-Feld leer"
+    },
+    "openwrt_geraeteseite": {
+      "url": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra?do=export_raw",
+      "stand": "Seitenrevision 2024-04-05 20:14",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Einzige Revision (pfassberg); Hardwaretabelle teils von anderen Geräten übernommen (Tag AR9344, \"Atheros (AR9563)\", \"orange led\")"
+    },
+    "openwrt_wiki_unifiac": {
+      "url": "https://openwrt.org/toh/ubiquiti/unifiac?do=export_raw",
+      "stand": "Seitenrevision 2026-02-19 22:43",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Gemeinsame Seite der UniFi-AC-Familie, nennt UK-Ultra nur in der Modellliste und bei der gemeinsamen Stock-Firmware; Kopie aus dem Lauf ubiquiti-unifi-ac-mesh vom selben Tag (cache wiki_unifiac_aus_ac-mesh-lauf.txt), nicht erneut abgerufen"
+    },
+    "openwrt_git": {
+      "url": "https://github.com/openwrt/openwrt/commit/bf94e0a38389b2ce5d33be9c97d104d36dd5ebd6",
+      "stand": "Commit 2024-01-05 (Autor David Bauer), gemergt 2024-01-07",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PR https://github.com/openwrt/openwrt/pull/14342"
+    },
+    "openwrt_git_2305": {
+      "url": "https://github.com/openwrt/openwrt/commit/5ad05681f2de00c8c6d6449df2b958b0838dbc1a",
+      "stand": "Backport-Commit 2024-01-10 (Branch openwrt-23.05), enthalten ab Tag v23.05.3",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PR https://github.com/openwrt/openwrt/pull/14369 (cherry-pick von bf94e0a); Datei qca9563_ubnt_uk-ultra.dts fehlt in v23.05.2, vorhanden in v23.05.3"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=uk-ultra+repo:openwrt/openwrt",
+      "stand": "Suchergebnis 2026-10-19 (2 Commits: c9e58f8 Template, bf94e0a Support)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_ubnt_uk-ultra.dts",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "dateien": [
+        "qca9563_ubnt_uk-ultra.dts",
+        "qca9563_ubnt_unifiac-lite.dtsi",
+        "qca9563_ubnt_unifiac.dtsi"
+      ]
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "dazu common-ubnt.mk (Device/ubnt_unifiac)"
+    },
+    "openwrt_board_d": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/generic/base-files/etc/board.d/03_gpio_switches",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "dateien": [
+        "02_network",
+        "03_gpio_switches"
+      ]
+    },
+    "openwrt_github_suche": {
+      "url": "https://api.github.com/search/issues?q=uk-ultra+org:openwrt",
+      "stand": "Suchergebnis 2026-10-19 (6 Treffer, davon 2 Support-PRs 14342/14369, Rest ohne Hardwarebezug)",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_commit": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/10721f6e23184a1ca501ba35173e49cd90b1bfd3",
+      "stand": "Commit 2024-01-11 (Autor David Bauer, PR #3149)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "aus lokalem Gluon-Klon gelesen (git log -S)"
+    },
+    "gluon_release_v2023_2_1": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/docs/releases/v2023.2.1.rst",
+      "stand": "Release Notes Gluon 2023.2.1 (Tag 2024-01-23)",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+      "stand": "Branch v2025.1.x (lokaler Klon, Stand 0ad3ad5b)",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_platform": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/package/gluon-core/luasrc/usr/lib/lua/gluon/platform.lua",
+      "stand": "Branch v2025.1.x (lokaler Klon, Stand 0ad3ad5b)",
+      "abgerufen": "2026-10-19"
+    },
+    "ubiquiti_techspecs": {
+      "url": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+      "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Next.js-Daten (__NEXT_DATA__) ausgewertet; datasheet: null, einziges Dokument Installation Guide https://ui.com/qig/uk-ultra"
+    },
+    "ubiquiti_store_eu": {
+      "url": "https://eu.store.ui.com/eu/en/products/uk-ultra",
+      "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Next.js-Daten; Status SoldOut, 75,00 EUR; nur Produkt UK-Ultra übernommen, verlinktes Zubehör (UniFi PoE Adapter 15W, U-PoE-af) getrennt notiert"
+    },
+    "ubiquiti_lieferumfang": {
+      "url": "https://cdn.ecomm.ui.com/products/eecac847-6407-4539-bbf0-03d0f8f3232f/d64035c9-2c40-4ab6-80f5-e76758267b54.png",
+      "stand": "Produktbild \"What's in the Box\", eingebunden in techspecs/Store 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "1500x796 PNG, als Bild ausgewertet"
+    },
+    "fcc": {
+      "url": "https://fccid.io/SWX-UKU",
+      "stand": "Grants 2023-12-15 (Original Equipment) und 2023-12-29 (Class II Permissive Change)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "FCC ID über Grantee-Liste https://fccid.io/SWX gefunden (SWX-UKU, 2023-12-29); SWX-UKULTRA gibt 404. Grenze 5 Abrufe auf fccid.io erreicht"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/SWX-UKU/Label/Label-Sample-6968820",
+      "stand": "Exhibit 2023-12-15 (PDF erstellt 2023-10-20)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "als Bild ausgewertet; bestätigt M/N UK-Ultra = FCC ID SWX-UKU"
+    },
+    "fcc_elabel": {
+      "url": "https://fccid.io/SWX-UKU/User-Manual/E-Label-Manual-6968792",
+      "stand": "Exhibit 2024-06-12 (PDF erstellt 2023-10-16)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "2 Seiten, pdftotext; nur Zulassungstexte, keine Hardwaredaten"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=UK-Ultra&fulltext=1",
+      "stand": "Suchen 2026-10-19 (\"UK-Ultra\", \"Swiss Army Knife\" Ubiquiti)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine Geräteseite"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/api.php?action=query&list=allpages&apprefix=Ubiquiti_Networks_UniFi",
+      "stand": "Abfrage 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine Seite für UK-Ultra / Swiss Army Knife"
+    },
+    "freifunk_forum_suche": {
+      "url": "https://forum.freifunk.net/search.json?q=UK-Ultra",
+      "stand": "Suche 2026-10-19 (2 Themen)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Thema 24606 \"Outdoor WLAN\" gelesen (nur Erwähnung als Outdoor-AP, keine Hardwaredaten); Thema 23818 Beitrag 2024-10-17: Flash-Werkzeug firmwareloader_uap_ac_pro unterstützt UK-Ultra"
+    },
+    "werkstatt": {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erstinstallation-ohne-factory.md",
+      "stand": "Arbeitskopie 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "kein Messprotokoll in docs/validierung/; nur Zeile in der Übersicht der Erstinstallationswege (Gruppe D Ubiquiti UniFi)"
+    }
+  },
+  "roh": {
+    "toh": {
+      "eintrag": null,
+      "hinweis": "kein Eintrag im Dump 2026-10-18"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi AP",
+      "Brand": "Ubiquiti",
+      "Model": "UniFi UK-Ultra",
+      "Versions": "",
+      "FCCID_urls": "",
+      "Availability_availability": "Available 2024",
+      "Where available": "https://eu.store.ui.com",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=bf94e0a38389b2ce5d33be9c97d104d36dd5ebd6",
+      "Supported Since Rel_releasesince": "23.05.3",
+      "Supported Current Rel_releasecurrent": "25.12.0",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "unknown",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Qualcomm Atheros QCA9563",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "775",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "-",
+      "VLAN_yesno": "¿",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Qualcomm Atheros QCA9563, Qualcomm Atheros QCA9880",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN 6.0GHz_wlan60": "-",
+      "WLAN 60.0GHz_wlan60g": "-",
+      "WLAN Comments_": "2.4GHz: 2X2 MIMO, 5GHz: 2X2 MIMO",
+      "WLAN driver_wlan-drivers": "ath9k, ath10k-ct",
+      "Detachable Antennas_numdetachantenna": "2",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "¿",
+      "Serial connection parameters_serialparam": "¿",
+      "Serial connection voltage_serialvoltage": "¿",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "2",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "¿",
+      "Power Supply": "PoE",
+      "Outdoor_yesno": "Yes",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:ubiquiti:unifi_uk-ultra",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "UniFi UK-Ultra",
+      "Git search_search-gits": "UniFi UK-Ultra",
+      "WikiDevi URL_urls": "",
+      "WikiDevi ID_hwinfo-ids": "",
+      "OEM Device Homepage URL_url": "http://¿",
+      "Firmware OEM Stock URL_url": "",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/generic/openwrt-25.12.0-ath79-generic-ubnt_uk-ultra-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/generic/openwrt-25.12.0-ath79-generic-ubnt_uk-ultra-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_uk-ultra-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_uk-ultra-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "see git-commit",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "see git-commit",
+      "Comment recovery": "",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "openwrt_geraeteseite": {
+      "Architecture": "MIPS",
+      "Vendor": "Atheros",
+      "Bootloader": "U-boot",
+      "System-On-Chip": "Atheros (AR9563)",
+      "CPU Speed": "775 MHz",
+      "Flash size": "16 MB",
+      "RAM": "128 MiB DDR2",
+      "Wireless": "AR9563 / AR9880",
+      "Ethernet port": "Gigabit, 802.3af PoE capable",
+      "USB": "No",
+      "Installation": "Gerät holt Adresse per DHCP, sonst 192.168.1.20; ssh ubnt@... (Passwort ubnt); sysupgrade-Image nach /tmp (kein factory-Image, OEM-Firmware basiert auf OpenWrt), als firmware.bin; Schreibschutz aus, Image per dd auf kernel0 und kernel1, bootselect-Flag auf kernel0, reboot",
+      "Install using TFTP": "Reset-Knopf beim Einschalten halten, bis der Ring abwechselnd blau/weiß blinkt; Gerät lauscht auf 192.168.1.20 per TFTP; Image übertragen, Neustart abwarten",
+      "Unbrick": "Anleitung für UAP-Pro (apollo.open-resource.org) laut Seite auch für UK-Ultra verwendbar",
+      "Specific Configuration": "LEDs white:dome und blue:dome per /sys/class/leds schalt- und blinkbar",
+      "Photos": "(leer)",
+      "Tags": "AR9344 16Flash 128RAM"
+    },
+    "openwrt_wiki_unifiac": {
+      "Modellliste": "UniFi Swiss Army Knife, aka UK-Ultra (Link techspecs.ui.com/unifi/wifi/uk-ultra)",
+      "Firmware": "UK-Ultra device is using same firmware (wie UniFi AC); Some of the firmwares are used for several models (... UAP-AC-UK-Ultra)",
+      "Supported Versions Filter": "UniFi UK-Ultra in der ToH-Filterliste"
+    },
+    "openwrt_git": {
+      "Hardware": {
+        "CPU": "Qualcomm Atheros QCA9563",
+        "RAM": "128M DDR2",
+        "FLASH": "16MB SPI-NOR",
+        "WiFi": [
+          "Qualcomm Atheros QCA9563 2x2:2 802.11n 2.4GHz",
+          "Qualcomm Atheros QCA9880 2x2:2 802.11ac 5GHz"
+        ]
+      },
+      "Antennas": "The device features internal antennas as well as external antenna connectors. By default, the internal antennas are used. Two GPIOs are exported by name, which can be used to control the antenna-path mux. Writing a logical 0 enables the external antenna connectors.",
+      "Installation": "sysupgrade-Image per scp nach /tmp (ubnt/ubnt, 192.168.1.20), Schreibschutz über /proc/ubnthal/.uf aus, dd auf mtdblock2 (kernel0) und mtdblock3 (kernel1), bootselect (mtd4) auf 0, reboot",
+      "Dateien": [
+        "target/linux/ath79/dts/qca9563_ubnt_uk-ultra.dts (neu)",
+        "qca9563_ubnt_unifiac.dtsi (Label leds:)",
+        "board.d/01_leds (rssileds wlan0, 4 Stufen)",
+        "board.d/02_network",
+        "board.d/03_gpio_switches (ant0_internal GPIO5, ant1_internal GPIO6, Vorgabe 1)",
+        "hotplug.d/firmware/11-ath10k-caldata",
+        "image/generic-ubnt.mk (Device/ubnt_uk-ultra)"
+      ],
+      "PR-Diskussion": "Leo-PL: gpio_switches statt Export im DTS; umgesetzt. Backport-PR 14369: UniFi-Bootloader sperrt den Flash beim Kernelstart nicht (blocktrron)"
+    },
+    "openwrt_dts": {
+      "compatible": "ubnt,uk-ultra, qca,qca9563",
+      "model": "Ubiquiti UniFi Swiss Army Knife Ultra",
+      "include": "qca9563_ubnt_unifiac-lite.dtsi -> qca9563_ubnt_unifiac.dtsi -> qca956x.dtsi",
+      "leds": {
+        "white:dome": "GPIO 7",
+        "blue:dome": "GPIO 8",
+        "white:rssi0": "GPIO 21",
+        "white:rssi1": "GPIO 20",
+        "white:rssi2": "GPIO 15",
+        "white:rssi3": "GPIO 1"
+      },
+      "led_aliases": "boot/failsafe = white:dome, running/upgrade = blue:dome",
+      "keys": "Reset button GPIO 2 active low, KEY_RESTART",
+      "antennenwahl": "GPIO5 und GPIO6: High = intern, Low = extern",
+      "ethernet": "eth0, phy4 an mdio0, phy-mode sgmii; MAC aus art 0x0; label-mac-device = eth0",
+      "wlan": "wmac (2.4 GHz, Kalibrierung art 0x1000) und ath10k an PCIe (5 GHz, Kalibrierung art 0x5000)",
+      "flash": "jedec,spi-nor, 25 MHz",
+      "partitionen": {
+        "u-boot": "0x000000 +0x060000 (ro)",
+        "u-boot-env": "0x060000 +0x010000 (ro)",
+        "firmware": "0x070000 +0xf20000 (kernel0+kernel1 zusammengefasst, denx,uimage)",
+        "bs": "0xf90000 +0x020000",
+        "cfg": "0xfb0000 +0x040000 (ro)",
+        "art": "0xff0000 +0x010000 (ro)"
+      }
+    },
+    "openwrt_image_mk": {
+      "Device/ubnt_uk-ultra": "$(Device/ubnt_unifiac); DEVICE_MODEL := UniFi Swiss Army Knife Ultra; DEVICE_PACKAGES += rssileds -swconfig",
+      "Device/ubnt_unifiac": "DEVICE_VENDOR := Ubiquiti; SOC := qca9563; IMAGE_SIZE := 15488k; DEVICE_PACKAGES := kmod-ath10k-ct ath10k-firmware-qca988x-ct"
+    },
+    "openwrt_board_d": {
+      "02_network": "ubnt,uk-ultra in der Gruppe mit unifiac-lite/-lr/-mesh: ucidef_set_interface_lan \"eth0\"",
+      "03_gpio_switches": "ant0_internal \"ANT0 Internal\" GPIO 517 Vorgabe 1; ant1_internal \"ANT1 Internal\" GPIO 518 Vorgabe 1 (main; im Commit 2024 noch GPIO 5/6)"
+    },
+    "gluon_commit": {
+      "targets/ath79-generic": "device('ubiquiti-unifi-swiss-army-knife-ultra', 'ubnt_uk-ultra', { factory = false, packages = ATH10K_PACKAGES_QCA9880 })",
+      "platform.lua": "ubnt,uk-ultra in M.is_outdoor_device()",
+      "supported_devices.rst": "ath79-generic / Ubiquiti / UniFi Swiss Army Knife Ultra"
+    },
+    "gluon_release_v2023_2_1": {
+      "Added hardware support": "ath79-generic - Ubiquiti - UniFi Swiss Army Knife Ultra"
+    },
+    "ubiquiti_techspecs": {
+      "titel": "Swiss Army Knife",
+      "name": "UK-Ultra",
+      "sku": "UK-Ultra-US",
+      "dokumente": [
+        {
+          "typ": "InstallationGuide",
+          "url": "https://ui.com/qig/uk-ultra"
+        }
+      ],
+      "datasheet": null,
+      "spezifikation": {
+        "dimensions": {
+          "label": "Dimensions",
+          "wert": "137 x 84 x 34 mm\n(5.4 x 3.3 x 1.3\")"
+        },
+        "wifi-standard": {
+          "label": "WiFi Standard",
+          "wert": "WiFi 5"
+        },
+        "spatial-streams": {
+          "label": "Spatial Streams",
+          "wert": "4"
+        },
+        "coverage-area": {
+          "label": "Coverage Area",
+          "wert": "115 m² (1,250 ft²)"
+        },
+        "maxdot-client-count": {
+          "label": "Max. Client Count",
+          "wert": "200+"
+        },
+        "uplink": {
+          "label": "Uplink",
+          "wert": "GbE"
+        },
+        "mounting": {
+          "label": "Mounting",
+          "wert": "Ceiling, Wall, Pole, Table (With Accessory)\n(Mounts Included)\nDesktop Stand (Optional)"
+        },
+        "weatherproofing": {
+          "label": "Weatherproofing",
+          "wert": "IPX6"
+        },
+        "power-method": {
+          "label": "Power Method",
+          "wert": "PoE"
+        },
+        "mimo": {
+          "label": "MIMO",
+          "wert": ""
+        },
+        "mimo-5-ghz": {
+          "label": "5 GHz",
+          "wert": "2 x 2 (DL MU-MIMO)"
+        },
+        "mimo-2dot4-ghz": {
+          "label": "2.4 GHz",
+          "wert": "2 x 2 (DL MU-MIMO)"
+        },
+        "maxdot-data-rate": {
+          "label": "Max. Data Rate",
+          "wert": ""
+        },
+        "maxdot-data-rate-5-ghz": {
+          "label": "5 GHz",
+          "wert": "866.7 Mbps (BW80)"
+        },
+        "maxdot-data-rate-2dot4-ghz": {
+          "label": "2.4 GHz",
+          "wert": "300 Mbps (BW40)"
+        },
+        "antenna-gain": {
+          "label": "Antenna Gain",
+          "wert": ""
+        },
+        "antenna-gain-5-ghz": {
+          "label": "5 GHz",
+          "wert": "6.1 dBi"
+        },
+        "antenna-gain-2dot4-ghz": {
+          "label": "2.4 GHz",
+          "wert": "4.7 dBi"
+        },
+        "maxdot-tx-power": {
+          "label": "Max. TX Power",
+          "wert": ""
+        },
+        "maxdot-tx-power-5-ghz": {
+          "label": "5 GHz",
+          "wert": "20 dBm"
+        },
+        "maxdot-tx-power-2dot4-ghz": {
+          "label": "2.4 GHz",
+          "wert": "20 dBm"
+        },
+        "maxdot-bssids": {
+          "label": "Max. BSSIDs",
+          "wert": "8 per Radio"
+        },
+        "supported-data-rates": {
+          "label": "Supported Data Rates",
+          "wert": ""
+        },
+        "supported-data-rates-802dot11ac-wifi-5": {
+          "label": "802.11ac (WiFi 5)",
+          "wert": "6.5 Mbps to 866.7 Mbps (MCS0 - MCS9 NSS1/2, VHT 20/40/80)"
+        },
+        "supported-data-rates-802dot11n": {
+          "label": "802.11n",
+          "wert": "6.5 Mbps to 300 Mbps (MCS0 - MCS15, HT 20/40)"
+        },
+        "wireless-meshing": {
+          "label": "Wireless Meshing",
+          "wert": "True"
+        },
+        "band-steering": {
+          "label": "Band Steering",
+          "wert": "True"
+        },
+        "802dot11v-bss-transition-management": {
+          "label": "802.11v BSS Transition Management",
+          "wert": "True"
+        },
+        "802dot11r-fast-roaming": {
+          "label": "802.11r Fast Roaming",
+          "wert": "True"
+        },
+        "802dot11k-radio-resource-management-rrm": {
+          "label": "802.11k Radio Resource Management (RRM)",
+          "wert": "True"
+        },
+        "advanced-radio-management": {
+          "label": "Advanced Radio Management",
+          "wert": "True"
+        },
+        "passpoint-hotspot-2dot0": {
+          "label": "Passpoint (Hotspot 2.0)",
+          "wert": "True"
+        },
+        "captive-hotspot-portal": {
+          "label": "Captive Hotspot Portal",
+          "wert": ""
+        },
+        "captive-hotspot-portal-custom-branding-landing-page": {
+          "label": "Custom Branding Landing Page",
+          "wert": "True"
+        },
+        "captive-hotspot-portal-voucher-authentication": {
+          "label": "Voucher Authentication",
+          "wert": "True"
+        },
+        "captive-hotspot-portal-payment-based-authentication": {
+          "label": "Payment-Based Authentication",
+          "wert": "True"
+        },
+        "captive-hotspot-portal-external-portal-server-support": {
+          "label": "External Portal Server Support",
+          "wert": "True"
+        },
+        "captive-hotspot-portal-password-authentication": {
+          "label": "Password Authentication",
+          "wert": "True"
+        },
+        "captive-hotspot-portal-guest-network-isolation": {
+          "label": "Guest Network Isolation",
+          "wert": "True"
+        },
+        "private-pre-shared-key-ppsk": {
+          "label": "Private Pre-Shared Key (PPSK)",
+          "wert": "True"
+        },
+        "wifi-speed-limiting": {
+          "label": "WiFi Speed Limiting",
+          "wert": "True"
+        },
+        "client-device-isolation": {
+          "label": "Client Device Isolation",
+          "wert": "True"
+        },
+        "wifi-schedules": {
+          "label": "WiFi Schedules",
+          "wert": "True"
+        },
+        "radius-over-tls-radsec": {
+          "label": "RADIUS over TLS (RadSec)",
+          "wert": "True"
+        },
+        "dynamic-radius-assigned-vlan": {
+          "label": "Dynamic RADIUS-assigned VLAN",
+          "wert": "True"
+        },
+        "maxdot-power-consumption": {
+          "label": "Max. Power Consumption",
+          "wert": "8W"
+        },
+        "supported-voltage-range": {
+          "label": "Supported Voltage Range",
+          "wert": "44–57V DC"
+        },
+        "networking-interface": {
+          "label": "Networking Interface",
+          "wert": "(1) GbE RJ45 port"
+        },
+        "weight": {
+          "label": "Weight",
+          "wert": "173 g (6.1 oz)"
+        },
+        "wind-loading": {
+          "label": "Wind Loading",
+          "wert": "33.2 N at 200 km/h (7.5 lbf at 125 mph)"
+        },
+        "pole-mount-diameter": {
+          "label": "Pole Mount Diameter",
+          "wert": "1~2\" (25–50 mm)"
+        },
+        "antennas": {
+          "label": "Antennas",
+          "wert": "(1) Internal antenna\n(2) RP-SMA connectors"
+        },
+        "management": {
+          "label": "Management",
+          "wert": "Ethernet"
+        },
+        "enclosure-material": {
+          "label": "Enclosure Material",
+          "wert": "UV-stabilized polycarbonate"
+        },
+        "mount-material": {
+          "label": "Mount Material",
+          "wert": "Polycarbonate, SGCC steel, plastic"
+        },
+        "leds": {
+          "label": "LEDs",
+          "wert": ""
+        },
+        "leds-system": {
+          "label": "System",
+          "wert": "(1) Power: White/Blue\n(4) Mesh Signal: Blue"
+        },
+        "channel-bandwidth": {
+          "label": "Channel Bandwidth",
+          "wert": "HT 20/40, VHT 20/40/80"
+        },
+        "operating-frequency": {
+          "label": "Operating Frequency",
+          "wert": "US/CA:\n2400 - 2472 MHz\nU-NII-1: 5150 - 5250 MHz\nU-NII-2A: 5250 - 5350 MHz\nU-NII-2C: 5470 - 5725 MHz\nU-NII-3: 5725 - 5850 MHz\n\nWorldwide:\n2400 - 2483.5 MHz\n5150 - 5850 MHz (Hinweis: For worldwide, it depends on the regulatory region)"
+        },
+        "ambient-operating-temperature": {
+          "label": "Ambient Operating Temperature",
+          "wert": "-40 to 60° C (-40 to 140° F)"
+        },
+        "ambient-operating-humidity": {
+          "label": "Ambient Operating Humidity",
+          "wert": "5 to 95% noncondensing"
+        },
+        "ndaa-compliant": {
+          "label": "NDAA Compliant",
+          "wert": "True"
+        },
+        "certifications": {
+          "label": "Certifications",
+          "wert": "CE, FCC, IC, Anatel: 06237-24-08356"
+        },
+        "application-requirements": {
+          "label": "Application Requirements",
+          "wert": ""
+        },
+        "application-requirements-unifi-network": {
+          "label": "UniFi Network",
+          "wert": "Version 7.5.187 and later"
+        }
+      }
+    },
+    "ubiquiti_store_eu": {
+      "titel": "Swiss Army Knife",
+      "name": "UK-Ultra",
+      "displaySku": "UK-Ultra",
+      "description": "Incredibly compact, indoor/outdoor AP with versatile mounting options and long-range external antenna support.",
+      "keyFeatures": [
+        "WiFi 5",
+        "4 spatial streams",
+        "115 m² (1,250 ft²) coverage with internal antenna",
+        "200+ connected devices",
+        "Powered using PoE",
+        "GbE uplink",
+        "Versatile wall, ceiling, and pole mounting",
+        "(2) RP-SMA connectors for optional external antennas",
+        "Weatherproof (outdoor exposed)"
+      ],
+      "featureTexte": {
+        "Dual-Radio WiFi": "Dual-radio 2.4/5 GHz 4-stream AP for proven mid-density coverage.",
+        "Ultra Compact Design": "Mount on a desk, on a ceiling, or on a wall.",
+        "External Antenna Ready": "Use the integrated antennas, included omni antenna, or use specialty antennas with RP-SMA connectors."
+      },
+      "tags": [
+        "feature:external-antenna-option",
+        "feature:4-stream",
+        "feature:1gbe"
+      ],
+      "preis": "75,00 EUR",
+      "status": "SoldOut",
+      "zubehoer_inline": "UniFi PoE Adapter (15W), U-PoE-af (Sammlung accessories-pro-poe-and-power)",
+      "zubehoer_u_poe_af_spezifikation": {
+        "Dimensions": "86 x 46 x 33 mm",
+        "Weight": "100 g",
+        "Output Voltage": "48V DC @ 0.32A",
+        "Rated Voltage": "100–240V AC at 50/60Hz",
+        "2-pair Powering": "Pins 4, 5 (+) and 7, 8 (-)",
+        "AC Connector": "IEC-320 C6",
+        "Clamping Protection": "11V Data, 60V Power",
+        "Data In / PoE": "RJ45 Shielded Socket",
+        "Gigabit LAN Port": "True",
+        "Reset Button": "False",
+        "Power Cable": "Included"
+      },
+      "spezifikation": {
+        "maxdot-client-count": {
+          "label": "Max. Client Count",
+          "wert": "200+"
+        },
+        "wifi5": {
+          "label": "WiFi5",
+          "wert": "WiFi 5"
+        },
+        "wifi6": {
+          "label": "WiFi6",
+          "wert": "Empty"
+        },
+        "wifi7": {
+          "label": "WiFi7",
+          "wert": "Empty"
+        },
+        "radioslashantenna": {
+          "label": "Radio/Antenna",
+          "wert": "Omnidirectional"
+        },
+        "uplink": {
+          "label": "Uplink",
+          "wert": "GbE"
+        },
+        "dimensions": {
+          "label": "Dimensions",
+          "wert": "137 x 84 x 34 mm\n(5.4 x 3.3 x 1.3\")"
+        },
+        "wifi-standard": {
+          "label": "WiFi Standard",
+          "wert": "WiFi 5"
+        },
+        "spatial-streams": {
+          "label": "Spatial Streams",
+          "wert": "4"
+        },
+        "thread": {
+          "label": "Thread",
+          "wert": "Empty"
+        },
+        "coverage-area": {
+          "label": "Coverage Area",
+          "wert": "115 m² (1,250 ft²)"
+        },
+        "mounting": {
+          "label": "Mounting",
+          "wert": "Ceiling, Wall, Pole, Table (With Accessory)\n(Mounts Included)\nDesktop Stand (Optional)"
+        },
+        "weatherproofing": {
+          "label": "Weatherproofing",
+          "wert": "IPX6"
+        },
+        "power-method": {
+          "label": "Power Method",
+          "wert": "PoE"
+        },
+        "mimo": {
+          "label": "MIMO",
+          "wert": ""
+        },
+        "mimo-6-ghz": {
+          "label": "6 GHz",
+          "wert": "Empty"
+        },
+        "mimo-5-ghz": {
+          "label": "5 GHz",
+          "wert": "2 x 2 (DL MU-MIMO)"
+        },
+        "mimo-2dot4-ghz": {
+          "label": "2.4 GHz",
+          "wert": "2 x 2 (DL MU-MIMO)"
+        },
+        "maxdot-data-rate": {
+          "label": "Max. Data Rate",
+          "wert": ""
+        },
+        "maxdot-data-rate-6-ghz": {
+          "label": "6 GHz",
+          "wert": "Empty"
+        },
+        "maxdot-data-rate-5-ghz": {
+          "label": "5 GHz",
+          "wert": "866.7 Mbps (BW80)"
+        },
+        "maxdot-data-rate-2dot4-ghz": {
+          "label": "2.4 GHz",
+          "wert": "300 Mbps (BW40)"
+        },
+        "antenna-gain": {
+          "label": "Antenna Gain",
+          "wert": ""
+        },
+        "antenna-gain-6-ghz": {
+          "label": "6 GHz",
+          "wert": "Empty"
+        },
+        "antenna-gain-5-ghz": {
+          "label": "5 GHz",
+          "wert": "6.1 dBi"
+        },
+        "antenna-gain-2dot4-ghz": {
+          "label": "2.4 GHz",
+          "wert": "4.7 dBi"
+        },
+        "maxdot-tx-power": {
+          "label": "Max. TX Power",
+          "wert": ""
+        },
+        "maxdot-tx-power-6-ghz": {
+          "label": "6 GHz",
+          "wert": "Empty"
+        },
+        "maxdot-tx-power-5-ghz": {
+          "label": "5 GHz",
+          "wert": "20 dBm"
+        },
+        "maxdot-tx-power-2dot4-ghz": {
+          "label": "2.4 GHz",
+          "wert": "20 dBm"
+        },
+        "maxdot-bssids": {
+          "label": "Max. BSSIDs",
+          "wert": "8 per Radio"
+        },
+        "supported-data-rates": {
+          "label": "Supported Data Rates",
+          "wert": ""
+        },
+        "supported-data-rates-802dot11be-wifi-7": {
+          "label": "802.11be (WiFi 7)",
+          "wert": "Empty"
+        },
+        "supported-data-rates-802dot11ax-wifi-6slash6e": {
+          "label": "802.11ax (WiFi 6/6E)",
+          "wert": "Empty"
+        },
+        "supported-data-rates-802dot11ax-wifi-6": {
+          "label": "802.11ax (WiFi 6)",
+          "wert": "Empty"
+        },
+        "supported-data-rates-802dot11ac-wifi-5": {
+          "label": "802.11ac (WiFi 5)",
+          "wert": "6.5 Mbps to 866.7 Mbps (MCS0 - MCS9 NSS1/2, VHT 20/40/80)"
+        },
+        "supported-data-rates-802dot11n": {
+          "label": "802.11n",
+          "wert": "6.5 Mbps to 300 Mbps (MCS0 - MCS15, HT 20/40)"
+        },
+        "wireless-meshing": {
+          "label": "Wireless Meshing",
+          "wert": "True"
+        },
+        "band-steering": {
+          "label": "Band Steering",
+          "wert": "True"
+        },
+        "802dot11v-bss-transition-management": {
+          "label": "802.11v BSS Transition Management",
+          "wert": "True"
+        },
+        "802dot11r-fast-roaming": {
+          "label": "802.11r Fast Roaming",
+          "wert": "True"
+        },
+        "802dot11k-radio-resource-management-rrm": {
+          "label": "802.11k Radio Resource Management (RRM)",
+          "wert": "True"
+        },
+        "zero-wait-dfs": {
+          "label": "Zero-Wait DFS",
+          "wert": "Empty"
+        },
+        "advanced-radio-management": {
+          "label": "Advanced Radio Management",
+          "wert": "True"
+        },
+        "real-time-spectral-analysis": {
+          "label": "Real-Time Spectral Analysis",
+          "wert": "Empty"
+        },
+        "passpoint-hotspot-2dot0": {
+          "label": "Passpoint (Hotspot 2.0)",
+          "wert": "True"
+        },
+        "captive-hotspot-portal": {
+          "label": "Captive Hotspot Portal",
+          "wert": ""
+        },
+        "captive-hotspot-portal-custom-branding-landing-page": {
+          "label": "Custom Branding Landing Page",
+          "wert": "True"
+        },
+        "captive-hotspot-portal-voucher-authentication": {
+          "label": "Voucher Authentication",
+          "wert": "True"
+        },
+        "captive-hotspot-portal-payment-based-authentication": {
+          "label": "Payment-Based Authentication",
+          "wert": "True"
+        },
+        "captive-hotspot-portal-external-portal-server-support": {
+          "label": "External Portal Server Support",
+          "wert": "True"
+        },
+        "captive-hotspot-portal-password-authentication": {
+          "label": "Password Authentication",
+          "wert": "True"
+        },
+        "captive-hotspot-portal-guest-network-isolation": {
+          "label": "Guest Network Isolation",
+          "wert": "True"
+        },
+        "private-pre-shared-key-ppsk": {
+          "label": "Private Pre-Shared Key (PPSK)",
+          "wert": "True"
+        },
+        "wifi-speed-limiting": {
+          "label": "WiFi Speed Limiting",
+          "wert": "True"
+        },
+        "client-device-isolation": {
+          "label": "Client Device Isolation",
+          "wert": "True"
+        },
+        "wifi-schedules": {
+          "label": "WiFi Schedules",
+          "wert": "True"
+        },
+        "radius-over-tls-radsec": {
+          "label": "RADIUS over TLS (RadSec)",
+          "wert": "True"
+        },
+        "dynamic-radius-assigned-vlan": {
+          "label": "Dynamic RADIUS-assigned VLAN",
+          "wert": "True"
+        },
+        "maxdot-power-consumption": {
+          "label": "Max. Power Consumption",
+          "wert": "8W"
+        },
+        "power-supply": {
+          "label": "Power Supply",
+          "wert": "Empty"
+        },
+        "includes-poe-adapter": {
+          "label": "Includes PoE Adapter",
+          "wert": "Empty"
+        },
+        "supported-voltage-range": {
+          "label": "Supported Voltage Range",
+          "wert": "44–57V DC"
+        },
+        "networking-interface": {
+          "label": "Networking Interface",
+          "wert": "(1) GbE RJ45 port"
+        },
+        "prismtm-rf-filtering": {
+          "label": "PRISM™ RF Filtering",
+          "wert": "Empty"
+        },
+        "weight": {
+          "label": "Weight",
+          "wert": "173 g (6.1 oz)"
+        },
+        "wind-loading": {
+          "label": "Wind Loading",
+          "wert": "33.2 N at 200 km/h (7.5 lbf at 125 mph)"
+        },
+        "pole-mount-diameter": {
+          "label": "Pole Mount Diameter",
+          "wert": "1~2\" (25–50 mm)"
+        },
+        "antennas": {
+          "label": "Antennas",
+          "wert": "(1) Internal antenna\n(2) RP-SMA connectors"
+        },
+        "antenna-beamwidth": {
+          "label": "Antenna beamwidth",
+          "wert": ""
+        },
+        "antenna-beamwidth-6-ghz": {
+          "label": "6 GHz",
+          "wert": "Empty"
+        },
+        "antenna-beamwidth-5-ghz": {
+          "label": "5 GHz",
+          "wert": "Empty"
+        },
+        "antenna-beamwidth-2dot4-ghz": {
+          "label": "2.4 GHz",
+          "wert": "Empty"
+        },
+        "management": {
+          "label": "Management",
+          "wert": "Ethernet"
+        },
+        "built-in-switch": {
+          "label": "Built-In Switch",
+          "wert": "Empty"
+        },
+        "enclosure-material": {
+          "label": "Enclosure Material",
+          "wert": "UV-stabilized polycarbonate"
+        },
+        "mount-material": {
+          "label": "Mount Material",
+          "wert": "Polycarbonate, SGCC steel, plastic"
+        },
+        "display": {
+          "label": "Display",
+          "wert": "Empty"
+        },
+        "leds": {
+          "label": "LEDs",
+          "wert": ""
+        },
+        "leds-system": {
+          "label": "System",
+          "wert": "(1) Power: White/Blue\n(4) Mesh Signal: Blue"
+        },
+        "channel-bandwidth": {
+          "label": "Channel Bandwidth",
+          "wert": "HT 20/40, VHT 20/40/80"
+        },
+        "operating-frequency": {
+          "label": "Operating Frequency",
+          "wert": "US/CA:\n2400 - 2472 MHz\nU-NII-1: 5150 - 5250 MHz\nU-NII-2A: 5250 - 5350 MHz\nU-NII-2C: 5470 - 5725 MHz\nU-NII-3: 5725 - 5850 MHz\n\nWorldwide:\n2400 - 2483.5 MHz\n5150 - 5850 MHz (Hinweis: For worldwide, it depends on the regulatory region)"
+        },
+        "ambient-operating-temperature": {
+          "label": "Ambient Operating Temperature",
+          "wert": "-40 to 60° C (-40 to 140° F)"
+        },
+        "ambient-operating-humidity": {
+          "label": "Ambient Operating Humidity",
+          "wert": "5 to 95% noncondensing"
+        },
+        "ndaa-compliant": {
+          "label": "NDAA Compliant",
+          "wert": "True"
+        },
+        "certifications": {
+          "label": "Certifications",
+          "wert": "CE, FCC, IC, Anatel: 06237-24-08356"
+        },
+        "application-requirements": {
+          "label": "Application Requirements",
+          "wert": ""
+        },
+        "application-requirements-unifi-network": {
+          "label": "UniFi Network",
+          "wert": "Version 7.5.187 and later"
+        },
+        "application-requirements-mobile-app": {
+          "label": "Mobile App",
+          "wert": "Empty"
+        }
+      }
+    },
+    "ubiquiti_lieferumfang": {
+      "bild": "UK-Ultra (weiß, LED vorn, Port-Abdeckung an der Schmalseite), zwei Montageplatten (eine mit Wasserwaage), 2 Kabelbinder, 2 Schrauben mit Senkkopf, 2 Holzschrauben, 2 Dübel, 2 Gewindestangen/lange Schrauben, 2 Muttern",
+      "nicht_im_bild": "kein PoE-Adapter, keine externe Antenne"
+    },
+    "fcc": {
+      "FCC ID": "SWX-UKU",
+      "Grantee": "Ubiquiti Inc. (SWX)",
+      "Equipment Class": "Digital Transmission Radio / NII",
+      "Test Firm": "Unified Compliance Laboratory",
+      "Frequenzen": {
+        "2412-2462 MHz": "Original Equipment 2023-12-15, Class II 2023-12-29",
+        "5180-5210 MHz (laut Liste; Exhibits für UNII-1/2a/2c/3)": "Original Equipment 2023-12-15, Class II 2023-12-29"
+      },
+      "Grant Comments": "Output Power listed is the maximum combined conducted output power. Professional installation is required. ... separation distance of at least 20 cm ... This device supports 20, 40 and 80 MHz bandwidth modes. Class II Permissive Change: Adds an additional external panel antenna.",
+      "Composite Device": "Yes",
+      "Modular Equipment": "Does not apply",
+      "Exhibits": [
+        "E-Label Manual (User Manual, 2024-06-12, 263 KB)",
+        "Regulation Folding (User Manual, 2024-06-12, 1.9 MB)",
+        "Internal Photos (2024-06-12, 738.6 KB)",
+        "External Photos (2024-06-12, 526 KB)",
+        "Label Location / Label Sample (2023-12-15, 204.3 KB)",
+        "Test Setup Photos (2024-06-12)",
+        "Antenna Datasheet (2023-12-15, 291.6 KB)",
+        "Dipole Antenna Datasheet (2023-12-15, 1.5 MB)",
+        "Antenna Datasheet (2023-12-29, 418.8 KB, Class II Panel)",
+        "Test Reports 2.4 WiFi / UNII-1/2/2a/2c/3 mit Annex (2023-12-15, 2023-12-29)",
+        "MPE Report / RF Exposure Evaluation",
+        "Block Diagram, Schematics, Operational Description (nur Metadaten, vertraulich)"
+      ]
+    },
+    "fcc_label": {
+      "M/N": "UK-Ultra",
+      "Schutzart": "IPX6",
+      "IC": "6545A-UKU",
+      "FCC ID": "SWX-UKU",
+      "Hersteller": "Ubiquiti Inc. 685 Third Avenue New York NY 10017 USA",
+      "Lage": "Zeichnung: Etikett auf einer Gehäusefläche (schematisch, Seite nicht benannt)"
+    },
+    "fcc_elabel": {
+      "FCC ID": "SWX-UKU",
+      "IC ID": "6545A-UKU",
+      "E-Label": "in der GUI unter Device > Settings > About",
+      "Hinweise": "CAN ICES-3 (A) / NMB-3 (A); Abstand mindestens 20 cm zu Personen"
+    },
+    "deviwiki": {
+      "ergebnis": "keine Geräteseite"
+    },
+    "wikidevi": {
+      "ergebnis": "keine Geräteseite"
+    },
+    "freifunk_forum_suche": {
+      "24606/14 (wusel, 2026-06-20)": "UK-Ultra als Beispiel für modernen Outdoor-AP genannt",
+      "24606/15 (TomH, 2026-06-20)": "ähnliche/identische Specs wie Ubiquiti AC Mesh; WiFi 5 auf 5 GHz, WiFi 4 auf 2.4 GHz",
+      "23818 (Djfe, 2024-10-17)": "codeberg.org/pitch/firmwareloader_uap_ac_pro unterstützt das Flashen des UK-Ultra, verifiziert"
+    },
+    "werkstatt": {
+      "erstinstallation-ohne-factory.md": "Gruppe D - Ubiquiti UniFi | 12 | verteilt | UniFi AC Lite/LR/Mesh/Pro, nanoHD, 6 Lite/LR/Plus, UK-Ultra | teils"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Ubiquiti",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Ubiquiti Inc.",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-UKU/Label/Label-Sample-6968820",
+        "stand": "Exhibit 2023-12-15 (PDF erstellt 2023-10-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "UniFi UK-Ultra",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "UniFi Swiss Army Knife Ultra",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/bf94e0a38389b2ce5d33be9c97d104d36dd5ebd6",
+        "stand": "Commit 2024-01-05 (Autor David Bauer), gemergt 2024-01-07",
+        "sicherheit": "mittel",
+        "bemerkung": "DTS model \"Ubiquiti UniFi Swiss Army Knife Ultra\", DEVICE_MODEL"
+      },
+      {
+        "wert": "Swiss Army Knife (UK-Ultra)",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Produkttitel \"Swiss Army Knife\", Name/SKU \"UK-Ultra\""
+      },
+      {
+        "wert": "UK-Ultra",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-UKU/Label/Label-Sample-6968820",
+        "stand": "Exhibit 2023-12-15 (PDF erstellt 2023-10-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild \"M/N UK-Ultra\""
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Etikett: \"M/N UK-Ultra  IPX6\", \"IC: 6545A-UKU  FCC ID: SWX-UKU\", \"Ubiquiti Inc. 685 Third Avenue New York NY 10017 USA\"",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-UKU/Label/Label-Sample-6968820",
+        "stand": "Exhibit 2023-12-15 (PDF erstellt 2023-10-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "keine Hardware-Version auf dem Etikett; keine Stromangabe auf dem Etikett. Lage laut FCC-Zeichnung nur schematisch"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "SWX-UKU",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/SWX-UKU",
+        "stand": "Grants 2023-12-15 (Original Equipment) und 2023-12-29 (Class II Permissive Change)",
+        "sicherheit": "hoch",
+        "bemerkung": "Erstzulassung 2023-12-15, Class II 2023-12-29 (zusätzliche externe Panel-Antenne)"
+      },
+      {
+        "wert": "SWX-UKU",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-UKU/Label/Label-Sample-6968820",
+        "stand": "Exhibit 2023-12-15 (PDF erstellt 2023-10-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "6545A-UKU",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-UKU/Label/Label-Sample-6968820",
+        "stand": "Exhibit 2023-12-15 (PDF erstellt 2023-10-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "anatel_id": [
+      {
+        "wert": "06237-24-08356",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Certifications: CE, FCC, IC, Anatel"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "UniFi Swiss Army Knife",
+          "Swiss Army Knife",
+          "UniFi UK-Ultra",
+          "UK-Ultra",
+          "UK-Ultra-US",
+          "UAP-AC-UK-Ultra"
+        ],
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "mittel",
+        "bemerkung": "UK-Ultra-US = SKU auf techspecs; UAP-AC-UK-Ultra = Schreibweise im OpenWrt-Wiki (unifiac) bei der Stock-Firmware"
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Available 2024; eu.store.ui.com",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "EU-Store: ausverkauft (SoldOut), 75,00 EUR",
+        "quelle": "ubiquiti_store_eu",
+        "beleg": "https://eu.store.ui.com/eu/en/products/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "mittel",
+        "bemerkung": "Stand Abruf 2026-10-19"
+      }
+    ],
+    "fcc_erstzulassung": [
+      {
+        "wert": "2023-12-15",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/SWX-UKU",
+        "stand": "Grants 2023-12-15 (Original Equipment) und 2023-12-29 (Class II Permissive Change)",
+        "sicherheit": "hoch",
+        "bemerkung": "Original Equipment; OpenWrt-Support ab 2024-01"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm Atheros QCA9563",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9563",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/bf94e0a38389b2ce5d33be9c97d104d36dd5ebd6",
+        "stand": "Commit 2024-01-05 (Autor David Bauer), gemergt 2024-01-07",
+        "sicherheit": "hoch",
+        "bemerkung": "Hardwareliste im Commit; DTS compatible qca,qca9563"
+      },
+      {
+        "wert": "Atheros (AR9563)",
+        "quelle": "openwrt_geraeteseite",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "stand": "Seitenrevision 2024-04-05 20:14",
+        "sicherheit": "niedrig",
+        "bemerkung": "Schreibfehler auf der Geräteseite (AR statt QCA); Tag dort AR9344 falsch"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 775,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 775,
+        "quelle": "openwrt_geraeteseite",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "stand": "Seitenrevision 2024-04-05 20:14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "mips_24kc",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": "Paketarchitektur"
+      },
+      {
+        "wert": "MIPS",
+        "quelle": "openwrt_geraeteseite",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "stand": "Seitenrevision 2024-04-05 20:14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 128,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/bf94e0a38389b2ce5d33be9c97d104d36dd5ebd6",
+        "stand": "Commit 2024-01-05 (Autor David Bauer), gemergt 2024-01-07",
+        "sicherheit": "hoch",
+        "bemerkung": "\"RAM: 128M DDR2\""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_geraeteseite",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "stand": "Seitenrevision 2024-04-05 20:14",
+        "sicherheit": "mittel",
+        "bemerkung": "\"128 MiB DDR2\""
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR2",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/bf94e0a38389b2ce5d33be9c97d104d36dd5ebd6",
+        "stand": "Commit 2024-01-05 (Autor David Bauer), gemergt 2024-01-07",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DDR2",
+        "quelle": "openwrt_geraeteseite",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "stand": "Seitenrevision 2024-04-05 20:14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/bf94e0a38389b2ce5d33be9c97d104d36dd5ebd6",
+        "stand": "Commit 2024-01-05 (Autor David Bauer), gemergt 2024-01-07",
+        "sicherheit": "hoch",
+        "bemerkung": "\"FLASH: 16MB SPI-NOR\""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_geraeteseite",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "stand": "Seitenrevision 2024-04-05 20:14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/bf94e0a38389b2ce5d33be9c97d104d36dd5ebd6",
+        "stand": "Commit 2024-01-05 (Autor David Bauer), gemergt 2024-01-07",
+        "sicherheit": "hoch",
+        "bemerkung": "SPI-NOR; DTS jedec,spi-nor"
+      }
+    ],
+    "firmware_partition_kb": [
+      {
+        "wert": 15488,
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "IMAGE_SIZE aus Device/ubnt_unifiac; kernel0+kernel1 zu einer Partition 0xf20000 zusammengefasst"
+      }
+    ],
+    "switch": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": "Switch \"-\""
+      },
+      {
+        "wert": "nein",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "DEVICE_PACKAGES -swconfig, eth0 direkt an PHY (SGMII)"
+      },
+      {
+        "wert": "nein",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Built-In Switch: Empty"
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "¿ (unbekannt)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": [
+          "Qualcomm Atheros QCA9563",
+          "Qualcomm Atheros QCA9880"
+        ],
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "2.4": "QCA9563 (im SoC)",
+          "5": "QCA9880 (PCIe)"
+        },
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/bf94e0a38389b2ce5d33be9c97d104d36dd5ebd6",
+        "stand": "Commit 2024-01-05 (Autor David Bauer), gemergt 2024-01-07",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AR9563 / AR9880",
+        "quelle": "openwrt_geraeteseite",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "stand": "Seitenrevision 2024-04-05 20:14",
+        "sicherheit": "niedrig",
+        "bemerkung": "Schreibweise mit AR"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": [
+          "ath9k",
+          "ath10k-ct"
+        ],
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kmod-ath10k-ct, ath10k-firmware-qca988x-ct",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ATH10K_PACKAGES_QCA9880",
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/10721f6e23184a1ca501ba35173e49cd90b1bfd3",
+        "stand": "Commit 2024-01-11 (Autor David Bauer, PR #3149)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "b/g/n",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11n",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/bf94e0a38389b2ce5d33be9c97d104d36dd5ebd6",
+        "stand": "Commit 2024-01-05 (Autor David Bauer), gemergt 2024-01-07",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11n (WiFi 4), HT20/40",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/bf94e0a38389b2ce5d33be9c97d104d36dd5ebd6",
+        "stand": "Commit 2024-01-05 (Autor David Bauer), gemergt 2024-01-07",
+        "sicherheit": "hoch",
+        "bemerkung": "2x2:2"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": "\"2.4GHz: 2X2 MIMO\""
+      },
+      {
+        "wert": 2,
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"2 x 2 (DL MU-MIMO)\" - MU-MIMO bei 802.11n technisch nicht möglich, Herstellerangabe so übernommen"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "a/n/ac",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11ac",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/bf94e0a38389b2ce5d33be9c97d104d36dd5ebd6",
+        "stand": "Commit 2024-01-05 (Autor David Bauer), gemergt 2024-01-07",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11ac (WiFi 5), VHT20/40/80",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/bf94e0a38389b2ce5d33be9c97d104d36dd5ebd6",
+        "stand": "Commit 2024-01-05 (Autor David Bauer), gemergt 2024-01-07",
+        "sicherheit": "hoch",
+        "bemerkung": "2x2:2"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"2 x 2 (DL MU-MIMO)\"; QCA9880 ist ein Wave-1-Chip (MU-MIMO-Angabe des Herstellers nicht durch OpenWrt-Quellen gedeckt)"
+      }
+    ],
+    "wlan_6_standard": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_datenrate_mbit": [
+      {
+        "wert": {
+          "2.4": 300,
+          "5": 866.7
+        },
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "2.4 GHz bei 40 MHz, 5 GHz bei 80 MHz"
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "HT20/40, VHT20/40/80",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "20/40/80 MHz",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/SWX-UKU",
+        "stand": "Grants 2023-12-15 (Original Equipment) und 2023-12-29 (Class II Permissive Change)",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant Comment"
+      }
+    ],
+    "wlan_frequenzen": [
+      {
+        "wert": "US/CA: 2400-2472 MHz, U-NII-1 5150-5250, U-NII-2A 5250-5350, U-NII-2C 5470-5725, U-NII-3 5725-5850 MHz; weltweit 2400-2483.5 und 5150-5850 MHz (je nach Region)",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": {
+          "2.4": 20,
+          "5": 20
+        },
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Max. TX Power"
+      }
+    ],
+    "wlan_max_clients": [
+      {
+        "wert": "200+",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_abdeckung_m2": [
+      {
+        "wert": 115,
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "mit interner Antenne"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern + 2 Anschlüsse für externe Antennen",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/bf94e0a38389b2ce5d33be9c97d104d36dd5ebd6",
+        "stand": "Commit 2024-01-05 (Autor David Bauer), gemergt 2024-01-07",
+        "sicherheit": "hoch",
+        "bemerkung": "Vorgabe intern; Umschaltung per GPIO-Mux (logisch 0 = extern)"
+      },
+      {
+        "wert": "intern (1) + extern abnehmbar über (2) RP-SMA",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"(1) Internal antenna, (2) RP-SMA connectors\""
+      },
+      {
+        "wert": "2 abnehmbare Antennen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas: 2"
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "RP-SMA (2x)",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "RP-SMA (2x)",
+        "quelle": "ubiquiti_store_eu",
+        "beleg": "https://eu.store.ui.com/eu/en/products/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"(2) RP-SMA connectors for optional external antennas\""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": {
+          "intern": 1,
+          "extern_anschluesse": 2
+        },
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_beiliegend": [
+      {
+        "wert": "nein",
+        "quelle": "ubiquiti_lieferumfang",
+        "beleg": "https://cdn.ecomm.ui.com/products/eecac847-6407-4539-bbf0-03d0f8f3232f/d64035c9-2c40-4ab6-80f5-e76758267b54.png",
+        "stand": "Produktbild \"What's in the Box\", eingebunden in techspecs/Store 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "keine externe Antenne im Lieferumfang-Bild"
+      },
+      {
+        "wert": "widersprüchlich: \"included omni antenna\"",
+        "quelle": "ubiquiti_store_eu",
+        "beleg": "https://eu.store.ui.com/eu/en/products/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Feature-Text \"Use the integrated antennas, included omni antenna, or use specialty antennas with RP-SMA connectors\" - passt nicht zum Lieferumfang-Bild; vermutlich ist die interne Rundstrahlantenne gemeint"
+      }
+    ],
+    "antennen_umschaltung": [
+      {
+        "wert": "GPIO-Schalter ant0_internal/ant1_internal, Vorgabe 1 = intern, 0 = externe RP-SMA",
+        "quelle": "openwrt_board_d",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/generic/base-files/etc/board.d/03_gpio_switches",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "auf main GPIO 517/518, im Commit 2024 GPIO 5/6"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4": 4.7,
+          "5": 6.1
+        },
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "interne Antenne"
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "rund (omnidirektional)",
+        "quelle": "ubiquiti_store_eu",
+        "beleg": "https://eu.store.ui.com/eu/en/products/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Radio/Antenna: Omnidirectional"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "Ethernet RJ45",
+            "geschwindigkeit": "1 Gbit/s",
+            "rolle": "Uplink, PoE-Eingang"
+          }
+        ],
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"(1) GbE RJ45 port\""
+      },
+      {
+        "wert": [
+          {
+            "name": "eth0",
+            "geschwindigkeit": "1 Gbit/s",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "openwrt_board_d",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/generic/base-files/etc/board.d/02_network",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "ucidef_set_interface_lan \"eth0\""
+      },
+      {
+        "wert": [
+          {
+            "name": "Ethernet",
+            "geschwindigkeit": "1 Gbit/s",
+            "rolle": "802.3af PoE capable"
+          }
+        ],
+        "quelle": "openwrt_geraeteseite",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "stand": "Seitenrevision 2024-04-05 20:14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": "Ethernet 1Gbit ports: 1"
+      },
+      {
+        "wert": 1,
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": true,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "nein",
+        "quelle": "openwrt_geraeteseite",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "stand": "Seitenrevision 2024-04-05 20:14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "PoE (Norm nicht genannt)",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power Method: PoE; Supported Voltage Range 44-57 V DC"
+      },
+      {
+        "wert": "802.3af",
+        "quelle": "openwrt_geraeteseite",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "stand": "Seitenrevision 2024-04-05 20:14",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Gigabit, 802.3af PoE capable\""
+      },
+      {
+        "wert": "PoE",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": "Power Supply: PoE"
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": "44-57",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Supported Voltage Range 44–57V DC; ob auch passives 24 V geht, nennt keine Quelle"
+      }
+    ],
+    "poe_zubehoer": [
+      {
+        "wert": "UniFi PoE Adapter (15W), U-PoE-af: 48 V DC 0.32 A, Pins 4,5 (+) und 7,8 (-), 100-240 V AC, IEC-320 C6",
+        "quelle": "ubiquiti_store_eu",
+        "beleg": "https://eu.store.ui.com/eu/en/products/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "niedrig",
+        "bemerkung": "im Store als passendes Zubehör verlinkt, nicht im Lieferumfang"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": "nein",
+        "quelle": "ubiquiti_lieferumfang",
+        "beleg": "https://cdn.ecomm.ui.com/products/eecac847-6407-4539-bbf0-03d0f8f3232f/d64035c9-2c40-4ab6-80f5-e76758267b54.png",
+        "stand": "Produktbild \"What's in the Box\", eingebunden in techspecs/Store 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Lieferumfang-Bild ohne PoE-Adapter"
+      },
+      {
+        "wert": "nein",
+        "quelle": "ubiquiti_store_eu",
+        "beleg": "https://eu.store.ui.com/eu/en/products/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "mittel",
+        "bemerkung": "Spezifikation \"Includes PoE Adapter\" und \"Power Supply\" nicht gesetzt (Empty)"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "nein",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: einziger Anschluss (1) GbE RJ45, Stromversorgung nur \"PoE\""
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 8,
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen und außen",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Weatherproofing IPX6; Store: \"indoor/outdoor AP\", \"Weatherproof (outdoor exposed)\""
+      },
+      {
+        "wert": "außen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: Yes"
+      },
+      {
+        "wert": "außen",
+        "quelle": "gluon_platform",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/package/gluon-core/luasrc/usr/lib/lua/gluon/platform.lua",
+        "stand": "Branch v2025.1.x (lokaler Klon, Stand 0ad3ad5b)",
+        "sicherheit": "hoch",
+        "bemerkung": "ubnt,uk-ultra in is_outdoor_device() - Gluon setzt Outdoor-Kanäle"
+      }
+    ],
+    "ip_schutzart": [
+      {
+        "wert": "IPX6",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "IPX6",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-UKU/Label/Label-Sample-6968820",
+        "stand": "Exhibit 2023-12-15 (PDF erstellt 2023-10-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "auf dem Etikett"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "-40 bis 60 °C",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "5 bis 95 %, nicht kondensierend",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_material": [
+      {
+        "wert": "UV-stabilisiertes Polycarbonat",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Decke, Wand, Mast, Tisch (mit Zubehör); Halterungen beiliegend, Tischständer optional",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Halterung: Polycarbonat, SGCC-Stahl, Kunststoff"
+      },
+      {
+        "wert": "2 Montageplatten (eine mit Wasserwaage), Kabelbinder für Mast, Schrauben, Dübel, Gewindestangen, Muttern",
+        "quelle": "ubiquiti_lieferumfang",
+        "beleg": "https://cdn.ecomm.ui.com/products/eecac847-6407-4539-bbf0-03d0f8f3232f/d64035c9-2c40-4ab6-80f5-e76758267b54.png",
+        "stand": "Produktbild \"What's in the Box\", eingebunden in techspecs/Store 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "mast_durchmesser_mm": [
+      {
+        "wert": "25-50",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "1~2\""
+      }
+    ],
+    "windlast": [
+      {
+        "wert": "33.2 N bei 200 km/h",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "137 x 84 x 34",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 173,
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": "1 Power-LED (weiß/blau) + 4 Mesh-Signal-LEDs (blau)",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "white:dome, blue:dome + 4 x white:rssi0-3",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_ubnt_uk-ultra.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Farbe der RSSI-LEDs im DTS weiß, beim Hersteller blau; unter OpenWrt als Empfangsstärke-Anzeige (rssileds) für wlan0"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": "LED count 2 (ohne RSSI-LEDs)"
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "ja (unter OpenWrt per /sys/class/leds bzw. /etc/config/system)",
+        "quelle": "openwrt_geraeteseite",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "stand": "Seitenrevision 2024-04-05 20:14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "ja, GPIO 2 (KEY_RESTART)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_ubnt_uk-ultra.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Lage nicht belegt"
+      },
+      {
+        "wert": "ja (1 Taster)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": "Button count 1"
+      },
+      {
+        "wert": "ja; beim Einschalten halten startet TFTP-Recovery (Ring blinkt blau/weiß)",
+        "quelle": "openwrt_geraeteseite",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "stand": "Seitenrevision 2024-04-05 20:14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/generic",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath79/generic",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/bf94e0a38389b2ce5d33be9c97d104d36dd5ebd6",
+        "stand": "Commit 2024-01-05 (Autor David Bauer), gemergt 2024-01-07",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "ubnt_uk-ultra",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "23.05.3",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "main gemergt 2024-01-07 (bf94e0a), Backport openwrt-23.05 2024-01-10 (5ad0568), erstes Release v23.05.3",
+        "quelle": "openwrt_git_2305",
+        "beleg": "https://github.com/openwrt/openwrt/commit/5ad05681f2de00c8c6d6449df2b958b0838dbc1a",
+        "stand": "Backport-Commit 2024-01-10 (Branch openwrt-23.05), enthalten ab Tag v23.05.3",
+        "sicherheit": "hoch",
+        "bemerkung": "geprüft: DTS fehlt in v23.05.2, vorhanden in v23.05.3; bf94e0a in v24.10.0 enthalten"
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.0",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot",
+        "quelle": "openwrt_geraeteseite",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "stand": "Seitenrevision 2024-04-05 20:14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "see git-commit",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": "Recovery: see git-commit"
+      },
+      {
+        "wert": "kein factory-Image; sysupgrade-Image per SSH aus der Stock-Firmware auf kernel0/kernel1 schreiben",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/bf94e0a38389b2ce5d33be9c97d104d36dd5ebd6",
+        "stand": "Commit 2024-01-05 (Autor David Bauer), gemergt 2024-01-07",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "SSH aus der Stock-Firmware wie im Commit, alternativ TFTP über Reset-Knopf beim Einschalten",
+        "quelle": "openwrt_geraeteseite",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "stand": "Seitenrevision 2024-04-05 20:14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "factory = false",
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/10721f6e23184a1ca501ba35173e49cd90b1bfd3",
+        "stand": "Commit 2024-01-11 (Autor David Bauer, PR #3149)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon baut nur sysupgrade"
+      },
+      {
+        "wert": "Erstinstallation ohne factory-Image, Gruppe D (Ubiquiti UniFi, Werkzeug teils vorhanden)",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erstinstallation-ohne-factory.md, Übersichtstabelle Zeile \"D - Ubiquiti UniFi\"",
+        "stand": "Arbeitskopie 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Einordnung, keine Messung am Gerät"
+      }
+    ],
+    "stock_firmware": [
+      {
+        "wert": "gemeinsame UniFi-AC-Firmware (BZ.qca956x) wie UAP-AC-Lite/LR/Pro/Mesh",
+        "quelle": "openwrt_wiki_unifiac",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "UniFi Network ab Version 7.5.187",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Application Requirements"
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.ui.com/download/unifi",
+        "quelle": "openwrt_wiki_unifiac",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": "Familien-Downloadseite"
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "eth0 (MAC aus art 0x0)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_ubnt_uk-ultra.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "label-mac-device = &eth0"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, ath79-generic, ubiquiti-unifi-swiss-army-knife-ultra",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch v2025.1.x (lokaler Klon, Stand 0ad3ad5b)",
+        "sicherheit": "hoch",
+        "bemerkung": "factory = false, packages = ATH10K_PACKAGES_QCA9880"
+      },
+      {
+        "wert": "ab Gluon v2023.2.1",
+        "quelle": "gluon_release_v2023_2_1",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/docs/releases/v2023.2.1.rst",
+        "stand": "Release Notes Gluon 2023.2.1 (Tag 2024-01-23)",
+        "sicherheit": "hoch",
+        "bemerkung": "main: Commit 10721f6 (2024-01-11)"
+      },
+      {
+        "wert": "unknown",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": "ToH-Feld veraltet"
+      }
+    ],
+    "bekannte_probleme": [
+      {
+        "wert": "ToH-Geräteseite enthält fremde Angaben (Tag AR9344, \"Atheros (AR9563)\", \"orange led\")",
+        "quelle": "openwrt_geraeteseite",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "stand": "Seitenrevision 2024-04-05 20:14",
+        "sicherheit": "mittel",
+        "bemerkung": "Daten der Geräteseite deshalb nur mit mittel/niedrig übernommen"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+        "stand": "Seitenrevision 2026-03-15 03:24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "quelle": "openwrt_geraeteseite",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_uk-ultra",
+        "stand": "Seitenrevision 2024-04-05 20:14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "quelle": "openwrt_wiki_unifiac",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": "Familienseite UniFi AC"
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://eu.store.ui.com/eu/en/products/uk-ultra",
+        "quelle": "ubiquiti_store_eu",
+        "beleg": "https://eu.store.ui.com/eu/en/products/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "installationsanleitung_hersteller": [
+      {
+        "wert": "https://ui.com/qig/uk-ultra",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/uk-ultra",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "JavaScript-Seite, nicht ausgewertet"
+      }
+    ],
+    "forum": [
+      {
+        "wert": "https://forum.freifunk.net/t/23818",
+        "quelle": "freifunk_forum_suche",
+        "beleg": "https://forum.freifunk.net/search.json?q=UK-Ultra",
+        "stand": "Suche 2026-10-19",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beitrag 2024-10-17: firmwareloader_uap_ac_pro unterstützt UK-Ultra"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/SWX-UKU/Internal-Photos/Internal-Photos-6968794",
+      "kategorie": "seriell_zugang",
+      "grund": "Innenfotos (738.6 KB): Lage der seriellen Konsole (Stiftleiste/Lötpunkte), Pinbelegung, Flash-/RAM-Chips; fccid.io-Grenze (5 Abrufe) erreicht. Keine Quelle nennt bisher seriellen Zugang (ToH: ¿)"
+    },
+    {
+      "url": "https://fccid.io/SWX-UKU/External-Photos/External-Photos-6968793",
+      "kategorie": "reset_knopf",
+      "grund": "Außenfotos (526 KB): Lage von Reset-Knopf, RJ45 unter der Port-Abdeckung und RP-SMA-Buchsen"
+    },
+    {
+      "url": "https://ui.com/qig/uk-ultra",
+      "kategorie": "montage",
+      "grund": "Quick Installation Guide (JavaScript-Seite; bei UAP-AC-M Text nur als SVG-Pfade): Reset, LED-Bedeutung, Montage, Stromversorgung"
+    },
+    {
+      "url": "https://fccid.io/SWX-UKU/User-Manual/Regulation-Folding-6968795",
+      "kategorie": "poe_eingang",
+      "grund": "Regulation Folding (1.9 MB): evtl. Stromangabe/Norm des PoE-Eingangs (802.3af nur auf der ToH-Geräteseite genannt, Hersteller nur \"PoE\" 44-57 V)"
+    },
+    {
+      "url": "https://fccid.io/SWX-UKU/Test-Report/Antenna-Datasheet-6968797",
+      "kategorie": "antennen_gewinn_dbi",
+      "grund": "Antennendatenblatt interne Antenne; dazu Dipole-Antenna-Datasheet-6968816 und Panel-Antenne (Class II) Antenna-Datasheet-7020770"
+    },
+    {
+      "url": "https://fccid.io/SWX-UKU/Test-Report/Test-Report-2-4-WiFi-6968817",
+      "kategorie": "wlan_sendeleistung_dbm",
+      "grund": "Testbericht 2.4 GHz (1.5 MB): gemessene Sendeleistung; dazu UNII-Berichte (2.8-4.9 MB)"
+    },
+    {
+      "url": "https://fccid.io/SWX-UKU/Test-Setup-Photos/Test-Setup-Photos-6968796",
+      "kategorie": "poe_eingang",
+      "grund": "Testaufbau-Fotos: welches PoE-Netzteil bei der Prüfung benutzt wurde"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_uk-ultra",
+      "kategorie": "hw_version",
+      "grund": "Versions-Feld leer, keine Quelle nennt Hardware-Revisionen; Feld hw_version deshalb weggelassen"
+    },
+    {
+      "url": "https://forum.openwrt.org/",
+      "kategorie": "seriell_zugang",
+      "grund": "kein OpenWrt-Forumsthread zum UK-Ultra bekannt (owrt_forum_topic_url leer); Forensuche wegen 429 nicht genutzt"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 38,
+    "notiz": "Kein ToH-Dump-Eintrag; Live-hwdata (Rev. 2026-03-15) und ToH-Geräteseite (2024-04-05), OpenWrt-Commit bf94e0a + Backport 5ad0568 (seit 23.05.3), DTS/Image-Makefile/board.d, Gluon-Commit 10721f6 und Release Notes 2023.2.1 (lokaler Klon), techspecs.ui.com und EU-Store (Next.js-Daten), Lieferumfang-Bild, FCC SWX-UKU (Liste, Etikett, E-Label; Grenze 5 Abrufe erreicht), DeviWiki/WikiDevi ohne Seite, Freifunk-Forum. Kein Werkstatt-Protokoll. Offen: serielle Konsole (Innenfotos), Lage des Reset-Knopfs, PoE-Norm (nur Geräteseite nennt 802.3af), Lüfter nicht belegt (weggelassen), keine Hardware-Versionen bekannt."
+  }
+}
