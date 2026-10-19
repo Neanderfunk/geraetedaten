@@ -62,7 +62,7 @@
     ] },
     { titel: 'Leistung und Verbrauch', filter: [
       { id: 'speicher', titel: 'Speicher für Updates', typ: 'eins',
-        werte: [['reicht', 'reicht'], ['knapp', 'knapp'], ['zu wenig', 'zu wenig']] },
+        werte: [['reichlich', 'reichlich'], ['ausreichend', 'ausreichend'], ['knapp', 'knapp'], ['zu wenig', 'zu wenig']] },
       { id: 'ram', titel: 'Arbeitsspeicher (RAM)', typ: 'min',
         werte: [['128', 'ab 128 MB'], ['256', 'ab 256 MB'], ['512', 'ab 512 MB']] },
       { id: 'flash', titel: 'Flash-Speicher', typ: 'min', werte: [['16', 'ab 16 MB'], ['128', 'ab 128 MB']] },
@@ -83,7 +83,10 @@
     cpu_kerne: 'Prozessorkerne', poe_spannung_v: 'PoE-Spannung', dc_spannung_v: 'Netzteil-Spannung',
     ip_schutzart: 'Schutzart', temperatur_betrieb: 'Temperatur', antennen_anzahl: 'Zahl der Antennen',
     ports_anzahl: 'Zahl der Buchsen', leistung_w_typ: 'Stromverbrauch', leistung_w_max: 'Stromverbrauch',
-    einsatzort: 'Einsatzort', poe_eingang: 'PoE'
+    einsatzort: 'Einsatzort', poe_eingang: 'PoE',
+    wlan_24_streams: 'Streams 2.4 GHz', wlan_5_streams: 'Streams 5 GHz', wlan_6_streams: 'Streams 6 GHz',
+    wlan_24_standard: 'WLAN-Standard 2.4 GHz', wlan_5_standard: 'WLAN-Standard 5 GHz',
+    wlan_6_standard: 'WLAN-Standard 6 GHz', dc_strom_a: 'Netzteil-Strom', dc_buchse_mass: 'Hohlstecker-Maß'
   };
   var ALLE = [];
   GRUPPEN.forEach(function (g) { g.filter.forEach(function (f) { ALLE.push(f); }); });
@@ -324,7 +327,7 @@
       rumpf.appendChild(el('h2', null, g.modell));
       if (g.speicher) {
         var sp = el('p', 'finder-speicher');
-        var stufe = g.speicher === 'zu wenig' ? 'sackgasse' : g.speicher;
+        var stufe = { 'reichlich': 'reichlich', 'ausreichend': 'reicht', 'knapp': 'knapp', 'zu wenig': 'sackgasse' }[g.speicher] || 'knapp';
         sp.appendChild(document.createTextNode('Speicher für Updates: '));
         sp.appendChild(el('span', 'ffnef-stufe ffnef-stufe-' + stufe, g.speicher));
         rumpf.appendChild(sp);

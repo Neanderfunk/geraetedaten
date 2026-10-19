@@ -236,7 +236,10 @@ def mass(t):
     return t if 'mm' in t else t + ' mm'
 
 
-STUFEN = {'reicht': ('reicht', 'genug Speicher für die aktuelle Firmware'),
+# Speicher fuer Updates. "reichlich" ab 32 MB Flash und 256 MB RAM: Reserve auch fuer kommende
+# Versionen (OpenWrt 25 und folgende) [abgeleitet, Schwelle adorfer/Supernode 19.10.2026].
+STUFEN = {'reichlich': ('reichlich', 'viel Reserve, auch für kommende Firmware-Versionen'),
+          'reicht': ('ausreichend', 'genug Speicher für die aktuelle Firmware'),
           'knapp': ('knapp', 'läuft noch, aber mit wenig Reserve für künftige Versionen'),
           'sackgasse': ('zu wenig', 'nur noch alte Firmware (Sackgasse)')}
 PASSIV_WARNUNG = ('Passives PoE: Nur mit dem passenden Netzteil oder Injektor betreiben und auf die '
@@ -246,6 +249,16 @@ EINE_BUCHSE = ('Nur eine Netzwerkbuchse: Im Betrieb ist sie der Anschluss ans In
                'Kabel lassen sich daran nicht anschließen.')
 
 
+def speicherstufe(flash, ram):
+    if flash >= 32 and ram >= 256:
+        return 'reichlich'
+    if flash >= 16 and ram >= 128:
+        return 'reicht'
+    if flash >= 8 and ram >= 64:
+        return 'knapp'
+    return 'sackgasse'
+
+
 def ansicht(d, idx):
     f, q = d.get('felder', {}), d.get('quellen', {})
     s = {k: auswahl(v, q, k in FAKT) for k, v in f.items()}
@@ -253,12 +266,7 @@ def ansicht(d, idx):
 
     ram, flash = zahl(s.get('ram_mb')), zahl(s.get('flash_mb'))
     if ram and flash:
-        if flash >= 16 and ram >= 128:
-            stufe = 'reicht'
-        elif flash >= 8 and ram >= 64:
-            stufe = 'knapp'
-        else:
-            stufe = 'sackgasse'
+        stufe = speicherstufe(flash, ram)
         kennwort, rest = STUFEN[stufe]
         oben.append({'titel': 'Speicher für Updates', 'stufe': stufe, 'kennwort': kennwort, 'wert': rest,
                      'erklaerung': '%g MB Flash, %g MB RAM' % (flash, ram),
@@ -398,8 +406,7 @@ def facetten(d):
     fa['ram'] = zahl(s.get('ram_mb'))
     fa['flash'] = zahl(s.get('flash_mb'))
     if fa['ram'] and fa['flash']:
-        fa['speicher'] = ('reicht' if fa['flash'] >= 16 and fa['ram'] >= 128 else
-                          'knapp' if fa['flash'] >= 8 and fa['ram'] >= 64 else 'zu wenig')
+        fa['speicher'] = STUFEN[speicherstufe(fa['flash'], fa['ram'])][0]
     else:
         fa['speicher'] = None
     fa['kerne'] = zahl(s.get('cpu_kerne'))

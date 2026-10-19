@@ -1,0 +1,2525 @@
+{
+  "image": "tp-link-re500-v1",
+  "modell": "TP-Link RE500 v1",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15682406",
+      "bemerkung": "Dump weicht von der Live-hwdata-Seite ab (WLAN MT7615E statt MT7615N, VLAN ¿, abnehmbare Antennen '-', aktuell 23.05.0)"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1?do=export_raw",
+      "stand": "Seitenrevision 2026-04-16 06:39",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Live-Seite: MT7615N, '4x4:3 MIMO both channels', Detachable Antennas 4, Serial 3.3 V, Gluon Yes, aktuell 25.12.2; Werte MT7615N/4 Antennen standen schon vor Rev. 2024-04-30"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/tp-link/re500_v1?do=export_raw",
+      "stand": "Seitenrevision 2026-06-10 11:53",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Seite grossteils Vorlage (FIXME); Buttons, Seriell-Parameter und OpenWrt-Bootlog 21.02 (Kernel 5.4.91) vorhanden"
+    },
+    "openwrt_git": {
+      "url": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+      "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_re650": {
+      "url": "https://github.com/openwrt/openwrt/commit/8c51ddeff0",
+      "stand": "Commit 2019-04-17 (Autor)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "RE650 v1, laut Commit ba0f4f0c dieselbe Hardware; Hardwareliste identisch"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_tplink_rexx0-v1.dtsi",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "dateien": [
+        "mt7621_tplink_re500-v1.dts",
+        "mt7621_tplink_rexx0-v1.dtsi"
+      ]
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "firmware_utils_safeloader": {
+      "url": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+      "stand": "Branch master am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_git": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/7a049cfd70c1f71124003b81f92b51f33fc4eb75",
+      "stand": "Commit 2022-08-30, enthalten ab Tag v2022.1 (2022-09-05)",
+      "abgerufen": "2026-10-19"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x?action=raw",
+      "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Revisionen: 2019-07-05 (Import M86), 2020-07-07 Achterin 'added flash details', 2020-07-07 Omega"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/wiki/TP-LINK_RE500_v1.x?action=raw",
+      "stand": "Seitenrevision 2019-07-05T02:47:29Z",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "aelterer Stand als der WikiDevi-Spiegel: Chains 3x3 und 2.4/5-GHz-Protokolle bei wi1/wi2 vertauscht, ohne Flash-Angaben"
+    },
+    "fcc": {
+      "url": "https://fccid.io/TE7RE650",
+      "stand": "Grant 2017-01-18 (Original Equipment)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "gemeinsame Zulassung RE650 (AC2600) und RE500 (AC1900); RE650 war Testmuster: 'There is nothing different of two models, just for different marketing use.'"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/TE7RE650/Label/Label-Info-re500-3262267",
+      "stand": "Exhibit 2017-01-18 (Zeichnung RE500(US)_1.0, 2016-12-16)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "als Bild ausgewertet (400 dpi)"
+    },
+    "fcc_handbuch": {
+      "url": "https://fccid.io/TE7RE650/User-Manual/User-Manual-re500-3262272",
+      "stand": "Exhibit 2017-01-18 (PDF, Copyright 2017)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "RE500 User Guide, 41 Seiten, pdftotext + Seite 3/4 als Bild"
+    },
+    "fcc_innenfotos": {
+      "url": "https://fccid.io/TE7RE650/Internal-Photos/Internal-Photos-3262265",
+      "stand": "Sporton EP6N0412 Rev. 01, 2017-01-13",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "17 Seiten, als Bild ausgewertet; gezeigt ist das gemeinsame Testmuster RE650/RE500"
+    },
+    "fcc_aussenfotos": {
+      "url": "https://fccid.io/TE7RE650/External-Photos/External-Photos-3262250",
+      "stand": "Sporton EP6N0412 Rev. 01, 2017-01-13",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "2 Seiten, als Bild ausgewertet; US-Stecker"
+    },
+    "fcc_rf_exposure": {
+      "url": "https://fccid.io/TE7RE650/RF-Exposure-Info/RF-Exposure-Info-3262264",
+      "stand": "Sporton FA6N0412 Rev. 01, 2017-01-13",
+      "abgerufen": "2026-10-19"
+    },
+    "tplink_produktseite": {
+      "url": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+      "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+      "abgerufen": "2026-10-19"
+    },
+    "tplink_downloadseite": {
+      "url": "https://www.tp-link.com/en/support/download/re500/v1/",
+      "stand": "Live-Seite 2026-10-19 (neueste Firmware 2019-05-30)",
+      "abgerufen": "2026-10-19"
+    },
+    "tplink_datenblatt": {
+      "url": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+      "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+      "abgerufen": "2026-10-19"
+    }
+  },
+  "roh": {
+    "toh": {
+      "score": 1.3,
+      "pid": "15682406",
+      "devicetype": "Range Extender",
+      "brand": "TP-Link",
+      "model": "RE500",
+      "version": "v1",
+      "fccid": "https://fcc.io/TE7/RE650",
+      "availability": "Discontinued",
+      "whereavailable": "",
+      "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+      "supportedsincerel": "21.02.0",
+      "supportedcurrentrel": "23.05.0",
+      "unsupported_functions": "NULL",
+      "target": "ramips",
+      "subtarget": "mt7621",
+      "packagearchitecture": "mipsel_24kc",
+      "bootloader": "U-Boot",
+      "cpu": "MediaTek MT7621AT",
+      "cpucores": "2",
+      "cpumhz": "880",
+      "flashmb": "16",
+      "rammb": "128",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "1",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "-",
+      "vlan": "¿",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "MediaTek MT7615E",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "a/n/ac",
+      "wlancomments": "",
+      "wlandriver": "mt76",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "-",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "57600 / 8N1",
+      "jtag": "¿",
+      "ledcount": "7",
+      "buttoncount": "3",
+      "gpios": "-",
+      "powersupply": "100-240 VAC, 0.4 A",
+      "devicepage": "toh:tp-link:re500_v1",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "RE500",
+      "gitsearch": "RE500",
+      "wikideviurl": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+      "oemdevicehomepageurl": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+      "firmwareoemstockurl": "https://www.tp-link.com/en/support/download/re500/v1/",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ramips/mt7621/openwrt-23.05.0-ramips-mt7621-tplink_re500-v1-squashfs-factory.bin",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ramips/mt7621/openwrt-23.05.0-ramips-mt7621-tplink_re500-v1-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-tplink_re500-v1-squashfs-factory.bin",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-tplink_re500-v1-squashfs-sysupgrade.bin",
+      "installationmethods": "GUI OEM,U-Boot TFTP + serial recovery,see git-commit",
+      "commentinstallation": "",
+      "recoverymethods": "U-Boot TFTP + serial recovery,see git-commit",
+      "commentrecovery": "",
+      "picture": "media:example:genericrouter1.png",
+      "comments": "",
+      "page": "toh:hwdata:tp-link:tp-link_re500_v1"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "Range Extender",
+      "Brand": "TP-Link",
+      "Model": "RE500",
+      "Versions": "v1",
+      "FCCID_urls": "https://fcc.io/TE7/RE650",
+      "Availability_availability": "Discontinued",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+      "Supported Since Rel_releasesince": "21.02.0",
+      "Supported Current Rel_releasecurrent": "25.12.2",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "ramips",
+      "Subtarget": "mt7621",
+      "Package architecture_pkg-arch": "mipsel_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "MediaTek MT7621AT",
+      "CPU Cores_numcores_": "2",
+      "CPU MHz": "880",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "-",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "MediaTek MT7615N",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN Comments_": "4x4:3 MIMO both channels",
+      "WLAN driver_wlan-drivers": "mt76",
+      "Detachable Antennas_numdetachantenna": "4",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "57600 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "7",
+      "Button count_numbutton": "3",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "100-240 VAC, 0.4 A",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:tp-link:re500_v1",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "RE500",
+      "Git search_search-gits": "RE500",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+      "WikiDevi ID_hwinfo-ids": "TP-LINK_RE500_v1.x",
+      "OEM Device Homepage URL_url": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+      "Firmware OEM Stock URL_url": "https://www.tp-link.com/en/support/download/re500/v1/",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/ramips/mt7621/openwrt-25.12.2-ramips-mt7621-tplink_re500-v1-squashfs-factory.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/ramips/mt7621/openwrt-25.12.2-ramips-mt7621-tplink_re500-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-tplink_re500-v1-squashfs-factory.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-tplink_re500-v1-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "GUI OEM, U-Boot TFTP + serial recovery, see git-commit",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "U-Boot TFTP + serial recovery, see git-commit",
+      "Comment recovery": "",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "openwrt_wiki": {
+      "beschreibung": "The RE500 is a an indoor range extender with dual-band WiFi and 4 antennas. It is designed to be plugged directly into a power outlet.",
+      "installation_oem": "Upload openwrt-ramips-mt7621-tplink_re500-v1-squashfs-factory.bin from the RE500 web interface.",
+      "back_to_stock": "TFTP-Upload nur aus U-Boot per serieller Konsole (Gehaeuse oeffnen); nimmt keine Hersteller-Firmware an, nur kernel+rootfs aus Flash-Backup",
+      "buttons": {
+        "Reset": "KEY_RESTART",
+        "Power": "KEY_POWER",
+        "WPS": "KEY_WPS_BUTTON",
+        "LED": "KEY_LIGHTS_TOGGLE"
+      },
+      "serial": "57600, 8N1",
+      "flash_layout": "FIXME (nicht ausgefuellt)",
+      "tftp_werte": "FIXME (nicht ausgefuellt)",
+      "tags": "ramips MT7621 16flash 128RAM 1port GigabitEthernet 802.11abgnac 0USB wall_plug mains_powered",
+      "bootlog_openwrt_auszug": [
+        "Linux version 5.4.91 ... OpenWrt GCC 8.4.0 r15588-465eaa0e07",
+        "SoC Type: MediaTek MT7621 ver:1 eco:3",
+        "MIPS: machine is TP-Link RE500 v1",
+        "Memory: 120452K/131072K available",
+        "CPU Clock: 880MHz",
+        "Kernel command line: console=ttyS0,57600 rootfstype=squashfs,jffs2",
+        "spi-nor spi0.0: w25q128 (16384 Kbytes)",
+        "0x000000000000-0x000000020000 : \"u-boot\"",
+        "0x000000020000-0x000000e00000 : \"firmware\"",
+        "0x000000e00000-0x000000e50000 : \"config\"",
+        "0x000000ff0000-0x000001000000 : \"radio\"",
+        "mt7530 mdio-bus:1f: MT7530 adapts as multi-chip module",
+        "pci 0000:01:00.0: [14c3:7615] type 00 class 0x000280",
+        "pci 0000:02:00.0: [14c3:7615] type 00 class 0x000280",
+        "mt7621-pci 1e140000.pcie: pcie2 no card, disable it",
+        "mt7530 mdio-bus:1f lan: Link is Up - 1Gbps/Full"
+      ]
+    },
+    "openwrt_git": {
+      "titel": "ramips: add support for TP-Link RE500 v1",
+      "autor": "Christoph Krapp",
+      "committer": "Adrian Schmutzler",
+      "hardware": [
+        "SoC 880 MHz - MediaTek MT7621AT",
+        "128 MB of DDR3 RAM",
+        "16 MB - Winbond 25Q128FVSG",
+        "4T4R 2.4 GHz - MediaTek MT7615E",
+        "4T4R 5 GHz - MediaTek MT7615E",
+        "1x 1 Gbps Ethernet - MT7621AT integrated",
+        "7x LEDs (Power, 2G, 5G, WPS(x2), Lan(x2))",
+        "4x buttons (Reset, Power, WPS, LED)",
+        "UART header (J1) - 2:GND, 3:RX, 4:TX",
+        "Serial console @ 57600,8n1"
+      ],
+      "hinweis": "This device uses the same hardware as RE650 v1 which got supported in 8c51dde.",
+      "flash": "Upload openwrt-ramips-mt7621-tplink_re500-v1-squashfs-factory.bin from the RE500 web interface.",
+      "geaenderte_dateien": [
+        "target/linux/ramips/dts/mt7621_tplink_re500-v1.dts",
+        "target/linux/ramips/dts/mt7621_tplink_re650-v1.dts",
+        "target/linux/ramips/dts/mt7621_tplink_rexx0-v1.dtsi",
+        "target/linux/ramips/image/mt7621.mk",
+        "target/linux/ramips/mt7621/base-files/etc/board.d/01_leds",
+        "target/linux/ramips/mt7621/base-files/etc/board.d/02_network",
+        "tools/firmware-utils/src/tplink-safeloader.c"
+      ],
+      "folgecommit": "7de08be913 2020-07-08 ramips: add missing kmod-mt7615-firmware for TP-Link RE500 v1"
+    },
+    "openwrt_git_re650": {
+      "titel": "ramips: add support for TP-Link RE650 v1",
+      "text": "TP-Link RE650 v1 is a dual-band AC2600 range extender, based on MediaTek MT7621A and MT7615E. According to the wikidevi entry for RE650 this device is identical with TP-Link RE500 as hardware. This patch supports only RE650.",
+      "hardware": "wie RE500-Commit (MT7621AT, 128 MB DDR3, Winbond 25Q128FVSG, 2x MT7615E 4T4R, 1x 1 Gbps, 7 LEDs, 4 Buttons, UART J1 2:GND 3:RX 4:TX 57600 8n1)"
+    },
+    "openwrt_dts": {
+      "compatible": "tplink,re500-v1",
+      "model": "TP-Link RE500 v1",
+      "buttons": {
+        "wps": "GPIO 18",
+        "power": "GPIO 25",
+        "led": "GPIO 30",
+        "reset": "GPIO 31"
+      },
+      "leds": {
+        "power": "blau GPIO 22",
+        "wifi2g": "blau GPIO 23",
+        "wifi5g": "blau GPIO 24",
+        "wps": "rot GPIO 26 / blau GPIO 27",
+        "eth_act": "gruen GPIO 28",
+        "eth_link": "gruen GPIO 29"
+      },
+      "flash": "jedec,spi-nor, spi-max-frequency 40 MHz",
+      "partitionen": {
+        "u-boot": "0x0-0x20000 ro",
+        "firmware": "0x20000 Laenge 0xde0000 (tplink,firmware)",
+        "config": "0xe00000 Laenge 0x50000 ro, MAC bei 0x10008",
+        "leer": "0xe50000-0xff0000 (in Herstellerfirmware leer, ungenutzt)",
+        "radio": "0xff0000 Laenge 0x10000 ro, EEPROM 0x0 und 0x8000"
+      },
+      "wlan": "pcie0: mt76 2400-2500 MHz; pcie1: mt76 5000-6000 MHz",
+      "ethernet": "gmac0 rgmii1, switch0 port@0 label lan",
+      "label_mac_device": "gmac0"
+    },
+    "openwrt_image_mk": {
+      "Device": "tplink_re500-v1",
+      "DEVICE_MODEL": "RE500",
+      "DEVICE_VARIANT": "v1",
+      "DEVICE_PACKAGES": "kmod-mt7615-firmware -uboot-envtools",
+      "TPLINK_BOARD_ID": "RE500-V1",
+      "IMAGE_SIZE": "14208k",
+      "basis": "$(Device/dsa-migration) $(Device/tplink-safeloader)"
+    },
+    "firmware_utils_safeloader": {
+      "id": "RE500-V1",
+      "support_list": [
+        "{product_name:RE500,product_ver:1.0.0,special_id:00000000}",
+        "{product_name:RE500,product_ver:1.0.0,special_id:55530000}",
+        "{product_name:RE500,product_ver:1.0.0,special_id:45550000}",
+        "{product_name:RE500,product_ver:1.0.0,special_id:4A500000}",
+        "{product_name:RE500,product_ver:1.0.0,special_id:43410000}",
+        "{product_name:RE500,product_ver:1.0.0,special_id:41550000}",
+        "{product_name:RE500,product_ver:1.0.0,special_id:41530000}"
+      ],
+      "special_id_ascii": {
+        "55530000": "US",
+        "45550000": "EU",
+        "4A500000": "JP",
+        "43410000": "CA",
+        "41550000": "AU",
+        "41530000": "AS"
+      },
+      "partitionen": {
+        "fs-uboot": "0x00000 0x20000",
+        "firmware": "0x20000 0xde0000",
+        "partition-table": "0xe00000 0x02000",
+        "default-mac": "0xe10000 0x00020",
+        "pin": "0xe10100 0x00020",
+        "product-info": "0xe11100 0x01000",
+        "soft-version": "0xe20000 0x01000",
+        "support-list": "0xe21000 0x01000",
+        "profile": "0xe22000 0x08000",
+        "user-config": "0xe30000 0x10000",
+        "default-config": "0xe40000 0x10000",
+        "radio": "0xff0000 0x10000"
+      }
+    },
+    "gluon_git": {
+      "commit": "7a049cfd70 ramips-mt7621: add support for TP-Link RE500 (#2625)",
+      "autor": "Christoph Krapp",
+      "target": "ramips-mt7621",
+      "zeile": "device('tp-link-re500-v1', 'tplink_re500-v1')",
+      "doku": "docs/user/supported_devices.rst: TP-Link RE500 (v1)",
+      "erstes_release": "v2022.1 (nicht in v2021.1.x)"
+    },
+    "wikidevi": {
+      "brand": "TP-LINK",
+      "model": "RE500",
+      "revision": "v1.x",
+      "series": "AC1900",
+      "asin": "B0718ZGS22",
+      "newegg": "27J-0014-00001",
+      "price": "110",
+      "manuf_country": "China",
+      "is_manuf": "No",
+      "manuf": "Proware",
+      "type": "range extender, access point",
+      "fcc_date": "01/18/2017",
+      "fcc_id": "TE7RE650",
+      "ic_id": "8853A-RE650",
+      "pcb_id": "1607132650-1.0",
+      "pwr_v": "100-240",
+      "pwr_amp": "0.4",
+      "pwr_conn": "AC (direct)",
+      "cpu1_brand": "MediaTek",
+      "cpu1_model": "MT7621AT;MEDIATEK, MT7621AT, 1619-AMTH, CTPA1V10, DTP4WP50;",
+      "fla1": "16",
+      "fla1_brand": "Winbond",
+      "fla1_model": "W25Q128FVSG",
+      "ram1": "128",
+      "ram1_brand": "Nanya",
+      "ram1_model": "NT5CC64M16GP-DI",
+      "wi1_chip1_brand": "MediaTek",
+      "wi1_chip1_model": "MT7615N;MEDIATEK, ARM, MT7615N, 1612-BFSL, ACMSSKNS;",
+      "wi1_802dot11_protocols": "bgn",
+      "wi1_ant_conn": "U.FL",
+      "wi1_txchains": "4",
+      "wi1_rxchains": "4",
+      "wi1_sstreams": "3",
+      "wi2_chip1_brand": "MediaTek",
+      "wi2_chip1_model": "MT7615N;MEDIATEK, ARM, MT7615N, 1612-BFSL, ACMSSKNS;",
+      "wi2_802dot11_protocols": "an+ac",
+      "wi2_ant_conn": "U.FL",
+      "wi2_txchains": "4",
+      "wi2_rxchains": "4",
+      "wi2_sstreams": "3",
+      "eth_cpu": "true",
+      "sw_cpu": "true",
+      "lan_speed": "1GbE",
+      "lan_ports": "1",
+      "flags": "Wave2, MU-MIMO, flip-up antenna,",
+      "802dot11_protocols": "abgn+ac",
+      "default_ssid": "TP-LINK_Extender_2.4GHz, TP-LINK_Extender_5GHz",
+      "default_ip": "192.168.0.254",
+      "default_user": "admin",
+      "default_pass": "admin",
+      "_text": ":• '''1300''' Mbps - 3SS 5GHz [https://en.wikipedia.org/wiki/IEEE_802.11ac#Data_rates_and_speed 802.11ac] (80MHz chan.),\n:• '''600''' Mbps - 3SS 2.4GHz [https://en.wikipedia.org/wiki/IEEE_802.11n-2009#Data_rates 802.11n] (40MHz chan., 256QAM) = '''''1900 Mbps'' class'''\n{{TagLine|AC1900 Wi-Fi Range Extender}}\n:{{ProductPage|http://www.tp-link.com/us/products/details/RE500.html}}{{SupportPage|vendor=TP-LINK|model=RE500_V1}}\n\"1607132650-1.0-A Rev1.0sp3\" is silkscreened on the board in the FCC photos.\nFCC docs cover the [[TP-LINK RE650 v1.x]] and the RE500. [https://fccid.io/TE7RE650/Test-Report/Test-Report-DTS-3262270.pdf Test Report DTS] says,\n:\"There is nothing different of two models, just for different marketing use.\"\nThis RE500 might be limited to three-stream operation in software.\n*Web GUI: http://tplinkrepeater.net\n__NOTOC__"
+    },
+    "deviwiki": {
+      "brand": "TP-LINK",
+      "model": "RE500",
+      "revision": "v1.x",
+      "asin": "B0718ZGS22",
+      "newegg": "27J-0014-00001",
+      "price": "110",
+      "fcc_date": "01/18/2017",
+      "manuf_country": "China",
+      "is_manuf": "No",
+      "type": "range extender, access point",
+      "fcc_id": "TE7RE650",
+      "ic_id": "8853A-RE650",
+      "pwr_v": "100-240",
+      "pwr_amp": "0.4",
+      "pwr_conn": "AC (direct)",
+      "cpu1_brand": "MediaTek",
+      "cpu1_model": "MT7621AT;MEDIATEK, MT7621AT, 1619-AMTH, CTPA1V10, DTP4WP50;",
+      "ram1": "128",
+      "ram1_brand": "Nanya",
+      "ram1_model": "NT5CC64M16GP-DI",
+      "wi1_chip1_brand": "MediaTek",
+      "wi1_chip1_model": "MT7615N;MEDIATEK, ARM, MT7615N, 1612-BFSL, ACMSSKNS;",
+      "wi1_802dot11_protocols": "an+ac",
+      "wi1_ant_conn": "U.FL",
+      "wi1_txchains": "3",
+      "wi1_rxchains": "3",
+      "wi1_sstreams": "3",
+      "wi2_chip1_brand": "MediaTek",
+      "wi2_chip1_model": "MT7615N;MEDIATEK, ARM, MT7615N, 1612-BFSL, ACMSSKNS;",
+      "wi2_802dot11_protocols": "bgn",
+      "wi2_ant_conn": "U.FL",
+      "wi2_txchains": "3",
+      "wi2_rxchains": "3",
+      "wi2_sstreams": "3",
+      "eth_cpu": "true",
+      "sw_cpu": "true",
+      "lan_speed": "1G",
+      "lan_ports": "1",
+      "flags": "Wave2, MU-MIMO, flip-up antenna,",
+      "802dot11_protocols": "abgn+ac",
+      "default_ssid": "TP-LINK_Extender_2.4GHz, TP-LINK_Extender_5GHz",
+      "default_ip": "192.168.0.254",
+      "default_user": "admin",
+      "default_pass": "admin",
+      "_text": ":• '''1300Mbps''' - 3SS 5GHz [https://en.wikipedia.org/wiki/IEEE_802.11ac#Data_rates_and_speed 802.11ac] (80MHz chan.),\n:• '''600Mbps''' - 3SS 2.4GHz [https://en.wikipedia.org/wiki/IEEE_802.11n-2009#Data_rates 802.11n] (40MHz chan., 256QAM) = '''''1900 Mbps'' class'''\n{{TagLine|AC1900 Wi-Fi Range Extender}}\n:{{ProductPage|http://www.tp-link.com/us/products/details/RE500.html}}{{SupportPage|vendor=TP-LINK|model=RE500_V1}}\n\"1607132650-1.0-A Rev1.0sp3\" is silkscreened on the board in the FCC photos.\nFCC docs cover the [[TP-LINK RE650 v1.x]] and the RE500. [https://fccid.io/TE7RE650/Test-Report/Test-Report-DTS-3262270.pdf Test Report DTS] says, \"There is nothing different of two models, just for different marketing use.\" This RE500 might be limited to three-stream operation in software.\nWeb GUI: http://tplinkrepeater.net"
+    },
+    "fcc": {
+      "fcc_id": "TE7RE650",
+      "grantee": "TP-Link Technologies Co., Ltd.",
+      "equipment_class": "AC2600 Wi-Fi Range Extender/AC1900 Wi-Fi Range Extender",
+      "test_firm": "SPORTON International Inc.",
+      "frequenzen": [
+        "2412-2462 MHz",
+        "5180-5240 MHz",
+        "5745-5825 MHz (laut RF-Exposure-Bericht)"
+      ],
+      "final_action_date": "2017-01-18",
+      "grant_comments": "Power listed is maximum combined output power conducted. This device is restricted to indoor use only. ... separation distance of at least 20 cm ... This device has 20, 40, and 80 MHz bandwidth modes.",
+      "dokumente": [
+        "User Manual re500 (PDF 2.4 MB)",
+        "User Manual re650 (PDF 1.9 MB)",
+        "Internal Photos (PDF 1.5 MB)",
+        "External Photos (PDF 150.8 KB)",
+        "Label Info re500 (PDF 3.6 MB)",
+        "Label Info re650 (PDF 3.4 MB)",
+        "Test Setup Photos",
+        "Radiated Emission Co-location Report",
+        "Test Report DTS (PDF 2.6 MB)",
+        "Test Report NII (PDF 3.5 MB)",
+        "Confidentiality Letter",
+        "DoC",
+        "POA",
+        "RF Exposure Info",
+        "Block Diagram/Schematics/Operational Description (nur Metadaten, vertraulich)"
+      ]
+    },
+    "fcc_label": {
+      "titel": "AC1900 Wi-Fi Range Extender",
+      "Model": "RE500",
+      "Power": "100-240V~ 50/60Hz 0.4A",
+      "Default Access": "http://tplinkrepeater.net",
+      "Default SSID": "TP-Link_Extender_2.4GHz/5GHz",
+      "FCC ID": "TE7RE650",
+      "IC": "8853A-RE650",
+      "hinweis": "for indoor use only",
+      "zeichen": "RoHS, cULus I.T.E. E470610, FCC, WEEE, MADE IN CHINA",
+      "ausfuehrung": "Gehaeuse-Aufdruck (壳体丝印) auf der Rueckseite oberhalb des Netzsteckers, 54.108x12.583 mm, PANTONE 429C",
+      "aufkleber": "Barcode-Aufkleber unten auf der Rueckseite: 'Model:RE500(US) Ver:1.0', 'S/N:...', 'MAC:XX-XX-XX-XX-XX-XX'",
+      "zeichnung": {
+        "Name": "RE500(US)_1.0_壳体丝印",
+        "Version": "A1",
+        "Werkzeug": "篝火163",
+        "Modellversion": "RE500(US)_1.0",
+        "Datum": "2016-12-16"
+      },
+      "masse_rueckseite_mm": "76.4 x 162.7"
+    },
+    "fcc_handbuch": {
+      "leds": {
+        "RE": "blau = gute Verbindung, rot = schwaches Signal, blinkt = WPS, aus = keine Verbindung",
+        "2.4GHz/5GHz": "an/aus",
+        "Power": "an/blinkt (Start)/aus"
+      },
+      "knoepfe": {
+        "WPS Button": "Front (RE-Taste)",
+        "Power Button": "Ein/Aus",
+        "LED Button": "alle LEDs an/aus",
+        "Reset (Hole)": "mit Stift druecken bis alle LEDs kurz leuchten",
+        "Ethernet Port": "fuer kabelgebundenes Geraet"
+      },
+      "aufstellung": "direkt in eine Steckdose, aufrecht empfohlen",
+      "default_ip": "192.168.0.254",
+      "ethernet_hinweis": "By default, the Ethernet port of the extender is connected to the 5GHz wireless netwok.",
+      "copyright": "2017"
+    },
+    "fcc_innenfotos": {
+      "soc": "MEDIATEK MT7621AT 1620-AMTH CTPA1V10 DTP4WP50 (unter Abschirmrahmen)",
+      "ram": "NANYA NT5CC64M16GP-DI (1612)",
+      "wlan": "2x MEDIATEK ARM MT7615N 1612-BFSL ACMSSKNS, je unter eigener Abschirmung",
+      "quarze": "Y1, Y2 T400 Ps8V",
+      "uart_kandidat": "4 offene Durchkontaktierungen in einer Reihe am Platinenrand neben dem SoC-Abschirmrahmen, unbestueckt (Bezeichnung auf dem Foto nicht lesbar)",
+      "taster": "3 Taster am Platinenrand (SW1-3)",
+      "antennen": "Koaxkabel mit U.FL zu den Klappantennen",
+      "kuehlung": "Kuehlkoerper (Rippen) auf der WLAN-Seite, kein Luefter zu sehen",
+      "netzteil": "eingebautes AC/DC-Netzteil auf eigener Platine im Steckerteil (U2 SC1226K?)"
+    },
+    "fcc_aussenfotos": {
+      "vorne": "RE-Taste mittig, 3 LEDs",
+      "seite_a": "2 Taster (Power, LED) und Reset-Loch",
+      "seite_b": "RJ45 mit 2 gruenen LEDs",
+      "rueckseite": "US-Netzstecker",
+      "antennen": "4 Klappantennen an Scharnieren"
+    },
+    "fcc_rf_exposure": {
+      "report": "FA6N0412",
+      "tabelle": [
+        {
+          "mode": "2.4G;D1D",
+          "DG_dBi": 7.48,
+          "Power_dBm": 26.59,
+          "EIRP_dBm": 34.08
+        },
+        {
+          "mode": "5.8G;D1D",
+          "DG_dBi": 7.88,
+          "Power_dBm": 24.56,
+          "EIRP_dBm": 32.44
+        }
+      ],
+      "multiple_listing": "RE650 AC2600 / RE500 AC1900: There is nothing different of two models, just for different marketing use."
+    },
+    "tplink_produktseite": {
+      "Working Modes": "Range Extender/Access Point",
+      "Plug Type": "EU, UK, US, AU",
+      "Button": "WPS Button, Reset Button, LED Button, Power Button",
+      "Input Power": "100-240V~50/60Hz",
+      "Power Consumption": "12W（max power consumption）",
+      "Dimensions ( W x D x H )": "6.4 x 3.4 x 1.6 in. (163 x 86 x 40mm)",
+      "Antenna": "4 External Antennas",
+      "Wireless Standards": "IEEE 802.11a/n/ac 5 GHz, IEEE 802.11b/g/n 2.4 GHz",
+      "Frequency": "2.4GHz & 5GHz(11ac)",
+      "Signal Rate": "5GHz:Up to 1300Mbps 2.4GHz:Up to 600Mpbs",
+      "Reception Sensitivity": "5GHz: 11a 6Mbps:-96dBm@10% PER 11a 54Mbps: -78dBm@10% PER 11ac HT20 mcs8: -69dBm@10% PER 11ac HT40 mcs9: -66dBm@10% PER 11ac HT80 mcs9: -63dBm@10% PER 2.4GHz 11g 54M: -79dBm@10% PER 11n HT20 mcs7: -77dBm@10% PER 11n HT40 mcs7: -74dBm@10% PER",
+      "Wireless Functions": "Enable/Disable Wireless Radio DFS (the latest firmware and hardware version is required) Access Control LED Control Power Schedule Wi-Fi Coverage",
+      "Wireless Security": "64/128-bit WEP WPA-PSK / WPA2-PSK",
+      "Transmission Power": "(leer)",
+      "Certification": "CE, FCC, RoHS",
+      "Package Contents": "AC1900 Wi-Fi Range Extender RE500 Quick Installation Guide",
+      "Box Dimensions (W X D X H)": "7.9 x 4.9 x 3.8 in. (202 x 125 x 97mm)",
+      "Environment": "Operating Temperature: 0℃~40℃ (32℉~104℉) Storage Temperature: -40℃~70℃ (-40℉~158℉) Operating Humidity: 10%~90% non-condensing Storage Humidity: 5%~90% non-condensing",
+      "Highlights": [
+        "Four fixed external antennas extend Wi-Fi coverage by up to 14,000 sq. ft.",
+        "AC1900 Dual Band Wi-Fi – Simultaneous 600Mbps on 2.4GHz + 1300Mbps on 5GHz",
+        "3×3 MU-MIMO",
+        "Beamforming Technology",
+        "Gigabit Ethernet Port",
+        "Intelligent Signal Light",
+        "AP Mode",
+        "880MHz Dual-Core CPU",
+        "4 Antennas"
+      ]
+    },
+    "tplink_downloadseite": {
+      "hardware_versionen": [
+        "v1"
+      ],
+      "firmware": [
+        "RE500(EU)_V1_190521 (2019-05-30)",
+        "RE500(EU)_V1_180416 (2018-05-30, Datei RE500(EU_UK_US_AU_JP)_V1_180416.zip)",
+        "RE500(EU)_V1_171219 (2018-01-10)",
+        "RE500(EU)_V1_170210 (2017-02-10)"
+      ],
+      "dokumente": [
+        "RE500_V1_Datasheet",
+        "RE500(EU)_V1_User Guide",
+        "RE500(EU)_V1_Quick Installation Guide",
+        "RE500(EU)_V1_GPL"
+      ]
+    },
+    "tplink_datenblatt": {
+      "Ethernet Port": "1 10/100/1000Mbps RJ45 Port",
+      "Button": "WPS Button, Reset Button, LED On/Off Button, Power On/Off Button",
+      "Antenna": "4 External Antennas",
+      "Power Consumption": "CE: 12W, FCC: 17W",
+      "Dimensions (L × W × H)": "163×86×40mm",
+      "Wireless Standards": "IEEE 802.11a/n/ac 5GHz, IEEE 802.11b/g/n 2.4GHz",
+      "Frequency": "2.4GHz and 5GHz",
+      "Signal Rate": "600Mbps at 2.4GHz, 1300Mbps at 5GHz",
+      "Transmit Power": "CE: <20dBm(2.4GHz),<23dBm(5GHz), FCC: <27dBm(2.4GHz), <25dBm(5GHz)",
+      "Reception Sensitivity": "5GHz: 11a 6Mbps: -96dBm, 11a 54Mbps: -78dBm, 11ac HT20: -69dBm, 11ac HT40: -66dBm, 11ac HT80: -63dBm; 2.4GHz: 11g 54Mbps: -79dBm, 11n HT20: -77dBm, 11n HT40: -74dBm",
+      "Wireless Function": "Enable/Disable Wireless Radio, Wireless Statistics",
+      "Wireless Security": "64/128-bit WEP, WPA/WPA2, WPA/WPA-PSK2 encryptions",
+      "Certification": "CE, FCC, RoHS",
+      "Package Contents": "AC1900 Wi-Fi Range Extender RE500, Quick Installation Guide",
+      "Features": [
+        "Four adjustable external antennas for optimal Wi-Fi coverage",
+        "Dual-core CPU – 880MHz",
+        "MU-MIMO",
+        "LED On/Off button",
+        "Power On/Off"
+      ]
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "TP-Link",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TP-Link",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TP-LINK",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Hersteller laut WikiDevi: Proware (manuf=Proware, is_manuf=No)"
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "RE500",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "AC1900 Wi-Fi Range Extender"
+      },
+      {
+        "wert": "RE500",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7RE650/Label/Label-Info-re500-3262267",
+        "stand": "Exhibit 2017-01-18 (Zeichnung RE500(US)_1.0, 2016-12-16)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild 'Model: RE500'"
+      },
+      {
+        "wert": "RE500",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "1.0",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7RE650/Label/Label-Info-re500-3262267",
+        "stand": "Exhibit 2017-01-18 (Zeichnung RE500(US)_1.0, 2016-12-16)",
+        "sicherheit": "hoch",
+        "bemerkung": "Aufkleber 'Model:RE500(US) Ver:1.0' (Zeichnung US-Variante)"
+      },
+      {
+        "wert": "v1",
+        "quelle": "tplink_downloadseite",
+        "beleg": "https://www.tp-link.com/en/support/download/re500/v1/",
+        "stand": "Live-Seite 2026-10-19 (neueste Firmware 2019-05-30)",
+        "sicherheit": "hoch",
+        "bemerkung": "einzige Hardware-Version auf der Downloadseite"
+      },
+      {
+        "wert": "1.0.0",
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+        "stand": "Branch master am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "product_ver:1.0.0 in allen Support-List-Einträgen"
+      },
+      {
+        "wert": "v1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Rückseite (Steckerseite): Gehäuse-Aufdruck 'AC1900 Wi-Fi Range Extender', 'Model: RE500', 'Power: 100-240V~ 50/60Hz 0.4A', FCC ID TE7RE650, IC 8853A-RE650; darunter Barcode-Aufkleber 'Model:RE500(US) Ver:1.0', S/N und MAC",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7RE650/Label/Label-Info-re500-3262267",
+        "stand": "Exhibit 2017-01-18 (Zeichnung RE500(US)_1.0, 2016-12-16)",
+        "sicherheit": "hoch",
+        "bemerkung": "Hardware-Version steht nur auf dem Aufkleber; Ländervariante in Klammern (US, EU, ...)"
+      },
+      {
+        "wert": "Gleiches Gehäuse wie RE650 (AC2600); unterscheidbar nur am Modellnamen auf dem Typenschild",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7RE650",
+        "stand": "Grant 2017-01-18 (Original Equipment)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC: 'There is nothing different of two models, just for different marketing use.'"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "TE7RE650",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7RE650",
+        "stand": "Grant 2017-01-18 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "gemeinsam mit RE650"
+      },
+      {
+        "wert": "TE7RE650",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7RE650/Label/Label-Info-re500-3262267",
+        "stand": "Exhibit 2017-01-18 (Zeichnung RE500(US)_1.0, 2016-12-16)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TE7RE650",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TE7/RE650",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Seitenrevision 2026-04-16 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "als https://fcc.io/TE7/RE650"
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "8853A-RE650",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7RE650/Label/Label-Info-re500-3262267",
+        "stand": "Exhibit 2017-01-18 (Zeichnung RE500(US)_1.0, 2016-12-16)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "8853A-RE650",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "RE500(US)",
+          "RE500(EU)",
+          "RE500(UK)",
+          "RE500(AU)",
+          "RE500(JP)"
+        ],
+        "quelle": "tplink_downloadseite",
+        "beleg": "https://www.tp-link.com/en/support/download/re500/v1/",
+        "stand": "Live-Seite 2026-10-19 (neueste Firmware 2019-05-30)",
+        "sicherheit": "hoch",
+        "bemerkung": "Ländervarianten laut Firmware-Datei RE500(EU_UK_US_AU_JP)_V1_180416.zip"
+      },
+      {
+        "wert": [
+          "Ländercodes US, EU, JP, CA, AU, AS"
+        ],
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+        "stand": "Branch master am 2026-10-19",
+        "sicherheit": "niedrig",
+        "bemerkung": "special_id der Support-Liste als ASCII gelesen (abgeleitet)"
+      },
+      {
+        "wert": "TP-Link RE650 v1 (gleiche Hardware, AC2600-Vermarktung)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": "'This device uses the same hardware as RE650 v1'"
+      }
+    ],
+    "plattform_gleich": [
+      {
+        "wert": "TP-Link RE650 v1",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TP-Link RE650 v1",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7RE650",
+        "stand": "Grant 2017-01-18 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TP-LINK RE650 v1.x",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Discontinued",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Discontinued",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Seitenrevision 2026-04-16 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "2017",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7RE650",
+        "stand": "Grant 2017-01-18 (Original Equipment)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Grant 2017-01-18, erste Firmware 2017-02-10"
+      }
+    ],
+    "hersteller_odm": [
+      {
+        "wert": "Proware",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": "manuf=Proware, manuf_country=China"
+      }
+    ],
+    "platinen_kennung": [
+      {
+        "wert": "1607132650-1.0",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": "'1607132650-1.0-A Rev1.0sp3' laut WikiDevi auf FCC-Fotos aufgedruckt"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TE7RE650/Internal-Photos/Internal-Photos-3262265",
+        "stand": "Sporton EP6N0412 Rev. 01, 2017-01-13",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufdruck MT7621AT 1620-AMTH"
+      },
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7621 ver:1 eco:3",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt-Bootlog"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Dual-Core"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog: 4 CPUs (2 Kerne mit je 2 VPE)"
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 880,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 880,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 880,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 880,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog 'CPU Clock: 880MHz'"
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "mipsel_24kc (MIPS 1004Kc)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MIPS 1004Kc",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 128,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": "DDR3"
+      },
+      {
+        "wert": 128,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Nanya NT5CC64M16GP-DI"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog 131072K"
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR3",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "Nanya NT5CC64M16GP-DI",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TE7RE650/Internal-Photos/Internal-Photos-3262265",
+        "stand": "Sporton EP6N0412 Rev. 01, 2017-01-13",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufdruck 'NANYA 1612 NT5CC64M16GP-DI'"
+      },
+      {
+        "wert": "Nanya NT5CC64M16GP-DI",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog 'w25q128 (16384 Kbytes)'"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_tplink_rexx0-v1.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "jedec,spi-nor"
+      },
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog spi-nor"
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "Winbond 25Q128FVSG",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Winbond W25Q128FVSG",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "switch": [
+      {
+        "wert": "MT7530 (im SoC, nur 1 Port genutzt)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog 'MT7530 adapts as multi-chip module'"
+      },
+      {
+        "wert": "-",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "Yes",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Seitenrevision 2026-04-16 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "¿",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": [
+          "MediaTek MT7615E (2.4 GHz)",
+          "MediaTek MT7615E (5 GHz)"
+        ],
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "MediaTek MT7615N",
+          "MediaTek MT7615N"
+        ],
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TE7RE650/Internal-Photos/Internal-Photos-3262265",
+        "stand": "Sporton EP6N0412 Rev. 01, 2017-01-13",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufdruck 'MEDIATEK ARM MT7615N 1612-BFSL'"
+      },
+      {
+        "wert": [
+          "MediaTek MT7615N",
+          "MediaTek MT7615N"
+        ],
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7615N",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Seitenrevision 2026-04-16 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7615E",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2x PCIe 14c3:7615 (mt7615e)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "mt76 (mt7615e), Paket kmod-mt7615-firmware",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "mt76",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "bgn",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "a/n/ac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "an+ac",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 3,
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'3×3 MU-MIMO', 600 Mbps (3SS, 256-QAM)"
+      },
+      {
+        "wert": "4T4R",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": "Chip/Funkteil 4T4R"
+      },
+      {
+        "wert": "4x4, 3 Spatial Streams",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "3x3, 3 Spatial Streams",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:47:29Z",
+        "sicherheit": "mittel",
+        "bemerkung": "älterer Stand"
+      },
+      {
+        "wert": "4x4:3",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Seitenrevision 2026-04-16 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "'4x4:3 MIMO both channels'"
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 3,
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'3×3 MU-MIMO', 1300 Mbps"
+      },
+      {
+        "wert": "4T4R",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "4x4, 3 Spatial Streams",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "3x3, 3 Spatial Streams",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:47:29Z",
+        "sicherheit": "mittel",
+        "bemerkung": "älterer Stand"
+      },
+      {
+        "wert": "4x4:3",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Seitenrevision 2026-04-16 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AC1900",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AC1900",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7RE650/Label/Label-Info-re500-3262267",
+        "stand": "Exhibit 2017-01-18 (Zeichnung RE500(US)_1.0, 2016-12-16)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AC1900",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_wave2": [
+      {
+        "wert": true,
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "MU-MIMO"
+      },
+      {
+        "wert": true,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": "flags Wave2, MU-MIMO"
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "20/40/80 MHz",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7RE650",
+        "stand": "Grant 2017-01-18 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "'This device has 20, 40, and 80 MHz bandwidth modes.'"
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": [
+          "2412-2462 MHz",
+          "5180-5240 MHz",
+          "5745-5825 MHz"
+        ],
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/TE7RE650/RF-Exposure-Info/RF-Exposure-Info-3262264",
+        "stand": "Sporton FA6N0412 Rev. 01, 2017-01-13",
+        "sicherheit": "hoch",
+        "bemerkung": "US-Zulassung, ohne DFS-Kanäle"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": {
+          "ce_24": "<20",
+          "ce_5": "<23",
+          "fcc_24": "<27",
+          "fcc_5": "<25"
+        },
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "fcc_24_leitungsgebunden": 26.59,
+          "fcc_5_8_leitungsgebunden": 24.56,
+          "eirp_24": 34.08,
+          "eirp_5_8": 32.44
+        },
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/TE7RE650/RF-Exposure-Info/RF-Exposure-Info-3262264",
+        "stand": "Sporton FA6N0412 Rev. 01, 2017-01-13",
+        "sicherheit": "hoch",
+        "bemerkung": "gemessen am RE650-Muster, Summe aller Ketten"
+      }
+    ],
+    "wlan_dfs": [
+      {
+        "wert": "DFS nur mit neuester Firmware/Hardware (Herstellerangabe)",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "extern fest (klappbar)",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'Four fixed external antennas'"
+      },
+      {
+        "wert": "extern fest (klappbar)",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": "'Four adjustable external antennas'"
+      },
+      {
+        "wert": "extern fest (klappbar), innen per U.FL angeschlossen",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": "flags 'flip-up antenna', ant_conn U.FL"
+      },
+      {
+        "wert": "extern klappbar an Scharnieren, Koaxkabel mit U.FL zur Platine",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TE7RE650/Internal-Photos/Internal-Photos-3262265",
+        "stand": "Sporton EP6N0412 Rev. 01, 2017-01-13",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "extern abnehmbar (4)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Seitenrevision 2026-04-16 06:39",
+        "sicherheit": "niedrig",
+        "bemerkung": "Widerspruch: 'Detachable Antennas: 4'; Hersteller nennt die Antennen 'fixed'"
+      },
+      {
+        "wert": "nicht abnehmbar",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas '-'"
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "U.FL (innen)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 4,
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/TE7RE650/External-Photos/External-Photos-3262250",
+        "stand": "Sporton EP6N0412 Rev. 01, 2017-01-13",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "dualband (alle 4 Antennen für beide Bänder)",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'four external dual band antennas'"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "richtgewinn_24": 7.48,
+          "richtgewinn_5_8": 7.88
+        },
+        "quelle": "fcc_rf_exposure",
+        "beleg": "https://fccid.io/TE7RE650/RF-Exposure-Info/RF-Exposure-Info-3262264",
+        "stand": "Sporton FA6N0412 Rev. 01, 2017-01-13",
+        "sicherheit": "hoch",
+        "bemerkung": "'DG' = Directional Gain der Gruppe, nicht Einzelantenne"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "Ethernet",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN (im Herstellermodus an 5-GHz-Netz gebrückt bzw. Uplink im AP-Modus)"
+          }
+        ],
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x 1 Gbps (MT7621AT integriert)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x 1G",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "switch0 port@0 'lan'",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_tplink_rexx0-v1.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "OpenWrt: Port heißt lan"
+      },
+      {
+        "wert": "RJ45 seitlich, mit 2 grünen LEDs",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/TE7RE650/External-Photos/External-Photos-3262250",
+        "stand": "Sporton EP6N0412 Rev. 01, 2017-01-13",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": true,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "sfp": [
+      {
+        "wert": false,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "'-'"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "keiner",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "'-'"
+      },
+      {
+        "wert": "keiner",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": "Tag 0USB"
+      }
+    ],
+    "modem": [
+      {
+        "wert": "keins",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+        "sicherheit": "niedrig",
+        "bemerkung": "Stromversorgung nur über eingebauten Netzstecker; PoE wird in keiner Quelle genannt (abgeleitet)"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "keine (Netzstecker direkt am Gehäuse)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": "pwr_conn 'AC (direct)'"
+      },
+      {
+        "wert": "keine",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": "'designed to be plugged directly into a power outlet', Tag wall_plug mains_powered"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": "eingebaut (AC/DC im Gehäuse, Steckdosen-Gerät)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TE7RE650/Internal-Photos/Internal-Photos-3262265",
+        "stand": "Sporton EP6N0412 Rev. 01, 2017-01-13",
+        "sicherheit": "mittel",
+        "bemerkung": "eigene Netzteil-Platine im Steckerteil"
+      },
+      {
+        "wert": "nicht nötig, Lieferumfang nur Gerät + Quick Installation Guide",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "100-240 V~ 50/60 Hz 0,4 A",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7RE650/Label/Label-Info-re500-3262267",
+        "stand": "Exhibit 2017-01-18 (Zeichnung RE500(US)_1.0, 2016-12-16)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "100-240V~50/60Hz",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "100-240 VAC, 0.4 A",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stecker_typ": [
+      {
+        "wert": [
+          "EU",
+          "UK",
+          "US",
+          "AU"
+        ],
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Plug Type; Variante je nach Land"
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 12,
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "max power consumption"
+      },
+      {
+        "wert": {
+          "ce": 12,
+          "fcc": 17
+        },
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7RE650",
+        "stand": "Grant 2017-01-18 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "'This device is restricted to indoor use only.'"
+      },
+      {
+        "wert": "innen",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7RE650/Label/Label-Info-re500-3262267",
+        "stand": "Exhibit 2017-01-18 (Zeichnung RE500(US)_1.0, 2016-12-16)",
+        "sicherheit": "hoch",
+        "bemerkung": "'for indoor use only'"
+      },
+      {
+        "wert": "innen",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": "'indoor range extender'"
+      },
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Seitenrevision 2026-04-16 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_lager": [
+      {
+        "wert": "-40 bis 70 °C",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "Betrieb 10-90 %, Lager 5-90 %, nicht kondensierend",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Steckdose (Gerät steckt direkt in der Wandsteckdose)",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7RE650/User-Manual/User-Manual-re500-3262272",
+        "stand": "Exhibit 2017-01-18 (PDF, Copyright 2017)",
+        "sicherheit": "hoch",
+        "bemerkung": "'Plug the extender into an electrical outlet'; aufrecht empfohlen"
+      },
+      {
+        "wert": "Steckdose",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": "'plugged directly into a power outlet'"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "163 x 86 x 40",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": "L x B x H, vermutlich ohne Antennen"
+      },
+      {
+        "wert": "163 x 86 x 40",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "W x D x H"
+      },
+      {
+        "wert": "162.7 x 76.4 (Rückseite)",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7RE650/Label/Label-Info-re500-3262267",
+        "stand": "Exhibit 2017-01-18 (Zeichnung RE500(US)_1.0, 2016-12-16)",
+        "sicherheit": "hoch",
+        "bemerkung": "Maße der Rückseiten-Zeichnung"
+      }
+    ],
+    "verpackung_mm": [
+      {
+        "wert": "202 x 125 x 97",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TE7RE650/Internal-Photos/Internal-Photos-3262265",
+        "stand": "Sporton EP6N0412 Rev. 01, 2017-01-13",
+        "sicherheit": "mittel",
+        "bemerkung": "Innenfotos zeigen nur passiven Kühlkörper"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 7,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": "Power, 2G, 5G, WPS (rot/blau), LAN (2)"
+      },
+      {
+        "wert": 7,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "ja, LED-Taste schaltet alle LEDs",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7RE650/User-Manual/User-Manual-re500-3262272",
+        "stand": "Exhibit 2017-01-18 (PDF, Copyright 2017)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja (LED-Taste, KEY_LIGHTS_TOGGLE)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_tplink_rexx0-v1.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "knoepfe": [
+      {
+        "wert": [
+          "Reset",
+          "Power",
+          "WPS",
+          "LED"
+        ],
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "WPS",
+          "Reset",
+          "LED On/Off",
+          "Power On/Off"
+        ],
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "Button count 3 (Widerspruch zu 4)"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "Loch, mit Stift drücken; seitlich neben Power- und LED-Taste",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/TE7RE650/External-Photos/External-Photos-3262250",
+        "stand": "Sporton EP6N0412 Rev. 01, 2017-01-13",
+        "sicherheit": "mittel",
+        "bemerkung": "Lage aus Außenfoto"
+      },
+      {
+        "wert": "Reset (Hole), mit Stift bis alle LEDs kurz leuchten",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7RE650/User-Manual/User-Manual-re500-3262272",
+        "stand": "Exhibit 2017-01-18 (PDF, Copyright 2017)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ein_aus_schalter": [
+      {
+        "wert": "ja, Power-Taste",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja (KEY_POWER)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_tplink_rexx0-v1.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen, J1 ('UART header')",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": "Commit nennt J1 'header', ob bestückt ist offen"
+      },
+      {
+        "wert": "innen Lötpunkte: 4 offene, unbestückte Durchkontaktierungen in einer Reihe am Platinenrand neben dem SoC-Abschirmrahmen",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TE7RE650/Internal-Photos/Internal-Photos-3262265",
+        "stand": "Sporton EP6N0412 Rev. 01, 2017-01-13",
+        "sicherheit": "mittel",
+        "bemerkung": "Testmuster RE650/RE500; dass es J1/UART ist, steht nicht auf dem Foto (Lage und 4-polige Form passen)"
+      },
+      {
+        "wert": "ja",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Seitenrevision 2026-04-16 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "J1: 2 = GND, 3 = RX, 4 = TX (Pin 1 nicht genannt)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "57600 8N1",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "57600 / 8N1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "57600 8N1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": "auch Kernel-Kommandozeile console=ttyS0,57600"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Seitenrevision 2026-04-16 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "Gehäuse öffnen nötig; Gerät hat eingebautes Netzteil (Netzspannung im Gehäuse)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": "Infobox high_voltage auf der Wiki-Seite"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ramips/mt7621",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ramips/mt7621, Profil tplink_re500-v1",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "tplink_re500-v1",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "21.02.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Commit ba0f4f0c vom 2020-07-06",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.2",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Seitenrevision 2026-04-16 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "23.05.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump"
+      }
+    ],
+    "openwrt_image_groesse_kb": [
+      {
+        "wert": 14208,
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Factory-Image über die Weboberfläche der Herstellerfirmware hochladen",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ba0f4f0cfddc6f1152273565ec35f2a0bda1e95d",
+        "stand": "Commit 2020-07-06 (Autor), gemergt 2020-07-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "GUI OEM, U-Boot TFTP + serial recovery",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Rückweg zur Herstellerfirmware nur per U-Boot-TFTP über serielle Konsole; Hersteller-Images werden dort nicht angenommen",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "safeloader_support_list": [
+      {
+        "wert": "RE500 product_ver 1.0.0, special_id 00000000/US/EU/JP/CA/AU/AS",
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+        "stand": "Branch master am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, tp-link-re500-v1 (ramips-mt7621) ab Gluon v2022.1",
+        "quelle": "gluon_git",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/7a049cfd70c1f71124003b81f92b51f33fc4eb75",
+        "stand": "Commit 2022-08-30, enthalten ab Tag v2022.1 (2022-09-05)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Yes",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Seitenrevision 2026-04-16 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.tp-link.com/en/support/download/re500/v1/",
+        "quelle": "tplink_downloadseite",
+        "beleg": "https://www.tp-link.com/en/support/download/re500/v1/",
+        "stand": "Live-Seite 2026-10-19 (neueste Firmware 2019-05-30)",
+        "sicherheit": "hoch",
+        "bemerkung": "letzte Firmware RE500(EU)_V1_190521 vom 2019-05-30"
+      },
+      {
+        "wert": "https://www.tp-link.com/en/support/download/re500/v1/",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "gmac0 (MAC aus config-Partition 0x10008); WLAN 2.4 = +1, 5 GHz = +2",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_tplink_rexx0-v1.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/tp-link/re500_v1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/re500_v1",
+        "stand": "Seitenrevision 2026-06-10 11:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2020-07-07T09:00:45Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "https://deviwiki.com/wiki/TP-LINK_RE500_v1.x",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_RE500_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:47:29Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/range-extender/re500/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE500%201.0-datasheet.pdf",
+        "stand": "PDF RE500 1.0 Datasheet, erstellt 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/TE7RE650/Internal-Photos/Internal-Photos-3262265",
+      "kategorie": "seriell_pinbelegung",
+      "grund": "Pin 1 von J1 und Bezeichnung der 4 Durchkontaktierungen auf den FCC-Fotos nicht lesbar; Commit nennt nur Pins 2-4, am Geraet messen"
+    },
+    {
+      "url": "https://fccid.io/TE7RE650/Test-Report/Test-Report-DTS-3262270",
+      "kategorie": "antennen_gewinn_dbi",
+      "grund": "DTS/NII-Testberichte (2.6/3.5 MB) nicht ausgewertet: Einzelgewinn je Antenne"
+    },
+    {
+      "url": "https://www.tp-link.com/en/support/download/re500/v1/",
+      "kategorie": "wlan_streams",
+      "grund": "Hersteller nennt 3x3, Chips/OpenWrt-Commit 4T4R: ob OpenWrt (mt76, EEPROM) 3 oder 4 Ketten nutzt, nicht belegt"
+    },
+    {
+      "url": "https://www.tp-link.com/en/support/download/re500/v1/",
+      "kategorie": "gewicht_g",
+      "grund": "Gewicht in keiner Quelle; ggf. RE500(EU)_V1_User Guide/Quick Installation Guide"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re500_v1",
+      "kategorie": "antennen_art",
+      "grund": "hwdata 'Detachable Antennas: 4' widerspricht Hersteller ('fixed') und WikiDevi (U.FL innen, flip-up); Herkunft der Angabe vor Rev. 2024-04-30 nicht geprueft"
+    },
+    {
+      "url": "https://fccid.io/TE7RE650/User-Manual/User-Manual-re650-3262273",
+      "kategorie": "vergleich",
+      "grund": "RE650-Handbuch nicht ausgewertet (gleiche Hardware)"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "fertig",
+    "anfragen": 33,
+    "notiz": "ToH-Dump + Live-hwdata, OpenWrt-Wiki (Bootlog), Support-Commit ba0f4f0c und RE650-Commit 8c51dde, DTS/Image-Makefile/Safeloader, Gluon-Commit (ab v2022.1), WikiDevi-Spiegel und DeviWiki, FCC TE7RE650 (Grant, Label RE500, Handbuch RE500, Innen-/Aussenfotos, RF-Exposure), TP-Link Produktseite, Downloadseite und Datenblatt 2017 ausgewertet. Keine Werkstatt-Protokolle. Innen, 230-V-Steckergeraet mit eingebautem Netzteil, 1x GbE, 4 klappbare Antennen fest, Seriell J1 innen (Pins 2-4 belegt, 57600)."
+  }
+}
