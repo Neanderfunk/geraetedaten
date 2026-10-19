@@ -34,3 +34,14 @@ aus der OpenWrt-ToH und DeviWiki stammen, die ebenfalls unter CC BY-SA 4.0
 stehen. Die Quelle jedes Werts steht im Eintrag.
 Die Werkzeuge unter `werkzeug/` stehen unter BSD-3-Clause
 (`werkzeug/LICENSE`).
+
+## routerwahl.ffnef.de
+
+`web/` ist die Seite für Leute, die noch einen Router suchen: Merkmale
+anklicken wie bei einer Preissuchmaschine (WLAN-Generation, Montage, PoE,
+RAM, Schwierigkeit der Installation ...), mit Trefferzahl je Option, Link in
+den Firmware-Selector und allen Daten je Gerät. Die Auswahl steht in der
+URL, `?geraet=<image>` zeigt ein einzelnes Gerät. Ausgeliefert wird sie vom
+`deploy.sh` in firmware-selector-config als zweiter Webroot neben
+routersoftware.ffnef.de; Bilder, Anleitungen und `devices.js` kommen von
+dort, die Filterdaten aus `ausgabe/selector/facetten.json`.
