@@ -1,0 +1,1578 @@
+{
+  "image": "friendlyelec-nanopi-r3s",
+  "modell": "FriendlyElec NanoPi R3S",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r3s",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "bemerkung": "Kein Eintrag im Dump (toh_suche.py: 0 Kandidaten; FriendlyARM-Eintraege nur bis R6S/R5C). Live-hwdata-Seite existiert nicht (\"This topic does not exist yet\")"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/friendlyelec/nanopi_r3s?do=export_raw",
+      "stand": "Seitenrevision 2026-07-24 04:09",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Geraeteseite liegt unter toh/friendlyelec/ (toh/friendlyarm/nanopi_r3s existiert nicht); ToH-Tabellen der Seite filtern auf brand FriendlyARM und bleiben mangels hwdata leer"
+    },
+    "openwrt_git": {
+      "url": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+      "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PR https://github.com/openwrt/openwrt/pull/16738, zusammen mit e35f0493 (U-Boot) und b5c7c67b (LED-Aliase)"
+    },
+    "openwrt_git_pcie": {
+      "url": "https://github.com/openwrt/openwrt/commit/12fa348112fe66b1d326e5c3ba2be7d7ecf95881",
+      "stand": "Commit 2026-09-09 (Autor), gemergt 2026-09-13; Backport openwrt-25.12 2026-09-26",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Backport 25.12: https://github.com/openwrt/openwrt/commit/7673104ad53dd0095ec54ecce47f0f5758991f5e; im Branch openwrt-24.10 seit 2026-09-01 nur Kernel-Bumps unter target/linux/rockchip, kein Backport gefunden"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=nanopi-r3s+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-19 (6 Commits, neuester 2026-09-09)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/openwrt-24.10/target/linux/rockchip/image/armv8.mk",
+      "stand": "Branch openwrt-24.10 und openwrt-25.12 am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_notes": {
+      "url": "https://openwrt.org/releases/25.12/notes-25.12.6",
+      "stand": "Seite 25.12.6 vom 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "nur Suchtreffer-Ausschnitt aus der Wiki-Suche ausgewertet"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/rockchip-armv8",
+      "stand": "Branch main am 2026-10-19; Commit 2024-11-28, enthalten ab v2025.1",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Gluon v2025.1.3 baut auf OPENWRT_BRANCH=openwrt-24.10 (https://github.com/freifunk-gluon/gluon/blob/v2025.1.3/modules)"
+    },
+    "friendlyelec_wiki": {
+      "url": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R3S?action=raw",
+      "stand": "Revision 28314 vom 2026-07-28T06:13:45Z (beschreibt R3S LTS)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Seite wurde 2025-06 auf die NanoPi R3S LTS (Platine 2411) umgeschrieben"
+    },
+    "friendlyelec_wiki_2024": {
+      "url": "https://wiki.friendlyelec.com/wiki/index.php?title=NanoPi_R3S&oldid=26530",
+      "stand": "Revision 26530 vom 2024-10-29T11:03:59Z (vor LTS)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Stand vor der LTS-Ueberarbeitung, beschreibt die Platine 2406"
+    },
+    "friendlyelec_shop_lts": {
+      "url": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+      "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Einziger R3S-Treffer der Shopsuche; alte R3S-Seite product_id=303 liefert heute 404"
+    },
+    "friendlyelec_shop_r3s": {
+      "url": "http://web.archive.org/web/20250108122732/https://www.friendlyelec.com/index.php?route=product%2Fproduct&product_id=303",
+      "stand": "Wayback-Snapshot 2025-01-08 12:27:32",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "archivierte Shopseite der urspruenglichen R3S (product_id=303)"
+    },
+    "friendlyelec_vergleich": {
+      "url": "https://wiki.friendlyelec.com/wiki/index.php/File:R3S_compared_to_R3SLTS.jpg",
+      "stand": "Wiki-Datei vom 2025-06-26",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Bild \"NanoPC-R3S(2406)\" gegen \"NanoPC-R3S LTS(2411)\", als Bild ausgewertet"
+    },
+    "friendlyelec_layout": {
+      "url": "https://wiki.friendlyelec.com/wiki/index.php/File:NanoPi_R3S-layout.jpg",
+      "stand": "Wiki-Datei vom 2024-08-27",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "als Bild ausgewertet (Ausschnitt Debug-UART vergroessert)"
+    },
+    "friendlyelec_layout_lts": {
+      "url": "https://wiki.friendlyelec.com/wiki/index.php/File:NanoPi_R3S_LTS-layout.jpg",
+      "stand": "Wiki-Datei vom 2025-06-26",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "als Bild ausgewertet"
+    },
+    "friendlyelec_gehaeusefotos": {
+      "url": "https://wiki.friendlyelec.com/wiki/images/c/c6/R3sc-03.jpg",
+      "stand": "Wiki-Fotos (Revision 26530 eingebunden, Dateidatum nicht abgefragt)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "R3sc-02.jpg (Anschlussseite), R3sc-03.jpg/R3sc-04.jpg (Frontseite) als Bild ausgewertet"
+    },
+    "friendlyelec_schaltplan": {
+      "url": "https://wiki.friendlyelec.com/wiki/images/a/a3/NanoPi_R3S_2406_SCH.PDF",
+      "stand": "Schaltplan Rev 2406, PDF vom 2024-08-26",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "20 Blaetter, pdftotext; nur Blockschaltbild/Stromversorgung ausgewertet"
+    },
+    "friendlyarm_kernel_dts": {
+      "url": "https://github.com/friendlyarm/kernel-rockchip/blob/nanopi6-v6.1.y/arch/arm64/boot/dts/rockchip/rk3566-nanopi-r3-rev02.dts",
+      "stand": "Branch nanopi6-v6.1.y am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "cnx": {
+      "url": "https://www.cnx-software.com/2024/08/28/nanopi-r3s-a-low-cost-rockchip-rk3566-sbc-and-dual-gigabit-ethernet-router/",
+      "stand": "Artikel 2024-08-28",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Vorstellungsartikel nach Herstellerangaben, kein eigener Test"
+    },
+    "openwrt_forum": {
+      "url": "https://forum.openwrt.org/t/openwrt-support-for-nanopi-r3s-lts/237172",
+      "stand": "Thread 2025-07-19 bis 2026-07-06",
+      "abgerufen": "2026-10-19"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=NanoPi+R3S&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Keine Treffer; Suche \"NanoPi\" nur NEO/NEO2/NEO Plus2/R1"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/index.php?search=NanoPi+R3S&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Keine Antwort (Abbruch nach ~140 s)"
+    }
+  },
+  "roh": {
+    "toh": {
+      "treffer": 0,
+      "bemerkung": "Kein Eintrag im Dump 2026-10-18 und keine hwdata-Seite"
+    },
+    "openwrt_git": {
+      "titel": "rockchip: Add support for RK3566 FriendlyElec NanoPi R3S",
+      "autor": "Kevin Zhang",
+      "datum_autor": "2024-10-27T05:13:05Z",
+      "datum_commit": "2024-10-27T13:57:51Z",
+      "CPU": "Rockchip RK3566, Quad-core Cortex-A55",
+      "RAM": "2GB LPDDR4X",
+      "Ethernet": "GMAC RTL8211F GbE, PCIe R8111H GbE",
+      "USB3.0 Host": "Type-A x1",
+      "Storage": "MicroSD Slot x 1, and optional on-board 32GB eMMC",
+      "Debug Serial Port": "3.3V TTL, 3-pin 2.54mm pitch connector, 1500000 bauds",
+      "LED": "LED x 3",
+      "RTC": "One low-power RTC, supports backup battery input",
+      "Ports": "Both GbE controllers are working (WAN eth0, LAN eth1).",
+      "Installation microSD": "Uncompress the OpenWRT sysupgrade.img.gz; Write image to microSD card using dd or similar tool",
+      "Installation eMMC": "Boot from microSD; Uncompress sysupgrade.img.gz; dd if=x.img of=/dev/mmcblk0; sync; Remove microSD card; Reboot",
+      "image_mk": {
+        "DEVICE_VENDOR": "FriendlyARM",
+        "DEVICE_MODEL": "NanoPi R3S",
+        "SOC": "rk3566",
+        "DEVICE_PACKAGES": "kmod-r8169",
+        "profil": "friendlyarm_nanopi-r3s"
+      },
+      "02_network_mac": "wan_mac=$(macaddr_generate_from_mmc_cid mmcblk*); lan_mac=$(macaddr_add \"$wan_mac\" 1)",
+      "dts_compatible": "friendlyarm,nanopi-r3s, rockchip,rk3566",
+      "dts_model": "FriendlyElec NanoPi R3S",
+      "dts_stdout": "serial2:1500000n8",
+      "dts_button": "reset: gpio0 RK_PC2, active low, KEY_RESTART",
+      "dts_leds": "power rot gpio0 RK_PB7 (default on), lan gruen gpio3 RK_PC2, wan gruen gpio3 RK_PC3",
+      "dts_eth": "gmac1 rgmii-id, PHY an mdio1 Adresse 1 (Reset gpio4 RK_PC2); pcie2x1 (Reset gpio4 RK_PC6) fuer RTL8111H",
+      "dts_storage": "sdhci 8 bit HS200 (eMMC, non-removable), sdmmc0 4 bit SDR50 (microSD)",
+      "dts_rtc": "haoyu,hym8563 an i2c1 0x51",
+      "dts_pmic": "rockchip,rk809 an i2c0 0x20; vdd_cpu tcs4525 an i2c0 0x1c",
+      "dts_strom": "vdd_usbc 5 V fest -> vcc5v0_sys -> vcc3v3_sys; vcc5v0_usb per gpio0 RK_PA6 geschaltet",
+      "commit_uboot": "https://github.com/openwrt/openwrt/commit/e35f0493b1dd3cce1754d3ff93f88ac62f2ab390 (uboot-rockchip: add support for NanoPi R3S)",
+      "commit_led": "https://github.com/openwrt/openwrt/commit/b5c7c67b8f10203253138ec35bb6aef213faae30 (LED-Aliase fuer Statusanzeige)"
+    },
+    "openwrt_git_pcie": {
+      "titel": "rockchip: import pending naneng ComboPHY RTERM detection fix",
+      "autor": "Tianling Shen",
+      "datum_autor": "2026-09-09",
+      "datum_commit": "2026-09-13",
+      "text": "Some RK356x ComboPHY revisions can fail to detect the PCIe endpoint RX termination, leaving the link down before endpoint enumeration. Import the Rockchip workaround to force the RTERM detection-ready signal. This restores the RTL8111H PCIe link on a 1 GiB NanoPi R3S.",
+      "datei": "target/linux/rockchip/patches-6.18/104-phy-rockchip-naneng-combphy-Fix-TX-detect-RX.patch",
+      "pr": "https://github.com/openwrt/openwrt/pull/25089",
+      "backport_25_12": "7673104ad53dd0095ec54ecce47f0f5758991f5e (2026-09-26)",
+      "openwrt_24_10": "kein Backport gefunden (Commits unter target/linux/rockchip/patches-6.6 seit 2026-04: nur Kernel-Bumps)"
+    },
+    "openwrt_notes": {
+      "25.12.6": "rockchip: NanoPi R3S (1 GB) - fix the PCIe link to the RTL8111H Ethernet chip"
+    },
+    "openwrt_wiki": {
+      "Beschreibung": "The NanoPi R3S is an open source platform with dual-Gbps Ethernet ports designed and developed by FriendlyElec for IoT applications. The NanoPi R3S uses the RK3566 SoC. It has two Gbps Ethernet ports and 2G LPDDR4X RAM, as well as optional 32GB eMMC. The NanoPi R3S can be optionally equipped with an integrated CNC anodized aluminum case.",
+      "Support Forum": "https://forum.openwrt.org/t/openwrt-support-for-nanopi-r3s-lts/237172",
+      "OEM images": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R3S#Official_image",
+      "Experimental Versions": "None at this time.",
+      "Installation microSD": "use USBImager write *_squashfs-sysupgrade.img.gz to microSD; insert microSD an boot nanopi R3S",
+      "Installation eMMC": "install to microSD and boot first; send image file to /tmp/; gunzip; dd if=/tmp/..._squashfs-sysupgrade.img of=/dev/mmcblk0 bs=4M conv=fsync; sync; remove microSD and reboot",
+      "Upgrade": "LuCI http://192.168.1.1/cgi-bin/luci/mini/system/upgrade/",
+      "Network interfaces": {
+        "br-lan": "LAN 192.168.1.1/24",
+        "eth1": "LAN port",
+        "eth0": "WAN port"
+      },
+      "Buttons": {
+        "Reset": "reset",
+        "Mask": "- (not supported in openwrt for now; GPIO 44 per sysfs lesbar, 0=press 1=not-press)"
+      },
+      "Opening the case": "There is a single black screw on the bottom panel of the case, likely covered by a FriendlyElec QC sticker if you purchased the case together. Once the bottom panel is removed, the PCB can be unsecured from the case by unscrewing three additional silver screws.",
+      "Serial connection parameters": "3.3V, 1500000, 8N1, flow control none",
+      "Serial Foto": "Insert photo of PCB with markings for serial port (Platzhalter, kein Foto)",
+      "Hardware mods": "None so far.",
+      "CNX-Link": "https://www.cnx-software.com/2024/08/28/nanopi-r3s-a-low-cost-rockchip-rk3566-sbc-and-dual-gigabit-ethernet-router/",
+      "Bootlog OpenWrt": {
+        "Kernel": "Linux 6.6.58, OpenWrt r27742-7cb784c980",
+        "Machine model": "FriendlyElec NanoPi R3S",
+        "Memory": "2018252K/2095104K available",
+        "Kernel command line": "console=ttyS2,1500000 earlycon=uart8250,mmio32,0xfe660000 root=PARTUUID=5452574f-02 rw rootwait",
+        "PCIe": "rockchip-dw-pcie: PCIe Gen.1 x1 link up; 0000:01:00.0 [10ec:8168]",
+        "eMMC": "mmcblk0: mmc0:0001 A3A551 28.9 GiB (HS200), boot0/boot1 je 4 MiB, rpmb 16 MiB",
+        "microSD": "mmcblk1: mmc1:5048 SD16G 14.4 GiB (SDR50)",
+        "eth1": "r8169 0000:01:00.0 eth1: RTL8168h/8111h, can't read MAC address, setting random one",
+        "eth0": "rk_gmac-dwmac fe010000.ethernet eth0: PHY [stmmac-0:01] driver [RTL8211F Gigabit Ethernet]",
+        "USB": "xhci-hcd: Host supports USB 3.0 SuperSpeed",
+        "Link": "eth0 und eth1 je 1Gbps/Full"
+      },
+      "Revisionen": [
+        "2026/07/24 04:09",
+        "2026/07/24 04:08",
+        "2026/06/07 10:08",
+        "2026/05/21 11:22"
+      ]
+    },
+    "friendlyelec_wiki": {
+      "Introduction": "The NanoPi R3S uses the RK3566 SoC, It has two Gbps Ethernet ports and 2G LPDDR4X RAM, 32GB eMMC (optional), FriendlyElec ported an OpenWrt system for it. It works with Docker CE. The NanoPi R3S can be optionally equipped with an integrated CNC anodized aluminum case.",
+      "Fotos": "NanoPi R3S LTS-1.jpg, NanoPi R3S LTS TOP.jpg, NanoPi R3S LTS BOT.jpg, NanoPi R3S LTS-case-01.jpg, R3S LTS-case-02..04.jpg",
+      "CPU": "Rockchip RK3566, Quad-core Cortex-A55",
+      "RAM": "1GB/2GB LPDDR4X",
+      "Ethernet": "one Native Gigabit Ethernet, and one PCIe Gigabit Ethernet",
+      "USB3.0 Host": "Type-A x1",
+      "Storage": "MicroSD Slot x 1, and on-board 32GB eMMC",
+      "Debug Serial Port": "3.3V TTL, 3-pin 2.54mm pitch connector, 1500000 bauds",
+      "LED": "LED x 3",
+      "RTC": "One low-power RTC, support backup battery input",
+      "Buttons": "1x User Button, 1x Power Button, 1x MASK button for eMMC flashing via USB-C",
+      "Display": "1x MIPI-DSI 30-Pin FPC connector; 1x HDMI Type-A output",
+      "Audio": "1x Speaker connector",
+      "PCB Size": "57*57*1.6mm",
+      "Power supply": "USB-C 5V/2A input",
+      "Temperature measuring range": "0℃ to 80℃",
+      "OS/Software": "U-boot, Ubuntu-Core, Debian-Core, OpenMediaVault, OpenWrt",
+      "MIPI-DSI": "0.5mm FPC Connector, 30 Pin; Pin 1-3 VCC5V0_SYS 5V Power output; I2C2_M0 mit 2.2K Pull-up; GPIO0_C3..C6; DSI TX1 4 Lanes",
+      "Debug UART": {
+        "Pegel": "3.3V level signals, 1500000bps",
+        "Pin 1": "GND 0V",
+        "Pin 2": "UART2_TX_M0_DEBUG output",
+        "Pin 3": "UART2_RX_M0_DEBUG input"
+      },
+      "USB3.0 A port": "2A output current limited",
+      "RTC Akku": "RTC backup current is 0.25μA TYP (VDD =3.0V, TA =25℃); Connector P/N: Molex 53398-0271",
+      "Speaker": "Class-D type amplifier capable of delivering 1.3W of power on an 8ohm BTL load",
+      "Essentials": "MicroSD Card/TF Card: Class 10 or Above, minimum 8GB SDHC; USB-C 5V/3A power adapter",
+      "Schaltplaene": [
+        "https://wiki.friendlyelec.com/wiki/images/a/a3/NanoPi_R3S_2406_SCH.PDF",
+        "https://wiki.friendlyelec.com/wiki/images/f/fd/NanoPi_R3S_LTS_2411_SCH.pdf"
+      ],
+      "PCB-Zeichnungen": [
+        "https://wiki.friendlyelec.com/wiki/images/a/a3/NanoPi_R3S_2D_CAD_DXF.zip",
+        "https://wiki.friendlyelec.com/wiki/images/7/71/NanoPi_R3S_LTS_DXF.zip"
+      ],
+      "IC Datasheet": "https://wiki.friendlyelec.com/wiki/images/8/89/Rockchip_RK3566_Datasheet_V1.2-20220930.pdf",
+      "Vergleich": "https://wiki.friendlyelec.com/wiki/index.php/File:R3S_compared_to_R3SLTS.jpg",
+      "Revisionen": [
+        "28314 2026-07-28",
+        "27211 2025-06-26",
+        "27125 2025-06-18",
+        "26530 2024-10-29",
+        "26359 2024-09-14",
+        "26349 2024-09-06",
+        "26293 2024-08-28"
+      ]
+    },
+    "friendlyelec_wiki_2024": {
+      "Introduction": "The NanoPi R3S can be optionally equipped with an integrated CNC anodized aluminum case and a 2-inch LCD screen for status monitoring.",
+      "CPU": "Rockchip RK3566, Quad-core Cortex-A55",
+      "RAM": "2GB LPDDR4X",
+      "Ethernet": "one Native Gigabit Ethernet, and one PCIe Gigabit Ethernet",
+      "USB3.0 Host": "Type-A x1",
+      "Storage": "MicroSD Slot x 1, and on-board 32GB eMMC",
+      "Debug Serial Port": "3.3V TTL, 3-pin 2.54mm pitch connector, 1500000 bauds",
+      "LED": "LED x 3",
+      "RTC": "One low-power RTC, support backup battery input",
+      "Buttons": "1x User BUtton, 1x MASK button for eMMC flashing via USB-C",
+      "Display": "1x MIPI-DSI 30-Pin FPC connector",
+      "PCB Size": "57*57*1.2mm",
+      "Power supply": "USB-C 5V/2A input",
+      "Temperature measuring range": "0℃ to 80℃",
+      "Debug UART": {
+        "Pin 1": "GND",
+        "Pin 2": "UART2_TX_M0_DEBUG output",
+        "Pin 3": "UART2_RX_M0_DEBUG input"
+      },
+      "USB3.0 A port": "2A output current limited",
+      "Essentials": "USB-C 5V/3A power adapter"
+    },
+    "friendlyelec_shop_lts": {
+      "Titel": "NanoPi R3S-LTS",
+      "Product Code": "RK3566 NanoPi R3S-LTS",
+      "Availability": "In Stock",
+      "Kaufoptionen": [
+        "1 GB RAM, no eMMC - Bare Board",
+        "1 GB RAM, no eMMC - Combo with Metal Case (+$7.00)",
+        "2 GB RAM, no eMMC - Bare Board (+$19.00)",
+        "2 GB RAM, no eMMC - Combo with Metal Case (+$26.00)",
+        "2 GB RAM - 32GB eMMC - Bare Board (+$45.00)",
+        "2 GB RAM - 32GB eMMC - Combo with Metal Case (+$53.00)"
+      ],
+      "CPU": "Model: Rockchip RK3566; Number of Cores: Quad-core ARM Cortex-A55; Frequency: 4 x Cortex-A55 up to 1.8GHz",
+      "NPU": "Support 1T",
+      "Memory": "RAM: 1GB/2GB LPDDR4/LPDDR4X",
+      "Storage": "Flash: 0GB/32GB eMMC; MicroSD Slot: support UHS-I(SDR104)",
+      "Connectivity": "Ethernet: Native Gigabit Ethernet, RTL8211F chip; PCIe Gigabit Ethernet, RTL8111H chip",
+      "Video Output": "MIPI-DSI: 30-Pin FPC connector; HDMI 2.0 Type-A",
+      "Audio": "Speaker connector",
+      "USB": "USB 3.0: USB 3.2 Gen 1 Type-A; USB-C: Power(5V) & DATA",
+      "Pin-header": "Debug: Debug UART, 3 Pin 2.54mm header, 3.3V level, 1500000bps",
+      "LED": "SYS LED(Red), WAN LED(Green), LAN LED(Green)",
+      "Button": "MASK Button for eMMC flashing via USB-C; User Button; Power Button",
+      "Others": "RTC Battery: 2 Pin 1.27/1.25mm RTC battery input connector for low power RTC IC HYM8563TS; Working Temperature: 0'C to 70°C",
+      "Power": "USB-C, DC 5V/2A (non-PD)",
+      "OS Support": "Alpine Linux 3.23, Buildroot - Weston(Wayland), Debian 12 Desktop - LXQT(X11), Debian 13 Core, FriendlyCore 20.04 - Qt5, FriendlyWrt 25.12, OpenMediaVault 8.0.6, Proxmox VE 8.2.7, Ubuntu 24.04 Core, Ubuntu 24.04 Desktop - LXQT(X11)",
+      "Kernel version": "Linux-6.1-LTS, U-boot-2017.09",
+      "PCB": "8 Layer",
+      "Weight": "35g(without Case) / 150g(with Case)",
+      "Dimension": "57x57x1.2mm mm(without Case) / 61.5x61.5x25mm mm(with Case)",
+      "Hardware Spec (Tab)": "Power: USB-C, 5V/2A input; Working temperature: 0 °C to 70°c"
+    },
+    "friendlyelec_shop_r3s": {
+      "Titel": "NanoPi R3S",
+      "Kaufoptionen": [
+        "RAM: 2 GB RAM - 32GB eMMC (+$5.00)",
+        "RAM: 2GB RAM, no eMMC",
+        "Product Option: Bare Board",
+        "Product Option: Combo with Metal Case (+$5.00)"
+      ],
+      "CPU": "Model: Rockchip RK3566; Number of Cores: Quad-core ARM Cortex-A55; Frequency:4 x Cortex-A55 up to 1.8GHZ",
+      "NPU": "Support 1T",
+      "Memory": "RAM:2GB LPDDR4X",
+      "Storage": "1 x MicroSD Slot: support UHS-I(SDR104); Flash:0GB/32GB eMMC",
+      "Connectivity": "Etheret:1 x Native Gigabit Ethernet, RTL8211F chip; 1 x PCle Gigabit Ethernet. RTL8111H chip",
+      "Video Output": "1 x MMIP|-DSl: 30-Pin FPC connector",
+      "USB": "1 x USB 3.0: USB 3.2 Gen 1 Type-A; 1 x USB-C: Power(5V) & DATA",
+      "Pin-header": "1 x Debug: Debug UART, 3 Pin 2.54mm header, 3.3V level. 1500000bps",
+      "LED": "1 x SYS LED(Red), 1 x WAN LED(Green), 1 x LAN LED(Green)",
+      "Button": "1 x MASK Button for eMMC flashing via USB-C; 1 x User Button",
+      "Others": "RTC Battery: 2 Pin 1.27/1.25mm RTC battery input connector for low power RTC IC HYM8563TS; Working Temperature: 0'C to 80°C",
+      "Power": "USB-C,5V/2Ainput",
+      "OS Support": "FriendlyWrt 23.05, Debian Bookworm Core, OpenMediaVault, Ubuntu Noble Core, Proxmox VE",
+      "Kernel version": "Linux-6.1-LTS, U-boot-2017.09",
+      "PCB": "8 Layer",
+      "Weight": "30g(without Case)/144g(with Case)",
+      "Dimension": "57 x 57 x 1.2mm mm(without Case)/61.5 x 61.5 x 25mm mm(with Case)"
+    },
+    "friendlyelec_vergleich": {
+      "NanoPC-R3S(2406)": [
+        "USB 3.0 Host",
+        "No Speaker",
+        "2 x Buttons (RST/MASK)"
+      ],
+      "NanoPC-R3S LTS(2411)": [
+        "HDMI Output",
+        "Speaker Interface (8Ω 1.3W)",
+        "3 x Buttons (PWR/RST/MASK)"
+      ],
+      "Beobachtung": "2406: USB-A neben den RJ45 an der Anschlussseite, microSD und Tasten an der Gegenseite; 2411: HDMI an der Stelle des USB-A, USB-A auf die Gegenseite verlegt, drei Tasten an einer Seitenkante, Platinenaufdruck \"NanoPi R3S LTS\" und \"2411\""
+    },
+    "friendlyelec_layout": {
+      "Beschriftungen": [
+        "USB 3.0",
+        "PCIe Gbps Ethernet LAN",
+        "Gbps Ethernet WAN",
+        "USB-C (Power-5V & DATA)",
+        "Debug UART",
+        "RTC Connector (2Pin 1.25mm)",
+        "RTL8211F",
+        "RTL8111H",
+        "Rockchip RK3566",
+        "LPDDR4X RAM",
+        "MicroSD Card Slot",
+        "USER Button",
+        "MASK Button",
+        "SYS LED (Red)",
+        "LAN LED (Green)",
+        "WAN LED (Green)",
+        "MIPI-DSI",
+        "eMMC",
+        "57mm x 57mm"
+      ],
+      "Debug UART": "bestueckte 3-polige Stiftleiste zwischen WAN-Buchse und USB-C, Aufdruck GND/TXD/RXD (Ausschnitt vergroessert)",
+      "Platinenaufdruck": "NanoPi R3S, 2406"
+    },
+    "friendlyelec_layout_lts": {
+      "Beschriftungen": [
+        "USB 3.0",
+        "RTC Connector (2Pin 1.25mm)",
+        "SYS LED (Red)",
+        "LAN LED (Green)",
+        "WAN LED (Green)",
+        "LPDDR4X RAM",
+        "MicroSD Card Slot",
+        "Rockchip RK3566",
+        "Speaker (2Pin 1.25mm)",
+        "HDMI",
+        "PCIe Gbps Ethernet",
+        "RTL8111H",
+        "RTL8211F",
+        "Gbps Ethernet",
+        "Debug UART",
+        "USB-C (Power-5V & DATA)",
+        "PWR Button",
+        "USER Button",
+        "MASK Button",
+        "MIPI-DSI",
+        "eMMC",
+        "57mm"
+      ],
+      "Debug UART": "bestueckte 3-polige Stiftleiste zwischen Gbps-Ethernet-Buchse und USB-C",
+      "Platinenaufdruck": "NanoPi R3S LTS, 2411"
+    },
+    "friendlyelec_gehaeusefotos": {
+      "R3sc-02.jpg (Anschlussseite)": "USB-C 5V, WAN, LAN, USB 3.0 (SS-Logo); Kuehlrippen oben",
+      "R3sc-03.jpg (Frontseite)": "microSD-Schlitz, Loecher RESET und MASK, Lichtleiter SYS WAN LAN",
+      "Gehaeuse": "Metallgehaeuse mit Kuehlrippen, kein Luefter erkennbar"
+    },
+    "friendlyelec_schaltplan": {
+      "Titel": "nanopi_r3s_2406_20240531",
+      "Rev": "2406",
+      "Blaetter": 20,
+      "Datum": "Monday, August 26, 2024",
+      "Power Diagram": "USB-C -> 5V_DCIN -> DC/DC -> VCC3V3_SYS; Switch -> VCC5V0_USB (USB HOST); RK809-5 PMIC; RTC IC",
+      "Spannungstabelle": "nennt VCC12V_DCIN als Quelle der EXT BUCK fuer VCC3V3_SYS/VCC5V0_SYS (vermutlich aus Vorlage uebernommen, widerspricht dem Blockschaltbild 5V_DCIN)"
+    },
+    "friendlyarm_kernel_dts": {
+      "rk3566-nanopi-r3-rev01.dts": "model \"FriendlyElec NanoPi R3S\", compatible friendlyelec,nanopi-r3s; ethernet0=gmac1, ethernet1=r8169; Taste K1 gpio0 RK_PC2",
+      "rk3566-nanopi-r3-rev02.dts": "model \"FriendlyElec NanoPi R3S LTS\", hwrev 2, #include rev01 plus Videoausgabe",
+      "rk3566-nanopi-r3-rev07.dts": "NanoPi R3G (anderes Geraet)"
+    },
+    "cnx": {
+      "SoC": "Rockchip RK3566",
+      "CPU": "Quad-core Cortex-A55 processor @ up to 2.0 GHz",
+      "GPU": "Arm Mali-G52 MP2 GPU",
+      "NPU": "0.8 TOPS AI accelerator",
+      "System Memory": "2GB LPDDR4X",
+      "Storage": "Optional 32GB eMMC flash; MicroSD card socket",
+      "Display Interface": "30-pin MIPI DSI FPC connector",
+      "Networking": "2x gigabit Ethernet RJ45 ports; WAN via Realtek RTL8111H PCIe to GbE controller tested up to 934 Mbps (Tx) and 936 Mbps (Rx); LAN via Realtek RTL8211E tested up to 934 Mbps (Tx) and 941 Mbps (Rx)",
+      "USB": "1x USB 3.2 Gen 1 Type-A port; 1x USB-C port for power and data (e.g. to flash firmware)",
+      "Debugging": "3-pin UART header (1.5 Mbps baudrate)",
+      "Misc": "Mask key for eMMC flash update; User button; 2-pin connector for RTC; 3x user LEDs for SYS, LAN, WAN",
+      "Power Supply": "5V via USB Type-C port",
+      "Dimensions": "PCB: 57 x 57 mm; enclosure: 61.5 x 61.5 x 25 mm",
+      "Weight": "30 grams without the case, 144 grams with the metal enclosure",
+      "Temperature Range": "0 to 80°C",
+      "Text": "no M.2 socket for WiFi & Bluetooth, only one USB 3.0 port, and no HDMI video output; FriendlyELEC shows the R3S runs much cooler than the R2S when used in the same/similar metal enclosure",
+      "Preis": "$30 ohne eMMC, $35 mit 32GB eMMC, Metallgehaeuse +$5 (Stand 2024-08)",
+      "Software": "Ubuntu Noble 24.04 Core, Debian 12 Core, OpenMediaVault 6.1, FriendlyWrt (21.02/23.05), Linux 6.1.x, u-boot v2017.09; Flashen per microSD oder USB-C (eFlasher)"
+    },
+    "openwrt_forum": {
+      "Titel": "OpenWRT support for NanoPi R3S LTS",
+      "Beitraege": 13,
+      "#3 mkhl 2025-08-15": "I've flashed R3S sysupgrade to EMMC from FriendlyWrt on LTS version, everything seems to work. After completing the flash it seems to be unable to reboot ... but after power cycling it boots into OpenWrt normally.",
+      "#6 mkhl 2025-11-17": "R3S images seem to work without problem on LTS, so there's nothing to support (I don't think anyone/OpenWrt is concerned with HDMI?).",
+      "#8 tavro 2026-05-18": "two NanoPi R3S (2GB RAM, LTS, no eMMC) ... openwrt-25.12.1-rockchip-armv8-friendlyarm_nanopi-r3s-squashfs-sysupgrade ... Unit 1: Works perfectly fine; Unit 2: The LAN port does not work ... with FriendlyWrt the LAN port works flawlessly ... PCIe host bridge error",
+      "#11 tavro 2026-05-21": "after ... building OpenWRT with several different modifications to the DTS the issue still persists",
+      "#13 wh2k9 2026-07-06": "Rockchip kernel 6.1 sources contain only one DTS for the LTS version (rk3566-nanopi-r3-rev02.dts), aside from the additional video output definitions it's the exact same as the DTS for the original version"
+    },
+    "gluon_targets": {
+      "zeile": "device('friendlyelec-nanopi-r3s', 'friendlyarm_nanopi-r3s')",
+      "target": "rockchip-armv8",
+      "commit": "aa39a94ed4 2024-11-28 Grische \"add support for NanoPi R3S\" (supported_devices.rst, 010-primary-mac, targets/rockchip-armv8)",
+      "tags": "enthalten in v2025.1 und v2025.1.1 (geprueft)",
+      "openwrt_basis_v2025.1.3": "openwrt-24.10 @ 5204715d14207efa956553d9d7079f6fa1aaea40"
+    },
+    "deviwiki": {
+      "treffer": 0
+    },
+    "wikidevi": {
+      "treffer": "keine Antwort"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "FriendlyElec",
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "FriendlyARM",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": "DEVICE_VENDOR in OpenWrt (alter Firmenname, gleiche Firma)"
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "NanoPi R3S",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": "DEVICE_MODEL"
+      },
+      {
+        "wert": "NanoPi R3S",
+        "quelle": "friendlyelec_shop_r3s",
+        "beleg": "http://web.archive.org/web/20250108122732/https://www.friendlyelec.com/index.php?route=product%2Fproduct&product_id=303",
+        "stand": "Wayback-Snapshot 2025-01-08 12:27:32",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NanoPi R3S-LTS",
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "heute einzig angebotene Ausfuehrung"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "2406 (NanoPi R3S)",
+        "quelle": "friendlyelec_vergleich",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/File:R3S_compared_to_R3SLTS.jpg",
+        "stand": "Wiki-Datei vom 2025-06-26",
+        "sicherheit": "hoch",
+        "bemerkung": "Platinenrevision laut Hersteller-Vergleichsbild und Schaltplan Rev 2406"
+      },
+      {
+        "wert": "2411 (NanoPi R3S LTS)",
+        "quelle": "friendlyelec_vergleich",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/File:R3S_compared_to_R3SLTS.jpg",
+        "stand": "Wiki-Datei vom 2025-06-26",
+        "sicherheit": "hoch",
+        "bemerkung": "Nachfolgeplatine; Hersteller-DTS rk3566-nanopi-r3-rev02 = \"NanoPi R3S LTS\" hwrev 2"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Platinenaufdruck \"NanoPi R3S\" mit \"2406\" bzw. \"NanoPi R3S LTS\" mit \"2411\". Ohne Öffnen: LTS hat eine HDMI-Buchse an der Anschlussseite (dort sitzt bei 2406 die USB-A-Buchse) und drei Taster (PWR/RST/MASK) statt zwei",
+        "quelle": "friendlyelec_vergleich",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/File:R3S_compared_to_R3SLTS.jpg",
+        "stand": "Wiki-Datei vom 2025-06-26",
+        "sicherheit": "hoch",
+        "bemerkung": "aus Bild abgelesen"
+      },
+      {
+        "wert": "RAM-Größe (1 GB / 2 GB) und eMMC (ohne / 32 GB) sind Kaufoptionen und von außen nicht erkennbar",
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus den Kaufoptionen; im Betrieb per dmesg/free prüfbar"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "NanoPi R3S LTS",
+          "NanoPi R3S-LTS"
+        ],
+        "quelle": "openwrt_forum",
+        "beleg": "https://forum.openwrt.org/t/openwrt-support-for-nanopi-r3s-lts/237172",
+        "stand": "Thread 2025-07-19 bis 2026-07-06",
+        "sicherheit": "niedrig",
+        "bemerkung": "LTS (2411) laut Forum mit dem R3S-Image lauffähig (#3, #6), ein Bericht mit totem LAN-Port (#8)"
+      },
+      {
+        "wert": [
+          "friendlyarm,nanopi-r3s",
+          "friendlyarm_nanopi-r3s"
+        ],
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": "DT-compatible und OpenWrt-Profil"
+      },
+      {
+        "wert": [
+          "friendlyelec,nanopi-r3s"
+        ],
+        "quelle": "friendlyarm_kernel_dts",
+        "beleg": "https://github.com/friendlyarm/kernel-rockchip/blob/nanopi6-v6.1.y/arch/arm64/boot/dts/rockchip/rk3566-nanopi-r3-rev02.dts",
+        "stand": "Branch nanopi6-v6.1.y am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "compatible im Hersteller-Kernel (FriendlyWrt)"
+      }
+    ],
+    "varianten": [
+      {
+        "wert": [
+          "2406, 2 GB, ohne eMMC",
+          "2406, 2 GB, 32 GB eMMC",
+          "je als Platine oder mit Metallgehäuse"
+        ],
+        "quelle": "friendlyelec_shop_r3s",
+        "beleg": "http://web.archive.org/web/20250108122732/https://www.friendlyelec.com/index.php?route=product%2Fproduct&product_id=303",
+        "stand": "Wayback-Snapshot 2025-01-08 12:27:32",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "LTS 2411, 1 GB, ohne eMMC",
+          "LTS 2411, 2 GB, ohne eMMC",
+          "LTS 2411, 2 GB, 32 GB eMMC",
+          "je als Platine oder mit Metallgehäuse"
+        ],
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Rockchip RK3566",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Rockchip RK3566",
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 4,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": "Quad-core Cortex-A55"
+      },
+      {
+        "wert": 4,
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 1800,
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"up to 1.8GHz\""
+      },
+      {
+        "wert": 1800,
+        "quelle": "friendlyelec_shop_r3s",
+        "beleg": "http://web.archive.org/web/20250108122732/https://www.friendlyelec.com/index.php?route=product%2Fproduct&product_id=303",
+        "stand": "Wayback-Snapshot 2025-01-08 12:27:32",
+        "sicherheit": "hoch",
+        "bemerkung": "\"up to 1.8GHZ\""
+      },
+      {
+        "wert": 2000,
+        "quelle": "cnx",
+        "beleg": "https://www.cnx-software.com/2024/08/28/nanopi-r3s-a-low-cost-rockchip-rk3566-sbc-and-dual-gigabit-ethernet-router/",
+        "stand": "Artikel 2024-08-28",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"up to 2.0 GHz\" - widerspricht Herstellerangabe"
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "ARM Cortex-A55 (aarch64)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/friendlyelec/nanopi_r3s",
+        "stand": "Seitenrevision 2026-07-24 04:09",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog: CPU 0x412fd050, rockchip/armv8"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 2048,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": "2GB LPDDR4X"
+      },
+      {
+        "wert": 2048,
+        "quelle": "friendlyelec_shop_r3s",
+        "beleg": "http://web.archive.org/web/20250108122732/https://www.friendlyelec.com/index.php?route=product%2Fproduct&product_id=303",
+        "stand": "Wayback-Snapshot 2025-01-08 12:27:32",
+        "sicherheit": "hoch",
+        "bemerkung": "R3S 2406: nur 2 GB angeboten"
+      },
+      {
+        "wert": 2048,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/friendlyelec/nanopi_r3s",
+        "stand": "Seitenrevision 2026-07-24 04:09",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog: Memory 2018252K/2095104K available"
+      },
+      {
+        "wert": [
+          1024,
+          2048
+        ],
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "R3S LTS: Kaufoption 1 GB oder 2 GB"
+      },
+      {
+        "wert": [
+          1024,
+          2048
+        ],
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R3S",
+        "stand": "Revision 28314 vom 2026-07-28T06:13:45Z (beschreibt R3S LTS)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"1GB/2GB LPDDR4X\""
+      },
+      {
+        "wert": 1024,
+        "quelle": "openwrt_git_pcie",
+        "beleg": "https://github.com/openwrt/openwrt/commit/12fa348112fe66b1d326e5c3ba2be7d7ecf95881",
+        "stand": "Commit 2026-09-09 (Autor), gemergt 2026-09-13; Backport openwrt-25.12 2026-09-26",
+        "sicherheit": "mittel",
+        "bemerkung": "Commit nennt ausdrücklich \"a 1 GiB NanoPi R3S\""
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "LPDDR4X",
+        "quelle": "friendlyelec_shop_r3s",
+        "beleg": "http://web.archive.org/web/20250108122732/https://www.friendlyelec.com/index.php?route=product%2Fproduct&product_id=303",
+        "stand": "Wayback-Snapshot 2025-01-08 12:27:32",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "LPDDR4/LPDDR4X",
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 32768,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": "optional on-board 32GB eMMC; ohne eMMC bootet das Gerät von microSD"
+      },
+      {
+        "wert": 32768,
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Flash: 0GB/32GB eMMC\" - Kaufoption"
+      },
+      {
+        "wert": 32768,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/friendlyelec/nanopi_r3s",
+        "stand": "Seitenrevision 2026-07-24 04:09",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog: mmcblk0 28.9 GiB"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "eMMC (optional) + microSD",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "eMMC (optional) + microSD (UHS-I SDR104)",
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "keins",
+        "quelle": "cnx",
+        "beleg": "https://www.cnx-software.com/2024/08/28/nanopi-r3s-a-low-cost-rockchip-rk3566-sbc-and-dual-gigabit-ethernet-router/",
+        "stand": "Artikel 2024-08-28",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: kein WLAN in allen Spezifikationen; CNX: \"no M.2 socket for WiFi & Bluetooth\". Nur kabelgebunden (Mesh über LAN/WAN), WLAN höchstens per USB"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "keine",
+        "quelle": "cnx",
+        "beleg": "https://www.cnx-software.com/2024/08/28/nanopi-r3s-a-low-cost-rockchip-rk3566-sbc-and-dual-gigabit-ethernet-router/",
+        "stand": "Artikel 2024-08-28",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: kein WLAN"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "WAN",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "WAN (eth0)",
+            "chip": "RTL8211F an SoC-GMAC"
+          },
+          {
+            "name": "LAN",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN (eth1)",
+            "chip": "RTL8111H an PCIe"
+          }
+        ],
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Both GbE controllers are working (WAN eth0, LAN eth1)\""
+      },
+      {
+        "wert": [
+          {
+            "name": "Gbps Ethernet WAN",
+            "geschwindigkeit": "1000",
+            "chip": "RTL8211F"
+          },
+          {
+            "name": "PCIe Gbps Ethernet LAN",
+            "geschwindigkeit": "1000",
+            "chip": "RTL8111H"
+          }
+        ],
+        "quelle": "friendlyelec_layout",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/File:NanoPi_R3S-layout.jpg",
+        "stand": "Wiki-Datei vom 2024-08-27",
+        "sicherheit": "hoch",
+        "bemerkung": "Gehäuse beschriftet WAN und LAN (R3sc-02.jpg)"
+      },
+      {
+        "wert": [
+          {
+            "name": "WAN",
+            "geschwindigkeit": "1000",
+            "chip": "RTL8111H (PCIe)"
+          },
+          {
+            "name": "LAN",
+            "geschwindigkeit": "1000",
+            "chip": "RTL8211E"
+          }
+        ],
+        "quelle": "cnx",
+        "beleg": "https://www.cnx-software.com/2024/08/28/nanopi-r3s-a-low-cost-rockchip-rk3566-sbc-and-dual-gigabit-ethernet-router/",
+        "stand": "Artikel 2024-08-28",
+        "sicherheit": "niedrig",
+        "bemerkung": "Widerspruch: CNX vertauscht WAN/LAN-Chips und nennt RTL8211E statt RTL8211F (Bootlog zeigt RTL8211F)"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": {
+          "anzahl": 1,
+          "version": "3.0 (USB 3.2 Gen 1)",
+          "bauform": "Typ A",
+          "strom_a": 2,
+          "zusatz": "USB-C für Strom und Daten (eMMC-Flashen mit MASK-Taste)"
+        },
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "2 A Strombegrenzung laut Hersteller-Wiki"
+      },
+      {
+        "wert": {
+          "anzahl": 1,
+          "version": "3.0",
+          "bauform": "Typ A"
+        },
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "cnx",
+        "beleg": "https://www.cnx-software.com/2024/08/28/nanopi-r3s-a-low-cost-rockchip-rk3566-sbc-and-dual-gigabit-ethernet-router/",
+        "stand": "Artikel 2024-08-28",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"no M.2 socket for WiFi & Bluetooth\""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: einzige Stromversorgung laut Hersteller USB-C 5 V; PoE nirgends erwähnt"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "USB-C",
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"USB-C, DC 5V/2A (non-PD)\""
+      },
+      {
+        "wert": "USB-C",
+        "quelle": "friendlyelec_shop_r3s",
+        "beleg": "http://web.archive.org/web/20250108122732/https://www.friendlyelec.com/index.php?route=product%2Fproduct&product_id=303",
+        "stand": "Wayback-Snapshot 2025-01-08 12:27:32",
+        "sicherheit": "hoch",
+        "bemerkung": "\"USB-C,5V/2Ainput\""
+      },
+      {
+        "wert": "USB-C",
+        "quelle": "friendlyelec_schaltplan",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/a/a3/NanoPi_R3S_2406_SCH.PDF",
+        "stand": "Schaltplan Rev 2406, PDF vom 2024-08-26",
+        "sicherheit": "hoch",
+        "bemerkung": "Blockschaltbild: USB-C -> 5V_DCIN"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 5,
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "kein USB-PD (\"non-PD\"): Netzteil muss ohne Aushandlung 5 V liefern"
+      },
+      {
+        "wert": 5,
+        "quelle": "friendlyelec_shop_r3s",
+        "beleg": "http://web.archive.org/web/20250108122732/https://www.friendlyelec.com/index.php?route=product%2Fproduct&product_id=303",
+        "stand": "Wayback-Snapshot 2025-01-08 12:27:32",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 2,
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Eingangsangabe 5V/2A"
+      },
+      {
+        "wert": 3,
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R3S#Essentials_You_Need",
+        "stand": "Revision 28314 vom 2026-07-28T06:13:45Z (beschreibt R3S LTS)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"USB-C 5V/3A power adapter\" als benötigtes Zubehör empfohlen"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": "nein",
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: Kaufoptionen nennen nur Platine bzw. Platine mit Metallgehäuse"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "USB-C 5 V / 3 A empfohlen, Eingang 5 V / 2 A, kein USB-PD",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R3S",
+        "stand": "Revision 28314 vom 2026-07-28T06:13:45Z (beschreibt R3S LTS)",
+        "sicherheit": "hoch",
+        "bemerkung": "aus Essentials und Shop-Spezifikation zusammengefasst"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: Platine/Tischgehäuse ohne Schutzart, Betriebstemperatur ab 0 °C"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": {
+          "min_c": 0,
+          "max_c": 80
+        },
+        "quelle": "friendlyelec_shop_r3s",
+        "beleg": "http://web.archive.org/web/20250108122732/https://www.friendlyelec.com/index.php?route=product%2Fproduct&product_id=303",
+        "stand": "Wayback-Snapshot 2025-01-08 12:27:32",
+        "sicherheit": "hoch",
+        "bemerkung": "R3S 2406, \"Working Temperature: 0'C to 80°C\""
+      },
+      {
+        "wert": {
+          "min_c": 0,
+          "max_c": 80
+        },
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R3S",
+        "stand": "Revision 28314 vom 2026-07-28T06:13:45Z (beschreibt R3S LTS)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Temperature measuring range: 0℃ to 80℃\" (Messbereich, nicht ausdrücklich Betrieb)"
+      },
+      {
+        "wert": {
+          "min_c": 0,
+          "max_c": 70
+        },
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "R3S LTS, \"0'C to 70°C\""
+      }
+    ],
+    "gehaeuse_material": [
+      {
+        "wert": "CNC-gefrästes, eloxiertes Aluminium mit Kühlrippen (optional)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/friendlyelec/nanopi_r3s",
+        "stand": "Seitenrevision 2026-07-24 04:09",
+        "sicherheit": "mittel",
+        "bemerkung": "\"optionally equipped with an integrated CNC anodized aluminum case\"; Rippen auf Herstellerfotos"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "friendlyelec_gehaeusefotos",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/0/06/R3sc-02.jpg",
+        "stand": "Wiki-Fotos (Revision 26530 eingebunden, Dateidatum nicht abgefragt)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: passives Rippengehäuse, kein Lüfter auf Fotos und in keiner Spezifikation"
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Tisch",
+        "quelle": "friendlyelec_gehaeusefotos",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/c/c6/R3sc-03.jpg",
+        "stand": "Wiki-Fotos (Revision 26530 eingebunden, Dateidatum nicht abgefragt)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: Tischgehäuse, keine Wand-/Mastbefestigung erwähnt"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": {
+          "platine": [
+            57,
+            57,
+            1.2
+          ],
+          "gehaeuse": [
+            61.5,
+            61.5,
+            25
+          ]
+        },
+        "quelle": "friendlyelec_shop_r3s",
+        "beleg": "http://web.archive.org/web/20250108122732/https://www.friendlyelec.com/index.php?route=product%2Fproduct&product_id=303",
+        "stand": "Wayback-Snapshot 2025-01-08 12:27:32",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "platine": [
+            57,
+            57,
+            1.2
+          ],
+          "gehaeuse": [
+            61.5,
+            61.5,
+            25
+          ]
+        },
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "platine": [
+            57,
+            57,
+            1.6
+          ]
+        },
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R3S",
+        "stand": "Revision 28314 vom 2026-07-28T06:13:45Z (beschreibt R3S LTS)",
+        "sicherheit": "mittel",
+        "bemerkung": "LTS-Wiki nennt 1.6 mm Platinendicke, Shop 1.2 mm"
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": {
+          "ohne_gehaeuse": 30,
+          "mit_gehaeuse": 144
+        },
+        "quelle": "friendlyelec_shop_r3s",
+        "beleg": "http://web.archive.org/web/20250108122732/https://www.friendlyelec.com/index.php?route=product%2Fproduct&product_id=303",
+        "stand": "Wayback-Snapshot 2025-01-08 12:27:32",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "ohne_gehaeuse": 35,
+          "mit_gehaeuse": 150
+        },
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 3,
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "SYS rot, WAN grün, LAN grün; im Gehäuse als Lichtleiter an der Frontseite"
+      },
+      {
+        "wert": 3,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": "DTS: power rot (default on), lan grün, wan grün"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "Frontseite, Loch \"RESET\" neben \"MASK\" und dem microSD-Schlitz; im Gehäuse mit Stift erreichbar",
+        "quelle": "friendlyelec_gehaeusefotos",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/c/c6/R3sc-03.jpg",
+        "stand": "Wiki-Fotos (Revision 26530 eingebunden, Dateidatum nicht abgefragt)",
+        "sicherheit": "hoch",
+        "bemerkung": "aus Foto abgelesen"
+      },
+      {
+        "wert": "Taste USER (GPIO0_C2) ist in OpenWrt die Reset-Taste (KEY_RESTART); MASK-Taste in OpenWrt ohne Funktion",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": "MASK laut OpenWrt-Wiki per sysfs GPIO 44 lesbar"
+      },
+      {
+        "wert": "LTS 2411 zusätzlich mit Power-Taste (PWR)",
+        "quelle": "friendlyelec_vergleich",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/File:R3S_compared_to_R3SLTS.jpg",
+        "stand": "Wiki-Datei vom 2025-06-26",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Stiftleiste (3-polig, 2.54 mm, bestückt) zwischen WAN-Buchse und USB-C",
+        "quelle": "friendlyelec_layout",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/File:NanoPi_R3S-layout.jpg",
+        "stand": "Wiki-Datei vom 2024-08-27",
+        "sicherheit": "hoch",
+        "bemerkung": "Platine 2406; aus vergrößertem Foto, Aufdruck GND/TXD/RXD"
+      },
+      {
+        "wert": "innen Stiftleiste (3-polig, 2.54 mm, bestückt) zwischen Ethernet-Buchse und USB-C",
+        "quelle": "friendlyelec_layout_lts",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/File:NanoPi_R3S_LTS-layout.jpg",
+        "stand": "Wiki-Datei vom 2025-06-26",
+        "sicherheit": "hoch",
+        "bemerkung": "Platine 2411 (LTS)"
+      },
+      {
+        "wert": "innen Stiftleiste (3-pin 2.54mm pitch connector)",
+        "quelle": "friendlyelec_wiki_2024",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php?title=NanoPi_R3S&oldid=26530",
+        "stand": "Revision 26530 vom 2024-10-29T11:03:59Z (vor LTS)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "1 GND, 2 TX (UART2_TX_M0, Ausgang), 3 RX (UART2_RX_M0, Eingang)",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R3S",
+        "stand": "Revision 28314 vom 2026-07-28T06:13:45Z (beschreibt R3S LTS)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Aufdruck GND, TXD, RXD (GND liegt zur USB-C-Buchse hin)",
+        "quelle": "friendlyelec_layout",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/File:NanoPi_R3S-layout.jpg",
+        "stand": "Wiki-Datei vom 2024-08-27",
+        "sicherheit": "hoch",
+        "bemerkung": "Platine 2406, aus Foto"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R3S",
+        "stand": "Revision 28314 vom 2026-07-28T06:13:45Z (beschreibt R3S LTS)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/friendlyelec/nanopi_r3s",
+        "stand": "Seitenrevision 2026-07-24 04:09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 1500000,
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R3S",
+        "stand": "Revision 28314 vom 2026-07-28T06:13:45Z (beschreibt R3S LTS)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1500000,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/friendlyelec/nanopi_r3s",
+        "stand": "Seitenrevision 2026-07-24 04:09",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1, flow control none; console=ttyS2,1500000"
+      },
+      {
+        "wert": 1500000,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": "stdout-path serial2:1500000n8"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "1,5 Mbaud: USB-Seriell-Adapter muss diese Rate können; Konsole ist ttyS2 (UART2)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/friendlyelec/nanopi_r3s",
+        "stand": "Seitenrevision 2026-07-24 04:09",
+        "sicherheit": "niedrig",
+        "bemerkung": "Adapteranforderung abgeleitet aus der Baudrate"
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "Eine schwarze Schraube im Boden (ggf. unter QC-Aufkleber), dann drei silberne Schrauben halten die Platine",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/friendlyelec/nanopi_r3s",
+        "stand": "Seitenrevision 2026-07-24 04:09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "rockchip/armv8",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "friendlyarm_nanopi-r3s",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/openwrt-24.10/target/linux/rockchip/image/armv8.mk",
+        "stand": "Branch openwrt-24.10 und openwrt-25.12 am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "24.10.0 (Commit 2902b0a6 vom 2024-10-27)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": "Changelog 24.10.0-rc1 nennt die Commits; Gerät im Branch openwrt-24.10 vorhanden"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ab v2025.1 (Target rockchip-armv8)",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/aa39a94ed4",
+        "stand": "Branch main am 2026-10-19; Commit 2024-11-28, enthalten ab v2025.1",
+        "sicherheit": "mittel",
+        "bemerkung": "Gluon v2025.1.x baut auf openwrt-24.10"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot (uboot-rockchip, von OpenWrt mitgebaut)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e35f0493b1dd3cce1754d3ff93f88ac62f2ab390",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot 2017.09 (Hersteller-Images)",
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Image auf microSD schreiben und davon booten; für eMMC vom microSD-System aus per dd auf /dev/mmcblk0 schreiben, microSD ziehen, neu starten",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/friendlyelec/nanopi_r3s",
+        "stand": "Seitenrevision 2026-07-24 04:09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "eMMC alternativ über USB-C mit MASK-Taste (Rockchip-Maskrom) oder eFlasher-microSD",
+        "quelle": "cnx",
+        "beleg": "https://www.cnx-software.com/2024/08/28/nanopi-r3s-a-low-cost-rockchip-rk3566-sbc-and-dual-gigabit-ethernet-router/",
+        "stand": "Artikel 2024-08-28",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R3S#Official_image",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/friendlyelec/nanopi_r3s",
+        "stand": "Seitenrevision 2026-07-24 04:09",
+        "sicherheit": "mittel",
+        "bemerkung": "FriendlyWrt, Debian, Ubuntu, OpenMediaVault u. a."
+      }
+    ],
+    "mac_herkunft": [
+      {
+        "wert": "WAN-MAC aus der CID der eMMC/microSD erzeugt (macaddr_generate_from_mmc_cid mmcblk*), LAN = WAN+1; RTL8111H hat keine eigene MAC",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
+        "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet: Bei Geräten ohne eMMC ändert sich die MAC (und damit die Gluon-Knoten-ID) vermutlich beim Tausch der microSD-Karte"
+      }
+    ],
+    "bekannte_probleme": [
+      {
+        "wert": "NanoPi R3S mit 1 GB: PCIe-Link zum RTL8111H (LAN) kommt nicht hoch; behoben in OpenWrt main (2026-09-13) und 25.12.6, im Branch openwrt-24.10 (Basis Gluon v2025.1.x) kein Backport gefunden",
+        "quelle": "openwrt_git_pcie",
+        "beleg": "https://github.com/openwrt/openwrt/commit/12fa348112fe66b1d326e5c3ba2be7d7ecf95881",
+        "stand": "Commit 2026-09-09 (Autor), gemergt 2026-09-13; Backport openwrt-25.12 2026-09-26",
+        "sicherheit": "mittel",
+        "bemerkung": "Release Notes 25.12.6: \"NanoPi R3S (1 GB) - fix the PCIe link to the RTL8111H Ethernet chip\""
+      },
+      {
+        "wert": "R3S LTS 2 GB ohne eMMC: an einem von zwei Geräten LAN-Port tot mit OpenWrt 25.12.1 (FriendlyWrt geht), PCIe-Fehler im Bootlog; ungeklärt",
+        "quelle": "openwrt_forum",
+        "beleg": "https://forum.openwrt.org/t/openwrt-support-for-nanopi-r3s-lts/237172",
+        "stand": "Thread 2025-07-19 bis 2026-07-06",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beitrag #8 (2026-05-18), passt zum PCIe-Fix oben, aber nicht bestätigt"
+      },
+      {
+        "wert": "Nach sysupgrade von FriendlyWrt kein selbstständiger Neustart, Strom einmal trennen",
+        "quelle": "openwrt_forum",
+        "beleg": "https://forum.openwrt.org/t/openwrt-support-for-nanopi-r3s-lts/237172",
+        "stand": "Thread 2025-07-19 bis 2026-07-06",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beitrag #3, R3S LTS"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "keine (kein ToH-Eintrag)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r3s",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/friendlyelec/nanopi_r3s",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/friendlyelec/nanopi_r3s",
+        "stand": "Seitenrevision 2026-07-24 04:09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "quelle": "friendlyelec_shop_lts",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
+        "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "aktuelle LTS-Seite; alte R3S-Seite product_id=303 nur noch im Webarchiv"
+      },
+      {
+        "wert": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R3S",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R3S",
+        "stand": "Revision 28314 vom 2026-07-28T06:13:45Z (beschreibt R3S LTS)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": [
+          "https://wiki.friendlyelec.com/wiki/images/a/a3/NanoPi_R3S_2406_SCH.PDF",
+          "https://wiki.friendlyelec.com/wiki/images/f/fd/NanoPi_R3S_LTS_2411_SCH.pdf"
+        ],
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R3S",
+        "stand": "Revision 28314 vom 2026-07-28T06:13:45Z (beschreibt R3S LTS)",
+        "sicherheit": "hoch",
+        "bemerkung": "Schaltpläne 2406 und LTS 2411; kein klassisches Datenblatt"
+      }
+    ],
+    "forum": [
+      {
+        "wert": "https://forum.openwrt.org/t/openwrt-support-for-nanopi-r3s-lts/237172",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/friendlyelec/nanopi_r3s",
+        "stand": "Seitenrevision 2026-07-24 04:09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://wiki.friendlyelec.com/wiki/images/f/fd/NanoPi_R3S_LTS_2411_SCH.pdf",
+      "kategorie": "hw_version",
+      "grund": "LTS-Schaltplan 2411 nicht ausgewertet (Unterschiede Stromversorgung/PCIe/Power-Taste gegenüber 2406)"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/pull/25089",
+      "kategorie": "bekannte_probleme",
+      "grund": "Ob 1-GB-Geräte mit Gluon v2025.1.x (OpenWrt 24.10, Kernel 6.6) einen funktionierenden LAN-Port haben, ist offen; PR-Diskussion und ggf. 24.10-Backport prüfen"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/openwrt-support-for-nanopi-r3s-lts/237172",
+      "kategorie": "bekannte_probleme",
+      "grund": "LAN-Ausfall an R3S LTS ohne eMMC (Beitrag #8) ungeklärt"
+    },
+    {
+      "url": "https://wikidevi.wi-cat.ru/index.php?search=NanoPi+R3S&fulltext=1",
+      "kategorie": "wikidevi",
+      "grund": "Spiegel antwortete nicht (Abbruch nach ~140 s); DeviWiki hat keine Seite, daher vermutlich auch der Spiegel nicht"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 42,
+    "notiz": "Kein ToH-Eintrag (Dump und hwdata), keine DeviWiki-Seite, WikiDevi-Spiegel ohne Antwort, keine FCC-ID in den Quellen (Einplatinenrechner ohne Funk). Ausgewertet: OpenWrt-Wiki (toh/friendlyelec/nanopi_r3s), OpenWrt-Commits (Geräteunterstützung, U-Boot, LED, PCIe-Fix 1 GB) und Image-Makefile 24.10/25.12, Gluon-Target, FriendlyElec-Wiki (aktuell LTS und Stand 2024), Shopseite R3S-LTS und archivierte R3S-Seite, Vergleichs-, Layout- und Gehäusefotos, Schaltplan 2406 (Stromversorgung), Hersteller-Kernel-DTS, CNX-Artikel, OpenWrt-Forum. Gerät ohne WLAN und ohne PoE, Strom nur USB-C 5 V. Leistungsaufnahme in keiner Quelle. Kein Werkstatt-Protokoll."
+  }
+}

@@ -1,0 +1,1590 @@
+{
+  "image": "friendlyelec-nanopi-r2c",
+  "modell": "FriendlyElec NanoPi R2C",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/views/toh_extended_all",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "bemerkung": "toh_suche.py: keine Kandidaten; der Dump enthaelt NanoPi R2S/R4S/R5S/R5C/R6S, aber keinen R2C (hwdata-Seite erst 2024-06-01 angelegt). Live-Seite unter openwrt_hwdata"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c?do=export_raw",
+      "stand": "Seitenrevision 2026-03-24 03:23",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "angelegt 2024-06-01 (raylynnknight), 10 Revisionen bis 2026-03-24"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/friendlyarm/nanopi_r2c",
+      "stand": "Seite existiert nicht (2026-10-19)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "\"This topic does not exist yet\"; Wiki-Suche \"r2c\" liefert nur Changelogs (23.05, 24.10)"
+    },
+    "openwrt_wiki_r2s": {
+      "url": "https://openwrt.org/toh/friendlyarm/nanopi_r2s?do=export_raw",
+      "stand": "Seitenrevision 2026-05-21 11:24",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Schwestergeraet R2S (laut Commit 8f578c15 bis auf WAN-PHY identisch); nur fuer Hinweise, Werte nicht als R2C-Beleg"
+    },
+    "openwrt_git_r2c": {
+      "url": "https://github.com/openwrt/openwrt/commit/8f578c15b3147ec52ceb2ec48e9223143144f2ad",
+      "stand": "Commit 2023-05-13 (Autor), gemergt 2023-05-18",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_uboot": {
+      "url": "https://github.com/openwrt/openwrt/commit/60c1fe692896a441e8624afe8643c7f52bd863c9",
+      "stand": "Commit 2023-05-13 (Autor), gemergt 2023-05-18",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_netzfix": {
+      "url": "https://github.com/openwrt/openwrt/commit/d312f12b1a6ee41e7bf1e07ec0349e141c07b92e",
+      "stand": "Commit 2023-06-14 (Autor), gemergt 2023-06-17",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=r2c+repo:openwrt/openwrt",
+      "stand": "Suchergebnis 2026-10-19 (7 Commits)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/rockchip/image/armv8.mk",
+      "stand": "Branch main am 2026-10-19 (letzte Aenderung 2026-09-06)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_02_network": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/rockchip/armv8/base-files/etc/board.d/02_network",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "linux_dts": {
+      "url": "https://github.com/torvalds/linux/blob/master/arch/arm64/boot/dts/rockchip/rk3328-nanopi-r2c.dtsi",
+      "stand": "Branch master am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "dateien": [
+        "rk3328-nanopi-r2c.dts",
+        "rk3328-nanopi-r2c.dtsi",
+        "rk3328-nanopi-r2.dtsi"
+      ]
+    },
+    "openwrt_pr_4694": {
+      "url": "https://github.com/openwrt/openwrt/pull/4694",
+      "stand": "PR 2021-10-18, nicht gemergt",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "von jensen (FriendlyARM), Cherry-Pick aus friendlywrt"
+    },
+    "openwrt_pr_19415": {
+      "url": "https://github.com/openwrt/openwrt/pull/19415",
+      "stand": "PR 2025-07-15, offen (zuletzt 2025-08-20)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_issue_13205": {
+      "url": "https://github.com/openwrt/openwrt/issues/13205",
+      "stand": "Issue 2023-08-01, geschlossen 2023-08-02",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_issue_17948": {
+      "url": "https://github.com/openwrt/openwrt/issues/17948",
+      "stand": "Issue 2025-02-12, geschlossen 2025-02-15",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "betrifft NanoPi R2C Plus (Titel sagt \"R2C Pro\"), gleicher WAN-PHY YT8521"
+    },
+    "openwrt_github_suche": {
+      "url": "https://api.github.com/search/issues?q=%22nanopi+r2c%22+org:openwrt",
+      "stand": "Suchergebnis 2026-10-19 (20 Treffer)",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/rockchip-armv8",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "kein R2C im Upstream-Gluon; GitHub-Suche Commits/Issues \"r2c\" in freifunk-gluon/gluon: 0 Treffer"
+    },
+    "neanderfunk_firmwareconfigs": {
+      "url": "https://github.com/Neanderfunk/FirmwareConfigs/blob/main/patches/add-nanopi-r2c.patch",
+      "stand": "Commit bf5b48ea 2026-09-09 (Repo-Stand de173856 2026-09-11)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "lokaler Checkout firmware-2025.1; dazu docs/migration-2025.1-targets.md und docs/patch-bilanz-2025.1.md (\"R2C fehlt upstream weiterhin, neu geschrieben\")"
+    },
+    "friendlyelec_wiki": {
+      "url": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+      "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Rohtext per action=raw; Vorlage 1500000SerialPortDebugSetting (Rev. 2022-05-17)"
+    },
+    "friendlyelec_wiki_zh": {
+      "url": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C/zh",
+      "stand": "Abruf 2026-10-19 (Revision nicht abgefragt)",
+      "abgerufen": "2026-10-19"
+    },
+    "friendlyelec_schaltplan": {
+      "url": "https://wiki.friendlyelec.com/wiki/images/b/b1/NanoPi_R2C_2107_SCH.pdf",
+      "stand": "Schaltplan NanoPi R2C 2107, PDF 2021-08-04",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "12 Seiten, Titel nanopi_r2c_2107_20210625; Seite 10 (USB/LED/Debug/FAN/KEY) als Bild ausgewertet; Cache sch.pdf"
+    },
+    "friendlyelec_layoutbild": {
+      "url": "https://wiki.friendlyelec.com/wiki/images/8/83/NanoPi_R2C-layout.jpg",
+      "stand": "Bild hochgeladen 2021-08-04",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "750x765, Ober- und Unterseite beschriftet, als Bild ausgewertet"
+    },
+    "friendlyelec_gehaeusefoto": {
+      "url": "https://wiki.friendlyelec.com/wiki/images/e/ed/R2sc-02.jpg",
+      "stand": "Bild hochgeladen 2022-01-18",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Bild \"Case\" auf der R2C-Wikiseite, als Bild ausgewertet"
+    },
+    "friendlyelec_shop": {
+      "url": "https://www.friendlyelec.com/index.php?route=product/search&search=R2C",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "kein Treffer fuer R2C; Suche \"NanoPi R2\" listet nur R2S, R2S Plus, R28S"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=NanoPi+R2C&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine Treffer"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/index.php?search=NanoPi+R2C&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Seite \"NanoPi R2C\" (Rev. 2023-06-27) ist nur eine Weiterleitung auf \"NanoPi R2C Plus\""
+    },
+    "wikidevi_r2c_plus": {
+      "url": "https://wikidevi.wi-cat.ru/NanoPi_R2C_Plus",
+      "stand": "Seitenrevision 2023-11-23T11:41:04Z",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "beschreibt R2C Plus (8 GB eMMC, Platine 2109), nicht den R2C; nur in roh und als Unterscheidungsmerkmal"
+    }
+  },
+  "roh": {
+    "toh": {
+      "kandidaten": [],
+      "bemerkung": "kein Eintrag im Dump 2026-10-18"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "Router",
+      "Brand": "FriendlyARM",
+      "Model": "NanoPi R2C",
+      "Versions": "",
+      "FCCID_urls": "http://¿",
+      "Availability_availability": "Available 2021",
+      "Where available": "friendlyarm.com, aliexpress.com, amazon.com",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=b7a9a183fb44f77d9f95c20bcec1db0edea9e206",
+      "Supported Since Rel_releasesince": "23.05.0",
+      "Supported Current Rel_releasecurrent": "25.12.1",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "rockchip",
+      "Subtarget": "armv8",
+      "Package architecture_pkg-arch": "aarch64_generic",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Rockchip RK3328",
+      "CPU Cores_numcores_": "4",
+      "CPU MHz": "1300",
+      "Flash MB_mbflashs": "microSDHC",
+      "RAM MB_mbram": "1024",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "2",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "Motorcomm YT8521SC Phy, Realtek RTL8153B USB to Ethernet",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "WAN 1GB Ethernet, LAN 1GB Ethernet",
+      "WLAN Hardwares": "none",
+      "WLAN 2.4GHz_wlan24": "-",
+      "WLAN 5.0GHz_wlan50": "-",
+      "WLAN Comments_": "",
+      "WLAN driver_wlan-drivers": "none",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "1x 2.0",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "",
+      "Serial connection voltage_serialvoltage": "¿",
+      "JTAG_yesno": "No",
+      "LED count_numled": "3",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "10",
+      "Power Supply": "5 VDC, 2.0A via USB Type-C",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "85",
+      "Wireguard performance": "325",
+      "Device Page_page": "",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "NanoPi R2C",
+      "Git search_search-gits": "NanoPi R2C",
+      "WikiDevi URL_urls": "",
+      "WikiDevi ID_hwinfo-ids": "",
+      "OEM Device Homepage URL_url": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+      "Firmware OEM Stock URL_url": "https://download.friendlyelec.com/nanopir2c",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.1/targets/rockchip/armv8/openwrt-25.12.1-rockchip-armv8-friendlyarm_nanopi-r2c-ext4-sysupgrade.img.gz",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.1/targets/rockchip/armv8/openwrt-25.12.1-rockchip-armv8-friendlyarm_nanopi-r2c-squashfs-sysupgrade.img.gz",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/openwrt-rockchip-armv8-friendlyarm_nanopi-r2c-ext4-sysupgrade.img.gz",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/openwrt-rockchip-armv8-friendlyarm_nanopi-r2c-squashfs-sysupgrade.img.gz",
+      "Installation method(s)_method-installations": "SD card",
+      "Comment installation": "write image to microSD/TF",
+      "Recovery method(s)_method-recoverys": "SD card",
+      "Comment recovery": "",
+      "Picture_img100s": "media:friendlyarm:nanopi-r2s-openwrt.png",
+      "Comments_": "Supports IEEE 802 IP Layer 2 priority encoding and IEEE 802.1Q Virtual bridged Local Area Network (VLAN)  on LAN port"
+    },
+    "openwrt_git_r2c": {
+      "betreff": "rockchip: add NanoPi R2C support",
+      "autor": "Tianling Shen",
+      "text": "The NanoPi R2C is a minor variant of NanoPi R2S with the on-board NIC chip changed from rtl8211e to yt8521s, and otherwise identical to R2S.",
+      "dateien": [
+        "target/linux/rockchip/armv8/base-files/etc/board.d/01_leds",
+        "target/linux/rockchip/armv8/base-files/etc/board.d/02_network",
+        "target/linux/rockchip/armv8/base-files/etc/hotplug.d/net/40-net-smp-affinity",
+        "target/linux/rockchip/image/armv8.mk",
+        "target/linux/rockchip/patches-5.15/006-v6.4-arm64-dts-rockchip-Add-FriendlyARM-NanoPi-R2C.patch",
+        "target/linux/rockchip/patches-5.15/100-rockchip-use-system-LED-for-OpenWrt.patch"
+      ],
+      "leds": "wan green:wan eth0, lan green:lan eth1 (wie R2S/R4S)",
+      "mac": "wan_mac=$(macaddr_generate_from_mmc_cid mmcblk0); lan_mac=wan_mac+1",
+      "smp_affinity": "eth0 Kern 2, eth1 und xhci-hcd:usb3 Kern 4",
+      "kernel_upstream": "DTS-Patch 004589ff9df5 (Linux v6.4), Link https://lore.kernel.org/r/20230325074022.9818-3-cnsztl@gmail.com",
+      "pr": "https://github.com/openwrt/openwrt/pull/12593 (enthaelt auch \"kernel: backport Motorcomm YT8521/YT8531 support\" 64afcbad)"
+    },
+    "openwrt_git_uboot": {
+      "betreff": "uboot-rockchip: add NanoPi R2C support",
+      "text": "Add support for the FriendlyARM NanoPi R2C. Manually generated of-platdata files to avoid swig dependency.",
+      "u_boot_ziel": "nanopi-r2c-rk3328, BUILD_DEVICES friendlyarm_nanopi-r2c"
+    },
+    "openwrt_git_netzfix": {
+      "betreff": "rockchip: fix setup network config for nanopi r2c",
+      "text": "Without it the WAN port won't be initialized properly."
+    },
+    "openwrt_git_suche": [
+      {
+        "sha": "782266473de09c2b5f9332027bde3e5ad0493534",
+        "datum": "2024-02-16T14:34:40+08:00",
+        "betreff": "rockchip: add NanoPi R2C Plus support"
+      },
+      {
+        "sha": "23cb2b1636d2cfacaff4b459139c4026120431be",
+        "datum": "2024-02-16T14:33:49+08:00",
+        "betreff": "uboot-rockchip: add NanoPi R2C Plus support"
+      },
+      {
+        "sha": "548ab9d7ada9812000d5fe8c4ee0aca637b45edf",
+        "datum": "2023-06-26T00:37:27+08:00",
+        "betreff": "uboot-rockchip: Update to 2023.07.02"
+      },
+      {
+        "sha": "d312f12b1a6ee41e7bf1e07ec0349e141c07b92e",
+        "datum": "2023-06-14T19:25:28+08:00",
+        "betreff": "rockchip: fix setup network config for nanopi r2c"
+      },
+      {
+        "sha": "60c1fe692896a441e8624afe8643c7f52bd863c9",
+        "datum": "2023-05-13T13:54:38+08:00",
+        "betreff": "uboot-rockchip: add NanoPi R2C support"
+      },
+      {
+        "sha": "8f578c15b3147ec52ceb2ec48e9223143144f2ad",
+        "datum": "2023-05-13T13:54:38+08:00",
+        "betreff": "rockchip: add NanoPi R2C support"
+      },
+      {
+        "sha": "64afcbad3d69147b07dff2462e5645f2c193dee5",
+        "datum": "2023-05-13T13:54:38+08:00",
+        "betreff": "kernel: backport Motorcomm YT8521/YT8531 support"
+      }
+    ],
+    "openwrt_image_mk": {
+      "Device/friendlyarm_nanopi-r2c": "  $(Device/rk3328)\n  DEVICE_VENDOR := FriendlyARM\n  DEVICE_MODEL := NanoPi R2C\n  DEVICE_PACKAGES := kmod-usb-net-rtl8152\n"
+    },
+    "openwrt_02_network": {
+      "rockchip_setup_interfaces": "friendlyarm,nanopi-r2c: ucidef_set_interfaces_lan_wan 'eth1' 'eth0'",
+      "rockchip_setup_macs": "friendlyarm,nanopi-r2c (mit r2s, m5, nanopc-t6 ...): wan_mac=$(macaddr_generate_from_mmc_cid mmcblk0); lan_mac=$(macaddr_add \"$wan_mac\" 1)"
+    },
+    "linux_dts": {
+      "rk3328-nanopi-r2c.dts": "// SPDX-License-Identifier: GPL-2.0-or-later OR MIT\n/*\n * Copyright (c) 2021 FriendlyElec Computer Tech. Co., Ltd.\n * (http://www.friendlyarm.com)\n *\n * Copyright (c) 2021-2023 Tianling Shen <cnsztl@gmail.com>\n */\n\n/dts-v1/;\n\n#include \"rk3328-nanopi-r2c.dtsi\"\n\n/ {\n\tmodel = \"FriendlyElec NanoPi R2C\";\n\tcompatible = \"friendlyarm,nanopi-r2c\", \"rockchip,rk3328\";\n};\n",
+      "rk3328-nanopi-r2c.dtsi": "// SPDX-License-Identifier: GPL-2.0-or-later OR MIT\n/*\n * Copyright (c) 2021 FriendlyElec Computer Tech. Co., Ltd.\n * (http://www.friendlyarm.com)\n *\n * Copyright (c) 2021-2023 Tianling Shen <cnsztl@gmail.com>\n */\n\n/dts-v1/;\n\n#include \"rk3328-nanopi-r2.dtsi\"\n\n&gmac2io {\n\tphy-handle = <&yt8521s>;\n\ttx_delay = <0x22>;\n\trx_delay = <0x12>;\n\tstatus = \"okay\";\n\n\tmdio {\n\t\tyt8521s: ethernet-phy@3 {\n\t\t\tcompatible = \"ethernet-phy-ieee802.3-c22\";\n\t\t\treg = <3>;\n\n\t\t\tmotorcomm,clk-out-frequency-hz = <125000000>;\n\t\t\tmotorcomm,keep-pll-enabled;\n\t\t\tmotorcomm,auto-sleep-disabled;\n\n\t\t\tpinctrl-0 = <&eth_phy_reset_pin>;\n\t\t\tpinctrl-names = \"default\";\n\t\t\treset-assert-us = <10000>;\n\t\t\treset-deassert-us = <50000>;\n\t\t\treset-gpios = <&gpio1 RK_PC2 GPIO_ACTIVE_LOW>;\n\t\t};\n\t};\n};\n",
+      "rk3328-nanopi-r2.dtsi_auszug": {
+        "aliases": "ethernet0 = &gmac2io; ethernet1 = &rtl8153; mmc0 = &sdmmc",
+        "stdout-path": "serial2:1500000n8",
+        "key-reset": "gpio0 RK_PA0 active low, KEY_RESTART, debounce 50",
+        "leds": "lan_led gpio2 RK_PB7 green:lan; sys_led gpio0 RK_PA2 red:sys; wan_led gpio2 RK_PC2 green:wan",
+        "usb": "usbdrd3 mit usbbda,8153 (RTL8153 am USB 3.0), usb20_otg, usb_host0 ehci/ohci",
+        "pwm2": "okay (Luefteranschluss)"
+      }
+    },
+    "openwrt_pr_4694": {
+      "titel": "rockchip: add NanoPi R2C support",
+      "autor": "jensen (jensenhuang@friendlyarm.com)",
+      "text": "The R2C is the same as the R2S, but with a Motorcomm YT8521S WAN chip instead of an RTL8211E. Rockchip RK3328 SoC; Quad-Core Cortex-A53 Up to 1.4GHz; 1GB DDR4 RAM; Gigabit Ethernet (WAN); Gigabit Ethernet (USB3) (LAN); USB 2.0 Host Port; MicroSD slot; Reset button; WAN - LAN - SYS LED. To install, flash the image onto a class10 SD card and insert into the device. Power on."
+    },
+    "openwrt_pr_19415": {
+      "titel": "rockchip: Fix yt8521s reset on NanoPi R2C",
+      "text": "ip link set dev eth0 down; sleep 1; ip link set dev eth0 up will trigger a hard reset, but motorcomm,clk-out-frequency-hz is not applied after reset, then stmmac die: \"Failed to reset the dma\" / \"DMA engine initialization failed\"",
+      "status": "offen, nicht gemergt; hauke 2025-07-26: erst main, dann Backport 24.10"
+    },
+    "openwrt_issue_13205": {
+      "titel": "YT8521 Ethernet Interface flapping on 23.05.0-rc2",
+      "geraet": "FriendlyElec NanoPi R2C",
+      "text": "WAN-Link (YT8521) faellt unter Last (400 Mbit/s) aus, bis Interface neu gestartet oder Kabel neu gesteckt",
+      "aufloesung": "2023-08-02: \"Issue has been resolved since replacing the power supply.\""
+    },
+    "openwrt_issue_17948": {
+      "titel": "YT8521 keeps disconnecting on 24.10.0 (NanoPi R2C Pro, eth0)",
+      "geraet": "NanoPi R2C Plus",
+      "workaround_melder": "ethtool -K eth0 generic-receive-offload off; ethtool -K eth0 tx-scatter-gather off"
+    },
+    "gluon_targets": {
+      "datei": "defaults {\n\tfactory = false,\n\tsysupgrade_ext = '.img.gz',\n}\n\ndevice('friendlyelec-nanopi-r2s', 'friendlyarm_nanopi-r2s')\ndevice('friendlyelec-nanopi-r3s', 'friendlyarm_nanopi-r3s')\ndevice('friendlyelec-nanopi-r4s', 'friendlyarm_nanopi-r4s') -- 4GB LPDDR4\n",
+      "r2c": "nicht enthalten"
+    },
+    "neanderfunk_firmwareconfigs": {
+      "patch": "targets/rockchip-armv8: + device('friendlyelec-nanopi-r2c', 'friendlyarm_nanopi-r2c')",
+      "historie": [
+        "b38c0d1c 2025-02-03 not nanopi r3c, but NanoPi R2C",
+        "9abe6b80 2025-02-03 fixup",
+        "bf5b48ea 2026-09-09 add-nanopi-r2c: gegen 2025.1 neu geschrieben"
+      ],
+      "build": "laut uebergaben/fakten-2025.1-firmware.md im Lauf 26092721bro gebaut, im Testlauf auskommentiert",
+      "imageliste": "quellen/images-21_dias-2026-10-19.txt enthaelt friendlyelec-nanopi-r2c",
+      "selector": "quellen/selector-modelle-2026-10-19.json: kategorie recommended, art basis"
+    },
+    "friendlyelec_wiki": {
+      "einleitung": "The NanoPi R2C(as \"R2C\") is an open source development board with dual-Gbps Ethernet ports designed and developed by FriendlyElec for IoT applications. The NanoPi R2C uses the RK3328 SoC. It has two Gbps Ethernet ports and 1G DDR4 RAM. FriendlyElec ported an OpenWrt system for it. It works with Docker CE.",
+      "hardware_spec": [
+        "CPU: Rockchip RK3328, Quad-core Cortex-A53",
+        "DDR4 RAM: 1GB",
+        "Network：",
+        "Internal 10/100/1000M Ethernet Port x 1",
+        "USB3.0 converted 10/100/1000M Ethernet Port x 1<br />",
+        "USB2.0 Host: Type-A x1",
+        "MicroSD Slot x 1",
+        "MicroUSB: power input and USB Slave",
+        "Debug Serial Port: 3.3V TTL, 3-pin 2.54mm pitch connector, 1500000 bauds",
+        "LED: LED x 3",
+        "KEY: KEY x 1 programmable",
+        "PC Size: 55.6 x 52mm",
+        "Power Supply: DC 5V/2A",
+        "Temperature measuring range: 0℃ to 80℃",
+        "OS/Software: U-boot，Ubuntu-Core，OpenWrt <br />"
+      ],
+      "durchsatz_iperf": {
+        "WAN": "TX 941 Mbps, RX 941 Mbps",
+        "LAN": "TX 941 Mbps, RX 941 Mbps"
+      },
+      "gpio_leiste": "10-polig (GPIO1): 1 SYS_3.3V, 2 VDD_5V, 3 I2C0_SDA/GPIO2_D1 (89), 4 VDD_5V, 5 I2C0_SCL/GPIO2_D0 (88), 6 GND, 7 GPIO2_A2/IR_RX (66), 8 UART1_TX/GPIO3_A4 (100), 9 GND, 10 UART1_RX/GPIO3_A6 (102)",
+      "seriell_vorlage": "Baud rate 1500000, Data bit 8, Parity None, Stop bit 1, Flow control None",
+      "essentials": "MicroSD Class 10, mindestens 8 GB SDHC; MicroUSB 5V/2A power adapter",
+      "bilder": [
+        "NanoPi R2C-1.jpg",
+        "NanoPi R2C_TOP.jpg",
+        "NanoPi R2C-BOT.jpg",
+        "NanoPi_R2S-case1.jpg (Case)",
+        "R2sc-02.jpg ... R2sc-05.jpg (Case)"
+      ],
+      "ressourcen": [
+        "https://wiki.friendlyelec.com/wiki/images/b/b1/NanoPi_R2C_2107_SCH.pdf",
+        "https://wiki.friendlyelec.com/wiki/index.php/File:NanoPi_R2C_2107_PCB_DXF.zip",
+        "http://wiki.friendlyelec.com/wiki/images/d/d7/Rockchip_RK3328_Datasheet_V1.1-20170309.pdf"
+      ],
+      "firmware": "FriendlyWrt 25 (Vorlage FriendlyWrt25), Ubuntu Core, Debian Core, Buildroot"
+    },
+    "friendlyelec_wiki_zh": {
+      "Network": "10/100/1000M以太网口 x 1; USB3.0转10/100/1000M以太网口 x 1",
+      "MicroUSB": "供电和Slave功能",
+      "Debug Serial Port": "3.3V TTL电平，3Pin 2.54mm间距排针 (Stiftleiste)",
+      "KEY": "KEY x 1 用户自定义功能",
+      "PC Size": "55.6 x 52mm",
+      "Power Supply": "DC 5V/2A",
+      "Temperature measuring range": "0℃ to 80℃"
+    },
+    "friendlyelec_schaltplan": {
+      "seiten": [
+        "01.Block Diagram",
+        "02.Power tree-RK805-1",
+        "03.PMIC RK805-1",
+        "04.RK3328 Power",
+        "05.DDR/eMMC/TF Controler",
+        "06.MAC/WiFi/USB Controler",
+        "07.HDMI/AV/GPIO Controler",
+        "08.RAM DDR4 4x16bit",
+        "09.TF/SD Card/EEPROM/SPI Flash",
+        "10.USB Port/LED/Debug/FAN/KEY",
+        "11.LAN 10/100M/1000M PHY",
+        "12.WAN 10/100M/1000M PHY"
+      ],
+      "strom": "USB-C1 \"USB-Type-C 16Pin\" (USB_TYPE-C-31-M-12), VDD_5Vin, CC1/CC2 je 5.1K; Seitenueberschrift \"MicroUSB:PWR and Slave\"; TVS D1 AZ5825-01F: \"Operating Supply Voltage 5.5V (5.25-6V)\", \"IF TVS UNMOUNTED, ESD OR SURGE SHOULD BE DAMAGE THE PMIC!!!\"; PMIC RK805-1; Blockdiagramm \"5V/2A\"",
+      "usb_host": "USBH1 USB A, VBUS ueber SY6280 (Strombegrenzung), USB20_HOST_DRV",
+      "debug_uart": "CON3 DBG_UART SIP3-2: Pin 1 GND, Pin 2 UART2_TX (ueber R63 22R), Pin 3 UART2_RX (ueber Diode D53 LRB521S-30T1G, Pull-up 10K an VCC_IO_33)",
+      "leds": "SYS-LED rot (STATUS-LED, Linux gpio 2), WAN-LED gruen (GPIO2_C2, gpio 82), LAN-LED gruen (GPIO2_B7, gpio 79)",
+      "key": "K1 SW-4 ts-019; \"K1=RESET: R79=100R,R55=NC,R78=NC; K1=GPIO0_A0: R79=NC,R55=10K,R78=100R\"; im Plan R79 NC/100R, R78 100R, R55 10K",
+      "fan": "CON4 FAN ZH-1M5-2A-SMT-V, FAN-5V ueber AO3415A/L2N7002WT1G, gesteuert von GPIO2_A6/PWM2 (Linux gpio 70)",
+      "lan": "RTL8153B (U10) an USB30, Uebertrager LPJG0801HENL, 25-MHz-Quarz, USB3.0-EN gpio 86",
+      "wan": "YT8521S (U24) RGMII, PHY address 00011b, 25 MHz",
+      "speicher": "MicroSD-A102-206017-001 (TF Card); SPI-Flash MX25L12835F/NC (unbestueckt); \"EEPROM with MAC Address\" U11 SOT23-6; eMMC-Signale auf Seite 5",
+      "ram": "DDR4, Seite 08 \"RAM DDR4 4x16bit\" (Bauteilnummern nicht im Text)"
+    },
+    "friendlyelec_layoutbild": {
+      "oberseite": [
+        "GPIO1",
+        "EEPROM with MAC (unmounted)",
+        "WAN LED (Green)",
+        "LAN LED (Green)",
+        "SYS LED (Red)",
+        "MicroSD Card Slot",
+        "Heat Sink Mounting Hole (Φ-1.6mm)",
+        "Rockchip RK3328",
+        "YT8521S",
+        "WAN - Gbps Ethernet (TX:941Mbps RX:941Mbps)",
+        "1GB DDR4 RAM",
+        "RTL8153B",
+        "LAN - Gbps Ethernet (TX:941Mbps RX:941Mbps)",
+        "Debug UART",
+        "USB-C (Power & Slave)",
+        "USB 2.0",
+        "K1",
+        "Fan (ZH1.5-2A)"
+      ],
+      "unterseite": [
+        "SPI Flash (unmounted)"
+      ],
+      "masse": "55.6 mm x 52 mm",
+      "aufdruck": "\"NanoPi R2C\" und \"2107\" auf der Oberseite (zwischen RAM und Platinenkante), auch Unterseite",
+      "beobachtung": "Debug-UART als bestueckte 3-polige Stiftleiste zwischen LAN-Buchse und USB-C; Luefterstecker mit Aufdruck 5V/GND; zwei DDR4-Chips; kein eMMC-Baustein beschriftet"
+    },
+    "friendlyelec_gehaeusefoto": {
+      "beobachtung": "dunkles Metallgehaeuse (Stirnseite), Ausschnitt fuer USB-A mit Aufdruck \"USB\" und Loch mit Aufdruck \"Reset\" daneben"
+    },
+    "friendlyelec_shop": {
+      "treffer_r2c": [],
+      "treffer_nanopi_r2": [
+        "NanoPi R2S (product_id 282)",
+        "NanoPi R2S Plus (296)",
+        "NanoPi R28S (320)"
+      ]
+    },
+    "deviwiki": {
+      "suchtreffer": []
+    },
+    "wikidevi": {
+      "suchtreffer": [
+        "NanoPi R2C Plus",
+        "NanoPi R2C (Weiterleitung)",
+        "NanoPi models",
+        "NanoPi series"
+      ]
+    },
+    "wikidevi_r2c_plus": {
+      "infobox": {
+        "brand": "FriendlyARM",
+        "model": "NanoPi R2",
+        "revision": "C Plus",
+        "newegg": "9SIAU62HJ12251",
+        "manuf_country": "China",
+        "is_manuf": "No",
+        "availability": "currently shipping",
+        "price": "48",
+        "est_release_date": "02/2022",
+        "type": "single-board computer",
+        "pwr_v": "5",
+        "pwr_amp": "2",
+        "pwr_conn": "USB (Type-C) Female",
+        "cpu1_brand": "Rockchip",
+        "cpu1_model": "RK3328",
+        "cpu1_cspeed": "1.5 GHz",
+        "cpu1_cores": "4",
+        "fla1": "8 GiB",
+        "fla1_brand": "Samsung",
+        "fla1_model": "KLM8G1GETF-B041",
+        "ram1": "1 GiB",
+        "ram1_brand": "Samsung",
+        "ram1_model": "K4A4G165WE-BCRC",
+        "ram1_num": "2",
+        "expansion_if_types": "USB 2.0",
+        "expansion_usb_num": "1",
+        "serial": "yes,, 3-pin,, populated,, 3.3V TTL,, (1500000 8N1)",
+        "eth_cpu": "true",
+        "eth_chip2_brand": "Realtek",
+        "eth_chip2_model": "RTL8153B",
+        "eth_chip3_brand": "Motorcomm",
+        "eth_chip3_model": "YT8521SC",
+        "lan_speed": "1GbE",
+        "lan_ports": "2",
+        "addl_chips": "RK805-1 (PMIC w/ RTC); SY8089; SY6280; WPM2015; L2N7002WT1G x4; BCM856BS; TT2102; AO3415A x3; TPD4E05U06 x4; RT9193",
+        "flags": "Micro SD Card slot, RTC, I2C, UART, GPIO, fan header, metal case",
+        "stock_boot": "U-Boot;2017.09;",
+        "stock_os": "Linux;5.10.60;Friendly Wrt 21.02.1;",
+        "tp_firmware": "Armbian (unofficial)",
+        "default_ip": "192.168.2.1",
+        "default_user": "root",
+        "default_pass": "password"
+      },
+      "text": "\"NanoPi R2C Plus\" and \"2109\" is silk-screened on top of board."
+    },
+    "openwrt_wiki_r2s": {
+      "serial": "Debug UART pins (3 pins near microUSB). The RX and TX pin locations are swapped from some other devices ... screen /dev/ttyUSB0 1500000 8N1. Debug UART port is 3.3V TTL. Some USB-TTL adapters ... have trouble operating at 1500000 baud",
+      "hardware_mods": "4 pin fan header which provides 5V at up to 2A (R2S)",
+      "gehaeuse": "all-metal case held by a single philipps screw; plastic (yellow) case held by clips",
+      "notes": "Ethernet instability can be mitigated by forcing maximum CPU frequency: echo performance > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor",
+      "netz": "eth0 WAN DHCP, eth1 LAN 192.168.1.1",
+      "installation": "sysupgrade.img.gz entpacken und auf microSD schreiben (dd, Balena Etcher)"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "FriendlyElec",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": "Firmenname FriendlyElec Computer Tech. Co., Ltd.; OpenWrt/ToH führen die Marke als FriendlyARM"
+      },
+      {
+        "wert": "FriendlyARM",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "NanoPi R2C",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NanoPi R2C",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "FriendlyElec NanoPi R2C",
+        "quelle": "linux_dts",
+        "beleg": "https://github.com/torvalds/linux/blob/master/arch/arm64/boot/dts/rockchip/rk3328-nanopi-r2c.dts",
+        "stand": "Branch master am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "model-String im Devicetree"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "2107 (Platinenrevision)",
+        "quelle": "friendlyelec_schaltplan",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/b/b1/NanoPi_R2C_2107_SCH.pdf",
+        "stand": "Schaltplan NanoPi R2C 2107, PDF 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": "Schaltplan \"NanoPi R2C 2107\"; einzige veröffentlichte Revision"
+      },
+      {
+        "wert": "2107",
+        "quelle": "friendlyelec_layoutbild",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/8/83/NanoPi_R2C-layout.jpg",
+        "stand": "Bild hochgeladen 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": "Platinenaufdruck neben \"NanoPi R2C\""
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Platinenaufdruck \"NanoPi R2C\" mit \"2107\"; WAN-PHY-Chip mit Aufschrift YT8521S neben der WAN-Buchse",
+        "quelle": "friendlyelec_layoutbild",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/8/83/NanoPi_R2C-layout.jpg",
+        "stand": "Bild hochgeladen 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": "R2S hat an dieser Stelle einen RTL8211E (Commit 8f578c15); R2C Plus trägt \"NanoPi R2C Plus\"/\"2109\" und hat 8 GB eMMC (WikiDevi)"
+      },
+      {
+        "wert": "Aufdruck \"NanoPi R2C Plus\" und \"2109\" kennzeichnet die Plus-Variante (nicht dieses Image)",
+        "quelle": "wikidevi_r2c_plus",
+        "beleg": "https://wikidevi.wi-cat.ru/NanoPi_R2C_Plus",
+        "stand": "Seitenrevision 2023-11-23T11:41:04Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "Unterscheidungsmerkmal, Seite beschreibt R2C Plus"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "R2C",
+          "friendlyarm_nanopi-r2c",
+          "friendlyarm,nanopi-r2c"
+        ],
+        "quelle": "openwrt_git_r2c",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8f578c15b3147ec52ceb2ec48e9223143144f2ad",
+        "stand": "Commit 2023-05-13 (Autor), gemergt 2023-05-18",
+        "sicherheit": "hoch",
+        "bemerkung": "OpenWrt-Profil und Devicetree-compatible"
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Available 2021; friendlyarm.com, aliexpress.com, amazon.com",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "im FriendlyElec-Shop nicht (mehr) gelistet",
+        "quelle": "friendlyelec_shop",
+        "beleg": "https://www.friendlyelec.com/index.php?route=product/search&search=R2C",
+        "stand": "Suche 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Suche \"R2C\" ohne Treffer, \"NanoPi R2\" nur R2S/R2S Plus/R28S"
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "2021",
+        "quelle": "friendlyelec_schaltplan",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/b/b1/NanoPi_R2C_2107_SCH.pdf",
+        "stand": "Schaltplan NanoPi R2C 2107, PDF 2021-08-04",
+        "sicherheit": "mittel",
+        "bemerkung": "Schaltplan 2107, PDF vom 2021-08-04; Wiki-Bilder 2021-08-04 hochgeladen; erster OpenWrt-PR 2021-10-18"
+      }
+    ],
+    "varianten": [
+      {
+        "wert": "R2S: identisch bis auf WAN-PHY (RTL8211E statt YT8521S), eigenes Image",
+        "quelle": "openwrt_git_r2c",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8f578c15b3147ec52ceb2ec48e9223143144f2ad",
+        "stand": "Commit 2023-05-13 (Autor), gemergt 2023-05-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "R2C Plus: mit 8 GB eMMC (Samsung KLM8G1GETF-B041), eigenes OpenWrt-Profil friendlyarm_nanopi-r2c-plus",
+        "quelle": "wikidevi_r2c_plus",
+        "beleg": "https://wikidevi.wi-cat.ru/NanoPi_R2C_Plus",
+        "stand": "Seitenrevision 2023-11-23T11:41:04Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "OpenWrt-Commit 78226647 (2024-02-16) fügt R2C Plus getrennt hinzu"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Rockchip RK3328",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Rockchip RK3328",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Rockchip RK3328",
+        "quelle": "openwrt_pr_4694",
+        "beleg": "https://github.com/openwrt/openwrt/pull/4694",
+        "stand": "PR 2021-10-18, nicht gemergt",
+        "sicherheit": "hoch",
+        "bemerkung": "PR von FriendlyARM"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 4,
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": "Quad-core Cortex-A53"
+      },
+      {
+        "wert": 4,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 1300,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1400,
+        "quelle": "openwrt_pr_4694",
+        "beleg": "https://github.com/openwrt/openwrt/pull/4694",
+        "stand": "PR 2021-10-18, nicht gemergt",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Up to 1.4GHz\" (FriendlyARM-Mitarbeiter im PR)"
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "ARM Cortex-A53 (aarch64)",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "aarch64_generic",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": "Paketarchitektur"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 1024,
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": "1GB DDR4"
+      },
+      {
+        "wert": 1024,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1024,
+        "quelle": "openwrt_pr_4694",
+        "beleg": "https://github.com/openwrt/openwrt/pull/4694",
+        "stand": "PR 2021-10-18, nicht gemergt",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1024,
+        "quelle": "friendlyelec_layoutbild",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/8/83/NanoPi_R2C-layout.jpg",
+        "stand": "Bild hochgeladen 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": "Beschriftung \"1GB DDR4 RAM\", zwei Chips"
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR4",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DDR4",
+        "quelle": "friendlyelec_schaltplan",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/b/b1/NanoPi_R2C_2107_SCH.pdf",
+        "stand": "Schaltplan NanoPi R2C 2107, PDF 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "microSD-Karte (kein Flash auf der Platine)",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": "MicroSD Slot x1; benötigt Class 10, mindestens 8 GB SDHC"
+      },
+      {
+        "wert": "microSDHC",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": "ToH-Feld Flash MB"
+      },
+      {
+        "wert": "microSD; SPI-Flash MX25L12835F vorgesehen, aber unbestückt",
+        "quelle": "friendlyelec_schaltplan",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/b/b1/NanoPi_R2C_2107_SCH.pdf",
+        "stand": "Schaltplan NanoPi R2C 2107, PDF 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": "Bauteil \"MX25L12835F/NC\"; im Layoutbild \"SPI Flash (unmounted)\""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "kein WLAN",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": "WLAN Hardwares: none, WLAN driver: none"
+      },
+      {
+        "wert": "kein WLAN",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": "Hardware-Spezifikation nennt kein WLAN"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "keine",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": "kein WLAN"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "WAN",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "WAN",
+            "anbindung": "RK3328-GMAC mit PHY Motorcomm YT8521S"
+          },
+          {
+            "name": "LAN",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN",
+            "anbindung": "Realtek RTL8153B an USB 3.0"
+          }
+        ],
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Internal 10/100/1000M Ethernet Port x 1, USB3.0 converted 10/100/1000M Ethernet Port x 1\"; Layoutbild: WAN/LAN je 941 Mbit/s TX/RX"
+      },
+      {
+        "wert": [
+          {
+            "name": "eth0",
+            "rolle": "WAN"
+          },
+          {
+            "name": "eth1",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "openwrt_02_network",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/rockchip/armv8/base-files/etc/board.d/02_network",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "ucidef_set_interfaces_lan_wan 'eth1' 'eth0'"
+      },
+      {
+        "wert": [
+          {
+            "name": "WAN",
+            "geschwindigkeit": "1000"
+          },
+          {
+            "name": "LAN",
+            "geschwindigkeit": "1000"
+          }
+        ],
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": "Ethernet 1Gbit ports: 2; Switch: Motorcomm YT8521SC Phy, Realtek RTL8153B USB to Ethernet"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "switch": [
+      {
+        "wert": "kein Switch; zwei getrennte Netzwerkchips (YT8521S-PHY am SoC, RTL8153B per USB 3.0)",
+        "quelle": "friendlyelec_schaltplan",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/b/b1/NanoPi_R2C_2107_SCH.pdf",
+        "stand": "Schaltplan NanoPi R2C 2107, PDF 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": "Kommentar: IEEE 802.1Q auf dem LAN-Port"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "1x USB 2.0 Typ A (Host)",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": "dazu USB-C/MicroUSB als Stromeingang und USB-Slave"
+      },
+      {
+        "wert": "1x USB 2.0",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "friendlyelec_schaltplan",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/b/b1/NanoPi_R2C_2107_SCH.pdf",
+        "stand": "Schaltplan NanoPi R2C 2107, PDF 2021-08-04",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet: Versorgung nur über USB-C (VDD_5Vin); an den RJ45-Übertragern kein PoE-Zweig; kein Hersteller-Satz \"kein PoE\""
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "USB-C",
+        "quelle": "friendlyelec_layoutbild",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/8/83/NanoPi_R2C-layout.jpg",
+        "stand": "Bild hochgeladen 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": "Beschriftung \"USB-C (Power & Slave)\""
+      },
+      {
+        "wert": "USB-C",
+        "quelle": "friendlyelec_schaltplan",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/b/b1/NanoPi_R2C_2107_SCH.pdf",
+        "stand": "Schaltplan NanoPi R2C 2107, PDF 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": "USB-C1 \"USB-Type-C 16Pin\"; Seitenüberschrift lautet aber \"MicroUSB:PWR and Slave\""
+      },
+      {
+        "wert": "USB-C",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": "\"5 VDC, 2.0A via USB Type-C\""
+      },
+      {
+        "wert": "MicroUSB",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Widerspruch: Spezifikationstext (en und zh) nennt \"MicroUSB: power input and USB Slave\", Layoutbild und Schaltplan zeigen USB-C; vermutlich vom R2S übernommen"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 5,
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": "DC 5V/2A"
+      },
+      {
+        "wert": 5,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 2,
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2.0,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "5 V / 2 A (Empfehlung \"MicroUSB 5V/2A power adapter\")",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": "Lieferumfang nicht angegeben"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Entwicklerplatine, optional im Metallgehäuse; keine Schutzart angegeben"
+      }
+    ],
+    "gehaeuse_material": [
+      {
+        "wert": "Metall (Gehäuse auf der R2C-Wikiseite abgebildet, ob im Lieferumfang unbekannt)",
+        "quelle": "friendlyelec_gehaeusefoto",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/e/ed/R2sc-02.jpg",
+        "stand": "Bild hochgeladen 2022-01-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "55.6 x 52 (Platine)",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": "PC Size"
+      },
+      {
+        "wert": "55.6 x 52 (Platine)",
+        "quelle": "friendlyelec_layoutbild",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/8/83/NanoPi_R2C-layout.jpg",
+        "stand": "Bild hochgeladen 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "kein Lüfter verbaut; 2-poliger Anschluss ZH1.5 (5 V, über PWM2 schaltbar)",
+        "quelle": "friendlyelec_schaltplan",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/b/b1/NanoPi_R2C_2107_SCH.pdf",
+        "stand": "Schaltplan NanoPi R2C 2107, PDF 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": "CON4 FAN ZH-1M5-2A-SMT-V, GPIO2_A6/PWM2"
+      },
+      {
+        "wert": "Anschluss \"Fan (ZH1.5-2A)\" neben K1",
+        "quelle": "friendlyelec_layoutbild",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/8/83/NanoPi_R2C-layout.jpg",
+        "stand": "Bild hochgeladen 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "kuehlkoerper": [
+      {
+        "wert": "Befestigungsloch für Kühlkörper (Ø 1.6 mm) an der Platine",
+        "quelle": "friendlyelec_layoutbild",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/8/83/NanoPi_R2C-layout.jpg",
+        "stand": "Bild hochgeladen 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 3,
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": "SYS rot, WAN grün, LAN grün (Layoutbild/Schaltplan)"
+      },
+      {
+        "wert": 3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "Taster K1 an der Stirnseite neben der USB-A-Buchse",
+        "quelle": "friendlyelec_layoutbild",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/8/83/NanoPi_R2C-layout.jpg",
+        "stand": "Bild hochgeladen 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "im Metallgehäuse durch ein Loch mit Aufdruck \"Reset\" neben USB erreichbar",
+        "quelle": "friendlyelec_gehaeusefoto",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/e/ed/R2sc-02.jpg",
+        "stand": "Bild hochgeladen 2022-01-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "K1 an GPIO0_A0, unter Linux/OpenWrt als Reset-Taste (KEY_RESTART)",
+        "quelle": "linux_dts",
+        "beleg": "https://github.com/torvalds/linux/blob/master/arch/arm64/boot/dts/rockchip/rk3328-nanopi-r2.dtsi",
+        "stand": "Branch master am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "kein Hardware-Reset; Schaltplan erlaubt per Bestückung K1=RESET oder K1=GPIO0_A0"
+      },
+      {
+        "wert": "1 Taste, frei programmierbar",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": "\"KEY x 1 programmable\""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Stiftleiste (3-polig, 2.54 mm, bestückt)",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": "\"3-pin 2.54mm pitch connector\"; zh: 排针 (Stiftleiste); \"innen\" nur im Gehäuse, die nackte Platine ist frei zugänglich"
+      },
+      {
+        "wert": "bestückte 3-polige Stiftleiste \"Debug UART\" zwischen LAN-Buchse und USB-C",
+        "quelle": "friendlyelec_layoutbild",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/8/83/NanoPi_R2C-layout.jpg",
+        "stand": "Bild hochgeladen 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "3-polig, bestückt (R2C Plus)",
+        "quelle": "wikidevi_r2c_plus",
+        "beleg": "https://wikidevi.wi-cat.ru/NanoPi_R2C_Plus",
+        "stand": "Seitenrevision 2023-11-23T11:41:04Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "Schwestergerät R2C Plus"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "Pin 1 GND, Pin 2 TX (vom Board), Pin 3 RX (zum Board)",
+        "quelle": "friendlyelec_schaltplan",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/b/b1/NanoPi_R2C_2107_SCH.pdf",
+        "stand": "Schaltplan NanoPi R2C 2107, PDF 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": "CON3 DBG_UART SIP3-2, Seite 10; RX über Diode D53; kein VCC-Pin. Unterseitenaufdruck laut Layoutbild \"GND TX RX\" (bei 750 px nicht sicher lesbar)"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": "3.3V TTL"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 1500000,
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": "8N1, keine Flusskontrolle (Vorlage 1500000SerialPortDebugSetting)"
+      },
+      {
+        "wert": 1500000,
+        "quelle": "linux_dts",
+        "beleg": "https://github.com/torvalds/linux/blob/master/arch/arm64/boot/dts/rockchip/rk3328-nanopi-r2.dtsi",
+        "stand": "Branch master am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "stdout-path serial2:1500000n8"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "1,5 MBaud: manche USB-TTL-Adapter/Treiber liefern bei dieser Rate nur Zeichensalat; RX/TX ggf. tauschen",
+        "quelle": "openwrt_wiki_r2s",
+        "beleg": "https://openwrt.org/toh/friendlyarm/nanopi_r2s",
+        "stand": "Seitenrevision 2026-05-21 11:24",
+        "sicherheit": "niedrig",
+        "bemerkung": "Angabe für R2S, gleiche Konsole (UART2)"
+      }
+    ],
+    "gpio_leiste": [
+      {
+        "wert": "10-polige Leiste GPIO1 (3.3 V, 5 V, GND, I2C0, UART1, IR_RX)",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "rockchip/armv8",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "rockchip/armv8",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/rockchip/image/armv8.mk",
+        "stand": "Branch main am 2026-10-19 (letzte Aenderung 2026-09-06)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "friendlyarm_nanopi-r2c",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/rockchip/image/armv8.mk",
+        "stand": "Branch main am 2026-10-19 (letzte Aenderung 2026-09-06)",
+        "sicherheit": "hoch",
+        "bemerkung": "DEVICE_PACKAGES kmod-usb-net-rtl8152"
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "Commit 8f578c15 (gemergt 2023-05-18)",
+        "quelle": "openwrt_git_r2c",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8f578c15b3147ec52ceb2ec48e9223143144f2ad",
+        "stand": "Commit 2023-05-13 (Autor), gemergt 2023-05-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "23.05.0",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": "Supported Since Commit verweist dort auf b7a9a183 - das ist der R2S-Commit (Kopierfehler im ToH-Eintrag)"
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.1",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot (OpenWrt-Paket uboot-rockchip, Ziel nanopi-r2c-rk3328, auf der microSD)",
+        "quelle": "openwrt_git_uboot",
+        "beleg": "https://github.com/openwrt/openwrt/commit/60c1fe692896a441e8624afe8643c7f52bd863c9",
+        "stand": "Commit 2023-05-13 (Autor), gemergt 2023-05-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Image auf microSD schreiben",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": "Installation/Recovery: SD card"
+      },
+      {
+        "wert": "kein factory-Image; sysupgrade .img.gz (entpackt auf microSD schreiben)",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/rockchip-armv8",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon-Target rockchip-armv8: factory = false, sysupgrade_ext = '.img.gz'"
+      },
+      {
+        "wert": "\"flash the image onto a class10 SD card and insert into the device\"",
+        "quelle": "openwrt_pr_4694",
+        "beleg": "https://github.com/openwrt/openwrt/pull/4694",
+        "stand": "PR 2021-10-18, nicht gemergt",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "mac_herkunft": [
+      {
+        "wert": "WAN-MAC aus der CID der microSD-Karte erzeugt, LAN = WAN + 1",
+        "quelle": "openwrt_02_network",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/rockchip/armv8/base-files/etc/board.d/02_network",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "macaddr_generate_from_mmc_cid mmcblk0; folgt daraus: neue microSD-Karte = neue MAC (bei Gluon neue Knoten-ID) [abgeleitet]"
+      },
+      {
+        "wert": "MAC-EEPROM vorgesehen, aber unbestückt",
+        "quelle": "friendlyelec_layoutbild",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/8/83/NanoPi_R2C-layout.jpg",
+        "stand": "Bild hochgeladen 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": "\"EEPROM with MAC (unmounted)\"; Schaltplan U11 \"EEPROM with MAC Address\""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://download.friendlyelec.com/nanopir2c",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": "FriendlyWrt"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "nein (Upstream-Gluon: rockchip-armv8 nur R2S, R3S, R4S)",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/rockchip-armv8",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, per Neanderfunk-Patch add-nanopi-r2c (eine Zeile im Target rockchip-armv8)",
+        "quelle": "neanderfunk_firmwareconfigs",
+        "beleg": "https://github.com/Neanderfunk/FirmwareConfigs/blob/main/patches/add-nanopi-r2c.patch",
+        "stand": "Commit bf5b48ea 2026-09-09 (Repo-Stand de173856 2026-09-11)",
+        "sicherheit": "hoch",
+        "bemerkung": "seit 2025-02 (b38c0d1c), für 2025.1 neu geschrieben 2026-09-09"
+      },
+      {
+        "wert": "Yes",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "niedrig",
+        "bemerkung": "ToH-Feld Gluon support; Upstream-Gluon führt das Gerät nicht"
+      }
+    ],
+    "vpn_leistung_mbit": [
+      {
+        "wert": {
+          "openvpn": 85,
+          "wireguard": 325
+        },
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bekannte_probleme": [
+      {
+        "wert": "WAN (YT8521S) fällt nach ifdown/ifup von eth0 aus: PHY-Hard-Reset, danach stmmac \"Failed to reset the dma\"; Fix-PR offen",
+        "quelle": "openwrt_pr_19415",
+        "beleg": "https://github.com/openwrt/openwrt/pull/19415",
+        "stand": "PR 2025-07-15, offen (zuletzt 2025-08-20)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WAN-Link-Abbrüche unter Last mit schwachem Netzteil; nach Netzteiltausch behoben",
+        "quelle": "openwrt_issue_13205",
+        "beleg": "https://github.com/openwrt/openwrt/issues/13205",
+        "stand": "Issue 2023-08-01, geschlossen 2023-08-02",
+        "sicherheit": "mittel",
+        "bemerkung": "23.05.0-rc2"
+      },
+      {
+        "wert": "YT8521 trennt unter Last dauerhaft (24.10.0); Melder-Workaround GRO und tx-scatter-gather aus",
+        "quelle": "openwrt_issue_17948",
+        "beleg": "https://github.com/openwrt/openwrt/issues/17948",
+        "stand": "Issue 2025-02-12, geschlossen 2025-02-15",
+        "sicherheit": "niedrig",
+        "bemerkung": "gemeldet für R2C Plus"
+      },
+      {
+        "wert": "Ethernet-Instabilität, Abhilfe CPU-Governor performance",
+        "quelle": "openwrt_wiki_r2s",
+        "beleg": "https://openwrt.org/toh/friendlyarm/nanopi_r2s",
+        "stand": "Seitenrevision 2026-05-21 11:24",
+        "sicherheit": "niedrig",
+        "bemerkung": "Hinweis für R2S"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/friendlyarm/friendlyarm_nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "keine Geräteseite (toh:friendlyarm:nanopi_r2c existiert nicht)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/friendlyarm/nanopi_r2c",
+        "stand": "Seitenrevision 2026-03-24 03:23",
+        "sicherheit": "mittel",
+        "bemerkung": "Device Page im hwdata-Eintrag leer"
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/NanoPi_R2C_Plus",
+        "quelle": "wikidevi_r2c_plus",
+        "beleg": "https://wikidevi.wi-cat.ru/NanoPi_R2C_Plus",
+        "stand": "Seitenrevision 2023-11-23T11:41:04Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "nur R2C Plus; \"NanoPi R2C\" leitet dorthin weiter"
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "quelle": "friendlyelec_wiki",
+        "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+        "stand": "Seitenrevision 2026-07-28T06:13:35Z",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://wiki.friendlyelec.com/wiki/images/b/b1/NanoPi_R2C_2107_SCH.pdf",
+        "quelle": "friendlyelec_schaltplan",
+        "beleg": "https://wiki.friendlyelec.com/wiki/images/b/b1/NanoPi_R2C_2107_SCH.pdf",
+        "stand": "Schaltplan NanoPi R2C 2107, PDF 2021-08-04",
+        "sicherheit": "hoch",
+        "bemerkung": "Schaltplan; Datenblatt RK3328 unter http://wiki.friendlyelec.com/wiki/images/d/d7/Rockchip_RK3328_Datasheet_V1.1-20170309.pdf"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+      "kategorie": "netzteil_beiliegend",
+      "grund": "Lieferumfang (Netzteil, Gehäuse) nirgends angegeben; R2C im FriendlyElec-Shop nicht mehr gelistet"
+    },
+    {
+      "url": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2C",
+      "kategorie": "leistung_w",
+      "grund": "keine Leistungsaufnahme angegeben, nur Netzteilempfehlung 5 V/2 A"
+    },
+    {
+      "url": "https://wiki.friendlyelec.com/wiki/index.php/File:NanoPi_R2C_2107_PCB_DXF.zip",
+      "kategorie": "montageloecher",
+      "grund": "Maßzeichnung (DXF) nicht ausgewertet: Bohrungen, Montage, Gehäusemasse"
+    },
+    {
+      "url": "https://wiki.friendlyelec.com/wiki/images/a/a5/NanoPi_R2C-BOT.jpg",
+      "kategorie": "seriell_pinbelegung",
+      "grund": "Unterseitenfoto (Aufdruck GND/TX/RX an der Debug-UART) nicht geladen; Pin-1-Lage auf der Platine nur aus Schaltplan"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/pull/19415",
+      "kategorie": "bekannte_probleme",
+      "grund": "Fix für YT8521S-Reset offen; prüfen, ob er in main/25.12 und damit in Gluon landet"
+    },
+    {
+      "url": "https://wiki.friendlyelec.com/wiki/images/e/ed/R2sc-02.jpg",
+      "kategorie": "gehaeuse_material",
+      "grund": "Gehäusefotos R2sc-03..05 und NanoPi_R2S-case1.jpg nicht ausgewertet (Material, Belüftung, Zugang zur Debug-UART)"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 50,
+    "anfragen_curl": 24,
+    "anfragen_gh_api": 26,
+    "notiz": "ToH-Dump ohne R2C; Live-hwdata (2026-03-24) vollstaendig in roh. OpenWrt-Wiki hat keine Geräteseite (R2S-Seite nur für Hinweise). OpenWrt-Commits 8f578c15/60c1fe69/d312f12b, armv8.mk und 02_network auf main, Linux-DTS, PRs 4694/12593/19415 und Issues 13205/17948. FriendlyElec-Wiki en/zh, Schaltplan 2107 (Seite 10 als Bild: Debug-UART CON3 1 GND/2 TX/3 RX, K1, Lüfter), Layoutbild und Gehäusefoto ausgewertet. Upstream-Gluon führt den R2C nicht, nur der Neanderfunk-Patch add-nanopi-r2c. DeviWiki ohne Treffer, WikiDevi nur R2C Plus, FriendlyElec-Shop ohne R2C, keine FCC-ID bekannt. Widerspruch Stromeingang: Wikitext MicroUSB vs. Layoutbild/Schaltplan/ToH USB-C. Kein WLAN, kein PoE, Speicher nur microSD, MAC aus SD-CID. Werkstatt-Protokolle: keine."
+  }
+}

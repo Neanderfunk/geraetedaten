@@ -1,0 +1,2714 @@
+{
+  "image": "raspberrypi-4-model-b",
+  "modell": "Raspberry Pi 4 Model B",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15677656",
+      "bemerkung": "toh_suche.py fand keinen Kandidaten (Marke 'Raspberry Pi Foundation' passt nicht auf 'raspberrypi'); Eintrag per grep im Dump gefunden. Weitere Pi-4-Einträge im Dump: 400 (pid 15677657), Compute Module 4 (pid 15677659), nicht übernommen"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b?do=export_raw",
+      "stand": "Seitenrevision 2026-08-12 19:06",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Live-Seite weicht vom Dump ab: RAM 2048 (Dump 8192), aktuell 25.12.5 (Dump 23.05.0), Serial 115200/8N1 und 3.3 V, Outdoor No, Wireguard 950 Mbit/s, Gluon support 'unknown'"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi?do=export_raw",
+      "stand": "Seitenrevision 2026-03-17 20:40",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Sammelseite aller Raspberry-Pi-Modelle; Rohtext am selben Tag im Lauf raspberrypi-3-model-b geladen und aus dessen Cache übernommen; Bootlog Raspberry Pi 4 Model B Rev 1.1 (OpenWrt, Kernel 5.4.98, 2021)"
+    },
+    "openwrt_git": {
+      "url": "https://github.com/openwrt/openwrt/commit/f781582828475f23abc478a07422db94f1bcda16",
+      "stand": "Commit 2019-07-13 (Autor), gemergt 2019-07-14",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "'brcm2708: Add Raspberry Pi 4 support' (zunächst 32 Bit in bcm2709), keine Hardwareangaben"
+    },
+    "openwrt_git_bcm2711": {
+      "url": "https://github.com/openwrt/openwrt/commit/5e928acf22cdc956eabe6e4b2327b34eb0ee66da",
+      "stand": "Commit 2019-08-02",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "'brcm2708: add bcm2711 subtarget (RPi 4B aarch64)', nur aus gh-Suchergebnis (Titel, Datum)"
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/bcm27xx/image/Makefile",
+      "stand": "Branch main, letzter Commit 2026-07-31",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "am selben Tag im Lauf raspberrypi-3-model-b geladen, aus dessen Cache übernommen"
+    },
+    "gluon_target": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/bcm27xx-bcm2711",
+      "stand": "Branch main, letzter Commit 2023-11-10",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_targets_mk": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/targets.mk",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "aus dem Cache des Laufs raspberrypi-3-model-b (selber Tag)"
+    },
+    "gluon_git": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/dbea6f979e2cfb3b6b313aa8ed66be69c2d9eea8",
+      "stand": "Commit 2023-11-10",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "'bcm27xx-bcm2711: add (broken) support for the Raspberry Pi 4' von Linus Lüssing, getestet auf Rev 1.1"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+      "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+      "abgerufen": "2026-10-19"
+    },
+    "deviwiki_2gb": {
+      "url": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_2GB",
+      "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+      "abgerufen": "2026-10-19"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/RPF_Raspberry_Pi_4_Model_B_4GB",
+      "stand": "Spiegel, Revision unbekannt",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "weicht von DeviWiki ab: WLAN 1T1R/1 Stream (DeviWiki 2T2R/2), fla1 512 KiB, Hinweis 1-GiB-Modell eingestellt, 8-GiB-Modell"
+    },
+    "rpi_doc_modelle": {
+      "url": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/sbcs/sbc-models.adoc",
+      "stand": "Datei geändert 2026-10-12",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Herstellerdoku (Quelle von raspberrypi.com/documentation); aus dem Cache des Laufs raspberrypi-3-model-b (selber Tag)"
+    },
+    "rpi_doc_strom": {
+      "url": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/power-supplies.adoc",
+      "stand": "Datei geändert 2026-10-12 (Messwerte Pi 4 Stand Juni 2019)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "aus dem Cache des Laufs raspberrypi-3-model-b (selber Tag)"
+    },
+    "rpi_doc_revision": {
+      "url": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/revision-codes.adoc",
+      "stand": "Datei geändert 2026-09-07",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "aus dem Cache des Laufs raspberrypi-3-model-b (selber Tag)"
+    },
+    "rpi_doc_eeprom": {
+      "url": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/eeprom-bootloader.adoc",
+      "stand": "Datei geändert 2026-09-29",
+      "abgerufen": "2026-10-19"
+    },
+    "rpi_datenblatt": {
+      "url": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+      "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Dokumentliste: https://pip.raspberrypi.com/categories/545-raspberry-pi-4-model-b"
+    },
+    "rpi_produktbrief": {
+      "url": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+      "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "21 MB, Text per pdftotext; Seite 3 (Physical specification) nur Grafik, nicht ausgewertet"
+    },
+    "rpi_zeichnung": {
+      "url": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008343-DS-1-raspberry-pi-4-mechanical-drawing.pdf",
+      "stand": "PDF erzeugt 2019-05-20",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "als Bild ausgewertet (Maße nur in der Grafik)"
+    },
+    "rpi_schaltplan": {
+      "url": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008345-DS-1-raspberry-pi-4-reduced-schematics.pdf",
+      "stand": "Reduced Schematics RPI-4B Rev 4, Datum 2019-06-18",
+      "abgerufen": "2026-10-19"
+    },
+    "pip_kategorie": {
+      "url": "https://pip.raspberrypi.com/categories/545-raspberry-pi-4-model-b",
+      "stand": "Dokumentliste am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "infineon": {
+      "url": "https://www.infineon.com/part/CYW43455",
+      "stand": "Produktseite, Stand unbekannt",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Chiphersteller-Seite des WLAN-Chips (Cypress gehört zu Infineon), nicht boardspezifisch"
+    },
+    "freifunk_forum_suche": {
+      "url": "https://forum.freifunk.net/search.json?q=Raspberry%20Pi%204%20gluon",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "nur Themenliste; nichts Pi-4-spezifisch Belastbares (ein Beitrag 2019 im Offloader-Thread 16230 verweist auf OpenWrt-Forum)"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "15677656",
+      "devicetype": "Single Board Computer",
+      "brand": "Raspberry Pi Foundation",
+      "model": "Raspberry Pi 4",
+      "version": "B",
+      "fccid": "https://fcc.io/2ABCB/-RPI4B",
+      "availability": "Available 2020",
+      "whereavailable": "widely available",
+      "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=f781582828475f23abc478a07422db94f1bcda16",
+      "supportedsincerel": "21.02.0",
+      "supportedcurrentrel": "23.05.0",
+      "unsupported_functions": "NULL",
+      "target": "bcm27xx",
+      "subtarget": "bcm2711",
+      "packagearchitecture": "aarch64_cortex-a72",
+      "bootloader": "¿",
+      "cpu": "Broadcom BCM2711",
+      "cpucores": "4",
+      "cpumhz": "1500",
+      "flashmb": "microSDXC",
+      "rammb": "8192",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "1",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "Broadcom BCM54213PE",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "Cypress CYW43455",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "a/n/ac",
+      "wlancomments": "SDIO connected",
+      "wlandriver": "brcmfmac",
+      "detachableantennas": "-",
+      "bluetooth": "5.0",
+      "usbports": "2x 2.0,2x 3.0,1x OTG",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "Composite,HDMI",
+      "audioports": "Headphone jack,HDMI",
+      "phoneports": "-",
+      "commentsavports": "Composite audio port is integrated on 3.5mm audio jack",
+      "serial": "Yes",
+      "serialconnectionparameters": "¿",
+      "jtag": "¿",
+      "ledcount": "¿",
+      "buttoncount": "¿",
+      "gpios": "more than 20",
+      "powersupply": "5 VDC, 3.0 A",
+      "devicepage": "toh:raspberry_pi_foundation:raspberry_pi",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "https://forum.openwrt.org/t/rpi4-community-build/69998",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "Raspberry Pi 4",
+      "gitsearch": "Raspberry Pi 4",
+      "wikideviurl": "https://wikidevi.wi-cat.ru/RPF_Raspberry_Pi_4_Model_B_4GB",
+      "oemdevicehomepageurl": "https://www.raspberrypi.com/products/raspberry-pi-4-model-b/",
+      "firmwareoemstockurl": "https://www.raspberrypi.com/software/",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.0/targets/bcm27xx/bcm2711/openwrt-23.05.0-bcm27xx-bcm2711-rpi-4-squashfs-factory.img.gz",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/bcm27xx/bcm2711/openwrt-23.05.0-bcm27xx-bcm2711-rpi-4-squashfs-sysupgrade.img.gz",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2711/openwrt-bcm27xx-bcm2711-rpi-4-squashfs-factory.img.gz",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2711/openwrt-bcm27xx-bcm2711-rpi-4-squashfs-sysupgrade.img.gz",
+      "installationmethods": "SD card",
+      "commentinstallation": "",
+      "recoverymethods": "SD card",
+      "commentrecovery": "",
+      "picture": "media:raspberry_pi_foundation:rpi4b.jpg",
+      "comments": "The 2 micro-HDMI ports support up to two 4K 60Hz. Newer hardware revs are 1800 MHz.",
+      "page": "toh:hwdata:raspberry_pi_foundation:raspberry_pi_foundation_raspberry_pi_4_b"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "Single Board Computer",
+      "Brand": "Raspberry Pi Foundation",
+      "Model": "Raspberry Pi 4",
+      "Versions": "B",
+      "FCCID_urls": "https://fcc.io/2ABCB/-RPI4B",
+      "Availability_availability": "Available 2025",
+      "Where available": "widely available",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=f781582828475f23abc478a07422db94f1bcda16",
+      "Supported Since Rel_releasesince": "21.02.0",
+      "Supported Current Rel_releasecurrent": "25.12.5",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "unknown",
+      "Target_target": "bcm27xx",
+      "Subtarget": "bcm2711",
+      "Package architecture_pkg-arch": "aarch64_cortex-a72",
+      "Bootloader_bootloader": "¿",
+      "CPU": "Broadcom BCM2711",
+      "CPU Cores_numcores_": "4",
+      "CPU MHz": "1500",
+      "Flash MB_mbflashs": "microSDXC",
+      "RAM MB_mbram": "2048",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "Broadcom BCM54213PE",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Cypress CYW43455",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN 6.0GHz_wlan60": "-",
+      "WLAN 60.0GHz_wlan60g": "-",
+      "WLAN Comments_": "SDIO connected",
+      "WLAN driver_wlan-drivers": "brcmfmac",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "5.0",
+      "miniPCI ports_port-minipci": "",
+      "USB ports_port-usbs": "2x 2.0, 2x 3.0, 1x OTG",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "Composite, HDMI",
+      "Audio ports_port-audios": "Headphone jack, HDMI",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "Composite video out is integrated on 3.5mm audio jack; 2x micro-HDMI ports support up to to 4K 60Hz.",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "¿",
+      "Button count_numbutton": "¿",
+      "GPIOs_numgpio": "more than 20",
+      "Power Supply": "5 VDC, 3.0A via USB Type-C",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "950",
+      "Device Page_page": "toh:raspberry_pi_foundation:raspberry_pi",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "https://forum.openwrt.org/t/rpi4-community-build/69998",
+      "Forum search_search-forums": "Raspberry Pi 4",
+      "Git search_search-gits": "Raspberry Pi 4",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/RPF_Raspberry_Pi_4_Model_B_4GB",
+      "WikiDevi ID_hwinfo-id": "RPF_Raspberry_Pi_4_Model_B_4GB",
+      "OEM Device Homepage URL_url": "https://www.raspberrypi.com/products/raspberry-pi-4-model-b/",
+      "Firmware OEM Stock URL_url": "https://www.raspberrypi.com/software/",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/bcm27xx/bcm2711/openwrt-25.12.5-bcm27xx-bcm2711-rpi-4-squashfs-factory.img.gz",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/bcm27xx/bcm2711/openwrt-25.12.5-bcm27xx-bcm2711-rpi-4-squashfs-sysupgrade.img.gz",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2711/openwrt-bcm27xx-bcm2711-rpi-4-squashfs-factory.img.gz",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2711/openwrt-bcm27xx-bcm2711-rpi-4-squashfs-sysupgrade.img.gz",
+      "Installation method(s)_method-installations": "SD card",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "SD card",
+      "Comment recovery": "",
+      "Picture_img100s": "media:raspberry_pi_foundation:rpi4b.jpg",
+      "Comments_": "RAM: 1, 2,4, 8GB options; Newer hardware revs are 1800MHz.",
+      "_infobox": "meta:infobox:broadcom_wifi (Warnbox zu Broadcom-WLAN eingebunden)"
+    },
+    "openwrt_wiki": {
+      "Einleitung": "Raspberry Pi 4 has significantly higher spec CPU, RAM, and storage while maintaining the form factor, low power consumption, and passive cooling. Its capability can exceed many top tier routers. However it requires adding a USB 3.0 to gigabit ethernet adapter, gigabit switch, and wireless access point to reach similar networking functionality.",
+      "Subtarget": "bcm2711 for the Raspberry Pi 4",
+      "Wireless Country Code": "Setting the Country Code under Network -> Wireless in LuCI does not work with the Raspberry Pi, you will need to set the country code in the latest Raspberry Pi OS. Starting with Raspberry Pi 3 B+, the on-board WiFi won't even start if there is no country code.",
+      "Updating the WiFi firmware": "Only necessary prior to OpenWrt 21.02.3 (PR 9504). Older versions with the Pi 4B: trouble connecting to higher 5 GHz channels (channel 44 ok, 153 not); fixed by newer cypress firmware 7.45.234.",
+      "Updating the EEPROM": "bootloader EEPROM has many improvements since launch for performance, bug fixes, and power draw/thermal throttling issues; recommended to update; OpenWrt package bcm27xx-eeprom provides rpi-eeprom-*",
+      "SoC-Tabelle BCM2711": "BCM2711 | ARMv8 Cortex-A72 (Quad Core) | Videocore VI (@500MHz) | L2 1024KB",
+      "Taktrate": "The Pi 4 B originally shipped at 1.5GHz, later revisions include an improved onboard power supply and ship at 1.8GHz. Users should be sure to attach the self-adhesive heatsinks.",
+      "Case Fan": "official case fan and other GPIO fans: kmod-hwmon-gpiofan, dtoverlay=gpio-fan,gpiopin=14,temp=80000",
+      "Power Notes": "Often a 1A (2A for rpi4) is needed. If unsure, use the official Raspberry Pi 15W USB-C power supply (5.1V / 3.0A DC). Possible to supply power via GPIO pins. The early rpi4 model has an issue with some USB-C cables, this is fixed in rev 1.2 and newer. Thermal throttling was also improved, update the EEPROM.",
+      "Serial": "Serial is available via GPIO. Pin 6 Ground, Pin 8 TX, Pin 10 RX. Connect via RS232 at 3.3V (not older 12V). 115200 bps 8N1.",
+      "Boot Log (Raspberry Pi 4)": "Machine model: Raspberry Pi 4 Model B Rev 1.1; Linux 5.4.98 (OpenWrt r15540); Memory 3829208K/4050944K; console=ttyAMA0,115200; fe201000.serial: ttyAMA0 PL011; bcmgenet fd580000.ethernet GENET 5.0; brcm-pcie link up 5 GT/s x1; xhci_hcd USB 3.0 (VL805, USB2.0 Hub 2109:3431); mmc0 SDHCI fe340000.emmc2; MAC DC:A6:32:03:78:1E",
+      "Resources": "https://forum.openwrt.org/t/raspberry-pi-4-released/39444 (original Pi 4 topic); https://forum.openwrt.org/t/rpi4-community-build/69998 (community builds)"
+    },
+    "openwrt_git": {
+      "message": "brcm2708: Add Raspberry Pi 4 support\n\n- Support added to bcm2709 subtarget (32 bit).\n- 64 bit kernel still requires many hacks on RPi 4B.\n\nSigned-off-by: Álvaro Fernández Rojas <noltari@gmail.com>",
+      "author": "Álvaro Fernández Rojas",
+      "author_date": "2019-07-13T11:33:44Z",
+      "commit_date": "2019-07-14T10:44:14Z",
+      "files": [
+        "target/linux/brcm2708/base-files/etc/board.d/02_network",
+        "target/linux/brcm2708/base-files/lib/preinit/05_set_preinit_iface_brcm2708",
+        "target/linux/brcm2708/bcm2709/config-4.19",
+        "target/linux/brcm2708/bcm2709/target.mk",
+        "target/linux/brcm2708/image/Makefile"
+      ]
+    },
+    "openwrt_git_bcm2711": {
+      "suche": "gh api search/commits?q=bcm2711+subtarget+repo:openwrt/openwrt",
+      "treffer": [
+        [
+          "5e928acf22cdc956eabe6e4b2327b34eb0ee66da",
+          "2019-08-02T20:39:13.000+02:00",
+          "brcm2708: add bcm2711 subtarget (RPi 4B aarch64)"
+        ],
+        [
+          "7d7aa2fd924c27829ec25f825481554dd81bce97",
+          "2020-02-14T14:10:51.000+01:00",
+          "brcm2708: rename target to bcm27xx"
+        ],
+        [
+          "3f7cc9d0144dbc429d19c1801cc6be149f969db9",
+          "2022-11-23T20:13:46.000+01:00",
+          "bcm27xx: disable duplicate sdhost driver"
+        ],
+        [
+          "8b63d9ac4ae9bd9a83a656825fb0c74fe0f4f25f",
+          "2024-01-25T17:46:46.000+01:00",
+          "bcm27xx: add new bcm2712 subtarget"
+        ],
+        [
+          "73b19f90c2322722be1ede3bcd037df9644c6046",
+          "2026-07-31T17:31:12.000+02:00",
+          "bcm27xx: add bcm27xx-i2c/spi meta-packages, drop hardcoded kmods"
+        ],
+        [
+          "1d7dacee9a0d0fd0c70c0fd31fd1921f221a14c1",
+          "2026-10-05T22:15:17.000+02:00",
+          "build: add -mcpu for cortex-a72 and cortex-a76"
+        ]
+      ]
+    },
+    "openwrt_image_mk": {
+      "Device/rpi-4": "define Device/rpi-4\n  DEVICE_MODEL := 4B/400/CM4/CM4S\n  DEVICE_VARIANT := (64bit)\n  KERNEL_IMG := kernel8.img\n  DEVICE_DTS := \\\n\tbroadcom/bcm2711-rpi-4-b \\\n\tbroadcom/bcm2711-rpi-400 \\\n\tbroadcom/bcm2711-rpi-cm4-io \\\n\tbroadcom/bcm2711-rpi-cm4 \\\n\tbroadcom/bcm2711-rpi-cm4s\n  SUPPORTED_DEVICES := \\\n\traspberrypi,400 \\\n\traspberrypi,4-compute-module \\\n\traspberrypi,4-compute-module-s \\\n\traspberrypi,4-model-b\n  DEVICE_PACKAGES := \\\n\t$(WIFI_43455_FW) \\\n\t$(BRCM_WIFI_DRIVER) \\\n\t$(LAN_DRIVERS)\n  IMAGE/sysupgrade.img.gz := boot-common | boot-2711 | sdcard-img | gzip | append-metadata\n  IMAGE/factory.img.gz := boot-common | boot-2711 | sdcard-img | gzip",
+      "WIFI_43455_FW": "cypress-firmware-43455-sdio brcmfmac-nvram-43455-sdio",
+      "BRCM_WIFI_DRIVER": "kmod-brcmfmac wpad-basic-mbedtls",
+      "LAN_DRIVERS": "kmod-usb-net-lan78xx kmod-usb-net-rtl8152 kmod-r8169"
+    },
+    "gluon_target": {
+      "datei": "include 'bcm27xx.inc'\n\ndevice('raspberrypi-4-model-b', 'rpi-4', {\n\tmanifest_aliases = {\n\t\t-- from Gluon 2023.1 and older\n\t\t'raspberry-pi-4-model-b-rev-1.1',\n\t\t'raspberry-pi-4-model-b-rev-1.2', -- untested\n\t\t'raspberry-pi-4-model-b-rev-1.4', -- untested\n\t\t'raspberry-pi-4-model-b-rev-1.5', -- untested\n\t},\n})",
+      "bcm27xx.inc": "-- We do not use the ext4 images, so we do not want to build them.\nconfig('TARGET_ROOTFS_EXT4FS', false)\n\ndefaults {\n\tfactory_ext = '.img.gz',\n\tsysupgrade_ext = '.img.gz',\n}"
+    },
+    "gluon_targets_mk": {
+      "zeile": "$(eval $(call GluonTarget,bcm27xx,bcm2711)) # BROKEN: No 11s support, no reset button, sys LED issues",
+      "block": "ifeq ($(BROKEN),1)"
+    },
+    "gluon_git": {
+      "message": "bcm27xx-bcm2711: add (broken) support for the Raspberry Pi 4\n\nKnown issues:\n\n* 11s is not working\n* has no reset button, only SSH access, serial access or an external SD\n  card update can return it to config mode at the moment\n* LED: generally the red sys LED is working, including boot and failsafe\n  blink patters, but:\n  * sometimes not lit after boot\n  * not blinking in config mode; instead sometimes either persistently on\n    and sometimes persistently off after booting into config mode\n\nTherefore adding it as broken.\n\nHowever, due to its CPU power and small size still interesting as a VPN\noffloader or WiFi rooftop core node (e.g. to Gluon'ify 5+60GHz devices).\n\nManifest aliases are added for upgrades from unreleased Gluon builds\nand can be removed again at some point in the future.\n\nTested on a Raspberry Pi 4 Model B Rev 1.1.\n\nSigned-off-by: Linus Lüssing <linus.luessing@c0d3.blue>",
+      "author": "Linus Lüssing",
+      "date": "2023-11-10T04:38:48Z",
+      "files": [
+        ".github/filters.yml",
+        "targets/bcm27xx-bcm2711",
+        "targets/targets.mk"
+      ]
+    },
+    "deviwiki": {
+      "brand": "RPF",
+      "model": "Raspberry Pi",
+      "revision": "4 Model B (4GB)",
+      "price": "55",
+      "est_release_date": "06/23/2019",
+      "fcc_date": "06/24/2019",
+      "manuf_country": "China",
+      "is_manuf": "No",
+      "fcc_id": "2ABCB-RPI4B",
+      "ic_id": "20953-RPI4B",
+      "pwr_v": "5",
+      "pwr_amp": "3",
+      "pwr_conn": "USB (Type C)",
+      "pwr_poe": "ns",
+      "cpu1_brand": "Broadcom",
+      "cpu1_model": "BCM2711;BROADCOM(R), 2711ZPKFSB06B0T, TE1903, 6863-02 B3 W;",
+      "cpu1_cspeed": "1.5 GHz",
+      "cpu1_cores": "4",
+      "ram1": "4 GiB",
+      "ram1_brand": "Micron",
+      "ram1_model": "MT53D1024M32D4DT-053 WT:D",
+      "expansion_if_types": "USB 2.0, USB 3.0 (Type A),",
+      "expansion_usb_num": "4",
+      "wi1_chip1_brand": "Cypress",
+      "wi1_chip1_model": "CYW43455",
+      "wi1_802dot11_protocols": "abgn+ac",
+      "wi1_txchains": "2",
+      "wi1_rxchains": "2",
+      "wi1_sstreams": "2",
+      "eth_chip1_brand": "Broadcom",
+      "eth_chip1_model": "BCM54213PE;BCM54213PE, B1KMLG, TA1848 P31, 00G-05 1 W;",
+      "lan_speed": "1G",
+      "lan_ports": "1",
+      "addl_chips": "Super Speed USB 3.0 Host Controller;VIA Labs, Inc;VL805;VLI, VL805-Q6, 1844, A1943X6000;1;,,,",
+      "flags": "Bluetooth 5.0, DFS, FCC radio module certified, Audio out (3.5 mm), GPIO, Micro HDMI, MicroSD Card slot,",
+      "802dot11_protocols": "abgn+ac",
+      "_text": ":{{ProductPage|https://www.raspberrypi.org/products/raspberry-pi-4-model-b}}\n\nIn addition to the $55 model with 4 GiB of RAM, a version with 2 GiB of RAM is available for $45 and a 1 GiB version is available for $35."
+    },
+    "deviwiki_2gb": {
+      "brand": "RPF",
+      "model": "Raspberry Pi",
+      "revision": "4 Model B (2GB)",
+      "upc": "0765756931175",
+      "price": "45",
+      "est_release_date": "6/23/2019",
+      "fcc_date": "6/24/2019",
+      "manuf_country": "UK",
+      "is_manuf": "No",
+      "manuf": "Element14",
+      "type": "single-board computer",
+      "fcc_id": "2ABCB-RPI4B,",
+      "ic_id": "20953-RPI4B",
+      "pwr_v": "5",
+      "pwr_amp": "3",
+      "pwr_conn": "USB (Type C)",
+      "cpu1_brand": "Broadcom",
+      "cpu1_model": "BCM2711;BROADCOM(R), 2711ZPKFSB06B0T, TE1912, 638-07 B3 W;",
+      "cpu1_cspeed": "1.5 GHz",
+      "cpu1_cores": "4",
+      "fla1": "512 KiB",
+      "ram1": "2 GiB",
+      "ram1_brand": "Micron",
+      "ram1_model": "MT53D512M32D2DS-053 WT:D",
+      "expansion_if_types": "USB 2.0, USB 3.0 (Type A),",
+      "expansion_usb_num": "4",
+      "serial": "yes,, 3.3V TTL,, via GPIO header,, (115200,8,N,1),",
+      "wi1_chip1_brand": "Cypress",
+      "wi1_chip1_model": "CYW43455",
+      "wi1_802dot11_protocols": "abgn+ac",
+      "wi1_txchains": "2",
+      "wi1_rxchains": "2",
+      "wi1_sstreams": "2",
+      "eth_chip1_brand": "Broadcom",
+      "eth_chip1_model": "BCM54213PE;BCM54213PE, B1KMLG, TA1912 P21, 009-23 1 W;",
+      "lan_speed": "1G",
+      "lan_ports": "1",
+      "addl_chips": "Super Speed USB 3.0 Host Controller;VIA Labs, Inc;VL805;VLI, VL805-Q6, 1914, A1943V5900;1;,,,\n5 output Universal PMIC;Exar;MxL7704;MXS, MXL7704-P4, F4CM27, 1913;1;,,,",
+      "flags": "Bluetooth 5.0 (BLE), DFS, FCC radio module certified, Audio out (3.5 mm), GPIO, Micro HDMI, Micro SD Card slot, MIPI CSI, MIPI DSI,",
+      "stock_os": "Linux;4.19.50-v7L+;Raspbian Gnu/Linux 10",
+      "802dot11_protocols": "abgn+ac",
+      "oui": "DC:A6:32",
+      "oui_eth": "DC:A6:32",
+      "_text": ":{{ProductPage|https://www.raspberrypi.org/products/raspberry-pi-4-model-b}}\n\nIn addition to the $45 model with 2 GiB of RAM, a version with 4 GiB of RAM is available for $55 and a 1 GiB version is available for $35.\n\n''Raspberry Pi 4 Model B'' and ''© Raspberry Pi 2018'' are silkscreened near the 40 pin GPIO connector.  ''FCC Made in the UK'' and ''HDMI'' are silkscreened near the micro HDMI ports."
+    },
+    "wikidevi": {
+      "brand": "RPF",
+      "model": "Raspberry Pi 4",
+      "revision": "Model B (4GB)",
+      "price": "55",
+      "manuf_country": "China",
+      "is_manuf": "No",
+      "manuf": "Element14",
+      "type": "single-board computer",
+      "est_release_date": "06/23/2019",
+      "fcc_date": "06/24/2019",
+      "fcc_id": "2ABCB-RPI4B",
+      "ic_id": "20953-RPI4B",
+      "pwr_v": "5",
+      "pwr_amp": "3",
+      "pwr_conn": "USB (Type C)",
+      "pwr_poe": "ns",
+      "cpu1_brand": "Broadcom",
+      "cpu1_model": "BCM2711;BCM2711ZP, KFSB06B0T, TE1903, 6863-02 B3 W;",
+      "cpu1_cspeed": "1.5 GHz",
+      "cpu1_cores": "4",
+      "fla1": "512 KiB",
+      "fla1_brand": "",
+      "fla1_model": "",
+      "ram1": "4 GiB",
+      "ram1_brand": "Micron",
+      "ram1_model": "MT53D1024M32D4DT-053 WT:D",
+      "expansion_if_types": "USB 2.0, USB 3.0 (Type A)",
+      "expansion_usb_num": "4",
+      "wi1_chip1_brand": "Cypress",
+      "wi1_chip1_model": "CYW43455",
+      "wi1_802dot11_protocols": "abgn+ac",
+      "wi1_txchains": "1",
+      "wi1_rxchains": "1",
+      "wi1_sstreams": "1",
+      "eth_chip1_brand": "Broadcom",
+      "eth_chip1_model": "BCM54213;BCM54213PE, B1KMLG, TA1848 P31, 00G-05 1 W;",
+      "lan_speed": "1GbE",
+      "lan_ports": "1",
+      "addl_chips": "Super Speed USB 3.0 Host Controller;VIA Labs;VL805;VLI, VL805-Q6, 1844, A1943X6000;1;",
+      "flags": "Bluetooth 5.0, MicroSD Card slot, Audio out (3.5 mm), Micro HDMI, GPIO, DFS",
+      "802dot11_protocols": "abgn+ac",
+      "_text": "{{TagLine|Raspberry Pi 4 Model B}}\n:{{ProductPage|https://www.raspberrypi.org/products/raspberry-pi-4-model-b}}\n\n{{See also|RPF Raspberry Pi series}}\n\n\"Raspberry Pi 4 Model B\" and \"Raspberry Pi 2018\" are silkscreened near the 40-pin GPIO connector.\n:\"FCC Made in the UK \"and \"HDMI\" are silkscreened near the micro HDMI ports.\n\n*In addition to this discontinued model with 1 GiB of RAM for $35,\n:a version with 2 GiB of RAM is available for $45, \n:a version with 4 GiB for $55 and \n:a 8 GiB version is available for $75.\n\n__NOTOC__"
+    },
+    "rpi_doc_modelle": {
+      "Abmessungen": "approximately 85 mm × 56 mm",
+      "Zeichnungen": "PDF RP-008343-DS, DXF RP-008342-DS, Schaltplan RP-008345-DS",
+      "SoC": "Broadcom BCM2711, 1.8 GHz quad-core 64-bit Arm Cortex-A72 (CPU) and 500 MHz VideoCore VI (GPU)",
+      "Memory": "LPDDR4 RAM that runs at 3200 MHz; a choice of 1, 2, 3, 4, or 8 GB of RAM",
+      "Wireless module": "dual-band (either 2.4 GHz or 5 GHz) 802.11ac Wi-Fi; Bluetooth 5.0 and BLE",
+      "USB controller": "VL805 behind the USB ports",
+      "Ethernet PHY": "dedicated PHY connects the Gigabit Ethernet interface in the SoC to the RJ45 port; Ethernet controller contained within the SoC; line speeds up to 1 Gb/s",
+      "USB 3.0 ports": "Two USB 3.0 ports (blue)",
+      "USB 2.0 ports": "Two USB 2.0 ports (black)",
+      "Gigabit Ethernet port": "RJ45, two LEDs at the bottom (connectivity and activity); supports PoE when used with a PoE+ HAT",
+      "PoE header": "four-pin header located near the GPIO header; with PoE+ HAT draw power from Ethernet instead of USB-C",
+      "AV jack": "3.5 mm, 4-pole stereo audio and composite video",
+      "Micro-HDMI ports": "HDMI0 and HDMI1, two 4K displays at 30 Hz or one 4K display at 60 Hz",
+      "CSI (camera) port": "2-lane MIPI CSI, 15-pin, 1 mm pitch",
+      "DSI (display) port": "2-lane MIPI DSI, 15-pin, 1 mm pitch",
+      "USB Type-C power port": "5 V at 3 A (15 W) required to power the board and attached peripherals",
+      "GPIO header": "40 metal pins, two rows of 20",
+      "MicroSD card slot": "underside of the board",
+      "Änderungen ggü. 3B+": "USB-C statt Micro-USB, echtes Gigabit statt über USB-Controller, eigener USB-Controller, Bluetooth 5.0"
+    },
+    "rpi_doc_strom": {
+      "Versorgung": "All models require a 5.1V supply; Raspberry Pi 4 uses a USB-C connector; recommended 3A USB-C Supply for Raspberry Pi 4",
+      "PoE": "The Ethernet jack on Raspberry Pi 4B and 3B+ is PoE capable, supporting the IEEE 802.3af-2003 PoE standard. All Raspberry Pi models with a PoE-capable Ethernet jack require a HAT to draw power through the Ethernet port.",
+      "Recommended PSU current capacity": "3.0A",
+      "Maximum total USB peripheral current draw": "1.2A",
+      "Typical bare-board active current consumption": "600mA",
+      "Messung 4B Boot Max/Avg": "0.85 / 0.7 A",
+      "Messung 4B Idle Avg": "0.6 A",
+      "Messung 4B Video Max/Avg": "0.85 / 0.78 A",
+      "Messung 4B Stress Max/Avg": "1.25 / 1.2 A",
+      "Messung 4B Halt current": "0.023 A",
+      "Messbedingungen": "Raspberry Pi OS June 2019, room temperature, HDMI monitor, USB keyboard and mouse, Pi 4 connected to Ethernet; without additional USB devices or HAT",
+      "PMIC": "Extra PMIC features on Raspberry Pi 4 (Whitepaper RP-004340-WP)"
+    },
+    "rpi_doc_revision": {
+      "Board-Typ": "0x11: 4B",
+      "Revisionscodes 4B": {
+        "a03111": "4B Rev 1.1, 1 GB, Sony UK",
+        "b03111": "4B Rev 1.1, 2 GB, Sony UK",
+        "c03111": "4B Rev 1.1, 4 GB, Sony UK",
+        "b03112": "4B Rev 1.2, 2 GB, Sony UK",
+        "c03112": "4B Rev 1.2, 4 GB, Sony UK",
+        "b03114": "4B Rev 1.4, 2 GB, Sony UK",
+        "c03114": "4B Rev 1.4, 4 GB, Sony UK",
+        "d03114": "4B Rev 1.4, 8 GB, Sony UK",
+        "b03115": "4B Rev 1.5, 2 GB, Sony UK",
+        "c03115": "4B Rev 1.5, 4 GB, Sony UK",
+        "d03115": "4B Rev 1.5, 8 GB, Sony UK"
+      },
+      "Device-Tree": "Raspberry Pi 4 Model B | raspberrypi | 4-model-b | brcm | bcm2711"
+    },
+    "rpi_doc_eeprom": {
+      "BOOT_UART": "On Raspberry Pi 4, the primary UART is exposed on GPIO 14 and 15. Configure the receiving debug terminal at 115200 bps, 8 data bits, 1 stop bit, no parity.",
+      "SD-Überstrom": "Raspberry Pi 4 Model B, Raspberry Pi 5 ...: bootloader switches off power to the SD card on over-current",
+      "MAC": "on Raspberry Pi 4 and 5 the MAC address is no longer generated from the serial number",
+      "Netzwerk-GUID": "FourCC RPi4 0x34695052",
+      "Recovery": "On a Raspberry Pi 4, the ROM can already load recovery.bin from the SD card",
+      "VL805": "Raspberry Pi 4B USB configuration: two USB 3.0 ports and four USB 2.0 ports (VL805-Firmware)",
+      "POWER_OFF": "On Raspberry Pi 4 version 1.3 and older, the configurable/long power off requires the XHCI controller to be enabled"
+    },
+    "rpi_datenblatt": {
+      "Titel": "Raspberry Pi 4 Model B Datasheet, Release 1.1, March 2024",
+      "Release History": "1 21/06/2019 First release; 1.1 12/03/2024 Updated obsolescence statement and electrical specification",
+      "Introduction": "The Pi4B is available with 1, 2, 4, or 8 gigabytes of LPDDR4 SDRAM.",
+      "Hardware": "Quad core 64-bit ARM-Cortex A72 running at 1.5GHz; 1, 2 and 4 Gigabyte LPDDR4 RAM options; H.265 4Kp60 decode; H.264 1080p60 decode; VideoCore VI; dual HDMI up to 4Kp60",
+      "Interfaces": "802.11 b/g/n/ac Wireless LAN; Bluetooth 5.0 with BLE; 1x SD Card; 2x micro-HDMI; 2x USB2; 2x USB3; 1x Gigabit Ethernet port (supports PoE with add-on PoE HAT); 1x CSI; 1x DSI; 28x user GPIO (up to 6x UART, 6x I2C, 5x SPI, SDIO, DPI, PCM, 2x PWM, 3x GPCLK)",
+      "Absolute Maximum Ratings": "VIN 5V Input Voltage -0.5 .. 6.0 V",
+      "DC Characteristics": "VDD IO = 3.3V (GPIO bank tied to on-board 3.3V rail)",
+      "Power Requirements": "good quality USB-C power supply capable of delivering 5V at 3A. If attached downstream USB devices consume less than 500mA, a 5V, 2.5A supply may be used.",
+      "GPIO": "28 BCM2711 GPIOs via standard 40-pin header; GPIO14 ALT0 TXD0, GPIO15 ALT0 RXD0",
+      "SD/SDIO": "dedicated SD card socket, 1.8V DDR50 (50 MB/s peak)",
+      "USB": "2x USB2 and 2x USB3 type-A; downstream USB current limited to approximately 1.1A in aggregate",
+      "HDMI": "2x micro-HDMI, CEC, HDMI 2.0 up to 4Kp60",
+      "Temperature Range and Thermals": "recommended ambient operating temperature range is 0 to 50 degrees Celsius; governor throttles so CPU never exceeds 85 degrees C; operates without extra cooling, for continuous load further cooling may be needed",
+      "Availability": "until at least January 2031"
+    },
+    "rpi_produktbrief": {
+      "Processor": "Broadcom BCM2711, quad-core Cortex-A72 (Arm v8) 64-bit SoC @ 1.8GHz",
+      "Memory": "1GB, 2GB, 3GB, 4GB or 8GB LPDDR4 (depending on model) with on-die ECC",
+      "Connectivity": "2.4 GHz and 5.0 GHz IEEE 802.11b/g/n/ac wireless LAN, Bluetooth 5.0, BLE; Gigabit Ethernet; 2 × USB 3.0 ports; 2 × USB 2.0 ports",
+      "GPIO": "Standard 40-pin GPIO header (fully backwards-compatible)",
+      "Video and sound": "2 × micro HDMI ports (up to 4Kp60 supported); 2-lane MIPI DSI display port; 2-lane MIPI CSI camera port; 4-pole stereo audio and composite video port",
+      "Multimedia": "H.265 (4Kp60 decode); H.264 (1080p60 decode, 1080p30 encode); OpenGL ES 3.0 graphics",
+      "SD card": "microSD card slot for loading operating system and data storage",
+      "Input power": "5V DC via USB-C connector (minimum 3A); 5V DC via GPIO header (minimum 3A); Power over Ethernet (PoE)-enabled (requires separate PoE HAT); a good-quality 2.5A supply can be used if downstream USB peripherals consume less than 500mA in total",
+      "Operating temperature": "0ºC to 50ºC",
+      "MTBF Ground Benign": "211 000 hours",
+      "Production lifetime": "until at least January 2034",
+      "List price": "1GB $35; 2GB $67.50; 3GB $83.75; 4GB $100; 8GB $165",
+      "Overview": "dual-band wireless LAN and Bluetooth have modular compliance certification; backwards compatible with Raspberry Pi 3 Model B+, similar power consumption",
+      "Safety warnings": "external power supply rated at 5V/3A DC or 5.1V/3A DC minimum; well ventilated environment, case should not be covered; do not expose to water or moisture; designed for reliable operation at normal ambient room temperatures; PCB UL94-V0 (Compliance-Doku)"
+    },
+    "rpi_zeichnung": {
+      "Platine": "85 × 56 mm, Eckenradius 3.0 mm",
+      "Montagelöcher": "4 Stück, Lochabstand 58 × 49 mm, Mitte 3.5 mm von den Rändern (Lochdurchmesser in der Zeichnung nicht angegeben)",
+      "Bauteilhöhen Z": "USB-Doppelbuchsen Z=16.0, RJ45 Z=13.5, GPIO-Leiste Z=8.5, AV-Buchse Z=6.0, DSI/CSI Z=5.5, USB-C Z=3.2, Micro-HDMI Z=3.0, SoC Z=2.4",
+      "Lagen": "USB-C 3.5+7.7 mm, Micro-HDMI 3.5+7.7+14.8 und +13.5 mm, AV-Buchse 53.5 mm vom linken Rand, RJ45 Mitte 45.75 mm vom unteren Rand, USB-Buchsen Mitte 27 und 9 mm"
+    },
+    "rpi_schaltplan": {
+      "Titel": "Raspberry Pi 4 Model B (REDUCED), Ref RPI-4B, Rev 4, Date Tuesday June 18 2019, Drawn by James Adams",
+      "J2": "RUN, GLOBAL_EN HEADER (Pins GLOBAL_EN, RUN, GND); NOTE RUN IS 3V3, GLOBAL_EN IS 5V",
+      "J1": "USB-C POWER IN (USB2 ONLY), CC1/CC2 je 5K1",
+      "J8": "GPIO EXPANSION 40-polig; Pin 6 GND, Pin 8 GPIO14 (TXD0), Pin 10 GPIO15 (RXD0); Pins 27/28 ID_SD/ID_SC für HAT-EEPROM",
+      "J14": "PoE HEADER 4-polig (TR0_TAP..TR3_TAP)",
+      "J10": "GIGABIT ETHERNET mit LEDs YEL/GRN (LAN_LEDY, LAN_LEDG)",
+      "LEDs": "D3 Red POWER OK \"PWR\" LED (PWR_LED_OFF), D5 Green STATUS \"ACT\" LED",
+      "J6/J13": "Micro HDMI 0 / Micro HDMI 1",
+      "J7": "A/V JACK",
+      "J3/J4": "DISPLAY / CAMERA",
+      "Taster": "keiner im Schaltplan"
+    },
+    "pip_kategorie": {
+      "Dokumente": {
+        "RP-008248-DS": "bcm2711-peripherals.pdf",
+        "RP-008254-DS": "case-fan-product-brief.pdf",
+        "RP-008341-DS": "raspberry-pi-4-datasheet.pdf",
+        "RP-008342-DS": "raspberry-pi-4-mechanical-drawing.dxf",
+        "RP-008343-DS": "raspberry-pi-4-mechanical-drawing.pdf",
+        "RP-008344-DS": "raspberry-pi-4-product-brief.pdf (Version 7)",
+        "RP-008345-DS": "raspberry-pi-4-reduced-schematics.pdf"
+      }
+    },
+    "infineon": {
+      "Titel": "CYW43455 - Wi-Fi 5 (802.11ac) | Infineon Technologies",
+      "Features": "Wi-Fi 5 (802.11ac); Dual-band (2.4/5 GHz) 1x1 SISO; 20/40/80 MHz, up to 433Mbps PHY rate; Internal PA+LNA w/ External LNA support; 2.4-GHz Internal and 5-GHz Ext TR Switch; SDIO v3.0 host interface",
+      "Antenna Configuration": "1x1",
+      "Bluetooth Specification": "Bluetooth 5.3 (Chipangabe Infineon; Board-Doku nennt 5.0)"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Raspberry Pi Foundation",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Raspberry Pi Ltd",
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": "Herausgeber des Product Brief; Marke Raspberry Pi (Trading) Ltd im Datenblatt"
+      },
+      {
+        "wert": "RPF",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": "Marke; Fertigung Element14 laut deviwiki_2gb und wikidevi"
+      }
+    ],
+    "fertigung": [
+      {
+        "wert": "Sony UK",
+        "quelle": "rpi_doc_revision",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/revision-codes.adoc",
+        "stand": "Datei geändert 2026-09-07",
+        "sicherheit": "hoch",
+        "bemerkung": "alle 4B-Revisionscodes a03111 bis d03115 nennen Sony UK"
+      },
+      {
+        "wert": "China (manuf_country)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "niedrig",
+        "bemerkung": "widerspricht Aufdruck \"FCC Made in the UK\" laut deviwiki_2gb/wikidevi"
+      },
+      {
+        "wert": "UK, Element14",
+        "quelle": "deviwiki_2gb",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_2GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "China (manuf_country), Element14",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Spiegel, Revision unbekannt",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "Raspberry Pi 4 Model B",
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Raspberry Pi 4 B",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Raspberry Pi 4 Model B (4GB)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Raspberry Pi 4 Model B (2GB)",
+        "quelle": "deviwiki_2gb",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_2GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": [
+          "1.1",
+          "1.2",
+          "1.4",
+          "1.5"
+        ],
+        "quelle": "rpi_doc_revision",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/revision-codes.adoc",
+        "stand": "Datei geändert 2026-09-07",
+        "sicherheit": "hoch",
+        "bemerkung": "Board-Revisionen laut Revisionscode-Tabelle (1.3 nicht gelistet, aber in rpi_doc_eeprom erwähnt)"
+      },
+      {
+        "wert": [
+          "1.1",
+          "1.2",
+          "1.4",
+          "1.5"
+        ],
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/bcm27xx-bcm2711",
+        "stand": "Branch main, letzter Commit 2023-11-10",
+        "sicherheit": "hoch",
+        "bemerkung": "manifest_aliases raspberry-pi-4-model-b-rev-1.1/-1.2/-1.4/-1.5 (1.2, 1.4, 1.5 als \"untested\" markiert)"
+      },
+      {
+        "wert": "1.1",
+        "quelle": "gluon_git",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/dbea6f979e2cfb3b6b313aa8ed66be69c2d9eea8",
+        "stand": "Commit 2023-11-10",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon-Unterstützung getestet auf Rev 1.1"
+      },
+      {
+        "wert": "1.3 (nur erwähnt)",
+        "quelle": "rpi_doc_eeprom",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/eeprom-bootloader.adoc",
+        "stand": "Datei geändert 2026-09-29",
+        "sicherheit": "mittel",
+        "bemerkung": "erwähnt 'Raspberry Pi 4 version 1.3 and older'"
+      },
+      {
+        "wert": "Rev 1.1 (Bootlog)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog 'Machine model: Raspberry Pi 4 Model B Rev 1.1'"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Kein Typenschild; Revision und RAM per /proc/cpuinfo-Zeile Revision (a03111/b03111/c03111 = 1.1; b03112/c03112 = 1.2; b03114/c03114/d03114 = 1.4; b03115/c03115/d03115 = 1.5; erste Ziffer a/b/c/d = 1/2/4/8 GB)",
+        "quelle": "rpi_doc_revision",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/revision-codes.adoc",
+        "stand": "Datei geändert 2026-09-07",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Bootlog-Zeile \"Machine model: Raspberry Pi 4 Model B Rev x.y\"",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "\"Raspberry Pi 4 Model B\" und \"© Raspberry Pi 2018\" neben der 40-poligen GPIO-Leiste aufgedruckt; \"FCC Made in the UK\" und \"HDMI\" neben den Micro-HDMI-Buchsen",
+        "quelle": "deviwiki_2gb",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_2GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Aufdruck \"Raspberry Pi 4 Model B\" und \"Raspberry Pi 2018\" an der GPIO-Leiste, \"FCC Made in the UK\" und \"HDMI\" an den Micro-HDMI-Buchsen",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Spiegel, Revision unbekannt",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "zwei blaue USB-3.0- und zwei schwarze USB-2.0-Buchsen, USB-C-Stromanschluss, zwei Micro-HDMI (Unterschied zu 3B/3B+)",
+        "quelle": "rpi_doc_modelle",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/sbcs/sbc-models.adoc",
+        "stand": "Datei geändert 2026-10-12",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "2ABCB-RPI4B",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2ABCB-RPI4B",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "ToH-Link https://fcc.io/2ABCB/-RPI4B"
+      },
+      {
+        "wert": "2ABCB-RPI4B",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Spiegel, Revision unbekannt",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "20953-RPI4B",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "20953-RPI4B",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Spiegel, Revision unbekannt",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "Pi4B",
+          "RPi 4B",
+          "rpi-4 (OpenWrt-Profil)",
+          "raspberrypi,4-model-b (Device Tree)"
+        ],
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/bcm27xx/image/Makefile",
+        "stand": "Branch main, letzter Commit 2026-07-31",
+        "sicherheit": "hoch",
+        "bemerkung": "OpenWrt-Device rpi-4 umfasst 4B/400/CM4/CM4S"
+      },
+      {
+        "wert": [
+          "raspberry-pi-4-model-b-rev-1.1",
+          "raspberry-pi-4-model-b-rev-1.2",
+          "raspberry-pi-4-model-b-rev-1.4",
+          "raspberry-pi-4-model-b-rev-1.5"
+        ],
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/bcm27xx-bcm2711",
+        "stand": "Branch main, letzter Commit 2023-11-10",
+        "sicherheit": "hoch",
+        "bemerkung": "manifest_aliases aus Gluon 2023.1 und älter (unveröffentlichte Builds)"
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "2019-06",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": "est_release_date 06/23/2019, FCC-Datum 2019-06-24"
+      },
+      {
+        "wert": "2019-06",
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": "Datenblatt Erstausgabe 21.06.2019"
+      }
+    ],
+    "preis_usd": [
+      {
+        "wert": {
+          "1GB": 35,
+          "2GB": 67.5,
+          "3GB": 83.75,
+          "4GB": 100,
+          "8GB": 165
+        },
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": "Listenpreise Stand Product Brief Oktober 2026"
+      },
+      {
+        "wert": {
+          "1GB": 35,
+          "2GB": 45,
+          "4GB": 55
+        },
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": "Einführungspreise 2019"
+      },
+      {
+        "wert": {
+          "1GB": 35,
+          "2GB": 45,
+          "4GB": 55,
+          "8GB": 75
+        },
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Spiegel, Revision unbekannt",
+        "sicherheit": "mittel",
+        "bemerkung": "1-GiB-Modell als eingestellt bezeichnet"
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "in Produktion bis mindestens Januar 2034",
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "garantiert bis mindestens Januar 2031",
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": "Stand Datenblatt 03/2024; Product Brief 10/2026 nennt 2034"
+      },
+      {
+        "wert": "Available 2020, widely available",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Available 2025, widely available",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Seitenrevision 2026-08-12 19:06",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Broadcom BCM2711",
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Broadcom BCM2711",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Broadcom BCM2711 (Aufdruck 2711ZPKFSB06B0T)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Broadcom BCM2711 (Aufdruck 2711ZPKFSB06B0T, TE1912)",
+        "quelle": "deviwiki_2gb",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_2GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 4,
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 1500,
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": "Datenblatt (Erstfassung 2019, Rev. 1.1 2024 unverändert)"
+      },
+      {
+        "wert": 1800,
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": "aktuelle Fertigung"
+      },
+      {
+        "wert": 1800,
+        "quelle": "rpi_doc_modelle",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/sbcs/sbc-models.adoc",
+        "stand": "Datei geändert 2026-10-12",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1500,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Kommentar Dump: 'Newer hardware revs are 1800 MHz.'"
+      },
+      {
+        "wert": 1500,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1500,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": "ursprünglich 1.5 GHz, spätere Revisionen mit verbesserter Stromversorgung 1.8 GHz"
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "aarch64_cortex-a72",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "ARMv8 Cortex-A72"
+      },
+      {
+        "wert": "Cortex-A72 (Arm v8), 64 Bit",
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gpu": [
+      {
+        "wert": "VideoCore VI, 500 MHz",
+        "quelle": "rpi_doc_modelle",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/sbcs/sbc-models.adoc",
+        "stand": "Datei geändert 2026-10-12",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Videocore VI (@500MHz), L2 1024 KB",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": [
+          1024,
+          2048,
+          3072,
+          4096,
+          8192
+        ],
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": "je nach Modell; 3 GB nur in neueren Herstellerunterlagen"
+      },
+      {
+        "wert": [
+          1024,
+          2048,
+          3072,
+          4096,
+          8192
+        ],
+        "quelle": "rpi_doc_modelle",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/sbcs/sbc-models.adoc",
+        "stand": "Datei geändert 2026-10-12",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          1024,
+          2048,
+          4096,
+          8192
+        ],
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": "Einleitung; Feature-Liste nennt nur 1, 2, 4 GB"
+      },
+      {
+        "wert": [
+          1024,
+          2048,
+          4096,
+          8192
+        ],
+        "quelle": "rpi_doc_revision",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/revision-codes.adoc",
+        "stand": "Datei geändert 2026-09-07",
+        "sicherheit": "hoch",
+        "bemerkung": "Revisionscodes: 1 GB nur Rev 1.1, 8 GB ab Rev 1.4"
+      },
+      {
+        "wert": 8192,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump nennt nur einen Wert"
+      },
+      {
+        "wert": 2048,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Seitenrevision 2026-08-12 19:06",
+        "sicherheit": "mittel",
+        "bemerkung": "Live-Seite; Kommentar 'RAM: 1, 2,4, 8GB options'"
+      },
+      {
+        "wert": 4096,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": "Seite für 4-GB-Modell"
+      },
+      {
+        "wert": 2048,
+        "quelle": "deviwiki_2gb",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_2GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": "Seite für 2-GB-Modell"
+      },
+      {
+        "wert": 4096,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Spiegel, Revision unbekannt",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "LPDDR4, 3200 MHz",
+        "quelle": "rpi_doc_modelle",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/sbcs/sbc-models.adoc",
+        "stand": "Datei geändert 2026-10-12",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "LPDDR4 mit On-Die-ECC",
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "Micron MT53D1024M32D4DT-053 WT:D (4 GB)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Micron MT53D512M32D2DS-053 WT:D (2 GB)",
+        "quelle": "deviwiki_2gb",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_2GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 0.5,
+        "quelle": "deviwiki_2gb",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_2GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "niedrig",
+        "bemerkung": "fla1 512 KiB = SPI-EEPROM für den Bootloader (kein Speicher für das Betriebssystem)"
+      },
+      {
+        "wert": 0.5,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Spiegel, Revision unbekannt",
+        "sicherheit": "niedrig",
+        "bemerkung": "fla1 512 KiB ohne Chipangabe"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "microSD-Karte (kein Onboard-Flash für das System)",
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": "microSD card slot for loading operating system and data storage"
+      },
+      {
+        "wert": "microSDXC",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Flash MB: 'microSDXC'"
+      },
+      {
+        "wert": "microSD, Slot auf der Unterseite, 1.8 V DDR50 bis 50 MB/s",
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "SPI-EEPROM für den Bootloader (rpi-eeprom), System auf SD/USB",
+        "quelle": "rpi_doc_eeprom",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/eeprom-bootloader.adoc",
+        "stand": "Datei geändert 2026-09-29",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet aus Bootloader-Doku"
+      }
+    ],
+    "switch": [
+      {
+        "wert": "kein Switch",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": "'lack an Ethernet Network Switch'"
+      },
+      {
+        "wert": "Broadcom BCM54213PE",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "ToH führt den Ethernet-PHY im Feld Switch; laut Herstellerdoku ist es ein PHY, kein Switch"
+      }
+    ],
+    "ethernet_chip": [
+      {
+        "wert": "GENET im SoC + PHY Broadcom BCM54213PE",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufdruck BCM54213PE, B1KMLG"
+      },
+      {
+        "wert": "Ethernet-Controller im SoC, eigener PHY",
+        "quelle": "rpi_doc_modelle",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/sbcs/sbc-models.adoc",
+        "stand": "Datei geändert 2026-10-12",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "bcmgenet (GENET 5.0)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog"
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb_controller": [
+      {
+        "wert": "VIA Labs VL805 (PCIe-USB-3.0)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "VL805",
+        "quelle": "rpi_doc_modelle",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/sbcs/sbc-models.adoc",
+        "stand": "Datei geändert 2026-10-12",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "pmic": [
+      {
+        "wert": "Exar MxL7704",
+        "quelle": "deviwiki_2gb",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_2GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "Cypress CYW43455 (SDIO)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Cypress CYW43455",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Cypress CYW43455",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Spiegel, Revision unbekannt",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Infineon (Cypress) CYW43455",
+        "quelle": "infineon",
+        "beleg": "https://www.infineon.com/part/CYW43455",
+        "stand": "Produktseite, Stand unbekannt",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "brcmfmac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kmod-brcmfmac, Firmware cypress-firmware-43455-sdio, brcmfmac-nvram-43455-sdio",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/bcm27xx/image/Makefile",
+        "stand": "Branch main, letzter Commit 2026-07-31",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": "abgn+ac"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11ac",
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": "abgn+ac"
+      },
+      {
+        "wert": "802.11ac (Wi-Fi 5), 20/40/80 MHz, bis 433 Mbit/s PHY",
+        "quelle": "infineon",
+        "beleg": "https://www.infineon.com/part/CYW43455",
+        "stand": "Produktseite, Stand unbekannt",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 1,
+        "quelle": "infineon",
+        "beleg": "https://www.infineon.com/part/CYW43455",
+        "stand": "Produktseite, Stand unbekannt",
+        "sicherheit": "mittel",
+        "bemerkung": "1x1 SISO (Chipangabe)"
+      },
+      {
+        "wert": 1,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Spiegel, Revision unbekannt",
+        "sicherheit": "mittel",
+        "bemerkung": "1T1R, 1 Spatial Stream"
+      },
+      {
+        "wert": 2,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "niedrig",
+        "bemerkung": "2T2R, 2 Spatial Streams; widerspricht Chiphersteller (1x1 SISO)"
+      },
+      {
+        "wert": 2,
+        "quelle": "deviwiki_2gb",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_2GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "niedrig",
+        "bemerkung": "2T2R; widerspricht Chiphersteller (1x1 SISO)"
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 1,
+        "quelle": "infineon",
+        "beleg": "https://www.infineon.com/part/CYW43455",
+        "stand": "Produktseite, Stand unbekannt",
+        "sicherheit": "mittel",
+        "bemerkung": "1x1 SISO, bis 433 Mbit/s PHY"
+      },
+      {
+        "wert": 1,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Spiegel, Revision unbekannt",
+        "sicherheit": "mittel",
+        "bemerkung": "1T1R"
+      },
+      {
+        "wert": 2,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "niedrig",
+        "bemerkung": "2T2R; widerspricht Chiphersteller (1x1 SISO)"
+      },
+      {
+        "wert": 2,
+        "quelle": "deviwiki_2gb",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_2GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "niedrig",
+        "bemerkung": "2T2R; widerspricht Chiphersteller (1x1 SISO)"
+      }
+    ],
+    "wlan_dfs": [
+      {
+        "wert": "ja",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": "Flag 'DFS'"
+      }
+    ],
+    "wlan_mesh": [
+      {
+        "wert": "kein 802.11s (Gluon: \"No 11s support\", \"11s is not working\")",
+        "quelle": "gluon_git",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/dbea6f979e2cfb3b6b313aa8ed66be69c2d9eea8",
+        "stand": "Commit 2023-11-10",
+        "sicherheit": "hoch",
+        "bemerkung": "für Gluon-Mesh über WLAN unbrauchbar; Mesh nur über Kabel (Mesh-on-LAN/WAN) oder VPN"
+      },
+      {
+        "wert": "kein 802.11s",
+        "quelle": "gluon_targets_mk",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/targets.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "BROKEN: No 11s support"
+      }
+    ],
+    "wlan_bekannte_probleme": [
+      {
+        "wert": "Ländercode lässt sich in LuCI nicht setzen; vorher unter Raspberry Pi OS setzen. Ab 3B+ startet das Onboard-WLAN ohne Ländercode nicht",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "vor OpenWrt 21.02.3: obere 5-GHz-Kanäle (z. B. 153) nicht nutzbar, behoben durch neuere Cypress-Firmware",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "5.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "5.0 und BLE",
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_modulzulassung": [
+      {
+        "wert": "WLAN und Bluetooth mit modularer Zulassung",
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "keine abnehmbaren Antennen",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas: '-'; Bauform der eingebauten Antenne in keiner gelesenen Quelle beschrieben"
+      },
+      {
+        "wert": "keine abnehmbaren Antennen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Seitenrevision 2026-08-12 19:06",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas: '-'"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "Ethernet RJ45",
+            "geschwindigkeit_mbit": 1000,
+            "rolle": "einzige Buchse (Gluon: WAN/Mesh je nach Konfiguration)"
+          }
+        ],
+        "quelle": "rpi_doc_modelle",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/sbcs/sbc-models.adoc",
+        "stand": "Datei geändert 2026-10-12",
+        "sicherheit": "hoch",
+        "bemerkung": "echtes Gigabit, Controller im SoC, nicht über USB"
+      },
+      {
+        "wert": [
+          {
+            "name": "Gigabit Ethernet",
+            "geschwindigkeit_mbit": 1000
+          }
+        ],
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Ethernet 1Gbit ports: 1"
+      },
+      {
+        "wert": 1,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": "lan_ports=1, lan_speed=1G"
+      },
+      {
+        "wert": 1,
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "rpi_doc_modelle",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/sbcs/sbc-models.adoc",
+        "stand": "Datei geändert 2026-10-12",
+        "sicherheit": "hoch",
+        "bemerkung": "eine RJ45-Buchse; zweiter Port nur per USB-Ethernet-Adapter"
+      },
+      {
+        "wert": true,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": "für Routerbetrieb USB-3.0-Gigabit-Adapter, Switch und AP nötig; OpenWrt bringt Treiber lan78xx, rtl8152, r8169 mit (openwrt_image_mk)"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Seitenrevision 2026-08-12 19:06",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": {
+          "anzahl": 4,
+          "version": "2× 3.0, 2× 2.0"
+        },
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typ A; zusammen etwa 1.1 A für alle vier Buchsen"
+      },
+      {
+        "wert": {
+          "anzahl": 4,
+          "version": "2× 2.0, 2× 3.0, 1× OTG"
+        },
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "OTG = USB-C-Stromanschluss (nur USB 2.0 laut Schaltplan)"
+      },
+      {
+        "wert": {
+          "anzahl": 4,
+          "version": "USB 2.0, USB 3.0 Typ A"
+        },
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb_strom_a": [
+      {
+        "wert": 1.2,
+        "quelle": "rpi_doc_strom",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/power-supplies.adoc",
+        "stand": "Datei geändert 2026-10-12 (Messwerte Pi 4 Stand Juni 2019)",
+        "sicherheit": "hoch",
+        "bemerkung": "Maximum total USB peripheral current draw"
+      },
+      {
+        "wert": 1.1,
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": "approximately 1.1A in aggregate"
+      }
+    ],
+    "weitere_anschluesse": [
+      {
+        "wert": [
+          "2× Micro-HDMI",
+          "3.5-mm-AV-Buchse (Audio + Composite)",
+          "CSI Kamera (2-lane)",
+          "DSI Display (2-lane)",
+          "40-polige GPIO-Stiftleiste",
+          "4-polige PoE-Stiftleiste",
+          "microSD (Unterseite)"
+        ],
+        "quelle": "rpi_doc_modelle",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/sbcs/sbc-models.adoc",
+        "stand": "Datei geändert 2026-10-12",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "J2 RUN/GLOBAL_EN-Stiftleiste"
+        ],
+        "quelle": "rpi_schaltplan",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008345-DS-1-raspberry-pi-4-reduced-schematics.pdf",
+        "stand": "Reduced Schematics RPI-4B Rev 4, Datum 2019-06-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nur mit aufgestecktem PoE-HAT (802.3af); ohne HAT kein PoE",
+        "quelle": "rpi_doc_strom",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/power-supplies.adoc",
+        "stand": "Datei geändert 2026-10-12 (Messwerte Pi 4 Stand Juni 2019)",
+        "sicherheit": "hoch",
+        "bemerkung": "Buchse PoE-fähig nach IEEE 802.3af-2003, HAT nötig"
+      },
+      {
+        "wert": "nur mit separatem PoE-HAT",
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "nur mit PoE-HAT",
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "nur mit PoE(+)-HAT über 4-polige PoE-Stiftleiste",
+        "quelle": "rpi_doc_modelle",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/sbcs/sbc-models.adoc",
+        "stand": "Datei geändert 2026-10-12",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ns (nicht angegeben)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "niedrig",
+        "bemerkung": "pwr_poe=ns"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "USB-C",
+        "quelle": "rpi_doc_modelle",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/sbcs/sbc-models.adoc",
+        "stand": "Datei geändert 2026-10-12",
+        "sicherheit": "hoch",
+        "bemerkung": "5 V, 3 A (15 W)"
+      },
+      {
+        "wert": "USB Type C",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "USB-C (alternativ 5 V über GPIO-Leiste)",
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 5.1,
+        "quelle": "rpi_doc_strom",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/power-supplies.adoc",
+        "stand": "Datei geändert 2026-10-12 (Messwerte Pi 4 Stand Juni 2019)",
+        "sicherheit": "hoch",
+        "bemerkung": "'All models require a 5.1V supply'"
+      },
+      {
+        "wert": 5,
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": "5 V DC (Sicherheitshinweis: 5 V/3 A oder 5.1 V/3 A)"
+      },
+      {
+        "wert": 5,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_spannung_max_v": [
+      {
+        "wert": 6.0,
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": "Absolute Maximum Rating VIN"
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 3.0,
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": "mindestens 3 A; 2.5 A reichen, wenn USB-Geräte zusammen unter 500 mA bleiben"
+      },
+      {
+        "wert": 3.0,
+        "quelle": "rpi_doc_strom",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/power-supplies.adoc",
+        "stand": "Datei geändert 2026-10-12 (Messwerte Pi 4 Stand Juni 2019)",
+        "sicherheit": "hoch",
+        "bemerkung": "Recommended PSU current capacity"
+      },
+      {
+        "wert": 3.0,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "empfohlen: offizielles Raspberry-Pi-USB-C-Netzteil 5.1 V / 3.0 A (15 W)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_typ": [
+      {
+        "wert": 3.0,
+        "quelle": "rpi_doc_strom",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/power-supplies.adoc",
+        "stand": "Datei geändert 2026-10-12 (Messwerte Pi 4 Stand Juni 2019)",
+        "sicherheit": "hoch",
+        "bemerkung": "Leerlauf gemessen 0.6 A × 5 V gerechnet (typisch aktiv bare board 600 mA), mit HDMI-Monitor, Tastatur, Maus, Ethernet"
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 6.25,
+        "quelle": "rpi_doc_strom",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/power-supplies.adoc",
+        "stand": "Datei geändert 2026-10-12 (Messwerte Pi 4 Stand Juni 2019)",
+        "sicherheit": "hoch",
+        "bemerkung": "Stresstest max. 1.25 A × 5 V gerechnet, ohne USB-Geräte; mit USB-Geräten bis Netzteilgrenze 3 A (15 W)"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Seitenrevision 2026-08-12 19:06",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": "Sicherheitshinweise: nicht Wasser oder Feuchtigkeit aussetzen, 'normal ambient room temperatures', gut belüftet"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 50 °C",
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "0 bis 50 °C",
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": "empfohlene Umgebungstemperatur; CPU wird bei 85 °C gedrosselt"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": {
+          "laenge": 85,
+          "breite": 56,
+          "hoehe_bauteile_max": 16.0
+        },
+        "quelle": "rpi_zeichnung",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008343-DS-1-raspberry-pi-4-mechanical-drawing.pdf",
+        "stand": "PDF erzeugt 2019-05-20",
+        "sicherheit": "hoch",
+        "bemerkung": "Platine ohne Gehäuse; höchstes Bauteil USB-Doppelbuchse Z=16.0 über Platine (Plattendicke nicht angegeben)"
+      },
+      {
+        "wert": {
+          "laenge": 85,
+          "breite": 56
+        },
+        "quelle": "rpi_doc_modelle",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/sbcs/sbc-models.adoc",
+        "stand": "Datei geändert 2026-10-12",
+        "sicherheit": "hoch",
+        "bemerkung": "approximately"
+      }
+    ],
+    "montageloecher": [
+      {
+        "wert": "4 Löcher, Lochabstand 58 × 49 mm, 3.5 mm vom Rand (Durchmesser in der Zeichnung nicht angegeben)",
+        "quelle": "rpi_zeichnung",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008343-DS-1-raspberry-pi-4-mechanical-drawing.pdf",
+        "stand": "PDF erzeugt 2019-05-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse": [
+      {
+        "wert": "keins (nackte Platine); Gehäuse separat",
+        "quelle": "rpi_produktbrief",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+        "stand": "Product Brief 'Published October 2026', PDF erzeugt 2026-09-22 (Dokumentversion 7)",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet: Brief beschreibt nur die Platine, Hinweis auf Betrieb im Gehäuse"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "keiner verbaut; läuft ohne Zusatzkühlung, bei Dauerlast ggf. Kühlung nötig",
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "keiner; offizieller Gehäuselüfter über GPIO nachrüstbar (kmod-hwmon-gpiofan); Kühlkörper empfohlen",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Case Fan als Zubehör (Product Brief RP-008254-DS)",
+        "quelle": "pip_kategorie",
+        "beleg": "https://pip.raspberrypi.com/categories/545-raspberry-pi-4-model-b",
+        "stand": "Dokumentliste am 2026-10-19",
+        "sicherheit": "niedrig",
+        "bemerkung": "Dokumentliste der Kategorie 4B"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": "¿ (unbekannt)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "PWR": "rot (D3, POWER OK)",
+          "ACT": "grün (D5, STATUS)",
+          "LAN": "gelb + grün in der RJ45-Buchse"
+        },
+        "quelle": "rpi_schaltplan",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008345-DS-1-raspberry-pi-4-reduced-schematics.pdf",
+        "stand": "Reduced Schematics RPI-4B Rev 4, Datum 2019-06-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "led_hinweis": [
+      {
+        "wert": "Gluon: rote Sys-LED blinkt bei Boot/Failsafe, ist aber manchmal nach dem Start aus und blinkt im Config-Mode nicht",
+        "quelle": "gluon_git",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/dbea6f979e2cfb3b6b313aa8ed66be69c2d9eea8",
+        "stand": "Commit 2023-11-10",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "keiner (Gluon: \"no reset button\"); Config-Mode nur per SSH, serieller Konsole oder SD-Karte von außen",
+        "quelle": "gluon_git",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/dbea6f979e2cfb3b6b313aa8ed66be69c2d9eea8",
+        "stand": "Commit 2023-11-10",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kein Taster; nur 3-polige Stiftleiste J2 (RUN 3.3 V, GLOBAL_EN 5 V, GND)",
+        "quelle": "rpi_schaltplan",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008345-DS-1-raspberry-pi-4-reduced-schematics.pdf",
+        "stand": "Reduced Schematics RPI-4B Rev 4, Datum 2019-06-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "¿ (Button count unbekannt)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "außen zugänglich (40-polige GPIO-Stiftleiste, bestückt)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": "'Serial is available via GPIO'"
+      },
+      {
+        "wert": "außen zugänglich, primärer UART auf GPIO 14/15",
+        "quelle": "rpi_doc_eeprom",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/eeprom-bootloader.adoc",
+        "stand": "Datei geändert 2026-09-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, 3.3 V TTL über GPIO-Leiste",
+        "quelle": "deviwiki_2gb",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_2GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": {
+          "6": "GND",
+          "8": "TX",
+          "10": "RX"
+        },
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "6": "GND",
+          "8": "GPIO14 TXD0",
+          "10": "GPIO15 RXD0"
+        },
+        "quelle": "rpi_schaltplan",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008345-DS-1-raspberry-pi-4-reduced-schematics.pdf",
+        "stand": "Reduced Schematics RPI-4B Rev 4, Datum 2019-06-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Seitenrevision 2026-08-12 19:06",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": "nicht RS232 mit 12 V"
+      },
+      {
+        "wert": 3.3,
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": "VDD IO 3.3 V, absolute Grenzen nur für 5V-Eingang angegeben"
+      },
+      {
+        "wert": 3.3,
+        "quelle": "deviwiki_2gb",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_2GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Seitenrevision 2026-08-12 19:06",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "rpi_doc_eeprom",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/eeprom-bootloader.adoc",
+        "stand": "Datei geändert 2026-09-29",
+        "sicherheit": "hoch",
+        "bemerkung": "Bootloader-Ausgabe mit BOOT_UART=1"
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "deviwiki_2gb",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_2GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "Konsole auf ttyAMA0 (PL011, console=ttyAMA0,115200)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog OpenWrt 2021, Rev 1.1"
+      },
+      {
+        "wert": "Bootloader-Debugausgabe per BOOT_UART=1 in der EEPROM-Konfiguration",
+        "quelle": "rpi_doc_eeprom",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/eeprom-bootloader.adoc",
+        "stand": "Datei geändert 2026-09-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "jtag": [
+      {
+        "wert": "¿ (unbekannt)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ARM-JTAG als Alternativfunktion ALT4 auf GPIO 22-27",
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gpio": [
+      {
+        "wert": "40-polige Stiftleiste, 28 nutzbare GPIOs",
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "more than 20",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "bcm27xx/bcm2711",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "bcm27xx/bcm2711",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/bcm27xx/image/Makefile",
+        "stand": "Branch main, letzter Commit 2026-07-31",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "rpi-4",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/bcm27xx/image/Makefile",
+        "stand": "Branch main, letzter Commit 2026-07-31",
+        "sicherheit": "hoch",
+        "bemerkung": "Image ...-bcm27xx-bcm2711-rpi-4-squashfs-{factory,sysupgrade}.img.gz"
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "21.02.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Commit f7815828 (2019-07-14)"
+      },
+      {
+        "wert": "2019-07-14 (32 Bit, bcm2709)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f781582828475f23abc478a07422db94f1bcda16",
+        "stand": "Commit 2019-07-13 (Autor), gemergt 2019-07-14",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2019-08-02 (64 Bit, Subtarget bcm2711)",
+        "quelle": "openwrt_git_bcm2711",
+        "beleg": "https://github.com/openwrt/openwrt/commit/5e928acf22cdc956eabe6e4b2327b34eb0ee66da",
+        "stand": "Commit 2019-08-02",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "23.05.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "Dump"
+      },
+      {
+        "wert": "25.12.5",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Seitenrevision 2026-08-12 19:06",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wireguard_mbit": [
+      {
+        "wert": 950,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Seitenrevision 2026-08-12 19:06",
+        "sicherheit": "niedrig",
+        "bemerkung": "Wireguard performance"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "Bootloader im SPI-EEPROM (rpi-eeprom), lädt von SD, USB oder Netz",
+        "quelle": "rpi_doc_eeprom",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/eeprom-bootloader.adoc",
+        "stand": "Datei geändert 2026-09-29",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet aus Bootloader-Doku"
+      },
+      {
+        "wert": "¿ (unbekannt)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader_hinweis": [
+      {
+        "wert": "EEPROM aktualisieren empfohlen (Leistungsaufnahme, Drosselung); OpenWrt-Paket bcm27xx-eeprom",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Image auf microSD-Karte schreiben (dd oder Raspberry Pi Imager), Karte einsetzen, starten",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "stand": "Seitenrevision 2026-03-17 20:40",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "SD card",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "recovery": [
+      {
+        "wert": "SD card",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "recovery.bin von SD-Karte (EEPROM-Wiederherstellung)",
+        "quelle": "rpi_doc_eeprom",
+        "beleg": "https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/eeprom-bootloader.adoc",
+        "stand": "Datei geändert 2026-09-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.raspberrypi.com/software/",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "nur mit BROKEN=1 (Target bcm27xx-bcm2711, 'BROKEN: No 11s support, no reset button, sys LED issues')",
+        "quelle": "gluon_targets_mk",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/targets.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "seit 2023-11-10 als BROKEN-Target; als VPN-Offloader oder kabelgebundener Dachknoten gedacht",
+        "quelle": "gluon_git",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/dbea6f979e2cfb3b6b313aa8ed66be69c2d9eea8",
+        "stand": "Commit 2023-11-10",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "unknown",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Seitenrevision 2026-08-12 19:06",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "varianten": [
+      {
+        "wert": [
+          "Raspberry Pi 4 Model B (1, 2, 4, 8 GB; Rev 1.1, 1.2, 1.4, 1.5)"
+        ],
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/bcm27xx-bcm2711",
+        "stand": "Branch main, letzter Commit 2023-11-10",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon-Image nur für 4B (Device-Tree raspberrypi,4-model-b), keine Aliase für 400/CM4"
+      },
+      {
+        "wert": [
+          "4B",
+          "400",
+          "CM4",
+          "CM4S"
+        ],
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/bcm27xx/image/Makefile",
+        "stand": "Branch main, letzter Commit 2026-07-31",
+        "sicherheit": "hoch",
+        "bemerkung": "gemeinsames OpenWrt-Image rpi-4"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_forum": [
+      {
+        "wert": "https://forum.openwrt.org/t/rpi4-community-build/69998",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_2GB",
+        "quelle": "deviwiki_2gb",
+        "beleg": "https://deviwiki.com/wiki/RPF_Raspberry_Pi_4_Model_B_2GB",
+        "stand": "Seitenrevision 2019-07-05 02:44 (Importstand, Benutzer imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/RPF_Raspberry_Pi_4_Model_B_4GB",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.raspberrypi.com/products/raspberry-pi-4-model-b/",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/raspberry_pi_foundation/raspberry_pi_foundation_raspberry_pi_4_b",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "nicht abgerufen (raspberrypi.com im Lauf 3B hinter Cloudflare)"
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://pip.raspberrypi.com/documents/RP-008341-DS",
+        "quelle": "rpi_datenblatt",
+        "beleg": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008341-DS-1-raspberry-pi-4-datasheet.pdf",
+        "stand": "Datasheet Release 1.1 vom 12.03.2024 (Erstausgabe 21.06.2019)",
+        "sicherheit": "hoch",
+        "bemerkung": "Product Brief RP-008344-DS, Maßzeichnung RP-008343-DS (DXF RP-008342-DS), Schaltplan RP-008345-DS, BCM2711-Peripherals RP-008248-DS"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/2ABCB-RPI4B",
+      "kategorie": "fcc",
+      "grund": "FCC-Dokumente (Innenfotos, Label, Antennenangaben, Sendeleistung) nicht abrufbar: fccid.io antwortete 403 (Security check)"
+    },
+    {
+      "url": "https://fccid.io/2ABCB-RPI4B",
+      "kategorie": "antennen_art",
+      "grund": "Bauform der eingebauten WLAN-Antenne (Platinenantenne o. ä.) und Gewinn in keiner gelesenen Quelle belegt"
+    },
+    {
+      "url": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+      "kategorie": "abmessungen_mm",
+      "grund": "Seite 3 Physical specification nur als Grafik, nicht ausgewertet (Lochdurchmesser, Plattendicke)"
+    },
+    {
+      "url": "https://www.raspberrypi.com/products/raspberry-pi-4-model-b/",
+      "kategorie": "netzteil_beiliegend",
+      "grund": "ob Netzteil/Gehäuse beiliegen, in keiner Quelle belegt; Produktseite nicht abgerufen (Cloudflare im Lauf 3B)"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/raspberry-pi-4-released/39444",
+      "kategorie": "wlan_bekannte_probleme",
+      "grund": "OpenWrt-Forumsthread zum Pi 4 nicht gelesen"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/rpi4-community-build/69998",
+      "kategorie": "openwrt",
+      "grund": "ToH-Forumsthread (Community-Builds) nicht gelesen"
+    },
+    {
+      "url": "https://pip.raspberrypi.com/documents/RP-004340-WP",
+      "kategorie": "leistung",
+      "grund": "Whitepaper PMIC-Funktionen Pi 4 nicht gelesen"
+    },
+    {
+      "url": "https://www.raspberrypi.com/news/bullseye-bonus-1-8ghz-raspberry-pi-4/",
+      "kategorie": "hw_version",
+      "grund": "welche Board-Revision ab Werk 1.8 GHz läuft, nicht belegt (Wiki: spätere Revisionen)"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 29,
+    "notiz": "ToH-Dump (pid 15677656; toh_suche.py fand nichts wegen Markenname), Live-hwdata, OpenWrt-Wiki-Sammelseite (Cache Lauf 3B), OpenWrt-Commits (f781582, bcm2711-Subtarget 5e928ac), Image-Makefile rpi-4, Gluon-Target, targets.mk und Commit dbea6f9, DeviWiki 4GB/2GB, WikiDevi-Spiegel, Herstellerdoku (sbc-models, power-supplies, revision-codes, eeprom-bootloader), Datenblatt, Product Brief, Maßzeichnung und Schaltplan, Infineon-Chipseite ausgewertet. Gluon-Target nur mit BROKEN=1: kein 802.11s, kein Reset-Taster, Sys-LED-Probleme. Widerspruch WLAN-Streams: DeviWiki 2x2, WikiDevi-Spiegel und Infineon 1x1. Gesperrt: fccid.io 403. Keine Werkstatt-Protokolle zum Pi 4."
+  }
+}
