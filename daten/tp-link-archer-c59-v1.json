@@ -1,0 +1,2706 @@
+{
+  "image": "tp-link-archer-c59-v1",
+  "modell": "TP-Link Archer C59 v1",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15677785"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1?do=export_raw",
+      "stand": "Seitenrevision 2026-03-22 03:00",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Live-Seite neuer als Dump: Target ath79, aktuell 25.12.1, WLAN-Hardware zusätzlich QCA9886, WLAN-Kommentar 2.4 GHz 3x3:3 / 5 GHz 2x2:2, Treiber ath9k/ath10k-ct, Serial 3.3 V, Outdoor No, Gluon support Broken; Netzteil 12 VDC 1.0A"
+    },
+    "openwrt_hwdata_diff": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1?do=diff&rev2%5B0%5D=1728954045&rev2%5B1%5D=1762890938&difftype=inline",
+      "stand": "Diff Revision 2024-10-15 gegen 2025-11-11",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Änderungen: Target ar71xx-ath79 -> ath79, WLAN-Hardware um QCA9886 ergänzt, Release-Links; 'Gluon support: Broken' stand schon vor 2024-10-15 drin (Herkunft nicht ermittelt)"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/tp-link/archer_c59?do=export_raw",
+      "stand": "Seitenrevision 2026-08-26 01:23",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Weitgehend unausgefüllte Vorlage; brauchbar: Gehäuse öffnen, Switch-Port-Zuordnung, Rückweg zur Stock-Firmware per TFTP, Tags"
+    },
+    "openwrt_wiki_c60v2": {
+      "url": "https://openwrt.org/toh/tp-link/archer_c60_v2?do=export_raw",
+      "stand": "abgerufen 2026-10-19 (Revision nicht ermittelt)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Schwestermodell Archer C60 v2 (andere Platine, Header J1); nur als Hinweis zur Pinbelegung, nicht für C59 übernommen ohne Markierung"
+    },
+    "openwrt_wiki_c58v1": {
+      "url": "https://openwrt.org/toh/tp-link/archer_c58_v1?do=export_raw",
+      "stand": "abgerufen 2026-10-19 (Revision nicht ermittelt)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Schwestermodell C58 v1; Serial-Abschnitt nur Vorlage, keine Daten"
+    },
+    "openwrt_git_ar71xx": {
+      "url": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+      "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_ath79": {
+      "url": "https://github.com/openwrt/openwrt/commit/946ffe470d923fdde53db68592437194e0c276fc",
+      "stand": "Commit 2018-10-31 (Autor David Bauer), gemergt 2018-11-26",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_lan1": {
+      "url": "https://github.com/openwrt/openwrt/commit/5a8e9846af689be7bc3b1fb4a356c3e3c711b94a",
+      "stand": "Commit 2017-11-27 (David Bauer), gemergt 2017-12-08",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_kalibrierung": {
+      "url": "https://github.com/openwrt/openwrt/commit/2a44808374497b83edb76b4e384f280546a62dbe",
+      "stand": "Commit 2025-09-25 (Christoph Krapp), gemergt 2025-10-14; Backport openwrt-24.10 als 0c1ff934ec (2025-10-14)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PR https://github.com/openwrt/openwrt/pull/20401; dazu ipq-wifi-Eintrag 8ea1396fd2"
+    },
+    "openwrt_issue_14541": {
+      "url": "https://github.com/openwrt/openwrt/issues/14541",
+      "stand": "Issue 2024-02-02 bis 2026-09-10 (geschlossen)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "ath10k: 5-GHz-Radio nach NVMEM-Umbau nicht erkannt (C60 v1 gemeldet, C59 v1 mitbetroffen)"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=c59+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-19 (21 Commits, neuester 2025-10-14)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9561_tplink_archer-c59-v1.dts",
+      "stand": "Branch main am 2026-10-19, letzte Änderung Commit 2a44808374 (2025-10-14)",
+      "abgerufen": "2026-10-19",
+      "dateien": [
+        "qca9561_tplink_archer-c59-v1.dts",
+        "qca9561_tplink_archer-c5x.dtsi"
+      ]
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-tp-link.mk",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "firmware_utils_safeloader": {
+      "url": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+      "stand": "Branch master am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_modules": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/modules",
+      "stand": "Branch v2025.1.x am 2026-10-19: OPENWRT_COMMIT a1ea57bd (2026-08-11), enthält 0c1ff934ec",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_pr_2489": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/2489",
+      "stand": "PR 2022-04-21, gemergt 2022-05-01",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "ath79-generic: (re)add support for archer-c59-v1; Checkliste ohne Test des Flashens aus Stock-Firmware"
+    },
+    "gluon_issue_3425": {
+      "url": "https://github.com/freifunk-gluon/gluon/issues/3425",
+      "stand": "Issue 2025-01-15 bis 2025-10-22 (geschlossen)",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_issue_1381": {
+      "url": "https://github.com/freifunk-gluon/gluon/issues/1381",
+      "stand": "Issue 2018-05-03 bis 2018-08-22",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "11s-Clientproblem auf C59 mit Gluon-next (Leipzig), von anderen nicht reproduziert"
+    },
+    "gluon_suche": {
+      "url": "https://api.github.com/search/issues?q=c59+repo:freifunk-gluon/gluon",
+      "stand": "Suche 2026-10-19 (16 Treffer)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "relevant u. a. #1122 (Wunsch 2017), #1275/#1281 (ar71xx-Support 2017/2018)"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+      "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+      "abgerufen": "2026-10-19"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/TP-LINK_Archer_C59_v1.x",
+      "stand": "Rohtext identisch mit DeviWiki-Revision 2019-07-05T05:31:43Z",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Spiegel, inhaltsgleich mit DeviWiki; Werte nur unter deviwiki in felder"
+    },
+    "fcc": {
+      "url": "https://fccid.io/TE7C59",
+      "stand": "Grant 2016-11-02 (Original Equipment), Class II permissive change 2017-01-23",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_handbuch": {
+      "url": "https://fccid.io/TE7C59/User-Manual/TE7C59-UM-3183406",
+      "stand": "FCC-Exhibit 2016-11-02, REV1.0.0 1910011791 (PDF erstellt 2016-05-25, geändert 2016-09-21)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "113 Seiten, pdftotext; Seiten 3-5 (Panel Layout) als Bild ausgewertet"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/TE7C59/Label/TE7C59-Label-3183400",
+      "stand": "Exhibit 2016-11-02 (Zeichnung 'Archer C59(US)_1.0_产品规格标贴' Version A1, fertig 2016-06-15)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "als Bild ausgewertet (300 dpi)"
+    },
+    "fcc_fotos_extern": {
+      "url": "https://fccid.io/TE7C59/External-Photos/TE7C59-ExPho-3183397",
+      "stand": "Sporton Projekt 651919, Rev. 01, PDF 2016-09-12",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "4 Seiten (G1-G3, G12), als Bild ausgewertet; inkl. Netzteil-Typenschild"
+    },
+    "fcc_fotos_intern": {
+      "url": "https://fccid.io/TE7C59/Internal-Photos/TE7C59-InPho-1027-3183398",
+      "stand": "Exhibit 2016-11-02 (PDF 2016-10-27)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "9 Seiten, 17 Fotos 1055x799, als Bild ausgewertet; Cache fcc/int/"
+    },
+    "fcc_dts": {
+      "url": "https://fccid.io/TE7C59/Test-Report/TE7C59-Test-Rpt-DTS-2-4G-3181271",
+      "stand": "Prüfbericht FR651919AC Rev. 03, 2016-10-28 (Rev. 01 2016-09-19)",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_unii": {
+      "url": "https://fccid.io/TE7C59/Test-Report/TE7C59-Test-Rpt-UNII-Band1-4-Part1-1101-3183403",
+      "stand": "Prüfbericht FR651919AN Rev. 02, 2016-10-26 (Rev. 01 2016-09-19)",
+      "abgerufen": "2026-10-19"
+    },
+    "tplink_datenblatt": {
+      "url": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+      "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "verlinkt als Archer C59_V1_Datasheet (https://www.tp-link.com/en/document/66484/)"
+    },
+    "tplink_downloadseite": {
+      "url": "https://www.tp-link.com/en/support/download/archer-c59/v1/",
+      "stand": "Live-Seite 2026-10-19, neueste Firmware Archer C59(EU)_V1_160725 (veröffentlicht 2018-04-20)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Versionsauswahl V1, V2; Dokumente: Datasheet, EU-UG, EU-QIG; Produktseite /en/home-networking/wifi-router/archer-c59/v1/ liefert 404"
+    },
+    "freifunk_forum_suche": {
+      "url": "https://forum.freifunk.net/search.json?q=Archer%20C59",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "freifunk_forum_21213": {
+      "url": "https://forum.freifunk.net/t/21213",
+      "stand": "Thread 2019-09-08 bis 2019-09-09 (3 Beiträge, alle gelesen)",
+      "abgerufen": "2026-10-19",
+      "titel": "Image für TP Link Archer C59V1 auf TP Link Archer C59(EU) V1"
+    },
+    "freifunk_forum_15986": {
+      "url": "https://forum.freifunk.net/t/15986",
+      "stand": "Thread 2017-11-14 bis 2017-11-20 (6 Beiträge, alle gelesen)",
+      "abgerufen": "2026-10-19",
+      "titel": "Archer C59 v3 ?"
+    },
+    "werkstatt": {
+      "url": "",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "grep -ril nach 'c59' in router-werkstatt/docs: kein Protokoll und kein Dokument zum Gerät"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "15677785",
+      "devicetype": "WiFi Router",
+      "brand": "TP-Link",
+      "model": "Archer C59",
+      "version": "v1",
+      "fccid": "https://fcc.io/TE7/C59",
+      "availability": "Discontinued 2017",
+      "whereavailable": "",
+      "supportedsincecommit": "https://git.lede-project.org/?p=source.git;a=commit;h=e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+      "supportedsincerel": "18.06.0",
+      "supportedcurrentrel": "23.05.0",
+      "unsupported_functions": "NULL",
+      "target": "ar71xx-ath79",
+      "subtarget": "generic",
+      "packagearchitecture": "mips_24kc",
+      "bootloader": "U-Boot",
+      "cpu": "Qualcomm Atheros QCA9561",
+      "cpucores": "1",
+      "cpumhz": "775",
+      "flashmb": "16",
+      "rammb": "128",
+      "ethernet100mports": "5",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "-",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "Qualcomm Atheros QCA9561",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "Qualcomm Atheros QCA9561",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "a/n/ac",
+      "wlancomments": "",
+      "wlandriver": "ath10k",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "1x 2.0",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "115200 / 8N1",
+      "jtag": "No",
+      "ledcount": "8",
+      "buttoncount": "3",
+      "gpios": "-",
+      "powersupply": "12 VDC, 1.0 A",
+      "devicepage": "toh:tp-link:archer_c59",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "Archer C59",
+      "gitsearch": "Archer C59",
+      "wikideviurl": "https://wikidevi.wi-cat.ru/TP-LINK_Archer_C59_v1.x",
+      "oemdevicehomepageurl": "http://www.tp-link.com/en/products/details/cat-9_Archer-C59.html",
+      "firmwareoemstockurl": "",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-tplink_archer-c59-v1-squashfs-factory.bin",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-tplink_archer-c59-v1-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-tplink_archer-c59-v1-squashfs-factory.bin",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-tplink_archer-c59-v1-squashfs-sysupgrade.bin",
+      "installationmethods": "GUI OEM,U-Boot TFTP recovery,see git-commit",
+      "commentinstallation": "Rename installation image to tp_recovery.bin, see git-commit",
+      "recoverymethods": "GUI generic,TP-Link TFTP,U-Boot TFTP + serial recovery,see git-commit",
+      "commentrecovery": "TFTP recovery filename: tp_recovery.bin (use factory image)",
+      "picture": "media:example:genericrouter1.png",
+      "comments": "",
+      "page": "toh:hwdata:tp-link:tp-link_archer_c59_v1"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi Router",
+      "Brand": "TP-Link",
+      "Model": "Archer C59",
+      "Versions": "v1",
+      "FCCID_urls": "https://fcc.io/TE7/C59",
+      "Availability_availability": "Discontinued 2017",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.lede-project.org/?p=source.git;a=commit;h=e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+      "Supported Since Rel_releasesince": "18.06.0",
+      "Supported Current Rel_releasecurrent": "25.12.1",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Broken",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Qualcomm Atheros QCA9561",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "775",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "5",
+      "Ethernet 1Gbit ports_numethport": "-",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "Qualcomm Atheros QCA9561",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Qualcomm Atheros QCA9561, Qualcomm Atheros QCA9886",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN Comments_": "2.4Ghz 3x3:3 MIMO, 5Ghz 2x2:2 MIMO",
+      "WLAN driver_wlan-drivers": "ath9k, ath10k-ct",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "¿",
+      "USB ports_port-usbs": "1x 2.0",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "No",
+      "LED count_numled": "8",
+      "Button count_numbutton": "3",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "12 VDC, 1.0A",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:tp-link:archer_c59",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "Archer C59",
+      "Git search_search-gits": "Archer C59",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/TP-LINK_Archer_C59_v1.x",
+      "WikiDevi ID_hwinfo-id": "TP-LINK_Archer_C59_v1.x",
+      "OEM Device Homepage URL_url": "http://www.tp-link.com/en/products/details/cat-9_Archer-C59.html",
+      "Firmware OEM Stock URL_url": "",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.1/targets/ath79/generic/openwrt-25.12.1-ath79-generic-tplink_archer-c59-v1-squashfs-factory.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.1/targets/ath79/generic/openwrt-25.12.1-ath79-generic-tplink_archer-c59-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-tplink_archer-c59-v1-squashfs-factory.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-tplink_archer-c59-v1-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "GUI OEM, U-Boot TFTP recovery, see git-commit",
+      "Comment installation": "Rename installation image to tp_recovery.bin, see git-commit",
+      "Recovery method(s)_method-recoverys": "GUI generic, TP-Link TFTP, U-Boot TFTP + serial recovery, see git-commit",
+      "Comment recovery": "TFTP recovery filename: tp_recovery.bin (use factory image)",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "openwrt_wiki": {
+      "Opening the case": "Remove the 4 Philips screws at the bottom and separate the top and bottom case. The two parts are held together by 8 clips: One at the back, 3 at the front and 2 at each sides.",
+      "Switch Ports (for VLANs)": {
+        "CPU": 0,
+        "LAN 1": 1,
+        "LAN 2": 4,
+        "LAN 3": 2,
+        "LAN 4": 3
+      },
+      "Network interfaces": {
+        "br-lan": "LAN & WiFi 192.168.1.1/24",
+        "vlan1 (eth1.1)": "LAN ports (1 to 4)",
+        "eth0": "WAN port, DHCP",
+        "wlan0": "WiFi, Disabled"
+      },
+      "Serial": "nur Vorlage ('EXAMPLE 115200, 8N1'), keine Fotos",
+      "Buttons": "nur Vorlage (EXAMPLE)",
+      "Reverting to stock": "Rename stock bin to \"tp_recovery.bin\" and place in your Tftp server. ... power off router. hold reset button and power on. hold it until you see transfer complete in logs (Bilder archer_c59_v2_1.png/archer_c59_v2_2.png)",
+      "Tags": "ath79 QCA9561 16flash 128ram 5port fastethernet 1core 1usb usb2.0 serial 3button 12v_powered vlan 802.11bgn 802.11anac ath9k ath10k-ct u-boot",
+      "Revisionen": "2019-11-03 angelegt (tmomas), 2019-11-27 Switch Ports/Specific Configuration (karoiz), 2020-04-11 Notes (amarshall40), 2021-03-29 Opening the case (nalx), 2021-04-18 umbenannt von toh:tp-link:tp-link_archer_c59, 2025-11-03 warranty (dimmadont), 2026-08-26 Tags (fgbxramel)"
+    },
+    "openwrt_wiki_c60v2": {
+      "Serial": "There is an unpopulated 4 pin serial header (J1) present on the left side of the PCB. The pin close to the rear of the unit (TX) is marked with a sideways triangle. Otherwise, the pins are unmarked. Note: UART operates at 3.3V! Pins: TX, RX, Gnd, Vcc (3.3V). Factory units do not have this header installed.",
+      "Serial connection parameters": "115200 (or 118000 for CH341A serial adapter), 8N1",
+      "Installation via UART": "Interrupt boot during Autoboot delay. You only have 1 second to type \"tpl<enter>\" to get Ath> prompt."
+    },
+    "openwrt_git_ar71xx": {
+      "titel": "ar71xx: add support to TP-Link Archer C59v1 and C60v1",
+      "beschreibung": "dual-band AC1350 router, based on Qualcomm/Atheros QCA9561+QCA9886",
+      "Specification": [
+        "775/650/258 MHz (CPU/DDR/AHB)",
+        "128 MB of RAM (DDR2)",
+        "16 MB of FLASH (SPI NOR)",
+        "3T3R 2.4 GHz",
+        "2T2R 5 GHz",
+        "5x 10/100 Mbps Ethernet",
+        "USB 2.0 port",
+        "8x LED (controled by 74HC595), 3x button",
+        "UART header on PCB"
+      ],
+      "Currently not working": [
+        "Port LAN1 on C59",
+        "WiFi 5GHz (missing ath10k firmware for QCA9886 chip)",
+        "Update from oficial web interface (tplink-saveloader not support \"product-info\")"
+      ],
+      "Flash instruction": [
+        "Set PC to fixed ip address 192.168.0.66",
+        "Download ...-squashfs-factory.bin and rename it to tp_recovery.bin",
+        "Start a tftp server with the file tp_recovery.bin in its root directory",
+        "Turn off the router",
+        "Press and hold Reset button",
+        "Turn on router with the reset button pressed and wait ~15 seconds",
+        "Release the reset button and after a short time the firmware should be transferred from the tftp server",
+        "Wait ~30 second to complete recovery."
+      ],
+      "Flash instruction under U-Boot, using UART": [
+        "tftp 0x81000000 lede-ar71xx-...-sysupgrade.bin",
+        "erase 0x9f020000 +$filesize",
+        "cp.b $fileaddr 0x9f020000 $filesize",
+        "reset"
+      ]
+    },
+    "openwrt_git_ath79": {
+      "titel": "ath79: add support for Archer C58/C59 v1",
+      "CPU": "Qualcomm QCA9561",
+      "RAM": "64M (C58) / 128M (C59)",
+      "FLASH": "8M (C58) / 16M (C59)",
+      "WiFi": "QCA9561 bgn 3x3:3, QCA9888 nac 2x2:2",
+      "LED": "Power, WiFi 2.4, WiFi 5, WAN green, WAN amber, LAN, WPS; Only C59: USB",
+      "BTN": "WPS, WiFi, Reset",
+      "Installation Web-UI": "Update factory image via Web-UI.",
+      "Installation TFTP": "Rename factory image to \"tp_recovery.bin\" and place it in the root-dir of your tftp server. Configure to listen on 192.168.0.66. Power up the router while holding down the reset-button. The router will flash itself and reboot.",
+      "Note": "For TFTP, you might need a switch between router and computer, as link establishment might take to long."
+    },
+    "openwrt_git_lan1": {
+      "titel": "ar71xx: C58/C59 fix LAN1 working incorrectly",
+      "text": "fixes LAN Port 1 not transferring data in case no other LAN Port has active link-state"
+    },
+    "openwrt_git_kalibrierung": {
+      "titel": "ath79: add calibtation variant for TP-Link Archer C59 v1",
+      "text": "Now that we have a board file, add calibration variant for TP-Link Archer C59 v1 and add ipq-wifi package for it.",
+      "Tested-by": "Mateusz Jończyk"
+    },
+    "openwrt_dts": {
+      "compatible": "tplink,archer-c59-v1, qca,qca9560",
+      "model": "TP-Link Archer C59 v1",
+      "label-mac-device": "eth1",
+      "leds (74HC595 über spi-gpio)": {
+        "power": "grün, Bit 0",
+        "wlan2g": "grün, Bit 1 (phy1tpt)",
+        "wlan5g": "grün, Bit 2 (phy0tpt)",
+        "lan": "grün, Bit 3",
+        "wan_green": "Bit 4",
+        "wan_amber": "Bit 5",
+        "wps": "grün, Bit 6",
+        "usb": "grün, Bit 7 (usbport)"
+      },
+      "keys": {
+        "WPS button": "GPIO 1",
+        "WiFi button": "GPIO 2 (KEY_RFKILL)",
+        "Reset button": "GPIO 21"
+      },
+      "pcie wifi@0,0": "qcom,ath10k, pre-calibration art@0x5000 (0x2f20), mac info+0x8 -1, calibration-variant TP-Link-Archer-c59-v1",
+      "wmac": "mac info+0x8, calibration art@0x1000 (0x440)",
+      "eth0": "mac info+0x8 +1, phy-handle swphy0 (switch-phy-addr-swap, switch-phy-swap)",
+      "eth1": "mac info+0x8 +0",
+      "spi-max-frequency": "25000000",
+      "partitionen": {
+        "u-boot": "0x000000 0x010000 ro",
+        "info": "0x010000 0x010000 ro",
+        "firmware": "0x020000 0xe30000 (denx,uimage)",
+        "tplink": "0xe50000 0x1a0000 ro",
+        "art": "0xff0000 0x010000 ro"
+      },
+      "usb0": "okay"
+    },
+    "openwrt_image_mk": {
+      "Device": "tplink_archer-c59-v1",
+      "Basis": "tplink-safeloader-uimage",
+      "SOC": "qca9561",
+      "IMAGE_SIZE": "14528k",
+      "DEVICE_MODEL": "Archer C59",
+      "DEVICE_VARIANT": "v1",
+      "TPLINK_BOARD_ID": "ARCHER-C59-V1",
+      "DEVICE_PACKAGES": "kmod-usb2 kmod-usb-ledtrig-usbport kmod-ath10k-ct ath10k-firmware-qca9888-ct ipq-wifi-tplink_archer-c59-v1",
+      "SUPPORTED_DEVICES": "archer-c59-v1"
+    },
+    "firmware_utils_safeloader": {
+      "id": "ARCHER-C59-V1",
+      "support_list": [
+        "{product_name:Archer C59,product_ver:1.0.0,special_id:00000000}",
+        "{product_name:Archer C59,product_ver:1.0.0,special_id:43410000}",
+        "{product_name:Archer C59,product_ver:1.0.0,special_id:45550000}",
+        "{product_name:Archer C59,product_ver:1.0.0,special_id:52550000}",
+        "{product_name:Archer C59,product_ver:1.0.0,special_id:55530000}"
+      ],
+      "soft_ver": "soft_ver:1.0.0",
+      "partitions": {
+        "fs-uboot": "0x00000 0x10000",
+        "default-mac": "0x10000 0x00200",
+        "pin": "0x10200 0x00200",
+        "device-id": "0x10400 0x00100",
+        "product-info": "0x10500 0x0fb00",
+        "firmware": "0x20000 0xe30000",
+        "partition-table": "0xe50000 0x10000",
+        "soft-version": "0xe60000 0x10000",
+        "support-list": "0xe70000 0x10000",
+        "profile": "0xe80000 0x10000",
+        "default-config": "0xe90000 0x10000",
+        "user-config": "0xea0000 0x40000",
+        "usb-config": "0xee0000 0x10000",
+        "certificate": "0xef0000 0x10000",
+        "qos-db": "0xf00000 0x40000",
+        "log": "0xfe0000 0x10000",
+        "radio": "0xff0000 0x10000"
+      }
+    },
+    "gluon_targets": {
+      "device": "device('tp-link-archer-c59-v1', 'tplink_archer-c59-v1', { packages = ATH10K_PACKAGES_QCA9888 })",
+      "kommentar_datei": "enforce mainline ath10k kmod/firmware over openwrt default ath10k-ct usage; ath10k-ct is unstable/broken with 11s meshing"
+    },
+    "gluon_issue_3425": {
+      "titel": "[ath79][ipq40xx] verify 5GHz on devices using ath10k QCA9888",
+      "text": "The nvmem-cell rework caused certain devices to not detect (some of) their 5GHz radios correctly. Specifically devices with a chip requiring QCA9888 firmware (wifi5 wave2). Affected are likely: ... Archer C58 v1, C59 v1, C6 v2",
+      "matjon 2025-01-21": "OpenWrt 23.05.5 dmesg: ath10k_pci 0000:00:00.0: qca9888 hw2.0 target 0x01000000 chip_id 0x00000000 sub 0000:0000; firmware ver 10.4b-ct-9888-fW-13-5ae337bb1",
+      "achterin 2025-10-06": "devices with existing bugreports: TP-Link Archer C59 v1, C60 v2, C60 v3",
+      "maurerle 2025-10-14": "The C59 v1 looks fixed in openwrt-main: 2a44808374",
+      "achterin 2025-10-14": "and it also got backported to openwrt-24.10, so next module update will also bring this fix to gluon.",
+      "rotanid 2025-10-18": "done."
+    },
+    "deviwiki": {
+      "brand": "TP-LINK",
+      "model": "Archer C59",
+      "revision": "v1.x",
+      "series": "AC1350",
+      "asin": "B01K1JJUNW",
+      "price": "79.99",
+      "est_release_date": "08/09/2016",
+      "fcc_date": "11/02/2016",
+      "manuf_country": "China",
+      "is_manuf": "Yes",
+      "type": "wireless router",
+      "fcc_id": "TE7C59",
+      "pwr_v": "12",
+      "pwr_amp": "1",
+      "pwr_conn": "barrel",
+      "cpu1_brand": "Qualcomm Atheros",
+      "cpu1_model": "QCA9561;QCA9561-AL3A;",
+      "cpu1_cspeed": "775",
+      "fla1": "16",
+      "fla1_brand": "Winbond",
+      "fla1_model": "W25Q128FVSG",
+      "ram1": "128",
+      "ram1_brand": "EtronTech",
+      "ram1_model": "EM68C16CWQD-25H",
+      "expansion_if_types": "USB 2.0",
+      "expansion_usb_num": "1",
+      "wi1_chip1_brand": "Qualcomm Atheros",
+      "wi1_chip1_model": "QCA9561;QCA9561-AL3A;",
+      "wi1_802dot11_protocols": "bgn",
+      "wi1_ant_conn": "U.FL",
+      "wi1_txchains": "3",
+      "wi1_rxchains": "3",
+      "wi1_sstreams": "3",
+      "wi2_chip1_brand": "Qualcomm Atheros",
+      "wi2_chip1_model": "QCA9886",
+      "wi2_802dot11_protocols": "an+ac",
+      "wi2_ant_conn": "U.FL",
+      "wi2_txchains": "2",
+      "wi2_rxchains": "2",
+      "wi2_sstreams": "2",
+      "eth_cpu": "true",
+      "sw_cpu": "true",
+      "lan_speed": "100M",
+      "lan_ports": "4",
+      "wan_speed": "100M",
+      "wan_ports": "1",
+      "stock_boot": "U-Boot;1.1.4;",
+      "802dot11_protocols": "abgn+ac",
+      "default_ssid": "TP-LINK_XXXX,TP-LINK_XXXX_5G,",
+      "default_ip": "192.168.0.1",
+      "default_user": "admin",
+      "default_pass": "admin",
+      "oui": "50:C7:BF",
+      "oui_eth": "50:C7:BF",
+      "_tagline": "AC1350 Wireless Dual Band Router",
+      "_link": "http://www.tp-link.com/en/products/details/cat-9_Archer-C59.html (Product page)"
+    },
+    "fcc": {
+      "Equipment Class": "AC1350 Wireless Dual Band Router",
+      "Applicant": "TP-Link Technologies Co., Ltd.",
+      "Test Firm": "SPORTON International Inc.",
+      "Frequenzen": [
+        "5180-5240 MHz Class II permissive change 2017-01-23",
+        "2412-2462 MHz Original Equipment 2016-11-02",
+        "5180-5240 MHz Original Equipment 2016-11-02"
+      ],
+      "Exhibits": [
+        "TE7C59 UG Users Manual 2017-01-23 5.1 MB",
+        "TE7C59 UM Users Manual 2016-11-02 5.1 MB",
+        "TE7C59 InPho_1027 Internal Photos 2016-11-02 2.1 MB",
+        "TE7C59 ExPho External Photos 2016-11-02 407 KB",
+        "TE7C59 Label ID Label/Location Info 2016-11-02 1.5 MB",
+        "TE7C59 TsupPhotos.NII Test Setup Photos 2017-01-23 741.5 KB",
+        "TE7C59 Test Sup_DTS Test Setup Photos 2016-11-02 792.8 KB",
+        "TE7C59 Test Sup_UNII Band1-4- Test Setup Photos 2016-11-02 1.8 MB",
+        "TE7C59 TestRpt.NII Test Report 2017-01-23 4.7 MB",
+        "TE7C59 TestRpt.NII.AppH Test Report 2017-01-23 1.1 MB",
+        "TE7C59 Test Rpt_DTS 2.4G Test Report 2016-11-02 3.4 MB",
+        "TE7C59 Test Rpt_UNII Band1-4(Part1)_1101 Test Report 2016-11-02 3.9 MB",
+        "TE7C59 Test Rpt_UNII Band1-4(Part2)_1101 Test Report 2016-11-02 2.2 MB",
+        "Attestation Statements (15B DoC, Ad Hoc, POA)",
+        "Cover Letters (C2PC, Conf.letter, POA, Confidentiality)",
+        "TE7C59 MPE RF Exposure Info 2016-11-02 und 2017-01-23",
+        "vertraulich: Block Diagram, Schematics, Operational Description, SW security"
+      ]
+    },
+    "fcc_handbuch": {
+      "Titel": "User Guide REV1.0.0 1910011791",
+      "LEDs (links nach rechts, Vorderseite)": [
+        "Power (an/blinkend/aus)",
+        "2.4GHz Wireless",
+        "5GHz Wireless",
+        "Internet (grün = Internet, orange = Port verbunden ohne Internet)",
+        "Ethernet",
+        "USB",
+        "WPS"
+      ],
+      "Rückseite (links nach rechts)": [
+        "WPS Button",
+        "Reset Button: Press this button for about 5 seconds to reset the router to its factory default settings.",
+        "Ethernet Ports (1/2/3/4)",
+        "Internet Port",
+        "USB Port",
+        "Power On/Off Button",
+        "Power Port: For connecting the router to a power socket via the provided power adapter.",
+        "Wi-Fi Button: Press this button for about 2 seconds to turn on or off the wireless function",
+        "Antennas: Upright them for the best Wi-Fi performance."
+      ],
+      "Position": "The router can be placed on a shelf or desktop. Not exposed to moisture or excessive heat.",
+      "USB": "USB external flash drives, hard drives and USB printers; FAT32, exFat, NTFS or HFS+; max. 4 devices via hub",
+      "Zeichnung": "3 externe Antennen auf der Rückseite"
+    },
+    "fcc_label": {
+      "Größe": "70.5*39.5±0.2mm 1.5R",
+      "Text": "TP-LINK AC1350 Wireless Dual Band Router; Model: Archer C59; Power: 12V === 1.5A; Default Access: http://tplinkwifi.net, Username: admin, Password: admin; CE 1588 (!); FCC ID: TE7C59, IC: 8853A-C59, for indoor use only; MADE IN CHINA",
+      "Felder": "S/N:XXXXXXXXXXXXX  US/1.0; MAC:XX-XX-XX-XX-XX-XX; Wireless Password/PIN:XXXXXXXX; SSID:TP-LINK_XXXX; SSID:TP-LINK_XXXX_5G",
+      "Lage": "Unterseite, Mitte (Foto 'Label Location')",
+      "Zeichnungsdaten": "Archer C59(US)_1.0_产品规格标贴, Version A1, 完成日期 2016-06-15"
+    },
+    "fcc_fotos_extern": {
+      "Gerät": "schwarzes Gehäuse mit Querrillen, 3 Stabantennen an der Rückseite (klappbar, nicht abschraubbar)",
+      "Rückseite": "links zwei kleine Taster, 4 gelbe LAN-Buchsen, 1 blaue Internet-Buchse, USB-A, Ein/Aus-Taster, Hohlstecker-Buchse, kleiner Taster rechts",
+      "Unterseite": "Lüftungsschlitze, zwei Schlüsselloch-Aussparungen, Gummifüße/Ecken",
+      "Netzteil": "TP-LINK TECHNOLOGIES CO.,LTD. Model: T120150-2B1; Input: 100-240V~ 50/60Hz 0.6A; Output: 12V === 1.5A; I.T.E. POWER SUPPLY; Level VI; cULus E342511; Polaritätssymbol Mitte positiv; US-Steckernetzteil"
+    },
+    "fcc_fotos_intern": {
+      "Aufbau": "eine Platine, zwei Schirmbleche mit Wärmeleitpads und Kühlkörpern, zwei gestanzte Blechteile (Antennen) auf der Platine",
+      "Chips": "QCA9561-AL3A (PE6J945.K0, 1608, TAIWAN); QCA9886 (Aufdruck unscharf, 'QCA9886 0VV'); EtronTech-RAM (Aufdruck unscharf)",
+      "U.FL": "JH-Buchsen (u. a. JH32) für die Antennenkabel",
+      "Seriell": "JP1: 4 Durchkontaktierungen in einer Reihe, unbestückt, Dreieck-Markierung am linken Pin; daneben R242 (bestückt) sowie R243/R244 (Pads, wirken unbestückt); Testpunkt TP3V3 in der Nähe",
+      "Antennen": "3 externe Stabantennen mit fest angeschlagenem Koaxkabel und U.FL-Stecker",
+      "Platinen-Nr.": "2050500765"
+    },
+    "fcc_dts": {
+      "Report No.": "FR651919AC",
+      "Antenna General Information": [
+        {
+          "No.": "A",
+          "Ant. Cat.": "External",
+          "Ant. Type": "Dipole",
+          "Gain (dBi)": 2.89,
+          "Band": "2.4G"
+        },
+        {
+          "No.": "B",
+          "Ant. Cat.": "External",
+          "Ant. Type": "Dipole",
+          "Gain (dBi)": 2.89,
+          "Band": "2.4G"
+        },
+        {
+          "No.": "C",
+          "Ant. Cat.": "External",
+          "Ant. Type": "Dipole",
+          "Gain (dBi)": 3.34,
+          "Band": "2.4G"
+        }
+      ],
+      "RF General Information": "2.4G 11b/11g/HT20 Kanal 1-11, HT40 Kanal 3-9, Nant 3, MCS 0-23",
+      "Transmit Chains": 3,
+      "Supply": "External AC adapter (Adapter Mode)"
+    },
+    "fcc_unii": {
+      "Report No.": "FR651919AN",
+      "Antenna General Information": [
+        {
+          "No.": "A",
+          "Ant. Cat.": "External",
+          "Ant. Type": "Dipole",
+          "Gain (dBi)": 4.8,
+          "Band": "5G"
+        },
+        {
+          "No.": "B",
+          "Ant. Cat.": "External",
+          "Ant. Type": "Dipole",
+          "Gain (dBi)": 4.69,
+          "Band": "5G"
+        }
+      ],
+      "RF General Information": "5.2G Kanal 36-48 (VHT80: 42), 5.8G Kanal 149-165 (VHT80: 155); 11a/HT20/HT40/VHT20/VHT40/VHT80; Nant 2; HT MCS 0-15, VHT MCS 0-9"
+    },
+    "tplink_datenblatt": {
+      "Ethernet Ports": "4 10/100Mbps LAN Ports & 1 10/100Mbps WAN Port",
+      "USB Port": "1 USB 2.0 Port",
+      "Button": "WPS/Reset Button, Wireless On/Off Button, Power On/Off Button",
+      "External Power Supply": "12V/1A",
+      "Dimensions (W x D x H)": "8.9×5.8×1.3in (225×148×33mm)",
+      "Antenna": "3 External Antennas",
+      "Features": "Three high gain external antennas provide maximum Omni-directional wireless coverage; Combined wireless speeds up to 1.35Gbps",
+      "Wireless Standards": "IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GHz",
+      "Signal Rate": "450Mbps at 2.4GHz, 867Mbps at 5GHz",
+      "Transmit Power": "CE: <20dBm(2.4GHz), <23dBm(5GHz); FCC: <30dBm",
+      "Reception Sensitivity": "5GHz: 11a 54M: -76dBm, 11ac VHT20 MCS8: -70dBm, 11ac VHT40 MCS9: -65.5dBm, 11ac VHT80 MCS9: -61.5dBm; 2.4G: 11g 54M: -76dBm, 11n HT20 MCS7: -74dBm, 11n HT40 MCS7: -71dBm",
+      "Wireless Function": "Enable/Disable Wireless Radio, WDS Bridge, WMM, Wireless Statistics",
+      "Wireless Security": "64/128-bit WEP, WPA/WPA2, WPA-PSK/WPA-PSK2 encryptions",
+      "Package Contents": "AC1350 Wireless Dual Band Router Archer C59, Power Adapter, RJ45 Ethernet Cable, Quick Installation Guide",
+      "Certification": "CE, RoHS",
+      "Operating Temperature": "0℃~40℃ (32℉ ~104℉)",
+      "Storage Temperature": "-40℃~70℃ (-40℉ ~158℉)",
+      "Operating Humidity": "10%~90% non-condensing",
+      "Storage Humidity": "5%~90% non-condensing",
+      "Software": "WAN Type Dynamic IP/Static IP/PPPoE/PPTP/L2TP/Bigpond; DHCP; QoS WMM, Bandwidth Control; Port Forwarding; DDNS DynDns, NO-IP; VPN Passthrough PPTP, L2TP, IPSec; Parental Control; SPI Firewall; IPv4 und IPv6; USB Sharing Samba/FTP/Media Server/Printer Server; Guest Network 2.4GHz x1, 5GHz x1",
+      "Similar Products": "Archer C58, Archer C60"
+    },
+    "tplink_downloadseite": {
+      "Hardwareversionen": [
+        "V1",
+        "V2"
+      ],
+      "Firmware": [
+        "Archer C59(EU)_V1_160725 (2018-04-20, 11.76 MB)",
+        "Archer C59(EU)_V1_160621 (2016-06-21, 11.51 MB)",
+        "Archer C59(EU)_V1_160512 (2016-05-12, 11.81 MB, First firmware released)"
+      ],
+      "Hinweis": "The EU firmware is specialized for CE certification and can't be downgraded to other version",
+      "Dokumente": [
+        "Archer C59_V1_Datasheet (/en/document/66484/)",
+        "Archer C59(EU)_V1_UG (/en/document/62977/)",
+        "Archer C59(EU)_V1_QIG (/en/document/64444/)",
+        "SOHO Wireless Router QIGs (132910, 132808, 129044)"
+      ]
+    },
+    "freifunk_forum_21213": {
+      "Frage": "Image für 'Archer C59 V1' auf 'Archer C59(EU) V1' flashbar?",
+      "adorfer 2019-09-08": "Solange es keine Fehlermeldungen gibt, sollte es keine Auswirkungen haben; ggf. Dateinamen kürzen."
+    },
+    "freifunk_forum_15986": {
+      "Inhalt": "Gerücht über eine C59 v3 aus WikiDevi (2017); keine Bestätigung im Thread",
+      "rotanid 2017-11-20": "blocktrron-Backport: 5GHz WiFi läuft noch nicht und LAN Port 1"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "TP-Link",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TP-Link",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7C59",
+        "stand": "Grant 2016-11-02 (Original Equipment), Class II permissive change 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": "TP-Link Technologies Co., Ltd."
+      },
+      {
+        "wert": "TP-LINK",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "Archer C59",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Archer C59",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C59/Label/TE7C59-Label-3183400",
+        "stand": "Exhibit 2016-11-02 (Zeichnung 'Archer C59(US)_1.0_产品规格标贴' Version A1, fertig 2016-06-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "'AC1350 Wireless Dual Band Router'"
+      },
+      {
+        "wert": "Archer C59",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Archer C59",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TP-Link Archer C59 v1",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9561_tplink_archer-c59-v1.dts",
+        "stand": "Branch main am 2026-10-19, letzte Änderung Commit 2a44808374 (2025-10-14)",
+        "sicherheit": "mittel",
+        "bemerkung": "model im DTS"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "v1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1.0 (Typenschild 'US/1.0' neben der Seriennummer)",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C59/Label/TE7C59-Label-3183400",
+        "stand": "Exhibit 2016-11-02 (Zeichnung 'Archer C59(US)_1.0_产品规格标贴' Version A1, fertig 2016-06-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "US-Variante des FCC-Musters"
+      },
+      {
+        "wert": "v1.x",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "product_ver 1.0.0",
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+        "stand": "Branch master am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "einzige Version in der Support-Liste von ARCHER-C59-V1"
+      },
+      {
+        "wert": "V1 (Download-Seite bietet V1 und V2)",
+        "quelle": "tplink_downloadseite",
+        "beleg": "https://www.tp-link.com/en/support/download/archer-c59/v1/",
+        "stand": "Live-Seite 2026-10-19, neueste Firmware Archer C59(EU)_V1_160725 (veröffentlicht 2018-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild 70.5 x 39.5 mm mittig auf der Unterseite; links 'Model: Archer C59', 'Power: 12V 1.5A', Default Access tplinkwifi.net admin/admin; rechts Barcode-Felder S/N mit Version rechts daneben (z. B. 'US/1.0'), MAC, Wireless Password/PIN, SSIDs TP-LINK_XXXX und TP-LINK_XXXX_5G; unten FCC ID TE7C59, IC 8853A-C59",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C59/Label/TE7C59-Label-3183400",
+        "stand": "Exhibit 2016-11-02 (Zeichnung 'Archer C59(US)_1.0_产品规格标贴' Version A1, fertig 2016-06-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Hardware-Version steht in der S/N-Zeile als <Region>/<Version>; v1 = 1.x, v2 = 2.x"
+      },
+      {
+        "wert": "Ver. auf dem Typenschild; 'Vx.0 = Vx.6/Vx.8/Vx.9' gilt als dieselbe Hardwareversion",
+        "quelle": "tplink_downloadseite",
+        "beleg": "https://www.tp-link.com/en/support/download/archer-c59/v1/",
+        "stand": "Live-Seite 2026-10-19, neueste Firmware Archer C59(EU)_V1_160725 (veröffentlicht 2018-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "TP-Link-Hinweis auf der Download-Seite"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "TE7C59",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7C59",
+        "stand": "Grant 2016-11-02 (Original Equipment), Class II permissive change 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TE7C59",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C59/Label/TE7C59-Label-3183400",
+        "stand": "Exhibit 2016-11-02 (Zeichnung 'Archer C59(US)_1.0_产品规格标贴' Version A1, fertig 2016-06-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TE7C59",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TE7C59",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "als https://fcc.io/TE7/C59"
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "8853A-C59",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C59/Label/TE7C59-Label-3183400",
+        "stand": "Exhibit 2016-11-02 (Zeichnung 'Archer C59(US)_1.0_产品规格标贴' Version A1, fertig 2016-06-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "AC1350 Wireless Dual Band Router",
+          "Archer C59(US) 1.0",
+          "Archer C59(EU) V1"
+        ],
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C59/Label/TE7C59-Label-3183400",
+        "stand": "Exhibit 2016-11-02 (Zeichnung 'Archer C59(US)_1.0_产品规格标贴' Version A1, fertig 2016-06-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "EU-Bezeichnung aus der TP-Link-Download-Seite"
+      },
+      {
+        "wert": [
+          "special_id 00000000 (ohne Region)",
+          "43410000 (CA)",
+          "45550000 (EU)",
+          "52550000 (RU)",
+          "55530000 (US)"
+        ],
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+        "stand": "Branch master am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Regionskennungen der Support-Liste; Zuordnung der Hex-Werte zu Ländercodes als ASCII abgeleitet"
+      }
+    ],
+    "varianten": [
+      {
+        "wert": "Schwestermodelle Archer C58 v1 (64 MB RAM, 8 MB Flash, ohne USB) und Archer C60 v1 auf gleicher Plattform QCA9561+QCA9886; Archer C59 v2 ist ein eigenes Image",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/946ffe470d923fdde53db68592437194e0c276fc",
+        "stand": "Commit 2018-10-31 (Autor David Bauer), gemergt 2018-11-26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Gerücht über eine 'v3' mit gleicher Hardware (WikiDevi 2016/2017), nirgends bestätigt; TP-Link listet nur V1 und V2",
+        "quelle": "freifunk_forum_15986",
+        "beleg": "https://forum.freifunk.net/t/15986",
+        "stand": "Thread 2017-11-14 bis 2017-11-20 (6 Beiträge, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Discontinued 2017",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "nicht mehr im Handel (Produktseite 404, letzte Firmware 2018-04-20)",
+        "quelle": "tplink_downloadseite",
+        "beleg": "https://www.tp-link.com/en/support/download/archer-c59/v1/",
+        "stand": "Live-Seite 2026-10-19, neueste Firmware Archer C59(EU)_V1_160725 (veröffentlicht 2018-04-20)",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet"
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "2016-08-09 (geschätzt)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "est_release_date 08/09/2016; FCC-Datum 2016-11-02"
+      },
+      {
+        "wert": "erste Firmware 2016-05-12 (EU)",
+        "quelle": "tplink_downloadseite",
+        "beleg": "https://www.tp-link.com/en/support/download/archer-c59/v1/",
+        "stand": "Live-Seite 2026-10-19, neueste Firmware Archer C59(EU)_V1_160725 (veröffentlicht 2018-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "Archer C59(EU)_V1_160512 'First firmware released'"
+      }
+    ],
+    "preis_neu": [
+      {
+        "wert": "79.99 USD",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "Listenpreis, ASIN B01K1JJUNW"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm Atheros QCA9561",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9561-AL3A",
+        "quelle": "fcc_fotos_intern",
+        "beleg": "https://fccid.io/TE7C59/Internal-Photos/TE7C59-InPho-1027-3183398",
+        "stand": "Exhibit 2016-11-02 (PDF 2016-10-27)",
+        "sicherheit": "hoch",
+        "bemerkung": "Chipaufdruck auf FCC-Innenfoto"
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9561-AL3A",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9561",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 775,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 775,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": "775/650/258 MHz (CPU/DDR/AHB)"
+      },
+      {
+        "wert": 775,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "mips_24kc (Paketarchitektur)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 128,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": "DDR2"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/946ffe470d923fdde53db68592437194e0c276fc",
+        "stand": "Commit 2018-10-31 (Autor David Bauer), gemergt 2018-11-26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR2",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_chips": [
+      {
+        "wert": "EtronTech EM68C16CWQD-25H",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "EtronTech (Typ auf Foto unscharf)",
+        "quelle": "fcc_fotos_intern",
+        "beleg": "https://fccid.io/TE7C59/Internal-Photos/TE7C59-InPho-1027-3183398",
+        "stand": "Exhibit 2016-11-02 (PDF 2016-10-27)",
+        "sicherheit": "mittel",
+        "bemerkung": "Sichtung"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9561_tplink_archer-c59-v1.dts",
+        "stand": "Branch main am 2026-10-19, letzte Änderung Commit 2a44808374 (2025-10-14)",
+        "sicherheit": "mittel",
+        "bemerkung": "Partitionen bis 0x1000000"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": "'16 MB of FLASH (SPI NOR)'"
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "Winbond W25Q128FVSG",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_layout": [
+      {
+        "wert": "u-boot 64 KiB, info 64 KiB (MAC bei 0x8), firmware 0x020000-0xe50000 (14528 KiB), tplink 0xe50000-0xff0000, art 0xff0000 (64 KiB)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9561_tplink_archer-c59-v1.dts",
+        "stand": "Branch main am 2026-10-19, letzte Änderung Commit 2a44808374 (2025-10-14)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "switch": [
+      {
+        "wert": "Qualcomm Atheros QCA9561 (integriert)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "im SoC integriert (sw_cpu)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": true,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "Qualcomm Atheros QCA9561",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump nennt nur den SoC"
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9561, Qualcomm Atheros QCA9886",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Seitenrevision 2026-03-22 03:00",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9561 (2.4 GHz), QCA9886 (5 GHz)",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9561 (2.4 GHz), QCA9888 (5 GHz)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/946ffe470d923fdde53db68592437194e0c276fc",
+        "stand": "Commit 2018-10-31 (Autor David Bauer), gemergt 2018-11-26",
+        "sicherheit": "mittel",
+        "bemerkung": "Treiber meldet 'qca9888 hw2.0'; QCA9886 nutzt die QCA9888-Firmware"
+      },
+      {
+        "wert": "QCA9561-AL3A (2.4 GHz), QCA9886 (5 GHz)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9886 unter dem Schirmblech",
+        "quelle": "fcc_fotos_intern",
+        "beleg": "https://fccid.io/TE7C59/Internal-Photos/TE7C59-InPho-1027-3183398",
+        "stand": "Exhibit 2016-11-02 (PDF 2016-10-27)",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufdruck leicht unscharf"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath10k",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath9k, ath10k-ct",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Seitenrevision 2026-03-22 03:00",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kmod-ath10k-ct + ath10k-firmware-qca9888-ct + ipq-wifi-tplink_archer-c59-v1",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-tp-link.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt-Standard"
+      },
+      {
+        "wert": "mainline ath10k (ATH10K_PACKAGES_QCA9888), nicht ath10k-ct",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Gluon: ath10k-ct gilt bei 11s-Mesh als instabil"
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Seitenrevision 2026-03-22 03:00",
+        "sicherheit": "mittel",
+        "bemerkung": "2.4Ghz 3x3:3 MIMO"
+      },
+      {
+        "wert": 3,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": "3T3R"
+      },
+      {
+        "wert": 3,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "tx/rx chains 3, spatial streams 3"
+      },
+      {
+        "wert": 3,
+        "quelle": "fcc_dts",
+        "beleg": "https://fccid.io/TE7C59/Test-Report/TE7C59-Test-Rpt-DTS-2-4G-3181271",
+        "stand": "Prüfbericht FR651919AC Rev. 03, 2016-10-28 (Rev. 01 2016-09-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "Nant 3, MCS 0-23"
+      },
+      {
+        "wert": 3,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "450 Mbit/s bei 2.4 GHz"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Seitenrevision 2026-03-22 03:00",
+        "sicherheit": "mittel",
+        "bemerkung": "5Ghz 2x2:2 MIMO"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": "2T2R"
+      },
+      {
+        "wert": 2,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "fcc_unii",
+        "beleg": "https://fccid.io/TE7C59/Test-Report/TE7C59-Test-Rpt-UNII-Band1-4-Part1-1101-3183403",
+        "stand": "Prüfbericht FR651919AN Rev. 02, 2016-10-26 (Rev. 01 2016-09-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "Nant 2, VHT MCS 0-9"
+      },
+      {
+        "wert": 2,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "867 Mbit/s bei 5 GHz"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AC1350",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AC1350",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C59/Label/TE7C59-Label-3183400",
+        "stand": "Exhibit 2016-11-02 (Zeichnung 'Archer C59(US)_1.0_产品规格标贴' Version A1, fertig 2016-06-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AC1350",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_wave2": [
+      {
+        "wert": true,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/946ffe470d923fdde53db68592437194e0c276fc",
+        "stand": "Commit 2018-10-31 (Autor David Bauer), gemergt 2018-11-26",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: QCA9886/QCA9888 ist 802.11ac Wave 2 (Gluon-Issue 3425: 'QCA9888 firmware (wifi5 wave2)')"
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "20/40 MHz (2.4 GHz), 20/40/80 MHz (5 GHz)",
+        "quelle": "fcc_unii",
+        "beleg": "https://fccid.io/TE7C59/Test-Report/TE7C59-Test-Rpt-UNII-Band1-4-Part1-1101-3183403",
+        "stand": "Prüfbericht FR651919AN Rev. 02, 2016-10-26 (Rev. 01 2016-09-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "2.4 GHz laut DTS-Bericht"
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": "2412-2462 MHz; 5180-5240 MHz (Kanal 36-48); 5745-5825 MHz (Kanal 149-165)",
+        "quelle": "fcc_unii",
+        "beleg": "https://fccid.io/TE7C59/Test-Report/TE7C59-Test-Rpt-UNII-Band1-4-Part1-1101-3183403",
+        "stand": "Prüfbericht FR651919AN Rev. 02, 2016-10-26 (Rev. 01 2016-09-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant-Liste auf fccid.io zeigt nur 2412-2462 und 5180-5240"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": "CE: <20 dBm (2.4 GHz), <23 dBm (5 GHz); FCC: <30 dBm",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_empfindlichkeit": [
+      {
+        "wert": "5 GHz: 11a 54M -76 dBm, VHT80 MCS9 -61.5 dBm; 2.4 GHz: 11g 54M -76 dBm, HT40 MCS7 -71 dBm",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_schalter": [
+      {
+        "wert": "Wi-Fi-Taster auf der Rückseite (ca. 2 s drücken schaltet WLAN an/aus)",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C59/User-Manual/TE7C59-UM-3183406",
+        "stand": "FCC-Exhibit 2016-11-02, REV1.0.0 1910011791 (PDF erstellt 2016-05-25, geändert 2016-09-21)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WiFi button GPIO 2 (KEY_RFKILL)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9561_tplink_archer-c5x.dtsi",
+        "stand": "Branch main am 2026-10-19, letzte Änderung Commit 2a44808374 (2025-10-14)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5ghz_hinweis": [
+      {
+        "wert": "Ab OpenWrt 23.05/24.10 (NVMEM-Umbau) wurde das 5-GHz-Radio nicht mehr erkannt; behoben 2025-10-14 durch Kalibrierungsvariante + ipq-wifi-Boarddatei (main 2a44808374, openwrt-24.10 0c1ff934ec)",
+        "quelle": "openwrt_git_kalibrierung",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2a44808374497b83edb76b4e384f280546a62dbe",
+        "stand": "Commit 2025-09-25 (Christoph Krapp), gemergt 2025-10-14; Backport openwrt-24.10 als 0c1ff934ec (2025-10-14)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Gluon-Issue: C59 v1 betroffen, nach Modul-Update auf den Fix erledigt (2025-10-18)",
+        "quelle": "gluon_issue_3425",
+        "beleg": "https://github.com/freifunk-gluon/gluon/issues/3425",
+        "stand": "Issue 2025-01-15 bis 2025-10-22 (geschlossen)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Gluon v2025.1.x pinnt OpenWrt a1ea57bd (2026-08-11), der den Fix 0c1ff934ec enthält",
+        "quelle": "gluon_modules",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/modules",
+        "stand": "Branch v2025.1.x am 2026-10-19: OPENWRT_COMMIT a1ea57bd (2026-08-11), enthält 0c1ff934ec",
+        "sicherheit": "mittel",
+        "bemerkung": "per GitHub-Compare geprüft (ahead 353, behind 0)"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "3 extern, nicht abnehmbar",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "'3 External Antennas'; Abnehmbarkeit aus FCC-Fotos/ToH"
+      },
+      {
+        "wert": "keine abnehmbaren Antennen",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas: -"
+      },
+      {
+        "wert": "3 externe Stabantennen mit fest angeschlagenem Koaxkabel (U.FL zur Platine), klappbar; zusätzlich zwei gestanzte Blechantennen im Gehäuse",
+        "quelle": "fcc_fotos_intern",
+        "beleg": "https://fccid.io/TE7C59/Internal-Photos/TE7C59-InPho-1027-3183398",
+        "stand": "Exhibit 2016-11-02 (PDF 2016-10-27)",
+        "sicherheit": "mittel",
+        "bemerkung": "Sichtung; Blechantennen vermutlich 5 GHz (abgeleitet)"
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "intern U.FL (2.4 und 5 GHz)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U.FL an der Platine, außen kein Stecker",
+        "quelle": "fcc_fotos_intern",
+        "beleg": "https://fccid.io/TE7C59/Internal-Photos/TE7C59-InPho-1027-3183398",
+        "stand": "Exhibit 2016-11-02 (PDF 2016-10-27)",
+        "sicherheit": "mittel",
+        "bemerkung": "Sichtung"
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 3,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "nur externe gezählt"
+      },
+      {
+        "wert": 5,
+        "quelle": "fcc_unii",
+        "beleg": "https://fccid.io/TE7C59/Test-Report/TE7C59-Test-Rpt-UNII-Band1-4-Part1-1101-3183403",
+        "stand": "Prüfbericht FR651919AN Rev. 02, 2016-10-26 (Rev. 01 2016-09-19)",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet: DTS-Bericht 3 Antennen 2.4 GHz (A-C), UNII-Bericht 2 Antennen 5 GHz (A-B), Bänder getrennt"
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "getrennt: 3 Dipole nur 2.4 GHz, 2 Dipole nur 5 GHz",
+        "quelle": "fcc_dts",
+        "beleg": "https://fccid.io/TE7C59/Test-Report/TE7C59-Test-Rpt-DTS-2-4G-3181271",
+        "stand": "Prüfbericht FR651919AC Rev. 03, 2016-10-28 (Rev. 01 2016-09-19)",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet aus den Antennentabellen von DTS- und UNII-Bericht; dass die 3 externen die 2.4-GHz-Antennen sind und 5 GHz innen liegt, ist aus Anzahl und Fotos geschlossen (niedrig)"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4": [
+            2.89,
+            2.89,
+            3.34
+          ]
+        },
+        "quelle": "fcc_dts",
+        "beleg": "https://fccid.io/TE7C59/Test-Report/TE7C59-Test-Rpt-DTS-2-4G-3181271",
+        "stand": "Prüfbericht FR651919AC Rev. 03, 2016-10-28 (Rev. 01 2016-09-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "Dipol, Kategorie External"
+      },
+      {
+        "wert": {
+          "5": [
+            4.8,
+            4.69
+          ]
+        },
+        "quelle": "fcc_unii",
+        "beleg": "https://fccid.io/TE7C59/Test-Report/TE7C59-Test-Rpt-UNII-Band1-4-Part1-1101-3183403",
+        "stand": "Prüfbericht FR651919AN Rev. 02, 2016-10-26 (Rev. 01 2016-09-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "Dipol, Kategorie External"
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "rund (Omni)",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "'maximum Omni-directional wireless coverage'"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "Internet",
+            "geschwindigkeit": "10/100",
+            "rolle": "WAN",
+            "farbe": "blau"
+          },
+          {
+            "name": "Ethernet 1",
+            "geschwindigkeit": "10/100",
+            "rolle": "LAN",
+            "farbe": "gelb"
+          },
+          {
+            "name": "Ethernet 2",
+            "geschwindigkeit": "10/100",
+            "rolle": "LAN",
+            "farbe": "gelb"
+          },
+          {
+            "name": "Ethernet 3",
+            "geschwindigkeit": "10/100",
+            "rolle": "LAN",
+            "farbe": "gelb"
+          },
+          {
+            "name": "Ethernet 4",
+            "geschwindigkeit": "10/100",
+            "rolle": "LAN",
+            "farbe": "gelb"
+          }
+        ],
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "Farben aus FCC-Außenfotos; Reihenfolge Rückseite von links: Ethernet 1-4, Internet"
+      },
+      {
+        "wert": "5x 10/100 Mbit/s",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1 WAN + 4 LAN, je 100 Mbit/s",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 5,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Ethernet 100M ports 5, Gigabit -"
+      },
+      {
+        "wert": 5,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports_geschwindigkeit_max_mbit": [
+      {
+        "wert": 100,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "kein Gigabit"
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "5 RJ45-Buchsen"
+      }
+    ],
+    "switch_portzuordnung": [
+      {
+        "wert": "CPU = Switch-Port 0, LAN 1 = 1, LAN 2 = 4, LAN 3 = 2, LAN 4 = 3; WAN = eth0, LAN = eth1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c59",
+        "stand": "Seitenrevision 2026-08-26 01:23",
+        "sicherheit": "mittel",
+        "bemerkung": "Abschnitt 'Switch Ports (for VLANs)' (2019, ar71xx-Zeit)"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": 0,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Live-Seite: '-'"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "1x USB 2.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x USB 2.0",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x USB 2.0",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x USB-A auf der Rückseite zwischen Internet-Buchse und Ein/Aus-Taster",
+        "quelle": "fcc_fotos_extern",
+        "beleg": "https://fccid.io/TE7C59/External-Photos/TE7C59-ExPho-3183397",
+        "stand": "Sporton Projekt 651919, Rev. 01, PDF 2016-09-12",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "keins",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": false,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "mittel",
+        "bemerkung": "keine PoE-Angabe in Datenblatt, Handbuch und FCC-Berichten; Strom nur über DC-Buchse"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "Hohlstecker-Buchse 'Power' auf der Rückseite rechts neben dem Ein/Aus-Taster",
+        "quelle": "fcc_fotos_extern",
+        "beleg": "https://fccid.io/TE7C59/External-Photos/TE7C59-ExPho-3183397",
+        "stand": "Sporton Projekt 651919, Rev. 01, PDF 2016-09-12",
+        "sicherheit": "hoch",
+        "bemerkung": "Handbuch: Power Port"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 12,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C59/Label/TE7C59-Label-3183400",
+        "stand": "Exhibit 2016-11-02 (Zeichnung 'Archer C59(US)_1.0_产品规格标贴' Version A1, fertig 2016-06-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 1.0,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "'External Power Supply: 12V/1A' (CE-Datenblatt)"
+      },
+      {
+        "wert": 1.0,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.0,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.5,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C59/Label/TE7C59-Label-3183400",
+        "stand": "Exhibit 2016-11-02 (Zeichnung 'Archer C59(US)_1.0_产品规格标贴' Version A1, fertig 2016-06-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild der US-Variante: 'Power: 12V 1.5A'"
+      },
+      {
+        "wert": 1.5,
+        "quelle": "fcc_fotos_extern",
+        "beleg": "https://fccid.io/TE7C59/External-Photos/TE7C59-ExPho-3183397",
+        "stand": "Sporton Projekt 651919, Rev. 01, PDF 2016-09-12",
+        "sicherheit": "hoch",
+        "bemerkung": "Netzteil des FCC-Musters T120150-2B1: 12 V 1.5 A"
+      }
+    ],
+    "dc_polaritaet": [
+      {
+        "wert": "Mitte positiv",
+        "quelle": "fcc_fotos_extern",
+        "beleg": "https://fccid.io/TE7C59/External-Photos/TE7C59-ExPho-3183397",
+        "stand": "Sporton Projekt 651919, Rev. 01, PDF 2016-09-12",
+        "sicherheit": "hoch",
+        "bemerkung": "Polaritätssymbol auf dem Netzteil T120150-2B1"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "Package Contents: Power Adapter"
+      },
+      {
+        "wert": true,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C59/User-Manual/TE7C59-UM-3183406",
+        "stand": "FCC-Exhibit 2016-11-02, REV1.0.0 1910011791 (PDF erstellt 2016-05-25, geändert 2016-09-21)",
+        "sicherheit": "hoch",
+        "bemerkung": "'via the provided power adapter'"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "TP-LINK T120150-2B1: Eingang 100-240 V~ 50/60 Hz 0.6 A, Ausgang 12 V DC 1.5 A, Effizienzklasse VI, cULus E342511 (US-Steckernetzteil)",
+        "quelle": "fcc_fotos_extern",
+        "beleg": "https://fccid.io/TE7C59/External-Photos/TE7C59-ExPho-3183397",
+        "stand": "Sporton Projekt 651919, Rev. 01, PDF 2016-09-12",
+        "sicherheit": "hoch",
+        "bemerkung": "Netzteil des FCC-Prüfmusters (US); EU-Netzteil laut Datenblatt 12 V 1 A, Typ unbekannt"
+      }
+    ],
+    "ein_aus_schalter": [
+      {
+        "wert": "Power On/Off-Taster auf der Rückseite",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Power On/Off Button zwischen USB-Port und Power-Buchse",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C59/User-Manual/TE7C59-UM-3183406",
+        "stand": "FCC-Exhibit 2016-11-02, REV1.0.0 1910011791 (PDF erstellt 2016-05-25, geändert 2016-09-21)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Seitenrevision 2026-03-22 03:00",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C59/Label/TE7C59-Label-3183400",
+        "stand": "Exhibit 2016-11-02 (Zeichnung 'Archer C59(US)_1.0_产品规格标贴' Version A1, fertig 2016-06-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "'for indoor use only'"
+      },
+      {
+        "wert": "innen",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C59/User-Manual/TE7C59-UM-3183406",
+        "stand": "FCC-Exhibit 2016-11-02, REV1.0.0 1910011791 (PDF erstellt 2016-05-25, geändert 2016-09-21)",
+        "sicherheit": "hoch",
+        "bemerkung": "Regal oder Tisch, nicht feucht oder heiß"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": {
+          "min": 0,
+          "max": 40
+        },
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_lager": [
+      {
+        "wert": {
+          "min": -40,
+          "max": 70
+        },
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "Betrieb 10-90 %, Lager 5-90 %, nicht kondensierend",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": {
+          "breite": 225,
+          "tiefe": 148,
+          "hoehe": 33
+        },
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "8.9 x 5.8 x 1.3 in., ohne Antennen"
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Tisch oder Regal",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C59/User-Manual/TE7C59-UM-3183406",
+        "stand": "FCC-Exhibit 2016-11-02, REV1.0.0 1910011791 (PDF erstellt 2016-05-25, geändert 2016-09-21)",
+        "sicherheit": "hoch",
+        "bemerkung": "'The router can be placed on a shelf or desktop.'"
+      },
+      {
+        "wert": "Tisch; Unterseite mit zwei Schlüsselloch-Aussparungen (Wandmontage vermutlich möglich)",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C59/Label/TE7C59-Label-3183400",
+        "stand": "Exhibit 2016-11-02 (Zeichnung 'Archer C59(US)_1.0_产品规格标贴' Version A1, fertig 2016-06-15)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Sichtung Foto 'Label Location'; Wandmontage in keiner Textquelle beschrieben"
+      }
+    ],
+    "montageloecher": [
+      {
+        "wert": "2 Schlüsselloch-Aussparungen auf der Unterseite",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C59/Label/TE7C59-Label-3183400",
+        "stand": "Exhibit 2016-11-02 (Zeichnung 'Archer C59(US)_1.0_产品规格标贴' Version A1, fertig 2016-06-15)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Sichtung Foto, Abstand nicht bekannt"
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "4 Kreuzschlitzschrauben auf der Unterseite lösen; Ober- und Unterschale zusätzlich mit 8 Clips verbunden (1 hinten, 3 vorne, je 2 seitlich)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c59",
+        "stand": "Seitenrevision 2026-08-26 01:23",
+        "sicherheit": "mittel",
+        "bemerkung": "Abschnitt 'Opening the case' (2021-03-29)"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": false,
+        "quelle": "fcc_fotos_intern",
+        "beleg": "https://fccid.io/TE7C59/Internal-Photos/TE7C59-InPho-1027-3183398",
+        "stand": "Exhibit 2016-11-02 (PDF 2016-10-27)",
+        "sicherheit": "mittel",
+        "bemerkung": "kein Lüfter auf den FCC-Innenfotos, passive Kühlkörper"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 8,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 8,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": "über Schieberegister 74HC595"
+      },
+      {
+        "wert": 7,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C59/User-Manual/TE7C59-UM-3183406",
+        "stand": "FCC-Exhibit 2016-11-02, REV1.0.0 1910011791 (PDF erstellt 2016-05-25, geändert 2016-09-21)",
+        "sicherheit": "hoch",
+        "bemerkung": "7 LED-Funktionen; Internet-LED zweifarbig grün/orange (= 8 im DTS)"
+      }
+    ],
+    "led_liste": [
+      {
+        "wert": "Power, 2.4 GHz, 5 GHz, Internet (grün/orange), Ethernet, USB, WPS",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C59/User-Manual/TE7C59-UM-3183406",
+        "stand": "FCC-Exhibit 2016-11-02, REV1.0.0 1910011791 (PDF erstellt 2016-05-25, geändert 2016-09-21)",
+        "sicherheit": "hoch",
+        "bemerkung": "Vorderseite von links nach rechts"
+      },
+      {
+        "wert": "power, wlan2g, wlan5g, lan, wan grün, wan amber, wps, usb",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9561_tplink_archer-c5x.dtsi",
+        "stand": "Branch main am 2026-10-19, letzte Änderung Commit 2a44808374 (2025-10-14)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "in Stock-Firmware: Control LEDs (Handbuch 13.11)",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C59/User-Manual/TE7C59-UM-3183406",
+        "stand": "FCC-Exhibit 2016-11-02, REV1.0.0 1910011791 (PDF erstellt 2016-05-25, geändert 2016-09-21)",
+        "sicherheit": "mittel",
+        "bemerkung": "nur Stock-Firmware"
+      }
+    ],
+    "knoepfe": [
+      {
+        "wert": "WPS, Reset, Wi-Fi On/Off, Power On/Off",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C59/User-Manual/TE7C59-UM-3183406",
+        "stand": "FCC-Exhibit 2016-11-02, REV1.0.0 1910011791 (PDF erstellt 2016-05-25, geändert 2016-09-21)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WPS/Reset Button, Wireless On/Off Button, Power On/Off Button",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "Datenblatt fasst WPS/Reset zusammen; DTS und Handbuch: getrennte Taster"
+      },
+      {
+        "wert": "WPS (GPIO 1), WiFi (GPIO 2), Reset (GPIO 21)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9561_tplink_archer-c5x.dtsi",
+        "stand": "Branch main am 2026-10-19, letzte Änderung Commit 2a44808374 (2025-10-14)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Button count ohne Power"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "Reset-Taster links auf der Rückseite (neben WPS); ca. 5 s drücken setzt die Stock-Firmware zurück",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C59/User-Manual/TE7C59-UM-3183406",
+        "stand": "FCC-Exhibit 2016-11-02, REV1.0.0 1910011791 (PDF erstellt 2016-05-25, geändert 2016-09-21)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Reset beim Einschalten gedrückt halten startet TFTP-Recovery",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte",
+        "quelle": "fcc_fotos_intern",
+        "beleg": "https://fccid.io/TE7C59/Internal-Photos/TE7C59-InPho-1027-3183398",
+        "stand": "Exhibit 2016-11-02 (PDF 2016-10-27)",
+        "sicherheit": "mittel",
+        "bemerkung": "JP1: 4 Durchkontaktierungen in einer Reihe, auf dem FCC-Muster ohne Stiftleiste, Dreieck-Markierung an einem Ende; Stiftleiste einlöten. R243/R244 daneben wirken unbestückt - ob sie im UART-Pfad liegen, ist offen"
+      },
+      {
+        "wert": "UART-Header auf der Platine",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": "'UART header on PCB'"
+      },
+      {
+        "wert": true,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial: Yes"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "TX (Pin mit Dreieck), RX, GND, VCC 3.3 V",
+        "quelle": "openwrt_wiki_c60v2",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c60_v2",
+        "stand": "abgerufen 2026-10-19 (Revision nicht ermittelt)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: gilt für Archer C60 v2 (Header J1); für C59 v1 (JP1) nicht belegt"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Seitenrevision 2026-03-22 03:00",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "115200 / 8N1"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "U-Boot-Flash per UART: tftp 0x81000000 <sysupgrade.bin>; erase 0x9f020000 +$filesize; cp.b $fileaddr 0x9f020000 $filesize; reset",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Bei TP-Link-U-Boot dieser Plattform 'tpl' + Enter innerhalb 1 s zum Anhalten",
+        "quelle": "openwrt_wiki_c60v2",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c60_v2",
+        "stand": "abgerufen 2026-10-19 (Revision nicht ermittelt)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet von Archer C60 v2"
+      }
+    ],
+    "jtag": [
+      {
+        "wert": false,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/generic",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Seitenrevision 2026-03-22 03:00",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ar71xx-ath79/generic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump-Stand"
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "tplink_archer-c59-v1 (TPLINK_BOARD_ID ARCHER-C59-V1, tplink-safeloader-uimage, IMAGE_SIZE 14528k)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-tp-link.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "18.06.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "ar71xx; Commit e39dc8d823 von 2017-01-26"
+      },
+      {
+        "wert": "ath79 seit Commit 2018-11-26 (erste Release mit ath79: 19.07)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/946ffe470d923fdde53db68592437194e0c276fc",
+        "stand": "Commit 2018-10-31 (Autor David Bauer), gemergt 2018-11-26",
+        "sicherheit": "niedrig",
+        "bemerkung": "Release abgeleitet"
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.1",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Seitenrevision 2026-03-22 03:00",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "23.05.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump-Stand"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot 1.1.4",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "GUI OEM, U-Boot TFTP recovery",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Rename installation image to tp_recovery.bin"
+      },
+      {
+        "wert": "Stock-Web-UI mit factory-Image; oder TFTP: PC auf 192.168.0.66, factory-Image als tp_recovery.bin, Reset gedrückt halten und einschalten, ca. 15 s halten",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": "Bei TFTP evtl. Switch zwischen Router und PC nötig (langsamer Link-Aufbau), laut ath79-Commit"
+      },
+      {
+        "wert": "Flashen aus Stock-Firmware in Gluon nicht getestet",
+        "quelle": "gluon_pr_2489",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2489",
+        "stand": "PR 2022-04-21, gemergt 2022-05-01",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "tftp_recovery": [
+      {
+        "wert": {
+          "server_ip": "192.168.0.66",
+          "dateiname": "tp_recovery.bin",
+          "ausloeser": "Reset beim Einschalten gedrückt halten"
+        },
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/946ffe470d923fdde53db68592437194e0c276fc",
+        "stand": "Commit 2018-10-31 (Autor David Bauer), gemergt 2018-11-26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Rückweg zur Stock-Firmware: Stock-Datei als tp_recovery.bin per TFTP, Reset beim Einschalten halten",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c59",
+        "stand": "Seitenrevision 2026-08-26 01:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.tp-link.com/en/support/download/archer-c59/v1/",
+        "quelle": "tplink_downloadseite",
+        "beleg": "https://www.tp-link.com/en/support/download/archer-c59/v1/",
+        "stand": "Live-Seite 2026-10-19, neueste Firmware Archer C59(EU)_V1_160725 (veröffentlicht 2018-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "neueste Archer C59(EU)_V1_160725 (2018-04-20); EU-Firmware kein Downgrade"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja (ath79-generic, tp-link-archer-c59-v1)",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Broken",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Seitenrevision 2026-03-22 03:00",
+        "sicherheit": "niedrig",
+        "bemerkung": "ToH-Feld 'Gluon support'; Grund nicht angegeben, vermutlich der 2025-10 behobene 5-GHz-Fehler (abgeleitet)"
+      },
+      {
+        "wert": "ath79 wieder aufgenommen 2022-05-01 (PR #2489)",
+        "quelle": "gluon_pr_2489",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2489",
+        "stand": "PR 2022-04-21, gemergt 2022-05-01",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "mac_schema": [
+      {
+        "wert": "Typenschild-MAC = LAN (eth1) und WLAN 2.4 GHz; WAN (eth0) = +1; WLAN 5 GHz = -1; Basis aus info-Partition Offset 0x8",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9561_tplink_archer-c59-v1.dts",
+        "stand": "Branch main am 2026-10-19, letzte Änderung Commit 2a44808374 (2025-10-14)",
+        "sicherheit": "mittel",
+        "bemerkung": "label-mac-device eth1"
+      }
+    ],
+    "oui": [
+      {
+        "wert": "50:C7:BF",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "werkseinstellungen": [
+      {
+        "wert": "http://tplinkwifi.net, admin/admin",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C59/Label/TE7C59-Label-3183400",
+        "stand": "Exhibit 2016-11-02 (Zeichnung 'Archer C59(US)_1.0_产品规格标贴' Version A1, fertig 2016-06-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "192.168.0.1, admin/admin, SSID TP-LINK_XXXX / TP-LINK_XXXX_5G",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_land": [
+      {
+        "wert": "China",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C59/Label/TE7C59-Label-3183400",
+        "stand": "Exhibit 2016-11-02 (Zeichnung 'Archer C59(US)_1.0_产品规格标贴' Version A1, fertig 2016-06-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "MADE IN CHINA"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/tp-link/archer_c59",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c59",
+        "stand": "Seitenrevision 2026-08-26 01:23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C59_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/TP-LINK_Archer_C59_v1.x",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_Archer_C59_v1.x",
+        "stand": "Rohtext identisch mit DeviWiki-Revision 2019-07-05T05:31:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.tp-link.com/en/support/download/archer-c59/v1/",
+        "quelle": "tplink_downloadseite",
+        "beleg": "https://www.tp-link.com/en/support/download/archer-c59/v1/",
+        "stand": "Live-Seite 2026-10-19, neueste Firmware Archer C59(EU)_V1_160725 (veröffentlicht 2018-04-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C59_Datasheet_1.0_1473319989106p.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C59_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "fcc_seite": [
+      {
+        "wert": "https://fccid.io/TE7C59",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7C59",
+        "stand": "Grant 2016-11-02 (Original Equipment), Class II permissive change 2017-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/TE7C59/External-Photos/TE7C59-ExPho-3183397",
+      "kategorie": "dc_buchse_mass",
+      "grund": "Hohlstecker-Maß in keiner Quelle; am Gerät oder Netzteil messen"
+    },
+    {
+      "url": "https://fccid.io/TE7C59",
+      "kategorie": "leistung_w",
+      "grund": "keine Leistungsaufnahme in Datenblatt, Handbuch oder Prüfberichten (nur Netzteil 12 V 1 A bzw. 1.5 A)"
+    },
+    {
+      "url": "https://fccid.io/TE7C59/Internal-Photos/TE7C59-InPho-1027-3183398",
+      "kategorie": "seriell",
+      "grund": "JP1-Pinbelegung und ob R243/R244 für RX/TX nachbestückt werden müssen, aus Fotos nicht sicher; keine C59-spezifische Quelle gefunden"
+    },
+    {
+      "url": "https://www.tp-link.com/en/document/62977/",
+      "kategorie": "handbuch_eu",
+      "grund": "EU-User-Guide (Archer C59(EU)_V1_UG) nicht geladen; FCC-Handbuch (US) ausgewertet"
+    },
+    {
+      "url": "https://www.tp-link.com/en/document/64444/",
+      "kategorie": "qig_eu",
+      "grund": "EU-Quick-Installation-Guide nicht geladen; könnte EU-Netzteil und Wandmontage zeigen"
+    },
+    {
+      "url": "https://fccid.io/TE7C59/User-Manual/TE7C59-UG-3264964",
+      "kategorie": "handbuch",
+      "grund": "zweites Handbuch (Class II change 2017-01-23, 5.1 MB) nicht ausgewertet"
+    },
+    {
+      "url": "https://fccid.io/TE7C59/Test-Report/TE7C59-TestRpt-NII-3264961",
+      "kategorie": "wlan",
+      "grund": "NII-Bericht der Class-II-Änderung 2017-01-23 (4.7 MB) nicht ausgewertet; Grund der Änderung unbekannt"
+    },
+    {
+      "url": "https://forum.freifunk.net/t/14809",
+      "kategorie": "praxis",
+      "grund": "Forenthreads zu C59 (14809, 16444, 22316) nur als Suchauszug gesehen"
+    },
+    {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/1281",
+      "kategorie": "gluon",
+      "grund": "ursprünglicher ar71xx-Support (2017/2018) nicht im Detail gelesen; Gluon-Version mit Erstsupport nicht ermittelt"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c59_v1?do=revisions",
+      "kategorie": "gluon_support",
+      "grund": "Herkunft des ToH-Eintrags 'Gluon support: Broken' (vor 2024-10-15) nicht ermittelt"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "notiz": "Erster Lauf: ToH-Dump und Live-Seite (+Diff), OpenWrt-Wiki (fast leere Vorlage) sowie C60v2/C58v1 als Schwesterseiten, OpenWrt-Commits (ar71xx 2017, ath79 2018, LAN1-Fix, 5-GHz-Kalibrierung 2025), DTS/DTSI/Image-Makefile, Safeloader, Gluon-Target/Issues/PR und v2025.1.x-Pin, DeviWiki/WikiDevi, FCC TE7C59 (Handbuch, Typenschild, Außen-/Innenfotos, DTS- und UNII-Bericht), TP-Link-Datenblatt und Download-Seite, Freifunk-Forum. Keine Werkstatt-Protokolle. Widersprüche: Netzteil 12 V 1 A (Datenblatt/ToH/DeviWiki) gegen 1.5 A (US-Typenschild, FCC-Netzteil); 5-GHz-Chip QCA9886 (ToH, DeviWiki, Foto) gegen QCA9888 (ath79-Commit, Treiberkennung); ToH 'Gluon support: Broken' gegen Gluon-Target und 5-GHz-Fix. Seriell nur als unbestückte Lötpunkte JP1 belegt, Pinbelegung nur abgeleitet. Offen: DC-Maß, Leistung, Pinbelegung.",
+    "anfragen": 60,
+    "laeufe": [
+      {
+        "datum": "2026-10-19",
+        "anfragen": 60,
+        "status": "teilweise"
+      }
+    ]
+  }
+}

@@ -1,0 +1,2426 @@
+{
+  "image": "ubiquiti-unifi-ac-lr",
+  "modell": "Ubiquiti UniFi AP AC LR",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15678115"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr?do=export_raw",
+      "stand": "Seitenrevision 2026-03-15 03:46",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Live-Seite neuer als Dump: Power Supply \"Passive 24V PoE, 802.3af/B\" (Dump: \"PoE 24V, 0.5 A, 802.3af/A\", geändert 2025-11-05 von dimmadont), Treiber ath9k/ath10k-ct, Serial 3.3 V, Outdoor No, Gluon Yes, aktuell 25.12.0"
+    },
+    "openwrt_hwdata_alt": {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr?rev=1762152632&do=export_raw",
+      "stand": "Seitenrevision 2025-11-03 06:50",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Revision vor der PoE-Änderung vom 2025-11-05, nur zum Vergleich"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/ubiquiti/unifiac?do=export_raw",
+      "stand": "Seitenrevision 2026-02-19 22:43",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Gemeinsame Seite UniFi AP AC Lite/LR/Pro/Mesh/EDU/IW; Hardwaretabelle mit eigener LR-Spalte, serielle Konsole an AC Lite beschrieben (LR \"Same as the AC Lite\")"
+    },
+    "openwrt_git_ath79": {
+      "url": "https://github.com/openwrt/openwrt/commit/07c1ddf522dbe6085af664cf03a41f636a70b99c",
+      "stand": "Commit 2019-10-06 (Autor), gemergt 2019-10-15",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_ar71xx": {
+      "url": "https://github.com/openwrt/openwrt/commit/c855e70491fbd5d432915c4cbeb3b80f3a117e30",
+      "stand": "Commit 2016-05-11 (Autor), gemergt 2016-05-12",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "von der ToH als \"Supported Since Commit\" genannt; Umbenennung unifiac -> unifiac-lite, LR lief unter ar71xx mit dem unifiac-lite-Image"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=unifiac-lr+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-19 (0 Treffer; Historie per Dateipfad der DTS gefunden)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_ubnt_unifiac-lr.dts",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "dateien": [
+        "qca9563_ubnt_unifiac-lr.dts",
+        "qca9563_ubnt_unifiac-lite.dtsi",
+        "qca9563_ubnt_unifiac.dtsi"
+      ]
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "dateien": [
+        "generic-ubnt.mk",
+        "common-ubnt.mk"
+      ]
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_commit_b901dfa": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/b901dfa69156b40044aeddc6647671a6d14a5e33",
+      "stand": "Commit 2022-04-02",
+      "abgerufen": "2026-10-19"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/wiki/Ubiquiti_Networks_UniFi_AP_AC_(UAP-AC)",
+      "stand": "Seitenrevision 2019-07-05T02:57:44Z",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Keine eigene LR-Seite (Ubiquiti_Networks_UniFi_AP_AC_LR: 404); LR nur in der Vergleichstabelle der UAP-AC-Seite"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/Ubiquiti_Networks_UniFi_AP_AC_(UAP-AC)",
+      "stand": "Seitenrevision 2026-02-10T15:25:43Z",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Spiegel; Vergleichstabelle inhaltlich wie DeviWiki, nur Formatierung (\"16/128 MB\", \"∅176x43 mm\")"
+    },
+    "ubnt_datenblatt_2017": {
+      "url": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+      "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "UniFi AC AP Datasheet, Seite 9 UAP-AC-LR Specifications"
+    },
+    "ubnt_datenblatt_2019": {
+      "url": "https://web.archive.org/web/20210103210358/https://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+      "stand": "PDF 2019-01-22 (Archiv 2021-01-03)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "gleiches Dokument, neuere Fassung: Power Method jetzt zusätzlich 802.3af/A"
+    },
+    "ui_techspecs": {
+      "url": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+      "stand": "Live-Seite 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Next.js-Daten der Seite ausgewertet; Installation Guide https://ui.com/qig/uap-ac-lr ist nur JavaScript"
+    },
+    "fcc": {
+      "url": "https://fccid.io/SWX-UAPACLR",
+      "stand": "Grant 2015-08-13 (Original), letzte Änderung 2020-09-28",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_handbuch": {
+      "url": "https://fccid.io/SWX-UAPACLR/User-Manual/User-manual-2713081",
+      "stand": "Quick Start Guide PDF 2015-08-04 (Exhibit 2015-09-27)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "UniFi UAP-AC-LR Quick Start Guide, 28 Seiten, pdftotext"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/SWX-UAPACLR/Label/Label-info-2713085",
+      "stand": "Zeichnung v07 2015-07-06 (Exhibit 2015-08-13)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "UAP-AC-LR Device Artwork, als Bild ausgewertet"
+    },
+    "fcc_innenfotos": {
+      "url": "https://fccid.io/SWX-UAPACLR/Internal-Photos/Internal-photo-2713083",
+      "stand": "Bericht ATL 15-0341, PDF 2015-07-31 (Exhibit 2015-09-27)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "4 Seiten, als Bild ausgewertet (200 dpi)"
+    },
+    "werkstatt": {
+      "url": "router-werkstatt/docs/erstinstallation-ohne-factory.md",
+      "stand": "Commit 0d84e25, 2026-10-10",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Abschnitt \"D: Ubiquiti UniFi - Sonderfall\"; Sammelaussage für UniFi AC Lite/LR/Mesh/Pro u. a., keine Messung am LR"
+    }
+  },
+  "roh": {
+    "toh": {
+      "score": 0.98,
+      "pid": "15678115",
+      "devicetype": "WiFi AP",
+      "brand": "Ubiquiti",
+      "model": "UniFi AP AC LR",
+      "version": "NULL",
+      "fccid": "https://fcc.io/SWX-UAPACLR",
+      "availability": "Available 2018",
+      "whereavailable": "amazon.de, amazon.com",
+      "supportedsincecommit": "https://git.lede-project.org/?p=source.git;a=commit;h=c855e70491fbd5d432915c4cbeb3b80f3a117e30",
+      "supportedsincerel": "17.01.0",
+      "supportedcurrentrel": "23.05.0",
+      "unsupported_functions": "NULL",
+      "target": "ar71xx-ath79",
+      "subtarget": "generic",
+      "packagearchitecture": "mips_24kc",
+      "bootloader": "U-Boot",
+      "cpu": "Qualcomm Atheros QCA9563",
+      "cpucores": "1",
+      "cpumhz": "775",
+      "flashmb": "16",
+      "rammb": "128",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "1",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "Atheros AR8033",
+      "wlanhardware": "Qualcomm Atheros QCA9882,Qualcomm Atheros QCA9563",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "a/n/ac",
+      "wlancomments": "2.4 GHz 3x3 MIMO - 5 GHz 2x2 MIMO",
+      "wlandriver": "ath10k",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "-",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "115200 / 8N1",
+      "jtag": "¿",
+      "ledcount": "2",
+      "buttoncount": "1",
+      "gpios": "-",
+      "powersupply": "PoE 24V, 0.5 A, 802.3af/A",
+      "devicepage": "toh:ubiquiti:unifiac",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "UniFi AP AC LR",
+      "gitsearch": "UniFi AP AC LR",
+      "wikideviurl": "NULL",
+      "oemdevicehomepageurl": "https://www.ubnt.com/unifi/unifi-ap-ac-lr/",
+      "firmwareoemstockurl": "https://www.ui.com/download/unifi/",
+      "firmwareopenwrtinstallurl": "NULL",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-ubnt_unifiac-lr-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "NULL",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_unifiac-lr-squashfs-sysupgrade.bin",
+      "installationmethods": "U-Boot TFTP + serial recovery,see devicepage",
+      "commentinstallation": "",
+      "recoverymethods": "U-Boot TFTP + serial recovery",
+      "commentrecovery": "",
+      "picture": "media:example:genericrouter1.png",
+      "comments": "",
+      "page": "toh:hwdata:ubiquiti:ubiquiti_unifi_apac_lr"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi AP",
+      "Brand": "Ubiquiti",
+      "Model": "UniFi AP AC LR",
+      "Versions": "",
+      "FCCID_urls": "https://fcc.io/SWX-UAPACLR",
+      "Availability_availability": "Available 2018",
+      "Where available": "amazon.de, amazon.com",
+      "Supported Since Commit_git": "https://git.lede-project.org/?p=source.git;a=commit;h=c855e70491fbd5d432915c4cbeb3b80f3a117e30",
+      "Supported Since Rel_releasesince": "17.01.0",
+      "Supported Current Rel_releasecurrent": "25.12.0",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Qualcomm Atheros QCA9563",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "775",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "Switch": "",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "Atheros AR8033 GbE Phy",
+      "WLAN Hardwares": "Qualcomm Atheros QCA9882, Qualcomm Atheros QCA9563",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN Comments_": "2.4 GHz 3x3 MIMO - 5 GHz 2x2 MIMO",
+      "WLAN driver_wlan-drivers": "ath9k, ath10k-ct",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "2",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "Passive 24V PoE, 802.3af/B",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:ubiquiti:unifiac",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "UniFi AP AC LR",
+      "Git search_search-gits": "UniFi AP AC LR",
+      "WikiDevi URL_urls": "",
+      "WikiDevi ID_hwinfo-id": "",
+      "OEM Device Homepage URL_url": "https://www.ubnt.com/unifi/unifi-ap-ac-lr/",
+      "Firmware OEM Stock URL_url": "https://www.ui.com/download/unifi/",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/generic/openwrt-25.12.0-ath79-generic-ubnt_unifiac-lr-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/generic/openwrt-25.12.0-ath79-generic-ubnt_unifiac-lr-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_unifiac-lr-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_unifiac-lr-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "U-Boot TFTP + serial recovery, see devicepage",
+      "Recovery method(s)_method-recoverys": "U-Boot TFTP + serial recovery",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "openwrt_hwdata_alt": {
+      "Power Supply": "PoE 24V, 0.5A, 802.3af/A",
+      "Supported Current Rel_releasecurrent": "24.10.4"
+    },
+    "openwrt_wiki": {
+      "modellliste": "UniFi AP AC LR (long-range), aka UAP-AC-LR / UniFi AC Long-Range (https://techspecs.ui.com/unifi/wifi/unifi-ac-lr)",
+      "hardware_tabelle_LR": {
+        "Instruction set": "MIPS",
+        "Vendor": "Qualcomm / Atheros",
+        "Bootloader": "U-Boot",
+        "System-On-Chip": "QCA9563-AL3A",
+        "CPU Frq": "775 MHz",
+        "BogoMIPS": "385.84",
+        "Flash-Chip": "Macronix MX25L12835FMI",
+        "Flash size": "16 MiB",
+        "RAM-Chip": "Winbond W971GG6KB-25",
+        "RAM size": "128 MiB",
+        "Wireless 1 (2.4 GHz)": "QCA9563 built-in 3x3 MIMO",
+        "Wireless 2 (5 GHz)": "U-AME-G1-BR4A 2x2 MIMO",
+        "Eth Phy": "Atheros AR8033-AL1A",
+        "USB": "None",
+        "Serial": "Same as the AC Lite",
+        "JTAG": "N/A"
+      },
+      "5ghz_phy": "The chip Ubiquiti U-AME-G1-BR4A seems to be a custom labeled QCA9882-BR4A (2x2:2 MIMO). It is detected as QCA988X/hw2.0 and supported by the ath10k driver.",
+      "leds": "The UniFi AP AC has two LEDs (ubnt:white:dome, ubnt:blue:dome)",
+      "serial_console": "The device has two pinheaders with serial ports. Both ports operate at 3.3V level, 115200 Baud, 8N1 and have the pinout +3,3V - RX - TX - GND. The port to the left (shown red) gives access to U-Boot and OpenWrt's console. The purpose of the other port (shown blue) is not identified yet. Using the default/factory U-Boot environment there are no outputs from the kernel during booting. Instead, one has to send a newline at 9600 Baud (to activate the console) and then login at 115200 Baud again. (setenv bootargs 'console=ttyS0,115200 panic=3'; saveenv)",
+      "serial_port_2": "CLI>build_version=0x11, rom_version=0x41020000, ram_version=0x11, stack_size=6348 / reset reason=0x0 / Image startup of Normal mode",
+      "serial_foto": "media:ubiquiti:unifi-apac-lite_serial.jpg (AC Lite)",
+      "fotos_lr": [
+        "media:ubiquiti:ubiquiti:unifi_ac_lr_fl.jpg",
+        "media:ubiquiti:ubiquiti:unifi_ac_lr_fr.jpg",
+        "media:ubiquiti:ubiquiti:unifi_ac_lr_rl.jpg",
+        "media:ubiquiti:ubiquiti:unifi_ac_lr_rr.jpg"
+      ],
+      "installation": [
+        "Non-invasive method using dd",
+        "Non-invasive method using mtd",
+        "Non-invasive method using mtd-tools from OpenWrt",
+        "Non-invasive method using mtd from unifi",
+        "Using U-Boot with serial console"
+      ],
+      "installation_hinweis": "Stock-Firmware 3.7.58 (Bootloader) als Ausgangspunkt; Firmware 6.7.35 laut Seite mit dd-Methode nicht funktionierend (AC Lite); manche Stock-Firmwares sperren mtd-Partitionen (Forum https://forum.openwrt.org/t/uap-ac-lr-openwrt-install/163143/3)",
+      "reset_verhalten": "Reset gedrückt beim Einschalten: nach ca. 5 s blaue LED, cfg-Partition gelöscht; weitere 8 s: U-Boot-Env auf Standard, TFTP-Server auf 192.168.1.20 (Client 192.168.1.254), LEDs blau/weiß blinkend; nimmt nur Images mit Firmware-Header. Reset-Taste am Gerät oder am PoE-Injektor.",
+      "tftp_recovery": "Reset beim Einstecken des PoE-Kabels halten, bis LED-Ring weiß/blau/aus blinkt (ca. 15 s); UAP ist dann TFTP-Server 192.168.1.20 (kein Ping, kein DHCP); Stock-Image BZ.qca956x....bin per TFTP PUT",
+      "tags": "GigabitEthernet 1Port Serial integrated 802.11ac 802.11abgn_simultan 2WNIC 2Ant 128RAM 16Flash MIPS MIPS32 2x2 QCA9563 QCA956x outdoor"
+    },
+    "openwrt_git_ath79": {
+      "titel": "ath79: add support for UniFi AC-LR",
+      "autor": "Andreas Ziegler",
+      "committer_signoff": "David Bauer",
+      "text": "The Unifi AC-LR has identical hardware to the Unifi AC-Lite. The antenna setup is different according to the vendor, which explains the thicker enclosure. Therefore, it is helpful to know the exact device variant, instead of having \"Ubiquiti UniFi-AC-LITE/LR\".",
+      "dateien": [
+        "base-files/etc/board.d/02_network (ubnt,unifiac-lr)",
+        "hotplug.d/firmware/11-ath10k-caldata",
+        "dts/qca9563_ubnt_unifiac-lite.dts (model ohne /LR)",
+        "dts/qca9563_ubnt_unifiac-lr.dts (neu)",
+        "image/generic-ubnt.mk (Device/ubnt_unifiac-lr, SUPPORTED_DEVICES += unifiac-lite ubnt,unifiac-lite)"
+      ]
+    },
+    "openwrt_git_ar71xx": {
+      "titel": "ar71xx: Rename unifiac to unifiac-lite",
+      "autor": "P.Wassi",
+      "text": "To avoid confusion with different unifiac devices, rename existing target \"unifiac\" to \"unifiac-lite\", before \"unifiac-pro\" is introduced."
+    },
+    "openwrt_dts": {
+      "compatible": "ubnt,unifiac-lr, qca,qca9563",
+      "model": "Ubiquiti UniFi AC LR",
+      "include": "qca9563_ubnt_unifiac-lite.dtsi -> qca9563_ubnt_unifiac.dtsi -> qca956x.dtsi",
+      "eth0": "phy4 (ethernet-phy@4) phy-mode sgmii, MAC aus art 0x0, label-mac-device eth0",
+      "leds": "white:dome GPIO 7, blue:dome GPIO 8 (led-boot/failsafe weiß, led-running/upgrade blau)",
+      "keys": "Reset button GPIO 2 active low, KEY_RESTART",
+      "wlan": "PCIe qcom,ath10k (Kalibrierung art 0x5000), wmac (Kalibrierung art 0x1000)",
+      "flash": "jedec,spi-nor 25 MHz; Partitionen u-boot 0x000000-0x060000 (ro), u-boot-env 0x060000 (64k, ro), firmware 0x070000 Größe 0xf20000 (kernel0+kernel1), bs 0xf90000 (128k), cfg 0xfb0000 (256k, ro), art 0xff0000 (64k, ro)"
+    },
+    "openwrt_image_mk": {
+      "Device/ubnt_unifiac-lr": "$(Device/ubnt_unifiac); DEVICE_MODEL := UniFi AC LR; DEVICE_PACKAGES += -swconfig; SUPPORTED_DEVICES += unifiac-lite ubnt,unifiac-lite",
+      "Device/ubnt_unifiac": "DEVICE_VENDOR := Ubiquiti; SOC := qca9563; IMAGE_SIZE := 15488k; DEVICE_PACKAGES := kmod-ath10k-ct ath10k-firmware-qca988x-ct"
+    },
+    "gluon_targets": {
+      "device": "device('ubiquiti-unifi-ac-lr', 'ubnt_unifiac-lr', { factory = false, packages = ATH10K_PACKAGES_QCA9880 })"
+    },
+    "gluon_commit_b901dfa": {
+      "titel": "ath79-generic: (re)add unifi-ap-ac-lr",
+      "autor": "aiyion.prime",
+      "text": "Gone due to commit 45c84a117bf8 (\"ar71xx: drop target\")",
+      "docs": "supported_devices.rst: UniFi AC LR unter ath79-generic"
+    },
+    "deviwiki": {
+      "Vergleichstabelle_UAP-AC-LR": {
+        "Dimensions": "∅176x43mm",
+        "Environment": "Indoor",
+        "CPU Chip": "QCA9563",
+        "Flash/RAM": "16/128",
+        "2.4GHz Chip": "QCA9563",
+        "2.4GHz Speed": "450 Mbps",
+        "5GHz Chip": "QCA9882",
+        "5GHz Speed": "867 Mbps",
+        "Eth PHY": "AR8033",
+        "Ports": "1x GbE",
+        "PoE Mode": "24V Pass PoE"
+      },
+      "Plattform_Lite_Notiz": "CPU: Qualcomm Atheros QCA9563-AL3A @775MHz; Flash: Macronix MX25L12835FMI (16MB); RAM: Winbond W971GG6KB-25 (128MB) (unter UAP-AC-LITE gelistet)",
+      "Link": "Ubiquiti Networks UniFi AP AC LR (UAP-AC-LR) - https://www.ubnt.com/unifi/unifi-ap-ac-lr/ (Seite existiert nicht)"
+    },
+    "wikidevi": {
+      "Vergleichstabelle_UAP-AC-LR": {
+        "Flash/RAM": "16/128 MB",
+        "Dimensions": "∅176x43 mm",
+        "Environment": "Indoor",
+        "2.4GHz Speed": "450 Mbps",
+        "5GHz Chip": "QCA9882",
+        "5GHz Speed": "867 Mbps",
+        "Eth PHY": "AR8033",
+        "Ports": "1x GbE",
+        "PoE Mode": "24V Pass PoE"
+      }
+    },
+    "ubnt_datenblatt_2017": {
+      "Dimensions": "175.7 x 175.7 x 43.2 mm (6.92 x 6.92 x 1.70\")",
+      "Weight": "240 g (8.5 oz)",
+      "With Mounting Kits": "315 g (11.1 oz)",
+      "Networking Interface": "(1) 10/100/1000 Ethernet Port",
+      "Buttons": "Reset",
+      "Power Method": "Passive Power over Ethernet (24V), (Pairs 4, 5+; 7, 8 Return)",
+      "Power Supply": "24V, 0.5A Gigabit PoE Adapter*",
+      "Power Save": "Supported",
+      "Maximum Power Consumption": "6.5W",
+      "Maximum TX Power 2.4 GHz": "24 dBm",
+      "Maximum TX Power 5 GHz": "22 dBm",
+      "Antennas": "(1) Dual-Band Antenna, Tri-Polarity, 2.4 GHz: 3 dBi, 5 GHz: 3 dBi",
+      "Wi-Fi Standards": "802.11 a/b/g/n/ac",
+      "Wireless Security": "WEP, WPA-PSK, WPA-Enterprise (WPA/WPA2, TKIP/AES)",
+      "BSSID": "Up to 8 per Radio",
+      "Mounting": "Wall/Ceiling (Kits Included)",
+      "Operating Temperature": "-10 to 70° C (14 to 158° F)",
+      "Operating Humidity": "5 to 95% Noncondensing",
+      "Certifications": "CE, FCC, IC",
+      "Fußnote": "Only the single-pack of the UAP-AC-LR includes a PoE adapter.",
+      "VLAN": "802.1Q",
+      "Advanced QoS": "Per-User Rate Limiting",
+      "Guest Traffic Isolation": "Supported",
+      "WMM": "Voice, Video, Best Effort, and Background",
+      "Concurrent Clients": "250+",
+      "802.11ac": "6.5 Mbps to 867 Mbps (MCS0 - MCS9 NSS1/2, VHT 20/40/80)",
+      "802.11n": "6.5 Mbps to 450 Mbps (MCS0 - MCS23, HT 20/40)",
+      "802.11a": "6, 9, 12, 18, 24, 36, 48, 54 Mbps",
+      "802.11g": "6, 9, 12, 18, 24, 36, 48, 54 Mbps",
+      "802.11b": "1, 2, 5.5, 11 Mbps",
+      "Vergleichstabelle": {
+        "Environment": "Indoor",
+        "Simultaneous Dual-Band": "✓",
+        "2.4 GHz Radio Rate": "450 Mbps",
+        "2.4 GHz MIMO": "3x3",
+        "5 GHz Radio Rate": "867 Mbps",
+        "5 GHz MIMO": "2x2",
+        "PoE Mode": "24V Passive PoE",
+        "Ceiling Mount": "✓",
+        "Wall Mount": "✓",
+        "Wireless Uplink": "✓",
+        "DFS Certification": "✓"
+      },
+      "Beschreibung": "Ideal for long-range deployments, the UniFi AC LR AP offers simultaneous, dual-band operation with 3x3 MIMO in the 2.4 GHz band and 2x2 MIMO in the 5 GHz band. The innovative antenna design provides a long-range, symmetrical-link coverage area ... available in single- and five-packs."
+    },
+    "ubnt_datenblatt_2019": {
+      "Power Method": "802.3af/A PoE, 24V Passive PoE (Pairs 4, 5+; 7, 8 Return)",
+      "Power Supply": "24V, 0.5A Gigabit PoE Adapter*",
+      "Wi-Fi Standards": "802.11 a/b/g/n/r/k/v/ac",
+      "Vergleichstabelle PoE Mode": "802.3af/A PoE, 24V Passive PoE",
+      "sonst": "übrige Werte wie Fassung 2017 (Maße, Gewicht, 6.5W, 24/22 dBm, 3 dBi, -10 bis 70 °C)"
+    },
+    "ui_techspecs": {
+      "title": "Access Point AC Long-Range",
+      "name": "UAP-AC-LR",
+      "shortDescription": "Ceiling-mounted WiFi 5 AP with 5 spatial streams and extended signal range.",
+      "SKUs": [
+        "UAP-AC-LR-US",
+        "UAP-AC-LR-5-US"
+      ],
+      "Dimensions": "⌀175.7 x 43.2 mm (⌀6.9 x 1.7\")",
+      "WiFi Standard": "WiFi 5",
+      "Spatial Streams": "5",
+      "Coverage Area": "185 m² (2,000 ft²)",
+      "Max. Client Count": "250+",
+      "Uplink": "GbE",
+      "Mounting": "Ceiling, Wall (Lite Mount Included)",
+      "Power Method": "PoE (Note: Supports passive 24V (Pairs 4, 5+; 7, 8 return))",
+      "MIMO 5 GHz": "2 x 2 (DL MU-MIMO)",
+      "MIMO 2.4 GHz": "3 x 3 (DL MU-MIMO)",
+      "Max. Data Rate 5 GHz": "867 Mbps (BW80)",
+      "Max. Data Rate 2.4 GHz": "450 Mbps (BW40)",
+      "Antenna Gain 5 GHz": "3 dBi",
+      "Antenna Gain 2.4 GHz": "3 dBi",
+      "Max. TX Power 5 GHz": "22 dBm",
+      "Max. TX Power 2.4 GHz": "24 dBm",
+      "Max. BSSIDs": "8 per Radio",
+      "802.11ac (WiFi 5)": "6.5 Mbps to 867 Mbps (MCS0 - MCS9 NSS1/2, VHT 20/40/80)",
+      "802.11n": "6.5 Mbps to 450 Mbps (MCS0 - MCS23, HT 20/40)",
+      "Features": [
+        "Wireless Meshing",
+        "Band Steering",
+        "802.11v BSS Transition Management",
+        "802.11r Fast Roaming",
+        "802.11k Radio Resource Management (RRM)",
+        "Advanced Radio Management",
+        "Passpoint (Hotspot 2.0)",
+        "Captive Hotspot Portal",
+        "Private Pre-Shared Key (PPSK)",
+        "WiFi Speed Limiting",
+        "Client Device Isolation",
+        "WiFi Schedules",
+        "RADIUS over TLS (RadSec)",
+        "Dynamic RADIUS-assigned VLAN"
+      ],
+      "Max. Power Consumption": "6.5W",
+      "Includes PoE Adapter": "yes (Note: 5-pack do not come with PoE adapter)",
+      "Networking Interface": "(1) GbE RJ45 port",
+      "Weight": "Device: 240 g (8.5 oz), With mount: 315 g (11.1 oz)",
+      "Management": "Ethernet",
+      "Enclosure Material": "Polycarbonate",
+      "LEDs System": "Status",
+      "Channel Bandwidth": "HT 20/40, VHT 20/40/80 (MHz)",
+      "Operating Frequency": "US/CA: 2400 - 2472 MHz, U-NII-1: 5150 - 5250 MHz, U-NII-2A: 5250 - 5350 MHz, U-NII-2C: 5470 - 5725 MHz, U-NII-3: 5725 - 5850 MHz; Worldwide: 2400 - 2483.5 MHz, 5150 - 5850 MHz (Note: For worldwide, it depends on the regulatory region)",
+      "Ambient Operating Temperature": "-10 to 70° C (14 to 158° F)",
+      "Ambient Operating Humidity": "5 to 95% noncondensing",
+      "NDAA Compliant": "yes",
+      "Certifications": "CE, FCC, IC, Anatel: 01409-16-08356",
+      "UniFi Network": "Version 6.0.45 and later",
+      "Documents": "InstallationGuide https://ui.com/qig/uap-ac-lr"
+    },
+    "fcc": {
+      "FCC ID": "SWX-UAPACLR",
+      "Grantee": "Ubiquiti Inc.",
+      "Equipment Class": "Digital Transmission Radio / NII",
+      "Test Firm": "Unified Compliance Laboratory (letzte), Original ATL",
+      "Anträge": [
+        "2015-08-13 Original Equipment (2412-2462, 5180-5240 MHz)",
+        "2016-06-01 Class II permissive change",
+        "2020-08-11 Class II permissive change",
+        "2020-09-28 Class II permissive change"
+      ],
+      "Ausgangsleistung W": {
+        "2412-2462 MHz": 0.114,
+        "5180-5240 MHz": 0.109,
+        "5260-5320 MHz": 0.134,
+        "5500-5700 MHz": 0.16,
+        "5745-5825 MHz": 0.132
+      },
+      "Grant Comments": "Power listed is the maximum combined conducted output power. Device is approved per 15.407(a)(1)(ii) as Indoor access point. 5150-5250MHz is restricted for indoor use only. Device is 2x2 MIMO contains 20/ 40/ 80 MHz signal bandwidth. ... separation distance of at least 20 cm from all persons",
+      "Exhibits": [
+        "User manual 2015-09-27 (4.2 MB)",
+        "Internal photo 2015-09-27",
+        "External photo 2015-09-27",
+        "Label info 2015-08-13",
+        "Test Setup Photos 2015/2016",
+        "Test Reports 2015/2016/2020",
+        "MPE 2015/2016",
+        "Block diagram, Schematics, Operational Description: nur Metadaten (vertraulich)"
+      ]
+    },
+    "fcc_handbuch": {
+      "Titel": "UniFi UAP-AC-LR Quick Start Guide",
+      "Lieferumfang": "UniFi AP AC LR, Mounting Bracket, Ceiling Backing Plate, Gigabit PoE (24V, 0.5A) with Mounting Bracket, Power Cord, Quick Start Guide (plus Schrauben)",
+      "LED": {
+        "White": "Factory default, waiting to be integrated.",
+        "Flashing White": "Initializing.",
+        "Alternating White/Blue": "Device is busy (e.g. firmware upgrade)",
+        "Blue": "integrated and working properly",
+        "Quickly Flashing Blue": "Locate",
+        "Steady Blue with occasional flashing": "isolated state"
+      },
+      "Ports": "Locking Notch, Ethernet Port, Cable Feed Plug, Reset Button",
+      "Ethernet": "This Gigabit Ethernet port is used to connect the power and should be connected to the LAN and DHCP server. Power can be provided by the Gigabit PoE adapter (included) or Ubiquiti Networks UniFi Switch.",
+      "Reset": "Restart: press and release quickly. Restore to Factory Default Settings: press and hold for more than five seconds. Alternatively, the UniFi AP may be reset remotely via a Reset button located on the bottom of the Gigabit PoE adapter.",
+      "Montage": "Wall Mount (6 mm Bohrer, vier Löcher), Ceiling Mount (3 mm, Deckenplatte mit Backing Plate)",
+      "Specifications": {
+        "Dimensions": "175.7 x 175.7 x 43.2 mm",
+        "Weight": "240 g (8.5 oz)",
+        "With Mounting Kits": "315 g (11.1 oz)",
+        "Networking Interface": "(1) 10/100/1000 Ethernet Port",
+        "Buttons": "(1) Reset to Defaults",
+        "Antennas": "(1) Dual-Band Antenna, Tri-Polarity",
+        "Wi-Fi Standards": "802.11 a/b/g/n/ac",
+        "Power Method": "Passive PoE (Pairs 4, 5+; 7, 8 Return)",
+        "Power Supply": "24V, 0.5A Gigabit PoE Adapter (Included)",
+        "Max. Power Consumption": "6.5W",
+        "Max. TX Power 2.4 GHz": "24 dBm",
+        "Max. TX Power 5 GHz": "22 dBm",
+        "BSSID": "Up to Four per Radio",
+        "Certifications": "CE, FCC, IC",
+        "Mounting": "Wall/Ceiling (Kits Included)",
+        "Operating Temperature": "-10 to 70° C (14 to 158° F)",
+        "Operating Humidity": "5 to 95% Noncondensing"
+      },
+      "Warnhinweis": "Do not use this product in location that can be submerged by water."
+    },
+    "fcc_label": {
+      "Typenschild_Text": "UniFi AP AC LR; M/N: UAP-AC-LR; 24V ⎓ 0.5A GigE PoE; FCC ID: SWX-UAPACLR; IC: 6545A-UAPACLR; Feld MAC ID; CE, RCM, WEEE, RoHS, QR-Code",
+      "Lage": "Unterseite, mittig im Artwork-Bereich innerhalb der Halterungsaufnahme",
+      "Durchmesser_mm": 175.68,
+      "Schnitte": "A-A: RJ45-Buchse in der Unterseite; B-B: RESET-Beschriftung an der Unterseite",
+      "Kopf": "UAP-AC-LR Device Artwork v06/v07, 7/6/15, Arena Number 388-00098"
+    },
+    "fcc_innenfotos": {
+      "Seiten": 4,
+      "Foto1": "geöffnetes Gehäuse: Deckel und Unterteil mit Platine",
+      "Foto2_3": "Platinenseite mit großem dreieckigem Blech-Antennenelement (\"WLAN Ant.\"), Aufdruck UAP-AC-LR, RJ45-Buchse am Rand, zwei bestückte 4-polige Stiftleisten (eine oben waagerecht, eine am rechten Rand senkrecht)",
+      "Foto4": "Rückseite: SoC/RAM-Bereich mit zwei Kühlkörpern, HF-Leitungen zu Antennenpunkten, Schaltregler"
+    },
+    "werkstatt": {
+      "Tabelle": "D - Ubiquiti UniFi | 12 | verteilt | UniFi AC Lite/LR/Mesh/Pro, nanoHD, 6 Lite/LR/Plus, UK-Ultra | teils",
+      "Abschnitt": "SSH (ubnt/ubnt, fwupdate.real -m; Firmware signiert) oder TFTP-Recovery (Reset beim Einschalten halten bis LED-Ring blau/weiß blinkt, ~15 s); \"Der zweite Weg ist der verlässlichere und kommt ohne Patchen aus.\""
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Ubiquiti",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Ubiquiti",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-UAPACLR/Label/Label-info-2713085",
+        "stand": "Zeichnung v07 2015-07-06 (Exhibit 2015-08-13)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild: Ubiquiti Networks"
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "UniFi AP AC LR",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "UniFi AP AC LR",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/SWX-UAPACLR/User-Manual/User-manual-2713081",
+        "stand": "Quick Start Guide PDF 2015-08-04 (Exhibit 2015-09-27)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Access Point AC Long-Range",
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "UniFi AC LR",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "DEVICE_MODEL"
+      },
+      {
+        "wert": "Ubiquiti UniFi AC LR",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_ubnt_unifiac.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "DTS model"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild Unterseite: \"UniFi AP AC LR\", \"M/N: UAP-AC-LR\", \"24V ⎓ 0.5A GigE PoE\", FCC ID SWX-UAPACLR, IC 6545A-UAPACLR; außerdem großes \"LR\"-Kästchen neben \"AP AC\"",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-UAPACLR/Label/Label-info-2713085",
+        "stand": "Zeichnung v07 2015-07-06 (Exhibit 2015-08-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Gleiche Platine wie AC Lite, aber dickeres Gehäuse wegen anderer Antenne (43.2 mm statt 32 mm Höhe)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/07c1ddf522dbe6085af664cf03a41f636a70b99c",
+        "stand": "Commit 2019-10-06 (Autor), gemergt 2019-10-15",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus Commit-Text und Maßvergleich DeviWiki (Lite ∅160x32, LR ∅176x43)"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "SWX-UAPACLR",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/SWX-UAPACLR",
+        "stand": "Grant 2015-08-13 (Original), letzte Änderung 2020-09-28",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "SWX-UAPACLR",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "SWX-UAPACLR",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-UAPACLR/Label/Label-info-2713085",
+        "stand": "Zeichnung v07 2015-07-06 (Exhibit 2015-08-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "6545A-UAPACLR",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-UAPACLR/Label/Label-info-2713085",
+        "stand": "Zeichnung v07 2015-07-06 (Exhibit 2015-08-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "anatel_id": [
+      {
+        "wert": "01409-16-08356",
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "UAP-AC-LR",
+          "UAP-AC-LR-5 (Fünferpack)",
+          "UniFi AC Long-Range",
+          "Access Point AC Long-Range"
+        ],
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "SKUs UAP-AC-LR-US, UAP-AC-LR-5-US"
+      },
+      {
+        "wert": [
+          "ubnt_unifiac-lr",
+          "ubnt,unifiac-lr"
+        ],
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "OpenWrt-Profil; Image akzeptiert auch Boardnamen unifiac-lite/ubnt,unifiac-lite"
+      },
+      {
+        "wert": "UAP-AC-LR",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Available 2018",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "ToH-Feld veraltet"
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "2015",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Ubiquiti released in 2015 a new serie of UniFi APs supporting 802.11ac\""
+      },
+      {
+        "wert": "FCC-Grant 2015-08-13",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/SWX-UAPACLR",
+        "stand": "Grant 2015-08-13 (Original), letzte Änderung 2020-09-28",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm Atheros QCA9563",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9563-AL3A",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9563",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_UniFi_AP_AC_(UAP-AC)",
+        "stand": "Seitenrevision 2019-07-05T02:57:44Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "qca9563",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "SOC := qca9563"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 775,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 775,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "MIPS (mips_24kc)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MIPS",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 128,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Seitenrevision 2026-03-15 03:46",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": "Winbond W971GG6KB-25"
+      },
+      {
+        "wert": 128,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_UniFi_AP_AC_(UAP-AC)",
+        "stand": "Seitenrevision 2019-07-05T02:57:44Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Vergleichstabelle Flash/RAM 16/128"
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "Winbond W971GG6KB-25",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": "Tabelle LR-Spalte"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Seitenrevision 2026-03-15 03:46",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": "Macronix MX25L12835FMI"
+      },
+      {
+        "wert": 16,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_UniFi_AP_AC_(UAP-AC)",
+        "stand": "Seitenrevision 2019-07-05T02:57:44Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Vergleichstabelle Flash/RAM 16/128"
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_ubnt_unifiac.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Partitionen bis 0x1000000"
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "Macronix MX25L12835FMI",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": "Tabelle LR-Spalte"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_ubnt_unifiac.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "compatible jedec,spi-nor"
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "Yes",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.1Q",
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "switch": [
+      {
+        "wert": "kein Switch (ein Port direkt am PHY)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "DEVICE_PACKAGES += -swconfig; ToH-Revision 2018-09-10 \"no switch (one port only)\""
+      }
+    ],
+    "eth_phy": [
+      {
+        "wert": "Atheros AR8033",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Atheros AR8033-AL1A",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AR8033",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_UniFi_AP_AC_(UAP-AC)",
+        "stand": "Seitenrevision 2019-07-05T02:57:44Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "PHY an Adresse 4, SGMII",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_ubnt_unifiac.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": [
+          "Qualcomm Atheros QCA9563 (2.4 GHz)",
+          "Qualcomm Atheros QCA9882 (5 GHz)"
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "QCA9563 built-in 3x3 MIMO (2.4 GHz)",
+          "U-AME-G1-BR4A 2x2 MIMO (5 GHz), umgelabelter QCA9882-BR4A"
+        ],
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "QCA9563 (2.4 GHz)",
+          "QCA9882 (5 GHz)"
+        ],
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_UniFi_AP_AC_(UAP-AC)",
+        "stand": "Seitenrevision 2019-07-05T02:57:44Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath10k",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "ath9k",
+          "ath10k-ct"
+        ],
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Seitenrevision 2026-03-15 03:46",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kmod-ath10k-ct, ath10k-firmware-qca988x-ct",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ATH10K_PACKAGES_QCA9880",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "802.11n bis 450 Mbps"
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 3,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "\"2.4 GHz 3x3 MIMO\""
+      },
+      {
+        "wert": 3,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3,
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "2.4 GHz MIMO 3x3"
+      },
+      {
+        "wert": 3,
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "3 x 3"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac (WiFi 5)",
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "\"5 GHz 2x2 MIMO\""
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "2 x 2 (DL MU-MIMO)"
+      },
+      {
+        "wert": 2,
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/SWX-UAPACLR",
+        "stand": "Grant 2015-08-13 (Original), letzte Änderung 2020-09-28",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant: \"Device is 2x2 MIMO\" (5 GHz)"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AC1300 (450 + 867 Mbps)",
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus Max. Data Rate 450 Mbps (BW40) + 867 Mbps (BW80); Ubiquiti nennt keine Klasse"
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "2.4 GHz HT20/40, 5 GHz VHT20/40/80",
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": {
+          "2.4 GHz": 24,
+          "5 GHz": 22
+        },
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "2.4 GHz": 24,
+          "5 GHz": 22
+        },
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "2.4 GHz": 24,
+          "5 GHz": 22
+        },
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/SWX-UAPACLR/User-Manual/User-manual-2713081",
+        "stand": "Quick Start Guide PDF 2015-08-04 (Exhibit 2015-09-27)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": {
+          "2412-2462 MHz": "0.114 W",
+          "5180-5240 MHz": "0.109 W",
+          "5260-5320 MHz": "0.134 W",
+          "5500-5700 MHz": "0.16 W",
+          "5745-5825 MHz": "0.132 W"
+        },
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/SWX-UAPACLR",
+        "stand": "Grant 2015-08-13 (Original), letzte Änderung 2020-09-28",
+        "sicherheit": "hoch",
+        "bemerkung": "maximale kombinierte Leitungsleistung"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "eine Dual-Band-Antenne im Gehäuse"
+      },
+      {
+        "wert": "intern",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/SWX-UAPACLR/Internal-Photos/Internal-photo-2713083",
+        "stand": "Bericht ATL 15-0341, PDF 2015-07-31 (Exhibit 2015-09-27)",
+        "sicherheit": "mittel",
+        "bemerkung": "dreieckiges Blech-Antennenelement auf der Platine (\"WLAN Ant.\")"
+      },
+      {
+        "wert": "intern (nicht abnehmbar)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas: -"
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": "1 Dual-Band-Antenne, Tri-Polarity",
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1 Dual-Band-Antenne, Tri-Polarity",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/SWX-UAPACLR/User-Manual/User-manual-2713081",
+        "stand": "Quick Start Guide PDF 2015-08-04 (Exhibit 2015-09-27)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "dualband",
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4 GHz": 3,
+          "5 GHz": 3
+        },
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "2.4 GHz": 3,
+          "5 GHz": 3
+        },
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "rund (Deckenmontage), auf große Reichweite ausgelegt",
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"long-range, symmetrical-link coverage area\"; Öffnungswinkel nicht angegeben"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "Ethernet",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN, 24 V Passive PoE in"
+          }
+        ],
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "Ethernet",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "PoE in (802.3af/A oder 24 V passiv)"
+          }
+        ],
+        "quelle": "ubnt_datenblatt_2019",
+        "beleg": "https://web.archive.org/web/20210103210358/https://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2019-01-22 (Archiv 2021-01-03)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "Ethernet",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "Strom und LAN"
+          }
+        ],
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/SWX-UAPACLR/User-Manual/User-manual-2713081",
+        "stand": "Quick Start Guide PDF 2015-08-04 (Exhibit 2015-09-27)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x 1G",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "eth0 (1 Port, SGMII-PHY)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_ubnt_unifiac.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x GbE",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_UniFi_AP_AC_(UAP-AC)",
+        "stand": "Seitenrevision 2019-07-05T02:57:44Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "einziger Anschluss ist die PoE-Ethernet-Buchse"
+      },
+      {
+        "wert": true,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/SWX-UAPACLR/User-Manual/User-manual-2713081",
+        "stand": "Quick Start Guide PDF 2015-08-04 (Exhibit 2015-09-27)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "sfp": [
+      {
+        "wert": false,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Seitenrevision 2026-03-15 03:46",
+        "sicherheit": "mittel",
+        "bemerkung": "SFP ports: -"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "keiner",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "keiner",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": "USB: None"
+      }
+    ],
+    "modem": [
+      {
+        "wert": "keins",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "passiv",
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Passive Power over Ethernet (24V)\", kein 802.3af genannt"
+      },
+      {
+        "wert": "passiv",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/SWX-UAPACLR/User-Manual/User-manual-2713081",
+        "stand": "Quick Start Guide PDF 2015-08-04 (Exhibit 2015-09-27)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Passive PoE (Pairs 4, 5+; 7, 8 Return)\""
+      },
+      {
+        "wert": [
+          "802.3af Mode A",
+          "passiv"
+        ],
+        "quelle": "ubnt_datenblatt_2019",
+        "beleg": "https://web.archive.org/web/20210103210358/https://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2019-01-22 (Archiv 2021-01-03)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"802.3af/A PoE, 24V Passive PoE\""
+      },
+      {
+        "wert": "passiv",
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Supports passive 24V\"; 802.3af auf der aktuellen Seite nicht genannt"
+      },
+      {
+        "wert": [
+          "passiv",
+          "802.3af Mode A"
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "\"PoE 24V, 0.5 A, 802.3af/A\""
+      },
+      {
+        "wert": [
+          "passiv",
+          "802.3af Mode B"
+        ],
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Seitenrevision 2026-03-15 03:46",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"Passive 24V PoE, 802.3af/B\" - am 2025-11-05 von dimmadont von \"/A\" auf \"/B\" geändert, ohne Quelle; widerspricht Datenblatt 2019 (Mode A)"
+      },
+      {
+        "wert": "passiv",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_UniFi_AP_AC_(UAP-AC)",
+        "stand": "Seitenrevision 2019-07-05T02:57:44Z",
+        "sicherheit": "mittel",
+        "bemerkung": "\"24V Pass PoE\""
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": 24,
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 24,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/SWX-UAPACLR/User-Manual/User-manual-2713081",
+        "stand": "Quick Start Guide PDF 2015-08-04 (Exhibit 2015-09-27)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 24,
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 24,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-UAPACLR/Label/Label-info-2713085",
+        "stand": "Zeichnung v07 2015-07-06 (Exhibit 2015-08-13)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"24V ⎓ 0.5A GigE PoE\""
+      },
+      {
+        "wert": 24,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 24,
+        "quelle": "ubnt_datenblatt_2019",
+        "beleg": "https://web.archive.org/web/20210103210358/https://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2019-01-22 (Archiv 2021-01-03)",
+        "sicherheit": "hoch",
+        "bemerkung": "für den passiven Weg; 802.3af zusätzlich"
+      }
+    ],
+    "poe_pinbelegung": [
+      {
+        "wert": "Paare 4,5 (+) und 7,8 (Rückleitung)",
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Paare 4,5 (+) und 7,8 (Rückleitung)",
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "poe_strom_a": [
+      {
+        "wert": 0.5,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-UAPACLR/Label/Label-info-2713085",
+        "stand": "Zeichnung v07 2015-07-06 (Exhibit 2015-08-13)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild 24V 0.5A"
+      },
+      {
+        "wert": 0.5,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_ausgang": [
+      {
+        "wert": false,
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "nur ein Port"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/SWX-UAPACLR/User-Manual/User-manual-2713081",
+        "stand": "Quick Start Guide PDF 2015-08-04 (Exhibit 2015-09-27)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gigabit PoE (24V, 0.5A) mit Halterung und Netzkabel"
+      },
+      {
+        "wert": "nur Einzelpack",
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Only the single-pack of the UAP-AC-LR includes a PoE adapter.\""
+      },
+      {
+        "wert": "nur Einzelpack",
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "\"5-pack do not come with PoE adapter\""
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "Gigabit-PoE-Injektor 24 V, 0.5 A, passiv; mit Fern-Reset-Taste an der Unterseite",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/SWX-UAPACLR/User-Manual/User-manual-2713081",
+        "stand": "Quick Start Guide PDF 2015-08-04 (Exhibit 2015-09-27)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 6.5,
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 6.5,
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 6.5,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/SWX-UAPACLR/User-Manual/User-manual-2713081",
+        "stand": "Quick Start Guide PDF 2015-08-04 (Exhibit 2015-09-27)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": false,
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Stromversorgung nur über PoE"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Environment: Indoor"
+      },
+      {
+        "wert": "innen",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/SWX-UAPACLR",
+        "stand": "Grant 2015-08-13 (Original), letzte Änderung 2020-09-28",
+        "sicherheit": "hoch",
+        "bemerkung": "\"approved ... as Indoor access point\""
+      },
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Seitenrevision 2026-03-15 03:46",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_UniFi_AP_AC_(UAP-AC)",
+        "stand": "Seitenrevision 2019-07-05T02:57:44Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Environment: Indoor"
+      },
+      {
+        "wert": "außen",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "niedrig",
+        "bemerkung": "Wiki-Tag \"outdoor\" gilt für die Sammelseite (Mesh/Pro), nicht LR-spezifisch"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": {
+          "min": -10,
+          "max": 70
+        },
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "min": -10,
+          "max": 70
+        },
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "min": -10,
+          "max": 70
+        },
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/SWX-UAPACLR/User-Manual/User-manual-2713081",
+        "stand": "Quick Start Guide PDF 2015-08-04 (Exhibit 2015-09-27)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "5 bis 95 % nicht kondensierend",
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_material": [
+      {
+        "wert": "Polycarbonat",
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": [
+          "Decke",
+          "Wand"
+        ],
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Halterungen im Lieferumfang"
+      },
+      {
+        "wert": [
+          "Decke",
+          "Wand"
+        ],
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Lite Mount Included"
+      },
+      {
+        "wert": [
+          "Decke",
+          "Wand"
+        ],
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/SWX-UAPACLR/User-Manual/User-manual-2713081",
+        "stand": "Quick Start Guide PDF 2015-08-04 (Exhibit 2015-09-27)",
+        "sicherheit": "hoch",
+        "bemerkung": "Wand: 6-mm-Bohrer, 4 Löcher; Decke: 3 mm, mit Ceiling Backing Plate"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "175.7 x 175.7 x 43.2",
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "⌀175.7 x 43.2",
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "∅176 x 43",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_UniFi_AP_AC_(UAP-AC)",
+        "stand": "Seitenrevision 2019-07-05T02:57:44Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 240,
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "mit Halterung 315 g"
+      },
+      {
+        "wert": 240,
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "mit Halterung 315 g"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": false,
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/SWX-UAPACLR/Internal-Photos/Internal-photo-2713083",
+        "stand": "Bericht ATL 15-0341, PDF 2015-07-31 (Exhibit 2015-09-27)",
+        "sicherheit": "mittel",
+        "bemerkung": "kein Lüfter auf den Innenfotos; passiv mit zwei Kühlkörpern"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": "weiß und blau, Ring/Dome"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_ubnt_unifiac.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "white:dome GPIO 7, blue:dome GPIO 8"
+      }
+    ],
+    "led_beschreibung": [
+      {
+        "wert": "ein LED-Ring (Dome) in Weiß und Blau",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/SWX-UAPACLR/User-Manual/User-manual-2713081",
+        "stand": "Quick Start Guide PDF 2015-08-04 (Exhibit 2015-09-27)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "Unterseite neben der Ethernet-Buchse; zusätzlich Fern-Reset-Taste unten am beiliegenden PoE-Adapter",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/SWX-UAPACLR/User-Manual/User-manual-2713081",
+        "stand": "Quick Start Guide PDF 2015-08-04 (Exhibit 2015-09-27)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1 Taste (GPIO 2)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_ubnt_unifiac.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "am Gerät oder am PoE-Injektor",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Stiftleiste (zwei 4-polige Stiftleisten)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": "Text und Foto gelten für AC Lite; LR \"Same as the AC Lite\""
+      },
+      {
+        "wert": "innen Stiftleiste: zwei bestückte 4-polige Stiftleisten (eine oben waagerecht, eine am rechten Platinenrand)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/SWX-UAPACLR/Internal-Photos/Internal-photo-2713083",
+        "stand": "Bericht ATL 15-0341, PDF 2015-07-31 (Exhibit 2015-09-27)",
+        "sicherheit": "mittel",
+        "bemerkung": "LR-Platine (Aufdruck UAP-AC-LR); Signalbelegung nicht auf dem Foto"
+      },
+      {
+        "wert": "vorhanden",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial: Yes"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "+3.3V - RX - TX - GND",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": "beide Stiftleisten; linke = U-Boot/OpenWrt-Konsole, rechte unbekannter Zweck (CLI des WLAN-Chips)"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Seitenrevision 2026-03-15 03:46",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1"
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1; mit Werks-Env Kernel stumm: Newline mit 9600 Baud senden, dann wieder 115200"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "Mit Werks-U-Boot-Env keine Kernel-Ausgaben; bootargs console=ttyS0,115200 setzen",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "Deckel abnehmbar, Platine im Unterteil verschraubt",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/SWX-UAPACLR/Internal-Photos/Internal-photo-2713083",
+        "stand": "Bericht ATL 15-0341, PDF 2015-07-31 (Exhibit 2015-09-27)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus Foto 1"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/generic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath79/generic",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Seitenrevision 2026-03-15 03:46",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath79/generic",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "ubnt_unifiac-lr",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "17.01.0 (ar71xx, mit unifiac-lite-Image)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath79-Profil ubnt_unifiac-lr ab Commit 2019-10-15",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/07c1ddf522dbe6085af664cf03a41f636a70b99c",
+        "stand": "Commit 2019-10-06 (Autor), gemergt 2019-10-15",
+        "sicherheit": "hoch",
+        "bemerkung": "erstes Release mit dem Profil nicht geprüft"
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "23.05.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "25.12.0",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Seitenrevision 2026-03-15 03:46",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "U-Boot TFTP + serial recovery, see devicepage",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ohne Öffnen per SSH auf Stock-Firmware (dd/mtd), Bootloader von Firmware 3.7.58 empfohlen; alternativ serielle Konsole + U-Boot-TFTP; kein Factory-Image",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "SSH oder TFTP-Recovery (Reset beim Einschalten ~15 s)",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/erstinstallation-ohne-factory.md",
+        "stand": "Commit 0d84e25, 2026-10-10",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kein Factory-Image (factory = false), nur sysupgrade",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.ui.com/download/unifi/",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "eth0 (MAC aus art 0x0)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_ubnt_unifiac.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "label-mac-device = eth0"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, ath79-generic, ubiquiti-unifi-ac-lr (factory = false)",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Yes",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Seitenrevision 2026-03-15 03:46",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "unter ath79 wieder aufgenommen 2022-04-02 (zuvor ar71xx)",
+        "quelle": "gluon_commit_b901dfa",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/b901dfa69156b40044aeddc6647671a6d14a5e33",
+        "stand": "Commit 2022-04-02",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "varianten": [
+      {
+        "wert": "Hardware identisch zu AC Lite, nur andere Antenne und dickeres Gehäuse",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/07c1ddf522dbe6085af664cf03a41f636a70b99c",
+        "stand": "Commit 2019-10-06 (Autor), gemergt 2019-10-15",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "devicepage toh:ubiquiti:unifiac"
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "https://deviwiki.com/wiki/Ubiquiti_Networks_UniFi_AP_AC_(UAP-AC)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_UniFi_AP_AC_(UAP-AC)",
+        "stand": "Seitenrevision 2019-07-05T02:57:44Z",
+        "sicherheit": "mittel",
+        "bemerkung": "keine eigene LR-Seite"
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/Ubiquiti_Networks_UniFi_AP_AC_(UAP-AC)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Ubiquiti_Networks_UniFi_AP_AC_(UAP-AC)",
+        "stand": "Seitenrevision 2026-02-10T15:25:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "keine eigene LR-Seite"
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "quelle": "ui_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/unifi-ac-lr",
+        "stand": "Live-Seite 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://www.ubnt.com/unifi/unifi-ap-ac-lr/",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "alte URL"
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://web.archive.org/web/20210103210358/https://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "quelle": "ubnt_datenblatt_2019",
+        "beleg": "https://web.archive.org/web/20210103210358/https://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2019-01-22 (Archiv 2021-01-03)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "quelle": "ubnt_datenblatt_2017",
+        "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+        "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "forum": [
+      {
+        "wert": "https://forum.openwrt.org/t/uap-ac-lr-openwrt-install/163143",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
+        "stand": "Seitenrevision 2026-02-19 22:43",
+        "sicherheit": "mittel",
+        "bemerkung": "aus Wiki verlinkt: gesperrte mtd-Partitionen bei manchen Stock-Firmwares; nicht abgerufen"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://web.archive.org/web/20210103210358/https://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
+      "kategorie": "poe_eingang",
+      "grund": "Datenblatt 2017 und Quick Start Guide 2015 nennen nur 24 V passiv, Datenblatt 2019 zusätzlich 802.3af Mode A; ab welcher Hardware-/Produktionsrevision 802.3af geht und woran man sie erkennt, ist offen. Am Gerät mit reinem 802.3af-Switch (Mode A) prüfen"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_lr",
+      "kategorie": "poe_eingang",
+      "grund": "ToH-Live-Seite seit 2025-11-05 \"802.3af/B\" (vorher \"/A\") ohne Quelle; widerspricht Datenblatt 2019 (Mode A). Mode-B-Switch würde laut Datenblatt nicht versorgen - klären"
+    },
+    {
+      "url": "https://fccid.io/SWX-UAPACLR/External-Photos/External-photo-2713082",
+      "kategorie": "erkennung_typenschild",
+      "grund": "Außenfotos (Typenschild real, Lage Reset) nicht abgerufen (fccid.io-Limit)"
+    },
+    {
+      "url": "https://fccid.io/SWX-UAPACLR/Test-Report/Test-Report-NII-4922924",
+      "kategorie": "hw_version",
+      "grund": "Class-II-Änderungen 2016 und 2020 (Testberichte, Cover Letter C2PC 2020-09-28) könnten eine Hardwareänderung (z. B. 802.3af) beschreiben; nicht abgerufen"
+    },
+    {
+      "url": "https://openwrt.org/_media/media/ubiquiti/unifi-apac-lite_serial.jpg",
+      "kategorie": "seriell_pinbelegung",
+      "grund": "Pinbelegung nur am AC Lite fotografiert; am LR-Platinenfoto (FCC Seite 3) sind zwei 4-polige Stiftleisten zu sehen, Zuordnung links/rechts und Pin 1 am LR nicht belegt"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/uap-ac-lr-openwrt-install/163143",
+      "kategorie": "installation",
+      "grund": "Thread zu gesperrten mtd-Partitionen (kernel0) beim LR, nicht ausgewertet"
+    },
+    {
+      "url": "https://ui.com/qig/uap-ac-lr",
+      "kategorie": "montage",
+      "grund": "aktueller Installation Guide nur als JavaScript-App, nicht ausgewertet"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 19,
+    "notiz": "ToH-Dump (pid 15678115) + Live-hwdata (und Revision vor PoE-Änderung), OpenWrt-Wiki unifiac (LR-Spalte, Serial), ath79-Commit 07c1ddf, ar71xx-Commit c855e70, DTS/Image-Makefiles, Gluon-Target und Commit b901dfa, DeviWiki/WikiDevi (nur Vergleichstabelle, keine LR-Seite), Ubiquiti-Datenblatt 2017 und 2019 (web.archive.org), techspecs.ui.com, FCC SWX-UAPACLR (Übersicht, Quick Start Guide, Typenschild-Zeichnung, Innenfotos). Kernpunkt Strom: 24 V passiv (Paare 4,5+/7,8-) sicher; 802.3af Mode A erst im Datenblatt 2019, ToH-Live sagt Mode B - offen. Innen, -10 bis 70 °C, 6.5 W, 1 GbE, 3x3 2.4 GHz + 2x2 5 GHz, intern 3 dBi, Stiftleisten seriell (3.3 V, 115200). Werkstatt nur Sammelaussage, keine Messung am LR."
+  }
+}

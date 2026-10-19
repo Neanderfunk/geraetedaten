@@ -1,0 +1,2368 @@
+{
+  "image": "tp-link-archer-c2600",
+  "modell": "TP-Link Archer C2600 v1",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15677790"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600?do=export_raw",
+      "stand": "Seitenrevision 2026-09-18 04:59",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Live-Seite weicht vom Dump ab: aktuelle Version 25.12.5 (Dump 23.05.2), WLAN \"2x Qualcomm Atheros QCA9980\", Gluon support Broken, Outdoor No, Wireguard 320, Strom \"12 VDC, 4.0A via barrel\""
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/tp-link/archer_c2600_v1?do=export_raw",
+      "stand": "Seitenrevision 2025-11-03 06:36",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Geräteseite v1.x; Installation, TFTP-Recovery, Flash-Layout, Switch-Ports, Tasten, Seriell (R87), OEM-Bootlog, Hinweise zu Reboots und WLAN-Treiber"
+    },
+    "openwrt_wiki_fotos_seriell": {
+      "url": "https://openwrt.org/_media/media/tplink/archerc2600/c2600_serial_tx_rx.png",
+      "stand": "Bild im Wiki, Foto R87 datiert 02.02.2016",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "c2600_serial_tx_rx.png und c2600_serial_resistor.png als Bild ausgewertet; Cache wikimedia/"
+    },
+    "openwrt_git_image": {
+      "url": "https://github.com/openwrt/openwrt/commit/ef02e8967cac02ebec78fadd063b367e67f8fbc6",
+      "stand": "Commit 2016-05-27 (Ash Benz)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "\"ipq806x: Add Archer C2600 to image/Makefile\"; laut ToH 'Supported since commit'. Commits nennen keine Hardwaredetails"
+    },
+    "openwrt_git_dts": {
+      "url": "https://github.com/openwrt/openwrt/commit/cd36d71655eecfeba3be52a51392e22140ed63d8",
+      "stand": "Commit 2016-05-27 (Ash Benz)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Erster DTS (Patch 802-ARM-qcom-add-TPLink-C2600-device-tree.patch, 425 Zeilen)"
+    },
+    "openwrt_git_mx25u": {
+      "url": "https://github.com/openwrt/openwrt/commit/d517d8691a5a442049b16d23e14c093323a30929",
+      "stand": "Commit 2016-05-27 (Ash Benz)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "\"kernel/mtd: Add support for Macronix mx25u25635f, used in C2600 v1.1\""
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=c2600+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-19 (32 Commits, neuester 2025-06-01)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/dts/qcom-ipq8064-c2600.dts",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "dateien": [
+        "qcom-ipq8064-c2600.dts",
+        "qcom-ipq8064-ad7200-c2600.dtsi"
+      ]
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/image/generic.mk",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "firmware_utils_safeloader": {
+      "url": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+      "stand": "Branch master am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ipq806x-generic",
+      "stand": "Branches main, v2025.1.x, v2023.2.x am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+      "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+      "abgerufen": "2026-10-19"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/TP-LINK_Archer_C2600_v1.x",
+      "stand": "Spiegel, Rohtext inhaltsgleich mit DeviWiki-Revision 2019-07-05",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Rohtext byte-identisch zu DeviWiki, Werte nur unter deviwiki geführt"
+    },
+    "fcc": {
+      "url": "https://fccid.io/TE7C2600",
+      "stand": "Grant 2015-05-29 (Original Equipment), Class-II-Änderungen 2015-12-16 und 2016-06-20",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_handbuch": {
+      "url": "https://fccid.io/TE7C2600/User-Manual/User-Manual-2629084",
+      "stand": "Exhibit 2015-05-29 (PDF 2015-05-20)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "95 Seiten; offensichtlich aus einer DSL-Modem-Vorlage: Spezifikationsanhang nennt ADSL, RJ11, 4x 10/100M, 1x USB 2.0 - widerspricht Datenblatt und Hardware, nur mit sicherheit niedrig verwendet"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/TE7C2600/Label/FCC-ID-Label-2629079",
+      "stand": "Exhibit 2015-05-29 (PDF 2015-05-22)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "als Bild ausgewertet"
+    },
+    "fcc_label_ort": {
+      "url": "https://fccid.io/TE7C2600/Label/FCC-ID-Label-Location-2629078",
+      "stand": "Exhibit 2015-05-29 (PDF 2015-05-22, geändert 2015-05-27)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Foto der Unterseite mit Typenschild, als Bild ausgewertet"
+    },
+    "fcc_innenfotos": {
+      "url": "https://fccid.io/TE7C2600/Internal-Photos/Internal-Photos-2629077",
+      "stand": "Exhibit 2015-05-29 (PDF 2015-05-26), Prüfnummer 150422C24",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "8 Seiten, 15 Fotos 1136x852, als Bild ausgewertet; Cache fcc/intimg/"
+    },
+    "tplink_produktseite": {
+      "url": "https://www.tp-link.com/en/home-networking/wifi-router/archer-c2600/",
+      "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+      "abgerufen": "2026-10-19"
+    },
+    "tplink_datenblatt": {
+      "url": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+      "stand": "Datasheet 1.0, PDF 2016-05-11",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "verlinkt als Archer C2600_V1_Datasheet1.0 (https://www.tp-link.com/en/document/66441/)"
+    },
+    "tplink_handbuch": {
+      "url": "https://static.tp-link.com/Archer_C2600(UN)_V1_UG_1475053462082j.pdf",
+      "stand": "Archer C2600(UN)_V1_UG, PDF 2016-09-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "verlinkt über https://www.tp-link.com/en/document/62591/"
+    },
+    "tplink_download": {
+      "url": "https://www.tp-link.com/en/support/download/archer-c2600/",
+      "stand": "Live-Seite 2026-10-19, neueste Firmware Archer C2600(UN)_V1_170306 (2017-03-06)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "nur V1 gelistet; Firmware 150924, 160902, 170306"
+    },
+    "openwrt_forum_61999": {
+      "url": "https://forum.openwrt.org/t/unexplained-hangs-freezes-and-reboots-with-archer-c2600/61999",
+      "stand": "Thread 2020-04-27 bis 2023-09-05 (79 Beiträge, 1-20 gelesen)",
+      "abgerufen": "2026-10-19"
+    },
+    "freifunk_forum_14721": {
+      "url": "https://forum.freifunk.net/t/gluon-lede-und-archer-c2600/14721",
+      "stand": "Thread 2017-04-06 bis 2018-08-01 (47 Beiträge, alle gelesen)",
+      "abgerufen": "2026-10-19"
+    },
+    "freifunk_forum_suche": {
+      "url": "https://forum.freifunk.net/search.json?q=c2600",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Treffer 14721, 16444, 11582, 21650; nur 14721 geladen"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "15677790",
+      "devicetype": "WiFi Router",
+      "brand": "TP-Link",
+      "model": "Archer C2600",
+      "version": "v1.0,v1.1",
+      "fccid": "https://fcc.io/TE7/C2600",
+      "availability": "Discontinued 2017",
+      "whereavailable": "",
+      "supportedsincecommit": "https://git.lede-project.org/?p=source.git;a=commit;h=ef02e8967cac02ebec78fadd063b367e67f8fbc6",
+      "supportedsincerel": "17.01.0",
+      "supportedcurrentrel": "23.05.2",
+      "unsupported_functions": "NULL",
+      "target": "ipq806x",
+      "subtarget": "generic",
+      "packagearchitecture": "arm_cortex-a15_neon-vfpv4",
+      "bootloader": "U-Boot",
+      "cpu": "Qualcomm Atheros IPQ8064",
+      "cpucores": "2",
+      "cpumhz": "1400",
+      "flashmb": "32",
+      "rammb": "512",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "5",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "Qualcomm Atheros QCA8337",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "Qualcomm Atheros QCA9980",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "a/n/ac",
+      "wlancomments": "4x4",
+      "wlandriver": "ath10k-ct",
+      "detachableantennas": "4",
+      "bluetooth": "-",
+      "usbports": "2x 3.0",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "No",
+      "serialconnectionparameters": "¿",
+      "jtag": "¿",
+      "ledcount": "10",
+      "buttoncount": "4",
+      "gpios": "-",
+      "powersupply": "12 VDC, 4.0 A",
+      "devicepage": "toh:tp-link:archer_c2600_v1",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "https://forum.openwrt.org/t/unexplained-hangs-freezes-and-reboots-with-archer-c2600/61999?u=tmomas,https://forum.archive.openwrt.org/viewtopic.php?id=54973",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "Archer C2600",
+      "gitsearch": "Archer C2600",
+      "wikideviurl": "https://wikidevi.wi-cat.ru/TP-LINK_Archer_C2600_v1.x",
+      "oemdevicehomepageurl": "https://www.tp-link.com/en/products/details/cat-2_Archer-C2600.html",
+      "firmwareoemstockurl": "https://www.tp-link.com/en/download/Archer-C2600.html\\\\",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.2/targets/ipq806x/generic/openwrt-23.05.2-ipq806x-generic-tplink_c2600-squashfs-factory.bin",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.2/targets/ipq806x/generic/openwrt-23.05.2-ipq806x-generic-tplink_c2600-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ipq806x/generic/openwrt-ipq806x-generic-tplink_c2600-squashfs-factory.bin",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ipq806x/generic/openwrt-ipq806x-generic-tplink_c2600-squashfs-sysupgrade.bin",
+      "installationmethods": "GUI OEM,U-Boot TFTP recovery,see devicepage",
+      "commentinstallation": "Rename installation image to ArcherC2600_1.0_tp_recovery.bin before flashing, see devicepage.",
+      "recoverymethods": "U-Boot TFTP recovery,see devicepage",
+      "commentrecovery": "TFTP-Recoveryname: ArcherC2600_1.0_tp_recovery.bin",
+      "picture": "media:tplink:archer_c2600_un_v1.jpg",
+      "comments": "",
+      "page": "toh:hwdata:tp-link:tp-link_archer_c2600"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi Router",
+      "Brand": "TP-Link",
+      "Model": "Archer C2600",
+      "Versions": "v1.0, v1.1",
+      "FCCID_urls": "https://fcc.io/TE7/C2600",
+      "Availability_availability": "Discontinued 2017",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.lede-project.org/?p=source.git;a=commit;h=ef02e8967cac02ebec78fadd063b367e67f8fbc6",
+      "Supported Since Rel_releasesince": "17.01.0",
+      "Supported Current Rel_releasecurrent": "25.12.5",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Broken",
+      "Target_target": "ipq806x",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "arm_cortex-a15_neon-vfpv4",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Qualcomm Atheros IPQ8064",
+      "CPU Cores_numcores_": "2",
+      "CPU MHz": "1400",
+      "Flash MB_mbflashs": "32",
+      "RAM MB_mbram": "512",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "5",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "Qualcomm Atheros QCA8337",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "2x Qualcomm Atheros QCA9980",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN Comments_": "4x4",
+      "WLAN driver_wlan-drivers": "ath10k-ct",
+      "Detachable Antennas_numdetachantenna": "4",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "2x 3.0",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "No",
+      "Serial connection parameters_serialparam": "¿",
+      "Serial connection voltage_serialvoltage": "¿",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "10",
+      "Button count_numbutton": "4",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "12 VDC, 4.0A via barrel",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "320",
+      "Device Page_page": "toh:tp-link:archer_c2600_v1",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "https://forum.openwrt.org/t/unexplained-hangs-freezes-and-reboots-with-archer-c2600/61999?u=tmomas, https://forum.archive.openwrt.org/viewtopic.php?id=54973",
+      "Forum search_search-forums": "Archer C2600",
+      "Git search_search-gits": "Archer C2600",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/TP-LINK_Archer_C2600_v1.x",
+      "WikiDevi ID_hwinfo-id": "TP-LINK_Archer_C2600_v1.x",
+      "OEM Device Homepage URL_url": "https://www.tp-link.com/en/products/details/cat-2_Archer-C2600.html",
+      "Firmware OEM Stock URL_url": "https://www.tp-link.com/en/download/Archer-C2600.html",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/ipq806x/generic/openwrt-25.12.5-ipq806x-generic-tplink_c2600-squashfs-factory.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/ipq806x/generic/openwrt-25.12.5-ipq806x-generic-tplink_c2600-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ipq806x/generic/openwrt-ipq806x-generic-tplink_c2600-squashfs-factory.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ipq806x/generic/openwrt-ipq806x-generic-tplink_c2600-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "GUI OEM, U-Boot TFTP recovery, see devicepage",
+      "Comment installation": "Rename installation image to ArcherC2600_1.0_tp_recovery.bin before flashing, see devicepage.",
+      "Recovery method(s)_method-recoverys": "U-Boot TFTP recovery, see devicepage",
+      "Comment recovery": "TFTP-Recoveryname: ArcherC2600_1.0_tp_recovery.bin",
+      "Picture_img100s": "media:tplink:archer_c2600_un_v1.jpg",
+      "Comments_": ""
+    },
+    "openwrt_wiki": {
+      "Einleitung": "Wireless-AC router based on QCA IPQ8064 with 32MB flash and 512MB RAM.",
+      "Installation Notes": [
+        "On version 1.0 of this device, OpenWrt can be loaded from the router's standard firmware upgrade page ... Verified 2020/12/19 by Rygle on device version 1.0 from factory software Build 20150610 Rel. 32140 to OpenWrt 19.07.5",
+        "On Version 1.1 of this device, the factory default username and password doesn't work. Hence the need to use TFTP to load OpenWrt.",
+        "Some units with \"v1.1\" physical label are recognized in software as \"v1.0\". Installing OpenWrt by uploading the factory image via the standard firmware upgrade page works for these models. (2022/03 using OpenWrt 21.02.2)",
+        "Reset to admin/admin reported working if reset button held down while switching on the device",
+        "Bestätigung: physisches Label v1.1, TP-Link-Firmware 2017-03-06 zeigte v1.0, Factory-Image 22.03.6 über die Stock-Weboberfläche installiert"
+      ],
+      "Flash Layout": "SBL1 0x0-0x20000, MIBIB, SBL2, SBL3, DDRCONFIG, SSD, TZ, RPM, APPSBL 0x100000-0x170000, APPSBLCFG, ART 0x1b0000-0x1f0000, HLOS 0x1f0000-0x3f0000, rootfs 0x3f0000-0x1ef0000, default-mac 0x1ef0000, pin, product-info, partition-table, soft-version, support-list, profile, default-config, user-config, qos-db, usb-config, log 0x1fe0000-0x2000000",
+      "TFTP": {
+        "Bootloader tftp client IPv4 address": "192.168.0.86",
+        "Bootloader MAC address (special)": "No special MAC address required",
+        "Firmware TFTP image": "Latest OpenWRT Factory Image (NOT sysupgrade), umbenannt in ArcherC2600_1.0_tp_recovery.bin",
+        "TFTP transfer window": "Approximately 5 seconds or less",
+        "TFTP window start": "Approximately 5-10 seconds after power on",
+        "TFTP server IP address": "PC statisch 192.168.0.66/24",
+        "LAN Port to connect": "LAN 1 works, probably any of LAN ports 1-4.",
+        "Ablauf": "Reset gedrückt halten, einschalten, 15 s halten oder bis TFTP-Übertragung; Router und PC direkt verbinden, nicht über Switch",
+        "Debricking": "Stock-Firmware als ArcherC2600_1.0_tp_recovery.bin, PC 192.168.0.66, Reset beim Einschalten ~15 s, Wiederherstellung ~5 min"
+      },
+      "Network interfaces": {
+        "br-lan": "LAN & WiFi 192.168.1.1/24",
+        "vlan1 (eth0)": "LAN ports (1 to 4)",
+        "vlan2 (eth1)": "WAN port DHCP",
+        "wlan0": "WiFi 5GHz",
+        "wlan1": "WiFi 2,4GHz"
+      },
+      "Switch Ports": {
+        "Internet (WAN)": "5",
+        "LAN 1": "4",
+        "LAN 2": "3",
+        "LAN 3": "2",
+        "LAN 4": "1",
+        "CPU": "0 (eth0) und 6 (eth1)"
+      },
+      "Buttons": {
+        "Reset": "reset",
+        "WPS": "wps",
+        "WiFi On/Off": "rfkill",
+        "LED On/Off": "lights_toggle"
+      },
+      "Opening the case": "FIXME (nicht beschrieben)",
+      "Serial": [
+        "Remove radiator and SoC shield.",
+        "Short two pads labeled R87",
+        "Pinout: Blue - 1v8 Tx, Green - 1v8 Rx, Yellow - Vcc 1v8, Red - Vcc 3v3, Orange - GND",
+        "Use \"Bi-Directional Logic Level Shifter Converter\" to get 3v3 logic: 3v3 Tx - HV4, 3v3 Rx - HV3, GND - GND",
+        "Serial connection parameters for TP-Link Archer C2600 v1: 115200, 8N1"
+      ],
+      "JTAG": "nicht beschrieben",
+      "OEM bootlog (Auszug)": [
+        "U-Boot 2012.07 [Standard IPQ806X.LN,unknown] (Aug 28 2015 - 19:57:21)",
+        "DRAM:  491 MiB",
+        "SF: Detected MX25U25635F with page size 4 KiB, total 32 MiB",
+        "01:00.0 - 168c:0040 - Network controller; 03:00.0 - 168c:0040 - Network controller",
+        "NAND:  ipq_nand: unknown NAND device manufacturer: 0 device: 0",
+        "Linux version 3.4.103 ... Tue Sep 1 11:26:14 CST 2015",
+        "Machine: Qualcomm Atheros AP148 reference board",
+        "TP-LINK Archer C2600 v1",
+        "Kernel command line: console=ttyHSL1,115200n8 root=mtd:rootfs rootfstype=squashfs"
+      ],
+      "Notes": [
+        "Known differences between Hardware v1.1 and v1.0: Flash chip used in v1.1 is changed (but same size). Possibly other changes...",
+        "Sporadic Reboots: cpufreq-Governor performance, max/min 1200000, cpuidle state0/1 abschalten (FS#3099, Forum 61999/17)",
+        "Alternative WiFi Module: Standard ath10k-ct (Candela); bei Problemen non-ct (ath10k-firmware-qca99x0 kmod-ath10k) oder kmod-ath10k-ct-smallbuffers"
+      ],
+      "Tags": "ipq806x IPQ8064 32flash 512ram 5port GigabitEthernet 802.11ac 802.11bgn 2core USB3.0 2USB"
+    },
+    "openwrt_wiki_fotos_seriell": {
+      "c2600_serial_tx_rx.png": "Umgebung U25/U18/JP4 nahe LAN-Buchse und USB: blau (Tx 1.8 V) an Lötpunkten neben U25 (bei R297), grün (Rx 1.8 V) Einzel-Pad neben U25, gelb (Vcc 1.8 V) Pads unter U25 und bei R299, rot (Vcc 3.3 V) und orange (GND) obere zwei Löcher der unbestückten 4-poligen Lochreihe JP4, weitere GND-Markierungen an USB-Buchsenlaschen und bei SW9",
+      "c2600_serial_resistor.png": "R87 links neben dem SoC U1 (IPQ8064) innerhalb des Abschirmrahmens, unbestückt, rot markiert; Foto datiert 02 02 2016"
+    },
+    "openwrt_git": {
+      "ef02e8967cac": "2016-05-27 ipq806x: Add Archer C2600 to image/Makefile",
+      "cd36d71655ee": "2016-05-27 ipq806x/dts: Add Archer C2600 DTS",
+      "14515cc27140": "2016-05-27 ipq806x/base-files: Add support for Archer C2600",
+      "98b50f0beff0": "2016-05-27 ipq806x/base-files: Add Archer C2600 LEDs and board",
+      "955c341d3bec": "2016-05-27 fw-utils/tplink-safeloader.c: Add support for Archer C2600",
+      "d517d8691a5a": "2016-05-27 kernel/mtd: Add support for Macronix mx25u25635f, used in C2600 v1.1",
+      "35c0328119": "2016-05-30 kernel/mtd: Add support for Macronix mx25u25635f, used in Archer C2600 v1.1",
+      "5889f92f7d": "2017-08-23 ipq806x: Archer C2600: fix switch ports numbering",
+      "b72b36653a": "2018-05-18 ipq806x: increase kernel partition size for the TP-Link Archer C2600",
+      "330965b342": "2018-10-28 ipq806x: add ath10k calibration data MAC addresses patching",
+      "8ddaeaf642": "2021-01-06 ipq806x: create DTSI for TP-Link AD7200 and C2600",
+      "2964e5024c": "2022-11-06 ipq806x: kernel ramoops storage for C2600/AD7200",
+      "41fe3aabad": "2025-06-01 ipq806x: dts: correct PCIe device node name"
+    },
+    "openwrt_dts": {
+      "model": "TP-Link Archer C2600",
+      "compatible": "tplink,c2600, qcom,ipq8064",
+      "memory": "reg = <0x42000000 0x1e000000> (480 MiB für Linux nutzbar)",
+      "reserved-memory": "ramoops 0x42100000 0x40000",
+      "label-mac-device": "gmac2",
+      "spi-nor": "jedec,spi-nor, spi-max-frequency 50000000",
+      "partitions": "SBL1, MIBIB, SBL2, SBL3, DDRCONFIG, SSD, TZ, RPM, fs-uboot 0x100000, uboot-env 0x170000, radio 0x1b0000 (Kalibrierdaten), os-image 0x1f0000, rootfs 0x5f0000, default-mac 0x1ef0000 (mac-base), pin, product-info, partition-table, soft-version, support-list, profile, default-config, user-config, qos-db, usb-config, log",
+      "pcie": "2x qcom,ath10k",
+      "switch": "qca,qca8337; cpu (gmac1, rgmii), lan4 phy0, lan3 phy1, lan2 phy2, lan1 phy3, wan phy4, cpu (gmac2, sgmii)",
+      "usb": "hs_phy_0/ss_phy_0, hs_phy_1/ss_phy_1 (2x USB 3.0)",
+      "keys": {
+        "wifi": "gpio49 KEY_RFKILL",
+        "reset": "gpio64 KEY_RESTART",
+        "wps": "gpio65 KEY_WPS_BUTTON",
+        "ledswitch": "gpio16 KEY_LIGHTS_TOGGLE"
+      },
+      "leds": {
+        "lan": "weiß gpio6",
+        "usb_4": "white:usb_4 gpio7",
+        "usb_2": "white:usb_2 gpio8",
+        "wps": "weiß gpio9",
+        "wan_amber": "gpio26",
+        "wan_white": "gpio33",
+        "power": "weiß gpio53",
+        "general": "white:general gpio66"
+      }
+    },
+    "openwrt_image_mk": {
+      "Device": "tplink_c2600",
+      "DEVICE_VENDOR": "TP-Link",
+      "DEVICE_MODEL": "Archer C2600",
+      "DEVICE_VARIANT": "v1",
+      "SOC": "qcom-ipq8064",
+      "BLOCKSIZE": "128k",
+      "PAGESIZE": "2048",
+      "BOARD_NAME": "c2600",
+      "TPLINK_BOARD_ID": "C2600",
+      "DEVICE_PACKAGES": "ath10k-firmware-qca99x0-ct kmod-ramoops",
+      "Aufrufe": "Device/TpSafeImage, Device/dsa-migration"
+    },
+    "firmware_utils_safeloader": {
+      "id": "C2600",
+      "support_list": "{product_name:Archer C2600,product_ver:1.0.0,special_id:00000000}",
+      "kommentar": "bigger os-image partition than the stock images ... kernel doesn't fit in the stock firmware's 2 MB os-image since kernel 4.14"
+    },
+    "gluon_targets": {
+      "main": "device('tp-link-archer-c2600', 'tplink_c2600', {packages = QCA9980_PACKAGES, broken = true, -- untested 802.11s})",
+      "v2025.1.x": "device('tp-link-archer-c2600', 'tplink_c2600', {packages = QCA9980_PACKAGES, broken = true})",
+      "v2023.2.x": "device('tp-link-archer-c2600', 'tplink_c2600', {packages = QCA9980_PACKAGES, broken = true})",
+      "QCA9980_PACKAGES": "-kmod-ath10k, kmod-ath10k-ct, -ath10k-firmware-qca99x0, ath10k-firmware-qca99x0-ct",
+      "Kommentar main": "The QCA9980 was discontinued by Qualcomm. It didn't receive any firmware-update for over 4 years. The QCA9980 has working 802.11s with the ath10k-ct driver."
+    },
+    "deviwiki": {
+      "brand": "TP-LINK",
+      "model": "Archer C2600",
+      "revision": "v1.x",
+      "series": "AC2600",
+      "asin": "B010UR8AM2;US;",
+      "fcc_date": "05/29/2015",
+      "manuf_country": "China",
+      "is_manuf": "Yes",
+      "availability": "new",
+      "type": "wireless router",
+      "fcc_id": "TE7C2600",
+      "pwr_v": "12",
+      "pwr_amp": "4",
+      "pwr_conn": "barrel",
+      "cpu1_brand": "Qualcomm",
+      "cpu1_model": "IPQ8064",
+      "cpu1_cspeed": "1.4 GHz",
+      "cpu1_cores": "2",
+      "fla1": "32",
+      "fla1_brand": "Spansion",
+      "fla1_model": "S25FL256SAIFR0",
+      "ram1": "512",
+      "ram1_brand": "Micron",
+      "ram1_model": "DDR3",
+      "ram1_num": "2",
+      "expansion_if_types": "USB 3.0",
+      "expansion_usb_num": "2",
+      "wi1_chip1_brand": "Qualcomm Atheros",
+      "wi1_chip1_model": "QCA9980",
+      "wi1_802dot11_protocols": "an+ac",
+      "wi1_ant_conn": "U.FL,RP-SMA",
+      "wi1_txchains": "4",
+      "wi1_rxchains": "4",
+      "wi1_sstreams": "4",
+      "wi2_chip1_brand": "Qualcomm Atheros",
+      "wi2_chip1_model": "QCA9980",
+      "wi2_802dot11_protocols": "bgn",
+      "wi2_ant_conn": "U.FL,RP-SMA",
+      "wi2_txchains": "4",
+      "wi2_rxchains": "4",
+      "wi2_sstreams": "4",
+      "eth_cpu": "true",
+      "sw_brand": "Qualcomm Atheros",
+      "sw_model": "QCA8337",
+      "lan_speed": "1G",
+      "lan_ports": "4",
+      "wan_ports": "1",
+      "addl_chips": "2.4GHz Power Amp;Skyworks;SE2623L;;4;,,,\n5GHz Power Amp;Skyworks;SKY85405;;4;",
+      "flags": "Wave2, MU-MIMO, 256QAM,",
+      "tp_firmware": "OpenWrt, LEDE Project, SuperWRT",
+      "802dot11_protocols": "abgn+ac",
+      "default_ssid": "TP-LINK_2.4GHz_XXXXXX, TP-LINK_5GHz_XXXXXX",
+      "default_ip": "192.168.0.1",
+      "default_user": "admin",
+      "default_pass": "admin",
+      "_freitext_hardware": [
+        "CPU: [[Qualcomm]] IPQ8064 @1.4GHz dual-core Internet Processor",
+        "RAM: 512 MB (2x DDR3), Flash: 32 MB (SPI, SOIC 16-pin)",
+        "2.4GHz Radio: [[Qualcomm Atheros]] QCA9980 4x4 MU-MIMO",
+        "- [[Skyworks]] SE2623L 2.4GHz Power Amp (x4)",
+        "5GHz Radio: [[Qualcomm Atheros]] QCA9980 4x4 MU-MIMO",
+        "- [[Skyworks]] SKY85405 5GHz Power Amp (x4)",
+        "Switch: [[Qualcomm Atheros]] QCA8337 (4x GbE)"
+      ],
+      "_kommentar": "Machine: Qualcomm Atheros AP148 reference board; bus=pci,vendor=168c,device=0040,subsystem-vendor=168c,subsystem-device=0002 from ath10k/QCA99X0/hw2.0/board-2.bin"
+    },
+    "fcc": {
+      "FCC ID": "TE7C2600",
+      "Bezeichnung": "AC2600 Wireless Dual Band Gigabit Router",
+      "Antragsteller": "TP-Link Technologies Co., Ltd.",
+      "Prüflabor": "Bureau Veritas CPS(H.K.) Ltd., Taoyuan Branch",
+      "Frequenzen": "2412-2462 MHz, 5180-5240 MHz (Original Equipment 2015-05-29; Class II 2015-12-16 und 2016-06-20)",
+      "Exhibits": "User Manual 2015-05-29 (2.8 MB); Internal Photos 2015-05-29 und 2016-06-20 (je 4.6 MB); External Photos 2015-05-29 und 2016-06-20 (je 2.3 MB); ID Label/Location 2015-05-29; Test Setup Photos; Test Reports DTS/NII/Co-Location; MPE Reports; Block Diagram, Schematics, Operational Description nur Metadaten (vertraulich)"
+    },
+    "fcc_handbuch": {
+      "Antennen (FCC/IC)": "omni-directional dipole antennas, max. gain 3.04 dBi 2.4G, 4.15 dBi 5G Band 4, 4.95 dBi 5G Band 1; Approved antenna list: External omni-directional antenna, 2412-2462MHz 3.04dBi, 5150-5250MHz 4.95dBi, 5745-5825MHz 4.15dBi",
+      "IC": "8853A-C2600",
+      "Mindestabstand": "FCC 39 cm, IC 45 cm",
+      "Produkttext": "four fixed external antennas and high power amplifiers; multi-functional USB 2.0 port; 2 dual band fixed external antennas",
+      "Rückseite": "LAN1, LAN2, LAN3, LAN4/WAN; Internet; POWER; POWER ON/OFF; Antennas",
+      "Seite": "USB; WiFi ON/OFF; WPS; RESET (pin, 8-10 seconds)",
+      "Anhang A (Vorlage)": "ANSI T1.413/G.992 ADSL, Four 10/100M RJ45, One RJ11, One USB 2.0; Working Temperature 0-40 °C, Humidity 10-90 %, Storage -40-70 °C, 5-90 %"
+    },
+    "fcc_label": {
+      "Text": "TP-LINK AC2600 Wireless Dual Band Gigabit Router; Model: Archer C2600; Power: 12V ⎓ 4.0A; Default Access: http://tplinkwifi.net, admin/admin; CE1588 (!); EAC; RoHS; RCM 5734; FCC ID:TE7C2600; IC:8853A-C2600; MADE IN CHINA; Barcode-Feld \"Model:Archer C2600 Ver:1.0\", S/N, MAC, Wireless Password/PIN, SSID TP-LINK_XXXX / TP-LINK_XXXX_5G"
+    },
+    "fcc_label_ort": {
+      "Lage": "Typenschild mittig auf der Unterseite; Unterseite vollflächig mit Lüftungsschlitzen; zwei schlitzförmige Aussparungen nahe der unteren Kante (Zweck nicht angegeben)"
+    },
+    "fcc_innenfotos": {
+      "Hauptplatine": "15012822600-1.0 Rev1.0sp2",
+      "LED-Platine": "15011622600-1.0 Rev1.0sp1 (über Flachbandkabel), 8 weiße LEDs",
+      "Kühlung": "zwei große Aluminium-Kühlkörper auf der Oberseite (SoC-Bereich und WLAN-Bereich), kein Lüfter sichtbar",
+      "SoC": "U1 Qualcomm IPQ8064 unter Abschirmrahmen, daneben zwei RAM-Bausteine U4/U5",
+      "WLAN": "zwei abgeschirmte Funkbereiche mit je einem großen QFN-Chip (U45, U31) und vier Frontend-Bausteinen; U.FL-Buchsen COM_CH1-CH4",
+      "Anschlüsse": "4x LAN + 1x WAN RJ45 (gelber Block), 2x USB (blau, eine hinten neben LAN, eine seitlich), DC-Buchse, Ein/Aus-Taster, 3 seitliche Taster",
+      "JP4": "4-polige unbestückte Lochreihe nahe LAN/USB (Platinenaufdruck JP4)",
+      "Antennen": "4 abnehmbare Stabantennen mit Schraubanschluss (TP-LINK-Aufdruck, Etiketten C150420-035-027-0xx)"
+    },
+    "tplink_produktseite": {
+      "Interface": "4 10/100/1000Mbps LAN Ports, 1 10/100/1000Mbps WAN Port, 2 USB 3.0 Ports",
+      "Button": "Wireless On/Off Button, Power On/off Button, LED On/off Button, WPS Button, Reset Button",
+      "External Power Supply": "12V/4A",
+      "Dimensions ( W x D x H )": "10.4 X 7.8 X 1.5 in. (263.8 X 197.8 X 37.3mm)",
+      "Antenna": "4 Detachable antennas",
+      "Wireless Standards": "IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GHz",
+      "Signal Rate": "5GHz Band: Up to 1733Mbps, 2.4GHz Band: Up to 800Mbps",
+      "Reception Sensitivity": "5GHz: 11a 6Mbps -91dBm, 11a 54Mbps -73dBm, 11ac HT20 -66dBm, 11ac HT40 -67dBm, 11ac HT80 -58dBm; 2.4GHz: 11g 54M -76dBm, 11n HT20 -73dBm, 11n HT40 -71dBm",
+      "Transmission Power": "CE: / FCC: (leer)",
+      "Package Content": "Router Archer C2600, Power Adapter, RJ45 Ethernet Cable, Quick Installation Guide",
+      "Environment": "Operating Temperature 0℃~40℃, Storage -40℃~70℃, Operating Humidity 10%~90% non-condensing, Storage Humidity 5%~90% non-condensing",
+      "Highlights": "1.4GHz dual-core processor; 4 dual band detachable high performance antennas ... beamforming; MU-MIMO powered by Qualcomm MU|EFX; 4-Stream; LEDs can be switched off; dual USB 3.0"
+    },
+    "tplink_datenblatt": {
+      "Ethernet Ports": "4 10/100/1000Mbps LAN Ports & 1 10/100/1000Mbps WAN Port",
+      "USB Port": "2 USB 3.0 Ports",
+      "Button": "WPS Button, Reset Button, Wireless On/Off Button, LED On/Off Button, Power On/Off Button",
+      "External Power Supply": "12V/4A",
+      "Dimensions (W x D x H)": "10.4×7.8×1.5 in. (263.8×197.8×37.3mm)",
+      "Wireless Standards": "IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GHz",
+      "Signal Rate": "1733Mbps at 5GHz, 800Mbps at 2.4GHz",
+      "Transmit Power": "CE: <20dBm(2.4GHz), <23dBm(5GHz); FCC: <30dBm",
+      "Reception Sensitivity": "5GHz: 11a 6Mbps -91dBm, 11a 54Mbps -73dBm, 11n HT20 -69dBm, 11n HT40 -67dBm, 11ac HT20 -66dBm, 11ac HT40 -61dBm, 11ac HT80 -58dBm; 2.4GHz: 11g 54Mbps -76dBm, 11n HT20 -73dBm, 11n HT40 -71dBm",
+      "Wireless Function": "Enable/Disable Wireless Radio, WDS Bridge, WMM, Wireless Statistics",
+      "Package Contents": "Router, 4 Detachable Antennas, Power Supply Unit, Ethernet Cable, Quick Installation Guide",
+      "Certification": "CE, FCC, RoHS",
+      "Environment": "Operating Temperature 0℃~40℃, Storage -40℃~70℃, Operating Humidity 10%~90%, Storage Humidity 5%~90% non-condensing",
+      "Highlights": "AC2600, 4-Stream, MU-MIMO, Dual-Core 1.4 GHz CPU, Dual USB 3.0 Ports, Beamforming; 4 dual band detachable antennas"
+    },
+    "tplink_handbuch": {
+      "LEDs": "Oberseite: Power, Internet (weiß/orange), 2.4GHz, 5GHz, LAN, WPS, USB",
+      "Rückseite": "Ethernet Ports(1/2/3/4), Internet Port, Power Port, Power On/Off Button, Antennas",
+      "Seite": "USB 3.0 (kompatibel mit USB 2.0), WiFi On/Off Button (~2 s), WPS Button, Reset Button (~5 s für Werkseinstellungen)",
+      "Aufstellung": "not ... exposed to moisture or excessive heat; The router can be placed on a shelf or desktop."
+    },
+    "tplink_download": {
+      "Hardware-Versionen": "nur V1 auswählbar",
+      "Firmware": "Archer C2600(UN)_V1_170306 (2017-03-06, 18.00 MB), Archer_C2600_V1_160902 (2016-09-02), Archer_C2600_V1_150924 (2015-09-24)",
+      "Dokumente": "Archer C2600(UN)_V1_UG, Archer C2600_V1_QIG, Archer C2600_V1_Datasheet1.0, SOHO-QIGs EU1/EU2/Middle-East"
+    },
+    "openwrt_forum_61999": {
+      "Thema": "Unexplained hangs freezes and reboots with Archer c2600 (79 Beiträge)",
+      "Kernaussagen": [
+        "#1 mrnuke: Hänger und Reboots seit 17.01 bis 19.07, oft automatischer Neustart, manchmal nur Stromziehen hilft",
+        "#4 slh: mögliche Ursachen alterndes Netzteil, stmmac-Bug",
+        "#6 slh: \"your device is rather difficult to get a serial connection\"",
+        "#7 kitfi: Wechsel auf non-ct ath10k beseitigte wöchentliche Reboots (bei mrnuke #9 nicht)",
+        "#13 otnert: C2600 v1.1",
+        "#16 dogtopus: Platine kommt nach Entfernen des silbernen Rahmens aus dem Unterteil",
+        "#17 ergamus: Last auf 2.4 GHz führt zu Paketverlust/Verbindungsabbrüchen",
+        "#18/#19: FS#3099 (Kernel 5.4 Crash), Abschalten von cpufreq machte das Gerät stabil"
+      ]
+    },
+    "freifunk_forum_14721": {
+      "Thema": "Gluon (Lede) und Archer C2600 (47 Beiträge)",
+      "Kernaussagen": [
+        "#1 (2017-04-06): Gluon master v2016.2-243 auf C2600 v1.1, Reboot schaltet Gerät ab, nur Ein/Aus-Schalter hilft; WLAN-Konfigurationsseite Fehler 500 (Gluon-Issue 1088)",
+        "#24 (2017-07-10): Gluon auf LEDE 2017.1.1 - Reboot-Problem, VPN baut nicht auf (C2600 v1.1)",
+        "#25/#26 (2018-07): Gluon 2018.1/master: Mesh-VPN (L2TP) und WLAN-Mesh laufen, Reboot klappt mit OpenWrt-18-Basis",
+        "#37: Gluon-Issue #1481 Mesh-on-LAN interface unavailable",
+        "#42 ChrisD: mit ath10k-ct AP auf 2.4/5 GHz gut, aber 11s kommt nicht hoch; non-ct nur 2.4 GHz",
+        "#43 hexa: Reboot FS#1557 / openwrt#7635, WLAN-LEDs FS#262 / openwrt#7397",
+        "#44 BIGFAT: Reboot mit 18.06-rc1 behoben; irqbalance empfohlen",
+        "#47 jotzt (2018-08-01): 11s auf 5 GHz macht Probleme, nach Abschalten läuft das Gerät einwandfrei"
+      ]
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "TP-Link",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TP-Link Technologies Co., Ltd.",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7C2600",
+        "stand": "Grant 2015-05-29 (Original Equipment), Class-II-Änderungen 2015-12-16 und 2016-06-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "Archer C2600",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Archer C2600",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C2600/Label/FCC-ID-Label-2629079",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-22)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild \"Model: Archer C2600\""
+      },
+      {
+        "wert": "AC2600 Wireless Dual Band Gigabit Router Archer C2600",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": [
+          "v1.0",
+          "v1.1"
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1.0",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C2600/Label/FCC-ID-Label-2629079",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-22)",
+        "sicherheit": "hoch",
+        "bemerkung": "Barcode-Feld \"Model:Archer C2600 Ver:1.0\" (Zulassungsmuster)"
+      },
+      {
+        "wert": [
+          "v1.0",
+          "v1.1"
+        ],
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": "v1.1 mit anderem Flash-Chip gleicher Größe; manche Geräte mit Aufkleber v1.1 melden sich in der Stock-Firmware als v1.0"
+      },
+      {
+        "wert": "V1",
+        "quelle": "tplink_download",
+        "beleg": "https://www.tp-link.com/en/support/download/archer-c2600/",
+        "stand": "Live-Seite 2026-10-19, neueste Firmware Archer C2600(UN)_V1_170306 (2017-03-06)",
+        "sicherheit": "hoch",
+        "bemerkung": "TP-Link listet nur V1 (Firmware \"For Archer C2600(UN)_V1\")"
+      },
+      {
+        "wert": "1.0.0",
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+        "stand": "Branch master am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Support-Liste des Factory-Images nennt nur product_ver 1.0.0; Geräte, die sich als 1.1 melden, lehnen das Factory-Image über die Weboberfläche vermutlich ab (Wiki: dann TFTP)"
+      },
+      {
+        "wert": "v1.x",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild mittig auf der Unterseite: \"Model: Archer C2600\", \"Power: 12V ⎓ 4.0A\", FCC ID TE7C2600, IC 8853A-C2600; Barcode-Feld \"Model:Archer C2600 Ver:1.0\"",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C2600/Label/FCC-ID-Label-2629079",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-22)",
+        "sicherheit": "hoch",
+        "bemerkung": "Lage aus fcc_label_ort (Foto Unterseite)"
+      },
+      {
+        "wert": "Aufkleber v1.1 kann in der Stock-Weboberfläche als v1.0 erscheinen",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": "Hinweis aus Installation Notes, bestätigt 2022/03 und 22.03.6"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "TE7C2600",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7C2600",
+        "stand": "Grant 2015-05-29 (Original Equipment), Class-II-Änderungen 2015-12-16 und 2016-06-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TE7C2600",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TE7/C2600",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Link https://fcc.io/TE7/C2600"
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "8853A-C2600",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C2600/Label/FCC-ID-Label-2629079",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-22)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "Archer C2600(UN)",
+          "AC2600 Wireless Dual Band Gigabit Router"
+        ],
+        "quelle": "tplink_download",
+        "beleg": "https://www.tp-link.com/en/support/download/archer-c2600/",
+        "stand": "Live-Seite 2026-10-19, neueste Firmware Archer C2600(UN)_V1_170306 (2017-03-06)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "tplink_c2600 (OpenWrt-Profil)",
+          "c2600 (Board-Name)"
+        ],
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/image/generic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Discontinued 2017",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "FCC-Zulassung 2015-05-29",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7C2600",
+        "stand": "Grant 2015-05-29 (Original Equipment), Class-II-Änderungen 2015-12-16 und 2016-06-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "FCC-Zulassung 05/29/2015",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm Atheros IPQ8064",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm IPQ8064",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "qcom-ipq8064",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/image/generic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "IPQ8064 (Aufdruck U1)",
+        "quelle": "openwrt_wiki_fotos_seriell",
+        "beleg": "https://openwrt.org/_media/media/tplink/archerc2600/c2600_serial_tx_rx.png",
+        "stand": "Bild im Wiki, Foto R87 datiert 02.02.2016",
+        "sicherheit": "mittel",
+        "bemerkung": "Chip-Aufdruck auf dem R87-Foto lesbar"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Dual-Core 1.4 GHz CPU\""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 1400,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1400,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1400,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": "\"1.4 GHz\""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "ARMv7 (arm_cortex-a15_neon-vfpv4)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Paketarchitektur"
+      },
+      {
+        "wert": "ARMv7 Processor [512f04d0]",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 512,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 512,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": "2x Micron DDR3"
+      },
+      {
+        "wert": 512,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": "Einleitung; OEM-Bootlog meldet \"DRAM: 491 MiB\" (nutzbar)"
+      },
+      {
+        "wert": 512,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/dts/qcom-ipq8064-c2600.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "memory 0x42000000 + 0x1e000000 = 480 MiB an Linux; Rest unterhalb 0x42000000 reserviert"
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR3, 2 Bausteine (Micron)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2 Bausteine U4/U5 neben dem SoC",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TE7C2600/Internal-Photos/Internal-Photos-2629077",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-26), Prüfnummer 150422C24",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufdruck auf dem Foto nicht lesbar"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 32,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 32,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 32,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog \"total 32 MiB\""
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/dts/qcom-ipq8064-c2600.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "jedec,spi-nor; kein NAND (OEM-Bootlog: ipq_nand failed to identify device)"
+      },
+      {
+        "wert": "SPI, SOIC 16-pin",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "Spansion S25FL256SAIFR0",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Version nicht angegeben; laut Wiki hat v1.1 einen anderen Flash-Chip, das dürfte die v1.0-Bestückung sein (nicht belegt)"
+      },
+      {
+        "wert": "Macronix MX25U25635F",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog im Wiki (Gerät nicht als v1.0/v1.1 bezeichnet)"
+      },
+      {
+        "wert": "Macronix MX25U25635F (v1.1)",
+        "quelle": "openwrt_git_mx25u",
+        "beleg": "https://github.com/openwrt/openwrt/commit/d517d8691a5a442049b16d23e14c093323a30929",
+        "stand": "Commit 2016-05-27 (Ash Benz)",
+        "sicherheit": "hoch",
+        "bemerkung": "Commit-Titel \"used in C2600 v1.1\""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "switch": [
+      {
+        "wert": "Qualcomm Atheros QCA8337",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA8337, zwei CPU-Ports (gmac1 RGMII, gmac2 SGMII)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/dts/qcom-ipq8064-c2600.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA8337",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "Qualcomm Atheros QCA9980",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump nennt den Chip einfach"
+      },
+      {
+        "wert": "2x Qualcomm Atheros QCA9980",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Seitenrevision 2026-09-18 04:59",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2x Qualcomm Atheros QCA9980 (je ein Chip für 2.4 und 5 GHz), Frontends 4x Skyworks SE2623L (2.4 GHz), 4x Skyworks SKY85405 (5 GHz)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2x PCIe 168c:0040 (QCA99X0)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath10k-ct",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath10k-ct (ath10k-firmware-qca99x0-ct); Alternative ath10k non-ct oder kmod-ath10k-ct-smallbuffers",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kmod-ath10k-ct + ath10k-firmware-qca99x0-ct (QCA9980_PACKAGES)",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ipq806x-generic",
+        "stand": "Branches main, v2025.1.x, v2023.2.x am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": "800 Mbit/s mit 256-QAM (\"2.4GHz Performance Mode requires 256 QAM support on Wi-Fi client\")"
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 4,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": "4 TX/4 RX, 4 Streams"
+      },
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "WLAN Comments \"4x4\""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": "1733 Mbit/s"
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 4,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": "4 TX/4 RX, 4 Streams"
+      },
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "WLAN Comments \"4x4\""
+      },
+      {
+        "wert": 4,
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/wifi-router/archer-c2600/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"4-Stream technology\""
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AC2600",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_wave2": [
+      {
+        "wert": "ja (MU-MIMO)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Flags Wave2, MU-MIMO, 256QAM"
+      },
+      {
+        "wert": "ja (MU-MIMO, Qualcomm MU|EFX)",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/wifi-router/archer-c2600/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": "CE: <20 (2.4 GHz), <23 (5 GHz); FCC: <30",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": "2412-2462 MHz, 5180-5240 MHz",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7C2600",
+        "stand": "Grant 2015-05-29 (Original Equipment), Class-II-Änderungen 2015-12-16 und 2016-06-20",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant-Liste; 5745-5825 MHz im Handbuch (IC-Antennenliste) genannt"
+      }
+    ],
+    "wlan_bekannte_probleme": [
+      {
+        "wert": "802.11s auf 5 GHz problematisch (Gluon 2018); mit non-ct-Treiber kein 11s",
+        "quelle": "freifunk_forum_14721",
+        "beleg": "https://forum.freifunk.net/t/gluon-lede-und-archer-c2600/14721",
+        "stand": "Thread 2017-04-06 bis 2018-08-01 (47 Beiträge, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beiträge #42, #47"
+      },
+      {
+        "wert": "QCA9980 von Qualcomm abgekündigt, seit über 4 Jahren keine Firmware-Updates; 802.11s mit ath10k-ct funktionsfähig",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ipq806x-generic",
+        "stand": "Branches main, v2025.1.x, v2023.2.x am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Kommentar in targets/ipq806x-generic (main)"
+      },
+      {
+        "wert": "bei hoher Last auf 2.4 GHz Paketverlust/Abbrüche (Einzelbericht)",
+        "quelle": "openwrt_forum_61999",
+        "beleg": "https://forum.openwrt.org/t/unexplained-hangs-freezes-and-reboots-with-archer-c2600/61999",
+        "stand": "Thread 2020-04-27 bis 2023-09-05 (79 Beiträge, 1-20 gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beitrag #17"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "extern abnehmbar",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": "\"4 dual band detachable high performance antennas\""
+      },
+      {
+        "wert": "extern abnehmbar",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas 4"
+      },
+      {
+        "wert": "extern abnehmbar (Schraubanschluss)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TE7C2600/Internal-Photos/Internal-Photos-2629077",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-26), Prüfnummer 150422C24",
+        "sicherheit": "mittel",
+        "bemerkung": "Fotos der vier einzelnen Antennen"
+      },
+      {
+        "wert": "extern fest",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C2600/User-Manual/User-Manual-2629084",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-20)",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"four fixed external antennas\" im Vorab-Handbuch; widerspricht Datenblatt und Fotos"
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "RP-SMA (außen), U.FL (Platine)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 4,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "dualband",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": "\"4 dual band detachable antennas\""
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4": 3.04,
+          "5150-5250": 4.95,
+          "5745-5825": 4.15
+        },
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C2600/User-Manual/User-Manual-2629084",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "FCC/IC-Antennenliste, Dipol rundstrahlend"
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "rund (omni-directional Dipol)",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C2600/User-Manual/User-Manual-2629084",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "rund (Omni-directional), Beamforming",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "Internet",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "WAN"
+          },
+          {
+            "name": "LAN 1",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN"
+          },
+          {
+            "name": "LAN 2",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN"
+          },
+          {
+            "name": "LAN 3",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN"
+          },
+          {
+            "name": "LAN 4",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": "alle auf der Rückseite"
+      },
+      {
+        "wert": "5x 1 Gbit/s",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "wan",
+            "switch_port": 5
+          },
+          {
+            "name": "lan1",
+            "switch_port": 4
+          },
+          {
+            "name": "lan2",
+            "switch_port": 3
+          },
+          {
+            "name": "lan3",
+            "switch_port": 2
+          },
+          {
+            "name": "lan4",
+            "switch_port": 1
+          }
+        ],
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/dts/qcom-ipq8064-c2600.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "DSA-Namen; Aufdruck Port 1 = Switch-Port 4 (Wiki)"
+      },
+      {
+        "wert": "LAN1, LAN2, LAN3, LAN4/WAN, Internet; 10/100M",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C2600/User-Manual/User-Manual-2629084",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-20)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Vorab-Handbuch aus DSL-Vorlage, Geschwindigkeit widerspricht Datenblatt"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 5,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Seitenrevision 2026-09-18 04:59",
+        "sicherheit": "mittel",
+        "bemerkung": "SFP ports \"-\" (Dump: \"¿\")"
+      }
+    ],
+    "usb": [
+      {
+        "wert": {
+          "anzahl": 2,
+          "version": "3.0"
+        },
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "anzahl": 2,
+          "version": "3.0"
+        },
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "anzahl": 2,
+          "version": "3.0"
+        },
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/dts/qcom-ipq8064-c2600.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "zwei HS/SS-PHY-Paare"
+      },
+      {
+        "wert": {
+          "anzahl": 2,
+          "version": "3.0",
+          "lage": "eine seitlich, eine hinten"
+        },
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TE7C2600/Internal-Photos/Internal-Photos-2629077",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-26), Prüfnummer 150422C24",
+        "sicherheit": "mittel",
+        "bemerkung": "Lage aus Fotos der Platine; Handbuch nennt USB auf der Seitenfläche"
+      },
+      {
+        "wert": {
+          "anzahl": 1,
+          "version": "2.0"
+        },
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C2600/User-Manual/User-Manual-2629084",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-20)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Vorab-Handbuch, widerspricht Datenblatt und Hardware"
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": "nur \"External Power Supply: 12V/4A\""
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "ja (Rundstecker)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Seitenrevision 2026-09-18 04:59",
+        "sicherheit": "mittel",
+        "bemerkung": "\"12 VDC, 4.0A via barrel\""
+      },
+      {
+        "wert": "ja (Rundstecker)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": "pwr_conn=barrel"
+      },
+      {
+        "wert": "ja (Power Port, Rückseite)",
+        "quelle": "tplink_handbuch",
+        "beleg": "https://static.tp-link.com/Archer_C2600(UN)_V1_UG_1475053462082j.pdf",
+        "stand": "Archer C2600(UN)_V1_UG, PDF 2016-09-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 12,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C2600/Label/FCC-ID-Label-2629079",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-22)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Power: 12V ⎓ 4.0A\""
+      },
+      {
+        "wert": 12,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 4.0,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C2600/Label/FCC-ID-Label-2629079",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-22)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4.0,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4.0,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": "Package Contents \"Power Supply Unit\""
+      },
+      {
+        "wert": true,
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/wifi-router/archer-c2600/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Power Adapter\""
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "12 V / 4 A extern",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ein_aus_schalter": [
+      {
+        "wert": "ja (Power On/Off Button, Rückseite)",
+        "quelle": "tplink_handbuch",
+        "beleg": "https://static.tp-link.com/Archer_C2600(UN)_V1_UG_1475053462082j.pdf",
+        "stand": "Archer C2600(UN)_V1_UG, PDF 2016-09-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Seitenrevision 2026-09-18 04:59",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "tplink_handbuch",
+        "beleg": "https://static.tp-link.com/Archer_C2600(UN)_V1_UG_1475053462082j.pdf",
+        "stand": "Archer C2600(UN)_V1_UG, PDF 2016-09-19",
+        "sicherheit": "hoch",
+        "bemerkung": "\"placed on a shelf or desktop\", keine Feuchtigkeit/übermäßige Hitze"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C2600/User-Manual/User-Manual-2629084",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-20)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_lager": [
+      {
+        "wert": "-40 bis 70 °C",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "Betrieb 10-90 %, Lager 5-90 %, nicht kondensierend",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Tisch / Regal",
+        "quelle": "tplink_handbuch",
+        "beleg": "https://static.tp-link.com/Archer_C2600(UN)_V1_UG_1475053462082j.pdf",
+        "stand": "Archer C2600(UN)_V1_UG, PDF 2016-09-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Wandmontage nicht beschrieben"
+      },
+      {
+        "wert": "Tisch",
+        "quelle": "fcc_label_ort",
+        "beleg": "https://fccid.io/TE7C2600/Label/FCC-ID-Label-Location-2629078",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-22, geändert 2015-05-27)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Unterseite zeigt zwei schlitzförmige Aussparungen nahe einer Kante; Zweck (Wandaufhängung?) nicht belegt"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": {
+          "b": 263.8,
+          "t": 197.8,
+          "h": 37.3
+        },
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": "ohne Antennen"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein (passiv, zwei große Kühlkörper)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TE7C2600/Internal-Photos/Internal-Photos-2629077",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-26), Prüfnummer 150422C24",
+        "sicherheit": "mittel",
+        "bemerkung": "aus Innenfotos abgelesen; Unterseite und Deckel mit Lüftungsschlitzen"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 10,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 8,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/dts/qcom-ipq8064-c2600.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "gpio-leds: lan, usb_4, usb_2, wps, wan_amber, wan_white, power, general"
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "ja (LED On/Off-Taster)",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja (Taster ledswitch, KEY_LIGHTS_TOGGLE)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/dts/qcom-ipq8064-c2600.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "Seitenfläche, Taster neben WPS und WiFi On/Off; ~5 s für Werkseinstellungen",
+        "quelle": "tplink_handbuch",
+        "beleg": "https://static.tp-link.com/Archer_C2600(UN)_V1_UG_1475053462082j.pdf",
+        "stand": "Archer C2600(UN)_V1_UG, PDF 2016-09-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Seitenfläche, mit Stift 8-10 s drücken",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C2600/User-Manual/User-Manual-2629084",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-20)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Vorab-Handbuch"
+      },
+      {
+        "wert": "gpio64; beim Einschalten gedrückt halten startet TFTP-Recovery",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "taster": [
+      {
+        "wert": [
+          "Reset",
+          "WPS",
+          "WiFi On/Off",
+          "LED On/Off",
+          "Power On/Off"
+        ],
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "wifi": "gpio49 rfkill",
+          "reset": "gpio64",
+          "wps": "gpio65",
+          "ledswitch": "gpio16"
+        },
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/dts/qcom-ipq8064-c2600.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "toh_button_count": [
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen erst nach Nachbestücken von Widerständen oder Lötbrücken",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": "Kühlkörper und SoC-Abschirmung entfernen, Lötpunkte R87 (unbestückt, neben dem SoC) überbrücken; Tx/Rx an Lötpunkten bei U25, 1.8-V-Pegel, Pegelwandler nötig"
+      },
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial \"No\"; widerspricht der Anleitung auf der Geräteseite"
+      },
+      {
+        "wert": "schwierig",
+        "quelle": "openwrt_forum_61999",
+        "beleg": "https://forum.openwrt.org/t/unexplained-hangs-freezes-and-reboots-with-archer-c2600/61999",
+        "stand": "Thread 2020-04-27 bis 2023-09-05 (79 Beiträge, 1-20 gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "#6 slh: \"rather difficult to get a serial connection\""
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "Tx 1.8 V (blau, Pads bei U25/R297), Rx 1.8 V (grün, Einzelpad neben U25), Vcc 1.8 V (gelb), Vcc 3.3 V (rot, JP4 oben), GND (orange, JP4 zweites Loch)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": "Farben beziehen sich auf das Foto c2600_serial_tx_rx.png"
+      },
+      {
+        "wert": "JP4: unbestückte 4-polige Lochreihe nahe LAN/USB, obere zwei Löcher 3.3 V und GND; Tx/Rx nicht auf JP4, sondern an SMD-Pads",
+        "quelle": "openwrt_wiki_fotos_seriell",
+        "beleg": "https://openwrt.org/_media/media/tplink/archerc2600/c2600_serial_tx_rx.png",
+        "stand": "Bild im Wiki, Foto R87 datiert 02.02.2016",
+        "sicherheit": "mittel",
+        "bemerkung": "aus dem Wiki-Foto abgelesen"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 1.8,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": "Pegelwandler auf 3.3 V empfohlen (HV4=Tx, HV3=Rx)"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1"
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog console=ttyHSL1,115200n8"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "R87 liegt im Abschirmrahmen links neben dem SoC U1 unter dem Kühlkörper",
+        "quelle": "openwrt_wiki_fotos_seriell",
+        "beleg": "https://openwrt.org/_media/media/tplink/archerc2600/c2600_serial_tx_rx.png",
+        "stand": "Bild im Wiki, Foto R87 datiert 02.02.2016",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "Wiki: nicht beschrieben (FIXME); Platine löst sich aus dem Unterteil nach Entfernen des silbernen Rahmens",
+        "quelle": "openwrt_forum_61999",
+        "beleg": "https://forum.openwrt.org/t/unexplained-hangs-freezes-and-reboots-with-archer-c2600/61999",
+        "stand": "Thread 2020-04-27 bis 2023-09-05 (79 Beiträge, 1-20 gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beitrag #16 dogtopus"
+      }
+    ],
+    "platinen_kennung": [
+      {
+        "wert": "15012822600-1.0 Rev1.0sp2 (Hauptplatine), 15011622600-1.0 Rev1.0sp1 (LED-Platine)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TE7C2600/Internal-Photos/Internal-Photos-2629077",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-26), Prüfnummer 150422C24",
+        "sicherheit": "mittel",
+        "bemerkung": "Zulassungsmuster 2015"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ipq806x/generic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ipq806x/generic",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/image/generic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "tplink_c2600",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/image/generic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "17.01.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Commit 2016-05-27 (ef02e8967cac)",
+        "quelle": "openwrt_git_image",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ef02e8967cac02ebec78fadd063b367e67f8fbc6",
+        "stand": "Commit 2016-05-27 (Ash Benz)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "23.05.2",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "25.12.5",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Seitenrevision 2026-09-18 04:59",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot 2012.07 [Standard IPQ806X.LN] (Aug 28 2015)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog"
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Factory-Image über die Stock-Weboberfläche (v1.0 und als v1.0 gemeldete v1.1); sonst TFTP-Recovery: PC 192.168.0.66/24, Datei ArcherC2600_1.0_tp_recovery.bin, Reset beim Einschalten ~15 s halten, LAN-Port 1-4, direkt ohne Switch",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "GUI OEM, U-Boot TFTP recovery; TFTP-Name ArcherC2600_1.0_tp_recovery.bin",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Factory-Image nur für product_ver 1.0.0",
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+        "stand": "Branch master am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.tp-link.com/en/support/download/archer-c2600/",
+        "quelle": "tplink_download",
+        "beleg": "https://www.tp-link.com/en/support/download/archer-c2600/",
+        "stand": "Live-Seite 2026-10-19, neueste Firmware Archer C2600(UN)_V1_170306 (2017-03-06)",
+        "sicherheit": "hoch",
+        "bemerkung": "letzte Firmware 2017-03-06"
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "gmac2 (label-mac-device), Basis-MAC aus Partition default-mac",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/dts/qcom-ipq8064-c2600.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "broken (Image nur mit BROKEN=1), Kommentar \"untested 802.11s\"",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ipq806x-generic",
+        "stand": "Branches main, v2025.1.x, v2023.2.x am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "main; in v2025.1.x und v2023.2.x ebenfalls broken = true"
+      },
+      {
+        "wert": "Broken",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Seitenrevision 2026-09-18 04:59",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "lief 2018 mit Gluon master (Mesh-VPN L2TP, 11s-Mesh); 11s auf 5 GHz problematisch",
+        "quelle": "freifunk_forum_14721",
+        "beleg": "https://forum.freifunk.net/t/gluon-lede-und-archer-c2600/14721",
+        "stand": "Thread 2017-04-06 bis 2018-08-01 (47 Beiträge, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beiträge #25, #26, #47"
+      }
+    ],
+    "bekannte_probleme": [
+      {
+        "wert": "sporadische Hänger und Reboots; Abhilfe: cpufreq auf performance/1.2 GHz fest, cpuidle aus (FS#3099)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Hänger/Reboots seit 17.01; Ursachen strittig (Netzteil, stmmac, ath10k-ct, cpufreq)",
+        "quelle": "openwrt_forum_61999",
+        "beleg": "https://forum.openwrt.org/t/unexplained-hangs-freezes-and-reboots-with-archer-c2600/61999",
+        "stand": "Thread 2020-04-27 bis 2023-09-05 (79 Beiträge, 1-20 gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "früher: Reboot schaltet ab (FS#1557, mit 18.06 behoben), WLAN-LEDs ohne Funktion (FS#262)",
+        "quelle": "freifunk_forum_14721",
+        "beleg": "https://forum.freifunk.net/t/gluon-lede-und-archer-c2600/14721",
+        "stand": "Thread 2017-04-06 bis 2018-08-01 (47 Beiträge, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beiträge #43, #44"
+      },
+      {
+        "wert": "v1.1: Stock-Standardzugang admin/admin funktioniert teils nicht, dann TFTP",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Seitenrevision 2019-07-05T02:53:39Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/TP-LINK_Archer_C2600_v1.x",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_Archer_C2600_v1.x",
+        "stand": "Spiegel, Rohtext inhaltsgleich mit DeviWiki-Revision 2019-07-05",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.tp-link.com/en/home-networking/wifi-router/archer-c2600/",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/wifi-router/archer-c2600/",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://www.tp-link.com/en/products/details/cat-2_Archer-C2600.html",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "alte URL laut ToH"
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/res/pmpo/files/Archer_C2600/Archer%20C2600%20Datasheet%201.0.pdf",
+        "stand": "Datasheet 1.0, PDF 2016-05-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "forum": [
+      {
+        "wert": [
+          "https://forum.openwrt.org/t/unexplained-hangs-freezes-and-reboots-with-archer-c2600/61999",
+          "https://forum.archive.openwrt.org/viewtopic.php?id=54973"
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c2600",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://forum.freifunk.net/t/gluon-lede-und-archer-c2600/14721",
+        "quelle": "freifunk_forum_14721",
+        "beleg": "https://forum.freifunk.net/t/gluon-lede-und-archer-c2600/14721",
+        "stand": "Thread 2017-04-06 bis 2018-08-01 (47 Beiträge, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/TE7C2600/External-Photos/External-Photos-2629076",
+      "kategorie": "montage",
+      "grund": "Außenfotos (2.3 MB) nicht geladen: Zweck der Schlitze auf der Unterseite (Wandaufhängung?) und Lage der Anschlüsse prüfen"
+    },
+    {
+      "url": "https://fccid.io/TE7C2600/Internal-Photos/Int-Pho-3031160",
+      "kategorie": "hw_version",
+      "grund": "Innenfotos der Class-II-Änderung 2016-06-20 (4.6 MB) nicht geladen: mögliche Änderungen zur v1.1 (Flash-Chip)"
+    },
+    {
+      "url": "https://fccid.io/TE7C2600/Test-Report/Test-Report-for-DTS-2629080",
+      "kategorie": "leistung_w_max",
+      "grund": "Testbericht DTS (2.4 MB) nicht ausgewertet: Leistungsaufnahme/Netzteilmodell evtl. angegeben"
+    },
+    {
+      "url": "https://fccid.io/TE7C2600/RF-Exposure-Info/MPE-Report-2629082",
+      "kategorie": "wlan_sendeleistung_dbm",
+      "grund": "MPE-Bericht: Sendeleistung je Band und Antennengewinn"
+    },
+    {
+      "url": "https://openwrt.org/toh/tp-link/archer_c2600_v1",
+      "kategorie": "flash_chip",
+      "grund": "Zuordnung Flash-Chip zu Hardware-Version: Spansion S25FL256S (DeviWiki, Version offen) vs. Macronix MX25U25635F (v1.1 laut Commit d517d869); Foto des Flash-Chips einer v1.0 fehlt"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/unexplained-hangs-freezes-and-reboots-with-archer-c2600/61999",
+      "kategorie": "bekannte_probleme",
+      "grund": "Beiträge 21-79 nicht gelesen (Stand der Reboot-Problematik in neueren Releases)"
+    },
+    {
+      "url": "https://www.tp-link.com/en/document/62567/",
+      "kategorie": "montage",
+      "grund": "Quick Installation Guide V1 nicht geladen (Aufstellung, Netzteil)"
+    },
+    {
+      "url": "https://openwrt.org/_media/media/tplink/archerc2600/c2600_serial_level_shifter.png",
+      "kategorie": "seriell_pinbelegung",
+      "grund": "Foto des Pegelwandler-Aufbaus nicht geladen"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 38,
+    "notiz": "ToH-Dump + Live-hwdata, OpenWrt-Wiki (inkl. Seriell-Fotos), OpenWrt-Commits/DTS/Image-Makefile/Safeloader, Gluon-Targets (main/v2025.1.x/v2023.2.x: broken), DeviWiki (= WikiDevi-Spiegel), FCC TE7C2600 (Handbuch, Typenschild, Unterseite, Innenfotos 2015), TP-Link Produktseite, Datenblatt 1.0 (2016), User Guide (2016), Downloadseite, OpenWrt-Forum 61999 (1-20), Freifunk-Forum 14721 ausgewertet. Keine Werkstatt-Protokolle. Innengerät, 12 V/4 A Rundstecker, 5x Gbit, 2x USB 3.0, 4 abnehmbare Dualband-Antennen (RP-SMA), passiv gekühlt. Serielle Konsole nur nach Überbrücken von R87 unter dem Kühlkörper, 1.8-V-Pegel. FCC-Handbuch ist eine fehlerhafte DSL-Vorlage (USB 2.0, 10/100, feste Antennen) und nur mit sicherheit niedrig geführt. Offen: Flash-Chip je Version, Leistungsaufnahme, Gewicht, Zweck der Bodenschlitze."
+  }
+}
