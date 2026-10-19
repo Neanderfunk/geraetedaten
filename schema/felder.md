@@ -63,6 +63,15 @@ Die Liste ist nicht abschließend. Weitere Kategorien aus Quellen kommen in
 | Serielle Konsole | `seriell_zugang` (außen zugänglich / innen Stiftleiste / innen Lötpunkte / innen erst nach Nachbestücken von Widerständen oder Lötbrücken), `seriell_pinbelegung`, `seriell_pegel_v`, `seriell_baud`, `seriell_hinweis` |
 | Firmware | `openwrt_target`, `openwrt_seit`, `bootloader`, `stock_firmware_url` |
 | Verweise | `toh_seite`, `openwrt_wiki`, `deviwiki`, `wikidevi`, `hersteller_seite`, `datenblatt` |
+| Handel | `ean` (je Variante/Region ein Eintrag, 13 Stellen), `amazon_asin` (je Marktplatz, `bemerkung: "amazon.de"`), `geizhals_url` (Permalink `https://geizhals.de/<name>-a<ID>.html`, ohne Suchparameter) |
+
+**Handel:** Die Felder dienen später für Preisvergleich und Links zu
+Gebrauchtmärkten. Ein Geizhals-Eintrag deckt oft mehrere Hardware-Versionen
+ab; das gehört dann in die `bemerkung`. EAN und ASIN nur übernehmen, wenn
+die Quelle sie eindeutig diesem Modell und dieser Version zuordnet. Geizhals
+selbst sperrt Abrufe; Permalinks findet man über das Webarchiv
+(`https://web.archive.org/cdx/search/cdx?url=geizhals.de/<hersteller>-<modell>*&output=json&fl=original&collapse=urlkey`),
+die EAN oft im archivierten Geizhals-Datenblatt oder im Hersteller-Datenblatt.
 
 Level, Risiko, Verwechslung, Kaufstatus und Anleitung kommen nicht von den
 Agenten. Sie stehen im RAMpe-Inventar (gluon-rampe-installer) und werden
