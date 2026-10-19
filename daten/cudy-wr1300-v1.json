@@ -1,0 +1,2012 @@
+{
+  "image": "cudy-wr1300-v1",
+  "modell": "Cudy WR1300 v1",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "23733210",
+      "bemerkung": "Dump-Zeile aelter als Live-Seite (Dump: MT7603E/MT7612E, aktuell 22.03.5, kein FCC/WikiDevi-Link)"
+    },
+    "toh_seite": {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1?do=export_raw",
+      "stand": "Seitenrevision 2026-05-25 20:43 (frollic, Data entry)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Live-Datenseite; neuer als Dump: WLAN MT7603EN/MT7612EN, aktuell 24.10.5, Gluon support Yes, Outdoor No, Serial 3.3 V, Hersteller-URLs cudy.com"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/cudy/wr1300_v3?do=export_raw",
+      "stand": "Seitenrevision 2026-05-25 20:37 (frollic)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Gemeinsame Geraeteseite fuer v1, v2, v3; nur Installation/Debricking, keine Hardwaredetails; https://openwrt.org/toh/cudy/wr1300 existiert nicht"
+    },
+    "openwrt_commit": {
+      "url": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+      "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_commit_v2": {
+      "url": "https://github.com/openwrt/openwrt/commit/62efb34071cff2e15bff85b00040520dad7d6097",
+      "stand": "Commit 62efb340, Autor 2022-09-20 (Oscar Garcia Amor), gemergt 2022-11-12",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "benennt cudy_wr1300 in cudy_wr1300-v1 um und fuehrt die Cudy-Boardnamen (R10 fuer v1, R23 fuer v2) ein"
+    },
+    "openwrt_commit_v3": {
+      "url": "https://github.com/openwrt/openwrt/commit/288738c59de0eeca1a0d2042882445ad54d95fe7",
+      "stand": "Commit 288738c5, Autor 2023-11-11 (Filip Milivojevic), gemergt 2023-11-25",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "v3 = v2 mit getauschten PCIe-Steckplaetzen; nur zur Abgrenzung"
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+      "stand": "Branch main, letzter Commit 42471994a9 vom 2026-10-15",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_cudy_wr1300-v1.dts",
+      "stand": "Branch main, letzter Commit f955716341 vom 2025-07-04",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_github_suche": {
+      "url": "https://api.github.com/search/issues?q=wr1300+repo:openwrt/openwrt",
+      "stand": "Suchergebnis 2026-10-19 (37 Treffer; Commit-Suche 4 Treffer)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_issue_v4": {
+      "url": "https://github.com/openwrt/openwrt/issues/22082",
+      "stand": "Issue vom 2026-02-18, zuletzt 2026-09-05, offen",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "WR1300 v4.0 (MT7603E + MT7663E, kein USB); dazu PR #22127 (v4 als Alias von v3, geschlossen 2026-04-02). Nur zur Abgrenzung"
+    },
+    "openwrt_issue_19922": {
+      "url": "https://github.com/openwrt/openwrt/issues/19922",
+      "stand": "Issue vom 2025-09-01, zuletzt 2025-11-04, offen",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "'Cudy WR1300 v1 bridge broken after 23.05.6'; laut Kommentar Konfigurationsfehler (DSA-Master eth0 als Bridge-Port nach Upgrade mit alter Konfiguration), kein Hardwaremangel"
+    },
+    "gluon_target": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ramips-mt7621",
+      "stand": "Branch main, letzter Commit 49a007fb4f vom 2026-10-09",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "nur WR1300 v1 in Gluon, v2/v3 nicht"
+    },
+    "gluon_commit": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/2794",
+      "stand": "Commit 3e3a7987b6 (Felix Baumann) vom 2023-02-22, Merge 2023-05-10; Umbenennung 5c895f9ceb vom 2023-06-20",
+      "abgerufen": "2026-10-19"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+      "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Seite ohne Versionsangabe; WLAN-Chip MT7612EN passt nur zu v1 (v2/v3/v4 haben MT7613BE/MT7663)"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=WR1300&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine eigene Seite; nur Erwaehnungen in Listen (Cudy WR1000 V1, OpenWrt-Listen 2022)"
+    },
+    "fccid": {
+      "url": "https://fccid.io/2APRG",
+      "stand": "Grantee-Liste 2APRG am 2026-10-19 (neuester Antrag 2026-03-01)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine FCC-ID fuer WR1300 unter dem Cudy-Grantee-Code; Router-IDs nur WR1000V1, RT01 (AX1800), RT02, WR3000H/SE, WR3600E/H, WR6500H"
+    },
+    "hersteller": {
+      "url": "https://www.cudy.com/products/wr1300-1-0",
+      "stand": "Shopify updated_at 2026-10-20T03:54:42+08:00 (Produkt angelegt 2024-02-21)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Produktname 'AC1200 Gigabit Mesh Wi-Fi Router, WR1300 1.0'; Spezifikationen nicht im HTML (body_html leer); Bilder ueberwiegend 'WR1300-V3.0'"
+    },
+    "hersteller_bild_v1": {
+      "url": "https://www.cudy.com/cdn/shop/files/WR1300-V1.0-BR1.png?v=1710395838",
+      "stand": "Bild auf Produktseite, v=1710395838 (2024-03-14)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Rueckansicht 'WR1300-V1.0', als Bild ausgewertet"
+    },
+    "hersteller_download": {
+      "url": "https://www.cudy.com/pages/download-center/wr1300-1-0",
+      "stand": "Abruf 2026-10-19; Firmware-Eintrag 26-May-2022",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Cudy fuehrt WR1300 1.0, 2.0, 3.0, 4.0, 5.0 sowie WR1300E 1.0/2.0 und WR1300S 1.0"
+    },
+    "hersteller_qig": {
+      "url": "https://www.cudy.com/cdn/shop/files/WR1300_Quick_Installation_Instructions-EN.pdf?v=4117211082087564331",
+      "stand": "PDF ohne Datum (Druckkennung 810600253)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "modellweit, ohne Hardwareversion; Rueckseitenzeichnung ohne USB-Buchse, passt also eher zu spaeteren Versionen"
+    },
+    "hersteller_ce": {
+      "url": "https://www.cudy.com/cdn/shop/files/CE_DOC_WR1300.pdf?v=354240176484026417",
+      "stand": "Konformitaetserklaerung vom 2023-07-18",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "modellweit 'WR1300', ohne Hardwareversion; nach dem v1-Zeitraum ausgestellt"
+    },
+    "hersteller_regulatory": {
+      "url": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_WR1300.pdf?v=13089421365173056872",
+      "stand": "Issue Date 2024-05-06",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "modellweit, ohne Hardwareversion"
+    },
+    "werkstatt_cudy": {
+      "url": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/src/branch/main/docs/cudy-installation.md",
+      "stand": "Commit a9781bd vom 2026-10-15",
+      "abgerufen": "2026-10-19",
+      "datei": "router-werkstatt/docs/cudy-installation.md",
+      "bemerkung": "Abschnitt 'Welche Zwischenfirmware fuer welches Modell'"
+    },
+    "werkstatt_erstinstallation": {
+      "url": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/src/branch/main/docs/erstinstallation-ohne-factory.md",
+      "stand": "Commit 0d84e25 vom 2026-10-10",
+      "abgerufen": "2026-10-19",
+      "datei": "router-werkstatt/docs/erstinstallation-ohne-factory.md",
+      "bemerkung": "Abschnitt 'Aufstellung nach Installationsweg', Weg A"
+    },
+    "werkstatt_gl_b1300": {
+      "url": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/src/branch/main/docs/validierung/glinet-gl-b1300-2026-10-16.md",
+      "stand": "Commit 9aea90d vom 2026-10-16",
+      "abgerufen": "2026-10-19",
+      "datei": "router-werkstatt/docs/validierung/glinet-gl-b1300-2026-10-16.md",
+      "bemerkung": "Abschnitt 'Umweg ueber OpenWrt 21.02.7': WR1300-v1-Image versehentlich auf GL-B1300; liefert Metadaten des Gluon-Images, keine Messung am WR1300"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "23733210",
+      "devicetype": "WiFi Router",
+      "brand": "Cudy",
+      "model": "WR1300",
+      "version": "v1",
+      "fccid": "NULL",
+      "availability": "Available 2023",
+      "whereavailable": "amazon.com, amazon.de",
+      "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+      "supportedsincerel": "21.02.0",
+      "supportedcurrentrel": "22.03.5",
+      "unsupported_functions": "NULL",
+      "target": "ramips",
+      "subtarget": "mt7621",
+      "packagearchitecture": "mipsel_24kc",
+      "bootloader": "U-Boot",
+      "cpu": "MediaTek MT7621AT",
+      "cpucores": "2",
+      "cpumhz": "880",
+      "flashmb": "16",
+      "rammb": "128",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "5",
+      "ethernet2_5gports": "-",
+      "ethernet5gports": "-",
+      "ethernet10gports": "-",
+      "sfp_ports": "-",
+      "sfp_plus_ports": "-",
+      "switch": "MediaTek MT7621AT",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "MediaTek MT7603E,MediaTek MT7612E",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "a/n/ac",
+      "wlancomments": "2×2 MIMO. 2.4GHz 20/40MHz. 5GHz 20/40/80MHz.",
+      "wlandriver": "mt76",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "1x 3.0",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "115200 / 8N1",
+      "jtag": "¿",
+      "ledcount": "11",
+      "buttoncount": "2",
+      "gpios": "-",
+      "powersupply": "12 VDC, 1.0 A",
+      "devicepage": "",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "WR1300",
+      "gitsearch": "WR1300",
+      "wikideviurl": "NULL",
+      "oemdevicehomepageurl": "http://www.cudytech.com/productinfo/90088.html",
+      "firmwareoemstockurl": "http://www.cudytech.com/openwrt_software_download",
+      "firmwareopenwrtinstallurl": "NULL",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/22.03.5/targets/ramips/mt7621/openwrt-22.03.5-ramips-mt7621-cudy_wr1300-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "NULL",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-cudy_wr1300-v1-squashfs-sysupgrade.bin",
+      "installationmethods": "Sysupgrade,see git-commit",
+      "commentinstallation": "",
+      "recoverymethods": "U-Boot TFTP recovery,see git-commit",
+      "commentrecovery": "",
+      "picture": "media:example:genericrouter1.png",
+      "comments": "",
+      "page": "toh:hwdata:cudy:cudy_wr1300_v1"
+    },
+    "toh_seite": {
+      "Device Type_devicetype": "WiFi Router",
+      "Brand": "Cudy",
+      "Model": "WR1300",
+      "Versions": "v1",
+      "FCCID_urls": "",
+      "Availability_availability": "Available 2023",
+      "Where available": "amazon.com, amazon.de",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+      "Supported Since Rel_releasesince": "21.02.0",
+      "Supported Current Rel_releasecurrent": "24.10.5",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "ramips",
+      "Subtarget": "mt7621",
+      "Package architecture_pkg-arch": "mipsel_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "MediaTek MT7621AT",
+      "CPU Cores_numcores_": "2",
+      "CPU MHz": "880",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "5",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "MediaTek MT7621AT",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "MediaTek MT7603EN, MediaTek MT7612EN",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN Comments_": "2×2 MIMO. 2.4GHz 20/40MHz. 5GHz 20/40/80MHz.",
+      "WLAN driver_wlan-drivers": "mt76",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "USB ports_port-usbs": "1x 3.0",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "11",
+      "Button count_numbutton": "2",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "12 VDC, 1.0A via barrel",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:cudy:wr1300_v3",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "WR1300",
+      "Git search_search-gits": "WR1300",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+      "WikiDevi ID_hwinfo-ids": "Cudy_WR1300",
+      "OEM Device Homepage URL_url": "https://www.cudy.com/products/wr1300-1-0",
+      "Firmware OEM Stock URL_url": "https://www.cudy.com/pages/download-center/wr1300-1-0",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/24.10.5/targets/ramips/mt7621/openwrt-24.10.5-ramips-mt7621-cudy_wr1300-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/24.10.5/targets/ramips/mt7621/openwrt-24.10.5-ramips-mt7621-cudy_wr1300-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-cudy_wr1300-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-cudy_wr1300-v1-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "Sysupgrade, see git-commit",
+      "Comment installation": "Need a signed OpenWrt intermediary image from Cudy before installing official OpenWrt image.",
+      "Recovery method(s)_method-recoverys": "U-Boot TFTP recovery, see git-commit",
+      "Comment recovery": "",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "openwrt_commit": {
+      "sha": "cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+      "autor": "Andrew Pikler",
+      "datum_autor": "2021-01-27T17:35:49Z",
+      "datum_commit": "2021-02-09T12:58:18Z",
+      "nachricht": "ramips: add support for Cudy WR1300\n\nSpecifications:\n - SoC: MediaTek MT7621AT\n - RAM: 128 MB (DDR3)\n - Flash: 16 MB (SPI NOR)\n - WiFi: MediaTek MT7603E, MediaTek MT7612E\n - Switch: 1 WAN, 4 LAN (Gigabit)\n - Ports: 1 USB 3.0\n - Buttons: Reset, WPS\n - LEDs: Power, System, Wan, Lan 1-4, WiFi 2.4G, WiFi 5G, WPS, USB\n - Power: DC 12V 1A tip positive\n\nUART Serial:\n  115200 baud\n  Located on unpopulated 4 pin header near J4:\n\n  J4\n  [o] Rx\n  [o] Tx\n  [o] GND\n  [ ] Vcc - Do not connect\n\nInstallation:\n\nDownload and flash the manufacturer's built OpenWRT image available at\nhttp://www.cudytech.com/openwrt_software_download\nInstall the new OpenWRT image via luci (System -> Backup/Flash firmware)\nBe sure to NOT keep settings. The force upgrade may need to be checked\ndue to differences in router naming conventions.\n\nRecovery:\n - Loads only signed manufacture firmware due to bootloader RSA verification\n - serve tftp-recovery image as /recovery.bin on 192.168.1.88/24\n - connect to any lan ethernet port\n - power on the device while holding the reset button\n - wait at least 8 seconds before releasing reset button for image to\n   download\n - See http://www.cudytech.com/newsinfo/547425.html\n\nMAC addresses as verified by OEM firmware:\n\nuse   address   source\nLAN   *:f0      label\nWAN   *:f1      label + 1\n2g    *:f0      label\n5g    *:f2      label + 2\n\nThe label MAC address is found in bdinfo 0xde00.\n\nSigned-off-by: Andrew Pikler <andrew.pikler@gmail.com>",
+      "dateien": [
+        "target/linux/ramips/dts/mt7621_cudy_wr1300.dts (added)",
+        "target/linux/ramips/image/mt7621.mk (modified)"
+      ]
+    },
+    "openwrt_commit_v2": {
+      "sha": "62efb34071cff2e15bff85b00040520dad7d6097",
+      "autor": "Óscar García Amor",
+      "datum_autor": "2022-09-20T11:24:43Z",
+      "datum_commit": "2022-11-12T17:15:55Z",
+      "nachricht": "ramips: add support for Cudy WR1300 v2\n\nSpecifications:\n - SoC: MediaTek MT7621AT\n - RAM: 128 MB (DDR3)\n - Flash: 16 MB (SPI NOR)\n - WiFi: MediaTek MT7603E, MediaTek MT7613BE\n - Switch: 1 WAN, 4 LAN (Gigabit)\n - Ports: 1 USB 3.0\n - Buttons: Reset, WPS\n - LEDs: System, Wan, Lan 1-4, WiFi 2.4G, WiFi 5G, WPS\n - Power: DC 12V 1A tip positive\n\nDownload and flash the manufacturer's built OpenWRT image available at\nhttp://www.cudytech.com/openwrt_software_download\nInstall the new OpenWRT image via luci (System -> Backup/Flash firmware)\nBe sure to NOT keep settings. The force upgrade may need to be checked\ndue to differences in router naming conventions.\n\nRecovery:\n - Loads only signed manufacture firmware due to bootloader RSA verification\n - serve tftp-recovery image as /recovery.bin on 192.168.1.88/24\n - connect to any lan ethernet port\n - power on the device while holding the reset button\n - wait at least 8 seconds before releasing reset button for image to\n   download\n - See http://www.cudytech.com/newsinfo/547425.html\n\nSigned-off-by: Óscar García Amor <ogarcia@connectical.com>",
+      "dateien": [
+        "target/linux/ramips/dts/mt7621_cudy_wr1300-v1.dts (renamed)",
+        "target/linux/ramips/dts/mt7621_cudy_wr1300-v2.dts (added)",
+        "target/linux/ramips/image/mt7621.mk (modified)"
+      ]
+    },
+    "openwrt_commit_v3": {
+      "sha": "288738c59de0eeca1a0d2042882445ad54d95fe7",
+      "autor": "Filip Milivojevic",
+      "datum_autor": "2023-11-11T09:57:32Z",
+      "datum_commit": "2023-11-25T14:48:41Z",
+      "nachricht": "ramips: Add support for Cudy WR1300 v3\n\nSpecifications:\n - SoC: MediaTek MT7621AT\n - RAM: 128 MB (DDR3)\n - Flash: 16 MB (SPI NOR)\n - WiFi: MediaTek MT7603E, MediaTek MT7613BE\n - Switch: 1 WAN, 4 LAN (Gigabit)\n - Buttons: Reset, WPS\n - LEDs: System, Wan, Lan 1-4, WiFi 2.4G, WiFi 5G, WPS\n - Power: DC 12V 1A tip positive\n\nDownload and flash the manufacturer's built OpenWRT image available at\nhttp://www.cudytech.com/openwrt_software_download\nInstall the new OpenWRT image via luci (System -> Backup/Flash firmware)\nBe sure to NOT keep settings. The force upgrade may need to be checked\ndue to differences in router naming conventions.\n\nCudy WR1300 v3 differs from v2 only in swapped WiFi chip PCIe slots. Common\nnodes are extracted to .dtsi and new v2 and v3 dts are created.\n\nCudy WR1300 v2 dts now contains ieee80211-freq-limit and has\neeprom_factory_8000 length fixed.\n\nThe same manufacturer's built OpenWRT image is provided for both v2 and v3\ndevices as a step in installing, but for proper WiFi functionality,\na separate build is required.\n\nRecovery:\n - Loads only signed manufacture firmware due to bootloader RSA verification\n - serve tftp-recovery image as /recovery.bin on 192.168.1.88/24\n - connect to any lan ethernet port\n - power on the device while holding the reset button\n - wait at least 8 seconds before releasing reset button for image to\n   download\n - See http://www.cudytech.com/newsinfo/547425.html\n\nSigned-off-by: Filip Milivojevic <zekica@gmail.com>",
+      "dateien": [
+        "target/linux/ramips/dts/mt7621_cudy_wr1300-v2.dts (modified)",
+        "target/linux/ramips/dts/mt7621_cudy_wr1300-v2v3.dtsi (added)",
+        "target/linux/ramips/dts/mt7621_cudy_wr1300-v3.dts (added)",
+        "target/linux/ramips/image/mt7621.mk (modified)"
+      ]
+    },
+    "wikidevi": {
+      "infobox": {
+        "brand": "Cudy",
+        "model": "WR1300",
+        "series": "AC1200",
+        "upc": "644925515104",
+        "ean": "6971690791179",
+        "serialnum_prefix": "WR130020",
+        "manuf_country": "China",
+        "is_manuf": "Yes",
+        "manuf": "",
+        "pcb_id": "BL-R7621AC2",
+        "type": "wireless router",
+        "pwr_v": "12",
+        "pwr_amp": "1",
+        "pwr_conn": "barrel",
+        "pwr_barrel_outer": "5.5",
+        "pwr_barrel_inner": "2.1",
+        "pwr_barrel_len": "9.5",
+        "cpu1_brand": "MediaTek",
+        "cpu1_model": "MT7621AT",
+        "cpu1_cspeed": "880",
+        "cpu1_cores": "2",
+        "fla1": "16",
+        "fla1_brand": "Winbond",
+        "fla1_model": "W25Q128FWSQ",
+        "ram1": "128",
+        "ram1_brand": "Winbond",
+        "ram1_model": "W631GG6MB-12",
+        "expansion_if_types": "USB 3.0",
+        "expansion_usb_num": "1",
+        "serial": "yes,, 4-pin header,, 3.3V TTL,, (115200 8N1),, J4",
+        "wi1_chip1_brand": "MediaTek",
+        "wi1_chip1_model": "MT7603EN",
+        "wi1_802dot11_protocols": "bgn",
+        "wi1_ant_conn": "soldered",
+        "wi1_txchains": "2",
+        "wi1_rxchains": "2",
+        "wi1_sstreams": "2",
+        "wi2_chip1_brand": "MediaTek",
+        "wi2_chip1_model": "MT7612EN",
+        "wi2_802dot11_protocols": "abgn+ac",
+        "wi2_ant_conn": "soldered",
+        "wi2_txchains": "2",
+        "wi2_rxchains": "2",
+        "wi2_sstreams": "2",
+        "eth_cpu": "true",
+        "sw_cpu": "true",
+        "lan_speed": "1GbE",
+        "lan_ports": "4",
+        "wan_speed": "1GbE",
+        "wan_ports": "1",
+        "tp_firmware": "OpenWrt",
+        "802dot11_protocols": "abgn+ac",
+        "default_ssid": "Cudy-XXXX, Cudy-XXXX-5G",
+        "default_ssid_regex": "^Cudy-[A-F0-9}{4}$,,, ^Cudy-[A-F0-9]{4}-5G$",
+        "default_ip": "192.168.10.1",
+        "default_pass": "admin",
+        "oui": "B4:4B:D6",
+        "oui_eth": "B4:4B:D6"
+      },
+      "text": "{{TagLine|AC1200 Gigabit Dual Band Wi-Fi Router}}\n\n:Manuf: ''Shenzhen Cudy Technology''\n\n===Hardware specification===\n*CPU: [[MediaTek]] MT7621AT @880MHz\n:SoC: Dual-core [[MIPS 1004Kc]]\n*Flash: 16MB (SPI NOR) Flash\n*Memory: 128MB (DDR3) SDRAM\n*Wi-Fi: [[MediaTek]] MT7603EN\n:802.11abgn (2.4GHz) 2x2:2 \n:[[MediaTek]] MT7612EN\n:802.11an/ac (5GHz) 2x2:2\n*Network: 5x GbE port \n*USB: 1x USB 3.0 port\n*Power Source: 12V/1A via barrel\n\n===See also===\n:;[[Cudy]]\n*[[Cudy AP3000]] (Outdoor) • \n:[[MediaTek]] MT7981BA/MT7976CN\n*[[Cudy M1800]] (AX1800) • \n*[[Cudy M3000]] (AX3000) • 2APRGMS01\n:[[MediaTek]] MT7981BA/MT7976CN\n*[[Cudy RE1200]] (AC1200)\n*[[Cudy RE1800 V2.0|Cudy RE1800]] (AX1800)\n*[[Cudy RE3000]] (AX3000) • 2APRGRT02\n:[[MediaTek]] MT7981BA/MT7976CN\n*[[Cudy TR3000]] (AX3000) • 2APRGRT02\n:[[MediaTek]] MT7981BA/MT7976CN\n*[[Cudy WR1000 V1|Cudy WR1000]]\n*[[Cudy WR1300]] (AC1200)\n*[[Cudy WR2100]] (AC2100)\n*[[Cudy WR3000]] (AX3000) • 2APRGRT02\n:[[MediaTek]] MT7981BA/MT7976CN\n*[[Cudy X6]]\n\n__NOTOC__"
+    },
+    "openwrt_wiki": {
+      "text": "====== Cudy WR1300 ======\n\nThis page covers all currently supported versions of the WR1300 - v1, v2, v3.\n===== Hardware Highlights =====\n<!-- ToH: {\n  \"source\": \"json\",\n  \"dom\": \"t\",\n  \"paging\": false,\n  \"rotate\": true,\n  \"shownColumns\": [\"model\", \"version\", \"cpu\", \"cpumhz\", \"cpucores\", \"flashmb\", \"rammb\", \"wlanhardware\", \"wlan24ghz\", \"wlan50ghz\", \"ethernet1gports\", \"usbports\"],\n  \"filterColumns\": {\"brand\": \"^Cudy$\", \"model\": \"^WR1300$\"}\n  } -->\n\n===== Installation =====\n/* stable release */\n\n<!-- ToH: {\n  \"source\": \"json\",\n  \"dom\": \"t\",\n  \"paging\": false,\n  \"shownColumns\": [\"model\", \"version\", \"supportedcurrentrel\", \"firmwareopenwrtinstallurl\", \"firmwareopenwrtupgradeurl\", \"firmwareoemstockurl\"],\n  \"filterColumns\": {\"brand\": \"^Cudy$\", \"model\": \"^WR1300$\"}\n} -->\n\n\n<tabbox OEM easy installation>\n  * Visit this URL to get the Cudy openwrt build: https://www.cudy.com/blogs/faq/openwrt-software-download\n  * Follow the Drive link found at \"Download OpenWrt Firmware to Remove Signature Check\"\n  * Download and unpack the file appropriate WR1300 ZIP file\n  * Login on the Cudy web UI, and go to Advanced - Firmware, browse to select Cudy's previously extracted image\n  * Let the device flash the firmware and reboot\n  * Surf (or SSH as root) to http://192.168.1.1 and login as root (no password)\n  * Flash the OpenWRT sysupgrade image matching your router from the table above\n  * The router will reboot, and boot vanilla OpenWRT.\n\n\n<tabbox OEM installation using the TFTP method>\nThis TFTP method works to install OpenWrt on a device freshly opened\n  * Visit this URL to get the Cudy openwrt build: https://www.cudy.com/blogs/faq/openwrt-software-download\n  * Follow the Drive link found at \"Download OpenWrt Firmware to Remove Signature Check\"\n  * Download and unpack the file appropriate WR1300 ZIP file\n\nSetup a tftp server\n  * Setup a tftp server with IP address 192.168.1.88\n  * Connect the device via ethernet on one of the LAN ports to the tftp server\n  * Copy the openwrt-22.03.0 file previous extracted (Cudy OpenWrt) to the root of the tftp server\n  * Rename the openwrt-22.03.0 file to recovery.bin\n\nFlash the device:\n  * Power off the device.\n  * Use a sim extraction tool or pin to push the reset button and hold it in\n  * Power on the device while the reset button/pin is held in\n  * After 10 seconds you can let the reset button go\n  * The device will pull the recovery.bin file from tftp and flash it\n  * The power LED will blink fast while flashing\n  * At some point all LEDs will go off, then the device will boot the Cudy OpenWrt 22.03.0 imagine\n  * The device can be accessed via web on the default OpenWrt address of 192.168.1.1\n\nUpdate to latest OpenWrt:\n  * Go to https://firmware-selector.openwrt.org/\n  * Under name of model type in \"Cudy WR1300 v3\n  * Select and download the upgrade file, typically the SYSUPGRADE file\n  * On the device OpenWrt web UI (192.168.1.1), select System - Firmware.\n  * Browse to select you latest OpenWrt SYSUPGRADE file and proceed to flash the device\n  * Allow the device a few minutes to flash and reboot itself\n  * Refresh the web UI at 192.168.1.1, you should now have the latest OpenWrt installed\n</tabbox>\n\n===== Upgrading OpenWrt =====\n->  [[docs:guide-user:installation:generic.sysupgrade]]\n\n\n===== Debricking =====\nIf it's a soft brick (bad configuration, incorrect package selection, etc.) you can:\n\n  * **[[:docs:guide-user:troubleshooting:failsafe_and_factory_reset|Reset the router]]**. This deletes all router configuration and you can start with a clean install on minutes.\n  * Entering **[[:docs:guide-user:troubleshooting:failsafe_and_factory_reset#failsafe_mode|failsafe mode]]**, where you can fix the problem manually.\n\nMore info: [[docs:guide-user:troubleshooting:generic.debrick]]\n\nIf you need to __fix a firmware problem__ (for example, a bad build) and trying with reset or failsafe does nothing, it isn't possible to unbrick OpenWrt directly. The Cudy bootloader will start a TFTP client for OEM recovery using the Reset button, but this only accepts OEM firmware.\n\nYou need to reinstall OEM Firmware using the TFTP method and then reinstall vanilla OpenWrt afterwards.\n\nThe procedure is described by Cudy at https://www.cudy.com/en-us/blogs/faq/how-to-recovery-the-cudy-router-from-openwrt-firmware-to-cudy-official-firmware\n==== Info ====\n\n<!-- ToH: {\n  \"source\": \"json\",\n  \"dom\": \"t\",\n  \"paging\": false,\n  \"rotate\": true,\n  \"shownColumns\": [\"brand\", \"model\", \"version\", \"devicetype\", \"availability\", \"supportedsincecommit\", \"supportedsincerel\", \"supportedcurrentrel\", \"unsupported_functions\", \"bootloader\", \"cpu\", \"target\", \"cpumhz\", \"flashmb\", \"rammb\", \"switch\", \"ethernet100mports\", \"ethernet1gports\", \"commentsnetworkports\", \"modem\", \"vlan\", \"wlan24ghz\", \"wlan50ghz\", \"wlanhardware\", \"wlancomments\", \"detachableantennas\", \"usbports\", \"serial\", \"jtag\", \"ledcount\", \"buttoncount\", \"powersupply\", \"deviceid\", \"owrt_forum_topic_url\", \"wikideviurl\", \"oemdevicehomepageurl\", \"firmwareopenwrtinstallurl\", \"firmwareopenwrtupgradeurl\", \"comments\"],\n  \"filterColumns\": {\"brand\": \"^Cudy$\", \"model\": \"^WR1300$\"}\n} -->\n\n\n\n"
+    },
+    "openwrt_image_mk": {
+      "cudy_wr1300-v1": "define Device/cudy_wr1300-v1\n  $(Device/dsa-migration)\n  IMAGE_SIZE := 15872k\n  DEVICE_VENDOR := Cudy\n  DEVICE_MODEL := WR1300\n  DEVICE_VARIANT := v1\n  DEVICE_PACKAGES := kmod-mt7603 kmod-mt76x2 kmod-usb2 kmod-usb3 \\\n\tkmod-usb-ledtrig-usbport -uboot-envtools\n  SUPPORTED_DEVICES += cudy,wr1300 R10\nendef",
+      "v2_supported_devices": "cudy,wr1300 R23",
+      "v3_supported_devices": "cudy,wr1300 R30"
+    },
+    "openwrt_dts": {
+      "compatible": "cudy,wr1300-v1, mediatek,mt7621-soc",
+      "model": "Cudy WR1300 v1",
+      "console": "ttyS0,115200",
+      "keys": {
+        "reset": "GPIO 18 active low, KEY_RESTART",
+        "wps": "GPIO 3 active low, KEY_WPS_BUTTON"
+      },
+      "leds_gpio": {
+        "sys (green)": "GPIO 15",
+        "usb (green)": "GPIO 14, usbport",
+        "wps (green)": "GPIO 13 active low"
+      },
+      "spi_flash": "jedec,spi-nor, 10 MHz",
+      "partitionen": {
+        "u-boot": "0x0 0x30000 ro",
+        "u-boot-env": "0x30000 0x10000 ro",
+        "factory": "0x40000 0x10000 ro (eeprom 0x0 len 0x400, 0x8000 len 0x200)",
+        "firmware": "0x50000 0xf80000 (denx,uimage)",
+        "debug": "0xfd0000 0x10000 ro",
+        "backup": "0xfe0000 0x10000 ro",
+        "bdinfo": "0xff0000 0x10000 ro (MAC 0xde00)"
+      },
+      "pcie0": "WLAN 2.4 GHz, eeprom factory 0x0, MAC bdinfo+0",
+      "pcie1": "WLAN 5 GHz, eeprom factory 0x8000, MAC bdinfo+2, led-sources 2",
+      "switch": {
+        "port0": "lan4",
+        "port1": "lan3",
+        "port2": "lan2",
+        "port3": "lan1",
+        "port4": "wan (MAC +1)"
+      }
+    },
+    "gluon_target": {
+      "eintrag": "device('cudy-wr1300-v1', 'cudy_wr1300-v1', {\n\tfactory = false,\n\tmanifest_aliases = {\n\t\t'cudy-wr1300', -- Upgrade from OpenWrt 22.03\n\t},\n})"
+    },
+    "gluon_commit": {
+      "pr": "#2794 add_cudy_wr1300v1 (Djfe)",
+      "checkliste": "vom Hersteller flashbar per Weboberflaeche (signiertes OpenWrt), dann sysupgrade; TFTP nicht angehakt; sysupgrade inkl. -n/firstboot ok; Profilname cudy-wr1300; Reset/WPS -> Konfigurationsmodus; Primaer-MAC = Etikett; alle Ports, WAN/LAN korrekt; AP, 802.11s-Mesh und beides parallel auf allen Radios; LEDs System/Radio/Port korrekt"
+    },
+    "openwrt_issue_v4": {
+      "v4_angaben": {
+        "Model": "Cudy WR1300 v4.0",
+        "Stock": "2.4.8-20250613-103350",
+        "SoC": "MediaTek MT7621",
+        "WiFi": "MT7603E (2.4GHz) + MT7663E (5GHz)",
+        "RAM": "128MB",
+        "Flash": "16MB SPI NOR",
+        "Ethernet": "5x Gigabit",
+        "USB": "None"
+      },
+      "pr_22127": "ramips: Cudy wr1300 v4 alias of v3 (geschlossen)"
+    },
+    "openwrt_issue_19922": {
+      "titel": "Cudy WR1300 v1 bridge broken after 23.05.6",
+      "release": "24.10.2",
+      "kern": "nach Upgrade von 23.05 mit behaltener Konfiguration nur eth0 in br-lan; brctl: Invalid argument; Downgrade 23.05.6 ok",
+      "antwort": "brada4: DSA-Master eth0 ist kein gueltiger Bridge-Port, eth0 aus Liste entfernen bzw. Reset und Neukonfiguration"
+    },
+    "deviwiki": {
+      "treffer": [
+        "Cudy WR1000 V1 (Erwaehnung *[[Cudy WR1300 ]] - AC1300 Dual Band Smart Wi-Fi Gigabit Router)",
+        "List of Wireless Routers recommended for OpenWrt in 2022 (MT7621AT, 16/128, b/g/n+a/n/ac)",
+        "Full List of OpenWrt supported devices (MT7621AT, 16/128, 21.02.3)"
+      ]
+    },
+    "fccid": {
+      "grantee": "2APRG Shenzhen Cudy Technology Co., Ltd.",
+      "router_ids": {
+        "2APRGWR1000V1": "2018-08-06 AC1200 Dual Band Smart Wi-Fi Router",
+        "2APRGRT01": "2021-08-25 AX1800 Gigabit Dual Band Wi-Fi 6 Router",
+        "2APRGRT02": "2023-06-08 Wi-Fi Router"
+      },
+      "wr1300": "keine FCC-ID gefunden"
+    },
+    "hersteller": {
+      "title": "AC1200 Gigabit Mesh Wi-Fi Router, WR1300 1.0",
+      "handle": "wr1300-1-0",
+      "created_at": "2024-02-21T14:37:55+08:00",
+      "updated_at": "2026-10-20T03:54:42+08:00",
+      "body_html": "",
+      "bilder": [
+        "WR1300-V1.0-BR1.png",
+        "WR1300-V3.0-A.png",
+        "WR1300-V3.0-R1.png",
+        "WR1300-V3.0.png (2x)"
+      ],
+      "versionen_im_menue": [
+        "WR1300 1.0",
+        "WR1300 2.0",
+        "WR1300 3.0",
+        "WR1300 4.0",
+        "WR1300 5.0",
+        "WR1300E 1.0",
+        "WR1300E 2.0",
+        "WR1300S 1.0"
+      ]
+    },
+    "hersteller_bild_v1": {
+      "rueckseite": "POWER (Hohlbuchse), RESET (Loch) ueber WPS-Taste, WAN, LAN1, LAN2, LAN3, LAN4, USB (blau)",
+      "antennen": "4 externe, klappbar, nicht abschraubbar erkennbar",
+      "gehaeuse": "weiss, Tischgeraet, LEDs oben vorn",
+      "vergleich_v3_bild": "WR1300-V3.0-R1: 4 Antennen, LEDs LAN4..LAN1, WAN, WPS, 5G, 2.4G, Power (keine USB-LED)"
+    },
+    "hersteller_download": {
+      "WR1300 1.0": {
+        "Firmware": "WR1300-R10-1.13.6-20220314-112409-flash_1.zip (26-May-2022)",
+        "Dokumente": [
+          "CE_DOC_WR1300.pdf",
+          "Regulatory_Compliance_WR1300.pdf",
+          "Statements_of_PSTI_Compliance_WR1300.pdf",
+          "WR1300_Quick_Installation_Instructions-EN.pdf",
+          "WR1300_Quick_Installation_Instructions.pdf"
+        ]
+      }
+    },
+    "hersteller_qig": {
+      "schritte": "Modem aus, WAN an Modem, Modem an, Netzteil an Router bis Power-LED dauerhaft leuchtet, WLAN (SSID/Passwort auf Unterseite) oder LAN, http://cudy.net/ oder http://192.168.10.1/, Administratorpasswort anlegen, Quick Setup (Mode, Timezone, WAN, Wireless, Summary)",
+      "betriebsarten": [
+        "Wireless Router",
+        "Wireless Access Point",
+        "Wireless Extender",
+        "WISP"
+      ],
+      "rueckseite_zeichnung": "POWER, RESET, WPS, WAN, LAN1-LAN4 (keine USB-Buchse)",
+      "leds": "Power, WPS, 2.4G, WAN, 5G, LAN 1~LAN 4",
+      "ssid": "Cudy-****-5G"
+    },
+    "hersteller_ce": {
+      "Product Name": "AC1200 Dual Band Wi-Fi Router",
+      "Model Number": "WR1300",
+      "Normen": [
+        "ETSI EN 301 489-1 V2.2.3",
+        "Draft ETSI EN 301 489-17 V3.2.5",
+        "EN 55032:2015/A11:2020",
+        "EN 55035:2017/A11:2020",
+        "ETSI EN 300 328 V2.2.2",
+        "ETSI EN 301893 V2.1.1",
+        "EN IEC 62311:2020",
+        "EN IEC 62368-1:2020+A11:2020",
+        "IEC 62321-x"
+      ],
+      "Date of issue": "2023-7-18",
+      "Seiten": 25
+    },
+    "hersteller_regulatory": {
+      "Product name": "AC1200 Gigabit Mesh Wi-Fi Router",
+      "Model Number": "WR1300",
+      "Netzteil": "I.T.E. Power Supply DSA-12PF11-12 FUS 120100",
+      "Issue Date": "2024-05-06",
+      "Sendeleistung": {
+        "2400-2483.5 MHz": "20dBm",
+        "5150-5250 MHz": "23dBm"
+      },
+      "Operation Temperature": "0° C to +40° C",
+      "Typenschild": "Unterseite des Produkts und am Netzteil",
+      "Symbole": [
+        "Class II equipment",
+        "Energy efficiency Marking",
+        "Direct current",
+        "Polarity of DC power connector",
+        "For indoor use only",
+        "Caution",
+        "Operator's manual"
+      ]
+    },
+    "werkstatt_cudy": {
+      "zeile": "| WR1300 v1 | cudy-wr1300.bin | WR1300+V1.zip | 34f1ecdcd756fdae90abf3c76def2d43 |",
+      "ablauf": "Cudy-Oberflaeche 192.168.10.1 (Passwort admin) -> Erweiterte Einstellungen -> System -> Firmware -> Zwischenfirmware, MD5 pruefen; dann 192.168.1.1 LuCI ohne Passwort -> sysupgrade-Image, Einstellungen nicht behalten"
+    },
+    "werkstatt_erstinstallation": {
+      "zeile": "A - Hersteller-Zwischenfirmware, signiert | 15 | mt7621 (5), filogic (10) | alle Cudy: X6, WR1300, WR2100, M1800, WR3000*, TR3000, AP3000, M3000, RE3000 | nein"
+    },
+    "werkstatt_gl_b1300": {
+      "meldung": "Device glinet,gl-b1300 not supported by this image ... Supported devices: cudy,wr1300-v1 cudy,wr1300 R10 Image check failed",
+      "hinweis": "ACHTUNG Verwechslung WR1300 (Cudy) <-> B1300 (GL)"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Cudy",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Cudy (Shenzhen Cudy Technology Co., Ltd.)",
+        "quelle": "hersteller_ce",
+        "beleg": "https://www.cudy.com/cdn/shop/files/CE_DOC_WR1300.pdf?v=354240176484026417",
+        "stand": "Konformitaetserklaerung vom 2023-07-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "WR1300",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AC1200 Gigabit Mesh Wi-Fi Router, WR1300 1.0",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr1300-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:54:42+08:00 (Produkt angelegt 2024-02-21)",
+        "sicherheit": "hoch",
+        "bemerkung": "Titel der Produktseite"
+      },
+      {
+        "wert": "AC1200 Dual Band Wi-Fi Router, Modellnummer WR1300",
+        "quelle": "hersteller_ce",
+        "beleg": "https://www.cudy.com/cdn/shop/files/CE_DOC_WR1300.pdf?v=354240176484026417",
+        "stand": "Konformitaetserklaerung vom 2023-07-18",
+        "sicherheit": "hoch",
+        "bemerkung": "modellweit, ohne Version"
+      },
+      {
+        "wert": "AC1200 Gigabit Dual Band Wi-Fi Router",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": "TagLine"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "v1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1.0 (Cudy-Schreibweise 'WR1300 1.0'; Firmware-Kennung R10)",
+        "quelle": "hersteller_download",
+        "beleg": "https://www.cudy.com/pages/download-center/wr1300-1-0",
+        "stand": "Abruf 2026-10-19; Firmware-Eintrag 26-May-2022",
+        "sicherheit": "hoch",
+        "bemerkung": "Firmware-Datei fuer 1.0: WR1300-R10-1.13.6-20220314-112409-flash_1.zip"
+      },
+      {
+        "wert": "v1 (OpenWrt-Profil cudy_wr1300-v1, Boardname der Cudy-Zwischenfirmware 'cudy,wr1300 R10')",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main, letzter Commit 42471994a9 vom 2026-10-15",
+        "sicherheit": "mittel",
+        "bemerkung": "SUPPORTED_DEVICES += cudy,wr1300 R10; v2 = R23, v3 = R30"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Version steht auf dem Aufkleber unter dem Gerät ('Modell und Version stehen auf dem Aufkleber unter dem Gerät').",
+        "quelle": "werkstatt_cudy",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/src/branch/main/docs/cudy-installation.md",
+        "stand": "Commit a9781bd vom 2026-10-15",
+        "sicherheit": "hoch",
+        "bemerkung": "allgemein fuer Cudy, kein WR1300-v1-Typenschildfoto vorhanden"
+      },
+      {
+        "wert": "Cudy-Zwischenfirmware bzw. Cudy-Firmware meldet für v1 den Boardnamen 'cudy,wr1300 R10' (v2: 'R23', v3: 'R30'); Cudy-Firmwaredateien für 1.0 heißen WR1300-R10-…",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main, letzter Commit 42471994a9 vom 2026-10-15",
+        "sicherheit": "mittel",
+        "bemerkung": "Kennung R10 auch im Cudy-Downloadcenter fuer WR1300 1.0"
+      },
+      {
+        "wert": "v1 hat eine blaue USB-3.0-Buchse rechts neben LAN4 auf der Rückseite; laut ToH haben v2/v3 keinen USB-Anschluss, laut Issue #22082 auch v4 nicht.",
+        "quelle": "hersteller_bild_v1",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR1300-V1.0-BR1.png?v=1710395838",
+        "stand": "Bild auf Produktseite, v=1710395838 (2024-03-14)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus Herstellerfoto V1.0 und ToH-Zeile v2,v3 (usbports '-'); Widerspruch: der v2-Commit 62efb340 nennt 'Ports: 1 USB 3.0', das v2-Profil enthaelt aber keine USB-Treiber"
+      },
+      {
+        "wert": "5-GHz-Chip MT7612EN = v1; v2/v3 haben MT7613BE, v4 MT7663E.",
+        "quelle": "openwrt_commit_v2",
+        "beleg": "https://github.com/openwrt/openwrt/commit/62efb34071cff2e15bff85b00040520dad7d6097",
+        "stand": "Commit 62efb340, Autor 2022-09-20 (Oscar Garcia Amor), gemergt 2022-11-12",
+        "sicherheit": "mittel",
+        "bemerkung": "nur nach Oeffnen bzw. in laufender Firmware erkennbar"
+      },
+      {
+        "wert": "Seriennummer-Präfix WR130020; Platinen-ID BL-R7621AC2",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "niedrig",
+        "bemerkung": "WikiDevi-Seite nennt keine Version, Chips passen zu v1"
+      },
+      {
+        "wert": "Verwechslungsgefahr: Cudy WR1300 und GL.iNet GL-B1300 – im Labor wurde das WR1300-v1-Image versehentlich auf einen GL-B1300 gespielt.",
+        "quelle": "werkstatt_gl_b1300",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/src/branch/main/docs/validierung/glinet-gl-b1300-2026-10-16.md",
+        "stand": "Commit 9aea90d vom 2026-10-16",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "Cudy WR1300 1.0",
+          "Cudy AC1200 Gigabit Mesh Wi-Fi Router"
+        ],
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr1300-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:54:42+08:00 (Produkt angelegt 2024-02-21)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "cudy_wr1300 (OpenWrt-Profil bis 22.03)",
+          "cudy,wr1300"
+        ],
+        "quelle": "openwrt_commit_v2",
+        "beleg": "https://github.com/openwrt/openwrt/commit/62efb34071cff2e15bff85b00040520dad7d6097",
+        "stand": "Commit 62efb340, Autor 2022-09-20 (Oscar Garcia Amor), gemergt 2022-11-12",
+        "sicherheit": "mittel",
+        "bemerkung": "seit Commit 62efb340 heisst das Profil cudy_wr1300-v1"
+      },
+      {
+        "wert": [
+          "cudy-wr1300 (Manifest-Alias fuer Upgrade von OpenWrt 22.03)"
+        ],
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ramips-mt7621",
+        "stand": "Branch main, letzter Commit 49a007fb4f vom 2026-10-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ean": [
+      {
+        "wert": "6971690791179",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "niedrig",
+        "bemerkung": "Version nicht angegeben; UPC 644925515104"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 880,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 880,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "mipsel_24kc",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt-Paketarchitektur"
+      },
+      {
+        "wert": "MIPS 1004Kc",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": "CPU-Kern"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 128,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR3",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DDR3",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "Winbond W631GG6MB-12",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": "SPI NOR"
+      },
+      {
+        "wert": "NOR",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": "SPI NOR"
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "Winbond W25Q128FWSQ",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_layout": [
+      {
+        "wert": "u-boot 0x0-0x30000, u-boot-env 0x30000 (64 KiB), factory 0x40000 (64 KiB), firmware 0x50000 (0xf80000 = 15872 KiB), debug 0xfd0000, backup 0xfe0000, bdinfo 0xff0000",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_cudy_wr1300-v1.dts",
+        "stand": "Branch main, letzter Commit f955716341 vom 2025-07-04",
+        "sicherheit": "mittel",
+        "bemerkung": "IMAGE_SIZE 15872k laut mt7621.mk"
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": [
+          "MediaTek MT7603EN (2.4 GHz)",
+          "MediaTek MT7612EN (5 GHz)"
+        ],
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1?do=export_raw",
+        "stand": "Seitenrevision 2026-05-25 20:43 (frollic, Data entry)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "MediaTek MT7603E",
+          "MediaTek MT7612E"
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "MediaTek MT7603E",
+          "MediaTek MT7612E"
+        ],
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "MediaTek MT7603EN",
+          "MediaTek MT7612EN"
+        ],
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "mt76",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kmod-mt7603, kmod-mt76x2",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main, letzter Commit 42471994a9 vom 2026-10-15",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "'2×2 MIMO'"
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": "2x2:2"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "'2×2 MIMO'"
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": "2x2:2"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AC1200",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr1300-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:54:42+08:00 (Produkt angelegt 2024-02-21)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AC1200",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "2.4 GHz: 20/40 MHz; 5 GHz: 20/40/80 MHz",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": {
+          "2.4 GHz (2400-2483.5 MHz)": 20,
+          "5 GHz (5150-5250 MHz)": 23
+        },
+        "quelle": "hersteller_regulatory",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_WR1300.pdf?v=13089421365173056872",
+        "stand": "Issue Date 2024-05-06",
+        "sicherheit": "mittel",
+        "bemerkung": "EU-Angabe, modellweit ohne Hardwareversion (2024)"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "extern fest",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": "ant_conn 'soldered' fuer beide Baender"
+      },
+      {
+        "wert": "extern fest",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas '-'"
+      },
+      {
+        "wert": "extern fest (klappbar)",
+        "quelle": "hersteller_bild_v1",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR1300-V1.0-BR1.png?v=1710395838",
+        "stand": "Bild auf Produktseite, v=1710395838 (2024-03-14)",
+        "sicherheit": "mittel",
+        "bemerkung": "Herstellerfoto V1.0"
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 4,
+        "quelle": "hersteller_bild_v1",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR1300-V1.0-BR1.png?v=1710395838",
+        "stand": "Bild auf Produktseite, v=1710395838 (2024-03-14)",
+        "sicherheit": "mittel",
+        "bemerkung": "Herstellerfoto V1.0"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "WAN",
+            "geschwindigkeit_mbit": 1000,
+            "rolle": "WAN"
+          },
+          {
+            "name": "LAN1",
+            "geschwindigkeit_mbit": 1000,
+            "rolle": "LAN"
+          },
+          {
+            "name": "LAN2",
+            "geschwindigkeit_mbit": 1000,
+            "rolle": "LAN"
+          },
+          {
+            "name": "LAN3",
+            "geschwindigkeit_mbit": 1000,
+            "rolle": "LAN"
+          },
+          {
+            "name": "LAN4",
+            "geschwindigkeit_mbit": 1000,
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": "'Switch: 1 WAN, 4 LAN (Gigabit)'; DTS: Switch-Port 4 = wan, 3..0 = lan1..lan4"
+      },
+      {
+        "wert": "4x LAN 1 GbE, 1x WAN 1 GbE",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Rückseite von links: Strombuchse, Reset/WPS, WAN, LAN1-LAN4, USB",
+        "quelle": "hersteller_bild_v1",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR1300-V1.0-BR1.png?v=1710395838",
+        "stand": "Bild auf Produktseite, v=1710395838 (2024-03-14)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 5,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "switch_chip": [
+      {
+        "wert": "MediaTek MT7621AT (im SoC)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": true,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "sfp": [
+      {
+        "wert": false,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "SFP ports '-'"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "1x USB 3.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x USB 3.0",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x USB 3.0",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x USB 3.0 (blaue Buchse, Rückseite rechts)",
+        "quelle": "hersteller_bild_v1",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR1300-V1.0-BR1.png?v=1710395838",
+        "stand": "Bild auf Produktseite, v=1710395838 (2024-03-14)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": false,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": false,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1?do=export_raw",
+        "stand": "Seitenrevision 2026-05-25 20:43 (frollic, Data entry)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: Power Supply nur '12 VDC, 1.0A via barrel'; PoE nennt keine Quelle"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": true,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1?do=export_raw",
+        "stand": "Seitenrevision 2026-05-25 20:43 (frollic, Data entry)",
+        "sicherheit": "mittel",
+        "bemerkung": "'via barrel'"
+      },
+      {
+        "wert": true,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_buchse_mass": [
+      {
+        "wert": "5.5x2.1",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": "Hohlstecker 5.5 mm aussen, 2.1 mm innen, 9.5 mm lang"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 12,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 1.0,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.0,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.0,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_polaritaet": [
+      {
+        "wert": "Mitte plus",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": "'tip positive'"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "hersteller_regulatory",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_WR1300.pdf?v=13089421365173056872",
+        "stand": "Issue Date 2024-05-06",
+        "sicherheit": "mittel",
+        "bemerkung": "Netzteil als Komponente des Produkts aufgefuehrt ('I.T.E. Power Supply', 'provided by manufacturer and in the original packing'); modellweit 2024"
+      },
+      {
+        "wert": true,
+        "quelle": "hersteller_qig",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR1300_Quick_Installation_Instructions-EN.pdf?v=4117211082087564331",
+        "stand": "PDF ohne Datum (Druckkennung 810600253)",
+        "sicherheit": "mittel",
+        "bemerkung": "'Connect the power adapter to the router'"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "I.T.E. Power Supply DSA-12PF11-12 FUS 120100",
+        "quelle": "hersteller_regulatory",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_WR1300.pdf?v=13089421365173056872",
+        "stand": "Issue Date 2024-05-06",
+        "sicherheit": "mittel",
+        "bemerkung": "Modellbezeichnung; Werte 12 V/1 A laut ToH/Commit, Netzteil-Typenschild nicht gesehen; modellweit 2024, fuer v1 nicht belegt"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1?do=export_raw",
+        "stand": "Seitenrevision 2026-05-25 20:43 (frollic, Data entry)",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor 'No'"
+      },
+      {
+        "wert": "innen",
+        "quelle": "hersteller_regulatory",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_WR1300.pdf?v=13089421365173056872",
+        "stand": "Issue Date 2024-05-06",
+        "sicherheit": "mittel",
+        "bemerkung": "Symbolerklaerung nennt 'For indoor use only' (modellweit, 'Symbols may vary')"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "hersteller_regulatory",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_WR1300.pdf?v=13089421365173056872",
+        "stand": "Issue Date 2024-05-06",
+        "sicherheit": "mittel",
+        "bemerkung": "modellweit"
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Tisch",
+        "quelle": "hersteller_bild_v1",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR1300-V1.0-BR1.png?v=1710395838",
+        "stand": "Bild auf Produktseite, v=1710395838 (2024-03-14)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Herstellerfoto zeigt Tischgeraet mit schraegem Fuss; Wandmontage in keiner Quelle"
+      }
+    ],
+    "leds": [
+      {
+        "wert": [
+          "Power",
+          "System",
+          "WAN",
+          "LAN1",
+          "LAN2",
+          "LAN3",
+          "LAN4",
+          "WLAN 2.4G",
+          "WLAN 5G",
+          "WPS",
+          "USB"
+        ],
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": "ToH: 11 LEDs"
+      },
+      {
+        "wert": [
+          "Power",
+          "WPS",
+          "2.4G",
+          "5G",
+          "WAN",
+          "LAN1~LAN4"
+        ],
+        "quelle": "hersteller_qig",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR1300_Quick_Installation_Instructions-EN.pdf?v=4117211082087564331",
+        "stand": "PDF ohne Datum (Druckkennung 810600253)",
+        "sicherheit": "niedrig",
+        "bemerkung": "modellweite Kurzanleitung"
+      }
+    ],
+    "knoepfe": [
+      {
+        "wert": [
+          "Reset",
+          "WPS"
+        ],
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": "DTS: reset GPIO 18, wps GPIO 3"
+      },
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Button count"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "Rückseite zwischen Strombuchse und WAN-Buchse, Loch 'RESET' über der WPS-Taste; mit Stift erreichbar",
+        "quelle": "hersteller_bild_v1",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR1300-V1.0-BR1.png?v=1710395838",
+        "stand": "Bild auf Produktseite, v=1710395838 (2024-03-14)",
+        "sicherheit": "mittel",
+        "bemerkung": "Herstellerfoto V1.0"
+      },
+      {
+        "wert": "Reset beim Einschalten gedrückt halten (mind. 8 s) startet TFTP-Recovery; in Gluon führt Reset/WPS in den Konfigurationsmodus",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": "Konfigurationsmodus laut Gluon-PR-Checkliste #2794"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": "'unpopulated 4 pin header near J4' - Stiftleiste unbestueckt, Stifte einloeten"
+      },
+      {
+        "wert": "innen Stiftleiste",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "niedrig",
+        "bemerkung": "nur '4-pin header', J4; ob bestueckt, sagt die Quelle nicht"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "J4: Rx, Tx, GND, Vcc (Vcc nicht anschließen); eckiges Pad = Vcc",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": "Reihenfolge laut Skizze im Commit"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1?do=export_raw",
+        "stand": "Seitenrevision 2026-05-25 20:43 (frollic, Data entry)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": "3.3V TTL"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1"
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 115200,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ramips/mt7621",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "21.02.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Commit cd2b6614, gemergt 2021-02-09",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_support_commit": [
+      {
+        "wert": "cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "24.10.5",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1?do=export_raw",
+        "stand": "Seitenrevision 2026-05-25 20:43 (frollic, Data entry)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "22.03.5",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump veraltet"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja (nur v1; Gluon-Image cudy-wr1300-v1, kein factory-Image)",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ramips-mt7621",
+        "stand": "Branch main, letzter Commit 49a007fb4f vom 2026-10-09",
+        "sicherheit": "mittel",
+        "bemerkung": "factory = false; Manifest-Alias cudy-wr1300"
+      },
+      {
+        "wert": "ja, seit Commit 3e3a7987b6 (2023-02-22), gemergt 2023-05-10",
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2794",
+        "stand": "Commit 3e3a7987b6 (Felix Baumann) vom 2023-02-22, Merge 2023-05-10; Umbenennung 5c895f9ceb vom 2023-06-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Yes",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1?do=export_raw",
+        "stand": "Seitenrevision 2026-05-25 20:43 (frollic, Data entry)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot mit RSA-Signaturprüfung: lädt nur vom Hersteller signierte Firmware",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.cudy.com/pages/download-center/wr1300-1-0",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1?do=export_raw",
+        "stand": "Seitenrevision 2026-05-25 20:43 (frollic, Data entry)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WR1300-R10-1.13.6-20220314-112409-flash_1.zip (Eintrag 26-May-2022)",
+        "quelle": "hersteller_download",
+        "beleg": "https://www.cudy.com/pages/download-center/wr1300-1-0",
+        "stand": "Abruf 2026-10-19; Firmware-Eintrag 26-May-2022",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_ip": [
+      {
+        "wert": "192.168.10.1",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "192.168.10.1 (auch http://cudy.net/)",
+        "quelle": "hersteller_qig",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR1300_Quick_Installation_Instructions-EN.pdf?v=4117211082087564331",
+        "stand": "PDF ohne Datum (Druckkennung 810600253)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "192.168.10.1",
+        "quelle": "werkstatt_cudy",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/src/branch/main/docs/cudy-installation.md",
+        "stand": "Commit a9781bd vom 2026-10-15",
+        "sicherheit": "hoch",
+        "bemerkung": "allgemein fuer Cudy"
+      }
+    ],
+    "stock_passwort": [
+      {
+        "wert": "admin",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "admin",
+        "quelle": "werkstatt_cudy",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/src/branch/main/docs/cudy-installation.md",
+        "stand": "Commit a9781bd vom 2026-10-15",
+        "sicherheit": "hoch",
+        "bemerkung": "allgemein fuer Cudy"
+      },
+      {
+        "wert": "beim ersten Aufruf Administratorpasswort festlegen",
+        "quelle": "hersteller_qig",
+        "beleg": "https://www.cudy.com/cdn/shop/files/WR1300_Quick_Installation_Instructions-EN.pdf?v=4117211082087564331",
+        "stand": "PDF ohne Datum (Druckkennung 810600253)",
+        "sicherheit": "niedrig",
+        "bemerkung": "modellweite Kurzanleitung"
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Zuerst die von Cudy signierte OpenWrt-Zwischenfirmware über die Cudy-Weboberfläche einspielen, dann das sysupgrade-Image (Einstellungen nicht behalten, ggf. erzwingen).",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Zwischenfirmware aus dem Spiegel: cudy-wr1300.bin (Cudy: 'WR1300+V1.zip', MD5 34f1ecdcd756fdae90abf3c76def2d43); danach Gluon-sysupgrade-Image unter 192.168.1.1, Haken 'Einstellungen beibehalten' entfernen.",
+        "quelle": "werkstatt_cudy",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/src/branch/main/docs/cudy-installation.md",
+        "stand": "Commit a9781bd vom 2026-10-15",
+        "sicherheit": "hoch",
+        "bemerkung": "Spiegel https://firmware.ffnef.de/other/cudy-mirror-20261015/zwischenfirmware/"
+      },
+      {
+        "wert": "Weg A (Hersteller-Zwischenfirmware, signiert) – nicht automatisierbar",
+        "quelle": "werkstatt_erstinstallation",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/src/branch/main/docs/erstinstallation-ohne-factory.md",
+        "stand": "Commit 0d84e25 vom 2026-10-10",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Alternativ TFTP: Zwischenfirmware als recovery.bin auf 192.168.1.88, Reset beim Einschalten etwa 10 s halten.",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr1300_v3?do=export_raw",
+        "stand": "Seitenrevision 2026-05-25 20:37 (frollic)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "recovery": [
+      {
+        "wert": "TFTP: recovery.bin auf 192.168.1.88/24 bereitstellen, an LAN anschließen, Reset beim Einschalten mind. 8 s halten; nur signierte Herstellerfirmware",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Bei hartem Fehler erst OEM-Firmware per TFTP, dann wieder OpenWrt; Anleitung https://www.cudy.com/en-us/blogs/faq/how-to-recovery-the-cudy-router-from-openwrt-firmware-to-cudy-official-firmware",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr1300_v3?do=export_raw",
+        "stand": "Seitenrevision 2026-05-25 20:37 (frollic)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "mac_schema": [
+      {
+        "wert": "Etikett-MAC aus bdinfo 0xde00: LAN = Etikett (*:f0), WAN = Etikett+1, 2.4 GHz = Etikett, 5 GHz = Etikett+2",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cd2b661453a8a2b8260dfb9b9c0dc5297b981331",
+        "stand": "Commit cd2b6614, Autor 2021-01-27 (Andrew Pikler), gemergt 2021-02-09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "OUI B4:4B:D6",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "sysupgrade_kennung": [
+      {
+        "wert": "Gluon-Image prüft 'Supported devices: cudy,wr1300-v1 cudy,wr1300 R10'",
+        "quelle": "werkstatt_gl_b1300",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/src/branch/main/docs/validierung/glinet-gl-b1300-2026-10-16.md",
+        "stand": "Commit 9aea90d vom 2026-10-16",
+        "sicherheit": "hoch",
+        "bemerkung": "Meldung beim Fehlversuch auf GL-B1300 (OpenWrt 21.02.7 LuCI)"
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Available 2023 (amazon.com, amazon.de)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "ToH-Angabe nicht aktuell gepflegt; Cudy fuehrt inzwischen WR1300 bis 5.0"
+      }
+    ],
+    "forum_thread": [
+      {
+        "wert": "https://github.com/openwrt/openwrt/issues/19922",
+        "quelle": "openwrt_issue_19922",
+        "beleg": "https://github.com/openwrt/openwrt/issues/19922",
+        "stand": "Issue vom 2025-09-01, zuletzt 2025-11-04, offen",
+        "sicherheit": "niedrig",
+        "bemerkung": "Bridge nach Upgrade 23.05 -> 24.10 kaputt; Ursache laut Kommentar alte Konfiguration (eth0 in br-lan), Empfehlung Neuinstallation ohne Einstellungen"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1300_v1?do=export_raw",
+        "stand": "Seitenrevision 2026-05-25 20:43 (frollic, Data entry)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/cudy/wr1300_v3",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/wr1300_v3?do=export_raw",
+        "stand": "Seitenrevision 2026-05-25 20:37 (frollic)",
+        "sicherheit": "mittel",
+        "bemerkung": "gemeinsame Seite v1-v3"
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+        "stand": "Revision 385630 vom 2024-09-03T20:39:08Z (Omega); angelegt 2024-06-10 (Rayknight, 'Details from on hand example')",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.cudy.com/products/wr1300-1-0",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/wr1300-1-0",
+        "stand": "Shopify updated_at 2026-10-20T03:54:42+08:00 (Produkt angelegt 2024-02-21)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://www.cudy.com/products/wr1300-1-0",
+      "kategorie": "abmessungen/gewicht/montage",
+      "grund": "Spezifikationen der Produktseite nicht im HTML (body_html leer, vermutlich per Skript nachgeladen); Abmessungen, Gewicht, Wandmontage, Antennengewinn fehlen"
+    },
+    {
+      "url": "https://www.cudy.com/cdn/shop/files/WR1300_Quick_Installation_Instructions.pdf?v=14400805844193272578",
+      "kategorie": "handbuch",
+      "grund": "mehrsprachige Kurzanleitung nicht ausgewertet (EN-Fassung gelesen)"
+    },
+    {
+      "url": "https://www.cudy.com/cdn/shop/files/Statements_of_PSTI_Compliance_WR1300.pdf?v=7713075126601819109",
+      "kategorie": "support_ende",
+      "grund": "PSTI-Erklaerung (Sicherheitsupdate-Zeitraum) nicht geladen"
+    },
+    {
+      "url": "https://www.cudy.com/cdn/shop/files/WR1300-R10-1.13.6-20220314-112409-flash_1.zip?v=14196535158736175031",
+      "kategorie": "stock_firmware",
+      "grund": "Stock-Firmware R10 nicht analysiert"
+    },
+    {
+      "url": "https://forum.openwrt.org/search?q=WR1300",
+      "kategorie": "forum",
+      "grund": "Forumssuche nicht ausgefuehrt (search.json drosselt); kein v1-Thread in ToH verlinkt; Fotos von Platine/J4 und Typenschild v1 fehlen"
+    },
+    {
+      "url": "https://wikidevi.wi-cat.ru/Cudy_WR1300",
+      "kategorie": "fotos",
+      "grund": "WikiDevi-Seite ohne Bilder und ohne Versionsangabe; Typenschildfoto v1 fehlt fuer erkennung_typenschild"
+    },
+    {
+      "url": "https://www.cudy.com/en-us/blogs/faq/how-to-recovery-the-cudy-router-from-openwrt-firmware-to-cudy-official-firmware",
+      "kategorie": "recovery",
+      "grund": "Cudy-Recovery-Anleitung nicht abgerufen"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "notiz": "Kern (SoC, RAM/Flash, WLAN, Ports, USB, Strom 12 V/1 A 5.5x2.1, innen, Seriell J4 unbestueckt 115200 3.3 V, Installation ueber Cudy-Zwischenfirmware) mehrfach belegt. Keine FCC-ID, keine DeviWiki-Seite. Es fehlen Abmessungen, Gewicht, Wandmontage, Luefter, Antennengewinn, Typenschildfoto. Herstellerdokumente (CE 2023, Regulatory 2024, QIG) sind modellweit und eher fuer spaetere Versionen."
+  }
+}

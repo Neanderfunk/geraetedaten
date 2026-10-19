@@ -1,0 +1,2787 @@
+{
+  "image": "cudy-tr1200-v1",
+  "modell": "Cudy TR1200 v1",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "bemerkung": "TR1200 nicht im Dump (Dump hat nur 7 Cudy-Zeilen); toh_suche.py liefert nur andere Cudy-Modelle. Statt dessen Live-hwdata-Seite (openwrt_hwdata)"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1?do=export_raw",
+      "stand": "Seitenrevision 2026-04-05 01:50",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Änderungen u. a. 2025-05-04 (serial voltage), 2025-05-09 (first release 23.05.4), 2026-04-05 (25.12.2)"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/cudy/tr1200?do=export_raw",
+      "stand": "Seitenrevision 2026-03-25 18:30",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Geräteseite, angelegt 2024-06 von lmita (= Portierer); DFS-Hinweis 2026-03-25"
+    },
+    "openwrt_wiki_fotos": {
+      "url": "https://openwrt.org/_media/media/cudy/cudy-tr1200_uart.jpg",
+      "stand": "Bilder eingebunden in Seitenrevision 2026-03-25 18:30 (Bilddatum unbekannt)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "cudy-tr1200_uart.jpg (1200x900) und cudy-tr1200_pcbtop.jpg (1198x1000), dazu Produktbilder cudy-tr1200_front.png/_back.png; als Bild ausgewertet",
+      "weitere": [
+        "https://openwrt.org/_media/media/cudy/cudy-tr1200_pcbtop.jpg",
+        "https://openwrt.org/_media/media/cudy/cudy-tr1200_front.png",
+        "https://openwrt.org/_media/media/cudy/cudy-tr1200_back.png"
+      ]
+    },
+    "openwrt_git_add": {
+      "url": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+      "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_naming": {
+      "url": "https://github.com/openwrt/openwrt/commit/d780d530dd89d135fffc6fb6598e6f7b28cd3921",
+      "stand": "Commit 2024-06-06 (Autor), gemergt 2024-06-10",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_2305": {
+      "url": "https://github.com/openwrt/openwrt/commit/7be58ccacc9caee6c3c4eb74e23b8a17adee93b8",
+      "stand": "Backport openwrt-23.05, 2024-07-07",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "in v23.05.4 enthalten (Tag 2024-07-16), in v23.05.3 nicht; auch in openwrt-24.10"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=tr1200+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-19 (3 Treffer, davon 2 zum TR1200)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7628an_cudy_tr1200-v1.dts",
+      "stand": "Branch main am 2026-10-19 (unverändert seit d780d530)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt76x8.mk",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_02_network": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/mt76x8/base-files/etc/board.d/02_network",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_commit": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/08ea643f95fd3dfd64b9dee53bc897a65a79bd2c",
+      "stand": "Commit 2025-03-04, gemergt 2025-04-27 (PR #3493)",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ramips-mt76x8",
+      "stand": "Branch main am 2026-10-19 (gleich in v2025.1.x)",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_release_v2025_1": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/docs/releases/v2025.1.rst",
+      "stand": "Release Notes Gluon 2025.1 (Branch main am 2026-10-19)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_forum_198787": {
+      "url": "https://forum.openwrt.org/t/openwrt-support-for-cudy-tr1200-mt7628/198787",
+      "stand": "Thread 2024-05-22 bis 2024-06-29 (16 Beiträge, alle gelesen)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_forum_240105": {
+      "url": "https://forum.openwrt.org/t/cudy-tr1200-anybody-able-willing-to-test-unofficial-dfs-patch/240105",
+      "stand": "Thread 2025-09-02 bis 2026-03-25 (5 Beiträge, alle gelesen)",
+      "abgerufen": "2026-10-19"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=TR1200&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "https://deviwiki.com/wiki/Cudy_TR1200?action=raw: HTTP 404; Volltextsuche TR1200: keine Treffer"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+      "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Rohtext per index.php?action=raw; Revision 2024-10-06 \"Details from on hand example\" (Rayknight)"
+    },
+    "wikidevi_foto": {
+      "url": "https://wikidevi.wi-cat.ru/File:Cudy_TR1200_Top.jpeg",
+      "stand": "Bild hochgeladen 2024-10-16T04:46:28Z (Foto 2024-10-16)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "4032x3024, verkleinert als Bild ausgewertet; Board Bottom nicht geladen"
+    },
+    "fcc_2aprgrt02": {
+      "url": "https://fccid.io/2APRGRT02",
+      "stand": "Grant 2023-06-08 (Original Equipment)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "von ToH als FCC-ID des TR1200 genannt; gehört laut Modellbrief zur AX3000-Familie (WR3000/TR3000 u. a.), nicht zum TR1200"
+    },
+    "fcc_2aprgrt02_modelle": {
+      "url": "https://fccid.io/2APRGRT02/Letter/Letter-of-declaration-model-difference-6580979",
+      "stand": "Brief vom 2023-04-17, Exhibit 2023-06-08",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Declaration on Electrically Identical Models, PDF per pdftotext"
+    },
+    "fcc_grantee_2aprg": {
+      "url": "https://fccid.io/2APRG",
+      "stand": "Liste am 2026-10-19 (neueste Anmeldung 2026-03-01)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine Zulassung mit TR1200 im Namen; 2APRGRE12 (AC1200 Range Extender, 2024-06-12) angesehen, kein Modellbrief, Zuordnung offen"
+    },
+    "cudy_produktseite": {
+      "url": "https://www.cudy.com/products/tr1200-1-0",
+      "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Specs-Reiter aus HTML; zusätzlich products/tr1200-1-0.json (Gewicht 160 g im Shop-Datensatz)"
+    },
+    "cudy_downloadseite": {
+      "url": "https://www.cudy.com/pages/download-center/tr1200-1-0",
+      "stand": "Live-Seite 2026-10-19, neueste Firmware 2.5.25 vom 2026-08-05",
+      "abgerufen": "2026-10-19"
+    },
+    "cudy_datenblatt": {
+      "url": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+      "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+      "abgerufen": "2026-10-19"
+    },
+    "cudy_qig": {
+      "url": "https://www.cudy.com/cdn/shop/files/TR_Quick_Installation_Guide-EN.pdf?v=6611979408674405960",
+      "stand": "PDF TR Quick Installation Guide EN (810600190), 2 Seiten, ohne Datum",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "gemeinsame Kurzanleitung TR1200/TR1300/TR3000, Text per pdftotext, Abbildungen nicht ausgewertet"
+    },
+    "werkstatt": {
+      "url": "router-werkstatt/docs/cudy-installation.md",
+      "stand": "Commit a9781bd 2026-10-15 (Tabelle Stand 15.10.2026)",
+      "abgerufen": "2026-10-19",
+      "datei": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/cudy-installation.md",
+      "bemerkung": "Abschnitte \"Welche Zwischenfirmware für welches Modell\" (Zeile TR1200 v1, Fußnote ³) und Spiegel-Befunde; kein Validierungsprotokoll unter docs/validierung/"
+    }
+  },
+  "roh": {
+    "toh": {
+      "hinweis": "kein Eintrag im Dump 2026-10-18 (zgrep tr1200: 0 Treffer)"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "Travel Router",
+      "Brand": "Cudy",
+      "Model": "TR1200",
+      "Versions": "v1",
+      "FCCID_urls": "https://fcc.io/2APRGRT02",
+      "Availability_availability": "Available 2024",
+      "Where available": "amazon.com",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=f1091ef7ac3596f1e401b918a36273672acbe389",
+      "Supported Since Rel_releasesince": "23.05.4",
+      "Supported Current Rel_releasecurrent": "25.12.2",
+      "Image too big_releasecurrents": "-",
+      "Unsupported Functions_unsupporteds": "DFS",
+      "Gluon support_gluonsupport": "No",
+      "Target_target": "ramips",
+      "Subtarget": "mt76x8",
+      "Package architecture_pkg-arch": "mipsel_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "MediaTek MT7628AN",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "580",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "2",
+      "Ethernet 1Gbit ports_numethport": "-",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "MediaTek MT7628AN",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "MediaTek MT7628AN, MediaTek MT7613BEN",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN 6.0GHz_wlan60": "-",
+      "WLAN 60.0GHz_wlan60g": "-",
+      "WLAN Comments_": "No DFS support",
+      "WLAN driver_wlan-drivers": "mt76",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "1x 2.0",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "No",
+      "LED count_numled": "2",
+      "Button count_numbutton": "2",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "5V, 2A via USB Type-C",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:cudy:tr1200",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "https://forum.openwrt.org/t/openwrt-support-for-cudy-tr1200-mt7628/198787/3",
+      "Forum search_search-forums": "TR1200",
+      "Git search_search-gits": "TR1200",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+      "WikiDevi ID_hwinfo-ids": "Cudy_TR1200",
+      "OEM Device Homepage URL_url": "https://www.cudy.com/products/tr1200-1-0",
+      "Firmware OEM Stock URL_url": "https://www.cudy.com/pages/download-center/tr1200-1-0",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/ramips/mt76x8/openwrt-25.12.2-ramips-mt76x8-cudy_tr1200-v1-initramfs-kernel.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/ramips/mt76x8/openwrt-25.12.2-ramips-mt76x8-cudy_tr1200-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/openwrt-ramips-mt76x8-cudy_tr1200-v1-initramfs-kernel.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/openwrt-ramips-mt76x8-cudy_tr1200-v1-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "see devicepage, see git-commit",
+      "Comment installation": "Need a signed OpenWrt intermediary image from Cudy before installing official OpenWrt image.",
+      "Recovery method(s)_method-recoverys": "see devicepage, see git-commit",
+      "Comment recovery": "",
+      "Picture_img100s": "media:cudy:cudy-tr1200_front.png",
+      "Comments_": ""
+    },
+    "openwrt_wiki": {
+      "titel": "Cudy TR1200 (AC1200 Travel Router)",
+      "beschreibung": "router designed for travel and portable use. It's powered with USB-C and features a USB2 port, Wi-Fi 5 and 1x100M WAN + 1x100M LAN port.",
+      "unsupported": "DFS channel is not supported on 5Ghz MT7613 radio phy chip",
+      "antennen": "The router has 2 non-detachable WiFi antennas.",
+      "installation_oem": "Stock-Firmware nimmt nur RSA-signierte Images; Zwischenfirmware \"TR1200 V1.zip\" -> \"TR1200-OpenWRT-Flash.bin\" über Web-UI http://192.168.10.1/ (Passwort admin), danach LuCI 192.168.1.1 am LAN (WLAN aus), sysupgrade-Image einspielen. Unterstützt ab 23.05.4.",
+      "installation_tftp": "Beta-Firmware mit entsperrtem U-Boot (mega.nz) einspielen, UART, beim Einschalten 1 drücken, WAN-Port, IP 192.168.1.88/24, initramfs-kernel.bin als recovery.bin, TFTP-Fenster 10 s",
+      "flash_layout": "XMC 25QH128C 16 MiB: u-boot 192 KiB, u-boot-env 64 KiB, factory 64 KiB, firmware 15872 KiB, debug 64 KiB, backup 64 KiB, bdinfo 64 KiB",
+      "debricking": "Reset 10 s nach dem Boot = Werkseinstellungen; Cudy-Bootloader-TFTP-Recovery per Reset nimmt nur OEM-Firmware",
+      "netzwerk": "eth0 = 100M WAN (DHCP), eth1 = 100M LAN, br-lan",
+      "knoepfe": "Reset (reset), Slider button (BTN_0)",
+      "gehaeuse_oeffnen": "4 Gummifüße unten abziehen (leicht anwärmen), 4 Kreuzschlitzschrauben darunter lösen, Boden mit Rastnasen vom Oberteil abhebeln",
+      "seriell": "Gerät öffnen und zwei kleine Kontakte kurzschließen (im Foto markiert); TX<->RX, RX<->TX, GND; 115200, 8N1, 3.3V",
+      "jtag": "keine Angabe",
+      "oem_bootlog": "U-Boot 1.1.3 (Aug 4 2023), Ralink UBoot 5.0.0.0, ASIC 7628_MP, DRAM 1024 Mbit DDR 16 bit, 128 MB, Flash xm25qh128c (ID 20 40 18), Image Name R46, Linux 4.4.140, \"Board has DDR2\", MT7628AN ver:1 eco:2, MIPS 24KEc, CPU Clock 580MHz, MT7613 AP Driver 6.0.4.0 (mt7663e), MT7628 AP Driver 4.1.0.0",
+      "openwrt_bootlog": "Linux 6.6.32, OpenWrt GCC 13.3.0 r25978+486 (2024-06-01)",
+      "tags": "U-boot 1core MT7628 2NIC FastEthernet wlan 2WNIC 802.11ac NonDetachableAntenna 2Ant 128RAM 16Flash 1USB USB2.0 2button \"portable router\" \"5v powered\" \"usb powered\"",
+      "forum": [
+        "https://forum.openwrt.org/t/openwrt-support-for-cudy-tr1200-mt7628/198787",
+        "https://forum.openwrt.org/t/cudy-tr1200-anybody-able-willing-to-test-unofficial-dfs-patch/240105"
+      ]
+    },
+    "openwrt_wiki_fotos": {
+      "pcbtop": "Platinenaufdruck \"TR1200 REV1.0\" / \"300100139\", Datumscode .2339; SoC MediaTek MT7628AN (2328-AJQSL), RAM ESMT M14D1G1664A -2.5B, Flash XMC 25QH128CHI0 (2328S), 5 GHz MediaTek MT7613BEN unter Abschirmrahmen; 2 U.FL-Kabel (grau) zu den Antennen im Gehäuseoberteil; J1 4 Löcher unbestückt, Aufdruck P G R T (Dreieck-Markierung bei T); J3 USB-C, RJ3 Doppel-RJ45, J4 USB-A; SW2 und SW3 (Schiebeschalter) an der Seitenkante; LEDs D20/D23 oben",
+      "uart": "J1 Beschriftung im Foto: Power, Ground, RX, TX (P G R T); unbestückte Bauteilplätze bei R391/R392 (orange \"RX\") und daneben (lila \"TX\") markiert",
+      "back_png": "Rückseite: USB-C \"Power\", RJ45 \"LAN\", RJ45 \"WAN\", USB-A \"USB 2.0\"",
+      "front_png": "zwei hochklappbare/aufgestellte Antennenflügel an den Seiten, Lüftungsschlitze, kein Lüfter sichtbar"
+    },
+    "openwrt_git_add": {
+      "betreff": "ramips: mt76x8: add support for Cudy TR1200 v1",
+      "autor": "Luis Mita",
+      "text": "ramips: mt76x8: add support for Cudy TR1200 v1\n\nHardware:\n - SoC: MediaTek MT7628AN (MIPS 580MHz)\n - Flash: 16 MiB XMC 25QH128CH10\n - RAM: 128 MiB ESMT M14D1G1664A\n - WLAN: 2.4 GHz (MT7628), 5 GHz (MT7613BEN 802.11ac)\n - Ethernet: 1x 10/100 Mbps WAN, 1x 10/100 LAN (MT7628)\n - USB 2.0 port\n - Buttons: 1 Reset button, 1 slider button\n - LEDs: 1x Red, 1x White\n - Serial console: unpopulated header, 115200 8n1\n - Power: 5 VDC, 2 A\n\nMAC addresses:\n+---------+-------------------+-----------+\n|         | MAC               | Algorithm |\n+---------+-------------------+-----------+\n| WAN     | 80:af:ca:xx:xx:x0 | label     |\n| LAN     | 80:af:ca:xx:xx:x0 | label     |\n| WLAN 2g | 80:af:ca:xx:xx:x0 | label     |\n| WLAN 5g | 80:af:ca:xx:xx:x2 | label+2   |\n+---------+-------------------+-----------+\n\nInstallation:\nThe installation must be done via TFTP by disassembling the router.\nOn other occasions Cudy has distributed intermediate firmware to make\ninstallation easier, and so I recommend checking the Wiki for this\ndevice if there is a more convenient solution than the one below.\n\nTo install using TFTP:\n1. Upgrade to a beta firmware (signed by Cudy) that can be downloaded\nfrom the wiki. This is required in order to use an unlocked u-boot.\n2. Connect to UART.\n3. While the router is turning on, press 1.\n4. Connect to LAN and set your IP to 192.168.1.88/24. Configure a TFTP\nserver and an OpenWrt initramfs-kernel.bin firmware file as recovery.bin.\n5. Press Enter three times. Verify the filename.\n6. If you can reach LuCI or SSH now, just use the sysupgrade image with\nthe 'Keep settings' option turned off.\n\nIf you don't want to use the beta firmware nor the unlocked u-boot, you\ncan install the firmware writing the sysupgrade image on the firmware\npartition of the SPI flash.\n\nSigned-off-by: Luis Mita <luis@luismita.com>",
+      "dateien": [
+        "target/linux/ramips/dts/mt7628an_cudy_tr1200-v1.dts",
+        "target/linux/ramips/image/mt76x8.mk",
+        "target/linux/ramips/mt76x8/base-files/etc/board.d/02_network"
+      ]
+    },
+    "openwrt_git_naming": {
+      "betreff": "ramips: mt76x8: sync Cudy TR1200 v1 naming",
+      "autor": "Luis Mita",
+      "text": "ramips: mt76x8: sync Cudy TR1200 v1 naming\n\nCudy assigns hardware versions to its devices on its website, and\nthe Cudy TR1200 router is now Cudy TR1200 v1.\nOpenWrt currently uses both variants, and this commit removes\ninconsistencies using only the new name.\n\nSigned-off-by: Luis Mita <luis@luismita.com>"
+    },
+    "openwrt_dts": {
+      "compatible": "cudy,tr1200-v1, mediatek,mt7628an-soc",
+      "model": "Cudy TR1200 v1",
+      "bootargs": "console=ttyS0,115200",
+      "gpio_keys": "reset GPIO 11 KEY_RESTART; mode GPIO 38 EV_SW BTN_0 (Schiebeschalter)",
+      "leds": "led_0 rot POWER GPIO 44 (boot/running/failsafe/upgrade); led_1 weiß STATUS GPIO 43",
+      "gpio_export": "usb GPIO 4 (USB-Strom, Ausgang 1)",
+      "flash": "jedec,spi-nor 40 MHz",
+      "partitionen": "u-boot 0x0-0x30000 ro; u-boot-env 0x30000 ro; factory 0x40000 ro (eeprom 0x0 0x400, eeprom 0x8000 0x4da8); firmware 0x50000 Länge 0xf80000 (denx,uimage); debug 0xfd0000 ro; backup partition@fe0000 mit reg 0xfe000 ro; bdinfo 0xff0000 ro (MAC bei 0xde00)",
+      "beobachtung_backup": "Knotenname partition@fe0000, aber reg = <0xfe000 0x10000> (Stock-Bootlog: backup 0xfe0000-0xff0000); wirkt wie Tippfehler, liegt read-only innerhalb von firmware - Auswirkung nicht geprüft",
+      "wlan": "wmac (2.4 GHz) eeprom@0, MAC bdinfo+0; pcie0 mt76 (5 GHz, ieee80211-freq-limit 5-6 GHz) eeprom@8000, MAC bdinfo+2",
+      "switch": "esw portmap 0x3d, portdisable 0x3c",
+      "usb": "ehci, ohci okay"
+    },
+    "openwrt_image_mk": {
+      "device": "cudy_tr1200-v1",
+      "IMAGE_SIZE": "15872k",
+      "DEVICE_VENDOR": "Cudy",
+      "DEVICE_MODEL": "TR1200",
+      "DEVICE_VARIANT": "v1",
+      "DEVICE_PACKAGES": "kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-mt7615e kmod-mt7663-firmware-ap",
+      "SUPPORTED_DEVICES": "R46"
+    },
+    "openwrt_02_network": {
+      "cudy,tr1200-v1": "ucidef_add_switch switch0 \"0:lan\" \"1:wan\" \"6@eth0\""
+    },
+    "gluon_commit": {
+      "betreff": "ramips-mt76x8: add support for Cudy TR1200 v1",
+      "autor": "David Bauer",
+      "target": "device('cudy-tr1200-v1', 'cudy_tr1200-v1', { factory = false, })",
+      "supported_devices_rst": "Cudy - TR1200 (v1)"
+    },
+    "gluon_release_v2025_1": {
+      "added_hardware": "Cudy - TR1200 v1"
+    },
+    "openwrt_forum_198787": {
+      "titel": "OpenWrt support for Cudy TR1200 (MT7628)",
+      "kern": "#1/#4: U-Boot-Konsole nicht erreichbar, Reset startet nur TFTP-/Web-Recovery für signierte Firmware; SPI-Clip-Lesen klappte nicht; serielle Ausgabe nur Kernelmeldungen, keine Shell. #5: Cudy-Support bestätigt gesperrten Bootloader, Portierer hat SPI-Chip neu programmiert, Cudy schickte Firmware mit entsperrtem U-Boot, PR geöffnet. #8: Firmware mit entsperrtem U-Boot (mega.nz, 11.99 MB); Cudy rät TFTP statt Web-Upgrade; stabil mit MT7613BE im STA-Modus. #9-#17: Web-Upgrade der Beta lehnt OpenWrt-sysupgrade ab (\"Invalid firmware\"). #18: Anleitung im Wiki."
+    },
+    "openwrt_forum_240105": {
+      "titel": "Cudy TR1200: Anybody able/willing to test unofficial DFS patch?",
+      "kern": "#1 (2025-09-02): inoffizieller mt76-Patch 345-mt7613-enable-dfs aktiviert DFS für MT7613 (is_mt7663-Ausnahme entfernt), auf 24.10.2 ohne negative Effekte, Radarerkennung unbestätigt. #5 (2026-03-25): Verweis auf mt76-Issue #925, Wiki-Seite DFS unsupported aktualisiert."
+    },
+    "deviwiki": {
+      "hinweis": "keine Seite, keine Suchtreffer"
+    },
+    "wikidevi": {
+      "infobox": {
+        "brand": "Cudy",
+        "model": "TR1200",
+        "revision": "(Rev 1.1)",
+        "series": "AC1200",
+        "ean": "6971690793074",
+        "serialnum_prefix": "TR1200",
+        "asin": "B0BXN86Q7Q",
+        "manuf_country": "China",
+        "is_manuf": "No",
+        "est_release_date": "03/2023",
+        "pcb_id": "300100154",
+        "type": "VPN Router,  travel router, wireless router",
+        "pwr_v": "5",
+        "pwr_amp": "2",
+        "pwr_conn": "USB (Type-C) Female",
+        "cpu1_brand": "MediaTek",
+        "cpu1_model": "MT7628AN",
+        "cpu1_cspeed": "580",
+        "fla1": "16",
+        "fla1_brand": "XMC",
+        "fla1_model": "XM25QH128CHIQ",
+        "ram1": "128",
+        "ram1_brand": "ESMT",
+        "ram1_model": "M14D1G1664A-2.5B",
+        "expansion_if_types": "USB 2.0",
+        "expansion_usb_num": "1",
+        "serial": "yes,, 4-pin header,, 3.3V TTL,, (115200 8N1),, J1 (PGRT)",
+        "wi1_chip1_brand": "MediaTek",
+        "wi1_chip1_model": "MT7628AN",
+        "wi1_802dot11_protocols": "bgn",
+        "wi1_ant_conn": "U.FL",
+        "wi1_txchains": "2",
+        "wi1_rxchains": "2",
+        "wi1_sstreams": "2",
+        "wi2_chip1_brand": "MediaTek",
+        "wi2_chip1_model": "MT7613BEN",
+        "wi2_802dot11_protocols": "an+ac",
+        "wi2_ant_conn": "U.FL",
+        "wi2_txchains": "2",
+        "wi2_rxchains": "2",
+        "wi2_sstreams": "2",
+        "eth_cpu": "true",
+        "sw_cpu": "true",
+        "lan_speed": "100M",
+        "lan_ports": "1",
+        "wan_speed": "100M",
+        "wan_ports": "1",
+        "stock_boot": "U-Boot;1.1.3;",
+        "stock_os": "Linux;4.4.140;",
+        "tp_firmware": "OpenWrt",
+        "802dot11_protocols": "abgn+ac",
+        "default_ssid": "Cudy-XXXX, Cudy-XXXX-5G",
+        "default_ssid_regex": "^Cudy-[A-F0-9}{4}$,,, ^Cudy-[A-F0-9]{4}-5G$",
+        "default_ip": "192.168.10.1",
+        "default_pass": "admin",
+        "oui": "80:AF:CA",
+        "oui_eth": "80:AF:CA"
+      },
+      "taglinie": "Wireless Mini VPN Router",
+      "hardware": "CPU MediaTek MT7628AN @580MHz MIPS 24KEc; Flash 16MB (SPI NOR) @104MHz; Memory 128MB (DDR2) SDRAM; Wi-Fi MT7628AN 802.11bgn 2x2, MT7613BEN 802.11an/ac 2x2; Network 2x FE (100M); USB 1x USB 2.0; Power 5V/2A via USB (Type-C)"
+    },
+    "wikidevi_foto": {
+      "board_top": "Platinenaufdruck \"TR1200 REV1.1\" / \"300100154\", Datumscode .2416; SoC MT7628AN (2407-AFSL), RAM ESMT M14D1G1664A -2.5B, Flash XMC, 5 GHz MT7613BEN; J1 P G R T unbestückt; Layout wie REV1.0"
+    },
+    "fcc_2aprgrt02": {
+      "geraet": "Wi-Fi Router, Model RT02, Shenzhen Cudy Technology Co., Ltd.",
+      "frequenzen_leistung_w": "2412-2462 MHz 0.2065; 5180-5240 0.1549; 5260-5320 0.1132; 5500-5700 0.1157; 5745-5825 0.2133",
+      "grant_comment": "802.11 b/g/n/ax device in a 2x2 Spatial Multiplexing MIMO configuration",
+      "testlabor": "Shenzhen LCS Compliance Testing Laboratory Ltd."
+    },
+    "fcc_2aprgrt02_modelle": {
+      "text": "model WR3000, WR3000 Plus, WR1500, TR3000, M3000, RE3000, AP3000, AP3000 Outdoor are identical in hardware and software, the only differences model was model name"
+    },
+    "fcc_grantee_2aprg": {
+      "zulassungen": "RE3600, M3600, WU650, WR3600H, WR6500H, WR3600E, WR3000H, WR3000SE, LT03, MS30, RE12 (AC1200 Range Extender 2024-06-12), P5, AP01, LTOD, UX03, RT02 (2023-06-08), LT02, MS01, LT01, RE01, RT01, UX02, UX01, -AX200, WR1000V1, RE300V1"
+    },
+    "cudy_produktseite": {
+      "titel": "AC1200 Wi-Fi Mini VPN Router, TR1200 1.0",
+      "specs": [
+        "Hardware Specs",
+        "Software Specs",
+        "Model Version",
+        "Model Version",
+        "TR1200 1.0",
+        "CPU",
+        "CPU",
+        "CPU Details",
+        "580 MHz Single-Core, MIPS24KEC",
+        "Memory/Storage",
+        "Memory/Storage",
+        "Flash/ROM",
+        "16 MB (128 Mbit) NOR",
+        "DDR/RAM",
+        "128 MB (1 Gbit) DDR3",
+        "Wireless",
+        "Wireless",
+        "5 GHz Wi-Fi Speed",
+        "867 Mbps",
+        "2.4 GHz Wi-Fi Speed",
+        "300 Mbps",
+        "5 GHz Wi-Fi Streams",
+        "2 Spatial Streams",
+        "2.4 GHz Wi-Fi Streams",
+        "2 Spatial Streams",
+        "Wi-Fi Antennas",
+        "2× Fixed",
+        "Beamforming",
+        "Range Performance",
+        "Max: 150 m (492 ft)",
+        "Tested in open-space environments with minimal interference. Actual WiFi range may vary depending on layout and wall materials. Refer to the Wall Performance specifications for placement suggestions.",
+        "Wall Performance",
+        "Two wooden walls with thickness",
+        "One concrete wall with thickness",
+        "Interfaces",
+        "Interfaces",
+        "10/100 Mbps RJ45 Ports",
+        "2",
+        "Ethernet Notes",
+        "1× WAN port, 1× LAN port",
+        "USB-A 2.0 Ports",
+        "1",
+        "Buttons and LEDs",
+        "Buttons and LEDs",
+        "LED",
+        "System",
+        "Physical Buttons",
+        "Reset Button, Configurable DIP Switch",
+        "Power",
+        "Power",
+        "Power Input Type",
+        "USB-C Port",
+        "Power Methods",
+        "USB-C",
+        "Power Input",
+        "5V⎓2A",
+        "PD",
+        "Max Power Consumption (W)",
+        "8W",
+        "Idle Power Consumption (W)",
+        "3W",
+        "Reliability",
+        "Reliability",
+        "Environment",
+        "Operating Temperature: 0 ℃ ~ 40 ℃ (32 ℉ ~104 ℉)",
+        "Storage Temperature: -40 ℃ ~ 70 ℃ (-40 ℉ ~ 158 ℉)",
+        "Humidity: 10% ~ 90% non-condensing",
+        "Storage Humidity: 5% ~ 95% non-condensing",
+        "Certifications",
+        "Certifications",
+        "FCC, CE",
+        "Mechanical",
+        "Mechanical",
+        "Installation",
+        "Desktop",
+        "Dimension",
+        "Main Part:",
+        "118×80×27.5 mm",
+        "4.65×3.15×1.08 inches",
+        "Product Weight",
+        "101.8 g (3.59 oz.)",
+        "Package Content",
+        "Package Content",
+        "TR1200",
+        "USB Charging Cable",
+        "Ethernet Cable",
+        "Installation Guide",
+        "Ordering Information",
+        "Ordering Information",
+        "Retail Package Weight",
+        "302.8 g (10.68 oz.)",
+        "Retail Package Dimension",
+        "176×140.5×56 mm",
+        "6.93×5.53×2.2 inches",
+        "Units per Carton",
+        "40",
+        "Carton Dimension",
+        "60×30×37.5 cm",
+        "23.62×11.81×14.76 inches",
+        "Carton Gross Weight",
+        "13.1 kg (28.88 lbs)",
+        "Carton Net Weight",
+        "12.1 kg (26.68 lbs)",
+        "Model Version",
+        "Model Version",
+        "TR1200 1.0",
+        "Wireless",
+        "Wireless",
+        "Wi-Fi Standards",
+        "Wi-Fi 5",
+        "Separate Client",
+        "Max Wi-Fi Modulation",
+        "256-QAM",
+        "Wi-Fi Efficiency",
+        "MU-MIMO",
+        "Wi-Fi Efficiency Note",
+        "MU-MIMO available on 5 GHz",
+        "Max Capacity",
+        "128",
+        "Recommended Client Upper Limit",
+        "40",
+        "Wi-Fi Channel Width",
+        "Auto/20/40/80 MHz",
+        "Wi-Fi Security",
+        "WPA/WPA2/WPA3",
+        "Guest Network",
+        "2.4 GHz, 5 GHz",
+        "WPS",
+        "General",
+        "General",
+        "Operation Modes",
+        "Wi-Fi Router",
+        "Access Point",
+        "Range Extender",
+        "WISP",
+        "Mesh",
+        "Cudy Mesh",
+        "Mesh Backhaul",
+        "Wireless Backhaul",
+        "Wired Backhaul",
+        "Multi-Band Backhaul",
+        "WAN Mode",
+        "DHCP",
+        "Static IP",
+        "PPPOE",
+        "PPTP",
+        "L2TP",
+        "Network",
+        "Network",
+        "QoS"
+      ]
+    },
+    "cudy_downloadseite": {
+      "firmware": [
+        "TR1200-R46-1.16.3-20230804-164635-flash.zip",
+        "TR1200-R46-2.1.3-20240428-102143-flash.zip",
+        "TR1200-R46-2.2.7-20241011-103924-flash.zip",
+        "TR1200-R46-2.3.7-20250113-115854-flash.zip",
+        "TR1200-R46-2.4.15-20250721-164017-flash.zip",
+        "TR1200-R46-2.5.25-20260805-112208-flash.zip"
+      ],
+      "dokumente": [
+        "CE_DOC_TR1200.pdf",
+        "Regulatory_Compliance_TR1200.pdf",
+        "Statements_of_PSTI_Compliance_TR1200.pdf",
+        "TR1200_V1.0_Datasheet.pdf",
+        "TR_Quick_Installation_Guide-EN.pdf",
+        "TR_Quick_Installation_Guide.pdf"
+      ],
+      "google_drive": "https://drive.google.com/file/d/1sDSWjrw51HYsv-NPoADaDgPwrUE7EtgL/view?usp=drive_link"
+    },
+    "cudy_datenblatt": {
+      "Hardware": {
+        "CPU": "580 MHz CPU",
+        "Flash": "16 MB (128 Mbit )",
+        "DDR": "128 MB (1 Gbit )",
+        "Antenna": "2× External Antennas",
+        "Ethernet": "1× 10/100 Mbps WAN Port, 1× 10/100 Mbps LAN Port",
+        "USB": "1× USB-A 2.0",
+        "Buttons": "Configurable Switch, Reset Button",
+        "External Power Supply": "5 V / 3 A USB-C (Compatible with PD Powering)",
+        "Router Weight": "99.9 g (3.52 oz.)",
+        "Dimension (W×D×H)": "118×80×27.5 mm (4.65×3.15×1.08 inches)"
+      },
+      "Wireless": {
+        "Wireless Standards": "IEEE 802.11ac/n/a 5 GHz, IEEE 802.11n/b/g 2.4 GHz",
+        "Frequency": "5 GHz, 2.4 GHz",
+        "Signal Rate": "867 Mbps (5 GHz), 300 Mbps (2.4 GHz)",
+        "Transmit Power": "CE: < 20 dBm (2.4 GHz), < 23 dBm (5 GHz); FCC: < 30 dBm (2.4 GHz & 5 GHz)",
+        "Wireless Functions": "Enable/Disable Wireless Radio, WMM",
+        "Wireless Encryption": "WPA-PSK, WPA2-PSK, WPA-PSK/WPA2-PSK"
+      },
+      "Software": {
+        "WAN Type": "Dynamic IP/Static IP/PPPoE",
+        "Guest Network": "2.4 GHz × 1, 5 GHz × 1",
+        "VPN": "Zerotier/Wireguard/OpenVPN/IPSec/L2TP/PPTP",
+        "Working Mode": "Router/AP/RE/WISP/Client/Mesh",
+        "Internet Protocols": "IPv4 / IPv6",
+        "File Sharing": "SMB, FTP"
+      },
+      "Others": {
+        "Package Content": "Travel Router, USB-C to USB-C Cable, RJ45 Ethernet Cable, Quick Installation Guide"
+      },
+      "Merkmale": "Speedy AC1200 Wi-Fi; 10/100 Mbps Ethernet Ports; File Sharing with a USB-A 2.0 Port; PD Powering with USB-C Power Jack; Configurable Switch, Reset Button"
+    },
+    "cudy_qig": {
+      "hardware_overview": "TR1200: Rückseite Power (USB-C), LAN, WAN, USB 2.0; Seite Toggle, RESET",
+      "led": "OFF, Red Flash, Red, White Flash, White",
+      "schritt1": "Connect the USB-C power adapter to the router and wait for it to boot up.",
+      "zugangsdaten": "SSID und Passwort auf der Unterseite des Routers; Web-UI http://cudy.net/, Passwort admin",
+      "konformitaet": "EU 2014/53/EU, 2009/125/EC, 2011/65/EU; FCC Part 15"
+    },
+    "werkstatt": {
+      "zeile": "| TR1200 v1 ³ | `cudy-tr1200.bin` | `TR1200 V1.zip` | `62180e158bb123193a5eb8878adff942` |",
+      "fussnote_3": "Nachgetragen 15.10.2026. Im Inventar für Gluon 2025.1; ob es für 2023.2 gebaut wird, ist hier nicht geprüft.",
+      "befund": "TR3000 v1 und TR1200 gibt es inzwischen (im Cudy-Spiegel 2026-10-15)",
+      "spiegel": "https://firmware.ffnef.de/other/cudy-mirror-20261015/zwischenfirmware/",
+      "allgemein": "Cudy-Stock nimmt nur von Cudy signierte Firmware: erst Zwischenfirmware, dann Gluon-sysupgrade (nicht factory)"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Cudy",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Cudy",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt76x8.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "DEVICE_VENDOR"
+      },
+      {
+        "wert": "Shenzhen Cudy Technology Co., Ltd.",
+        "quelle": "fcc_grantee_2aprg",
+        "beleg": "https://fccid.io/2APRG",
+        "stand": "Liste am 2026-10-19 (neueste Anmeldung 2026-03-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "Grantee 2APRG"
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "TR1200",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Cudy TR1200 v1",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7628an_cudy_tr1200-v1.dts",
+        "stand": "Branch main am 2026-10-19 (unverändert seit d780d530)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TR1200 1.0",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"AC1200 Wi-Fi Mini VPN Router, TR1200 1.0\""
+      },
+      {
+        "wert": "TR1200",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "\"AC1200 Wi-Fi Mini VPN Router\" / \"AC1200 Wi-Fi Travel Router\""
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "v1",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "v1",
+        "quelle": "openwrt_git_naming",
+        "beleg": "https://github.com/openwrt/openwrt/commit/d780d530dd89d135fffc6fb6598e6f7b28cd3921",
+        "stand": "Commit 2024-06-06 (Autor), gemergt 2024-06-10",
+        "sicherheit": "hoch",
+        "bemerkung": "Cudy führt das Gerät inzwischen als TR1200 v1; OpenWrt-Name cudy,tr1200 -> cudy,tr1200-v1 umbenannt"
+      },
+      {
+        "wert": "1.0",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Model Version: TR1200 1.0\""
+      },
+      {
+        "wert": "Platine TR1200 REV1.0 (300100139)",
+        "quelle": "openwrt_wiki_fotos",
+        "beleg": "https://openwrt.org/_media/media/cudy/cudy-tr1200_pcbtop.jpg",
+        "stand": "Bilder eingebunden in Seitenrevision 2026-03-25 18:30 (Bilddatum unbekannt)",
+        "sicherheit": "hoch",
+        "bemerkung": "Datumscode 2339"
+      },
+      {
+        "wert": "(Rev 1.1)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": "revision-Feld; pcb_id 300100154"
+      },
+      {
+        "wert": "Platine TR1200 REV1.1 (300100154)",
+        "quelle": "wikidevi_foto",
+        "beleg": "https://wikidevi.wi-cat.ru/File:Cudy_TR1200_Top.jpeg",
+        "stand": "Bild hochgeladen 2024-10-16T04:46:28Z (Foto 2024-10-16)",
+        "sicherheit": "hoch",
+        "bemerkung": "Datumscode 2416; Bestückung und Lage der Bauteile wie REV1.0"
+      }
+    ],
+    "varianten": [
+      {
+        "wert": [
+          "Platine REV1.0 (300100139)",
+          "Platine REV1.1 (300100154)"
+        ],
+        "quelle": "wikidevi_foto",
+        "beleg": "https://wikidevi.wi-cat.ru/File:Cudy_TR1200_Top.jpeg",
+        "stand": "Bild hochgeladen 2024-10-16T04:46:28Z (Foto 2024-10-16)",
+        "sicherheit": "mittel",
+        "bemerkung": "zwei Platinenrevisionen unter Modellversion 1.0; ob Cudy sie auf dem Typenschild unterscheidet, ist offen"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Aufkleber auf der Unterseite (SSID/Passwort \"printed on the bottom of the router\")",
+        "quelle": "cudy_qig",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR_Quick_Installation_Guide-EN.pdf?v=6611979408674405960",
+        "stand": "PDF TR Quick Installation Guide EN (810600190), 2 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "Version auf dem Aufkleber nicht beschrieben"
+      },
+      {
+        "wert": "\"Modell und Version stehen auf dem Aufkleber unter dem Gerät.\"",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/cudy-installation.md",
+        "stand": "Commit a9781bd 2026-10-15 (Tabelle Stand 15.10.2026)",
+        "sicherheit": "mittel",
+        "bemerkung": "allgemein für Cudy, nicht TR1200-spezifisch belegt"
+      },
+      {
+        "wert": "Stock-Boardkennung R46 (SUPPORTED_DEVICES += R46; Stock-Firmware TR1200-R46-*)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt76x8.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "hilft beim Zuordnen von Stock-Images, nicht von außen sichtbar"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "2APRGRT02",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "niedrig",
+        "bemerkung": "vermutlich falsch, siehe fcc_2aprgrt02_modelle"
+      },
+      {
+        "wert": "2APRGRT02 gilt nicht für TR1200",
+        "quelle": "fcc_2aprgrt02_modelle",
+        "beleg": "https://fccid.io/2APRGRT02/Letter/Letter-of-declaration-model-difference-6580979",
+        "stand": "Brief vom 2023-04-17, Exhibit 2023-06-08",
+        "sicherheit": "hoch",
+        "bemerkung": "Modellbrief nennt nur WR3000, WR3000 Plus, WR1500, TR3000, M3000, RE3000, AP3000, AP3000 Outdoor; Grant spricht von 802.11ax - der TR1200 ist 802.11ac"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": "AC1200 Wi-Fi Mini VPN Router",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AC1200 Wi-Fi Travel Router",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "R46",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt76x8.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Cudy-interne Boardkennung"
+      }
+    ],
+    "ean": [
+      {
+        "wert": "6971690793074",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "asin": [
+      {
+        "wert": "B0BXN86Q7Q",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Available 2024 (amazon.com)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Firmware-Updates bis 2.5.25 vom 2026-08-05",
+        "quelle": "cudy_downloadseite",
+        "beleg": "https://www.cudy.com/pages/download-center/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19, neueste Firmware 2.5.25 vom 2026-08-05",
+        "sicherheit": "hoch",
+        "bemerkung": "Gerät wird weiter gepflegt"
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "03/2023",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": "est_release_date"
+      },
+      {
+        "wert": "älteste Firmware 1.16.3 vom 2023-08-04",
+        "quelle": "cudy_downloadseite",
+        "beleg": "https://www.cudy.com/pages/download-center/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19, neueste Firmware 2.5.25 vom 2026-08-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Shop-Eintrag veröffentlicht 2024-03-19",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "MediaTek MT7628AN",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7628AN",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7628AN",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7628AN (Aufdruck)",
+        "quelle": "openwrt_wiki_fotos",
+        "beleg": "https://openwrt.org/_media/media/cudy/cudy-tr1200_pcbtop.jpg",
+        "stand": "Bilder eingebunden in Seitenrevision 2026-03-25 18:30 (Bilddatum unbekannt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7628AN ver:1 eco:2",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"580 MHz Single-Core, MIPS24KEC\""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 580,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 580,
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 580,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 580,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 580,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "mipsel_24kc",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MIPS 24KEc",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MIPS24KEC",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 128,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog \"Total memory: 128 MBytes\""
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR2",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog \"Board has DDR2\", \"DRAM component: 1024 Mbits DDR, width 16\""
+      },
+      {
+        "wert": "DDR2",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DDR3",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"128 MB (1 Gbit) DDR3\" - widerspricht Bootlog und Chip (ESMT M14D1G1664A ist ein DDR2-Baustein); Herstellerangabe vermutlich falsch"
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "ESMT M14D1G1664A",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ESMT M14D1G1664A-2.5B",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ESMT M14D1G1664A -2.5B (Aufdruck)",
+        "quelle": "openwrt_wiki_fotos",
+        "beleg": "https://openwrt.org/_media/media/cudy/cudy-tr1200_pcbtop.jpg",
+        "stand": "Bilder eingebunden in Seitenrevision 2026-03-25 18:30 (Bilddatum unbekannt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": "Flash-Layout und OEM-Bootlog XM25QH128C (16384 Kbytes)"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"16 MB (128 Mbit) NOR\""
+      },
+      {
+        "wert": "NOR",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": "SPI NOR"
+      },
+      {
+        "wert": "NOR",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7628an_cudy_tr1200-v1.dts",
+        "stand": "Branch main am 2026-10-19 (unverändert seit d780d530)",
+        "sicherheit": "hoch",
+        "bemerkung": "jedec,spi-nor"
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "XMC 25QH128CH10",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "XMC XM25QH128CHIQ",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "XMC 25QH128CHI0 (Aufdruck)",
+        "quelle": "openwrt_wiki_fotos",
+        "beleg": "https://openwrt.org/_media/media/cudy/cudy-tr1200_uart.jpg",
+        "stand": "Bilder eingebunden in Seitenrevision 2026-03-25 18:30 (Bilddatum unbekannt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "xm25qh128c, JEDEC 20 40 18",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog"
+      }
+    ],
+    "switch": [
+      {
+        "wert": "MediaTek MT7628AN",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "SoC-Switch switch0: Port 0 LAN, Port 1 WAN, CPU 6@eth0",
+        "quelle": "openwrt_02_network",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/mt76x8/base-files/etc/board.d/02_network",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": [
+          "MediaTek MT7628AN",
+          "MediaTek MT7613BEN"
+        ],
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "MT7628 (2.4 GHz)",
+          "MT7613BEN (5 GHz, 802.11ac)"
+        ],
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "MediaTek MT7628AN",
+          "MediaTek MT7613BEN"
+        ],
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MT7613BEN (Aufdruck, unter Abschirmrahmen)",
+        "quelle": "openwrt_wiki_fotos",
+        "beleg": "https://openwrt.org/_media/media/cudy/cudy-tr1200_pcbtop.jpg",
+        "stand": "Bilder eingebunden in Seitenrevision 2026-03-25 18:30 (Bilddatum unbekannt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "mt76",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kmod-mt7615e, kmod-mt7663-firmware-ap",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt76x8.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "5 GHz über mt7615e/mt7663"
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "b/g/n",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "b/g/n",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"2.4 GHz Wi-Fi Streams: 2 Spatial Streams\""
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": "2x2, 2 Streams"
+      },
+      {
+        "wert": 2,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "mittel",
+        "bemerkung": "300 Mbps (2.4 GHz)"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "a/n/ac",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "a/n/ac",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Wi-Fi 5",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"5 GHz Wi-Fi Streams: 2 Spatial Streams\""
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": "2x2"
+      },
+      {
+        "wert": 2,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "mittel",
+        "bemerkung": "867 Mbps (5 GHz)"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AC1200",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AC1200",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "Auto/20/40/80 MHz",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": "CE: < 20 dBm (2.4 GHz), < 23 dBm (5 GHz); FCC: < 30 dBm",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_wave2": [
+      {
+        "wert": "MU-MIMO auf 5 GHz",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"MU-MIMO available on 5 GHz\"; Wave-2 als Begriff nicht genannt"
+      }
+    ],
+    "wlan_dfs": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": "Unsupported Functions: DFS; \"No DFS support\""
+      },
+      {
+        "wert": "nein",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": "DFS auf dem MT7613 nicht unterstützt"
+      },
+      {
+        "wert": "nur mit inoffiziellem mt76-Patch (Radarerkennung unbestätigt)",
+        "quelle": "openwrt_forum_240105",
+        "beleg": "https://forum.openwrt.org/t/cudy-tr1200-anybody-able-willing-to-test-unofficial-dfs-patch/240105",
+        "stand": "Thread 2025-09-02 bis 2026-03-25 (5 Beiträge, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_bekannte_probleme": [
+      {
+        "wert": "5 GHz ohne DFS: in Deutschland nur Kanäle 36-48 nutzbar",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus fehlendem DFS"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "extern fest",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": "\"2 non-detachable WiFi antennas\""
+      },
+      {
+        "wert": "extern fest",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Wi-Fi Antennas: 2× Fixed\""
+      },
+      {
+        "wert": "extern",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "\"2× External Antennas\""
+      },
+      {
+        "wert": "extern fest: zwei Antennenflügel am Gehäuse, innen per U.FL-Kabel angeschlossen",
+        "quelle": "openwrt_wiki_fotos",
+        "beleg": "https://openwrt.org/_media/media/cudy/cudy-tr1200_front.png",
+        "stand": "Bilder eingebunden in Seitenrevision 2026-03-25 18:30 (Bilddatum unbekannt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "nicht abnehmbar",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas: -"
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "U.FL (intern)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": "wi1_ant_conn/wi2_ant_conn"
+      },
+      {
+        "wert": "U.FL auf der Platine, Kabel zu den Antennenflügeln",
+        "quelle": "openwrt_wiki_fotos",
+        "beleg": "https://openwrt.org/_media/media/cudy/cudy-tr1200_pcbtop.jpg",
+        "stand": "Bilder eingebunden in Seitenrevision 2026-03-25 18:30 (Bilddatum unbekannt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "WAN",
+            "geschwindigkeit": "10/100",
+            "rolle": "WAN"
+          },
+          {
+            "name": "LAN",
+            "geschwindigkeit": "10/100",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "switchport": 0,
+            "rolle": "LAN"
+          },
+          {
+            "name": "WAN",
+            "switchport": 1,
+            "rolle": "WAN"
+          }
+        ],
+        "quelle": "openwrt_02_network",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/mt76x8/base-files/etc/board.d/02_network",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "lage": "Rückseite, links"
+          },
+          {
+            "name": "WAN",
+            "lage": "Rückseite, rechts"
+          }
+        ],
+        "quelle": "openwrt_wiki_fotos",
+        "beleg": "https://openwrt.org/_media/media/cudy/cudy-tr1200_back.png",
+        "stand": "Bilder eingebunden in Seitenrevision 2026-03-25 18:30 (Bilddatum unbekannt)",
+        "sicherheit": "hoch",
+        "bemerkung": "Beschriftung im Produktbild"
+      },
+      {
+        "wert": "2 × 100M",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ports_geschwindigkeit": [
+      {
+        "wert": "10/100 Mbit/s",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "10/100 Mbit/s",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "100M",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "WAN und LAN getrennt"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "1x 2.0",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1× USB-A 2.0",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1× USB 2.0",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "EHCI/OHCI, USB-Strom über GPIO 4 schaltbar",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7628an_cudy_tr1200-v1.dts",
+        "stand": "Branch main am 2026-10-19 (unverändert seit d780d530)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "mittel",
+        "bemerkung": "einzige Stromversorgung: USB-C"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "USB-C",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Power Input Type: USB-C Port\""
+      },
+      {
+        "wert": "USB-C",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "USB Type-C Buchse",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "USB-C (J3), Rückseite \"Power\"",
+        "quelle": "openwrt_wiki_fotos",
+        "beleg": "https://openwrt.org/_media/media/cudy/cudy-tr1200_back.png",
+        "stand": "Bilder eingebunden in Seitenrevision 2026-03-25 18:30 (Bilddatum unbekannt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 5,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 2,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"5V⎓2A\""
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "\"External Power Supply: 5 V / 3 A USB-C (Compatible with PD Powering)\" - Empfehlung für das Netzteil, nicht Aufnahme"
+      }
+    ],
+    "usb_pd": [
+      {
+        "wert": "ja",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Power Methods: USB-C | Power Input: 5V⎓2A | PD\""
+      },
+      {
+        "wert": "ja",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "\"PD Powering with USB-C Power Jack\""
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": false,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "Lieferumfang: Travel Router, USB-C-zu-USB-C-Kabel, RJ45-Kabel, Kurzanleitung - kein Netzteil"
+      },
+      {
+        "wert": false,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "Lieferumfang: TR1200, USB Charging Cable, Ethernet Cable, Installation Guide"
+      },
+      {
+        "wert": "Kurzanleitung spricht von \"USB-C power adapter\"",
+        "quelle": "cudy_qig",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR_Quick_Installation_Guide-EN.pdf?v=6611979408674405960",
+        "stand": "PDF TR Quick Installation Guide EN (810600190), 2 Seiten, ohne Datum",
+        "sicherheit": "mittel",
+        "bemerkung": "Netzteil muss man selbst stellen"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "5 V / 3 A USB-C, PD-kompatibel (empfohlen)",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "5 V / 2 A USB-C",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 8,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Max Power Consumption (W): 8W\""
+      }
+    ],
+    "leistung_w_typ": [
+      {
+        "wert": 3,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Idle Power Consumption (W): 3W\" (Leerlauf)"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "Installation: Desktop; Betriebstemperatur 0-40 °C"
+      },
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_lager": [
+      {
+        "wert": "-40 bis 70 °C",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "10-90 % nicht kondensierend (Lager 5-95 %)",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Tisch",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Installation: Desktop\""
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "118 × 80 × 27.5",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "118 × 80 × 27.5",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "W×D×H"
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 101.8,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 99.9,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 160,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Shop-Datensatz products/tr1200-1-0.json (Versandgewicht?)"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein (passiv, Lüftungsschlitze; kein Lüfter auf Platine/Produktbild)",
+        "quelle": "openwrt_wiki_fotos",
+        "beleg": "https://openwrt.org/_media/media/cudy/cudy-tr1200_pcbtop.jpg",
+        "stand": "Bilder eingebunden in Seitenrevision 2026-03-25 18:30 (Bilddatum unbekannt)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2 (1× rot, 1× weiß)",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "eine System-LED: aus, rot blinkend, rot, weiß blinkend, weiß",
+        "quelle": "cudy_qig",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR_Quick_Installation_Guide-EN.pdf?v=6611979408674405960",
+        "stand": "PDF TR Quick Installation Guide EN (810600190), 2 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "LED: System",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "Stock: ja (\"LED Control\")",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "mittel",
+        "bemerkung": "für Gluon nicht geprüft"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "ja, an der Seite neben dem Schiebeschalter (\"Toggle\", \"RESET\")",
+        "quelle": "cudy_qig",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR_Quick_Installation_Guide-EN.pdf?v=6611979408674405960",
+        "stand": "PDF TR Quick Installation Guide EN (810600190), 2 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, GPIO 11 (KEY_RESTART)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7628an_cudy_tr1200-v1.dts",
+        "stand": "Branch main am 2026-10-19 (unverändert seit d780d530)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja; 10 s nach dem Boot = Werkseinstellungen; beim Einschalten startet Cudy-TFTP-/Web-Recovery (nur signierte OEM-Firmware)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Reset startet nur TFTP- und Web-Recovery für signierte Firmware",
+        "quelle": "openwrt_forum_198787",
+        "beleg": "https://forum.openwrt.org/t/openwrt-support-for-cudy-tr1200-mt7628/198787",
+        "stand": "Thread 2024-05-22 bis 2024-06-29 (16 Beiträge, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "schiebeschalter": [
+      {
+        "wert": "ja, GPIO 38 als BTN_0 (EV_SW)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7628an_cudy_tr1200-v1.dts",
+        "stand": "Branch main am 2026-10-19 (unverändert seit d780d530)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, \"Configurable Switch\"",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Slider button -> BTN_0",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "knoepfe_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1 Reset, 1 Schiebeschalter",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen erst nach Nachbestücken von Widerständen oder Lötbrücken",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": "\"open the device and short two small contacts (marked on the photo)\""
+      },
+      {
+        "wert": "innen erst nach Nachbestücken von Widerständen oder Lötbrücken: J1 vier unbestückte Lötaugen (P G R T), dazu zwei markierte unbestückte Bauteilplätze bei R391/R392 brücken",
+        "quelle": "openwrt_wiki_fotos",
+        "beleg": "https://openwrt.org/_media/media/cudy/cudy-tr1200_uart.jpg",
+        "stand": "Bilder eingebunden in Seitenrevision 2026-03-25 18:30 (Bilddatum unbekannt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "innen Lötpunkte",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Serial console: unpopulated header\""
+      },
+      {
+        "wert": "innen 4-polig J1 (PGRT)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"4-pin header\", Bestückung nicht angegeben"
+      },
+      {
+        "wert": "Stock-Firmware gibt seriell nur Kernelmeldungen aus, keine Shell; U-Boot-Menü erst mit entsperrtem U-Boot (Beta-Firmware)",
+        "quelle": "openwrt_forum_198787",
+        "beleg": "https://forum.openwrt.org/t/openwrt-support-for-cudy-tr1200-mt7628/198787",
+        "stand": "Thread 2024-05-22 bis 2024-06-29 (16 Beiträge, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "J1: P (Power), G (Ground), R (RX), T (TX); Dreieck-Markierung bei T",
+        "quelle": "openwrt_wiki_fotos",
+        "beleg": "https://openwrt.org/_media/media/cudy/cudy-tr1200_uart.jpg",
+        "stand": "Bilder eingebunden in Seitenrevision 2026-03-25 18:30 (Bilddatum unbekannt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "J1 (PGRT)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": "3.3V TTL"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7628an_cudy_tr1200-v1.dts",
+        "stand": "Branch main am 2026-10-19 (unverändert seit d780d530)",
+        "sicherheit": "hoch",
+        "bemerkung": "bootargs console=ttyS0,115200"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "GND funktioniert ohne Brücke; RX/TX erst nach Kurzschließen der markierten Kontakte",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Stock-U-Boot gesperrt: Menü (Taste 1) nur nach Beta-Firmware mit entsperrtem U-Boot",
+        "quelle": "openwrt_forum_198787",
+        "beleg": "https://forum.openwrt.org/t/openwrt-support-for-cudy-tr1200-mt7628/198787",
+        "stand": "Thread 2024-05-22 bis 2024-06-29 (16 Beiträge, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "4 Gummifüße ab, 4 Kreuzschlitzschrauben darunter, Boden mit Rastnasen abhebeln",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ramips/mt76x8",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ramips/mt76x8, Profil cudy_tr1200-v1",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt76x8.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "cudy_tr1200-v1",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt76x8.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "23.05.4",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "23.05.4",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "23.05.4",
+        "quelle": "openwrt_git_2305",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7be58ccacc9caee6c3c4eb74e23b8a17adee93b8",
+        "stand": "Backport openwrt-23.05, 2024-07-07",
+        "sicherheit": "hoch",
+        "bemerkung": "Backport 2024-07-07, in v23.05.4 enthalten, in v23.05.3 nicht"
+      },
+      {
+        "wert": "main 2024-06-05",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.2",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot 1.1.3",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot 1.1.3 (Aug 4 2023), Ralink UBoot 5.0.0.0",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog"
+      },
+      {
+        "wert": "gesperrt (Cudy-Support bestätigt)",
+        "quelle": "openwrt_forum_198787",
+        "beleg": "https://forum.openwrt.org/t/openwrt-support-for-cudy-tr1200-mt7628/198787",
+        "stand": "Thread 2024-05-22 bis 2024-06-29 (16 Beiträge, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Zwischenfirmware \"TR1200 V1.zip\" (TR1200-OpenWRT-Flash.bin) über Stock-Web-UI 192.168.10.1, danach sysupgrade-Image über LuCI 192.168.1.1 am LAN",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Zwischenfirmware cudy-tr1200.bin aus dem Neanderfunk-Spiegel (= Cudy \"TR1200 V1.zip\", MD5 62180e158bb123193a5eb8878adff942), dann Gluon-sysupgrade",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/cudy-installation.md",
+        "stand": "Commit a9781bd 2026-10-15 (Tabelle Stand 15.10.2026)",
+        "sicherheit": "hoch",
+        "bemerkung": "Spiegel https://firmware.ffnef.de/other/cudy-mirror-20261015/zwischenfirmware/"
+      },
+      {
+        "wert": "ursprünglich nur per TFTP nach Gehäuseöffnen (Beta-Firmware mit entsperrtem U-Boot, UART) oder SPI-Flash beschreiben",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "nur sysupgrade (factory = false)",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ramips-mt76x8",
+        "stand": "Branch main am 2026-10-19 (gleich in v2025.1.x)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.cudy.com/pages/download-center/tr1200-1-0",
+        "quelle": "cudy_downloadseite",
+        "beleg": "https://www.cudy.com/pages/download-center/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19, neueste Firmware 2.5.25 vom 2026-08-05",
+        "sicherheit": "hoch",
+        "bemerkung": "neueste 2.5.25 (2026-08-05)"
+      },
+      {
+        "wert": "https://www.cudy.com/pages/download-center/tr1200-1-0",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "Label-MAC = WAN = LAN = WLAN 2.4 GHz (80:af:ca:...:x0), WLAN 5 GHz = Label+2",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f1091ef7ac3596f1e401b918a36273672acbe389",
+        "stand": "Commit 2024-05-30 (Autor), gemergt 2024-06-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "OUI 80:AF:CA",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_zugang": [
+      {
+        "wert": "192.168.10.1, Passwort admin, SSID Cudy-XXXX / Cudy-XXXX-5G",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "http://cudy.net/, Passwort admin",
+        "quelle": "cudy_qig",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR_Quick_Installation_Guide-EN.pdf?v=6611979408674405960",
+        "stand": "PDF TR Quick Installation Guide EN (810600190), 2 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, device('cudy-tr1200-v1', 'cudy_tr1200-v1', { factory = false }), nicht broken",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ramips-mt76x8",
+        "stand": "Branch main am 2026-10-19 (gleich in v2025.1.x)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "neu in Gluon 2025.1",
+        "quelle": "gluon_release_v2025_1",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/docs/releases/v2025.1.rst",
+        "stand": "Release Notes Gluon 2025.1 (Branch main am 2026-10-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "No",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "niedrig",
+        "bemerkung": "veraltet, Gluon unterstützt seit 2025.1"
+      },
+      {
+        "wert": "Neanderfunk: im Inventar für Gluon 2025.1; 2023.2 nicht geprüft",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/cudy-installation.md",
+        "stand": "Commit a9781bd 2026-10-15 (Tabelle Stand 15.10.2026)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+        "stand": "Seitenrevision 2026-04-05 01:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/cudy/tr1200",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.cudy.com/products/tr1200-1-0",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/tr1200-1-0",
+        "stand": "Live-Seite 2026-10-19 (Shopify updated_at 2026-10-20T03:44:34+08:00, veröffentlicht 2024-03-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR1200_V1.0_Datasheet.pdf?v=8472045220480580312",
+        "stand": "PDF TR1200_V1.0_Datasheet, 3 Seiten, ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "forum": [
+      {
+        "wert": "https://forum.openwrt.org/t/openwrt-support-for-cudy-tr1200-mt7628/198787",
+        "quelle": "openwrt_forum_198787",
+        "beleg": "https://forum.openwrt.org/t/openwrt-support-for-cudy-tr1200-mt7628/198787",
+        "stand": "Thread 2024-05-22 bis 2024-06-29 (16 Beiträge, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://forum.openwrt.org/t/cudy-tr1200-anybody-able-willing-to-test-unofficial-dfs-patch/240105",
+        "quelle": "openwrt_forum_240105",
+        "beleg": "https://forum.openwrt.org/t/cudy-tr1200-anybody-able-willing-to-test-unofficial-dfs-patch/240105",
+        "stand": "Thread 2025-09-02 bis 2026-03-25 (5 Beiträge, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "platinen_kennung": [
+      {
+        "wert": "TR1200 REV1.0 / 300100139",
+        "quelle": "openwrt_wiki_fotos",
+        "beleg": "https://openwrt.org/_media/media/cudy/cudy-tr1200_pcbtop.jpg",
+        "stand": "Bilder eingebunden in Seitenrevision 2026-03-25 18:30 (Bilddatum unbekannt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "300100154",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR1200",
+        "stand": "Seitenrevision 2024-10-19T16:33:04Z",
+        "sicherheit": "mittel",
+        "bemerkung": "pcb_id"
+      },
+      {
+        "wert": "TR1200 REV1.1 / 300100154",
+        "quelle": "wikidevi_foto",
+        "beleg": "https://wikidevi.wi-cat.ru/File:Cudy_TR1200_Top.jpeg",
+        "stand": "Bild hochgeladen 2024-10-16T04:46:28Z (Foto 2024-10-16)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "bekannte_probleme": [
+      {
+        "wert": "kein DFS auf 5 GHz (MT7613)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr1200",
+        "stand": "Seitenrevision 2026-03-25 18:30",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "backup-Partition mit reg 0xfe000 statt 0xfe0000 (Tippfehler im DTS), read-only innerhalb firmware",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7628an_cudy_tr1200-v1.dts",
+        "stand": "Branch main am 2026-10-19 (unverändert seit d780d530)",
+        "sicherheit": "mittel",
+        "bemerkung": "Auswirkung nicht geprüft"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://www.cudy.com/cdn/shop/files/CE_DOC_TR1200.pdf?v=18227272802109967891",
+      "kategorie": "hw_version",
+      "grund": "CE-Konformitätserklärung TR1200, nicht geladen (Modell-/Versionsangabe, Normen)"
+    },
+    {
+      "url": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_TR1200.pdf?v=13068434797945307149",
+      "kategorie": "fcc_id",
+      "grund": "Regulatory Compliance TR1200, nicht geladen - nennt evtl. die echte FCC-ID"
+    },
+    {
+      "url": "https://fccid.io/2APRGRE12",
+      "kategorie": "fcc_id",
+      "grund": "AC1200-Zulassung 2024-06-12 (Range Extender), ohne Modellbrief; ob TR1200/RE1200/M1200 darunter laufen, offen (Label/Handbuch nicht gelesen)"
+    },
+    {
+      "url": "https://wikidevi.wi-cat.ru/File:Cudy_TR1200_Bottom.jpeg",
+      "kategorie": "seriell_zugang",
+      "grund": "Unterseite der Platine REV1.1 nicht ausgewertet"
+    },
+    {
+      "url": "https://openwrt.org/_media/media/cudy/cudy-tr1200_uart.jpg",
+      "kategorie": "seriell_zugang",
+      "grund": "Welcher der beiden markierten Bauteilplätze (R391/R392) für RX und welcher für TX zu brücken ist und ob 0-Ohm genügt, im Foto nur farbig markiert - an echtem Gerät prüfen"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_tr1200_v1",
+      "kategorie": "fcc_id",
+      "grund": "ToH nennt FCC-ID 2APRGRT02, laut FCC-Modellbrief AX3000-Familie - Korrektur in der ToH steht aus"
+    },
+    {
+      "url": "https://github.com/openwrt/mt76/issues/925",
+      "kategorie": "wlan_dfs",
+      "grund": "mt76-Issue zu DFS auf MT7613/MT7663, nicht gelesen"
+    },
+    {
+      "url": "https://www.cudy.com/cdn/shop/files/TR_Quick_Installation_Guide-EN.pdf?v=6611979408674405960",
+      "kategorie": "erkennung_typenschild",
+      "grund": "Abbildungen der Kurzanleitung (Lage Reset/Schalter, Typenschild) nur als Text ausgewertet; echtes Typenschildfoto fehlt"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 49,
+    "notiz": "Nicht im ToH-Dump; Live-hwdata und OpenWrt-Wiki (Fotos UART/Platine/Produkt als Bild), OpenWrt-Commits f1091ef7/d780d530/Backport 23.05 (ab 23.05.4), DTS/Image-Makefile/02_network, Gluon-Target (seit 2025.1, factory=false), OpenWrt-Forum 198787 und 240105, WikiDevi (Platine REV1.1) mit Platinenfoto, Cudy Produktseite/Downloadseite/Datenblatt/Kurzanleitung, FCC 2APRGRT02 (gehört nicht zum TR1200), Werkstatt cudy-installation.md. DeviWiki ohne Seite. Kernpunkte: Reiserouter innen, USB-C 5 V (PD), kein Netzteil im Lieferumfang, 2x 100 Mbit, 2 feste Antennen, kein DFS auf 5 GHz, serielle Konsole erst nach Brücken."
+  }
+}

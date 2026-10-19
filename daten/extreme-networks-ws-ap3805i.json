@@ -1,0 +1,2137 @@
+{
+  "image": "extreme-networks-ws-ap3805i",
+  "modell": "Extreme Networks WS-AP3805i",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "bemerkung": "Kein Eintrag im Dump: toh_suche.py liefert nur WS-AP3825i (pid 19225049, mpc85xx, anderes Gerät); Volltextsuche nach 3805 trifft nur einen MikroTik-Eintrag (Commit-Hash). Werte daher aus der Live-hwdata-Seite (openwrt_hwdata)."
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i?do=export_raw",
+      "stand": "Seitenrevision 2026-04-12 15:38",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Letzte Revisionen: 2026-04-12 kjoshj (25.12.2), 2025-10-06/2025-07-06 raylynnknight (24.10.3/24.10.2), 2025-05-03 kjoshj (Zusammenfassungen \"NAND\", dann \"NOR\"), 2025-02-15 hauke (24.10.0)"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/extreme_networks/ws-ap3805i?do=export_raw",
+      "stand": "Seite existiert nicht (\"topic does not exist yet\"), Feld Device Page in hwdata leer",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_add": {
+      "url": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+      "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Albin Hellström, überarbeitet von David Bauer; PR #3762"
+    },
+    "openwrt_git_modellname": {
+      "url": "https://github.com/openwrt/openwrt/commit/7d6032f310058d7e9b96d7e1dc4d49c8232beff7",
+      "stand": "Commit 2022-10-07",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_nvmem": {
+      "url": "https://github.com/openwrt/openwrt/commit/3faa3a04bb44c3a265e95cb5f8ec31b37ba37520",
+      "stand": "Commit 2025-10-01 (Autor), gemergt 2025-10-22",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Rosen Penev, PR #16286; brachte den u-boot-env-Fehler (Ethernet kommt nicht hoch)"
+    },
+    "openwrt_git_ubootenv": {
+      "url": "https://github.com/openwrt/openwrt/commit/bd949eb528d5b39c8e532ed2d0b1284ee27203b1",
+      "stand": "Commit 2026-04-10 (Autor), gemergt 2026-04-16",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Fix für 3faa3a04, PR #22882 \"[master and 25.12]\""
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=ap3805i+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-19 (6 Commits, neuester 2026-07-15)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "2644302c (2026-07) betrifft nur enterasys,ws-ap3705i; 7915d9a1 uboot-envtools für ws-ap3805i (2026-04)"
+    },
+    "openwrt_pr_3762": {
+      "url": "https://github.com/openwrt/openwrt/pull/3762",
+      "stand": "PR 2021-01-07 bis 2022-10-07",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PR-Text \"Extreme Networks AP3805i, Indoor Access Point\", Bootlogs von eutampieri (2022-02-24), Hinweis mcprat: gleiche Hardware wie WatchGuard AP300 (#4072), aber andere Software"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9557_extreme-networks_ws-ap3805i.dts",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic.mk",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_releases": {
+      "url": "https://github.com/openwrt/openwrt/tags",
+      "stand": "Tags v22.03.0-rc6, v22.03.0, v24.10.6, v25.12.2, v25.12.3 am 2026-10-19 geprüft",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "generic.mk enthält das Gerät ab v22.03.0 (nicht in -rc6); DTS v24.10.6 ohne nvmem-MAC, v25.12.2 mit \"u-boot,env\" (fehlerhaft), v25.12.3 mit \"u-boot,env-redundant-count\" (behoben)"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_commit_33adfb1": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/33adfb1aeb1eaf878780d9ee88d0a2ea1b83d4ce",
+      "stand": "Commit 2022-10-08",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PR #2659; nicht in v2022.1.4, enthalten in v2023.1"
+    },
+    "openwrt_forum_83481": {
+      "url": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481",
+      "stand": "Thread 2020-12-27 bis 2026-08-21 (118 Beiträge)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Alle 118 Beiträge geladen (/t/83481.json + posts.json); Beiträge 32-71 betreffen überwiegend WatchGuard AP300 (akornow)"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=AP3805&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Keine Treffer; auch Suche \"Extreme Networks AP3805i\" ohne Treffer, Seite Extreme_Networks_AP3805i: 404"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/index.php?search=AP3805&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Keine Treffer; Seite Extreme_Networks_AP3805i: 404"
+    },
+    "fcc_qxo": {
+      "url": "https://fccid.io/QXO",
+      "stand": "Liste am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Grantee QXO (Extreme Networks): keine Zulassung mit 3805 im Namen. QXO-4411AC (2015-12-16) geprüft: Handbuch beschreibt AP3935, nicht AP3805i"
+    },
+    "extreme_doku": {
+      "url": "https://www.extremenetworks.com/support/documentation/access-points-ap3805i/",
+      "stand": "404 am 2026-10-19 (Weiterleitung auf supportdocs.extremenetworks.com)",
+      "abgerufen": "2026-10-19"
+    },
+    "werkstatt": {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/",
+      "stand": "grep 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "kein Protokoll/Dokument zu AP3805i/3805"
+    },
+    "fcc_qxo_4200": {
+      "url": "https://fccid.io/QXO-4200",
+      "stand": "Grant 2014-11-13, letzte Änderung (C2PC) 2016-04-28",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "FCC ID des WS-AP3805i laut Typenschild; Produktcode 4200 trägt keinen Modellnamen, deshalb im ersten Lauf übersehen. Exhibit-Liste (39 Dokumente) gelesen."
+    },
+    "fcc_4200_typenschild": {
+      "url": "https://fccid.io/QXO-4200/Label/ID-Label-Model-3805i-2441644",
+      "stand": "Exhibit 2014-11-13 (PDF erstellt 2014-11-10)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Bild des Typenschilds WS-AP3805i; Lage laut https://fccid.io/QXO-4200/Label/Label-location-info-2441645: Rückseite, Mitte"
+    },
+    "fcc_4200_quickref": {
+      "url": "https://fccid.io/QXO-4200/User-Manual/User-manual-AP3805-2442894",
+      "stand": "Exhibit 2014-11-13 (Quick Reference, Copyright 2014, Dok.-Nr. 9034815)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "WS-AP3805 Quick Reference (6 Seiten, 1.2 MB, PDF-Titel fälschlich \"WS-AP3825i/WS-AP3825e ...\"), mit pdftotext und Seitenbild ausgewertet"
+    },
+    "fcc_4200_rf_exposure": {
+      "url": "https://fccid.io/QXO-4200/RF-Exposure-Info/MPE-2973798",
+      "stand": "Bericht FA482702-04 Rev. 01 vom 2016-03-25",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "MPE-Bericht mit Antennengewinn je Band; inhaltsgleich mit https://fccid.io/QXO-4200/RF-Exposure-Info/RF-Exposure-2441651 (Bericht FA482702 Rev. 01 vom 2014-11-10), ergänzt um Modelle 30912/30913"
+    },
+    "fcc_4200_fotos_extern": {
+      "url": "https://fccid.io/QXO-4200/External-Photos/External-photo-2441646",
+      "stand": "Exhibit 2014-11-13 (Prüfmuster ICC Projekt 482702)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "17 Seiten; Seiten 1-4 WS-AP3805i mit Netzteil, Rest AP3805e/Antennen"
+    },
+    "fcc_4200_fotos_intern": {
+      "url": "https://fccid.io/QXO-4200/Internal-Photos/Internal-photo-2441647",
+      "stand": "Exhibit 2014-11-13 (Prüfmuster ICC Projekt 482702)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "23 Seiten, 9.5 MB; Seiten 1-11 WS-AP3805i (PIFA), Bilder mit pdfimages ausgewertet"
+    },
+    "fcc_4200_c2pc": {
+      "url": "https://fccid.io/QXO-4200/Letter/Change-letter-2973854",
+      "stand": "Brief 2016-04-27",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Class II Permissive Change: Modellnummern 30912 und 30913 ergänzt, elektrisch identisch"
+    },
+    "extreme_datenblatt": {
+      "url": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+      "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "\"3805i/e Indoor Access Point - Data Sheet\", 8 Seiten, Kopie bei AV-iQ (per https Zertifikatsfehler, per http geladen); Fundstelle über search.brave.com"
+    },
+    "extreme_installguide": {
+      "url": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+      "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "ExtremeWireless WS-AP3805-FCC/ROW Installation Guide, 37 Seiten, aus den ANATEL-Unterlagen (fccid.io-Spiegel); gilt laut Text für WS-AP3805i-FCC (30912) und WS-AP3805i-ROW (30913)"
+    },
+    "anatel": {
+      "url": "https://fccid.io/ANATEL/02586-15-09558",
+      "stand": "Homologation 2018-04-04 (Zertifikat 2015-07-07, Status suspendiert)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Modelle WS-AP3805i-ROW, WS-AP3805i, WS-AP3805e; Dokumentliste gelesen"
+    },
+    "brave_suche": {
+      "url": "https://search.brave.com/search?q=%22AP3805i%22+datasheet+pdf",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Fundstellen Datenblatt, Installation Guide (Extreme-Archiv 401, ANATEL-Kopie), manualslib (gesperrt)"
+    }
+  },
+  "roh": {
+    "toh": {
+      "_hinweis": "kein Eintrag im Dump 2026-10-18 (siehe quellen.toh)"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi Router",
+      "Brand": "Extreme Networks",
+      "Model": "WS-AP3805i",
+      "Versions": "",
+      "FCCID_urls": "http://¿",
+      "Availability_availability": "",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=f8c87aa2d27ab405f284dd4357377ab5c893a345",
+      "Supported Since Rel_releasesince": "22.03.0",
+      "Supported Current Rel_releasecurrent": "25.12.2",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Qualcomm Atheros QCA9557",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "720",
+      "Flash MB_mbflashs": "64",
+      "RAM MB_mbram": "256",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Qualcomm Atheros QCA9557, Qualcomm Atheros QCA9882",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN Comments_": "MIMO 2x2:2 on both bands",
+      "WLAN driver_wlan-drivers": "ath9k, ath10k-ct",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "¿",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "1",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "PoE 802.3at",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481",
+      "Forum search_search-forums": "WS-AP3805i",
+      "Git search_search-gits": "WS-AP3805i",
+      "WikiDevi URL_urls": "",
+      "WikiDevi ID_hwinfo-ids": "",
+      "OEM Device Homepage URL_url": "http://¿",
+      "Firmware OEM Stock URL_url": "http://¿",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/ath79/generic/openwrt-25.12.2-ath79-generic-extreme-networks_ws-ap3805i-initramfs-kernel.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/ath79/generic/openwrt-25.12.2-ath79-generic-extreme-networks_ws-ap3805i-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-extreme-networks_ws-ap3805i-initramfs-kernel.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-extreme-networks_ws-ap3805i-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "U-Boot TFTP + serial recovery, see git-commit",
+      "Comment installation": "See instruction",
+      "Recovery method(s)_method-recoverys": "U-Boot TFTP + serial recovery, see git-commit",
+      "Comment recovery": "",
+      "Picture_img100s": "",
+      "Comments_": ""
+    },
+    "openwrt_git_add": {
+      "Specifications": {
+        "SoC": "Qualcomm Atheros QCA9557-AT4A",
+        "RAM": "2x 128MB Nanya NT5TU64M16HG",
+        "FLASH": "64MB - SPANSION FL512SAIFG1",
+        "LAN": "Atheros AR8035-A (RGMII GbE with PoE+ IN)",
+        "WLAN2": "Qualcomm Atheros QCA9557 2x2 2T2R",
+        "WLAN5": "Qualcomm Atheros QCA9882-BR4A 2x2 2T2R",
+        "SERIAL": "UART pins at J10 (115200 8n1) Pinout is 3.3V - GND - TX - RX (Arrow Pad is 3.3V)",
+        "LEDs": "Power (Green/Amber), WiFi 5 (Green), WiFi 2 (Green)",
+        "BTN": "Reset"
+      },
+      "Installation": [
+        "1. Download the OpenWrt initramfs-image. Place it into a TFTP server root directory and rename it to 1D01A8C0.img. Configure the TFTP server to listen at 192.168.1.66/24.",
+        "2. Connect the TFTP server to the access point.",
+        "3. Connect to the serial console of the access point. Attach power and interrupt the boot procedure when prompted. Credentials are admin / new2day",
+        "4. Configure U-Boot for booting OpenWrt from ram and flash: setenv boot_openwrt 'setenv bootargs; bootm 0xa1280000'; setenv ramboot_openwrt 'setenv serverip 192.168.1.66; tftpboot 0x89000000 1D01A8C0.img; bootm'; setenv bootcmd 'run boot_openwrt'; saveenv",
+        "5. Load OpenWrt into memory: run ramboot_openwrt",
+        "6. Transfer the OpenWrt sysupgrade image to the device. Write the image to flash using sysupgrade: sysupgrade -n /path/to/openwrt-sysupgrade.bin"
+      ],
+      "PR-Text_zusatz": "Extreme Networks AP3805i, Indoor Access Point. ... interrupt the boot procedure when prompted (bootdelay is 2 seconds)"
+    },
+    "openwrt_git_nvmem": {
+      "message": "Userspace handling is deprecated. Use ath9k LED instead of specifying a generic one."
+    },
+    "openwrt_git_ubootenv": {
+      "message": "This is apparently a redundant u-boot config split between cfg1 and cfg2. The size is also 0x10000 instead of the full amount. This is needed in order to fix ethernet probing. Fixes: 3faa3a04bb"
+    },
+    "openwrt_dts": {
+      "compatible": "extreme-networks,ws-ap3805i, qca,qca9557",
+      "model": "Extreme Networks WS-AP3805i",
+      "leds": {
+        "power_green": "GPIO 19 active low",
+        "power_amber": "GPIO 23 active low",
+        "wlan5 (green:wlan5)": "GPIO 13 active low, Trigger phy0tpt",
+        "wmac led-sources": "22 (ath9k-LED, 2.4 GHz)"
+      },
+      "keys": {
+        "reset": "GPIO 17 active low, KEY_RESTART"
+      },
+      "watchdog": "linux,wdt-gpio GPIO 16, hw_algo toggle, hw_margin_ms 20000, always-running; interner wdt disabled",
+      "eth0": "phy-handle phy5 (mdio0 reg 5), phy-mode rgmii-id, MAC aus U-Boot-Env ethaddr (cfg1, u-boot,env-redundant-count, env-size 0x10000)",
+      "label-mac-device": "eth0",
+      "wifi": "wmac (ath9k) Kalibrierung art 0x1000 Länge 0x440; pcie0 qcom,ath10k Kalibrierung art 0x5000 Länge 0x844",
+      "spi_flash": "jedec,spi-nor, 50 MHz, m25p,fast-read",
+      "partitionen": {
+        "u-boot-bak": "0x0 0x80000 ro",
+        "u-boot": "0x80000 0x80000 ro",
+        "cfg1": "0x100000 0x40000 ro",
+        "cfg2": "0x140000 0x40000 ro",
+        "nvram4": "0x180000 0x40000 ro",
+        "nvram3": "0x1c0000 0x40000 ro",
+        "nvram2": "0x200000 0x40000 ro",
+        "nvram1": "0x240000 0x40000 ro",
+        "PriImg": "0x280000 0x1000000 ro",
+        "SecImg": "0x1280000 0x1000000 ro",
+        "firmware": "0x2280000 0x1cc0000 (denx,uimage)",
+        "cert": "0x3f40000 0x80000 ro",
+        "art": "0x3fc0000 0x40000 ro"
+      }
+    },
+    "openwrt_image_mk": {
+      "Device": "extreme-networks_ws-ap3805i",
+      "SOC": "qca9557",
+      "BLOCKSIZE": "256k",
+      "DEVICE_VENDOR": "Extreme Networks",
+      "DEVICE_MODEL": "WS-AP3805i",
+      "DEVICE_PACKAGES": "ath10k-firmware-qca988x-ct kmod-ath10k-ct",
+      "IMAGE_SIZE": "29440k"
+    },
+    "gluon_targets": {
+      "device": "device('extreme-networks-ws-ap3805i', 'extreme-networks_ws-ap3805i', {packages = ATH10K_PACKAGES_QCA9880, factory = false})",
+      "supported_devices.rst": "Extreme Networks - WS-AP3805i (ath79-generic)"
+    },
+    "openwrt_pr_3762_bootlog": {
+      "Kernel": "Linux 5.10.100 (Build eutampieri, OpenWrt r18955)",
+      "CPU": "CPU0 revision is: 00019750 (MIPS 74Kc)",
+      "machine": "Extreme Networks AP3805i",
+      "SoC": "Qualcomm Atheros QCA9558 ver 1 rev 0",
+      "Memory": "250920K/262144K available",
+      "CPU clock": "720.000 MHz",
+      "spi-nor": "s25fl512s (65536 Kbytes)",
+      "PHY": "ag71xx 19000000.eth: connected to PHY at mdio.0:05 [uid=004dd072, driver=Qualcomm Atheros AR8035]",
+      "eth0": "link up (1000Mbps/Full duplex)",
+      "ath10k": "qca988x hw2.0 target 0x4100016c chip_id 0x043222ff sub 0000:0000; firmware ver 10.1-ct-8x-__fW-022-ecad3248",
+      "ath9k": "Atheros AR9550 Rev:0 mem=0xb8100000, irq=12"
+    },
+    "openwrt_forum_83481": {
+      "#1 Dragets 2020-12-27": "SoC QCA9557-AT4A, RAM 2x 128MB Nanya NT5TU64M16HG, FLASH 64MB SPANSION FL512SAIFG1, LAN Atheros AR8035-A (RGMII GbE with PoE+ IN), WLAN2 QCA9557 2x2 2T2R, WLAN5 QCA9882-BR4A 2x2 2T2R, SERIAL UART pins at J10 (115200 8n1); OEM-Bootlog/Env/Logs auf pastebin",
+      "#3 Dragets 2020-12-28": "Senao-made one with Extreme Systems/Enterasys own small changes; ohne art-Partition; Reboot nach 30 s",
+      "#5 Dragets 2020-12-28": "/proc/simple_config: external_wdt_* - externer Watchdog, Refresh-Intervall 20 s",
+      "#9 Dragets 2020-12-29": "GPIO16 wird in U-Boot jede Sekunde getoggelt, GPIO16-Watchdog funktioniert",
+      "#17 Dragets 2021-01-05": "OEM-MTD-Layout ath-nor0: BootBAK 0-0x80000, BootPRI -0x100000, CFG1, CFG2, NVRAM4..1, PriImg 0x280000-0x1280000, SecImg -0x2280000, FS -0x3f40000; Kalibrierdaten ath9k bei Flash+0x3fc1000, ath10k bei +0x3fc5000",
+      "#19 Dragets 2021-01-05": "5 GHz ca. 300 Mbit/s up/down, 2.4 GHz 42 down / 66 up (Speedtest)",
+      "#23 Dragets 2021-01-06 (U-Boot printenv)": "bootdelay=2, baudrate=115200, ipaddr=192.168.1.1, serverip=192.168.1.10, WATCHDOG_LIMIT=3, BOOT_KERNEL=primary, SERVICETYPE=siemens, SERVICEATTRS=ac_manager,ru_manager, AC_HOSTNAME=Controller, REGION=NA, NUM_ANTENNAS=4, CRYPTO_FLAG=3, static_bootargs=console=ttyS0,115200n81 mem=261632K panic=30 ro, CURR_VER=U-Boot 1.2.0.03 (Mar 28 2016 - 20:40:29), MODEL=AP3805i, SERIAL#=163XXXXXX85M0000, ethaddr=D8:84:66:XX:XX:D5, RADIOADDR0=D8:84:66:XX:XX:40, RADIOADDR1=D8:84:66:XX:XX:48, HW_RELEASE=513, PriImg=9f280000, SecImg=a0280000",
+      "#24 Dragets 2021-01-06": "Siemens-HiPath-Wireless-CA0-Zertifikat bei 0x3f80000 (für Rückweg zur Stock-Firmware erhalten)",
+      "#32 akornow 2021-01-18": "WatchGuard AP300 nutzt dieselbe Platine 7016A0886008 v1.00 (Aufkleber v1.0.1)",
+      "#35 mpratt14 2021-01-19": "auf AP300-Foto 3 Antennenkabel am SoC -> eher QCA9558 als QCA9557",
+      "#62 Dragets 2021-01-26": "Zeichensalat an der seriellen Konsole sieht aus wie schlecht verbundene Masse; JTAG-Lötpunkte nahe der PCIe-Karte",
+      "#86 vchrizz 2022-10-27": "TFTP-Installation per Gerät öffnen und Buspirate; mit zwei Kabeln Zeichensalat im Bootloader, ab Kernel lesbar; Stock-Firmware hat SSH offen, fw_printenv/fw_setenv lauffähig",
+      "#89 vchrizz 2022-10-28": "Stock /proc/mtd: mtd0 BootBAK 0x80000 ... mtd10 FS 0x1cc0000, erasesize 0x40000",
+      "#92 damadmai 2022-11-16": "fw_env.config: /dev/mtd2 0x00000 0x10000 0x40000 und /dev/mtd3 0x00000 0x10000 0x40000; Verweis github.com/aveexy/openwrt_ap3805i_autoprovision",
+      "#93 trs80 2023-06-02": "in 22.03 enthalten",
+      "#97 Dragets 2023-09-11": "Pin layout: 3.3V - GND - TX - RX, 3.3V ist der Pin mit Pfeil",
+      "#106 Sir-Noot-Noot 2024-03-27": "USB-TTL: Zeichensalat im Bootloader, danach lesbar, Login admin/new2day geht; Bootloader nicht unterbrechbar",
+      "#112 saxy 2026-04-09": "Upgrade auf 25.12 zweimal fehlgeschlagen",
+      "#113 dekarl 2026-04-09": "u-boot-env CRC-Fehler, Verdacht Commit 3faa3a04 (nvmem)",
+      "#117 neheb 2026-04-10": "Problem war, dass das Ethernet-Interface nicht hochkam",
+      "#119 saxy 2026-04-16": "sysupgrade 24.10.6 -> Testimage funktioniert",
+      "#121 dekarl 2026-08-21": "gemergt, in Snapshot und 25.12 seit Mitte April"
+    },
+    "fcc_qxo": {
+      "QXO-Zulassungen 2012-2016": "QXO-OAP36B, QXO-OAP36C, QXO-WSAP3705I, QXO-AP3715E, QXO-AP3715E1, QXO-AP3715I, QXO-24G32, QXO-57G45, QXO-AP3825E, QXO-4411AC (AP3935), QXO-4411OAC, QXO-4200, QXO-4411OU (WS-AP3965i), QXO-4018WP"
+    },
+    "fcc_qxo_4200": {
+      "FCC ID": "QXO-4200",
+      "Grantee": "Extreme Networks, Inc. (QXO)",
+      "Equipment Class": "Wireless 802.11 ac/a + b/g/n Access Point (DTS, NII)",
+      "Test Firm": "International Certification Corp. (Taiwan)",
+      "Frequenzen": "2412-2462 MHz, 5180-5240 MHz (Original 2014-11-13); 5180-5240 MHz C2PC 2015-05-28; C2PC 2016-04-28",
+      "Modelle laut Unterlagen": "WS-AP3805i, WS-AP3805e, WS-AP3801i, 30912, 30913",
+      "Exhibits (Auswahl)": "User manual_AP3801i, User manual_AP3805, Internal photo (5 MB), External photo (2.2 MB), ID Label_Model 3801i/3805e/3805i, Label location info, Test-/DFS-/NII-/RF-Reports, MPE, Block diagram und Schematics (nur Metadaten, vertraulich)",
+      "Grant Comments": "Power output listed is conducted. ... separation distance of at least 20 cm"
+    },
+    "fcc_4200_typenschild": {
+      "Hersteller": "Extreme Networks, 145 Rio Robles, San Jose, CA 95134",
+      "Model": "WS-AP3805i",
+      "FCC ID": "QXO-4200",
+      "IC": "4141B-4200",
+      "Zeichen": "FCC, CE, (!) (Klasse-2-Funk), RCM, cULus Listed I.T.E. E206448, WEEE",
+      "Input": "12Vdc 1.25A",
+      "Herkunft": "Made in Taiwan",
+      "Lage": "Rückseite, Mitte (Label location info)"
+    },
+    "fcc_4200_quickref": {
+      "Overview": "The WS-AP3805 is designed to extend your IdentiFi Wireless LAN around indoor locations ... available in both an \"i\" model (with internal antennas) and an \"e\" model (with external antennas)",
+      "Features": "Radios: 2 radios (2.4 GHz and 5 GHz); LEDs: 3; Max. Power Consumption: 9.6W; 802.3af; Antennas: WS-AP3805i: 4 internal single band antenna assemblies; WS-AP3805e: 4 external RSMA antenna connectors",
+      "Powering": "PoE: Power is provided through the RJ45 Ethernet port (LAN port) ... preferred method ... on ceiling and high wall installations. External 12V DC power supply (optional): plug the supply's input jack into the DC-In port",
+      "Items Shipped": "T-rail Mounting Hardware ((2) 15/16\" clips, (2) 9/16\" clips, (2) Spacers, Mounting screws), Wall/Ceiling Mounting Bracket, Mounting Bracket Hardware ((2) Drywall anchors, Mounting screws)",
+      "Views (Figure 1)": "1-4 Antenna Ports (AP3805e only), 5 LEDs, 6 External Antenna (AP3805e only), 7 External Power Supply Port, 8 LAN port, 9 Kensington Lock Slot",
+      "LEDs": "1 Power, 2 Radio 1, 3 Radio 2; Green LEDs mean ON. Amber LEDs mean OFF.",
+      "Hinweise": "Do not connect the WS-AP3805 to an external power supply if the AP is plugged into the PoE port. There is no wall mount for the 12V DC power supply. LAN connectors with shrouds will not fit into the AP port.",
+      "Regulatorisch": "Operation of this device is restricted to indoor use only; RF safety distance 22 cm (Text) bzw. 20 cm (FCC-Statement)"
+    },
+    "fcc_4200_rf_exposure": {
+      "Modelle": "WS-AP3805i (30912 WS-AP3805i-FCC, 30913 WS-AP3805-ROW): Internal PIFA antenna; WS-AP3801i: Internal PIFA antenna; WS-AP3805e: External Dipole antenna",
+      "Hinweis": "The AP3805i and AP3801i use identical hardware. The only difference is the AP3801i is software limited to prevent simultaneous operation in the 2.4 GHz and 5GHz bands.",
+      "PIFA 2412-2462 MHz": "max. conducted 26.53 dBm, Gain 3.52 dBi",
+      "PIFA 5180-5240 MHz": "max. conducted 27.58 dBm, Gain 5.40 dBi",
+      "PIFA 5745-5825 MHz": "max. conducted 25.94 dBm, Gain 5.68 dBi",
+      "Dipole (AP3805e)": "2.4 GHz 4.42 dBi, 5180-5240 3.18 dBi, 5745-5825 2.95 dBi",
+      "Panels (AP3805e)": "WS-AI-DQ04360 4/7 dBi, WS-AI-DD05120 5/5 dBi",
+      "Gleichzeitiger Betrieb": "2.4 and 5GHz can transmit at the same time"
+    },
+    "fcc_4200_fotos_extern": {
+      "Gehäuse": "rund, weiß, Logo mittig, drei LED-Öffnungen am Rand (Power, Funk 1, Funk 2)",
+      "Rückseite": "vertiefte Anschlussmulde mit RJ45-Buchse und DC-Rundbuchse nebeneinander, zwei Befestigungsdorne, Lüftungsschlitze, ovale Öffnung (Kensington), Gehäuseschraube am Rand",
+      "Netzteil des Prüfmusters": "Powertron Electronics Corp. PA1015-2I (PA1015-2I120125), Part No. PA1015-120IB125, Input 100-240V~ 50-60Hz 0.4A, Output 12V 1.25A 15W Max, Indoor use only, LPS, Wechselstecker (4 Länderadapter), Ferritkern am DC-Kabel"
+    },
+    "fcc_4200_fotos_intern": {
+      "Aufbau": "runde Hauptplatine, 5-GHz-Funk auf Mini-PCIe-Karte, vier PIFA-Blechantennen am Platinenrand mit U.FL-Kabeln, Abschirmblech mit Kühlkörper",
+      "Hauptplatine Aufdruck": "CAP7250AG-0 20 LFP (Lesung aus Foto, unscharf)",
+      "Mini-PCIe-Karte": "7016A0759004 V1.00, QCA9882-BR4A, Frontends Skyworks 5003L1",
+      "SoC": "QCA9557-AT4A PRY688.003C 1339 CHINA",
+      "RAM": "2x NANYA NT5TU64M16HG-AC",
+      "Flash": "Spansion FL512SAIF01 (Aufdruck sinngemäß FL512SAIFG1)",
+      "PHY": "Atheros AR8035-A",
+      "Steckverbinder": "4-poliger bestückter Stecker (schwarz) am Platinenrand neben dem Mini-PCIe-Steckplatz, Bezeichnung nicht lesbar; J1: 2x7 unbestückte Pads mit Pfeilmarkierung neben dem SoC-Schirm; J8/J9 U.FL-Lötplätze",
+      "Unterseite": "Taster am Platinenrand, LEDs; kein Lüfter sichtbar"
+    },
+    "fcc_4200_c2pc": {
+      "Text": "Original report was listed model for WS-AP3805i, WS-AP3805e, WS-AP3801i and the C2PC is for adding new models: 30912, 30913. The only change for additional two model numbers are just model number change due to marketing segment purpose. Those models are electrically identical to each other and does not have impact on RF performance"
+    },
+    "extreme_datenblatt": {
+      "Titel": "3805i/e Indoor Access Point - Enterprise-Grade Performance and Security Without the Premium Cost",
+      "Overview": "802.11ac and 802.11abgn indoor access point ... The AP3805i comes with an integrated four antenna array ... The AP3805e requires professional installation and includes four RP-SMA antenna connectors ... AP3805 uses 802.3af Power over Ethernet (PoE) without reducing its performance ... An optional external power supply is available",
+      "Number of radios": "2",
+      "MIMO": "2x2",
+      "Spatial streams": "2",
+      "Max Throughput": "2.4GHz 300Mbps, 5GHz 867Mbps, per AP 1.17Gbps",
+      "Forwarding Rate": "40,000 packets per second",
+      "SSIDs": "8 / 16",
+      "Simultaneous users": "312",
+      "Max radiated power": "Radio 1 (5GHz) 26 dBm*, Radio 2 (2.4GHz) 25 dBm* (*abhängig von Regulierung und Kanal)",
+      "Max antenna gain (integrated)": "Radio 1 (5GHz) 5 dBi, Radio 2 (2.4GHz) 3 dBi (AP3805i)",
+      "Frequency Bands": "5.15-5.25, 5.25-5.35*, 5.47-5.725*, 5.725-5.850 GHz (FCC/IC), 2.400-2.472 GHz (FCC/IC), 2.400-2.4835 GHz (ETSI); *FCC/IC DFS certification in progress",
+      "Interfaces": "10/100/1000 Base T Ethernet autosensing link: 1",
+      "Mounting": "Wall mounting (included); Flush and Protruded drop-ceiling mounting bracket (9/16\" and 15/16\" flat T-bar included)",
+      "Environmental": "Plenum rated (UL 2043); Operating 0 °C to +45 °C, Humidity 0-95% noncondensing; Storage/Transport -50 °C to +70 °C",
+      "Compliance": "FCC Part 15 Class B, ICES-003, 15.247, 15.407, RSS-210, EN 301 893, EN 300 328, EN 301 489-1/-17, EN 62311, EN 55022, EN 60601-1-2, AS/NZS4268; Safety IEC/EN/UL 60950-1, CSA 22.2, AS/NZS 60950.1",
+      "Dimensions (Outer Diameter x Height)": "6.18\" x 1.63\" - AP3805i; 6.71\" x 2.03\" - AP3805e",
+      "Weight": "0.75 lbs (0.34 kg) - AP3805i; 0.84 lbs (0.38 kg) - AP3805e",
+      "Max power consumption": "9.6W",
+      "Warranty": "Lifetime",
+      "Ordering": "WS-AP3805i (Requires V9.15.01 or higher); WS-AP3805e (V9.15.02, RP-SMA); 30912 AP3805i_FCC (US, Puerto Rico, Colombia) ExtremeCloud Ready (10.01.04); 30913 AP3805i_ROW ExtremeCloud Ready (10.01.04)",
+      "Accessories": "WS-MBI-DCU01 drop ceiling brackets; WS-PSI12V-MR1 Multi-region 12V Indoor External Power Supply for the AP3805i/e; WS-MBI-WALL02 wall jack bracket; PD-3501G-ENT Single port 1 Gigabit 802.3af PoE Midspan",
+      "Antennen-Diagramme": "horizontale und vertikale Strahlungsdiagramme 2.4/5 GHz (nur als Bild)"
+    },
+    "extreme_installguide": {
+      "Modelle": "30912 (Shipping 908659-10) WS-AP3805i-FCC; 30913 (Shipping 908660-10) WS-AP3805i-ROW",
+      "Back View": "4 External Power Supply Port, 5 LAN Port, 6 Kensington Lock Slot; Front: 1-3 LEDs",
+      "LEDs": "1 Power: Green = normal, Flashing Green = Selbsttest/Laden, Red = CPU- oder Systemfehler; 2 Radio 1 (5.0 GHz) Green = an; 3 Radio 2 (2.4 GHz) Green = an",
+      "LAN": "one 10/100/1000BaseT RJ45 LAN port ... supports power over Ethernet (PoE) based on the IEEE 802.3af standard",
+      "Reset Button": "Use a pen tip or a nail to press the switch button through the hole (located on the front of the AP). < 5 s: software interrupt/reset; >= 5 s: factory default configuration",
+      "Kensington": "slot for a Kensington lock on the bottom of the AP",
+      "Package Contents": "AP3805, Quick Reference Guide, ExtremeCloud Quick Reference Guide, 2 T-rail connectors 15/16 in, 2 T-rail connectors 9/16 in, 2 long screws, 2 short screws, 2 AP mounting screws, 2 spacers, wall/ceiling mounting bracket, 2 drywall anchors, 2 drywall anchor screws (kein Netzteil)",
+      "Accessories": "WS-PSI12V-MR1 12V DC Power Supply with six country adapters",
+      "Power Connections": "PoE through the RJ45 LAN port on the back ... preferred ... ceiling and high wall installations; optional external 12V DC power supply (WS-PSI12V-MR1) ordered separately",
+      "LAN Connections": "single LAN port, located on the back of the AP ... remove the AP from its mount ... first",
+      "Spec AP3805": "Enclosure: Plastic housing; Power source: 802.3af compliant PoE PD, 12V DC input; Maximum power consumption 9.6W; Case diameter 6.69 inches (17 cm); Antenna 4x internal antennas, 2.4GHz x 2, 5GHz x 2; Uplink GbE Ethernet x1 with PoE; RoHS yes; Radio IEEE 802.11a/b/h/g/n/ac, 2.4/5GHz dual-band, Dual-radio, 2x2:2 MIMO; Operating temperature 0 °C to +45 °C",
+      "Spec WS-PSI12V-MR1": "Plastic housing; AC input 90 to 264V; DC output 12V; 110 x 31 x 45 mm; 140 g; Operating 0 °C to +40 °C",
+      "Internal Antennas": "AP3805i Indoor MU-MIMO 3dBi 2.4 GHz, 5dBi 5.0 GHz, Connector None; 0 Grad = AP-Vorderseite",
+      "Regulatorisch": "5600-5650 MHz per Software ab Werk gesperrt (FCC); RF-Abstand 22 cm"
+    },
+    "anatel": {
+      "Approval Number": "02586-15-09558",
+      "Model": "WS-AP3805i-ROW (auch WS-AP3805i, WS-AP3805e)",
+      "Applicant": "EXTREME NETWORKS DO BRASIL LTDA",
+      "Manufacturer": "Extreme Networks Inc (USA)",
+      "Certificate": "4401, 2015-07-07 bis 2019-07-07, Status Suspended",
+      "Dokumente": "Installation Guide_WS-AP3805i-ROW (2016-08-31), Fotos Externas_WS-AP3805i-ROW, CC4401_v3, Foto Selo Anatel_WS-AP3805i-ROW, Manual_WS-AP3805i-ROW (2016-08-30), CC4401_v2, Foto Selo Anatel, Manual, Fotos externas (2015-07-08)"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Extreme Networks",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Extreme Networks",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "DEVICE_VENDOR"
+      },
+      {
+        "wert": "Senao (ODM)",
+        "quelle": "openwrt_forum_83481",
+        "beleg": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481/3",
+        "stand": "Beitrag #3 vom 2020-12-28",
+        "sicherheit": "niedrig",
+        "bemerkung": "Dragets: \"Senao-made one with Extreme Systems/Enterasys own small changes\""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "WS-AP3805i",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WS-AP3805i",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9557_extreme-networks_ws-ap3805i.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "model = \"Extreme Networks WS-AP3805i\""
+      },
+      {
+        "wert": "AP3805i",
+        "quelle": "openwrt_forum_83481",
+        "beleg": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481/23",
+        "stand": "Beitrag #23 vom 2021-01-06",
+        "sicherheit": "mittel",
+        "bemerkung": "U-Boot-Env MODEL=AP3805i"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "AP3805i",
+          "Extreme Networks AP3805i"
+        ],
+        "quelle": "openwrt_git_modellname",
+        "beleg": "https://github.com/openwrt/openwrt/commit/7d6032f310058d7e9b96d7e1dc4d49c8232beff7",
+        "stand": "Commit 2022-10-07",
+        "sicherheit": "mittel",
+        "bemerkung": "ursprünglicher Modellname im DTS, korrigiert auf WS-AP3805i"
+      },
+      {
+        "wert": [
+          "enterasys,ws-ap3805i"
+        ],
+        "quelle": "openwrt_git_nvmem",
+        "beleg": "https://github.com/openwrt/openwrt/commit/3faa3a04bb44c3a265e95cb5f8ec31b37ba37520",
+        "stand": "Commit 2025-10-01 (Autor), gemergt 2025-10-22",
+        "sicherheit": "niedrig",
+        "bemerkung": "so in Commit-Titeln von Rosen Penev (3faa3a04, bd949eb5); Compatible im DTS ist extreme-networks,ws-ap3805i"
+      },
+      {
+        "wert": [
+          "WatchGuard AP300 (gleiche Platine, andere Software)"
+        ],
+        "quelle": "openwrt_pr_3762",
+        "beleg": "https://github.com/openwrt/openwrt/pull/3762",
+        "stand": "PR 2021-01-07 bis 2022-10-07",
+        "sicherheit": "niedrig",
+        "bemerkung": "mcprat: \"hardware is the same as WatchGuard AP300 #4072 but the software is different\"; akornow (Forum #32) Platine 7016A0886008; mpratt14 (#35): Chips können abweichen"
+      },
+      {
+        "wert": [
+          "30912 (WS-AP3805i-FCC, AP3805i_FCC)",
+          "30913 (WS-AP3805i-ROW, AP3805i_ROW)"
+        ],
+        "quelle": "fcc_4200_c2pc",
+        "beleg": "https://fccid.io/QXO-4200/Letter/Change-letter-2973854",
+        "stand": "Brief 2016-04-27",
+        "sicherheit": "hoch",
+        "bemerkung": "Bestellnummern der ExtremeCloud-Ready-Ausführung; laut C2PC-Brief elektrisch identisch zum WS-AP3805i"
+      },
+      {
+        "wert": [
+          "IdentiFi WS-AP3805i",
+          "ExtremeWireless WS-AP3805i",
+          "3805i Indoor Access Point"
+        ],
+        "quelle": "fcc_4200_quickref",
+        "beleg": "https://fccid.io/QXO-4200/User-Manual/User-manual-AP3805-2442894",
+        "stand": "Exhibit 2014-11-13 (Quick Reference, Copyright 2014, Dok.-Nr. 9034815)",
+        "sicherheit": "mittel",
+        "bemerkung": "Marketingnamen: IdentiFi (Quick Reference 2014), ExtremeWireless (Installation Guide 2016), Datenblatt-Titel"
+      },
+      {
+        "wert": [
+          "WS-AP3801i (gleiche Hardware, per Software nur ein Band gleichzeitig)"
+        ],
+        "quelle": "fcc_4200_rf_exposure",
+        "beleg": "https://fccid.io/QXO-4200/RF-Exposure-Info/MPE-2973798",
+        "stand": "Bericht FA482702-04 Rev. 01 vom 2016-03-25",
+        "sicherheit": "hoch",
+        "bemerkung": "\"The AP3805i and AP3801i use identical hardware\"; ob das OpenWrt-Image dort läuft, ist nicht belegt"
+      },
+      {
+        "wert": [
+          "WS-AP3805e (Schwestermodell mit vier RP-SMA-Buchsen, gleiche FCC ID)"
+        ],
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "nicht das Gluon-Image; OpenWrt/Gluon nennen nur ws-ap3805i"
+      }
+    ],
+    "platinen_kennung": [
+      {
+        "wert": "7016A0886008 v1.00 (Aufkleber v1.0.1)",
+        "quelle": "openwrt_forum_83481",
+        "beleg": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481/32",
+        "stand": "Beitrag #32 vom 2021-01-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "beobachtet an WatchGuard AP300, laut akornow \"exactly the same board as this extreme\" - am AP3805i selbst nicht belegt"
+      },
+      {
+        "wert": "Hauptplatine CAP7250AG-0 20 LFP; 5-GHz-Mini-PCIe-Karte 7016A0759004 V1.00",
+        "quelle": "fcc_4200_fotos_intern",
+        "beleg": "https://fccid.io/QXO-4200/Internal-Photos/Internal-photo-2441647",
+        "stand": "Exhibit 2014-11-13 (Prüfmuster ICC Projekt 482702)",
+        "sicherheit": "niedrig",
+        "bemerkung": "aus Fotos des FCC-Prüfmusters gelesen, Hauptplatinen-Aufdruck unscharf"
+      }
+    ],
+    "hw_release_uboot": [
+      {
+        "wert": "HW_RELEASE=513",
+        "quelle": "openwrt_forum_83481",
+        "beleg": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481/23",
+        "stand": "Beitrag #23 vom 2021-01-06",
+        "sicherheit": "niedrig",
+        "bemerkung": "U-Boot-Env eines Geräts; Bedeutung nicht dokumentiert"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm Atheros QCA9557-AT4A",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": "Chipaufdruck laut Commit (Gerät geöffnet)"
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9557",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9558 ver 1 rev 0",
+        "quelle": "openwrt_pr_3762",
+        "beleg": "https://github.com/openwrt/openwrt/pull/3762#issuecomment-1049701056",
+        "stand": "Kommentar 2022-02-24 (Bootlog nach sysupgrade, eigener Build Linux 5.10.100)",
+        "sicherheit": "niedrig",
+        "bemerkung": "so meldet es der Kernel im Bootlog; Widerspruch zum Chipaufdruck QCA9557-AT4A. Im Forum (#9) nennt Dragets QCA9558 \"almost identical\""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9557-AT4A",
+        "quelle": "fcc_4200_fotos_intern",
+        "beleg": "https://fccid.io/QXO-4200/Internal-Photos/Internal-photo-2441647",
+        "stand": "Exhibit 2014-11-13 (Prüfmuster ICC Projekt 482702)",
+        "sicherheit": "hoch",
+        "bemerkung": "Aufdruck QCA9557-AT4A PRY688.003C 1339 auf dem Foto des FCC-Prüfmusters; stützt den Commit gegen die Kernelmeldung QCA9558"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 720,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 720,
+        "quelle": "openwrt_pr_3762",
+        "beleg": "https://github.com/openwrt/openwrt/pull/3762#issuecomment-1049701056",
+        "stand": "Kommentar 2022-02-24 (Bootlog nach sysupgrade, eigener Build Linux 5.10.100)",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog \"CPU clock: 720.000 MHz\""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "MIPS 74Kc",
+        "quelle": "openwrt_pr_3762",
+        "beleg": "https://github.com/openwrt/openwrt/pull/3762#issuecomment-1049701056",
+        "stand": "Kommentar 2022-02-24 (Bootlog nach sysupgrade, eigener Build Linux 5.10.100)",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog \"CPU0 revision is: 00019750 (MIPS 74Kc)\""
+      },
+      {
+        "wert": "mips_24kc (Paketarchitektur)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 256,
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": "2x 128MB Nanya NT5TU64M16HG"
+      },
+      {
+        "wert": 256,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 256,
+        "quelle": "openwrt_pr_3762",
+        "beleg": "https://github.com/openwrt/openwrt/pull/3762#issuecomment-1049701056",
+        "stand": "Kommentar 2022-02-24 (Bootlog nach sysupgrade, eigener Build Linux 5.10.100)",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog \"Memory: 250920K/262144K available\""
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "2x Nanya NT5TU64M16HG",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2x NANYA NT5TU64M16HG-AC",
+        "quelle": "fcc_4200_fotos_intern",
+        "beleg": "https://fccid.io/QXO-4200/Internal-Photos/Internal-photo-2441647",
+        "stand": "Exhibit 2014-11-13 (Prüfmuster ICC Projekt 482702)",
+        "sicherheit": "hoch",
+        "bemerkung": "Foto FCC-Prüfmuster"
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR2",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus der Teilenummer NT5TU (Nanya DDR2)"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 64,
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": "SPANSION FL512SAIFG1"
+      },
+      {
+        "wert": 64,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "openwrt_pr_3762",
+        "beleg": "https://github.com/openwrt/openwrt/pull/3762#issuecomment-1049701056",
+        "stand": "Kommentar 2022-02-24 (Bootlog nach sysupgrade, eigener Build Linux 5.10.100)",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog \"spi-nor spi0.0: s25fl512s (65536 Kbytes)\""
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "Spansion S25FL512S (Aufdruck FL512SAIFG1)",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": "Typ s25fl512s laut Bootlog"
+      },
+      {
+        "wert": "Spansion FL512SAIF..",
+        "quelle": "fcc_4200_fotos_intern",
+        "beleg": "https://fccid.io/QXO-4200/Internal-Photos/Internal-photo-2441647",
+        "stand": "Exhibit 2014-11-13 (Prüfmuster ICC Projekt 482702)",
+        "sicherheit": "mittel",
+        "bemerkung": "Foto FCC-Prüfmuster, letzte Zeichen unscharf"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9557_extreme-networks_ws-ap3805i.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "jedec,spi-nor"
+      },
+      {
+        "wert": "NOR",
+        "quelle": "openwrt_pr_3762",
+        "beleg": "https://github.com/openwrt/openwrt/pull/3762#issuecomment-1049701056",
+        "stand": "Kommentar 2022-02-24 (Bootlog nach sysupgrade, eigener Build Linux 5.10.100)",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog spi-nor s25fl512s"
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "switch": [
+      {
+        "wert": "kein Switch: einzelner PHY Atheros AR8035-A an RGMII",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9557_extreme-networks_ws-ap3805i.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "eth0 an phy5, rgmii-id; Bootlog uid=004dd072 AR8035"
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": [
+          "Qualcomm Atheros QCA9557 (2.4 GHz, im SoC, 2x2 2T2R)",
+          "Qualcomm Atheros QCA9882-BR4A (5 GHz, PCIe, 2x2 2T2R)"
+        ],
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "Qualcomm Atheros QCA9557",
+          "Qualcomm Atheros QCA9882"
+        ],
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "AR9550 (ath9k, SoC-WMAC)",
+          "qca988x hw2.0 (ath10k)"
+        ],
+        "quelle": "openwrt_pr_3762",
+        "beleg": "https://github.com/openwrt/openwrt/pull/3762#issuecomment-1049701056",
+        "stand": "Kommentar 2022-02-24 (Bootlog nach sysupgrade, eigener Build Linux 5.10.100)",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog"
+      },
+      {
+        "wert": [
+          "Qualcomm Atheros QCA9557-AT4A (2.4 GHz, im SoC)",
+          "Qualcomm Atheros QCA9882-BR4A auf Mini-PCIe-Karte 7016A0759004 (5 GHz)"
+        ],
+        "quelle": "fcc_4200_fotos_intern",
+        "beleg": "https://fccid.io/QXO-4200/Internal-Photos/Internal-photo-2441647",
+        "stand": "Exhibit 2014-11-13 (Prüfmuster ICC Projekt 482702)",
+        "sicherheit": "hoch",
+        "bemerkung": "Fotos FCC-Prüfmuster; 5-GHz-Karte steckt im Mini-PCIe-Slot"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath9k, ath10k-ct",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kmod-ath10k-ct, ath10k-firmware-qca988x-ct",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "DEVICE_PACKAGES"
+      },
+      {
+        "wert": "ATH10K_PACKAGES_QCA9880",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": "QCA9557 2x2 2T2R"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": "\"MIMO 2x2:2 on both bands\""
+      },
+      {
+        "wert": 2,
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "2x2:2"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "VHT20/40/80"
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": "QCA9882-BR4A 2x2 2T2R"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": "\"MIMO 2x2:2 on both bands\""
+      },
+      {
+        "wert": 2,
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "2x2:2"
+      }
+    ],
+    "wlan_messung_forum": [
+      {
+        "wert": "5 GHz ca. 300 Mbit/s up/down, 2.4 GHz 42 down / 66 up",
+        "quelle": "openwrt_forum_83481",
+        "beleg": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481/19",
+        "stand": "Beitrag #19 vom 2021-01-05",
+        "sicherheit": "niedrig",
+        "bemerkung": "Speedtest des Portierers mit Vorabversion"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "nicht abnehmbar (keine abnehmbaren Antennen)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas: -"
+      },
+      {
+        "wert": "intern",
+        "quelle": "fcc_qxo",
+        "beleg": "https://fccid.io/QXO-4411AC/User-Manual/Users-Manual-2843906",
+        "stand": "Exhibit 2015-12-16",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus Extremes Namensschema: Handbuch QXO-4411AC (AP3935): \"i\"-Modell mit internen Antennen, \"e\"-Modell mit externen; für AP3805i nicht direkt belegt"
+      },
+      {
+        "wert": "intern",
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"integrated four antenna array\""
+      },
+      {
+        "wert": "intern (PIFA)",
+        "quelle": "fcc_4200_rf_exposure",
+        "beleg": "https://fccid.io/QXO-4200/RF-Exposure-Info/MPE-2973798",
+        "stand": "Bericht FA482702-04 Rev. 01 vom 2016-03-25",
+        "sicherheit": "hoch",
+        "bemerkung": "Internal PIFA antenna; Innenfotos zeigen vier Blechantennen am Platinenrand"
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 4,
+        "quelle": "openwrt_forum_83481",
+        "beleg": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481/23",
+        "stand": "Beitrag #23 vom 2021-01-06",
+        "sicherheit": "niedrig",
+        "bemerkung": "U-Boot-Env NUM_ANTENNAS=4 eines Geräts (2x2 je Band würde passen)"
+      },
+      {
+        "wert": 4,
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "4x internal antennas, 2.4GHz x 2, 5GHz x 2"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "LAN (eth0)",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN, PoE+ in"
+          }
+        ],
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Atheros AR8035-A (RGMII GbE with PoE+ IN)\""
+      },
+      {
+        "wert": "1x 1 Gbit",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "eth0 (1 Port)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9557_extreme-networks_ws-ap3805i.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "Uplink, PoE-Eingang 802.3af"
+          }
+        ],
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "RJ45 in der Anschlussmulde auf der Rückseite; Stecker mit Knickschutztülle passen nicht"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "10/100/1000 Base T Ethernet autosensing link: 1"
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "mittel",
+        "bemerkung": "eine Ethernet-Buchse, Strom per PoE+; ob zusätzlich eine DC-Buchse existiert, ist nicht belegt"
+      },
+      {
+        "wert": true,
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "eine Ethernet-Buchse; daneben eine 12-V-DC-Buchse für optionales Netzteil"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "802.3at",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": "\"PoE+ IN\"; ob 802.3af für den Betrieb reicht, ist nicht belegt"
+      },
+      {
+        "wert": "802.3at",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": "Power Supply: PoE 802.3at"
+      },
+      {
+        "wert": "802.3af",
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"AP3805 uses 802.3af Power over Ethernet (PoE) without reducing its performance\"; Midspan-Zubehör PD-3501G-ENT ist 802.3af. Widerspruch zu \"PoE+ IN\" im OpenWrt-Commit: laut Hersteller reicht 802.3af"
+      },
+      {
+        "wert": "802.3af",
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "802.3af compliant PoE PD"
+      },
+      {
+        "wert": "802.3af",
+        "quelle": "fcc_4200_quickref",
+        "beleg": "https://fccid.io/QXO-4200/User-Manual/User-manual-AP3805-2442894",
+        "stand": "Exhibit 2014-11-13 (Quick Reference, Copyright 2014, Dok.-Nr. 9034815)",
+        "sicherheit": "hoch",
+        "bemerkung": "Max. Power Consumption: 9.6W; 802.3af"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "openwrt_pr_3762",
+        "beleg": "https://github.com/openwrt/openwrt/pull/3762",
+        "stand": "PR 2021-01-07 bis 2022-10-07",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Extreme Networks AP3805i, Indoor Access Point\""
+      },
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"3805i/e Indoor Access Point\""
+      },
+      {
+        "wert": "innen",
+        "quelle": "fcc_4200_quickref",
+        "beleg": "https://fccid.io/QXO-4200/User-Manual/User-manual-AP3805-2442894",
+        "stand": "Exhibit 2014-11-13 (Quick Reference, Copyright 2014, Dok.-Nr. 9034815)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Operation of this device is restricted to indoor use only\""
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 3,
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "mittel",
+        "bemerkung": "Power (grün/gelb, zweifarbig), WiFi 5 (grün), WiFi 2 (grün)"
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": "LED count: 1 - Widerspruch zum Commit"
+      },
+      {
+        "wert": 3,
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power (grün/grün blinkend/rot), Radio 1 5 GHz (grün), Radio 2 2.4 GHz (grün)"
+      },
+      {
+        "wert": 3,
+        "quelle": "fcc_4200_quickref",
+        "beleg": "https://fccid.io/QXO-4200/User-Manual/User-manual-AP3805-2442894",
+        "stand": "Exhibit 2014-11-13 (Quick Reference, Copyright 2014, Dok.-Nr. 9034815)",
+        "sicherheit": "hoch",
+        "bemerkung": "LEDs: 3"
+      }
+    ],
+    "led_belegung": [
+      {
+        "wert": "Power grün GPIO19, Power gelb GPIO23, WLAN 5 GHz grün GPIO13, WLAN 2.4 GHz über ath9k-LED (Pin 22)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9557_extreme-networks_ws-ap3805i.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1 Power: grün = normal, grün blinkend = Selbsttest/Laden, rot = CPU-/Systemfehler; 2 Radio 1 (5 GHz) grün = an; 3 Radio 2 (2.4 GHz) grün = an",
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Stock-Firmware; DTS nennt Power grün/gelb (amber)"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "vorhanden (GPIO17), Lage nicht beschrieben",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9557_extreme-networks_ws-ap3805i.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "vorhanden",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": "BTN: Reset"
+      },
+      {
+        "wert": "1 Taster",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": "Button count: 1"
+      },
+      {
+        "wert": "vorne (Logo-Seite) am oberen Rand, gegenüber den LEDs, durch ein kleines Loch mit Stift erreichbar",
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Stock: < 5 s Neustart, >= 5 s Werkseinstellungen"
+      },
+      {
+        "wert": "Taster am Platinenrand",
+        "quelle": "fcc_4200_fotos_intern",
+        "beleg": "https://fccid.io/QXO-4200/Internal-Photos/Internal-photo-2441647",
+        "stand": "Exhibit 2014-11-13 (Prüfmuster ICC Projekt 482702)",
+        "sicherheit": "mittel",
+        "bemerkung": "Foto Platinenunterseite FCC-Prüfmuster"
+      }
+    ],
+    "watchdog_extern": [
+      {
+        "wert": "externer GPIO-Watchdog an GPIO16 (toggle, 20 s); ohne ihn Neustart nach etwa 30 s",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9557_extreme-networks_ws-ap3805i.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "interner ath79-wdt im DTS abgeschaltet"
+      },
+      {
+        "wert": "externer Watchdog, Refresh alle 20 s; Neustart nach 30 s, wenn nicht bedient",
+        "quelle": "openwrt_forum_83481",
+        "beleg": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481/5",
+        "stand": "Beitrag #5 vom 2020-12-28",
+        "sicherheit": "niedrig",
+        "bemerkung": "/proc/simple_config/external_wdt_debug der Stock-Firmware"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen J10 (4 Pins, \"UART pins\"; ob Stiftleiste bestückt ist, ist nicht belegt)",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "innen; FCC-Innenfoto zeigt einen bestückten 4-poligen Stecker am Platinenrand neben dem Mini-PCIe-Steckplatz",
+        "quelle": "fcc_4200_fotos_intern",
+        "beleg": "https://fccid.io/QXO-4200/Internal-Photos/Internal-photo-2441647",
+        "stand": "Exhibit 2014-11-13 (Prüfmuster ICC Projekt 482702)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Bezeichnung auf dem Foto nicht lesbar, Zuordnung zu J10 abgeleitet; Prüfmuster von 2014, Seriengeräte können abweichen. Gehäuse: Rückdeckel, Schraube am Rand"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "3.3V - GND - TX - RX (Pin mit Pfeil = 3.3V)",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Arrow Pad is 3.3V\""
+      },
+      {
+        "wert": "3.3V - GND - TX - RX (Pin mit Pfeil = 3.3V)",
+        "quelle": "openwrt_forum_83481",
+        "beleg": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481/97",
+        "stand": "Beitrag #97 vom 2023-09-11",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "Mehrere Nutzer erhalten im Bootloader nur Zeichensalat, die Kernelausgabe ist lesbar; U-Boot ließ sich dann nicht unterbrechen",
+        "quelle": "openwrt_forum_83481",
+        "beleg": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481/106",
+        "stand": "Beitrag #106 vom 2024-03-27",
+        "sicherheit": "niedrig",
+        "bemerkung": "vchrizz #86 (2022-10-27, gelöst mit Buspirate), Sir-Noot-Noot #106 (2024-03-27, ungelöst); Dragets #62 vermutet schlecht verbundene Masse"
+      },
+      {
+        "wert": "U-Boot-Zugang admin / new2day, bootdelay 2 s",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": "bootdelay laut PR-Text"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/generic",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath79/generic",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "extreme-networks_ws-ap3805i",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "22.03.0",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "22.03.0",
+        "quelle": "openwrt_releases",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v22.03.0/target/linux/ath79/image/generic.mk",
+        "stand": "Tag v22.03.0",
+        "sicherheit": "hoch",
+        "bemerkung": "generic.mk: in v22.03.0 enthalten, in v22.03.0-rc6 nicht"
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.2",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": "Tags bis v25.12.6 vorhanden, hwdata nicht nachgeführt"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot 1.2.0.03 (Mar 28 2016), Dual-Image PriImg/SecImg, bootcmd=run boot_flash",
+        "quelle": "openwrt_forum_83481",
+        "beleg": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481/23",
+        "stand": "Beitrag #23 vom 2021-01-06",
+        "sicherheit": "niedrig",
+        "bemerkung": "printenv eines Geräts"
+      }
+    ],
+    "installation": [
+      {
+        "wert": "serielle Konsole + U-Boot-TFTP: initramfs als 1D01A8C0.img, TFTP-Server 192.168.1.66/24, U-Boot-Variablen setzen, danach sysupgrade -n; kein Factory-Image",
+        "quelle": "openwrt_git_add",
+        "beleg": "https://github.com/openwrt/openwrt/commit/f8c87aa2d27ab405f284dd4357377ab5c893a345",
+        "stand": "Commit 2021-01-07 (Autor), gemergt 2022-08-28",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot TFTP + serial recovery",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "factory = false (kein Factory-Image in Gluon)",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ohne Öffnen denkbar: Stock-Firmware hat SSH offen, fw_setenv läuft (fw_env.config: /dev/mtd2 und /dev/mtd3, 0x00000 0x10000 0x40000)",
+        "quelle": "openwrt_forum_83481",
+        "beleg": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481/92",
+        "stand": "Beitrag #92 vom 2022-11-16",
+        "sicherheit": "niedrig",
+        "bemerkung": "vchrizz #86/#89, damadmai #92; vollständiger Ablauf nicht beschrieben"
+      }
+    ],
+    "stock_firmware": [
+      {
+        "wert": "Controller-gebunden (SERVICETYPE=siemens, ac_manager); Siemens-HiPath-Wireless-CA0-Zertifikat bei Flash 0x3f80000, in OpenWrt als Partition cert schreibgeschützt erhalten",
+        "quelle": "openwrt_forum_83481",
+        "beleg": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481/24",
+        "stand": "Beitrag #24 vom 2021-01-06",
+        "sicherheit": "niedrig",
+        "bemerkung": "Dragets #23/#24"
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "eth0 (label-mac-device), MAC aus U-Boot-Env ethaddr",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9557_extreme-networks_ws-ap3805i.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "OUI D8:84:66 (ethaddr, RADIOADDR0/1)",
+        "quelle": "openwrt_forum_83481",
+        "beleg": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481/23",
+        "stand": "Beitrag #23 vom 2021-01-06",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, ath79-generic, Image extreme-networks-ws-ap3805i, ohne Factory-Image",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "seit v2023.1 (nicht in v2022.1.4)",
+        "quelle": "gluon_commit_33adfb1",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/33adfb1aeb1eaf878780d9ee88d0a2ea1b83d4ce",
+        "stand": "Commit 2022-10-08",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bekannte_probleme": [
+      {
+        "wert": "OpenWrt 25.12.0 bis 25.12.2: nach sysupgrade kommt Ethernet nicht hoch (u-boot-env CRC-Fehler durch nvmem-Umstellung 3faa3a04); behoben ab 25.12.3 (bd949eb5). 24.10.x nicht betroffen (DTS v24.10.6 ohne nvmem-MAC)",
+        "quelle": "openwrt_git_ubootenv",
+        "beleg": "https://github.com/openwrt/openwrt/commit/bd949eb528d5b39c8e532ed2d0b1284ee27203b1",
+        "stand": "Commit 2026-04-10 (Autor), gemergt 2026-04-16",
+        "sicherheit": "hoch",
+        "bemerkung": "Forum #112-#121 bestätigt Fehler und Fix"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "forum": [
+      {
+        "wert": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+        "stand": "Seitenrevision 2026-04-12 15:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "QXO-4200",
+        "quelle": "fcc_4200_typenschild",
+        "beleg": "https://fccid.io/QXO-4200/Label/ID-Label-Model-3805i-2441644",
+        "stand": "Exhibit 2014-11-13 (PDF erstellt 2014-11-10)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild WS-AP3805i; gleiche FCC ID für WS-AP3805e, WS-AP3801i, 30912, 30913"
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "4141B-4200",
+        "quelle": "fcc_4200_typenschild",
+        "beleg": "https://fccid.io/QXO-4200/Label/ID-Label-Model-3805i-2441644",
+        "stand": "Exhibit 2014-11-13 (PDF erstellt 2014-11-10)",
+        "sicherheit": "hoch",
+        "bemerkung": "Industry Canada"
+      }
+    ],
+    "anatel_id": [
+      {
+        "wert": "02586-15-09558",
+        "quelle": "anatel",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558",
+        "stand": "Homologation 2018-04-04 (Zertifikat 2015-07-07, Status suspendiert)",
+        "sicherheit": "hoch",
+        "bemerkung": "Homologation für WS-AP3805i-ROW, WS-AP3805i, WS-AP3805e; Status suspendiert"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "keine Hardware-Revisionen bekannt; WS-AP3805i, 30912 (-FCC) und 30913 (-ROW) sind elektrisch identisch",
+        "quelle": "fcc_4200_c2pc",
+        "beleg": "https://fccid.io/QXO-4200/Letter/Change-letter-2973854",
+        "stand": "Brief 2016-04-27",
+        "sicherheit": "hoch",
+        "bemerkung": "C2PC 2016: nur neue Modellnummern aus Marketinggründen; FCC-Akte zeigt nur eine Platine. U-Boot-Env eines Feldgeräts: HW_RELEASE=513 (Forum #23)"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild mittig auf der runden Rückseite: \"Model: WS-AP3805i\", FCC ID QXO-4200, IC 4141B-4200, Input 12Vdc 1.25A, Made in Taiwan",
+        "quelle": "fcc_4200_typenschild",
+        "beleg": "https://fccid.io/QXO-4200/Label/ID-Label-Model-3805i-2441644",
+        "stand": "Exhibit 2014-11-13 (PDF erstellt 2014-11-10)",
+        "sicherheit": "hoch",
+        "bemerkung": "Lage laut https://fccid.io/QXO-4200/Label/Label-location-info-2441645. Bei 30912/30913 vermutlich WS-AP3805i-FCC/-ROW auf dem Schild (nicht gesehen). WS-AP3805e erkennt man an den vier goldenen RP-SMA-Buchsen am Gehäuserand"
+      }
+    ],
+    "herstellungsland": [
+      {
+        "wert": "Taiwan",
+        "quelle": "fcc_4200_typenschild",
+        "beleg": "https://fccid.io/QXO-4200/Label/ID-Label-Model-3805i-2441644",
+        "stand": "Exhibit 2014-11-13 (PDF erstellt 2014-11-10)",
+        "sicherheit": "hoch",
+        "bemerkung": "Made in Taiwan"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "1.17 Gbit/s (2.4 GHz 300 Mbit/s, 5 GHz 867 Mbit/s)",
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "entspricht AC1200 (Bezeichnung abgeleitet)"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": {
+          "5": 26,
+          "2.4": 25
+        },
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "Max radiated power; tatsächlich abhängig von Land und Kanal"
+      },
+      {
+        "wert": {
+          "2.4": 26.53,
+          "5_unii1": 27.58,
+          "5_unii3": 25.94
+        },
+        "quelle": "fcc_4200_rf_exposure",
+        "beleg": "https://fccid.io/QXO-4200/RF-Exposure-Info/MPE-2973798",
+        "stand": "Bericht FA482702-04 Rev. 01 vom 2016-03-25",
+        "sicherheit": "hoch",
+        "bemerkung": "max. conducted power laut FCC-MPE-Bericht (US-Zulassung)"
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "getrennt (je 2 für 2.4 GHz und 5 GHz)",
+        "quelle": "fcc_4200_quickref",
+        "beleg": "https://fccid.io/QXO-4200/User-Manual/User-manual-AP3805-2442894",
+        "stand": "Exhibit 2014-11-13 (Quick Reference, Copyright 2014, Dok.-Nr. 9034815)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"4 internal single band antenna assemblies\""
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4": 3,
+          "5": 5
+        },
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "Max antenna gain (integrated antenna); gleich im Installation Guide"
+      },
+      {
+        "wert": {
+          "2.4": 3.52,
+          "5_unii1": 5.4,
+          "5_unii3": 5.68
+        },
+        "quelle": "fcc_4200_rf_exposure",
+        "beleg": "https://fccid.io/QXO-4200/RF-Exposure-Info/MPE-2973798",
+        "stand": "Bericht FA482702-04 Rev. 01 vom 2016-03-25",
+        "sicherheit": "hoch",
+        "bemerkung": "PIFA-Werte im FCC-MPE-Bericht"
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "Rundstrahler-Innenantennen, Strahlungsdiagramme nur als Bild",
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Diagramme 2.4/5 GHz horizontal/vertikal (0 Grad = Vorderseite) nicht ausgewertet; \"rund\" abgeleitet aus Bauform Deckengerät"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "ja, DC-Rundbuchse neben der LAN-Buchse in der Anschlussmulde auf der Rückseite",
+        "quelle": "fcc_4200_fotos_extern",
+        "beleg": "https://fccid.io/QXO-4200/External-Photos/External-photo-2441646",
+        "stand": "Exhibit 2014-11-13 (Prüfmuster ICC Projekt 482702)",
+        "sicherheit": "hoch",
+        "bemerkung": "Fotos Seiten 3-4; Quick Reference: External Power Supply Port (Item 7). Nicht gleichzeitig mit PoE betreiben (Quick Reference)"
+      },
+      {
+        "wert": "ja (12V DC input)",
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Back View Item 4 External Power Supply Port"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 12,
+        "quelle": "fcc_4200_typenschild",
+        "beleg": "https://fccid.io/QXO-4200/Label/ID-Label-Model-3805i-2441644",
+        "stand": "Exhibit 2014-11-13 (PDF erstellt 2014-11-10)",
+        "sicherheit": "hoch",
+        "bemerkung": "Input: 12Vdc 1.25A"
+      },
+      {
+        "wert": 12,
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "12V DC input"
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 1.25,
+        "quelle": "fcc_4200_typenschild",
+        "beleg": "https://fccid.io/QXO-4200/Label/ID-Label-Model-3805i-2441644",
+        "stand": "Exhibit 2014-11-13 (PDF erstellt 2014-11-10)",
+        "sicherheit": "hoch",
+        "bemerkung": "Input: 12Vdc 1.25A"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": false,
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Lieferumfang ohne Netzteil; WS-PSI12V-MR1 optional, separat zu bestellen"
+      },
+      {
+        "wert": false,
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"An optional external power supply is available\""
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "WS-PSI12V-MR1: 90-264 V AC, 12 V DC, 110 x 31 x 45 mm, 140 g, 0-40 °C, sechs Länderadapter",
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "optionales Zubehör"
+      },
+      {
+        "wert": "Powertron PA1015-2I (PA1015-120IB125): 100-240 V~ 0.4 A, 12 V 1.25 A 15 W max, Wechselstecker",
+        "quelle": "fcc_4200_fotos_extern",
+        "beleg": "https://fccid.io/QXO-4200/External-Photos/External-photo-2441646",
+        "stand": "Exhibit 2014-11-13 (Prüfmuster ICC Projekt 482702)",
+        "sicherheit": "mittel",
+        "bemerkung": "Netzteil des FCC-Prüfmusters; dass WS-PSI12V-MR1 dieses Netzteil ist, ist nicht belegt"
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 9.6,
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "Max power consumption"
+      },
+      {
+        "wert": 9.6,
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Maximum power consumption"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 45 °C",
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "Luftfeuchte 0-95 % nicht kondensierend; Lagerung -50 bis +70 °C"
+      },
+      {
+        "wert": "0 bis 45 °C",
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse": [
+      {
+        "wert": "Kunststoff, rund, weiß; plenum rated (UL 2043)",
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "Installation Guide: Plastic housing"
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Decke (abgehängte Decke, T-Schiene 9/16 und 15/16 Zoll) und Wand/feste Decke, Halterungen beiliegend",
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "Flush and protruded drop-ceiling bracket; Wall mounting included"
+      },
+      {
+        "wert": "Decke (T-Schiene, Clips 15/16 und 9/16 Zoll, Abstandshalter) oder Wand/Decke mit Halteplatte (zwei Schlüssellöcher, Dübel), AP per Drehung um etwa 90 Grad einrasten",
+        "quelle": "fcc_4200_quickref",
+        "beleg": "https://fccid.io/QXO-4200/User-Manual/User-manual-AP3805-2442894",
+        "stand": "Exhibit 2014-11-13 (Quick Reference, Copyright 2014, Dok.-Nr. 9034815)",
+        "sicherheit": "hoch",
+        "bemerkung": "Netzteil hat keine Wandhalterung"
+      }
+    ],
+    "montageloecher": [
+      {
+        "wert": "Halteplatte mit zwei Schlüssellochschlitzen; am AP zwei Befestigungsschrauben im Boden",
+        "quelle": "fcc_4200_quickref",
+        "beleg": "https://fccid.io/QXO-4200/User-Manual/User-manual-AP3805-2442894",
+        "stand": "Exhibit 2014-11-13 (Quick Reference, Copyright 2014, Dok.-Nr. 9034815)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": {
+          "durchmesser": 157,
+          "hoehe": 41
+        },
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "6.18\" x 1.63\" (Outer Diameter x Height), umgerechnet"
+      },
+      {
+        "wert": {
+          "durchmesser": 170
+        },
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Case diameter 6.69 inches (17 cm) - Widerspruch zum Datenblatt (6.18\"); 6.71\" nennt das Datenblatt für AP3805e"
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 340,
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "0.75 lbs (0.34 kg) - AP3805i"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "fcc_4200_fotos_intern",
+        "beleg": "https://fccid.io/QXO-4200/Internal-Photos/Internal-photo-2441647",
+        "stand": "Exhibit 2014-11-13 (Prüfmuster ICC Projekt 482702)",
+        "sicherheit": "niedrig",
+        "bemerkung": "kein Lüfter auf Innenfotos, Lüftungsschlitze im Gehäuse; Hersteller nennt es nicht ausdrücklich"
+      }
+    ],
+    "kensington": [
+      {
+        "wert": "ja, auf der Unterseite/Rückseite",
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "jtag": [
+      {
+        "wert": "J1: 2x7 unbestückte Pads mit Pfeil neben dem SoC-Schirm",
+        "quelle": "fcc_4200_fotos_intern",
+        "beleg": "https://fccid.io/QXO-4200/Internal-Photos/Internal-photo-2441647",
+        "stand": "Exhibit 2014-11-13 (Prüfmuster ICC Projekt 482702)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Funktion JTAG abgeleitet (Forum #62: JTAG-Lötpunkte nahe der PCIe-Karte)"
+      }
+    ],
+    "stock_firmware_version": [
+      {
+        "wert": "ExtremeWireless ab V9.15.01 (WS-AP3805i); 30912/30913 ab 10.01.04 (ExtremeCloud Ready)",
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "Ordering Information"
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "quelle": "extreme_datenblatt",
+        "beleg": "http://cdn-docs.av-iq.com/dataSheet/Wireless%20AP%203805.pdf",
+        "stand": "Datenblatt 9516-0516-19 (PDF 2016-05-19)",
+        "sicherheit": "hoch",
+        "bemerkung": "Kopie bei AV-iQ; Original bei Extreme nicht frei abrufbar"
+      }
+    ],
+    "installationsanleitung": [
+      {
+        "wert": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "quelle": "extreme_installguide",
+        "beleg": "https://fccid.io/ANATEL/02586-15-09558/Installation-Guide_WS-AP3805i-ROW/67DC6289-14E5-4AD4-8683-2FC8288BA415/PDF",
+        "stand": "Installation Guide 9034961, Published April 2016 (PDF 2016-04-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "ANATEL-Kopie; Extreme-Archiv https://documentation.extremenetworks.com/Active_Archive/Wireless_Access_Points/HW_Doc/9034816_AP3805_Install_Guide.pdf liefert 401"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/QXO",
+      "kategorie": "fcc_id",
+      "grund": "FCC-ID des AP3805i nicht gefunden: keine QXO-Zulassung mit 3805; möglicherweise unter Senao-Grantee oder einer QXO-Nummer ohne Modellnamen (QXO-4200, QXO-57G45 nicht geprüft). Typenschildfoto fehlt.",
+      "status": "erledigt 2026-10-19",
+      "ergebnis": "FCC ID QXO-4200 (Typenschild WS-AP3805i), Handbuch, Typenschild, Fotos, MPE ausgewertet"
+    },
+    {
+      "url": "https://www.extremenetworks.com/support/documentation/",
+      "kategorie": "datenblatt",
+      "grund": "Datenblatt/Installation Guide AP3805i nicht gefunden (Dokuseite 404); offen: DC-Buchse ja/nein, Leistungsaufnahme, PoE-Klasse/802.3af-Betrieb, Abmessungen, Gewicht, Montage, Temperatur, Antennengewinn",
+      "status": "weitgehend erledigt 2026-10-19",
+      "ergebnis": "Datenblatt (AV-iQ-Kopie) und Installation Guide (ANATEL-Kopie) ausgewertet: DC-Buchse 12 V, 9.6 W, 802.3af, Maße, Gewicht, Montage, 0-45 °C, Antennengewinn. Offen nur noch DC-Steckermaß"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3805i/83481/1",
+      "kategorie": "fotos",
+      "grund": "Beitrag #1 und weitere verlinken Platinenfotos sowie OEM-Bootlog/Env auf pastebin (g5xr0a2g, VcebmjMP); Lage Reset-Knopf, J10 bestückt oder nicht, DC-Buchse auf Fotos prüfen",
+      "status": "teilweise erledigt 2026-10-19",
+      "ergebnis": "Reset-Lage und DC-Buchse aus Herstellerunterlagen/FCC-Fotos geklärt; offen: ob J10 an Seriengeräten bestückt ist"
+    },
+    {
+      "url": "https://github.com/aveexy/openwrt_ap3805i_autoprovision",
+      "kategorie": "installation",
+      "grund": "Auto-Provisioning-Skripte (2022-10/2023-02) für Installation ohne serielle Konsole; run.sh startet nur DHCP/dnsmasq, eigentlicher Ablauf in weiteren Dateien nicht gelesen"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/pull/4072",
+      "kategorie": "varianten",
+      "grund": "WatchGuard AP300 laut mcprat gleiche Hardware; Abgleich der Chips/Platine nicht gemacht"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/extreme_networks/extreme_networks_ws-ap3805i",
+      "kategorie": "led_anzahl",
+      "grund": "hwdata nennt 1 LED, Commit 3 (Power zweifarbig, WLAN 5, WLAN 2); am Gerät zählen",
+      "status": "erledigt 2026-10-19",
+      "ergebnis": "Hersteller nennt 3 LEDs (Installation Guide, Quick Reference); hwdata-Wert 1 ist falsch"
+    },
+    {
+      "url": "https://documentation.extremenetworks.com/Active_Archive/Wireless_Access_Points/HW_Doc/9034816_AP3805_Install_Guide.pdf",
+      "kategorie": "datenblatt",
+      "grund": "Original-Installation-Guide WS-AP3805i (9034816) und Quick Reference 9034960; Extreme-Archiv liefert 401. Gegenprüfen: Gehäusedurchmesser 157 mm (Datenblatt) gegen 17 cm (Guide 9034961)"
+    },
+    {
+      "url": "https://fccid.io/QXO-4200/Test-Report/Test-report-15-247-1-2442897",
+      "kategorie": "dc_buchse_mass",
+      "grund": "DC-Steckermaß (Hohlstecker) nirgends genannt; FCC-Testberichte (3-5 MB) oder Datenblatt Powertron PA1015-2I könnten es enthalten"
+    },
+    {
+      "url": "https://fccid.io/QXO-4200/Internal-Photos/Internal-photo-2441647",
+      "kategorie": "seriell",
+      "grund": "4-poliger Stecker am Platinenrand: Bezeichnung (J10?) auf 1015-px-Fotos nicht lesbar; an einem Seriengerät prüfen"
+    },
+    {
+      "url": "https://fccid.io/ANATEL/02586-15-09558",
+      "kategorie": "fotos",
+      "grund": "ANATEL-Fotos Externas/Selo Anatel (2015/2016) nicht geladen; könnten Typenschild der -ROW-Ausführung zeigen"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "fertig",
+    "anfragen": 19,
+    "notiz": "Zweiter Lauf: FCC ID QXO-4200 gefunden (Produktcode ohne Modellnamen) und Typenschild, Quick Reference, MPE-Berichte, C2PC-Brief, Außen- und Innenfotos ausgewertet; Herstellerdatenblatt (AV-iQ-Kopie, 2016) und Installation Guide 9034961 (ANATEL-Kopie, 2016) gelesen. Geklärt: innen, 802.3af reicht (9.6 W max), 12-V-DC-Buchse 1.25 A (Netzteil optional, nicht beiliegend), 3 LEDs, Reset vorne durch Loch, Maße/Gewicht, Montage Decke/Wand, 0-45 °C, Antennen intern 3/5 dBi, keine HW-Revisionen (30912/30913 elektrisch identisch), SoC-Aufdruck QCA9557-AT4A auf FCC-Foto. Offen: DC-Steckermaß, J10 an Seriengeräten bestückt, Durchmesser 157 mm vs. 17 cm."
+  },
+  "lauf_vorher": [
+    {
+      "datum": "2026-10-19",
+      "status": "teilweise",
+      "anfragen": 68,
+      "notiz": "Nicht im ToH-Dump; Live-hwdata, OpenWrt-Commits (Erstunterstützung, Modellname, nvmem, u-boot-env-Fix), PR #3762 mit Bootlogs, DTS/Image-Makefile, Release-Tags, Gluon-Target/Commit und alle 118 Beiträge des OpenWrt-Forumsthreads ausgewertet. Keine OpenWrt-Wiki-Seite, keine DeviWiki-/WikiDevi-Seite, keine FCC-ID gefunden, Extreme-Dokuseite 404. Unbekannt: DC-Buchse, Leistung, Abmessungen, Montage, Antennengewinn, Lage Reset. Wichtig: OpenWrt 25.12.0-25.12.2 Ethernet-Fehler, ab 25.12.3 behoben."
+    }
+  ]
+}

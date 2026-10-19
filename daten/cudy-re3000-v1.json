@@ -1,0 +1,2143 @@
+{
+  "image": "cudy-re3000-v1",
+  "modell": "Cudy RE3000 v1",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+      "stand": "Seitenrevision 2026-08-21 06:39",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Nicht im lokalen ToH-Dump quellen-toh-2026-10-18.tsv.gz (toh_suche.py fand nur andere Cudy-Modelle, grep nach re3000 leer); daher Live-Seite per ?do=export_raw. Seite ohne Device Page (devicepage leer).",
+      "dump_suche": "quellen/quellen-toh-2026-10-18.tsv.gz: kein Eintrag"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+      "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Rohtext per ?action=raw, Revisionen per api.php; Eintrag \"Details from on hand example\" (Rayknight 2024-03-27)"
+    },
+    "openwrt_git_support": {
+      "url": "https://github.com/openwrt/openwrt/commit/e8f75973172749874afa13e4f746acd8cb515de2",
+      "stand": "Commit 2024-02-16 (Autor), gemergt 2024-02-29",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_pr_14651": {
+      "url": "https://github.com/openwrt/openwrt/pull/14651",
+      "stand": "PR 2024-02-16 bis 2024-02-29",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-re3000-v1.dts",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_02_network": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/filogic/base-files/etc/board.d/02_network",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_bootlog": {
+      "url": "https://github.com/openwrt/openwrt/files/14424657/openwrt-boot.txt",
+      "stand": "Anhang PR 14651, 2024-02-27 (OpenWrt-Build vom 2024-02-26)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_issue_18020": {
+      "url": "https://github.com/openwrt/openwrt/issues/18020",
+      "stand": "Issue 2025-02-18 (offen)",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_commit": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/6cae5224755fb1a941e805e2d607b2339f31f52d",
+      "stand": "Commit 2026-01-10; enthalten ab v2023.2.6 und v2025.1.1",
+      "abgerufen": "2026-10-19"
+    },
+    "cudy_produktseite": {
+      "url": "https://www.cudy.com/products/re3000-1-0",
+      "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Weiterleitung von https://www.cudy.com/productinfo/1627603.html (ToH-Link)"
+    },
+    "cudy_produktseite_v2": {
+      "url": "https://www.cudy.com/products/re3000-2-0",
+      "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+      "abgerufen": "2026-10-19"
+    },
+    "cudy_download": {
+      "url": "https://www.cudy.com/pages/download-center/re3000-1-0",
+      "stand": "Live-Seite 2026-10-19, neueste Firmware 2.5.33 vom 09-Sep-2026",
+      "abgerufen": "2026-10-19"
+    },
+    "cudy_datenblatt": {
+      "url": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+      "stand": "PDF ohne Datum (4 Seiten)",
+      "abgerufen": "2026-10-19"
+    },
+    "cudy_regulatory": {
+      "url": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_RE3000.pdf?v=9578908102602482082",
+      "stand": "PDF ohne Datum (8 Seiten)",
+      "abgerufen": "2026-10-19"
+    },
+    "cudy_ce_doc": {
+      "url": "https://www.cudy.com/cdn/shop/files/CE_DOC_RE3000.pdf?v=3206071028734605861",
+      "stand": "Ausstellungsdatum 2025-02-19",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_rt02": {
+      "url": "https://fccid.io/2APRGRT02",
+      "stand": "Grant 2023-06-08 (Original Equipment)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Sammelzulassung: lt. Modellerklärung identisch WR3000, WR3000 Plus, WR1500, TR3000, M3000, RE3000, AP3000, AP3000 Outdoor; Label, Handbuch und vermutlich Fotos zeigen den WR3000, nicht den RE3000"
+    },
+    "fcc_rt02_modell": {
+      "url": "https://fccid.io/2APRGRT02/Letter/Letter-of-declaration-model-difference-6580979",
+      "stand": "Schreiben 2023-04-17, eingereicht 2023-06-07",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_rt02_label": {
+      "url": "https://fccid.io/2APRGRT02/Label/Label-and-label-location-6580976",
+      "stand": "Exhibit 2023-06-08 (PDF 2023-04-13)",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_rt02_handbuch": {
+      "url": "https://fccid.io/2APRGRT02/User-Manual/User-manual-6581057",
+      "stand": "Exhibit 2023-06-08 (PDF 2023-01-13)",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_re01": {
+      "url": "https://fccid.io/2APRGRE01",
+      "stand": "Grant 2022-03-14 (Original Equipment)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Von ToH als FCC-ID genannt, laut Modellerklärung aber RE1800/RE1200/RE1500 (2022, WiFi 5/AX1800-Familie), nicht RE3000"
+    },
+    "fcc_re01_modell": {
+      "url": "https://fccid.io/2APRGRE01/Letter/Declaration-Letter-of-Model-Difference-5749081",
+      "stand": "Schreiben 2022-03-11",
+      "abgerufen": "2026-10-19"
+    },
+    "wikidevi_foto_top": {
+      "url": "https://wikidevi.wi-cat.ru/images/7/7b/Cudy_RE3000_Top.jpeg",
+      "stand": "Upload 2024-04-06",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Platine ohne Kühlkörper, als Bild ausgewertet (Ausschnitte J6 und Platinenaufdruck); Cache bilder/"
+    },
+    "wikidevi_foto_internal": {
+      "url": "https://wikidevi.wi-cat.ru/images/9/98/Cudy_RE3000_Internal.jpeg",
+      "stand": "Upload 2024-04-06",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Platine mit Kühlkörper (3 Schrauben), als Bild ausgewertet"
+    },
+    "wikidevi_foto_power": {
+      "url": "https://wikidevi.wi-cat.ru/images/f/f3/Cudy_RE3000_Power.jpeg",
+      "stand": "Upload 2024-04-06",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Netzteilplatine im Gehäuseunterteil, als Bild ausgewertet"
+    },
+    "freifunk_darmstadt_1010": {
+      "url": "https://forum.darmstadt.freifunk.net/t/installation-cudy-tr3000/1010",
+      "stand": "Thread 2025-04-09, Beitrag #4 2026-01-13",
+      "abgerufen": "2026-10-19"
+    },
+    "werkstatt": {
+      "url": "router-werkstatt docs/cudy-installation.md (git.ideenwerk.me/neanderfunk/routerwerkstatt)",
+      "stand": "Stand 15.10.2026 (Commit a9781bd1, 2026-10-15)",
+      "abgerufen": "2026-10-19",
+      "datei": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/cudy-installation.md"
+    },
+    "werkstatt_erstinstallation": {
+      "url": "router-werkstatt docs/erstinstallation-ohne-factory.md (git.ideenwerk.me/neanderfunk/routerwerkstatt)",
+      "stand": "Commit 0d84e25e, 2026-10-10",
+      "abgerufen": "2026-10-19",
+      "datei": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erstinstallation-ohne-factory.md"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=RE3000&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Keine Treffer für RE3000; Suche \"Cudy\" listet nur Cudy WR1000 V1; Seite Cudy_RE3000 -> 404"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=RE3000+repo:openwrt/openwrt",
+      "stand": "Suchergebnis 2026-10-19 (3 Commits, neuester 2025-05-19)",
+      "abgerufen": "2026-10-19"
+    },
+    "freifunk_forum_suche": {
+      "url": "https://forum.freifunk.net/search.json?q=RE3000",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine Treffer"
+    }
+  },
+  "roh": {
+    "toh": {
+      "Device Type_devicetype": "WiFi Router",
+      "Brand": "Cudy",
+      "Model": "RE3000",
+      "Versions": "v1",
+      "FCCID_urls": "https://fcc.io/2APRGRE01",
+      "Availability_availability": "Available 2024",
+      "Where available": "amazon.com",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=e8f75973172749874afa13e4f746acd8cb515de2",
+      "Supported Since Rel_releasesince": "23.05.3",
+      "Supported Current Rel_releasecurrent": "25.12.5",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "mediatek",
+      "Subtarget": "filogic",
+      "Package architecture_pkg-arch": "aarch64_cortex-a53",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "MediaTek MT7981BA",
+      "CPU Cores_numcores_": "2",
+      "CPU MHz": "1300",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "256",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "-",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "MediaTek MT7981BA, MediaTek MT7976CN",
+      "WLAN 2.4GHz_wlan24": "b/g/n/ax",
+      "WLAN 5.0GHz_wlan50": "a/n/ac/ax",
+      "WLAN 6.0GHz_wlan60": "-",
+      "WLAN 60.0GHz_wlan60g": "-",
+      "WLAN Comments_": "2.4GHz: 2x2:2 MIMO, 5GHz: 2X3:2 MIMO",
+      "WLAN driver_wlan-drivers": "mt76",
+      "Detachable Antennas_numdetachantenna": "2",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "No",
+      "LED count_numled": "4",
+      "Button count_numbutton": "2",
+      "GPIOs_numgpio": "¿",
+      "Power Supply": "100-240 VAC, 50/60Hz, 0.3A",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "RE3000",
+      "Git search_search-gits": "RE3000",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+      "WikiDevi ID_hwinfo-ids": "Cudy_RE3000",
+      "OEM Device Homepage URL_url": "https://www.cudy.com/productinfo/1627603.html",
+      "Firmware OEM Stock URL_url": "https://www.cudy.com/pages/download-center/re3000-1-0",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/mediatek/filogic/openwrt-25.12.5-mediatek-filogic-cudy_re3000-v1-initramfs-kernel.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/mediatek/filogic/openwrt-25.12.5-mediatek-filogic-cudy_re3000-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-cudy_re3000-v1-initramfs-kernel.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-cudy_re3000-v1-squashfs-sysupgrade.bin",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "see git-commit",
+      "Comment recovery": "",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "wikidevi": {
+      "brand": "Cudy",
+      "model": "RE3000",
+      "revision": "(REV1.1 sp2)",
+      "series": "AX3000",
+      "ean": "6971690792909",
+      "asin": "B0BRK4BHYD",
+      "manuf_country": "China",
+      "is_manuf": "No",
+      "manuf": "",
+      "availability": "currently shipping",
+      "est_release_date": "01/2023",
+      "fcc_date": "06/08/2023",
+      "fcc_id": "2APRGRT02",
+      "pcb_id": "300200004",
+      "type": "range extender",
+      "pwr_v": "100-240",
+      "pwr_amp": "0.3",
+      "pwr_conn": "NEMA 1-15P",
+      "cpu1_brand": "MediaTek",
+      "cpu1_model": "MT7981BA",
+      "cpu1_cspeed": "1.3 GHz",
+      "cpu1_cores": "2",
+      "fla1": "16",
+      "fla1_brand": "XMC",
+      "fla1_model": "XM25QH128CHIQ",
+      "ram1": "256",
+      "ram1_brand": "ESMT",
+      "ram1_model": "M15T2G16128A-DEB",
+      "serial": "yes,, 4-pin header,, unpopulated,, 3.3V TTL,, (115200 8N1)",
+      "wi1_chip1_brand": "MediaTek",
+      "wi1_chip1_model": "MT7981BA",
+      "wi1_chip2_brand": "MediaTek",
+      "wi1_chip2_model": "MT7976CN",
+      "wi1_802dot11_protocols": "bgn+ax",
+      "wi1_ant_conn": "U.FL (internal)",
+      "wi1_txchains": "2",
+      "wi1_rxchains": "2",
+      "wi1_sstreams": "2",
+      "wi2_chip1_brand": "MediaTek",
+      "wi2_chip1_model": "MT7981BA",
+      "wi2_chip2_brand": "MediaTek",
+      "wi2_chip2_model": "MT7976CN",
+      "wi2_802dot11_protocols": "an+ac+ax",
+      "wi2_ant_conn": "U.FL (internal)",
+      "wi2_txchains": "2",
+      "wi2_rxchains": "3",
+      "wi2_sstreams": "2",
+      "eth_cpu": "true",
+      "lan_speed": "1GbE",
+      "lan_ports": "1",
+      "flags": "Wi-Fi 6, MU-MIMO, WPA3, Mesh, heatsink",
+      "stock_boot": "U-Boot;2022.07-rc3;",
+      "stock_os": "Linux;5.4.219;",
+      "tp_firmware": "OpenWrt",
+      "802dot11_protocols": "abgn+ac+ax",
+      "default_ssid": "Cudy-Extender",
+      "default_ip": "192.168.10.254",
+      "default_pass": "admin",
+      "oui": "80:AF:CA",
+      "oui_eth": "80:AF:CA",
+      "_hardware_specification": [
+        "CPU: MediaTek MT7981BA @1.3GHz (Filogic 820), SoC: Dual-core ARM (Cortex-A53)",
+        "Flash: 16MB (SPI) XMC @133MHz",
+        "Memory: 256MB (DDR3L) SDRAM",
+        "Wi-Fi: MediaTek MT7981BA/MT7976CN, 802.11abgn/ac/ax Dual Band (2.4/5GHz), 2x2 2.4GHz + 3x3 5GHz (2x2 + Zero-wait DFS)",
+        "Network: 1x 1GbE port",
+        "Power Source: AC"
+      ],
+      "_datenraten": [
+        "574 Mbps - 2SS 2.4GHz 802.11ax (40MHz chan.)",
+        "2402 Mbps - 2SS 5GHz 802.11ax (160MHz chan.) = AX3000 class"
+      ],
+      "_tagline": "AX3000 Dual Band Wi-Fi 6 Range Extender",
+      "_bilder": [
+        "File:Cudy RE3000 Top.jpeg (Board Top, 2024-04-06)",
+        "File:Cudy RE3000 Internal.jpeg (Internal, 2024-04-06)",
+        "File:Cudy RE3000 Power.jpeg (Power, 2024-04-06)"
+      ]
+    },
+    "openwrt_git_support": {
+      "titel": "mediatek: filogic: add support for Cudy RE3000 v1",
+      "autor": "Robert Senderek",
+      "committer": "Hauke Mehrtens",
+      "nachricht": "MT7981B /256MB /16MB SPI (XM25QH128C)\nAX 2.4Ghz\nAX 5Ghz 160Mhz wide\n1Gbit LAN\n\nOEM:\nroot@RE3000:~# ifconfig |grep HWaddr\nbr-lan    Link encap:Ethernet  HWaddr 80:XX:XX:08:XX:X0 (label)\nbr-wan    Link encap:Ethernet  HWaddr 80:XX:XX:08:XX:X0\neth0      Link encap:Ethernet  HWaddr 80:XX:XX:08:XX:X0\nra0       Link encap:Ethernet  HWaddr 80:XX:XX:08:XX:X0\nra2       Link encap:Ethernet  HWaddr 82:XX:XX:28:XX:X0\nrax0      Link encap:Ethernet  HWaddr 82:XX:XX:38:XX:X0\nrax2      Link encap:Ethernet  HWaddr 82:XX:XX:58:XX:X0\n\nOpenWrt\nroot@OpenWrt:/# ifconfig |grep HW\nbr-lan    Link encap:Ethernet  HWaddr 80:XX:XX:08:XX:X0\neth0      Link encap:Ethernet  HWaddr 80:XX:XX:08:XX:X0\nphy0-ap0  Link encap:Ethernet  HWaddr 80:XX:XX:08:XX:X0\nphy1-ap0  Link encap:Ethernet  HWaddr 82:XX:XX:08:XX:X1\n\n tftp Installation via u-boot:\n\nConnect TTL converter \nconnector is under the radiator Set speed 115200 8 N 1\nInterrupt boot process by holding down-arrow key during boot then\n>> 6. Load image\n>> 0 - TFTP client (Default)\nenter IP adresses and initramfs-kernel.bin\n\nwrite to flash via sysupgrade or gui\n\nTested And\nSigned-off-by: Robert Senderek [robert.senderek@10g.pl](mailto:robert.senderek@10g.pl)",
+      "dateien": [
+        "target/linux/mediatek/base-files/lib/preinit/05_set_preinit_iface",
+        "target/linux/mediatek/dts/mt7981b-cudy-re3000-v1.dts",
+        "target/linux/mediatek/filogic/base-files/etc/board.d/01_leds",
+        "target/linux/mediatek/filogic/base-files/etc/board.d/02_network",
+        "target/linux/mediatek/filogic/base-files/etc/hotplug.d/ieee80211/11_fix_wifi_mac",
+        "target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh",
+        "target/linux/mediatek/image/filogic.mk"
+      ],
+      "01_leds": "ucidef_set_led_netdev \"lan\" \"lan\" \"green:lan\" \"eth0\" \"link tx rx\"",
+      "11_fix_wifi_mac": "phy0 = bdinfo 0xde00, phy1 = bdinfo 0xde00 +1 mit LA-Bit",
+      "commits_spaeter": [
+        "a51fd20e0d 2025-03-21 mediatek: filogic: PHY LEDs do have an address, gpio-leds don't",
+        "ac5561906e 2025-05-19 mediatek: filogic: fix unit name leading 0s dtc warnings"
+      ],
+      "backport_23_05": "PR 14781 \"[23.05] mediatek: filogic: add support for Cudy RE3000 v1\" (2024-03-03, geschlossen)"
+    },
+    "openwrt_pr_14651": {
+      "kommentare": [
+        "2024-02-27 nicefile: OpenWrt boot log (openwrt-boot.txt)",
+        "2024-02-27 hauke: You are not using NMBM for the flash, many Mediatek vendor boot loader use it.",
+        "2024-02-27 dangowrt: From what I can tell this device uses SPI-NOR and hence doesn't require NMBM which is used only on NAND flash."
+      ]
+    },
+    "openwrt_dts": {
+      "model": "Cudy RE3000 v1",
+      "compatible": "cudy,re3000-v1, mediatek,mt7981",
+      "stdout-path": "serial0:115200n8",
+      "label-mac-device": "gmac1 (bdinfo 0xde00)",
+      "gpio-keys": {
+        "reset": "GPIO 1, KEY_RESTART, active low",
+        "wps": "GPIO 0, KEY_WPS_BUTTON, active low"
+      },
+      "leds": {
+        "led-0": "status, white, GPIO 10",
+        "led-1": "red:wifi5, GPIO 7, Trigger phy1tpt",
+        "led-2": "white:wifi2, GPIO 6, Trigger phy0tpt",
+        "led-3": "lan, green, GPIO 9",
+        "led-4": "wps, white, GPIO 11"
+      },
+      "ethernet": "gmac1, phy-mode gmii, interner GbE-PHY (int_gbe_phy); MT7531-Knoten am MDIO (reset GPIO 39)",
+      "flash": "spi2, jedec,spi-nor, 25 MHz, Quad",
+      "partitionen": {
+        "BL2": "0x00000-0x40000 ro",
+        "u-boot-env": "0x40000 +0x10000 ro",
+        "Factory": "0x50000 +0x10000 ro (WLAN-EEPROM)",
+        "bdinfo": "0x60000 +0x10000 ro (MAC 0xde00)",
+        "FIP": "0x70000 +0x80000 ro",
+        "firmware": "0xf0000 +0xf10000 (denx,fit)"
+      }
+    },
+    "openwrt_image_mk": {
+      "Device": "cudy_re3000-v1",
+      "DEVICE_MODEL": "RE3000",
+      "DEVICE_VARIANT": "v1",
+      "DEVICE_DTS": "mt7981b-cudy-re3000-v1",
+      "IMAGES": "sysupgrade.bin",
+      "IMAGE_SIZE": "15424k",
+      "SUPPORTED_DEVICES": "R36",
+      "DEVICE_PACKAGES": "kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware",
+      "KERNEL_INITRAMFS": "kernel-bin | lzma | fit lzma ... with-initrd | pad-to 64k"
+    },
+    "openwrt_02_network": {
+      "cudy,re3000-v1": "ucidef_set_interface_lan \"eth0\""
+    },
+    "openwrt_bootlog": {
+      "BL2": "v2.7(release):09a5dc9712, Built 08:35:35, Feb 22 2023",
+      "EMI": "Detected DRAM size: 256MB",
+      "CPU": "MT7981 (1300MHz)",
+      "BL2_meldung": "ERROR: No Flash Device Matched / spi nor init fail -22",
+      "U-Boot": "U-Boot 2022.07-rc3 (Feb 22 2023 - 08:35:35 +0000), Build: jenkins-RE3000-11, Model: mt7981-rfb",
+      "Linux": "6.1.79, Machine model: Cudy RE3000 v1",
+      "Memory": "240412K/262144K available",
+      "spi-nor": "spi0.0: XM25QH128C (16384 Kbytes)",
+      "eth0": "PHY [mdio-bus:00] driver [MediaTek MT7981 PHY], phy/gmii",
+      "U-Boot_menü": "Boot-Menü u. a. \"3. Upgrade ATF BL2\", \"0. U-Boot console\""
+    },
+    "openwrt_issue_18020": {
+      "titel": "Cudy RE3000 v1 automatically reboot after enable hardware flow offloading in firewall",
+      "version": "OpenWrt 24.10.0 r28427-6df0e3d02a",
+      "status": "offen",
+      "beschreibung": "Mit Hardware-Flow-Offloading Neustart, sobald WLAN-Uplink besteht oder der einzige Port auf WAN gestellt und verbunden ist; Software-Offloading geht"
+    },
+    "gluon_commit": {
+      "titel": "mediatek-filogic: add support for Cudy RE3000 v1",
+      "autor": "Maximilian Baumgartner",
+      "targets/mediatek-filogic": "device('cudy-re3000-v1', 'cudy_re3000-v1', { factory = false, })",
+      "docs": "supported_devices.rst: Cudy RE3000 (v1)",
+      "releases": "v2023.2.6, v2025.1.1 (nicht in v2023.2.5, v2025.1)"
+    },
+    "cudy_produktseite": {
+      "titel": "AX3000 Mesh Wi-Fi 6 Range Extender, RE3000 1.0",
+      "Model Version": "RE3000 1.0",
+      "CPU Details": "1.3 GHz Dual-Core, ARM Cortex-A53",
+      "Flash/ROM": "16 MB (128 Mbit) NOR",
+      "DDR/RAM": "256 MB (2 Gbit) DDR3",
+      "5 GHz Wi-Fi Speed": "2402 Mbps",
+      "2.4 GHz Wi-Fi Speed": "574 Mbps",
+      "5 GHz Wi-Fi Streams": "3 Spatial Streams",
+      "2.4 GHz Wi-Fi Streams": "2 Spatial Streams",
+      "Wi-Fi Antennas": "2× Fixed, 1 × Internal",
+      "FEM or PA/LNA": "5 GHz: 3× Internal, 2.4 GHz: 2× Internal",
+      "Range Performance": "Max: 150 m (492 ft)",
+      "Wall Performance": "Two wooden walls with thickness",
+      "Gigabit RJ45 Ports": "1",
+      "LED": "Signal Strength, WPS, Power",
+      "Physical Buttons": "WPS Button, Reset Button",
+      "Power Input Type": "AC Plug",
+      "Power Methods": "AC",
+      "Power Input": "100V-240V~",
+      "Note": "EU, US, UK plug are available on corresponding region versions",
+      "Environment": "Operating Temperature: 0 ℃ ~ 50 ℃ (32 ℉ ~ 122 ℉); Storage Temperature: -40 ℃ ~ 70 ℃; Operating Humidity: 10% ~ 90% non-condensing; Storage Humidity: 5% ~ 90% non-condensing",
+      "Certifications": "FCC, CE",
+      "Install in a Daisy Chain": "Recommend to install less than 3 repeaters in a wireless chain.",
+      "Installation": "Plug-In-Socket",
+      "Dimension": "Main Part: 129.6×80×48.6 mm (5.1×3.15×1.91 inches)",
+      "Product Weight": "EU: 279 g, UK: 282 g, US: 276 g",
+      "Package Content": "RE3000, Installation Guide",
+      "Retail Package Weight": "EU: 417 g, UK: 405 g, US: 422 g",
+      "Retail Package Dimension": "161×120×96 mm",
+      "Units per Carton": "30",
+      "Carton Net Weight": "EU: 12.5 kg, UK: 12.1 kg, US: 12.7 kg",
+      "Carton Gross Weight": "EU: 13.3 kg, UK: 13.1 kg, US: 13.2 kg",
+      "Carton Dimension": "50.4×37.7×34.1 cm",
+      "Wi-Fi Standards": "Wi-Fi 6",
+      "Max Wi-Fi Modulation": "1024-QAM",
+      "Wi-Fi Efficiency": "OFDMA, MU-MIMO, BSS Color",
+      "Max Capacity": "512",
+      "Recommended Client Upper Limit": "50",
+      "Wi-Fi Channel Width": "Auto/20/40/80/160 MHz",
+      "Wi-Fi Security": "WPA/WPA2/WPA3",
+      "WPS": "ja",
+      "Operation Modes": "Access Point, Range Extender, Mesh",
+      "Mesh": "Cudy Mesh Satellite",
+      "Mesh Backhaul": "Wireless Backhaul, Wired Backhaul, Multi-Band Backhaul",
+      "System": "LED Control, Config Web Page, App Control, Local Update, App (Over the Air), Online Update, Timed Reboot, Backup and Restore",
+      "Diagnostic Tools": "Ping, Traceroute, NSLookup, System Log",
+      "Werbetext": "The new Wi-Fi 6 chip with a 4-nm made process ...; 1× Gigabit Ethernet Port; 50 Connected Devices"
+    },
+    "cudy_produktseite_v2": {
+      "titel": "AX3000 Mesh Wi-Fi 6 Range Extender, RE3000 2.0",
+      "Model Version": "RE3000 2.0",
+      "CPU Details": "1.2 GHz Dual-Core, ARM Cortex-A9",
+      "Flash/ROM": "32 MB (256 Mbit) NOR",
+      "DDR/RAM": "128 MB (1 Gbit) DDR3",
+      "5 GHz Wi-Fi Streams": "2 Spatial Streams",
+      "2.4 GHz Wi-Fi Streams": "2 Spatial Streams",
+      "Wi-Fi Antennas": "2× Fixed",
+      "FEM or PA/LNA": "5 GHz: 2× Internal, 2.4 GHz: 2× Internal",
+      "Gigabit RJ45 Ports": "1",
+      "Power Input": "100V-240V~",
+      "Environment": "Operating Temperature: 0 ℃ ~ 40 ℃",
+      "Installation": "Plug-In-Socket",
+      "Dimension": "Main Part: 129.6×80×48.6 mm"
+    },
+    "cudy_download": {
+      "versionen": [
+        "RE3000 1.0",
+        "RE3000 2.0"
+      ],
+      "firmware": [
+        "2.5.33 09-Sep-2026 RE3000-R36-2.5.33-20260908-114843-sysupgrade.zip 12.4 MB",
+        "2.4.17 12-Aug-2025 RE3000-R36-2.4.17-20250811-185007-sysupgrade.zip 12.2 MB",
+        "2.3.10 17-Feb-2025 RE3000-R36-2.3.10-20250214-094115-sysupgrade.zip 12.3 MB",
+        "2.2.7 24-Sep-2024 RE3000-R36-2.2.7-20240918-092548-sysupgrade.zip 12.0 MB",
+        "2.0.2 06-May-2024 RE3000-R36-2.0.2-20240429-035204-sysupgrade.zip 11.63 MB (APP-Support, Online-/Auto-Upgrade, Admin-Passwort nach ETSI EN 303 645)",
+        "1.15.10 19-Jul-2023 RE3000-R36-1.15.10-20230717-101643-sysupgrade.zip 11.1 MB"
+      ],
+      "dokumente": [
+        "Datasheet",
+        "Installation Guide Multilingual (Link zeigt auf RE1200_V2.0_Quick_Installation_Guide.pdf)",
+        "Regulatory Compliance",
+        "CE Doc",
+        "PSTI Doc"
+      ],
+      "gpl": "21.02, 16-Apr-2024"
+    },
+    "cudy_datenblatt": {
+      "Product Name": "AX3000 Dual Band Wi-Fi 6 Range Extender",
+      "Product Model": "RE3000",
+      "Processor": "MT7981BA+MT7976CN",
+      "Standards and Protocols": "IEEE 802.11ax/ac/n/g/a/b",
+      "Frequency": "2.4GHz & 5GHz (11ax)",
+      "Bandwidth": "20/40/80/160MHz",
+      "Signal Rate": "5GHz: Up to 2402Mbps, 2.4GHz: Up to 574Mbps",
+      "Wireless Security": "WPA-PSK / WPA2-PSK / WPA3",
+      "Ports": "1 10/100/1000Mbps self-adaptive LAN",
+      "Power": "Direct plug-in power supply (100V-240V)",
+      "Buttons": "Reset Button / WPS Button",
+      "Antenna": "2*External Antennas + 1*Internal Antenna",
+      "LED Lights": "WiFi / WPS / Power",
+      "Environment": "Operating Temperature: 0℃~40℃; Storage Temperature: -40℃~70℃; Operating Humidity: 10%~90% non-condensing; Storage Humidity: 5%~90% non-condensing",
+      "LED-Tabelle": [
+        "Power weiß: aus = kein Strom, blinkt = Boot/Upgrade, an = Start fertig",
+        "WPS weiß: aus = nicht mit Host-WLAN verbunden, blinkt = WPS läuft, an = mit Host-WLAN verbunden",
+        "WiFi: aus/blinkt = keine Host-WLAN-Konfiguration, rot blinkt = nicht verbunden, rot = schwach, pink = mittel, weiß = gut"
+      ],
+      "Reset": "Reset 2 Sekunden halten, bis alle LEDs an- und ausgehen",
+      "WPS": "drücken, bis WPS-LED blinkt",
+      "Features": "Gigabit Ethernet ports to connect wired devices; External antennas; 3-in-1 Extender/Access Point/Add-On Mesh",
+      "Abbildung": "Seite 2: Gerät mit zwei aufgestellten Antennen an den Seiten, Rückseite RJ45 Port"
+    },
+    "cudy_regulatory": {
+      "Product name": "AX3000 Wi-Fi 6 Range Extender",
+      "Model Number": "RE3000",
+      "Operating Frequency (Maximum transmitted power)": [
+        "2400 MHz - 2483.5 MHz: 20dBm",
+        "5150 MHz - 5250 MHz: 23dBm",
+        "5250 MHz - 5350 MHz: 23dBm",
+        "5470 MHz - 5725 MHz: 30dBm"
+      ],
+      "Safety": "Operating Temperature: 0℃ ~ 40℃",
+      "Label": "The product label can be found at the bottom of the product and its I.T.E. power supply.",
+      "Symbole": "Class II equipment, Energy efficiency Marking, Direct current, Polarity of DC power connector, For indoor use only (allgemeine Symboltabelle)",
+      "Anatel": "Abschnitt Anatel-Hinweis vorhanden, ohne Nummer"
+    },
+    "cudy_ce_doc": {
+      "Product Name": "Range Extender",
+      "Model Number": "RE3000",
+      "Trademark": "Cudy",
+      "Richtlinien": "2014/30/EU, 2014/35/EU, 2014/53/EU, 2011/65/EU, (EU) 2015/863",
+      "Normen": [
+        "EN 55032:2015+A1:2020",
+        "EN 55035:2017+A11:2020",
+        "EN IEC 62368-1:2020+A11:2020",
+        "ETSI EN 301 489-1 V2.2.3",
+        "ETSI EN 301 489-3 V2.3.2",
+        "Draft ETSI EN 301 489-17 V3.2.5",
+        "ETSI EN 300 328 V2.2.2",
+        "ETSI EN 301 893 V2.1.1",
+        "ETSI EN 300 440 V2.2.1",
+        "EN IEC 62311:2020"
+      ],
+      "Date of issue": "2025-2-19",
+      "Seiten": 25
+    },
+    "fcc_rt02": {
+      "FCC ID": "2APRGRT02",
+      "Equipment Class": "Wi-Fi Router (DTS / NII)",
+      "Test Firm": "Shenzhen LCS Compliance Testing Laboratory Ltd.",
+      "TCB": "KL-Certification GmbH",
+      "Date of Grant": "2023-06-08",
+      "Leistung (max. peak conducted)": [
+        "2412-2462 MHz 0.2065 W",
+        "5180-5240 MHz 0.1549 W",
+        "5260-5320 MHz 0.1132 W",
+        "5500-5700 MHz 0.1157 W",
+        "5745-5825 MHz 0.2133 W"
+      ],
+      "Grant Comments": "20/40 MHz (2.4 GHz), 802.11 b/g/n/ax 2x2 Spatial Multiplexing MIMO; 20 cm Abstand",
+      "Exhibits": "User manual, Internal photos, External photos, Label, Test setup photos, Antenna information (4.4 MB), Testberichte 2.4G/5G/DFS mit Anhängen, Modellerklärung, Kanal-12/13-Erklärung"
+    },
+    "fcc_rt02_modell": {
+      "Datum": "2023-04-17",
+      "Text": "model < WR3000, WR3000 Plus, WR1500, TR3000, M3000, RE3000, AP3000, AP3000 Outdoor > are identical in hardware and software, the only differences model was model name."
+    },
+    "fcc_rt02_label": {
+      "Text": "Wi-Fi Router, Model: WR3000, FCC ID: 2APRGRT02 (Size: L 4.5cm x W 5.5cm)"
+    },
+    "fcc_rt02_handbuch": {
+      "Titel": "810600161 说明书,坦克,Cudy,WR3000(REV1.0) ... 英德意西法葡",
+      "Inhalt": "Quick Installation Guide WR3000 (WAN/LAN1-3), nicht RE3000"
+    },
+    "fcc_re01": {
+      "FCC ID": "2APRGRE01",
+      "Equipment Class": "WiFi Range Extender",
+      "Date of Grant": "2022-03-14",
+      "Frequenzen": [
+        "2412-2462 MHz 0.1517 W",
+        "5180-5240 MHz 0.1191 W",
+        "5745-5825 MHz 0.235 W"
+      ],
+      "Grant Comments": "20/40 MHz, 2x2 MIMO"
+    },
+    "fcc_re01_modell": {
+      "Datum": "2022-03-11",
+      "Text": "Product name: WiFi Range Extender, Models No.: RE1800, RE1200, RE1500"
+    },
+    "wikidevi_foto_top": {
+      "Platinenaufdruck": "300200004 / RE3000 REV1.1 sp2",
+      "Datumscode": "23 14 (neben 94V-0 E358874 MS-M1)",
+      "J6": "4 unbestückte Durchkontaktierungen in einer Reihe, Pin 1 eckig markiert, Aufdruck TX, RX, GND, VCC (Pin 1 = TX)",
+      "Lage J6": "rechts neben dem Abschirmblech von SoC/RAM, unter dem Kühlkörper",
+      "sonstiges": "RAM-Aufdruck ESMT sichtbar; zwei U.FL-Antennenanschlüsse oben, Kabel zu den seitlichen Antennenflügeln; 2x3-Steckverbinder oben rechts (Stromzufuhr von der Netzteilplatine); SW1/SW2 am rechten Rand; RJ45 unten rechts; kein Lüfter"
+    },
+    "wikidevi_foto_internal": {
+      "Inhalt": "Aluminium-Kühlkörper über SoC/RAM, mit 3 Schrauben befestigt, deckt J6 ab"
+    },
+    "wikidevi_foto_power": {
+      "Inhalt": "eigene Netzteilplatine GSP21450... im Gehäuseunterteil mit Steckerkontakten N/L, Sicherung T2A 250V, Trafo; 2x3-Stiftleiste J1 zur Hauptplatine; Lüftungsgitter im Gehäuse"
+    },
+    "freifunk_darmstadt_1010": {
+      "Beitrag 4 (TomH, 2026-01-13)": "Die Anweisungen sollten auch für den Cudy RE3000 v1 funktionieren: RE3000 v1.zip aus dem Google Drive, Datei cudy_re3000-v1-sysupgrade.bin, andere Prüfsumme, Ablauf sonst identisch",
+      "Ablauf TR3000": "Cudy-UI http://192.168.10.1/, Passwort admin, Ersteinrichtung durchklicken, Erweiterte Einstellungen > System > Firmware, Cudy-signiertes OpenWrt, danach http://192.168.1.1/ Gluon-sysupgrade"
+    },
+    "werkstatt": {
+      "Tabelle Zwischenfirmware": "RE3000 v1 | cudy-re3000.bin | RE3000 V1.zip | MD5 d350aa4ec09cd51ce5727958f6712c62",
+      "Spiegel": "https://firmware.ffnef.de/other/cudy-mirror-20261015/zwischenfirmware/",
+      "Ablauf": "Schritt 1 Cudy-UI http://192.168.10.1/ (Passwort admin) > Erweiterte Einstellungen > System > Firmware: Zwischenfirmware, MD5 prüfen; Schritt 2 OpenWrt http://192.168.1.1/ (Passwort leer), Gluon-sysupgrade ohne Einstellungen beibehalten",
+      "Hinweis allgemein": "Modell und Version stehen auf dem Aufkleber unter dem Gerät; Cudy-Modelle mit neuem Flash-Chip (Seriennummer ab 2543) brauchen Zwischenfirmware vom November 2025 oder neuer",
+      "Bemerkung": "Bedienschritte nach TR3000-Anleitung, nicht an jedem Modell nachgeprüft; kein eigenes Prüfprotokoll zum RE3000 in docs/validierung/"
+    },
+    "werkstatt_erstinstallation": {
+      "Abschnitt A": "Cudy - Hersteller-Zwischenfirmware, signiert; RE3000 in der Liste; Weg im Darmstädter Forum für TR3000 und RE3000 dokumentiert; nicht automatisierbar",
+      "neuer Flash-Chip": "AX3000-Geräte mit Seriennummer ab 2543 (ab November 2025) mit SPI-NAND F50L1G41LC laut Cudy-FAQ; Patch in v2023.2.x seit 09.09.2026 und in 2025.1"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Cudy",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Cudy",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Shenzhen Cudy Technology Co., Ltd.",
+        "quelle": "cudy_ce_doc",
+        "beleg": "https://www.cudy.com/cdn/shop/files/CE_DOC_RE3000.pdf?v=3206071028734605861",
+        "stand": "Ausstellungsdatum 2025-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "RE3000",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "RE3000",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Produktname \"AX3000 Mesh Wi-Fi 6 Range Extender, RE3000 1.0\""
+      },
+      {
+        "wert": "RE3000",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+        "stand": "PDF ohne Datum (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Cudy RE3000 v1",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-re3000-v1.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "DTS model"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "v1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "Feld \"Versions: v1\""
+      },
+      {
+        "wert": "1.0",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Model Version \"RE3000 1.0\""
+      },
+      {
+        "wert": [
+          "1.0",
+          "2.0"
+        ],
+        "quelle": "cudy_download",
+        "beleg": "https://www.cudy.com/pages/download-center/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19, neueste Firmware 2.5.33 vom 09-Sep-2026",
+        "sicherheit": "hoch",
+        "bemerkung": "Downloadcenter führt RE3000 1.0 und RE3000 2.0; nur 1.0 ist von OpenWrt/Gluon unterstützt"
+      },
+      {
+        "wert": "2.0",
+        "quelle": "cudy_produktseite_v2",
+        "beleg": "https://www.cudy.com/products/re3000-2-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "RE3000 2.0 ist andere Hardware: 1.2 GHz Dual-Core Cortex-A9, 32 MB NOR, 128 MB RAM, 5 GHz 2 Streams, 2 feste Antennen ohne interne; kein OpenWrt-Image dafür (Gluon-Image ist nur v1)"
+      },
+      {
+        "wert": "REV1.1 sp2",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Feld revision \"(REV1.1 sp2)\" = Platinenrevision"
+      },
+      {
+        "wert": "RE3000 REV1.1 sp2",
+        "quelle": "wikidevi_foto_top",
+        "beleg": "https://wikidevi.wi-cat.ru/images/7/7b/Cudy_RE3000_Top.jpeg",
+        "stand": "Upload 2024-04-06",
+        "sicherheit": "mittel",
+        "bemerkung": "Platinenaufdruck \"300200004 / RE3000 REV1.1 sp2\" (PCB-ID 300200004 wie WikiDevi pcb_id)"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild auf der Unterseite; Modell und Version (RE3000 1.0) stehen auf dem Aufkleber",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt docs/cudy-installation.md (git.ideenwerk.me/neanderfunk/routerwerkstatt)",
+        "stand": "Stand 15.10.2026 (Commit a9781bd1, 2026-10-15)",
+        "sicherheit": "mittel",
+        "bemerkung": "allgemeine Angabe für alle Cudy-Modelle in der Anleitung, nicht speziell am RE3000 geprüft"
+      },
+      {
+        "wert": "Produktetikett auf der Unterseite des Geräts",
+        "quelle": "cudy_regulatory",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_RE3000.pdf?v=9578908102602482082",
+        "stand": "PDF ohne Datum (8 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": "allgemeiner Satz der Regulatory-Unterlage"
+      },
+      {
+        "wert": "v1: 1.3 GHz Cortex-A53, 16 MB Flash, 256 MB RAM, 5 GHz 3 Streams, 2 äußere + 1 interne Antenne",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gehäuse und Abmessungen bei v1 und v2 gleich (129.6×80×48.6 mm), im Angebot an \"1.3 GHz\" (v1) bzw. \"1.2 GHz\" (v2) erkennbar"
+      },
+      {
+        "wert": "v2: 1.2 GHz Cortex-A9, 32 MB Flash, 128 MB RAM, 5 GHz 2 Streams, 2 feste Antennen",
+        "quelle": "cudy_produktseite_v2",
+        "beleg": "https://www.cudy.com/products/re3000-2-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "nicht unterstützt; nur am Aufkleber oder in der Cudy-Oberfläche von v1 zu unterscheiden"
+      },
+      {
+        "wert": "Cudy-Firmware trägt die interne Kennung R36 (Dateiname RE3000-R36-...); OpenWrt akzeptiert R36 als SUPPORTED_DEVICES",
+        "quelle": "cudy_download",
+        "beleg": "https://www.cudy.com/pages/download-center/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19, neueste Firmware 2.5.33 vom 09-Sep-2026",
+        "sicherheit": "mittel",
+        "bemerkung": "Kennung R36 auch in filogic.mk"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "2APRGRT02",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "fcc_date 06/08/2023"
+      },
+      {
+        "wert": "2APRGRT02",
+        "quelle": "fcc_rt02_modell",
+        "beleg": "https://fccid.io/2APRGRT02/Letter/Letter-of-declaration-model-difference-6580979",
+        "stand": "Schreiben 2023-04-17, eingereicht 2023-06-07",
+        "sicherheit": "hoch",
+        "bemerkung": "Sammelzulassung, RE3000 in der Modellerklärung genannt; Label/Handbuch zeigen WR3000"
+      },
+      {
+        "wert": "2APRGRE01",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "niedrig",
+        "bemerkung": "falsch: laut FCC-Modellerklärung gehört 2APRGRE01 zu RE1800/RE1200/RE1500"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": "AX3000 Mesh Wi-Fi 6 Range Extender",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AX3000 Dual Band Wi-Fi 6 Range Extender",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+        "stand": "PDF ohne Datum (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "R36",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "SUPPORTED_DEVICES += R36 (Board-Kennung der Cudy-Firmware)"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "MediaTek MT7981BA",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7981BA (Filogic 820)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7981B",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e8f75973172749874afa13e4f746acd8cb515de2",
+        "stand": "Commit 2024-02-16 (Autor), gemergt 2024-02-29",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MT7981BA + MT7976CN",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+        "stand": "PDF ohne Datum (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MT7981 (1300MHz)",
+        "quelle": "openwrt_bootlog",
+        "beleg": "https://github.com/openwrt/openwrt/files/14424657/openwrt-boot.txt",
+        "stand": "Anhang PR 14651, 2024-02-27 (OpenWrt-Build vom 2024-02-26)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 1300,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1300,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1300,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1300,
+        "quelle": "openwrt_bootlog",
+        "beleg": "https://github.com/openwrt/openwrt/files/14424657/openwrt-boot.txt",
+        "stand": "Anhang PR 14651, 2024-02-27 (OpenWrt-Build vom 2024-02-26)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "aarch64_cortex-a53",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "Paketarchitektur"
+      },
+      {
+        "wert": "ARM Cortex-A53",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 256,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 256,
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e8f75973172749874afa13e4f746acd8cb515de2",
+        "stand": "Commit 2024-02-16 (Autor), gemergt 2024-02-29",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 256,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "ESMT M15T2G16128A-DEB, DDR3L"
+      },
+      {
+        "wert": 256,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "256 MB (2 Gbit) DDR3"
+      },
+      {
+        "wert": 256,
+        "quelle": "openwrt_bootlog",
+        "beleg": "https://github.com/openwrt/openwrt/files/14424657/openwrt-boot.txt",
+        "stand": "Anhang PR 14651, 2024-02-27 (OpenWrt-Build vom 2024-02-26)",
+        "sicherheit": "hoch",
+        "bemerkung": "BL2 \"Detected DRAM size: 256MB\""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e8f75973172749874afa13e4f746acd8cb515de2",
+        "stand": "Commit 2024-02-16 (Autor), gemergt 2024-02-29",
+        "sicherheit": "mittel",
+        "bemerkung": "XM25QH128C"
+      },
+      {
+        "wert": 16,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "XMC XM25QH128CHIQ"
+      },
+      {
+        "wert": 16,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "16 MB (128 Mbit) NOR"
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_bootlog",
+        "beleg": "https://github.com/openwrt/openwrt/files/14424657/openwrt-boot.txt",
+        "stand": "Anhang PR 14651, 2024-02-27 (OpenWrt-Build vom 2024-02-26)",
+        "sicherheit": "hoch",
+        "bemerkung": "spi-nor: XM25QH128C (16384 Kbytes)"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-re3000-v1.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "jedec,spi-nor"
+      },
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_pr_14651",
+        "beleg": "https://github.com/openwrt/openwrt/pull/14651",
+        "stand": "PR 2024-02-16 bis 2024-02-29",
+        "sicherheit": "mittel",
+        "bemerkung": "dangowrt: SPI-NOR, daher kein NMBM"
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": [
+          "MediaTek MT7981BA",
+          "MediaTek MT7976CN"
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "MediaTek MT7981BA",
+          "MediaTek MT7976CN"
+        ],
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "MT7981BA",
+          "MT7976CN"
+        ],
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+        "stand": "PDF ohne Datum (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n/ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n/ax",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n/ax (Wi-Fi 6)",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+        "stand": "PDF ohne Datum (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "\"2.4GHz: 2x2:2 MIMO\""
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "2 TX, 2 RX, 2 SS"
+      },
+      {
+        "wert": 2,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac/ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac/ax",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac/ax, bis 160 MHz",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+        "stand": "PDF ohne Datum (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "\"5GHz: 2X3:2 MIMO\" (2 TX, 3 RX, 2 Streams)"
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "2 TX, 3 RX, 2 SS; \"3×3 5GHz (2×2 + Zero-wait DFS)\""
+      },
+      {
+        "wert": 3,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Herstellerangabe \"3 Spatial Streams\" (vermutlich inkl. Zero-wait-DFS-Kette); Datenrate 2402 Mbps entspricht 2 Streams bei 160 MHz"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AX3000",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "2402 + 574 Mbps"
+      },
+      {
+        "wert": "AX3000",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_kanalbreite_5": [
+      {
+        "wert": "20/40/80/160 MHz",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+        "stand": "PDF ohne Datum (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "160 MHz",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e8f75973172749874afa13e4f746acd8cb515de2",
+        "stand": "Commit 2024-02-16 (Autor), gemergt 2024-02-29",
+        "sicherheit": "mittel",
+        "bemerkung": "\"AX 5Ghz 160Mhz wide\""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": {
+          "2.4 GHz": 20,
+          "5150-5250 MHz": 23,
+          "5250-5350 MHz": 23,
+          "5470-5725 MHz": 30
+        },
+        "quelle": "cudy_regulatory",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_RE3000.pdf?v=9578908102602482082",
+        "stand": "PDF ohne Datum (8 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": "EU-Angabe \"Maximum transmitted power\""
+      },
+      {
+        "wert": {
+          "2412-2462 MHz": 23.1,
+          "5180-5240 MHz": 21.9,
+          "5260-5320 MHz": 20.5,
+          "5500-5700 MHz": 20.6,
+          "5745-5825 MHz": 23.3
+        },
+        "quelle": "fcc_rt02",
+        "beleg": "https://fccid.io/2APRGRT02",
+        "stand": "Grant 2023-06-08 (Original Equipment)",
+        "sicherheit": "niedrig",
+        "bemerkung": "umgerechnet aus FCC-Grant (W, max. peak conducted) der Sammelzulassung; gemessen am WR3000"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "2 außen fest + 1 intern",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Wi-Fi Antennas: 2× Fixed, 1 × Internal\""
+      },
+      {
+        "wert": "2 außen + 1 intern",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+        "stand": "PDF ohne Datum (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"2*External Antennas + 1*Internal Antenna\""
+      },
+      {
+        "wert": "extern abnehmbar (2)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "niedrig",
+        "bemerkung": "Feld \"Detachable Antennas: 2\" - widerspricht Herstellerangabe \"Fixed\""
+      },
+      {
+        "wert": "U.FL intern",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "ant_conn U.FL (internal) für beide Bänder"
+      },
+      {
+        "wert": "2 seitliche Antennenflügel, per U.FL-Kabel an der Platine",
+        "quelle": "wikidevi_foto_top",
+        "beleg": "https://wikidevi.wi-cat.ru/images/7/7b/Cudy_RE3000_Top.jpeg",
+        "stand": "Upload 2024-04-06",
+        "sicherheit": "mittel",
+        "bemerkung": "Fotoauswertung"
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 3,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "2 fest außen + 1 intern"
+      },
+      {
+        "wert": 3,
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+        "stand": "PDF ohne Datum (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "geschwindigkeit_mbit": 1000,
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+        "stand": "PDF ohne Datum (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"1 10/100/1000Mbps self-adaptive LAN\""
+      },
+      {
+        "wert": [
+          {
+            "name": "eth0",
+            "geschwindigkeit_mbit": 1000,
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "openwrt_02_network",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/filogic/base-files/etc/board.d/02_network",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "ucidef_set_interface_lan \"eth0\"; interner GbE-PHY des MT7981"
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "geschwindigkeit_mbit": 1000
+          }
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "Ethernet 1Gbit ports: 1"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "einzige RJ45-Buchse"
+      },
+      {
+        "wert": true,
+        "quelle": "openwrt_02_network",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/filogic/base-files/etc/board.d/02_network",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "keine",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "USB ports: -"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "SFP ports: -"
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power Methods: AC (nur Netzstecker)"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "nein",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+        "stand": "PDF ohne Datum (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Direct plug-in power supply (100V-240V)\", Netzteil im Gehäuse"
+      },
+      {
+        "wert": "nein",
+        "quelle": "wikidevi_foto_power",
+        "beleg": "https://wikidevi.wi-cat.ru/images/f/f3/Cudy_RE3000_Power.jpeg",
+        "stand": "Upload 2024-04-06",
+        "sicherheit": "mittel",
+        "bemerkung": "Netzteilplatine mit Steckerkontakten N/L im Gehäuse"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": "integriert (Steckdosengerät)",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Lieferumfang nur RE3000 und Installation Guide; Stecker EU/US/UK je nach Regionalversion"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "100-240 V AC, 50/60 Hz, 0.3 A",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "100-240 V AC, 0.3 A, Stecker NEMA 1-15P",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "US-Exemplar"
+      },
+      {
+        "wert": "100-240 V AC",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Netzteilplatine GSP21450..., Sicherung T2A 250V",
+        "quelle": "wikidevi_foto_power",
+        "beleg": "https://wikidevi.wi-cat.ru/images/f/f3/Cudy_RE3000_Power.jpeg",
+        "stand": "Upload 2024-04-06",
+        "sicherheit": "mittel",
+        "bemerkung": "Fotoauswertung"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Steckdosen-Repeater, Betrieb 0-50 °C"
+      },
+      {
+        "wert": "innen",
+        "quelle": "cudy_regulatory",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_RE3000.pdf?v=9578908102602482082",
+        "stand": "PDF ohne Datum (8 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": "5150-5350 MHz nur in Gebäuden; Symbol \"For indoor use only\""
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+        "stand": "PDF ohne Datum (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "cudy_regulatory",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_RE3000.pdf?v=9578908102602482082",
+        "stand": "PDF ohne Datum (8 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "0 bis 50 °C",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "widerspricht Datenblatt und Regulatory (0-40 °C); v2-Seite nennt 0-40 °C"
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Steckdose",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Installation: Plug-In-Socket"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "129.6 × 80 × 48.6",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Main Part"
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 279,
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "EU; UK 282 g, US 276 g"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "wikidevi_foto_top",
+        "beleg": "https://wikidevi.wi-cat.ru/images/7/7b/Cudy_RE3000_Top.jpeg",
+        "stand": "Upload 2024-04-06",
+        "sicherheit": "niedrig",
+        "bemerkung": "kein Lüfter auf den Innenfotos, passiver Kühlkörper"
+      }
+    ],
+    "leds": [
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "LED count"
+      },
+      {
+        "wert": [
+          "status (weiß)",
+          "red:wifi5",
+          "white:wifi2",
+          "lan (grün)",
+          "wps (weiß)"
+        ],
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-re3000-v1.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "5 GPIO-LEDs"
+      },
+      {
+        "wert": [
+          "WiFi (Signalstärke rot/pink/weiß)",
+          "WPS (weiß)",
+          "Power (weiß)"
+        ],
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+        "stand": "PDF ohne Datum (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": "sichtbare LEDs"
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "ja (Cudy-Firmware: LED Control)",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Angabe zur Hersteller-Firmware"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "Reset- und WPS-Taster vorhanden; Lage nicht belegt",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "reset GPIO 1, wps GPIO 0",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-re3000-v1.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Reset 2 Sekunden halten (Cudy-Firmware)",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+        "stand": "PDF ohne Datum (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "Button count"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "\"4-pin header, unpopulated\""
+      },
+      {
+        "wert": "innen Lötpunkte unter dem Kühlkörper",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e8f75973172749874afa13e4f746acd8cb515de2",
+        "stand": "Commit 2024-02-16 (Autor), gemergt 2024-02-29",
+        "sicherheit": "mittel",
+        "bemerkung": "\"connector is under the radiator\""
+      },
+      {
+        "wert": "innen Lötpunkte (J6, 4 Durchkontaktierungen, unbestückt)",
+        "quelle": "wikidevi_foto_top",
+        "beleg": "https://wikidevi.wi-cat.ru/images/7/7b/Cudy_RE3000_Top.jpeg",
+        "stand": "Upload 2024-04-06",
+        "sicherheit": "mittel",
+        "bemerkung": "Kühlkörper (3 Schrauben, Foto Internal) muss ab"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "J6: 1 TX, 2 RX, 3 GND, 4 VCC",
+        "quelle": "wikidevi_foto_top",
+        "beleg": "https://wikidevi.wi-cat.ru/images/7/7b/Cudy_RE3000_Top.jpeg",
+        "stand": "Upload 2024-04-06",
+        "sicherheit": "mittel",
+        "bemerkung": "Platinenaufdruck neben J6, Pin 1 eckig"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "3.3V TTL"
+      },
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e8f75973172749874afa13e4f746acd8cb515de2",
+        "stand": "Commit 2024-02-16 (Autor), gemergt 2024-02-29",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Connect TTL3.3V converter\""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1"
+      },
+      {
+        "wert": 115200,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1"
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e8f75973172749874afa13e4f746acd8cb515de2",
+        "stand": "Commit 2024-02-16 (Autor), gemergt 2024-02-29",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1"
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-re3000-v1.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "serial0:115200n8"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "U-Boot-Menü: beim Start Pfeil-unten halten, \"6. Load image\" > \"0 - TFTP client\", initramfs-kernel.bin laden, dann sysupgrade",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e8f75973172749874afa13e4f746acd8cb515de2",
+        "stand": "Commit 2024-02-16 (Autor), gemergt 2024-02-29",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "BL2 meldet \"No Flash Device Matched / spi nor init fail -22\", bootet trotzdem",
+        "quelle": "openwrt_bootlog",
+        "beleg": "https://github.com/openwrt/openwrt/files/14424657/openwrt-boot.txt",
+        "stand": "Anhang PR 14651, 2024-02-27 (OpenWrt-Build vom 2024-02-26)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "mediatek/filogic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "mediatek/filogic",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Device cudy_re3000-v1"
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "23.05.3",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "erste Release"
+      },
+      {
+        "wert": "Snapshot 2024-02-29 (e8f75973)",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e8f75973172749874afa13e4f746acd8cb515de2",
+        "stand": "Commit 2024-02-16 (Autor), gemergt 2024-02-29",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.5",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_seit": [
+      {
+        "wert": [
+          "v2023.2.6",
+          "v2025.1.1"
+        ],
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/6cae5224755fb1a941e805e2d607b2339f31f52d",
+        "stand": "Commit 2026-01-10; enthalten ab v2023.2.6 und v2025.1.1",
+        "sicherheit": "mittel",
+        "bemerkung": "factory = false (nur sysupgrade)"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot 2022.07-rc3",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "BL2 v2.7 + U-Boot 2022.07-rc3 (Build jenkins-RE3000-11, Feb 22 2023)",
+        "quelle": "openwrt_bootlog",
+        "beleg": "https://github.com/openwrt/openwrt/files/14424657/openwrt-boot.txt",
+        "stand": "Anhang PR 14651, 2024-02-27 (OpenWrt-Build vom 2024-02-26)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware": [
+      {
+        "wert": "Linux 5.4.219",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2.5.33 (09-Sep-2026)",
+        "quelle": "cudy_download",
+        "beleg": "https://www.cudy.com/pages/download-center/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19, neueste Firmware 2.5.33 vom 09-Sep-2026",
+        "sicherheit": "hoch",
+        "bemerkung": "neueste Fassung"
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.cudy.com/pages/download-center/re3000-1-0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://www.cudy.com/pages/download-center/re3000-1-0",
+        "quelle": "cudy_download",
+        "beleg": "https://www.cudy.com/pages/download-center/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19, neueste Firmware 2.5.33 vom 09-Sep-2026",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "standard_ip": [
+      {
+        "wert": "192.168.10.254",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "default_ip; SSID Cudy-Extender, Passwort admin"
+      },
+      {
+        "wert": "192.168.10.1",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt docs/cudy-installation.md (git.ideenwerk.me/neanderfunk/routerwerkstatt)",
+        "stand": "Stand 15.10.2026 (Commit a9781bd1, 2026-10-15)",
+        "sicherheit": "mittel",
+        "bemerkung": "allgemeine Cudy-Anleitung (Ablauf nach TR3000), nicht am RE3000 geprüft"
+      }
+    ],
+    "erstinstallation": [
+      {
+        "wert": "Cudy-Zwischenfirmware cudy-re3000.bin (RE3000 V1.zip, MD5 d350aa4ec09cd51ce5727958f6712c62) über die Cudy-Oberfläche, danach Gluon-sysupgrade",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt docs/cudy-installation.md (git.ideenwerk.me/neanderfunk/routerwerkstatt)",
+        "stand": "Stand 15.10.2026 (Commit a9781bd1, 2026-10-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "Abschnitt \"Welche Zwischenfirmware für welches Modell\""
+      },
+      {
+        "wert": "RE3000 v1.zip / cudy_re3000-v1-sysupgrade.bin aus Cudys Google-Drive, Ablauf wie TR3000",
+        "quelle": "freifunk_darmstadt_1010",
+        "beleg": "https://forum.darmstadt.freifunk.net/t/installation-cudy-tr3000/1010",
+        "stand": "Thread 2025-04-09, Beitrag #4 2026-01-13",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"sollte funktionieren\", nicht als getestet berichtet"
+      },
+      {
+        "wert": "TFTP über U-Boot mit serieller Konsole (initramfs-kernel.bin)",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e8f75973172749874afa13e4f746acd8cb515de2",
+        "stand": "Commit 2024-02-16 (Autor), gemergt 2024-02-29",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kein Factory-Image (factory = false)",
+        "quelle": "gluon_commit",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/6cae5224755fb1a941e805e2d607b2339f31f52d",
+        "stand": "Commit 2026-01-10; enthalten ab v2023.2.6 und v2025.1.1",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "Label-MAC = LAN/eth0 = 2.4-GHz-WLAN (bdinfo 0xde00), 5 GHz = +1 mit LA-Bit",
+        "quelle": "openwrt_git_support",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e8f75973172749874afa13e4f746acd8cb515de2",
+        "stand": "Commit 2024-02-16 (Autor), gemergt 2024-02-29",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "OUI 80:AF:CA",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bekannte_probleme": [
+      {
+        "wert": "Neustart bei Hardware-Flow-Offloading (OpenWrt 24.10.0)",
+        "quelle": "openwrt_issue_18020",
+        "beleg": "https://github.com/openwrt/openwrt/issues/18020",
+        "stand": "Issue 2025-02-18 (offen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Issue offen"
+      }
+    ],
+    "ean": [
+      {
+        "wert": "6971690792909",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "ASIN B0BRK4BHYD"
+      }
+    ],
+    "marktstart": [
+      {
+        "wert": "01/2023",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": "est_release_date"
+      },
+      {
+        "wert": "Available 2024",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:39",
+        "sicherheit": "mittel",
+        "bemerkung": "keine Device Page"
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_RE3000",
+        "stand": "Seitenrevision 2024-10-21T13:32:43Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.cudy.com/products/re3000-1-0",
+        "quelle": "cudy_produktseite",
+        "beleg": "https://www.cudy.com/products/re3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+        "quelle": "cudy_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/RE3000_V1.0__Datasheet.pdf?v=6500833477167932131",
+        "stand": "PDF ohne Datum (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://www.cudy.com/en-us/blogs/faq/openwrt-software-download",
+      "kategorie": "flash_typ",
+      "grund": "Cudy-Warnung zum neuen Flash F50L1G41LC ab Seriennummer 2543 betrifft SPI-NAND-Geräte; RE3000 v1 hat laut allen Quellen SPI-NOR (XM25QH128C). Ob Cudy beim RE3000 seit 2025 einen anderen NOR-Chip verbaut oder er auf der Liste steht, nicht geprüft"
+    },
+    {
+      "url": "https://www.cudy.com/products/re3000-2-0",
+      "kategorie": "hw_version",
+      "grund": "RE3000 2.0: SoC nicht genannt (1.2 GHz Cortex-A9, 32 MB/128 MB), kein OpenWrt; wie man v2 am Typenschild sicher erkennt (Aufdruck \"2.0\"?), ist nicht belegt"
+    },
+    {
+      "url": "https://www.cudy.com/products/re3000-1-0",
+      "kategorie": "leistung_w_max",
+      "grund": "Leistungsaufnahme in keiner Quelle; nur Eingangsstrom 0.3 A (ToH/WikiDevi)"
+    },
+    {
+      "url": "https://www.cudy.com/cdn/shop/files/RE1200_V2.0_Quick_Installation_Guide.pdf?v=8958291315079149061",
+      "kategorie": "reset_knopf",
+      "grund": "Downloadcenter verlinkt als RE3000-Installation-Guide eine RE1200-V2.0-Anleitung; Lage von Reset/WPS-Taster und LAN-Buchse am Gehäuse nicht belegt (Fotos: SW1/SW2 am rechten Platinenrand)"
+    },
+    {
+      "url": "https://fccid.io/2APRGRT02/Test-Report/Antenna-information-6580915",
+      "kategorie": "antennen_gewinn_dbi",
+      "grund": "Antenneninformation der Sammelzulassung (4.4 MB), vermutlich WR3000-Antennen; Antennengewinn RE3000 unbelegt"
+    },
+    {
+      "url": "https://fccid.io/2APRGRT02/Internal-Photos/Internal-photos-6580975",
+      "kategorie": "seriell_zugang",
+      "grund": "FCC-Innenfotos der Sammelzulassung, Label zeigt WR3000 - für RE3000 vermutlich nicht aussagekräftig, nicht geladen"
+    },
+    {
+      "url": "https://forum.openwrt.org/search?q=RE3000",
+      "kategorie": "allgemein",
+      "grund": "OpenWrt-Forum nicht durchsucht (search.json gemieden); ToH nennt keinen Forumsthread"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+      "kategorie": "fcc_id",
+      "grund": "ToH nennt FCC-ID 2APRGRE01, die laut FCC-Modellerklärung zu RE1800/RE1200/RE1500 gehört; richtig wäre 2APRGRT02 (Sammelzulassung) - ToH-Eintrag ggf. korrigieren lassen"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1",
+      "kategorie": "antennen_art",
+      "grund": "ToH \"Detachable Antennas: 2\" gegen Cudy \"2× Fixed\"; am Gerät prüfen"
+    },
+    {
+      "url": "https://www.cudy.com/products/re3000-1-0",
+      "kategorie": "temperatur_betrieb",
+      "grund": "Produktseite 0-50 °C, Datenblatt und Regulatory 0-40 °C"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 44,
+    "notiz": "Nicht im lokalen ToH-Dump 2026-10-18, daher ToH-Live-Seite (Rev. 2026-08-21). OpenWrt-Commit e8f7597/PR 14651 mit Bootlog, DTS/filogic.mk/02_network (main), Gluon-Commit 6cae522 (ab v2023.2.6/v2025.1.1, factory=false), WikiDevi-Spiegel mit 3 Innenfotos (J6 TX/RX/GND/VCC unbestückt unter dem Kühlkörper, PCB RE3000 REV1.1 sp2, Netzteilplatine), DeviWiki ohne Seite, FCC 2APRGRT02 (Sammelzulassung mit RE3000, Unterlagen vom WR3000) und 2APRGRE01 (ToH-Angabe falsch: RE1800/1200/1500), Cudy Produktseiten v1 und v2, Downloadcenter, Datenblatt, Regulatory, CE-DoC, Darmstädter Forum, Werkstatt-Doku (Zwischenfirmware). Wichtig: es gibt einen RE3000 2.0 mit anderer, nicht unterstützter Hardware im gleichen Gehäuse. Widersprüche: 5-GHz-Streams 2 vs. 3, Betriebstemperatur 0-40 vs. 0-50 °C, Antennen fest vs. abnehmbar. Offen: Leistungsaufnahme, Lage von Tastern/Buchse, Flash-Wechsel ab SN 2543, Erkennung v2 am Typenschild."
+  }
+}
