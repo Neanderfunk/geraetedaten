@@ -271,7 +271,7 @@
     var name = suchname(g.modell);
     var version = (/\s(v\d+(\.\d+)?)\b/i.exec(g.modell) || [])[1];
     var p = el('p', 'finder-kaufen');
-    p.appendChild(document.createTextNode('Preise und gebraucht: '));
+    p.appendChild(document.createTextNode('Neu oder gebraucht suchen: '));
     var ziele = [
       ['Geizhals', g.geizhals || 'https://geizhals.de/?fs=' + encodeURIComponent(name) + '&hloc=de'],
       ['eBay', 'https://www.ebay.de/sch/i.html?_nkw=' + encodeURIComponent(name)],
@@ -287,7 +287,8 @@
       p.appendChild(a);
     });
     if (version) p.appendChild(el('span', 'finder-kaufen-hinweis',
-      ' Beim Kauf auf die Hardware-Version ' + version + ' achten.'));
+      ' Achte beim Kauf auf die Hardware-Version ' + version +
+      '. Sie steht auf dem Typenschild; fehlt sie im Angebot, frag nach.'));
     return p;
   }
 
