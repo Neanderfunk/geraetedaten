@@ -313,17 +313,16 @@
       a.target = '_blank';
       p.appendChild(a);
     });
+    /* Andere Versionen ohne Firmware nur kurz nennen; warum sie nicht gehen,
+       ist bei diesem Geraet egal (adorfer 20.10.). */
+    var nicht = (g.nicht_unterstuetzt || []).map(function (n) { return n.version; });
+    var nichtText = nicht.length ? (nicht.length === 1 ? nicht[0] + ' geht' :
+      nicht.slice(0, -1).join(', ') + ' und ' + nicht[nicht.length - 1] + ' gehen') + ' nicht' : '';
     /* Gibt es nur diese Version und ist das Geraet eingestellt, hilft der Hinweis niemandem. */
     if (version && g.versionen !== 'abgeschlossen') p.appendChild(el('span', 'finder-kaufen-hinweis',
-      ' Achte beim Kauf auf die Hardware-Version ' + version +
+      ' Achte beim Kauf auf die Hardware-Version ' + version + (nichtText ? ' (' + nichtText + ')' : '') +
       '. Sie steht auf dem Typenschild; fehlt sie im Angebot, frag nach.'));
-    /* "Keine Firmware" klaenge, als haette das Geraet gar keine (Content).
-       "noch nicht in unserer Freifunk-Firmware" steht dann schon im Satz. */
-    if (g.nicht_unterstuetzt) g.nicht_unterstuetzt.forEach(function (n) {
-      p.appendChild(el('span', 'finder-kaufen-hinweis',
-        ' Für ' + n.version + ' gibt es keine Freifunk-Firmware' +
-        (n.grund ? ' (' + n.grund.replace(/^noch nicht in unserer Freifunk-Firmware, /, '') + ')' : '') + '.'));
-    });
+    else if (nichtText) p.appendChild(el('span', 'finder-kaufen-hinweis', ' ' + nichtText.charAt(0).toUpperCase() + nichtText.slice(1) + '.'));
     return p;
   }
 
