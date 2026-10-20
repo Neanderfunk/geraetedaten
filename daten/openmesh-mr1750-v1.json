@@ -1,0 +1,1962 @@
+{
+  "image": "openmesh-mr1750-v1",
+  "modell": "Open-Mesh MR1750 v1",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-20",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15677574",
+      "bemerkung": "werkzeug/toh_suche.py fand keinen Kandidaten (Image-Teil \"openmesh\" passt nicht auf Marke \"Open-Mesh\"); Eintrag per grep im Dump gefunden"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1?do=export_raw",
+      "stand": "Seitenrevision 2026-08-06 01:38",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Live-Seite neuer als Dump: aktuell 25.12.5, Treiber ath9k+ath10k-ct, AR8035-PHY, 3x3:3 je Band, 1x miniPCI, Seriell 3,3 V, Gluon Yes, Outdoor No; Installation ohne ap51-flash"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/open-mesh/mr1750?do=export_raw",
+      "stand": "abgefragt 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "keine Geräteseite (\"This topic does not exist yet\"); Namespace toh:open-mesh enthält nur mr600_v1/mr600_v2"
+    },
+    "openwrt_git_ath79": {
+      "url": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+      "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_git_ar71xx": {
+      "url": "https://github.com/openwrt/openwrt/commit/fec6313b6284e8098a27efef077173f7107e2bda",
+      "stand": "Commit 2015-09-14 (SVN r46932)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Profil/Image; Kernel-Unterstützung in aba20334a4 (r46926, mach-mr1750.c)"
+    },
+    "openwrt_git_ar71xx_kernel": {
+      "url": "https://github.com/openwrt/openwrt/commit/aba20334a4bdb557f5b14c28318a974529dd2b70",
+      "stand": "Commit 2015-09-14 (SVN r46926)",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_git_v2": {
+      "url": "https://github.com/openwrt/openwrt/commit/0988e03f0e676286f3377d1530ebfb0d819ee629",
+      "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "MR1750 v2 (ath79): gleiche Gerätebeschreibung wie v1; ar71xx f7719dca71 (2016-05-20): v2 nur eigener Maschinentyp \"MR1750v2\" mit derselben Setup-Funktion"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=mr1750+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-20 (15 Commits, neuester 2021-01-19; dazu 7 Commits zu \"mr1750v2\")",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr.dtsi",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "dateien": [
+        "qca9558_openmesh_mr1750-v1.dts",
+        "qca9558_openmesh_mr.dtsi",
+        "image/generic.mk"
+      ]
+    },
+    "gluon_target": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/ath79-generic",
+      "stand": "lokaler Checkout v2025.1.3-5-g0ad3ad5b (2026-09-05)",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc": {
+      "url": "https://fccid.io/WT8-MR1750",
+      "stand": "Grant 2015-01-29 (Original), Class II 2016-03-23",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Grantee Datto, Inc. (früher Open Mesh, Inc.); Zulassung von 2015, also vor der OpenWrt-Unterstützung für v2 (2016-05): beschreibt die erste Hardware (v1), abgeleitet"
+    },
+    "fcc_handbuch": {
+      "url": "https://fccid.io/WT8-MR1750/User-Manual/User-Manual-pdf-2517980",
+      "stand": "Exhibit 2015-01-29 (PDF 2015-01-26, Titel UM_MR1750_140126)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "ODM-Handbuch (Web-UI mit WPS, 300 Mbps je Band), nicht CloudTrax-Firmware; Hardwareteil mit Vorsicht lesen"
+    },
+    "fcc_betriebsbeschreibung": {
+      "url": "https://fccid.io/WT8-MR1750/Operational-Description/Operational-Description-pdf-2517974",
+      "stand": "Exhibit 2015-01-29",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_mpe": {
+      "url": "https://fccid.io/WT8-MR1750/RF-Exposure-Info/RF-Exposure-Info-MPE-pdf-2517981",
+      "stand": "Bericht SA140224C17D vom 2015-01-07, Exhibit 2015-01-29",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/WT8-MR1750/Label/Label-Sample-pdf-2517972",
+      "stand": "Exhibit 2015-01-29 (PDF 2015-01-26)",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_innenfotos": {
+      "url": "https://fccid.io/WT8-MR1750/Internal-Photos/Internal-Photos-pdf-2517973",
+      "stand": "Exhibit 2015-01-29 (8 Seiten)",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_aussenfotos": {
+      "url": "https://fccid.io/WT8-MR1750/External-Photos/External-Photos-pdf-2517970",
+      "stand": "Exhibit 2015-01-29 (4 Seiten)",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_aenderung": {
+      "url": "https://fccid.io/WT8-MR1750/Letter/Cover-Letter-Description-of-Change-pdf-2937996",
+      "stand": "Exhibit 2016-03-23 (PDF 2016-03-07)",
+      "abgerufen": "2026-10-20"
+    },
+    "openmesh_shop_2015": {
+      "url": "https://web.archive.org/web/20150811200307/http://www.open-mesh.com:80/products/mr1750-ac-cloud-access-point.html",
+      "stand": "Webarchiv 2015-08-11",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Herstellerseite (Shop), vor v2"
+    },
+    "openmesh_shop_intl_2016": {
+      "url": "https://web.archive.org/web/20160502115112/http://www.open-mesh.com:80/products/access-points/mr1750-ac-international-cloud-access-point.html",
+      "stand": "Webarchiv 2016-05-02",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "International Version (SKU MR1750-INTL); Zeitpunkt nahe am Erscheinen von v2, Version nicht genannt"
+    },
+    "openmesh_datenblatt": {
+      "url": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+      "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "nennt keine Hardware-Version; Stand vor der OpenWrt-Unterstützung für v2 (2016-05-20)"
+    },
+    "webarchiv_cdx_geizhals": {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/open-mesh-mr1750*&output=json&fl=timestamp,original,statuscode&collapse=urlkey",
+      "stand": "Abfrage 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "leer; ebenso geizhals.de/openmesh-mr1750* und geizhals.de/open-mesh-*"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "15677574",
+      "devicetype": "WiFi AP",
+      "brand": "Open-Mesh",
+      "model": "MR1750",
+      "version": "v1",
+      "fccid": "https://fcc.io/WT8-MR1750",
+      "availability": "Discontinued 2018",
+      "whereavailable": "",
+      "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=fec6313b6284e8098a27efef077173f7107e2bda",
+      "supportedsincerel": "17.01.0",
+      "supportedcurrentrel": "23.05.0",
+      "unsupported_functions": "NULL",
+      "target": "ar71xx-ath79",
+      "subtarget": "generic",
+      "packagearchitecture": "mips_24kc",
+      "bootloader": "U-Boot",
+      "cpu": "Qualcomm Atheros QCA9558",
+      "cpucores": "1",
+      "cpumhz": "700",
+      "flashmb": "16",
+      "rammb": "128",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "1",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "¿",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "Qualcomm Atheros QCA9558,Atheros AR9880",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "a/n/ac",
+      "wlancomments": "",
+      "wlandriver": "ath9k",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "-",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "115200 / 8N1",
+      "jtag": "¿",
+      "ledcount": "6",
+      "buttoncount": "1",
+      "gpios": "-",
+      "powersupply": "12 VDC, 2.0 A, PoE 802.3af/at",
+      "devicepage": "",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "MR1750",
+      "gitsearch": "MR1750",
+      "wikideviurl": "NULL",
+      "oemdevicehomepageurl": "https://www.open-mesh.com/products/access-points/grp-mr1750-ac-cloud-access-point-274.html",
+      "firmwareoemstockurl": "https://help.datto.com/s/article/KB360024255852",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-openmesh_mr1750-v1-initramfs-kernel.bin",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-openmesh_mr1750-v1-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-openmesh_mr1750-v1-initramfs-kernel.bin",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-openmesh_mr1750-v1-squashfs-sysupgrade.bin",
+      "installationmethods": "ap51-flash,U-Boot TFTP recovery,see git-commit",
+      "commentinstallation": "",
+      "recoverymethods": "U-Boot TFTP recovery,see git-commit",
+      "commentrecovery": "",
+      "picture": "media:example:genericrouter1.png",
+      "comments": "",
+      "page": "toh:hwdata:open-mesh:open-mesh_mr1750_v1"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi AP",
+      "Brand": "Open-Mesh",
+      "Model": "MR1750",
+      "Versions": "v1",
+      "FCCID_urls": "https://fcc.io/WT8-MR1750",
+      "Availability_availability": "Discontinued 2018",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=fec6313b6284e8098a27efef077173f7107e2bda",
+      "Supported Since Rel_releasesince": "17.01.0",
+      "Supported Current Rel_releasecurrent": "25.12.5",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Qualcomm Atheros QCA9558",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "700",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "¿",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "Atheros AR8035 GbE Phy",
+      "WLAN Hardwares": "Qualcomm Atheros QCA9558, Atheros AR9880",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN Comments_": "3x3:3 MIMO on both bands",
+      "WLAN driver_wlan-drivers": "ath9k, ath10k-ct",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "1x miniPCI",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "6",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "12 VDC, 2.0A, PoE 802.3af/at",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "MR1750",
+      "Git search_search-gits": "MR1750",
+      "WikiDevi URL_urls": "",
+      "WikiDevi ID_hwinfo-id": "",
+      "OEM Device Homepage URL_url": "https://www.open-mesh.com/products/access-points/grp-mr1750-ac-cloud-access-point-274.html",
+      "Firmware OEM Stock URL_url": "https://help.datto.com/s/article/KB360024255852",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/generic/openwrt-25.12.5-ath79-generic-openmesh_mr1750-v1-initramfs-kernel.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/generic/openwrt-25.12.5-ath79-generic-openmesh_mr1750-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-openmesh_mr1750-v1-initramfs-kernel.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-openmesh_mr1750-v1-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "U-Boot TFTP recovery, see git-commit",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "U-Boot TFTP recovery, see git-commit",
+      "Comment recovery": "",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "openwrt_git_ath79": {
+      "nachricht": "ath79: Add support for OpenMesh MR1750 v1\n\nDevice specifications:\n======================\n\n* Qualcomm/Atheros QCA9558 ver 1 rev 0\n* 720/600/240 MHz (CPU/DDR/AHB)\n* 128 MB of RAM\n* 16 MB of SPI NOR flash\n  - 2x 7 MB available; but one of the 7 MB regions is the recovery image\n* 3T3R 2.4 GHz Wi-Fi (11n)\n* 3T3R 5 GHz Wi-Fi (11ac)\n* 6x GPIO-LEDs (2x wifi, 2x status, 1x lan, 1x power)\n* 1x GPIO-button (reset)\n* external h/w watchdog (enabled by default))\n* TTL pins are on board (arrow points to VCC, then follows: GND, TX, RX)\n* 1x ethernet\n  - AR8035 ethernet PHY (RGMII)\n  - 10/100/1000 Mbps Ethernet\n  - 802.3af POE\n  - used as LAN interface\n* 12-24V 1A DC\n* internal antennas\n\nFlashing instructions:\n======================\n\nVarious methods can be used to install the actual image on the flash.\nTwo easy ones are:\n\nap51-flash\n----------\n\nThe tool ap51-flash (https://github.com/ap51-flash/ap51-flash) should be\nused to transfer the image to the u-boot when the device boots up.\n\ninitramfs from TFTP\n-------------------\n\nThe serial console must be used to access the u-boot shell during bootup.\nIt can then be used to first boot up the initramfs image from a TFTP server\n(here with the IP 192.168.1.21):\n\n   setenv serverip 192.168.1.21\n   setenv ipaddr 192.168.1.1\n   tftpboot 0c00000 <filename-of-initramfs-kernel>.bin && bootm $fileaddr\n\nThe actual sysupgrade image can then be transferred (on the LAN port) to the\ndevice via\n\n  scp <filename-of-squashfs-sysupgrade>.bin root@192.168.1.1:/tmp/\n\nOn the device, the sysupgrade must then be started using\n\n  sysupgrade -n /tmp/<filename-of-squashfs-sysupgrade>.bin\n\nSigned-off-by: Sven Eckelmann <sven@narfation.org>\n[rebase, apply shared DTSI/device node, add LED migration]\nSigned-off-by: Adrian Schmutzler <freifunk@adrianschmutzler.de>",
+      "dts_v1": "@@ -0,0 +1,16 @@\n+// SPDX-License-Identifier: GPL-2.0-or-later OR MIT\n+\n+#include \"qca9558_openmesh_mr.dtsi\"\n+\n+/ {\n+\tcompatible = \"openmesh,mr1750-v1\", \"qca,qca9558\";\n+\tmodel = \"OpenMesh MR1750 v1\";\n+};\n+\n+&led_wifi2g {\n+\tlinux,default-trigger = \"phy1tpt\";\n+};\n+\n+&led_wifi5g {\n+\tlinux,default-trigger = \"phy0tpt\";\n+};"
+    },
+    "openwrt_git_ar71xx": {
+      "nachricht": "ar71xx: create profile and build image for the OpenMesh MR1750 board\n\nSigned-off-by: Sven Eckelmann <sven@open-mesh.com>\n\nSVN-Revision: 46932",
+      "kernel_nachricht": "ar71xx: add kernel support for the OpenMesh MR1750 board\n\nSigned-off-by: Sven Eckelmann <sven@open-mesh.com>\n\nSVN-Revision: 46926",
+      "mach_gpio": {
+        "LED_LAN": 12,
+        "LED_WLAN_2G": 13,
+        "LED_STATUS_GREEN": 19,
+        "LED_STATUS_RED": 21,
+        "LED_POWER": 22,
+        "LED_WLAN_5G": 23,
+        "BTN_RESET": 17
+      },
+      "mac0_offset_art": "0x0",
+      "wmac_caldata_offset": "0x1000",
+      "weitere_commits": {
+        "4d6c4994fc (2016-03-16)": "ar71xx: Use PHY fixups for Open Mesh MR1750 - u-boot setzt ETH_CFG-Verzögerungen je Linkgeschwindigkeit, OpenWrt nur die PHY-Verzögerungen; Kommunikationsprobleme möglich, daher ETH_CFG fest zurückgesetzt",
+        "26d18d4e07 (2016-03-23)": "ar71xx: Use private version of ath79_setup_qca955x_eth_cfg for MR1750",
+        "3d16c16eb6 (2017-02-03)": "ar71xx: Add missing device package om-watchdog for MR1750",
+        "bfeae90850 (2015-09-14)": "ar71xx: extract ath10k wifi board.bin for the OpenMesh MR1750 board"
+      }
+    },
+    "openwrt_git_v2": {
+      "nachricht": "ath79: Add support for OpenMesh MR1750 v2\n\nDevice specifications:\n======================\n\n* Qualcomm/Atheros QCA9558 ver 1 rev 0\n* 720/600/240 MHz (CPU/DDR/AHB)\n* 128 MB of RAM\n* 16 MB of SPI NOR flash\n  - 2x 7 MB available; but one of the 7 MB regions is the recovery image\n* 3T3R 2.4 GHz Wi-Fi (11n)\n* 3T3R 5 GHz Wi-Fi (11ac)\n* 6x GPIO-LEDs (2x wifi, 2x status, 1x lan, 1x power)\n* 1x GPIO-button (reset)\n* external h/w watchdog (enabled by default))\n* TTL pins are on board (arrow points to VCC, then follows: GND, TX, RX)\n* 1x ethernet\n  - AR8035 ethernet PHY (RGMII)\n  - 10/100/1000 Mbps Ethernet\n  - 802.3af POE\n  - used as LAN interface\n* 12-24V 1A DC\n* internal antennas\n\nFlashing instructions:\n======================\n\nVarious methods can be used to install the actual image on the flash.\nTwo easy ones are:\n\nap51-flash\n----------\n\nThe tool ap51-flash (https://github.com/ap51-flash/ap51-flash) should be\nused to transfer the image to the u-boot when the device boots up.\n\ninitramfs from TFTP\n-------------------\n\nThe serial console must be used to access the u-boot shell during bootup.\nIt can then be used to first boot up the initramfs image from a TFTP server\n(here with the IP 192.168.1.21):\n\n   setenv serverip 192.168.1.21\n   setenv ipaddr 192.168.1.1\n   tftpboot 0c00000 <filename-of-initramfs-kernel>.bin && bootm $fileaddr\n\nThe actual sysupgrade image can then be transferred (on the LAN port) to the\ndevice via\n\n  scp <filename-of-squashfs-sysupgrade>.bin root@192.168.1.1:/tmp/\n\nOn the device, the sysupgrade must then be started using\n\n  sysupgrade -n /tmp/<filename-of-squashfs-sysupgrade>.bin\n\nSigned-off-by: Sven Eckelmann <sven@narfation.org>\n[rebase, add LED migration]\nSigned-off-by: Adrian Schmutzler <freifunk@adrianschmutzler.de>",
+      "ar71xx_f7719dca71": "ar71xx: add kernel support for the OpenMesh MR1750v2\n\nSigned-off-by: Sven Eckelmann <sven.eckelmann@open-mesh.com>",
+      "ar71xx_f21de7d9a8": "Profil umbenannt: \"OpenMesh MR1750/MR1750v2\", PACKAGES kmod-ath9k kmod-ath10k",
+      "supported_devices": {
+        "v1": "mr1750",
+        "v2": "mr1750v2"
+      }
+    },
+    "openwrt_dts": {
+      "qca9558_openmesh_mr.dtsi": "// SPDX-License-Identifier: GPL-2.0-or-later OR MIT\n\n#include \"qca955x.dtsi\"\n\n#include <dt-bindings/gpio/gpio.h>\n#include <dt-bindings/input/input.h>\n#include <dt-bindings/leds/common.h>\n\n/ {\n\tchosen {\n\t\t/delete-property/ bootargs;\n\t};\n\n\taliases {\n\t\tled-boot = &led_power_blue;\n\t\tled-failsafe = &led_power_blue;\n\t\tled-running = &led_power_blue;\n\t\tled-upgrade = &led_power_blue;\n\t\tlabel-mac-device = &eth0;\n\t};\n\n\tkeys {\n\t\tcompatible = \"gpio-keys\";\n\n\t\treset {\n\t\t\tlabel = \"reset\";\n\t\t\tlinux,code = <KEY_RESTART>;\n\t\t\tgpios = <&gpio 17 GPIO_ACTIVE_LOW>;\n\t\t};\n\t};\n\n\tleds {\n\t\tcompatible = \"gpio-leds\";\n\n\t\tlan_blue {\n\t\t\tfunction = LED_FUNCTION_LAN;\n\t\t\tcolor = <LED_COLOR_ID_BLUE>;\n\t\t\tgpios = <&gpio 12 GPIO_ACTIVE_LOW>;\n\t\t};\n\n\t\tstatus_green {\n\t\t\tfunction = LED_FUNCTION_STATUS;\n\t\t\tcolor = <LED_COLOR_ID_GREEN>;\n\t\t\tgpios = <&gpio 19 GPIO_ACTIVE_LOW>;\n\t\t};\n\n\t\tstatus_red {\n\t\t\tfunction = LED_FUNCTION_STATUS;\n\t\t\tcolor = <LED_COLOR_ID_RED>;\n\t\t\tgpios = <&gpio 21 GPIO_ACTIVE_LOW>;\n\t\t};\n\n\t\tled_power_blue: power_blue {\n\t\t\tfunction = LED_FUNCTION_POWER;\n\t\t\tcolor = <LED_COLOR_ID_BLUE>;\n\t\t\tgpios = <&gpio 22 GPIO_ACTIVE_LOW>;\n\t\t\tdefault-state = \"on\";\n\t\t};\n\n\t\tled_wifi5g: wifi5g {\n\t\t\tlabel = \"blue:wifi5g\";\n\t\t\tgpios = <&gpio 23 GPIO_ACTIVE_LOW>;\n\t\t};\n\t};\n\n\twatchdog {\n\t\tcompatible = \"linux,wdt-gpio\";\n\t\tgpios = <&gpio 16 GPIO_ACTIVE_LOW>;\n\t\thw_algo = \"toggle\";\n\t\t/* hw_margin_ms is actually 300s but driver limits it to 60s */\n\t\thw_margin_ms = <60000>;\n\t\talways-running;\n\t};\n};\n\n&spi {\n\tstatus = \"okay\";\n\n\tflash@0 {\n\t\tcompatible = \"jedec,spi-nor\";\n\t\treg = <0>;\n\t\tspi-max-frequency = <40000000>;\n\n\t\t/* partitions are passed via bootloader */\n\t\tpartitions {\n\t\t\tcompatible = \"fixed-partitions\";\n\t\t\t#address-cells = <1>;\n\t\t\t#size-cells = <1>;\n\n\t\t\tpartition@0 {\n\t\t\t\tlabel = \"u-boot\";\n\t\t\t\treg = <0x000000 0x040000>;\n\t\t\t\tread-only;\n\t\t\t};\n\n\t\t\tpartition@40000 {\n\t\t\t\tlabel = \"u-boot-env\";\n\t\t\t\treg = <0x040000 0x010000>;\n\t\t\t};\n\n\t\t\tpartition@50000 {\n\t\t\t\tlabel = \"custom\";\n\t\t\t\treg = <0x050000 0x060000>;\n\t\t\t\tread-only;\n\t\t\t};\n\n\t\t\tpartition@b0000 {\n\t\t\t\tlabel = \"inactive\";\n\t\t\t\treg = <0x0b0000 0x7a0000>;\n\t\t\t};\n\n\t\t\tpartition@850000 {\n\t\t\t\tlabel = \"inactive2\";\n\t\t\t\treg = <0x850000 0x7a0000>;\n\t\t\t};\n\n\t\t\tpartition@ff0000 {\n\t\t\t\tlabel = \"ART\";\n\t\t\t\treg = <0xff0000 0x010000>;\n\t\t\t\tread-only;\n\n\t\t\t\tnvmem-layout {\n\t\t\t\t\tcompatible = \"fixed-layout\";\n\t\t\t\t\t#address-cells = <1>;\n\t\t\t\t\t#size-cells = <1>;\n\n\t\t\t\t\tmacaddr_art_0: macaddr@0 {\n\t\t\t\t\t\tcompatible = \"mac-base\";\n\t\t\t\t\t\treg = <0x0 0x6>;\n\t\t\t\t\t\t#nvmem-cell-cells = <1>;\n\t\t\t\t\t};\n\n\t\t\t\t\tcal_art_1000: calibration@1000 {\n\t\t\t\t\t\treg = <0x1000 0x440>;\n\t\t\t\t\t};\n\n\t\t\t\t\tcal_art_5000: calibration@5000 {\n\t\t\t\t\t\treg = <0x5000 0x844>;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t};\n\t};\n};\n\n&mdio0 {\n\tstatus = \"okay\";\n\n\tphy5: ethernet-phy@5 {\n\t\treg = <5>;\n\t\teee-broken-100tx;\n\t\teee-broken-1000t;\n\t};\n};\n\n&eth0 {\n\tstatus = \"okay\";\n\n\tpll-data = <0x82000000 0x80000101 0x80001313>;\n\n\tnvmem-cells = <&macaddr_art_0 0>;\n\tnvmem-cell-names = \"mac-address\";\n\n\tphy-mode = \"rgmii-id\";\n\tphy-handle = <&phy5>;\n\n\tgmac-config {\n\t\tdevice = <&gmac>;\n\t\trgmii-enabled = <1>;\n\t};\n};\n\n&wdt {\n\tstatus = \"disabled\";\n};\n\n&wmac {\n\tstatus = \"okay\";\n\n\tnvmem-cells = <&macaddr_art_0 1>, <&cal_art_1000>;\n\tnvmem-cell-names = \"mac-address\", \"calibration\";\n\n\tled {\n\t\tled-sources = <13>;\n\t\tled-active-low;\n\t};\n};\n\n&pcie0 {\n\tstatus = \"okay\";\n\n\twifi@0,0 {\n\t\tcompatible = \"qcom,ath10k\";\n\t\treg = <0x0000 0 0 0 0>;\n\t\tnvmem-cells = <&cal_art_5000>, <&macaddr_art_0 16>;\n\t\tnvmem-cell-names = \"calibration\", \"mac-address\";\n\t};\n};\n",
+      "generic.mk openmesh_mr1750-v1": "define Device/openmesh_mr1750-v1\n  $(Device/openmesh_common_64k)\n  SOC := qca9558\n  DEVICE_MODEL := MR1750\n  DEVICE_VARIANT := v1\n  DEVICE_PACKAGES += kmod-ath10k-ct ath10k-firmware-qca988x-ct\n  OPENMESH_CE_TYPE := MR1750\n  SUPPORTED_DEVICES += mr1750\nendef",
+      "generic.mk openmesh_common_64k": "define Device/openmesh_common_64k\n  DEVICE_VENDOR := OpenMesh\n  DEVICE_PACKAGES := uboot-envtools\n  IMAGE_SIZE := 7808k\n  OPENMESH_CE_TYPE :=\n  KERNEL := kernel-bin | append-dtb | lzma | uImage lzma | \\\n\tpad-to $$(BLOCKSIZE)\n  IMAGE/sysupgrade.bin := append-rootfs | pad-rootfs | \\\n\topenmesh-image ce_type=$$$$(OPENMESH_CE_TYPE) | append-metadata\nendef"
+    },
+    "gluon_target": {
+      "ath79-generic": "device('openmesh-mr1750-v1', 'openmesh_mr1750-v1', {\n\tpackages = ATH10K_PACKAGES_QCA9880,\n\tfactory = false,\n})",
+      "ATH10K_PACKAGES_QCA9880": "{'kmod-ath10k', '-kmod-ath10k-ct', '-kmod-ath10k-ct-smallbuffers', ...}",
+      "manifest_aliase": [
+        "openmesh-mr1750 (v1)",
+        "openmesh-mr1750v2 (v2)"
+      ]
+    },
+    "fcc": {
+      "FCC ID": "WT8-MR1750",
+      "Grantee": "Datto, Inc. (Grantee Code WT8)",
+      "Equipment Class": "Wireless a/b/g/n/AC Access Point",
+      "Test Firm": "Bureau Veritas CPS (H.K.) Ltd., Taoyuan Branch",
+      "Anträge": [
+        {
+          "datum": "2015-01-29",
+          "zweck": "Original Equipment"
+        },
+        {
+          "datum": "2015-01-29",
+          "zweck": "Original Equipment"
+        },
+        {
+          "datum": "2016-03-23",
+          "zweck": "Class II permissive change"
+        }
+      ],
+      "Frequenzen/Leistung": [
+        {
+          "MHz": "2412-2462",
+          "W": 0.74,
+          "Regel": "15C"
+        },
+        {
+          "MHz": "5180-5240",
+          "W": 0.047,
+          "Regel": "15E"
+        },
+        {
+          "MHz": "5180-5240",
+          "W": 0.544,
+          "Regel": "15E"
+        },
+        {
+          "MHz": "5745-5825",
+          "W": 0.594,
+          "Regel": "15C"
+        },
+        {
+          "MHz": "5745-5825",
+          "W": 0.312,
+          "Regel": "15E"
+        }
+      ],
+      "Grant Comments": "Class II Permissive Change to update 5.2GHz and 5.8GHz bands to U-NII-1 & U-NII-3 new rules. Power listed is the maximum combined conducted output power. ... separation distance of at least 30 cm ... Operations in the 5.15-5.25GHz band are restricted to indoor usage only. This device has 20 MHz, 40 MHz and 80 MHz bandwidth mode.",
+      "Exhibits": [
+        "User Manual.pdf (2.3 MB)",
+        "Internal Photos.pdf (931.2 KB)",
+        "External Photos.pdf (336.2 KB)",
+        "Label Location.pdf",
+        "Label Sample.pdf",
+        "Operational Description.pdf",
+        "Test Setup Photos_rev.pdf (2016)",
+        "Test Set Up Photo.pdf",
+        "Test Report_rev.pdf (2016, 576.9 KB)",
+        "Test Report (DTS).pdf (4.1 MB)",
+        "Test Report (NII).pdf (1011 KB)",
+        "Attestation (Channel and Mode Declaration).pdf",
+        "Cover Letters",
+        "RF Exposure Info (MPE).pdf (2015, 2016)",
+        "Block Diagram/Schematics/Software Operating Description: nur Metadaten (vertraulich)"
+      ],
+      "Modular Equipment": "Does not apply",
+      "Composite Device": "Yes"
+    },
+    "fcc_handbuch": {
+      "Titel": "Wireless-N / AC Long Range Ceiling Mount Dual Concurrent Access Point",
+      "Features": [
+        "High Speed Data Rate Up to 300 Mbps for each band (2.4GHz / 5GHz)",
+        "10/100/1000 Gigabit Ethernet",
+        "Power-over-Ethernet (IEEE802.3at/af)",
+        "Multiple SSID (up to 8 in each frequency band)",
+        "SNMP",
+        "QoS (WMM)"
+      ],
+      "Package Contents": [
+        "MR1750 Access Point",
+        "Wall Mount Kit: Mounting Bracket, Wall/Ceiling Mounting Hardware Kit, T-Rail Mounting Hardware Kit"
+      ],
+      "Hardware Installation": "Connect the Power Adapter DC connector to the DC-IN port ... POWER light ... orange; 2.4GHz/5GHz WLAN light (green for 5G, blue for 2.4G); LAN light blue",
+      "Montage": "Halterung an Wand/Decke; T-Rail-Verbinder 15/16in (2.38cm) und 9/16in (1.43cm); Abstandshalter für abgehängte Decken",
+      "Front Panel": {
+        "Reset Button": "One click for reset the device. Press over 10 seconds for reset to factory default.",
+        "LED Lights": "LED lights for WPS, WLAN 5G, WLAN 2.4G, Ethernet port and Power."
+      },
+      "Rear Panel": {
+        "Power": "DC IN for Power.",
+        "Ethernet Port": "Ethernet port for RJ-45 cable.",
+        "Ceiling (Wall) Mount Hole": "attach to ceiling or wall",
+        "Kensington Security Slot": "cable lock"
+      },
+      "Betriebsmodi": "Access Point, WDS AP, WDS Bridge, Repeater",
+      "Regulatorik": "Operations in the 5.15-5.25GHz band are restricted to indoor usage only; IC RSS-210; CE 1999/5/EC"
+    },
+    "fcc_betriebsbeschreibung": {
+      "Text": "Wireless a/b/g/n/AC Access Point, 2.4GHz & 5.0GHz; maximum data rate up to 1299.9Mbps (OFDM), 11Mbps DSSS fallback. The transmitter of the EUT is powered by 12Vdc adapter or 48Vdc POE. The EUT is used PIFA antenna with IPEX connector.",
+      "Report No.": "RF150105C11"
+    },
+    "fcc_mpe": {
+      "Report No.": "SA140224C17D",
+      "Applicant": "Open Mesh, Inc., 7327 SW Barnes Rd #422, Portland, OR 97225",
+      "Brand": "Open Mesh",
+      "Model": "MR1750",
+      "Test Sample": "ENGINEERING SAMPLE",
+      "Bestätigungstext": "The above equipment (Model: EAP1750H) has been tested by Bureau Veritas ...",
+      "Tabelle": [
+        {
+          "MHz": "2412-2462",
+          "max_dBm": 28.69,
+          "gewinn_dBi": 8.77
+        },
+        {
+          "MHz": "5180-5240",
+          "max_dBm": 16.72,
+          "gewinn_dBi": 9.77
+        },
+        {
+          "MHz": "5745-5825",
+          "max_dBm": 27.74,
+          "gewinn_dBi": 9.77
+        }
+      ],
+      "Note": "2.4GHz Band: Directional gain = 4dBi + 10log(3) = 8.77dBi; 5.0GHz Band: Directional gain = 5dBi + 10log(3) = 9.77dBi",
+      "Abstand": "30 cm, Mobile Device"
+    },
+    "fcc_label": {
+      "Model No.": "MR1750",
+      "FCC ID": "WT8-MR1750",
+      "IC": "10103A-MR1750",
+      "Marke": "Open Mesh",
+      "MAC": "AC:86:74:0C:57:E0 (Muster)",
+      "SN": "12A296551 (Muster)",
+      "Herkunft": "Made in Taiwan",
+      "Zeichen": "FCC, RoHS, WEEE, CE mit Warnzeichen (!), RCM",
+      "QR-Code": "ja",
+      "Hardware-Version": "nicht aufgedruckt"
+    },
+    "fcc_innenfotos": {
+      "Gehäuse": "rund, weiß, zwei Schalen; Platine rund mit Abschirmblech über SoC/RAM und 2.4-GHz-Teil",
+      "Antennen": "Antennenblech-Träger mit drei Armen und Koaxkabeln (IPEX) auf der Platine bzw. zur Mini-PCIe-Karte",
+      "5-GHz-Karte": "Mini-PCIe-Karte, Aufkleber \"PCE4553AH\", S/N 13B297748, MAC 88DC9613134A (Muster); Kühlblech; Steckplatz auf der Hauptplatine",
+      "Platine": "Aufdruck mit \"Ver 1.00\" teilweise lesbar; Reset-Taster am Platinenrand sichtbar; serielle Stiftleiste auf den Fotos nicht eindeutig erkennbar"
+    },
+    "fcc_aussenfotos": {
+      "Gerät": "runder weißer Deckel, LEDs an der Vorderkante; Rückseite: RJ45-Buchse und DC-Buchse nebeneinander in einer Mulde, Montagelöcher, Lüftungsschlitze, Kensington-Schlitz",
+      "Netzteil (Testmuster)": "Powertron Electronics Corp. AC Adapter, Model PA1024-2HUB / PA1024-2HU / PA1024-120HUB200, Part No. PA1024-120HUB200, Input 100-240V~ 50-60Hz 0.6A, Output 12V DC 2.0A 24W Max, Efficiency Level V, LPS, Hohlstecker; US-Stecker"
+    },
+    "fcc_aenderung": {
+      "Text": "Class II permissive change: 1. Converting the DTS filing from 15.247 to 15.407 under new rule 2. Updating U-NII filing to under new rule.",
+      "Reference no.": "RF160113C18"
+    },
+    "openmesh_shop_2015": {
+      "Titel": "MR1750 Dual Band 802.11ac Access Point",
+      "Preis": "$225.00",
+      "Kurz": "High performance, 802.11ac cloud-managed access point with 802.3af Gigabit PoE.",
+      "Netzteil-Optionen": [
+        "Without Adapter (802.3af PoE only)",
+        "24v Universal Power Supply (US, UK, EU, AU) +$5.00"
+      ],
+      "Beschreibung": "cloud managed, dual band, 802.11ac mesh-capable access point that includes hardware watchdog, standard 802.3af POE support and a single Gigabit Ethernet port; 50-100 simultaneous users; 802.11ac replacement for the MR900",
+      "High performance": "3x3, 450+1300 Mbps MIMO configuration",
+      "Flexible": "included wall/ceiling mount, optional outdoor enclosure",
+      "Mesh": "For optimal range, the MR1750 will mesh with other devices over the 2.4 GHz band only.",
+      "Strom": "We recommend powering this unit with standard 802.3af PoE. It is also compatible with the 24v international power supply (add-on option). This access point is not compatible with Open-Mesh passive PoE injectors.",
+      "Compatible Enclosures": [
+        "OM Indoor Ethernet",
+        "OM Indoor Ceiling",
+        "OM Indoor Wallplug",
+        "OM Outdoor",
+        "MR Outdoor"
+      ],
+      "SKU": "MR1750",
+      "Warranty": "1 year",
+      "Weight": "1.0000 (Versandgewicht, Einheit nicht genannt)"
+    },
+    "openmesh_shop_intl_2016": {
+      "Titel": "MR1750 Dual Band 802.11ac Access Point (International Version)",
+      "SKU": "MR1750-INTL",
+      "Kurz": "High performance, 802.11ac cloud-managed access point with 802.3af/at Gigabit PoE. International version: will not ship to USA.",
+      "Netzteil-Optionen": [
+        "Without Adapter (802.3af PoE only)",
+        "24v (24W) Universal Power Supply (US, UK, EU, AU) +$5.00"
+      ],
+      "International": "The international version is identical to the US version, but ships without the firmware restrictions required by the FCC.",
+      "Fußnote 3": "While most deployments will use less than 15.4W (802.3af), long cable runs and/or very high client density may exceed an af power budget.",
+      "Strom": "We recommend powering this unit with standard 802.3af/at PoE. It is also compatible with the 24v universal power supply (add-on option). This access point is not compatible with Open Mesh passive PoE injectors."
+    },
+    "openmesh_datenblatt": {
+      "Speed (rated)": "3x3 MIMO 450 + 1300 Mbps",
+      "Radio: 2.5 GHz [sic]": "11b/g/n: 2.412~2.484 GHz",
+      "Radio: 5 GHz": "11a/n/ac: 5.18-5.24 and 5.745-5.825 GHz",
+      "Antenna": "Six internal (2.4 GHz: 4 dBi; 5 GHz: 5 dBi)",
+      "Power": "Up to 23 dBm (200 mw)",
+      "Processor": "QCA9558 (Processor @ 700mhz MIPS74K + 2.4 GHz radio) + AR9880 (5 GHz Radio)",
+      "Max users (recommended)": "50-100 per AP",
+      "Memory": "128MB DRAM",
+      "Security": "WPA/WPA2 Personal, WPA/WPA2 Enterprise, 802.1X RADIUS, captive portal, client isolation",
+      "Self-forming, self-healing mesh": "Yes (2.4 GHz)",
+      "Hardware watchdog CPU": "Yes",
+      "SSIDs": "4",
+      "SSID to VLAN tagging": "Yes",
+      "Ethernet": "1 x Gigabit",
+      "PoE": "802.3af 48v",
+      "Power supply options": "Universal 24v (US, EU, UK, AU)",
+      "LEDs": "Power, Ethernet, 2.4 GHz, 5 GHz, Traffic",
+      "Temperature": "0-50 C",
+      "Mounting options": "Solid ceiling, wall, 9/16\" or 15/16\" drop ceiling (included); outdoor enclosure ODMRX00 (optional)",
+      "Size": "6.38\" (diameter) x 1.5\" (height) | 0.52 Lbs",
+      "Certifications": "FCC (US), IC (Canada), CE (Europe), RCM (Australia, New Zealand)",
+      "Warranty": "1 Year",
+      "Transmission pattern": "Diagramme horizontal/vertikal für 2.4 GHz und 5 GHz (nur grafisch)",
+      "Enclosure-Seite": "With the narrower 180-degree antenna pattern of the MR Series access points, the outdoor enclosure is ideal for covering an outdoor sector ...; Enclosure: Diameter 8.0cm, Depth 4.5cm [sic], 802.3af PoE recommended, UV-stabilized ABS with rubber seal, pole/wall"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Open Mesh",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8-MR1750/Label/Label-Sample-pdf-2517972",
+        "stand": "Exhibit 2015-01-29 (PDF 2015-01-26)",
+        "sicherheit": "hoch",
+        "bemerkung": "Schreibweise auch Open-Mesh (ToH, Webseite 2015); später Datto, Inc. (FCC-Grantee)"
+      },
+      {
+        "wert": "Open-Mesh",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "OpenMesh",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr.dtsi",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "DEVICE_VENDOR in generic.mk"
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "MR1750",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8-MR1750/Label/Label-Sample-pdf-2517972",
+        "stand": "Exhibit 2015-01-29 (PDF 2015-01-26)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MR1750",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "v1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "v1",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr.dtsi",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "model = \"OpenMesh MR1750 v1\"; SUPPORTED_DEVICES += mr1750 (ar71xx-Maschinenname \"MR1750\", v2 = \"MR1750v2\")"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild zeigt nur \"Model No.: MR1750\", FCC ID WT8-MR1750, IC 10103A-MR1750, MAC, SN; keine Hardware-Version",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8-MR1750/Label/Label-Sample-pdf-2517972",
+        "stand": "Exhibit 2015-01-29 (PDF 2015-01-26)",
+        "sicherheit": "hoch",
+        "bemerkung": "Muster-Typenschild von 2015 (vor v2)"
+      },
+      {
+        "wert": "v1 und v2 unterscheidet OpenWrt nur am vom Bootloader gemeldeten Gerätenamen (ar71xx: \"MR1750\" bzw. \"MR1750v2\"); die Hardwarebeschreibung ist in beiden Commits gleich",
+        "quelle": "openwrt_git_v2",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0988e03f0e676286f3377d1530ebfb0d819ee629",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet; woran man v2 außen erkennt, ist nicht belegt"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "WT8-MR1750",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8-MR1750/Label/Label-Sample-pdf-2517972",
+        "stand": "Exhibit 2015-01-29 (PDF 2015-01-26)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WT8-MR1750",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "ToH-Link https://fcc.io/WT8-MR1750"
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "10103A-MR1750",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8-MR1750/Label/Label-Sample-pdf-2517972",
+        "stand": "Exhibit 2015-01-29 (PDF 2015-01-26)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": "MR1750-INTL (International Version, gleiche Hardware ohne FCC-Firmware-Beschränkung)",
+        "quelle": "openmesh_shop_intl_2016",
+        "beleg": "https://web.archive.org/web/20160502115112/http://www.open-mesh.com:80/products/access-points/mr1750-ac-international-cloud-access-point.html",
+        "stand": "Webarchiv 2016-05-02",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "EnGenius EAP1750H (vermutlich ODM-Grundgerät)",
+        "quelle": "fcc_mpe",
+        "beleg": "https://fccid.io/WT8-MR1750/RF-Exposure-Info/RF-Exposure-Info-MPE-pdf-2517981",
+        "stand": "Bericht SA140224C17D vom 2015-01-07, Exhibit 2015-01-29",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: Bestätigungstext im MPE-Bericht nennt \"Model: EAP1750H\"; Handbuch ist ODM-Vorlage"
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "abgekündigt 2018",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Discontinued 2018"
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "2015-01 (FCC-Zulassung 2015-01-29); 2015-08 im Open-Mesh-Shop lieferbar",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8-MR1750",
+        "stand": "Grant 2015-01-29 (Original), Class II 2016-03-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm Atheros QCA9558",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9558 ver 1 rev 0",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9558",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 700,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 700,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 720,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": "720/600/240 MHz (CPU/DDR/AHB), Widerspruch zu 700 MHz"
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "MIPS 74K",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"MIPS74K\""
+      },
+      {
+        "wert": "mips_24kc (OpenWrt-Paketarchitektur)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 128,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"128MB DRAM\""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": "2x 7 MB nutzbar, einer der beiden Bereiche ist das Recovery-Image"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr.dtsi",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "compatible = \"jedec,spi-nor\""
+      }
+    ],
+    "flash_partitionen": [
+      {
+        "wert": "u-boot 256 KiB, u-boot-env 64 KiB, custom 384 KiB, inactive 0x7a0000, inactive2 0x7a0000, ART 64 KiB; Image-Größe 7808k (Dual-Image)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr.dtsi",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Partitionen kommen laut DTS vom Bootloader"
+      }
+    ],
+    "switch": [
+      {
+        "wert": "kein Switch; einzelner Ethernet-PHY Atheros AR8035 (RGMII)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Atheros AR8035 GbE Phy",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Seitenrevision 2026-08-06 01:38",
+        "sicherheit": "mittel",
+        "bemerkung": "Comments network ports; Feld Switch \"¿\""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": [
+          "Qualcomm Atheros QCA9558 (2.4 GHz, im SoC)",
+          "Atheros AR9880 (5 GHz)"
+        ],
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "Qualcomm Atheros QCA9558",
+          "Atheros AR9880"
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "5-GHz-Funk auf Mini-PCIe-Karte \"PCE4553AH\""
+        ],
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8-MR1750/Internal-Photos/Internal-Photos-pdf-2517973",
+        "stand": "Exhibit 2015-01-29 (8 Seiten)",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufkleber auf dem Foto gelesen; ToH-Live: 1x miniPCI"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath9k",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath9k, ath10k-ct",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Seitenrevision 2026-08-06 01:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath9k (2.4 GHz), ath10k-ct mit ath10k-firmware-qca988x-ct (5 GHz)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr.dtsi",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "DEVICE_PACKAGES in generic.mk"
+      },
+      {
+        "wert": "ath10k (nicht -ct) über ATH10K_PACKAGES_QCA9880",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/ath79-generic",
+        "stand": "lokaler Checkout v2025.1.3-5-g0ad3ad5b (2026-09-05)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": "3x3",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": "3T3R 2.4 GHz Wi-Fi (11n)"
+      },
+      {
+        "wert": "3x3",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": "3x3 MIMO 450 Mbps"
+      },
+      {
+        "wert": "3x3:3",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Seitenrevision 2026-08-06 01:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": "3x3",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": "3T3R 5 GHz Wi-Fi (11ac)"
+      },
+      {
+        "wert": "3x3",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": "3x3 MIMO 1300 Mbps"
+      },
+      {
+        "wert": "3x3:3",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Seitenrevision 2026-08-06 01:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AC1750 (450 + 1300 Mbps)",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_wave2": [
+      {
+        "wert": "nein (Wave 1)",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus dem 5-GHz-Chip AR9880 (QCA988x-Familie, 802.11ac Wave 1)"
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "20/40/80 MHz",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8-MR1750",
+        "stand": "Grant 2015-01-29 (Original), Class II 2016-03-23",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant Comments"
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": [
+          "2412-2462 MHz",
+          "5180-5240 MHz",
+          "5745-5825 MHz"
+        ],
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8-MR1750",
+        "stand": "Grant 2015-01-29 (Original), Class II 2016-03-23",
+        "sicherheit": "hoch",
+        "bemerkung": "kein DFS-Bereich in der US-Zulassung"
+      },
+      {
+        "wert": [
+          "2.412-2.484 GHz",
+          "5.18-5.24 GHz",
+          "5.745-5.825 GHz"
+        ],
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": "Datenblatt-Angabe"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": 23,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Up to 23 dBm (200 mw)\""
+      },
+      {
+        "wert": {
+          "2.4 GHz": 28.69,
+          "5180-5240 MHz": 16.72,
+          "5745-5825 MHz": 27.74
+        },
+        "quelle": "fcc_mpe",
+        "beleg": "https://fccid.io/WT8-MR1750/RF-Exposure-Info/RF-Exposure-Info-MPE-pdf-2517981",
+        "stand": "Bericht SA140224C17D vom 2015-01-07, Exhibit 2015-01-29",
+        "sicherheit": "hoch",
+        "bemerkung": "maximale leitungsgebundene Summenleistung aller drei Ketten (US-Zulassung 2015)"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": "internal antennas"
+      },
+      {
+        "wert": "intern",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": "Six internal"
+      },
+      {
+        "wert": "intern (PIFA, mit IPEX-Stecker an der Platine)",
+        "quelle": "fcc_betriebsbeschreibung",
+        "beleg": "https://fccid.io/WT8-MR1750/Operational-Description/Operational-Description-pdf-2517974",
+        "stand": "Exhibit 2015-01-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "intern IPEX (U.FL), nicht von außen zugänglich",
+        "quelle": "fcc_betriebsbeschreibung",
+        "beleg": "https://fccid.io/WT8-MR1750/Operational-Description/Operational-Description-pdf-2517974",
+        "stand": "Exhibit 2015-01-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 6,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "getrennt (3x 2.4 GHz, 3x 5 GHz)",
+        "quelle": "fcc_mpe",
+        "beleg": "https://fccid.io/WT8-MR1750/RF-Exposure-Info/RF-Exposure-Info-MPE-pdf-2517981",
+        "stand": "Bericht SA140224C17D vom 2015-01-07, Exhibit 2015-01-29",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet: Gewinn je Band getrennt angegeben (4 bzw. 5 dBi), je 10log(3) für drei Ketten; Datenblatt: sechs interne Antennen"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4 GHz": 4,
+          "5 GHz": 5
+        },
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "2.4 GHz": 4,
+          "5 GHz": 5
+        },
+        "quelle": "fcc_mpe",
+        "beleg": "https://fccid.io/WT8-MR1750/RF-Exposure-Info/RF-Exposure-Info-MPE-pdf-2517981",
+        "stand": "Bericht SA140224C17D vom 2015-01-07, Exhibit 2015-01-29",
+        "sicherheit": "hoch",
+        "bemerkung": "je Antenne; gerichteter Summengewinn 8.77 bzw. 9.77 dBi"
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "Halbraum, etwa 180° (für Decken- oder Wandmontage)",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"narrower 180-degree antenna pattern of the MR Series access points\"; Diagramme nur grafisch"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "LAN (eth0)",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "Uplink/LAN, PoE-Eingang 802.3af"
+          }
+        ],
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "Ethernet",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "RJ-45 auf der Rückseite, PoE-Eingang"
+          }
+        ],
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR1750/User-Manual/User-Manual-pdf-2517980",
+        "stand": "Exhibit 2015-01-29 (PDF 2015-01-26, Titel UM_MR1750_140126)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "Ethernet",
+            "geschwindigkeit": "1000",
+            "rolle": ""
+          }
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Ethernet 1Gbit ports: 1"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": "1 x Gigabit"
+      },
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": "eine RJ45-Buchse für Netz und PoE, daneben DC-Buchse"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Seitenrevision 2026-08-06 01:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "802.3af",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.3af",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"802.3af 48v\""
+      },
+      {
+        "wert": "802.3af",
+        "quelle": "openmesh_shop_2015",
+        "beleg": "https://web.archive.org/web/20150811200307/http://www.open-mesh.com:80/products/mr1750-ac-cloud-access-point.html",
+        "stand": "Webarchiv 2015-08-11",
+        "sicherheit": "hoch",
+        "bemerkung": "nicht kompatibel mit den passiven PoE-Injektoren von Open Mesh"
+      },
+      {
+        "wert": "802.3af/at",
+        "quelle": "openmesh_shop_intl_2016",
+        "beleg": "https://web.archive.org/web/20160502115112/http://www.open-mesh.com:80/products/access-points/mr1750-ac-international-cloud-access-point.html",
+        "stand": "Webarchiv 2016-05-02",
+        "sicherheit": "hoch",
+        "bemerkung": "meist unter 15.4 W (af), bei langen Kabeln oder sehr vielen Clients kann das af-Budget überschritten werden"
+      },
+      {
+        "wert": "802.3af/at",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR1750/User-Manual/User-Manual-pdf-2517980",
+        "stand": "Exhibit 2015-01-29 (PDF 2015-01-26, Titel UM_MR1750_140126)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power-over-Ethernet (IEEE802.3at/af)"
+      },
+      {
+        "wert": "802.3af/at",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": 48,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": "802.3af 48v"
+      },
+      {
+        "wert": 48,
+        "quelle": "fcc_betriebsbeschreibung",
+        "beleg": "https://fccid.io/WT8-MR1750/Operational-Description/Operational-Description-pdf-2517974",
+        "stand": "Exhibit 2015-01-29",
+        "sicherheit": "hoch",
+        "bemerkung": "\"48Vdc POE\""
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "ja (DC-IN, Rückseite neben der RJ45-Buchse)",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR1750/User-Manual/User-Manual-pdf-2517980",
+        "stand": "Exhibit 2015-01-29 (PDF 2015-01-26, Titel UM_MR1750_140126)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, Hohlstecker",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/WT8-MR1750/External-Photos/External-Photos-pdf-2517970",
+        "stand": "Exhibit 2015-01-29 (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": "Maß nicht angegeben"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 12,
+        "quelle": "fcc_betriebsbeschreibung",
+        "beleg": "https://fccid.io/WT8-MR1750/Operational-Description/Operational-Description-pdf-2517974",
+        "stand": "Exhibit 2015-01-29",
+        "sicherheit": "hoch",
+        "bemerkung": "\"powered by 12Vdc adapter or 48Vdc POE\""
+      },
+      {
+        "wert": 12,
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/WT8-MR1750/External-Photos/External-Photos-pdf-2517970",
+        "stand": "Exhibit 2015-01-29 (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": "Netzteil des Testmusters 12 V"
+      },
+      {
+        "wert": 12,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "12 VDC, 2.0 A"
+      },
+      {
+        "wert": "12-24",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": "\"12-24V 1A DC\""
+      },
+      {
+        "wert": 24,
+        "quelle": "openmesh_shop_2015",
+        "beleg": "https://web.archive.org/web/20150811200307/http://www.open-mesh.com:80/products/mr1750-ac-cloud-access-point.html",
+        "stand": "Webarchiv 2015-08-11",
+        "sicherheit": "hoch",
+        "bemerkung": "Zubehör \"24v Universal Power Supply\"; Widerspruch zu 12 V des FCC-Testmusters, laut Commit beides im zulässigen Bereich"
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 2.0,
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/WT8-MR1750/External-Photos/External-Photos-pdf-2517970",
+        "stand": "Exhibit 2015-01-29 (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": "Nennstrom des 12-V-Testnetzteils"
+      },
+      {
+        "wert": 2.0,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": "12-24V 1A DC"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": "nein (optional für 5 $ dazu)",
+        "quelle": "openmesh_shop_2015",
+        "beleg": "https://web.archive.org/web/20150811200307/http://www.open-mesh.com:80/products/mr1750-ac-cloud-access-point.html",
+        "stand": "Webarchiv 2015-08-11",
+        "sicherheit": "hoch",
+        "bemerkung": "Auswahl \"Without Adapter (802.3af PoE only)\" oder \"24v Universal Power Supply (US, UK, EU, AU)\""
+      },
+      {
+        "wert": "nein",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR1750/User-Manual/User-Manual-pdf-2517980",
+        "stand": "Exhibit 2015-01-29 (PDF 2015-01-26, Titel UM_MR1750_140126)",
+        "sicherheit": "mittel",
+        "bemerkung": "Lieferumfang: Access Point und Wall Mount Kit, kein Netzteil genannt"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "24 V, 24 W, Universal-Netzteil (US, UK, EU, AU), Zubehör",
+        "quelle": "openmesh_shop_intl_2016",
+        "beleg": "https://web.archive.org/web/20160502115112/http://www.open-mesh.com:80/products/access-points/mr1750-ac-international-cloud-access-point.html",
+        "stand": "Webarchiv 2016-05-02",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Powertron PA1024-120HUB200: 100-240 V~, 12 V DC 2.0 A, 24 W max, Hohlstecker",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/WT8-MR1750/External-Photos/External-Photos-pdf-2517970",
+        "stand": "Exhibit 2015-01-29 (4 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": "Netzteil des FCC-Testmusters, US-Stecker"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Seitenrevision 2026-08-06 01:38",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen (außen nur im optionalen Außengehäuse MR Outdoor/ODMRX00)",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0-50 °C",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": [
+          "Decke",
+          "Wand",
+          "abgehängte Decke (T-Schiene 9/16\" oder 15/16\")"
+        ],
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": "Halterung beiliegend; optional Außengehäuse für Mast/Wand"
+      },
+      {
+        "wert": [
+          "Decke",
+          "Wand",
+          "T-Schiene 15/16in (2.38 cm) und 9/16in (1.43 cm)"
+        ],
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR1750/User-Manual/User-Manual-pdf-2517980",
+        "stand": "Exhibit 2015-01-29 (PDF 2015-01-26, Titel UM_MR1750_140126)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gerät wird auf die Halterung gesetzt und etwa 90° im Uhrzeigersinn gedreht"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "162 x 38 (Durchmesser x Höhe)",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": "6.38\" x 1.5\", umgerechnet"
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 236,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": "0.52 lbs, umgerechnet"
+      }
+    ],
+    "diebstahlsicherung": [
+      {
+        "wert": "Kensington-Schlitz",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR1750/User-Manual/User-Manual-pdf-2517980",
+        "stand": "Exhibit 2015-01-29 (PDF 2015-01-26, Titel UM_MR1750_140126)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 6,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 6,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": "2x WLAN, 2x Status (grün/rot), 1x LAN, 1x Power (blau)"
+      },
+      {
+        "wert": 5,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power, Ethernet, 2.4 GHz, 5 GHz, Traffic"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "ja, 1 Taster (GPIO 17)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, Vorderseite; über 10 Sekunden drücken = Werkseinstellungen",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR1750/User-Manual/User-Manual-pdf-2517980",
+        "stand": "Exhibit 2015-01-29 (PDF 2015-01-26, Titel UM_MR1750_140126)",
+        "sicherheit": "mittel",
+        "bemerkung": "ODM-Handbuch; Lage auf den Außenfotos nicht eindeutig"
+      }
+    ],
+    "hardware_watchdog": [
+      {
+        "wert": "ja, extern, ab Werk aktiv (GPIO 16, Hardware-Frist 300 s)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": "DTS: linux,wdt-gpio, hw_algo toggle; Paket om-watchdog unter ar71xx"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen, TTL-Pins auf der Platine (ob Stiftleiste oder Lötpunkte, nicht belegt)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": "\"TTL pins are on board\"; auf den FCC-Innenfotos nicht eindeutig erkennbar"
+      },
+      {
+        "wert": "vorhanden",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial: Yes"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "Pfeil markiert VCC, danach GND, TX, RX",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Seitenrevision 2026-08-06 01:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "115200 8N1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/generic",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Seitenrevision 2026-08-06 01:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ar71xx-ath79/generic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "ar71xx bis 19.07, ath79 ab 21.02"
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "openmesh_mr1750-v1",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr.dtsi",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "17.01.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ar71xx: Commit 2015-09-14 (r46932)",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/fec6313b6284e8098a27efef077173f7107e2bda",
+        "stand": "Commit 2015-09-14 (SVN r46932)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath79: gemergt 2021-01-19",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "23.05.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "25.12.5",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Seitenrevision 2026-08-06 01:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "ap51-flash, U-Boot TFTP recovery, siehe Git-Commit",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot TFTP recovery, siehe Git-Commit",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Seitenrevision 2026-08-06 01:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ap51-flash beim Hochfahren über LAN; oder per serieller Konsole initramfs per TFTP starten, dann sysupgrade -n",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "nur sysupgrade-Image, kein factory-Image (factory = false)",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/ath79-generic",
+        "stand": "lokaler Checkout v2025.1.3-5-g0ad3ad5b (2026-09-05)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja (ath79-generic, openmesh-mr1750-v1)",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/ath79-generic",
+        "stand": "lokaler Checkout v2025.1.3-5-g0ad3ad5b (2026-09-05)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Yes",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Seitenrevision 2026-08-06 01:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://help.datto.com/s/article/KB360024255852",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "eth0 (LAN) = MAC auf dem Typenschild; WLAN 2.4 GHz = +1, 5 GHz = +16",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr.dtsi",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "label-mac-device = &eth0; nvmem macaddr_art_0"
+      }
+    ],
+    "varianten": [
+      {
+        "wert": [
+          "MR1750 v1 (dieses Image)",
+          "MR1750 v2 (eigenes Image openmesh-mr1750-v2, laut OpenWrt gleiche Hardwaredaten)",
+          "MR1750-INTL (Vertriebsvariante, gleiche Hardware)"
+        ],
+        "quelle": "openwrt_git_v2",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0988e03f0e676286f3377d1530ebfb0d819ee629",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bekannte_probleme": [
+      {
+        "wert": "EEE am AR8035 in OpenWrt abgeschaltet (eee-broken-100tx/1000t); früher Ethernet-Verzögerungsprobleme zwischen U-Boot und OpenWrt (ar71xx 2016 behoben)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr.dtsi",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "mesh_herstellerfirmware": [
+      {
+        "wert": "Mesh nur über 2.4 GHz (Herstellerfirmware)",
+        "quelle": "openmesh_shop_2015",
+        "beleg": "https://web.archive.org/web/20150811200307/http://www.open-mesh.com:80/products/mr1750-ac-cloud-access-point.html",
+        "stand": "Webarchiv 2015-08-11",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://web.archive.org/web/20150811200307/http://www.open-mesh.com:80/products/mr1750-ac-cloud-access-point.html",
+        "quelle": "openmesh_shop_2015",
+        "beleg": "https://web.archive.org/web/20150811200307/http://www.open-mesh.com:80/products/mr1750-ac-cloud-access-point.html",
+        "stand": "Webarchiv 2015-08-11",
+        "sicherheit": "hoch",
+        "bemerkung": "ToH-Link https://www.open-mesh.com/products/access-points/grp-mr1750-ac-cloud-access-point-274.html ist nicht archiviert"
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/WT8-MR1750/Internal-Photos/Internal-Photos-pdf-2517973",
+      "kategorie": "seriell_zugang",
+      "grund": "Innenfotos bei 200 dpi gesichtet: Lage der TTL-Pins (Stiftleiste oder Lötpunkte), RAM-/Flash-Chips und Platinenkennung nicht sicher lesbar; Fotos mit eigener Platine vergleichen"
+    },
+    {
+      "url": "https://fccid.io/WT8-MR1750/External-Photos/External-Photos-pdf-2517970",
+      "kategorie": "dc_buchse",
+      "grund": "Maß der DC-Buchse nirgends angegeben (Testnetzteil Powertron PA1024-120HUB200, Hohlstecker); am Gerät messen"
+    },
+    {
+      "url": "https://help.datto.com/s/article/KB360024255852",
+      "kategorie": "hw_version",
+      "grund": "Datto-Supportseite (JavaScript, nicht ausgewertet); offen, woran man v1 und v2 außen unterscheidet (Typenschild-Muster 2015 ohne Version)"
+    },
+    {
+      "url": "https://web.archive.org/web/20170616031404/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-06.pdf",
+      "kategorie": "datenblatt",
+      "grund": "späteres MR-Datenblatt (2016-06), evtl. mit v2-Hinweis oder geänderten Strom-/Gewichtsangaben"
+    },
+    {
+      "url": "https://fccid.io/WT8-MR1750/Test-Report/Test-Report-DTS-pdf-2517977",
+      "kategorie": "wlan_sendeleistung_dbm",
+      "grund": "Prüfbericht DTS (4.1 MB) mit Leistung je Kette und Antennendaten, nicht ausgewertet"
+    },
+    {
+      "url": "https://forum.openwrt.org/search?q=MR1750",
+      "kategorie": "seriell_zugang",
+      "grund": "Forum-Suche (search.json gesperrt) nicht ausgeführt; Threads zu MR1750 v1/v2 Unterschied und serieller Konsole möglich"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/open-mesh-mr1750*&output=json",
+      "kategorie": "handel",
+      "grund": "kein Geizhals-Eintrag im Webarchiv; EAN und ASIN nirgends gefunden"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-20",
+    "status": "teilweise",
+    "anfragen": 46,
+    "notiz": "ToH-Dump (pid 15677574) + Live-hwdata (Rev. 2026-08-06), keine OpenWrt-Wiki-Geräteseite, OpenWrt-Commits ar71xx (2015) und ath79 v1/v2 (2021), DTSI/generic.mk, Gluon-Target v2025.1, FCC WT8-MR1750 (Handbuch, Betriebsbeschreibung, MPE, Typenschild, Innen-/Außenfotos, Änderungsschreiben), Open-Mesh-Shopseiten 2015/2016 und Datenblatt MR-2016-03 aus dem Webarchiv ausgewertet. DeviWiki/WikiDevi ohne Treffer, Geizhals im Webarchiv ohne Treffer. Widersprüche: CPU 700 (ToH/Datenblatt) vs. 720 MHz (Commit); DC 12 V 2 A (FCC-Testnetzteil, ToH) vs. 12-24 V 1 A (Commit) vs. 24-V-Zubehörnetzteil (Shop); PoE af (Commit, Datenblatt) vs. af/at (ToH, Shop 2016, FCC-Handbuch). Herstellerangaben nennen keine Hardware-Version; FCC- und Shopdaten von 2015 stammen aus der Zeit vor v2. Seriell-Lage, DC-Buchsenmaß, v1/v2-Erkennung und Handelsdaten offen."
+  }
+}

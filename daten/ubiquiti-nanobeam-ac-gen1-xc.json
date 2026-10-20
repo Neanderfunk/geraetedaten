@@ -1,0 +1,2230 @@
+{
+  "image": "ubiquiti-nanobeam-ac-gen1-xc",
+  "modell": "Ubiquiti NanoBeam 5AC 19 (NBE-5AC-19, Gen1, XC)",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-20",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15681392",
+      "bemerkung": "toh_suche.py: sechs Kandidaten mit Score 0.6/0.4; passend ist \"NanoBeam 5AC 19 / XC\" (Gluon-Doku: \"NanoBeam 5AC 19 (XC)\", OpenWrt ubnt_nanobeam-ac-xc). Dump-Werte älter als Live-Seite (Release 23.05.0)"
+    },
+    "toh_seite": {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+      "stand": "Seitenrevision 2026-03-17 04:21 (raylynnknight, \"Update for 25.12.0\")",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "per ?do=export_raw; neu gegenüber Dump: Supported Current Rel 25.12.0, Serial 3.3 V, Outdoor Yes, Gluon support unknown, Kommentar Netzwerk \"Atheros AR8033 GbE Phy\", Installation method leer (Dump: \"Ubiquiti XC\")"
+    },
+    "toh_gen2xc": {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_gen2_xc",
+      "stand": "Live-Seite per ?do=export_raw am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Nachbarmodell NanoBeam 5AC Gen 2 (XC), FCC SWX-NBE5ACG2; verweist ohne Support-Commit ebenfalls auf das Image ubnt_nanobeam-ac-xc; nur zur Abgrenzung in roh"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/ubiquiti/nanobeam_ac",
+      "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "per ?do=export_raw; gemeinsame Seite NBE-5AC-16 (WA), NBE-5AC-19 (XC), NBE-2AC-13, NBE-5AC-Gen2 (XC/WA). Hardware-Infotabelle beschreibt erkennbar die WA-Variante (AR9342, 64 MiB) und wird für NBE-5AC-19 nicht übernommen. Installationsabschnitt (Umgehung der Signaturprüfung) bewusst nicht ausgewertet"
+    },
+    "openwrt_wiki_bootlog": {
+      "url": "https://openwrt.org/toh/ubiquiti/nanobeam_ac#bootlogs",
+      "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Abschnitte \"OEM bootlog / NBE-5AC-19\" (airOS XC.v8.6.2) und \"OpenWrt bootlog / NBE-5AC-19\" (SNAPSHOT r18567, 2022-01-14) auf der Wiki-Seite"
+    },
+    "openwrt_wiki_foto_board": {
+      "url": "https://openwrt.org/_media/media/ubiquiti/nanobeam_ac/nbe-5ac-19-board_top.jpg",
+      "stand": "Foto ohne EXIF, auf der Wiki-Seite (Revision 2025-02-11); identisch mit FCC-Innenfoto SWX-NBE5AC19 (Aufkleber 147E45D814)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "2367x1300, als Bild ausgewertet"
+    },
+    "openwrt_commit": {
+      "url": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+      "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "ath79: Add support for Ubiquiti NanoBeam AC Gen1 XC"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=nanobeam+repo:openwrt/openwrt",
+      "stand": "Suchergebnis 2026-10-20 (9 Commits, für NBE-5AC-19 nur 73ea763c)",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_ubnt_nanobeam-ac-xc.dts",
+      "stand": "Branch main am 2026-10-20 (letzter Commit an der Datei c2e5bded8d06, 2025-09-01)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "plus qca955x_ubnt_xc.dtsi (Flash-Partitionen, art/Kalibrierdaten); Datei-Historie: 73ea763c, dae39275, d0c64ae6, e816591e, e3ddfcc7, c2e5bded"
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Device/ubnt_nanobeam-ac-xc in generic-ubnt.mk, Device/ubnt-xc in common-ubnt.mk (IMAGE_SIZE 15744k, UBNT_BOARD/UBNT_TYPE XC, UBNT_CHIP qca955x, UBNT_VERSION 8.7.4)"
+    },
+    "gluon": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/ath79-generic",
+      "stand": "lokaler Checkout v2025.1.3 (Commit e2fe4b5 vom 2026-08-18)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "lokal gelesen (targets/ath79-generic, docs/user/supported_devices.rst, git log); Checkout flach, ältere Historie nicht vorhanden; keine Netzanfrage"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/wiki/Ubiquiti_Networks",
+      "stand": "Seite \"Ubiquiti Networks\" Revision 159819 vom 2018-11-30T21:28:03Z (imported>Omega)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "keine eigene Geräteseite; Volltextsuche \"NanoBeam 5AC\" (https://deviwiki.com/w/index.php?search=NanoBeam+5AC&fulltext=1) liefert nur Herstellerseite und OpenWrt-Listen; Herstellerseite enthält FCC/IC-Tabelle"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/api.php?action=query&list=search&srsearch=NanoBeam&format=json",
+      "stand": "Suchergebnis 2026-10-20 (1 Treffer: Ubiquiti Networks NanoBeam M2)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "keine Seite für NanoBeam AC"
+    },
+    "fcc_nbe5ac19": {
+      "url": "https://fccid.io/SWX-NBE5AC19",
+      "stand": "Original Equipment 2015-04-24 (5160-5245 MHz), Class II Permissive Change 2015-09-17 (5255-5340 MHz); Testlabor Compliance Testing, LLC",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_nbe5ac19_handbuch": {
+      "url": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+      "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "NanoBeam NBE-5AC-19 Quick Start Guide, 24 Seiten, Text per pdftotext"
+    },
+    "fcc_nbe5ac19_label": {
+      "url": "https://fccid.io/SWX-NBE5AC19/Label/Label-and-Location-2596160",
+      "stand": "Exhibit 2015-04-24 (Zeichnung \"NBE-5AC-19 Silkscreen Artwork v04\", 2014-11-20)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Zeichnung (Ober-, Seiten-, Unteransicht) und Produktfoto Unterseite, als Bild ausgewertet"
+    },
+    "fcc_nbe5ac19_innenfotos": {
+      "url": "https://fccid.io/SWX-NBE5AC19/Internal-Photos/Internal-Photos-2596159",
+      "stand": "Exhibit 2015-04-24, verfügbar ab 2015-06-21 (PDF 2015-04-20)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "2 Seiten (Platinenober- und -unterseite), als Bild ausgewertet"
+    },
+    "fcc_nbeac": {
+      "url": "https://fccid.io/SWX-NBEAC",
+      "stand": "Original Equipment 2015-06-29 und 2016-08-30 (je 5735-5840 MHz); Testlabor Sporton International",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "zweite FCC-ID, Equipment Class auf fccid.io \"NBE-5AC-19\", nur Band 5735-5840 MHz"
+    },
+    "fcc_nbeac_handbuch": {
+      "url": "https://fccid.io/SWX-NBEAC/User-Manual/User-Manual-3117369",
+      "stand": "Exhibit 2016-08-30 (PDF 2017-12-13, Druckvermerk 6/4/15, Dok.-Nr. 640-00127-08)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Quick Start Guide NBE-5AC-19 (2 Seiten, Doppelbogen), IC 6545A-NBEAC"
+    },
+    "fcc_nbeac_innenfotos": {
+      "url": "https://fccid.io/SWX-NBEAC/Internal-Photos/Internal-Photos-2659422",
+      "stand": "Sporton EP561115 Rev. 01, Issued 2015-06-25 (Exhibit 2015-06-29, verfügbar ab 2015-12-23)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "11 Fotos (Gehäuse, Antennenblech, Hauptplatine, LED-Platine), als Bild ausgewertet"
+    },
+    "datenblatt_2018": {
+      "url": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+      "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "NanoBeam ac Datasheet, Modelle NBE-5AC-16 und NBE-5AC-19; Original https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf. Weitere Archivstände 2015-01-21, 2015-05-25, 2017-07-08, 2019-09-23 nicht ausgewertet"
+    },
+    "geizhals_archiv": {
+      "url": "https://web.archive.org/web/20150920090129/http://geizhals.de/ubiquiti-nanobeam-ac-nbe-5ac-19-a1302545.html",
+      "stand": "Archivkopie 2015-09-20 (gelistet seit 2015-07-28)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "per Webarchiv-CDX gefunden (geizhals.de selbst gesperrt)"
+    },
+    "freifunk_forum_suche": {
+      "url": "https://forum.freifunk.net/search.json?q=nanobeam%20ac",
+      "stand": "Suche 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "nur Praxis-/Verkaufsthreads (z. B. 4398, 5032, 10502, 22540), keine Hardwaredaten zum NBE-5AC-19; nicht weiter ausgewertet"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "15681392",
+      "devicetype": "WiFi AP",
+      "brand": "Ubiquiti",
+      "model": "NanoBeam 5AC 19",
+      "version": "XC",
+      "fccid": "https://fccid.io/SWX-NBE5AC19",
+      "availability": "Discontinued 2017",
+      "whereavailable": "¿",
+      "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=73ea763c0dcdb96c",
+      "supportedsincerel": "22.03.0",
+      "supportedcurrentrel": "23.05.0",
+      "unsupported_functions": "NULL",
+      "target": "ath79",
+      "subtarget": "generic",
+      "packagearchitecture": "mips_24kc",
+      "bootloader": "U-Boot",
+      "cpu": "Qualcomm Atheros QCA9558",
+      "cpucores": "1",
+      "cpumhz": "720",
+      "flashmb": "16",
+      "rammb": "128",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "1",
+      "ethernet2_5gports": "-",
+      "ethernet5gports": "-",
+      "ethernet10gports": "-",
+      "sfp_ports": "-",
+      "sfp_plus_ports": "-",
+      "switch": "",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "AR8033 phy",
+      "wlanhardware": "Qualcomm Atheros QCA9880",
+      "wlan24ghz": "-",
+      "wlan50ghz": "a/n/ac",
+      "wlancomments": "19 dBi antenna",
+      "wlandriver": "ath10k-ct",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "-",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "115200 / 8N1",
+      "jtag": "No",
+      "ledcount": "4",
+      "buttoncount": "1",
+      "gpios": "-",
+      "powersupply": "PoE 24 VDC, 0.5 A",
+      "devicepage": "toh:ubiquiti:nanobeam_ac",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "NanoBeam 5AC",
+      "gitsearch": "NanoBeam 5AC",
+      "wikideviurl": "NULL",
+      "oemdevicehomepageurl": "https://www.ui.com/airmax/nanobeam-ac-gen2/",
+      "firmwareoemstockurl": "https://www.ui.com/download/airmax-ac/nanobeam-ac/nbe-5ac-19",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-ubnt_nanobeam-ac-xc-squashfs-factory.bin",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-ubnt_nanobeam-ac-xc-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_nanobeam-ac-xc-squashfs-factory.bin",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_nanobeam-ac-xc-squashfs-sysupgrade.bin",
+      "installationmethods": "Ubiquiti XC",
+      "commentinstallation": "",
+      "recoverymethods": "Ubiquiti TFTP",
+      "commentrecovery": "",
+      "picture": "media:ubiquiti:nanobeam_ac:nanobeamac.png",
+      "comments": "",
+      "page": "toh:hwdata:ubiquiti:ubiquiti_nanobeam_ac_19"
+    },
+    "toh_seite": {
+      "Device Type_devicetype": "WiFi AP",
+      "Brand": "Ubiquiti",
+      "Model": "NanoBeam 5AC 19",
+      "Versions": "XC",
+      "FCCID_urls": "https://fccid.io/SWX-NBE5AC19",
+      "Availability_availability": "Discontinued 2017",
+      "Where available": "¿",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=73ea763c0dcdb96c",
+      "Supported Since Rel_releasesince": "22.03.0",
+      "Supported Current Rel_releasecurrent": "25.12.0",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "unknown",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Qualcomm Atheros QCA9558",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "720",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "Atheros AR8033 GbE Phy",
+      "WLAN Hardwares": "Qualcomm Atheros QCA9880",
+      "WLAN 2.4GHz_wlan24": "-",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN Comments_": "19 dBi antenna",
+      "WLAN driver_wlan-drivers": "ath10k-ct",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "No",
+      "LED count_numled": "4",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "PoE 24 VDC, 0.5 A",
+      "Outdoor_yesno": "Yes",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:ubiquiti:nanobeam_ac",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "NanoBeam 5AC",
+      "Git search_search-gits": "NanoBeam 5AC",
+      "WikiDevi URL_urls": "",
+      "WikiDevi ID_hwinfo-id": "",
+      "OEM Device Homepage URL_url": "https://www.ui.com/airmax/nanobeam-ac-gen2/",
+      "Firmware OEM Stock URL_url": "https://www.ui.com/download/airmax-ac/nanobeam-ac/nbe-5ac-19",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/generic/openwrt-25.12.0-ath79-generic-ubnt_nanobeam-ac-xc-squashfs-factory.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/generic/openwrt-25.12.0-ath79-generic-ubnt_nanobeam-ac-xc-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_nanobeam-ac-xc-squashfs-factory.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_nanobeam-ac-xc-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "Ubiquiti TFTP",
+      "Comment recovery": "",
+      "Picture_img100s": "media:ubiquiti:nanobeam_ac:nanobeamac.png",
+      "Comments_": ""
+    },
+    "toh_gen2xc": {
+      "Device Type_devicetype": "other",
+      "Brand": "Ubiquiti",
+      "Model": "NanoBeam 5AC Gen 2",
+      "Versions": "XC",
+      "FCCID_urls": "https://fccid.io/SWX-NBE5ACG2",
+      "Availability_availability": "Discontinued 2018",
+      "Where available": "¿",
+      "Supported Since Commit_git": "",
+      "Supported Since Rel_releasesince": "22.03.0",
+      "Supported Current Rel_releasecurrent": "25.12.0",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "unknown",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Qualcomm Atheros QCA9558",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "720",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "-",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Qualcomm Atheros QCA9880",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN Comments_": "19 dBi antenna, 2.4GHz is a management radio",
+      "WLAN driver_wlan-drivers": "ath10k-ct",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "No",
+      "LED count_numled": "4",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "PoE 24 VDC, 0.5 A",
+      "Outdoor_yesno": "Yes",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:ubiquiti:nanobeam_ac",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "NanoBeam 5AC",
+      "Git search_search-gits": "NanoBeam 5AC",
+      "WikiDevi URL_urls": "",
+      "WikiDevi ID_hwinfo-id": "",
+      "OEM Device Homepage URL_url": "https://www.ui.com/airmax/nanobeam-ac-gen2/",
+      "Firmware OEM Stock URL_url": "https://www.ui.com/download/airmax-ac/nanobeam-ac-gen2/nbe-5ac-gen2",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/generic/openwrt-25.12.0-ath79-generic-ubnt_nanobeam-ac-xc-squashfs-factory.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/generic/openwrt-25.12.0-ath79-generic-ubnt_nanobeam-ac-xc-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_nanobeam-ac-xc-squashfs-factory.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_nanobeam-ac-xc-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "U-Boot TFTP recovery",
+      "Comment recovery": "",
+      "Picture_img100s": "media:ubiquiti:nanobeam_ac:nanobeamac.png",
+      "Comments_": ""
+    },
+    "openwrt_wiki": {
+      "einleitung": "lightweight proprietary (based on 802.11ac) outdoor access points with a 13, 16 or 19 dBi antenna covering 30º and a Passive POE Gigabit Ethernet port based on the AR9342 SoC",
+      "hinweis_airmax": "official firmware is not compatible to 802.11ac as Ubiquiti uses their own TDMA packet timing scheme ... With the OpenWrt firmware however, the device is normally 802.11ac compatible",
+      "versionstabelle": [
+        {
+          "Model": "NBE-5AC-16",
+          "Version": "WA",
+          "Release Date": "2015",
+          "Antenna Gain (dBi)": "16",
+          "management radio": "☐",
+          "ethernet ports": "1",
+          "supported": "✔"
+        },
+        {
+          "Model": "NBE-5AC-19",
+          "Version": "XC",
+          "Release Date": "2015",
+          "Antenna Gain (dBi)": "19",
+          "management radio": "☐",
+          "ethernet ports": "1",
+          "supported": "✔"
+        },
+        {
+          "Model": "NBE-2AC-13",
+          "Version": "2WA",
+          "Release Date": "2016",
+          "Antenna Gain (dBi)": "13 (2.4GHz)",
+          "management radio": "5GHz",
+          "ethernet ports": "1",
+          "supported": "untested"
+        },
+        {
+          "Model": "NBE-5AC-Gen2",
+          "Version": "XC",
+          "Release Date": "2017",
+          "Antenna Gain (dBi)": "19",
+          "management radio": "2.4GHz",
+          "ethernet ports": "1",
+          "supported": "✔"
+        },
+        {
+          "Model": "NBE-5AC-Gen2",
+          "Version": "WA",
+          "Release Date": "2017",
+          "Antenna Gain (dBi)": "19",
+          "management radio": "2.4GHz",
+          "ethernet ports": "2",
+          "supported": "✔"
+        }
+      ],
+      "hardware_highlights_hinweis": "The official data sheet list 8MB flash, but the bootlog really shows 16MB, even the OEM mtd table is using/assuming all 16MB",
+      "installation": "Flashing through factory firmware: siehe toh:ubiquiti:common#openwrt_installation_on_wa_and_xc_boards (Einzelschritte hier nicht übernommen)",
+      "oeffnen": "The NanoBeam AC devices seem to be ultrasonically welded together and thus cannot be opened. This makes any TTL serial recovery somewhat destructive.",
+      "debricking": "urescue aus U-Boot: Reset 20 s beim Einschalten halten, Signal-LEDs blinken abwechselnd, TFTP an 192.168.1.20 mit signierter Herstellerfirmware",
+      "buttons": {
+        "Reset": "reset"
+      },
+      "hardware_info_tabelle": {
+        "Architecture": "MIPS",
+        "Vendor": "Ubiquiti",
+        "Bootloader": "U-Boot",
+        "System-On-Chip": "Atheros AR9342 - MIPS 74Kc V4.12",
+        "CPU/Speed": "535 MHz",
+        "Flash-Chip": "Macronix MX25L12805D",
+        "Flash size": "128 Mbit",
+        "RAM": "64 MiB",
+        "Wireless": "Atheros AR9342 & Qualcomm/Atheros QCA988X",
+        "Ethernet": "1000/100/10 Mbit/s (Atheros AR8035 PHY)",
+        "USB": "None",
+        "Serial": "Yes",
+        "JTAG": "No",
+        "_hinweis": "Tabelle passt zur WA-Variante (NBE-5AC-16), nicht zum NBE-5AC-19"
+      },
+      "flash_layout_stock": {
+        "u-boot": "256KiB",
+        "u-boot-env": "64KiB",
+        "kernel": "1024KiB",
+        "rootfs": "14720KiB",
+        "cfg": "256KiB",
+        "EEPROM": "64KiB"
+      },
+      "flash_layout_openwrt": {
+        "u-boot": "256KiB",
+        "u-boot-env": "64KiB",
+        "firmware": "15744KiB",
+        "cfg": "256 KiB",
+        "EEPROM": "64KiB"
+      },
+      "serial": "115200, 8N1; FIXME Add photo of serial connection",
+      "jtag": "None",
+      "fotos": [
+        "nbe-5ac-16-board_top.jpg",
+        "nbe-5ac-19-board_top.jpg",
+        "NBE-5AC-gen2-XC-board_top.jpg",
+        "NBE-5AC-gen2-WA-board_top.jpg"
+      ],
+      "openwrt_wifi_radio_info": "Note that the NanoBeam AC does not seem to have the 2nd 2.4Ghz radio ... iw list: Available Antennas: TX 0x3 RX 0x3; VHT RX MCS set: 1 streams: MCS 0-9, 2 streams: MCS 0-9 (Gerät des Abschnitts nicht genannt)"
+    },
+    "openwrt_wiki_bootlog": {
+      "oem_banner": "PRODUCT: NanoBeam 5AC 19 / VERSION: XC.v8.6.2",
+      "oem_kernel": "Linux version 2.6.32.68 ... Thu Aug 22 16:38:56 EEST 2019",
+      "oem_flash_size": "flash_size passed from bootloader = 16",
+      "oem_mtdparts": "mtdparts=ath-nor0:256k(u-boot),64k(u-boot-env),1024k(kernel),14720k(rootfs),256k(cfg),64k(EEPROM)",
+      "oem_mem": "mem=128M; Memory: 126604k/131072k available",
+      "oem_takt": "cpu apb ddr apb ath_sys_frequency: cpu 720 ddr 600 ahb 200",
+      "oem_cpu": "CPU revision is: 00019750 (MIPS 74Kc)",
+      "oem_console": "console=ttyS0,115200; Serial: Atheros High-Speed UART (115200)",
+      "oem_ubnthal": "ubnthal: initialised, board found, sysid = 0xe4f5, name = NanoBeam 5AC 19",
+      "oem_eth": "qca955x_GMAC ... Found PHY at address 4 with ID 4d:d074, Registering AR8033 Phy; MAC:1 Warning: Phy not found",
+      "oem_wlan": "ath_pci: 10.1.467 (Atheros/multi-bss); ol_ath_attach() TARGET TYPE: 7 Vers 0x4100016c",
+      "openwrt_version": "OpenWrt SNAPSHOT, r18567-9e15dea36e (Linux 5.10.90)",
+      "openwrt_machine": "MIPS: machine is Ubiquiti NanoBeam AC Gen1 (XC)",
+      "openwrt_memory": "Memory: 121096K/131072K available",
+      "openwrt_flash": "spi-nor spi0.0: mx25l12805d (16384 Kbytes)",
+      "openwrt_eth": "ag71xx 19000000.eth: connected to PHY at mdio.0:04 [uid=004dd074, driver=Qualcomm Atheros AR8031/AR8033]; eth0: Atheros AG71xx at 0xb9000000, irq 4, mode: sgmii; eth0: link up (1000Mbps/Full duplex)",
+      "openwrt_wlan": "ath10k_pci 0000:00:00.0: qca988x hw2.0 ubiquiti target 0x4100016c chip_id 0x043222ff sub 0777:e4f5; firmware ver 10.1-ct-8x-__fW-022-ecad3248"
+    },
+    "openwrt_wiki_foto_board": {
+      "Inhalt": "Platinenoberseite NBE-5AC-19, gleiche Platine wie FCC-Innenfoto SWX-NBE5AC19 (Aufkleber \"033G0 147E45D814 13-00346-14\"); zwei bestückte 4-polige Stiftleisten am Platinenrand, ohne Beschriftung der Pins im Foto lesbar"
+    },
+    "openwrt_commit": {
+      "titel": "ath79: Add support for Ubiquiti NanoBeam AC Gen1 XC",
+      "beschreibung": "The Ubiquiti NanoBeam AC Gen1 XC (NBE-5AC-19) is an outdoor 802.11ac CPE with a waterproof casing (ultrasonically welded) and bulb shaped.",
+      "SoC": "Qualcomm Atheros QCA9558",
+      "RAM": "128 MB DDR2",
+      "Flash": "16 MB SPI NOR",
+      "Ethernet": "1x GbE, AR8033 phy connected via SGMII",
+      "PSU": "24 Vdc passive PoE",
+      "WiFi 5 GHz": "Qualcomm Atheros QCA988X",
+      "Buttons": "1x reset",
+      "LEDs": "1x power, 1x Ethernet, 4x RSSI, all blue",
+      "Internal antenna": "19 dBi planar",
+      "Installation": "Follow instructions for XC-type Ubiquiti devices on OpenWrt wiki at https://openwrt.org/toh/ubiquiti/common",
+      "dateien": [
+        "target/linux/ath79/dts/qca9558_ubnt_nanobeam-ac-xc.dts (neu)",
+        "target/linux/ath79/generic/base-files/etc/board.d/01_leds",
+        "target/linux/ath79/generic/base-files/etc/board.d/02_network",
+        "target/linux/ath79/generic/base-files/etc/hotplug.d/firmware/11-ath10k-caldata",
+        "target/linux/ath79/image/generic-ubnt.mk"
+      ]
+    },
+    "openwrt_dts": {
+      "compatible": "ubnt,nanobeam-ac-xc, ubnt,xc, qca,qca9558",
+      "model": "Ubiquiti NanoBeam AC Gen1 (XC)",
+      "reset": "gpio 19 active low, KEY_RESTART",
+      "leds": "über 74HC595 (spi-gpio, GPIO 0/1/3, enable GPIO 18): blue:rssi0..3, power (blau)",
+      "ethernet": "eth0 SGMII, PHY an mdio0 Adresse 4 (at803x-override-sgmii-link-check), MAC aus art 0x0",
+      "wlan": "ath10k (qcom,ath10k) an PCIe, Kalibrierdaten art 0x5000 Länge 0x844",
+      "flash": "jedec,spi-nor 25 MHz; Partitionen u-boot 0x0-0x40000, u-boot-env 0x40000 (64k), firmware 0x50000 (0xf60000, denx,uimage), cfg 0xfb0000 (256k), art 0xff0000 (64k)"
+    },
+    "openwrt_image_mk": {
+      "Device/ubnt_nanobeam-ac-xc": {
+        "$(Device/ubnt-xc)": "",
+        "SOC": "qca9558",
+        "DEVICE_MODEL": "NanoBeam AC",
+        "DEVICE_VARIANT": "Gen1 (XC)",
+        "DEVICE_PACKAGES": "+= kmod-ath10k-ct ath10k-firmware-qca988x-ct rssileds"
+      },
+      "Device/ubnt-xc": {
+        "IMAGE_SIZE": "15744k",
+        "UBNT_BOARD": "XC",
+        "UBNT_CHIP": "qca955x",
+        "UBNT_TYPE": "XC",
+        "UBNT_VERSION": "8.7.4"
+      },
+      "Device/ubnt": {
+        "DEVICE_VENDOR": "Ubiquiti",
+        "DEVICE_PACKAGES": "kmod-usb2",
+        "IMAGES": "+= factory.bin"
+      }
+    },
+    "gluon": {
+      "targets/ath79-generic": "device('ubiquiti-nanobeam-ac-gen1-xc', 'ubnt_nanobeam-ac-xc', { packages = ATH10K_PACKAGES_QCA9880 })",
+      "ATH10K_PACKAGES_QCA9880": "kmod-ath10k, -kmod-ath10k-ct, -kmod-ath10k-ct-smallbuffers, ... (Kommentar: enforce mainline ath10k kmod/firmware over openwrt default ath10k-ct usage; ath10k-ct is unstable/broken with 11s meshing)",
+      "docs/user/supported_devices.rst": "Ubiquiti: NanoBeam 5AC 19 (XC)",
+      "commit": "b0ef97da1762 2024-01-03 Tom Herbers \"ath79-generic: (re)add support for Ubiquiti AirMax targets\" (A fix has been found for the read-only filesystems after upgrades on Ubiquiti airmax devices)",
+      "enthalten_ab": "v2025.1 (git tag --contains)"
+    },
+    "deviwiki": {
+      "FCC/IC-Tabelle": [
+        {
+          "Produkt": "NanoBeam 5AC 16",
+          "FCC": "SWX-NBEAC",
+          "IC": "6545A-NBEAC"
+        },
+        {
+          "Produkt": "NanoBeam 5AC 19",
+          "FCC": "SWX-NBEAC",
+          "IC": "6545A-NBEAC"
+        }
+      ]
+    },
+    "fcc_nbe5ac19": {
+      "Grantee": "Ubiquiti Inc. (SWX)",
+      "Product Code": "NBE5AC19",
+      "Equipment Class": "Access Point",
+      "Test Firm": "Compliance Testing, LLC",
+      "Grants": [
+        {
+          "Frequenz": "5160-5245 MHz",
+          "Zweck": "Original Equipment",
+          "Datum": "2015-04-24"
+        },
+        {
+          "Frequenz": "5255-5340 MHz",
+          "Zweck": "Class II permissive change",
+          "Datum": "2015-09-17"
+        }
+      ],
+      "Exhibits": "Manual 2015-09-17 (3.1 MB) und 2015-06-21 (3.1 MB), Internal Photos 2015-06-21 (629 KB), External Photos 2015-06-21 (4.6 MB), Label and Location 2015-04-24 (539 KB), Test Setup Photos, Test Reports UNII-1/2/3 + DFS Annex A-E, Attestation, CIIPC Letter, Agent Auth, Antenna Data Sheet 2015-04-24 (86 KB), Correspondence, Confidentiality, RF Exposure Part 1.1310 UNII-1/2/3; Block Diagram, Schematics, Theory of Op nur Metadaten (vertraulich)"
+    },
+    "fcc_nbe5ac19_handbuch": {
+      "Titel": "NanoBeam NBE-5AC-19 Quick Start Guide",
+      "Kopf": "5 GHz, 19 dBi airMAX ac CPE, Model: NBE-5AC-19",
+      "Package Contents": "NanoBeam ac, Ball Joint Mount, Lock Ring, Metal Strap, Gigabit PoE (24V, 0.5A) with Mounting Bracket, Power Cord, Quick Start Guide",
+      "Hardware Overview": "LEDs; Reset Button; Ethernet Port (10/100/1000 Mbps)",
+      "Reset Button": "To reset to factory defaults, press and hold the Reset button for more than 10 seconds while the NanoBeam is already powered on. Alternatively, the NanoBeam may be reset remotely via a Reset button located on the bottom of the Gigabit PoE Adapter.",
+      "Ethernet Port": "This Gigabit Ethernet port is used to connect the power ... Power can be provided by: Gigabit PoE Adapter (included), Ubiquiti Networks TOUGHSwitch PoE, Ubiquiti Networks EdgeSwitch or EdgeRouter PoE",
+      "LEDs": "Power (blau bei Stromversorgung), Ethernet (blau, blinkt bei Aktivität), Signal 4 LEDs ab -94/-80/-73/-65 dBm",
+      "Installation Requirements": "Pole-mounting: 7 mm socket wrench or screwdriver; Wall-mounting: wall fastener (not included); Shielded Category 5 (or above) cabling ... grounded through the AC ground of the PoE",
+      "Connecting to the PoE Adapter": "Remove the port cover by pressing down the center of the ... Connect an Ethernet cable to the Ethernet port. Replace the port cover.",
+      "Specifications": {
+        "Dimensions (Mount Included)": "189 x 189 x 125 mm (7.44 x 7.44 x 4.92\")",
+        "Weight (Mount Included)": "530 g (1.17 lb)",
+        "Operating Frequency": "Worldwide: 5150 - 5875 MHz; USA: 5150 - 5350, 5470 - 5850 MHz",
+        "Gain": "19 dBi",
+        "Networking Interface": "(1) 10/100/1000 Ethernet Port",
+        "Enclosure": "Outdoor UV Stabilized Plastic",
+        "Max. Power Consumption": "8W",
+        "Power Supply": "24V, 0.5A Gigabit PoE Adapter (Included)",
+        "Power Method": "Passive PoE (Pairs 4, 5+; 7, 8 Return)",
+        "Wind Loading": "45.4 N @ 200 km/h (10.2 lbf @ 125 mph)",
+        "Wind Survivability": "200 km/h (125 mph)",
+        "Certifications": "CE, FCC, IC",
+        "Mounting": "Pole-Mount (Kit Included), Wall-Mount (Not Included)",
+        "ESD/EMP Protection": "± 24kV Contact/Air",
+        "Operating Temperature": "-40 to 80° C (-40 to 176° F)",
+        "Operating Humidity": "5 to 95% Noncondensing",
+        "Salt Fog Test": "IEC 68-2-11 (ASTM B117), Equivalent: MIL-STD-810 G Method 509.5",
+        "Vibration Test": "IEC 68-2-6",
+        "Temperature Shock Test": "IEC 68-2-14",
+        "UV Test": "IEC 68-2-5 at 40° C (104° F), Equivalent: ETS 300 019-1-4",
+        "Wind-Driven Rain Test": "ETS 300 019-1-4, Equivalent: MIL-STD-810 G Method 506.5"
+      },
+      "Warnungen": "Do not use this product in location that can be submerged by water."
+    },
+    "fcc_nbe5ac19_label": {
+      "Zeichnung": "NBE-5AC-19 Silkscreen Artwork v04, 11/20/14, Revision \"v04 - Change FCC and IC IDs\", Arena Number 388-00036",
+      "Ansichten": "Cover View (Logo mittig), Side View (RESET BUTTON, Aufdruck \"RESET\" an der Seite), Bottom View (Libelle \"Polarity Align\", Schriftzug \"NanoBeam ac\", Typenschild am Halterungsansatz)",
+      "Typenschild": "UBIQUITI NETWORKS; M/N: NBE-5AC-19; 24V⎓0.5A GigEPOE; FCC ID: SWX-NBE5AC19; IC: 6545A-NBE5AC19; FCC Part 15; CE, Konformitätszeichen, WEEE, QR-Code, Feld für Seriennummer"
+    },
+    "fcc_nbe5ac19_innenfotos": {
+      "Unterseite": "Platine mit Aufkleber-Barcode \"1429G 0418D64A000F\", UL-Kennung \"HSB J E89382 MV-4 94V-0 1426\", handschriftlich \"NBE-AC5-19 #1\"",
+      "Oberseite": "Aufkleber \"033G0 147E45D814 13-00346-14\"; Ubiquiti-Logo (c) 2014; SoC unter Kühlkörper; Winbond W971GG8KB-25; SOIC-16-Flash (Aufdruck nicht lesbar); Ubiquiti-gelabelter QFN-Chip; M-TEK G24103SKG 1413F (Ethernet-Übertrager); RJ45; zwei 4-polige Stiftleisten bestückt am Platinenrand; U.FL-Antennenanschlüsse"
+    },
+    "fcc_nbeac": {
+      "Grantee": "Ubiquiti Inc. (SWX)",
+      "Product Code": "NBEAC",
+      "Equipment Class": "NBE-5AC-19",
+      "Test Firm": "Sporton International Inc",
+      "Grants": [
+        {
+          "Frequenz": "5735-5840 MHz",
+          "Zweck": "Original Equipment",
+          "Datum": "2015-06-29"
+        },
+        {
+          "Frequenz": "5735-5840 MHz",
+          "Zweck": "Original Equipment",
+          "Datum": "2016-08-30"
+        }
+      ],
+      "Exhibits": "User Manual 2016-08-30 / 2015-12-23 (je 2 MB), Internal Photos 2016-08-30 / 2015-12-23 (je 2.4 MB), External Photos 2016-08-30 / 2015-12-23, Label 2016-08-30 / 2015-06-29 (105 KB), Test Setup Photos, Test Report / DTS, Agent Authorization, Antenna Expiration 2016-08-30, Confidentiality, POA, MPE / RF Exposure; Block Diagram, Schematics, Operational Description, Security Exhibit, BOM, Part List, Tune Up Procedure nur Metadaten",
+      "Composite Device": "Yes"
+    },
+    "fcc_nbeac_handbuch": {
+      "Kopf": "5 GHz, 19 dBi airMAX ac CPE, Model: NBE-5AC-19",
+      "Dok.-Nr.": "640-00127-08",
+      "Druckvermerk": "6/4/15 2:22 PM",
+      "Specifications": {
+        "Dimensions (Mount Included)": "189 x 189 x 125 mm (7.44 x 7.44 x 4.92\")",
+        "Power Supply": "24V, 0.5A Gigabit PoE Adapter (Included)",
+        "Power Method": "Passive PoE (Pairs 4, 5+; 7, 8 Return)",
+        "Wind Loading": "45.4 N @ 200 km/h (10.2 lbf @ 125 mph)",
+        "Wind Survivability": "200 km/h (125 mph)",
+        "Certifications": "CE, FCC, IC"
+      },
+      "IC-Hinweis": "This radio transmitter (IC: 6545A-NBEAC) has been approved ... Integrated antenna, gain: 17.6 or 19 dBi",
+      "Hinweis": "Text sonst gleich dem QSG unter SWX-NBE5AC19 (Lieferumfang, Reset > 10 s, LEDs, Montage)"
+    },
+    "fcc_nbeac_innenfotos": {
+      "Bericht": "Sporton EP561115, Brand Name UBIQUITI / Model Name NBE-5AC-19 / Marketing Name NBE-5AC-19, Rev. 01, 2015-06-25",
+      "Fotos": [
+        "Gehäusedeckel und Antennenträger (Blech mit 3x3 Patch-Elementen, gelb markiert \"WLAN\")",
+        "Hauptplatine auf Antennenblech, Gehäuseunterteil mit Anschlussfach",
+        "Platine Unterseite: \"HSB J E89382 MV-4 94V-0\"",
+        "Platine Oberseite gesamt (ca. 100 x 60 mm laut Lineal)",
+        "Ubiquiti-gelabelter Chip \"U AME-G1-BR4A NKY259.0K4 1433 TAIWAN\" (U11), daneben SOIC-16-Flash MXIC MX25L12835F..., Platinenkennung 11-00346-06",
+        "SoC \"QCA9557-AT4A P13U27.AK2 1438 TAIWAN\" (U1), Winbond W971GG6KB-25 (U2), Atheros-PHY-Chip (Aufdruck nicht lesbar), zwei 3R3-Spulen",
+        "rechts am Rand zwei Reihen mit je 4 Lötaugen, unbestückt",
+        "M-TEK G24103SKG 1502B, RJ45, Taster SW1 am RJ45",
+        "LED-Platine 1 (D1-D6, Steckverbinder J1, \"PLOTECH 1 94V-0 E169497\", Kennung ...-02075-03, Ubiquiti Networks (c) 2013), Vorder- und Rückseite",
+        "Antennenblech Vorder- und Rückseite (rund, ca. 180 mm)"
+      ]
+    },
+    "datenblatt_2018": {
+      "Titel": "NanoBeam ac Datasheet, High-Performance airMAX ac Bridge, Models: NBE-5AC-16, NBE-5AC-19",
+      "Zubehör": {
+        "IsoBeam": "ISO-BEAM-19",
+        "Wall Mount Kit": "NBE-WMK",
+        "Window Mount": "NBE-19-WM"
+      },
+      "Specifications NBE-5AC-19": {
+        "Dimensions": "189 x 189 x 125 mm (7.44 x 7.44 x 4.92\")",
+        "Weight": "0.530 kg (1.17 lb)",
+        "Power Supply": "24V, 0.5A Gigabit PoE",
+        "Max. Power Consumption": "8W",
+        "Operating Frequency": "Worldwide 5150 - 5875 MHz; USA: U-NII-1 5150 - 5250 MHz*, U-NII-2A 5250 - 5350 MHz*, U-NII-2C 5470 - 5725 MHz*, U-NII-3 5725 - 5850 MHz*",
+        "Gain": "19 dBi",
+        "Networking Interface": "(1) 10/100/1000 Ethernet Port",
+        "Processor Specs": "Atheros MIPS 74Kc, 720 MHz",
+        "Memory": "128 MB DDR2, 8 MB Flash",
+        "LEDs": "(1) Power, (1) LAN, (4) WLAN",
+        "Signal Strength LEDs": "Software-Adjustable to Correspond to Custom RSSI Levels",
+        "Max. VSWR": "1.5:1",
+        "Channel Sizes": "PtP Mode 10/20/30/40/50/60/80 MHz; PtMP Mode 10/20/30/40 MHz",
+        "Polarization": "Dual Linear",
+        "Enclosure": "Outdoor UV Stabilized Plastic",
+        "Mounting": "Pole-Mount (Kit Included), Wall-Mount",
+        "Wind Loading": "45.4 N @ 200 km/h (10.2 lbf @ 125 mph)",
+        "Wind Survivability": "200 km/h (125 mph)",
+        "ESD/EMP Protection": "Air: ± 24 kV, Contact: ± 24 kV",
+        "Operating Temperature": "-40 to 70° C (-40 to 158° F)",
+        "Operating Humidity": "5 to 95% Noncondensing",
+        "Wireless Approvals": "FCC, IC, CE",
+        "RoHS Compliance": "Yes",
+        "Salt Fog Test": "IEC 68-2-11 (ASTM B117), Equivalent: MIL-STD-810 G Method 509.5",
+        "Vibration Test": "IEC 68-2-6",
+        "Temperature Shock Test": "IEC 68-2-14",
+        "UV Test": "IEC 68-2-5 at 40° C (104° F), Equivalent: ETS 300 019-1-4",
+        "Wind-Driven Rain Test": "ETS 300 019-1-4, Equivalent: MIL-STD-810 G Method 506.5"
+      },
+      "TX Power NBE-5AC-19": "Output Power 26 dBm; 1x BPSK (½) bis 4x 16QAM (¾) 26 dBm, 6x 64QAM (2/3, ¾) 25 dBm, 6x 64QAM (5/6) 24 dBm, 8x 256QAM (¾, 5/6) 22 dBm, je ± 2 dB",
+      "RX Sensitivity NBE-5AC-19": "-96 / -95 / -92 / -90 / -86 / -83 / -77 / -74 / -69 / -65 dBm (1x BPSK ½ bis 8x 256QAM 5/6), ± 2 dB",
+      "Throughput": "up to 450+ Mbps real TCP/IP throughput",
+      "Fußnote": "* Some frequencies may require activation; visit: https://www.ubnt.com/fcclabelrequest"
+    },
+    "geizhals_archiv": {
+      "Titel": "Ubiquiti NanoBeam ac NBE-5AC-19, 5GHz",
+      "Kategorie": "WLAN/Funk » Repeater & Bridges",
+      "Preis": "ab € 84,75 (Archivstand)",
+      "Kurzdaten": "LAN: 1x 1000Base-T • Wireless: 802.11ac • Übertragungsrate: 450Mbps (5GHz) • Antennen: 1x extern • Leistungsaufnahme: 8W (Betrieb) • Abmessungen: 189x189x125mm • Besonderheiten: Outdoor",
+      "EAN-Codes": "8592457075837, 0810354022425, 2504031511231",
+      "Gelistet seit": "28.07.2015, 08:33"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Ubiquiti",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Ubiquiti Networks",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "NanoBeam 5AC 19",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NanoBeam ac NBE-5AC-19",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Ubiquiti NanoBeam AC Gen1 (XC)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_ubnt_nanobeam-ac-xc.dts",
+        "stand": "Branch main am 2026-10-20 (letzter Commit an der Datei c2e5bded8d06, 2025-09-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "model-String im DTS"
+      },
+      {
+        "wert": "NanoBeam 5AC 19 (XC)",
+        "quelle": "gluon",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/ath79-generic",
+        "stand": "lokaler Checkout v2025.1.3 (Commit e2fe4b5 vom 2026-08-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "docs/user/supported_devices.rst"
+      },
+      {
+        "wert": "NBE-5AC-19",
+        "quelle": "fcc_nbe5ac19_label",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/Label/Label-and-Location-2596160",
+        "stand": "Exhibit 2015-04-24 (Zeichnung \"NBE-5AC-19 Silkscreen Artwork v04\", 2014-11-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "M/N auf dem Typenschild"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "XC",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Gen1 (XC)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "DEVICE_VARIANT; Board-Typ XC (UBNT_BOARD/UBNT_TYPE XC, UBNT_CHIP qca955x)"
+      },
+      {
+        "wert": "XC",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Versionstabelle: NBE-5AC-19 = XC, Erscheinungsjahr 2015; Nachfolger NBE-5AC-Gen2 (XC oder WA, 2017) mit 2.4-GHz-Management-Funk"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild an der Unterseite am Halterungsansatz: \"M/N: NBE-5AC-19\", \"24V⎓0.5A GigEPOE\", \"FCC ID: SWX-NBE5AC19\", \"IC: 6545A-NBE5AC19\"",
+        "quelle": "fcc_nbe5ac19_label",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/Label/Label-and-Location-2596160",
+        "stand": "Exhibit 2015-04-24 (Zeichnung \"NBE-5AC-19 Silkscreen Artwork v04\", 2014-11-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gen2 heißt NBE-5AC-Gen2 (FCC SWX-NBE5ACG2 laut ToH), NBE-5AC-16 ist die WA-Variante mit 16 dBi"
+      },
+      {
+        "wert": "airOS-Banner \"PRODUCT: NanoBeam 5AC 19\", Firmware-Präfix \"XC.\" (XC.v8.6.2); ubnthal sysid 0xe4f5",
+        "quelle": "openwrt_wiki_bootlog",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac#bootlogs",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "NBE-5AC-16 läuft mit WA-Firmware (WA.v8.5.0)"
+      },
+      {
+        "wert": "Gen1 ohne zweiten (2.4-GHz-)Management-Funk; Gen2 mit 2.4 GHz",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Versionstabelle"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "SWX-NBE5AC19",
+        "quelle": "fcc_nbe5ac19_label",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/Label/Label-and-Location-2596160",
+        "stand": "Exhibit 2015-04-24 (Zeichnung \"NBE-5AC-19 Silkscreen Artwork v04\", 2014-11-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "SWX-NBE5AC19",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "als https://fccid.io/SWX-NBE5AC19"
+      },
+      {
+        "wert": "SWX-NBEAC",
+        "quelle": "fcc_nbeac",
+        "beleg": "https://fccid.io/SWX-NBEAC",
+        "stand": "Original Equipment 2015-06-29 und 2016-08-30 (je 5735-5840 MHz); Testlabor Sporton International",
+        "sicherheit": "hoch",
+        "bemerkung": "zweite Zulassung (Equipment Class \"NBE-5AC-19\", Sporton-Bericht nennt Model Name NBE-5AC-19), nur 5735-5840 MHz"
+      },
+      {
+        "wert": "SWX-NBEAC",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks",
+        "stand": "Seite \"Ubiquiti Networks\" Revision 159819 vom 2018-11-30T21:28:03Z (imported>Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": "Herstellertabelle nennt für NanoBeam 5AC 16 und 5AC 19 dieselbe FCC-ID SWX-NBEAC"
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "6545A-NBE5AC19",
+        "quelle": "fcc_nbe5ac19_label",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/Label/Label-and-Location-2596160",
+        "stand": "Exhibit 2015-04-24 (Zeichnung \"NBE-5AC-19 Silkscreen Artwork v04\", 2014-11-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "6545A-NBEAC",
+        "quelle": "fcc_nbeac_handbuch",
+        "beleg": "https://fccid.io/SWX-NBEAC/User-Manual/User-Manual-3117369",
+        "stand": "Exhibit 2016-08-30 (PDF 2017-12-13, Druckvermerk 6/4/15, Dok.-Nr. 640-00127-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "IC-Hinweis im QSG der FCC-ID SWX-NBEAC"
+      },
+      {
+        "wert": "6545A-NBEAC",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks",
+        "stand": "Seite \"Ubiquiti Networks\" Revision 159819 vom 2018-11-30T21:28:03Z (imported>Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": "NBE-5AC-19",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Ubiquiti NanoBeam ac NBE-5AC-19, 5GHz",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150920090129/http://geizhals.de/ubiquiti-nanobeam-ac-nbe-5ac-19-a1302545.html",
+        "stand": "Archivkopie 2015-09-20 (gelistet seit 2015-07-28)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ubnt_nanobeam-ac-xc",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "OpenWrt-Gerätename"
+      },
+      {
+        "wert": "ubiquiti-nanobeam-ac-gen1-xc",
+        "quelle": "gluon",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/ath79-generic",
+        "stand": "lokaler Checkout v2025.1.3 (Commit e2fe4b5 vom 2026-08-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon-Image-Name"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm Atheros QCA9558",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9558",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "qca9558",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_ubnt_nanobeam-ac-xc.dts",
+        "stand": "Branch main am 2026-10-20 (letzter Commit an der Datei c2e5bded8d06, 2025-09-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "compatible \"qca,qca9558\""
+      },
+      {
+        "wert": "Qualcomm QCA9557-AT4A",
+        "quelle": "fcc_nbeac_innenfotos",
+        "beleg": "https://fccid.io/SWX-NBEAC/Internal-Photos/Internal-Photos-2659422",
+        "stand": "Sporton EP561115 Rev. 01, Issued 2015-06-25 (Exhibit 2015-06-29, verfügbar ab 2015-12-23)",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufdruck \"QCA9557-AT4A P13U27.AK2 1438 TAIWAN\" auf dem FCC-Muster SWX-NBEAC (Platine 11-00346-06); Widerspruch zu QCA9558 in OpenWrt/ToH"
+      },
+      {
+        "wert": "Atheros MIPS 74Kc, 720 MHz",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": "Datenblatt nennt keinen Chipnamen"
+      },
+      {
+        "wert": "Atheros AR9342",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "niedrig",
+        "bemerkung": "Hardware-Infotabelle der Sammelseite, passt zur WA-Variante NBE-5AC-16, nicht zum NBE-5AC-19"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 720,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 720,
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 720,
+        "quelle": "openwrt_wiki_bootlog",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac#bootlogs",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog NBE-5AC-19: \"cpu 720 ddr 600 ahb 200\""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "MIPS 74Kc",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MIPS 74Kc",
+        "quelle": "openwrt_wiki_bootlog",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac#bootlogs",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "CPU revision 00019750"
+      },
+      {
+        "wert": "mips_24kc",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt-Paketarchitektur"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 128,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": "128 MB DDR2"
+      },
+      {
+        "wert": 128,
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": "128 MB DDR2"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_wiki_bootlog",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac#bootlogs",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM mem=128M, OpenWrt Memory 121096K/131072K"
+      },
+      {
+        "wert": 128,
+        "quelle": "fcc_nbe5ac19_innenfotos",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/Internal-Photos/Internal-Photos-2596159",
+        "stand": "Exhibit 2015-04-24, verfügbar ab 2015-06-21 (PDF 2015-04-20)",
+        "sicherheit": "mittel",
+        "bemerkung": "Winbond W971GG8KB-25 (1 Gbit DDR2) auf FCC-Innenfoto SWX-NBE5AC19; Kapazität aus Typbezeichnung abgeleitet"
+      },
+      {
+        "wert": 128,
+        "quelle": "fcc_nbeac_innenfotos",
+        "beleg": "https://fccid.io/SWX-NBEAC/Internal-Photos/Internal-Photos-2659422",
+        "stand": "Sporton EP561115 Rev. 01, Issued 2015-06-25 (Exhibit 2015-06-29, verfügbar ab 2015-12-23)",
+        "sicherheit": "mittel",
+        "bemerkung": "Winbond W971GG6KB-25 (1 Gbit DDR2) auf FCC-Innenfoto SWX-NBEAC; Kapazität aus Typbezeichnung abgeleitet"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": "16 MB SPI NOR"
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_wiki_bootlog",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac#bootlogs",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM \"flash_size passed from bootloader = 16\"; OpenWrt \"spi-nor spi0.0: mx25l12805d (16384 Kbytes)\""
+      },
+      {
+        "wert": 16,
+        "quelle": "fcc_nbeac_innenfotos",
+        "beleg": "https://fccid.io/SWX-NBEAC/Internal-Photos/Internal-Photos-2659422",
+        "stand": "Sporton EP561115 Rev. 01, Issued 2015-06-25 (Exhibit 2015-06-29, verfügbar ab 2015-12-23)",
+        "sicherheit": "mittel",
+        "bemerkung": "MXIC MX25L12835F (128 Mbit) auf FCC-Innenfoto SWX-NBEAC; Kapazität aus Typbezeichnung abgeleitet"
+      },
+      {
+        "wert": 8,
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "niedrig",
+        "bemerkung": "Datenblatt: \"128 MB DDR2, 8 MB Flash\"; Widerspruch, OpenWrt-Wiki: \"The official data sheet list 8MB flash, but the bootlog really shows 16MB\""
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": "SPI NOR"
+      },
+      {
+        "wert": "NOR",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_ubnt_nanobeam-ac-xc.dts",
+        "stand": "Branch main am 2026-10-20 (letzter Commit an der Datei c2e5bded8d06, 2025-09-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "jedec,spi-nor"
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "Qualcomm Atheros QCA9880",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA988X",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA988X hw2.0",
+        "quelle": "openwrt_wiki_bootlog",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac#bootlogs",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt-Bootlog: \"qca988x hw2.0 ubiquiti target 0x4100016c chip_id 0x043222ff sub 0777:e4f5\""
+      },
+      {
+        "wert": "Ubiquiti-gelabelter Chip \"AME-G1-BR4A\"",
+        "quelle": "fcc_nbeac_innenfotos",
+        "beleg": "https://fccid.io/SWX-NBEAC/Internal-Photos/Internal-Photos-2659422",
+        "stand": "Sporton EP561115 Rev. 01, Issued 2015-06-25 (Exhibit 2015-06-29, verfügbar ab 2015-12-23)",
+        "sicherheit": "niedrig",
+        "bemerkung": "auf FCC-Innenfoto SWX-NBEAC; Zuordnung zum QCA988X nicht belegt"
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "keins",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "WLAN 2.4GHz \"-\""
+      },
+      {
+        "wert": "keins",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Gen1 ohne Management-Funk; Abschnitt \"OpenWrt Wifi Radio info\": kein 2.4-GHz-Radio gefunden"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11ac",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "herstellerseitig airMAX ac (proprietäres TDMA), unter OpenWrt 802.11ac",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Hinweis der Wiki-Seite: Herstellerfirmware nicht 802.11ac-kompatibel, mit OpenWrt kompatibel zu normalen 802.11an/ac-Geräten"
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "niedrig",
+        "bemerkung": "iw list: \"Available Antennas: TX 0x3 RX 0x3\", VHT MCS 0-9 für 1 und 2 Streams; im Abschnitt nicht gesagt, an welcher Variante gemessen"
+      },
+      {
+        "wert": "Polarisation Dual Linear",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "niedrig",
+        "bemerkung": "zwei Polarisationen; Stream-Zahl nicht genannt"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": 26,
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": "Output Power NBE-5AC-19: 26 dBm (BPSK bis 16QAM ¾), 22 dBm bei 256QAM, ± 2 dB"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Internal antenna: 19 dBi planar"
+      },
+      {
+        "wert": "intern",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": "Radio und Antenne integriert"
+      },
+      {
+        "wert": "intern",
+        "quelle": "fcc_nbeac_innenfotos",
+        "beleg": "https://fccid.io/SWX-NBEAC/Internal-Photos/Internal-Photos-2659422",
+        "stand": "Sporton EP561115 Rev. 01, Issued 2015-06-25 (Exhibit 2015-06-29, verfügbar ab 2015-12-23)",
+        "sicherheit": "mittel",
+        "bemerkung": "Antennenblech mit 3x3 Patch-Elementen unter dem Deckel"
+      },
+      {
+        "wert": "extern",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150920090129/http://geizhals.de/ubiquiti-nanobeam-ac-nbe-5ac-19-a1302545.html",
+        "stand": "Archivkopie 2015-09-20 (gelistet seit 2015-07-28)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Geizhals-Kurzdaten \"Antennen: 1x extern\"; Widerspruch, Antenne ist im Gehäuse"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": 19,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "WLAN Comments \"19 dBi antenna\""
+      },
+      {
+        "wert": 19,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 19,
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 19,
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 19,
+        "quelle": "fcc_nbeac_handbuch",
+        "beleg": "https://fccid.io/SWX-NBEAC/User-Manual/User-Manual-3117369",
+        "stand": "Exhibit 2016-08-30 (PDF 2017-12-13, Druckvermerk 6/4/15, Dok.-Nr. 640-00127-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "IC-Hinweis: \"Integrated antenna, gain: 17.6 or 19 dBi\""
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "Richtantenne, Polarisation Dual Linear, max. VSWR 1.5:1",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": "Öffnungswinkel im Datenblatttext nicht als Zahl, nur Diagramme"
+      },
+      {
+        "wert": "Richtantenne, Abdeckung 30°",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "niedrig",
+        "bemerkung": "Angabe der Sammelseite für alle NanoBeam AC (13/16/19 dBi)"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "Ethernet",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN, Passive-PoE-Eingang"
+          }
+        ],
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": "im Anschlussfach unter Abdeckung"
+      },
+      {
+        "wert": [
+          {
+            "name": "Ethernet",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x 1 Gbit",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Kommentar \"AR8033 phy\"; Live-Seite: \"Atheros AR8033 GbE Phy\""
+      },
+      {
+        "wert": "1x GbE, AR8033 PHY über SGMII",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "eth0 (1 Port, SGMII)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_ubnt_nanobeam-ac-xc.dts",
+        "stand": "Branch main am 2026-10-20 (letzter Commit an der Datei c2e5bded8d06, 2025-09-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": "einzige Buchse für Daten und Strom"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "keins",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "USB ports \"-\""
+      },
+      {
+        "wert": "keins",
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": "Hardware-Übersicht nennt nur Reset und Ethernet"
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "passiv",
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": "Passive PoE (Pairs 4, 5+; 7, 8 Return)"
+      },
+      {
+        "wert": "passiv",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": "24V, 0.5A Gigabit PoE"
+      },
+      {
+        "wert": "passiv",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": "24 Vdc passive PoE"
+      },
+      {
+        "wert": "passiv",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Power Supply \"PoE 24 VDC, 0.5 A\""
+      },
+      {
+        "wert": "passiv",
+        "quelle": "fcc_nbe5ac19_label",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/Label/Label-and-Location-2596160",
+        "stand": "Exhibit 2015-04-24 (Zeichnung \"NBE-5AC-19 Silkscreen Artwork v04\", 2014-11-20)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild \"24V⎓0.5A GigEPOE\""
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": 24,
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 24,
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 24,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 24,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 24,
+        "quelle": "fcc_nbe5ac19_label",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/Label/Label-and-Location-2596160",
+        "stand": "Exhibit 2015-04-24 (Zeichnung \"NBE-5AC-19 Silkscreen Artwork v04\", 2014-11-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "nein",
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "mittel",
+        "bemerkung": "Hardware-Übersicht: nur Reset-Taste und Ethernet-Port; Strom nur über PoE"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": "Lieferumfang: Gigabit PoE (24V, 0.5A) with Mounting Bracket, Power Cord"
+      },
+      {
+        "wert": true,
+        "quelle": "fcc_nbeac_handbuch",
+        "beleg": "https://fccid.io/SWX-NBEAC/User-Manual/User-Manual-3117369",
+        "stand": "Exhibit 2016-08-30 (PDF 2017-12-13, Druckvermerk 6/4/15, Dok.-Nr. 640-00127-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power Supply \"24V, 0.5A Gigabit PoE Adapter (Included)\""
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "Gigabit-PoE-Adapter 24 V, 0.5 A mit Halteblech und Netzkabel (Schutzleiter); Ports POE und LAN; Reset-Taste an der Unterseite des Adapters für Fern-Reset",
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 8,
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 8,
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 8,
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150920090129/http://geizhals.de/ubiquiti-nanobeam-ac-nbe-5ac-19-a1302545.html",
+        "stand": "Archivkopie 2015-09-20 (gelistet seit 2015-07-28)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Leistungsaufnahme: 8W (Betrieb)\""
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "außen",
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": "Enclosure: Outdoor UV Stabilized Plastic"
+      },
+      {
+        "wert": "außen",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "außen",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Seitenrevision 2026-03-17 04:21 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor Yes"
+      },
+      {
+        "wert": "außen",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": "outdoor 802.11ac CPE with a waterproof casing (ultrasonically welded)"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "-40 bis 80 °C",
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "-40 bis 70 °C",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": "Widerspruch zum QSG 2015 (-40 bis 80 °C)"
+      }
+    ],
+    "luftfeuchte_betrieb": [
+      {
+        "wert": "5 bis 95 %, nicht kondensierend",
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "5 bis 95 %, nicht kondensierend",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "windlast": [
+      {
+        "wert": "45.4 N bei 200 km/h, Windfestigkeit 200 km/h",
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "45.4 N bei 200 km/h, Windfestigkeit 200 km/h",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Mast (Kugelgelenk-Halterung und Metallband enthalten), Wand (Befestigungsmaterial nicht enthalten)",
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": "Wandmontage direkt auf Holzständer; optional NanoBeam Wall Mount Kit"
+      },
+      {
+        "wert": "Mast (Kit enthalten), Wand",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": "Zubehör: NBE-WMK (Wand), NBE-19-WM (Fenster-Saugnapf), ISO-BEAM-19 (Abschirmring)"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "189 x 189 x 125",
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": "mit Halterung"
+      },
+      {
+        "wert": "189 x 189 x 125",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "189 x 189 x 125",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150920090129/http://geizhals.de/ubiquiti-nanobeam-ac-nbe-5ac-19-a1302545.html",
+        "stand": "Archivkopie 2015-09-20 (gelistet seit 2015-07-28)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 530,
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": "mit Halterung"
+      },
+      {
+        "wert": 530,
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "fcc_nbeac_innenfotos",
+        "beleg": "https://fccid.io/SWX-NBEAC/Internal-Photos/Internal-Photos-2659422",
+        "stand": "Sporton EP561115 Rev. 01, Issued 2015-06-25 (Exhibit 2015-06-29, verfügbar ab 2015-12-23)",
+        "sicherheit": "niedrig",
+        "bemerkung": "kein Lüfter auf den Innenfotos; Kühlkörper auf dem SoC (FCC-Foto SWX-NBE5AC19)"
+      }
+    ],
+    "leds": [
+      {
+        "wert": "1x Power, 1x Ethernet, 4x RSSI, alle blau",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "(1) Power, (1) LAN, (4) WLAN",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Power blau, Ethernet blau (blinkt bei Aktivität), 4 Signal-LEDs ab -94/-80/-73/-65 dBm",
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "blue:rssi0..3 und power über 74HC595",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_ubnt_nanobeam-ac-xc.dts",
+        "stand": "Branch main am 2026-10-20 (letzter Commit an der Datei c2e5bded8d06, 2025-09-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "Ethernet-LED nicht im DTS"
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "RSSI- und Power-LED per GPIO (74HC595) schaltbar",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_ubnt_nanobeam-ac-xc.dts",
+        "stand": "Branch main am 2026-10-20 (letzter Commit an der Datei c2e5bded8d06, 2025-09-01)",
+        "sicherheit": "mittel",
+        "bemerkung": "Ethernet-LED nicht als GPIO-LED beschrieben"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "am Gerät neben der Ethernet-Buchse; > 10 s im Betrieb = Werkseinstellungen; zusätzlich Fern-Reset-Taste an der Unterseite des PoE-Adapters",
+        "quelle": "fcc_nbe5ac19_handbuch",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/User-Manual/Manual-2714431",
+        "stand": "Exhibit 2015-09-17 (PDF erstellt 2015-07-02)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "seitlich am Gehäuse, Aufdruck \"RESET\" (Seitenansicht \"RESET BUTTON\")",
+        "quelle": "fcc_nbe5ac19_label",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/Label/Label-and-Location-2596160",
+        "stand": "Exhibit 2015-04-24 (Zeichnung \"NBE-5AC-19 Silkscreen Artwork v04\", 2014-11-20)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "GPIO 19, KEY_RESTART",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_ubnt_nanobeam-ac-xc.dts",
+        "stand": "Branch main am 2026-10-20 (letzter Commit an der Datei c2e5bded8d06, 2025-09-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1 Taster",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Button count 1"
+      },
+      {
+        "wert": "Recovery: Reset 20 s beim Einschalten halten, dann TFTP-Modus (Signal-LEDs blinken abwechselnd)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Abschnitt \"Debricking\""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Stiftleiste: zwei 4-polige Stiftleisten bestückt am Platinenrand",
+        "quelle": "fcc_nbe5ac19_innenfotos",
+        "beleg": "https://fccid.io/SWX-NBE5AC19/Internal-Photos/Internal-Photos-2596159",
+        "stand": "Exhibit 2015-04-24, verfügbar ab 2015-06-21 (PDF 2015-04-20)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Muster 2015-04 (Platine 13-00346-14); welche Leiste die UART ist, nicht beschriftet erkennbar"
+      },
+      {
+        "wert": "innen Lötpunkte: zwei Reihen mit je 4 Lötaugen, unbestückt",
+        "quelle": "fcc_nbeac_innenfotos",
+        "beleg": "https://fccid.io/SWX-NBEAC/Internal-Photos/Internal-Photos-2659422",
+        "stand": "Sporton EP561115 Rev. 01, Issued 2015-06-25 (Exhibit 2015-06-29, verfügbar ab 2015-12-23)",
+        "sicherheit": "mittel",
+        "bemerkung": "FCC-Muster Sporton 2015-06 (Platine 11-00346-06)"
+      },
+      {
+        "wert": "innen Stiftleiste: zwei 4-polige Stiftleisten bestückt",
+        "quelle": "openwrt_wiki_foto_board",
+        "beleg": "https://openwrt.org/_media/media/ubiquiti/nanobeam_ac/nbe-5ac-19-board_top.jpg",
+        "stand": "Foto ohne EXIF, auf der Wiki-Seite (Revision 2025-02-11); identisch mit FCC-Innenfoto SWX-NBE5AC19 (Aufkleber 147E45D814)",
+        "sicherheit": "mittel",
+        "bemerkung": "gleiche Platine wie FCC-Foto SWX-NBE5AC19"
+      },
+      {
+        "wert": "vorhanden",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial Yes; Pinbelegung nicht angegeben"
+      },
+      {
+        "wert": "innen, Gehäuse ultraschallverschweißt",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "\"cannot be opened. This makes any TTL serial recovery somewhat destructive\"; \"FIXME Add photo of serial connection\""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "115200 / 8N1"
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "115200, 8N1"
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_wiki_bootlog",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac#bootlogs",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM console=ttyS0,115200"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Seitenrevision 2026-03-17 04:21 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial connection voltage 3.3"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "Gehäuse ist ultraschallverschweißt und lässt sich nur zerstörend öffnen (Wiki verweist auf Video \"cut open with Dremel tool\")",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "waterproof casing (ultrasonically welded)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/generic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath79/generic",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "Device ubnt_nanobeam-ac-xc"
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "22.03.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Supported Since Commit 73ea763c0dcdb96c"
+      },
+      {
+        "wert": "Commit 73ea763c (gemergt 2022-02-19)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.0",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Seitenrevision 2026-03-17 04:21 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "23.05.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump-Stand"
+      }
+    ],
+    "gluon_image": [
+      {
+        "wert": "ubiquiti-nanobeam-ac-gen1-xc (OpenWrt ubnt_nanobeam-ac-xc), Pakete ATH10K_PACKAGES_QCA9880 (Mainline-ath10k statt ath10k-ct)",
+        "quelle": "gluon",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/ath79-generic",
+        "stand": "lokaler Checkout v2025.1.3 (Commit e2fe4b5 vom 2026-08-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "ab v2025.1 (Commit b0ef97da, 2024-01-03, \"(re)add support for Ubiquiti AirMax targets\"); ältere Historie im flachen Checkout nicht prüfbar"
+      },
+      {
+        "wert": "Gluon support: unknown",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Seitenrevision 2026-03-17 04:21 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Ubiquiti XC",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Installation method im Dump; Live-Seite leer"
+      },
+      {
+        "wert": "nach Anleitung für XC-Geräte (toh:ubiquiti:common)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0",
+        "stand": "Commit 2022-01-16 (Autor Daniel González Cabanelas), gemergt 2022-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "factory.bin mit UBNT-Header XC, Version 8.7.4",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "UBNT_VERSION im Image-Makefile"
+      }
+    ],
+    "recovery": [
+      {
+        "wert": "Ubiquiti TFTP",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.ui.com/download/airmax-ac/nanobeam-ac/nbe-5ac-19",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/ubiquiti/nanobeam_ac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Device Page toh:ubiquiti:nanobeam_ac"
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "keine Geräteseite; nur Herstellerseite https://deviwiki.com/wiki/Ubiquiti_Networks",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks",
+        "stand": "Seite \"Ubiquiti Networks\" Revision 159819 vom 2018-11-30T21:28:03Z (imported>Omega)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "quelle": "datenblatt_2018",
+        "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+        "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
+        "sicherheit": "hoch",
+        "bemerkung": "Original https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf"
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.ui.com/airmax/nanobeam-ac-gen2/",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_19",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "verweist auf die Gen2-Seite, nicht auf NBE-5AC-19"
+      }
+    ],
+    "ean": [
+      {
+        "wert": "0810354022425",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150920090129/http://geizhals.de/ubiquiti-nanobeam-ac-nbe-5ac-19-a1302545.html",
+        "stand": "Archivkopie 2015-09-20 (gelistet seit 2015-07-28)",
+        "sicherheit": "mittel",
+        "bemerkung": "eine von drei EAN, die Geizhals dem Eintrag NBE-5AC-19 zuordnet"
+      },
+      {
+        "wert": "8592457075837",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150920090129/http://geizhals.de/ubiquiti-nanobeam-ac-nbe-5ac-19-a1302545.html",
+        "stand": "Archivkopie 2015-09-20 (gelistet seit 2015-07-28)",
+        "sicherheit": "niedrig",
+        "bemerkung": "eine von drei EAN bei Geizhals; Präfix 859 (GS1 Tschechien), vermutlich Händler-/Distributorcode"
+      },
+      {
+        "wert": "2504031511231",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150920090129/http://geizhals.de/ubiquiti-nanobeam-ac-nbe-5ac-19-a1302545.html",
+        "stand": "Archivkopie 2015-09-20 (gelistet seit 2015-07-28)",
+        "sicherheit": "niedrig",
+        "bemerkung": "eine von drei EAN bei Geizhals; beginnt mit 2 (GS1-Bereich für interne Nummern), kein Herstellercode"
+      }
+    ],
+    "geizhals_url": [
+      {
+        "wert": "https://geizhals.de/ubiquiti-nanobeam-ac-nbe-5ac-19-a1302545.html",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150920090129/http://geizhals.de/ubiquiti-nanobeam-ac-nbe-5ac-19-a1302545.html",
+        "stand": "Archivkopie 2015-09-20 (gelistet seit 2015-07-28)",
+        "sicherheit": "mittel",
+        "bemerkung": "Eintrag nur NBE-5AC-19 (Gen1); Gen2 hat eigenen Eintrag a1648678, NBE-5AC-16 a1432991"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/SWX-NBE5AC19/External-Photos/External-Photos-2596158",
+      "kategorie": "gehaeuse",
+      "grund": "Außenfotos (4.6 MB) nicht geladen: Anschlussfach, Lage von Reset und Erdung"
+    },
+    {
+      "url": "https://fccid.io/SWX-NBEAC/Internal-Photos/Internal-Photos-3117364",
+      "kategorie": "hw_version",
+      "grund": "zweite Original-Equipment-Zulassung SWX-NBEAC 2016-08-30 (Innenfotos 2.4 MB, dazu \"Antenna Expiration\"-Brief): prüfen, ob sich die Hardware gegenüber 2015 geändert hat"
+    },
+    {
+      "url": "https://fccid.io/SWX-NBEAC/Label/Label-and-Label-Location-3117365",
+      "kategorie": "erkennung_typenschild",
+      "grund": "Typenschild der Zulassung SWX-NBEAC nicht ausgewertet (Vorschaubild ohne Inhalt): ob Geräte mit FCC-ID SWX-NBEAC und IC 6545A-NBEAC im Feld vorkommen"
+    },
+    {
+      "url": "https://openwrt.org/toh/ubiquiti/nanobeam_ac",
+      "kategorie": "seriell_pinbelegung",
+      "grund": "zwei 4-polige Leisten auf der Platine, welche die UART ist und Pinbelegung unbekannt; Wiki-Abschnitt Serial hat nur \"FIXME Add photo of serial connection\""
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanobeam_ac_gen2_xc",
+      "kategorie": "andere_namen",
+      "grund": "ToH ordnet auch NanoBeam 5AC Gen 2 (XC) dem Image ubnt_nanobeam-ac-xc zu (ohne Support-Commit); OpenWrt-Commit 73ea763c nennt nur NBE-5AC-19 - ob das Gluon-Image für Gen2 XC passt, ist offen"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/nanobeam-ac-gen-2/70640",
+      "kategorie": "andere_namen",
+      "grund": "OpenWrt-Forumsthread zu NanoBeam AC Gen2 (über Freifunk-Forum gefunden), nicht gelesen; evtl. Abgrenzung Gen1/Gen2 XC"
+    },
+    {
+      "url": "https://web.archive.org/web/20190923195107/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
+      "kategorie": "datenblatt",
+      "grund": "neuester Archivstand des Datenblatts (809 KB, 2019) nicht ausgewertet; Abweichungen zu 2018 (Temperatur, Flash) möglich"
+    },
+    {
+      "url": "https://openwrt.org/toh/ubiquiti/common",
+      "kategorie": "installation",
+      "grund": "Installationsweg für XC-Boards dort beschrieben, nicht ausgewertet"
+    },
+    {
+      "url": "https://fccid.io/SWX-NBE5AC19/Letter/Antenna-Data-Sheet-2596157",
+      "kategorie": "antennen_charakteristik",
+      "grund": "Antennendatenblatt (86 KB) mit Öffnungswinkel nicht geladen"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-20",
+    "status": "teilweise",
+    "anfragen": 39,
+    "notiz": "ToH-Dump (pid 15681392) + Live-Datenseite, OpenWrt-Wiki-Sammelseite NanoBeam AC (Versionstabelle, Bootlogs NBE-5AC-19, Platinenfoto), OpenWrt-Commit 73ea763c, DTS/dtsi/Image-Makefiles main, Gluon lokal (v2025.1, b0ef97da), DeviWiki (nur FCC/IC-Tabelle), WikiDevi (keine Seite), FCC SWX-NBE5AC19 (QSG, Typenschild-Zeichnung, Innenfotos) und SWX-NBEAC (QSG, Innenfotos Sporton), Datenblatt 2018 aus dem Webarchiv, Geizhals-Archiv 2015 (Permalink, 3 EAN). Werkstatt: keine Protokolle. Widersprüche: SoC QCA9558 (OpenWrt/ToH) vs. Aufdruck QCA9557-AT4A (FCC-Foto), Flash 16 MB (Bootlog/OpenWrt/Foto) vs. 8 MB (Datenblatt), Betriebstemperatur bis 80 °C (QSG 2015) vs. 70 °C (Datenblatt 2018), FCC-ID SWX-NBE5AC19 vs. SWX-NBEAC. Seriell: Platine hat zwei 4-polige Leisten (2015-04 bestückt, 2015-06 unbestückt), UART-Zuordnung offen; Gehäuse verschweißt. Installationsabschnitt des Wikis (Signatur-Umgehung) bewusst nicht übernommen."
+  }
+}

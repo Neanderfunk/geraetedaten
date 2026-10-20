@@ -1,0 +1,2300 @@
+{
+  "image": "openmesh-om2p-lc",
+  "modell": "Open-Mesh OM2P-LC",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-20",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15677585",
+      "bemerkung": "toh_suche.py fand den Eintrag nicht (Marke \"Open-Mesh\" vs. Image \"openmesh\"); per pid aus dem Dump gezogen"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc?do=export_raw",
+      "stand": "Seitenrevision 2026-04-12 20:06",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Live-Seite neuer als Dump: Device Type WiFi AP, FCC-ID WT8OM2PLC, aktuell 25.12.2, Gluon support Yes, Outdoor No, Power Supply-Text praeziser"
+    },
+    "openwrt_wiki_om2p": {
+      "url": "https://openwrt.org/toh/openmesh/om2p?do=export_raw",
+      "stand": "Live-Seite 2026-10-20 (Revision nicht abgefragt)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Seite beschreibt das OM2P (v1, AR7240); keine eigene OM2P-LC-Geraeteseite (devicepage leer). Nur abgeleitet verwendet"
+    },
+    "openwrt_git_ath79": {
+      "url": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+      "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_git_ar71xx": {
+      "url": "https://github.com/openwrt/openwrt/commit/797944d3f193485bfc2be8efc2dd1f928a069581",
+      "stand": "Commit 2012-07-05 (SVN r32611)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Patch von Marek Lindner (Open-Mesh)"
+    },
+    "openwrt_git_ar71xx_mac": {
+      "url": "https://github.com/openwrt/openwrt/commit/93ce462b7eeb1ad49079b414ea4b01e8eeb2d4f0",
+      "stand": "Commit 2013-05-26 (SVN r36723)",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=OM2P-LC+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-20 (8 Commits, 2012-07-05 bis 2020-11-23)",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9330_openmesh_om2p.dtsi",
+      "stand": "Stand Commit eb3a5ddb (2020-12-30)",
+      "abgerufen": "2026-10-20",
+      "dateien": [
+        "ar9330_openmesh_om2p-lc.dts",
+        "ar9330_openmesh_om2p.dtsi"
+      ],
+      "bemerkung": "aus dem Patch des Commits eb3a5ddb gelesen, nicht vom aktuellen main"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+      "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+      "abgerufen": "2026-10-20"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/Open-Mesh_OM2P-LC",
+      "stand": "Spiegel, abgerufen 2026-10-20 (inhaltsgleich mit DeviWiki)",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc": {
+      "url": "https://fccid.io/WT8OM2PLC",
+      "stand": "Grant 2012-09-19 (Original Equipment)",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/WT8OM2PLC/Label/Label-and-Location-1796086",
+      "stand": "Exhibit 2012-09-19 (Zeichnung Rev.001, PDF 2012-08-11)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Zeichnung von Senao Networks, als Bild ausgewertet; Cache fcc/label.pdf"
+    },
+    "fcc_handbuch": {
+      "url": "https://fccid.io/WT8OM2PLC/User-Manual/User-Manual-1796092",
+      "stand": "Exhibit 2012-09-19 (PDF 2012-09-14)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "EnGenius-Vorlage (ENH-Outdoor, Mastmontage, \"EOA200\", LED-Tabelle) nur mit Modellnamen OM2P-LC/OM2P-HS ersetzt; Hardwareangaben passen nicht zum Geraet, daher sicherheit niedrig. Kein Spezifikationsanhang im Text"
+    },
+    "fcc_testbericht": {
+      "url": "https://fccid.io/WT8OM2PLC/Test-Report/Test-Report-1796090",
+      "stand": "Bureau Veritas RF120627C02, 2012-08-15",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_betriebsbeschreibung": {
+      "url": "https://fccid.io/WT8OM2PLC/Operational-Description/Operational-Description-1796088",
+      "stand": "Exhibit 2012-09-19 (PDF 2012-09-14)",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_innenfotos": {
+      "url": "https://fccid.io/WT8OM2PLC/Internal-Photos/Internal-Photos-1796087",
+      "stand": "Exhibit 2012-09-19 (PDF 2012-09-04)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "3 Seiten, als Bild ausgewertet; Cache fcc/img/"
+    },
+    "fcc_aussenfotos": {
+      "url": "https://fccid.io/WT8OM2PLC/External-Photos/External-Photos-1796085",
+      "stand": "Exhibit 2012-09-19 (PDF 2012-09-14)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "1 Seite, als Bild ausgewertet"
+    },
+    "openmesh_datenblatt": {
+      "url": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+      "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Seriendatenblatt OM2P/OM2P-LC/OM2P-HS; gemeinsame Zeilen gelten fuer alle drei"
+    },
+    "openmesh_produktseite": {
+      "url": "https://web.archive.org/web/20131023010253/http://www.open-mesh.com:80/products/om2p-lc.html",
+      "stand": "Archiv 2013-10-23",
+      "abgerufen": "2026-10-20"
+    },
+    "werkstatt": {
+      "url": "router-werkstatt/docs/erstinstallation-ohne-factory.md",
+      "stand": "Stand 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Planungsdokument, keine Messung am Geraet; Abschnitt Tabelle \"C - ap51-flash (Open-Mesh-Bootloader)\""
+    },
+    "wayback_cdx_geizhals": {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/open-mesh*",
+      "stand": "Abfrage 2026-10-20: leer (auch geizhals.de/openmesh*, geizhals.at/open-mesh*)",
+      "abgerufen": "2026-10-20"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "15677585",
+      "devicetype": "WiFi Router",
+      "brand": "Open-Mesh",
+      "model": "OM2P-LC",
+      "version": "NULL",
+      "fccid": "http://¿",
+      "availability": "Discontinued",
+      "whereavailable": "",
+      "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+      "supportedsincerel": "21.02.0",
+      "supportedcurrentrel": "23.05.0",
+      "unsupported_functions": "NULL",
+      "target": "ath79",
+      "subtarget": "generic",
+      "packagearchitecture": "mips_24kc",
+      "bootloader": "U-Boot",
+      "cpu": "Atheros AR9330",
+      "cpucores": "1",
+      "cpumhz": "400",
+      "flashmb": "16",
+      "rammb": "64",
+      "ethernet100mports": "2",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "-",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "Atheros AR9330",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "Atheros AR9330",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "-",
+      "wlancomments": "",
+      "wlandriver": "ath9k",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "-",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "¿",
+      "jtag": "¿",
+      "ledcount": "6",
+      "buttoncount": "1",
+      "gpios": "-",
+      "powersupply": "12-24 VDC, 1.0 A, 18-24 VDC passive PoE",
+      "devicepage": "",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "OM2P-LC",
+      "gitsearch": "OM2P-LC",
+      "wikideviurl": "https://wikidevi.wi-cat.ru/Open-Mesh_OM2P-LC",
+      "oemdevicehomepageurl": "http://¿",
+      "firmwareoemstockurl": "http://¿",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-openmesh_om2p-lc-initramfs-kernel.bin",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-openmesh_om2p-lc-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-openmesh_om2p-lc-initramfs-kernel.bin",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-openmesh_om2p-lc-squashfs-sysupgrade.bin",
+      "installationmethods": "ap51-flash,U-Boot TFTP + serial recovery,see git-commit",
+      "commentinstallation": "",
+      "recoverymethods": "U-Boot TFTP + serial recovery",
+      "commentrecovery": "",
+      "picture": "media:example:genericrouter1.png",
+      "comments": "",
+      "page": "toh:hwdata:open-mesh:open-mesh_om2p-lc"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi AP",
+      "Brand": "Open-Mesh",
+      "Model": "OM2P-LC",
+      "Versions": "",
+      "FCCID_urls": "https://fcc.io/WT8OM2PLC",
+      "Availability_availability": "Discontinued",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+      "Supported Since Rel_releasesince": "21.02.0",
+      "Supported Current Rel_releasecurrent": "25.12.2",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Atheros AR9330",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "400",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "64",
+      "Ethernet 100M ports_numethport": "2",
+      "Ethernet 1Gbit ports_numethport": "-",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "Atheros AR9330",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Atheros AR9330",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "-",
+      "WLAN Comments_": "",
+      "WLAN driver_wlan-drivers": "ath9k",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "¿",
+      "Serial connection voltage_serialvoltage": "¿",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "6",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "12-24 VDC, 1.0A via barrel, or 18-24 VDC Passive PoE",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "OM2P-LC",
+      "Git search_search-gits": "OM2P-LC",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/Open-Mesh_OM2P-LC",
+      "WikiDevi ID_hwinfo-ids": "Open-Mesh_OM2P-LC",
+      "OEM Device Homepage URL_url": "http://¿",
+      "Firmware OEM Stock URL_url": "http://¿",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/ath79/generic/openwrt-25.12.2-ath79-generic-openmesh_om2p-lc-initramfs-kernel.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/ath79/generic/openwrt-25.12.2-ath79-generic-openmesh_om2p-lc-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-openmesh_om2p-lc-initramfs-kernel.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-openmesh_om2p-lc-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "U-Boot TFTP + serial recovery, see git-commit",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "U-Boot TFTP + serial recovery",
+      "Comment recovery": "",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "openwrt_wiki_om2p": {
+      "titel": "Open-Mesh.com OM2P",
+      "kurz": "High Power 802.11n Mini Router including hardware watchdog, passive 12-18v (NON 802.3af) POE support, dual Ethernet Ports",
+      "flash_layout_om2p": "u-boot 0x40000, u-boot-env 0x40000, custom 0x140000, kernel 0x100000, rootfs 0x600000, rootfs_data 0x3c0000, inactive 0x700000, ART 0x40000",
+      "hardware_info_om2p": "CPU MIPS 24Kc V7.4; 61272k/65536k RAM; eth0/eth1 Atheros AG71xx; AR7240/AR9330 built-in switch; Atheros AR9285; s25sl12800 (16384 Kbytes); ttyS0 16550A",
+      "gehaeuse_oeffnen_om2p": "2 vordere Gummifuesse ab, 2 Schrauben, Deckel vorn max. 5 mm anheben und nach vorn schieben",
+      "seriell_om2p": "3.3 V, 115200, keine Flusskontrolle, keine Paritaet, 8 Datenbits; Pinbelegung (Ethernetbuchsen vorn) RXD, TXD, GND, VCC",
+      "interfaces_om2p": "lan=eth0, wan=eth1, passt nicht zur Beschriftung",
+      "buttons_om2p": "nur ein kleiner Reset-Knopf, schaltet nicht in Failsafe",
+      "installation_om2p": "ap51-flash ueber Ethernet beim Einschalten",
+      "notes": "OM2Pv2: Flashen ueber den Port naechst der Strombuchse; nach sysupgrade 19.07->21 ohne Konfig LAN/WAN vertauscht",
+      "tags": "AR7240 16flash 64ram"
+    },
+    "openwrt_git_ath79": {
+      "titel": "ath79: Add support for OpenMesh OM2P-LC",
+      "autor": "Sven Eckelmann",
+      "spezifikation": [
+        "Qualcomm/Atheros AR9330 rev 1",
+        "400/400/200 MHz (CPU/DDR/AHB)",
+        "64 MB of RAM",
+        "16 MB of SPI NOR flash - 2x 7 MB available; but one of the 7 MB regions is the recovery image",
+        "2x 10/100 Mbps Ethernet",
+        "1T1R 2.4 GHz Wi-Fi",
+        "6x GPIO-LEDs (3x wifi, 2x ethernet, 1x power)",
+        "1x GPIO-button (reset)",
+        "external h/w watchdog (enabled by default)",
+        "TTL pins are on board (arrow points to VCC, then follows: GND, TX, RX)",
+        "2x fast ethernet: eth0 builtin switch port 1, used as LAN interface; eth1 18-24V passive POE (mode B), used as WAN interface",
+        "12-24V 1A DC",
+        "internal antennas"
+      ],
+      "installation": "ap51-flash; oder U-Boot-Shell ueber serielle Konsole, initramfs per TFTP (serverip 192.168.1.21, ipaddr 192.168.1.1, tftpboot 0c00000), dann sysupgrade -n ueber LAN",
+      "image_mk": "Device/openmesh_om2p-lc: $(Device/openmesh_om2p-common), SOC := ar9330, DEVICE_MODEL := OM2P-LC, SUPPORTED_DEVICES += om2p-lc",
+      "uboot_env": "/dev/mtd1 0x0 0x40000 0x40000"
+    },
+    "openwrt_git_ar71xx": {
+      "titel": "ar71xx: add support for the OpenMesh OM2P-LC board",
+      "board_name": "OM2P-LC",
+      "machine_name": "OpenMesh OM2P LC",
+      "flash_typ": "s25sl12800",
+      "gpio_led_power": 1,
+      "gpio_led_green": 15,
+      "gpio_led_red": 16,
+      "gpio_led_yellow": 0,
+      "gpio_led_lan": 13,
+      "gpio_led_wan": 17,
+      "gpio_btn_reset": 12,
+      "mac_quelle": "mac1 = 0x1ffc0000, mac2 = 0x1ffc0000+6, ART 0x1ffc1000",
+      "profil": "OpenMesh OM2P/OM2P-LC, Pakete kmod-ath9k om-watchdog"
+    },
+    "openwrt_git_ar71xx_mac": {
+      "titel": "ar71xx: set eth0 mac address to match bottom label of the OM2P LC",
+      "aenderung": "eth0 = mac1 (ART 0x0), eth1 = mac2"
+    },
+    "openwrt_git_suche": {
+      "commits": [
+        "518a70f06c 2012-07-05 package/om-watchdog: add om2p-lc support",
+        "797944d3f1 2012-07-05 ar71xx: add support for the OpenMesh OM2P-LC board",
+        "b020a7e7c3 2012-07-06 ar71xx: OM2P LC sysupgrade patch",
+        "6fbb548eb9 2012-07-06 uboot-envtools: OM2P LC support",
+        "bd00d48fe2 2012-08-15 package/om-watchdog: start service only on the om2p/om2p-lc boards on ar71xx",
+        "62ab2b0da6 2012-10-14 ar71xx: unbreak building images for OpenMesh OM2P/OM2P-LC",
+        "93ce462b7e 2013-05-26 ar71xx: set eth0 mac address to match bottom label of the OM2P LC",
+        "eb3a5ddba0 2020-11-23 ath79: Add support for OpenMesh OM2P-LC"
+      ]
+    },
+    "openwrt_dts": {
+      "compatible": "openmesh,om2p-lc, qca,ar9330",
+      "model": "OpenMesh OM2P-LC",
+      "label-mac-device": "eth1",
+      "reset": "GPIO 12 active low, KEY_RESTART",
+      "leds": {
+        "yellow:wifi": "GPIO 0",
+        "blue:power": "GPIO 1",
+        "blue:lan": "GPIO 13",
+        "green:wifi": "GPIO 15 (phy0tpt)",
+        "red:wifi": "GPIO 16",
+        "blue:wan": "GPIO 17"
+      },
+      "watchdog": "linux,wdt-gpio GPIO 26, toggle, hw_margin 300 s (Treiber auf 60 s begrenzt), always-running",
+      "flash": "jedec,spi-nor 25 MHz; u-boot 0x0/0x40000 (ro), u-boot-env 0x40000/0x40000, custom 0x80000/0x140000 (ro), inactive 0x1c0000/0x700000, inactive2 0x8c0000/0x700000, ART 0xfc0000/0x40000 (ro)",
+      "mac": "eth0 = ART 0x6, eth1 = ART 0x0",
+      "wmac_cal": "ART 0x1000"
+    },
+    "gluon_targets": {
+      "device": "device('openmesh-om2p-lc', 'openmesh_om2p-lc', {class = 'tiny', factory = false})"
+    },
+    "deviwiki": {
+      "brand": "Open-Mesh",
+      "model": "OM2P",
+      "revision": "-LC",
+      "fcc_date": "09/19/2012",
+      "manuf_country": "Taiwan",
+      "is_manuf": "No",
+      "manuf": "Senao",
+      "type": "mesh node, access point",
+      "fcc_id": "WT8OM2PLC",
+      "ic_id": "10103A-OM2PLC",
+      "pwr_v": "12",
+      "pwr_amp": "1",
+      "pwr_conn": "barrel",
+      "pwr_barrel_outer": "5.5",
+      "pwr_barrel_inner": "2.1",
+      "pwr_barrel_len": "9.5",
+      "pwr_poe": "ns",
+      "cpu1_brand": "Atheros",
+      "cpu1_model": "AR9331",
+      "cpu1_cspeed": "400",
+      "fla1": "16",
+      "fla1_brand": "Spansion",
+      "fla1_model": "FL128PIFL",
+      "ram1": "64",
+      "ram1_brand": "Nanya",
+      "ram1_model": "NT5DS32M16DS-5T",
+      "wi1_chip1_brand": "Atheros",
+      "wi1_chip1_model": "AR9331",
+      "wi1_802dot11_protocols": "bgn",
+      "wi1_ant_conn": "U.FL",
+      "wi1_txchains": "1",
+      "wi1_rxchains": "1",
+      "wi1_sstreams": "1",
+      "eth_cpu": "true",
+      "sw_cpu": "true",
+      "lan_speed": "100M",
+      "lan_ports": "1",
+      "wan_ports": "1",
+      "tp_firmware": "OpenWrt",
+      "802dot11_protocols": "bgn",
+      "default_ssid": "open-mesh",
+      "default_ssid_regex": "^open-mesh$",
+      "default_user": "root",
+      "oui": "AC:86:74",
+      "oui_eth": "AC:86:74",
+      "_freitext": "'''OM2P-LC 150Mbps Access Point'''\n\n[http://www.open-mesh.com/index.php/products/om2p-lc.html On '''Open-Mesh''''s store]\n:[https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf Datasheet for the OM2P series]\n::Transmit Power is noted to be 20dBm...\n\n\"7016A0604001 Ver:1.00\" is silkscreened on the board in the FCC photos.\n\nAn Atheros logo is visible on the WiSoC in the FCC internal photos.<br>\nThe SoC is presumed to be AR9331 based on the specifications of the device.\n:AR9330 / Hornet based (AR9331 and AR1311 being included in that family)\n\n[https://dev.openwrt.org/changeset/32611 Changeset to support the device on the OpenWrt Trac]\n\nThe PoE implementation in this device consists of a Passive PoE feed with pins +4,5 and -7,8 at 18 VDC.",
+      "_hinweis": "Feld default_pass (Zugangsdaten) bewusst nicht uebernommen"
+    },
+    "wikidevi": {
+      "brand": "Open-Mesh",
+      "model": "OM2P",
+      "revision": "-LC",
+      "fcc_date": "09/19/2012",
+      "manuf_country": "Taiwan",
+      "is_manuf": "No",
+      "manuf": "Senao",
+      "type": "mesh node, access point",
+      "fcc_id": "WT8OM2PLC",
+      "ic_id": "10103A-OM2PLC",
+      "pwr_v": "12",
+      "pwr_amp": "1",
+      "pwr_conn": "barrel",
+      "pwr_barrel_outer": "5.5",
+      "pwr_barrel_inner": "2.1",
+      "pwr_barrel_len": "9.5",
+      "pwr_poe": "ns",
+      "cpu1_brand": "Atheros",
+      "cpu1_model": "AR9331",
+      "cpu1_cspeed": "400",
+      "fla1": "16",
+      "fla1_brand": "Spansion",
+      "fla1_model": "FL128PIFL",
+      "ram1": "64",
+      "ram1_brand": "Nanya",
+      "ram1_model": "NT5DS32M16DS-5T",
+      "wi1_chip1_brand": "Atheros",
+      "wi1_chip1_model": "AR9331",
+      "wi1_802dot11_protocols": "bgn",
+      "wi1_ant_conn": "U.FL",
+      "wi1_txchains": "1",
+      "wi1_rxchains": "1",
+      "wi1_sstreams": "1",
+      "eth_cpu": "true",
+      "sw_cpu": "true",
+      "lan_speed": "100M",
+      "lan_ports": "1",
+      "wan_ports": "1",
+      "tp_firmware": "OpenWrt",
+      "802dot11_protocols": "bgn",
+      "default_ssid": "open-mesh",
+      "default_ssid_regex": "^open-mesh$",
+      "default_user": "root",
+      "oui": "AC:86:74",
+      "oui_eth": "AC:86:74",
+      "_freitext": "'''OM2P-LC 150Mbps Access Point'''\n\n[http://www.open-mesh.com/index.php/products/om2p-lc.html On '''Open-Mesh''''s store]\n:[https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf Datasheet for the OM2P series]\n::Transmit Power is noted to be 20dBm...\n\n\"7016A0604001 Ver:1.00\" is silkscreened on the board in the FCC photos.\n\nAn Atheros logo is visible on the WiSoC in the FCC internal photos.<br>\nThe SoC is presumed to be AR9331 based on the specifications of the device.\n:AR9330 / Hornet based (AR9331 and AR1311 being included in that family)\n\n[https://dev.openwrt.org/changeset/32611 Changeset to support the device on the OpenWrt Trac]\n\nThe PoE implementation in this device consists of a Passive PoE feed with pins +4,5 and -7,8 at 18 VDC.",
+      "_hinweis": "Feld default_pass (Zugangsdaten) bewusst nicht uebernommen"
+    },
+    "fcc": {
+      "grantee": "Open Mesh, Inc. (heute bei fccid.io: Datto, Inc.)",
+      "grantee_code": "WT8",
+      "product_code": "OM2PLC",
+      "model": "OM2PLC",
+      "equipment_class": "DTS - Digital Transmission System",
+      "beschreibung": "Wireless 802.11b/g/n Mesh Router",
+      "frequenz": "2412-2462 MHz",
+      "leistung_w": "0.127 (conducted)",
+      "grant": "2012-09-19",
+      "testlabor": "Bureau Veritas CPS (H.K.) Ltd. Taoyuan Branch",
+      "tcb": "Curtis-Straus LLC",
+      "grant_notes": "Output power listed is conducted. ... separation distance of at least 20 cm ... This device has 20 MHz and 40 MHz bandwidth mode.",
+      "langzeit_vertraulich": "Yes",
+      "exhibits": [
+        "User Manual 2012-09-19 PDF 1.4 MB",
+        "Internal Photos 2012-09-19 PDF 1.9 MB",
+        "External Photos 2012-09-19 PDF 579.6 KB",
+        "Label and Location 2012-09-19 PDF 301 KB",
+        "Operational Description 2012-09-19 PDF 35.9 KB",
+        "Test Setup Photos 2012-09-19 PDF 288.3 KB",
+        "Test Report 2012-09-19 PDF 955.1 KB",
+        "Attestation - General Declaration 127.5 KB",
+        "Confidentiality Request 141.7 KB",
+        "Cover Letter - Agent Authorization 136.5 KB",
+        "RF Exposure Info 55.2 KB"
+      ]
+    },
+    "fcc_label": {
+      "text": "Model Name: OM2P-LC / DC Input:12~18V, 1~1.25A / FCC ID:WT8OM2PLC / IC:10103A-OM2PLC / Made in Taiwan",
+      "groesse": "24.8 x 24.0 mm, weisses Perlglanzpapier",
+      "lage": "Unterseite, mittig zwischen den beiden Schluesselloch-Aufhaengungen",
+      "zeichnung": "Senao Networks, Inc., LABEL FREQUENCY 24.8*24mm (OM2P-LC) LFP, Rev.001",
+      "unterseite": "4 Gummifuesse, 2 Schluesselloch-Aufhaengungen, Lueftungsschlitze, kleines Loch neben dem Etikettenfeld"
+    },
+    "fcc_handbuch": {
+      "titel": "Microsoft Word - OM2P_UM_for FCC apply",
+      "seiten": 92,
+      "bottom_view": "two RJ-45 ports, a PoE interface, and a Reset button; removable cover",
+      "reset": "recessed; press approximately 10 seconds",
+      "installation": "mount on a 1\"-4\" pole (Vorlagentext, verweist auf EOA200)",
+      "leds": "Power, LAN, WLAN (Vorlagentabelle)",
+      "paket": "One EnGenius Wireless Access Point / Client Bridge (OM2P-LC/OM2P-HS)",
+      "features": "up to 150 Mbps, 802.11b/g/n, Power over Ethernet and Power by Adapter, four SSIDs, WDS, Client Router",
+      "hinweis": "EnGenius-Handbuchvorlage (About This Document: \"EnGenius ENH Series Outdoor Access Point/Bridge\")"
+    },
+    "fcc_testbericht": {
+      "report": "RF120627C02",
+      "getestet": "2012-08-04 bis 2012-08-14",
+      "brand": "Open Mesh",
+      "eut": "Wireless 802.11b/g/n Mesh Router",
+      "power_supply": "12Vdc (adapter)",
+      "modulation": "CCK, DQPSK, DBPSK (DSSS); 64QAM, 16QAM, QPSK, BPSK (OFDM)",
+      "transfer_rate": "802.11b bis 11 Mbps, 802.11g bis 54 Mbps, 802.11n bis 150 Mbps",
+      "frequenz": "2412-2462 MHz",
+      "kanaele": "11 (20 MHz), 7 (802.11n 40 MHz)",
+      "output_power": "127.35 mW",
+      "antenna_type": "printing antenna with 2.0dBi gain",
+      "antenna_connector": "N/A",
+      "15.203": "No antenna connector is used",
+      "io_ports": "RJ45 Port",
+      "tx": "1TX in allen Modi",
+      "adapter": "DVE DSA-12G-12 FUS, Eingang 100-240 Vac 50/60 Hz 0.3 A, Ausgang 12 Vdc 1.0 A, 1.5 m Kabel",
+      "poe": "EnGenius EPE-1212, Ausgang 12 Vdc 0.6 A (support unit)",
+      "testmodi": "A Adapter Mode, B POE Mode",
+      "leistung_avg_dbm": {
+        "802.11b": "K1 18.02, K6 21.05, K11 19.01",
+        "802.11g": "K1 15.18, K6 20.18, K11 18.02",
+        "802.11n20": "K1 15.07, K6 19.12, K11 18.01",
+        "802.11n40": "K3 13.06, K6 18.25, K9 18.21"
+      },
+      "psd_max": "8 dBm"
+    },
+    "fcc_betriebsbeschreibung": {
+      "text": "Wireless 802.11b/g/n Mesh Router, 2.4 GHz, bis 150 Mbps; transmitter powered by a 12Vdc adapter; printing antenna without antenna connector"
+    },
+    "fcc_innenfotos": {
+      "platine": "Aufdruck \"7016A0604001 Ver:1.00\"",
+      "ram": "NANYA NT5DS32M16DS-5T (unter abnehmbarem Schirmblech)",
+      "ethernet_trafo": "FM-1003SLF",
+      "stiftleiste": "4-polige Stiftleiste bestueckt, Platinenrand oben neben dem U.FL-Anschluss",
+      "antenne": "Leiterplattenantenne \"Lynwave ALA120-052022\" im Gehaeusedeckel, per Koaxkabel an U.FL",
+      "anschluesse": "DC-Hohlbuchse + 2x RJ45 (gelb) an einer Schmalseite",
+      "taster": "Taster auf der Platinenunterseite",
+      "luefter": "keiner zu sehen",
+      "aufkleber_platine": "P/N 58164060-0001 (Lesung unsicher)"
+    },
+    "fcc_aussenfotos": {
+      "gehaeuse": "weisses Kunststoffgehaeuse, 4 LEDs auf der Oberseite vorn, Lueftungsschlitze an den Seiten",
+      "rueckseite": "2x RJ45 (gelb) + DC-Hohlbuchse",
+      "unterseite": "4 Gummifuesse, 2 Aufhaengungen"
+    },
+    "openmesh_datenblatt": {
+      "titel": "OM2P Series Cloud-Managed Wireless LAN Access Points",
+      "om2p_lc": {
+        "Access Points": "Best Price",
+        "Speed (Max)": "150 Mbps",
+        "Power": "20 dBm",
+        "Antenna": "Single Internal",
+        "Optimized for": "Price",
+        "Recommended enclosures": "Indoor Wall Plug, Ceiling",
+        "Processor": "400 MHz Atheros AR9330, MIPS 24Kc V7.4"
+      },
+      "serie": {
+        "WLAN Standard": "802.11g/n 2.4 GHz",
+        "Memory": "64MB DRAM",
+        "Hardware Watchdog CPU": "Yes",
+        "Public and Private SSIDs": "Yes (2)",
+        "Ethernet": "2 (WAN and LAN)",
+        "PoE": "12-20v Passive (non-802.3af)",
+        "Power Supply Options": "US/EU/UK/AU",
+        "LEDs": "Power, Ethernet (2), WiFi",
+        "Temperature": "0-50 C",
+        "Size and Weight": "3.75\" x 2.75\" x 1\" | 0.52 Lbs",
+        "Certifications": "FCC, IC, CE, CTick",
+        "Warranty": "1 Year"
+      },
+      "gehaeuse_zubehoer": {
+        "Outdoor": "nur OM2P",
+        "Indoor Wall": "OM2P, LC, HS; 13.6 x 11.3 x 4.86 cm; Montage an nordamerikanischer Steckdose; 12v North American Netzteil",
+        "Indoor Ceiling": "LC, HS; 15.9 cm rund, 3.3-4.5 cm tief; Abhaengedecken-Schienen 9/16\" und 15/16\", Wand oder Decke; PoE oder Netzteil"
+      }
+    },
+    "openmesh_produktseite": {
+      "titel": "OM2P-LC 802.11g/n 150mbps Access Point",
+      "preis": "$55.00",
+      "verfuegbar": "In stock (Qty 20,819)",
+      "quick_overview": "150mbps 802.11n Mini access point with passive 12-18v (NON 802.3af) POE support, dual Ethernet Ports. Single internal antenna.",
+      "netzteil_optionen": "Without Adapter; US Adapter 18V +$4; US Adapter 12v (for use ONLY with the wallplug enclosure) +$4; EU/UK/AU Adapter +$4",
+      "beschreibung": "20dBm power (2-5dBi higher than most access points) and receive amplifier; antenna internal (same 2dBi gain as the OM2P); fits Ceiling and Ethernet wall jack enclosures",
+      "poe_text": "compatible with passive 12-24v PoE (not 802.3af ... cannot be powered with standard PoE switches)",
+      "highlights_poe": "12-20v passive PoE ... up to 350 feet away",
+      "sku": "OM2P-LC",
+      "garantie": "1 year",
+      "gewicht": "0.5200 (Einheit nicht angegeben, vermutlich lbs)"
+    },
+    "werkstatt": {
+      "abschnitt": "Tabelle Installationsklassen, Zeile \"C - ap51-flash (Open-Mesh-Bootloader)\": 20 Geraete ath79-generic, OM2P*, OM5P*, MR600/900/1750, A40/A60; eigenes Werkzeug, laeuft schon"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Open-Mesh",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Open Mesh, Inc.",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8OM2PLC",
+        "stand": "Grant 2012-09-19 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "Grantee; fccid.io fuehrt heute Datto, Inc."
+      },
+      {
+        "wert": "Senao (ODM)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": "manuf=Senao, manuf_country=Taiwan, is_manuf=No"
+      },
+      {
+        "wert": "Senao Networks, Inc. (ODM)",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM2PLC/Label/Label-and-Location-1796086",
+        "stand": "Exhibit 2012-09-19 (Zeichnung Rev.001, PDF 2012-08-11)",
+        "sicherheit": "hoch",
+        "bemerkung": "Etikettenzeichnung im Senao-Rahmen"
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "OM2P-LC",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "OM2P-LC",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM2PLC/Label/Label-and-Location-1796086",
+        "stand": "Exhibit 2012-09-19 (Zeichnung Rev.001, PDF 2012-08-11)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild \"Model Name: OM2P-LC\""
+      },
+      {
+        "wert": "OM2PLC",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8OM2PLC",
+        "stand": "Grant 2012-09-19 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "Modellangabe im FCC-Antrag"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Etikett Unterseite: \"Model Name: OM2P-LC\", \"DC Input:12~18V, 1~1.25A\", \"FCC ID:WT8OM2PLC\", \"IC:10103A-OM2PLC\"",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM2PLC/Label/Label-and-Location-1796086",
+        "stand": "Exhibit 2012-09-19 (Zeichnung Rev.001, PDF 2012-08-11)",
+        "sicherheit": "hoch",
+        "bemerkung": "keine Hardware-Versionsangabe auf dem Etikett; nur eine Fassung bekannt (ToH-Version leer)"
+      },
+      {
+        "wert": "Platinenaufdruck \"7016A0604001 Ver:1.00\"",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8OM2PLC/Internal-Photos/Internal-Photos-1796087",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-04)",
+        "sicherheit": "hoch",
+        "bemerkung": "nach Öffnen sichtbar"
+      },
+      {
+        "wert": "Platinenaufdruck \"7016A0604001 Ver:1.00\"",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": "aus FCC-Fotos"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "WT8OM2PLC",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8OM2PLC",
+        "stand": "Grant 2012-09-19 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WT8OM2PLC",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Seitenrevision 2026-04-12 20:06",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump noch \"http://¿\""
+      },
+      {
+        "wert": "WT8OM2PLC",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WT8OM2PLC",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM2PLC/Label/Label-and-Location-1796086",
+        "stand": "Exhibit 2012-09-19 (Zeichnung Rev.001, PDF 2012-08-11)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "10103A-OM2PLC",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM2PLC/Label/Label-and-Location-1796086",
+        "stand": "Exhibit 2012-09-19 (Zeichnung Rev.001, PDF 2012-08-11)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "10103A-OM2PLC",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": "OM2P LC / OpenMesh OM2P LC",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/797944d3f193485bfc2be8efc2dd1f928a069581",
+        "stand": "Commit 2012-07-05 (SVN r32611)",
+        "sicherheit": "hoch",
+        "bemerkung": "Boardname unter ar71xx"
+      },
+      {
+        "wert": "OM2PLC",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8OM2PLC",
+        "stand": "Grant 2012-09-19 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Open-Mesh OM2P, Revision -LC",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "nicht mehr erhältlich",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Discontinued"
+      },
+      {
+        "wert": "2013 lieferbar, 55 USD",
+        "quelle": "openmesh_produktseite",
+        "beleg": "https://web.archive.org/web/20131023010253/http://www.open-mesh.com:80/products/om2p-lc.html",
+        "stand": "Archiv 2013-10-23",
+        "sicherheit": "hoch",
+        "bemerkung": "Archivstand 2013-10-23"
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "2012-09-19",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8OM2PLC",
+        "stand": "Grant 2012-09-19 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "FCC-Grant"
+      },
+      {
+        "wert": "OpenWrt-Unterstützung ab 2012-07-05",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/797944d3f193485bfc2be8efc2dd1f928a069581",
+        "stand": "Commit 2012-07-05 (SVN r32611)",
+        "sicherheit": "hoch",
+        "bemerkung": "vor dem FCC-Grant eingereicht"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Atheros AR9330",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm/Atheros AR9330 rev 1",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Atheros AR9330",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Atheros AR9331",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "DeviWiki: \"presumed to be AR9331\" aus Spezifikation, nur Atheros-Logo auf Foto"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 400,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 400,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": "400/400/200 MHz (CPU/DDR/AHB)"
+      },
+      {
+        "wert": 400,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 400,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "MIPS 24Kc (mips_24kc)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MIPS 24Kc V7.4",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 64,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "Serienzeile \"64MB DRAM\""
+      },
+      {
+        "wert": 64,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR (Nanya NT5DS32M16DS-5T)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8OM2PLC/Internal-Photos/Internal-Photos-1796087",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-04)",
+        "sicherheit": "hoch",
+        "bemerkung": "Aufdruck auf FCC-Innenfoto lesbar"
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "Nanya NT5DS32M16DS-5T",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8OM2PLC/Internal-Photos/Internal-Photos-1796087",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-04)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Nanya NT5DS32M16DS-5T",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": "2x 7 MB nutzbar, eine davon Recovery-Image"
+      },
+      {
+        "wert": 16,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "Spansion FL128PIFL",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "s25sl12800",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/797944d3f193485bfc2be8efc2dd1f928a069581",
+        "stand": "Commit 2012-07-05 (SVN r32611)",
+        "sicherheit": "hoch",
+        "bemerkung": "Flash-Typ im Maschinencode"
+      }
+    ],
+    "vlan": [
+      {
+        "wert": true,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "switch": [
+      {
+        "wert": "Atheros AR9330 (integriert)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "eth0 am integrierten Switch Port 1",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "Atheros AR9330 (im SoC)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Atheros AR9331 (im SoC)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "vermutet"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath9k",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8OM2PLC",
+        "stand": "Grant 2012-09-19 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11g/n",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "Serienzeile"
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 1,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": "1T1R"
+      },
+      {
+        "wert": 1,
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/WT8OM2PLC/Test-Report/Test-Report-1796090",
+        "stand": "Bureau Veritas RF120627C02, 2012-08-15",
+        "sicherheit": "hoch",
+        "bemerkung": "1TX in allen Modi"
+      },
+      {
+        "wert": 1,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": "1x1, 1 Spatial Stream"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "keins (\"-\")",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "N150",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Speed (Max) 150 Mbps\""
+      },
+      {
+        "wert": "N150",
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/WT8OM2PLC/Test-Report/Test-Report-1796090",
+        "stand": "Bureau Veritas RF120627C02, 2012-08-15",
+        "sicherheit": "hoch",
+        "bemerkung": "802.11n bis 150 Mbps (40 MHz)"
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "20/40 MHz",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8OM2PLC",
+        "stand": "Grant 2012-09-19 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": "2412-2462 MHz",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8OM2PLC",
+        "stand": "Grant 2012-09-19 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": 20,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 20,
+        "quelle": "openmesh_produktseite",
+        "beleg": "https://web.archive.org/web/20131023010253/http://www.open-mesh.com:80/products/om2p-lc.html",
+        "stand": "Archiv 2013-10-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 21.05,
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/WT8OM2PLC/Test-Report/Test-Report-1796090",
+        "stand": "Bureau Veritas RF120627C02, 2012-08-15",
+        "sicherheit": "hoch",
+        "bemerkung": "gemessen leitungsgebunden, 802.11b Kanal 6 (127.35 mW)"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern fest",
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/WT8OM2PLC/Test-Report/Test-Report-1796090",
+        "stand": "Bureau Veritas RF120627C02, 2012-08-15",
+        "sicherheit": "hoch",
+        "bemerkung": "\"printing antenna\", kein Antennenanschluss"
+      },
+      {
+        "wert": "intern",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "Single Internal"
+      },
+      {
+        "wert": "intern",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": "internal antennas"
+      },
+      {
+        "wert": "intern: Leiterplattenantenne im Gehäusedeckel, per Koaxkabel an U.FL der Platine",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8OM2PLC/Internal-Photos/Internal-Photos-1796087",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-04)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "U.FL (intern)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U.FL (intern)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8OM2PLC/Internal-Photos/Internal-Photos-1796087",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-04)",
+        "sicherheit": "hoch",
+        "bemerkung": "Koaxkabel zur Deckelantenne"
+      },
+      {
+        "wert": "keiner (außen)",
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/WT8OM2PLC/Test-Report/Test-Report-1796090",
+        "stand": "Bureau Veritas RF120627C02, 2012-08-15",
+        "sicherheit": "hoch",
+        "bemerkung": "15.203: No antenna connector is used"
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/WT8OM2PLC/Test-Report/Test-Report-1796090",
+        "stand": "Bureau Veritas RF120627C02, 2012-08-15",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8OM2PLC/Internal-Photos/Internal-Photos-1796087",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-04)",
+        "sicherheit": "hoch",
+        "bemerkung": "Lynwave ALA120-052022"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": 2.0,
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/WT8OM2PLC/Test-Report/Test-Report-1796090",
+        "stand": "Bureau Veritas RF120627C02, 2012-08-15",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2.0,
+        "quelle": "openmesh_produktseite",
+        "beleg": "https://web.archive.org/web/20131023010253/http://www.open-mesh.com:80/products/om2p-lc.html",
+        "stand": "Archiv 2013-10-23",
+        "sicherheit": "hoch",
+        "bemerkung": "\"same 2dBi gain as the OM2P\""
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "eth0 (LAN)",
+            "geschwindigkeit": "10/100",
+            "rolle": "LAN"
+          },
+          {
+            "name": "eth1 (WAN)",
+            "geschwindigkeit": "10/100",
+            "rolle": "WAN, Passive-PoE-Eingang"
+          }
+        ],
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "WAN",
+            "geschwindigkeit": "",
+            "rolle": "WAN"
+          },
+          {
+            "name": "LAN",
+            "geschwindigkeit": "",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"2 (WAN and LAN)\""
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "geschwindigkeit": "10/100",
+            "rolle": "LAN"
+          },
+          {
+            "name": "WAN",
+            "geschwindigkeit": "10/100",
+            "rolle": "WAN"
+          }
+        ],
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "2x 100 Mbit"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/WT8OM2PLC/External-Photos/External-Photos-1796085",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-14)",
+        "sicherheit": "hoch",
+        "bemerkung": "2x RJ45 an der Rückseite"
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/WT8OM2PLC/External-Photos/External-Photos-1796085",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-14)",
+        "sicherheit": "hoch",
+        "bemerkung": "DC-Buchse und 2x RJ45"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "keins",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Seitenrevision 2026-04-12 20:06",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "keins",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "keins",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "keins",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "passiv",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": "am WAN-Port (eth1), mode B"
+      },
+      {
+        "wert": "passiv",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "passiv",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "non-802.3af"
+      },
+      {
+        "wert": "passiv",
+        "quelle": "openmesh_produktseite",
+        "beleg": "https://web.archive.org/web/20131023010253/http://www.open-mesh.com:80/products/om2p-lc.html",
+        "stand": "Archiv 2013-10-23",
+        "sicherheit": "hoch",
+        "bemerkung": "\"not 802.3af PoE compatible ... cannot be powered with standard PoE switches\""
+      },
+      {
+        "wert": "passiv",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Freitext; Infobox pwr_poe=ns"
+      },
+      {
+        "wert": "PoE-Betrieb getestet (EnGenius EPE-1212, 12 V 0.6 A)",
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/WT8OM2PLC/Test-Report/Test-Report-1796090",
+        "stand": "Bureau Veritas RF120627C02, 2012-08-15",
+        "sicherheit": "hoch",
+        "bemerkung": "Testmodus B \"POE Mode\""
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": "18-24",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "18-24",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "12-20",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "12-18",
+        "quelle": "openmesh_produktseite",
+        "beleg": "https://web.archive.org/web/20131023010253/http://www.open-mesh.com:80/products/om2p-lc.html",
+        "stand": "Archiv 2013-10-23",
+        "sicherheit": "hoch",
+        "bemerkung": "Kurzbeschreibung; im Fließtext 12-24 V, in den Highlights 12-20 V"
+      },
+      {
+        "wert": "18",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Passive PoE feed ... at 18 VDC\""
+      },
+      {
+        "wert": "12",
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/WT8OM2PLC/Test-Report/Test-Report-1796090",
+        "stand": "Bureau Veritas RF120627C02, 2012-08-15",
+        "sicherheit": "hoch",
+        "bemerkung": "EnGenius EPE-1212 im Test, 12 V 0.6 A"
+      },
+      {
+        "wert": "12-18",
+        "quelle": "openwrt_wiki_om2p",
+        "beleg": "https://openwrt.org/toh/openmesh/om2p",
+        "stand": "Live-Seite 2026-10-20 (Revision nicht abgefragt)",
+        "sicherheit": "niedrig",
+        "bemerkung": "OM2P (v1)-Seite, nicht LC"
+      }
+    ],
+    "poe_pinbelegung": [
+      {
+        "wert": "+4,5 / -7,8",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "mode B (Ersatzpaare)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "poe_ausgang": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "nicht in der Stromangabe genannt"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "ja, Hohlstecker",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, Hohlbuchse neben den RJ45",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/WT8OM2PLC/External-Photos/External-Photos-1796085",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-14)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": "12-24V 1A DC"
+      }
+    ],
+    "dc_buchse_mass": [
+      {
+        "wert": "5.5x2.1",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Steckerlänge 9.5 mm"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": "12-18",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM2PLC/Label/Label-and-Location-1796086",
+        "stand": "Exhibit 2012-09-19 (Zeichnung Rev.001, PDF 2012-08-11)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"DC Input:12~18V\""
+      },
+      {
+        "wert": "12-24",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "12-24",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Seitenrevision 2026-04-12 20:06",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "12",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "12",
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/WT8OM2PLC/Test-Report/Test-Report-1796090",
+        "stand": "Bureau Veritas RF120627C02, 2012-08-15",
+        "sicherheit": "hoch",
+        "bemerkung": "Testnetzteil"
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": "1-1.25",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM2PLC/Label/Label-and-Location-1796086",
+        "stand": "Exhibit 2012-09-19 (Zeichnung Rev.001, PDF 2012-08-11)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Seitenrevision 2026-04-12 20:06",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": "optional",
+        "quelle": "openmesh_produktseite",
+        "beleg": "https://web.archive.org/web/20131023010253/http://www.open-mesh.com:80/products/om2p-lc.html",
+        "stand": "Archiv 2013-10-23",
+        "sicherheit": "hoch",
+        "bemerkung": "Auswahl \"Without Adapter\" oder US 18 V, US 12 V (nur für Wandsteckdosen-Gehäuse), EU, UK, AU je +4 USD"
+      },
+      {
+        "wert": "optional",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power Supply Options US/EU/UK/AU"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "DVE DSA-12G-12 FUS, 12 V 1.0 A",
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/WT8OM2PLC/Test-Report/Test-Report-1796090",
+        "stand": "Bureau Veritas RF120627C02, 2012-08-15",
+        "sicherheit": "hoch",
+        "bemerkung": "im FCC-Test verwendet (\"support unit only\")"
+      },
+      {
+        "wert": "US-Netzteil 18 V oder 12 V; EU/UK/AU ohne Spannungsangabe",
+        "quelle": "openmesh_produktseite",
+        "beleg": "https://web.archive.org/web/20131023010253/http://www.open-mesh.com:80/products/om2p-lc.html",
+        "stand": "Archiv 2013-10-23",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Seitenrevision 2026-04-12 20:06",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "Recommended enclosures: Indoor Wall Plug, Ceiling; Outdoor-Gehäuse nur für OM2P"
+      },
+      {
+        "wert": "innen oder außen",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8OM2PLC/User-Manual/User-Manual-1796092",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-14)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Vorlagentext \"nearly any indoor or outdoor location\"; Handbuch ist EnGenius-Vorlage"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0-50 °C",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "Serienzeile"
+      }
+    ],
+    "gehaeuse_material": [
+      {
+        "wert": "weißer Kunststoff",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/WT8OM2PLC/External-Photos/External-Photos-1796085",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-14)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Tisch oder Wand",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM2PLC/Label/Label-and-Location-1796086",
+        "stand": "Exhibit 2012-09-19 (Zeichnung Rev.001, PDF 2012-08-11)",
+        "sicherheit": "hoch",
+        "bemerkung": "4 Gummifüße und 2 Schlüsselloch-Aufhängungen auf der Unterseite (Zeichnung)"
+      },
+      {
+        "wert": "optional Wandsteckdosen- oder Deckengehäuse (Zubehör)",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "Indoor Wall: nordamerikanische Steckdose; Indoor Ceiling: Abhängedecken-Schienen, Wand oder Decke"
+      },
+      {
+        "wert": "Mast",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8OM2PLC/User-Manual/User-Manual-1796092",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-14)",
+        "sicherheit": "niedrig",
+        "bemerkung": "EnGenius-Vorlagentext, passt nicht zum Gehäuse"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "95 x 70 x 25",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "Serienzeile 3.75\" x 2.75\" x 1\", umgerechnet"
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 236,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "Serienzeile 0.52 lbs, umgerechnet"
+      },
+      {
+        "wert": 236,
+        "quelle": "openmesh_produktseite",
+        "beleg": "https://web.archive.org/web/20131023010253/http://www.open-mesh.com:80/products/om2p-lc.html",
+        "stand": "Archiv 2013-10-23",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Weight 0.5200\" ohne Einheit, als lbs gelesen"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 6,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 6,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": "3x WLAN (gelb/grün/rot), 2x Ethernet, 1x Power"
+      },
+      {
+        "wert": 4,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power, Ethernet (2), WiFi - als sichtbare Anzeigen"
+      },
+      {
+        "wert": 4,
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/WT8OM2PLC/External-Photos/External-Photos-1796085",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-14)",
+        "sicherheit": "hoch",
+        "bemerkung": "4 LEDs auf der Oberseite sichtbar"
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "ja, alle LEDs per GPIO",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9330_openmesh_om2p.dtsi",
+        "stand": "Stand Commit eb3a5ddb (2020-12-30)",
+        "sicherheit": "hoch",
+        "bemerkung": "alle 6 LEDs sind GPIO-LEDs"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8OM2PLC/Internal-Photos/Internal-Photos-1796087",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-04)",
+        "sicherheit": "mittel",
+        "bemerkung": "kein Lüfter auf den Innenfotos"
+      },
+      {
+        "wert": "nein",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "niedrig",
+        "bemerkung": "passiv, nur Lüftungsschlitze"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "ja, GPIO 12",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1 Knopf",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, Taster auf der Platinenunterseite",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8OM2PLC/Internal-Photos/Internal-Photos-1796087",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-04)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "versenkt, etwa 10 s drücken für Werkseinstellungen",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8OM2PLC/User-Manual/User-Manual-1796092",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-14)",
+        "sicherheit": "niedrig",
+        "bemerkung": "EnGenius-Vorlage"
+      },
+      {
+        "wert": "ja, sehr klein, schaltet nicht in Failsafe",
+        "quelle": "openwrt_wiki_om2p",
+        "beleg": "https://openwrt.org/toh/openmesh/om2p",
+        "stand": "Live-Seite 2026-10-20 (Revision nicht abgefragt)",
+        "sicherheit": "niedrig",
+        "bemerkung": "OM2P (v1)-Seite"
+      }
+    ],
+    "hardware_watchdog": [
+      {
+        "wert": "ja, extern, GPIO 26, Timeout 300 s",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9330_openmesh_om2p.dtsi",
+        "stand": "Stand Commit eb3a5ddb (2020-12-30)",
+        "sicherheit": "hoch",
+        "bemerkung": "immer aktiv (always-running); Treiber begrenzt auf 60 s"
+      },
+      {
+        "wert": "ja",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "Hardware Watchdog CPU"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Stiftleiste",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": "\"TTL pins are on board\""
+      },
+      {
+        "wert": "innen Stiftleiste (4-polig, bestückt)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8OM2PLC/Internal-Photos/Internal-Photos-1796087",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-04)",
+        "sicherheit": "hoch",
+        "bemerkung": "am Platinenrand neben dem U.FL-Anschluss"
+      },
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "VCC (Pfeil), GND, TX, RX",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_wiki_om2p",
+        "beleg": "https://openwrt.org/toh/openmesh/om2p",
+        "stand": "Live-Seite 2026-10-20 (Revision nicht abgefragt)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet von OM2P (v1), nicht für LC belegt"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "openwrt_wiki_om2p",
+        "beleg": "https://openwrt.org/toh/openmesh/om2p",
+        "stand": "Live-Seite 2026-10-20 (Revision nicht abgefragt)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet von OM2P (v1), nicht für LC belegt; ToH-LC: \"¿\""
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "U-Boot-Shell über die serielle Konsole erreichbar (TFTP-initramfs)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "2 vordere Gummifüße ab, 2 Schrauben lösen, Deckel vorn anheben und nach vorn schieben",
+        "quelle": "openwrt_wiki_om2p",
+        "beleg": "https://openwrt.org/toh/openmesh/om2p",
+        "stand": "Live-Seite 2026-10-20 (Revision nicht abgefragt)",
+        "sicherheit": "niedrig",
+        "bemerkung": "OM2P (v1)-Gehäuse; LC-Gehäuse laut FCC-Fotos ähnlich"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/generic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ar71xx/generic (bis 19.07)",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/797944d3f193485bfc2be8efc2dd1f928a069581",
+        "stand": "Commit 2012-07-05 (SVN r32611)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "openmesh_om2p-lc",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "21.02.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "ath79"
+      },
+      {
+        "wert": "ar71xx seit SVN r32611 (2012-07-05)",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/797944d3f193485bfc2be8efc2dd1f928a069581",
+        "stand": "Commit 2012-07-05 (SVN r32611)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.2",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Seitenrevision 2026-04-12 20:06",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "23.05.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump-Stand"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "ap51-flash beim Booten; oder U-Boot-TFTP-initramfs über serielle Konsole, dann sysupgrade",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ap51-flash, U-Boot TFTP + serial recovery",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kein Factory-Image (factory = false), Gluon-Klasse tiny",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ap51-flash, Klasse C (eigenes Werkzeug, läuft schon)",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/erstinstallation-ohne-factory.md",
+        "stand": "Stand 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "Etikett-MAC = ART 0x0 = eth1 (WAN)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9330_openmesh_om2p.dtsi",
+        "stand": "Stand Commit eb3a5ddb (2020-12-30)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Etikett-MAC = ART 0x0",
+        "quelle": "openwrt_git_ar71xx_mac",
+        "beleg": "https://github.com/openwrt/openwrt/commit/93ce462b7eeb1ad49079b414ea4b01e8eeb2d4f0",
+        "stand": "Commit 2013-05-26 (SVN r36723)",
+        "sicherheit": "hoch",
+        "bemerkung": "ar71xx: eth0 auf Etikett-MAC umgestellt"
+      },
+      {
+        "wert": "OUI AC:86:74",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, openmesh-om2p-lc (tiny, nur sysupgrade)",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Yes",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Seitenrevision 2026-04-12 20:06",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "platinen_kennung": [
+      {
+        "wert": "7016A0604001 Ver:1.00",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8OM2PLC/Internal-Photos/Internal-Photos-1796087",
+        "stand": "Exhibit 2012-09-19 (PDF 2012-09-04)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "7016A0604001 Ver:1.00",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/openmesh/om2p",
+        "quelle": "openwrt_wiki_om2p",
+        "beleg": "https://openwrt.org/toh/openmesh/om2p",
+        "stand": "Live-Seite 2026-10-20 (Revision nicht abgefragt)",
+        "sicherheit": "niedrig",
+        "bemerkung": "nur OM2P-Familienseite, keine LC-Geräteseite"
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
+        "stand": "Seitenrevision 2019-07-05T05:05:36Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/Open-Mesh_OM2P-LC",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Open-Mesh_OM2P-LC",
+        "stand": "Spiegel, abgerufen 2026-10-20 (inhaltsgleich mit DeviWiki)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://web.archive.org/web/20131023010253/http://www.open-mesh.com:80/products/om2p-lc.html",
+        "quelle": "openmesh_produktseite",
+        "beleg": "https://web.archive.org/web/20131023010253/http://www.open-mesh.com:80/products/om2p-lc.html",
+        "stand": "Archiv 2013-10-23",
+        "sicherheit": "hoch",
+        "bemerkung": "Open-Mesh-Shop (archiviert)"
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
+        "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
+        "sicherheit": "hoch",
+        "bemerkung": "Seriendatenblatt OM2P (archiviert)"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/WT8OM2PLC/Test-Setup-Photos/Test-Setup-Photos-1796091",
+      "kategorie": "netzteil",
+      "grund": "Testaufbau-Fotos (288 KB), evtl. PoE-Injektor/Netzteil sichtbar; nicht geladen"
+    },
+    {
+      "url": "https://web.archive.org/web/20131023010253/http://www.open-mesh.com:80/products/om2p-lc.html",
+      "kategorie": "montage",
+      "grund": "Produktbilder (om2p-lc-front-left-lr, om2p-lc-top-lr) im Archiv nicht ausgewertet; Lage des Reset-Knopfs außen offen"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
+      "kategorie": "seriell",
+      "grund": "Baudrate/Pegel für OM2P-LC nicht belegt (ToH \"¿\"); 115200/3.3 V nur von der OM2P-v1-Seite abgeleitet"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/open-mesh*",
+      "kategorie": "handel",
+      "grund": "kein Geizhals-Permalink im Webarchiv gefunden (open-mesh*, openmesh*, geizhals.at); EAN und ASIN in keiner Quelle"
+    },
+    {
+      "url": "https://fccid.io/WT8OM2PLC",
+      "kategorie": "leistung_w",
+      "grund": "Leistungsaufnahme in keiner Quelle; nur Typenschild 12-18 V 1-1.25 A"
+    },
+    {
+      "url": "https://web.archive.org/web/20131023010253/http://www.open-mesh.com:80/products/om2p-lc.html",
+      "kategorie": "poe_spannung_v",
+      "grund": "PoE-Spannung widersprüchlich: 12-18 V (Typenschild DC, Shop), 12-20 V (Datenblatt), 12-24 V (Shop-Text), 18-24 V (OpenWrt-Commit/ToH), 18 V (DeviWiki); Herstellerangabe für LC allein fehlt"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-20",
+    "status": "teilweise",
+    "anfragen": 30,
+    "notiz": "ToH-Dump (per pid, toh_suche.py fand nichts) + Live-hwdata, OpenWrt-Wiki (nur OM2P-v1-Seite), OpenWrt-Commits ar71xx 2012/2013 und ath79 2020 inkl. DTS, Gluon-Target, DeviWiki/WikiDevi (inhaltsgleich), FCC WT8OM2PLC (Grant, Label, Handbuch=EnGenius-Vorlage, Testbericht, Betriebsbeschreibung, Innen-/Außenfotos), Open-Mesh-Datenblatt 2012 und Shopseite 2013 aus dem Webarchiv. Keine Hardware-Versionen bekannt. PoE-Spannung widersprüchlich (12-24 V Spannbreite), Baudrate nur abgeleitet. Kein Geizhals/EAN/ASIN. Werkstatt: nur Planungsdokument (ap51-flash), kein Messprotokoll."
+  }
+}

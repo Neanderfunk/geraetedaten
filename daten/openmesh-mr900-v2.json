@@ -1,0 +1,2335 @@
+{
+  "image": "openmesh-mr900-v2",
+  "modell": "Open-Mesh MR900 v2",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "toh_suche.py fand den Eintrag nicht (Marke \"Open-Mesh\" vs. Image \"openmesh\"); per grep im Dump gefunden",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15677570"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2?do=export_raw",
+      "stand": "Seitenrevision 2026-08-06 01:36",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Live-Seite neuer als Dump: Discontinued, aktuell 25.12.5, VLAN Yes, PHY AR8035-A, WLAN 3x3:3 je Band, Treiber ath9k, 1x miniPCIe, Outdoor No, Gluon support Yes, Installation ohne ap51-flash; Revisionen 2024-10-05 bis 2026-08-06"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/open-mesh/mr900",
+      "stand": "Seite existiert nicht (2026-10-20)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "ToH-Feld devicepage leer; toh:open-mesh:mr900 \"This topic does not exist yet\""
+    },
+    "openwrt_git": {
+      "url": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+      "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+      "abgerufen": "2026-10-20",
+      "autor": "Sven Eckelmann, rebase Adrian Schmutzler"
+    },
+    "openwrt_git_v1": {
+      "url": "https://github.com/openwrt/openwrt/commit/e06c9eec5dc8a3721df768ab952712cf015d4e6f",
+      "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Paralleler v1-Commit; legte die gemeinsame qca9558_openmesh_mr900.dtsi an (u. a. serial0 = uart)"
+    },
+    "openwrt_git_dtsi": {
+      "url": "https://github.com/openwrt/openwrt/commit/847cda16eba23d4436a01b7313a21426b9c606fb",
+      "stand": "Commit 2021-01-19",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "DTSI in qca9558_openmesh_mr.dtsi umbenannt und für MR1750 verallgemeinert"
+    },
+    "openwrt_git_ar71xx_profil": {
+      "url": "https://github.com/openwrt/openwrt/commit/b6f5713b3f5cf343c5ffd893976eaaa86253e03a",
+      "stand": "Commit 2014-11-14 (SVN r43270)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "\"ar71xx: adjust MR900 profile for the OpenMesh MR900v2 board\" (Sven Eckelmann, open-mesh.com): Profil \"OpenMesh MR900/MR900v2\", Pakete kmod-ath9k om-watchdog"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=MR900+repo:openwrt/openwrt",
+      "stand": "Suchergebnis 2026-10-20 (15 Commits, neuester 2021-01-19)",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr900-v2.dts",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "dateien": [
+        "qca9558_openmesh_mr900-v2.dts",
+        "qca9558_openmesh_mr.dtsi"
+      ]
+    },
+    "openwrt_dtsi": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr.dtsi",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "dtsi aus dem Cache des Laufs openmesh-mr1750-v2 (gleicher Tag) übernommen"
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic.mk",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "aus dem Cache des Laufs openmesh-mr1750-v2 (gleicher Tag) übernommen; Device/openmesh_mr900-v2: SOC qca9558, OPENMESH_CE_TYPE MR900, SUPPORTED_DEVICES += mr900v2"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "aus dem Cache des Laufs openmesh-mr1750-v2 (gleicher Tag) übernommen"
+    },
+    "gluon_targets_v2022_1": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/v2022.1/targets/ath79-generic",
+      "stand": "Tag v2022.1",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_commit_0de095f": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/0de095fe9f7b795c6df216189c717be49acfe5cf",
+      "stand": "Commit 2021-10-10 (Autor), gemergt 2022-03-21",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_git_suche": {
+      "url": "https://api.github.com/search/commits?q=MR900+repo:freifunk-gluon/gluon",
+      "stand": "Suchergebnis 2026-10-20 (3 Commits)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "2016-05-14 ar71xx-Unterstützung OpenMesh (a5c8e60172), 2021-10-10 ath79 v1 (9d794294b0) und v2 (0de095fe9f)"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+      "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Inhalt identisch mit WikiDevi-Spiegel"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/Open-Mesh_MR900_v2",
+      "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Spiegel; Text identisch mit DeviWiki"
+    },
+    "fcc": {
+      "url": "https://fccid.io/WT8-MR900V2",
+      "stand": "Grant 2014-03-19 (Original Equipment)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Antragsteller Datto, Inc. (Testberichte: Open Mesh, Inc.); Testlabor Bureau Veritas Taoyuan; Gerätebeschreibung \"Dual Band 450Mbps+450Mbps Indoor Access Point\"; Schaltpläne/Blockdiagramme vertraulich"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/WT8-MR900V2/Label/Label-and-Location-pdf-2219919",
+      "stand": "Exhibit 2014-03-19 (PDF 2014-03-17, Zeichnung Senao 6710A3993370 vom 2014-02-11)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet (400 dpi Ausschnitt); Seite 1 Lage, Seite 2 Etikettzeichnung (rote Felder Platzhalter)"
+    },
+    "fcc_handbuch": {
+      "url": "https://fccid.io/WT8-MR900V2/User-Manual/User-Manual-pdf-2219927",
+      "stand": "Exhibit 2014-03-19 (PDF \"UM_MR900v2_20140225\", erstellt 2014-03-13)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "84 Seiten, OEM-Handbuch (Senao-Stockfirmware, nicht CloudTrax), pdftotext; Seiten 15-19 als Bild"
+    },
+    "fcc_mpe": {
+      "url": "https://fccid.io/WT8-MR900V2/RF-Exposure-Info/RF-Exposure-Info-MPE-pdf-2219929",
+      "stand": "Bureau Veritas SA131230C23A, 2014-02-27",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_testbericht_dts": {
+      "url": "https://fccid.io/WT8-MR900V2/Test-Report/Test-Report-DTS-rev-pdf-2219925",
+      "stand": "Bureau Veritas RF131230C23A, PDF 2014-03-19",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_innenfotos": {
+      "url": "https://fccid.io/WT8-MR900V2/Internal-Photos/Internal-Photos-pdf-2219920",
+      "stand": "Exhibit 2014-03-19 (PDF \"131230C23A EUT photo\", 2014-03-06)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "9 Seiten, 18 Fotos 1136x852, als Bild ausgewertet"
+    },
+    "fcc_aussenfotos": {
+      "url": "https://fccid.io/WT8-MR900V2/External-Photos/External-Photos-pdf-2219918",
+      "stand": "Exhibit 2014-03-19 (PDF \"131230C23A EUT photo\", 2014-03-06)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "3 Seiten, 6 Fotos, als Bild ausgewertet (Gerät, Unterseite, Netzteil mit Typenschild)"
+    },
+    "fcc_v1": {
+      "url": "https://fccid.io/WT8-MR900",
+      "stand": "Grant 2013-09-17 (Original Equipment)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "zum Vergleich der Typenschilder v1/v2"
+    },
+    "fcc_v1_label": {
+      "url": "https://fccid.io/WT8-MR900/Label/Label-pdf-2074127",
+      "stand": "Exhibit 2013-09-17 (PDF 2013-09-10)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet"
+    },
+    "openmesh_produktseite": {
+      "url": "https://web.archive.org/web/20141107093006/http://www.open-mesh.com/products/access-points/mr900-dual-band-cloud-access-point.html",
+      "stand": "Archivkopie 2014-11-07",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Shopseite \"MR900 Dual Band 3x3 Access Point\", 225 USD; Hardware-Version nicht genannt"
+    },
+    "openmesh_datenblatt": {
+      "url": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+      "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "auf der Produktseite als \"Download the datasheet\" verlinkt; Spalte MR900 ohne Versionsangabe; Cache om/MR900.pdf"
+    },
+    "freifunk_forum_suche": {
+      "url": "https://forum.freifunk.net/search.json?q=MR900",
+      "stand": "Suche 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "7 Threads, nur Erwähnungen (Gluon 2016.1.5 ergänzt MR900 v1/v2 unter ar71xx); keine Hardwaredaten"
+    },
+    "werkstatt": {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erstinstallation-ohne-factory.md",
+      "stand": "Arbeitsstand router-werkstatt 2026-10",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Tabelle \"Aufstellung nach Installationsweg\", Weg C ap51-flash für MR600/900/1750; keine eigene Messung am Gerät"
+    },
+    "webarchiv_cdx_geizhals": {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/open-mesh-mr900*&output=json&fl=timestamp,original,statuscode&collapse=urlkey",
+      "stand": "Abfrage 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "leere Liste; ebenso geizhals.de/openmesh-mr900*; Filterabfrage über ganz geizhals.de nach Zeitüberschreitung abgebrochen"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "15677570",
+      "devicetype": "WiFi AP",
+      "brand": "Open-Mesh",
+      "model": "MR900",
+      "version": "v2",
+      "fccid": "https://fcc.io/WT8/-MR900V2",
+      "availability": "unknown 2021",
+      "whereavailable": "¿",
+      "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=31172e53f9d0971204e6fa7e3541c0695d99618a",
+      "supportedsincerel": "21.02.0",
+      "supportedcurrentrel": "23.05.0",
+      "unsupported_functions": "NULL",
+      "target": "ath79",
+      "subtarget": "generic",
+      "packagearchitecture": "mips_24kc",
+      "bootloader": "U-Boot",
+      "cpu": "Qualcomm Atheros QCA9558",
+      "cpucores": "1",
+      "cpumhz": "720",
+      "flashmb": "16",
+      "rammb": "128",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "1",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "¿",
+      "vlan": "¿",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "Qualcomm Atheros QCA9558,Qualcomm Atheros QCA9580 (mini-PCIe)",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "a/n",
+      "wlancomments": "",
+      "wlandriver": "unknown",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "-",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "¿",
+      "jtag": "¿",
+      "ledcount": "6",
+      "buttoncount": "1",
+      "gpios": "-",
+      "powersupply": "12-24 VDC, 1.0 A, PoE 802.3af",
+      "devicepage": "",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "MR900",
+      "gitsearch": "MR900",
+      "wikideviurl": "https://wikidevi.wi-cat.ru/Open-Mesh_MR900_v2",
+      "oemdevicehomepageurl": "http://¿",
+      "firmwareoemstockurl": "http://¿",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-openmesh_mr900-v2-initramfs-kernel.bin",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-openmesh_mr900-v2-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-openmesh_mr900-v2-initramfs-kernel.bin",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-openmesh_mr900-v2-squashfs-sysupgrade.bin",
+      "installationmethods": "ap51-flash,U-Boot TFTP recovery,see git-commit",
+      "commentinstallation": "",
+      "recoverymethods": "U-Boot TFTP recovery,see git-commit",
+      "commentrecovery": "",
+      "picture": "media:example:genericrouter1.png",
+      "comments": "",
+      "page": "toh:hwdata:open-mesh:open-mesh_mr900_v2"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi AP",
+      "Brand": "Open-Mesh",
+      "Model": "MR900",
+      "Versions": "v2",
+      "FCCID_urls": "https://fcc.io/WT8-MR900V2",
+      "Availability_availability": "Discontinued",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=31172e53f9d0971204e6fa7e3541c0695d99618a",
+      "Supported Since Rel_releasesince": "21.02.0",
+      "Supported Current Rel_releasecurrent": "25.12.5",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Qualcomm Atheros QCA9558",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "720",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "-",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "Atheros AR8035-A GbE Phy",
+      "WLAN Hardwares": "Qualcomm Atheros QCA9558, Qualcomm Atheros QCA9580 (mini-PCIe)",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n",
+      "WLAN Comments_": "2.4Ghz 3x3:3 MIMO, 5Ghz 3x3:3 MIMO",
+      "WLAN driver_wlan-drivers": "ath9k",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "1x miniPCIe",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "¿",
+      "Serial connection voltage_serialvoltage": "¿",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "6",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "12-24 VDC, 1.0A, PoE 802.3af",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "MR900",
+      "Git search_search-gits": "MR900",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/Open-Mesh_MR900_v2",
+      "WikiDevi ID_hwinfo-ids": "Open-Mesh_MR900_v2",
+      "OEM Device Homepage URL_url": "http://¿",
+      "Firmware OEM Stock URL_url": "http://¿",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/generic/openwrt-25.12.5-ath79-generic-openmesh_mr900-v2-initramfs-kernel.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/generic/openwrt-25.12.5-ath79-generic-openmesh_mr900-v2-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-openmesh_mr900-v2-initramfs-kernel.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-openmesh_mr900-v2-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "U-Boot TFTP recovery, see git-commit",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "U-Boot TFTP recovery, see git-commit",
+      "Comment recovery": "",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "openwrt_git": {
+      "nachricht": "ath79: Add support for OpenMesh MR900 v2\n\nDevice specifications:\n======================\n\n* Qualcomm/Atheros QCA9558 ver 1 rev 0\n* 720/600/240 MHz (CPU/DDR/AHB)\n* 128 MB of RAM\n* 16 MB of SPI NOR flash\n  - 2x 7 MB available; but one of the 7 MB regions is the recovery image\n* 3T3R 2.4 GHz Wi-Fi\n* 3T3R 5 GHz Wi-Fi\n* 6x GPIO-LEDs (2x wifi, 2x status, 1x lan, 1x power)\n* 1x GPIO-button (reset)\n* external h/w watchdog (enabled by default))\n* TTL pins are on board (arrow points to VCC, then follows: GND, TX, RX)\n* 1x ethernet\n  - AR8035 ethernet PHY (RGMII)\n  - 10/100/1000 Mbps Ethernet\n  - 802.3af POE\n  - used as LAN interface\n* 12-24V 1A DC\n* internal antennas\n\nFlashing instructions:\n======================\n\nVarious methods can be used to install the actual image on the flash.\nTwo easy ones are:\n\nap51-flash\n----------\n\nThe tool ap51-flash (https://github.com/ap51-flash/ap51-flash) should be\nused to transfer the image to the u-boot when the device boots up.\n\ninitramfs from TFTP\n-------------------\n\nThe serial console must be used to access the u-boot shell during bootup.\nIt can then be used to first boot up the initramfs image from a TFTP server\n(here with the IP 192.168.1.21):\n\n   setenv serverip 192.168.1.21\n   setenv ipaddr 192.168.1.1\n   tftpboot 0c00000 <filename-of-initramfs-kernel>.bin && bootm $fileaddr\n\nThe actual sysupgrade image can then be transferred (on the LAN port) to the\ndevice via\n\n  scp <filename-of-squashfs-sysupgrade>.bin root@192.168.1.1:/tmp/\n\nOn the device, the sysupgrade must then be started using\n\n  sysupgrade -n /tmp/<filename-of-squashfs-sysupgrade>.bin\n\nSigned-off-by: Sven Eckelmann <sven@narfation.org>\n[rebase, add LED migration]\nSigned-off-by: Adrian Schmutzler <freifunk@adrianschmutzler.de>"
+    },
+    "openwrt_dts": {
+      "qca9558_openmesh_mr900-v2.dts": "compatible \"openmesh,mr900-v2\"; model \"OpenMesh MR900 v2\"; &led_wifi5g trigger phy1tpt; pcie0 wifi@0,0 compatible \"pci168c,0033\" (Atheros AR9580, ath9k), MAC aus ART +16",
+      "qca9558_openmesh_mr.dtsi": {
+        "aliases": "led-boot/failsafe/running/upgrade = power_blue; label-mac-device = eth0",
+        "keys": "reset GPIO 17 active low (KEY_RESTART)",
+        "leds": "lan blau GPIO 12, status grün GPIO 19, status rot GPIO 21, power blau GPIO 22 (default an), wifi5g blau GPIO 23; wifi2g über wmac led-sources 13",
+        "watchdog": "linux,wdt-gpio GPIO 16, toggle, hw_margin 300 s (Treiber begrenzt auf 60 s), always-running",
+        "flash": "jedec,spi-nor 40 MHz; Partitionen u-boot 0x000000+0x40000, u-boot-env 0x40000+0x10000, custom 0x50000+0x60000, inactive 0xb0000+0x7a0000, inactive2 0x850000+0x7a0000, ART 0xff0000+0x10000",
+        "ethernet": "eth0 rgmii-id, PHY an Adresse 5 (eee-broken-100tx/1000t), MAC aus ART 0x0",
+        "wmac": "2.4 GHz im SoC, Kalibrierung ART 0x1000"
+      },
+      "generic.mk": "Device/openmesh_mr900-v2: openmesh_common_64k, SOC qca9558, DEVICE_MODEL MR900, DEVICE_VARIANT v2, OPENMESH_CE_TYPE MR900, SUPPORTED_DEVICES += mr900v2"
+    },
+    "gluon": {
+      "targets_main": "device('openmesh-mr900-v2', 'openmesh_mr900-v2', { factory = false, })",
+      "targets_v2022_1": "device('openmesh-mr900-v2', 'openmesh_mr900-v2', { factory = false, -- old name from OpenWrt 19.07.x\n manifest_aliases = {'openmesh-mr900v2'}, })",
+      "commit_0de095f": "ath79-generic: Add support for OpenMesh MR900 v2\n\nDevice specifications:\n======================\n\n* Qualcomm/Atheros QCA9558 ver 1 rev 0\n* 720/600/240 MHz (CPU/DDR/AHB)\n* 128 MB of RAM\n* 16 MB of SPI NOR flash\n  - 2x 7 MB available; but one of the 7 MB regions is the recovery image\n* 3T3R 2.4 GHz Wi-Fi\n* 3T3R 5 GHz Wi-Fi\n* 6x GPIO-LEDs (2x wifi, 2x status, 1x lan, 1x power)\n* 1x GPIO-button (reset)\n* external h/w watchdog (enabled by default))\n* TTL pins are on board (arrow points to VCC, then follows: GND, TX, RX)\n* 1x ethernet\n  - AR8035 ethernet PHY (RGMII)\n  - 10/100/1000 Mbps Ethernet\n  - 802.3af POE\n  - used as LAN interface\n* 12-24V 1A DC\n* internal antennas\n\nFlashing instructions:\n======================\n\nVarious methods can be used to install the actual image on the flash.\nTwo easy ones are:\n\nap51-flash\n----------\n\nThe tool ap51-flash (https://github.com/ap51-flash/ap51-flash) should be\nused to transfer the image to the u-boot when the device boots up.\n\ninitramfs from TFTP\n-------------------\n\nThe serial console must be used to access the u-boot shell during bootup.\nIt can then be used to first boot up the initramfs image from a TFTP server\n(here with the IP 192.168.1.21):\n\n    setenv serverip 192.168.1.21\n    setenv ipaddr 192.168.1.1\n    tftpboot 0c00000 <filename-of-initramfs-kernel>.bin && bootm $fileaddr\n\nThe actual sysupgrade image can then be transferred (on the LAN port) to the\ndevice via\n\n    scp <filename-of-squashfs-sysupgrade>.bin root@192.168.1.1:/tmp/\n\nOn the device, the sysupgrade must then be started using\n\n    sysupgrade -n /tmp/<filename-of-squashfs-sysupgrade>.bin\n\nGluon image name change\n=======================\n\nThe device had the image name \"openmesh-mr900v2\" in older versions of Gluon.\nThis had to be changed with the new name in the device trees of the ath79\ndevice tree."
+    },
+    "deviwiki": {
+      "brand": "Open-Mesh",
+      "model": "MR900",
+      "revision": "v2",
+      "upc": "",
+      "ean": "",
+      "asin": "",
+      "price": "",
+      "est_release_date": "",
+      "fcc_date": "09/17/2013",
+      "manuf_country": "Taiwan",
+      "is_manuf": "No",
+      "manuf": "Senao",
+      "manuf_model": "",
+      "manuf_rev": "",
+      "availability": "",
+      "type": "access point",
+      "fcc_id": "WT8-MR900V2",
+      "ic_id": "10103A-MR900V2",
+      "us_id": "",
+      "pwr_v": "12",
+      "pwr_amp": "2",
+      "pwr_conn": "barrel",
+      "pwr_barrel_outer": "",
+      "pwr_barrel_inner": "",
+      "pwr_barrel_len": "",
+      "pwr_vac": "",
+      "pwr_ac_hz": "",
+      "pwr_pol": "",
+      "pwr_poe": "af",
+      "cpu1_brand": "Qualcomm Atheros",
+      "cpu1_model": "QCA9558;QCA9558-AT4A, <...>, <...>, CHINA;",
+      "cpu1_cspeed": "",
+      "cpu2_brand": "",
+      "cpu2_model": "",
+      "cpu2_cspeed": "",
+      "fla1": "16 MiB",
+      "fla1_brand": "Macronix",
+      "fla1_model": "",
+      "fla1_num": "",
+      "fla2": "",
+      "fla2_brand": "",
+      "fla2_model": "",
+      "fla2_num": "",
+      "ram1": "128 MiB",
+      "ram1_brand": "Nanya",
+      "ram1_model": "NT5TU32M16DG-AC",
+      "ram1_num": "2",
+      "ram2": "",
+      "ram2_brand": "",
+      "ram2_model": "",
+      "ram2_num": "",
+      "expansion_if_types": "",
+      "expansion_pcmcia_num": "",
+      "expansion_expresscard_num": "",
+      "expansion_minipci_num": "",
+      "expansion_minipcie_num": "",
+      "expansion_usb_num": "",
+      "jtag": "",
+      "serial": "yes,, internal,, 4-pin header,, 3.3V TTL",
+      "wi1_module": "",
+      "wi1_module_if": "",
+      "wi1_chip1_brand": "Qualcomm Atheros",
+      "wi1_chip1_model": "QCA9558;QCA9558-AT4A, <...>, <...>, CHINA;",
+      "wi1_chip2_brand": "",
+      "wi1_chip2_model": "",
+      "wi1_chip3_brand": "",
+      "wi1_chip3_model": "",
+      "wi1_802dot11_protocols": "bgn",
+      "wi1_ant_conn": "U.FL",
+      "wi1_txchains": "3",
+      "wi1_rxchains": "3",
+      "wi1_sstreams": "3",
+      "wi2_module": "",
+      "wi2_module_if": "Mini PCIe (oversized)",
+      "wi2_chip1_brand": "Atheros",
+      "wi2_chip1_model": "AR9580;AR9580-AR1A, PMT929.001C, 1251, KOREA;",
+      "wi2_chip2_brand": "",
+      "wi2_chip2_model": "",
+      "wi2_chip3_brand": "",
+      "wi2_chip3_model": "",
+      "wi2_802dot11_protocols": "an",
+      "wi2_ant_conn": "U.FL",
+      "wi2_txchains": "3",
+      "wi2_rxchains": "3",
+      "wi2_sstreams": "3",
+      "eth_none": "",
+      "eth_cpu": "true",
+      "eth_chip1_brand": "",
+      "eth_chip1_model": "",
+      "eth_chip2_brand": "Atheros",
+      "eth_chip2_model": "AR8035-A;AR8035-A, ST7Y7.20, 1338 CN;",
+      "eth_chip3_brand": "",
+      "eth_chip3_model": "",
+      "sw_cpu": "",
+      "sw_brand": "",
+      "sw_model": "",
+      "lan_speed": "1G",
+      "lan_ports": "1",
+      "wan_ports": "",
+      "addl_chips": "5GHz Power Amplifier IC;Skyworks;SE5003L;SiGe, 5003L, 336AX;3;\n,,, 2.4GHz Power Amplifier IC;Skyworks;SE2576L;;3;",
+      "flags": "",
+      "stock_boot": "",
+      "stock_os": "",
+      "tp_firmware": "",
+      "802dot11_protocols": "abgn",
+      "default_ssid": "",
+      "default_ssid_regex": "",
+      "default_ip": "",
+      "default_user": "",
+      "default_pass": "",
+      "oui": "",
+      "oui_eth": "",
+      "_freitext": "\"MR900 V2-0.10 LFP\" is silkscreened on the main board in the FCC photos.\n:\"7016A0647004\", \"V1.00\", and a date code of '''1328''' is silkscreened on the Mini PCIe wireless module.\n\nThe Flash chip used looks to be in the MX25L128... series (16 MB)..\n\n==Probable used PSU(s)==\nThe power supply shown in the FCC photos is a '''Powertron''' PA1024-2HUB / PA1024-2HU / PA1024-120HUB200.\n\n{{hasPowerSupply\n|brand=Powertron\n|model=PA1024-120HUB200\n|input_v=100-240\n|input_a=0.6\n|input_c=AC\n|input_hz=50-60\n|input_conn=NEMA 1-15P\n|output_v=12\n|output_a=2\n|output_c=DC\n|output_conn=barrel\n|manuf_country=China\n|e_level=5\n|style=medium, horiz.\n}}"
+    },
+    "fcc": {
+      "FCC ID": "WT8-MR900V2",
+      "Grantee": "Datto, Inc.",
+      "Gerätebeschreibung": "Dual Band 450Mbps+450Mbps Indoor Access Point",
+      "Testlabor": "Bureau Veritas CPS (H.K.) Ltd., Taoyuan Branch",
+      "Final Action Date": "2014-03-19",
+      "Frequenzen/Leistung": "2412-2462 MHz 0.68 W (15C); 5180-5240 MHz 0.049 W (15E); 5745-5825 MHz 0.993 W (15C); maximale summierte leitungsgebundene Leistung",
+      "Grant-Hinweis 28": "An AC adapter incorporating a ferrite core at the connector end of its DC line must be provided with every unit sold.",
+      "Abstand": "mindestens 33 cm zu Personen",
+      "Exhibits": "User Manual, Internal Photos, External Photos, Label and Location, Operational Description, Test Setup Photos, Test Report DTS/NII/co-located, Attestation, Cover Letters, RF Exposure (MPE); Block Diagram und Schematics nur Metadaten (vertraulich)"
+    },
+    "fcc_label": {
+      "Lage": "Unterseite, in der Kabelmulde zwischen den beiden Montagelöchern",
+      "Etikett": "32 x 55 mm",
+      "Text": "Model No. : MR900 v2; FCC ID: WT8-MR900V2; IC: 10103A-MR900V2; Cloud SN, 3x MAC, S/N als Barcodes; HW:v1.0.0 SW:v1.0.0; Made in Taiwan; US00Z; Open Mesh; CE 0560 (!), RCM, RoHS, WEEE",
+      "Zeichnung": "Senao Networks, Inc., Teil 6710A3993370, 2014-02-11; \"Red text for reference and will be printed by factory\""
+    },
+    "fcc_v1_label": {
+      "Text": "Model No. : MR900; FCC ID: WT8-MR900; IC: 10103A-MR900; Open Mesh; CE (!), RCM, RoHS, WEEE"
+    },
+    "fcc_handbuch": {
+      "Titel": "Wireless-N 450 + 450Mbps Long Range Ceiling Mount Dual Concurrent Access Point (MR900V2)",
+      "Features": "Up to 300 Mbps for each band (2.4GHz / 5GHz); 10/100/1000 Gigabit Ethernet; IEEE 802.11a/b/g/n; Power-over-Ethernet (IEEE802.3at/af); bis 8 SSIDs je Band; SNMP; WMM",
+      "Lieferumfang": "MR900V2 Access Point; 12V/2A 100V~240V Power Adapter; RJ-45 Ethernet LAN Cable; Wall Mount Kit: Mounting Bracket, Wall/Ceiling Mounting Hardware Kit, T-Rail Mounting Hardware Kit; CD; Quick Installation Guide",
+      "LED beim Einschalten": "POWER orange; WLAN grün (5G) / blau (2.4G); LAN blau",
+      "Montage": "Decke oder Wand mit Montageplatte (Gerät ca. 90° im Uhrzeigersinn aufdrehen); T-Rail-Clips 15/16 in (2.38 cm) und 9/16 in (1.43 cm) für Rasterdecken; Abstandshalter",
+      "Front Panel": "Reset Button: One click for reset the device. Press over 10 seconds for reset to factory default. LED Lights for WPS, WLAN 5G, WLAN 2.4G, Ethernet port and Power.",
+      "Rear Panel": "Power (DC IN), Ethernet Port (RJ-45), Ceiling (Wall) Mount Hole, Kensington Security Slot",
+      "LED Control": "Stockfirmware: LEDs für Power, LAN, 2.4G/5G WLAN und WPS einzeln abschaltbar",
+      "Regulatorik": "Operations in the 5.15-5.25GHz band are restricted to indoor usage only"
+    },
+    "fcc_mpe": {
+      "Bericht": "SA131230C23A, Muster \"ENGINEERING SAMPLE\", getestet 2013-11-27 bis 2014-01-16",
+      "Antennengewinn": "2.4 GHz 4 dBi je Kette (802.11b/g directional 8.77 dBi); 5 GHz 5 dBi je Kette (802.11a directional 9.27 dBi)",
+      "max. Leistung (dBm, leitungsgebunden)": "2.4 GHz: b 28.33, g 26.80, n20 28.02, n40 23.57; 5180-5240: a 13.81, n20 16.94, n40 16.87; 5745-5825: a 29.93, n20 29.96, n40 29.97",
+      "Abstand": "33 cm"
+    },
+    "fcc_testbericht_dts": {
+      "EUT": "Dual Band 450Mbps+450Mbps Indoor Access Point, MR900 v2",
+      "POWER SUPPLY": "12Vdc (Adapter); 48Vdc (PoE)",
+      "OUTPUT POWER": "680.032mW for 2412 ~ 2462MHz; 992.768mW for 5745 ~ 5825MHz",
+      "ANTENNA TYPE": "For 2.4GHz: PIFA antenna with 4.0dBi gain; For 5.0GHz: PIFA antenna with 5.0dBi gain",
+      "ANTENNA CONNECTOR": "IPEX (\"Antenna connector is IPEX not a standard connector\")",
+      "MIMO": "3 Sender, 3 Empfänger; MCS 0-23 (1-3 TX)",
+      "Netzteil": "Powertron Electronics Corp. PA1024-2HUB / PA1024-2HU / PA1024-120HUB200, Eingang 100-240Vac 50-60Hz 0.6A, Ausgang 12Vdc 2.0A 24W max, 1.5 m Kabel mit Ferritkern",
+      "PoE-Testaufbau": "PoE-Injektor EnGenius NPE-7530G (48Vdc) mit Netzteil Powertron PA1040-480IB080 (48Vdc 0.8A)"
+    },
+    "fcc_innenfotos": {
+      "Aufbau": "runde Hauptplatine; SoC, RAM und Flash unter Abschirmblech; Funkmodul im (überlangen) miniPCIe-Steckplatz mit drei U.FL-Buchsen (\"5G\"); Antennenträger aus Blech mit sechs aufgestellten Blechantennen (PIFA), Koaxkabel schwarz und weiß mit U.FL",
+      "Seriell": "bestückte 4-polige Stiftleiste (gewinkelt) neben dem miniPCIe-Bereich, Bestückungsdruck R175/R176 und C103/C104 daneben",
+      "Platine": "Bestückungsdruck \"MR900 V2.0 10 LFP\" (oben auf der Platine, Foto i-013)",
+      "Funkmodul": "Atheros AR9580 mit drei SiGe 5003L, Aufdruck \"7016A0647004 V1.00\", Aufkleber P/N 5816A0647000",
+      "Anschlüsse": "RJ45 und DC-Hohlbuchse nebeneinander am Platinenrand; Reset-Taster am Rand der Platine; LED-Reihe am Rand",
+      "Lüfter": "keiner zu sehen"
+    },
+    "fcc_aussenfotos": {
+      "Gehäuse": "weiß, rund, flach; LED-Reihe vorne am Rand der Oberseite",
+      "Unterseite": "Kabelmulde mit RJ45 und DC-Buchse, zwei Schlüsselloch-Montagelöcher, Lüftungsschlitze, Kensington-Schlitz",
+      "Netzteil": "Powertron PA1024-120HUB200 (Modell PA1024-2HUB/PA1024-2HU), US-Stecker, 100-240V~ 50-60Hz 0.6A, 12V 2.0A 24W max, Effizienz V, Ferritkern am DC-Kabel, Hohlstecker"
+    },
+    "openmesh_produktseite": {
+      "Titel": "MR900 Dual Band 3x3 Access Point",
+      "Preis": "225.00 USD, \"Qty Available: 191\"",
+      "Beschreibung": "cloud managed, dual band, 900 Mbps 802.11n mesh-capable access point that includes hardware watchdog, standard 802.3af POE support and a single Gigabit Ethernet port; 50-100 simultaneous users",
+      "Strom": "We recommend powering this unit with standard 802.3af PoE. It is also compatible with the 20v international power supply (add-on option). Optionen: \"Without Adapter (802.3af PoE only)\", \"20v Universal Power Supply +$4.00\"",
+      "Montage": "included wall/ceiling mount, optional outdoor enclosure (\"MR Outdoor\")",
+      "Datenblatt": "https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf"
+    },
+    "openmesh_datenblatt": {
+      "Speed (Max)": "3x3 MIMO, 900 Mbps",
+      "Radio": "One 802.11b/g/n 2.4 GHz, one 802.11a/n 5 GHz",
+      "Antenna": "Six internal (2.4 GHz: 2 dBi; 5 GHz: 5 dBi)",
+      "Power": "20 dBm +/-2 (100 mw) flat power",
+      "Processor": "AR9558 (Processor @ 700mhz MIPS74K + 2.4 GHz radio) + AR9580 (5 GHz Radio)",
+      "Max users (recommended)": "50-100 per AP",
+      "SSIDs": "2",
+      "Memory": "128 MB",
+      "Hardware Watchdog CPU": "Yes",
+      "Ethernet": "Single 10/100/1000 Ethernet port",
+      "PoE": "802.3af 48v",
+      "Power Supply Options": "International 20v (US/EU/UK/AU)",
+      "LEDs": "Power, Ethernet, 2.4 GHz, 5 GHz, Traffic",
+      "Temperature": "0-50 C",
+      "Mounting options": "Solid ceiling, wall, 9/16\" or 15/16\" drop ceiling (included); outdoor enclosure (optional)",
+      "Size and Weight": "6.38\" (diameter) x 1.5\" (height) | 0.52 Lbs",
+      "Certifications": "FCC, IC, CE, RCM (C-Tick)",
+      "Warranty": "1 Year",
+      "Outdoor-Gehäuse": "MR Series outdoor enclosure: Diameter 8.0cm, Depth 4.5cm (Angabe so im Datenblatt), 802.3af PoE recommended, UV-stabilized ABS with rubber seal, pole/wall; \"narrower 180-degree antenna pattern of the MR Series access points\""
+    },
+    "werkstatt": {
+      "Weg C": "| **C — ap51-flash (Open-Mesh-Bootloader)** | 20 | ath79-generic | OM2P*, OM5P*, MR600/900/1750, A40/A60 | eigenes Werkzeug, läuft schon |"
+    },
+    "freifunk_forum_suche": {
+      "Treffer": "11521, 13370, 2368, 12340 (Gluon 2016.1.5: \"Added hardware support ar71xx-generic OpenMesh ... MR900 (v1, v2)\"), 11186, 2933, 1756"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Open Mesh",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8-MR900V2/Label/Label-and-Location-pdf-2219919",
+        "stand": "Exhibit 2014-03-19 (PDF 2014-03-17, Zeichnung Senao 6710A3993370 vom 2014-02-11)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild \"Open Mesh\"; FCC-Antragsteller Datto, Inc. (übernahm Open Mesh)"
+      },
+      {
+        "wert": "Open-Mesh",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Senao (ODM)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": "manuf=Senao, Taiwan; Etikettzeichnung im FCC-Antrag trägt \"Senao Networks, Inc.\""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "MR900 v2",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8-MR900V2/Label/Label-and-Location-pdf-2219919",
+        "stand": "Exhibit 2014-03-19 (PDF 2014-03-17, Zeichnung Senao 6710A3993370 vom 2014-02-11)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Model No. : MR900 v2\""
+      },
+      {
+        "wert": "MR900",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Version v2"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "v2",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8-MR900V2/Label/Label-and-Location-pdf-2219919",
+        "stand": "Exhibit 2014-03-19 (PDF 2014-03-17, Zeichnung Senao 6710A3993370 vom 2014-02-11)",
+        "sicherheit": "hoch",
+        "bemerkung": "Etikett zusätzlich \"HW:v1.0.0\" (Platzhalter in Rot, ab Werk gedruckt)"
+      },
+      {
+        "wert": "v2",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "v2",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Platine \"MR900 V2-0.10 LFP\""
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Etikett auf der Unterseite (Kabelmulde): \"Model No. : MR900 v2\", FCC ID WT8-MR900V2, IC 10103A-MR900V2",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8-MR900V2/Label/Label-and-Location-pdf-2219919",
+        "stand": "Exhibit 2014-03-19 (PDF 2014-03-17, Zeichnung Senao 6710A3993370 vom 2014-02-11)",
+        "sicherheit": "hoch",
+        "bemerkung": "v1 dagegen: \"Model No. : MR900\", FCC ID WT8-MR900, IC 10103A-MR900 (fcc_v1_label)"
+      },
+      {
+        "wert": "v1-Etikett: \"Model No. : MR900\", FCC ID WT8-MR900, IC 10103A-MR900 - ohne \"v2\"",
+        "quelle": "fcc_v1_label",
+        "beleg": "https://fccid.io/WT8-MR900/Label/Label-pdf-2074127",
+        "stand": "Exhibit 2013-09-17 (PDF 2013-09-10)",
+        "sicherheit": "hoch",
+        "bemerkung": "zur Abgrenzung von v2"
+      },
+      {
+        "wert": "Bestückungsdruck \"MR900 V2-0.10 LFP\" auf der Hauptplatine",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": "aus den FCC-Fotos abgelesen; auf FCC-Innenfoto als \"MR900 V2.0 10 LFP\" lesbar"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "WT8-MR900V2",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8-MR900V2",
+        "stand": "Grant 2014-03-19 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WT8-MR900V2",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8-MR900V2/Label/Label-and-Location-pdf-2219919",
+        "stand": "Exhibit 2014-03-19 (PDF 2014-03-17, Zeichnung Senao 6710A3993370 vom 2014-02-11)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WT8-MR900V2",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WT8-MR900V2",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Seitenrevision 2026-08-06 01:36",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump: https://fcc.io/WT8/-MR900V2"
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "10103A-MR900V2",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8-MR900V2/Label/Label-and-Location-pdf-2219919",
+        "stand": "Exhibit 2014-03-19 (PDF 2014-03-17, Zeichnung Senao 6710A3993370 vom 2014-02-11)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "10103A-MR900V2",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": "MR900V2",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR900V2/User-Manual/User-Manual-pdf-2219927",
+        "stand": "Exhibit 2014-03-19 (PDF \"UM_MR900v2_20140225\", erstellt 2014-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": "OEM-Bezeichnung \"Wireless-N 450 + 450Mbps Long Range Ceiling Mount Dual Concurrent Access Point\""
+      },
+      {
+        "wert": "OpenMesh MR900 v2",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr900-v2.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "DTS-model; compatible \"openmesh,mr900-v2\"; SUPPORTED_DEVICES mr900v2"
+      },
+      {
+        "wert": "openmesh-mr900v2",
+        "quelle": "gluon_commit_0de095f",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/0de095fe9f7b795c6df216189c717be49acfe5cf",
+        "stand": "Commit 2021-10-10 (Autor), gemergt 2022-03-21",
+        "sicherheit": "mittel",
+        "bemerkung": "alter Gluon-Imagename (ar71xx/OpenWrt 19.07), in v2022.1 als manifest_alias"
+      },
+      {
+        "wert": "MR900 Dual Band 3x3 Access Point",
+        "quelle": "openmesh_produktseite",
+        "beleg": "https://web.archive.org/web/20141107093006/http://www.open-mesh.com/products/access-points/mr900-dual-band-cloud-access-point.html",
+        "stand": "Archivkopie 2014-11-07",
+        "sicherheit": "hoch",
+        "bemerkung": "Shopname, ohne Versionsangabe"
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "nicht mehr erhältlich",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Seitenrevision 2026-08-06 01:36",
+        "sicherheit": "mittel",
+        "bemerkung": "Discontinued"
+      },
+      {
+        "wert": "unbekannt (2021)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "\"unknown 2021\""
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "2014-03 (FCC-Zulassung)",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8-MR900V2",
+        "stand": "Grant 2014-03-19 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant 2014-03-19; Muster getestet 2013-11 bis 2014-01"
+      },
+      {
+        "wert": "2013-09-17 (fcc_date)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "Widerspruch: das ist das Grant-Datum von WT8-MR900 (v1); WT8-MR900V2 wurde 2014-03-19 erteilt"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm Atheros QCA9558",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": "ver 1 rev 0"
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9558",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9558 (QCA9558-AT4A)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AR9558 (sic)",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": "Datenblatt schreibt \"AR9558\"; gemeint QCA9558"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 720,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": "720/600/240 MHz (CPU/DDR/AHB)"
+      },
+      {
+        "wert": 720,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 700,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Processor @ 700mhz\""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "MIPS 74K",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "mips_24kc (Paketarchitektur)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 128,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": "2x Nanya NT5TU32M16DG-AC"
+      },
+      {
+        "wert": 128,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR2",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus Chipbezeichnung Nanya NT5TU32M16DG-AC (DDR2, 512 Mbit), zwei Stück"
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "2x Nanya NT5TU32M16DG-AC",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": "2x 7 MB nutzbar, eine Hälfte ist das Recovery-/Zweitimage"
+      },
+      {
+        "wert": 16,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr900-v2.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "jedec,spi-nor"
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "Macronix, vermutlich MX25L128-Reihe",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"looks to be in the MX25L128... series\""
+      }
+    ],
+    "flash_partitionen": [
+      {
+        "wert": "u-boot 256 KiB, u-boot-env 64 KiB, custom 384 KiB, inactive 7808 KiB, inactive2 7808 KiB, ART 64 KiB (Partitionen vom Bootloader übergeben)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr900-v2.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": true,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Seitenrevision 2026-08-06 01:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "switch": [
+      {
+        "wert": "keiner",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Seitenrevision 2026-08-06 01:36",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump: \"¿\""
+      }
+    ],
+    "ethernet_phy": [
+      {
+        "wert": "Atheros AR8035 (RGMII)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Atheros AR8035-A",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Seitenrevision 2026-08-06 01:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Atheros AR8035-A",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": [
+          "Qualcomm Atheros QCA9558 (2.4 GHz)",
+          "Atheros AR9580 (5 GHz, miniPCIe)"
+        ],
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Modul \"Mini PCIe (oversized)\"; PAs: 3x Skyworks/SiGe SE5003L (5 GHz), 3x SE2576L (2.4 GHz)"
+      },
+      {
+        "wert": [
+          "Qualcomm Atheros QCA9558",
+          "Qualcomm Atheros QCA9580 (mini-PCIe)"
+        ],
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Seitenrevision 2026-08-06 01:36",
+        "sicherheit": "mittel",
+        "bemerkung": "\"QCA9580\" in der ToH; DTS nennt pci168c,0033 = AR9580"
+      },
+      {
+        "wert": [
+          "QCA9558 (2.4 GHz)",
+          "AR9580 (5 GHz)"
+        ],
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "QCA9558 (wmac, 2.4 GHz)",
+          "PCI 168c:0033 = AR9580 (5 GHz)"
+        ],
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr900-v2.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "AR9580 mit 3x SiGe 5003L auf miniPCIe-Karte"
+        ],
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8-MR900V2/Internal-Photos/Internal-Photos-pdf-2219920",
+        "stand": "Exhibit 2014-03-19 (PDF \"131230C23A EUT photo\", 2014-03-06)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath9k",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Seitenrevision 2026-08-06 01:36",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump: \"unknown\""
+      },
+      {
+        "wert": "ath9k",
+        "quelle": "openwrt_git_ar71xx_profil",
+        "beleg": "https://github.com/openwrt/openwrt/commit/b6f5713b3f5cf343c5ffd893976eaaa86253e03a",
+        "stand": "Commit 2014-11-14 (SVN r43270)",
+        "sicherheit": "mittel",
+        "bemerkung": "Profil-Pakete kmod-ath9k om-watchdog"
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR900V2/User-Manual/User-Manual-pdf-2219927",
+        "stand": "Exhibit 2014-03-19 (PDF \"UM_MR900v2_20140225\", erstellt 2014-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": "3x3",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": "3T3R"
+      },
+      {
+        "wert": "3x3:3",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Seitenrevision 2026-08-06 01:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "3x3:3",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "3x3",
+        "quelle": "fcc_testbericht_dts",
+        "beleg": "https://fccid.io/WT8-MR900V2/Test-Report/Test-Report-DTS-rev-pdf-2219925",
+        "stand": "Bureau Veritas RF131230C23A, PDF 2014-03-19",
+        "sicherheit": "hoch",
+        "bemerkung": "3 Sender, 3 Empfänger, MCS 0-23"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR900V2/User-Manual/User-Manual-pdf-2219927",
+        "stand": "Exhibit 2014-03-19 (PDF \"UM_MR900v2_20140225\", erstellt 2014-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": "3x3",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": "3T3R"
+      },
+      {
+        "wert": "3x3:3",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Seitenrevision 2026-08-06 01:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "3x3:3",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "N900 (450 + 450 Mbit/s)",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8-MR900V2",
+        "stand": "Grant 2014-03-19 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "FCC: \"Dual Band 450Mbps+450Mbps\"; Klassenname abgeleitet"
+      },
+      {
+        "wert": "N900",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "mittel",
+        "bemerkung": "\"3x3 MIMO, 900 Mbps\"; Klassenname abgeleitet"
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "20/40 MHz",
+        "quelle": "fcc_testbericht_dts",
+        "beleg": "https://fccid.io/WT8-MR900V2/Test-Report/Test-Report-DTS-rev-pdf-2219925",
+        "stand": "Bureau Veritas RF131230C23A, PDF 2014-03-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": "2412-2462 MHz; 5180-5240 MHz; 5745-5825 MHz",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8-MR900V2",
+        "stand": "Grant 2014-03-19 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "kein DFS-Band in der FCC-Zulassung"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": {
+          "2.4": 28.3,
+          "5_unii1": 16.9,
+          "5_unii3": 30.0
+        },
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8-MR900V2",
+        "stand": "Grant 2014-03-19 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "maximale summierte leitungsgebundene Leistung aller drei Ketten: 0.68 W / 0.049 W / 0.993 W; ohne Antennengewinn"
+      },
+      {
+        "wert": {
+          "2.4": 28.33,
+          "5_unii1": 16.94,
+          "5_unii3": 29.97
+        },
+        "quelle": "fcc_mpe",
+        "beleg": "https://fccid.io/WT8-MR900V2/RF-Exposure-Info/RF-Exposure-Info-MPE-pdf-2219929",
+        "stand": "Bureau Veritas SA131230C23A, 2014-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": "Höchstwerte je Band aus der MPE-Tabelle (leitungsgebunden)"
+      },
+      {
+        "wert": 20,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": "\"20 dBm +/-2 (100 mw) flat power\"; Version nicht genannt"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern fest (6 Blech-PIFA auf Träger, über U.FL/IPEX-Koax angeschlossen)",
+        "quelle": "fcc_testbericht_dts",
+        "beleg": "https://fccid.io/WT8-MR900V2/Test-Report/Test-Report-DTS-rev-pdf-2219925",
+        "stand": "Bureau Veritas RF131230C23A, PDF 2014-03-19",
+        "sicherheit": "hoch",
+        "bemerkung": "PIFA, Anschluss IPEX"
+      },
+      {
+        "wert": "intern",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": "\"internal antennas\""
+      },
+      {
+        "wert": "intern (sechs)",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "intern, Antennenträger aus Blech mit sechs Antennen, Koax mit U.FL",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8-MR900V2/Internal-Photos/Internal-Photos-pdf-2219920",
+        "stand": "Exhibit 2014-03-19 (PDF \"131230C23A EUT photo\", 2014-03-06)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "IPEX/U.FL (intern)",
+        "quelle": "fcc_testbericht_dts",
+        "beleg": "https://fccid.io/WT8-MR900V2/Test-Report/Test-Report-DTS-rev-pdf-2219925",
+        "stand": "Bureau Veritas RF131230C23A, PDF 2014-03-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U.FL",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 6,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Six internal\""
+      },
+      {
+        "wert": 6,
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8-MR900V2/Internal-Photos/Internal-Photos-pdf-2219920",
+        "stand": "Exhibit 2014-03-19 (PDF \"131230C23A EUT photo\", 2014-03-06)",
+        "sicherheit": "hoch",
+        "bemerkung": "auf dem Antennenträger gezählt"
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "getrennt (3x 2.4 GHz, 3x 5 GHz)",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet aus sechs Antennen und je 3 Ketten"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4": 4.0,
+          "5": 5.0
+        },
+        "quelle": "fcc_testbericht_dts",
+        "beleg": "https://fccid.io/WT8-MR900V2/Test-Report/Test-Report-DTS-rev-pdf-2219925",
+        "stand": "Bureau Veritas RF131230C23A, PDF 2014-03-19",
+        "sicherheit": "hoch",
+        "bemerkung": "je Antenne; MPE: gerichtet 8.77 dBi (2.4, 802.11b/g) bzw. 9.27 dBi (5, 802.11a)"
+      },
+      {
+        "wert": {
+          "2.4": 4.0,
+          "5": 5.0
+        },
+        "quelle": "fcc_mpe",
+        "beleg": "https://fccid.io/WT8-MR900V2/RF-Exposure-Info/RF-Exposure-Info-MPE-pdf-2219929",
+        "stand": "Bureau Veritas SA131230C23A, 2014-02-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "2.4": 2.0,
+          "5": 5.0
+        },
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": "Widerspruch zur FCC (2.4 GHz: 4 dBi); Datenblatt ohne Versionsangabe"
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "nach unten/vorn gerichtet, \"180-degree antenna pattern\" (MR-Serie)",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "mittel",
+        "bemerkung": "Text zum Outdoor-Gehäuse; Diagramme horizontal/vertikal im PDF"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "Ethernet (LAN)",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN, PoE-Eingang 802.3af"
+          }
+        ],
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "Ethernet",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "PoE-Eingang"
+          }
+        ],
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "Ethernet Port",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "RJ-45, Rückseite"
+          }
+        ],
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR900V2/User-Manual/User-Manual-pdf-2219927",
+        "stand": "Exhibit 2014-03-19 (PDF \"UM_MR900v2_20140225\", erstellt 2014-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "ethernet1gports 1"
+      },
+      {
+        "wert": 1,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": "eine Ethernet-Buchse, als LAN konfiguriert; DC-Buchse zusätzlich"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": 0,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Seitenrevision 2026-08-06 01:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": 0,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "minipcie": [
+      {
+        "wert": "1x miniPCIe (mit 5-GHz-Funkkarte bestückt)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Seitenrevision 2026-08-06 01:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x Mini PCIe (oversized), AR9580-Karte",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "802.3af",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.3af",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.3af",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.3af",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": "\"802.3af 48v\""
+      },
+      {
+        "wert": "802.3af",
+        "quelle": "openmesh_produktseite",
+        "beleg": "https://web.archive.org/web/20141107093006/http://www.open-mesh.com/products/access-points/mr900-dual-band-cloud-access-point.html",
+        "stand": "Archivkopie 2014-11-07",
+        "sicherheit": "hoch",
+        "bemerkung": "\"standard 802.3af POE support\""
+      },
+      {
+        "wert": "802.3at/af",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR900V2/User-Manual/User-Manual-pdf-2219927",
+        "stand": "Exhibit 2014-03-19 (PDF \"UM_MR900v2_20140225\", erstellt 2014-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": "OEM-Handbuch (Senao) nennt \"IEEE802.3at/af\""
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": 48,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": "\"802.3af 48v\" (Normspannung)"
+      },
+      {
+        "wert": 48,
+        "quelle": "fcc_testbericht_dts",
+        "beleg": "https://fccid.io/WT8-MR900V2/Test-Report/Test-Report-DTS-rev-pdf-2219925",
+        "stand": "Bureau Veritas RF131230C23A, PDF 2014-03-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Testaufbau mit 48-V-PoE-Injektor EnGenius NPE-7530G"
+      }
+    ],
+    "poe_ausgang": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": "nur ein Ethernet-Port"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": true,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": "\"12-24V 1A DC\""
+      },
+      {
+        "wert": "Hohlbuchse (barrel)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DC IN, Hohlbuchse neben RJ45 in der Kabelmulde",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/WT8-MR900V2/External-Photos/External-Photos-pdf-2219918",
+        "stand": "Exhibit 2014-03-19 (PDF \"131230C23A EUT photo\", 2014-03-06)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": "12-24",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "12-24",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Seitenrevision 2026-08-06 01:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": "pwr_v=12, pwr_amp=2"
+      },
+      {
+        "wert": 12,
+        "quelle": "fcc_testbericht_dts",
+        "beleg": "https://fccid.io/WT8-MR900V2/Test-Report/Test-Report-DTS-rev-pdf-2219925",
+        "stand": "Bureau Veritas RF131230C23A, PDF 2014-03-19",
+        "sicherheit": "hoch",
+        "bemerkung": "\"12Vdc (Adapter)\""
+      },
+      {
+        "wert": 20,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": "Netzteiloption \"International 20v (US/EU/UK/AU)\""
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 1.0,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": "12-24V 1A"
+      },
+      {
+        "wert": 2.0,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Nennstrom des FCC-Netzteils"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR900V2/User-Manual/User-Manual-pdf-2219927",
+        "stand": "Exhibit 2014-03-19 (PDF \"UM_MR900v2_20140225\", erstellt 2014-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": "OEM-Lieferumfang: \"12V/2A 100V~240V Power Adapter\"; FCC-Grant-Hinweis 28 verlangt Netzteil mit Ferritkern bei jedem verkauften Gerät"
+      },
+      {
+        "wert": false,
+        "quelle": "openmesh_produktseite",
+        "beleg": "https://web.archive.org/web/20141107093006/http://www.open-mesh.com/products/access-points/mr900-dual-band-cloud-access-point.html",
+        "stand": "Archivkopie 2014-11-07",
+        "sicherheit": "hoch",
+        "bemerkung": "Open-Mesh-Shop: \"Without Adapter (802.3af PoE only)\" oder \"20v Universal Power Supply +$4.00\""
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "Powertron PA1024-120HUB200 (PA1024-2HUB/PA1024-2HU): 100-240 V~ 0.6 A, 12 V 2.0 A, 24 W max, Ferritkern, US-Stecker",
+        "quelle": "fcc_testbericht_dts",
+        "beleg": "https://fccid.io/WT8-MR900V2/Test-Report/Test-Report-DTS-rev-pdf-2219925",
+        "stand": "Bureau Veritas RF131230C23A, PDF 2014-03-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Powertron PA1024-120HUB200, 12 V 2 A, NEMA 1-15P, Effizienz V",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "International 20v (US/EU/UK/AU)",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "watchdog": [
+      {
+        "wert": "externer Hardware-Watchdog an GPIO 16 (300 s), ab Werk aktiv",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": "DTS: linux,wdt-gpio, always-running"
+      },
+      {
+        "wert": "Hardware Watchdog CPU",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8-MR900V2",
+        "stand": "Grant 2014-03-19 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Indoor Access Point\""
+      },
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Seitenrevision 2026-08-06 01:36",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen; außen nur im optionalen MR-Outdoor-Gehäuse",
+        "quelle": "openmesh_produktseite",
+        "beleg": "https://web.archive.org/web/20141107093006/http://www.open-mesh.com/products/access-points/mr900-dual-band-cloud-access-point.html",
+        "stand": "Archivkopie 2014-11-07",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 50 °C",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": "Version nicht genannt"
+      }
+    ],
+    "montage": [
+      {
+        "wert": [
+          "Decke",
+          "Wand",
+          "Rasterdecke (T-Rail 9/16\" und 15/16\")"
+        ],
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR900V2/User-Manual/User-Manual-pdf-2219927",
+        "stand": "Exhibit 2014-03-19 (PDF \"UM_MR900v2_20140225\", erstellt 2014-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": "Montageplatte und T-Rail-Clips im Lieferumfang; Kensington-Schlitz"
+      },
+      {
+        "wert": [
+          "Decke",
+          "Wand",
+          "Rasterdecke 9/16\" oder 15/16\"",
+          "Outdoor-Gehäuse optional"
+        ],
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montageloecher": [
+      {
+        "wert": "zwei Schlüsselloch-Aufnahmen auf der Unterseite für Montageplatte/T-Rail-Clips",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/WT8-MR900V2/External-Photos/External-Photos-pdf-2219918",
+        "stand": "Exhibit 2014-03-19 (PDF \"131230C23A EUT photo\", 2014-03-06)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": {
+          "durchmesser": 162,
+          "hoehe": 38
+        },
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": "umgerechnet aus 6.38\" x 1.5\"; Version nicht genannt"
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 236,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": "umgerechnet aus 0.52 lbs; Version nicht genannt"
+      }
+    ],
+    "gehaeuse_material": [
+      {
+        "wert": "Kunststoff, weiß",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/WT8-MR900V2/External-Photos/External-Photos-pdf-2219918",
+        "stand": "Exhibit 2014-03-19 (PDF \"131230C23A EUT photo\", 2014-03-06)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luefter": [
+      {
+        "wert": false,
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8-MR900V2/Internal-Photos/Internal-Photos-pdf-2219920",
+        "stand": "Exhibit 2014-03-19 (PDF \"131230C23A EUT photo\", 2014-03-06)",
+        "sicherheit": "hoch",
+        "bemerkung": "kein Lüfter auf den Innenfotos"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 6,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": "2x WLAN, 2x Status (grün/rot), 1x LAN, 1x Power"
+      },
+      {
+        "wert": 6,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR900V2/User-Manual/User-Manual-pdf-2219927",
+        "stand": "Exhibit 2014-03-19 (PDF \"UM_MR900v2_20140225\", erstellt 2014-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": "sichtbar: WPS, WLAN 5G, WLAN 2.4G, Ethernet, Power"
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": true,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR900V2/User-Manual/User-Manual-pdf-2219927",
+        "stand": "Exhibit 2014-03-19 (PDF \"UM_MR900v2_20140225\", erstellt 2014-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": "Stockfirmware: Seite \"LED Control\""
+      },
+      {
+        "wert": true,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr900-v2.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "niedrig",
+        "bemerkung": "alle LEDs als GPIO-LEDs, unter OpenWrt schaltbar; abgeleitet"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "vorn am Gehäuserand neben der LED-Reihe; über 10 s = Werkseinstellungen (Stockfirmware)",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/WT8-MR900V2/User-Manual/User-Manual-pdf-2219927",
+        "stand": "Exhibit 2014-03-19 (PDF \"UM_MR900v2_20140225\", erstellt 2014-03-13)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "GPIO 17 (reset)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr900-v2.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "buttoncount"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Stiftleiste (4-polig, bestückt)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8-MR900V2/Internal-Photos/Internal-Photos-pdf-2219920",
+        "stand": "Exhibit 2014-03-19 (PDF \"131230C23A EUT photo\", 2014-03-06)",
+        "sicherheit": "hoch",
+        "bemerkung": "gewinkelte Stiftleiste neben dem miniPCIe-Bereich"
+      },
+      {
+        "wert": "innen Stiftleiste (4-polig)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": "\"yes,, internal,, 4-pin header,, 3.3V TTL\""
+      },
+      {
+        "wert": "innen, TTL-Pins auf der Platine",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": "\"TTL pins are on board\""
+      },
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "VCC (Pfeil), GND, TX, RX",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": "\"arrow points to VCC, then follows: GND, TX, RX\""
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": "\"3.3V TTL\""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "Deckel abnehmbar, darunter Platine mit Abschirmblechen und Antennenträger",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/WT8-MR900V2/Internal-Photos/Internal-Photos-pdf-2219920",
+        "stand": "Exhibit 2014-03-19 (PDF \"131230C23A EUT photo\", 2014-03-06)",
+        "sicherheit": "mittel",
+        "bemerkung": "Befestigung (Schrauben/Clips) auf den Fotos nicht eindeutig"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/generic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath79/generic",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "openmesh_mr900-v2",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "21.02.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ar71xx-Profil \"OpenMesh MR900/MR900v2\" seit 2014-11-14",
+        "quelle": "openwrt_git_ar71xx_profil",
+        "beleg": "https://github.com/openwrt/openwrt/commit/b6f5713b3f5cf343c5ffd893976eaaa86253e03a",
+        "stand": "Commit 2014-11-14 (SVN r43270)",
+        "sicherheit": "mittel",
+        "bemerkung": "erste Release nicht geprüft"
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.5",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Seitenrevision 2026-08-06 01:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "23.05.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump-Stand"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "ap51-flash; U-Boot TFTP (initramfs über serielle Konsole), dann sysupgrade",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot TFTP recovery, see git-commit",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Seitenrevision 2026-08-06 01:36",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump nannte zusätzlich ap51-flash"
+      },
+      {
+        "wert": "ap51-flash (Weg C)",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erstinstallation-ohne-factory.md (Abschnitt \"Aufstellung nach Installationsweg\", Zeile Weg C)",
+        "stand": "Arbeitsstand router-werkstatt 2026-10",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "eth0 (MAC aus ART 0x0)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_mr900-v2.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "label-mac-device"
+      },
+      {
+        "wert": "Etikett mit drei MAC-Barcodes, Cloud SN und S/N",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8-MR900V2/Label/Label-and-Location-pdf-2219919",
+        "stand": "Exhibit 2014-03-19 (PDF 2014-03-17, Zeichnung Senao 6710A3993370 vom 2014-02-11)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, ath79-generic \"openmesh-mr900-v2\", ohne Factory-Image",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath79 seit Commit 0de095fe (gemergt 2022-03-21), in v2022.1 enthalten; vorher ar71xx als \"openmesh-mr900v2\"",
+        "quelle": "gluon_commit_0de095f",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/0de095fe9f7b795c6df216189c717be49acfe5cf",
+        "stand": "Commit 2021-10-10 (Autor), gemergt 2022-03-21",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ar71xx-generic seit Gluon 2016.1.5",
+        "quelle": "freifunk_forum_suche",
+        "beleg": "https://forum.freifunk.net/search.json?q=MR900",
+        "stand": "Suche 2026-10-20",
+        "sicherheit": "niedrig",
+        "bemerkung": "Zitat der Release Notes im Forum (Thema 12340)"
+      },
+      {
+        "wert": "Yes",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Seitenrevision 2026-08-06 01:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "varianten": [
+      {
+        "wert": "MR900 v1 (FCC WT8-MR900, 2013-09) und v2 (WT8-MR900V2, 2014-03); OpenWrt-Commits nennen identische Eckdaten, getrennte Images",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Hardwareunterschied im Commit nicht beschrieben; im ar71xx-Target gemeinsames Profil MR900/MR900v2"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "keine Geräteseite (toh:open-mesh:mr900 existiert nicht)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/open-mesh/mr900",
+        "stand": "Seite existiert nicht (2026-10-20)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/Open-Mesh_MR900_v2",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Open-Mesh_MR900_v2",
+        "stand": "Seitenrevision 2019-07-05T02:42:06Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://web.archive.org/web/20141107093006/http://www.open-mesh.com/products/access-points/mr900-dual-band-cloud-access-point.html",
+        "quelle": "openmesh_produktseite",
+        "beleg": "https://web.archive.org/web/20141107093006/http://www.open-mesh.com/products/access-points/mr900-dual-band-cloud-access-point.html",
+        "stand": "Archivkopie 2014-11-07",
+        "sicherheit": "hoch",
+        "bemerkung": "nur Archiv; open-mesh.com abgeschaltet (ToH: http://¿)"
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
+        "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
+        "sicherheit": "hoch",
+        "bemerkung": "MR-Series-Datenblatt, Spalte MR900 ohne Versionsangabe"
+      }
+    ],
+    "forum": [
+      {
+        "wert": "https://forum.freifunk.net/t/11521",
+        "quelle": "freifunk_forum_suche",
+        "beleg": "https://forum.freifunk.net/search.json?q=MR900",
+        "stand": "Suche 2026-10-20",
+        "sicherheit": "niedrig",
+        "bemerkung": "Erwähnung MR900v2 als Gluon-Dualband-Gerät, keine Hardwaredaten"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/WT8-MR900V2/External-Photos/External-Photos-pdf-2219918",
+      "kategorie": "dc_buchse_mass",
+      "grund": "Hohlstecker-Maß und Polarität nirgends angegeben (Netzteilaufdruck auf dem Foto ohne lesbares Polaritätssymbol)"
+    },
+    {
+      "url": "https://fccid.io/WT8-MR900V2/Internal-Photos/Internal-Photos-pdf-2219920",
+      "kategorie": "seriell_baud",
+      "grund": "Baudrate nirgends genannt (ToH \"¿\"); Lage des VCC-Pfeils auf der Stiftleiste in 1136x852 nicht erkennbar"
+    },
+    {
+      "url": "https://fccid.io/WT8-MR900V2/Test-Report/Test-Report-NII-pdf-2219928",
+      "kategorie": "wlan_sendeleistung_dbm",
+      "grund": "NII-Testbericht (5180-5240 MHz, 834 KB) nicht ausgewertet"
+    },
+    {
+      "url": "https://fccid.io/WT8-MR900V2/Operational-Description/Operational-Description-pdf-2219921",
+      "kategorie": "wlan_chips",
+      "grund": "Operational Description (16 KB) nicht ausgewertet"
+    },
+    {
+      "url": "https://fccid.io/WT8-MR900/Internal-Photos/Internal-Photos-pdf-2074128",
+      "kategorie": "varianten",
+      "grund": "v1-Innenfotos zum Vergleich v1/v2 (Hardwareunterschied unbeschrieben), nicht ausgewertet"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=open-mesh.com/*mr900*&fl=timestamp,original,statuscode&collapse=urlkey",
+      "kategorie": "datenblatt",
+      "grund": "spätere Open-Mesh-Produktseiten/Quick Start Guides mit ausdrücklicher v2-Angabe (Maße, Leistungsaufnahme) nicht gesucht"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/open-mesh-mr900*&output=json&fl=timestamp,original,statuscode&collapse=urlkey",
+      "kategorie": "geizhals_url",
+      "grund": "CDX-Präfixsuchen open-mesh-mr900*/openmesh-mr900* leer; domänenweite Filtersuche Zeitüberschreitung. EAN/ASIN: keine Quelle (DeviWiki-Felder leer)"
+    },
+    {
+      "url": "https://forum.openwrt.org/search?q=MR900",
+      "kategorie": "forum",
+      "grund": "OpenWrt-Forum-Suche gemieden (429); Thread-IDs zum MR900 v2 unbekannt"
+    },
+    {
+      "url": "https://fccid.io/WT8-MR900V2",
+      "kategorie": "leistung_w",
+      "grund": "Leistungsaufnahme für MR900 nirgends angegeben (nur Netzteil 24 W max)"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-20",
+    "status": "teilweise",
+    "anfragen": 34,
+    "notiz": "ToH-Dump (manuell, toh_suche.py ohne Treffer) + Live-hwdata, OpenWrt-Commits 31172e53/e06c9eec/847cda16/b6f5713b, DTS main, generic.mk und Gluon-Target (aus Cache MR1750-v2, gleicher Tag), Gluon-Commit 0de095fe und Tag v2022.1, DeviWiki = WikiDevi (Rev. 2019-07-05), FCC WT8-MR900V2 (Label, Handbuch, MPE, DTS-Testbericht, Innen-/Außenfotos) und v1-Label WT8-MR900, Open-Mesh-Produktseite 2014-11 und Datenblatt 2014-10 (Archiv), Freifunk-Forum-Suche, Werkstatt Weg C. Kein OpenWrt-Wiki. Widersprüche: Antenne 2.4 GHz 4 dBi (FCC) vs. 2 dBi (Datenblatt), Netzteil 12 V/2 A (FCC/OEM) vs. 20 V (Open-Mesh) vs. 12-24 V (OpenWrt), PoE af (OpenWrt/Open-Mesh) vs. at/af (OEM-Handbuch), DeviWiki fcc_date = v1-Datum. Offen: Hohlstecker-Maß, Baudrate, Handelsdaten."
+  }
+}

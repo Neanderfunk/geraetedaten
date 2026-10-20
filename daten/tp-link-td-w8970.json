@@ -1,0 +1,2839 @@
+{
+  "image": "tp-link-td-w8970",
+  "modell": "TP-Link TD-W8970 v1",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-20",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15677835",
+      "bemerkung": "Dump-Werte älter als Live-Seite: Subtarget xrx200, aktuell 22.03.5, Typ WiFi Router; v3.0 (pid 15677836) ist ein eigener Eintrag (Broadcom BCM6362, nicht unterstützt)"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1?do=export_raw",
+      "stand": "Seitenrevision 2026-05-01 16:51",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Live-Seite neuer als Dump: Subtarget xrx200_legacy, aktuell 25.12.2, Gluon support Yes, Outdoor No, Seriell 3.3 V, Device Type Modem; Revision 2025-05-27 \"8/64 warning\""
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/tp-link/td-w8970_v1?do=export_raw",
+      "stand": "Seitenrevision 2026-07-08 18:53",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_wiki_foto_seriell": {
+      "url": "https://openwrt.org/_media/media/tplink/td-w8970/td-w8970_serial-jtag.jpg",
+      "stand": "Bild eingebunden in Seitenrevision 2026-07-08 18:53 (Bilddatum unbekannt)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet (567x281)"
+    },
+    "openwrt_wiki_foto_typenschild": {
+      "url": "https://openwrt.org/_media/media/tplink/td-w8970/td-w8970-backside-label.png",
+      "stand": "Bild eingefügt Seitenrevision 2024-01-19 17:51 (\"Added photo of backside label\")",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet (999x506)"
+    },
+    "openwrt_git": {
+      "url": "https://github.com/openwrt/openwrt/commit/54b40740744776839c9d065788f8b86d4c15d540",
+      "stand": "Commit 2013-07-25 (SVN r37543)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "\"lantiq: add TP-Link TDW8970 image generation\", nur image/Makefile; im ToH als Supported-Since-Commit eingetragen"
+    },
+    "openwrt_git_dts": {
+      "url": "https://github.com/openwrt/openwrt/commit/a99042c6a454d1167241ed35068f33ab97612e80",
+      "stand": "Commit 2013-07-25 (SVN r37541)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "\"lantiq: add devicetree for TP-Link TDW8970\" (John Crispin), ohne Hardwarebeschreibung im Text"
+    },
+    "openwrt_git_legacy": {
+      "url": "https://github.com/openwrt/openwrt/commit/e63326e26a82cb083eec602b3a2f71d4cd8e2ea4",
+      "stand": "Commit 2024-11-29 (Autor), gemergt 2024-12-15",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "\"lantiq/xrx200: move 8M flash devices to a small flash subtarget\" (PR openwrt#17113, Issue #16761)"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=tdw8970+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-20 (16 Commits zu \"tdw8970\", 8 zu \"TD-W8970\", neuester gerätebezogen 2025-01-11)",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_tplink_tdw8970.dts",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "dateien": [
+        "vr9_tplink_tdw8970.dts",
+        "vr9_tplink_tdw89x0.dtsi"
+      ]
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/image/tp-link_legacy.mk",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_board_network": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/xrx200_legacy/base-files/etc/board.d/02_network",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_target": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/lantiq-xrx200_legacy",
+      "stand": "Branch main am 2026-10-20 (Datei seit Commit b5ba291b54, 2024-12-26)",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_pr_1867": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/1867",
+      "stand": "PR 2019-11-19, gemergt 2020-03-09",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "lantiq-xrx200: add support for TP-Link TD-W8970, TD-W8980 and TD-W9980 (kpanic23); Checkliste und Kommentare gelesen"
+    },
+    "gluon_pr_2833": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/2833",
+      "stand": "PR 2023-03-30",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "docs: readd TP-Link TD-W8970 v1 (Gerät war in der Doku unter ar71xx eingetragen und vor Gluon 22 entfernt)"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+      "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Rohtext per action=raw; Suche W8970 ergibt nur v1 und v3"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/TP-LINK_TD-W8970_v1",
+      "stand": "Seitenrevision 2020-02-03T19:14:37Z",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Rohtext per action=raw; Abruf nach 16 KB abgebrochen (Timeout), Infobox und Text vollständig, Bootlog teilweise; weicht von DeviWiki ab (lan_ports 3 + WAN, Seriell/JTAG belegt, pcb_id)"
+    },
+    "fcc": {
+      "url": "https://fccid.io/TE7TDW8970V1",
+      "stand": "Grant 2013-01-28 (Original Equipment)",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_handbuch": {
+      "url": "https://fccid.io/TE7TDW8970V1/User-Manual/TD-W8970-User-Guide-1886457",
+      "stand": "Exhibit 2013-01-28 (PDF erstellt 2012-10-17)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "User Guide, 96 Seiten, 4.2 MB; pdftotext, Seiten 6-7 (Rückseite, Wandmontage) als Bild ausgewertet; Cache fcc/manual.pdf"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/TE7TDW8970V1/Label/TD-W8970-Label-Lable-Location-1886451",
+      "stand": "Exhibit 2013-01-28 (Zeichnung TD-W8970(UN)_1.0.0, Version A2, 2012-07-09)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "2 Seiten: Labelzeichnung (Text) und Foto der Unterseite (als Bild ausgewertet)"
+    },
+    "fcc_innenfotos": {
+      "url": "https://fccid.io/TE7TDW8970V1/Internal-Photos/TD-W8970-F-CC-ID-Int-Photo-1886450",
+      "stand": "Exhibit 2013-01-28 (PDF 2013-01-21)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "4 Seiten, 7 Fotos 640x480 inkl. Netzteil, als Bild ausgewertet; Cache fcc/int/"
+    },
+    "tplink_produktseite": {
+      "url": "https://www.tp-link.com/en/home-networking/dsl-modem-router/td-w8970/v1/",
+      "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Spezifikationen weichen vom v1-Datenblatt ab (1 USB, 2 Antennen, 802.3ab, Windows 10): passt zur v3 laut ToH, Seite trägt aber /v1/"
+    },
+    "tplink_download_v1": {
+      "url": "https://www.tp-link.com/en/support/download/td-w8970/v1/",
+      "stand": "Live-Seite 2026-10-20, neueste Firmware TD-W8970_V1_140613 (2014-06-13)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Versionsauswahl V1 und V3"
+    },
+    "tplink_datenblatt": {
+      "url": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+      "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "verlinkt als TD-W8970_V1.0_Datasheet (https://www.tp-link.com/en/document/66451/), 4 Seiten"
+    },
+    "geizhals_cdx": {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/tp-link-td-w8970*&output=json&fl=original,timestamp&collapse=urlkey",
+      "stand": "Abfrage 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Treffer a863930 (TD-W8970) und a924389 (TD-W8970B)"
+    },
+    "geizhals_archiv": {
+      "url": "https://web.archive.org/web/20150506180941/http://geizhals.de/tp-link-td-w8970-a863930.html?hloc=at&hloc=de",
+      "stand": "Archivkopie 2015-05-06 (Gelistet seit 2012-11-12)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Kopie 2026-03-03 lieferte 403, Kopie 2014-02-07 (id_) 421"
+    },
+    "toh_v3": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v3.0",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-20",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15677836",
+      "bemerkung": "nur zur Abgrenzung: v3.0 ist Broadcom, kein Gluon-Image"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "15677835",
+      "devicetype": "WiFi Router",
+      "brand": "TP-Link",
+      "model": "TD-W8970",
+      "version": "v1,v1.2",
+      "fccid": "https://fcc.io/TE7/TDW8970V1",
+      "availability": "Discontinued",
+      "whereavailable": "",
+      "supportedsincecommit": "https://git.lede-project.org/?p=source.git;a=commit;h=54b40740744776839c9d065788f8b86d4c15d540",
+      "supportedsincerel": "15.05.1",
+      "supportedcurrentrel": "22.03.5",
+      "unsupported_functions": "NULL",
+      "target": "lantiq",
+      "subtarget": "xrx200",
+      "packagearchitecture": "mips_24kc",
+      "bootloader": "U-Boot",
+      "cpu": "Lantiq XWAY VRX268",
+      "cpucores": "2",
+      "cpumhz": "500",
+      "flashmb": "8",
+      "rammb": "64",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "4",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "Lantiq GSWIP (built-in SoC switch)",
+      "vlan": "Yes",
+      "modem": "VDSL2",
+      "commentsnetworkports": "",
+      "wlanhardware": "Atheros AR9381",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "-",
+      "wlancomments": "",
+      "wlandriver": "ath9k",
+      "detachableantennas": "3",
+      "bluetooth": "-",
+      "usbports": "2x 2.0",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "115200 / 8N1",
+      "jtag": "Yes",
+      "ledcount": "6",
+      "buttoncount": "1",
+      "gpios": "-",
+      "powersupply": "12 VDC, 1.5 A",
+      "devicepage": "toh:tp-link:td-w8970_v1",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "https://forum.openwrt.org/viewtopic.php?id=42380",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "TD-W8970",
+      "gitsearch": "TD-W8970",
+      "wikideviurl": "https://wikidevi.wi-cat.ru/TP-LINK_TD-W8970_v1",
+      "oemdevicehomepageurl": "https://www.tp-link.com/en/home-networking/dsl-modem-router/td-w8970/",
+      "firmwareoemstockurl": "https://www.tp-link.com/en/support/download/td-w8970/v1/",
+      "firmwareopenwrtinstallurl": "NULL",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/22.03.5/targets/lantiq/xrx200/openwrt-22.03.5-lantiq-xrx200-tplink_tdw8970-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "NULL",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/lantiq/xrx200/openwrt-lantiq-xrx200-tplink_tdw8970-squashfs-sysupgrade.bin",
+      "installationmethods": "U-Boot TFTP + serial recovery,see devicepage",
+      "commentinstallation": "",
+      "recoverymethods": "U-Boot TFTP + serial recovery",
+      "commentrecovery": "",
+      "picture": "media:tplink:td-w8970:td-w8970-v1.png",
+      "comments": "",
+      "page": "toh:hwdata:tp-link:tp-link_td-w8970_v1"
+    },
+    "toh_v3": {
+      "pid": "15677836",
+      "devicetype": "WiFi Router",
+      "brand": "TP-Link",
+      "model": "TD-W8970",
+      "version": "v3.0",
+      "fccid": "https://fcc.io/TE7/TDW8970V3",
+      "availability": "Discontinued",
+      "whereavailable": "¿",
+      "supportedsincecommit": "",
+      "supportedsincerel": "",
+      "supportedcurrentrel": "",
+      "unsupported_functions": "NULL",
+      "target": "brcm63xx",
+      "subtarget": "",
+      "packagearchitecture": "",
+      "bootloader": "¿",
+      "cpu": "Broadcom BCM6362",
+      "cpucores": "1",
+      "cpumhz": "400",
+      "flashmb": "16",
+      "rammb": "64",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "4",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "Broadcom BCM53125",
+      "vlan": "Yes",
+      "modem": "ADSL2+",
+      "commentsnetworkports": "",
+      "wlanhardware": "Broadcom BCM6362",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "-",
+      "wlancomments": "2x2",
+      "wlandriver": "b43",
+      "detachableantennas": "2",
+      "bluetooth": "-",
+      "usbports": "1x 2.0",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "¿",
+      "jtag": "¿",
+      "ledcount": "¿",
+      "buttoncount": "¿",
+      "gpios": "-",
+      "powersupply": "12 VDC, 1.5 A",
+      "devicepage": "toh:tp-link:td-w8970_v3.0",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "https://forum.openwrt.org/viewtopic.php?id=42380",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "TD-W8970",
+      "gitsearch": "TD-W8970",
+      "wikideviurl": "https://wikidevi.wi-cat.ru/TP-LINK_TD-W8970_v3",
+      "oemdevicehomepageurl": "http://www.tp-link.com/en/products/details/cat-15_TD-W8970.html",
+      "firmwareoemstockurl": "http://www.tp-link.com/en/download/TD-W8970.html",
+      "firmwareopenwrtinstallurl": "NULL",
+      "firmwareopenwrtupgradeurl": "NULL",
+      "firmwareopenwrtsnapshotinstallurl": "NULL",
+      "firmwareopenwrtsnapshotupgradeurl": "NULL",
+      "installationmethods": "NULL",
+      "commentinstallation": "",
+      "recoverymethods": "NULL",
+      "commentrecovery": "",
+      "picture": "media:example:genericrouter1.png",
+      "comments": "",
+      "page": "toh:hwdata:tp-link:tp-link_td-w8970_v3.0"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "Modem",
+      "Brand": "TP-Link",
+      "Model": "TD-W8970",
+      "Versions": "v1, v1.2",
+      "FCCID_urls": "https://fcc.io/TE7/TDW8970V1",
+      "Availability_availability": "Discontinued",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.lede-project.org/?p=source.git;a=commit;h=54b40740744776839c9d065788f8b86d4c15d540",
+      "Supported Since Rel_releasesince": "15.05.1",
+      "Supported Current Rel_releasecurrent": "25.12.2",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "lantiq",
+      "Subtarget": "xrx200_legacy",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Lantiq XWAY VRX268 (PSB 80910 EL)",
+      "CPU Cores_numcores_": "2",
+      "CPU MHz": "500",
+      "Flash MB_mbflashs": "8",
+      "RAM MB_mbram": "64",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "4",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "Lantiq GSWIP (built-in SoC switch)",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "VDSL2",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Atheros AR9381",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "-",
+      "WLAN Comments_": "",
+      "WLAN driver_wlan-drivers": "ath9k",
+      "Detachable Antennas_numdetachantenna": "3",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "¿",
+      "USB ports_port-usbs": "2x 2.0",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "Yes",
+      "LED count_numled": "6",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "12 VDC, 1.5A via barrel",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:tp-link:td-w8970_v1",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "https://forum.openwrt.org/viewtopic.php?id=42380",
+      "Forum search_search-forums": "TD-W8970",
+      "Git search_search-gits": "TD-W8970",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/TP-LINK_TD-W8970_v1",
+      "WikiDevi ID_hwinfo-id": "TP-LINK_TD-W8970_v1",
+      "OEM Device Homepage URL_url": "https://www.tp-link.com/en/home-networking/dsl-modem-router/td-w8970/",
+      "Firmware OEM Stock URL_url": "https://www.tp-link.com/en/support/download/td-w8970/v1/",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/lantiq/xrx200_legacy/openwrt-25.12.2-lantiq-xrx200_legacy-tplink_tdw8970-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/lantiq/xrx200_legacy/openwrt-25.12.2-lantiq-xrx200_legacy-tplink_tdw8970-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/lantiq/xrx200_legacy/openwrt-lantiq-xrx200_legacy-tplink_tdw8970-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/lantiq/xrx200_legacy/openwrt-lantiq-xrx200_legacy-tplink_tdw8970-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "U-Boot TFTP + serial recovery, see devicepage",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "U-Boot TFTP + serial recovery",
+      "Comment recovery": "",
+      "Picture_img100s": "media:tplink:td-w8970:td-w8970-v1.png",
+      "Comments_": ""
+    },
+    "openwrt_wiki": {
+      "Einleitung": "The TD-W8970 v1 is a 450Mbps Wireless N Gigabit ADSL2+ / VDSL2 Modem Router, but is marketed as a 300Mbps and only ADSL2+ capable product. The TD-W8970 v3 is a Broadcom router which is not supported by OpenWrt. Very similar to TD-W8980 and TD-W9980.",
+      "Supported Versions": [
+        "ADSL/VDSL works",
+        "switch is passing traffic (tagged + untagged), but passing it to all ports https://dev.openwrt.org/ticket/15511"
+      ],
+      "Flash layout (OEM 1.2)": {
+        "mtd0": "0x00000000-0x00020000 boot U-Boot v2.0.40",
+        "mtd1": "0x00020000-0x00160000 kernel 2.6.32",
+        "mtd2": "0x00160000-0x007c0000 rootfs squashfs",
+        "mtd3": "0x007c0000-0x007d0000 config",
+        "mtd4": "0x007d0000-0x007e0000 romfile (MAC address and WPS key)",
+        "mtd5": "0x007e0000-0x007f0000 rom (U-Boot DDR Settings)",
+        "mtd6": "0x007f0000-0x00800000 radio (Radio Calibration Data)"
+      },
+      "Installation": "classic method using serial access (U-Boot: press 't', tftpboot, sf erase/write) oder Methode ohne Öffnen über die Weboberfläche (siehe Geräteseite); ab FW-Build 12.10.2013 nimmt die TP-Link-Weboberfläche nur signierte Images an",
+      "Openwrt Performance": "about 25MBps=400mbps on gigabit lan and 5MBps=40mbps on wireless (Video)",
+      "Failsafe mode": "nach Einschalten 45 s lang einmal pro Sekunde WPS drücken (Factory Reset), danach LAN1 192.168.1.1",
+      "DSL Settings": "Default annex a, tone av, xfer_mode atm; Annex B: annex=b, tone=bv, xfer_mode=ptm (kmod-ltq-ptm-vr9)",
+      "Switch Ports": {
+        "LAN 1": 5,
+        "LAN 2": 0,
+        "LAN 3": 2,
+        "LAN 4 /WAN": 4,
+        "GMII": "6 (CPU)"
+      },
+      "LEDs": "WPS-LED als Status-LED (Power-LED nicht steuerbar); seit r48041 geht sie nach dem Boot aus",
+      "Hardware Info": {
+        "Instruction set": "MIPS",
+        "Vendor": "Lantiq",
+        "Bootloader": "U-Boot 2010.06-LANTIQ-v-2.0.40-svn2583 (press t to enter U-Boot console on OEM firmware)",
+        "System-On-Chip": "XWAY VRX268 (VR9 Family)",
+        "CPU/Speed": "MIPS34Kc @ 500 MHz",
+        "Flash Chip": "cFeon Q64-104HIP, other Winbond 25Q64FVSIG",
+        "Flash Specs": "8 MiB SPI",
+        "RAM Chip": "Hynix H5PS5162GFR-Y5C, other Winbond W9751G6KB or Zentel A3R12E40CBF",
+        "RAM Specs": "64 MiB DDR2 @ 250 MHz (3-5-5-5)",
+        "Wireless": "AR9381 2.4 GHz (3x3) 802.11bgn",
+        "Ethernet": "4x 10/100/1000 BASE-TX Ethernet Interface (2x XWAY VR9 GPHY 11G & 2x XWAY PEF7071 via RGMII)",
+        "Switch": "Internal configurable (Infineon)",
+        "xDSL": "Lantiq XWAY VRX208: ADSL1/2/2+ (G.992.1/3/5) Annexes A, B, I, J, M, L, VDSL1 (G.993.1, T1.424, TS 101 270), VDSL2 (G.993.2), ITU-T G 998.2 Bonding, EFM (IEEE 802.3ah)",
+        "USB": "2 x USB 2.0",
+        "GPIO Buttons": "WPS button, WiFi toggle switch, Reset button",
+        "GPIO LEDs": "ADSL, Internet, WPS, USB Port 1, USB Port 2",
+        "Power": "External 12V 1.5A",
+        "Serial": "Yes",
+        "JTAG": "Yes"
+      },
+      "Power Consumption @ 12.0V (Lab PSU)": {
+        "Bootup": "0.21 A",
+        "Idle": "0.43 A",
+        "Idle + Wifi": "0.44 A",
+        "100% CPU-load + Wifi": "0.50 A",
+        "Idle + Wifi + DSL": "? A"
+      },
+      "Opening the case": "Remove four screw; carefully unhook the plastic clips that fasten the upper and bottom cover",
+      "Serial": {
+        "Parameter": "115200, 8N1",
+        "Connector": "J7",
+        "Pins (from top to bottom)": "VCC (3.3V), GND, Rx, Tx",
+        "Hint": "If you are soldering headers to the board, the GND point can be quite tricky because it is not drilled all the way through. There is, however, a via marked \"GND3\" closeby you can alternatively use.",
+        "U-Boot": "Press t on the console to interrupt U-Boot autobooting. Login admin/1234"
+      },
+      "UART Boot": "Temporarily connect the left side of R225 to GND, to get into UART mode (ROM VER: 1.1.4, CFG 04); UART-U-Boot von github.com/mkresin/u-boot",
+      "JTAG": "FIXME Insert photo of PCB with markings for JTAG port (JTAG-Pads im Seriell-Foto beschriftet)",
+      "16MB Flash mod": "Tausch gegen Winbond W25Q128FV möglich, braucht modifizierten U-Boot und angepasstes OpenWrt (Kalibrierdaten verschoben)",
+      "Bugs": [
+        "ticket #14413..#14455 (fixed)",
+        "FS#1794 - W8970 - ADSL stops working after some time"
+      ],
+      "Notes": [
+        "OEM source code: http://static.tp-link.com/resources/gpl/GPL_TD-W8970.tar.gz",
+        "https://forum.openwrt.org/viewtopic.php?id=42380",
+        "https://hycrandom.wordpress.com/2018/10/12/flash-openwrt-to-tp-link-td-w8970-using-serial/"
+      ],
+      "Tags": "Lantiq VR9 8Flash 64RAM 4Port GigabitEthernet MIPS MIPS32 34Kc 1NIC 1WNIC xDSL VDSL2 ADSL2+ USB 2USB JTAG Serial 802.11bgn ath9k 3Ant DetachableAntenna"
+    },
+    "openwrt_wiki_foto_seriell": {
+      "Beschriftung": "SERIAL: VCC, GND, RX, TX (4 Durchkontaktierungen, ohne Stiftleiste); JTAG: TRST, TDI, TDO, TMS, TCK, RST (Pads); SPI-Flash U8 daneben; Kühlkörper auf dem SoC"
+    },
+    "openwrt_wiki_foto_typenschild": {
+      "Typenschild": "TP-LINK 300Mbps Wireless N Gigabit ADSL2+ Modem Router; Model No.: TD-W8970; Power: 12V ⎓ 1.5A; Default Settings IP 192.168.1.1 admin/admin; CE 1588; N28505; FCC ID:TE7TDW8970V1; IC:8853A-W8970; MADE IN CHINA",
+      "Aufkleber": "Model:TD-W8970  Ver:1.2, S/N; MAC; PIN (Werte im Foto geschwärzt)"
+    },
+    "openwrt_git_legacy": {
+      "Nachricht": "Images for xrx200 8M flash are either not building due to image size (TD-W8970, TD-W8980) or building such that the available free space in the overlayfs is too little to be useful. To keep images for these devices buildable, move them into a small flash variant of the xrx200 subtarget. As these devices are NOR flash only, remove NAND and UBI references from the kernel config"
+    },
+    "openwrt_dts": {
+      "model": "TP-LINK TD-W8970",
+      "compatible": "tplink,tdw8970, tplink,tdw89x0, lantiq,xway, lantiq,vr9",
+      "bootargs": "console=ttyLTQ0,115200",
+      "memory": "0x4000000 (64 MiB)",
+      "keys": {
+        "reset": "gpio 0 low, KEY_RESTART",
+        "wifi": "gpio 9 high, KEY_RFKILL",
+        "wps": "gpio 39 low, KEY_WPS_BUTTON"
+      },
+      "leds": {
+        "green:dsl": "gpio 4",
+        "green:internet": "gpio 5",
+        "usb0": "gpio 19 usbport",
+        "green:usb2": "gpio 20 usbport",
+        "wps": "gpio 37 (led-boot, led-failsafe; Kommentar: the power led can't be controlled, use the wps led instead)"
+      },
+      "switch_ports": {
+        "port@0": "lan2 rgmii",
+        "port@2": "lan3 internal",
+        "port@4": "lan4 internal",
+        "port@5": "lan1 rgmii"
+      },
+      "gphy": "GPHY_MODE_GE (beide)",
+      "wifi": "ath9k pci168c,0030 (PCIe), Kalibrierung boardconfig 0x21000 Länge 0x440",
+      "flash": "jedec,spi-nor: u-boot 0x0-0x20000, firmware 0x20000 (0x7a0000), config 0x7c0000, boardconfig 0x7d0000 (0x30000); MAC-Basis boardconfig 0xf100",
+      "usb": "usb0 und usb1, VBUS über gpio 33"
+    },
+    "openwrt_image_mk": {
+      "Device": "tplink_tdw8970",
+      "DEVICE_MODEL": "TD-W8970",
+      "DEVICE_VARIANT": "v1",
+      "TPLINK_FLASHLAYOUT": "8Mltq",
+      "TPLINK_HWID": "0x89700001",
+      "TPLINK_HWREV": "1",
+      "IMAGE_SIZE": "7680k",
+      "DEVICE_PACKAGES": "kmod-ath9k wpad-basic-mbedtls kmod-usb-dwc2 kmod-usb-ledtrig-usbport xrx200-rev1.1-phy11g-firmware xrx200-rev1.2-phy11g-firmware",
+      "SUPPORTED_DEVICES": "TDW8970"
+    },
+    "openwrt_board_network": {
+      "tplink,tdw8970": "ucidef_set_interface_lan \"lan1 lan2 lan3 lan4\"; wan_mac = boardconfig 0xf100 + 1"
+    },
+    "gluon_target": {
+      "packages": "entfernt ltq-vdsl-*, kmod-ltq-*-vr9, dsl-vrx200-firmware-xdsl-*, ppp-mod-pppoa, ltq-dsl-base",
+      "CAVEAT": "These devices don't have a dedicated WAN port. All ethernet ports on the device are bridged and used as WAN ports. Clients connected to these ports will be connected to your private network.",
+      "device": "device('tp-link-td-w8970', 'tplink_tdw8970', { factory = false })"
+    },
+    "gluon_pr_1867": {
+      "Checkliste": "flashbar von Vendor-Firmware: webinterface (if old enough), other: webinterface shell injection (if newer stock firmware); sysupgrade ok; wps button must return device into config mode [x]; primary mac should match address on device label [x]; all network ports, correct port assignment [x]; LEDs ok",
+      "Review": "blocktrron 2020-02-03: device (td-w8970) qualifies as non-broken; Kommentar zur LAN-Port-Besonderheit als CAVEAT im Target verlangt"
+    },
+    "deviwiki": {
+      "brand": "TP-LINK",
+      "model": "TD-W8970",
+      "revision": "v1",
+      "upc": "845973060862",
+      "ean": "",
+      "asin": "B00X4FKL0W,B00BFX4QJC",
+      "price": "",
+      "est_release_date": "02/11/2013",
+      "fcc_date": "01/28/2013",
+      "manuf_country": "China",
+      "is_manuf": "No",
+      "manuf": "",
+      "manuf_model": "",
+      "manuf_rev": "",
+      "availability": "",
+      "type": "wireless router,dsl modem",
+      "fcc_id": "TE7TDW8970V1",
+      "ic_id": "8853A-W8970",
+      "us_id": "",
+      "pwr_v": "12",
+      "pwr_amp": "1.5",
+      "pwr_conn": "barrel",
+      "pwr_barrel_inner": "2.1",
+      "pwr_barrel_outer": "5.5",
+      "cpu1_brand": "Lantiq",
+      "cpu1_model": "PSB 80910;XWAY VRX268 (PSB 80910 EL V1.2);",
+      "cpu1_cspeed": "500",
+      "fla1": "8",
+      "fla1_brand": "Eon",
+      "fla1_model": "Q64-104HIP",
+      "ram1": "64",
+      "ram1_brand": "Hynix",
+      "ram1_model": "H5PS5162GFR-Y5C",
+      "expansion_if_types": "USB 2.0",
+      "expansion_usb_num": "2",
+      "jtag": "",
+      "serial": "",
+      "wi1_chip1_brand": "Atheros",
+      "wi1_chip1_model": "AR9381",
+      "wi1_802dot11_protocols": "bgn",
+      "wi1_ant_conn": "RP-SMA",
+      "wi1_txchains": "3",
+      "wi1_rxchains": "3",
+      "wi1_sstreams": "3",
+      "eth_none": "",
+      "eth_cpu": "true",
+      "eth_chip2_brand": "Lantiq",
+      "eth_chip2_model": "PEF7071V",
+      "eth_chip3_brand": "Lantiq",
+      "eth_chip3_model": "PEF7071V",
+      "sw_cpu": "true",
+      "sw_brand": "",
+      "sw_model": "",
+      "lan_speed": "1G",
+      "lan_ports": "4",
+      "wan_ports": "1",
+      "addl_chips": "DSL (ADSL2+) AFE and LD;Lantiq;PSB 80190;;1;",
+      "flags": "ADSL2+",
+      "stock_os": "",
+      "tp_firmware": "",
+      "802dot11_protocols": "bgn",
+      "default_ssid": "",
+      "default_ssid_regex": "",
+      "default_ip": "192.168.1.1",
+      "default_user": "admin",
+      "default_pass": "admin",
+      "oui": "A0:F3:C1",
+      "oui_eth": "A0:F3:C1",
+      "TagLine": "300Mbps Wireless N Gigabit ADSL2+ Modem Router",
+      "Text": "The TP-LINK logo and \"2011500134 Rev:1.0\" appears to be silkscreened on the board in the FCC photos. Internal photos: Lantiq PSB 80190 V, V1.1 - VRX208 (AFE-LD); 2x Lantiq PEF7071V, V1.4 - GbE PHYs. Bootlog OFW: U-Boot 2010.06-LANTIQ-v-2.0.40-svn4806 (Jun 12 2014), CLOCK CPU 500M RAM 250M, DRAM 64 MiB, 8192 KiB W25Q64, Linux 2.6.32.32, CPU MIPS 34Kc"
+    },
+    "wikidevi": {
+      "brand": "TP-LINK",
+      "model": "TD-W8970",
+      "revision": "v1",
+      "upc": "845973060862",
+      "asin": "B00BFX4QJC",
+      "manuf_country": "China",
+      "is_manuf": "Yes",
+      "availability": "now",
+      "type": "wireless router,dsl modem",
+      "est_release_date": "02/11/2013",
+      "fcc_date": "01/28/2013",
+      "fcc_id": "TE7TDW8970V1",
+      "ic_id": "8853A-W8970",
+      "pcb_id": "2011500134",
+      "pwr_v": "12",
+      "pwr_amp": "1.5",
+      "pwr_conn": "barrel",
+      "pwr_barrel_inner": "2.1",
+      "pwr_barrel_outer": "5.5",
+      "cpu1_brand": "Lantiq",
+      "cpu1_model": "PSB 80910;XWAY VRX268, (PSB 80910 EL V1.2);",
+      "cpu1_cspeed": "500",
+      "fla1": "8",
+      "fla1_brand": "Eon",
+      "fla1_model": "Q64-104HIP",
+      "ram1": "64",
+      "ram1_brand": "Hynix",
+      "ram1_model": "H5PS5162GFR-Y5C",
+      "expansion_if_types": "USB 2.0",
+      "expansion_usb_num": "2",
+      "jtag": "yes,, 6-pad header,,",
+      "serial": "yes,, 4-pin header,, J7,,",
+      "wi1_chip1_brand": "Atheros",
+      "wi1_chip1_model": "AR9381",
+      "wi1_802dot11_protocols": "bgn",
+      "wi1_ant_conn": "RP-SMA",
+      "wi1_txchains": "3",
+      "wi1_rxchains": "3",
+      "wi1_sstreams": "3",
+      "eth_none": "",
+      "eth_cpu": "true",
+      "eth_chip2_brand": "Lantiq",
+      "eth_chip2_model": "PEF7071V",
+      "eth_chip3_brand": "Lantiq",
+      "eth_chip3_model": "PEF7071V",
+      "sw_cpu": "true",
+      "sw_brand": "",
+      "sw_model": "",
+      "lan_speed": "1GbE",
+      "lan_ports": "3",
+      "wan_speed": "1GbE",
+      "wan_ports": "1",
+      "addl_chips": "DSL (ADSL2+) AFE/LD;Lantiq;PSB 80190;;1;",
+      "flags": "ADSL2+",
+      "stock_boot": "U-Boot",
+      "stock_os": "Linux;2.6.32;",
+      "tp_firmware": "",
+      "802dot11_protocols": "bgn",
+      "default_ssid": "",
+      "default_ssid_regex": "",
+      "default_ip": "192.168.1.1",
+      "default_user": "admin",
+      "default_pass": "admin",
+      "oui": "A0:F3:C1",
+      "oui_eth": "A0:F3:C1"
+    },
+    "fcc": {
+      "Grantee": "TP-Link Technologies Co., Ltd.",
+      "Product Code": "TDW8970V1",
+      "Equipment Class": "DTS - Digital Transmission System",
+      "Device Description": "300Mbps Wireless N Gigabit ADSL2+Modem Router",
+      "Frequency Range": "2412-2462 MHz",
+      "Output Watts": "0.2904 (conducted)",
+      "Rule Parts": "68 MO, 15C",
+      "Test Firm": "Audix Technology (Shenzhen) Co., Ltd.",
+      "Date of Grant": "2013-01-28",
+      "Grant Comments": "Device is an 802.11n device in a 3x3 Spatial Multiplexing MIMO configuration. This device has a 20 MHz and 40 MHz bandwidth mode.",
+      "Exhibits": [
+        "User Guide 1886457 (4.2 MB)",
+        "Internal Photos 1886450",
+        "External Photos 1886449",
+        "Label & Location 1886451",
+        "Test Setup Photos 1886456",
+        "Test Report Part1 1886455 (2.1 MB)",
+        "Test Report Part2 1886458 (5 MB)",
+        "MPE Report 1886453",
+        "Letters 1886446/1886447/1886448"
+      ]
+    },
+    "fcc_handbuch": {
+      "Package Contents": "TD-W8970, Power Adapter, Quick Installation Guide, One RJ45 cable, Two RJ11 cables, One ADSL splitter, Resource CD",
+      "Main Features": "Maximum wireless speed up to 300Mbps at 2.4GHz; Four 10/100/1000Mbps Auto-Negotiation RJ45 LAN ports (Auto MDI/MDIX), one RJ11 port; Powered by 3X3 MIMO technology; Supports Ethernet WAN (EWAN); 3G/3.75G USB Modem Sharing, USB Storage Sharing, Print Server, FTP Server",
+      "LEDs (Front, links nach rechts)": "Power, ADSL, Internet, WLAN, WPS, LAN1-4; USB-LED auf der Rückseite",
+      "Back Panel": "ADSL (RJ11), USB1, USB2, WPS, WiFi (Schiebeschalter), RESET (mit Stift, mind. 5 s), LAN4/WAN, LAN3, LAN2, LAN1, ON/OFF, POWER, Antennas (3)",
+      "Installation Environment": "not exposed to moisture or excessive heat; can be placed on a shelf or desktop",
+      "Wandmontage": "Abb. 2-1: zwei Schlüssellöcher auf der Unterseite; The diameter of the screw, 3.5mm<D<8mm, and the distance of two screws is 122mm. The screw that project from the wall need around 4mm based, length at least 20mm",
+      "Antenne (FCC-Hinweis)": "designed to operate with the antennas listed below, and having a maximum gain of 5 dBi; impedance 50 ohms",
+      "Specifications": {
+        "Standards": "ANSI T1.413, ITU G.992.1/2/3/5, IEEE 802.11b/g/n, IEEE 802.3, 802.3u",
+        "Ports": "Four 10/100/1000M Auto-Negotiation RJ45 ports (Auto MDI/MDIX), One RJ11 port, Two USB 2.0 ports",
+        "LEDs": "Power, ADSL, Internet, WLAN, WPS, USB, 1,2,3,4(LAN)",
+        "Working Temperature": "0℃ ~ 40℃",
+        "Working Humidity": "10% ~ 90% RH (non-condensing)",
+        "Storage Temperature": "-40℃ ~ 70℃",
+        "Storage Humidity": "5% ~ 90% RH (non-condensing)"
+      },
+      "Troubleshooting T1": "press and hold the RESET button on the rear panel for 8 to 10 seconds"
+    },
+    "fcc_label": {
+      "Model No.": "TD-W8970",
+      "Power": "12V ⎓ 1.5A",
+      "FCC ID": "TE7TDW8970V1",
+      "IC": "8853A-W8970",
+      "Default Settings": "IP 192.168.1.1, admin/admin",
+      "Labelmaß": "79.5*39.5 mm, 1.5R",
+      "Zeichnungskopf": "TD-W8970(UN)_产品规格标贴, Version A2, 机型版本号 TD-W8970(UN)_1.0.0, 2012-7-9",
+      "Lage": "Foto: Typenschild auf der Gehäuseunterseite zwischen den Lüftungsschlitzen; drei weiße Felder (im Muster leer)"
+    },
+    "fcc_innenfotos": {
+      "Beobachtung": "Gehäuse aus Ober- und Unterschale; Platine mit Kühlkörper auf dem SoC, kein Lüfter sichtbar; drei Antennenbuchsen (Gewinde) an der Rückseite, per Koaxkabel zur Platine; Atheros-WLAN-Chip mit SPI-Flash daneben; zwei GROUP-TEK-Übertrager; Ein/Aus-Schalter und DC-Buchse hinten rechts",
+      "Netzteil": "Huntkey Switching Adapter, MODEL HKA01812015-2K, INPUT 100-240V~50/60Hz 0.5A, OUTPUT 12.0V ⎓ 1.5A, Steckernetzteil mit US-Stecker, UL listed E181356"
+    },
+    "tplink_produktseite": {
+      "Interface": "4 10/100/1000Mbps RJ45 Ports, 1 RJ11 Port, 1 USB 2.0 Port",
+      "Button": "1 Power On/Off Button, 1 WPS Button, 1 Wi-Fi On/Off Switch, 1 RESET Button",
+      "External Power Supply": "12VDC/1.5A",
+      "IEEE Standards": "IEEE 802.3, 802.3u, 802.3ab",
+      "ADSL Standards": "Full-rate ANSI T1.413 Issue 2, ITU-T G.992.1(G.DMT), ITU-T G.992.2(G.Lite), ITU-T G.994.1 (G.hs), ITU-T G.995.1",
+      "ADSL2 Standards": "ITU-T G.992.3 (G.dmt.bis), ITU-T G.992.4(G.lite.bis)",
+      "ADSL2+ Standards": "ITU-T G.992.5",
+      "Dimensions ( W x D x H )": "8.9x5.5x1.3 in.(225x140x32.5mm)",
+      "Antenna": "Omni directional, Detachable, Reverse SMA",
+      "Antenna Gain": "2 x 5dBi",
+      "Wireless Standards": "IEEE 802.11b, 802.11g, 802.11n",
+      "Frequency": "2.400-2.4835GHz",
+      "Certification": "CE, FCC, RoHS",
+      "Environment": "Operating Temperature: 0°C~40°C; Storage Temperature: -40°C~70°C; Operating Humidity: 10%~90% non-condensing; Storage Humidity: 5%~90% non-condensing",
+      "Marketing": "One USB Sharing Port; Interchangeable LAN/WAN Port (EWAN to LAN throughput up to 900Mbps+)"
+    },
+    "tplink_download_v1": {
+      "Hardware-Versionen": "V1, V3",
+      "Hinweis": "Vx.0 = Vx.6/Vx.8/Vx.9 (eg: V1.0=V1.6/V1.8/V1.9); Vx.x0 = Vx.x6/Vx.x8/Vx.x9",
+      "Dokumente": "TD-W8970_V1.0_Datasheet, TD-W8970_V1_User Guide, TD-W8970_V1_QIG, Application Guides",
+      "Firmware": [
+        "TD-W8970_V1_140613 (2014-06-13)",
+        "TD-W8970_V1_130828 (2013-08-28: updated security mechanism, no downgrade)",
+        "TD-W8970_V1_130415 (2013-04-15)",
+        "TD-W8970_V1_130201 (2013-02-01)"
+      ]
+    },
+    "tplink_datenblatt": {
+      "Interface": "4 10/100/1000Mbps RJ45 Ports, 1 RJ11 Port, 2 USB 2.0 Ports",
+      "Button": "1 Power On/Off Button, 1 WPS Button, 1 Wi-Fi On/Off Switch, 1 RESET Button",
+      "External Power Supply": "12VDC/1.5A(G.hs)",
+      "IEEE Standards": "IEEE 802.3, 802.3u",
+      "Antenna Type": "Omni directional, Detachable, Reverse SMA",
+      "Antenna Gain": "3 x 5dBi",
+      "Wireless Standards": "IEEE 802.11b, 802.11g, 802.11n",
+      "Frequency": "2.400-2.4835GHz",
+      "EIRP": "<20dBm(EIRP)",
+      "Operating Temperature": "0°C~40°C (32°F~104°F)",
+      "Storage Temperature": "-40°C~70°C",
+      "Operating Humidity": "10%~90% non-condensing",
+      "Storage Humidity": "5%~90% non-condensing",
+      "Features": "All-in-One Device: ADSL2+ Modem, NAT Router, 4-Port Switch and Wireless N Access Point; All Gigabit ports; Wireless N speed up to 300Mbps; 2 USB 2.0 ports; IPv6; Ethernet WAN (EWAN); Wi-Fi On/Off Button; WPS button",
+      "Package": "TD-W8970, One Power Adapter, One External splitter (Optional), Two RJ-11 Telephone Lines, One RJ-45 Ethernet Cable, Resource CD, Quick Installation Guide"
+    },
+    "geizhals_cdx": {
+      "Treffer": [
+        "http://geizhals.de/tp-link-td-w8970-a863930.html (2014-02-07)",
+        "http://geizhals.de/tp-link-td-w8970-a863930.html?hloc=at&hloc=de (2015-05-06)",
+        "http://geizhals.de/tp-link-td-w8970-mimo-a863930.html (2026-03-03)",
+        "http://geizhals.de/tp-link-td-w8970b-a924389.html (2026-03-11)",
+        "http://geizhals.de/tp-link-td-w8970b-mimo-a924389.html (2013-10-27)"
+      ]
+    },
+    "geizhals_archiv": {
+      "Titel": "TP-Link TD-W8970",
+      "Datenblatt": "Modem: 1x RJ-11, ADSL2+, POTS, Annex A/L/M • WAN: 1x 1000Base-T (shared mit LAN) • LAN: 4x 1000Base-T • Telefon: N/A • Wireless: WLAN 802.11b/g/n • Übertragungsrate: 300Mbps (2.4GHz) • Sicherheit: 64/128bit WEP, WPA, WPA2, WPS • Antennen: extern (abnehmbar) • Anschlüsse: 2x USB 2.0 • Leistungsaufnahme: keine Angabe (Betrieb) • Abmessungen: 243x160.6x32.5mm • Besonderheiten: IPv6, VPN passthrough (IPSec, PPTP), VPN (10 IPSec-Tunnel), OpenWrt • Herstellergarantie: drei Jahre",
+      "EAN-Codes": "0231503165761, 0845973060862, 5052916666783, 6935364061296, 6935364060879, ...",
+      "Gelistet seit": "12.11.2012, 10:09"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "TP-Link",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TP-Link Technologies Co., Ltd.",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7TDW8970V1",
+        "stand": "Grant 2013-01-28 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "TD-W8970",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TD-W8970",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7TDW8970V1/Label/TD-W8970-Label-Lable-Location-1886451",
+        "stand": "Exhibit 2013-01-28 (Zeichnung TD-W8970(UN)_1.0.0, Version A2, 2012-07-09)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild \"Model No.: TD-W8970\""
+      },
+      {
+        "wert": "TD-W8970",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/image/tp-link_legacy.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "DEVICE_MODEL TD-W8970, DEVICE_VARIANT v1"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": "300Mbps Wireless N Gigabit ADSL2+ Modem Router",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": "Produktbezeichnung"
+      },
+      {
+        "wert": "TDW8970",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/image/tp-link_legacy.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "SUPPORTED_DEVICES += TDW8970 (alter Boardname)"
+      },
+      {
+        "wert": "TD-W8970 (MIMO)",
+        "quelle": "geizhals_cdx",
+        "beleg": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/tp-link-td-w8970*&output=json&fl=original,timestamp&collapse=urlkey",
+        "stand": "Abfrage 2026-10-20",
+        "sicherheit": "niedrig",
+        "bemerkung": "Geizhals-URL-Variante tp-link-td-w8970-mimo-a863930"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": [
+          "v1",
+          "v1.2"
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Spalte version \"v1,v1.2\""
+      },
+      {
+        "wert": [
+          "v1",
+          "v1.2"
+        ],
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Seitenrevision 2026-05-01 16:51",
+        "sicherheit": "mittel",
+        "bemerkung": "Versions: v1, v1.2"
+      },
+      {
+        "wert": "1.2",
+        "quelle": "openwrt_wiki_foto_typenschild",
+        "beleg": "https://openwrt.org/_media/media/tplink/td-w8970/td-w8970-backside-label.png",
+        "stand": "Bild eingefügt Seitenrevision 2024-01-19 17:51 (\"Added photo of backside label\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufkleber \"Model:TD-W8970 Ver:1.2\""
+      },
+      {
+        "wert": "v1",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/image/tp-link_legacy.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "DEVICE_VARIANT v1, TPLINK_HWID 0x89700001, TPLINK_HWREV 1"
+      },
+      {
+        "wert": [
+          "V1",
+          "V3"
+        ],
+        "quelle": "tplink_download_v1",
+        "beleg": "https://www.tp-link.com/en/support/download/td-w8970/v1/",
+        "stand": "Live-Seite 2026-10-20, neueste Firmware TD-W8970_V1_140613 (2014-06-13)",
+        "sicherheit": "hoch",
+        "bemerkung": "TP-Link führt V1 und V3; V3 laut ToH Broadcom BCM6362, nicht von OpenWrt/Gluon unterstützt"
+      },
+      {
+        "wert": "TD-W8970(UN)_1.0.0",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7TDW8970V1/Label/TD-W8970-Label-Lable-Location-1886451",
+        "stand": "Exhibit 2013-01-28 (Zeichnung TD-W8970(UN)_1.0.0, Version A2, 2012-07-09)",
+        "sicherheit": "hoch",
+        "bemerkung": "Zeichnungskopf \"机型版本号 TD-W8970(UN)_1.0.0\""
+      },
+      {
+        "wert": "v1",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": "revision=v1"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild auf der Unterseite; weißes Feld \"Model:TD-W8970 Ver:1.2\" mit S/N, darunter Felder für MAC und PIN; FCC ID TE7TDW8970V1, IC 8853A-W8970, \"Power: 12V ⎓ 1.5A\"",
+        "quelle": "openwrt_wiki_foto_typenschild",
+        "beleg": "https://openwrt.org/_media/media/tplink/td-w8970/td-w8970-backside-label.png",
+        "stand": "Bild eingefügt Seitenrevision 2024-01-19 17:51 (\"Added photo of backside label\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Typenschild auf der Gehäuseunterseite zwischen den Lüftungsschlitzen: \"Model No.: TD-W8970\", \"Power: 12V ⎓ 1.5A\", FCC ID:TE7TDW8970V1, IC:8853A-W8970; Versionsfelder im Muster leer",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7TDW8970V1/Label/TD-W8970-Label-Lable-Location-1886451",
+        "stand": "Exhibit 2013-01-28 (Zeichnung TD-W8970(UN)_1.0.0, Version A2, 2012-07-09)",
+        "sicherheit": "hoch",
+        "bemerkung": "Muster vor Serienstart (Zeichnung 2012-07-09)"
+      },
+      {
+        "wert": "v1 = Lantiq (unterstützt); v3 = Broadcom BCM6362, FCC-ID TE7TDW8970V3, wird nicht unterstützt",
+        "quelle": "toh_v3",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v3.0",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Abgrenzung über die Versionsangabe auf dem Aufkleber bzw. die FCC-ID-Endung (V1/V3)"
+      },
+      {
+        "wert": "Wiki-Hinweis: TD-W8970 v3 ist ein Broadcom-Router, nicht unterstützt",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "TE7TDW8970V1",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7TDW8970V1",
+        "stand": "Grant 2013-01-28 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TE7TDW8970V1",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7TDW8970V1/Label/TD-W8970-Label-Lable-Location-1886451",
+        "stand": "Exhibit 2013-01-28 (Zeichnung TD-W8970(UN)_1.0.0, Version A2, 2012-07-09)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TE7TDW8970V1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Link https://fcc.io/TE7/TDW8970V1"
+      },
+      {
+        "wert": "TE7TDW8970V1",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "8853A-W8970",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7TDW8970V1/Label/TD-W8970-Label-Lable-Location-1886451",
+        "stand": "Exhibit 2013-01-28 (Zeichnung TD-W8970(UN)_1.0.0, Version A2, 2012-07-09)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "8853A-W8970",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "eingestellt",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Seitenrevision 2026-05-01 16:51",
+        "sicherheit": "mittel",
+        "bemerkung": "Availability: Discontinued"
+      },
+      {
+        "wert": "Markteinführung ca. 2013 (geschätztes Release 2013-02-11, FCC 2013-01-28)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": "est_release_date 02/11/2013"
+      },
+      {
+        "wert": "bei Geizhals gelistet seit 2012-11-12",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150506180941/http://geizhals.de/tp-link-td-w8970-a863930.html?hloc=at&hloc=de",
+        "stand": "Archivkopie 2015-05-06 (Gelistet seit 2012-11-12)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "platinen_kennung": [
+      {
+        "wert": "2011500134 Rev:1.0",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": "laut DeviWiki auf der Platine in den FCC-Fotos aufgedruckt"
+      },
+      {
+        "wert": "2011500134 Rev:1.0",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2020-02-03T19:14:37Z",
+        "sicherheit": "mittel",
+        "bemerkung": "pcb_id=2011500134"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Lantiq XWAY VRX268",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Lantiq XWAY VRX268 (PSB 80910 EL)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Seitenrevision 2026-05-01 16:51",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Lantiq XWAY VRX268 (VR9-Familie)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Lantiq PSB 80910 / XWAY VRX268 (PSB 80910 EL V1.2)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "lantiq,vr9",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_tplink_tdw8970.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "compatible"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Seitenrevision 2026-05-01 16:51",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 500,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 500,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": "MIPS34Kc @ 500 MHz"
+      },
+      {
+        "wert": 500,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": "cpu1_cspeed=500; Bootlog \"CLOCK CPU 500M RAM 250M\""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "MIPS 34Kc (Paketarchitektur mips_24kc)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Seitenrevision 2026-05-01 16:51",
+        "sicherheit": "mittel",
+        "bemerkung": "Package architecture mips_24kc"
+      },
+      {
+        "wert": "MIPS34Kc",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 64,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": "64 MiB DDR2 @ 250 MHz"
+      },
+      {
+        "wert": 64,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_tplink_tdw8970.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "memory reg 0x4000000"
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR2, 250 MHz (3-5-5-5)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": [
+          "Hynix H5PS5162GFR-Y5C",
+          "Winbond W9751G6KB",
+          "Zentel A3R12E40CBF"
+        ],
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": "je nach Serie"
+      },
+      {
+        "wert": "Hynix H5PS5162GFR-Y5C",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 8,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 8,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": "8 MiB SPI"
+      },
+      {
+        "wert": 8,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 8,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_tplink_tdw8970.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Partitionen bis 0x800000"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": "8 MiB SPI"
+      },
+      {
+        "wert": "NOR",
+        "quelle": "openwrt_git_legacy",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e63326e26a82cb083eec602b3a2f71d4cd8e2ea4",
+        "stand": "Commit 2024-11-29 (Autor), gemergt 2024-12-15",
+        "sicherheit": "mittel",
+        "bemerkung": "\"these devices are NOR flash only\""
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": [
+          "cFeon Q64-104HIP",
+          "Winbond W25Q64FV"
+        ],
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Eon Q64-104HIP",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog OFW 2014 meldet W25Q64"
+      }
+    ],
+    "switch": [
+      {
+        "wert": "Lantiq GSWIP (im SoC)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "intern, konfigurierbar (Infineon); 2x XWAY VR9 GPHY 11G im SoC + 2x Lantiq PEF7071 über RGMII",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "im SoC; zusätzliche PHYs 2x Lantiq PEF7071V",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": true,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "VDSL2",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Lantiq XWAY VRX208: ADSL1/2/2+ Annex A, B, I, J, M, L, VDSL1, VDSL2 (G.993.2)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": "\"marketed as ... only ADSL2+ capable\""
+      },
+      {
+        "wert": "ADSL2+ (ANSI T1.413, G.992.1/2/3/5)",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ADSL2+, Annex A/L/M, 1x RJ-11",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150506180941/http://geizhals.de/tp-link-td-w8970-a863930.html?hloc=at&hloc=de",
+        "stand": "Archivkopie 2015-05-06 (Gelistet seit 2012-11-12)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "in Gluon entfernt",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/lantiq-xrx200_legacy",
+        "stand": "Branch main am 2026-10-20 (Datei seit Commit b5ba291b54, 2024-12-26)",
+        "sicherheit": "mittel",
+        "bemerkung": "targets/lantiq-xrx200_legacy entfernt alle DSL-Pakete"
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "Atheros AR9381",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Atheros AR9381 (PCIe, ath9k)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_tplink_tdw8970.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "pci168c,0030"
+      },
+      {
+        "wert": "Atheros AR9381",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath9k",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "IEEE 802.11b, 802.11g, 802.11n",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 3,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": "AR9381 2.4 GHz (3x3)"
+      },
+      {
+        "wert": 3,
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7TDW8970V1",
+        "stand": "Grant 2013-01-28 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant: \"802.11n device in a 3x3 Spatial Multiplexing MIMO configuration\""
+      },
+      {
+        "wert": 3,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": "wi1_txchains=3, rxchains=3, sstreams=3"
+      },
+      {
+        "wert": 3,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7TDW8970V1/User-Manual/TD-W8970-User-Guide-1886457",
+        "stand": "Exhibit 2013-01-28 (PDF erstellt 2012-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Powered by 3X3 MIMO technology\"; vermarktet als 300 Mbps"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "kein 5 GHz",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "wlan50ghz \"-\""
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "N300",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Wireless N speed up to 300Mbps\""
+      },
+      {
+        "wert": "N450 (technisch), vermarktet als N300",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": "\"450Mbps Wireless N ... but is marketed as a 300Mbps\""
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "20/40 MHz",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7TDW8970V1",
+        "stand": "Grant 2013-01-28 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"This device has a 20 MHz and 40 MHz bandwidth mode\""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": 24.6,
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7TDW8970V1",
+        "stand": "Grant 2013-01-28 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "FCC: 0.2904 W leitungsgebunden (umgerechnet), 2412-2462 MHz"
+      },
+      {
+        "wert": 20,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": "EIRP <20 dBm (EU-Grenze)"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "extern abnehmbar",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas 3"
+      },
+      {
+        "wert": "extern abnehmbar, rundstrahlend",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": "Omni directional, Detachable, Reverse SMA"
+      },
+      {
+        "wert": "extern abnehmbar",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150506180941/http://geizhals.de/tp-link-td-w8970-a863930.html?hloc=at&hloc=de",
+        "stand": "Archivkopie 2015-05-06 (Gelistet seit 2012-11-12)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "RP-SMA",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": "Reverse SMA"
+      },
+      {
+        "wert": "RP-SMA",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "RP-SMA",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/dsl-modem-router/td-w8970/v1/",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 3,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": "3 x 5dBi"
+      },
+      {
+        "wert": 3,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7TDW8970V1/User-Manual/TD-W8970-User-Guide-1886457",
+        "stand": "Exhibit 2013-01-28 (PDF erstellt 2012-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "Rückseitenfoto Abb. 1-2"
+      },
+      {
+        "wert": 3,
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TE7TDW8970V1/Internal-Photos/TD-W8970-F-CC-ID-Int-Photo-1886450",
+        "stand": "Exhibit 2013-01-28 (PDF 2013-01-21)",
+        "sicherheit": "hoch",
+        "bemerkung": "drei Antennenbuchsen mit Koaxkabeln"
+      },
+      {
+        "wert": 2,
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/dsl-modem-router/td-w8970/v1/",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"2 x 5dBi\"; widerspricht Datenblatt V1.0 und FCC; ToH nennt 2 Antennen für v3"
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "nur 2.4 GHz",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": 5,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": "3 x 5dBi"
+      },
+      {
+        "wert": 5,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7TDW8970V1/User-Manual/TD-W8970-User-Guide-1886457",
+        "stand": "Exhibit 2013-01-28 (PDF erstellt 2012-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "maximaler zulässiger Gewinn 5 dBi, 50 Ohm"
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "rund (omnidirektional)",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "LAN1-LAN3",
+            "anzahl": 3,
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN"
+          },
+          {
+            "name": "LAN4/WAN",
+            "anzahl": 1,
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "LAN oder WAN (EWAN)"
+          },
+          {
+            "name": "ADSL",
+            "anzahl": 1,
+            "typ": "RJ11",
+            "rolle": "DSL"
+          }
+        ],
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7TDW8970V1/User-Manual/TD-W8970-User-Guide-1886457",
+        "stand": "Exhibit 2013-01-28 (PDF erstellt 2012-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "Rückseite: ADSL, USB1, USB2, WPS, WiFi, RESET, LAN4/WAN, LAN3, LAN2, LAN1, ON/OFF, POWER"
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "anzahl": 4,
+            "geschwindigkeit": "1000"
+          }
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "ethernet1gports 4, Modem VDSL2"
+      },
+      {
+        "wert": [
+          {
+            "name": "lan1",
+            "phy": "PEF7071 (rgmii, Switchport 5)"
+          },
+          {
+            "name": "lan2",
+            "phy": "PEF7071 (rgmii, Switchport 0)"
+          },
+          {
+            "name": "lan3",
+            "phy": "interne GPHY (Switchport 2)"
+          },
+          {
+            "name": "lan4",
+            "phy": "interne GPHY (Switchport 4)"
+          }
+        ],
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_tplink_tdw8970.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "DSA-Ports, kein eigener WAN-Port"
+      },
+      {
+        "wert": [
+          {
+            "name": "lan1 lan2 lan3 lan4",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "openwrt_board_network",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/xrx200_legacy/base-files/etc/board.d/02_network",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt-Vorgabe: alle vier Ports LAN, kein WAN"
+      },
+      {
+        "wert": "kein eigener WAN-Port: alle Ethernet-Ports gebrückt und als WAN genutzt; dort angeschlossene Clients landen im privaten Netz",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/lantiq-xrx200_legacy",
+        "stand": "Branch main am 2026-10-20 (Datei seit Commit b5ba291b54, 2024-12-26)",
+        "sicherheit": "mittel",
+        "bemerkung": "CAVEAT im Gluon-Target"
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "anzahl": 3,
+            "geschwindigkeit": "1000"
+          },
+          {
+            "name": "WAN",
+            "anzahl": 1,
+            "geschwindigkeit": "1000"
+          }
+        ],
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2020-02-03T19:14:37Z",
+        "sicherheit": "mittel",
+        "bemerkung": "lan_ports=3, wan_ports=1 (DeviWiki: lan_ports=4, wan_ports=1)"
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "anzahl": 4,
+            "geschwindigkeit": "1000"
+          },
+          {
+            "name": "WAN",
+            "anzahl": 1,
+            "geschwindigkeit": "1000",
+            "bemerkung": "shared mit LAN"
+          }
+        ],
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150506180941/http://geizhals.de/tp-link-td-w8970-a863930.html?hloc=at&hloc=de",
+        "stand": "Archivkopie 2015-05-06 (Gelistet seit 2012-11-12)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 4,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": "4 RJ45 Gigabit, zusätzlich 1 RJ11"
+      },
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": "4 RJ45-Buchsen"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": false,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "sfp_ports \"¿\" im Dump, Live-Seite \"-\""
+      }
+    ],
+    "usb": [
+      {
+        "wert": {
+          "anzahl": 2,
+          "version": "2.0"
+        },
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "anzahl": 2,
+          "version": "2.0"
+        },
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "anzahl": 2,
+          "version": "2.0"
+        },
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7TDW8970V1/User-Manual/TD-W8970-User-Guide-1886457",
+        "stand": "Exhibit 2013-01-28 (PDF erstellt 2012-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "USB1, USB2 auf der Rückseite"
+      },
+      {
+        "wert": {
+          "anzahl": 2,
+          "version": "2.0"
+        },
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150506180941/http://geizhals.de/tp-link-td-w8970-a863930.html?hloc=at&hloc=de",
+        "stand": "Archivkopie 2015-05-06 (Gelistet seit 2012-11-12)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "anzahl": 1,
+          "version": "2.0"
+        },
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/dsl-modem-router/td-w8970/v1/",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"1 USB 2.0 Port\"; widerspricht Datenblatt V1.0; ToH nennt 1x USB für v3"
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": false,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "telefon_ports": [
+      {
+        "wert": 0,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "phoneports \"-\""
+      }
+    ],
+    "jtag": [
+      {
+        "wert": true,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "6 Pads TRST, TDI, TDO, TMS, TCK, RST",
+        "quelle": "openwrt_wiki_foto_seriell",
+        "beleg": "https://openwrt.org/_media/media/tplink/td-w8970/td-w8970_serial-jtag.jpg",
+        "stand": "Bild eingebunden in Seitenrevision 2026-07-08 18:53 (Bilddatum unbekannt)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, 6-pad header",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2020-02-03T19:14:37Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: Datenblatt nennt nur \"External Power Supply 12VDC/1.5A\", kein PoE"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "Hohlstecker",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": "pwr_conn=barrel"
+      },
+      {
+        "wert": "Hohlstecker",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Seitenrevision 2026-05-01 16:51",
+        "sicherheit": "mittel",
+        "bemerkung": "\"12 VDC, 1.5A via barrel\""
+      },
+      {
+        "wert": "DC-Buchse POWER hinten rechts neben dem Ein/Aus-Schalter",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7TDW8970V1/User-Manual/TD-W8970-User-Guide-1886457",
+        "stand": "Exhibit 2013-01-28 (PDF erstellt 2012-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "dc_buchse_mass": [
+      {
+        "wert": "5.5x2.1",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": "pwr_barrel_outer=5.5, inner=2.1"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 12,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7TDW8970V1/Label/TD-W8970-Label-Lable-Location-1886451",
+        "stand": "Exhibit 2013-01-28 (Zeichnung TD-W8970(UN)_1.0.0, Version A2, 2012-07-09)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 1.5,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7TDW8970V1/Label/TD-W8970-Label-Lable-Location-1886451",
+        "stand": "Exhibit 2013-01-28 (Zeichnung TD-W8970(UN)_1.0.0, Version A2, 2012-07-09)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.5,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.5,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7TDW8970V1/User-Manual/TD-W8970-User-Guide-1886457",
+        "stand": "Exhibit 2013-01-28 (PDF erstellt 2012-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "Package Contents: One Power Adapter"
+      },
+      {
+        "wert": true,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": "Package: One Power Adapter"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "Huntkey HKA01812015-2K, Eingang 100-240 V~ 50/60 Hz 0.5 A, Ausgang 12.0 V ⎓ 1.5 A, Steckernetzteil",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TE7TDW8970V1/Internal-Photos/TD-W8970-F-CC-ID-Int-Photo-1886450",
+        "stand": "Exhibit 2013-01-28 (PDF 2013-01-21)",
+        "sicherheit": "hoch",
+        "bemerkung": "FCC-Muster mit US-Stecker; Netzteile anderer Regionen nicht belegt"
+      }
+    ],
+    "leistung_w_typ": [
+      {
+        "wert": 5.2,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": "gemessen am Labornetzteil 12.0 V: Idle 0.43 A, Idle + WLAN 0.44 A (umgerechnet); ohne DSL"
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 6.0,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": "gemessen 12.0 V × 0.50 A bei 100 % CPU-Last + WLAN (umgerechnet); ohne DSL und USB-Last"
+      },
+      {
+        "wert": 18,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7TDW8970V1/Label/TD-W8970-Label-Lable-Location-1886451",
+        "stand": "Exhibit 2013-01-28 (Zeichnung TD-W8970(UN)_1.0.0, Version A2, 2012-07-09)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus Typenschild 12 V × 1.5 A (Nennwert Netzteil)"
+      }
+    ],
+    "ein_ausschalter": [
+      {
+        "wert": true,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7TDW8970V1/User-Manual/TD-W8970-User-Guide-1886457",
+        "stand": "Exhibit 2013-01-28 (PDF erstellt 2012-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "ON/OFF: The switch for the power"
+      },
+      {
+        "wert": true,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": "1 Power On/Off Button"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Seitenrevision 2026-05-01 16:51",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7TDW8970V1/User-Manual/TD-W8970-User-Guide-1886457",
+        "stand": "Exhibit 2013-01-28 (PDF erstellt 2012-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"can be placed on a shelf or desktop\", nicht Feuchtigkeit oder Hitze aussetzen"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7TDW8970V1/User-Manual/TD-W8970-User-Guide-1886457",
+        "stand": "Exhibit 2013-01-28 (PDF erstellt 2012-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": [
+          "Tisch",
+          "Regal",
+          "Wand"
+        ],
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7TDW8970V1/User-Manual/TD-W8970-User-Guide-1886457",
+        "stand": "Exhibit 2013-01-28 (PDF erstellt 2012-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "Kap. 2.2 und Abb. 2-1 (Wandmontage über zwei Schlüssellöcher auf der Unterseite)"
+      }
+    ],
+    "montageloecher": [
+      {
+        "wert": "2 Schlüssellöcher auf der Unterseite, Abstand 122 mm; Schraubendurchmesser 3.5-8 mm, Kopf ca. 4 mm von der Wand, Schraubenlänge mindestens 20 mm",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7TDW8970V1/User-Manual/TD-W8970-User-Guide-1886457",
+        "stand": "Exhibit 2013-01-28 (PDF erstellt 2012-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "225 x 140 x 32.5",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/dsl-modem-router/td-w8970/v1/",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Breite x Tiefe x Höhe; Spezifikationen der Seite passen teils zur v3"
+      },
+      {
+        "wert": "243 x 160.6 x 32.5",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150506180941/http://geizhals.de/tp-link-td-w8970-a863930.html?hloc=at&hloc=de",
+        "stand": "Archivkopie 2015-05-06 (Gelistet seit 2012-11-12)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Stand 2015, ohne Versionsangabe"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": false,
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TE7TDW8970V1/Internal-Photos/TD-W8970-F-CC-ID-Int-Photo-1886450",
+        "stand": "Exhibit 2013-01-28 (PDF 2013-01-21)",
+        "sicherheit": "mittel",
+        "bemerkung": "kein Lüfter auf den Innenfotos, nur Kühlkörper auf dem SoC"
+      }
+    ],
+    "kuehlkoerper": [
+      {
+        "wert": "Kühlkörper auf dem SoC",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TE7TDW8970V1/Internal-Photos/TD-W8970-F-CC-ID-Int-Photo-1886450",
+        "stand": "Exhibit 2013-01-28 (PDF 2013-01-21)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Kühlkörper auf dem SoC",
+        "quelle": "openwrt_wiki_foto_seriell",
+        "beleg": "https://openwrt.org/_media/media/tplink/td-w8970/td-w8970_serial-jtag.jpg",
+        "stand": "Bild eingebunden in Seitenrevision 2026-07-08 18:53 (Bilddatum unbekannt)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 6,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "LED count (user configurable)"
+      },
+      {
+        "wert": "Power, ADSL, Internet, WLAN, WPS, LAN1-4 vorne; USB hinten",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7TDW8970V1/User-Manual/TD-W8970-User-Guide-1886457",
+        "stand": "Exhibit 2013-01-28 (PDF erstellt 2012-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "steuerbar: dsl, internet, usb0, usb2, wps; Power-LED nicht steuerbar",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_tplink_tdw8970.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "Power-LED nicht per Software schaltbar",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_tplink_tdw8970.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "\"the power led can't be controlled, use the wps led instead\""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "hinten, versenkt (mit Stift drücken), mind. 5 s für Werkseinstellungen",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7TDW8970V1/User-Manual/TD-W8970-User-Guide-1886457",
+        "stand": "Exhibit 2013-01-28 (PDF erstellt 2012-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "Troubleshooting T1 nennt 8-10 s"
+      },
+      {
+        "wert": "vorhanden (gpio 0, KEY_RESTART)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_tplink_tdw8970.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "tasten_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Button count (user configurable)"
+      },
+      {
+        "wert": "WPS-Taster, WLAN-Schiebeschalter, Reset-Taster, Ein/Aus-Schalter",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7TDW8970V1/User-Manual/TD-W8970-User-Guide-1886457",
+        "stand": "Exhibit 2013-01-28 (PDF erstellt 2012-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "reset, wifi (RFKILL), wps",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_tplink_tdw8970.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "vier Schrauben lösen, dann die Kunststoffclips von Ober- und Unterschale vorsichtig aushaken",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte (J7, 4 Durchkontaktierungen ohne Stiftleiste)",
+        "quelle": "openwrt_wiki_foto_seriell",
+        "beleg": "https://openwrt.org/_media/media/tplink/td-w8970/td-w8970_serial-jtag.jpg",
+        "stand": "Bild eingebunden in Seitenrevision 2026-07-08 18:53 (Bilddatum unbekannt)",
+        "sicherheit": "mittel",
+        "bemerkung": "Foto zeigt unbestückte Löcher neben dem SoC-Kühlkörper"
+      },
+      {
+        "wert": "innen Lötpunkte J7 (Stiftleiste einlöten)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": "\"If you are soldering headers to the board, the GND point can be quite tricky because it is not drilled all the way through\"; Ersatz: Via \"GND3\" daneben"
+      },
+      {
+        "wert": "ja, 4-pin header J7",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2020-02-03T19:14:37Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": true,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial: Yes"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "J7 von oben nach unten: VCC (3.3 V), GND, RX, TX",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "VCC, GND, RX, TX",
+        "quelle": "openwrt_wiki_foto_seriell",
+        "beleg": "https://openwrt.org/_media/media/tplink/td-w8970/td-w8970_serial-jtag.jpg",
+        "stand": "Bild eingebunden in Seitenrevision 2026-07-08 18:53 (Bilddatum unbekannt)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Seitenrevision 2026-05-01 16:51",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": "VCC (3.3V)"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "115200 8N1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_tplink_tdw8970.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "console=ttyLTQ0,115200"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "GND-Lötauge nicht durchkontaktiert, besser Via GND3 nutzen; in U-Boot mit \"t\" unterbrechen; Login der Stock-Firmware admin/1234",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "UART-Boot: linke Seite von R225 kurz auf GND legen (Rettung ohne funktionierenden U-Boot)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "lantiq/xrx200",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Stand Dump"
+      },
+      {
+        "wert": "lantiq/xrx200_legacy",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Seitenrevision 2026-05-01 16:51",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "lantiq/xrx200_legacy",
+        "quelle": "openwrt_git_legacy",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e63326e26a82cb083eec602b3a2f71d4cd8e2ea4",
+        "stand": "Commit 2024-11-29 (Autor), gemergt 2024-12-15",
+        "sicherheit": "mittel",
+        "bemerkung": "seit 2024-12 im Subtarget für 8-MB-Flash-Geräte"
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "tplink_tdw8970",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/image/tp-link_legacy.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "15.05.1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Trunk 2013-07-25 (SVN r37541/r37543)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/54b40740744776839c9d065788f8b86d4c15d540",
+        "stand": "Commit 2013-07-25 (SVN r37543)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "22.03.5",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "veralteter Dump-Wert"
+      },
+      {
+        "wert": "25.12.2",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Seitenrevision 2026-05-01 16:51",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot 2010.06-LANTIQ-v-2.0.40-svn2583",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot 2010.06-LANTIQ-v-2.0.40-svn4806 (Jun 12 2014)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog OFW"
+      }
+    ],
+    "installation": [
+      {
+        "wert": "U-Boot TFTP + serielle Konsole; siehe Geräteseite",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "nur sysupgrade-Image, kein Factory-Image (factory = false)",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/lantiq-xrx200_legacy",
+        "stand": "Branch main am 2026-10-20 (Datei seit Commit b5ba291b54, 2024-12-26)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Stock-Firmware ab Build 12.10.2013 nimmt nur signierte Images an; Wege ohne Öffnen siehe Geräteseite",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, Image tp-link-td-w8970 (lantiq-xrx200_legacy)",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/lantiq-xrx200_legacy",
+        "stand": "Branch main am 2026-10-20 (Datei seit Commit b5ba291b54, 2024-12-26)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "aufgenommen mit PR 1867, gemergt 2020-03-09 (damals lantiq-xrx200)",
+        "quelle": "gluon_pr_1867",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/1867",
+        "stand": "PR 2019-11-19, gemergt 2020-03-09",
+        "sicherheit": "mittel",
+        "bemerkung": "im Review als nicht broken eingestuft"
+      },
+      {
+        "wert": "Yes",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Seitenrevision 2026-05-01 16:51",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "configmode_taste": [
+      {
+        "wert": "WPS-Taste",
+        "quelle": "gluon_pr_1867",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/1867",
+        "stand": "PR 2019-11-19, gemergt 2020-03-09",
+        "sicherheit": "mittel",
+        "bemerkung": "Checkliste: \"wps button must return device into config mode [x]\""
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "primäre MAC entspricht dem Typenschild",
+        "quelle": "gluon_pr_1867",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/1867",
+        "stand": "PR 2019-11-19, gemergt 2020-03-09",
+        "sicherheit": "mittel",
+        "bemerkung": "Checkliste [x]"
+      },
+      {
+        "wert": "OUI A0:F3:C1",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bekannte_probleme": [
+      {
+        "wert": "nur 8 MB Flash / 64 MB RAM; Images für xrx200 wurden zu groß, daher seit Dezember 2024 im Subtarget xrx200_legacy",
+        "quelle": "openwrt_git_legacy",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e63326e26a82cb083eec602b3a2f71d4cd8e2ea4",
+        "stand": "Commit 2024-11-29 (Autor), gemergt 2024-12-15",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "8/64-Warnung im ToH-Eintrag",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Seitenrevision 2026-05-01 16:51",
+        "sicherheit": "mittel",
+        "bemerkung": "Revision 2025-05-27 \"8/64 warning\""
+      },
+      {
+        "wert": "kein eigener WAN-Port in OpenWrt/Gluon (alle vier Ports im selben Switch, Stock-Firmware schaltet LAN4 als WAN)",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/lantiq-xrx200_legacy",
+        "stand": "Branch main am 2026-10-20 (Datei seit Commit b5ba291b54, 2024-12-26)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/td-w8970_v1",
+        "stand": "Seitenrevision 2026-07-08 18:53",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/TP-LINK_TD-W8970_v1",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2020-02-03T19:14:37Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.tp-link.com/en/home-networking/dsl-modem-router/td-w8970/v1/",
+        "quelle": "tplink_produktseite",
+        "beleg": "https://www.tp-link.com/en/home-networking/dsl-modem-router/td-w8970/v1/",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://www.tp-link.com/en/support/download/td-w8970/v1/",
+        "quelle": "tplink_download_v1",
+        "beleg": "https://www.tp-link.com/en/support/download/td-w8970/v1/",
+        "stand": "Live-Seite 2026-10-20, neueste Firmware TD-W8970_V1_140613 (2014-06-13)",
+        "sicherheit": "mittel",
+        "bemerkung": "Downloadseite"
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/resources/document/TD-W8970_V1.0_Datasheet.zip",
+        "stand": "PDF TD-W8970_V1.0_Datasheet.pdf, erstellt 2012-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.tp-link.com/en/support/download/td-w8970/v1/",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "forum": [
+      {
+        "wert": "https://forum.openwrt.org/viewtopic.php?id=42380",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w8970_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "altes Forum (Archiv)"
+      }
+    ],
+    "geizhals_url": [
+      {
+        "wert": "https://geizhals.de/tp-link-td-w8970-a863930.html",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150506180941/http://geizhals.de/tp-link-td-w8970-a863930.html?hloc=at&hloc=de",
+        "stand": "Archivkopie 2015-05-06 (Gelistet seit 2012-11-12)",
+        "sicherheit": "mittel",
+        "bemerkung": "Eintrag \"TP-Link TD-W8970\" seit 2012-11-12 ohne Hardware-Versionsangabe; ob später auch V3 darunter läuft, ist nicht belegt; TD-W8970B hat eigenen Eintrag a924389"
+      }
+    ],
+    "ean": [
+      {
+        "wert": "0845973060862",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150506180941/http://geizhals.de/tp-link-td-w8970-a863930.html?hloc=at&hloc=de",
+        "stand": "Archivkopie 2015-05-06 (Gelistet seit 2012-11-12)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Geizhals-Liste (gekürzt mit \"...\") ohne Region/Version; deckt sich mit UPC 845973060862 aus DeviWiki"
+      },
+      {
+        "wert": "6935364061296",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150506180941/http://geizhals.de/tp-link-td-w8970-a863930.html?hloc=at&hloc=de",
+        "stand": "Archivkopie 2015-05-06 (Gelistet seit 2012-11-12)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Geizhals-Liste (gekürzt mit \"...\") ohne Region/Version"
+      },
+      {
+        "wert": "6935364060879",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150506180941/http://geizhals.de/tp-link-td-w8970-a863930.html?hloc=at&hloc=de",
+        "stand": "Archivkopie 2015-05-06 (Gelistet seit 2012-11-12)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Geizhals-Liste (gekürzt mit \"...\") ohne Region/Version"
+      },
+      {
+        "wert": "5052916666783",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150506180941/http://geizhals.de/tp-link-td-w8970-a863930.html?hloc=at&hloc=de",
+        "stand": "Archivkopie 2015-05-06 (Gelistet seit 2012-11-12)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Geizhals-Liste (gekürzt mit \"...\") ohne Region/Version"
+      },
+      {
+        "wert": "0231503165761",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20150506180941/http://geizhals.de/tp-link-td-w8970-a863930.html?hloc=at&hloc=de",
+        "stand": "Archivkopie 2015-05-06 (Gelistet seit 2012-11-12)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Geizhals-Liste (gekürzt mit \"...\") ohne Region/Version; Präfix 02 (Händler-/Instore-Bereich), Zuordnung unsicher"
+      },
+      {
+        "wert": "0845973060862",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "mittel",
+        "bemerkung": "als UPC 845973060862 angegeben (12 Stellen, hier mit führender 0); vermutlich US-Ware, Region nicht genannt"
+      }
+    ],
+    "amazon_asin": [
+      {
+        "wert": "B00BFX4QJC",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "Marktplatz nicht angegeben; auch in WikiDevi"
+      },
+      {
+        "wert": "B00X4FKL0W",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_TD-W8970_v1",
+        "stand": "Seitenrevision 2019-07-05T02:57:22Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "Marktplatz nicht angegeben; fehlt in WikiDevi"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/TE7TDW8970V1/External-Photos/TD-W8970-FCC-ID-Ext-Photo-1886449",
+      "kategorie": "abmessungen_mm",
+      "grund": "Außenfotos nicht ausgewertet; Maße widersprechen sich (TP-Link-Seite 225x140x32.5, Geizhals 243x160.6x32.5), Gewicht unbekannt"
+    },
+    {
+      "url": "https://fccid.io/TE7TDW8970V1/RF-Exposure-Info/TD-W8970-MPE-Report-1886453",
+      "kategorie": "antennen_gewinn_dbi",
+      "grund": "MPE-Bericht mit Antennenangaben nicht gelesen"
+    },
+    {
+      "url": "https://fccid.io/TE7TDW8970V1/Test-Report/TD-W8970-FCC-ID-Report-Part1-1886455",
+      "kategorie": "wlan_sendeleistung_dbm",
+      "grund": "Testbericht (2.1 MB) nicht ausgewertet: Sendeleistung je Kette, Antennen"
+    },
+    {
+      "url": "https://www.tp-link.com/en/document/63247/",
+      "kategorie": "abmessungen_mm",
+      "grund": "TD-W8970_V1 User Guide/QIG (63228) der Downloadseite nicht gelesen; evtl. Maße/Gewicht"
+    },
+    {
+      "url": "https://web.archive.org/web/20260303033527/http://geizhals.de/tp-link-td-w8970-mimo-a863930.html",
+      "kategorie": "ean",
+      "grund": "neuere Geizhals-Archivkopie lieferte 403; vollständige EAN-Liste (2015 mit \"...\" gekürzt) und ob V3 im selben Eintrag steckt"
+    },
+    {
+      "url": "https://web.archive.org/web/2026/http://geizhals.de/tp-link-td-w8970b-a924389.html",
+      "kategorie": "andere_namen",
+      "grund": "TD-W8970B (eigener Geizhals-Eintrag, im OpenWrt-Wiki mit eigenen Stock-Builds 141008/160808 erwähnt): ob baugleich mit TD-W8970 v1 und vom Gluon-Image abgedeckt, ist nicht belegt"
+    },
+    {
+      "url": "https://openwrt.org/_media/media/tplink/td-w8970/td-w8970_hardware_labeled.png",
+      "kategorie": "platinen_kennung",
+      "grund": "beschriftetes Platinenfoto im OpenWrt-Wiki nicht ausgewertet"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/openwrt-installation-on-tp-link-td-w8970-v1/78282",
+      "kategorie": "installation",
+      "grund": "Forumsthread zur Installation nicht gelesen"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-20",
+    "status": "teilweise",
+    "anfragen": 47,
+    "notiz": "ToH-Dump + Live-hwdata (2026-05-01), OpenWrt-Wiki (2026-07-08) mit Seriell- und Typenschildfoto, Commits 2013 (DTS/Image) und 2024 (xrx200_legacy), aktuelle DTS/tp-link_legacy.mk/02_network, Gluon-Target lantiq-xrx200_legacy sowie PRs 1867/2833, DeviWiki und WikiDevi (v1), FCC TE7TDW8970V1 (Grant, Handbuch 96 S., Label, Innenfotos mit Netzteil), TP-Link Produkt- und Downloadseite v1, Datenblatt V1.0 (2012), Geizhals über Webarchiv (a863930, Kopie 2015) ausgewertet. Keine Werkstatt-Protokolle. Gluon-Image = v1/v1.2 (Lantiq VRX268, 8 MB NOR, 64 MB DDR2, AR9381 3x3 nur 2.4 GHz); V3 ist Broadcom und nicht unterstützt, Unterscheidung über Ver-Aufkleber/FCC-ID. Innen, 12 V 1.5 A Hohlstecker 5.5x2.1, Netzteil beiliegend, kein PoE belegt, 4x Gbit (kein eigener WAN-Port unter OpenWrt/Gluon), 2x USB 2.0, 3 abnehmbare RP-SMA-Antennen 5 dBi, Tisch/Wand (2 Schlüssellöcher, 122 mm), Seriell innen Lötpunkte J7 (VCC/GND/RX/TX, 3.3 V, 115200 8N1). Widersprüche: TP-Link-Produktseite nennt 1 USB/2 Antennen/225x140x32.5 mm (v3-Werte?), Geizhals 243x160.6x32.5 mm. Anfragen: 28 curl + 19 gh api."
+  }
+}
