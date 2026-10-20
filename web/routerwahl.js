@@ -439,7 +439,7 @@
     if (!treffer.length) {
       ziel.appendChild(el('p', 'finder-nichts',
         'Kein Gerät hat alle gewählten Merkmale. Nimm eins heraus: Die Zahl hinter jeder Auswahl zeigt, wie viele Geräte dann passen.' +
-        (mitUnbekannt ? '' : ' Oder lass dir auch Geräte zeigen, bei denen Angaben fehlen.')));
+        (mitUnbekannt ? '' : ' Oder nimm den Haken bei „Geräte ausblenden, bei denen Angaben fehlen“ heraus.')));
       return;
     }
     var kartenVon = {};
@@ -474,7 +474,7 @@
       var ul = el('ul', 'finder-chips');
       chips(g).forEach(function (c) { ul.appendChild(el('li', null, c)); });
       rumpf.appendChild(ul);
-      if (t.fehlt.length) rumpf.appendChild(el('p', 'finder-fehlt', 'Nicht bekannt: ' + t.fehlt.join(', ')));
+      if (t.fehlt.length) rumpf.appendChild(el('p', 'finder-fehlt', 'Es fehlen Angaben zu: ' + t.fehlt.join(', ')));
       if (g.unsicher) rumpf.appendChild(el('p', 'finder-unsicher',
         'Quellen widersprechen sich bei: ' + g.unsicher.map(feldName).join(', ')));
       rumpf.appendChild(kaufLinks(g));
