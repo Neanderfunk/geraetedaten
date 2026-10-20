@@ -4,11 +4,11 @@
 * { box-sizing: border-box; }
 :root {
   --background-color: white; --text-color: #333; --shadow-color: #ccc;
-  --table-alternate-color: #f3f3f3; --leise: #777;
+  --table-alternate-color: #f3f3f3; --leise: #777; --markiert: #fff3b0;
 }
 @media (prefers-color-scheme: dark) {
   :root { --background-color: #333; --text-color: #ccc; --shadow-color: #222;
-          --table-alternate-color: #444; --leise: #999; }
+          --table-alternate-color: #444; --leise: #999; --markiert: #5a5020; }
 }
 body {
   margin: 0;
@@ -240,3 +240,13 @@ button { font: inherit; cursor: pointer; }
   border-left: 3px solid var(--warn-color, #e0a800);
   font-size: 0.95em;
 }
+
+.finder-level { margin: 0.2em 0 0.4em; }
+.finder-level-kenn { text-decoration: underline dotted; cursor: help; }
+.finder-level-legende { display: inline-block; margin-left: 0.5em; font-size: 0.9em; }
+.finder-level-legende summary { cursor: pointer; text-decoration: underline; }
+.finder-level-legende dl { color: var(--text-color); display: grid; grid-template-columns: max-content 1fr; gap: 0.2em 0.8em; margin: 0.4em 0; }
+.finder-level-legende dt { font-weight: bold; }
+.finder-level-legende dd { margin: 0; }
+.finder-level-hier, .finder-level-hier + dd { background: var(--markiert); color: var(--text-color); }
+@media (max-width: 40em) { .finder-level-legende dl { grid-template-columns: 1fr; } }

@@ -23,6 +23,20 @@
     'L5': 'Besondere Programme', 'L6': 'Serielles Kabel',
     'L7': 'Gehäuse öffnen', 'L8': 'Löten und Programmer'
   };
+  /* Was hinter den Leveln steckt; wortgleich mit der Tabelle "Level und Risiko"
+     in gluon-rampe-installer, anleitungen/README.md. */
+  var LEVEL_ERKL = {
+    'L0': 'Die Freifunk-Firmware wird über die Weboberfläche des Geräts hochgeladen; es gibt nur eine passende Datei.',
+    'L0.1': 'Wie L0, aber es gibt zwei Dateien (Erstinstallation und Upgrade), und man muss die richtige nehmen.',
+    'L1': 'Erst eine Zwischenfirmware oder eine ältere Herstellerfirmware, dann die Freifunk-Firmware; alles im Browser.',
+    'L2': 'Notfall-Modus per Taste, dann Hochladen im Browser; der Rechner bekommt seine Adresse von selbst.',
+    'L3': 'Wie L2 oder ein anderer Weg im Browser, aber die Netzwerkeinstellung des Rechners muss von Hand umgestellt werden.',
+    'L4': 'TFTP-Server, SSH, curl oder ein Image auf einen Datenträger schreiben; Programme, die es für jedes System gibt.',
+    'L5': 'Skripte oder Programme außerhalb des Üblichen, oder Dateien vorher selbst zusammenbauen.',
+    'L6': 'Ein Konsolenkabel am Gerät, ohne es zu öffnen.',
+    'L7': 'Für die serielle Konsole muss das Gerät aufgeschraubt werden.',
+    'L8': 'Klemmen am Speicherchip, Lötarbeiten oder ein Flash-Programmer.'
+  };
 
   /* typ: menge = Wert ist eine Liste, Treffer wenn eine gewaehlte drin ist;
           eins  = Wert ist ein Text, Treffer wenn er gewaehlt ist;
@@ -73,7 +87,10 @@
     { titel: 'Installation', filter: [
       { id: 'level', titel: 'Schwierigkeit', typ: 'max',
         werte: [['L1', 'bis L1: nur im Browser'], ['L3', 'bis L3: mit fester Adresse am Rechner'],
-                ['L4', 'bis L4: mit Network-Tools (TFTP, SSH)'], ['L6', 'bis L6: auch mit seriellem Kabel']] },
+                ['L4', 'bis L4: mit Network-Tools (TFTP, SSH)'], ['L6', 'bis L6: auch mit seriellem Kabel'],
+                /* umgekehrt, fuer Bastelnde: nur die schwierigeren */
+                ['ab:L5', 'ab L5: besondere Programme und mehr'], ['ab:L6', 'ab L6: serielles Kabel und mehr'],
+                ['ab:L7', 'ab L7: Gehäuse öffnen und mehr']] },
       { id: 'erprobt', titel: 'von uns am Gerät erprobt', typ: 'ja' },
       { id: 'ohne_bootloader', titel: 'Bootloader bleibt unangetastet', typ: 'ja' }
     ] }
@@ -93,7 +110,9 @@
 
   var geraete = [];      // [{image, modell, ...facetten, level, ...}]
   var wahl = {};         // id -> [werte]
-  var mitUnbekannt = false;
+  /* Geraete mit fehlenden Angaben werden standardmaessig gezeigt (adorfer
+     20.10.); das Haekchen blendet sie aus. */
+  var mitUnbekannt = true;
   /* Geraete, deren Firmware es nur im Testzweig gibt (stable: false), sind
      zunaechst ausgeblendet; die Firmware kommt erst mit der naechsten Version. */
   var mitNaechster = false;
@@ -152,6 +171,7 @@
     if (f.id === 'ohne_bootloader') return g.risiko ? g.risiko !== 'bootloader' : null;
     if (f.id === 'level') {
       if (!g.level) return null;
+      if (w[0].indexOf('ab:') === 0) return LEVEL_REIHE.indexOf(g.level) >= LEVEL_REIHE.indexOf(w[0].slice(3));
       return LEVEL_REIHE.indexOf(g.level) <= LEVEL_REIHE.indexOf(w[0]);
     }
     if (v === null || v === undefined) return null;
@@ -336,6 +356,31 @@
     });
   }
 
+  /* "Freifunk installieren: L0.1 Hochladen, richtige Datei wählen" mit
+     Erklaerung beim Darueberfahren und aufklappbarer Legende aller Level. */
+  function levelZeile(g) {
+    var p = el('div', 'finder-level');
+    p.appendChild(document.createTextNode('Freifunk installieren: '));
+    var k = el('span', 'finder-level-kenn', g.level + ' ' + (LEVEL[g.level] || ''));
+    if (LEVEL_ERKL[g.level]) k.title = LEVEL_ERKL[g.level];
+    p.appendChild(k);
+    if (g.status === 'erprobt') p.appendChild(document.createTextNode(', am Gerät erprobt'));
+    var d = el('details', 'finder-level-legende');
+    d.appendChild(el('summary', null, 'Was heißt das?'));
+    d.addEventListener('toggle', function () {
+      if (!d.open || d.querySelector('dl')) return;
+      var dl = el('dl');
+      LEVEL_REIHE.forEach(function (l) {
+        var dt = el('dt', l === g.level ? 'finder-level-hier' : null, l + ' ' + (LEVEL[l] || ''));
+        dl.appendChild(dt);
+        dl.appendChild(el('dd', null, LEVEL_ERKL[l] || ''));
+      });
+      d.appendChild(dl);
+    });
+    p.appendChild(d);
+    return p;
+  }
+
   function listeZeichnen() {
     var treffer = sortieren(filtern(null));
     $('#finder-anzahl').textContent = treffer.length === 1 ? '1 Gerät passt' : treffer.length + ' Geräte passen';
@@ -351,7 +396,8 @@
     ziel.textContent = '';
     if (!treffer.length) {
       ziel.appendChild(el('p', 'finder-nichts',
-        'Kein Gerät hat alle gewählten Merkmale. Nimm eins heraus: Die Zahl hinter jeder Auswahl zeigt, wie viele Geräte dann passen. Oder lass dir auch Geräte zeigen, bei denen Angaben fehlen.'));
+        'Kein Gerät hat alle gewählten Merkmale. Nimm eins heraus: Die Zahl hinter jeder Auswahl zeigt, wie viele Geräte dann passen.' +
+        (mitUnbekannt ? '' : ' Oder lass dir auch Geräte zeigen, bei denen Angaben fehlen.')));
       return;
     }
     treffer.forEach(function (t) {
@@ -378,10 +424,7 @@
         sp.appendChild(el('span', 'ffnef-stufe ffnef-stufe-' + stufe, g.speicher));
         rumpf.appendChild(sp);
       }
-      if (g.level) {
-        rumpf.appendChild(el('p', 'finder-level', g.level + ' ' + (LEVEL[g.level] || '') +
-          (g.status === 'erprobt' ? ', am Gerät erprobt' : '')));
-      }
+      if (g.level) rumpf.appendChild(levelZeile(g));
       var ul = el('ul', 'finder-chips');
       chips(g).forEach(function (c) { ul.appendChild(el('li', null, c)); });
       rumpf.appendChild(ul);
@@ -496,7 +539,7 @@
     Object.keys(wahl).forEach(function (k) {
       teile.push(encodeURIComponent(k) + '=' + wahl[k].map(function (x) { return encodeURIComponent(String(x)); }).join(','));
     });
-    if (mitUnbekannt) teile.push('unbekannt=1');
+    if (!mitUnbekannt) teile.push('unbekannt=0');
     if (mitNaechster) teile.push('naechste=1');
     if (sortierung !== 'einfach') teile.push('sort=' + sortierung);
     if (nurGeraet) teile.push('geraet=' + encodeURIComponent(nurGeraet));
@@ -508,7 +551,7 @@
       if (!p) return;
       var kv = p.split('=');
       var k = decodeURIComponent(kv[0]), v = decodeURIComponent(kv[1] || '');
-      if (k === 'unbekannt') { mitUnbekannt = v === '1'; return; }
+      if (k === 'unbekannt') { mitUnbekannt = v !== '0'; return; }
       if (k === 'naechste') { mitNaechster = v === '1'; return; }
       if (k === 'sort') { sortierung = v; return; }
       if (k === 'geraet') { nurGeraet = v; return; }
@@ -516,7 +559,7 @@
       if (!f) return;
       wahl[k] = (f.typ === 'ja' || f.typ === 'nein') ? [true] : v.split(',');
     });
-    $('#finder-unbekannt').checked = mitUnbekannt;
+    $('#finder-unbekannt').checked = !mitUnbekannt;
     $('#finder-naechste').checked = mitNaechster;
     $('#finder-sortierung').value = sortierung;
   }
@@ -544,7 +587,7 @@
           geraete.push(g);
         });
         zustandLesen();
-        $('#finder-unbekannt').addEventListener('change', function (e) { mitUnbekannt = e.target.checked; neu(); });
+        $('#finder-unbekannt').addEventListener('change', function (e) { mitUnbekannt = !e.target.checked; neu(); });
         $('#finder-naechste').addEventListener('change', function (e) { mitNaechster = e.target.checked; neu(); });
         $('#finder-sortierung').addEventListener('change', function (e) { sortierung = e.target.value; neu(); });
         $('#finder-leeren').addEventListener('click', function () { wahl = {}; nurGeraet = null; neu(); });
