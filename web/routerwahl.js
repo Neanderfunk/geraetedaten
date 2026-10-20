@@ -126,20 +126,11 @@
      Leerzeichen und Bindestriche. */
   var namensSuche = '';
   function dicht(t) { return String(t || '').toLowerCase().replace(/[\s\-_./()]+/g, ''); }
-  /* Treffer nur an Wortanfaengen ("lte" nicht mitten in "Filter"); auch der
-     Wechsel Buchstabe/Ziffer zaehlt als Wortanfang ("3000" findet "WR3000"). */
-  function woerter(t) {
-    return String(t || '').toLowerCase().replace(/([a-z])(\d)|(\d)([a-z])/g, '$1$3 $2$4')
-      .split(/[\s\-_./()+,;:]+/).filter(Boolean);
-  }
   function passtName(g) {
     if (!namensSuche) return true;
     var n = dicht(namensSuche);
-    return [g.modell, g.image].concat(g.namen || []).some(function (t) {
-      var w = woerter(t);
-      for (var i = 0; i < w.length; i++) if (w.slice(i).join('').indexOf(n) === 0) return true;
-      return false;
-    });
+    /* freie Zeichenkette, irgendwo im Namen (adorfer) */
+    return [g.modell, g.image].concat(g.namen || []).some(function (t) { return dicht(t).indexOf(n) > -1; });
   }
   var sortierung = 'einfach';
   var nurGeraet = null;     // ?geraet=<image>: nur dieses Geraet, Daten gleich offen
