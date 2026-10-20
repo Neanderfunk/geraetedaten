@@ -35,8 +35,10 @@ def main():
     for r in rows:
         hm = teile(r['brand'] + ' ' + r['model'])
         voll = '-'.join(hm)
-        treffer = sum(1 for x in ziel_ohne_v if x in hm or x in voll)
-        if not treffer or ziel[0] not in voll:
+        # "Open-Mesh" im Dump, "openmesh" im Image-Namen
+        dicht = voll.replace('-', '')
+        treffer = sum(1 for x in ziel_ohne_v if x in hm or x in voll or x in dicht)
+        if not treffer or (ziel[0] not in voll and ziel[0] not in dicht):
             continue
         score = treffer / max(len(ziel_ohne_v), 1) - 0.02 * max(0, len(hm) - len(ziel_ohne_v))
         rv = norm(r['version'])
