@@ -13,12 +13,13 @@
   SOCKS-Tunnel (kollektor6, OVH-Kollektor-VM, Mesh-Knoten), 4 Agenten je Stapel. Skripte und
   Sperrliste der Hosts: siehe Workflow-Skripte der Supernode-Session; Kurzfassung der Sperren in
   `schema/felder.md` (Handel).
-- Nicht unterstützte Hardware-Versionen mit Grund (Selector `versionen-toh.json`, routerwahl-Kaufhinweis).
+- Nicht unterstützte Hardware-Versionen mit Grund (Selector `versionen-toh.json`, Hersteller-Downloadseiten
+  `versionen-hersteller.json`), auf routerwahl als eigene Karten hinter den Geschwistern.
+- **Geizhals über preisvergleich.heise.de** (20.10.): 362 Geräte, 308 mit `geizhals_url` (188 genau, 119
+  mehrere Versionen), Datenblatt-Tabelle in `roh.geizhals`; 51 nicht gelistet. heise antwortete zweimal 403.
 
 ## Offen
-- **Handelsdaten-Nachlauf** (EAN, Amazon-ASIN, Geizhals-Permalink): 263 Einträge haben noch keins
-  der drei Felder, meist aus den Stapeln vor der Handelsdaten-Anweisung. Engpass ist die CDX-API des
-  Webarchivs (zeitweise 503/504); geizhals.de, idealo und ean-search.org sperren direkt.
+- **EAN/ASIN:** Geizhals-Seiten (über heise) nennen keine EAN; 0 von 362 bisher. Offen, falls je gebraucht.
 - **Zweiter Durchgang** über FCC-Fotos und Anatel für Hohlstecker-Maß, Netzteil-Typenschild, Lüfter,
   LEDs, serielle Konsole je Charge (offene Fäden in den Einträgen).
 - **Eigene Messungen** aus der Router-Werkstatt (`docs/validierung/`) als Quelle "werkstatt" mit hoher
