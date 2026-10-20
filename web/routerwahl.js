@@ -359,11 +359,11 @@
     });
   }
 
-  /* "Freifunk installieren: L0.1 Hochladen, richtige Datei wählen" mit
+  /* "Installation: L0.1 Hochladen, richtige Datei wählen" mit
      Erklaerung beim Darueberfahren und aufklappbarer Legende aller Level. */
   function levelZeile(g) {
     var p = el('div', 'finder-level');
-    p.appendChild(document.createTextNode('Freifunk installieren: '));
+    p.appendChild(document.createTextNode('Installation: '));
     var k = el('span', 'finder-level-kenn', g.level + ' ' + (LEVEL[g.level] || ''));
     if (LEVEL_ERKL[g.level]) k.title = LEVEL_ERKL[g.level];
     p.appendChild(k);
