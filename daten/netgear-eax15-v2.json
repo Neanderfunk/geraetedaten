@@ -1,0 +1,2023 @@
+{
+  "image": "netgear-eax15-v2",
+  "modell": "Netgear EAX15 v2",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-20",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "bemerkung": "Kein EAX15- und kein EAX-Eintrag im Dump; toh_suche.py liefert nur fremde Netgear-v2-Kandidaten (DGN2200 v2, EX6100 v2, EX6150 v2, EX7300 v2, WAG302 v2, WG302 v2, Score 0.8), keiner passt"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+      "stand": "Seitenrevision 2026-04-20 05:15",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Datenseite des EAX12; EAX15 v2 hat keine eigene Datenseite. Inhalt am 2026-10-20 byte-gleich mit dem Abruf des EAX12-Laufs vom 2026-10-19"
+    },
+    "openwrt_hwdata_eax15": {
+      "url": "https://openwrt.org/toh/hwdata/netgear/netgear_eax15_v2?do=export_raw",
+      "stand": "Abruf 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "HTTP 500, keine Datenseite für EAX15 v2"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/netgear/eax12?do=export_raw",
+      "stand": "Seitenrevision 2026-08-25 23:43",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Geräteseite 'NETGEAR EAX12 series (EAX12, EAX11v2, EAX15v2)'; am 2026-10-20 byte-gleich mit dem Abruf vom 2026-10-19; Serial/JTAG/Bootlogs nur Vorlage"
+    },
+    "openwrt_wiki_eax15": {
+      "url": "https://openwrt.org/toh/netgear/eax15?do=export_raw",
+      "stand": "Abruf 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "'This topic does not exist yet' - keine eigene EAX15-Seite"
+    },
+    "openwrt_git": {
+      "url": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+      "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Commit 'ramips: add support for Netgear EAX12 series' nennt EAX15v2 ausdrücklich; Text aus dem Cache des EAX12-Laufs (cache/netgear-eax12/commit_32ea8a9.json)"
+    },
+    "openwrt_git_2305": {
+      "url": "https://github.com/openwrt/openwrt/commit/29280638e8cb",
+      "stand": "Backport in openwrt-23.05, 2024-07-09",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "aus dem EAX12-Lauf: mt7621.mk enthält netgear_eax12 ab Tag v23.05.4"
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+      "stand": "Branch main, letzter Commit der Datei 42471994a9fc vom 2026-10-15",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Device/netgear_eax12 mit DEVICE_ALT1 NETGEAR EAX15 v2"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_netgear_eax12.dts",
+      "stand": "main, letzter Commit fcbaaddf088a vom 2026-02-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "aus dem Cache des EAX12-Laufs (cache/netgear-eax12/dts_main.dts)"
+    },
+    "openwrt_pr_12286": {
+      "url": "https://github.com/openwrt/openwrt/pull/12286",
+      "stand": "PR 2023-03-29, geschlossen 2023-07-01",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "aus dem EAX12-Lauf"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=eax15+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-20: 0 Commits, 0 Issues/PRs (search/issues), Codesuche 'EAX15v2': 1 Datei (target/linux/ramips/image/mt7621.mk)",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ramips-mt7621",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_pr_3433": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/3433",
+      "stand": "PR 2025-01-22 (maurerle), gemergt 2025-01-25 als ff58f65a2b6a",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "aus dem EAX12-Lauf (cache/netgear-eax12/gluon3433*.json)"
+    },
+    "gluon_release": {
+      "url": "https://github.com/freifunk-gluon/gluon/releases/tag/v2025.1",
+      "stand": "Release v2025.1 vom 2025-12-31",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "aus dem EAX12-Lauf: compare v2025.1...ff58f65 behind (enthalten), v2023.2.5 diverged (nicht enthalten)"
+    },
+    "gluon_suche": {
+      "url": "https://api.github.com/search/issues?q=eax15+repo:freifunk-gluon/gluon",
+      "stand": "Suchergebnis vom 2026-10-20 (2 Treffer: #3433, #3631)",
+      "abgerufen": "2026-10-20"
+    },
+    "netgear_datenblatt_v2": {
+      "url": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+      "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Datenblatt der australischen Ausführung; Lieferumfang nennt ausdrücklich 'EAX15v2'. Original unter downloads.netgear.com nicht mehr abrufbar"
+    },
+    "netgear_handbuch_2020": {
+      "url": "https://web.archive.org/web/20210624234554/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15_UM_EN.pdf",
+      "stand": "User Manual 202-12097-01, October 2020 (PDF 2020-10-02), archiviert 2021-06-24",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "'AX1800 4-Stream WiFi 6 Mesh Extender Model EAX15', 71 Seiten; Zeit der FCC-Zulassung von v1 (2020-09), keine Versionsangabe"
+    },
+    "netgear_handbuch": {
+      "url": "https://www.downloads.netgear.com/files/GDC/EAX15/EAX15_UM_EN.pdf",
+      "stand": "User Manual 202-12941-01, May 2026 (PDF 2026-05-12)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "'4-Stream WiFi 6 Mesh Extender', Modelle EAX10 und EAX15 ohne Versionsangabe, 67 Seiten; ob v2 oder v3 gemeint ist, sagt das Handbuch nicht"
+    },
+    "netgear_produktseite": {
+      "url": "https://www.netgear.com/home/wifi/range-extenders/eax15/",
+      "stand": "Seite ohne Datum, Stand Abruf 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Zeigt heute EAX15v3 (Lieferumfang 'AX1800 WiFi Extender (EAX15v3)'), nicht v2"
+    },
+    "netgear_datenblatt_v3": {
+      "url": "https://www.downloads.netgear.com/files/GDC/EAX15v3/EAX15v3_DS.pdf",
+      "stand": "D-EAX15v3-2, PDF 2026-05-21",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Nur zur Abgrenzung: v3 hat einen 1.3-GHz-Dual-Core"
+    },
+    "netgear_produktseite_us_2024": {
+      "url": "https://web.archive.org/web/20240418011347/https://www.netgear.com/home/wifi/range-extenders/eax15/",
+      "stand": "Archivkopie 2024-04-18",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Technische Daten ohne Versionsangabe ('AX1800 WiFi Mesh Extender (EAX15)'), SKU EAX15-100NAS"
+    },
+    "netgear_produktseite_de_2023": {
+      "url": "https://web.archive.org/web/20230928011258/https://www.netgear.com/de/home/wifi/range-extenders/eax15/",
+      "stand": "Archivkopie 2023-09-28",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Deutsche Seite ohne Versionsangabe, SKU EAX15-100PES"
+    },
+    "netgear_downloads_cdx": {
+      "url": "https://web.archive.org/cdx/search/cdx?url=downloads.netgear.com/files/GDC/EAX15*",
+      "stand": "Webarchiv-Index, Abfrage 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Archivierte Dateinamen unter GDC/EAX15 und GDC/EAX15v3"
+    },
+    "netgear_support": {
+      "url": "https://www.netgear.com/support/product/eax15/",
+      "stand": "Abruf 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Seite lädt Inhalte per JavaScript nach, per curl nicht auswertbar"
+    },
+    "fcc_v1": {
+      "url": "https://fccid.io/PY320200496",
+      "stand": "Grant 2020-09-07 (Original Equipment), Exhibits bis 2021-03-07",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "'AX1800 Mesh Extender', laut Etikettenzeichnung EAX15 V1 - nicht die hier beschriebene v2"
+    },
+    "fcc_v1_label": {
+      "url": "https://fccid.io/PY320200496/Label/Label-Sample-4891176",
+      "stand": "Zeichnung AW-14572-02 Rev. 01 (19AUG2020), PDF 2020-08-31",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Titel 'AW,PLBL,EAX15NA,V1'"
+    },
+    "fcc_v1_innenfotos": {
+      "url": "https://fccid.io/PY320200496/Internal-Photos/Internal-Photos-4891104",
+      "stand": "Bericht 200701C18-2, PDF 2020-08-26",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "8 Seiten, Seiten 4-6 angesehen; Chipaufdrucke bei dieser Auflösung nicht lesbar"
+    },
+    "fcc_eax12": {
+      "url": "https://fccid.io/PY320400514",
+      "stand": "Grant 2021-05-04 (Original Equipment), Exhibits bis 2021-11-01",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Zulassung des EAX12 (AX1600), Series Model EAX11v2; EAX15v2 dort nicht als Modell genannt, aber Kurzanleitung und Etikettenlage-Zeichnung tragen den Namen EAX15. Auswertung aus dem EAX12-Lauf"
+    },
+    "fcc_eax12_labellage": {
+      "url": "https://fccid.io/PY320400514/Label/Label-Location-5231636",
+      "stand": "Exhibit 2021-05-04, Dokumenttitel 'EAX15 Label location'",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet"
+    },
+    "fcc_eax12_innenfotos": {
+      "url": "https://fccid.io/PY320400514/Internal-Photos/Internal-Photos-5231627",
+      "stand": "BBQZ-WTW-P20110869_INT, PDF 2021-04-21, Exhibit 2021-11-01",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Auswertung aus dem EAX12-Lauf"
+    },
+    "fcc_eax12_testbericht_5g": {
+      "url": "https://fccid.io/PY320400514/Test-Report/RF-Test-Report-5231603",
+      "stand": "RFBBQZ-WTW-P20110869-1, ausgestellt 2021-04-01",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Auswertung aus dem EAX12-Lauf"
+    },
+    "fcc_eax12_label": {
+      "url": "https://fccid.io/PY320400514/Label/Label-2-5231638",
+      "stand": "Etikettenzeichnung AW-14796-01 Rev. 02 vom 2020-10-29 (AW,PLBL,EAX12NA,V1)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Auswertung aus dem EAX12-Lauf"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=EAX15&fulltext=1",
+      "stand": "Suche 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Keine Treffer"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/index.php?search=EAX15&fulltext=1",
+      "stand": "Suche 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Keine eigene Seite (Netgear_EAX15: action=raw 404); Treffer nur in 'Netgear EAX80 (Nighthawk AX8)', 'Netgear WAC series', 'Netgear PCB ID'"
+    },
+    "wikidevi_pcbid": {
+      "url": "https://wikidevi.wi-cat.ru/Netgear_PCB_ID",
+      "stand": "Abruf 2026-10-20 (Rohtext)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Listet 'Netgear EAX15 (AX1800)' mit FCC ID PY320200496 (2020-09-07), also v1"
+    },
+    "geizhals_cdx": {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/netgear-*&filter=original:.*[eE][aA][xX]1[125].*",
+      "stand": "Webarchiv-Index, Abfrage 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Für geizhals.de nur EAX12 (a2632113), für geizhals.at nichts; kein EAX15-Permalink"
+    },
+    "werkstatt": {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/",
+      "stand": "Suche 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "grep -ril 'eax1' ohne Treffer, kein Protokoll in docs/validierung/"
+    }
+  },
+  "roh": {
+    "toh": {
+      "eintrag": "keiner",
+      "kandidaten_toh_suche": [
+        "15667782 NETGEAR DGN2200 v2",
+        "15667790 NETGEAR EX6100 v2",
+        "15667794 NETGEAR EX6150 v2",
+        "15667797 NETGEAR EX7300 v2",
+        "15667803 NETGEAR WAG302 v2",
+        "15667805 NETGEAR WG302 v2"
+      ],
+      "bemerkung": "alle Score 0.8, nur Hersteller und 'v2' passen; zgrep -i eax: 0 Treffer"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "Range Extender",
+      "Brand": "NETGEAR",
+      "Model": "EAX12",
+      "Versions": "",
+      "FCCID_urls": "http://¿",
+      "Availability_availability": "Available 2024",
+      "Where available": "amazon.com, bestbuy.com",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+      "Supported Since Rel_releasesince": "23.05.2",
+      "Supported Current Rel_releasecurrent": "25.12.2",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "unknown",
+      "Target_target": "ramips",
+      "Subtarget": "mt7621",
+      "Package architecture_pkg-arch": "mipsel_24kc",
+      "Bootloader_bootloader": "¿",
+      "CPU": "MediaTek MT7621",
+      "CPU Cores_numcores_": "2",
+      "CPU MHz": "880",
+      "Flash MB_mbflashs": "128NAND",
+      "RAM MB_mbram": "256",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "-",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "MediaTek MT7915",
+      "WLAN 2.4GHz_wlan24": "b/g/n/ax",
+      "WLAN 5.0GHz_wlan50": "a/n/ac/ax",
+      "WLAN 6.0GHz_wlan60": "-",
+      "WLAN 60.0GHz_wlan60g": "-",
+      "WLAN Comments_": "2x2 DBDC",
+      "WLAN driver_wlan-drivers": "mt76",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "9",
+      "Button count_numbutton": "2",
+      "GPIOs_numgpio": "¿",
+      "Power Supply": "AC Line",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:netgear:eax12",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "EAX12",
+      "Git search_search-gits": "EAX12",
+      "WikiDevi URL_urls": "http://¿",
+      "WikiDevi ID_hwinfo-ids": "",
+      "OEM Device Homepage URL_url": "https://www.netgear.com/home/wifi/range-extenders/eax12/",
+      "Firmware OEM Stock URL_url": "https://www.netgear.com/support/product/eax12/\\#download",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/ramips/mt7621/openwrt-25.12.2-ramips-mt7621-netgear_eax12-squashfs-factory.img",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/ramips/mt7621/openwrt-25.12.2-ramips-mt7621-netgear_eax12-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-netgear_eax12-squashfs-factory.img",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-netgear_eax12-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "see git-commit",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "see git-commit",
+      "Comment recovery": "",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "openwrt_wiki": {
+      "Titel": "NETGEAR EAX12 series",
+      "Einleitung": "The NETGEAR EAX12 series (EAX12, EAX11v2, EAX15v2) are wall-plug 802.11ax (Wi-Fi 6) extenders that share the SoC, WiFi chip, and image format with the WAX202.",
+      "Installation": "Flash the factory image through the stock web interface, or TFTP to the bootloader. NMRP can be used to TFTP without opening the case.",
+      "Flash Layout": [
+        "mtd0: 00080000 00020000 \"Bootloader\"",
+        "mtd1: 00080000 00020000 \"Config\"",
+        "mtd2: 00080000 00020000 \"Factory\"",
+        "mtd3: 03800000 00020000 \"firmware\"",
+        "mtd4: 00400000 00020000 \"kernel\"",
+        "mtd5: 03400000 00020000 \"ubi\"",
+        "mtd6: 03800000 00020000 \"firmware_backup\"",
+        "mtd7: 00200000 00020000 \"CFG\"",
+        "mtd8: 00600000 00020000 \"RAE\"",
+        "mtd9: 00020000 00020000 \"POT\"",
+        "mtd10: 00040000 00020000 \"LOG\""
+      ],
+      "Network interfaces": {
+        "br-lan": "LAN & WiFi, 192.168.1.1/24",
+        "eth0": "LAN port",
+        "phy1-ap0": "WiFi, Disabled"
+      },
+      "Buttons": {
+        "Reset": "reset",
+        "WPS": "wps"
+      },
+      "Fotos": {
+        "Front": "media:netgear:eax12_front.png",
+        "Back": "media:netgear:eax12_back.jpg (power plug and label visible)",
+        "left side": "media:netgear:eax12_left_side.png (ethernet port and the reset and WPS-buttons)"
+      },
+      "Opening the case": "To remove the cover and open the device, you need to open the plastic case. There are now screws. Be careful to not break anything.",
+      "Main PCB": "Insert photo of PCB (Platzhalter)",
+      "Serial": "Platzhalter: 'FIXME Replace EXAMPLE by real values.' / 'EXAMPLE 115200, 8N1, 3.3V'",
+      "JTAG": "Platzhalter",
+      "Hardware mods": "None so far.",
+      "Bootlogs": "Platzhalter (OEM und OpenWrt)",
+      "Tags": "ramips mt7621 128nand 256ram 1port gigabitethernet 2core serial 2button vlan 802.11bgnax 802.11anacax mt76",
+      "Revisionen": "2024-12-27 angelegt (frauhottelmann), 2025-04-26 vulpes2, 2025-11-03 dimmadont, 2026-08-25 fgbxramel (Tags)"
+    },
+    "openwrt_git": {
+      "Titel": "ramips: add support for Netgear EAX12 series",
+      "Text": "Netgear EAX12, EAX11v2, EAX15v2 are wall-plug 802.11ax (Wi-Fi 6) extenders that share the SoC, WiFi chip, and image format with the WAX202.",
+      "Specifications": [
+        "MT7621, 256 MiB RAM, 128 MiB NAND",
+        "MT7915: 2.4/5 GHz 2x2 802.11ax (DBDC)",
+        "Ethernet: 1 port 10/100/1000",
+        "UART: 115200 baud (labeled on board)"
+      ],
+      "LEDs/Buttons": "All LEDs and buttons appear to work without state_default.",
+      "Installation": "Flash the factory image through the stock web interface, or TFTP to the bootloader. NMRP can be used to TFTP without opening the case.",
+      "Revert to stock": "Flash the stock firmware to the bootloader using TFTP/NMRP.",
+      "GPL-Quelle": "https://www.downloads.netgear.com/files/GPL/EAX12_EAX11v2_EAX15v2_GPL_V1.0.3.34_src.tar.gz (DTS: target/linux/ramips/dts/mt7621-rfb-ax-nand.dts)",
+      "DTS compatible": "netgear,eax12, mediatek,mt7621-soc",
+      "DTS model": "Netgear EAX12",
+      "DTS bootargs": "console=ttyS0,115200",
+      "DTS keys": {
+        "reset": "GPIO 15 active low, KEY_RESTART",
+        "wps": "GPIO 8 active low, KEY_WPS_BUTTON"
+      },
+      "DTS leds": {
+        "green:power": "GPIO 16 low",
+        "red:power": "GPIO 7 low",
+        "green:client": "GPIO 13 low",
+        "red:client": "GPIO 14 low",
+        "green:router": "GPIO 5 high",
+        "red:router": "GPIO 11 high",
+        "green:wps": "GPIO 17 high",
+        "green:eth": "GPIO 10 low",
+        "yellow:eth": "GPIO 12 low"
+      },
+      "DTS led aliases": "boot/running = power_green, failsafe/upgrade = power_red",
+      "DTS NAND-Partitionen": {
+        "Bootloader": "0x0-0x80000 ro",
+        "Config": "0x80000 +0x80000 ro",
+        "Factory": "0x100000 +0x80000 ro (MT7915-EEPROM)",
+        "firmware": "0x180000 +0x3800000 (kernel 0x400000, ubi 0x3400000)",
+        "firmware_backup": "0x3980000 +0x3800000 ro",
+        "CFG": "0x7180000 +0x200000 ro",
+        "RAE": "0x7380000 +0x600000 ro",
+        "POT": "0x7980000 +0x20000 ro",
+        "LOG": "0x79A0000 +0x40000 ro"
+      },
+      "DTS switch": "port@0 label lan",
+      "DTS xhci": "disabled",
+      "DTS pcie1": "wifi@0,0 mediatek,mt76, EEPROM aus Factory 0x0",
+      "mt7621.mk": {
+        "DEVICE_VENDOR": "NETGEAR",
+        "DEVICE_MODEL": "EAX12",
+        "DEVICE_ALT0": "NETGEAR EAX11 v2",
+        "DEVICE_ALT1": "NETGEAR EAX15 v2",
+        "DEVICE_PACKAGES": "kmod-mt7915-firmware -uboot-envtools",
+        "NETGEAR_ENC_MODEL": "EAX12",
+        "NETGEAR_ENC_REGION": "US",
+        "NETGEAR_ENC_HW_ID_LIST": "1010000004540000_NETGEAR",
+        "NETGEAR_ENC_MODEL_LIST": "EAX12;EAX11v2;EAX15v2",
+        "IMAGE_SIZE": "57344k",
+        "KERNEL_LOADADDR": "0x82000000",
+        "IMAGES": "factory.img (netgear-encrypted-factory), sysupgrade.bin"
+      },
+      "uboot-envtools": "netgear,eax12 in Liste mit ubootenv /dev/mtd1 0x0 0x20000 0x20000",
+      "01_leds": "eth_act: yellow:eth lan tx rx; eth_link: green:eth lan link",
+      "02_network": "lan_mac = mtd_get_mac_ascii Config mac; label_mac = lan_mac",
+      "10_fix_wifi_mac": "phy0 = Config-MAC +1, phy1 = Config-MAC +2",
+      "platform.sh": "netgear,eax12 im NAND-Upgradepfad"
+    },
+    "openwrt_git_2305": {
+      "Releases mit netgear_eax12 in mt7621.mk": {
+        "v23.05.2": "nein",
+        "v23.05.3": "nein",
+        "v23.05.4": "ja",
+        "v23.05.5": "ja",
+        "v24.10.0": "ja"
+      }
+    },
+    "openwrt_dts": {
+      "Commits": [
+        "fcbaaddf088a 2026-02-19 ramips: dts: mt7621: add USB t-phy node",
+        "01996b785dce 2024-02-17 ramips: clean up useless dts partition labels",
+        "19c45b95dbb5 2024-02-07 ramips: convert to new LED color/function format where possible",
+        "0e6179e50e4d 2024-01-16 ramips: mt7621: convert MT7915 EEPROM to NVMEM format",
+        "6f31941d384d 2023-10-17 Revert \"ramips: convert MT7915 EEPROM to NVMEM format\"",
+        "9ac891f8c441 2023-10-02 ramips: convert MT7915 EEPROM to NVMEM format",
+        "32ea8a9a7e4b 2023-03-30 ramips: add support for Netgear EAX12 series"
+      ],
+      "Änderungen gegenüber Erstcommit": "LEDs power/wps auf function/color; Factory-Partition mit nvmem-layout eeprom@0 (0xe00) und precal@e10 (0x19c10); usb_phy disabled"
+    },
+    "openwrt_pr_12286": {
+      "Titel": "add support for Netgear EAX12 / EX6250v2 series",
+      "Kommentar looi 2023-03-31": "I only have US devices, but I believe that all devices use the same stock firmware image and the region is controlled by the Config partition. For example, you can see on netgear.fr that the linked firmware image is the same as the US model.",
+      "Kommentar hauke 2023-07-01": "Thanks. I applied the first 3 patches, but not the last one removing the detection in ath79."
+    },
+    "openwrt_image_mk": {
+      "define": "Device/netgear_eax12",
+      "Basis": "$(Device/nand): BLOCKSIZE 128k, KERNEL_SIZE 4096k, PAGESIZE 2048, UBINIZE_OPTS -E 5, sysupgrade-tar",
+      "DEVICE_VENDOR": "NETGEAR",
+      "DEVICE_MODEL": "EAX12",
+      "DEVICE_ALT0": "NETGEAR EAX11 v2",
+      "DEVICE_ALT1": "NETGEAR EAX15 v2",
+      "DEVICE_PACKAGES": "kmod-mt7915-firmware -uboot-envtools",
+      "NETGEAR_ENC_MODEL": "EAX12",
+      "NETGEAR_ENC_REGION": "US",
+      "NETGEAR_ENC_HW_ID_LIST": "1010000004540000_NETGEAR",
+      "NETGEAR_ENC_MODEL_LIST": "EAX12;EAX11v2;EAX15v2",
+      "IMAGE_SIZE": "57344k",
+      "KERNEL_LOADADDR": "0x82000000",
+      "IMAGES": "sysupgrade.bin, factory.img (netgear-encrypted-factory)"
+    },
+    "gluon_targets": {
+      "targets/ramips-mt7621": "device('netgear-eax12', 'netgear_eax12', { factory_ext = '.img', aliases = {'netgear-eax11-v2', 'netgear-eax15-v2'} })",
+      "Abschnitt": "-- NETGEAR"
+    },
+    "gluon_pr_3433": {
+      "Titel": "ramips-mt7621: add support netgear eax12",
+      "Text": "this is the same device as the EAX 11 v2 and EAX 15 v2",
+      "Checkliste": {
+        "Flash from vendor firmware": "Web interface ja, TFTP nicht angehakt, Other: nmrpflash",
+        "sysupgrade/keep/forget config": "ja",
+        "Profilname": "lua platform_info.get_image_name() -> netgear-eax15 (so im PR angegeben)",
+        "Reset/WPS returns to config mode": "ja",
+        "Primary MAC matches label": "ja",
+        "Wired network all ports / port assignment": "ja",
+        "WiFi AP/mesh/AP+mesh all radios": "ja",
+        "Power LED / config mode blink": "ja",
+        "Radio LEDs": "no led per radio",
+        "Switch port LEDs link/activity": "ja",
+        "Outdoor device": "nein (nicht angehakt)"
+      },
+      "Hinweis": "The three LEDS: router, client, wps are working but not enabled in any way in gluon. Reset works fine on WPS button as well as on Reset button",
+      "targets/ramips-mt7621": "device('netgear-eax12', 'netgear_eax12', { factory_ext = '.img', aliases = {'netgear-eax11-v2', 'netgear-eax15-v2'} })",
+      "docs": "supported_devices.rst zunächst unter TP-Link einsortiert (EAX11 (v2), EAX12, EAX15 (v2)); korrigiert durch PR #3631 'move EAX11/EAX12/EAX15 to correct vendor' (2025-12-05)"
+    },
+    "gluon_suche": {
+      "Treffer": [
+        "#3433 ramips-mt7621: add support netgear eax12 (geschlossen 2025-01-25)",
+        "#3631 docs: user/supported_devices: move EAX11/EAX12/EAX15 to correct vendor (geschlossen 2025-12-06)"
+      ]
+    },
+    "netgear_datenblatt_v2": {
+      "Titel": "Data Sheet | EAX15 - AX1800 4-Stream WiFi 6 Mesh Extender",
+      "Dokument": "D-EAX15v2-AU-0, ©2021",
+      "Leading the new era of WiFi 6": [
+        "Up to 1.5X better performance than a WiFi 5 (802.11ac) extender",
+        "OFDMA provides more WiFi for more devices",
+        "880MHz dual-core processor enables smooth 4K UHD streaming & gaming",
+        "Works with your existing WiFi",
+        "Powerful WiFi where you want it with wallplug placement"
+      ],
+      "Overview": "4-Stream WiFi with up to 1.8Gbps; One WiFi Name & Smart Roaming; Seamless mesh WiFi",
+      "Seite 2": "Secure connection (WPS), Reset, One Gigabit Ethernet LAN port to connect wired devices",
+      "Package Contents": [
+        "AX1800 4-Stream WiFi Mesh Extender (EAX15v2)",
+        "Quick start guide"
+      ],
+      "Physical Specifications": {
+        "Dimensions": "149 x 68.4 x 52.3mm",
+        "Weight": "222g"
+      },
+      "Security & Standards": [
+        "AX1800 WiFi",
+        "IEEE 802.11b/g/n/ax 2.4GHz 0.6Gbps",
+        "IEEE 802.11a/n/ac/ax 5GHz 1.2Gbps",
+        "IEEE 802.11k",
+        "Two (2) internal antennas",
+        "One (1) 10/100/1000 Ethernet port with auto-sensing technology",
+        "Standards-based WiFi Security (802.11i, 128-bit AES encryption with PSK)",
+        "Latest security standard - Supports WPA3 WiFi security protocol"
+      ],
+      "Key Features": [
+        "Up to 1.5X better performance than a WiFi 5 (802.11ac) extender (comparable with an AC1200 WiFi Range Extender)",
+        "More WiFi for more devices - OFDMA (requires DL-/UL-OFDMA clients)",
+        "Powerful processor - 880MHz dual-core processor",
+        "Nighthawk App",
+        "WiFi 6 supports all current WiFi devices",
+        "Push 'N' Connect using WPS"
+      ],
+      "System Requirements": "2.4 and/or 5GHz 802.11 a/b/g/n/ac/ax WiFi router or gateway; IE 8.0, Firefox 20, Safari 5.1, Chrome 25.0",
+      "Support": "90-day complimentary technical support",
+      "Warranty": "www.netgear.com.au/warranty",
+      "Hinweise": [
+        "For indoor use only.",
+        "The product may not be compatible with routers or gateways with firmware that has been altered, is based on open source programs, or is non-standard or outdated."
+      ]
+    },
+    "netgear_handbuch_2020": {
+      "Titel": "AX1800 4-Stream WiFi 6 Mesh Extender Model EAX15 User Manual",
+      "Dokument": "202-12097-01, October 2020",
+      "Data rate 2.4 GHz": "Max 600 Mbps",
+      "Data rate 5 GHz": "Disabled by default (When enabled the max data rate is 1200 Mbps)",
+      "Physical specifications": "Dimensions: 5.9 x 2.7 x 2.1 in (149.86 x 68.58 x 53.34 mm); Weight: 0.49 lb (222 g)",
+      "Environmental": "Operating temperature: 32° to 104°F (0° to 40°C); Operating humidity: 90% maximum relative humidity, noncondensing",
+      "Reset": "Reset button at least seven seconds, Power LED blinks amber -> factory settings"
+    },
+    "netgear_handbuch": {
+      "Titel": "4-Stream WiFi 6 Mesh Extender User Manual",
+      "Modelle": [
+        "EAX10",
+        "EAX15"
+      ],
+      "Dokument": "202-12941-01, May 2026",
+      "Package": "Your package contains an extender only.",
+      "LEDs": {
+        "Power": "amber = booting, green = on, off = off",
+        "Router Link": "green best / amber good / red poor / off no connection",
+        "Client Link": "green best / amber good / red poor / off no connection",
+        "WPS": "blinking green = WPS in progress, green = connected with security, off = no security"
+      },
+      "Side panel": [
+        "1. WPS button",
+        "2. Reset button: at least seven seconds, Power LED blinks amber, factory settings",
+        "3. Ethernet port: Gigabit Ethernet RJ-45 LAN port"
+      ],
+      "Factory defaults": {
+        "SSID": "NETGEAR_EXT",
+        "Security": "Disabled",
+        "Operating mode": "802.11a/b/g/n/ac/ax",
+        "Data rate 2.4 GHz": "Max 290 Mbps (EAX10), 600 Mbps (EAX15)",
+        "Data rate 5 GHz": "Disabled by default (When enabled, max 1200 Mbps)",
+        "DHCP": "Server and client are enabled"
+      },
+      "Physical specifications": "Dimensions: 5.9 x 2.7 x 2.1 in (149.86 x 68.58 x 53.34 mm); Weight: 0.49 lb (222 g)",
+      "Environmental": "Operating temperature: 32° to 104°F (0° to 40°C); Operating humidity: 90% maximum relative humidity, noncondensing",
+      "Interface": "One 10/100/1000 Mbps Ethernet port; 802.11a/b/g/n/ac/ax and 802.11k",
+      "Kapitel": "Turn the LEDs On or Off (S. 57)"
+    },
+    "netgear_produktseite": {
+      "Titel": "EAX15 - Dual-band WiFi 6 Extender, 1.8Gbps, Wall-plug, Internal Antennas",
+      "What's included": [
+        "AX1800 WiFi Extender (EAX15v3)",
+        "Quick Start Guide"
+      ],
+      "Dimensions": "5.9 x 2.7 x 2.1in (149 x 68.4 x 52.3mm)",
+      "Weight": "0.49lb (222g)",
+      "WiFi Technology": "802.11ax",
+      "WiFi Performance": "AX1800",
+      "Ports": "(1) 10/100/1000 Mbps Ethernet port with auto-sensing technology",
+      "Antennas": "(2) internal antennas",
+      "Dokumente": [
+        "https://www.downloads.netgear.com/files/GDC/EAX15/EAX15_QSG_EN.pdf",
+        "https://www.downloads.netgear.com/files/GDC/EAX15/EAX15_UM_EN.pdf",
+        "https://www.downloads.netgear.com/files/GDC/EAX15v3/EAX15v3_DS.pdf"
+      ]
+    },
+    "netgear_datenblatt_v3": {
+      "Dokument": "D-EAX15v3-2",
+      "Prozessor": "1.3 GHz dual-core processor",
+      "Package": "AX1800 ... (EAX15v3)",
+      "Dimensions": "5.9 x 2.7 x 2.1 in",
+      "Weight": "0.49 lb (222 g)",
+      "WLAN": "IEEE 802.11b/g/n/ax 2.4 GHz 0.6 Gbps; (2) internal antennas"
+    },
+    "netgear_produktseite_us_2024": {
+      "SKU": "EAX15-100NAS",
+      "Physical Specification": "AX1800 WiFi Mesh Extender (EAX15): Dimensions 5.9 x 2.7 x 2.1in (149 x 68.4 x 52.3mm), Weight 0.49lb (222g)",
+      "WiFi Technology": "802.11ax",
+      "WiFi Performance": "AX1800",
+      "Ports": "One (1) 10/100/1000 Ethernet port with auto-sensing technology",
+      "Antennen": "The wall-plug design has two powerful internal antennas",
+      "WiFi 6 Features": "4 Stream WiFi with up to 0.6+1.2 Gbps; OFDMA up to 4 devices; 4-stream MU-MIMO"
+    },
+    "netgear_produktseite_de_2023": {
+      "SKU": "EAX15-100PES",
+      "Titel": "Dual-Band-WiFi 6-Mesh-Repeater, 1,8 Gbit/s, Wandstecker, interne Antenne",
+      "Physikalische Spezifikation": "AX1800 WLAN-Mesh-Repeater (EAX15): Abmessungen 149 x 68.4 x 52.3mm, Gewicht 222 g",
+      "Ports": "Ein (1) 10/100/100/1000 Ethernet-Port mit Auto-Sensing-Technologie",
+      "Antennen": "zwei leistungsstarke interne Antennen"
+    },
+    "netgear_downloads_cdx": {
+      "GDC/EAX15": [
+        "EAX15_EAX11_EAX14-V1.0.2.30.zip",
+        "EAX15_EAX11_EAX14-V1.0.3.34.zip",
+        "EAX15_EAX11_EAX14-V1.0.3.36.zip",
+        "EAX15_QSG_<Sprache>.pdf",
+        "EAX15_UM_EN.pdf",
+        "EAX15_UM_FR.pdf",
+        "EAX15v2_AU_DS.pdf"
+      ],
+      "GDC/EAX15v3": [
+        "EAX15v3_DS.pdf",
+        "EAX15v3_firmware_V1.0.0.20.zip",
+        "EAX15v3_firmware_V1.0.0.24.zip",
+        "EAX15v3_firmware_V1.0.2.28.zip"
+      ],
+      "GPL (OpenWrt-Commit)": "GPL/EAX12_EAX11v2_EAX15v2_GPL_V1.0.3.34_src.tar.gz"
+    },
+    "fcc_v1": {
+      "FCC ID": "PY320200496",
+      "Grantee": "Netgear Incorporated (PY3)",
+      "Equipment Class": "AX1800 Mesh Extender",
+      "Test Firm": "Bureau Veritas CPS(H.K.) Ltd., Taoyuan Branch",
+      "Frequenzen": [
+        "2412-2462 MHz",
+        "5180-5240 MHz"
+      ],
+      "Final Action Date": "2020-09-07",
+      "Composite Device": "Yes",
+      "Exhibits": [
+        "Users Manual 2.3 MB",
+        "Users Manual (Statement)",
+        "Internal Photos 837 KB",
+        "External Photos 247.5 KB",
+        "Label Location 510.3 KB",
+        "Label Sample 583.9 KB",
+        "Test setup photos",
+        "Test Report (NII) rev 1.1 MB",
+        "Test report (DTS-WLAN) 1.9 MB",
+        "Attestation (Channel and Mode Declaration)",
+        "Agent Authorization",
+        "Confidentiality request (Long/Short term)",
+        "RF Exposure Info (MPE)",
+        "Block diagram, Schematics_1/2, Operational Description, Software Operational Description_rev2 (nur Metadaten)"
+      ]
+    },
+    "fcc_v1_label": {
+      "Titel": "AW,PLBL,EAX15NA,V1",
+      "P/N": "AW-14572-02 Rev. 01",
+      "Revision": "01 CHANGED DEFAULT ACCESS FONT, 19AUG2020",
+      "Hinweise": "MAC & Seriennummer vom ODM gedruckt; NTGR SERIAL, MAC(2), WPS PIN codiert; Herkunftsland je nach Druckverfahren"
+    },
+    "fcc_v1_innenfotos": {
+      "Bericht": "200701C18-2, 8 Seiten",
+      "Seite 1": "Antennen 'Ant 0' und 'Ant 1'",
+      "Seite 4": "Platinenaufdruck 'AP-BCM090-0003_WIFI REV1.0'; Blech-Antennen mit U.FL-artigen Anschlusspunkten; abgeschirmte Frontend-Bereiche",
+      "Seite 6": "Platinenrückseite mit Abschirmblech, 4 Lötaugen in einer Reihe an der Platinenkante, Kennzeichnungsaufkleber"
+    },
+    "fcc_eax12_labellage": {
+      "Dokumenttitel": "EAX15 Label location",
+      "Inhalt": "Zeichnung der Gehäuserückseite mit US-Netzstecker; Etikett rund um den Stecker (rot markiert); darunter Lüftungsschlitze"
+    },
+    "fcc_eax12": {
+      "FCC ID": "PY320400514",
+      "Grantee": "Netgear Incorporated (PY3), San Jose",
+      "Equipment Class": "AX1600 Mesh Extender",
+      "Test Firm": "Bureau Veritas CPS (H.K.) Ltd., Taoyuan Branch",
+      "Frequenzen": [
+        "2412-2462 MHz",
+        "5180-5240 MHz",
+        "5745-5825 MHz"
+      ],
+      "Final Action Date": "2021-05-04",
+      "Applicant FRN": "0022158786",
+      "Exhibits": [
+        "User Manual (2.4 MB, 2021-11-01)",
+        "User Manual (Statement) 17 KB",
+        "User manual 2.4 MB",
+        "Internal Photos 1.6 MB",
+        "External Photos 456 KB",
+        "Label Location 508 KB",
+        "Label-1 577 KB",
+        "Label-2 575 KB",
+        "RF Test Set-Up Photos 267 KB",
+        "RF Test Report 1.2 MB",
+        "RF Test Report 2 MB",
+        "RF Test Report (co-located) 466 KB",
+        "Channel and Mode Declaration",
+        "LTC Letter",
+        "POA",
+        "STC Letter",
+        "RF Exposure Report 180 KB",
+        "Block Diagram (nur Metadaten)",
+        "Schematics (nur Metadaten)",
+        "NII S/W Security Statement (nur Metadaten)",
+        "Operational Description (nur Metadaten)"
+      ]
+    },
+    "fcc_eax12_innenfotos": {
+      "Bericht": "BBQZ-WTW-P20110869_INT, 10 Seiten",
+      "Seite 1-2": "Gehäuse zweiteilig, Kunststoff weiß mit Lüftungsschlitzen; Platine mit großem schwarzem Kühlkörper (Rippenkühlkörper)",
+      "Seite 3": "Platine beide Seiten: RJ45-Buchse, 2 Taster, ESMT-Baustein im TSOP48-Gehäuse (Aufdruck unscharf); vierpolige gewinkelte Stiftleiste am unteren Platinenrand bestückt; auf der Gegenseite 4 runde Lötaugen in einer Reihe; schwarzer 2x2-Steckverbinder",
+      "Seite 4": "Blech-Antennen (PIFA) mit U.FL-ähnlichen Anschlusspunkten auf der Platine",
+      "Seite 5-6": "Abschirmhauben; U434 MEDIATEK MT7915DAN (2035-BXDAL), U435 MEDIATEK MT7975DN (2030-AJCAL); Platinenaufdruck 'EAX1? REV2.0' (Ziffer unscharf); FE-Module/Chips '6332 1038'",
+      "Seite 8-9": "Netzteilplatine im Gehäuseteil mit Stecker (Elkos, Übertrager), Netzteil eingebaut",
+      "Seite 9-10": "Zwei Varianten der Wärmeleitpads ('Thermal absorber source 1st/2nd')",
+      "Lüfter": "keiner zu sehen (passive Kühlkörper)"
+    },
+    "fcc_eax12_testbericht_5g": {
+      "Titel": "RFBBQZ-WTW-P20110869-1_NETGEAR_EAX12_FCC 15.407 (16-24)_band 1,4_ax_2TX_rev2",
+      "Product": "AX1600 Mesh Extender",
+      "Test Model": "EAX12",
+      "Series Model": "EAX11v2",
+      "Model Difference": "For marketing purposes only",
+      "Sample Status": "Engineering sample",
+      "Power Supply Rating": "100-240Vac, 50-60Hz, 0.5A",
+      "Transfer Rate": "802.11a 54 Mbps, 802.11n up to 300Mbps, 802.11ac up to 867Mbps, 802.11ax up to 1200Mbps",
+      "Operating Frequency": "5180~5240MHz, 5745~5825MHz",
+      "Kanäle": "UNII-1: 36-48 (HT40 38/46, VHT80 42); UNII-3: 149-165 (HT40 151/159, VHT80 155)",
+      "Output Power": "CDD 5180~5240MHz 705.616mW, 5745~5825MHz 678.148mW; Beamforming 698.451mW / 678.148mW",
+      "MIMO": "2 completed transmitters and 2 receivers; 802.11a 2TX; n/ac/ax 2TX mit Beamforming; HE80 max",
+      "Antennen": {
+        "Typ": "PIFA",
+        "Connector": "NA",
+        "DB1": "2.4GHz 2.97 dBi, 5GHz Band 1 3.37 dBi, Band 4 3.63 dBi",
+        "DB2": "2.4GHz 3.17 dBi, 5GHz Band 1 3.62 dBi, Band 4 3.78 dBi"
+      },
+      "15.203": "No antenna connector is used.",
+      "Hinweis": "Two different thermal absorber sources; WLAN 2.4GHz & 5GHz can transmit at same time"
+    },
+    "fcc_eax12_label": {
+      "Titel": "AW,PLBL,EAX12NA,V1",
+      "P/N": "AW-14796-01 Rev. 02",
+      "Revisionen": "01 Initial document creation 22OCT2020; 02 Power input description update 29OCT2020",
+      "Etikett": "NETGEAR AX1600 Mesh Extender, Model: EAX12, Default Access www.mywifiext.net, For indoor use only; FCC-Part-15-Text mit FCC ID: PY320400514; 100-240V~0.5A,50-60Hz; Designed by NETGEAR in California; Schutzklasse-II-Zeichen, CSA C/US; Made in Vietnam 272-13674-01; Felder S/N, MAC 1, MAC 2; LED-Legende Power/Router Link/Client Link/WPS",
+      "Hinweise": "MAC & Seriennummer vom ODM gedruckt; NTGR SERIAL, MAC(2), WPS PIN codiert"
+    },
+    "fcc_eax12_handbuch": {
+      "Titel": "AX1800 4-Stream WiFi Mesh Extender Model EAX15 Quick Start Guide",
+      "Datum": "July 2020",
+      "Übersicht": "A WPS button, B Reset button, C Ethernet port; LEDs 1 Power, 2 Router Link, 3 Client Link, 4 WPS",
+      "Einrichtung": "Nighthawk-App, WLAN NETGEAR_EXT"
+    },
+    "wikidevi_pcbid": {
+      "Zeile 266-267": "*[[Netgear EAX15]] (AX1800) - AX1800 Dual-band WiFi 6 Mesh Extender :PY320200496 (2020-09-07) - AX1800 Mesh Extender",
+      "Zeile 365": "*PY320200496 (2020-09-07) '''AX1800''' Mesh Extender • [[Netgear EAX15]]",
+      "Zeile 240": ":[[Netgear EAX11 v2]] (AX1600) • [[Netgear EAX12]]"
+    },
+    "wikidevi": {
+      "Treffer": [
+        "Netgear EAX80 (Nighthawk AX8): '*[[Netgear EAX15]] (AX1800)' (Rev. 2023-09-13)",
+        "Netgear WAC series",
+        "Netgear PCB ID"
+      ],
+      "Netgear_EAX15": "existiert nicht (404)"
+    },
+    "deviwiki": {
+      "Treffer": "keine"
+    },
+    "geizhals_cdx": {
+      "geizhals.de": [
+        "https://geizhals.de/netgear-ax1600-eax12-mesh-extender-eax12-100-a2632113.html (EAX12, nicht EAX15)"
+      ],
+      "geizhals.at": []
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Netgear",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "EAX15 v2",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": "Lieferumfang 'AX1800 4-Stream WiFi Mesh Extender (EAX15v2)'"
+      },
+      {
+        "wert": "NETGEAR EAX15 v2",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main, letzter Commit der Datei 42471994a9fc vom 2026-10-15",
+        "sicherheit": "hoch",
+        "bemerkung": "DEVICE_ALT1_MODEL EAX15, DEVICE_ALT1_VARIANT v2"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "v2",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": "Datenblatt D-EAX15v2-AU-0, Lieferumfang '(EAX15v2)'"
+      },
+      {
+        "wert": "v2",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main, letzter Commit der Datei 42471994a9fc vom 2026-10-15",
+        "sicherheit": "hoch",
+        "bemerkung": "NETGEAR_ENC_MODEL_LIST EAX12;EAX11v2;EAX15v2"
+      },
+      {
+        "wert": "v2",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ramips-mt7621",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "Alias netgear-eax15-v2"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Etikett auf der Rückseite rund um den Netzstecker",
+        "quelle": "fcc_eax12_labellage",
+        "beleg": "https://fccid.io/PY320400514/Label/Label-Location-5231636",
+        "stand": "Exhibit 2021-05-04, Dokumenttitel 'EAX15 Label location'",
+        "sicherheit": "mittel",
+        "bemerkung": "Zeichnung 'EAX15 Label location' in der EAX12-Zulassung (US-Stecker); ob sie v1 oder v2 zeigt, steht nicht dabei"
+      },
+      {
+        "wert": "EAX15 v1 (nicht unterstützt): US-Etikett mit FCC ID PY320200496, Etikettenzeichnung 'AW,PLBL,EAX15NA,V1'",
+        "quelle": "fcc_v1_label",
+        "beleg": "https://fccid.io/PY320200496/Label/Label-Sample-4891176",
+        "stand": "Zeichnung AW-14572-02 Rev. 01 (19AUG2020), PDF 2020-08-31",
+        "sicherheit": "mittel",
+        "bemerkung": "Zur Abgrenzung; ob die Version 'v1' auf dem Etikett selbst steht, ist aus der Zeichnung (Textebene) nicht lesbar"
+      },
+      {
+        "wert": "EAX15 v3 (nicht unterstützt): 1.3-GHz-Dual-Core statt 880 MHz, eigenes Datenblatt und eigene Firmware (EAX15v3_firmware_V1.0.x)",
+        "quelle": "netgear_datenblatt_v3",
+        "beleg": "https://www.downloads.netgear.com/files/GDC/EAX15v3/EAX15v3_DS.pdf",
+        "stand": "D-EAX15v3-2, PDF 2026-05-21",
+        "sicherheit": "mittel",
+        "bemerkung": "Zur Abgrenzung; Unterscheidung am Typenschild nicht belegt"
+      },
+      {
+        "wert": "Stock-Firmware: v1 läuft mit Firmware-Dateien 'EAX15_EAX11_EAX14-V1.0.x', v2 gehört zur Firmwarefamilie EAX12/EAX11v2/EAX15v2 (GPL V1.0.3.34)",
+        "quelle": "netgear_downloads_cdx",
+        "beleg": "https://web.archive.org/cdx/search/cdx?url=downloads.netgear.com/files/GDC/EAX15*",
+        "stand": "Webarchiv-Index, Abfrage 2026-10-20",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus Netgear-Dateinamen; welche Datei auf welchem Gerät läuft, ist nicht belegt"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "EAX12",
+          "EAX11 v2"
+        ],
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "gleiche Hardware und gleiches Image laut OpenWrt-Commit"
+      },
+      {
+        "wert": [
+          "netgear-eax12",
+          "netgear-eax11-v2"
+        ],
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ramips-mt7621",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "netgear-eax15-v2 ist Gluon-Alias des Images netgear-eax12"
+      },
+      {
+        "wert": [
+          "AX1800 4-Stream WiFi 6 Mesh Extender"
+        ],
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "MediaTek MT7621",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "Commit beschreibt die Serie EAX12/EAX11v2/EAX15v2 mit gleicher Hardware"
+      },
+      {
+        "wert": "MediaTek MT7621",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "Datenseite des EAX12"
+      },
+      {
+        "wert": "880 MHz Dual-Core (Hersteller nennt kein Modell)",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": "880MHz dual-core processor"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "Datenseite des EAX12"
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 880,
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 880,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "Datenseite des EAX12"
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "MIPS, Paketarchitektur mipsel_24kc",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 256,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "256 MiB RAM; Commit beschreibt die Serie EAX12/EAX11v2/EAX15v2 mit gleicher Hardware"
+      },
+      {
+        "wert": 256,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "Datenseite des EAX12"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 128,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "128 MiB NAND; Commit beschreibt die Serie EAX12/EAX11v2/EAX15v2 mit gleicher Hardware"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "128NAND, Datenseite des EAX12"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NAND",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NAND",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main, letzter Commit der Datei 42471994a9fc vom 2026-10-15",
+        "sicherheit": "hoch",
+        "bemerkung": "Device/nand, Blockgröße 128k, Seitengröße 2048"
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "ESMT, TSOP48 (Aufdruck unscharf)",
+        "quelle": "fcc_eax12_innenfotos",
+        "beleg": "https://fccid.io/PY320400514/Internal-Photos/Internal-Photos-5231627",
+        "stand": "BBQZ-WTW-P20110869_INT, PDF 2021-04-21, Exhibit 2021-11-01",
+        "sicherheit": "niedrig",
+        "bemerkung": "am EAX12-Muster der FCC-Zulassung PY320400514 gesehen; für EAX15 v2 nur über die gleiche Hardware abgeleitet"
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "MediaTek MT7915 (DBDC, 2.4 und 5 GHz gleichzeitig)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "Commit beschreibt die Serie EAX12/EAX11v2/EAX15v2 mit gleicher Hardware"
+      },
+      {
+        "wert": "MediaTek MT7915",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "Datenseite des EAX12"
+      },
+      {
+        "wert": "MediaTek MT7915DAN + MT7975DN",
+        "quelle": "fcc_eax12_innenfotos",
+        "beleg": "https://fccid.io/PY320400514/Internal-Photos/Internal-Photos-5231627",
+        "stand": "BBQZ-WTW-P20110869_INT, PDF 2021-04-21, Exhibit 2021-11-01",
+        "sicherheit": "niedrig",
+        "bemerkung": "am EAX12-Muster der FCC-Zulassung PY320400514 gesehen; für EAX15 v2 nur über die gleiche Hardware abgeleitet"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "mt76 (kmod-mt7915-firmware)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main, letzter Commit der Datei 42471994a9fc vom 2026-10-15",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "mt76",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n/ax",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": "0.6 Gbps"
+      },
+      {
+        "wert": "b/g/n/ax",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "Datenseite des EAX12"
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "MT7915 2x2; Commit beschreibt die Serie EAX12/EAX11v2/EAX15v2 mit gleicher Hardware"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "WLAN Comments: 2x2 DBDC"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac/ax",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": "1.2 Gbps"
+      },
+      {
+        "wert": "a/n/ac/ax",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "Datenseite des EAX12"
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "MT7915 2x2; Commit beschreibt die Serie EAX12/EAX11v2/EAX15v2 mit gleicher Hardware"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "WLAN Comments: 2x2 DBDC"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AX1800",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": "0.6 Gbps (2.4 GHz) + 1.2 Gbps (5 GHz); der baugleiche EAX12 wird als AX1600 verkauft"
+      },
+      {
+        "wert": "AX1800",
+        "quelle": "netgear_handbuch_2020",
+        "beleg": "https://web.archive.org/web/20210624234554/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15_UM_EN.pdf",
+        "stand": "User Manual 202-12097-01, October 2020 (PDF 2020-10-02), archiviert 2021-06-24",
+        "sicherheit": "hoch",
+        "bemerkung": "2.4 GHz max 600 Mbps, 5 GHz max 1200 Mbps; Handbuch ohne Versionsangabe"
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "2.4 GHz bis 40 MHz, 5 GHz bis 80 MHz",
+        "quelle": "fcc_eax12_testbericht_5g",
+        "beleg": "https://fccid.io/PY320400514/Test-Report/RF-Test-Report-5231603",
+        "stand": "RFBBQZ-WTW-P20110869-1, ausgestellt 2021-04-01",
+        "sicherheit": "niedrig",
+        "bemerkung": "Testmodi des EAX12 (US); am EAX12-Muster der FCC-Zulassung PY320400514 gemessen; für EAX15 v2 nur über die gleiche Hardware abgeleitet"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": "nicht für EAX15 v2 belegt",
+        "quelle": "fcc_eax12_testbericht_5g",
+        "beleg": "https://fccid.io/PY320400514/Test-Report/RF-Test-Report-5231603",
+        "stand": "RFBBQZ-WTW-P20110869-1, ausgestellt 2021-04-01",
+        "sicherheit": "niedrig",
+        "bemerkung": "EAX12 (US): 2.4 GHz 403 mW, 5 GHz bis 706 mW leitungsgebunden; EU-Werte unbekannt"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": "Two (2) internal antennas"
+      },
+      {
+        "wert": "intern",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas: -"
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "keiner",
+        "quelle": "fcc_eax12_testbericht_5g",
+        "beleg": "https://fccid.io/PY320400514/Test-Report/RF-Test-Report-5231603",
+        "stand": "RFBBQZ-WTW-P20110869-1, ausgestellt 2021-04-01",
+        "sicherheit": "niedrig",
+        "bemerkung": "15.203: No antenna connector is used; am EAX12-Muster der FCC-Zulassung PY320400514 belegt; für EAX15 v2 nur über die gleiche Hardware abgeleitet"
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "dualband",
+        "quelle": "fcc_eax12_testbericht_5g",
+        "beleg": "https://fccid.io/PY320400514/Test-Report/RF-Test-Report-5231603",
+        "stand": "RFBBQZ-WTW-P20110869-1, ausgestellt 2021-04-01",
+        "sicherheit": "niedrig",
+        "bemerkung": "beide PIFA-Antennen mit Gewinn für 2.4 und 5 GHz; EAX12-Zulassung"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": "2.4 GHz 2.97/3.17, 5 GHz 3.37-3.78",
+        "quelle": "fcc_eax12_testbericht_5g",
+        "beleg": "https://fccid.io/PY320400514/Test-Report/RF-Test-Report-5231603",
+        "stand": "RFBBQZ-WTW-P20110869-1, ausgestellt 2021-04-01",
+        "sicherheit": "niedrig",
+        "bemerkung": "EAX12-Zulassung, gleiche Hardware"
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "rund (PIFA im Gehäuse)",
+        "quelle": "fcc_eax12_testbericht_5g",
+        "beleg": "https://fccid.io/PY320400514/Test-Report/RF-Test-Report-5231603",
+        "stand": "RFBBQZ-WTW-P20110869-1, ausgestellt 2021-04-01",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus Antennentyp PIFA"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "geschwindigkeit_mbit": 1000,
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": "One (1) 10/100/1000 Ethernet port with auto-sensing technology"
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "geschwindigkeit_mbit": 1000,
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "Ethernet: 1 port 10/100/1000"
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "geschwindigkeit_mbit": 1000,
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "Ethernet 1Gbit ports: 1"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet: ein Ethernet-Port, Strom über den eingebauten Netzstecker (wallplug)"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_netgear_eax12.dts",
+        "stand": "main, letzter Commit fcbaaddf088a vom 2026-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": "DTS: USB nicht aktiviert (usb_phy disabled)"
+      },
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "USB ports: -"
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet: Steckernetzgerät für die Steckdose, keine Quelle nennt PoE"
+      }
+    ],
+    "poe_ausgang": [
+      {
+        "wert": "nein",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet: Datenblatt nennt keinen PoE-Ausgang"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "nein",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet: Wall-Plug-Gerät, Lieferumfang nur Gerät und Kurzanleitung"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": "eingebaut (Steckergerät)",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": "wallplug placement; Package Contents: Extender und Quick start guide"
+      },
+      {
+        "wert": "eingebaut (Steckergerät)",
+        "quelle": "fcc_eax12_innenfotos",
+        "beleg": "https://fccid.io/PY320400514/Internal-Photos/Internal-Photos-5231627",
+        "stand": "BBQZ-WTW-P20110869_INT, PDF 2021-04-21, Exhibit 2021-11-01",
+        "sicherheit": "niedrig",
+        "bemerkung": "Netzteilplatine im Gehäuse; am EAX12-Muster der FCC-Zulassung PY320400514 gesehen; für EAX15 v2 nur über die gleiche Hardware abgeleitet"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "100-240 V~, 50-60 Hz, 0.5 A",
+        "quelle": "fcc_eax12_label",
+        "beleg": "https://fccid.io/PY320400514/Label/Label-2-5231638",
+        "stand": "Etikettenzeichnung AW-14796-01 Rev. 02 vom 2020-10-29 (AW,PLBL,EAX12NA,V1)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Etikett EAX12 (US); für EAX15 v2 nicht belegt"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": "For indoor use only."
+      },
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No (EAX12)"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "netgear_handbuch_2020",
+        "beleg": "https://web.archive.org/web/20210624234554/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15_UM_EN.pdf",
+        "stand": "User Manual 202-12097-01, October 2020 (PDF 2020-10-02), archiviert 2021-06-24",
+        "sicherheit": "mittel",
+        "bemerkung": "Handbuch EAX15 Oktober 2020, ohne Versionsangabe"
+      },
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "netgear_handbuch",
+        "beleg": "https://www.downloads.netgear.com/files/GDC/EAX15/EAX15_UM_EN.pdf",
+        "stand": "User Manual 202-12941-01, May 2026 (PDF 2026-05-12)",
+        "sicherheit": "mittel",
+        "bemerkung": "Handbuch EAX10/EAX15 Mai 2026, ohne Versionsangabe"
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "max. 90 % relative Feuchte, nicht kondensierend",
+        "quelle": "netgear_handbuch_2020",
+        "beleg": "https://web.archive.org/web/20210624234554/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15_UM_EN.pdf",
+        "stand": "User Manual 202-12097-01, October 2020 (PDF 2020-10-02), archiviert 2021-06-24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Steckdose (Wall-Plug)",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": "wallplug placement"
+      },
+      {
+        "wert": "Steckdose (Wall-Plug)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "wall-plug 802.11ax (Wi-Fi 6) extenders"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "149 x 68.4 x 52.3",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "149.86 x 68.58 x 53.34",
+        "quelle": "netgear_handbuch_2020",
+        "beleg": "https://web.archive.org/web/20210624234554/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15_UM_EN.pdf",
+        "stand": "User Manual 202-12097-01, October 2020 (PDF 2020-10-02), archiviert 2021-06-24",
+        "sicherheit": "mittel",
+        "bemerkung": "Umrechnung aus 5.9 x 2.7 x 2.1 in"
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 222,
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 222,
+        "quelle": "netgear_handbuch_2020",
+        "beleg": "https://web.archive.org/web/20210624234554/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15_UM_EN.pdf",
+        "stand": "User Manual 202-12097-01, October 2020 (PDF 2020-10-02), archiviert 2021-06-24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "fcc_eax12_innenfotos",
+        "beleg": "https://fccid.io/PY320400514/Internal-Photos/Internal-Photos-5231627",
+        "stand": "BBQZ-WTW-P20110869_INT, PDF 2021-04-21, Exhibit 2021-11-01",
+        "sicherheit": "niedrig",
+        "bemerkung": "nur passive Kühlkörper; am EAX12-Muster der FCC-Zulassung PY320400514 gesehen; für EAX15 v2 nur über die gleiche Hardware abgeleitet"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": "4 Front-LEDs: Power, Router Link, Client Link, WPS",
+        "quelle": "netgear_handbuch",
+        "beleg": "https://www.downloads.netgear.com/files/GDC/EAX15/EAX15_UM_EN.pdf",
+        "stand": "User Manual 202-12941-01, May 2026 (PDF 2026-05-12)",
+        "sicherheit": "mittel",
+        "bemerkung": "Handbuch ohne Versionsangabe"
+      },
+      {
+        "wert": "4 zweifarbige bzw. einfarbige Front-LEDs + 2 LEDs an der LAN-Buchse (9 GPIO-LEDs)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_netgear_eax12.dts",
+        "stand": "main, letzter Commit fcbaaddf088a vom 2026-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": "power/client/router grün+rot, wps grün, eth grün+gelb"
+      },
+      {
+        "wert": 9,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "LED count"
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "ja (Stock-Firmware: 'Turn the LEDs On or Off')",
+        "quelle": "netgear_handbuch",
+        "beleg": "https://www.downloads.netgear.com/files/GDC/EAX15/EAX15_UM_EN.pdf",
+        "stand": "User Manual 202-12941-01, May 2026 (PDF 2026-05-12)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "Seite, neben WPS-Taste und LAN-Buchse; mindestens 7 s = Werkseinstellungen (Stock)",
+        "quelle": "netgear_handbuch_2020",
+        "beleg": "https://web.archive.org/web/20210624234554/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15_UM_EN.pdf",
+        "stand": "User Manual 202-12097-01, October 2020 (PDF 2020-10-02), archiviert 2021-06-24",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Reset- und WPS-Taste vorhanden",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": "Seite 2: Secure connection (WPS), Reset"
+      },
+      {
+        "wert": "Reset GPIO 15, WPS GPIO 8",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_netgear_eax12.dts",
+        "stand": "main, letzter Commit fcbaaddf088a vom 2026-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Reset- und WPS-Taste bringen das Gerät in den Config-Mode",
+        "quelle": "gluon_pr_3433",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/3433",
+        "stand": "PR 2025-01-22 (maurerle), gemergt 2025-01-25 als ff58f65a2b6a",
+        "sicherheit": "mittel",
+        "bemerkung": "Gluon-Checkliste (EAX12-Serie)"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen, UART auf der Platine beschriftet (Stiftleiste oder Lötpunkte nicht genannt)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "mittel",
+        "bemerkung": "UART: 115200 baud (labeled on board); Commit beschreibt die Serie EAX12/EAX11v2/EAX15v2 mit gleicher Hardware"
+      },
+      {
+        "wert": "innen Stiftleiste (4-polig, gewinkelt, am unteren Platinenrand)",
+        "quelle": "fcc_eax12_innenfotos",
+        "beleg": "https://fccid.io/PY320400514/Internal-Photos/Internal-Photos-5231627",
+        "stand": "BBQZ-WTW-P20110869_INT, PDF 2021-04-21, Exhibit 2021-11-01",
+        "sicherheit": "niedrig",
+        "bemerkung": "am EAX12-Engineering-Sample bestückt; dass es der UART ist und Seriengeräte ihn bestückt haben, ist offen"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "auch DTS bootargs console=ttyS0,115200"
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "115200 / 8N1"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "Wiki-Abschnitt Serial ist nur Vorlage, keine Pinbelegung, kein Platinenfoto",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/netgear/eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-08-25 23:43",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "Kunststoffgehäuse ohne Schrauben, vorsichtig aufhebeln",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/netgear/eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-08-25 23:43",
+        "sicherheit": "niedrig",
+        "bemerkung": "Wikitext 'There are now screws', gemeint vermutlich 'no screws'"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ramips/mt7621",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main, letzter Commit der Datei 42471994a9fc vom 2026-10-15",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ramips/mt7621",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "netgear_eax12",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main, letzter Commit der Datei 42471994a9fc vom 2026-10-15",
+        "sicherheit": "hoch",
+        "bemerkung": "EAX15 v2 als DEVICE_ALT1, kein eigenes Profil"
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "Snapshot ab 2023-07-01",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "Merge in main"
+      },
+      {
+        "wert": "23.05.4",
+        "quelle": "openwrt_git_2305",
+        "beleg": "https://github.com/openwrt/openwrt/commit/29280638e8cb",
+        "stand": "Backport in openwrt-23.05, 2024-07-09",
+        "sicherheit": "hoch",
+        "bemerkung": "in v23.05.2 und v23.05.3 nicht enthalten"
+      },
+      {
+        "wert": "23.05.2",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "Supported Since Rel laut ToH (widerspricht dem Git-Stand)"
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.2",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot (abgeleitet)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus TFTP/NMRP im Bootloader und Config-Partition; ToH: ¿"
+      }
+    ],
+    "installation": [
+      {
+        "wert": "factory.img über die Stock-Weboberfläche oder per TFTP/NMRP an den Bootloader (ohne Öffnen)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Rückweg: Stock-Firmware per TFTP/NMRP an den Bootloader",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "factory.img ist für Region US kodiert (NETGEAR_ENC_REGION US), Modellliste EAX12;EAX11v2;EAX15v2",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "Branch main, letzter Commit der Datei 42471994a9fc vom 2026-10-15",
+        "sicherheit": "hoch",
+        "bemerkung": "ob EU-Geräte das Image über die Weboberfläche annehmen, ist nicht belegt"
+      }
+    ],
+    "gpl_quelle": [
+      {
+        "wert": "https://www.downloads.netgear.com/files/GPL/EAX12_EAX11v2_EAX15v2_GPL_V1.0.3.34_src.tar.gz",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "Label-MAC = LAN-MAC aus Config-Partition; WLAN +1/+2",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": "Commit beschreibt die Serie EAX12/EAX11v2/EAX15v2 mit gleicher Hardware"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ab v2025.1 als Alias netgear-eax15-v2 des Images netgear-eax12",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ramips-mt7621",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ab v2025.1, in v2023.2.x nicht enthalten",
+        "quelle": "gluon_release",
+        "beleg": "https://github.com/freifunk-gluon/gluon/releases/tag/v2025.1",
+        "stand": "Release v2025.1 vom 2025-12-31",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "PR: 'this is the same device as the EAX 11 v2 and EAX 15 v2'",
+        "quelle": "gluon_pr_3433",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/3433",
+        "stand": "PR 2025-01-22 (maurerle), gemergt 2025-01-25 als ff58f65a2b6a",
+        "sicherheit": "mittel",
+        "bemerkung": "Checkliste nennt als Profilname 'netgear-eax15' - Hinweis, dass ein EAX15 getestet wurde, nicht ausdrücklich gesagt"
+      }
+    ],
+    "varianten": [
+      {
+        "wert": "EAX15 v1 (2020, FCC PY320200496, Platine 'AP-BCM090-0003_WIFI REV1.0') - nicht unterstützt",
+        "quelle": "fcc_v1_innenfotos",
+        "beleg": "https://fccid.io/PY320200496/Internal-Photos/Internal-Photos-4891104",
+        "stand": "Bericht 200701C18-2, PDF 2020-08-26",
+        "sicherheit": "mittel",
+        "bemerkung": "Platinenname enthält 'BCM' - Broadcom-Plattform nur vermutet, Chips nicht lesbar"
+      },
+      {
+        "wert": "EAX15 v2 = EAX12-Hardware (MT7621 + MT7915), unterstützt",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/32ea8a9a7e4b1319607ae398e9bf7d8e3c4cd756",
+        "stand": "Commit 2023-03-30 (Autor Wenli Looi), gemergt 2023-07-01 (Hauke Mehrtens)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "EAX15 v3 (1.3-GHz-Dual-Core, Firmware ab 2025) - nicht unterstützt",
+        "quelle": "netgear_datenblatt_v3",
+        "beleg": "https://www.downloads.netgear.com/files/GDC/EAX15v3/EAX15v3_DS.pdf",
+        "stand": "D-EAX15v3-2, PDF 2026-05-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Netgear-Artikelnummern ohne Versionsangabe: EAX15-100NAS (US), EAX15-100PES (EU)",
+        "quelle": "netgear_produktseite_de_2023",
+        "beleg": "https://web.archive.org/web/20230928011258/https://www.netgear.com/de/home/wifi/range-extenders/eax15/",
+        "stand": "Archivkopie 2023-09-28",
+        "sicherheit": "niedrig",
+        "bemerkung": "welche Hardware-Version dahinter steckt, sagen die Seiten nicht"
+      }
+    ],
+    "platinen_kennung": [
+      {
+        "wert": "EAX1? REV2.0 (Ziffer unscharf)",
+        "quelle": "fcc_eax12_innenfotos",
+        "beleg": "https://fccid.io/PY320400514/Internal-Photos/Internal-Photos-5231627",
+        "stand": "BBQZ-WTW-P20110869_INT, PDF 2021-04-21, Exhibit 2021-11-01",
+        "sicherheit": "niedrig",
+        "bemerkung": "Platinenaufdruck am EAX12-Muster; Etikettenlage-Zeichnung derselben Zulassung heißt 'EAX15 Label location'"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-04-20 05:15",
+        "sicherheit": "mittel",
+        "bemerkung": "keine eigene Datenseite für EAX15 v2"
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/netgear/eax12",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/netgear/eax12?do=export_raw",
+        "stand": "Seitenrevision 2026-08-25 23:43",
+        "sicherheit": "mittel",
+        "bemerkung": "Seite 'NETGEAR EAX12 series' deckt EAX15v2 ab"
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "keine Seite (Netgear_EAX15 nicht angelegt)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/index.php?search=EAX15&fulltext=1",
+        "stand": "Suche 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.netgear.com/home/wifi/range-extenders/eax15/",
+        "quelle": "netgear_produktseite",
+        "beleg": "https://www.netgear.com/home/wifi/range-extenders/eax15/",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "zeigt heute EAX15v3"
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "quelle": "netgear_datenblatt_v2",
+        "beleg": "https://web.archive.org/web/20220118102726/https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_AU_DS.pdf",
+        "stand": "D-EAX15v2-AU-0, PDF 2021-07-23, archiviert 2022-01-18",
+        "sicherheit": "hoch",
+        "bemerkung": "AU-Ausführung, archiviert"
+      }
+    ],
+    "handbuch": [
+      {
+        "wert": "https://www.downloads.netgear.com/files/GDC/EAX15/EAX15_UM_EN.pdf",
+        "quelle": "netgear_handbuch",
+        "beleg": "https://www.downloads.netgear.com/files/GDC/EAX15/EAX15_UM_EN.pdf",
+        "stand": "User Manual 202-12941-01, May 2026 (PDF 2026-05-12)",
+        "sicherheit": "mittel",
+        "bemerkung": "aktuelle Fassung für EAX10/EAX15 ohne Versionsangabe"
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.netgear.com/support/product/eax15/",
+        "quelle": "netgear_support",
+        "beleg": "https://www.netgear.com/support/product/eax15/",
+        "stand": "Abruf 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Seite per JavaScript, Versionsauswahl nicht ausgewertet"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/PY3",
+      "kategorie": "fcc_id",
+      "grund": "FCC ID des EAX15 v2 nicht gefunden (PY320200496 ist v1, PY320400514 nennt nur EAX12/EAX11v2); fccid.io-Suche gesperrt"
+    },
+    {
+      "url": "https://www.netgear.com/support/product/eax15/",
+      "kategorie": "erkennung_typenschild",
+      "grund": "Foto oder Text des EAX15-v2-Typenschilds fehlt: steht 'EAX15v2' auf dem Etikett? Unterscheidung zu v1/v3 am Gerät offen"
+    },
+    {
+      "url": "https://forum.openwrt.org/search?q=EAX15",
+      "kategorie": "erkennung_typenschild",
+      "grund": "OpenWrt-Forum nicht durchsucht (search.json meiden); könnte Erfahrungen mit EAX15 v2 und Abgrenzung zu v1/v3 enthalten"
+    },
+    {
+      "url": "https://www.netgear.com/about/regulatory/",
+      "kategorie": "leistung_w_max",
+      "grund": "Leistungsaufnahme in keiner Quelle; EU-Konformitätserklärung/ErP-Angaben könnten sie nennen"
+    },
+    {
+      "url": "https://openwrt.org/toh/netgear/eax12",
+      "kategorie": "seriell_pinbelegung",
+      "grund": "Serial-Abschnitt nur Vorlage; Pinbelegung der beschrifteten UART-Stelle fehlt"
+    },
+    {
+      "url": "https://www.downloads.netgear.com/files/GDC/EAX15/EAX15v2_DS.pdf",
+      "kategorie": "datenblatt",
+      "grund": "EU-Datenblatt EAX15v2 nicht gefunden (Pfad unter GDC/EAX15v2 und GDC/EAX15 liefert 403); nur AU-Fassung archiviert - EAN/Region offen"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/netgear-*",
+      "kategorie": "geizhals_url",
+      "grund": "Kein Geizhals-Permalink für EAX15 im Webarchiv; EAN nirgends genannt"
+    },
+    {
+      "url": "https://www.downloads.netgear.com/files/GPL/EAX12_EAX11v2_EAX15v2_GPL_V1.0.3.34_src.tar.gz",
+      "kategorie": "hardware",
+      "grund": "GPL-Quellen mit Stock-DTS; Größe unbekannt, nicht geladen"
+    },
+    {
+      "url": "https://fccid.io/PY320400514/Internal-Photos/Internal-Photos-5231627",
+      "kategorie": "platinen_kennung",
+      "grund": "Platinenaufdruck 'EAX1? REV2.0' in höherer Auflösung lesen - EAX15 würde die Zuordnung der Zulassung zur EAX15-v2-Platine stützen"
+    },
+    {
+      "url": "https://fccid.io/PY320200496/Internal-Photos/Internal-Photos-4891104",
+      "kategorie": "varianten",
+      "grund": "SoC/WLAN-Chips des EAX15 v1 auf den Fotos nicht lesbar; für die Abgrenzung v1/v2 nützlich (ggf. Test-Report DTS-WLAN 1.9 MB)"
+    },
+    {
+      "url": "https://www.downloads.netgear.com/files/GDC/EAX15/EAX15_UM_EN.pdf",
+      "kategorie": "temperatur_betrieb",
+      "grund": "Handbuch-Angaben (0-40 °C, 90 %) ohne Versionsangabe; ob sie für v2 gelten, nur über v1-Handbuch 2020 und aktuelles (EAX10/EAX15) gestützt"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-20",
+    "status": "teilweise",
+    "anfragen": 41,
+    "notiz": "netgear-eax15-v2 ist Gluon-Alias von netgear-eax12 (gleiche Hardware laut OpenWrt-Commit 32ea8a9 und mt7621.mk DEVICE_ALT1). Kein ToH-Dump-Eintrag, keine eigene OpenWrt-Seite. Neu für EAX15 v2: archiviertes Netgear-Datenblatt D-EAX15v2-AU-0 (880 MHz Dual-Core, AX1800, 2 interne Antennen, 1x GbE, 149x68.4x52.3 mm, 222 g, innen), Handbücher 2020 und 2026 (0-40 °C), Abgrenzung zu v1 (FCC PY320200496, Etikett EAX15NA V1, Platine AP-BCM090-0003) und v3 (1.3 GHz, heutige Produktseite). Serien-Werte (RAM, Flash, WLAN, Seriell, LEDs) aus OpenWrt-Commit/DTS und der EAX12-Auswertung (Cache cache/netgear-eax12) übernommen, Fotobelege vom EAX12-Muster als niedrig markiert. FCC ID v2, Typenschild v2, EAN, Geizhals, Leistungsaufnahme offen. Keine Werkstatt-Protokolle."
+  }
+}

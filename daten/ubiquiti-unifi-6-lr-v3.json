@@ -1,0 +1,2294 @@
+{
+  "image": "ubiquiti-unifi-6-lr-v3",
+  "modell": "Ubiquiti UniFi 6 LR v3",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "31134337"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3?do=export_raw",
+      "stand": "Seitenrevision 2026-02-09 06:09",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Live-Seite neuer als Dump: aktuell 24.10.5 (Dump 23.05.2), Bluetooth '-', Serial voltage 3.3, Outdoor No, Gluon support unknown"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/ubiquiti/unifi_6_lr?do=export_raw",
+      "stand": "Seitenrevision 2026-08-31 20:29",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "gemeinsame Seite v1/v2/v3; Hardware-, Seriell- und Bootlog-Abschnitte stammen aus der v1-Zeit"
+    },
+    "openwrt_wiki_foto_seriell": {
+      "url": "https://openwrt.org/_media/media/ubiquiti/img_4843.jpeg",
+      "stand": "Foto 2022-03-11 (EXIF)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Platine mit Aufkleber-Code 2207K..., also vor 2234 gebaut (v1/v2), nicht v3; als Bild ausgewertet"
+    },
+    "openwrt_git_v3": {
+      "url": "https://github.com/openwrt/openwrt/commit/a0f4eadf6a25fb54c189bde91425673e11125d35",
+      "stand": "Commit 2023-08-27 (Autor), gemergt 2023-08-28",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_v1": {
+      "url": "https://github.com/openwrt/openwrt/commit/634c13c186646aff2badb51a43b248825d0fe5a0",
+      "stand": "Commit 2021-02-11 (Autor), gemergt 2021-02-18",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Erstunterstützung UniFi 6 LR (v1); Hardwareliste mit Aquantia-PHY gilt für v3 nur teilweise"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=unifi-6-lr+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-19 (39 Commits, neuester 2024-08-10)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7622-ubnt-unifi-6-lr-v3.dts",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "dateien": [
+        "mt7622-ubnt-unifi-6-lr-v3.dts",
+        "mt7622-ubnt-unifi-6-lr-v3.dtsi",
+        "mt7622-ubnt-unifi-6-lr.dtsi"
+      ]
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/mt7622.mk",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_forum_141792": {
+      "url": "https://forum.openwrt.org/t/unifi-6-lr-v2-ethernet-not-working/141792",
+      "stand": "Thread 2022-11-04 bis 2023-09-12 (99 Beiträge, geschlossen)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "alle Beiträge gelesen"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/mediatek-mt7622",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_pr_2982": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/2982",
+      "stand": "PR 2023-09-13, gemergt 2026-01-25 (Commit 8624249346)",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_backport_3686": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/3686",
+      "stand": "gemergt 2026-02-10 in v2025.1.x (Commit c970085e9d)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "enthalten ab Tag v2025.1.1 (Release 2026-05-04), auch v2025.1.2/v2025.1.3; nicht in v2025.1 und v2023.2.x"
+    },
+    "freifunk_forum_23860": {
+      "url": "https://forum.freifunk.net/t/23860",
+      "stand": "Thread 2023-09-09 bis 2023-09-16",
+      "abgerufen": "2026-10-19"
+    },
+    "freifunk_forum_23864": {
+      "url": "https://forum.freifunk.net/t/23864",
+      "stand": "Thread 2023-09-16 bis 2023-10-18",
+      "abgerufen": "2026-10-19"
+    },
+    "ubiquiti_datenblatt": {
+      "url": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+      "stand": "PDF 2023-04-21",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine Hardware-Revision genannt, gilt für U6-LR allgemein"
+    },
+    "ubiquiti_techspecs": {
+      "url": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+      "stand": "Live-Seite, ohne Datum (© 2026)",
+      "abgerufen": "2026-10-19"
+    },
+    "ubiquiti_lieferumfang": {
+      "url": "https://cdn.ecomm.ui.com/products/d8fee47d-b53e-4a86-a5cb-cf2f6ab1c5ef/0d720b1c-d32a-4188-be49-73dca62cda91.png",
+      "stand": "Produktbild 'What's in the box' der Techspecs-Seite (SKU U6-LR-US), ohne Datum",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "als Bild ausgewertet"
+    },
+    "fcc": {
+      "url": "https://fccid.io/SWX-U6LR",
+      "stand": "Grant 2020-05-20 (Original Equipment)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "einzige Zulassung, keine spätere Änderung gelistet; Unterlagen zeigen v1-Stand 2020"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/SWX-U6LR/Label/Label-Info-4731775",
+      "stand": "Exhibit 2020-05-20 (Zeichnung 'U6-LR Device Artwork' 2020-04-27, V04)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "als Bild ausgewertet"
+    },
+    "fcc_qig": {
+      "url": "https://fccid.io/SWX-U6LR/User-Manual/User-Manual-curv-4731771",
+      "stand": "Exhibit 2020-11-16 (PDF 2020-04-30)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "QIG-Karte, nur Zeichnungen, als Bild ausgewertet"
+    },
+    "fcc_innenfotos": {
+      "url": "https://fccid.io/SWX-U6LR/Internal-Photos/Internal-Photos-4731770",
+      "stand": "Exhibit 2020-11-16 (PDF 2020-05-11)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "v1-Muster 2020, Platine 11-00742-02; als Bild ausgewertet"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=U6-LR&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine Seite zum U6-LR (auch Suche nach SWX-U6LR ohne Treffer)"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/api.php?action=query&list=allpages&apprefix=Ubiquiti_Networks_UniFi",
+      "stand": "Seitenliste 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine Seite zum U6-LR; nur Kommentar in 'Ubiquiti Networks UniFi AP 6 Plus' (Rev. 2026-02-10): 'U6-LR PHY/Version: AQR112C v2/RTL8211 v3'"
+    },
+    "werkstatt": {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/geraetefotos.md",
+      "stand": "Stand 2026-10-06 (Datei geändert 2026-10-07)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "auch docs/chronik.md (Eintrag 31.01./01.02.2026); kein Validierungsprotokoll zum Gerät"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "31134337",
+      "devicetype": "",
+      "brand": "Ubiquiti",
+      "model": "UniFi 6 LR",
+      "version": "v3",
+      "fccid": "http://¿",
+      "availability": "Available 2023",
+      "whereavailable": "¿",
+      "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=a0f4eadf6a25fb54c189bde91425673e11125d35",
+      "supportedsincerel": "23.05.0",
+      "supportedcurrentrel": "23.05.2",
+      "unsupported_functions": "NULL",
+      "target": "mediatek",
+      "subtarget": "mt7622",
+      "packagearchitecture": "aarch64_cortex-a53",
+      "bootloader": "U-Boot",
+      "cpu": "MediaTek MT7622",
+      "cpucores": "2",
+      "cpumhz": "1350",
+      "flashmb": "64",
+      "rammb": "512",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "1",
+      "ethernet2_5gports": "-",
+      "ethernet5gports": "-",
+      "ethernet10gports": "-",
+      "sfp_ports": "-",
+      "sfp_plus_ports": "-",
+      "switch": "¿",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "n.b. no 2.5GBit support unlike v1, v2",
+      "wlanhardware": "MediaTek MT7622,MediaTek MT7915",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "a/n/ac/ax",
+      "wlancomments": "",
+      "wlandriver": "mt76",
+      "detachableantennas": "-",
+      "bluetooth": "¿",
+      "usbports": "-",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "115200 / 8N1",
+      "jtag": "¿",
+      "ledcount": "1",
+      "buttoncount": "¿",
+      "gpios": "¿",
+      "powersupply": "PoE+ (802.3at) or passive PoE",
+      "devicepage": "toh:ubiquiti:unifi_6_lr",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "https://forum.openwrt.org/t/unifi-6-lr-v2-ethernet-not-working/141792/79",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "UniFi 6 LR",
+      "gitsearch": "UniFi 6 LR",
+      "wikideviurl": "http://¿",
+      "oemdevicehomepageurl": "https://store.ui.com/collections/unifi-network-access-points/products/unifi-6-long-range-access-point",
+      "firmwareoemstockurl": "https://in.ui.com/download/software/u6-lr",
+      "firmwareopenwrtinstallurl": "NULL",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.2/targets/mediatek/mt7622/openwrt-23.05.2-mediatek-mt7622-ubnt_unifi-6-lr-v3-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "NULL",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7622/openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v3-squashfs-sysupgrade.bin",
+      "installationmethods": "see devicepage",
+      "commentinstallation": "",
+      "recoverymethods": "see devicepage",
+      "commentrecovery": "",
+      "picture": "media:ubiquiti:unifi_6_lr_front.jpg",
+      "comments": "See device page for details on identifying variants",
+      "page": "toh:hwdata:ubiquiti:ubiquiti_unifi_6_lr_v3"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi AP",
+      "Brand": "Ubiquiti",
+      "Model": "UniFi 6 LR",
+      "Versions": "v3",
+      "FCCID_urls": "http://¿",
+      "Availability_availability": "Available 2023",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=a0f4eadf6a25fb54c189bde91425673e11125d35",
+      "Supported Since Rel_releasesince": "23.05.0",
+      "Supported Current Rel_releasecurrent": "24.10.5",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "unknown",
+      "Target_target": "mediatek",
+      "Subtarget": "mt7622",
+      "Package architecture_pkg-arch": "aarch64_cortex-a53",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "MediaTek MT7622",
+      "CPU Cores_numcores_": "2",
+      "CPU MHz": "1350",
+      "Flash MB_mbflashs": "64",
+      "RAM MB_mbram": "512",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "n.b. no 2.5GBit support unlike v1, v2",
+      "WLAN Hardwares": "MediaTek MT7622, MediaTek MT7915",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac/ax",
+      "WLAN 6.0GHz_wlan60": "-",
+      "WLAN 60.0GHz_wlan60g": "-",
+      "WLAN Comments_": "",
+      "WLAN driver_wlan-drivers": "mt76",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "none",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "1",
+      "Button count_numbutton": "¿",
+      "GPIOs_numgpio": "¿",
+      "Power Supply": "PoE+ (802.3at) or Passive PoE",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:ubiquiti:unifi_6_lr",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "https://forum.openwrt.org/t/unifi-6-lr-v2-ethernet-not-working/141792/79",
+      "Forum search_search-forums": "UniFi 6 LR",
+      "Git search_search-gits": "UniFi 6 LR",
+      "WikiDevi URL_urls": "http://¿",
+      "WikiDevi ID_hwinfo-ids": "",
+      "OEM Device Homepage URL_url": "https://store.ui.com/collections/unifi-network-access-points/products/unifi-6-long-range-access-point",
+      "Firmware OEM Stock URL_url": "https://in.ui.com/download/software/u6-lr",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/24.10.5/targets/mediatek/mt7622/openwrt-24.10.5-mediatek-mt7622-ubnt_unifi-6-lr-v3-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/24.10.5/targets/mediatek/mt7622/openwrt-24.10.5-mediatek-mt7622-ubnt_unifi-6-lr-v3-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7622/openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v3-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7622/openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v3-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "see devicepage",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "see devicepage",
+      "Comment recovery": "",
+      "Picture_img100s": "media:ubiquiti:unifi_6_lr_front.jpg",
+      "Comments_": "See device page for details on identifying variants"
+    },
+    "openwrt_wiki": {
+      "einleitung": "The Ubiquiti U6 Long Range (U6-LR) is a PoE powered 802.11ax WiFi 6 access point with 8 spacial streams. The design is approximately a 9\" (220mm) disk designed for wall mounting or can be layed flat on a shelf.",
+      "wichtig": "Devices with manufacturing date 2234 (34rd week of 2022) and later appear to be a version 3 hardware with a different (1 GbE only) Ethernet PHY chip. Flashing v2 firmware to this hardware will result in inoperable Ethernet.",
+      "v1_vs_v2": "v1's LED has full RGB color support while v2's has limited blue/white colors (supply shortages); v1 image on v2 not fatal, only LED error",
+      "v3": "Since about summer 2022 there is a v3 device with a RTL8211 PHY. The v3 is not compatible with v1/v2 images. Use a v3 image (since 23.05). Check: 23.05.5/24.10.2 'dmesg | grep mtk_soc_eth' -> 'PHY [mdio-bus:00] driver [RTL8211F Gigabit Ethernet] (irq=POLL)'; earlier 23.05.x 'dmesg | grep mtk_sgmii_init' -> 'detect RTL8211_CARD'. PHY table: AQR112C = v2, RTL8211 = v3. Note: as of early 2024, it appears that both v2 and v3 are in production.",
+      "installation": "factory reset (reset ~10 s); MAC on rear panel middle line next to QR code, also in QR code; DHCP or default 192.168.1.20 (old stock 192.168.1.34); SSH ubnt/ubnt; check hardware version; scp sysupgrade image to /tmp; mtd 6:bs 8:kernel0 9:kernel1; stock 6.2+ write protected partitions need unlock; bootselect flag bs; dd image to kernel0 and kernel1 (~2 min each); first boot ~4 min, LED flashes white/off; solid blue = done; OpenWrt default 192.168.1.1/24, DHCP server on LAN, wifi disabled",
+      "ubootmod": "alternative 'ubootmod' images (preloader, bl31-uboot.fip, initramfs-recovery.itb, squashfs-sysupgrade.itb) replace bootloader; do not mix variants",
+      "flash_layout": "mtd0 Preloader 0x40000, mtd1 ATF 0x20000, mtd2 u-boot 0x60000, mtd3 u-boot-env 0x10000, mtd4 Factory 0x40000, mtd5 EEPROM 0x10000, mtd6 bs 0x10000, mtd7 cfg 0x100000, mtd8 kernel0 0x1ee0000, mtd9 kernel1 0x1ee0000 (erasesize 0x1000)",
+      "debricking": "bootloop symptom: white LED flashes twice, dark ~30 s, repeat. Hold reset while plugging PoE, 15-20 s until LED alternates white-blue-off; recovery IP may differ (e.g. .31), may ignore ping, use ARP scan; stock firmware (6.7 branch worked) renamed firmware.bin; tftp put; 5-10 min re-flash",
+      "netzwerk": "lan 192.168.1.1/24; wlan0 radio0 802.11bgn disabled; wlan1 radio1 802.11nacax disabled",
+      "buttons": "Reset -> reset",
+      "fotos": [
+        "unifi_6_lr_front.jpg",
+        "unifi_6_lr_back.jpg",
+        "unifi_6_lr_pcb_layer.jpeg",
+        "unifi_6_lr_pcb_layout.jpeg",
+        "unifi_6_lr_antennas.jpeg",
+        "unifi_6_lr_antenna_layout.jpeg",
+        "unifi_6_lr_open_case.jpeg",
+        "img_4843.jpeg (serial)"
+      ],
+      "backside_label": "Insert photo of backside label (Platzhalter, kein Foto)",
+      "gehaeuse": "glued together; heat gun ~90 °C on outer border, sharp knife, then flat knife below the ethernet port, flat screwdriver, work around; clips break easily",
+      "serial": "CPU UART0 at the pinout next to the Holtek MCU. Pinout (first pin next to SoC / MCU) 0 3V3, 1 RX, 2 TX, 3 GND; 115200, 8N1",
+      "bootlogs": "OEM-Bootlog (Stock, Linux 4.4.198) und OpenWrt-Bootlog (2500base-x Link, also v1/v2)",
+      "tags": "mediatek u-boot MT7622 2core ARMv8 CortexA53 64NAND 512RAM 1port 1NIC 802.3bz 2.5GigabitEthernet GigabitEthernet 2wmic mt7915 4x4 802.11bgn ht40 802.11anac 802.11ax he80 wifi6 InternalAntenna 0usb 1Button Serial ceiling PoE",
+      "revisionen": [
+        "2026/08/31 20:29 [Debricking] jannispinter",
+        "2026/08/31 20:20 [Debricking] jannispinter",
+        "2026/06/08 22:32 confirmed working on 100mbps connection, still no 10mbps as of 25.12 (alexceltare2)",
+        "2026/04/05 17:04 [Tags] wfgriffin88",
+        "2025/11/03 06:39 warranty dimmadont",
+        "2025/10/13 01:21 [Installation Steps] searinminecraft"
+      ]
+    },
+    "openwrt_wiki_foto_seriell": {
+      "beschreibung": "Platinenausschnitt mit U.FL-Kabeln 2G1-2G3, 5G1-5G3, SA; Messklemmen TX, RX, GND an Kontakten neben einem SOIC-Baustein unterhalb des Schirmblechs; Aufkleber '2207K...21F976604-ccGkDE'",
+      "exif_datum": "2022:03:11 22:54:07",
+      "groesse": "960x1280"
+    },
+    "openwrt_git_v3": {
+      "titel": "mediatek: add support for Ubiquiti UniFi 6 LR v3",
+      "autor": "Daniel Golle",
+      "text": "Some recent models of the Ubiquiti Networks UniFi 6 LR access point come with a RealTek RTL8211FS 1000M/100M/10M PHY instead of the Aquantia AQR112 2500M/1000M/100M/10M PHY used in both v1 and v2. Add build for this variant so we can support Ethernet with the PHY.",
+      "dateien": [
+        "mt7622-ubnt-unifi-6-lr-v1.dtsi",
+        "mt7622-ubnt-unifi-6-lr-v2.dtsi",
+        "mt7622-ubnt-unifi-6-lr-v3-ubootmod.dts",
+        "mt7622-ubnt-unifi-6-lr-v3.dts",
+        "mt7622-ubnt-unifi-6-lr-v3.dtsi",
+        "mt7622-ubnt-unifi-6-lr.dtsi",
+        "image/mt7622.mk"
+      ],
+      "backport": "23.05: Commit 230c09d2034995540aaec920466eb25387173e56 (laut Freifunk-Forum 23860)"
+    },
+    "openwrt_git_v1": {
+      "titel": "mediatek: add support for Ubiquiti UniFi 6 LR",
+      "autor": "David Bauer",
+      "hardware": [
+        "MediaTek MT7622",
+        "512MB DDR3 RAM",
+        "64M SPI-NOR Flash (Winbond W25Q512JV)",
+        "MediaTek MT7622 802.11bgn 4T4R WMAC",
+        "MediaTek MT7915 802.11ax 4T4R",
+        "Marvell AQR1112 100/1000/2500 NBase-T PHY",
+        "Holtek HT32F52241 LED controller",
+        "Reset Switch"
+      ],
+      "uart": "CPU UART0 at the pinout next to the Holtek MCU. Pinout (first pin next to SoC / MCU) 0 3V3, 1 RX, 2 TX, 3 GND. Settings are 115200 8N1.",
+      "gehaeuse": "glued together; flat knife between front and back casing below the ethernet port",
+      "installation": "192.168.1.20 ubnt/ubnt; scp sysupgrade; bs/kernel0/kernel1; dd"
+    },
+    "openwrt_git_suche": {
+      "treffer": 39,
+      "relevant_v3": [
+        "a0f4eadf6a 2023-08-28 mediatek: add support for Ubiquiti UniFi 6 LR v3",
+        "fff4441135 2023-08-28 uboot-mediatek: add builds for UniFi 6 LR v2 and v3",
+        "74879140a1 2024-07-25 treewide: fixup models names for UniFi U6 series",
+        "824f7ea52d 2024-08-10 uboot-envtools: add env settings for ubnt,unifi-6-lr-v3"
+      ]
+    },
+    "openwrt_dts": {
+      "model": "Ubiquiti UniFi 6 LR v3",
+      "compatible": [
+        "ubnt,unifi-6-lr-v3",
+        "mediatek,mt7622"
+      ],
+      "leds": {
+        "white:dome": "pio 0x43 active low (boot, failsafe)",
+        "blue:dome": "pio 0x44 active high (running, upgrade)"
+      },
+      "eth": "gmac0 phy-mode sgmii, managed in-band-status, phy0 ethernet-phy-ieee802.3-c22 reg 0",
+      "wmac1": "mt76 an slot0, ieee80211-freq-limit 5000000-6000000",
+      "mac": "gmac0 und wmac aus eeprom@0, wmac1 aus eeprom@6",
+      "reset": "gpio-keys reset pio 62 active low",
+      "konsole": "serial0 = uart0, 115200n8",
+      "flash": "nor_flash jedec,spi-nor, spi-max-frequency 50 MHz",
+      "partitionen_v3_dts": [
+        "preloader",
+        "atf",
+        "u-boot",
+        "u-boot-env",
+        "factory",
+        "eeprom",
+        "bs",
+        "cfg",
+        "firmware (denx,fit)",
+        "kernel1"
+      ]
+    },
+    "openwrt_image_mk": {
+      "Device/ubnt_unifi-6-lr-v3": {
+        "DEVICE_VENDOR": "Ubiquiti",
+        "DEVICE_MODEL": "UniFi U6 Long-Range",
+        "DEVICE_VARIANT": "v3",
+        "DEVICE_DTS_CONFIG": "config@1",
+        "DEVICE_DTS": "mt7622-ubnt-unifi-6-lr-v3",
+        "DEVICE_PACKAGES": "kmod-mt7915-firmware"
+      },
+      "weiteres_profil": "ubnt_unifi-6-lr-v3-ubootmod",
+      "vergleich_v1": "v1 zusätzlich kmod-leds-ubnt-ledbar, SUPPORTED_DEVICES ubnt,unifi-6-lr"
+    },
+    "openwrt_forum_141792": {
+      "titel": "UniFi 6 LR v2 ethernet not working",
+      "kernaussagen": [
+        "#3 daniel: PHY uid 001cc916 = RTL8211F, neue Hardware-Revision mit 1-GBit-PHY statt AQR112C",
+        "#15/#16: Stock 6.2.x sperrt mtd-Kernel-Partitionen",
+        "#19 AndyX90: Geräte mit vorinstallierter Stock 6.0.24, nicht zum Download angeboten",
+        "#25 danijeltudek: auf v3 hängt Stock 6.0.21 beim Abfragen des RGB-LED-Treibers, läuft nach Minuten weiter",
+        "#31 TimSmall: Rückseite '2234K' (KW 34/2022), Verpackung 'Test Date 08/25/22', ab Werk U6-LR-BZ.6.0.24; TFTP-Recovery auf 6.2.37 funktioniert mit neuem PHY",
+        "#35 darkm4n: 2236V; #36 pythoner6: 2246V und 2247V; #39 brikr: zwei 2233K vermutlich v3",
+        "#45/#51/#74: PHY ist RTL8211FS, per SERDES/SGMII angebunden",
+        "#53 pythoner6: v3 nach falschem Image per serieller Konsole (Pins angelötet) und WLAN gerettet",
+        "#55 derekS: 2231K mit AQR112C",
+        "#57/#61 strelok: 2243V mit AQR112C, also nicht jedes Gerät nach 2234 ist v3",
+        "#77-#90: SGMII-AN-Fix, 1000 und 100 Mbit/s funktionieren",
+        "#91 daniel: Snapshot-Build #106 enthält v3-Images",
+        "#94/#96/#98: v3 bestätigt (u. a. 2247V), VLANs gehen",
+        "#97 ngscb: 2245K mit Stock 6.0.25"
+      ]
+    },
+    "gluon_targets": {
+      "eintrag": "device('ubiquiti-unifi-6-lr-v3', 'ubnt_unifi-6-lr-v3', { factory = false, })",
+      "target": "mediatek-mt7622",
+      "commits": [
+        "8624249346 2026-01-25 mediatek-mt7622: add support for Ubiquiti UniFi 6 LR v3 (#2982)",
+        "142741fbbf 2026-04-06 mediatek-mt7622: add Ubiquiti UniFi 6 LR v2"
+      ]
+    },
+    "gluon_pr_2982": {
+      "autor": "Djfe (Felix Baumann), Co-Autor Florian Maurer",
+      "checkliste": "flashbar aus Stock per SSH (nicht Web, nicht TFTP); sysupgrade ok; Image-Name ubiquiti-unifi-6-lr-v3; Reset → Konfigurationsmodus; Primär-MAC = Label (60:22:32:6a:37:d5); WAN = PoE-Eingang; AP und 802.11s-Mesh auf allen Radios; Power-LED und Config-Mode-Blinken ok",
+      "system_info_v3": {
+        "cpu": "MT7622_SOC",
+        "cpuid": "410fd034",
+        "flashSize": "67108864",
+        "ramsize": "536870911",
+        "vendorid": "0777",
+        "systemid": "a620",
+        "boardrevision": "33",
+        "manufid": "003d",
+        "mfgweek": "202235",
+        "radio0.name": "MT7622",
+        "radio1.name": "MT7915",
+        "eth0.macaddr": "60:22:32:6a:37:d5",
+        "ra0.macaddr": "60:22:32:6a:37:d6",
+        "rai0.macaddr": "60:22:32:6a:37:d7",
+        "bt0.macaddr": "60:22:32:6a:37:d8",
+        "cpu_rev_id": "00007622"
+      },
+      "led": "v3 hat ebenfalls zwei statische LEDs blau und weiß ('dome')",
+      "problem_5ghz": "maurerle 2025-08-21: mit gluon-main 5-GHz-Initialisierungsfehler, 'wifi' hilft meist; mit v2025.1 nicht aufgetreten",
+      "test": "2026-01-15: von FFAC getestet, Neuinstallation noch offen"
+    },
+    "gluon_backport_3686": {
+      "titel": "[Backport v2025.1.x] mediatek-mt7622: add support for Ubiquiti UniFi 6 LR v3",
+      "tags_mit_v3": [
+        "v2025.1.1",
+        "v2025.1.2",
+        "v2025.1.3"
+      ],
+      "tags_ohne_v3": [
+        "v2025.1",
+        "v2023.2.3",
+        "v2023.2.4",
+        "v2023.2.5",
+        "v2023.2.6"
+      ]
+    },
+    "freifunk_forum_23860": {
+      "titel": "Wifi6: UniFi 6 LR v3, NWA50AX, WAX218 und Meshbandauswahl in Gluon",
+      "kernaussagen": [
+        "Djfe: OpenWrt unterstützt 3. Revision (Realtek-Ethernet, 1 Gbit/s statt 2.5 Gbit/s); Geräte seit KW 34/2022",
+        "Gerät vom 22.08.2022 (Montag KW 34) für Test gefunden",
+        "Djfe: 4x4 MIMO in dichten Umgebungen (Unterkünfte) bevorzugt",
+        "Djfe #8: v1 RGB-LED, v2 zwei statische LEDs weiß/blau, v3 zusätzlich 1-G-PHY von Realtek; nach Erstinstallation falschen Images nicht mehr per LAN erreichbar"
+      ]
+    },
+    "freifunk_forum_23864": {
+      "titel": "UniFi 6 long range hergestellt 1. Hälfte 2022 - Besitzer/in gesucht",
+      "kernaussagen": [
+        "Versionsnummer nicht aufgedruckt; Unterscheidung über Stock-Firmware oder Herstellungswoche auf der Rückseite",
+        "v3: alle Geräte ab 2234; /proc/ubnthal/system.info boardrevision=33",
+        "heini66: zwei Geräte 2141 und 2224, nur blau/weiß, shortname=UALR6v2, boardrevision=3"
+      ]
+    },
+    "ubiquiti_datenblatt": {
+      "Dimensions": "Ø220 x 48 mm (Ø8.7 x 1.9\")",
+      "Weight": "Without mount: 800 g (1.8 lb); With mount: 930 g (2.1 lb)",
+      "Enclosure material": "Polycarbonate",
+      "Mount material": "Stainless steel (SUS304)",
+      "Weatherproofing": "IP54",
+      "Networking interface": "(1) GbE RJ45 port",
+      "Management interfaces": "Ethernet, Bluetooth",
+      "Power method": "PoE+",
+      "Power supply": "UniFi PoE switch; 48V, 0.5A PoE adapter (not included)",
+      "Supported voltage range": "44-57V DC",
+      "Max. power consumption": "18.5W",
+      "Max. TX power": "2.4 GHz 26 dBm; 5 GHz 26 dBm",
+      "MIMO": "2.4 GHz 4x4; 5 GHz 4x4",
+      "Throughput rate": "2.4 GHz 600 Mbps; 5 GHz 2400 Mbps",
+      "Antenna gain": "2.4 GHz 4 dBi; 5 GHz 5.5 dBi",
+      "LEDs": "White/blue",
+      "Button": "Factory reset",
+      "Mounting": "Wall/ceiling (included)",
+      "Operating temperature": "-30 to 60° C (-22 to 140° F)",
+      "Operating humidity": "5 to 95% noncondensing",
+      "Certifications": "CE, FCC, IC",
+      "WiFi standards": "802.11a/b/g, WiFi 4/WiFi 5/WiFi 6",
+      "Wireless security": "WPA-PSK, WPA-Enterprise (WPA/WPA2/WPA3)",
+      "BSSID": "8 per radio",
+      "VLAN": "802.1Q",
+      "Advanced QoS": "Per-user rate limiting",
+      "Guest traffic isolation": "Supported",
+      "Concurrent clients": "300+",
+      "802.11a": "6, 9, 12, 18, 24, 36, 48, 54 Mbps",
+      "802.11b": "1, 2, 5.5, 11 Mbps",
+      "802.11g": "6, 9, 12, 18, 24, 36, 48, 54 Mbps",
+      "802.11n (WiFi 4)": "6.5 Mbps to 600 Mbps (MCS0 - MCS31, HT 20/40)",
+      "802.11ac (WiFi 5)": "6.5 Mbps to 1.7 Gbps (MCS0 - MCS9 NSS1/2/3/4, VHT 20/40/80/160)",
+      "802.11ax (WiFi 6)": "7.3 Mbps to 2.4 Gbps (MCS0 - MCS11 NSS1/2/3/4, HE 20/40/80/160)"
+    },
+    "ubiquiti_techspecs": {
+      "Dimensions": "⌀220 x 48 mm (⌀8.7 x 1.9\")",
+      "WiFi Standard": "WiFi 6",
+      "Spatial Streams": "8",
+      "Coverage Area": "185 m² (2,000 ft²)",
+      "Max. Client Count": "350+",
+      "Uplink": "GbE",
+      "Mounting": "Ceiling, Wall (Pro Mount Included)",
+      "Weatherproofing": "IP54",
+      "Power Method": "PoE+",
+      "MIMO": "5 GHz 4 x 4 (DL/UL MU-MIMO); 2.4 GHz 4 x 4 (SU-MIMO)",
+      "Max. Data Rate": "5 GHz 2.4 Gbps (BW160); 2.4 GHz 600 Mbps (BW40)",
+      "Antenna Gain": "5 GHz 5.5 dBi; 2.4 GHz 4 dBi",
+      "Max. TX Power": "5 GHz 26 dBm; 2.4 GHz 26 dBm",
+      "Max. BSSIDs": "8 per Radio",
+      "802.11ax (WiFi 6)": "7.3 Mbps to 2.4 Gbps (MCS0 - MCS11 NSS1/2/3/4, HE 20/40/80); 7.3 Mbps to 2.4 Gbps (MCS0 - MCS11 NSS1/2, HE 160)",
+      "802.11ac (WiFi 5)": "6.5 Mbps to 1.7 Gbps (MCS0 - MCS9 NSS1/2/3/4, VHT 20/40/80); 6.5 Mbps to 1.7 Gbps (MCS0 - MCS9 NSS1/2, VHT 160)",
+      "802.11n": "6.5 Mbps to 600 Mbps (MCS0 - MCS31, HT 20/40)",
+      "Features": "Wireless Meshing, Band Steering, 802.11v, 802.11r, 802.11k, Advanced Radio Management, Passpoint, Captive Portal, PPSK, RadSec, Dynamic RADIUS VLAN u. a.",
+      "Max. Power Consumption": "18.5W",
+      "Supported Voltage Range": "44–57V DC",
+      "Networking Interface": "(1) GbE RJ45 port",
+      "Weight": "Device: 800 g (1.8 lb); With mount: 930 g (2.1 lb)",
+      "Management": "Ethernet, Bluetooth",
+      "Enclosure Material": "Polycarbonate",
+      "Mount Material": "Stainless steel (SUS304)",
+      "LEDs": "System White/Blue",
+      "Channel Bandwidth": "HT 20/40, VHT 20/40/80/160, HE 20/40/80/160 (MHz)",
+      "Operating Frequency": "US/CA: 2400-2472 MHz, U-NII-1 5150-5250, U-NII-2A 5250-5350, U-NII-2C 5470-5725, U-NII-3 5725-5850 MHz; Worldwide: 2400-2483.5 MHz, 5150-5850 MHz",
+      "Ambient Operating Temperature": "-30 to 60° C (-22 to 140° F)",
+      "Ambient Operating Humidity": "5 to 95% noncondensing",
+      "NDAA Compliant": "ja",
+      "Certifications": "CE, FCC, IC, SRRC, Anatel: 10457-21-08356",
+      "Application Requirements": "UniFi Network Version 6.0.45 and later",
+      "shortDescription": "Ceiling-mounted WiFi 6 AP with 8 spatial streams and extended signal range.",
+      "SKU": "U6-LR-US",
+      "Dokumente": [
+        "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "https://ui.com/qig/u6-longrange"
+      ]
+    },
+    "ubiquiti_lieferumfang": {
+      "inhalt_laut_bild": [
+        "Access Point",
+        "Montageplatte (Metall)",
+        "Deckenring (Metall)",
+        "Bohrschablone/Papierring",
+        "2 Halteklammern",
+        "Schrauben, Dübel, Muttern",
+        "Inbusschlüssel"
+      ],
+      "kein": "PoE-Adapter"
+    },
+    "fcc": {
+      "grantee": "Ubiquiti Inc.",
+      "product_code": "U6LR",
+      "model": "U6LR",
+      "equipment_class": "DTS / NII",
+      "test_firm": "Unified Compliance Laboratory",
+      "tcb": "Timco Engineering",
+      "final_action_date": "2020-05-20",
+      "frequenzen": {
+        "2412-2462 MHz": "0.417 W, 15C",
+        "5180-5240 MHz": "0.776 W, 15E",
+        "5745-5825 MHz": "0.776 W, 15E"
+      },
+      "grant_kommentar": "Power listed is conducted ... separation distance of at least 20 cm ... This device supports 20 MHz, 40 MHz and 80 MHz bandwidth modes.",
+      "composite_device": "Yes",
+      "exhibits": [
+        "User Manual Lite v01 (2020-11-16, 159 KB)",
+        "User Manual curv (2020-11-16, 798 KB)",
+        "Internal Photos (2020-11-16, 417 KB)",
+        "External Photos (2020-11-16, 193 KB)",
+        "Label Info (2020-05-20, 2.2 MB)",
+        "Label info (2020-05-20, 2.2 MB)",
+        "Test Setup Photos (2020-11-16, 543 KB)",
+        "RF Exposure Test Report",
+        "Test Rpt UNII-1 (+Annex)",
+        "Test Rpt UNII-3 (+Annex)",
+        "Test Rpt WIFI 01 DTS (+Annex)",
+        "Block Diagram, Schematics, Operational Description: nur Metadaten (vertraulich)"
+      ]
+    },
+    "fcc_label": {
+      "zeichnung": "U6-LR Device Artwork, 2020-04-27, Artwork P/N 388-00503-03, V04 - Updated product logo",
+      "gravur_rueckseite": "UniFi 6 Long-Range | M/N: U6-LR | 802.3af PoE | IC: 6545A-U6LR | FCC ID: SWX-U6LR | Ubiquiti Inc., 685 Third Avenue, New York, NY 10017 USA | RCM, CE, WEEE",
+      "qr_feld": "Laser etching area 7 x 22 mm, QR code 7 x 7 mm, drei Textzeilen (xxxxx / xxxxxxxxxXXX / xxxxxx)",
+      "vorderseite": "U-Logo mit 'UniFi6' mittig",
+      "beschriftungen_seite": [
+        "RESET (Knopf in Mulde)",
+        "PoE IN (RJ45-Buchse in Mulde)"
+      ]
+    },
+    "fcc_qig": {
+      "titel": "U6-LR_QIG Card, 2020-04-30",
+      "inhalt": "Schritte 1-3: PoE-Kabel anschließen, App UniFi Network; Montage A Wand (Platte, Schrauben), B Deckenplatte (Ring von hinten)"
+    },
+    "fcc_innenfotos": {
+      "oberseite": "Platine 11-00742-02 (Ubiquiti © 2020), SoC unter Abdeckung, zwei große BGA-Chips im Schirmrahmen (WLAN), Kupfer-Antennenstreifen auf der Platine, U.FL-Kabel, TSSOP-20-Baustein U9, 4 unbestückte Durchkontaktierungen in einer Reihe oben links",
+      "unterseite": "J7: 4 unbestückte Durchkontaktierungen (Pin 1 eckig) mit R226/R227/R229; Reset-Taster SW1; RJ45 J6; Übertrager G2410ZMK (1944); Kondensatoren 35 V/63 V",
+      "hinweis": "v1-Muster (2020), Platinenform weicht vom Wiki-Foto (rund, 2022) ab"
+    },
+    "deviwiki": {
+      "ergebnis": "keine Seite; Suchtreffer nur Tenda U6 u. a."
+    },
+    "wikidevi": {
+      "ergebnis": "keine Seite zum U6-LR",
+      "kommentar_u6_plus": "U6-LR PHY/Version: AQR112C v2/RTL8211 v3"
+    },
+    "werkstatt": {
+      "geraetefotos_md": "| Ubiquiti UniFi U6 LR | 16 | `ubiquiti-unifi-u6-lr` | (nicht im Downloader) | [UniFi 6 LR](https://openwrt.org/toh/ubiquiti/unifi_6_lr) | GASt73, alle 16 (Graf-Adolf-Str. 73, je Etage zwei) |",
+      "chronik_md": "| 31.01./01.02.2026 | Notschlafstelle Graf-Adolf-Straße 73 (Düsseldorf): Erdgeschoss und Gehweg fertig, insgesamt u.a. 16 UniFi U6 LR | Sozial |",
+      "validierung": "kein Protokoll in docs/validierung/"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Ubiquiti",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Ubiquiti Inc.",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/SWX-U6LR",
+        "stand": "Grant 2020-05-20 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "UniFi 6 LR",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "UniFi U6 Long-Range",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/mt7622.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "DEVICE_MODEL, DEVICE_VARIANT v3"
+      },
+      {
+        "wert": "U6 Long-Range (U6-LR)",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "M/N: U6-LR",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-U6LR/Label/Label-Info-4731775",
+        "stand": "Exhibit 2020-05-20 (Zeichnung 'U6-LR Device Artwork' 2020-04-27, V04)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gravur 'UniFi 6 Long-Range', M/N: U6-LR"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "v3",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "v3",
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0f4eadf6a25fb54c189bde91425673e11125d35",
+        "stand": "Commit 2023-08-27 (Autor), gemergt 2023-08-28",
+        "sicherheit": "mittel",
+        "bemerkung": "inoffizielle Bezeichnung von OpenWrt: Variante mit RealTek RTL8211FS statt Aquantia AQR112(C) als Ethernet-PHY"
+      },
+      {
+        "wert": "keine offizielle Hardware-Version, Ubiquiti führt nur ein Modell U6-LR",
+        "quelle": "freifunk_forum_23864",
+        "beleg": "https://forum.freifunk.net/t/23864",
+        "stand": "Thread 2023-09-16 bis 2023-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "Djfe #3: Versionsnummer nicht aufgedruckt, Nummerierung v1/v2/v3 stammt aus Wiki/Forum; Stock-Firmware zeigt in /proc/ubnthal/system.info bei v3 'boardrevision=33' (v2-Gerät: shortname=UALR6v2, boardrevision=3)"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Nicht am Typenschild erkennbar. Unterscheidung nur in der Stock-Firmware per 'dmesg | grep mtk_sgmii_init' (RTL8211_CARD = v3, AQR112C_CARD = v2) bzw. unter OpenWrt 23.05.5/24.10.2 'dmesg | grep mtk_soc_eth' (RTL8211F Gigabit Ethernet = v3)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+        "stand": "Seitenrevision 2026-08-31 20:29",
+        "sicherheit": "mittel",
+        "bemerkung": "Wiki-Tabelle: AQR112C = v2, RTL8211 = v3"
+      },
+      {
+        "wert": "Herstellungswoche auf der Rückseite (oberste Zeile neben dem QR-Code, z. B. '2234K'): ab 2234 (KW 34/2022) v3",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "ToH v2-Eintrag: 'V2 devices have production date codes (top line next to rear QR code) before 2234'; Wiki: 'manufacturing date 2234 ... and later appear to be a version 3'; Wiki: 'as of early 2024, it appears that both v2 and v3 are in production'"
+      },
+      {
+        "wert": "Datumscode allein unzuverlässig: 2243V und 2231K mit AQR112C (also v2) gemeldet, v3 u. a. mit 2233K(?), 2234K, 2236V, 2245K, 2246V, 2247V",
+        "quelle": "openwrt_forum_141792",
+        "beleg": "https://forum.openwrt.org/t/unifi-6-lr-v2-ethernet-not-working/141792",
+        "stand": "Thread 2022-11-04 bis 2023-09-12 (99 Beiträge, geschlossen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beiträge #31, #35, #36, #39, #55, #57, #61, #96, #97; Suffix K/V ohne erkannte Bedeutung; Testdatum auch auf der Verpackung ('Test Date 08/25/22')"
+      },
+      {
+        "wert": "Gravur auf der Rückseite: 'UniFi 6 Long-Range', 'M/N: U6-LR', '802.3af PoE', 'IC: 6545A-U6LR', 'FCC ID: SWX-U6LR', darunter laser-gravierter QR-Code (7x7 mm) mit drei Textzeilen (Feld 7x22 mm)",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-U6LR/Label/Label-Info-4731775",
+        "stand": "Exhibit 2020-05-20 (Zeichnung 'U6-LR Device Artwork' 2020-04-27, V04)",
+        "sicherheit": "hoch",
+        "bemerkung": "Zeichnung von 2020 (v1); die mittlere Zeile neben dem QR-Code ist laut Wiki die MAC-Adresse"
+      },
+      {
+        "wert": "LED-Ring nur weiß/blau (zwei feste Farben); v1 hatte RGB",
+        "quelle": "freifunk_forum_23864",
+        "beleg": "https://forum.freifunk.net/t/23864",
+        "stand": "Thread 2023-09-16 bis 2023-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "unterscheidet v1 von v2/v3, nicht v2 von v3"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "SWX-U6LR",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/SWX-U6LR",
+        "stand": "Grant 2020-05-20 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant 2020-05-20 für U6LR, keine eigene Zulassung für v3"
+      },
+      {
+        "wert": "SWX-U6LR",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-U6LR/Label/Label-Info-4731775",
+        "stand": "Exhibit 2020-05-20 (Zeichnung 'U6-LR Device Artwork' 2020-04-27, V04)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "6545A-U6LR",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-U6LR/Label/Label-Info-4731775",
+        "stand": "Exhibit 2020-05-20 (Zeichnung 'U6-LR Device Artwork' 2020-04-27, V04)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "anatel_id": [
+      {
+        "wert": "10457-21-08356",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": "für U6-LR allgemein, ohne Revisionsbezug"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": "U6-LR",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U6 Long-Range",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "UniFi U6 Long-Range v3",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/mt7622.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Ubiquiti UniFi 6 LR v3 (DTS model), compatible ubnt,unifi-6-lr-v3",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7622-ubnt-unifi-6-lr-v3.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U6-LR-US (SKU)",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": "Variante auf der US-Techspecs-Seite"
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Available 2023",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "v2 und v3 parallel in Produktion (Stand Anfang 2024)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+        "stand": "Seitenrevision 2026-08-31 20:29",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "ab ca. KW 34/2022 (Datumscode 2234)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+        "stand": "Seitenrevision 2026-08-31 20:29",
+        "sicherheit": "mittel",
+        "bemerkung": "'Since about summer 2022 there is a v3 device'"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "MediaTek MT7622",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7622 (cpu=MT7622_SOC, cpu_rev_id=00007622)",
+        "quelle": "gluon_pr_2982",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2982",
+        "stand": "PR 2023-09-13, gemergt 2026-01-25 (Commit 8624249346)",
+        "sicherheit": "mittel",
+        "bemerkung": "/proc/ubnthal/system.info eines v3, Djfe 2023"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 1350,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "aarch64_cortex-a53",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 512,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 512,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Seitenrevision 2026-02-09 06:09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 512,
+        "quelle": "gluon_pr_2982",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2982",
+        "stand": "PR 2023-09-13, gemergt 2026-01-25 (Commit 8624249346)",
+        "sicherheit": "mittel",
+        "bemerkung": "v3-Gerät: ramsize=536870911 in /proc/ubnthal/system.info"
+      },
+      {
+        "wert": 512,
+        "quelle": "openwrt_git_v1",
+        "beleg": "https://github.com/openwrt/openwrt/commit/634c13c186646aff2badb51a43b248825d0fe5a0",
+        "stand": "Commit 2021-02-11 (Autor), gemergt 2021-02-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "512MB DDR3 RAM - Angabe für v1"
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR3",
+        "quelle": "openwrt_git_v1",
+        "beleg": "https://github.com/openwrt/openwrt/commit/634c13c186646aff2badb51a43b248825d0fe5a0",
+        "stand": "Commit 2021-02-11 (Autor), gemergt 2021-02-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "Angabe für v1, für v3 nicht belegt"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 64,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "gluon_pr_2982",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2982",
+        "stand": "PR 2023-09-13, gemergt 2026-01-25 (Commit 8624249346)",
+        "sicherheit": "mittel",
+        "bemerkung": "v3-Gerät: flashSize=67108864"
+      },
+      {
+        "wert": 64,
+        "quelle": "openwrt_git_v1",
+        "beleg": "https://github.com/openwrt/openwrt/commit/634c13c186646aff2badb51a43b248825d0fe5a0",
+        "stand": "Commit 2021-02-11 (Autor), gemergt 2021-02-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "v1: 64M SPI-NOR"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7622-ubnt-unifi-6-lr-v3.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "v3-DTS: &nor_flash, compatible jedec,spi-nor, nor_partitions"
+      },
+      {
+        "wert": "NOR",
+        "quelle": "openwrt_git_v1",
+        "beleg": "https://github.com/openwrt/openwrt/commit/634c13c186646aff2badb51a43b248825d0fe5a0",
+        "stand": "Commit 2021-02-11 (Autor), gemergt 2021-02-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "v1: SPI-NOR"
+      },
+      {
+        "wert": "NAND",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+        "stand": "Seitenrevision 2026-08-31 20:29",
+        "sicherheit": "niedrig",
+        "bemerkung": "nur Tag '64NAND' am Seitenende; widerspricht DTS und Flash-Layout (4-KiB-Erasesize)"
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "Winbond W25Q512JV",
+        "quelle": "openwrt_git_v1",
+        "beleg": "https://github.com/openwrt/openwrt/commit/634c13c186646aff2badb51a43b248825d0fe5a0",
+        "stand": "Commit 2021-02-11 (Autor), gemergt 2021-02-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "Angabe für v1, für v3 nicht belegt"
+      }
+    ],
+    "flash_layout": [
+      {
+        "wert": "Preloader 256K, ATF 128K, u-boot 384K, u-boot-env 64K, Factory 256K, EEPROM 64K, bs 64K, cfg 1M, kernel0 und kernel1 je 0x1ee0000 (30.875 MiB)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+        "stand": "Seitenrevision 2026-08-31 20:29",
+        "sicherheit": "mittel",
+        "bemerkung": "Stock-Layout aus /proc/mtd, Erasesize 4 KiB"
+      }
+    ],
+    "ethernet_phy": [
+      {
+        "wert": "RealTek RTL8211FS (10/100/1000)",
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0f4eadf6a25fb54c189bde91425673e11125d35",
+        "stand": "Commit 2023-08-27 (Autor), gemergt 2023-08-28",
+        "sicherheit": "mittel",
+        "bemerkung": "statt Aquantia AQR112 (v1/v2)"
+      },
+      {
+        "wert": "RTL8211, per SGMII am GMAC0, MDIO-Adresse 0, Clause 22",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7622-ubnt-unifi-6-lr-v3.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "phy-mode sgmii, managed in-band-status"
+      },
+      {
+        "wert": "RTL8211FS, über SERDES/SGMII angebunden",
+        "quelle": "openwrt_forum_141792",
+        "beleg": "https://forum.openwrt.org/t/unifi-6-lr-v2-ethernet-not-working/141792",
+        "stand": "Thread 2022-11-04 bis 2023-09-12 (99 Beiträge, geschlossen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beiträge #42, #45, #51, #74 (Foto des Chips)"
+      }
+    ],
+    "led_controller": [
+      {
+        "wert": "keiner: zwei GPIO-LEDs 'white:dome' (GPIO 0x43) und 'blue:dome' (GPIO 0x44)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7622-ubnt-unifi-6-lr-v3.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "v1 hat Holtek HT32F52241 als LED-Controller (Commit 634c13c)"
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.1Q",
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "ja (Management per Bluetooth)",
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": "Management interfaces: Ethernet, Bluetooth"
+      },
+      {
+        "wert": "nein ('-')",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Seitenrevision 2026-02-09 06:09",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt nutzt Bluetooth nicht"
+      },
+      {
+        "wert": "bt0.macaddr vorhanden",
+        "quelle": "gluon_pr_2982",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2982",
+        "stand": "PR 2023-09-13, gemergt 2026-01-25 (Commit 8624249346)",
+        "sicherheit": "mittel",
+        "bemerkung": "v3-Gerät, Stock-Firmware"
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": [
+          "MediaTek MT7622 (2.4 GHz, integriert)",
+          "MediaTek MT7915 (5 GHz)"
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "MT7622 (radio0)",
+          "MT7915 (radio1)"
+        ],
+        "quelle": "gluon_pr_2982",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2982",
+        "stand": "PR 2023-09-13, gemergt 2026-01-25 (Commit 8624249346)",
+        "sicherheit": "mittel",
+        "bemerkung": "system.info radio0.name/radio1.name"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "mt76",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "b/g/n (HT 20/40, bis 600 Mbit/s)",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 4,
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": "MIMO 4x4"
+      },
+      {
+        "wert": 4,
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": "4 x 4 (SU-MIMO)"
+      },
+      {
+        "wert": 4,
+        "quelle": "openwrt_git_v1",
+        "beleg": "https://github.com/openwrt/openwrt/commit/634c13c186646aff2badb51a43b248825d0fe5a0",
+        "stand": "Commit 2021-02-11 (Autor), gemergt 2021-02-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "802.11bgn 4T4R WMAC (v1)"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "a/n/ac/ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "a/n/ac/ax (WiFi 6)",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 4,
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": "MIMO 4x4"
+      },
+      {
+        "wert": 4,
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": "4 x 4 (DL/UL MU-MIMO)"
+      },
+      {
+        "wert": 4,
+        "quelle": "openwrt_git_v1",
+        "beleg": "https://github.com/openwrt/openwrt/commit/634c13c186646aff2badb51a43b248825d0fe5a0",
+        "stand": "Commit 2021-02-11 (Autor), gemergt 2021-02-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "MT7915 802.11ax 4T4R (v1)"
+      }
+    ],
+    "wlan_spatial_streams_gesamt": [
+      {
+        "wert": 8,
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_datenrate_mbps": [
+      {
+        "wert": {
+          "2.4": 600,
+          "5": 2400
+        },
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "HT 20/40, VHT 20/40/80/160, HE 20/40/80/160 MHz (160 MHz nur mit NSS 1/2)",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "20, 40 und 80 MHz",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/SWX-U6LR",
+        "stand": "Grant 2020-05-20 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant-Kommentar US-Zulassung"
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": [
+          "2412-2462 MHz",
+          "5180-5240 MHz",
+          "5745-5825 MHz"
+        ],
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/SWX-U6LR",
+        "stand": "Grant 2020-05-20 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": {
+          "2.4": 26,
+          "5": 26
+        },
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "2.4": 26,
+          "5": 26
+        },
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_bssid_je_radio": [
+      {
+        "wert": 8,
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_bekannte_probleme": [
+      {
+        "wert": "5 GHz startet nach dem Booten teils nicht richtig (Clients sehen SSID, verbinden sich nicht, Mesh-Nachbarn fehlen in 'batctl n'); 'wifi' hilft meist; mit HT20 auf radio0 reproduzierbar",
+        "quelle": "gluon_pr_2982",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2982",
+        "stand": "PR 2023-09-13, gemergt 2026-01-25 (Commit 8624249346)",
+        "sicherheit": "niedrig",
+        "bemerkung": "maurerle 2025-08-21 mit gluon-main; mit v2025.1 nicht aufgetreten; vgl. https://github.com/openwrt/openwrt/issues/9035"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas '-'"
+      },
+      {
+        "wert": "intern",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+        "stand": "Seitenrevision 2026-08-31 20:29",
+        "sicherheit": "mittel",
+        "bemerkung": "Tag InternalAntenna"
+      },
+      {
+        "wert": "intern",
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": "keine Antennenanschlüsse angegeben"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4": 4,
+          "5": 5.5
+        },
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "2.4": 4,
+          "5": 5.5
+        },
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "PoE IN",
+            "geschwindigkeit": "10/100/1000",
+            "rolle": "WAN (Gluon), PoE-Eingang"
+          }
+        ],
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0f4eadf6a25fb54c189bde91425673e11125d35",
+        "stand": "Commit 2023-08-27 (Autor), gemergt 2023-08-28",
+        "sicherheit": "mittel",
+        "bemerkung": "RTL8211FS 1000M/100M/10M; v1/v2 hatten 2.5G-fähigen PHY"
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "geschwindigkeit": "1 Gbit",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "'n.b. no 2.5GBit support unlike v1, v2'"
+      },
+      {
+        "wert": [
+          {
+            "name": "(1) GbE RJ45",
+            "geschwindigkeit": "1 Gbit"
+          }
+        ],
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "PoE IN",
+            "lage": "Rückseite, Buchse in einer Mulde"
+          }
+        ],
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-U6LR/Label/Label-Info-4731775",
+        "stand": "Exhibit 2020-05-20 (Zeichnung 'U6-LR Device Artwork' 2020-04-27, V04)",
+        "sicherheit": "hoch",
+        "bemerkung": "Beschriftung 'PoE IN' an der Buchse"
+      },
+      {
+        "wert": [
+          {
+            "name": "eth0",
+            "rolle": "WAN (PoE-Eingang)"
+          }
+        ],
+        "quelle": "gluon_pr_2982",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2982",
+        "stand": "PR 2023-09-13, gemergt 2026-01-25 (Commit 8624249346)",
+        "sicherheit": "mittel",
+        "bemerkung": "Checkliste: 'the PoE input should be WAN'"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ethernet_geschwindigkeit_mbit": [
+      {
+        "wert": 1000,
+        "quelle": "openwrt_git_v3",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0f4eadf6a25fb54c189bde91425673e11125d35",
+        "stand": "Commit 2023-08-27 (Autor), gemergt 2023-08-28",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1000 und 100 getestet; bei erzwungenem 100BaseT-Vollduplex am Switch nur Halbduplex beobachtet (vermutlich Switch)",
+        "quelle": "openwrt_forum_141792",
+        "beleg": "https://forum.openwrt.org/t/unifi-6-lr-v2-ethernet-not-working/141792",
+        "stand": "Thread 2022-11-04 bis 2023-09-12 (99 Beiträge, geschlossen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beiträge #86, #89, #90"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "802.3at (PoE+) oder passiv",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "'PoE+ (802.3at) or passive PoE'"
+      },
+      {
+        "wert": "802.3at (PoE+)",
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": "Power method: PoE+; Power supply: UniFi PoE switch oder 48V, 0.5A PoE adapter"
+      },
+      {
+        "wert": "802.3at (PoE+)",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power Method: PoE+"
+      },
+      {
+        "wert": "802.3af",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-U6LR/Label/Label-Info-4731775",
+        "stand": "Exhibit 2020-05-20 (Zeichnung 'U6-LR Device Artwork' 2020-04-27, V04)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gravur '802.3af PoE' auf der Zeichnung von 2020 (v1-Zeit); widerspricht dem Datenblatt 2023"
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": "44-57 V DC (Bereich)",
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": "Supported voltage range 44-57V DC"
+      },
+      {
+        "wert": "44-57 V DC (Bereich)",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": false,
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": "'48V, 0.5A PoE adapter (not included)'"
+      },
+      {
+        "wert": false,
+        "quelle": "ubiquiti_lieferumfang",
+        "beleg": "https://cdn.ecomm.ui.com/products/d8fee47d-b53e-4a86-a5cb-cf2f6ab1c5ef/0d720b1c-d32a-4188-be49-73dca62cda91.png",
+        "stand": "Produktbild 'What's in the box' der Techspecs-Seite (SKU U6-LR-US), ohne Datum",
+        "sicherheit": "mittel",
+        "bemerkung": "Bild zeigt AP, Montageplatte, Deckenring, Schablone, Schrauben/Dübel, Inbus - keinen PoE-Adapter (SKU U6-LR-US)"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "48 V, 0.5 A PoE-Adapter (separat) oder UniFi-PoE-Switch",
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 18.5,
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 18.5,
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "nein",
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "mittel",
+        "bemerkung": "nur PoE als Stromversorgung genannt"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Seitenrevision 2026-02-09 06:09",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen (Decke/Wand)",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": "'Ceiling-mounted WiFi 6 AP'; trotzdem IP54 und -30 bis 60 °C angegeben"
+      }
+    ],
+    "ip_schutzart": [
+      {
+        "wert": "IP54",
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "IP54",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "-30 bis 60 °C",
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "-30 bis 60 °C",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "5-95 % nicht kondensierend",
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_material": [
+      {
+        "wert": "Polycarbonat; Montageplatte Edelstahl (SUS304)",
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Wand/Decke (Halterung beiliegend)",
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Decke, Wand (Pro Mount beiliegend)",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Wand (Platte mit Schrauben/Dübeln) oder abgehängte Decke/Deckenplatte (Ring von hinten)",
+        "quelle": "fcc_qig",
+        "beleg": "https://fccid.io/SWX-U6LR/User-Manual/User-Manual-curv-4731771",
+        "stand": "Exhibit 2020-11-16 (PDF 2020-04-30)",
+        "sicherheit": "hoch",
+        "bemerkung": "QIG-Zeichnungen A/B"
+      },
+      {
+        "wert": "Wand oder flach auf ein Regal",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+        "stand": "Seitenrevision 2026-08-31 20:29",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "Ø220 x 48",
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 800,
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": "mit Halterung 930 g"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "LED count 1"
+      },
+      {
+        "wert": 1,
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": "ein LED-Ring, Farben weiß/blau"
+      }
+    ],
+    "led_farben": [
+      {
+        "wert": "weiß/blau",
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "weiß (Boot, Failsafe) und blau (läuft, Upgrade) als zwei getrennte GPIO-LEDs",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7622-ubnt-unifi-6-lr-v3.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "ja, Werksreset (Lage Rückseite in einer Mulde, Beschriftung 'RESET')",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/SWX-U6LR/Label/Label-Info-4731775",
+        "stand": "Exhibit 2020-05-20 (Zeichnung 'U6-LR Device Artwork' 2020-04-27, V04)",
+        "sicherheit": "hoch",
+        "bemerkung": "Zeichnung 2020"
+      },
+      {
+        "wert": "ja, Factory reset",
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, als 'reset' unter OpenWrt nutzbar (GPIO 62)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7622-ubnt-unifi-6-lr-v3.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, in Gluon führt er in den Konfigurationsmodus",
+        "quelle": "gluon_pr_2982",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2982",
+        "stand": "PR 2023-09-13, gemergt 2026-01-25 (Commit 8624249346)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "verklebt und geclipst: Rand mit Heißluft (~90 °C) anwärmen, unterhalb der Ethernet-Buchse mit Messer/Schraubendreher ansetzen und rundum lösen; Clips brechen leicht",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+        "stand": "Seitenrevision 2026-08-31 20:29",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen, 4 Kontakte 'next to the Holtek MCU' (Stiftleiste oder Lötpunkte nicht angegeben)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+        "stand": "Seitenrevision 2026-08-31 20:29",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beschreibung aus v1-Zeit; v3 hat laut DTS keinen Holtek-LED-Controller mehr"
+      },
+      {
+        "wert": "innen: 4 unbestückte Durchkontaktierungen J7 (Pin 1 eckig) neben einem TSSOP-20-Baustein",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/SWX-U6LR/Internal-Photos/Internal-Photos-4731770",
+        "stand": "Exhibit 2020-11-16 (PDF 2020-05-11)",
+        "sicherheit": "niedrig",
+        "bemerkung": "v1-Muster 2020 (Platine 11-00742-02); für v3 nicht belegt"
+      },
+      {
+        "wert": "innen: keine bestückte Stiftleiste, Abgriff mit Messklemmen an Kontakten neben einem SOIC-Baustein",
+        "quelle": "openwrt_wiki_foto_seriell",
+        "beleg": "https://openwrt.org/_media/media/ubiquiti/img_4843.jpeg",
+        "stand": "Foto 2022-03-11 (EXIF)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Gerät mit Code 2207K (v1/v2), nicht v3"
+      },
+      {
+        "wert": "innen, Pins müssen angelötet werden",
+        "quelle": "openwrt_forum_141792",
+        "beleg": "https://forum.openwrt.org/t/unifi-6-lr-v2-ethernet-not-working/141792",
+        "stand": "Thread 2022-11-04 bis 2023-09-12 (99 Beiträge, geschlossen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beitrag #53 (pythoner6, 2023-04-12) an einem v3-Gerät (2246V/2247V): 'soldering on some pins to access the serial connection'"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "Pin 0 (neben SoC/MCU): 3V3, 1: RX, 2: TX, 3: GND",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+        "stand": "Seitenrevision 2026-08-31 20:29",
+        "sicherheit": "niedrig",
+        "bemerkung": "aus Commit 634c13c (v1)"
+      },
+      {
+        "wert": "0: 3V3, 1: RX, 2: TX, 3: GND",
+        "quelle": "openwrt_git_v1",
+        "beleg": "https://github.com/openwrt/openwrt/commit/634c13c186646aff2badb51a43b248825d0fe5a0",
+        "stand": "Commit 2021-02-11 (Autor), gemergt 2021-02-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "v1"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "115200 / 8N1"
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7622-ubnt-unifi-6-lr-v3.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "console=ttyS0,115200n8"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Seitenrevision 2026-02-09 06:09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "mediatek/mt7622",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "ubnt_unifi-6-lr-v3 (dazu ubnt_unifi-6-lr-v3-ubootmod)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/mt7622.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "23.05.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Snapshot 2023-08-30 (Build #106), Commit a0f4eadf vom 2023-08-28",
+        "quelle": "openwrt_forum_141792",
+        "beleg": "https://forum.openwrt.org/t/unifi-6-lr-v2-ethernet-not-working/141792",
+        "stand": "Thread 2022-11-04 bis 2023-09-12 (99 Beiträge, geschlossen)",
+        "sicherheit": "mittel",
+        "bemerkung": "Beitrag #91"
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "23.05.2",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "24.10.5",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Seitenrevision 2026-02-09 06:09",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "aus der Stock-Firmware per SSH (ubnt/ubnt, 192.168.1.20): sysupgrade-Image per scp übertragen und mit dd in kernel0 und kernel1 schreiben; ab Stock 6.2 vorher Schreibschutz der mtd-Partitionen aufheben (Wiki)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+        "stand": "Seitenrevision 2026-08-31 20:29",
+        "sicherheit": "mittel",
+        "bemerkung": "Gluon: factory = false, nur sysupgrade-Image; erst Hardware-Version prüfen, v1/v2-Image hat auf v3 kein Ethernet"
+      },
+      {
+        "wert": "Stock-Firmware, SSH (kein Web-Interface, kein TFTP)",
+        "quelle": "gluon_pr_2982",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2982",
+        "stand": "PR 2023-09-13, gemergt 2026-01-25 (Commit 8624249346)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "recovery": [
+      {
+        "wert": "TFTP-Recovery der Stock-Firmware: Reset beim Einstecken 15-20 s halten bis LED weiß-blau-aus wechselt; IP nicht unbedingt 192.168.1.20, ARP-Scan; Stock-Image als firmware.bin",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+        "stand": "Seitenrevision 2026-08-31 20:29",
+        "sicherheit": "mittel",
+        "bemerkung": "Abschnitt Debricking (2026-08-31)"
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://in.ui.com/download/software/u6-lr",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "Gluon-Primär-MAC = MAC auf Gehäuse und Verpackung (eth0)",
+        "quelle": "gluon_pr_2982",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2982",
+        "stand": "PR 2023-09-13, gemergt 2026-01-25 (Commit 8624249346)",
+        "sicherheit": "mittel",
+        "bemerkung": "Beispiel 60:22:32:6a:37:d5; Stock: ra0 = +1, rai0 = +2, bt0 = +3"
+      },
+      {
+        "wert": "MAC auf der Rückseite, mittlere Zeile neben dem QR-Code, auch im QR-Code (erste Zeile)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+        "stand": "Seitenrevision 2026-08-31 20:29",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, device('ubiquiti-unifi-6-lr-v3', 'ubnt_unifi-6-lr-v3', {factory = false})",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/mediatek-mt7622",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ab v2025.1.1 (Backport #3686), nicht in v2025.1 und v2023.2.x",
+        "quelle": "gluon_backport_3686",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/3686",
+        "stand": "gemergt 2026-02-10 in v2025.1.x (Commit c970085e9d)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Hardware-Checkliste erfüllt (sysupgrade, Reset → Konfigurationsmodus, MAC, WAN, AP+Mesh auf beiden Radios, LED)",
+        "quelle": "gluon_pr_2982",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2982",
+        "stand": "PR 2023-09-13, gemergt 2026-01-25 (Commit 8624249346)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "unknown",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Seitenrevision 2026-02-09 06:09",
+        "sicherheit": "mittel",
+        "bemerkung": "Feld 'Gluon support' nicht gepflegt"
+      }
+    ],
+    "varianten": [
+      {
+        "wert": "v1: AQR112 2.5G-PHY + RGB-LED (Holtek); v2: AQR112C + LED weiß/blau; v3: RTL8211FS 1G-PHY + LED weiß/blau; alle gleiche UniFi-Firmware, aber getrennte OpenWrt/Gluon-Images",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "aus den ToH-Kommentaren der v1/v2-Einträge und dem v3-Commit zusammengefasst"
+      },
+      {
+        "wert": "v1/v2-Image auf v3: Ethernet geht nicht",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+        "stand": "Seitenrevision 2026-08-31 20:29",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bekannte_probleme": [
+      {
+        "wert": "Falsches Image (v1/v2) auf v3 → kein Ethernet; Rettung über serielle Konsole oder WLAN",
+        "quelle": "openwrt_forum_141792",
+        "beleg": "https://forum.openwrt.org/t/unifi-6-lr-v2-ethernet-not-working/141792",
+        "stand": "Thread 2022-11-04 bis 2023-09-12 (99 Beiträge, geschlossen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beiträge #1-#53"
+      },
+      {
+        "wert": "Stock 6.0.21 auf v3 hängt beim Booten minutenlang an der RGB-LED-Abfrage, läuft nach ca. 10 min weiter",
+        "quelle": "openwrt_forum_141792",
+        "beleg": "https://forum.openwrt.org/t/unifi-6-lr-v2-ethernet-not-working/141792",
+        "stand": "Thread 2022-11-04 bis 2023-09-12 (99 Beiträge, geschlossen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beiträge #25, #29"
+      },
+      {
+        "wert": "5-GHz-Initialisierung (siehe wlan_bekannte_probleme)",
+        "quelle": "gluon_pr_2982",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2982",
+        "stand": "PR 2023-09-13, gemergt 2026-01-25 (Commit 8624249346)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "im_einsatz": [
+      {
+        "wert": "16 UniFi U6 LR in der Notschlafstelle Graf-Adolf-Str. 73 (Düsseldorf), je Etage zwei",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/geraetefotos.md",
+        "stand": "Stand 2026-10-06 (Datei geändert 2026-10-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "geraetefotos.md (Modellkennung 'ubiquiti-unifi-u6-lr' auf der Karte, Hardware-Version und Firmware dort nicht angegeben); chronik.md 31.01./01.02.2026"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+        "stand": "Seitenrevision 2026-08-31 20:29",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "quelle": "ubiquiti_techspecs",
+        "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+        "stand": "Live-Seite, ohne Datum (© 2026)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://store.ui.com/collections/unifi-network-access-points/products/unifi-6-long-range-access-point",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr_v3",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "quelle": "ubiquiti_datenblatt",
+        "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
+        "stand": "PDF 2023-04-21",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "forum": [
+      {
+        "wert": "https://forum.openwrt.org/t/unifi-6-lr-v2-ethernet-not-working/141792",
+        "quelle": "openwrt_forum_141792",
+        "beleg": "https://forum.openwrt.org/t/unifi-6-lr-v2-ethernet-not-working/141792",
+        "stand": "Thread 2022-11-04 bis 2023-09-12 (99 Beiträge, geschlossen)",
+        "sicherheit": "mittel",
+        "bemerkung": "Entdeckung und Unterstützung der v3"
+      },
+      {
+        "wert": "https://forum.freifunk.net/t/23860",
+        "quelle": "freifunk_forum_23860",
+        "beleg": "https://forum.freifunk.net/t/23860",
+        "stand": "Thread 2023-09-09 bis 2023-09-16",
+        "sicherheit": "mittel",
+        "bemerkung": "Gluon-Support v3"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://openwrt.org/toh/ubiquiti/unifi_6_lr",
+      "kategorie": "seriell_zugang",
+      "grund": "UART-Lage und -Form für v3 nicht belegt: Wiki und Commit beschreiben v1 ('next to the Holtek MCU'), v3 hat laut DTS keinen Holtek-LED-Controller; nur Forumsbeitrag 141792 #53 (Pins angelötet). Wiki-Platinenfotos (pcb_layer, pcb_layout, open_case) nicht ausgewertet"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/unifi-6-lr-v2-ethernet-not-working/141792/53",
+      "kategorie": "seriell_zugang",
+      "grund": "verlinkter Thread 'Unifi 6 LR Issues' (pythoner6, v3 per serieller Konsole gerettet, Beitrag #23 dort) nicht gelesen - Lage der angelöteten Pins am v3"
+    },
+    {
+      "url": "https://fccid.io/SWX-U6LR/External-Photos/External-Photos-4731769",
+      "kategorie": "erkennung_typenschild",
+      "grund": "Außenfotos (193 KB) nicht angesehen; zeigen v1-Muster 2020"
+    },
+    {
+      "url": "https://fccid.io/SWX-U6LR/Test-Report/Test-Rpt-WIFI-01-DTS-4731773",
+      "kategorie": "wlan_sendeleistung_dbm",
+      "grund": "FCC-Testberichte (DTS, UNII-1, UNII-3, Annexe, RF Exposure) nicht gelesen: Antennengewinn je Kette, Leistung"
+    },
+    {
+      "url": "https://web.archive.org/web/2021*/https://dl.ui.com/ds/u6-lr_ds.pdf",
+      "kategorie": "poe_eingang",
+      "grund": "Widerspruch 802.3af (FCC-Gravur 2020) gegen PoE+ (Datenblatt 2023); ob die v3-Gehäuse noch '802.3af PoE' tragen, offen - Foto der Rückseite eines v3 (z. B. aus der Graf-Adolf-Str. 73) klärt das"
+    },
+    {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/geraetefotos.md",
+      "kategorie": "hw_version",
+      "grund": "16 U6 LR in der Graf-Adolf-Str. 73: Revision (v1/v2/v3) je Gerät (dmesg / Datumscode) und Firmware feststellen, Typenschild fotografieren"
+    },
+    {
+      "url": "https://ui.com/qig/u6-longrange",
+      "kategorie": "montage",
+      "grund": "Installation Guide als JS-Seite, Text nicht abrufbar (LED-Bedeutungen, Montage, Reset)"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/issues/9035",
+      "kategorie": "wlan_bekannte_probleme",
+      "grund": "OpenWrt-Issue zur 5-GHz-Initialisierung (MT7915/mt7622), nicht gelesen"
+    },
+    {
+      "url": "https://openwrt.org/toh/ubiquiti/unifi_6_lr?do=revisions",
+      "kategorie": "ethernet_geschwindigkeit_mbit",
+      "grund": "Wiki-Revision 2026-06-08 'confirmed working on 100mbps connection, still no 10mbps as of 25.12' - unklar, für welche Version (vermutlich v1/v2 mit AQR112); 10 Mbit/s an v3 nicht belegt"
+    },
+    {
+      "url": "https://techspecs.ui.com/unifi/wifi/u6-lr",
+      "kategorie": "anatel_id",
+      "grund": "Anatel-Zulassung 10457-21-08356 (2021, also vor v3) nicht abgerufen"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/ubiquiti-unifi-6*&output=json&fl=original&collapse=urlkey",
+      "kategorie": "handel",
+      "grund": "EAN/Geizhals nicht recherchiert; Geizhals-Eintrag deckt alle Revisionen ab, laut Nachbardatei ubiquiti-unifi-6-lr-v2: https://geizhals.de/ubiquiti-unifi-6-long-range-u6-lr-a2428267.html"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 27,
+    "notiz": "ToH-Dump + Live-hwdata, OpenWrt-Wiki (inkl. Revisionen, Seriell-Foto), OpenWrt-Commits v1/v3, DTS, mt7622.mk, OpenWrt-Forum 141792 komplett (99 Beiträge), Gluon-Target, PR 2982 und Backport 3686 (ab v2025.1.1), Freifunk-Forum 23860/23864, Ubiquiti-Datenblatt 2023 und Techspecs inkl. Lieferumfang, FCC SWX-U6LR (Seite, Typenschild-Zeichnung, QIG, Innenfotos; alles v1-Stand 2020). DeviWiki/WikiDevi ohne Seite. Kernpunkte v3: RTL8211FS 1-G-PHY statt AQR112C, LED weiß/blau per GPIO, nur per Stock-dmesg sicher von v2 unterscheidbar (Datumscode ab 2234 nur Anhaltspunkt). Widerspruch PoE: FCC-Gravur 2020 '802.3af', Datenblatt/Techspecs PoE+ 44-57 V. Serielle Konsole für v3 nur aus Forum (Pins anlöten), Pinbelegung aus v1."
+  }
+}

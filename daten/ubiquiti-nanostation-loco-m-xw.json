@@ -1,0 +1,3177 @@
+{
+  "image": "ubiquiti-nanostation-loco-m-xw",
+  "modell": "Ubiquiti NanoStation Loco M2/M5 (XW)",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15678085, 15678086",
+      "bemerkung": "Zeilen pid 15678085 (NanoStation Loco M2 XW) und 15678086 (NanoStation Loco M5 XW); Kandidaten XM (15678084), AC loco, Loco2/Loco5 passen nicht. Dump-Inhalt älter als Live-Seiten (Release 23.05.0, CPU-Angaben M2 vor der Änderung 2025-04-12)"
+    },
+    "toh_seite_loco_m2_xw": {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+      "stand": "Seitenrevision 2026-03-17 04:15 (raylynnknight, \"Update for 25.12.0\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per ?do=export_raw, dazu Revisionsliste und Diff 2025-02-15 -> 2025-04-12 (kjoshj: CPU AR9342 -> AR7240, 535 -> 400 MHz, WLAN AR9340 -> AR9287)"
+    },
+    "toh_seite_loco_m5_xw": {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+      "stand": "Seitenrevision 2026-03-17 04:14 (raylynnknight, \"Update for 25.12.0\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per ?do=export_raw"
+    },
+    "openwrt_wiki_nanostationm5": {
+      "url": "https://openwrt.org/toh/ubiquiti/nanostationm5",
+      "stand": "Seitenrevision 2026-06-20 10:51 (smurfix, \"[Nanostation Loco M5 Serial Pins]\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Geräteseite NanoStation M5 / Loco M5 (XM und XW gemischt); aus dem Cache des Laufs ubiquiti-nanostation-m-xw übernommen"
+    },
+    "openwrt_wiki_nanostationm2": {
+      "url": "https://openwrt.org/toh/ubiquiti/nanostationm2",
+      "stand": "Seitenrevision 2025-09-04 02:48 (mpeter, \"[Preparations]\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Geräteseite NanoStation M2 / Loco M2; Info-Tabelle beschreibt Loco M2 XM; aus dem Cache des Laufs ubiquiti-nanostation-m-xw übernommen"
+    },
+    "openwrt_wiki_airmaxm": {
+      "url": "https://openwrt.org/toh/ubiquiti/airmaxm",
+      "stand": "Seitenrevision 2023-05-07 19:24 (g6094199)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Übersicht Airmax M"
+    },
+    "openwrt_wiki_foto_seriell_loco_m5": {
+      "url": "https://openwrt.org/_media/media/ubiquiti/nanostation_loco_m5_serial.jpg",
+      "stand": "Foto EXIF 2015-06-01 (LG-P880), mit GIMP bearbeitet 2015-07-09; auf Seite toh:ubiquiti:nanostationm5 (Seitenrevision 2026-06-20)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Foto 3264x2448 als Bild ausgewertet; Platine mit Aufdruck LOCOM5, rote Beschriftung GND/TX/RX/3V3 vom Hochladenden"
+    },
+    "openwrt_wiki_foto_uart": {
+      "url": "https://openwrt.org/_media/media/ubiquiti/nanom2-uart.jpg",
+      "stand": "Bild auf Seite toh:ubiquiti:nanostationm2 (Seitenrevision 2025-09-04), Bilddatum unbekannt",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "im Wiki unter 'Nanostation Loco M2/M5 Loco' eingebunden, zeigt aber JP1 (10-polig) und JTAG J500, wie bei der großen NanoStation M; Zuordnung zur Loco fraglich"
+    },
+    "openwrt_commit_ath79": {
+      "url": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+      "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "ath79: add support for Ubiquiti NanoStation Loco M (XW)"
+    },
+    "openwrt_commit_v2": {
+      "url": "https://github.com/openwrt/openwrt/commit/54e70703a0bdcdb9d52fb9e0cd7d01cbaea59c2f",
+      "stand": "Commit 54e70703a0bd (Autor 2026-06-22, eingespielt 2026-07-01), Matthias Urlichs, PR #23912",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "ath79: add support for Ubiquiti NanoStation Loco M (XW v2); nur im Branch main, nicht in openwrt-24.10 und openwrt-25.12 (Datei-Abfrage 2026-10-20: 404)"
+    },
+    "openwrt_commit_ar71xx": {
+      "url": "https://github.com/openwrt/openwrt/commit/cb37fe5ca587868f4a909949c884e981bd90727b",
+      "stand": "Commit cb37fe5ca587 vom 2014-09-15 (SVN r42549)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "ar71xx: add board support for ubnt loco m xw (Alexander Couzens)"
+    },
+    "openwrt_commit_reset_gpio": {
+      "url": "https://github.com/openwrt/openwrt/commit/6613a7f5cc8e1527671128d9479b3de78f7b4cdd",
+      "stand": "Commit 6613a7f5cc8e vom 2020-02-24",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "ath79: add missing reset-gpios for NanoStation Loco M (XW)"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=loco-m-xw+repo:openwrt/openwrt",
+      "stand": "Suchergebnis 2026-10-20 (8 Commits, dazu Suche \"loco m\": 11 Commits)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_pr_23912": {
+      "url": "https://github.com/openwrt/openwrt/pull/23912",
+      "stand": "PR erstellt 2026-06-22, gemergt 2026-07-01",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts_main": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9342_ubnt_nanostation-loco-m-xw.dts",
+      "stand": "Branch main am 2026-10-19 (dtsi letzter Commit f70e786a7cee, 2026-05-10)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "plus ar9342_ubnt_xw.dtsi, ar9342_ubnt_xw_rssileds.dtsi, image/generic-ubnt.mk und common-ubnt.mk; aus den Caches der Läufe ubiquiti-nanobeam-m5-xw und ubiquiti-nanostation-m-xw"
+    },
+    "gluon": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/ath79-generic",
+      "stand": "lokaler Checkout v2025.1.3 (Commit e2fe4b52 vom 2026-08-18)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "lokal gelesen: targets/ath79-generic, platform.lua, docs/user/supported_devices.rst, docs/releases; keine Netzanfrage"
+    },
+    "gluon_issues": {
+      "url": "https://github.com/freifunk-gluon/gluon/issues?q=loco",
+      "stand": "Issues/PRs 1370, 2487, 2547, 2562, 2663 (2018-04-20 bis 2022-10-11)",
+      "abgerufen": "2026-10-19"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/wiki/Ubiquiti_Networks_NanoStation_Loco_M2",
+      "stand": "Seitenrevision 72959 vom 2019-07-05T05:35:59Z (imported>M86)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Seite beschreibt Loco M2 mit AR7240/32 MB (XM-Stand); Seite 'Ubiquiti Networks NanoStation Loco M5' existiert nicht (404)"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/Ubiquiti_Networks_NanoStation_Loco_M2",
+      "stand": "Seitenrevision 389580 vom 2026-02-11T22:52:24Z (Omega)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "inhaltsgleich mit DeviWiki (nur model/revision anders aufgeteilt); Loco-M5-Seite fehlt (404)"
+    },
+    "fcc_m2l": {
+      "url": "https://fccid.io/SWX-M2L",
+      "stand": "Grant 2011-09-30 (Original Equipment, MET Laboratories)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "einzige Application, 2011 (XM-Zeit); Dokumente nicht geladen"
+    },
+    "fcc_m5lb": {
+      "url": "https://fccid.io/SWX-M5LB",
+      "stand": "Original 2011-05-26, Original 2016-08-24, Class II Permissive Change 2016-08-30",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_m5lb_qsg": {
+      "url": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+      "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quick Start Guide NanoStationM/locoM (24 Seiten, Text per pdftotext)"
+    },
+    "fcc_m5lb_innenfotos": {
+      "url": "https://fccid.io/SWX-M5LB/Internal-Photos/Internal-Photos-3105577",
+      "stand": "Exhibit 3105577, PDF erstellt 2016-08-17, veröffentlicht 2016-10-08",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "4 Fotos (1057x792) als Bild ausgewertet"
+    },
+    "fcc_m5lb_label": {
+      "url": "https://fccid.io/SWX-M5LB/Label/Label-3105582",
+      "stand": "Exhibit 3105582, Label-Artwork v03 vom 2015-07-22 (PDF 2015-07-23), eingereicht 2016-08-24",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "als Bild ausgewertet"
+    },
+    "datenblatt": {
+      "url": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+      "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "NanoStationM & NanoStationlocoM Datasheet; PDF aus dem Cache des Laufs ubiquiti-nanostation-m-xw; Werte locoM2 (AR7240-Klasse 400 MHz/32 MB) beschreiben offenbar XM"
+    },
+    "hersteller_techspecs_locom2": {
+      "url": "https://techspecs.ui.com/uisp/wireless/locom2",
+      "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "hersteller_techspecs_locom5": {
+      "url": "https://techspecs.ui.com/uisp/wireless/locom5",
+      "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "aredn_forum": {
+      "url": "https://www.arednmesh.org/content/nanostation-loco-m5-xw-test-date-after-nov-2017",
+      "stand": "Forenthema 2018-12-20 bis 2020-07-24 (7 Beiträge)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "im PR #23912 als Beleg für die Unterscheidung v1/v2 genannt"
+    },
+    "werkstatt": {
+      "url": "router-werkstatt/docs/gluon-migrationspfade.md",
+      "stand": "router-werkstatt docs/gluon-migrationspfade.md, nachgeprüft 04.10.2026",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "lokal: /home/adorfer/projekte/freifunk/router-werkstatt/docs/gluon-migrationspfade.md (Abschnitt 'Was den Sprung tatsächlich begrenzt') und docs/sackgasse-2021.md (Abschnitt 'Targets'); keine Validierungsprotokolle zur Loco in docs/validierung/"
+    }
+  },
+  "roh": {
+    "toh": {
+      "loco_m2_xw": {
+        "score": 0.8,
+        "pid": "15678085",
+        "devicetype": "other",
+        "brand": "Ubiquiti",
+        "model": "NanoStation Loco M2",
+        "version": "XW",
+        "fccid": "https://fcc.io/SWX/-M2L",
+        "availability": "Available 2022",
+        "whereavailable": "amazon.com, store.ui.com",
+        "supportedsincecommit": "http://¿",
+        "supportedsincerel": "18.06.1",
+        "supportedcurrentrel": "23.05.0",
+        "unsupported_functions": "NULL",
+        "target": "ar71xx-ath79",
+        "subtarget": "generic",
+        "packagearchitecture": "mips_24kc",
+        "bootloader": "U-Boot",
+        "cpu": "Atheros AR9342",
+        "cpucores": "1",
+        "cpumhz": "535",
+        "flashmb": "8",
+        "rammb": "64",
+        "ethernet100mports": "1",
+        "ethernetgbitports": "NULL",
+        "ethernet1gports": "-",
+        "ethernet2_5gports": "-",
+        "ethernet5gports": "-",
+        "ethernet10gports": "-",
+        "sfp_ports": "-",
+        "sfp_plus_ports": "-",
+        "switch": "-",
+        "vlan": "Yes",
+        "modem": "-",
+        "commentsnetworkports": "",
+        "wlanhardware": "Atheros AR9340 Rev",
+        "wlan24ghz": "b/g/n",
+        "wlan50ghz": "-",
+        "wlancomments": "",
+        "wlandriver": "ath9k",
+        "detachableantennas": "-",
+        "bluetooth": "-",
+        "usbports": "-",
+        "sataports": "-",
+        "commentsusbsataports": "",
+        "videoports": "-",
+        "audioports": "-",
+        "phoneports": "-",
+        "commentsavports": "",
+        "serial": "Yes",
+        "serialconnectionparameters": "115200 / 8N1",
+        "jtag": "¿",
+        "ledcount": "6",
+        "buttoncount": "-",
+        "gpios": "-",
+        "powersupply": "PoE 24 VDC, 0.5 A",
+        "devicepage": "toh:ubiquiti:nanostationm2",
+        "device_techdata": "View/Edit data",
+        "owrt_forum_topic_url": "NULL",
+        "lede_forum_topic_url": "NULL",
+        "forumsearch": "NanoStation Loco M2",
+        "gitsearch": "NanoStation Loco M2",
+        "wikideviurl": "https://wikidevi.wi-cat.ru/Ubiquiti_Networks_NanoStation_Loco_M2",
+        "oemdevicehomepageurl": "https://www.ubnt.com/airmax/nanostationm/",
+        "firmwareoemstockurl": "https://www.ui.com/download/airmax-m/nanostationm/locom2",
+        "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-factory.bin",
+        "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-sysupgrade.bin",
+        "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-factory.bin",
+        "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-sysupgrade.bin",
+        "installationmethods": "Sysupgrade",
+        "commentinstallation": "Flashing through the system upgrade GUI is only possible with the unsigned OEM firmware v5.6.12 or v5.6.15!",
+        "recoverymethods": "TFTP generic",
+        "commentrecovery": "Power off the device, press and hold reset 8 sec. with power on to start the recovery tftp loader",
+        "picture": "media:ubiquiti:nanostation-locom2_front.jpg",
+        "comments": "",
+        "page": "toh:hwdata:ubiquiti:ubiquiti_nanostation_loco_m2_xw"
+      },
+      "loco_m5_xw": {
+        "score": 0.8,
+        "pid": "15678086",
+        "devicetype": "other",
+        "brand": "Ubiquiti",
+        "model": "NanoStation Loco M5",
+        "version": "XW",
+        "fccid": "NULL",
+        "availability": "unknown 2018",
+        "whereavailable": "",
+        "supportedsincecommit": "https://git.lede-project.org/?p=source.git;a=commit;h=cb37fe5ca587868f4a909949c884e981bd90727b",
+        "supportedsincerel": "15.05",
+        "supportedcurrentrel": "23.05.0",
+        "unsupported_functions": "NULL",
+        "target": "ar71xx-ath79",
+        "subtarget": "generic",
+        "packagearchitecture": "mips_24kc",
+        "bootloader": "U-Boot",
+        "cpu": "Atheros AR9342",
+        "cpucores": "1",
+        "cpumhz": "400",
+        "flashmb": "8",
+        "rammb": "64",
+        "ethernet100mports": "1",
+        "ethernetgbitports": "NULL",
+        "ethernet1gports": "-",
+        "ethernet2_5gports": "-",
+        "ethernet5gports": "-",
+        "ethernet10gports": "-",
+        "sfp_ports": "-",
+        "sfp_plus_ports": "-",
+        "switch": "",
+        "vlan": "Yes",
+        "modem": "-",
+        "commentsnetworkports": "",
+        "wlanhardware": "Atheros AR9342",
+        "wlan24ghz": "-",
+        "wlan50ghz": "a/n",
+        "wlancomments": "",
+        "wlandriver": "ath9k",
+        "detachableantennas": "-",
+        "bluetooth": "-",
+        "usbports": "-",
+        "sataports": "-",
+        "commentsusbsataports": "",
+        "videoports": "-",
+        "audioports": "-",
+        "phoneports": "-",
+        "commentsavports": "",
+        "serial": "Yes",
+        "serialconnectionparameters": "115200 / 8N1",
+        "jtag": "¿",
+        "ledcount": "¿",
+        "buttoncount": "¿",
+        "gpios": "¿",
+        "powersupply": "¿",
+        "devicepage": "toh:ubiquiti:nanostationm5",
+        "device_techdata": "View/Edit data",
+        "owrt_forum_topic_url": "NULL",
+        "lede_forum_topic_url": "NULL",
+        "forumsearch": "NanoStation Loco M5 xw",
+        "gitsearch": "NanoStation Loco M5 xw",
+        "wikideviurl": "NULL",
+        "oemdevicehomepageurl": "https://www.ubnt.com/airmax/nanostationm/",
+        "firmwareoemstockurl": "",
+        "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-factory.bin",
+        "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-sysupgrade.bin",
+        "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-factory.bin",
+        "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-sysupgrade.bin",
+        "installationmethods": "GUI OEM,U-Boot TFTP recovery,see devicepage",
+        "commentinstallation": "",
+        "recoverymethods": "U-Boot TFTP recovery",
+        "commentrecovery": "",
+        "picture": "media:example:genericrouter1.png",
+        "comments": "",
+        "page": "toh:hwdata:ubiquiti:ubiquiti_nanostation_loco_m5_xw"
+      }
+    },
+    "toh_seite_loco_m2_xw": {
+      "Device Type_devicetype": "other",
+      "Brand": "Ubiquiti",
+      "Model": "NanoStation Loco M2",
+      "Versions": "XW",
+      "FCCID_urls": "https://fcc.io/SWX/-M2L",
+      "Availability_availability": "Available 2022",
+      "Where available": "amazon.com, store.ui.com",
+      "Supported Since Commit_git": "http://¿",
+      "Supported Since Rel_releasesince": "18.06.1",
+      "Supported Current Rel_releasecurrent": "25.12.0",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "unknown",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Atheros AR7240",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "400",
+      "Flash MB_mbflashs": "8",
+      "RAM MB_mbram": "64",
+      "Ethernet 100M ports_numethport": "1",
+      "Ethernet 1Gbit ports_numethport": "-",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "-",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Atheros AR9287",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "-",
+      "WLAN Comments_": "",
+      "WLAN driver_wlan-drivers": "ath9k",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "¿",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "6",
+      "Button count_numbutton": "-",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "PoE 24 VDC, 0.5A",
+      "Outdoor_yesno": "Yes",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:ubiquiti:nanostationm2",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "NanoStation Loco M2",
+      "Git search_search-gits": "NanoStation Loco M2",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/Ubiquiti_Networks_NanoStation_Loco_M2",
+      "WikiDevi ID_hwinfo-id": "Ubiquiti_Networks_NanoStation_Loco_M2",
+      "OEM Device Homepage URL_url": "https://www.ubnt.com/airmax/nanostationm/",
+      "Firmware OEM Stock URL_url": "https://www.ui.com/download/airmax-m/nanostationm/locom2",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/generic/openwrt-25.12.0-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-factory.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/generic/openwrt-25.12.0-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-factory.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "Sysupgrade",
+      "Comment installation": "Flashing through the system upgrade GUI is only possible with the unsigned OEM firmware v5.6.12 or v5.6.15!",
+      "Recovery method(s)_method-recoverys": "TFTP generic",
+      "Comment recovery": "Power off the device, press and hold reset 8 sec. with power on to start the recovery tftp loader",
+      "Picture_img100s": "media:ubiquiti:nanostation-locom2_front.jpg",
+      "Comments_": ""
+    },
+    "toh_seite_loco_m5_xw": {
+      "Device Type_devicetype": "other",
+      "Brand": "Ubiquiti",
+      "Model": "NanoStation Loco M5",
+      "Versions": "XW",
+      "FCCID_urls": "",
+      "Availability_availability": "unknown 2018",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.lede-project.org/?p=source.git;a=commit;h=cb37fe5ca587868f4a909949c884e981bd90727b",
+      "Supported Since Rel_releasesince": "15.05",
+      "Supported Current Rel_releasecurrent": "25.12.0",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Atheros AR9342",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "400",
+      "Flash MB_mbflashs": "8",
+      "RAM MB_mbram": "64",
+      "Ethernet 100M ports_numethport": "1",
+      "Ethernet 1Gbit ports_numethport": "-",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Atheros AR9342",
+      "WLAN 2.4GHz_wlan24": "-",
+      "WLAN 5.0GHz_wlan50": "a/n",
+      "WLAN Comments_": "",
+      "WLAN driver_wlan-drivers": "ath9k",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "¿",
+      "Button count_numbutton": "¿",
+      "GPIOs_numgpio": "¿",
+      "Power Supply": "¿",
+      "Outdoor_yesno": "Yes",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:ubiquiti:nanostationm5",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "NanoStation Loco M5 xw",
+      "Git search_search-gits": "NanoStation Loco M5 xw",
+      "WikiDevi URL_urls": "",
+      "WikiDevi ID_hwinfo-id": "",
+      "OEM Device Homepage URL_url": "https://www.ubnt.com/airmax/nanostationm/",
+      "Firmware OEM Stock URL_url": "",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/generic/openwrt-25.12.0-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-factory.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/generic/openwrt-25.12.0-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-factory.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "GUI OEM, U-Boot TFTP recovery, see devicepage",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "U-Boot TFTP recovery",
+      "Comment recovery": "",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "toh_seite_loco_m2_xw_diff_2025_04_12": {
+      "CPU": "Atheros AR9342 -> Atheros AR7240",
+      "CPU MHz": "535 -> 400",
+      "WLAN Hardwares": "Atheros AR9340 Rev -> Atheros AR9287",
+      "Power Supply": "PoE 24 VDC, 0.5 A -> PoE 24 VDC, 0.5A",
+      "Target": "ar71xx-ath79 -> ath79",
+      "autor": "kjoshj, 2025-04-12 16:03"
+    },
+    "openwrt_wiki_nanostationm5": {
+      "titel": "Ubiquiti Nanostation M5 / Loco M5",
+      "warnung": "There are two versions of NanoStation: xm and xw. Downgrade procedure fails for devices with HW revision higher than 1847G. The old xm version has limited RAM (32 MB) and thus is not recommended.",
+      "versionen": [
+        {
+          "version": "xm",
+          "launch": "-",
+          "openwrt": "14.07",
+          "chip": "ar724x"
+        },
+        {
+          "version": "xw",
+          "launch": "2014",
+          "openwrt": "14.07 - for Nanostation M5; 14.07 - for Nanostation Loco M5",
+          "chip": "ar9342",
+          "hardwarefehler": "A hardware bug causing loss of eth0 connectivity was fixed in OpenWrt 17.01. (https://dev.openwrt.org/ticket/19085)"
+        }
+      ],
+      "image_hinweis": "For newer Nanostation Loco M5 (XW) (models since 2014) there is a new image (openwrt-ar71xx-generic-ubnt-loco-m-xw-squashfs-factory.bin). For old Nanostation Loco M5 (XM) the image name is openwrt-ar71xx-generic-ubnt-nano-m-squashfs-factory.bin.",
+      "cpuinfo": "XW based hardware should come back as Atheros AR93xx, XM = Atheros AR72xx",
+      "lan_enumeration": "Observed for a NanoStationlocoM2 (model SWX-M2L, XM firmware): LAN port is eth1, not eth0",
+      "installation": "Webinterface default address http://192.168.1.20/; may need to downgrade AirOS to v5.5 for web upload; TFTP rescue: power cycle while keeping reset pushed (~10 sec), LEDs blink red and yellow",
+      "seriell_loco_m5": "A pin header can be soldered to the board to use the serial port. The board is mounted to a sled which can be pulled out after the protective cover for the RJ-45 port and the screw (under the label) is removed. If your adapter requires the board's 3.3V, the board may not boot (stalls after U-Boot's \"DRAM:   4 MB\" message). If this happens, re-apply power after removing the adapter and only plug it in after the second LED has turned on.",
+      "bootlog_loco_m5": "U-Boot 1.1.4.2-s564 (Jul 19 2012); Board: Ubiquiti Networks XM board (rev 1.0 e0a5); DRAM: 32 MB; Flash: 8 MB (XM-Gerät)"
+    },
+    "openwrt_wiki_nanostationm2": {
+      "titel": "Ubiquiti NanoStation M2 / Loco M2",
+      "warnung_24_10": "DO NOT INSTALL/UPGRADE TO VERSION 24.x.x! last known good 23.05.5 (ubnt_nanostation-loco-m-xw-squashfs files). A kernel change lead to the flash memory of the device not being set to be writable anymore; tracked in openwrt#18312, fix merged into linux 6.1.149, 6.6.103, 6.12.44, 6.16.4. Recovery via TFTP requires physical access and a functional reset button.",
+      "info_tabelle_loco_m2_xm": {
+        "Instruction set": "MIPS",
+        "Vendor": "Qualcomm Atheros",
+        "Bootloader": "U-Boot",
+        "System-On-Chip": "Atheros AR7240",
+        "CPU": "AR7240 MIPS 24KC @400MHz",
+        "Flash size": "8 MiB",
+        "Flash Chip": "MX25L6408EMI-12G",
+        "RAM size": "32 MiB",
+        "RAM Chip": "Winbond W9725G6KB-25 (DDR2-800)",
+        "Wireless": "Atheros AR9287 802.11b/g/n",
+        "Wireless Output power": "23 dBm",
+        "Antenna gain": "8.5 dBi",
+        "Ethernet": "1x 10/100Mbps",
+        "USB": "No",
+        "Power": "passive POE (pairs 4,5+; 7,8 return) 12 to 24 VDC (POE injector included in the package)",
+        "PSU": "24V DC 0.5A / GP-A240-050 POE-24-12W",
+        "Serial": "Yes",
+        "JTAG": "Yes"
+      },
+      "oeffnen": "To open the device, remove the screw under the label. Then pull out the inner plastic part with the Ethernet ports while lifting this part up slightly.",
+      "alt_neu": "from the beginning of 2014 Ubiquiti has released new model ... old boards use ar724x chip and new ones are using ar934x chip. This became true (at least confirmed for Loco M2 in Oct.2016).",
+      "seriell": "Bild nanom2-uart.jpg unter 'Nanostation Loco M2/M5 Loco'; Bild nanostation_loco_m2_xm_serial.jpg unter 'Nanostation Loco M2 (XM)'; Serial connection settings: 11520 Baud 8N1",
+      "tftp": "Turn on Nanostation and keep reset button pressed for 20 seconds, a little bit after the led lights start blinking in pairs; TFTP server 192.168.1.20"
+    },
+    "openwrt_wiki_airmaxm": {
+      "NanoStation Loco M": "low cost sectorial 60 deg antenna, 1 ethernet",
+      "hinweis": "For the models with 1x ethernet (nanostation loco m, picostation m hp, bullet m), use the bullet-m image. (as of 2023/05) unresolved problem with builds for Ubnt units with ONE ethernet port ... last working version is 19.07.10 AR71xx"
+    },
+    "openwrt_wiki_foto_seriell_loco_m5": {
+      "beschriftung": "GND, TX, RX, 3V3 (von links, an einer 4-poligen Reihe neben der RJ45-Buchse, Buchsenleiste aufgesteckt)",
+      "platinenaufdruck": "LOCOM5 (Antennenseite), Ubiquiti-Logo, Etikett mit 'LOCOM5...' und '13-00127-5?'",
+      "bauteile_sichtbar": "Übertrager 'HN16614CG 1348', Kühlkörper auf dem SoC, Spule 6R8",
+      "exif": "LG-P880, 2015-06-01 21:29:53, GIMP 2.8.10 2015-07-09"
+    },
+    "openwrt_wiki_foto_uart": {
+      "JP1 (SERIAL PORT)": "links GND, NC, NC, NC, PWR; rechts GND, TXD (SOUT, R170), -, RXD (SIN, R1016/R171), +3.3V (PWR)",
+      "J500 (JTAG)": "TCK, TMS, TDO, TDI, TRST, COLD_RST, PWR, GND",
+      "bemerkung": "Leiterplatte CA-F121..., 94V-0; ob Loco, unklar"
+    },
+    "openwrt_commit_ath79": {
+      "sha": "633c4304ad42d18d180ba65a264ba668de445d91",
+      "autor": "Roger Pueyo Centelles",
+      "datum_autor": "2019-09-18T13:17:56Z",
+      "datum_commit": "2020-01-31T16:24:31Z",
+      "nachricht": "ath79: add support for Ubiquiti NanoStation Loco M (XW)\n\nThis commit adds support for the NanoStation Loco M2/M5 XW devices\non the ath79 target (support was long ago available on ar71xx).\n\nSpecifications:\n\n - AR9342 SoC @ 535 MHz\n - 64 MB RAM\n - 8 MB SPI flash\n - 1x 10/100 Mbps Ethernet, 24 Vdc PoE-in\n - AR8032 switch\n - 2T2R 5 GHz radio, 22 dBm\n - 13 dBi built-in antenna\n - POWER/LAN green LEDs\n - 4x RSSI LEDs (red, orange, green, green)\n - UART (115200 8N1) on PCB\n\nFlashing via TFTP:\n\n - Use a pointy tool (e.g., pen cap, paper clip) and keep the reset\n   button on the device or on the PoE supply pressed\n - Power on the device via PoE (keep reset button pressed)\n - Keep pressing until LEDs flash alternatively LED1+LED3 =>\n   LED2+LED4 => LED1+LED3, etc.\n - Release reset button\n - The device starts a TFTP server at 192.168.1.20\n - Set a static IP on the computer (e.g., 192.168.1.21/24)\n - Upload via tftp the factory image:\n   $ tftp 192.168.1.20\n   tftp> bin\n   tftp> trace\n   tftp> put openwrt-ath79-generic-xxxxx-ubnt_nanostation-loco-m-xw-squashfs-factory.bin\n\nSigned-off-by: Roger Pueyo Centelles <roger.pueyo@guifi.net>",
+      "dateien": [
+        "target/linux/ath79/dts/ar9342_ubnt_nanostation-loco-m-xw.dts",
+        "target/linux/ath79/generic/base-files/etc/board.d/01_leds",
+        "target/linux/ath79/generic/base-files/etc/board.d/02_network",
+        "target/linux/ath79/image/generic-ubnt.mk"
+      ]
+    },
+    "openwrt_commit_v2": {
+      "sha": "54e70703a0bdcdb9d52fb9e0cd7d01cbaea59c2f",
+      "autor": "Matthias Urlichs",
+      "datum_autor": "2026-06-22T09:44:20Z",
+      "datum_commit": "2026-07-01T17:02:40Z",
+      "nachricht": "ath79: add support for Ubiquiti NanoStation Loco M (XW v2)\n\nThis commit adds support for the NanoStation Loco M2/M5 XW devices\non the ath79 target with test date (label on the packaging, not the\ndevice) later than October 2017.\n\nTo discover whether you have the new version, open a console on the\nstock web interface and run `dmesg | grep AR803`. New versions print\nAR8035, v1 shows AR8032.\n\nSpecifications:\n\n - AR9342 (rev 3) SoC @ 535 MHz\n - 64 MB RAM\n - 8 MB SPI flash\n - 1x 10/100 Mbps Ethernet, 24 Vdc PoE-in\n - AR8035 switch\n - 2T2R 5 GHz radio, 22 dBm\n - 13 dBi built-in directional antenna\n - POWER/LAN green LEDs\n - 4x RSSI LEDs (red, orange, green, green)\n - UART (115200 8N1) on PCB\n\nFlashing via TFTP:\n\n - Use a pointy tool (e.g., pen cap, paper clip) and keep the reset\n   button on the device pressed\n - Power on the device via PoE (keep reset button pressed)\n - Keep pressing until LEDs flash alternatively LED1+LED3 =>\n   LED2+LED4 => LED1+LED3, etc.\n - Release reset button\n - The device starts a TFTP server at 192.168.1.20\n - Set a static IP on the computer (e.g., 192.168.1.21/24)\n - Upload via tftp the factory image:\n   $ tftp 192.168.1.20\n   tftp> bin\n   tftp> put openwrt-ath79-generic-xxxxx-ubnt_nanostation-loco-m-xw-v2-squashfs-factory.bin\n\nMAC addresses: stored on Flash, in the \"art\" partition.\n\nSigned-off-by: Matthias Urlichs <matthias@urlichs.de>\nLink: https://github.com/openwrt/openwrt/pull/23912\nSigned-off-by: Robert Marko <robert.marko@sartura.hr>",
+      "dateien": [
+        "target/linux/ath79/dts/ar9342_ubnt_nanostation-loco-m-xw-v2.dts",
+        "target/linux/ath79/generic/base-files/etc/board.d/01_leds",
+        "target/linux/ath79/generic/base-files/etc/board.d/02_network",
+        "target/linux/ath79/image/generic-ubnt.mk"
+      ]
+    },
+    "openwrt_commit_ar71xx": {
+      "sha": "cb37fe5ca587868f4a909949c884e981bd90727b",
+      "autor": "John Crispin",
+      "datum_autor": "2014-09-15T10:19:14Z",
+      "datum_commit": "2014-09-15T10:19:14Z",
+      "nachricht": "ar71xx: add board support for ubnt loco m xw\n\nSigned-off-by: Alexander Couzens <lynxis@fe80.eu>\n\nSVN-Revision: 42549",
+      "dateien": [
+        "target/linux/ar71xx/base-files/etc/diag.sh",
+        "target/linux/ar71xx/base-files/etc/uci-defaults/01_leds",
+        "target/linux/ar71xx/base-files/etc/uci-defaults/02_network",
+        "target/linux/ar71xx/base-files/lib/ar71xx.sh",
+        "target/linux/ar71xx/base-files/lib/upgrade/platform.sh",
+        "target/linux/ar71xx/image/Makefile",
+        "target/linux/ar71xx/patches-3.10/616-MIPS-ath79-ubnt-xw.patch",
+        "target/linux/ar71xx/patches-3.10/722-MIPS-ath79-add-airGateway-support.patch"
+      ]
+    },
+    "openwrt_commit_reset_gpio": {
+      "sha": "6613a7f5cc8e1527671128d9479b3de78f7b4cdd",
+      "autor": "Roger Pueyo Centelles",
+      "datum_autor": "2020-02-24T17:21:49Z",
+      "datum_commit": "2020-02-24T19:42:19Z",
+      "nachricht": "ath79: add missing reset-gpios for NanoStation Loco M (XW)\n\nWhen porting support from ar71xx to ath79, the reset-gpios option was\nmissed. Due to a hardware bug, this would eventually leave the devices\nwith RX-deaf Ethernet PHY.\n\nSigned-off-by: Roger Pueyo Centelles <roger.pueyo@guifi.net>",
+      "dateien": [
+        "target/linux/ath79/dts/ar9342_ubnt_nanostation-loco-m-xw.dts"
+      ]
+    },
+    "openwrt_pr_23912": {
+      "titel": "ath79: add support for newer Nanostation Loco M5",
+      "text": "This patch supports a newer hardware version of the Ubiquity Nanostation Loco M5 (XW v2). It uses a different PHY (AR8035) but appears to be otherwise identical.\r\n\r\nThis patch adds the kconfig entry, DTS, and LED declarations.\r\n",
+      "kommentare": [
+        {
+          "von": "Djfe",
+          "am": "2026-06-22T11:28:10Z",
+          "text": "Thanks, please copy specs and instructions from this commit for completeness :) (git repo serves as documentation)\r\n633c4304ad42d18d180ba65a264ba668de445d91\r\n\r\naccording to https://www.arednmesh.org/content/nanostation-loco-m5-xw-test-date-after-nov-2017\r\nv2 is distinguishable by test date (written on the device's label):\r\n\r\n- NanoStation Loco M5 (XW): test date before Nov 2017\r\n- NanoStation Loco M5 (XW) v2: test date after Nov 2017\r\n"
+        },
+        {
+          "von": "m-u-xyz",
+          "am": "2026-06-23T08:14:17Z",
+          "text": "Commit description updated."
+        },
+        {
+          "von": "m-u-xyz",
+          "am": "2026-06-24T00:18:20Z",
+          "text": "Casing of Signed-off-by footer fixed *sigh*."
+        },
+        {
+          "von": "robimarko",
+          "am": "2026-07-01T17:03:09Z",
+          "text": "Thanks! Rebased on top of main and merged!"
+        }
+      ]
+    },
+    "openwrt_dts_main": {
+      "ar9342_ubnt_nanostation-loco-m-xw.dts": "// SPDX-License-Identifier: GPL-2.0-or-later OR MIT\n\n#include \"ar9342_ubnt_xw_rssileds.dtsi\"\n\n/ {\n\tcompatible = \"ubnt,nanostation-loco-m-xw\", \"ubnt,xw\", \"qca,ar9342\";\n\tmodel = \"Ubiquiti Nanostation Loco M (XW)\";\n};\n\n&mdio0 {\n\tstatus = \"okay\";\n\n\tphy1: ethernet-phy@1 {\n\t\treg = <1>;\n\t\tphy-mode = \"mii\";\n\t\treset-gpios = <&gpio 0 GPIO_ACTIVE_LOW>;\n\t};\n};\n\n&eth0 {\n\tstatus = \"okay\";\n\n\tphy-handle = <&phy1>;\n};\n",
+      "ar9342_ubnt_nanostation-loco-m-xw-v2.dts": "// SPDX-License-Identifier: GPL-2.0-or-later OR MIT\n\n#include \"ar9342_ubnt_xw_rssileds.dtsi\"\n\n/ {\n\tcompatible = \"ubnt,nanostation-loco-m-xw-v2\", \"ubnt,xw\", \"qca,ar9342\";\n\tmodel = \"Ubiquiti Nanostation Loco M (XW) v2\";\n};\n\n&mdio0 {\n\tstatus = \"okay\";\n\n\tphy4: ethernet-phy@4 {\n\t\treg = <4>;\n\t};\n};\n\n&eth0 {\n\tstatus = \"okay\";\n\n\t/* default for ar934x, except for 1000M and 10M */\n\tpll-data = <0x02000000 0x00000101 0x00001313>;\n\n\tphy-mode = \"rgmii-id\";\n\tphy-handle = <&phy4>;\n\n\tgmac-config {\n\t\tdevice = <&gmac>;\n\t\trxd-delay = <3>;\n\t\trxdv-delay = <3>;\n\t};\n};",
+      "ar9342_ubnt_xw.dtsi_auszug": "keys: reset GPIO 12 active low KEY_RESTART; spi-nor 25 MHz; Partitionen u-boot 0x000000-0x040000 (ro), u-boot-env 0x040000 (64k, ro), firmware 0x050000 Länge 0x760000 (denx,uimage), cfg 0x7b0000 (256k, ro), art 0x7f0000 (64k, ro); MAC eth0 art@0x0, WLAN-Kalibrierung art@0x1000, WLAN-MAC art@0x1002",
+      "ar9342_ubnt_xw_rssileds.dtsi_auszug": "LEDs red:link1 GPIO 11, orange:link2 GPIO 16, green:link3 GPIO 13, green:link4 GPIO 14 (alle active low); led-boot/running/upgrade/failsafe = link4; label-mac-device = wmac",
+      "generic-ubnt.mk_v1": "define Device/ubnt_nanostation-loco-m-xw\n  $(Device/ubnt-xw)\n  DEVICE_MODEL := Nanostation Loco M\n  DEVICE_PACKAGES += rssileds -kmod-usb2\n  DEVICE_ALT0_VENDOR := Ubiquiti\n  DEVICE_ALT0_MODEL := AirGrid M5 HP\n  DEVICE_ALT0_VARIANT := XW\n  DEVICE_ALT1_VENDOR := Ubiquiti\n  DEVICE_ALT1_MODEL := PowerBeam M5 300\n  DEVICE_ALT1_VARIANT := XW\n  DEVICE_ALT2_VENDOR := Ubiquiti\n  DEVICE_ALT2_MODEL := NanoBeam M5\n  DEVICE_ALT2_VARIANT := XW\n  SUPPORTED_DEVICES += loco-m-xw nanostation-m-xw ubnt,nanobeam-m5-xw\nendef\nTARGET_DEVICES += ubnt_nanostation-loco-m-xw\n",
+      "generic-ubnt.mk_v2": "define Device/ubnt_nanostation-loco-m-xw-v2\n  $(Device/ubnt-xw)\n  DEVICE_MODEL := Nanostation Loco M\n  DEVICE_VARIANT := XW v2\n  DEVICE_PACKAGES += rssileds -kmod-usb2\nendef\nTARGET_DEVICES += ubnt_nanostation-loco-m-xw-v2\n",
+      "common-ubnt.mk_ubnt-xw": "define Device/ubnt-xw\n  $(Device/ubnt)\n  SOC := ar9342\n  DEVICE_VARIANT := XW\n  IMAGE_SIZE := 7552k\n  UBNT_BOARD := XM\n  UBNT_CHIP := ar934x\n  UBNT_REVISION := 42.$(UBNT_REVISION)\n  UBNT_TYPE := XW\n  UBNT_VERSION := 6.0.4\nendef\n"
+    },
+    "gluon": {
+      "targets/ath79-generic": "device('ubiquiti-nanostation-loco-m-xw', 'ubnt_nanostation-loco-m-xw', { aliases = { 'ubiquiti-nanobeam-m5-xw', }, })",
+      "supported_devices.rst": "NanoStation Loco M2/M5 (XW)",
+      "platform.lua is_outdoor_device": "enthält 'ubnt,nanostation-loco-m-xw'",
+      "releases": {
+        "v2015.1": "Loco M XW (neu)",
+        "v2022.1.1": "Fixes the update path for GL-AR300M and NanoStation Loco M2/M5 (XW) devices.",
+        "v2023.2": "NanoStation Loco M2/M5 (XW) entfernt: Ubiquiti airMax devices have been removed temporarily due to an unsolved issue with the flash write-protect (#2939)",
+        "v2025.1": "NanoStation Loco M2/M5 (XW) [#readded]"
+      },
+      "git_log_target": "b0ef97d 2024-01-03 ath79-generic: (re)add support for Ubiquiti AirMax targets",
+      "v2021.1_ar71xx_namen": "device('ubiquiti-loco-m-xw', 'ubnt-loco-m-xw', aliases ubiquiti-nanostation-loco-m2-xw, ubiquiti-nanostation-loco-m5-xw) (aus Issue 2663 zitiert)",
+      "kein_v2": "Gluon v2025.1.3 kennt kein ubnt_nanostation-loco-m-xw-v2 (OpenWrt-Basis openwrt-24.10 ohne v2-Unterstützung)"
+    },
+    "gluon_issues": {
+      "1370": {
+        "titel": "issues with upgrading nanostation loco m2 to newer builds (or flashing gluon-factory via tftp)",
+        "url": "https://github.com/freifunk-gluon/gluon/issues/1370",
+        "kern": "Loco M2 XM mit U-Boot 1.1.4.2-s956 (AirOS 5.6) nach Gluon-v2017.1.6-Update soft-brick; Ursache Kernel 4.4.120, behoben mit 4a2f7945"
+      },
+      "2487": {
+        "titel": "ath79-generic: (re)add support for nanostation-loco-m",
+        "url": "https://github.com/freifunk-gluon/gluon/pull/2487",
+        "kern": "Loco M XM (nicht XW): kein MAC-Aufdruck am Gerät; Reboots unter Last (OOM, 32 MB); geschlossen, keine Zukunft für 8/32-Geräte"
+      },
+      "2547": {
+        "titel": "ath79-generic: (re)add support for NanoStation Loco M2 (XW)",
+        "url": "https://github.com/freifunk-gluon/gluon/pull/2547",
+        "kern": "Loco M2 XW: Checkliste erfüllt (sysupgrade, Reset -> Config-Mode, MAC wie Etikett, Port, WLAN, LEDs, outdoor); Flash ab Werk nicht getestet"
+      },
+      "2562": {
+        "titel": "Ath79 migrate ubnt loco m5 xw",
+        "url": "https://github.com/freifunk-gluon/gluon/pull/2562",
+        "kern": "Loco M5 XW: per TFTP aus Werksfirmware geflasht, Checkliste erfüllt; 'Radio LEDs do not exist, rssi works'"
+      },
+      "2663": {
+        "titel": "v2022.1: Autoupdater from old release does not work for Loco M XW",
+        "url": "https://github.com/freifunk-gluon/gluon/issues/2663",
+        "kern": "Autoupdater fand v2022.1 nicht (Modellname ubiquiti-loco-m-xw aus v2021.1)"
+      }
+    },
+    "deviwiki": {
+      "infobox": {
+        "brand": "Ubiquiti Networks",
+        "model": "NanoStation Loco M2",
+        "revision": "(LOCOM2)",
+        "upc": "609728683597",
+        "asin": "B00DCNRTAG,B004EGI3CI",
+        "fcc_date": "09/30/2011",
+        "manuf_country": "",
+        "is_manuf": "No",
+        "manuf": "",
+        "manuf_model": "",
+        "manuf_rev": "",
+        "availability": "",
+        "type": "access point",
+        "fcc_id": "SWX-M2L",
+        "ic_id": "6545A-M2L",
+        "pcb_id": "",
+        "pwr_v": "24",
+        "pwr_amp": "0.5",
+        "pwr_conn": "Ethernet (PoE)",
+        "pwr_poe": "ns",
+        "cpu1_brand": "Atheros",
+        "cpu1_model": "AR7240",
+        "cpu1_cspeed": "400",
+        "fla1": "8",
+        "fla1_brand": "Winbond",
+        "fla1_model": "W25Q64CVFIG",
+        "ram1": "32",
+        "ram1_brand": "ESMT",
+        "ram1_model": "M13S2561616A",
+        "expansion_if_types": "",
+        "expansion_usb_num": "",
+        "jtag": "",
+        "serial": "",
+        "wi1_chip1_brand": "Atheros",
+        "wi1_chip1_model": "AR9287",
+        "wi1_802dot11_protocols": "bgn",
+        "wi1_ant_conn": "U.FL",
+        "wi1_txchains": "2",
+        "wi1_rxchains": "2",
+        "wi1_sstreams": "2",
+        "eth_cpu": "true",
+        "lan_speed": "100M",
+        "lan_ports": "1",
+        "addl_chips": "",
+        "flags": "",
+        "stock_boot": "",
+        "stock_os": "",
+        "tp_firmware": "OpenWrt, Gargoyle, DD-WRT",
+        "802dot11_protocols": "bgn",
+        "default_ssid": "ubnt",
+        "default_ssid_regex": "",
+        "default_ip": "192.168.1.20",
+        "default_user": "ubnt",
+        "default_pass": "ubnt",
+        "oui": "",
+        "oui_eth": ""
+      },
+      "text": "{{TagLine|2.4GHz Indoor/Outdoor airMax 8dBi CPE}}\n\n===FCC test results===\n* Radiated power (with antenna): 115 dBuV/m peak (802.11b CH1,CH11) \n:(this is indeed a high gain directional antenna)\n* Output power (before antenna): 22 dBm peak (802.11b CH6) (158.48mW) \n:(unit has >10dB output power flatness from CH1 to CH11 \n:- shit RF PCB design/calibration)\n\n===Wikis===\n*[https://openwrt.org/toh/ubiquiti/nanostationm2 ''NanoStation M2/Loco M2'' on the '''OpenWrt''' Wiki]\n:*M2 - [[Atheros]] AR7240/AR9283, 2x FE ports, 28dBm/11.2dBi\n:*Loco M2 - [[Atheros]] AR7240/AR9287, 1x FE, 23dBm/8.5dBi\n\n*[http://www.dd-wrt.com/wiki/index.php/Supported_Devices#Ubiquiti ''Supported Devices'' table on the '''DD-WRT''' Wiki]\n:Like other UBNT devices, activation seems to be required.\n:[[Atheros]] AR724x device, DD-WRT wiki says AR7240, \n:WiFi chip is probably AR9287 (if not, AR9283)\n\n===Reg. third party firmware support===\n*''OpenWrt'' and ''Gargoyle'' (.. which is based on OpenWrt) firmware \n:should work fine on these devices.\n\n===See also===\n*[[Ubiquiti Networks NanoStation2]] (NS2)\n*[[Ubiquiti Networks NanoStation5]] (NS5)\n*[[Ubiquiti Networks NanoStation M2]] (M2N)\n*[[Ubiquiti Networks NanoStation M5]] (M5N)\n*[[Ubiquiti Networks NanoStation Loco M2]] (LOCOM2)\n*[[Ubiquiti Networks NanoStation Loco M5]] (LOCOM5)\n*[[Ubiquiti Networks NanoStation AC (NS-5AC)]]\n*[[Ubiquiti Networks NanoStation AC loco (NS-5ACL)]]\n*[[Ubiquiti Networks NanoStation AC loco (NS-5ACLW)]]\n\n__NOTOC__"
+    },
+    "wikidevi": {
+      "infobox": {
+        "brand": "Ubiquiti Networks",
+        "model": "NanoStation",
+        "revision": "Loco M2 (LOCOM2)",
+        "upc": "609728683597",
+        "asin": "B00DCNRTAG, B004EGI3CI",
+        "manuf_country": "",
+        "is_manuf": "No",
+        "manuf": "",
+        "availability": "",
+        "fcc_date": "09/30/2011",
+        "fcc_id": "SWX-M2L",
+        "ic_id": "6545A-M2L",
+        "pcb_id": "",
+        "type": "access point",
+        "pwr_v": "24",
+        "pwr_amp": "0.5",
+        "pwr_conn": "Ethernet (PoE)",
+        "pwr_poe": "ns",
+        "cpu1_brand": "Atheros",
+        "cpu1_model": "AR7240",
+        "cpu1_cspeed": "400",
+        "fla1": "8",
+        "fla1_brand": "Winbond",
+        "fla1_model": "W25Q64CVFIG",
+        "ram1": "32",
+        "ram1_brand": "ESMT",
+        "ram1_model": "M13S2561616A",
+        "expansion_if_types": "",
+        "expansion_usb_num": "",
+        "jtag": "",
+        "serial": "",
+        "wi1_chip1_brand": "Atheros",
+        "wi1_chip1_model": "AR9287",
+        "wi1_802dot11_protocols": "bgn",
+        "wi1_ant_conn": "U.FL",
+        "wi1_txchains": "2",
+        "wi1_rxchains": "2",
+        "wi1_sstreams": "2",
+        "eth_cpu": "true",
+        "lan_speed": "100M",
+        "lan_ports": "1",
+        "addl_chips": "",
+        "flags": "",
+        "stock_boot": "",
+        "stock_os": "",
+        "tp_firmware": "OpenWrt, Gargoyle, DD-WRT",
+        "802dot11_protocols": "bgn",
+        "default_ssid": "ubnt",
+        "default_ssid_regex": "",
+        "default_ip": "192.168.1.20",
+        "default_user": "ubnt",
+        "default_pass": "ubnt",
+        "oui": "",
+        "oui_eth": ""
+      },
+      "bemerkung": "sonst inhaltsgleich mit DeviWiki"
+    },
+    "fcc_m2l": {
+      "Equipment Class": "Compact, Hi-Power, 802.11b/g/n 2x2 MIMO AirMax TDMA Station",
+      "Test Firm": "MET Laboratories, Incorporated",
+      "Frequenz": "2403-2475 MHz",
+      "Equipment Class Code": "DTS - Digital Transmission System",
+      "Applications": "2011-09-30 Original Equipment",
+      "Ausgangsleistung W (conducted, MIMO aggregiert)": "0.4677 bis 0.6346",
+      "Exhibits": [
+        "Users Manual 2011-09-30",
+        "Form Factors (Internal Photos) 2011-09-30",
+        "Internal Photos 2011-09-30",
+        "External Photos 2011-09-30",
+        "ID Label/Location Info 2011-09-30",
+        "Test Setup Photos",
+        "Test Report 5.6 MB",
+        "Confidentiality Request Letter",
+        "Professional Install Letter",
+        "Antenna Datasheet",
+        "MPE"
+      ]
+    },
+    "fcc_m5lb": {
+      "Equipment Class": "NanoStationLocoM5",
+      "Test Firm": "EUROFINS ELECTRICAL AND ELECTRONIC TESTING NA, INC (MET)",
+      "Applications": [
+        "2011-05-26 Original Equipment 5728-5847 MHz",
+        "2016-08-24 Original Equipment 5160-5245 MHz",
+        "2016-08-30 Class II permissive change 5728-5847 MHz (DTS to NII transition)"
+      ],
+      "Exhibits 2016": [
+        "Quick Start Guide 2.9 MB",
+        "Internal Photos 520 KB",
+        "External Photos 169 KB",
+        "Label 344 KB",
+        "Label Location 120 KB",
+        "Test Setup Photos",
+        "Test Reports (DFS, UNII-1/2/3, Annexe)",
+        "Antenna Information",
+        "FCC Part 1.1310"
+      ],
+      "Exhibits 2011": [
+        "Users Manual 2.8 MB",
+        "Int Photos 1.5 MB",
+        "Ext Photos 1.1 MB",
+        "Label ID",
+        "Test Setup Photos",
+        "Test Report 5 MB",
+        "MPE"
+      ],
+      "nur Metadaten": [
+        "Block Diagram",
+        "Schematics",
+        "SDR Software/Security",
+        "Parts List",
+        "Theory of Operation"
+      ]
+    },
+    "fcc_m5lb_qsg": {
+      "Titel": "NanoStationM/locoM Quick Start Guide, Models: NSM2/NSM3/NSM365/NSM5/locoM2/locoM5",
+      "Lieferumfang": "NanoStation, Cable Tie, PoE Adapter (24V, 0.5A) with Mounting Bracket, Power Cord, Quick Start Guide",
+      "LED Panel": "Power (grün bei Strom), LAN1 Main Ethernet (grün, blinkt bei Aktivität), LAN2 nur NanoStation M2/M3/M5, Signal-LEDs: rot > -94 dBm, gelb (amber) > -80 dBm, grün > -73 dBm, grün > -65 dBm (Voreinstellung airOS)",
+      "Ports": "Main/LAN 10/100 Ethernet port used to connect the power ...; * Main is labeled LAN on the NanoStationlocoM2/M5; Secondary nur NanoStationM2/M3/M5",
+      "Reset Button": "To reset to factory defaults, press and hold the Reset button for more than 10 seconds while the NanoStation is already powered on. Alternatively, a remote reset button is located on the bottom of the PoE Adapter.",
+      "Installation": "Port Cover Release Button auf der Rückseite, Abdeckung abschieben, Kabel an Main/LAN, Abdeckung zurück; Mast mit Kabelbinder durch den Schlitz der Mounting Bracket",
+      "Spezifikation locoM2/M5": {
+        "Dimensions": "163 x 31 x 80 mm (6.42 x 1.22 x 3.15\")",
+        "Weight": "0.18 kg (6.35 oz)",
+        "Gain locoM2": "8 dBi",
+        "Gain locoM5": "13 dBi",
+        "Max. Power Consumption": "5.5W",
+        "Power Supply": "24V, 0.5A PoE Adapter (Included)",
+        "Power Method": "Passive PoE (Pairs 4, 5+; 7, 8 Return)",
+        "Mounting": "Pole-Mounting Kit Included",
+        "Networking Interface": "(1) 10/100 Ethernet Port",
+        "Operating Temperature": "-30 to 75° C (-22 to 167° F)",
+        "Operating Humidity": "5 to 95% Noncondensing",
+        "locoM2 Operating Frequency": "2412 - 2462 MHz",
+        "locoM5 Operating Frequency": "Worldwide 5150 - 5875; EU 5150 - 5350, 5470 - 5725, 5725 - 5875; USA U-NII-1 5150-5250, U-NII-2A 5250-5350, U-NII-2C 5470-5725, U-NII-3 5725-5850; IC 5470 - 5600, 5650 - 5725, 5725 - 5850"
+      },
+      "Teilenummer": "640-00210-03",
+      "Sicherheit": "WARNING: Do not use this product in location that can be submerged by water.",
+      "Kabel": "Shielded Category 5 (or above) cabling ... grounded through the AC ground of the PoE"
+    },
+    "fcc_m5lb_label": {
+      "File Name": "NanoStationLocoM5 Label Artwork v03",
+      "Date": "7/22/2015",
+      "Revision": "v03 - Remove MAC ID frame",
+      "P/N": "603-00002-02",
+      "Größe": "34.78 x 24.7 mm",
+      "Aufdruck": "NanoStation loco M5, UBIQUITI NETWORKS, M/N: LOCOM5, 24V 0.5A PoE, FCC ID: SWX-M5LB, IC: 6545A-M5LB, CE, RCM, WEEE, QR-Code, FCC Part 15 Text"
+    },
+    "fcc_m5lb_innenfotos": {
+      "foto1": "Platine im Schlitten, links RJ45-Buchse (J2), oben links 4-polige gewinkelte Stiftleiste bestückt (bei S1, Bauteil '4008H 221B'), Abschirmrahmen über dem Funkteil ohne Deckel, U.FL-Buchsen, Kühlkörper auf dem SoC",
+      "foto2": "Etiketten auf der Platine: '013G 15B6C7FB56 13-00127-56' und '1545G 44D9E7AA7C87' (MAC-Barcode); Platinenaufdruck 11-00127-14, Ubiquiti 2013; 6 SMD-LEDs (D25-D30) an der Kante",
+      "foto3": "RAM EtronTech EM68B16CWQD-25H (U92), Übertrager FPE LH16137SN 1542C, Spulen 6R8, 3R3, 2R2",
+      "foto4": "Flash MXIC MX25L6408EMI-12G (U96, SOP16), Ethernet-PHY U88 mit Aufdruck 'ATHEROS AR803x' (letzte Zeichen unscharf), Quarz Y2, 4-polige Stiftleiste neben Reset-Taster S1"
+    },
+    "datenblatt": {
+      "Titel": "NanoStationM & NanoStationlocoM Datasheet, Models: NSM2, NSM3, NSM365, NSM5, locoM2, locoM5, locoM9",
+      "Fußnote": "1 Only NanoStationM models (Dual Ethernet); 2 Remote reset is an option that is sold separately as the POE-24. The NanoStationM includes a 24V PoE adapter without remote reset.",
+      "locoM2": {
+        "Dimensions": "161 x 31 x 80 mm (6.31 x 1.22 x 3.15\")",
+        "Weight": "180 g (6.35 oz)",
+        "Power Supply (PoE)": "24V, 0.5A",
+        "Max. Power Consumption": "5.5W",
+        "Power Method": "Passive PoE (Pairs 4, 5+; 7, 8 Return)",
+        "Operating Frequency": "2412-2462 MHz",
+        "Gain": "8.5 dBi",
+        "Networking Interface": "(1) 10/100 Ethernet Port",
+        "Processor Specs": "Atheros MIPS 24Kc, 400 MHz",
+        "Memory": "32 MB SDRAM, 8 MB Flash",
+        "Frequency": "2.4 GHz",
+        "Cross-pol Isolation": "20 dB Minimum",
+        "Max. VSWR": "1.4:1",
+        "Beamwidth": "60° (H-pol) / 60° (V-pol) / 60° (Elevation)",
+        "Polarization": "Dual Linear",
+        "Enclosure": "Outdoor UV Stabilized Plastic",
+        "Mounting": "Pole-Mount (Kit Included)",
+        "Operating Temperature": "-30 to 75° C (-22 to 167° F)",
+        "Operating Humidity": "5 to 95% Noncondensing",
+        "Wireless Approvals": "FCC Part 15.247, IC RS210, CE",
+        "RoHS Compliance": "Yes",
+        "Shock & Vibration": "ETSI300-019-1.4",
+        "Output Power": "23 dBm",
+        "TX 11b/g": "1-24 Mbps 23 dBm, 36 Mbps 21, 48 Mbps 19, 54 Mbps 18 (± 2 dB)",
+        "TX airMAX": "MCS0-3 23 dBm, MCS4 22, MCS5 20, MCS6 18, MCS7 17, MCS8-11 23, MCS12 22, MCS13 20, MCS14 18, MCS15 17",
+        "RX": "1-24 Mbps -83 dBm ... MCS0 -96 dBm ... MCS15 -75 dBm"
+      },
+      "locoM5": {
+        "Dimensions": "161 x 31 x 80 mm (6.31 x 1.22 x 3.15\")",
+        "Weight": "180 g (6.35 oz)",
+        "Power Supply (PoE)": "24V, 0.5A",
+        "Max. Power Consumption": "5.5W",
+        "Power Method": "Passive PoE (Pairs 4, 5+; 7, 8 Return)",
+        "Operating Frequency": "Worldwide 5170-5875 MHz, USA 5725-5850 MHz, USA DFS 5250-5850 MHz",
+        "Gain": "13 dBi",
+        "Networking Interface": "(1) 10/100 Ethernet Port",
+        "Processor Specs": "Atheros MIPS 74Kc, 560 MHz",
+        "Memory": "64 MB DDR2, 8 MB Flash",
+        "Frequency": "5 GHz",
+        "Cross-pol Isolation": "20 dB Minimum",
+        "Max. VSWR": "1.4:1",
+        "Beamwidth": "45° (H-pol) / 45° (V-pol) / 45° (Elevation)",
+        "Polarization": "Dual Linear",
+        "Enclosure": "Outdoor UV Stabilized Plastic",
+        "Mounting": "Pole-Mount (Kit Included)",
+        "Operating Temperature": "-30 to 75° C (-22 to 167° F)",
+        "Operating Humidity": "5 to 95% Noncondensing",
+        "Wireless Approvals": "FCC Part 15.247, IC RS210, CE",
+        "RoHS Compliance": "Yes",
+        "Shock & Vibration": "ETSI300-019-1.4",
+        "Output Power": "23 dBm",
+        "TX 11a": "6-24 Mbps 23 dBm, 36 Mbps 21, 48 Mbps 19, 54 Mbps 18 (± 2 dB)",
+        "TX 11n/airMAX": "MCS0-3 23 dBm, MCS4 22, MCS5 20, MCS6 18, MCS7 17, MCS8-11 23, MCS12 22, MCS13 20, MCS14 18, MCS15 17",
+        "RX": "6-24 Mbps -83 dBm ... MCS0 -96 dBm ... MCS15 -75 dBm"
+      }
+    },
+    "hersteller_techspecs_locom2": {
+      "Titel": "UISP airMAX NanoStation M2 loco - Tech Specs (SKU LocoM2)",
+      "Mechanical": {
+        "Dimensions": "161 x 31 x 80 mm (6.3 x 1.2 x 3.2\")",
+        "Weight": "180 g (6.4 oz)",
+        "Enclosure material": "Outdoor UV-stabilized plastic",
+        "Mounting": "Pole-mount (Kit included)"
+      },
+      "Hardware": {
+        "Networking interface": "(1) 10/100 MbE RJ45 port",
+        "Power method": "Passive PoE 2-pair (4, 5+; 7, 8 return)",
+        "Power supply": "24V, 0.5A PoE adapter (Included)",
+        "Supported voltage range": "22–27V DC",
+        "Max. power consumption": "5.5W",
+        "Ambient operating temperature": "-30 to 75° C (-22 to 167° F)",
+        "Ambient operating humidity": "5 to 95% noncondensing",
+        "Shock & vibration": "ETSI300-019-1.4",
+        "Certifications": "FCC, IC, CE, RoHS",
+        "NDAA Compliant": "Yes"
+      },
+      "System": {
+        "Frequency": "2.4 GHz",
+        "Operating frequency": "2412-2462 MHz",
+        "Gain": "8.5 dBi",
+        "Cross-pol isolation": "20 dB Min.",
+        "Max. VSWR": "1.4:1",
+        "Beamwidth": "60° (H-pol) / 60° (V-pol) / 60° (Elevation)",
+        "Polarization": "Dual linear"
+      }
+    },
+    "hersteller_techspecs_locom5": {
+      "Titel": "UISP airMAX NanoStation M5 loco - Tech Specs (SKU LocoM5)",
+      "Mechanical": {
+        "Dimensions": "161 x 31 x 80 mm (6.3 x 1.2 x 3.2\")",
+        "Weight": "180 g (6.4 oz)",
+        "Enclosure Materials": "Outdoor UV-stabilized polycarbonate",
+        "Mounting": "Pole Mount (Included)"
+      },
+      "Hardware": {
+        "Networking Interface": "(1) 10/100 MbE RJ45 port",
+        "Power Method": "Passive PoE 2-pair (4, 5+; 7, 8 return)",
+        "Power Supply": "24V, 0.5A PoE adapter (Included)",
+        "Supported Voltage Range": "22–27V DC",
+        "Max. Power Consumption": "5.5W",
+        "Ambient Operating Temperature": "-30 to 75° C (-22 to 167° F)",
+        "Ambient Operating Humidity": "5 to 95% noncondensing",
+        "NDAA Compliant": "✓",
+        "Shock and Vibration Certification": "ETSI300-019-1.4",
+        "Certifications": "FCC, IC, CE, RoHS"
+      },
+      "System": {
+        "Antenna Gain": "13 dBi",
+        "Polarization": "Dual-Linear",
+        "Antenna beamwidth": "45° (H-pol) / 45° (V-pol) / 45° (Elevation)",
+        "Cross-Pol Isolation": "20 dB Min."
+      }
+    },
+    "aredn_forum": {
+      "AE6XE 2018-12-20": "The device has 2 different Ethernet port chips. There is no other known notation that helps us distinguish the difference. Ubiquiti started shipping a new hardware revision somewhere around Nov 2017. The device's test date by the manufacturer is on the sticker of the packaging. If you load the wrong image, the Ethernet port is not functional, but the node can be accessed by the wireless card.",
+      "AE6XE 2020-03-28": "in the dmesg output ... the newer one takes the AR8035 chip, and the older one has the AR8032.",
+      "K2QA 2020-07-24": "Unit 1: Atheros AR9342 rev 2, PHY ag71xx-mdio.0:01 uid=004dd023 Atheros 8032; Unit 2: Atheros AR9342 rev 2, PHY ag71xx-mdio.0:04 uid=004dd072 Atheros 8035"
+    },
+    "werkstatt": {
+      "gluon-migrationspfade.md": "| NanoStation (Loco) M XW, UniFi AP, UniFi AC Lite/Pro | Magic `2705` | **besteht**; AC Lite/Pro nur ~0,5 MB Reserve | (Prüfung platform_check_image von Chaos Calmer / Gluon 2016.2 gegen eigene ath79-Images aus OpenWrt 24.10)",
+      "sackgasse-2021.md": "ar71xx-generic | 39 | 14 | 895 | 8/32: NanoStation loco M2 (9 bei uns), ...; Loco M XW, WR842N/ND v1/v2, RE450 |",
+      "validierung": "keine Protokolle zur NanoStation Loco in docs/validierung/"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Ubiquiti",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "Ubiquiti Networks",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "Ubiquiti Inc.",
+        "quelle": "fcc_m5lb",
+        "beleg": "https://fccid.io/SWX-M5LB",
+        "stand": "Original 2011-05-26, Original 2016-08-24, Class II Permissive Change 2016-08-30",
+        "sicherheit": "hoch",
+        "bemerkung": "Grantee SWX (2016; 2011 noch Ubiquiti Networks, Inc.)",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "NanoStation Loco M2 / NanoStation Loco M5 (Version XW)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "zwei Zeilen: Model 'NanoStation Loco M2' bzw. 'NanoStation Loco M5', Versions 'XW'",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "NanoStationlocoM (locoM2, locoM5)",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "airMAX NanoStation M2 loco",
+        "quelle": "hersteller_techspecs_locom2",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom2",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "airMAX NanoStation M5 loco",
+        "quelle": "hersteller_techspecs_locom5",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom5",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "Nanostation Loco M (XW)",
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9342_ubnt_nanostation-loco-m-xw.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "DTS model; DEVICE_MODEL 'Nanostation Loco M'",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "XW",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Spalte version bei beiden Zeilen",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "XW (v1, Ethernet-PHY AR8032); daneben gibt es XW v2 mit AR8035 (Testdatum nach Oktober 2017), für die dieses Image nicht gedacht ist",
+        "quelle": "openwrt_commit_v2",
+        "beleg": "https://github.com/openwrt/openwrt/commit/54e70703a0bdcdb9d52fb9e0cd7d01cbaea59c2f",
+        "stand": "Commit 54e70703a0bd (Autor 2026-06-22, eingespielt 2026-07-01), Matthias Urlichs, PR #23912",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt hat dafür seit 2026-07-01 ein eigenes Image ubnt_nanostation-loco-m-xw-v2 (nur Branch main). Gluon v2025.1 baut nur ubnt_nanostation-loco-m-xw (= v1)",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "XW (seit 2014, Vorgänger XM mit AR724x)",
+        "quelle": "openwrt_wiki_nanostationm5",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanostationm5",
+        "stand": "Seitenrevision 2026-06-20 10:51 (smurfix, \"[Nanostation Loco M5 Serial Pins]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "'For newer Nanostation Loco M5 (XW) (models since 2014)'",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "XW-Boards mit AR934x bestätigt für Loco M2 im Oktober 2016",
+        "quelle": "openwrt_wiki_nanostationm2",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanostationm2",
+        "stand": "Seitenrevision 2025-09-04 02:48 (mpeter, \"[Preparations]\")",
+        "sicherheit": "niedrig",
+        "bemerkung": "'This became true (at least confirmed for Loco M2 in Oct.2016)'",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "zwei Hardware-Stände mit verschiedenen Ethernet-Chips (AR8032 alt, AR8035 neu ab etwa November 2017)",
+        "quelle": "aredn_forum",
+        "beleg": "https://www.arednmesh.org/content/nanostation-loco-m5-xw-test-date-after-nov-2017",
+        "stand": "Forenthema 2018-12-20 bis 2020-07-24 (7 Beiträge)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beiträge AE6XE 2018-12-20 und 2020-03-28",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Etikett zeigt NanoStation loco M5, M/N: LOCOM5, 24V 0.5A PoE, FCC ID SWX-M5LB, IC 6545A-M5LB; keine XM/XW- oder v1/v2-Angabe",
+        "quelle": "fcc_m5lb_label",
+        "beleg": "https://fccid.io/SWX-M5LB/Label/Label-3105582",
+        "stand": "Exhibit 3105582, Label-Artwork v03 vom 2015-07-22 (PDF 2015-07-23), eingereicht 2016-08-24",
+        "sicherheit": "hoch",
+        "bemerkung": "Label-Artwork v03 (2015-07-22, 'Remove MAC ID frame'), 34.78 x 24.7 mm",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "v1 oder v2 nur am Testdatum auf dem Etikett der Verpackung (nach Oktober 2017 = v2) oder in der Werksfirmware per 'dmesg | grep AR803' (AR8032 = v1, AR8035 = v2)",
+        "quelle": "openwrt_commit_v2",
+        "beleg": "https://github.com/openwrt/openwrt/commit/54e70703a0bdcdb9d52fb9e0cd7d01cbaea59c2f",
+        "stand": "Commit 54e70703a0bd (Autor 2026-06-22, eingespielt 2026-07-01), Matthias Urlichs, PR #23912",
+        "sicherheit": "mittel",
+        "bemerkung": "Commit: 'test date (label on the packaging, not the device) later than October 2017'",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "Testdatum steht auf dem Etikett am Gerät (vor Nov 2017 = v1, nach Nov 2017 = v2)",
+        "quelle": "openwrt_pr_23912",
+        "beleg": "https://github.com/openwrt/openwrt/pull/23912",
+        "stand": "PR-Kommentar Djfe 2026-06-22",
+        "sicherheit": "niedrig",
+        "bemerkung": "Widerspruch zum Commit-Text (Verpackung, nicht Gerät); Djfe beruft sich auf das AREDN-Forum, das 'sticker of the packaging' schreibt",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "Testdatum auf dem Aufkleber der Verpackung; sonst nur per dmesg (AR8032 / AR8035) unterscheidbar",
+        "quelle": "aredn_forum",
+        "beleg": "https://www.arednmesh.org/content/nanostation-loco-m5-xw-test-date-after-nov-2017",
+        "stand": "Forenthema 2018-12-20 bis 2020-07-24 (7 Beiträge)",
+        "sicherheit": "niedrig",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "XW-Geräte: unter OpenWrt zeigt /proc/cpuinfo Atheros AR93xx (XW) statt AR72xx (XM); airOS-Firmware XW. statt XM.",
+        "quelle": "openwrt_wiki_nanostationm5",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanostationm5",
+        "stand": "Seitenrevision 2026-06-20 10:51 (smurfix, \"[Nanostation Loco M5 Serial Pins]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "MAC-Barcode-Etikett auf der Platine (z. B. '1545G 44D9E7AA7C87') und Etikett '013G 15B6C7FB56 13-00127-56'",
+        "quelle": "fcc_m5lb_innenfotos",
+        "beleg": "https://fccid.io/SWX-M5LB/Internal-Photos/Internal-Photos-3105577",
+        "stand": "Exhibit 3105577, PDF erstellt 2016-08-17, veröffentlicht 2016-10-08",
+        "sicherheit": "mittel",
+        "bemerkung": "Prüfmuster für die FCC 2016, nur nach Öffnen sichtbar",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "Etikett mit Modellbezeichnung auf der Rückseite; die Schraube zum Öffnen sitzt unter dem Etikett",
+        "quelle": "openwrt_wiki_nanostationm2",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanostationm2",
+        "stand": "Seitenrevision 2025-09-04 02:48 (mpeter, \"[Preparations]\")",
+        "sicherheit": "niedrig",
+        "bemerkung": "'remove the screw under the label'",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "SWX-M2L",
+        "quelle": "fcc_m2l",
+        "beleg": "https://fccid.io/SWX-M2L",
+        "stand": "Grant 2011-09-30 (Original Equipment, MET Laboratories)",
+        "sicherheit": "hoch",
+        "bemerkung": "einzige Application 2011-09-30 (XM-Zeit); keine eigene Zulassung für XW gefunden",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "SWX-M2L",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "als https://fcc.io/SWX/-M2L",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "SWX-M2L",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_NanoStation_Loco_M2",
+        "stand": "Seitenrevision 72959 vom 2019-07-05T05:35:59Z (imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": "IC 6545A-M2L",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "SWX-M5LB",
+        "quelle": "fcc_m5lb_label",
+        "beleg": "https://fccid.io/SWX-M5LB/Label/Label-3105582",
+        "stand": "Exhibit 3105582, Label-Artwork v03 vom 2015-07-22 (PDF 2015-07-23), eingereicht 2016-08-24",
+        "sicherheit": "hoch",
+        "bemerkung": "IC 6545A-M5LB",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "SWX-M5LB",
+        "quelle": "fcc_m5lb",
+        "beleg": "https://fccid.io/SWX-M5LB",
+        "stand": "Original 2011-05-26, Original 2016-08-24, Class II Permissive Change 2016-08-30",
+        "sicherheit": "hoch",
+        "bemerkung": "Equipment Class 'NanoStationLocoM5'",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "6545A-M5LB",
+        "quelle": "fcc_m5lb_label",
+        "beleg": "https://fccid.io/SWX-M5LB/Label/Label-3105582",
+        "stand": "Exhibit 3105582, Label-Artwork v03 vom 2015-07-22 (PDF 2015-07-23), eingereicht 2016-08-24",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "6545A-M2L",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_NanoStation_Loco_M2",
+        "stand": "Seitenrevision 72959 vom 2019-07-05T05:35:59Z (imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "LOCOM2",
+          "LOCOM5",
+          "locoM2",
+          "locoM5",
+          "NanoStationlocoM2",
+          "NanoStationlocoM5"
+        ],
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Modellbezeichnungen (M/N auf dem Etikett LOCOM5)",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": [
+          "airMAX NanoStation M2 loco",
+          "airMAX NanoStation M5 loco"
+        ],
+        "quelle": "hersteller_techspecs_locom5",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom5",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": [
+          "ubnt_nanostation-loco-m-xw",
+          "ubnt,nanostation-loco-m-xw",
+          "loco-m-xw"
+        ],
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Image-Name, DTS-compatible, SUPPORTED_DEVICES (alter ar71xx-Boardname)",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": [
+          "AirGrid M5 HP (XW)",
+          "PowerBeam M5 300 (XW)",
+          "NanoBeam M5 (XW)"
+        ],
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-ubnt.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "DEVICE_ALT0..2 im selben OpenWrt-Image (andere Geräte, gleiche Hardwarebasis)",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": [
+          "ubiquiti-nanobeam-m5-xw (Alias)",
+          "ubiquiti-loco-m-xw (Gluon bis v2021.1, ar71xx)",
+          "ubiquiti-nanostation-loco-m2-xw",
+          "ubiquiti-nanostation-loco-m5-xw"
+        ],
+        "quelle": "gluon",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/ath79-generic",
+        "stand": "lokaler Checkout v2025.1.3 (Commit e2fe4b52 vom 2026-08-18)",
+        "sicherheit": "mittel",
+        "bemerkung": "Gluon-Alias und frühere Gluon-Imagenamen (Issue 2663)",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Atheros AR9342",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "beide Zeilen im Dump",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "Atheros AR9342",
+        "quelle": "toh_seite_loco_m5_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Seitenrevision 2026-03-17 04:14 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "Atheros AR7240",
+        "quelle": "toh_seite_loco_m2_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Seitenrevision 2026-03-17 04:15 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "niedrig",
+        "bemerkung": "seit Änderung kjoshj 2025-04-12 (vorher AR9342); AR7240 ist der XM-SoC, widerspricht der Version XW auf derselben Seite",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "Atheros AR9342 @ 535 MHz",
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+        "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "Atheros AR9342 (rev 3) @ 535 MHz",
+        "quelle": "openwrt_commit_v2",
+        "beleg": "https://github.com/openwrt/openwrt/commit/54e70703a0bdcdb9d52fb9e0cd7d01cbaea59c2f",
+        "stand": "Commit 54e70703a0bd (Autor 2026-06-22, eingespielt 2026-07-01), Matthias Urlichs, PR #23912",
+        "sicherheit": "mittel",
+        "bemerkung": "für XW v2",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "Atheros AR9342 rev 2",
+        "quelle": "aredn_forum",
+        "beleg": "https://www.arednmesh.org/content/nanostation-loco-m5-xw-test-date-after-nov-2017",
+        "stand": "Forenthema 2018-12-20 bis 2020-07-24 (7 Beiträge)",
+        "sicherheit": "niedrig",
+        "bemerkung": "/proc/cpuinfo zweier Geräte (AR8032 und AR8035)",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "Atheros MIPS 74Kc (ohne Typ)",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "locoM5",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "Atheros MIPS 24Kc (ohne Typ)",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "locoM2; 24Kc mit 400 MHz und 32 MB passt zum XM (AR7240), nicht zum XW",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "Atheros AR7240",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_NanoStation_Loco_M2",
+        "stand": "Seitenrevision 72959 vom 2019-07-05T05:35:59Z (imported>M86)",
+        "sicherheit": "niedrig",
+        "bemerkung": "XM-Stand der Seite",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 535,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Zeile Loco M2 XW",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": 400,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Zeile Loco M5 XW",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": 400,
+        "quelle": "toh_seite_loco_m2_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Seitenrevision 2026-03-17 04:15 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "niedrig",
+        "bemerkung": "seit 2025-04-12 (vorher 535), zusammen mit AR7240",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": 535,
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+        "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 535,
+        "quelle": "openwrt_commit_v2",
+        "beleg": "https://github.com/openwrt/openwrt/commit/54e70703a0bdcdb9d52fb9e0cd7d01cbaea59c2f",
+        "stand": "Commit 54e70703a0bd (Autor 2026-06-22, eingespielt 2026-07-01), Matthias Urlichs, PR #23912",
+        "sicherheit": "mittel",
+        "bemerkung": "für XW v2",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 560,
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "locoM5: 'Atheros MIPS 74Kc, 560 MHz'",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": 400,
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "locoM2: 'Atheros MIPS 24Kc, 400 MHz' (XM-Angabe)",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "MIPS 74Kc",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "locoM5",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "mips_24kc (Paketarchitektur)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt-Paketarchitektur, nicht der CPU-Kern",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 64,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "beide Zeilen",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 64,
+        "quelle": "toh_seite_loco_m2_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Seitenrevision 2026-03-17 04:15 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": 64,
+        "quelle": "toh_seite_loco_m5_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Seitenrevision 2026-03-17 04:14 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": 64,
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+        "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 64,
+        "quelle": "openwrt_commit_v2",
+        "beleg": "https://github.com/openwrt/openwrt/commit/54e70703a0bdcdb9d52fb9e0cd7d01cbaea59c2f",
+        "stand": "Commit 54e70703a0bd (Autor 2026-06-22, eingespielt 2026-07-01), Matthias Urlichs, PR #23912",
+        "sicherheit": "mittel",
+        "bemerkung": "für XW v2",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 64,
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "locoM5: 64 MB DDR2",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": 32,
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "locoM2: 32 MB SDRAM - XM-Angabe, im Datenblatt 2018 nicht aktualisiert",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": 32,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_NanoStation_Loco_M2",
+        "stand": "Seitenrevision 72959 vom 2019-07-05T05:35:59Z (imported>M86)",
+        "sicherheit": "niedrig",
+        "bemerkung": "XM-Stand (AR7240, ESMT M13S2561616A)",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "EtronTech EM68B16CWQD-25H (DDR2)",
+        "quelle": "fcc_m5lb_innenfotos",
+        "beleg": "https://fccid.io/SWX-M5LB/Internal-Photos/Internal-Photos-3105577",
+        "stand": "Exhibit 3105577, PDF erstellt 2016-08-17, veröffentlicht 2016-10-08",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufdruck im Foto, U92",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 8,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 8,
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+        "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+        "sicherheit": "mittel",
+        "bemerkung": "8 MB SPI flash",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 8,
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 8,
+        "quelle": "fcc_m5lb_innenfotos",
+        "beleg": "https://fccid.io/SWX-M5LB/Internal-Photos/Internal-Photos-3105577",
+        "stand": "Exhibit 3105577, PDF erstellt 2016-08-17, veröffentlicht 2016-10-08",
+        "sicherheit": "mittel",
+        "bemerkung": "MX25L6408E = 64 Mbit",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9342_ubnt_xw.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "compatible jedec,spi-nor",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "MXIC MX25L6408EMI-12G (SOP16, U96)",
+        "quelle": "fcc_m5lb_innenfotos",
+        "beleg": "https://fccid.io/SWX-M5LB/Internal-Photos/Internal-Photos-3105577",
+        "stand": "Exhibit 3105577, PDF erstellt 2016-08-17, veröffentlicht 2016-10-08",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "ethernet_phy": [
+      {
+        "wert": "Atheros AR8032 (MII, PHY-Adresse 1)",
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+        "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+        "sicherheit": "mittel",
+        "bemerkung": "im Commit als 'AR8032 switch' bezeichnet; DTS phy1 reg 1, phy-mode mii, reset-gpios GPIO 0",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "Atheros AR8035 (RGMII, PHY-Adresse 4) bei XW v2",
+        "quelle": "openwrt_commit_v2",
+        "beleg": "https://github.com/openwrt/openwrt/commit/54e70703a0bdcdb9d52fb9e0cd7d01cbaea59c2f",
+        "stand": "Commit 54e70703a0bd (Autor 2026-06-22, eingespielt 2026-07-01), Matthias Urlichs, PR #23912",
+        "sicherheit": "mittel",
+        "bemerkung": "nicht von diesem Image unterstützt",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "Atheros AR803x (U88, letzte Ziffer im Foto unscharf)",
+        "quelle": "fcc_m5lb_innenfotos",
+        "beleg": "https://fccid.io/SWX-M5LB/Internal-Photos/Internal-Photos-3105577",
+        "stand": "Exhibit 3105577, PDF erstellt 2016-08-17, veröffentlicht 2016-10-08",
+        "sicherheit": "niedrig",
+        "bemerkung": "Prüfmuster 2016, also vor v2",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "AR8032 (uid 004dd023, mdio:01) bzw. AR8035 (uid 004dd072, mdio:04)",
+        "quelle": "aredn_forum",
+        "beleg": "https://www.arednmesh.org/content/nanostation-loco-m5-xw-test-date-after-nov-2017",
+        "stand": "Forenthema 2018-12-20 bis 2020-07-24 (7 Beiträge)",
+        "sicherheit": "niedrig",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "Atheros AR9342 (im SoC)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "Atheros AR9340 Rev",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "so im Dump",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "Atheros AR9287",
+        "quelle": "toh_seite_loco_m2_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Seitenrevision 2026-03-17 04:15 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "niedrig",
+        "bemerkung": "seit 2025-04-12; AR9287 ist der WLAN-Chip des Loco M2 XM",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "Atheros AR9287",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_NanoStation_Loco_M2",
+        "stand": "Seitenrevision 72959 vom 2019-07-05T05:35:59Z (imported>M86)",
+        "sicherheit": "niedrig",
+        "bemerkung": "XM-Stand",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "fcc_m2l",
+        "beleg": "https://fccid.io/SWX-M2L",
+        "stand": "Grant 2011-09-30 (Original Equipment, MET Laboratories)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "keins (nur 5 GHz)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "fcc_m2l",
+        "beleg": "https://fccid.io/SWX-M2L",
+        "stand": "Grant 2011-09-30 (Original Equipment, MET Laboratories)",
+        "sicherheit": "hoch",
+        "bemerkung": "'2x2 MIMO' (Zulassung 2011, XM-Zeit)",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": 2,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_NanoStation_Loco_M2",
+        "stand": "Seitenrevision 72959 vom 2019-07-05T05:35:59Z (imported>M86)",
+        "sicherheit": "niedrig",
+        "bemerkung": "txchains/rxchains/sstreams 2 (XM-Stand)",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "keins (nur 2.4 GHz)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+        "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+        "sicherheit": "mittel",
+        "bemerkung": "'2T2R 5 GHz radio, 22 dBm' (Commit gilt für M2/M5, nennt aber nur 5 GHz)",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": 2,
+        "quelle": "fcc_m5lb_qsg",
+        "beleg": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+        "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+        "sicherheit": "hoch",
+        "bemerkung": "'High-Power 2x2 MIMO airMAX TDMA Station'",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "wlan_frequenz_mhz": [
+      {
+        "wert": "2412-2462",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "Worldwide 5170-5875, USA 5725-5850, USA DFS 5250-5850",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "Worldwide 5150-5875; EU 5150-5350, 5470-5725, 5725-5875",
+        "quelle": "fcc_m5lb_qsg",
+        "beleg": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+        "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": 23,
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Output Power locoM2 und locoM5 (MCS0-3, 1-24 Mbps)",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 22,
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+        "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 23,
+        "quelle": "openwrt_wiki_nanostationm2",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanostationm2",
+        "stand": "Seitenrevision 2025-09-04 02:48 (mpeter, \"[Preparations]\")",
+        "sicherheit": "niedrig",
+        "bemerkung": "Info-Tabelle Loco M2 (XM)",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": 22,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_NanoStation_Loco_M2",
+        "stand": "Seitenrevision 72959 vom 2019-07-05T05:35:59Z (imported>M86)",
+        "sicherheit": "niedrig",
+        "bemerkung": "'Output power (before antenna): 22 dBm peak (802.11b CH6)' aus FCC-Messung (XM-Zeit)",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "'Powerful Integrated Antenna'",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "intern (keine abnehmbaren Antennen)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas '-'",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "intern, gerichtet",
+        "quelle": "openwrt_commit_v2",
+        "beleg": "https://github.com/openwrt/openwrt/commit/54e70703a0bdcdb9d52fb9e0cd7d01cbaea59c2f",
+        "stand": "Commit 54e70703a0bd (Autor 2026-06-22, eingespielt 2026-07-01), Matthias Urlichs, PR #23912",
+        "sicherheit": "mittel",
+        "bemerkung": "'13 dBi built-in directional antenna'",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": 8.5,
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": 8.5,
+        "quelle": "hersteller_techspecs_locom2",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom2",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": 8,
+        "quelle": "fcc_m5lb_qsg",
+        "beleg": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+        "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+        "sicherheit": "hoch",
+        "bemerkung": "Quick Start Guide 2016",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": 13,
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": 13,
+        "quelle": "hersteller_techspecs_locom5",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom5",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": 13,
+        "quelle": "fcc_m5lb_qsg",
+        "beleg": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+        "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": 13,
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+        "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "Sektor, 60° (H-pol) / 60° (V-pol) / 60° (Elevation), Dual Linear",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "Sektor, 45° (H-pol) / 45° (V-pol) / 45° (Elevation), Dual Linear",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "Sektor 60°",
+        "quelle": "openwrt_wiki_airmaxm",
+        "beleg": "https://openwrt.org/toh/ubiquiti/airmaxm",
+        "stand": "Seitenrevision 2023-05-07 19:24 (g6094199)",
+        "sicherheit": "niedrig",
+        "bemerkung": "'low cost sectorial 60 deg antenna'",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "U.FL (intern, Kabel zur Patch-Antenne)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_NanoStation_Loco_M2",
+        "stand": "Seitenrevision 72959 vom 2019-07-05T05:35:59Z (imported>M86)",
+        "sicherheit": "niedrig",
+        "bemerkung": "wi1_ant_conn=U.FL (XM-Stand)",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "U.FL-Buchsen auf der Platine",
+        "quelle": "fcc_m5lb_innenfotos",
+        "beleg": "https://fccid.io/SWX-M5LB/Internal-Photos/Internal-Photos-3105577",
+        "stand": "Exhibit 3105577, PDF erstellt 2016-08-17, veröffentlicht 2016-10-08",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "LAN (Main)",
+            "geschwindigkeit": "10/100 Mbit/s",
+            "rolle": "einzige Buchse, PoE-Eingang"
+          }
+        ],
+        "quelle": "fcc_m5lb_qsg",
+        "beleg": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+        "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+        "sicherheit": "hoch",
+        "bemerkung": "'Main is labeled LAN on the NanoStationlocoM2/M5'; Buchse unter einer Schiebeabdeckung (Port Cover Release Button)",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": [
+          {
+            "name": "eth0",
+            "geschwindigkeit": "10/100 Mbit/s",
+            "rolle": "einzige Buchse"
+          }
+        ],
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+        "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+        "sicherheit": "mittel",
+        "bemerkung": "1x 10/100 Mbps Ethernet, 24 Vdc PoE-in",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Ethernet 100M ports 1",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 1,
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 1,
+        "quelle": "hersteller_techspecs_locom5",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom5",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "fcc_m5lb_qsg",
+        "beleg": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+        "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+        "sicherheit": "hoch",
+        "bemerkung": "Secondary-Port nur bei NanoStation M2/M3/M5, nicht bei loco",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": true,
+        "quelle": "openwrt_wiki_airmaxm",
+        "beleg": "https://openwrt.org/toh/ubiquiti/airmaxm",
+        "stand": "Seitenrevision 2023-05-07 19:24 (g6094199)",
+        "sicherheit": "niedrig",
+        "bemerkung": "'1 ethernet'",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "keins",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "USB ports '-'; Image mit -kmod-usb2",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "passiv",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Passive PoE (Pairs 4, 5+; 7, 8 Return)",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "passiv",
+        "quelle": "fcc_m5lb_qsg",
+        "beleg": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+        "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+        "sicherheit": "hoch",
+        "bemerkung": "Passive PoE (Pairs 4, 5+; 7, 8 Return)",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "passiv (2-pair)",
+        "quelle": "hersteller_techspecs_locom2",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom2",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "passiv (2-pair)",
+        "quelle": "hersteller_techspecs_locom5",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom5",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "PoE",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Power Supply 'PoE 24 VDC, 0.5 A' (Loco M5 XW: '¿')",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "PoE-Eingang",
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+        "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+        "sicherheit": "mittel",
+        "bemerkung": "'24 Vdc PoE-in'",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": 24,
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power Supply (PoE) 24V, 0.5A",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 24,
+        "quelle": "fcc_m5lb_label",
+        "beleg": "https://fccid.io/SWX-M5LB/Label/Label-3105582",
+        "stand": "Exhibit 3105582, Label-Artwork v03 vom 2015-07-22 (PDF 2015-07-23), eingereicht 2016-08-24",
+        "sicherheit": "hoch",
+        "bemerkung": "Etikett '24V 0.5A PoE'",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "22-27",
+        "quelle": "hersteller_techspecs_locom2",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom2",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Supported voltage range 22–27V DC",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "22-27",
+        "quelle": "hersteller_techspecs_locom5",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom5",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Supported Voltage Range 22–27V DC",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": 24,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": 24,
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+        "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "12 bis 24",
+        "quelle": "openwrt_wiki_nanostationm2",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanostationm2",
+        "stand": "Seitenrevision 2025-09-04 02:48 (mpeter, \"[Preparations]\")",
+        "sicherheit": "niedrig",
+        "bemerkung": "Info-Tabelle (XM): '12 to 24 VDC'; widerspricht Hersteller 22-27 V",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "poe_pinbelegung": [
+      {
+        "wert": "Paare 4, 5 (+) und 7, 8 (Rückleiter)",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "keine (nur PoE über die LAN-Buchse)",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power Method nur Passive PoE, 1 Ethernet-Port",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": "ja, PoE-Adapter 24 V 0.5 A mit Montagehalter und Netzkabel",
+        "quelle": "fcc_m5lb_qsg",
+        "beleg": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+        "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+        "sicherheit": "hoch",
+        "bemerkung": "Package Contents",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "ja",
+        "quelle": "hersteller_techspecs_locom5",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom5",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "24V, 0.5A PoE adapter (Included)",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "ja",
+        "quelle": "hersteller_techspecs_locom2",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom2",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "24V, 0.5A PoE adapter (Included)",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "24 V, 0.5 A, passiver PoE-Adapter; Fernreset-Taste unten am Adapter",
+        "quelle": "fcc_m5lb_qsg",
+        "beleg": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+        "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+        "sicherheit": "hoch",
+        "bemerkung": "Datenblatt-Fußnote dagegen: Remote Reset nur mit separat verkauftem POE-24, der beiliegende Adapter (bei NanoStationM) ohne Remote Reset",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "24V DC 0.5A / GP-A240-050 POE-24-12W",
+        "quelle": "openwrt_wiki_nanostationm2",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanostationm2",
+        "stand": "Seitenrevision 2025-09-04 02:48 (mpeter, \"[Preparations]\")",
+        "sicherheit": "niedrig",
+        "bemerkung": "Info-Tabelle M2 / Loco M2 (XM)",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 5.5,
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 5.5,
+        "quelle": "fcc_m5lb_qsg",
+        "beleg": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+        "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 5.5,
+        "quelle": "hersteller_techspecs_locom2",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom2",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": 5.5,
+        "quelle": "hersteller_techspecs_locom5",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom5",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "außen",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "'Indoor/Outdoor airMAX CPE', Enclosure 'Outdoor UV Stabilized Plastic'",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "außen",
+        "quelle": "toh_seite_loco_m5_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Seitenrevision 2026-03-17 04:14 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor Yes",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "außen",
+        "quelle": "toh_seite_loco_m2_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Seitenrevision 2026-03-17 04:15 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor Yes",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "außen",
+        "quelle": "gluon",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/package/gluon-core/luasrc/usr/lib/lua/gluon/platform.lua",
+        "stand": "lokaler Checkout v2025.1.3 (Commit e2fe4b52 vom 2026-08-18)",
+        "sicherheit": "mittel",
+        "bemerkung": "is_outdoor_device enthält ubnt,nanostation-loco-m-xw",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "gehaeuse": [
+      {
+        "wert": "UV-stabilisierter Kunststoff für außen",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "UV-stabilisiertes Polycarbonat für außen",
+        "quelle": "hersteller_techspecs_locom5",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom5",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "-30 bis 75 °C",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "Luftfeuchte 5 bis 95 % nicht kondensierend",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "-30 bis 75 °C",
+        "quelle": "fcc_m5lb_qsg",
+        "beleg": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+        "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "-30 bis 75 °C",
+        "quelle": "hersteller_techspecs_locom2",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom2",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "-30 bis 75 °C",
+        "quelle": "hersteller_techspecs_locom5",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom5",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Mast (Kabelbinder durch den Halter an der Rückseite, im Lieferumfang)",
+        "quelle": "fcc_m5lb_qsg",
+        "beleg": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+        "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+        "sicherheit": "hoch",
+        "bemerkung": "bei loco ein Kabelbinder, bei NanoStation M zwei",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "Mast (Pole-Mount, Kit beiliegend)",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "161 x 31 x 80",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "161 x 31 x 80",
+        "quelle": "hersteller_techspecs_locom5",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom5",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "163 x 31 x 80",
+        "quelle": "fcc_m5lb_qsg",
+        "beleg": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+        "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+        "sicherheit": "hoch",
+        "bemerkung": "Quick Start Guide 2016",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 180,
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 180,
+        "quelle": "fcc_m5lb_qsg",
+        "beleg": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+        "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+        "sicherheit": "hoch",
+        "bemerkung": "0.18 kg",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 180,
+        "quelle": "hersteller_techspecs_locom5",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom5",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "leds": [
+      {
+        "wert": "Power (grün), LAN (grün), 4 Signal-LEDs (rot, gelb, grün, grün)",
+        "quelle": "fcc_m5lb_qsg",
+        "beleg": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+        "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+        "sicherheit": "hoch",
+        "bemerkung": "LED Panel; Schwellen in airOS einstellbar",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "POWER/LAN grün, 4 RSSI-LEDs (rot, orange, grün, grün)",
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+        "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+        "sicherheit": "mittel",
+        "bemerkung": "DTS: GPIO 11, 16, 13, 14; Status-LED unter OpenWrt = link4",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": 6,
+        "quelle": "toh_seite_loco_m2_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Seitenrevision 2026-03-17 04:15 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": "LED count",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "keine Funk-LEDs mit Aktivität; RSSI-LEDs funktionieren unter Gluon",
+        "quelle": "gluon_issues",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2562",
+        "stand": "Issue/PR 2562 vom 2022-06-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "an der Anschlussseite neben der LAN-Buchse unter der Portabdeckung; im Betrieb mehr als 10 s drücken = Werkseinstellungen; zusätzlich Fernreset-Taste unten am PoE-Adapter",
+        "quelle": "fcc_m5lb_qsg",
+        "beleg": "https://fccid.io/SWX-M5LB/User-Manual/Quick-Start-Guide-3105581",
+        "stand": "Exhibit 3105581, PDF erstellt 2016-08-18, veröffentlicht 2016-10-08",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "GPIO 12 (active low), KEY_RESTART",
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9342_ubnt_xw.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "TFTP-Recovery: Gerät stromlos, Reset gedrückt halten und per PoE einschalten, etwa 8 s halten",
+        "quelle": "toh_seite_loco_m2_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Seitenrevision 2026-03-17 04:15 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Comment recovery",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "TFTP-Recovery: Reset am Gerät oder am PoE-Adapter gedrückt halten, einschalten, halten bis LED1+LED3 und LED2+LED4 im Wechsel blinken; TFTP-Server 192.168.1.20",
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+        "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "TFTP-Modus: beim Einschalten gedrückt halten (~10 s), LEDs blinken rot/gelb",
+        "quelle": "openwrt_wiki_nanostationm5",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanostationm5",
+        "stand": "Seitenrevision 2026-06-20 10:51 (smurfix, \"[Nanostation Loco M5 Serial Pins]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "TFTP-Modus: 20 s halten, bis die LEDs paarweise blinken",
+        "quelle": "openwrt_wiki_nanostationm2",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanostationm2",
+        "stand": "Seitenrevision 2025-09-04 02:48 (mpeter, \"[Preparations]\")",
+        "sicherheit": "niedrig",
+        "bemerkung": "Widerspruch 8 s / 10 s / 20 s",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "Reset-Taster bringt Gluon in den Config-Mode",
+        "quelle": "gluon_issues",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2547",
+        "stand": "Issue/PR 2547 vom 2022-06-14 und 2562 vom 2022-06-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Gluon-Prüfliste abgehakt",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "Taster S1 auf der Platine neben der 4-poligen Stiftleiste und der RJ45-Buchse",
+        "quelle": "fcc_m5lb_innenfotos",
+        "beleg": "https://fccid.io/SWX-M5LB/Internal-Photos/Internal-Photos-3105577",
+        "stand": "Exhibit 3105577, PDF erstellt 2016-08-17, veröffentlicht 2016-10-08",
+        "sicherheit": "niedrig",
+        "bemerkung": "Zuordnung S1 = Reset abgeleitet aus Lage und Bezeichnung",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte (4-polige Stiftleiste nachlöten)",
+        "quelle": "openwrt_wiki_nanostationm5",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanostationm5",
+        "stand": "Seitenrevision 2026-06-20 10:51 (smurfix, \"[Nanostation Loco M5 Serial Pins]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "'A pin header can be soldered to the board'; Platine sitzt auf einem Schlitten, herausziehbar nach Abnehmen der Portabdeckung und der Schraube unter dem Etikett",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "innen, 4-polige Reihe neben der RJ45-Buchse, im Foto mit aufgesteckter Buchsenleiste",
+        "quelle": "openwrt_wiki_foto_seriell_loco_m5",
+        "beleg": "https://openwrt.org/_media/media/ubiquiti/nanostation_loco_m5_serial.jpg",
+        "stand": "Foto EXIF 2015-06-01 (LG-P880), mit GIMP bearbeitet 2015-07-09; auf Seite toh:ubiquiti:nanostationm5 (Seitenrevision 2026-06-20)",
+        "sicherheit": "niedrig",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "innen Stiftleiste (4-polig gewinkelt, im FCC-Prüfmuster bestückt)",
+        "quelle": "fcc_m5lb_innenfotos",
+        "beleg": "https://fccid.io/SWX-M5LB/Internal-Photos/Internal-Photos-3105577",
+        "stand": "Exhibit 3105577, PDF erstellt 2016-08-17, veröffentlicht 2016-10-08",
+        "sicherheit": "niedrig",
+        "bemerkung": "Prüfmuster; Serienstand laut Wiki unbestückt; Funktion im Foto nicht beschriftet, Lage passt zum Wiki-Foto",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "ja (UART auf der Platine)",
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+        "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+        "sicherheit": "mittel",
+        "bemerkung": "'UART (115200 8N1) on PCB'",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial Yes",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "GND, TX, RX, 3V3 (Reihenfolge laut Foto-Beschriftung)",
+        "quelle": "openwrt_wiki_foto_seriell_loco_m5",
+        "beleg": "https://openwrt.org/_media/media/ubiquiti/nanostation_loco_m5_serial.jpg",
+        "stand": "Foto EXIF 2015-06-01 (LG-P880), mit GIMP bearbeitet 2015-07-09; auf Seite toh:ubiquiti:nanostationm5 (Seitenrevision 2026-06-20)",
+        "sicherheit": "niedrig",
+        "bemerkung": "von links gesehen mit RJ45-Buchse rechts oben; Platine LOCOM5, XM/XW nicht angegeben",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "JP1: GND, TXD (SOUT), RXD (SIN), +3.3V (PWR); daneben JTAG J500",
+        "quelle": "openwrt_wiki_foto_uart",
+        "beleg": "https://openwrt.org/_media/media/ubiquiti/nanom2-uart.jpg",
+        "stand": "Bild auf Seite toh:ubiquiti:nanostationm2 (Seitenrevision 2025-09-04)",
+        "sicherheit": "niedrig",
+        "bemerkung": "im Wiki unter 'Nanostation Loco M2/M5 Loco', Platine sieht aber nach der großen NanoStation M aus",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "toh_seite_loco_m2_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Seitenrevision 2026-03-17 04:15 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial connection voltage",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": 3.3,
+        "quelle": "toh_seite_loco_m5_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Seitenrevision 2026-03-17 04:14 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial connection voltage",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "115200 8N1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+        "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "11520 8N1",
+        "quelle": "openwrt_wiki_nanostationm2",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanostationm2",
+        "stand": "Seitenrevision 2025-09-04 02:48 (mpeter, \"[Preparations]\")",
+        "sicherheit": "niedrig",
+        "bemerkung": "Tippfehler im Wiki, gemeint vermutlich 115200",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "3.3 V des Adapters nicht anschließen: Mit eingespeisten 3.3 V bleibt die Platine nach 'DRAM: 4 MB' hängen; Adapter erst stecken, wenn die zweite LED leuchtet",
+        "quelle": "openwrt_wiki_nanostationm5",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanostationm5",
+        "stand": "Seitenrevision 2026-06-20 10:51 (smurfix, \"[Nanostation Loco M5 Serial Pins]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "mac_adresse": [
+      {
+        "wert": "MAC aus der art-Partition (eth0 @0x0, WLAN @0x1002); label-mac-device = WLAN",
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9342_ubnt_xw.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "primäre MAC stimmt mit dem Etikett überein",
+        "quelle": "gluon_issues",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2547",
+        "stand": "Issue/PR 2547 vom 2022-06-14",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/generic",
+        "quelle": "toh_seite_loco_m5_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Seitenrevision 2026-03-17 04:14 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "ar71xx-ath79/generic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump-Wert",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "ar71xx-generic (Gluon v2021.1, Sackgasse)",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/sackgasse-2021.md",
+        "stand": "router-werkstatt docs/sackgasse-2021.md, Abschnitt Targets (Stand 05.10.2026)",
+        "sicherheit": "hoch",
+        "bemerkung": "Loco M XW in der Gerätespalte von ar71xx-generic",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "15.05 (Commit cb37fe5ca587, ar71xx)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "18.06.1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Supported Since Commit '¿'",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "ar71xx: 2014-09-15 (cb37fe5ca587)",
+        "quelle": "openwrt_commit_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/cb37fe5ca587868f4a909949c884e981bd90727b",
+        "stand": "Commit cb37fe5ca587 vom 2014-09-15 (SVN r42549)",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "ath79: Commit 633c4304ad42, eingespielt 2020-01-31",
+        "quelle": "openwrt_commit_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
+        "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "XW v2: nur Branch main seit 2026-07-01 (54e70703a0bd), nicht in 24.10/25.12",
+        "quelle": "openwrt_commit_v2",
+        "beleg": "https://github.com/openwrt/openwrt/commit/54e70703a0bdcdb9d52fb9e0cd7d01cbaea59c2f",
+        "stand": "Commit 54e70703a0bd (Autor 2026-06-22, eingespielt 2026-07-01), Matthias Urlichs, PR #23912",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "openwrt_hinweise": [
+      {
+        "wert": "OpenWrt 24.10.0 bis 24.10.2: Flash bleibt schreibgeschützt, Einstellungen gehen beim Neustart verloren; Fix in Kernel 6.6.103",
+        "quelle": "openwrt_wiki_nanostationm2",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanostationm2",
+        "stand": "Seitenrevision 2025-09-04 02:48 (mpeter, \"[Preparations]\")",
+        "sicherheit": "mittel",
+        "bemerkung": "openwrt#18312; betrifft ubnt_nanostation-loco-m-xw",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "reset-gpios für den PHY fehlte zunächst in ath79; ohne ihn wird der Ethernet-PHY durch einen Hardwarefehler irgendwann taub für Empfang",
+        "quelle": "openwrt_commit_reset_gpio",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6613a7f5cc8e1527671128d9479b3de78f7b4cdd",
+        "stand": "Commit 6613a7f5cc8e vom 2020-02-24",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "Hardwarefehler mit Verlust der eth0-Verbindung, in OpenWrt 17.01 behoben",
+        "quelle": "openwrt_wiki_nanostationm5",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanostationm5",
+        "stand": "Seitenrevision 2026-06-20 10:51 (smurfix, \"[Nanostation Loco M5 Serial Pins]\")",
+        "sicherheit": "niedrig",
+        "bemerkung": "Ticket 19085",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "mit falschem Image (v1 auf v2 oder umgekehrt) geht der Ethernet-Port nicht, das Gerät bleibt über WLAN erreichbar",
+        "quelle": "aredn_forum",
+        "beleg": "https://www.arednmesh.org/content/nanostation-loco-m5-xw-test-date-after-nov-2017",
+        "stand": "Forenthema 2018-12-20 bis 2020-07-24 (7 Beiträge)",
+        "sicherheit": "niedrig",
+        "bemerkung": "AREDN-Firmware, nicht Gluon",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "gluon": [
+      {
+        "wert": "Image ubiquiti-nanostation-loco-m-xw (Alias ubiquiti-nanobeam-m5-xw), OpenWrt-Profil ubnt_nanostation-loco-m-xw; outdoor",
+        "quelle": "gluon",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/ath79-generic",
+        "stand": "lokaler Checkout v2025.1.3 (Commit e2fe4b52 vom 2026-08-18)",
+        "sicherheit": "mittel",
+        "bemerkung": "in v2023.2 wegen Flash-Schreibschutz entfernt (#2939), in v2025.1 wieder aufgenommen; kein Image für XW v2",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "Gluon support Yes",
+        "quelle": "toh_seite_loco_m5_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Seitenrevision 2026-03-17 04:14 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "Gluon support unknown",
+        "quelle": "toh_seite_loco_m2_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Seitenrevision 2026-03-17 04:15 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "sysupgrade_von_gluon_2016_2": [
+      {
+        "wert": "besteht die Abbildprüfung von Chaos Calmer (Magic 2705)",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/gluon-migrationspfade.md",
+        "stand": "router-werkstatt docs/gluon-migrationspfade.md, nachgeprüft 04.10.2026",
+        "sicherheit": "hoch",
+        "bemerkung": "Abschnitt 'Was den Sprung tatsächlich begrenzt', Tabelle 'Ergebnis je Gerät' (eigene ath79-Images aus OpenWrt 24.10)",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      },
+      {
+        "wert": "U-Boot; Partition u-boot 256 KiB, u-boot-env 64 KiB, firmware 7552 KiB, cfg 256 KiB, art 64 KiB",
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9342_ubnt_xw.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "IMAGE_SIZE 7552k",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.ui.com/download/airmax-m/nanostationm/locom2",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "installation_kurz": [
+      {
+        "wert": "Sysupgrade über die airOS-Oberfläche nur mit der unsignierten Werksfirmware v5.6.12 oder v5.6.15; Recovery per TFTP",
+        "quelle": "toh_seite_loco_m2_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Seitenrevision 2026-03-17 04:15 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Comment installation",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "GUI OEM, U-Boot TFTP recovery",
+        "quelle": "toh_seite_loco_m5_xw",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Seitenrevision 2026-03-17 04:14 (raylynnknight, \"Update for 25.12.0\")",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/ubiquiti/nanostationm2",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Device Page toh:ubiquiti:nanostationm2",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "https://openwrt.org/toh/ubiquiti/nanostationm5",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Device Page toh:ubiquiti:nanostationm5",
+        "variante": "NanoStation Loco M5 XW"
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "https://deviwiki.com/wiki/Ubiquiti_Networks_NanoStation_Loco_M2",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_NanoStation_Loco_M2",
+        "stand": "Seitenrevision 72959 vom 2019-07-05T05:35:59Z (imported>M86)",
+        "sicherheit": "mittel",
+        "bemerkung": "nur Loco M2, XM-Stand",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/Ubiquiti_Networks_NanoStation_Loco_M2",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "WikiDevi URL",
+        "variante": "NanoStation Loco M2 XW"
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://techspecs.ui.com/uisp/wireless/locom2",
+        "quelle": "hersteller_techspecs_locom2",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom2",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M2 XW"
+      },
+      {
+        "wert": "https://techspecs.ui.com/uisp/wireless/locom5",
+        "quelle": "hersteller_techspecs_locom5",
+        "beleg": "https://techspecs.ui.com/uisp/wireless/locom5",
+        "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "",
+        "variante": "NanoStation Loco M5 XW"
+      },
+      {
+        "wert": "https://www.ubnt.com/airmax/nanostationm/",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m5_xw",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM Device Homepage (alt)",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "quelle": "datenblatt",
+        "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
+        "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
+        "sicherheit": "hoch",
+        "bemerkung": "NanoStationM & NanoStationlocoM Datasheet AJJL020218",
+        "variante": "beide (Loco M2 XW und Loco M5 XW)"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/SWX-M5LB/External-Photos/External-Photos-3105576",
+      "kategorie": "gehaeuse",
+      "grund": "Außenfotos 2016 nicht geladen (Lage Etikett, Portabdeckung)"
+    },
+    {
+      "url": "https://fccid.io/SWX-M5LB/Label/Label-Location-3105578",
+      "kategorie": "erkennung",
+      "grund": "Lage des Etiketts am Gerät nicht ausgewertet"
+    },
+    {
+      "url": "https://fccid.io/SWX-M2L/Internal-Photos/Internal-Photos-1552584",
+      "kategorie": "seriell",
+      "grund": "Innenfotos Loco M2 von 2011 (XM-Zeit) nicht ausgewertet; keine eigene FCC-Zulassung für Loco M2 XW gefunden"
+    },
+    {
+      "url": "https://fccid.io/SWX-M5LB/Internal-Photos/Internal-Photos-3105577",
+      "kategorie": "seriell",
+      "grund": "Funktion der 4-poligen Stiftleiste (J11?) und PHY-Aufdruck (AR803x) im Foto nicht sicher lesbar; Serienstand bestückt/unbestückt offen"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
+      "kategorie": "soc",
+      "grund": "Live-Seite seit 2025-04-12 mit AR7240/400 MHz/AR9287 (XM-Werte) bei Version XW und 64 MB; SoC/Takt des Loco M2 XW durch eigenes /proc/cpuinfo klären"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/pull/23912",
+      "kategorie": "hw_version",
+      "grund": "Lage des Testdatums (Verpackung oder Gerät) widersprüchlich; v2-Erkennung ohne Werksfirmware offen; Gluon hat kein v2-Image"
+    },
+    {
+      "url": "https://techspecs.ui.com/uisp/wireless/locom5",
+      "kategorie": "ip_schutzart",
+      "grund": "keine IP-Schutzart in Datenblatt, QSG und Techspecs; nur 'Outdoor UV Stabilized' und Warnung vor Überflutung"
+    },
+    {
+      "url": "https://openwrt.org/_media/media/ubiquiti/nanostation_loco_m2_xm_serial.jpg",
+      "kategorie": "seriell",
+      "grund": "Seriell-Foto Loco M2 (XM) nicht geladen; Loco M2 XW ohne eigenes Seriell-Foto"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 47,
+    "notiz": "ToH-Dump (pid 15678085 Loco M2 XW, 15678086 Loco M5 XW) + Live-Datenseiten mit Revisionsdiff, OpenWrt-Wiki nanostationm2/m5/airmaxm (aus Cache nanostation-m-xw) + Seriell-Foto Loco M5, OpenWrt-Commits cb37fe5 (ar71xx 2014), 633c430 (ath79), 6613a7f (reset-gpios), 54e7070 (XW v2, nur main) mit PR #23912, DTS/Makefiles main, Gluon v2025.1.3 lokal + Gluon-Issues, DeviWiki/WikiDevi (nur Loco M2, XM-Stand), FCC SWX-M2L (nur 2011) und SWX-M5LB (QSG, Innenfotos, Label 2016), Datenblatt AJJL020218, Ubiquiti-Techspecs locom2/locom5, AREDN-Forum (v1/v2-Unterscheidung), Werkstatt-Doku. Wichtig: Es gibt Loco M XW v2 (Ethernet-PHY AR8035, Testdatum nach Okt./Nov. 2017), für die das Gluon-Image (v1, AR8032) nicht passt; OpenWrt-Unterstützung für v2 nur in main. Widersprüche: CPU 535 vs 400 vs 560 MHz; Loco M2 XW Live-ToH seit 2025-04 mit XM-Werten (AR7240, AR9287); Datenblatt locoM2 32 MB (XM); Gewinn M2 8.5 vs 8 dBi; Maß 161 vs 163 mm; PoE 24 V vs 22-27 V vs 12-24 V (Wiki XM); TFTP-Reset 8/10/20 s; Remote-Reset am beiliegenden Adapter (QSG) vs nur POE-24 (Datenblatt); Testdatum auf Verpackung vs Gerät. Keine IP-Schutzart in den Quellen, kein Lüfter-Hinweis. Keine Blockaden."
+  }
+}
