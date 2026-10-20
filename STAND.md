@@ -29,6 +29,10 @@
   Sicherheit einpflegen (z. B. MR70X V1.20, Lage der Konsole).
 - Werte teils noch englisch oder in ASCII-Umlauten; der Generator bereinigt nur häufige Wörter.
 - Modellnamen in GERAETE.md bei Varianten holprig ("AP3000 wall-v1").
+- Geräteliste: `werkzeug/image-liste.py <URL des letzten Laufs auf imageslive>` (z. B.
+  `https://imageslive.ffdus.de/images2025.1/images-<epoch>/21_dias/21_dias`) schreibt
+  `quellen/images-lauf-<datum>.txt` mit allen gebauten Geräten (auch BROKEN). Die Download-Zweige
+  reichen dafür nicht: neue Targets (ipq50xx) fehlten dort, z. B. die MR80X.
 - Nach jedem neuen stable (z. B. Rollout 2025.1): `werkzeug/image-liste.py stable` holt die
   Gerätenamen vom Firmware-Server nach `quellen/images-stable-<datum>.txt`. Daraus setzt
   `selector-ansicht.py` die Facette `stable`; routerwahl blendet Geräte ohne stable-Image

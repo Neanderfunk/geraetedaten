@@ -3,9 +3,9 @@
 Alle Geräte, für die Neanderfunk Gluon-Images baut, mit dem Stand ihrer Daten.
 Erzeugt von `werkzeug/geraeteliste.py`, nicht von Hand ändern.
 
-- Image-Namen: `quellen/images-testing-2026-10-20.txt`
+- Image-Namen: `quellen/images-lauf-2026-10-21.txt`
 - Modellnamen: `quellen/selector-modelle-2026-10-19.json`
-- **357 von 360 Geräten erfasst.**
+- **358 von 361 Geräten erfasst.**
 
 Mithelfen: Bei einem Gerät ohne Daten führt „anlegen“ auf GitHub zu einer neuen Datei
 mit fertiger Vorlage. Aufbau und Feldnamen stehen in [schema/felder.md](schema/felder.md).

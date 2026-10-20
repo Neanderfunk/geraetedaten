@@ -2,6 +2,9 @@
 """Holt die Gluon-Geraetenamen eines Firmware-Zweigs vom Download-Server.
 
     image-liste.py <zweig> [domain]      z. B. image-liste.py stable
+    image-liste.py <URL eines Laufs> [domain]
+        z. B. https://imageslive.ffdus.de/images2025.1/images-1792163458/21_dias/21_dias
+        -> quellen/images-lauf-<datum>.txt (alle gebauten Geraete des Laufs)
 
 Liest die Verzeichnisse sysupgrade/ und factory/ unter
 https://download.ffnef.de/firmware/<zweig>/<domain>/ (Vorgabe 21_dias; alle
@@ -23,8 +26,15 @@ def main():
     domain = sys.argv[2] if len(sys.argv) > 2 else "21_dias"
     namen, version = set(), set()
     muster = re.compile(r"gluon-nef-%s-([0-9A-Za-z.+~]+)-(.+?)-(sysupgrade|factory)(\.[A-Za-z0-9.]+)?$" % re.escape(domain))
-    for art in ("sysupgrade", "factory"):
-        url = BASIS.format(zweig, domain, art)
+    if zweig.startswith("http"):
+        # Lauf auf imageslive (Buildsystem): .../images-<epoch>/<domain>/<domain>/ -
+        # nur sysupgrade/, die Factory-Dateien tragen dort kein "-factory" im Namen.
+        # sysupgrade/ enthaelt alle gebauten Geraete, auch BROKEN und disable_manifest.
+        quellen = [zweig.rstrip("/") + "/sysupgrade/"]
+        zweig = "lauf"
+    else:
+        quellen = [BASIS.format(zweig, domain, art) for art in ("sysupgrade", "factory")]
+    for url in quellen:
         with urllib.request.urlopen(url, timeout=60) as r:
             text = r.read().decode("utf-8", "replace")
         for datei in {urllib.parse.unquote(d) for d in re.findall(r'href="[^"]*/(gluon-[^"/]+)"', text)}:

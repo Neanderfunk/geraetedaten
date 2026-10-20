@@ -49,9 +49,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--index', help='anleitungen/html/index.json aus gluon-rampe-installer')
     a = ap.parse_args()
-    # Grundlage ist der Testzweig (werkzeug/image-liste.py testing): er hat die
-    # meisten Geraete; aeltere Listen (images-<domain>-*.txt) nur als Rueckfall.
-    imgdatei = neueste('images-testing-*.txt') or neueste('images-*.txt')
+    # Grundlage ist der letzte Lauf des Buildsystems (werkzeug/image-liste.py <URL>):
+    # er hat alle gebauten Geraete; Testzweig und aeltere Listen nur als Rueckfall.
+    imgdatei = neueste('images-lauf-*.txt') or neueste('images-testing-*.txt') or neueste('images-*.txt')
     modelldatei = neueste('selector-modelle-*.json')
     images = [z.strip() for z in open(imgdatei) if z.strip() and not z.startswith('#')]
     modelle = json.load(open(modelldatei))['modelle']
