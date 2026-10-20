@@ -84,7 +84,7 @@
       { id: 'leistung', titel: 'Stromverbrauch', typ: 'max', werte: [['10', 'bis 10 W'], ['15', 'bis 15 W']] },
       { id: 'luefter', titel: 'lautlos (ohne Lüfter)', typ: 'nein' }
     ] },
-    { titel: 'Installation', filter: [
+    { titel: 'Einrichtung', filter: [
       { id: 'level', titel: 'Schwierigkeit', typ: 'max',
         werte: [['L1', 'bis L1: nur im Browser'], ['L3', 'bis L3: mit fester Adresse am Rechner'],
                 ['L4', 'bis L4: mit Network-Tools (TFTP, SSH)'], ['L6', 'bis L6: auch mit seriellem Kabel'],
@@ -359,11 +359,11 @@
     });
   }
 
-  /* "Installation: L0.1 Hochladen, richtige Datei wählen" mit
+  /* "Einrichtung: L0.1 Hochladen, richtige Datei wählen" mit
      Erklaerung beim Darueberfahren und aufklappbarer Legende aller Level. */
   function levelZeile(g) {
     var p = el('div', 'finder-level');
-    p.appendChild(document.createTextNode('Installation: '));
+    p.appendChild(document.createTextNode('Einrichtung: '));
     var k = el('span', 'finder-level-kenn', g.level + ' ' + (LEVEL[g.level] || ''));
     if (LEVEL_ERKL[g.level]) k.title = LEVEL_ERKL[g.level];
     p.appendChild(k);

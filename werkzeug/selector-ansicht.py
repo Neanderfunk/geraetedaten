@@ -292,7 +292,7 @@ def ansicht(d, idx):
                      'weitere': []})
     a = idx.get(d['image'])
     if a:   # sonst ergaenzt ffnef-geraete.js die Zeile aus anleitungen/index.json
-        oben.append({'titel': 'Installation', 'level': a.get('level', ''), 'risiko': a.get('risiko', ''),
+        oben.append({'titel': 'Einrichtung', 'level': a.get('level', ''), 'risiko': a.get('risiko', ''),
                      'status': a.get('status', ''), 'wert': a.get('level', ''),
                      'belege': [{'quelle': 'anleitung', 'url': a.get('url', ''), 'stand': '', 'sicherheit': 'hoch'}],
                      'abweichend': [], 'weitere': []})
