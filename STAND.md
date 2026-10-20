@@ -25,6 +25,10 @@
   Sicherheit einpflegen (z. B. MR70X V1.20, Lage der Konsole).
 - Werte teils noch englisch oder in ASCII-Umlauten; der Generator bereinigt nur häufige Wörter.
 - Modellnamen in GERAETE.md bei Varianten holprig ("AP3000 wall-v1").
+- Nach jedem neuen stable (z. B. Rollout 2025.1): `werkzeug/image-liste.py stable` holt die
+  Gerätenamen vom Firmware-Server nach `quellen/images-stable-<datum>.txt`. Daraus setzt
+  `selector-ansicht.py` die Facette `stable`; routerwahl blendet Geräte ohne stable-Image
+  zunächst aus („Firmware erst mit der nächsten Version“).
 - Neu erzeugen nach jeder Datenänderung:
   `werkzeug/selector-ansicht.py` und `werkzeug/geraeteliste.py --index <installer>/anleitungen/html/index.json`,
   dann committen, pushen, Deploy durch adorfer.

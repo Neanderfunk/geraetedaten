@@ -383,6 +383,7 @@ def ansicht(d, idx):
 
 VERSIONEN = {}   # 'Hersteller|Modell' -> {'bekannt': [...], 'nicht_unterstuetzt': [...]} aus dem Selector
 MODELLE = {}     # image -> {'hersteller', 'modell', ...} aus quellen/selector-modelle-*.json
+STABLE = set()   # Images im stable-Zweig, aus quellen/images-stable-*.txt
 
 
 def modell_schluessel(image):
@@ -571,6 +572,9 @@ def main():
     a = ap.parse_args()
     if os.path.exists(a.versionen):
         VERSIONEN.update(json.load(open(a.versionen, encoding='utf-8')).get('geraete', {}))
+    st = sorted(glob.glob(os.path.join(WURZEL, 'quellen', 'images-stable-*.txt')))
+    if st:   # werkzeug/image-liste.py stable
+        STABLE.update(z.strip() for z in open(st[-1]) if z.strip())
     md = sorted(glob.glob(os.path.join(WURZEL, 'quellen', 'selector-modelle-*.json')))
     if md:
         MODELLE.update(json.load(open(md[-1], encoding='utf-8'))['modelle'])
@@ -594,6 +598,9 @@ def main():
             json.dump(v, fh, ensure_ascii=False, separators=(',', ':'))
         liste[d['image']] = {'modell': v['modell'], 'stand': v['stand']}
         fac[d['image']] = dict(modell=v['modell'], **facetten(d))
+        # Gibt es das Image im stable-Zweig? Sonst kommt die Firmware erst
+        # mit der naechsten Version (routerwahl blendet es zunaechst aus).
+        fac[d['image']]['stable'] = (d['image'] in STABLE) if STABLE else None
     with open(os.path.join(a.aus, 'index.json'), 'w', encoding='utf-8') as fh:
         json.dump({'quelle': 'https://github.com/Neanderfunk/geraetedaten', 'lizenz': 'CC BY-SA 4.0',
                    'geraete': liste}, fh, ensure_ascii=False, indent=1)
