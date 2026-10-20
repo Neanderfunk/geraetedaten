@@ -364,7 +364,19 @@
   }
 
   /* "Einrichtung: L0.1 Hochladen, richtige Datei wählen" mit
-     Erklaerung beim Darueberfahren und aufklappbarer Legende aller Level. */
+     Erklaerung beim Darueberfahren; die Legende aller Level steht im Seitenkopf. */
+  /* Legende aller Level im Seitenkopf (#finder-legende), einmal fuer alle Karten. */
+  function legendeZeichnen() {
+    var d = $('#finder-legende');
+    if (!d || d.querySelector('dl')) return;
+    var dl = el('dl');
+    LEVEL_REIHE.forEach(function (l) {
+      dl.appendChild(el('dt', null, l + ' ' + (LEVEL[l] || '')));
+      dl.appendChild(el('dd', null, LEVEL_ERKL[l] || ''));
+    });
+    d.appendChild(dl);
+  }
+
   function levelZeile(g) {
     var p = el('div', 'finder-level');
     p.appendChild(document.createTextNode('Einrichtung: '));
@@ -372,19 +384,6 @@
     if (LEVEL_ERKL[g.level]) k.title = LEVEL_ERKL[g.level];
     p.appendChild(k);
     if (g.status === 'erprobt') p.appendChild(document.createTextNode(', am Gerät erprobt'));
-    var d = el('details', 'finder-level-legende');
-    d.appendChild(el('summary', null, 'Was heißt das?'));
-    d.addEventListener('toggle', function () {
-      if (!d.open || d.querySelector('dl')) return;
-      var dl = el('dl');
-      LEVEL_REIHE.forEach(function (l) {
-        var dt = el('dt', l === g.level ? 'finder-level-hier' : null, l + ' ' + (LEVEL[l] || ''));
-        dl.appendChild(dt);
-        dl.appendChild(el('dd', null, LEVEL_ERKL[l] || ''));
-      });
-      d.appendChild(dl);
-    });
-    p.appendChild(d);
     return p;
   }
 
@@ -642,6 +641,7 @@
           if (x) { g.level = x.level; g.risiko = x.risiko; g.status = x.status; g.url = x.url; }
           geraete.push(g);
         });
+        legendeZeichnen();
         holen('geraete/nicht-unterstuetzt.json', function (n) {
         nichtKarten = (n && n.karten) || [];
         zustandLesen();
