@@ -991,7 +991,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_nanohd",
         "stand": "Seitenrevision 2026-04-09 05:58",
         "sicherheit": "mittel",
-        "bemerkung": "WLAN-Kommentar \"2.4GHz 4X4, 5GHz 4X4\"; widerspricht Commit und Datenblatt"
+        "bemerkung": "WLAN-Kommentar \"2.4GHz 4X4, 5GHz 4X4\"; widerspricht Commit und Datenblatt",
+        "widerlegt": "2.4 GHz laeuft ueber MediaTek MT7603 (bgn 2T2R) laut OpenWrt-Commit https://github.com/openwrt/openwrt/commit/4c8446bf39de99990847eb4bc7744e25835a34f5; Ubiquiti-Datenblatt https://web.archive.org/web/2022id_/http://dl.ubnt.com/datasheets/unifi/UniFi_nanoHD_AP_DS.pdf und FCC-QSG nennen 2.4 GHz MIMO 2x2. 4X4 gilt nur fuer 5 GHz (MT7615), der hwdata-Kommentar hat es auf beide Baender uebertragen."
       }
     ],
     "wlan_5_standard": [
@@ -1989,6 +1990,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Einzelgerät a1802819 (UAP-NanoHD, Modell ohne Hardware-Versionen); Datenblatt übernommen, keine EAN/ASIN auf der Seite; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_24_streams: 2 gilt (MT7603 2T2R laut OpenWrt-Commit, Datenblatt 2x2, FCC-QSG 2x2); 4 aus openwrt_hwdata widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

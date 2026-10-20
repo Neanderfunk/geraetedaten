@@ -1456,7 +1456,7 @@
         "beleg": "https://dl.ui.com/ds/u6-lr_ds.pdf",
         "stand": "PDF 2023-04-21",
         "sicherheit": "hoch",
-        "bemerkung": "Supported voltage range 44-57V DC"
+        "bemerkung": "Supported voltage range 44-57V DC; gilt als zulässiger Eingangsbereich am PoE-Eingang (PoE+ 802.3at bzw. Switch/Adapter)"
       },
       {
         "wert": "44-57",
@@ -1464,7 +1464,7 @@
         "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lr",
         "stand": "Seite abgerufen 2026-10-19 (ohne Datum)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "44-57V DC = zulässiger Eingangsbereich; Techspecs nennen bei Power Method PoE+ zusätzlich \"Supports passive 48V\" (https://techspecs.ui.com/unifi/wifi/u6-lr)"
       },
       {
         "wert": 48,
@@ -1472,7 +1472,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_lr",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "passive PoE 48 VDC, 0.5 A"
+        "bemerkung": "passive PoE 48 VDC, 0.5 A; gilt als Nennspannung bei passivem 48-V-Betrieb (liegt im Bereich 44-57 V); von Ubiquiti-Techspecs bestätigt: \"Supports passive 48V\", Datenblatt nennt 48V, 0.5A PoE adapter"
       }
     ],
     "netzteil_beiliegend": [
@@ -2151,6 +2151,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "heise-Suche 'Ubiquiti U6-LR' -> a2428267 (U6-LR, ohne Versionsangabe, 'Verschiedene Revisionen verfügbar.'); nur Link und 19 Datenblattzeilen roh, keine normalisierten Werte; keine EAN/ASIN; U6+ LR (a2849259) ist ein anderes Geraet; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "poe_spannung_v: 44-57 V = zulässiger Eingangsbereich (Datenblatt/Techspecs), 48 V = Nennspannung passiv 48 V (ToH; Techspecs \"Supports passive 48V\"), liegt im Bereich"
+      ],
+      "offen": []
     }
   }
 }

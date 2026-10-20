@@ -178,6 +178,12 @@
       "stand": "Gelistet seit 10.03.2014; abgerufen 2026-10-20",
       "abgerufen": "2026-10-20",
       "bemerkung": "Geizhals-Artikel a1082060 (TD-W9980B, Annex B/J) über preisvergleich.heise.de; gleiches Gluon-Image; keine EAN/ASIN auf der Seite"
+    },
+    "openwrt_vr9_dtsi": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9.dtsi",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "SoC-Grund-DTSI für VR9/VRX268: genau ein cpus-Knoten cpu@0, compatible mips,mips34Kc"
     }
   },
   "roh": {
@@ -1181,7 +1187,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_td-w9980",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "",
+        "widerlegt": "MIPS 34Kc ist ein Einzelkern mit MT-ASE (2 VPEs/Hardware-Threads); OpenWrt-DTS führt nur cpu@0 (https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9.dtsi), OEM-/proc/cpuinfo zeigt nur processor 0 (https://openwrt.org/toh/tp-link/td-w8980_v1). Die 2 zählt Threads, nicht Kerne."
       },
       {
         "wert": 2,
@@ -1189,7 +1196,8 @@
         "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_TD-W9980_v1.x",
         "stand": "Seitenrevision 2020-09-08T16:17:08Z",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "",
+        "widerlegt": "MIPS 34Kc ist ein Einzelkern mit MT-ASE (2 VPEs/Hardware-Threads); OpenWrt-DTS führt nur cpu@0 (https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9.dtsi), OEM-/proc/cpuinfo zeigt nur processor 0 (https://openwrt.org/toh/tp-link/td-w8980_v1). Die 2 zählt Threads, nicht Kerne."
       },
       {
         "wert": 1,
@@ -1198,6 +1206,14 @@
         "stand": "Seitenrevision 2024-02-12 08:58",
         "sicherheit": "niedrig",
         "bemerkung": "OEM-/proc/cpuinfo zeigt nur processor 0 (MIPS 34Kc, MT-ASE: 2 VPEs/Threads in einem Kern); ToH/WikiDevi zählen 2"
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_vr9_dtsi",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9.dtsi",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "ein CPU-Knoten cpu@0 (mips,mips34Kc); Einzelkern mit 2 Hardware-Threads (MT)"
       }
     ],
     "cpu_mhz": [
@@ -1567,7 +1583,8 @@
         "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_TD-W9980_v1.x",
         "stand": "Seitenrevision 2020-09-08T16:17:08Z",
         "sicherheit": "mittel",
-        "bemerkung": "3 TX/3 RX-Ketten, 2 räumliche Streams"
+        "bemerkung": "3 TX/3 RX-Ketten, 2 räumliche Streams",
+        "widerlegt": "Feld zählt Sende-/Empfangsketten: FCC-Grant nennt 3T3R im 5-GHz-Band (https://fccid.io/TE7TDW9980V1), WikiDevi selbst 3 TX/3 RX (https://wikidevi.wi-cat.ru/TP-LINK_TD-W9980_v1.x). Die 2 sind räumliche Streams (WAVE300, 300 Mbit/s), nicht Ketten."
       }
     ],
     "wlan_klasse": [
@@ -2793,6 +2810,15 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "2 heise-Abrufe: a1082080 (TD-W9980, Gelistet seit 10.03.2014) und a1082060 (TD-W9980B); Datenblatt nach roh.geizhals/roh.geizhals_w9980b, normalisierte Felder ergänzt; Leistungsaufnahme keine Angabe; keine EAN/ASIN auf den Seiten"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "cpu_kerne: 1 (MIPS 34Kc Einzelkern, OpenWrt vr9.dtsi nur cpu@0); 2 von toh/wikidevi widerlegt (zählt MT-Threads)",
+        "wlan_5_streams: 3 (FCC 3T3R); 2 von wikidevi widerlegt (räumliche Streams, nicht Ketten)"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

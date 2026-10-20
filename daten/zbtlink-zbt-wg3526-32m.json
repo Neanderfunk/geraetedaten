@@ -172,6 +172,12 @@
       "stand": "",
       "abgerufen": "2026-10-20",
       "bemerkung": "keine FCC-ID bekannt (ToH NULL, DeviWiki/WikiDevi fcc_id leer); nicht abgefragt"
+    },
+    "digineo_produktseite": {
+      "url": "https://web.archive.org/web/20190716211422/https://www.digineo.de/produkte/ac1200-pro",
+      "stand": "archiviert 2019-07-16",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Produktseite Digineo AC1200 Pro (laut OpenWrt-Commit 3cfc909c = 32-MB-Flash-Variante des ZBT-WG3526); Technische Details: RAM 512 MB, Flash 32 MB; Rohabruf cache/.../pruefung/digineo_ac1200pro_2019.html"
     }
   },
   "roh": {
@@ -1087,7 +1093,16 @@
         "beleg": "https://web.archive.org/web/20230312230010/https://www.zbtlink.com/photo/zbtlink/document/20971/ZBT-WG3526-Specification.pdf",
         "stand": "Specification Version V3.1 vom 2017-07-19 (PDF erstellt 2021-01-25, archiviert 2023-03-12)",
         "sicherheit": "hoch",
-        "bemerkung": "Widerspruch: \"RAM DDR3 256MB (MAX DDR2 512MB)\"; alle anderen Quellen 512 MB"
+        "bemerkung": "Widerspruch: \"RAM DDR3 256MB (MAX DDR2 512MB)\"; alle anderen Quellen 512 MB",
+        "widerlegt": "Datenblatt V3.1 ist in sich widersprüchlich (\"DDR3 256MB (MAX DDR2 512MB)\", dazu 10/100-Ports) und erkennbar Vorlagentext; verbaut ist Nanya NT5CB256M16BP-D1 (4 Gbit x16 = 512 MB, https://deviwiki.com/wiki/ZBT_WG3526), Bootlog \"Memory: 512048K/524288K\" (https://openwrt.org/toh/zbtlink/zbt_wg3526), Zbtlink-Produktseite 2016 \"Memory: 512M\" und Digineo AC1200 Pro (= 32M-Variante) \"RAM 512 MB\" (https://web.archive.org/web/20190716211422/https://www.digineo.de/produkte/ac1200-pro)"
+      },
+      {
+        "wert": 512,
+        "quelle": "digineo_produktseite",
+        "beleg": "https://web.archive.org/web/20190716211422/https://www.digineo.de/produkte/ac1200-pro",
+        "stand": "archiviert 2019-07-16",
+        "sicherheit": "hoch",
+        "bemerkung": "\"RAM 512 MB\", \"Flash 32 MB\" - Anbieter genau der 32M-Variante"
       }
     ],
     "ram_typ": [
@@ -2535,6 +2550,14 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "Kein Geizhals-Artikel: heise-Suchen \"ZBT WG3526\", \"Zbtlink\" und \"Digineo AC1200 Pro\" (je 1 Abruf) liefern nur Fremdtreffer (u. a. BTLINK-Leuchten, Mainboards, devolo); weder Zbtlink noch Digineo bei Geizhals gelistet"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ram_mb: 512 gilt; 256 (zbtlink_datenblatt) widerlegt - Vorlagentext, Nanya-Chip 512 MB, Bootlog, Digineo-Seite der 32M-Variante als neuer Beleg"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

@@ -1614,7 +1614,7 @@
         "beleg": "https://dl.ui.com/ds/u6-lite_ds.pdf",
         "stand": "PDF 2023-03-28",
         "sicherheit": "hoch",
-        "bemerkung": "Supported voltage range 44-57V DC"
+        "bemerkung": "Supported voltage range 44-57V DC; zulaessiger Eingangsspannungsbereich (802.3af bzw. passiv); der Nennwert 48 V liegt darin"
       },
       {
         "wert": "44-57",
@@ -1622,7 +1622,7 @@
         "beleg": "https://techspecs.ui.com/unifi/wifi/u6-lite",
         "stand": "Live-Seite 2026-10-19 (ohne Datum)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "zulaessiger Eingangsspannungsbereich (802.3af bzw. passiv); der Nennwert 48 V liegt darin"
       },
       {
         "wert": "48 (Adapter)",
@@ -1630,7 +1630,7 @@
         "beleg": "https://fccid.io/SWX-U6LITE/Test-Report/Test-Report-NII-4831028",
         "stand": "ICC FR030302-02AN Rev. 01, 2020-07-22",
         "sicherheit": "hoch",
-        "bemerkung": "48Vdc from PoE"
+        "bemerkung": "48Vdc from PoE; Nennspannung der im FCC-Test verwendeten PoE-Quelle, kein Widerspruch zum Bereich 44-57 V"
       },
       {
         "wert": 48,
@@ -1638,7 +1638,7 @@
         "beleg": "https://preisvergleich.heise.de/ubiquiti-unifi-6-lite-u6-lite-eu-a2428301.html",
         "stand": "Gelistet seit 18.11.2020; abgerufen 2026-10-20",
         "sicherheit": "mittel",
-        "bemerkung": "aus LAN-Zeile"
+        "bemerkung": "aus LAN-Zeile; Nennspannung fuer passives 48-V-PoE (techspecs: Supports passive 48V), liegt im Bereich 44-57 V"
       }
     ],
     "poe_strom_a": [
@@ -2347,6 +2347,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Suche + Produktseite a2428301 über heise (2 Abrufe), Datenblatt nach roh.geizhals, 19 Felder als geizhals/mittel; keine EAN/ASIN auf der Seite"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "poe_spannung_v: 44-57 V = zulaessiger Eingangsbereich (Datenblatt/techspecs), 48 V = Nennspannung (passives 48-V-PoE bzw. PoE-Quelle im FCC-Test); 48 liegt im Bereich"
+      ],
+      "offen": []
     }
   }
 }

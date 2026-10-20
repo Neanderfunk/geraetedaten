@@ -1808,7 +1808,7 @@
         "beleg": "https://static.tp-link.com/WBS510%20&%20WBS210_V%201.1_Datasheet.pdf",
         "stand": "PDF V1.1, erstellt 2015-11-19",
         "sicherheit": "hoch",
-        "bemerkung": "Voltage range: 16-27VDC"
+        "bemerkung": "Voltage range: 16-27VDC - zulässiger Eingangsspannungsbereich (passives PoE an LAN0, +4,5/-7,8); der Nennwert 24 V von Typenschild und beiliegendem Adapter liegt darin"
       },
       {
         "wert": "16-27",
@@ -1816,7 +1816,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_wbs510_v1",
         "stand": "Seitenrevision 2026-03-17 04:39",
         "sicherheit": "mittel",
-        "bemerkung": "16-27 VDC, 0.6A, Passive PoE"
+        "bemerkung": "16-27 VDC, 0.6A, Passive PoE - zulässiger Eingangsspannungsbereich (passives PoE an LAN0, +4,5/-7,8); der Nennwert 24 V von Typenschild und beiliegendem Adapter liegt darin"
       },
       {
         "wert": 24,
@@ -1824,7 +1824,7 @@
         "beleg": "https://fccid.io/TE7WBS510/Label/WBS510-Label-Location-3079520",
         "stand": "Exhibit 2016-07-30 (Zeichnung WBS510(UN) 1.20, 2015-12-10; PDF 2016-06-30)",
         "sicherheit": "hoch",
-        "bemerkung": "Typenschild 'Power: 24V⎓1A'"
+        "bemerkung": "Typenschild 'Power: 24V⎓1A' - Nennwert (Typenschild bzw. beiliegender 24-V-Passiv-PoE-Adapter); zulässiger Bereich laut Datenblatt V1.1 16-27 V DC"
       },
       {
         "wert": 24,
@@ -1832,7 +1832,7 @@
         "beleg": "https://fccid.io/TE7WBS510/External-Photos/1632114R-External-Photograph-2016-07-27-3079518",
         "stand": "Exhibit 2016-07-30 (PDF 2016-07-27)",
         "sicherheit": "hoch",
-        "bemerkung": "beiliegender Adapter T240100-2-PoE, Output 24V⎓1A"
+        "bemerkung": "beiliegender Adapter T240100-2-PoE, Output 24V⎓1A - Nennwert (Typenschild bzw. beiliegender 24-V-Passiv-PoE-Adapter); zulässiger Bereich laut Datenblatt V1.1 16-27 V DC"
       }
     ],
     "poe_pinbelegung": [
@@ -2509,6 +2509,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "Produktseite a1364672 per heise gelesen (1 Abruf), Datenblatt nach roh.geizhals; ohne Versionsangabe, daher keine normalisierten Hardwarewerte; keine EAN/ASIN. Geizhals nennt 1x 1000Base-T und IP68 (Datenblatt: 2x 10/100, IP65)"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "poe_spannung_v: 16-27 V = zulässiger Eingangsbereich (Datenblatt V1.1, OpenWrt hwdata), 24 V = Nennwert auf Typenschild und beiliegendem Passiv-PoE-Adapter T240100-2-PoE (FCC-Typenschild/Außenfotos, Datenblatt 'Output Voltage 24VDC')"
+      ],
+      "offen": []
     }
   }
 }

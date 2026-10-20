@@ -135,6 +135,12 @@
       "url": "https://preisvergleich.heise.de/ubiquiti-unifi-ap-ac-long-range-uap-ac-lr-a1354669.html",
       "stand": "Gelistet seit 13.11.2015; abgerufen 2026-10-20",
       "abgerufen": "2026-10-20"
+    },
+    "fcc_aussenfotos": {
+      "url": "https://fccid.io/SWX-UAPACLR/External-Photos/External-photo-2713082",
+      "stand": "External Photos UAP-AC-LR, 8 Seiten (Exhibit 2015)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Kuppelgehaeuse fuer Decke/Wand, offene RJ45-Buchse unter der Montageplatte ohne Abdichtung, Innenraum-PoE-Netzteil mit Kaltgeraetestecker"
     }
   },
   "roh": {
@@ -1913,7 +1919,16 @@
         "beleg": "https://openwrt.org/toh/ubiquiti/unifiac",
         "stand": "Seitenrevision 2026-02-19 22:43",
         "sicherheit": "niedrig",
-        "bemerkung": "Wiki-Tag \"outdoor\" gilt für die Sammelseite (Mesh/Pro), nicht LR-spezifisch"
+        "bemerkung": "Wiki-Tag \"outdoor\" gilt für die Sammelseite (Mesh/Pro), nicht LR-spezifisch",
+        "widerlegt": "Tag \"outdoor\" der Sammelseite gilt fuer AC Mesh/Pro; LR laut Datenblatt-Vergleichstabelle 'Environment: Indoor' (https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf); FCC-Aussenfotos zeigen Deckengehaeuse mit ungeschuetzter RJ45-Buchse, keine Kabelabdichtung, keine Masthalterung (https://fccid.io/SWX-UAPACLR/External-Photos/External-photo-2713082)"
+      },
+      {
+        "wert": "innen",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/SWX-UAPACLR/External-Photos/External-photo-2713082",
+        "stand": "External Photos (Exhibit 2015)",
+        "sicherheit": "hoch",
+        "bemerkung": "Fotos: Kuppelgehaeuse fuer Decken-/Wandmontage, RJ45-Buchse offen in Mulde unter der Montageplatte, kein Wetterschutz, keine Mastschelle"
       }
     ],
     "temperatur_betrieb": [
@@ -2555,6 +2570,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Suche \"Ubiquiti UniFi AC LR\" + Produktseite a1354669 (2 Abrufe): Datenblatt-Tabelle uebernommen, 12 Felder ergaenzt; Widersprueche: LAN 10/100 (Datenblatt Gigabit), AC1350 statt abgeleitet AC1300; 802.3af erst ab Produktcode 1638 (09/2016); keine EAN/ASIN auf der Seite"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "einsatzort: innen; openwrt_wiki 'außen' widerlegt (Sammelseiten-Tag, Datenblatt Indoor, FCC-Aussenfotos ohne Wetterschutz)"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

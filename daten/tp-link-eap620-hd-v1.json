@@ -1113,7 +1113,8 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/4b6e7da0f7499acb69feaacca79e0ee826c0b8db",
         "stand": "Commit 2024-12-13 (Autor), committet 2024-12-22",
         "sicherheit": "hoch",
-        "bemerkung": "\"QCA5054 (4x4 5 GHz 802.11ax)\": Fähigkeit des Chips, Widerspruch zu FCC/Hersteller"
+        "bemerkung": "\"QCA5054 (4x4 5 GHz 802.11ax)\": Fähigkeit des Chips, Widerspruch zu FCC/Hersteller",
+        "widerlegt": "4x4 ist die Fähigkeit des QCN5054, nicht die Bestückung: FCC-Testbericht 5 GHz nur 2TX (Ant. 1+2), Grant '2x2 Spatial Multiplexing MIMO', Hersteller 1201 Mbps = 2x2 HE80 (https://fccid.io/TE7EAP620HD/Test-Report/12-FCC-Test-Report-WLAN-5G-Band-1-Band-4-R02-part1-5045317, https://fccid.io/TE7EAP620HD)"
       },
       {
         "wert": 4,
@@ -1121,7 +1122,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap620_hd_v1?do=export_raw",
         "stand": "Seitenrevision 2025-04-13 14:11",
         "sicherheit": "mittel",
-        "bemerkung": "\"5GHz MU-MIMO 4x4\""
+        "bemerkung": "\"5GHz MU-MIMO 4x4\"",
+        "widerlegt": "'5GHz MU-MIMO 4x4' übernimmt die Chipfähigkeit (QCN5054); FCC-Testbericht 5 GHz 2TX und Grant '2x2 Spatial Multiplexing MIMO' belegen 2x2 (https://fccid.io/TE7EAP620HD/Test-Report/12-FCC-Test-Report-WLAN-5G-Band-1-Band-4-R02-part1-5045317)"
       },
       {
         "wert": 2,
@@ -2209,6 +2211,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "Artikel a2420664 (TP-Link Omada EAP620 HD, AX1800) ohne Versionsangabe, Angebote nennen V3.2; nur Link und roh.geizhals, keine normalisierten Hardwarewerte. 1 heise-Abruf."
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_5_streams: 2 (FCC-Testbericht 2TX, Grant 2x2, 1201 Mbps); 4 aus openwrt_git/openwrt_hwdata = Chipfähigkeit QCN5054, widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

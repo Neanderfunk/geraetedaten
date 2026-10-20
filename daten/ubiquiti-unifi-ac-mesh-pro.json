@@ -1114,7 +1114,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_ac_mesh_pro",
         "stand": "Seitenrevision 2026-03-15 03:27",
         "sicherheit": "niedrig",
-        "bemerkung": "WLAN Comments \"2x2:2 MIMO on both bands\" - widerspricht Hersteller und Platine"
+        "bemerkung": "WLAN Comments \"2x2:2 MIMO on both bands\" - widerspricht Hersteller und Platine",
+        "widerlegt": "3x3 je Band belegt: Ubiquiti-Datenblatt (https://dl.ubnt.com/datasheets/unifi/UniFi_AC_Mesh_DS.pdf, Mesh Pro 3x3 2.4/5 GHz), FCC-Innenfotos (https://fccid.io/SWX-UAPACPROO/Internal-Photos/Internal-Photos-3087949: QCA9563 und QCA9880 mit je drei Frontend-Ketten und Buchsen 2G_0..2G_2/5G_0..5G_2); \"2x2:2\" in hwdata stammt vermutlich aus der Vorlage der AC Mesh (UAP-AC-M)"
       },
       {
         "wert": 3,
@@ -1190,7 +1191,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_ac_mesh_pro",
         "stand": "Seitenrevision 2026-03-15 03:27",
         "sicherheit": "niedrig",
-        "bemerkung": "\"2x2:2 MIMO on both bands\" - widerspricht Hersteller und Platine"
+        "bemerkung": "\"2x2:2 MIMO on both bands\" - widerspricht Hersteller und Platine",
+        "widerlegt": "3x3 je Band belegt: Ubiquiti-Datenblatt (https://dl.ubnt.com/datasheets/unifi/UniFi_AC_Mesh_DS.pdf, Mesh Pro 3x3 2.4/5 GHz), FCC-Innenfotos (https://fccid.io/SWX-UAPACPROO/Internal-Photos/Internal-Photos-3087949: QCA9563 und QCA9880 mit je drei Frontend-Ketten und Buchsen 2G_0..2G_2/5G_0..5G_2); \"2x2:2\" in hwdata stammt vermutlich aus der Vorlage der AC Mesh (UAP-AC-M)"
       },
       {
         "wert": 3,
@@ -1664,7 +1666,7 @@
         "beleg": "https://dl.ubnt.com/datasheets/unifi/UniFi_AC_Mesh_DS.pdf",
         "stand": "PDF 2019-01-17",
         "sicherheit": "hoch",
-        "bemerkung": "Supported Voltage Range: 44 to 57VDC"
+        "bemerkung": "Supported Voltage Range: 44 to 57VDC; Zulässiger Eingangsspannungsbereich (802.3af)"
       },
       {
         "wert": "44-57",
@@ -1672,7 +1674,7 @@
         "beleg": "https://techspecs.ui.com/unifi/wifi/uap-ac-mesh-pro",
         "stand": "Live-Seite 2026-10-19 (ohne Datum)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Zulässiger Eingangsspannungsbereich (802.3af)"
       },
       {
         "wert": "44-57",
@@ -1680,7 +1682,7 @@
         "beleg": "https://fccid.io/SWX-UAPACMPRO/User-Manual/User-Manual-3113910",
         "stand": "Quick Start Guide V01 2016-07-27 (Exhibit 2017-02-28)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Zulässiger Eingangsspannungsbereich (802.3af)"
       },
       {
         "wert": 48,
@@ -1688,7 +1690,7 @@
         "beleg": "https://fccid.io/SWX-UAPACMPRO/Label/Label-Sample-3091602",
         "stand": "Exhibit 2016-08-10 (PDF 2017-12-11)",
         "sicherheit": "hoch",
-        "bemerkung": "Nennwert auf dem Typenschild 48V ⎓ 0.5A"
+        "bemerkung": "Nennwert auf dem Typenschild 48V ⎓ 0.5A; Nennspannung auf dem Typenschild (48 V ⎓ 0.5A, passend zum beiliegenden 48-V-PoE-Adapter); liegt im Bereich 44-57 V"
       }
     ],
     "poe_strom_a": [
@@ -2506,6 +2508,17 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "a1547497 (UAP-AC-M-PRO, Einzelpack); Datenblatt nach roh.geizhals, 15 Felder ergänzt, keine EAN/ASIN; 5er-Pack a1547499 nicht abgerufen"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_24_streams: 3 gilt, 2 (openwrt_hwdata) widerlegt durch Datenblatt und FCC-Innenfotos (3 Ketten QCA9563)",
+        "wlan_5_streams: 3 gilt, 2 (openwrt_hwdata) widerlegt durch Datenblatt und FCC-Innenfotos (3 Ketten QCA9880)"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: 44-57 V = zulässiger Bereich (802.3af), 48 V = Nennwert auf dem Typenschild"
+      ],
+      "offen": []
     }
   }
 }

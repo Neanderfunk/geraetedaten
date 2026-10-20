@@ -1048,7 +1048,8 @@
         "stand": "Datenblatt-PDF 2014-07-16 (Webarchiv, nächster Stand zu 2011)",
         "sicherheit": "niedrig",
         "bemerkung": "\"128 MB SDRAM, 8 MB Flash\" für M2 und M5; Widerspruch zu Bootlog und ToH, Datenblatt beschreibt wohl spätere Fertigung (XW); M3/M365/M900 dort 64 MB",
-        "variante": "beide (Rocket M2 XM und M5 XM)"
+        "variante": "beide (Rocket M2 XM und M5 XM)",
+        "widerlegt": "Für XM falsch: Bootlog Rocket M5 XM \"Memory: 55220K/65536K available\" (https://forum.freifunk.net/t/ubiquiti-rocket-m2-m5-xm-besitzer-gesucht/23762/71), FCC-Innenfoto RAM Micron 46V32M16 = 512 Mbit = 64 MB (https://fccid.io/SWX-RM5/Internal-Photos/Internal-Photos-1611211), OpenWrt-Commit 9e86a96af5 \"ubnt-xm 64M RAM boards\" (https://github.com/openwrt/openwrt/commit/9e86a96af5ecea6e73fa463d6cfa4408e2b49d35); Datenblatt ohne XM/XW-Unterscheidung, beschreibt spätere Fertigung"
       },
       {
         "wert": 128,
@@ -1057,7 +1058,8 @@
         "stand": "Datenblatt JL061720, PDF 2020-06-17",
         "sicherheit": "niedrig",
         "bemerkung": "wie 2014: M2/M5 128 MB, M3/M365/M900 64 MB",
-        "variante": "beide (Rocket M2 XM und M5 XM)"
+        "variante": "beide (Rocket M2 XM und M5 XM)",
+        "widerlegt": "Für XM falsch: Bootlog Rocket M5 XM \"Memory: 55220K/65536K available\" (https://forum.freifunk.net/t/ubiquiti-rocket-m2-m5-xm-besitzer-gesucht/23762/71), FCC-Innenfoto RAM Micron 46V32M16 = 512 Mbit = 64 MB (https://fccid.io/SWX-RM5/Internal-Photos/Internal-Photos-1611211), OpenWrt-Commit 9e86a96af5 \"ubnt-xm 64M RAM boards\" (https://github.com/openwrt/openwrt/commit/9e86a96af5ecea6e73fa463d6cfa4408e2b49d35); Datenblatt ohne XM/XW-Unterscheidung, beschreibt spätere Fertigung"
       }
     ],
     "flash_mb": [
@@ -2116,6 +2118,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "heise-Artikel Rocket M2 a652410 und Rocket M5 a652467 ohne XM/XW-Unterscheidung; nur Links und roh.geizhals, keine normalisierten Werte; keine EAN/ASIN auf der Seite; 3 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ram_mb: 64 MB gilt (Bootlog M5 XM, FCC-Innenfoto 46V32M16, OpenWrt-Commit 9e86a96af5); 128 MB aus Datenblatt 2014/2020 widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

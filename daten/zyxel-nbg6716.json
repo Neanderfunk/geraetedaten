@@ -138,6 +138,12 @@
       "stand": "Gelistet seit 30.07.2013; abgerufen 2026-10-20",
       "abgerufen": "2026-10-20",
       "bemerkung": "heise preisvergleich = Geizhals-Datenbestand, Artikel a983070 (Herstellernummer NBG6716-EU0101F), Canonical geizhals.de"
+    },
+    "openwrt_wiki_bootlog": {
+      "url": "https://openwrt.org/toh/zyxel/nbg6716?do=export_raw",
+      "stand": "Seitenrevision 2025-01-21 13:44",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Abschnitte 'OEM bootlog' und 'OpenWrt Boot Log' aus dem Cache (wiki.txt) am 2026-10-20 ausgewertet, kein neuer Abruf"
     }
   },
   "roh": {
@@ -1090,7 +1096,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nbg6716_a01",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "Dump: \"16,256\""
+        "bemerkung": "Dump: \"16,256\"; gilt fuer die Ausfuehrung mit 16 MB SPI-NOR (MX25L128) + 256 MB NAND (H27U2G8F2CTR); belegt durch OEM-Bootlog im OpenWrt-Wiki (mx25l12805d 16384 KB, Hynix NAND 256MiB). Daneben gibt es Geraete mit 4 MB SPI + 128 MB NAND, beide laufen mit demselben Image"
       },
       {
         "wert": {
@@ -1101,7 +1107,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nbg6716_a01",
         "stand": "Seitenrevision 2026-03-09 05:11",
         "sicherheit": "mittel",
-        "bemerkung": "\"16, 256NAND\""
+        "bemerkung": "\"16, 256NAND\"; gilt fuer die Ausfuehrung mit 16 MB SPI-NOR (MX25L128) + 256 MB NAND (H27U2G8F2CTR); belegt durch OEM-Bootlog im OpenWrt-Wiki (mx25l12805d 16384 KB, Hynix NAND 256MiB). Daneben gibt es Geraete mit 4 MB SPI + 128 MB NAND, beide laufen mit demselben Image"
       },
       {
         "wert": {
@@ -1112,7 +1118,7 @@
         "beleg": "https://openwrt.org/toh/zyxel/nbg6716",
         "stand": "Seitenrevision 2025-01-21 13:44",
         "sicherheit": "mittel",
-        "bemerkung": "Wiki nennt außerdem Varianten 8+128, 16+128 (EMG2926-Q10A A03) und 4+128 MiB"
+        "bemerkung": "Wiki nennt außerdem Varianten 8+128, 16+128 (EMG2926-Q10A A03) und 4+128 MiB; gilt fuer die Ausfuehrung mit 16 MB SPI-NOR (MX25L128) + 256 MB NAND (H27U2G8F2CTR); belegt durch OEM-Bootlog im OpenWrt-Wiki (mx25l12805d 16384 KB, Hynix NAND 256MiB). Daneben gibt es Geraete mit 4 MB SPI + 128 MB NAND, beide laufen mit demselben Image"
       },
       {
         "wert": {
@@ -1123,7 +1129,7 @@
         "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NBG6716",
         "stand": "Seitenrevision 2026-03-15T23:11:59Z",
         "sicherheit": "mittel",
-        "bemerkung": "Erstzulassung; C2PC 2014-02-25: SPI-Flash 4 MB und NAND 128 MB (H27U1G8F2BTR) auf Fotos"
+        "bemerkung": "Erstzulassung; C2PC 2014-02-25: SPI-Flash 4 MB und NAND 128 MB (H27U1G8F2BTR) auf Fotos; gilt fuer die Ausfuehrung mit 16 MB SPI-NOR (MX25L128) + 256 MB NAND (H27U2G8F2CTR); belegt durch OEM-Bootlog im OpenWrt-Wiki (mx25l12805d 16384 KB, Hynix NAND 256MiB). Daneben gibt es Geraete mit 4 MB SPI + 128 MB NAND, beide laufen mit demselben Image"
       },
       {
         "wert": {
@@ -1134,7 +1140,7 @@
         "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NBG6716",
         "stand": "Seitenrevision 2026-03-15T23:11:59Z",
         "sicherheit": "mittel",
-        "bemerkung": "Variante laut FCC-C2PC 2014-02-25; welche Geräte betroffen sind, unbekannt"
+        "bemerkung": "Variante laut FCC-C2PC 2014-02-25; welche Geräte betroffen sind, unbekannt; gilt fuer die spaetere Ausfuehrung (FCC-C2PC 2014-02-25); bestaetigt durch OpenWrt-Bootlog im OpenWrt-Wiki (mx25l3205d 4096 KB, Hynix NAND 128MiB, Chip-ID 0xf1). Ausfuehrung mit 16 + 256 MB gibt es ebenfalls"
       },
       {
         "wert": {
@@ -1147,7 +1153,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/99835e09992bb411519fda1f8d16a6d07df7f598",
         "stand": "Commit 2019-10-23 (Autor), gemergt 2019-10-27",
         "sicherheit": "hoch",
-        "bemerkung": "NBG6716 kann 128 oder 256 MB NAND haben; ath79 nutzt nur die ersten 128 MB"
+        "bemerkung": "NBG6716 kann 128 oder 256 MB NAND haben; ath79 nutzt nur die ersten 128 MB; 128 und 256 MB sind beides reale Ausfuehrungen desselben Geraets, kein Widerspruch"
       },
       {
         "wert": {
@@ -1157,7 +1163,18 @@
         "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_zyxel_nbg6716.dts",
         "stand": "Branch main am 2026-10-19",
         "sicherheit": "hoch",
-        "bemerkung": "NAND-Partitionen enden bei 0x8000000 = 128 MiB"
+        "bemerkung": "NAND-Partitionen enden bei 0x8000000 = 128 MiB; nutzbar unter ath79/Gluon: 128 MB NAND unabhaengig von der Ausfuehrung; bei 256-MB-Geraeten bleibt die zweite Haelfte ungenutzt"
+      },
+      {
+        "wert": {
+          "spi_nor": 4,
+          "nand": 128
+        },
+        "quelle": "openwrt_wiki_bootlog",
+        "beleg": "https://openwrt.org/toh/zyxel/nbg6716#openwrt_boot_log",
+        "stand": "Seitenrevision 2025-01-21 13:44",
+        "sicherheit": "hoch",
+        "bemerkung": "Bootlog eines echten NBG6716 (OpenWrt, Kernel 3.18.23): m25p80 mx25l3205d (4096 Kbytes), nand: Hynix NAND 128MiB; der OEM-Bootlog derselben Seite zeigt 16 MB + 256 MB. Beide Ausfuehrungen existieren"
       }
     ],
     "flash_typ": [
@@ -2747,6 +2764,16 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise a983070 (NBG6716-EU0101F), 1 Treffer in der Suche; Datenblatt nach roh.geizhals, 15 Felder ergaenzt; keine EAN/ASIN, keine Netzteil-/Gewichtsangabe; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "flash_mb: 16 MB SPI + 256 MB NAND und 4 MB SPI + 128 MB NAND sind zwei reale Ausfuehrungen (beide Bootlogs im OpenWrt-Wiki, Commit 99835e09: 128 oder 256 MB NAND); ath79/Gluon nutzt in beiden Faellen 128 MB NAND"
+      ],
+      "offen": [
+        "flash_mb: welche Seriennummern/Produktionszeitraeume welche Ausfuehrung haben, nicht ermittelbar; vom Wiki genannte 8 MB + 128 MB ohne Beleg (nicht als Eintrag erfasst)"
+      ]
     }
   }
 }

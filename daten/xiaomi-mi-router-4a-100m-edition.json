@@ -1534,7 +1534,8 @@
         "beleg": "https://deviwiki.com/wiki/Xiaomi_Mi_Router_4A_100M_(R4AC)",
         "stand": "Seitenrevision 2021-10-09T20:21:18Z",
         "sicherheit": "niedrig",
-        "bemerkung": "txchains=1, rxchains=1; widerspricht allen anderen Quellen; beschreibt die internationale Fassung R4AC (SKU DVB4230GL); laut OpenWrt-Commit 1a8c74da physisch identisch mit der chinesischen 100M-Fassung"
+        "bemerkung": "txchains=1, rxchains=1; widerspricht allen anderen Quellen; beschreibt die internationale Fassung R4AC (SKU DVB4230GL); laut OpenWrt-Commit 1a8c74da physisch identisch mit der chinesischen 100M-Fassung",
+        "widerlegt": "Xiaomi-Spezifikation nennt 2.4G Wi-Fi 2x2 (11n MCS0-15 = 2 Streams), FCC-Prüfbericht DTS-1 misst 11n auf Ant. 1 + Ant. 2; txchains/rxchains=1 ist ein Eintragsfehler. Belege: https://web.archive.org/web/20210821174134/https://www.mi.com/miwifi4a/specs, https://fccid.io/2AFZZR4AC/Test-Report/Test-Report-DTS-1-5361865"
       }
     ],
     "wlan_5_standard": [
@@ -1594,7 +1595,8 @@
         "beleg": "https://deviwiki.com/wiki/Xiaomi_Mi_Router_4A_100M_(R4AC)",
         "stand": "Seitenrevision 2021-10-09T20:21:18Z",
         "sicherheit": "niedrig",
-        "bemerkung": "txchains=1, rxchains=1; widerspricht allen anderen Quellen; beschreibt die internationale Fassung R4AC (SKU DVB4230GL); laut OpenWrt-Commit 1a8c74da physisch identisch mit der chinesischen 100M-Fassung"
+        "bemerkung": "txchains=1, rxchains=1; widerspricht allen anderen Quellen; beschreibt die internationale Fassung R4AC (SKU DVB4230GL); laut OpenWrt-Commit 1a8c74da physisch identisch mit der chinesischen 100M-Fassung",
+        "widerlegt": "Xiaomi-Spezifikation nennt 5G Wi-Fi 2x2 mit 867 Mbit/s (11ac MCS0-9, 2 Streams; mit 1x1 wären höchstens 433 Mbit/s möglich); txchains/rxchains=1 ist ein Eintragsfehler. Beleg: https://web.archive.org/web/20210821174134/https://www.mi.com/miwifi4a/specs"
       }
     ],
     "wlan_klasse": [
@@ -2791,6 +2793,15 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "heise-Suche 'Xiaomi Mi Router 4A': a2306908 (Mi Router 4A, weiß, 10/100) und a2479018 (Gigabit Edition, anderes Gerät). a2306908 ohne Fassungsangabe (CN/International v1/v2) -> nur Link und roh.geizhals, keine normalisierten Werte; keine EAN/ASIN auf der Seite. 2 heise-Abrufe."
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_24_streams: 2x2 gilt, DeviWiki 1x1 widerlegt (Xiaomi-Spezifikation 2x2/MCS0-15, FCC-Prüfbericht 2 Antennen bei 11n)",
+        "wlan_5_streams: 2x2 gilt, DeviWiki 1x1 widerlegt (Xiaomi-Spezifikation 2x2, 867 Mbit/s nur mit 2 Streams)"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

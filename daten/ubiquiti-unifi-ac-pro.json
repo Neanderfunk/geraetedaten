@@ -204,6 +204,12 @@
       "stand": "Gelistet seit 17.09.2015; abgerufen 2026-10-20",
       "abgerufen": "2026-10-20",
       "bemerkung": "Abruf über preisvergleich.heise.de (gleiche Artikelnummer wie Geizhals); Einzelpack UAP-AC-PRO, eigene Artikel für 2er/3er/5er-Pack und UAP-AC-PRO-E (a1770232, ohne PoE-Injektor)"
+    },
+    "fcc_aussenfotos": {
+      "url": "https://fccid.io/SWX-UAPACPRO/External-Photos/Ext-photo-2743795",
+      "stand": "Exhibit 2015-10-26 (PDF 2015-08-24, 7 Seiten)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet; Cache pruefung/ext/"
     }
   },
   "roh": {
@@ -1746,7 +1752,7 @@
         "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
         "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
         "sicherheit": "hoch",
-        "bemerkung": "Supported Voltage Range 44 to 57VDC"
+        "bemerkung": "Supported Voltage Range 44 to 57VDC; zulässiger Eingangsbereich (802.3af/at bzw. passiv); Nennwert 48 V"
       },
       {
         "wert": {
@@ -1757,7 +1763,7 @@
         "beleg": "https://techspecs.ui.com/unifi/wifi/uap-ac-pro",
         "stand": "Live-Seite 2026-10-19 (ohne Datum)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "zulässiger Eingangsbereich (802.3af/at bzw. passiv); Nennwert 48 V"
       },
       {
         "wert": 48,
@@ -1765,7 +1771,7 @@
         "beleg": "https://fccid.io/SWX-UAPACPRO/Label/ID-Label-2743781",
         "stand": "Exhibit 2015-09-11 (Zeichnung \"UAP-AC-PRO Device Artwork v07\", 2015-07-07; PDF 2015-08-27)",
         "sicherheit": "hoch",
-        "bemerkung": "Typenschild \"48V ⎓ 0.5A\""
+        "bemerkung": "Typenschild \"48V ⎓ 0.5A\"; Nennspannung (Typenschild bzw. beiliegender Injektor 48 V 0.5 A); zulässiger Bereich 44-57 V laut Datenblatt"
       },
       {
         "wert": 48,
@@ -1773,7 +1779,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_pro",
         "stand": "Seitenrevision 2026-03-15 03:45",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "Nennspannung (Typenschild bzw. beiliegender Injektor 48 V 0.5 A); zulässiger Bereich 44-57 V laut Datenblatt"
       },
       {
         "wert": 24,
@@ -1781,7 +1787,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_pro",
         "stand": "Dump 2026-10-18",
         "sicherheit": "niedrig",
-        "bemerkung": "alter Dump-Wert, widerspricht Typenschild und Datenblatt"
+        "bemerkung": "alter Dump-Wert, widerspricht Typenschild und Datenblatt",
+        "widerlegt": "Typenschild-Zeichnung FCC zeigt \"48V ⎓ 0.5A\" (https://fccid.io/SWX-UAPACPRO/Label/ID-Label-2743781), Datenblatt 44-57 VDC (https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf), Handbuch: beiliegender Injektor 48 V 0.5 A; Live-hwdata inzwischen 48 V; 24 V ist ein veralteter Dump-Wert"
       }
     ],
     "poe_strom_a": [
@@ -1899,7 +1906,7 @@
         "beleg": "https://fccid.io/SWX-UAPACPRO/User-Manual/Users-Manual-3289040",
         "stand": "Exhibit 2017-02-21 (PDF 2017-12-22, Druck-Nr. 640-00183-06)",
         "sicherheit": "hoch",
-        "bemerkung": "\"may be installed outdoors under an eave or other protected location. Do not install the UniFi AP in an open environment.\" Mind. 60 cm vom Rand des Überstands, Kabeleinführung nach unten"
+        "bemerkung": "\"may be installed outdoors under an eave or other protected location. Do not install the UniFi AP in an open environment.\" Mind. 60 cm vom Rand des Überstands, Kabeleinführung nach unten; modellspezifischer Text (nennt UAP-AC-PRO ausdrücklich, kein Vorlagentext); Bilder im Handbuch: Gummi-Portabdeckung, Kabeldurchführung dichtet um das Kabel ab, nur Wand-/Deckenhalterung"
       },
       {
         "wert": "innen/außen",
@@ -1907,7 +1914,7 @@
         "beleg": "https://web.archive.org/web/20170915185947/http://dl.ubnt.com/datasheets/unifi/UniFi_AC_APs_DS.pdf",
         "stand": "PDF 2017-09-07 (Archiv 2017-09-15)",
         "sicherheit": "hoch",
-        "bemerkung": "Environment Indoor/Outdoor, \"weatherproof casing\""
+        "bemerkung": "Environment Indoor/Outdoor, \"weatherproof casing\"; \"außen\" gilt nur geschützt unter Dachüberstand o. ä. (Handbuch); keine IP-Angabe, keine Masthalterung"
       },
       {
         "wert": "innen",
@@ -1915,7 +1922,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_apac_pro",
         "stand": "Seitenrevision 2026-03-15 03:45",
         "sicherheit": "mittel",
-        "bemerkung": "Outdoor: No"
+        "bemerkung": "Outdoor: No",
+        "widerlegt": "Hersteller spezifiziert geschützten Außeneinsatz: Handbuch \"may be installed outdoors under an eave or other protected location\" (https://fccid.io/SWX-UAPACPRO/User-Manual/Users-Manual-3289040), Datenblatt Environment Indoor/Outdoor; Fotos zeigen Gummi-Portabdeckung mit abdichtender Kabeldurchführung"
       },
       {
         "wert": "innen, Gluon-Board nicht in is_outdoor_device",
@@ -1923,7 +1931,7 @@
         "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/package/gluon-core/luasrc/usr/lib/lua/gluon/platform.lua",
         "stand": "Branch main am 2026-10-19",
         "sicherheit": "hoch",
-        "bemerkung": "Gluon behandelt 5 GHz wie Innengerät"
+        "bemerkung": "Gluon behandelt 5 GHz wie Innengerät; gilt für Gluons 5-GHz-Kanalwahl (is_outdoor_device), nicht für die Gehäuseeignung; FCC-Grant führt das Gerät für 5150-5250 MHz ebenfalls als Indoor Access Point (https://fccid.io/SWX-UAPACPRO)"
       },
       {
         "wert": "außen nur mit Regenschutz bzw. unter Dach",
@@ -1931,7 +1939,15 @@
         "beleg": "https://forum.freifunk.net/t/19043",
         "stand": "Thread 2018-06-19 bis 2018-12-10 (16 Beiträge, alle gelesen)",
         "sicherheit": "niedrig",
-        "bemerkung": "Herstellerangabe \"Indirect\" laut Beitrag #12"
+        "bemerkung": "Herstellerangabe \"Indirect\" laut Beitrag #12; deckt sich mit dem Handbuch"
+      },
+      {
+        "wert": "innen; außen nur geschützt (Wand/Decke, keine Mastmontage)",
+        "quelle": "fcc_aussenfotos",
+        "beleg": "https://fccid.io/SWX-UAPACPRO/External-Photos/Ext-photo-2743795",
+        "stand": "Exhibit 2015-10-26 (PDF 2015-08-24, 7 Seiten)",
+        "sicherheit": "hoch",
+        "bemerkung": "flache runde Scheibe, Ports (Main, Secondary, USB, Reset) in einer Aussparung auf der Rückseite hinter der Halterung; keine Mastschelle, keine Kabelverschraubung erkennbar"
       }
     ],
     "temperatur_betrieb": [
@@ -2634,6 +2650,18 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "a1325749 (UniFi AP AC Pro, UAP-AC-Pro, Einzelpack) über heise gefunden, Datenblatt (19 Zeilen) nach roh.geizhals, Felder ergänzt; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "poe_spannung_v: 24 V (toh) widerlegt, Typenschild/Datenblatt/Injektor 48 V",
+        "einsatzort: Outdoor: No (openwrt_hwdata) widerlegt; gilt innen, außen nur geschützt unter Dachüberstand, Wand/Decke, kein Mast (FCC-Außenfotos + Handbuchbilder angesehen)"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: 48 V Nennwert (Typenschild, Injektor) vs. 44-57 V zulässiger Bereich (Datenblatt, techspecs)",
+        "einsatzort: Datenblatt innen/außen = nur geschützt; Gluon innen = 5-GHz-Kanalwahl, nicht Gehäuse"
+      ],
+      "offen": []
     }
   }
 }

@@ -1747,7 +1747,7 @@
         "beleg": "https://www.tp-link.com/en/document/65716/",
         "stand": "PDF 'WBS510 & WBS210 1.1 Datasheet', 2016-01-15",
         "sicherheit": "hoch",
-        "bemerkung": "Voltage range: 16-27VDC"
+        "bemerkung": "Voltage range: 16-27VDC; zulässiger Eingangsspannungsbereich (passives PoE über LAN0, +4,5/-7,8); 24 V vom beiliegenden Adapter liegt darin"
       },
       {
         "wert": "16-27",
@@ -1755,7 +1755,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_wbs210_v1",
         "stand": "Seitenrevision 2026-03-17 04:40",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "zulässiger Eingangsspannungsbereich (passives PoE über LAN0, +4,5/-7,8); 24 V vom beiliegenden Adapter liegt darin"
       },
       {
         "wert": 24,
@@ -1763,7 +1763,7 @@
         "beleg": "https://fccid.io/TE7WBS210/Label/WBS210-Label-Location-3058269",
         "stand": "Exhibit 2016-07-12 (Zeichnung WBS210(UN), Version BS210(UN)1.20, 2015-12-17; PDF 2016-06-08)",
         "sicherheit": "hoch",
-        "bemerkung": "Typenschild: 24V ⎓ 1A"
+        "bemerkung": "Typenschild: 24V ⎓ 1A; Nennspannung des mitgelieferten 24-V-Passiv-PoE-Adapters, innerhalb des Bereichs 16-27 V DC (Datenblatt)"
       },
       {
         "wert": 24,
@@ -1771,7 +1771,7 @@
         "beleg": "https://fccid.io/TE7WBS210/User-Manual/WBS210-User-Manual-2-2016-06-29-3058313",
         "stand": "Exhibit 2016-07-12 (PDF 2016-06-29, 19 Seiten, nur Bild)",
         "sicherheit": "hoch",
-        "bemerkung": "beiliegender Adapter"
+        "bemerkung": "beiliegender Adapter; Nennspannung des mitgelieferten 24-V-Passiv-PoE-Adapters, innerhalb des Bereichs 16-27 V DC (Datenblatt)"
       }
     ],
     "poe_pinbelegung": [
@@ -2489,6 +2489,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "Ein Artikel \"TP-Link WBS210\" (a1364712) ohne Versionsangabe, gelistet seit 02.12.2015; Modell hat v1 und v2. Nur Link und roh.geizhals uebernommen. Datenblatt passt nicht zu v1 (1x 1000Base-T statt 2x 10/100, 189x75x32 statt 198x74x40 mm, IP68). Keine EAN/ASIN auf der Seite."
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "poe_spannung_v: 16-27 V DC = zulässiger Eingangsbereich (Datenblatt), 24 V = Nennwert Typenschild/beiliegender Passiv-PoE-Adapter (24V 1A), liegt im Bereich"
+      ],
+      "offen": []
     }
   }
 }

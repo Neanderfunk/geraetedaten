@@ -1011,7 +1011,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_ap",
         "stand": "Dump 2026-10-18",
         "sicherheit": "niedrig",
-        "bemerkung": "ToH \"1x1 MIMO\" - widerspricht Hersteller (2x2) und MCS15/300 Mbps"
+        "bemerkung": "ToH \"1x1 MIMO\" - widerspricht Hersteller (2x2) und MCS15/300 Mbps",
+        "widerlegt": "ToH-Kommentar \"1x1 MIMO\" falsch: Ubiquiti-Datenblatt, Seite 12 \"Specifications (UAP-LR)\": \"Supports 2x2 MIMO with Spatial Diversity\", 300 Mbps MCS0-MCS15 (MCS8-15 setzen 2 Spatial Streams voraus), https://dl.ubnt.com/datasheets/unifi/UniFi_AP_DS.pdf; Handbuch UAP/AP-LR Anhang C ebenso; WLAN-Chip AR9287 (openwrt_hwdata) ist ein 2x2-Chip"
       }
     ],
     "wlan_5_standard": [
@@ -1934,6 +1935,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Artikel a1020136 (Einzelgerät UAP-LR) gefunden; 2 heise-Abrufe; Datenblatt knapp (kein PoE/Ports/Gewicht), keine EAN/ASIN"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_24_streams: 2 (Datenblatt UAP-LR 2x2, MCS15/300 Mbps); ToH 1x1 widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

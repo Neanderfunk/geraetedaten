@@ -1636,7 +1636,7 @@
         "beleg": "https://fccid.io/TE7CPE710/Label/13-Label-and-location-4634389",
         "stand": "Exhibit 2020-03-02 (Zeichnung CPE710(UN) 1.0 vom 2019-11-16, PDF 2019-12-03)",
         "sicherheit": "hoch",
-        "bemerkung": "Typenschild"
+        "bemerkung": "Typenschild; Nennspannung passives PoE (24 V, Pins 4/5 +, 7/8 -), wie das beiliegende Netzteil 24 VDC/0.5 A; zulaessiger Eingangsbereich laut Produktseite 16-27 V DC"
       },
       {
         "wert": 24,
@@ -1644,7 +1644,7 @@
         "beleg": "https://static.tp-link.com/upload/product-overview/2025/202511/20251106/CPE%20series-Datasheet.pdf",
         "stand": "PDF 2023-08-28, geaendert 2025-11-06",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Nennspannung passives PoE (24 V, Pins 4/5 +, 7/8 -), wie das beiliegende Netzteil 24 VDC/0.5 A; zulaessiger Eingangsbereich laut Produktseite 16-27 V DC"
       },
       {
         "wert": "16-27",
@@ -1652,7 +1652,7 @@
         "beleg": "https://www.tp-link.com/en/business-networking/pharos-cpe/cpe710/",
         "stand": "Abruf 2026-10-20 (Seite ohne Datum, data-version V1)",
         "sicherheit": "hoch",
-        "bemerkung": "\"Voltage range: 16-27V DC\""
+        "bemerkung": "\"Voltage range: 16-27V DC\"; zulaessiger Eingangsbereich fuer passives PoE (Produktseite \"Voltage range: 16-27V DC\"); Nennwert 24 V passiv, kein 802.3af/at"
       },
       {
         "wert": "16-27",
@@ -1660,7 +1660,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v1",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "zulaessiger Eingangsbereich fuer passives PoE (Produktseite \"Voltage range: 16-27V DC\"); Nennwert 24 V passiv, kein 802.3af/at"
       }
     ],
     "poe_strom_a": [
@@ -2406,6 +2406,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "a2661954 über heise abgerufen (1 Abruf); Hinweis \"Verschiedene Revisionen verfügbar.\", ohne HW-Version: nur Link und roh.geizhals, keine normalisierten Werte; keine EAN/ASIN auf der Seite"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "poe_spannung_v: 24 V = Nennspannung passives PoE (Typenschild, Datenblatt, Netzteil 24 VDC/0.5 A), 16-27 V = zulaessiger Eingangsbereich (Produktseite, ToH)"
+      ],
+      "offen": []
     }
   }
 }

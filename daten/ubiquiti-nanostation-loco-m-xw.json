@@ -1643,7 +1643,8 @@
         "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
         "sicherheit": "hoch",
         "bemerkung": "locoM2: 32 MB SDRAM - XM-Angabe, im Datenblatt 2018 nicht aktualisiert",
-        "variante": "NanoStation Loco M2 XW"
+        "variante": "NanoStation Loco M2 XW",
+        "widerlegt": "locoM2-Spalte beschreibt die XM-Hardware (gleiche Zeile: 'Atheros MIPS 24Kc, 400 MHz' = AR7240, XW hat AR9342/74Kc); für Loco M2/M5 XW nennt OpenWrt 64 MB RAM (https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91), ToH Loco M2 XW ebenfalls 64 MB (https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw); Gluon hat den Loco M2 XW 2022 getestet und ohne BROKEN wieder aufgenommen (https://github.com/freifunk-gluon/gluon/pull/2547), während 32-MB-Geräte dort abgelehnt werden (https://github.com/freifunk-gluon/gluon/pull/2487)"
       },
       {
         "wert": 32,
@@ -1652,7 +1653,8 @@
         "stand": "Seitenrevision 72959 vom 2019-07-05T05:35:59Z (imported>M86)",
         "sicherheit": "niedrig",
         "bemerkung": "XM-Stand (AR7240, ESMT M13S2561616A)",
-        "variante": "NanoStation Loco M2 XW"
+        "variante": "NanoStation Loco M2 XW",
+        "widerlegt": "Seite beschreibt den Loco M2 XM (AR7240, ESMT M13S2561616A), nicht XW; für XW 64 MB laut https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91"
       }
     ],
     "ram_chip": [
@@ -2256,7 +2258,7 @@
         "beleg": "https://dl.ubnt.com/datasheets/nanostationm/nsm_ds_web.pdf",
         "stand": "Datenblatt AJJL020218 (PDF 2018-02-05)",
         "sicherheit": "hoch",
-        "bemerkung": "Power Supply (PoE) 24V, 0.5A",
+        "bemerkung": "Power Supply (PoE) 24V, 0.5A; Nennspannung (beiliegender PoE-Adapter 24 V, 0.5 A, passiv); zulässiger Bereich 22-27 V laut Hersteller-Techspecs",
         "variante": "beide (Loco M2 XW und Loco M5 XW)"
       },
       {
@@ -2265,7 +2267,7 @@
         "beleg": "https://fccid.io/SWX-M5LB/Label/Label-3105582",
         "stand": "Exhibit 3105582, Label-Artwork v03 vom 2015-07-22 (PDF 2015-07-23), eingereicht 2016-08-24",
         "sicherheit": "hoch",
-        "bemerkung": "Etikett '24V 0.5A PoE'",
+        "bemerkung": "Typenschild '24V 0.5A PoE'; Nennspannung (beiliegender PoE-Adapter 24 V, 0.5 A, passiv); zulässiger Bereich 22-27 V laut Hersteller-Techspecs",
         "variante": "NanoStation Loco M5 XW"
       },
       {
@@ -2274,7 +2276,7 @@
         "beleg": "https://techspecs.ui.com/uisp/wireless/locom2",
         "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
         "sicherheit": "hoch",
-        "bemerkung": "Supported voltage range 22–27V DC",
+        "bemerkung": "Supported voltage range 22–27V DC; zulässiger Eingangsspannungsbereich (passives PoE); Nennwert des beiliegenden Adapters 24 V",
         "variante": "NanoStation Loco M2 XW"
       },
       {
@@ -2283,7 +2285,7 @@
         "beleg": "https://techspecs.ui.com/uisp/wireless/locom5",
         "stand": "Seite ohne Datum, Stand Abruf 2026-10-19",
         "sicherheit": "hoch",
-        "bemerkung": "Supported Voltage Range 22–27V DC",
+        "bemerkung": "Supported Voltage Range 22–27V DC; zulässiger Eingangsspannungsbereich (passives PoE); Nennwert des beiliegenden Adapters 24 V",
         "variante": "NanoStation Loco M5 XW"
       },
       {
@@ -2292,7 +2294,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_nanostation_loco_m2_xw",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "",
+        "bemerkung": "Nennspannung (beiliegender PoE-Adapter 24 V, 0.5 A, passiv); zulässiger Bereich 22-27 V laut Hersteller-Techspecs",
         "variante": "NanoStation Loco M2 XW"
       },
       {
@@ -2301,7 +2303,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/633c4304ad42d18d180ba65a264ba668de445d91",
         "stand": "Commit 633c4304ad42 (Autor 2019-09-18, eingespielt 2020-01-31), Roger Pueyo Centelles",
         "sicherheit": "mittel",
-        "bemerkung": "",
+        "bemerkung": "Nennspannung (beiliegender PoE-Adapter 24 V, 0.5 A, passiv); zulässiger Bereich 22-27 V laut Hersteller-Techspecs",
         "variante": "beide (Loco M2 XW und Loco M5 XW)"
       },
       {
@@ -2311,7 +2313,8 @@
         "stand": "Seitenrevision 2025-09-04 02:48 (mpeter, \"[Preparations]\")",
         "sicherheit": "niedrig",
         "bemerkung": "Info-Tabelle (XM): '12 to 24 VDC'; widerspricht Hersteller 22-27 V",
-        "variante": "NanoStation Loco M2 XW"
+        "variante": "NanoStation Loco M2 XW",
+        "widerlegt": "Info-Tabelle der Wiki-Seite beschreibt den Loco M2 XM; für Loco M2 XW nennt Ubiquiti 'Supported voltage range 22-27V DC' (https://techspecs.ui.com/uisp/wireless/locom2), 12 V liegt außerhalb"
       }
     ],
     "poe_pinbelegung": [
@@ -3244,6 +3247,17 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "3 heise-Abrufe (Suche, a1403800 Loco M5, a651904 Loco M2); Artikel ohne XM/XW-/v1/v2-Angabe, daher nur Links + roh, keine Hardwarewerte; keine EAN/ASIN"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ram_mb: 64 MB gilt für Loco M2/M5 XW; 32 MB (Datenblatt-Spalte locoM2, DeviWiki) ist XM-Stand, widerlegt",
+        "poe_spannung_v: '12 bis 24' (OpenWrt-Wiki, XM-Tabelle) widerlegt, Hersteller nennt 22-27 V"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: 24 V = Nennspannung des beiliegenden passiven PoE-Adapters, 22-27 V = zulässiger Eingangsbereich"
+      ],
+      "offen": []
     }
   }
 }

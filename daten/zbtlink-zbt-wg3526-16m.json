@@ -2056,7 +2056,8 @@
         "beleg": "https://web.archive.org/web/20230312230010/https://www.zbtlink.com/photo/zbtlink/document/20971/ZBT-WG3526-Specification.pdf",
         "stand": "Specification V3.1 vom 2017-07-19 (PDF erzeugt 2021-01-25), Archiv 2023-03-12",
         "sicherheit": "hoch",
-        "bemerkung": "Widerspruch: Datenblatt V3.1 (2017-07-19) nennt \"DDR3 256MB （MAX DDR2 512MB）\"; alle anderen Quellen und der Bootlog 512 MB"
+        "bemerkung": "Widerspruch: Datenblatt V3.1 (2017-07-19) nennt \"DDR3 256MB （MAX DDR2 512MB）\"; alle anderen Quellen und der Bootlog 512 MB",
+        "widerlegt": "Bootlog ZBT-WG3526 (16M) im OpenWrt-Wiki: \"Memory: 512048K/524288K available\" (https://openwrt.org/toh/zbtlink/zbt_wg3526); RAM-Chip Nanya NT5CB256M16BP-D1 = 4 Gbit = 512 MB (https://wikidevi.wi-cat.ru/ZBT_WG3526); Herstellerseiten 2017/2021 nennen 512 MB. Datenblatt V3.1 ist Vorlage mit inneren Widerspruechen (DDR3 256MB vs. MAX DDR2 512MB)"
       }
     ],
     "ram_typ": [
@@ -3635,6 +3636,14 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "heise-Suche \"WG3526\" nur unscharfe Fremdtreffer (andere Produkte mit ähnlichen Zahlen), Suche \"Zbtlink\" ohne Artikel; kein Geizhals-Eintrag, nichts übernommen (2 Abrufe)"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ram_mb: 512 MB gilt, 256 MB (Datenblatt V3.1) widerlegt durch Bootlog 16M und RAM-Chip NT5CB256M16BP-D1"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

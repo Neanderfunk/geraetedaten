@@ -946,7 +946,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_plus",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "Dump: '16,4096 eMMC'"
+        "bemerkung": "Dump: '16,4096 eMMC'; Prüfung 2026-10-20: gilt für die verbauten Speicherchips (Rohkapazität); unter OpenWrt nutzbar sind nur ca. 120 MiB, weil die Partitionstabelle des eMMC unverändert bleibt (https://openwrt.org/toh/ubiquiti/unifi_6_plus)"
       },
       {
         "wert": "16 (SPI-NOR) + eMMC",
@@ -954,7 +954,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_6_plus",
         "stand": "Seitenrevision 2026-03-01 03:55",
         "sicherheit": "mittel",
-        "bemerkung": "Live: '16, eMMC'; Comments: '16 MB SPI NOR and 4 GB eMMC'"
+        "bemerkung": "Live: '16, eMMC'; Comments: '16 MB SPI NOR and 4 GB eMMC'; Prüfung 2026-10-20: gilt für die verbauten Speicherchips (Rohkapazität); unter OpenWrt nutzbar sind nur ca. 120 MiB, weil die Partitionstabelle des eMMC unverändert bleibt (https://openwrt.org/toh/ubiquiti/unifi_6_plus)"
       },
       {
         "wert": "16 (SPI-NOR) + 4096 (eMMC)",
@@ -962,7 +962,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/75ee5546e9b7cfa5bbfd6f844ab8c5fffd5bb594",
         "stand": "Commit 2023-09-17 (Autor), gemergt 2023-09-24",
         "sicherheit": "hoch",
-        "bemerkung": "'16 MB SPI NOR and 4 GB eMMC'"
+        "bemerkung": "'16 MB SPI NOR and 4 GB eMMC'; Prüfung 2026-10-20: gilt für die verbauten Speicherchips (Rohkapazität); unter OpenWrt nutzbar sind nur ca. 120 MiB, weil die Partitionstabelle des eMMC unverändert bleibt (https://openwrt.org/toh/ubiquiti/unifi_6_plus)"
       },
       {
         "wert": "ca. 120 MiB nutzbar für OpenWrt",
@@ -970,7 +970,7 @@
         "beleg": "https://openwrt.org/toh/ubiquiti/unifi_6_plus",
         "stand": "Seitenrevision 2026-04-08 20:17",
         "sicherheit": "mittel",
-        "bemerkung": "Partitionstabelle des eMMC bleibt unverändert, Kernel auf mmcblk0p6 (kernel0), Rootfs auf mmcblk0p7 (kernel1)"
+        "bemerkung": "Partitionstabelle des eMMC bleibt unverändert, Kernel auf mmcblk0p6 (kernel0), Rootfs auf mmcblk0p7 (kernel1); Prüfung 2026-10-20: kein Widerspruch zur Bestückung; gilt für den unter OpenWrt nutzbaren Platz (Partitionen kernel0/kernel1 auf dem eMMC bleiben unverändert), nicht für die verbauten Speicherchips. Dieselbe Wiki-Seite nennt in der Infobox '16 MB SPI NOR and 4 GB eMMC' (https://openwrt.org/toh/ubiquiti/unifi_6_plus)"
       }
     ],
     "flash_typ": [
@@ -2260,6 +2260,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Suche 'Ubiquiti UniFi 6 Plus' -> a2849254 'UniFi 6+ (U6+)' (nicht U6-PLUS-LR a2849259); Modell ohne Hardware-Versionen; 14 Datenblattzeilen uebernommen, 16 Felder ergaenzt, keine EAN/ASIN; keine Widersprueche; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "flash_mb: 16 MB SPI-NOR + 4 GB eMMC = verbaute Chips (Commit 75ee554, DTS, Wiki-Infobox); ca. 120 MiB = unter OpenWrt nutzbarer Platz bei unveränderter eMMC-Partitionierung (Wiki)"
+      ],
+      "offen": []
     }
   }
 }

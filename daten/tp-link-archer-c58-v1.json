@@ -1201,7 +1201,8 @@
         "beleg": "https://www.tp-link.com/en/home-networking/wifi-router/archer-c58/",
         "stand": "Live-Seite 2026-10-20 (ohne Datum, ohne Versionsangabe)",
         "sicherheit": "niedrig",
-        "bemerkung": "Produktseite ohne Versionsangabe; TP-Link führt v1 und v2, die Seite nennt AC1200/300 Mbps und widerspricht damit dem v1-Handbuch (AC1350) - Zuordnung zu v1 unsicher; 300 Mbps entspricht 2 Streams (abgeleitet), Fließtext derselben Seite nennt dagegen 450 Mbps"
+        "bemerkung": "Produktseite ohne Versionsangabe; TP-Link führt v1 und v2, die Seite nennt AC1200/300 Mbps und widerspricht damit dem v1-Handbuch (AC1350) - Zuordnung zu v1 unsicher; 300 Mbps entspricht 2 Streams (abgeleitet), Fließtext derselben Seite nennt dagegen 450 Mbps",
+        "widerlegt": "Produktseite ohne Versionsangabe mit AC1200/300 Mbps (passt nicht zu v1, dessen Handbuch AC1350 nennt; Fliesstext derselben Seite nennt 450 Mbps). C58 v1 hat QCA9561 mit 3T3R im 2.4-GHz-Band laut OpenWrt-Commits https://github.com/openwrt/openwrt/commit/b05c7193fd289ff697324caccf77adf9ffa76373 (\"3T3R 2.4 GHz\") und https://github.com/openwrt/openwrt/commit/946ffe470d923fdde53db68592437194e0c276fc (\"QCA9561 bgn 3x3:3\"); 2 Streams nicht fuer v1"
       }
     ],
     "wlan_5_standard": [
@@ -2271,6 +2272,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "a1491510 \"TP-Link Archer C58\", gelistet seit 10.08.2016, ohne Versionsangabe (Modell hat v1 und v2, Seite warnt vor unterschiedlichen Revisionen). Werte AC1350/3x extern/225x148x33 mm passen zu v1, trotzdem nur Link + roh, keine Hardwarewerte; keine EAN/ASIN auf der Seite. 1 heise-Abruf (Permalink aus Webarchiv vorhanden)."
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_24_streams: 3 gilt (OpenWrt-Commits ar71xx/ath79: QCA9561 3T3R/3x3:3, AC1350 = 450 Mbps); 2 der TP-Link-Produktseite (AC1200/300 Mbps, ohne Version, nicht v1) widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

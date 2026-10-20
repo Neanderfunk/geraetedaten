@@ -1162,7 +1162,16 @@
         "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_re200_v2",
         "stand": "Seitenrevision 2026-03-29 05:21",
         "sicherheit": "mittel",
-        "bemerkung": "\"MIMO 2x2:2 on both bands\" - widerspricht Commit, DeviWiki und FCC"
+        "bemerkung": "\"MIMO 2x2:2 on both bands\" - widerspricht Commit, DeviWiki und FCC",
+        "widerlegt": "5-GHz-Funk ist MediaTek MT7610EN (1T1R-Chip); FCC-MPE-Report nennt 802.11a/ac 1TX+1RX bzw. 'a/ac mode is 1TX only' (https://fccid.io/TE7RE200V2/RF-Exposure-Info/1705FS13-IEEE-C95-1-MPE-17-0334-3507130), OpenWrt-Commit '1T1R 5 GHz' (https://github.com/openwrt/openwrt/commit/6d6f36ae787c3b339b16c1d345a90faa1d9f4011), Datenblatt 433 Mbps bei 5 GHz = 1 Stream VHT80 (https://static.tp-link.com/RE200_V2_Datasheet.pdf); 'MIMO 2x2:2 on both bands' gilt nur fuer 2.4 GHz"
+      },
+      {
+        "wert": 1,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/RE200_V2_Datasheet.pdf",
+        "stand": "PDF 2017-04-27",
+        "sicherheit": "hoch",
+        "bemerkung": "AC750: 300 Mbps 2.4 GHz + 433 Mbps 5 GHz; 433 Mbps = 1 Spatial Stream 802.11ac VHT80"
       }
     ],
     "wlan_klasse": [
@@ -2141,6 +2150,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "heise-Suche \"TP-Link RE200\" (1 Treffer a1143429) + Produktseite, 2 Abrufe: Artikel \"TP-Link RE200\" ohne Versionsangabe, gelistet seit 21.07.2014 (v1-Zeit), Hinweis \"Mesh ist nur für bestimmte Revisionen verfügbar\"; RE200 hat v1-v5 -> nur geizhals_url mit Bemerkung und roh.geizhals, keine normalisierten Hardwarewerte, keine EAN/ASIN"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_5_streams: 1 gilt (MT7610EN 1T1R, FCC-MPE 1TX+1RX, Commit 1T1R, Datenblatt 433 Mbps); openwrt_hwdata-Wert 2 widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

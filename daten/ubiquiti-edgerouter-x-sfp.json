@@ -1049,7 +1049,8 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/9715beb04c74a918697945b3e2d23a139bd04b70",
         "stand": "Commit 2017-05-29 (Autor), gemergt 2017-06-07",
         "sicherheit": "niedrig",
-        "bemerkung": "Commit-Text \"RAM: 265 MiB\", offensichtlicher Tippfehler, alle anderen Quellen 256"
+        "bemerkung": "Commit-Text \"RAM: 265 MiB\", offensichtlicher Tippfehler, alle anderen Quellen 256",
+        "widerlegt": "Tippfehler im Commit-Text; dieselbe Commit-DTS setzt memory@0 reg = <0x0 0x10000000> = 256 MiB (https://github.com/openwrt/openwrt/commit/9715beb04c74a918697945b3e2d23a139bd04b70), Ubiquiti-Datenblatt ER-X-SFP '256 MB DDR3 RAM' (https://dl.ubnt.com/datasheets/edgemax/EdgeRouter_X_DS.pdf)"
       }
     ],
     "ram_typ": [
@@ -1409,7 +1410,7 @@
         "beleg": "https://techspecs.ui.com/uisp/wired/er-x-sfp",
         "stand": "Seite abgerufen 2026-10-19 (ohne Datum)",
         "sicherheit": "hoch",
-        "bemerkung": "5 RJ45 + 1 SFP"
+        "bemerkung": "5 RJ45 + 1 SFP; Zählweise inkl. SFP-Port"
       },
       {
         "wert": 6,
@@ -1417,7 +1418,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_edgerouter_x-sfp",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "5x 1 Gbit + 1 SFP"
+        "bemerkung": "5x 1 Gbit + 1 SFP; Zählweise inkl. SFP-Port"
       },
       {
         "wert": 5,
@@ -1425,7 +1426,7 @@
         "beleg": "https://deviwiki.com/wiki/Ubiquiti_Networks_EdgeRouter_X_SFP",
         "stand": "Seitenrevision 2019-07-05T02:58:50Z",
         "sicherheit": "mittel",
-        "bemerkung": "lan_ports 4 + wan_ports 1, SFP separat unter expansion"
+        "bemerkung": "lan_ports 4 + wan_ports 1, SFP separat unter expansion; Wert gilt nur für die RJ45-Buchsen (Datenblatt: 5x RJ45 + 1x SFP; OpenWrt-DTS: eth0-eth4 + eth5 SFP), mit SFP-Port 6"
       },
       {
         "wert": 6,
@@ -1433,7 +1434,7 @@
         "beleg": "https://preisvergleich.heise.de/ubiquiti-edgerouter-x-sfp-er-x-sfp-a1271802.html",
         "stand": "Gelistet seit 21.05.2015; abgerufen 2026-10-20",
         "sicherheit": "mittel",
-        "bemerkung": "5x RJ-45 + 1x SFP"
+        "bemerkung": "5x RJ-45 + 1x SFP; Zählweise inkl. SFP-Port"
       }
     ],
     "nur_eine_buchse": [
@@ -2540,6 +2541,16 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise a1271802 (ER-X-SFP), 2 Abrufe; Datenblatt nach roh.geizhals, leistung_w_typ/abmessungen/ports/ports_anzahl/sfp ergaenzt; keine EAN/ASIN auf der Seite"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ram_mb: 265 (openwrt_git_support) widerlegt, Tippfehler im Commit-Text; Commit-DTS memory 0x10000000 = 256 MiB, Datenblatt 256 MB DDR3"
+      ],
+      "beide_richtig": [
+        "ports_anzahl: 5 (deviwiki) = nur RJ45-Buchsen, 6 = 5x RJ45 + 1x SFP; Zählweise in bemerkung vermerkt"
+      ],
+      "offen": []
     }
   }
 }

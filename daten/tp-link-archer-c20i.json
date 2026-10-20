@@ -1408,7 +1408,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c20i_ac750_v1",
         "stand": "Dump 2026-10-18",
         "sicherheit": "niedrig",
-        "bemerkung": "WLAN Comments \"3x3 MIMO\"; widerspricht DeviWiki/FCC (2x2) und dem 1x1-Chip MT7610E, wohl Antennenzahl"
+        "bemerkung": "WLAN Comments \"3x3 MIMO\"; widerspricht DeviWiki/FCC (2x2) und dem 1x1-Chip MT7610E, wohl Antennenzahl",
+        "widerlegt": "\"3x3 MIMO\" ist die Antennenzahl (3 interne Antennen, eine davon am 5-GHz-Chip MT7610E), nicht die Streamzahl: das 2.4-GHz-Radio im MT7620A ist 2T2R (DeviWiki wi1 tx/rx chains 2, https://deviwiki.com/wiki/TP-LINK_Archer_C20i; FCC-Grant \"2x2 Spatial Multiplexing MIMO\", https://fccid.io/TE7C20I; 300 Mbit/s = 2 Streams HT40)"
       },
       {
         "wert": 2,
@@ -1476,7 +1477,8 @@
         "beleg": "https://fccid.io/TE7C20I/User-Manual/C20i-UGrev1-2316882",
         "stand": "Exhibit 2014-07-08 (PDF REV1.0.0, erstellt 2014-03-20, geändert 2014-07-01)",
         "sicherheit": "niedrig",
-        "bemerkung": "Spezifikation \"11ac: up to 450Mbps\" (Vorserien-Handbuch)"
+        "bemerkung": "Spezifikation \"11ac: up to 450Mbps\" (Vorserien-Handbuch)",
+        "widerlegt": "450 Mbit/s im Vorserien-Handbuch REV1.0.0 ist mit dem 1x1-Chip MT7610E nicht erreichbar (1 Stream VHT80 hoechstens 433 Mbit/s); Serienangabe 433 Mbit/s (https://www.tp-link.com/en/home-networking/wifi-router/archer-c20i/), Klasse AC750 = 300 + 433, DeviWiki wi2 tx/rx chains 1 (https://deviwiki.com/wiki/TP-LINK_Archer_C20i)"
       },
       {
         "wert": 1,
@@ -2654,6 +2656,15 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "a1153574 (TP-Link Archer C20i, gelistet seit 14.08.2014), Modell nur als V1; Datenblatt übernommen, keine Leistungsaufnahme/Netzteil/Gewicht/EAN; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_24_streams: 2 (2x2, MT7620A 2T2R); toh \"3x3\" widerlegt (Antennenzahl), 300 Mbit/s passt zu 2",
+        "wlan_5_streams: 1 (1x1, MT7610E); fcc_handbuch \"450 Mbit/s\" widerlegt (Vorserie, mit 1 Stream unmoeglich), 433 Mbit/s passt zu 1"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

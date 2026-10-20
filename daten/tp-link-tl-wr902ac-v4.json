@@ -1019,7 +1019,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_tl-wr902ac_v4",
         "stand": "Seitenrevision 2026-03-29 04:54",
         "sicherheit": "mittel",
-        "bemerkung": "\"MIMO 2x2:2 for each band\""
+        "bemerkung": "\"MIMO 2x2:2 for each band\"",
+        "widerlegt": "ToH 'MIMO 2x2:2 for each band' gilt nur fuer den Chip MT7613BE; auf der v4-Platine ist nur eine 5-GHz-Antenne angeschlossen (FCC-Innenfoto beschriftet '2.4G Wi-Fi Ant 0/1' und genau eine '5G Wi-Fi Ant': https://fccid.io/2AXJ4WR902ACV4/Internal-Photos/2305RSU013-UE-Internal-Photo-6590328; Antennenspezifikation nur Ant3 fuer 5 GHz: https://fccid.io/2AXJ4WR902ACV4/Test-Report/TL-WR902AC-Antenna-specification-6590316; TP-Link 5 GHz 433 Mbps = 1x1 VHT80)"
       },
       {
         "wert": 1,
@@ -1027,7 +1028,7 @@
         "beleg": "https://fccid.io/2AXJ4WR902ACV4/Test-Report/TL-WR902AC-Antenna-specification-6590316",
         "stand": "Exhibit 2023-06-12 (Antenna specification V1.0, 2023-04-13)",
         "sicherheit": "hoch",
-        "bemerkung": "nur eine 5-GHz-Antenne (Ant3) beschrieben; Widerspruch zur ToH"
+        "bemerkung": "nur eine 5-GHz-Antenne (Ant3) beschrieben; Widerspruch zur ToH; FCC-Innenfoto zeigt ebenfalls genau eine 5-GHz-Antenne"
       },
       {
         "wert": 1,
@@ -1036,6 +1037,14 @@
         "stand": "Abruf 2026-10-19 (Seite ohne Versionsangabe)",
         "sicherheit": "niedrig",
         "bemerkung": "abgeleitet aus 433 Mbps (802.11ac, entspricht 1x1 VHT80)"
+      },
+      {
+        "wert": 1,
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/2AXJ4WR902ACV4/Internal-Photos/2305RSU013-UE-Internal-Photo-6590328",
+        "stand": "Exhibit 2023-06-12 (MRT 2305RSU013-UE, PDF 2023-06-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "Foto 1 beschriftet 2.4G Wi-Fi Ant 0, 2.4G Wi-Fi Ant 1 und eine 5G Wi-Fi Ant (Drahtantenne J8); MT7613BE ist ein 2x2-Chip, auf dieser Platine aber nur eine 5-GHz-Kette mit Antenne"
       }
     ],
     "wlan_klasse": [
@@ -1916,6 +1925,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "Artikel a1560401 \"TP-Link TL-WR902AC, Travel Router\" ohne Versionsangabe, gelistet seit 12.01.2017 (v1-Zeit), verlinkt OpenWrt v1/v3, Händlertitel nennen V4.0/V4.6 -> nur Link und roh.geizhals, keine normalisierten Hardwarewerte; einziger Treffer der Suche; keine EAN/ASIN auf der Seite; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_5_streams: 1 gilt; ToH-Wert 2 widerlegt (FCC-Innenfoto und Antennenspezifikation: nur eine 5-GHz-Antenne, 433 Mbps = 1x1)"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

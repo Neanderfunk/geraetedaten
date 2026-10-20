@@ -41,11 +41,11 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
 | AP-303 | `aruba-ap-303` | [erfasst](daten/aruba-ap-303.json): 82 Felder, 9 offene Fäden, teilweise |  | recommended |
-| AP-303H | `aruba-ap-303h` | [erfasst](daten/aruba-ap-303h.json): 92 Felder, 11 offene Fäden, teilweise |  | recommended |
+| AP-303H | `aruba-ap-303h` | [erfasst](daten/aruba-ap-303h.json): 93 Felder, 11 offene Fäden, teilweise |  | recommended |
 | AP-365 | `aruba-ap-365` | [erfasst](daten/aruba-ap-365.json): 82 Felder, 8 offene Fäden, teilweise |  | recommended |
 | aruba-ap-32x | `aruba-ap-32x` | [erfasst](daten/aruba-ap-32x.json): 66 Felder, 11 offene Fäden, teilweise |  |  |
 | Instant On AP11 | `aruba-instant-on-ap11` | [erfasst](daten/aruba-instant-on-ap11.json): 84 Felder, 10 offene Fäden, teilweise |  | recommended |
-| Instant On AP11D | `aruba-instant-on-ap11d` | [erfasst](daten/aruba-instant-on-ap11d.json): 75 Felder, 10 offene Fäden, teilweise |  | recommended |
+| Instant On AP11D | `aruba-instant-on-ap11d` | [erfasst](daten/aruba-instant-on-ap11d.json): 76 Felder, 10 offene Fäden, teilweise |  | recommended |
 | Instant On AP17 | `aruba-instant-on-ap17` | [erfasst](daten/aruba-instant-on-ap17.json): 76 Felder, 10 offene Fäden, teilweise |  | recommended |
 
 ## Asus

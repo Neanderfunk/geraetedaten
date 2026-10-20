@@ -126,6 +126,12 @@
       "url": "https://preisvergleich.heise.de/ubiquiti-unifi-ap-ac-hd-uap-ac-hd-a1573453.html",
       "stand": "Gelistet seit 08.02.2017; abgerufen 2026-10-20",
       "abgerufen": "2026-10-20"
+    },
+    "fcc_aussenfotos": {
+      "url": "https://fccid.io/SWX-UAPACHD/External-Photos/External-Photos-3193432",
+      "stand": "Sporton 661623-02, 2016-11-09",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "6 Seiten als Bild ausgewertet: flache Deckenscheibe, Anschlüsse (MAIN, SECONDARY, USB) offen in einer Mulde auf der Unterseite, keine Dichtungen/Kabelabdichtung, keine Masthalterung; Typenschild \"48V ⎓ 0.5A GigE PoE\""
     }
   },
   "roh": {
@@ -1766,7 +1772,7 @@
         "beleg": "https://dl.ui.com/datasheets/unifi/UniFi_UAP-AC-HD_DS.pdf",
         "stand": "PDF JLNB020819, 2019-02-08",
         "sicherheit": "hoch",
-        "bemerkung": "Supported Voltage Range 44 to 57VDC"
+        "bemerkung": "Supported Voltage Range 44 to 57VDC; zulässiger Eingangsspannungsbereich am Gerät (802.3at PoE+); 48 V auf dem Typenschild ist der Nennwert innerhalb dieses Bereichs"
       },
       {
         "wert": "44-57",
@@ -1774,7 +1780,7 @@
         "beleg": "https://techspecs.ui.com/unifi/wifi/uap-ac-hd",
         "stand": "Live-Seite 2026-10-19 (ohne Datum)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "zulässiger Eingangsspannungsbereich am Gerät (802.3at PoE+); 48 V auf dem Typenschild ist der Nennwert innerhalb dieses Bereichs"
       },
       {
         "wert": "48 (Nennwert)",
@@ -1782,7 +1788,7 @@
         "beleg": "https://fccid.io/SWX-UAPACHD/Label/Label-and-Location-3201554",
         "stand": "Exhibit 2016-11-22 (Zeichnung v02 2016-07-11)",
         "sicherheit": "hoch",
-        "bemerkung": "\"48V ⎓ 0.5A GigE PoE\""
+        "bemerkung": "\"48V ⎓ 0.5A GigE PoE\"; Nennwert vom Typenschild (auch auf FCC-Außenfoto Seite 3 lesbar, https://fccid.io/SWX-UAPACHD/External-Photos/External-Photos-3193432); zulässiger Bereich laut Datenblatt 44-57 V"
       }
     ],
     "poe_strom_a": [
@@ -1916,7 +1922,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/ubiquiti/ubiquiti_unifi_ac_hd",
         "stand": "Seitenrevision 2026-06-15 00:34",
         "sicherheit": "mittel",
-        "bemerkung": "Outdoor: No"
+        "bemerkung": "Outdoor: No; gilt im Sinne von \"kein wetterfestes Außengerät\"; Hersteller erlaubt zusätzlich geschützte Außenmontage (Datenblatt \"Indoor or Outdoor (Covered)\", Handbuch), Fotos zeigen offenes Gehäuse ohne Dichtung (https://fccid.io/SWX-UAPACHD/External-Photos/External-Photos-3193432)"
       },
       {
         "wert": "innen oder außen geschützt (unter Dachvorsprung)",
@@ -1924,7 +1930,7 @@
         "beleg": "https://dl.ui.com/datasheets/unifi/UniFi_UAP-AC-HD_DS.pdf",
         "stand": "PDF JLNB020819, 2019-02-08",
         "sicherheit": "hoch",
-        "bemerkung": "\"Indoor or Outdoor (Covered)\""
+        "bemerkung": "\"Indoor or Outdoor (Covered)\"; gilt; deckt sich mit gerätebezogenem Handbuchtext (UAP-AC-HD genannt, kein Vorlagentext) und FCC-Außenfotos: kein wetterfestes Gehäuse, Anschlüsse offen in Mulde, daher nur geschützt (unter Dachvorsprung)"
       },
       {
         "wert": "innen; außen nur geschützt unter Dachvorsprung, mind. 60 cm vom Rand, Kabel nach unten",
@@ -1932,7 +1938,7 @@
         "beleg": "https://fccid.io/SWX-UAPACHD/User-Manual/Users-Manual-AC-HD-3201556",
         "stand": "Exhibit 2016-11-22 (PDF 2016-07-22, geändert 2016-11-21)",
         "sicherheit": "hoch",
-        "bemerkung": "\"may be installed outdoors under an eave or other protected location. Do not install ... in an open environment\""
+        "bemerkung": "\"may be installed outdoors under an eave or other protected location. Do not install ... in an open environment\"; gleiche Aussage wie Datenblatt, nennt UAP-AC-HD ausdrücklich; kein Widerspruch"
       },
       {
         "wert": "innen",
@@ -1940,7 +1946,7 @@
         "beleg": "https://github.com/freifunk-gluon/gluon/pull/3361",
         "stand": "PR 2024-10-31, gemergt 2024-11-05",
         "sicherheit": "mittel",
-        "bemerkung": "nicht in is_outdoor_device eingetragen"
+        "bemerkung": "nicht in is_outdoor_device eingetragen; is_outdoor_device ist eine Gluon-Einstellung für typische Außengeräte (Kanalwahl/Mesh), keine Aussage, dass geschützte Außenmontage unzulässig ist; als Gerät \"innen oder außen geschützt\" laut Hersteller"
       }
     ],
     "temperatur_betrieb": [
@@ -2528,6 +2534,15 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise a1573453 \"Ubiquiti UniFi AP AC HD\" (UAP-AC-HD), Datenblatt nach roh.geizhals, 15 Felder ergänzt; keine EAN/ASIN auf der Seite; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "poe_spannung_v: 44-57 V ist der zulässige Eingangsbereich (Datenblatt/techspecs), 48 V der Nennwert auf dem Typenschild; beides richtig",
+        "einsatzort: innen oder außen geschützt (unter Dachvorsprung) laut Hersteller; \"innen\" (OpenWrt Outdoor: No, Gluon ohne is_outdoor_device) bedeutet nur kein wetterfestes Außengerät; FCC-Außenfotos: offene Anschlussmulde, keine Dichtung, keine Mastbefestigung"
+      ],
+      "offen": []
     }
   }
 }

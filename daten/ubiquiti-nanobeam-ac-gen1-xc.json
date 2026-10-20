@@ -1167,7 +1167,8 @@
         "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
         "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
         "sicherheit": "niedrig",
-        "bemerkung": "Datenblatt: \"128 MB DDR2, 8 MB Flash\"; Widerspruch, OpenWrt-Wiki: \"The official data sheet list 8MB flash, but the bootlog really shows 16MB\""
+        "bemerkung": "Datenblatt: \"128 MB DDR2, 8 MB Flash\"; Widerspruch, OpenWrt-Wiki: \"The official data sheet list 8MB flash, but the bootlog really shows 16MB\"",
+        "widerlegt": "Datenblatt-Angabe 8 MB gilt nicht fuer die gebaute Hardware: OpenWrt-DTS qca955x_ubnt_xc.dtsi legt Partitionen bis 0x1000000 (16 MB) an (https://github.com/openwrt/openwrt/commit/73ea763c0dcdb96c9163790f20edd964399035c0), OEM-Bootlog NBE-5AC-19 \"flash_size passed from bootloader = 16\" (https://openwrt.org/toh/ubiquiti/nanobeam_ac#bootlogs), FCC-Innenfoto MX25L12835F 128 Mbit (https://fccid.io/SWX-NBEAC/Internal-Photos/Internal-Photos-2659422)"
       }
     ],
     "flash_typ": [
@@ -1297,7 +1298,16 @@
         "beleg": "https://web.archive.org/web/20180903194641/https://dl.ubnt.com/datasheets/NanoBeam_ac/NanoBeam_ac_DS.pdf",
         "stand": "Datenblatt AJJL020618 (PDF 2018-02-07), Archivkopie 2018-09-03",
         "sicherheit": "niedrig",
-        "bemerkung": "zwei Polarisationen; Stream-Zahl nicht genannt"
+        "bemerkung": "zwei Polarisationen; Stream-Zahl nicht genannt",
+        "widerlegt": "Kein Stream-Wert: \"Dual Linear\" ist die Antennen-Polarisation; Stream-Zahl 2 laut OEM-Bootlog NBE-5AC-19 \"num_rf_chain : 00000002\" und OpenWrt iw list TX/RX 0x3 (https://openwrt.org/toh/ubiquiti/nanobeam_ac#bootlogs)"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_wiki_bootlog",
+        "beleg": "https://openwrt.org/toh/ubiquiti/nanobeam_ac#bootlogs",
+        "stand": "Seitenrevision 2025-02-11 17:52 (danitool, \"[Tags]\")",
+        "sicherheit": "hoch",
+        "bemerkung": "OEM-Bootlog Abschnitt NBE-5AC-19 (sysid 0xe4f5): \"num_rf_chain : 00000002\", Chainmask actual 3 (TX/RX); 2x2"
       }
     ],
     "wlan_sendeleistung_dbm": [
@@ -2363,6 +2373,15 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Permalink a1302545 aus felder.geizhals_url, Produktseite per heise abgerufen (1 Abruf); Datenblatt-Tabelle nach roh.geizhals, 13 Felder ergaenzt; keine EAN/ASIN auf der Seite; Widerspruch Antennen 'extern' vs. intern"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 16 MB, 8 MB (Datenblatt 2018) widerlegt durch DTS, OEM-Bootlog und FCC-Flashchip",
+        "wlan_5_streams: 2, \"Polarisation Dual Linear\" (Datenblatt) ist kein Stream-Wert, widerlegt; Beleg OEM-Bootlog NBE-5AC-19 num_rf_chain 2 ergaenzt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }
