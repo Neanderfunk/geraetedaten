@@ -198,6 +198,11 @@
       "stand": "Datei-Commit 2026-10-15 10:44, Tabelle Stand 15.10.2026",
       "abgerufen": "2026-10-19",
       "bemerkung": "Abschnitte \"Welche Zwischenfirmware für welches Modell\" und Spiegel-Abgleich (X6 V1.0.zip); dazu docs/geraetefotos.md (Stand Karte 06.10.2026: kein X6 im Feld)"
+    },
+    "geizhals": {
+      "url": "https://preisvergleich.heise.de/cudy-x6-a2756708.html",
+      "stand": "Gelistet seit 24.06.2022; abgerufen 2026-10-20",
+      "abgerufen": "2026-10-20"
     }
   },
   "roh": {
@@ -841,6 +846,28 @@
     "werkstatt": {
       "cudy-installation.md": "Tabelle \"Welche Zwischenfirmware für welches Modell\": X6 v1 | unsere Datei cudy-x6-v1.bin | Cudys Eintrag \"X6 V1.0.zip\" | MD5 f321fc7c41731875faa3cdc9ee8d583f; X6 v2 | cudy-x6-v2.bin | \"X6+V2.zip\" | 89c000214e74b6ad89f5b9951fe0f226. Stand 15.10.2026. Spiegel: https://firmware.ffnef.de/other/cudy-mirror-20261015/zwischenfirmware/. Aus \"X6+V1\" wurde \"X6 V1.0.zip\", MD5 unverändert. Offen: cudy-x6 ist in devices.js ein Eintrag ohne Revision. Vorgehen allgemein: Zwischenfirmware (von Cudy signiertes OpenWrt) über Cudy-Web-UI, dann Gluon-sysupgrade-Image (nicht factory). Modell und Version stehen auf dem Aufkleber unter dem Gerät.",
       "geraetefotos.md": "Downloader-Liste zählt 'Cudy X6' mit 1 Knoten, der in Wahrheit der Redmi AX6S ist; ein X6 steht nicht im Feld (Karte 06.10.2026)"
+    },
+    "geizhals": {
+      "WAN": "1x RJ-45 (10/100/1000Base-T)",
+      "LAN": "4x RJ-45 (10/100/1000Base-T)",
+      "Wireless": "Wi-Fi 6 (802.11a/b/g/n/ac/ax), simultan",
+      "Übertragungsrate": "574Mbit/s (2.4GHz), 1201Mbit/s (5GHz)",
+      "Pseudoklasse": "AX1800",
+      "Sicherheit": "WEP, WPA, WPA2, WPA3, WPS",
+      "Antennen": "4x extern",
+      "Band-Fähigkeiten": "Dual Band (simultan)",
+      "Mesh": "Roaming, Mesh (geteiltes Band)",
+      "Stromversorgung": "externes Netzteil\nLieferumfang: Netzteil (12V/1A/12W)",
+      "Leistungsaufnahme": "12V/1A/12W (max. Netzteilleistung)",
+      "Abmessungen": "205x138x38mm",
+      "Besonderheiten": "MU-MIMO, IPv6, VPN passthrough (L2TP/PPTP)",
+      "Garantie": "3 Jahre",
+      "802.11ax (Wi-Fi 6 / Wi-Fi 6E) 2.4GHz": "574Mbit/s (2x2, 40MHz, 1024-QAM)",
+      "802.11ax (Wi-Fi 6 / Wi-Fi 6E) 5GHz": "1201Mbit/s (2x2, 80MHz, 1024-QAM)",
+      "Hinweis zu alternativer Firmware": "Open-/DD-WRT ist möglicherweise nur für bestimmte Revisionen verfügbar, bitte weiterführende Links beachten!\nLinks zu alternativer Firmware: Link 1",
+      "Hinweis zur Leistungsaufnahme": "In einigen Fällen entspricht die maximale Verbrauchsangabe des Herstellers nur der maximalen Ausgabeleistung des Netzteils und ist daher keine aussagekräftige Auskunft für den Stromverbrauch im Alltag.",
+      "Links": "Links zu alternativer Firmware: Link 1",
+      "Gelistet seit": "24.06.2022, 09:18"
     }
   },
   "felder": {
@@ -2403,6 +2430,16 @@
         "sicherheit": "hoch",
         "bemerkung": "docs/geraetefotos.md, Karte 06.10.2026"
       }
+    ],
+    "geizhals_url": [
+      {
+        "wert": "https://geizhals.de/cudy-x6-a2756708.html",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/cudy-x6-a2756708.html",
+        "stand": "Gelistet seit 24.06.2022; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Geizhals-Eintrag deckt mehrere Hardware-Versionen ab"
+      }
     ]
   },
   "offene_faeden": [
@@ -2461,6 +2498,11 @@
     "datum": "2026-10-19",
     "status": "teilweise",
     "anfragen": 48,
-    "notiz": "ToH-Dump + Live-hwdata, OpenWrt-Wiki (inkl. Bootlogs, Serial- und Label-Foto), OpenWrt-Commits 4a8eaa5/45cf200/e38de40/c54ce12/ed7c1a5, DTS und mt7621.mk, PR #4582, Issues #11333/#10440, Forum 143631, Gluon-Targets (main, v2023.1) und PR #2793, FCC 2APRGRT01 (QIG, Label, Innen-/Aussenfotos, RF-Exposure), Cudy-Produktseite (nur X6 2.0), Download-Center X6 1.0, CE-DoC, Werkstatt cudy-installation.md. Seriell: J2 unbestückt (Lötpunkte), 3.3V/GND/RX/TX, 115200. Widersprüche: USB (Commit-Text 1x USB 3.0 vs. Fotos/ToH keiner), Strom 1 A (Commit) vs. 1.5 A (Typenschild), Antennen abnehmbar (ToH) vs. fest (Fotos). Zwei Flash-Chips belegt (W25Q256, EN25QH256A). DeviWiki ohne Seite, WikiDevi hängt."
+    "notiz": "ToH-Dump + Live-hwdata, OpenWrt-Wiki (inkl. Bootlogs, Serial- und Label-Foto), OpenWrt-Commits 4a8eaa5/45cf200/e38de40/c54ce12/ed7c1a5, DTS und mt7621.mk, PR #4582, Issues #11333/#10440, Forum 143631, Gluon-Targets (main, v2023.1) und PR #2793, FCC 2APRGRT01 (QIG, Label, Innen-/Aussenfotos, RF-Exposure), Cudy-Produktseite (nur X6 2.0), Download-Center X6 1.0, CE-DoC, Werkstatt cudy-installation.md. Seriell: J2 unbestückt (Lötpunkte), 3.3V/GND/RX/TX, 115200. Widersprüche: USB (Commit-Text 1x USB 3.0 vs. Fotos/ToH keiner), Strom 1 A (Commit) vs. 1.5 A (Typenschild), Antennen abnehmbar (ToH) vs. fest (Fotos). Zwei Flash-Chips belegt (W25Q256, EN25QH256A). DeviWiki ohne Seite, WikiDevi hängt.",
+    "geizhals": {
+      "datum": "2026-10-20",
+      "zuordnung": "mehrere_versionen",
+      "ergebnis": "heise-Suche \"Cudy X6\" (1 Treffer) + Produktseite a2756708 \"Cudy X6, AX1800\" ohne Versionsangabe, X6 gibt es als v1 und v2 (2.0): nur Link und roh.geizhals, keine normalisierten Werte. Netzteil laut Geizhals 12V/1A/12W (Typenschild v1: 1.5 A), Abmessungen 205x138x38mm. Keine EAN/ASIN. 2 heise-Abrufe."
+    }
   }
 }
