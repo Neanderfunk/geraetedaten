@@ -169,6 +169,12 @@
       "stand": "Stand 15.09.2026 (Abschnitt \"Stand 15.09.2026: vm.min_free_kbytes 2048 bricht ath10k\")",
       "abgerufen": "2026-10-19",
       "bemerkung": "kein Validierungsprotokoll zum Archer C2 v3 in router-werkstatt/docs/validierung/"
+    },
+    "geizhals": {
+      "url": "https://preisvergleich.heise.de/tp-link-archer-c2-ac900-a1866958.html",
+      "stand": "Gelistet seit 10.08.2018; abgerufen 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Geizhals-Artikel 1866958 'TP-Link Archer C2 AC900' ueber preisvergleich.heise.de (Suche 'TP-Link Archer C2': daneben a1084374 'Archer C2 AC750'); Artikel ohne Versionsangabe, Hinweis auf AC750-Revisionen; keine EAN, keine ASIN auf der Seite"
     }
   },
   "roh": {
@@ -664,6 +670,24 @@
       "abschnitt": "Stand 15.09.2026: vm.min_free_kbytes 2048 bricht ath10k",
       "auszug": "Betroffen: nur MemTotal < 64 MB (dort greift der Patch) und ath10k, also die 7 Modelle Archer C2 v3, C25 v1, C58 v1, C60 v1, D50 v1, TL-WR902AC v1, FRITZ!WLAN Repeater 1750E. ... Mechanismus: ath10k füllt die RX-DMA-Ringe im IRQ-Kontext per GFP_ATOMIC nach ... Bei 2048 reicht das unter Last nicht, das Nachfüllen scheitert, der Ring wird korrupt, der Chip hängt.",
       "kopf": "Gluon führt diese Geräte als broken, wegen genau dieses Problems. Wir bauen sie trotzdem (adorfer: drin lassen, maximal entlasten)."
+    },
+    "geizhals": {
+      "Modem": "N/A",
+      "WAN": "1x 1000Base-T",
+      "LAN": "4x 1000Base-T",
+      "Wireless": "WLAN 802.11a/b/g/n/ac (Wi-Fi 5), simultan",
+      "Übertragungsrate": "450Mbps (2.4GHz), 433Mbps (5GHz)",
+      "Sicherheit": "64/128bit WEP, WPA, WPA2, WPS",
+      "Antennen": "3x extern (abnehmbar)",
+      "Anschlüsse": "N/A",
+      "Leistungsaufnahme": "keine Angabe (Verbrauch, Betrieb), keine Angabe (max. Netzteilleistung)",
+      "Abmessungen": "230x144x35mm",
+      "Besonderheiten": "WLAN on/off-Schalter, IPv6, VPN passthrough (IPSec/PPTP/L2TP), Open-/DD-WRT",
+      "Band-Fähigkeit": "Dual Band (simultan)",
+      "Herstellergarantie": "drei Jahre",
+      "Hinweis": "Revisionen mit Übertragungsrate AC750 verfügbar: 300Mbps (2.4GHz), 433Mbps (5GHz). Open-/DD-WRT ist möglicherweise nur für bestimmte Revisionen verfügbar. Bitte weiterführende Links beachten und beim Händler anfragen, welche Revision wirklich zum Verkauf steht!",
+      "Letztes Preisupdate": "-",
+      "Gelistet seit": "10.08.2018, 14:44"
     }
   },
   "felder": {
@@ -2409,6 +2433,16 @@
         "sicherheit": "mittel",
         "bemerkung": "Support-Thread"
       }
+    ],
+    "geizhals_url": [
+      {
+        "wert": "https://geizhals.de/tp-link-archer-c2-ac900-a1866958.html",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/tp-link-archer-c2-ac900-a1866958.html",
+        "stand": "Gelistet seit 10.08.2018; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Geizhals-Eintrag deckt mehrere Hardware-Versionen ab. Artikel 'TP-Link Archer C2 AC900' ohne Versionsangabe; Hinweis der Seite: 'Revisionen mit Übertragungsrate AC750 verfügbar ... beim Händler anfragen, welche Revision wirklich zum Verkauf steht'. Datenblatt (450/433 Mbps, 3 Antennen abnehmbar, 230x144x35 mm) passt zu v3; Archer C2 gibt es als V1, V3, V5"
+      }
     ]
   },
   "offene_faeden": [
@@ -2462,6 +2496,11 @@
     "datum": "2026-10-19",
     "status": "teilweise",
     "anfragen": 54,
-    "notiz": "ToH-Dump (pid 15677753) + Live-hwdata (weicht ab: 9 V/0.85 A statt 12 V/1 A, ath9k/ath10k-ct), keine OpenWrt-Geräteseite, Wiki-Fotos (Seriell JP2 mit R902/R912/R24, EU-Platine 2050500773, Rückseite); OpenWrt-Commits 9c01273e (Support) und 30f48fb1 (Safeloader extra-para), DTS, Image-Makefile, 02_network, Safeloader-SupportList (nur 3.0.0, EU/US); Gluon-Target (broken, tiny, ab v2021.1), Commit 2777188/PR 2145; DeviWiki und WikiDevi-Spiegel; FCC TE7C2V3 (Grant, Label, Handbuch REV3.0.0, MPE-Bericht mit Antennengewinn und 3T3R/1T1R, Innen- und Außenfotos inkl. US-Prüfnetzteil); TP-Link Datenblatt 3.0 und Downloadseite (EU); OpenWrt-Forum 15617 komplett, Stock-Bootlog/-Info aus Pastebin (Flash GD25Q64CSIG, 115200 Baud). Werkstatt: nur ramdruck-64mb.md (Modellliste ath10k + 64 MB), kein Validierungsprotokoll. Netzteil: EU 9 V/0.85 A, US 12 V/1 A. Seriell: innen nach Lötbrücken R902/R912 und Entfernen von R24 (ein Nutzerbericht). Offen: DC-Buchsenmaß/EU-Polarität, Leistungsaufnahme, Gewicht, Wandmontage."
+    "notiz": "ToH-Dump (pid 15677753) + Live-hwdata (weicht ab: 9 V/0.85 A statt 12 V/1 A, ath9k/ath10k-ct), keine OpenWrt-Geräteseite, Wiki-Fotos (Seriell JP2 mit R902/R912/R24, EU-Platine 2050500773, Rückseite); OpenWrt-Commits 9c01273e (Support) und 30f48fb1 (Safeloader extra-para), DTS, Image-Makefile, 02_network, Safeloader-SupportList (nur 3.0.0, EU/US); Gluon-Target (broken, tiny, ab v2021.1), Commit 2777188/PR 2145; DeviWiki und WikiDevi-Spiegel; FCC TE7C2V3 (Grant, Label, Handbuch REV3.0.0, MPE-Bericht mit Antennengewinn und 3T3R/1T1R, Innen- und Außenfotos inkl. US-Prüfnetzteil); TP-Link Datenblatt 3.0 und Downloadseite (EU); OpenWrt-Forum 15617 komplett, Stock-Bootlog/-Info aus Pastebin (Flash GD25Q64CSIG, 115200 Baud). Werkstatt: nur ramdruck-64mb.md (Modellliste ath10k + 64 MB), kein Validierungsprotokoll. Netzteil: EU 9 V/0.85 A, US 12 V/1 A. Seriell: innen nach Lötbrücken R902/R912 und Entfernen von R24 (ein Nutzerbericht). Offen: DC-Buchsenmaß/EU-Polarität, Leistungsaufnahme, Gewicht, Wandmontage.",
+    "geizhals": {
+      "datum": "2026-10-20",
+      "zuordnung": "mehrere_versionen",
+      "ergebnis": "heise-Suche 'TP-Link Archer C2': a1866958 'Archer C2 AC900' und a1084374 'Archer C2 AC750'; Produktseite a1866958 ausgewertet (16 Datenblattzeilen), ohne Versionsangabe und mit Revisions-Hinweis, daher nur Link und roh; keine EAN/ASIN; 2 Abrufe"
+    }
   }
 }

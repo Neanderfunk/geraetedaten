@@ -161,6 +161,12 @@
       "stand": "Beitrag #7 (soc) 2017-05-24, US-Platine; dazu Bootlog-Bild #8",
       "abgerufen": "2026-10-19",
       "bemerkung": "PCB-Foto 1920x1324 und Bootlog https://forum.openwrt.org/uploads/default/original/1X/629e0d89a8bfe2c471aa10eb36e957609e95784d.png als Bild ausgewertet"
+    },
+    "geizhals": {
+      "url": "https://preisvergleich.heise.de/tp-link-archer-c7-verschiedene-revisionen-a923544.html",
+      "stand": "Gelistet seit 27.03.2013; abgerufen 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Artikel 'TP-Link Archer C7 (verschiedene Revisionen)' ohne Hardware-Version; Hinweis der Seite: '1x USB 2.0 und nicht abnehmbare Antennen ab Revision 5'. Eigener Artikel nur fuer C7 V1 (a1272742), keiner fuer V4. Keine EAN/ASIN auf der Seite."
     }
   },
   "roh": {
@@ -676,6 +682,27 @@
     "openwrt_forum_3924_fotos": {
       "pcb_foto": "U1 QCA9563-AL3A PK643G9X 1643 TAIWAN; U11 QCA9880-BR4A FK63773Z 1637 TAIWAN; U12 QCA8337N-AL3C PK646LGD 1646 TAIWAN; U5 ESMT M14D1G1664A -2.5B; Quarze Y1/Y2/Y3; Testpunkte TPGND2, TP_VDD18_DDR2, TP_VDD12_QCA9563; Abschirmblech über dem Funkteil",
       "bootlog": "found gd25q128c, expected m25p80; gd25q128c (16384 Kbytes); 5 cmdlinepart partitions; eth0: Atheros AR8327 switch driver attached; PHY uid=004dd036"
+    },
+    "geizhals": {
+      "WAN": "1x RJ-45 (10/100/1000Base-T)",
+      "LAN": "4x RJ-45 (10/100/1000Base-T)",
+      "Wireless": "Wi-Fi 5 (802.11a/b/g/n/ac/h), simultan",
+      "Übertragungsrate": "450Mbit/s (2.4GHz), 1300Mbit/s (5GHz)",
+      "Pseudoklasse": "AC1750",
+      "Sicherheit": "64/128bit WEP, WPA, WPA2, WPS",
+      "Antennen": "3x extern",
+      "Anschlüsse": "1x USB-A 2.0 (480Mb/s)",
+      "Band-Fähigkeiten": "Dual Band (simultan)",
+      "Mesh": "Mesh (geteiltes Band)",
+      "Farbe": "schwarz",
+      "Abmessungen": "243x161x33mm",
+      "Besonderheiten": "IPv6, TPC/DFS, WLAN on/off-Schalter, VPN passthrough (IPSec/L2TP/PPTP)",
+      "Garantie": "3 Jahre",
+      "802.11n (Wi-Fi 4) 2.4GHz": "450Mbit/s",
+      "802.11ac (Wi-Fi 5) 5GHz": "1300Mbit/s",
+      "Hinweis": "Verschiedene Revisionen verfügbar.\nTPC/DFS nach Firmware-Update\nMesh nach Firmware-Update möglich.\nMesh ist nur für bestimmte Revisionen verfügbar.\n1x USB 2.0 und nicht abnehmbare Antennen ab Revision 5 (ältere Revisionen mit 2x USB 2.0 und abnehmbaren Antennen).",
+      "Hinweis zu alternativer Firmware": "Open-/DD-WRT ist möglicherweise nur für bestimmte Revisionen verfügbar, bitte weiterführende Links beachten!",
+      "Gelistet seit": "27.03.2013, 11:18"
     }
   },
   "felder": {
@@ -2804,6 +2831,16 @@
         "sicherheit": "mittel",
         "bemerkung": "ToH-Forumslink, nicht gelesen"
       }
+    ],
+    "geizhals_url": [
+      {
+        "wert": "https://geizhals.de/tp-link-archer-c7-verschiedene-revisionen-a923544.html",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/tp-link-archer-c7-verschiedene-revisionen-a923544.html",
+        "stand": "Gelistet seit 27.03.2013; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Geizhals-Eintrag deckt mehrere Hardware-Versionen ab"
+      }
     ]
   },
   "offene_faeden": [
@@ -2857,6 +2894,11 @@
     "datum": "2026-10-19",
     "status": "teilweise",
     "anfragen": 46,
-    "notiz": "ToH-Dump + Live-hwdata (2026-03-22), OpenWrt-Wiki (gemeinsame C7-Seite), OpenWrt-Commits ar71xx 9887afb/ath79 12310f0 und Folgecommits, DTS, image.mk, tplink-safeloader, Gluon-Target und -Historie, DeviWiki/WikiDevi v4.x, FCC TE7C7V4 (Grant, Typenschild, Handbuch, Prüfberichte 2.4/5 GHz Teil 1, Innen- und Aussenfotos inkl. Netzteil), TP-Link Datenblatt 4.0 und Downloadseite V4, OpenWrt-Forum 3924 komplett (216 Beiträge) mit PCB-Foto und Bootlog ausgewertet. Keine Werkstatt-Protokolle zum C7 v4. Widersprüche: Commit-Texte nennen QCA9561/QCA9888 (Fotos/Code: QCA9563/QCA9880); DeviWiki 750 MHz vs. 775 MHz; FCC-Handbuch REV4.0.2 beschreibt v2-Hardware (interne 2.4-GHz-Antennen, WPS/Reset kombiniert, WLAN-Schalter); Forum #98 '1 USB' vs. 2 USB überall sonst. Serielle Konsole: 4-poliger Anschluss innen, RX laut Forum erst nach Nachbestücken von SMD-Widerständen nutzbar; Pinbelegung/Baudrate offen. Montage und DC-Steckermaß offen."
+    "notiz": "ToH-Dump + Live-hwdata (2026-03-22), OpenWrt-Wiki (gemeinsame C7-Seite), OpenWrt-Commits ar71xx 9887afb/ath79 12310f0 und Folgecommits, DTS, image.mk, tplink-safeloader, Gluon-Target und -Historie, DeviWiki/WikiDevi v4.x, FCC TE7C7V4 (Grant, Typenschild, Handbuch, Prüfberichte 2.4/5 GHz Teil 1, Innen- und Aussenfotos inkl. Netzteil), TP-Link Datenblatt 4.0 und Downloadseite V4, OpenWrt-Forum 3924 komplett (216 Beiträge) mit PCB-Foto und Bootlog ausgewertet. Keine Werkstatt-Protokolle zum C7 v4. Widersprüche: Commit-Texte nennen QCA9561/QCA9888 (Fotos/Code: QCA9563/QCA9880); DeviWiki 750 MHz vs. 775 MHz; FCC-Handbuch REV4.0.2 beschreibt v2-Hardware (interne 2.4-GHz-Antennen, WPS/Reset kombiniert, WLAN-Schalter); Forum #98 '1 USB' vs. 2 USB überall sonst. Serielle Konsole: 4-poliger Anschluss innen, RX laut Forum erst nach Nachbestücken von SMD-Widerständen nutzbar; Pinbelegung/Baudrate offen. Montage und DC-Steckermaß offen.",
+    "geizhals": {
+      "datum": "2026-10-20",
+      "zuordnung": "mehrere_versionen",
+      "ergebnis": "heise-Suche 'TP-Link Archer C7': a923544 'TP-Link Archer C7 (verschiedene Revisionen)' (gelistet seit 27.03.2013) und a1272742 'Archer C7 V1', kein V4-Artikel; nur Permalink a923544 und roh.geizhals, keine Hardwarewerte; keine EAN/ASIN. 2 heise-Abrufe."
+    }
   }
 }
