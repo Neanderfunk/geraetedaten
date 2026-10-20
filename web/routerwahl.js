@@ -370,7 +370,7 @@
       var rumpf = el('div', 'finder-rumpf');
       rumpf.appendChild(el('h2', null, g.modell));
       if (g.stable === false) rumpf.appendChild(el('p', 'finder-naechste-hinweis',
-        'Freifunk-Firmware gibt es dafür erst mit der nächsten Version. Sie wird gerade getestet.'));
+        'Die Freifunk-Firmware für dieses Gerät kommt erst mit der nächsten Version. Sie wird gerade getestet.'));
       if (g.speicher) {
         var sp = el('p', 'finder-speicher');
         var stufe = { 'reichlich': 'reichlich', 'ausreichend': 'reicht', 'knapp': 'knapp', 'zu wenig': 'sackgasse' }[g.speicher] || 'knapp';
