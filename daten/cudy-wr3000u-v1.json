@@ -207,7 +207,7 @@
       "dts": "/dts-v1/;\n#include \"mt7981b-cudy-wbr3000uax-v1.dtsi\"\n/ { model = \"Cudy WR3000U v1\"; compatible = \"cudy,wr3000u-v1\", \"mediatek,mt7981\"; };\n&spi_nand { mediatek,nmbm; mediatek,bmt-max-ratio = <1>; mediatek,bmt-max-reserved-blocks = <64>; };\n&ubi { reg = <0x5c0000 0xe600000>; };",
       "filogic_mk": "define Device/cudy_wr3000u-v1\n  DEVICE_VENDOR := Cudy\n  DEVICE_MODEL := WR3000U\n  DEVICE_VARIANT := v1\n  DEVICE_DTS := mt7981b-cudy-wr3000u-v1\n  DEVICE_DTS_DIR := ../dts\n  SUPPORTED_DEVICES += R138\n  UBINIZE_OPTS := -E 5\n  BLOCKSIZE := 128k\n  PAGESIZE := 2048\n  IMAGE_SIZE := 235520k\n  KERNEL_IN_UBI := 1\n  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata\n  DEVICE_PACKAGES := kmod-usb3 kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware\nendef",
       "01_leds": "cudy,wr3000u-v1|cudy,wbr3000uax-v1: internet_off = red:fault (an); internet = blue:wan-online (netdev wan link); wan = blue:wan (netdev wan tx rx); lan_off = red:wps (an); lan = blue:lan (netdev br-lan link tx rx)",
-      "11_fix_wifi_mac": "cudy,wr3000u-v1 in der Liste der Cudy-Geraete mit WLAN-MAC-Korrektur"
+      "11_fix_wifi_mac": "cudy,wr3000u-v1 in der Liste der Cudy-Geräte mit WLAN-MAC-Korrektur"
     },
     "openwrt_pr": {
       "titel": "mediatek: add support for Cudy WR3000U v1",
@@ -238,7 +238,7 @@
       "dtsi_usb": "xhci an, usb_phy an, VBUS-Regler 5 V an GPIO 35 (active high)",
       "dtsi_basis": "#include \"mt7981b-cudy-wr3000-nand.dtsi\" (ubi-Partition ab 0x5c0000)",
       "filogic_mk": "SUPPORTED_DEVICES += R120; IMAGE_SIZE := 65536k; DEVICE_PACKAGES := kmod-usb3 kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware",
-      "installation_hinweis": "Since the factory BL is locked and the boot process can not be stopped, you have to use mtkuartboot (gilt fuer WBR3000UAX; beim WR3000U nennt der Commit stattdessen Reset beim Einschalten und TFTP-Fehler -> Konsole)"
+      "installation_hinweis": "Since the factory BL is locked and the boot process can not be stopped, you have to use mtkuartboot (gilt für WBR3000UAX; beim WR3000U nennt der Commit stattdessen Reset beim Einschalten und TFTP-Fehler -> Konsole)"
     },
     "openwrt_pr_wbr3000uax_fotos": {
       "01": {
@@ -247,7 +247,7 @@
       },
       "02": {
         "url": "https://github.com/user-attachments/assets/cb533f80-7614-44d9-bfc1-500b49a8183f",
-        "abgelesen": "Platinenunterseite: SPI-NAND ESMT F50L1G41LB (U6), 128 MB-Bestueckung des WBR3000UAX"
+        "abgelesen": "Platinenunterseite: SPI-NAND ESMT F50L1G41LB (U6), 128 MB-Bestückung des WBR3000UAX"
       },
       "03": {
         "url": "https://github.com/user-attachments/assets/483d6f20-207e-4cf6-9731-9ae40bc868db",
@@ -321,7 +321,7 @@
     },
     "fccid": {
       "grantee": "2APRG (Shenzhen Cudy Technology Co., Ltd.)",
-      "ergebnis": "keine FCC-ID fuer WR3000U"
+      "ergebnis": "keine FCC-ID für WR3000U"
     }
   },
   "felder": {
@@ -1067,7 +1067,7 @@
         "bemerkung": "Lage nicht angegeben"
       },
       {
-        "wert": "innen Loetpunkte: J6, 4 unbestückte Durchkontaktierungen; laut Commit des Schwestergeräts Gehäuse oeffnen und Kühlkörper abschrauben, kein Löten nötig",
+        "wert": "innen Lötpunkte: J6, 4 unbestückte Durchkontaktierungen; laut Commit des Schwestergeräts Gehäuse öffnen und Kühlkörper abschrauben, kein Löten nötig",
         "quelle": "openwrt_pr_wbr3000uax_fotos",
         "beleg": "https://github.com/openwrt/openwrt/pull/21225#issuecomment-3684157229",
         "stand": "Kommentar fildunsky 2025-12-22 21:05 (7 Fotos)",
@@ -1143,7 +1143,7 @@
     ],
     "gehaeuse_oeffnen": [
       {
-        "wert": "Gehäuse oeffnen und Kühlkörper abschrauben, um an die serielle Schnittstelle zu kommen",
+        "wert": "Gehäuse öffnen und Kühlkörper abschrauben, um an die serielle Schnittstelle zu kommen",
         "quelle": "openwrt_commit_wbr3000uax",
         "beleg": "https://github.com/openwrt/openwrt/commit/d7d6faf26f39b59d22c38d09321e0d345fbec950",
         "stand": "Commit d7d6faf26f (Autor Fil Dunsky 2025-12-12, PR 21225 gemergt 2025-12-30)",
@@ -1263,7 +1263,7 @@
     ],
     "installation": [
       {
-        "wert": "Cudy-Zwischenfirmware (Cudy-signiertes OpenWrt) über die Stock-Weboberflaeche, danach offizielles OpenWrt; alternativ UART + TFTP (initramfs, dann sysupgrade)",
+        "wert": "Cudy-Zwischenfirmware (Cudy-signiertes OpenWrt) über die Stock-Weboberfläche, danach offizielles OpenWrt; alternativ UART + TFTP (initramfs, dann sysupgrade)",
         "quelle": "openwrt_commit",
         "beleg": "https://github.com/openwrt/openwrt/commit/b9d7b448c256bb3860c7965ccf599c29c4847cb4",
         "stand": "Commit b9d7b448 vom 2026-08-02 (Autor Dmitry Mostovoy 2026-07-28, Committer Hauke Mehrtens)",
@@ -1330,7 +1330,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/b9d7b448c256bb3860c7965ccf599c29c4847cb4",
         "stand": "Commit b9d7b448 vom 2026-08-02 (Autor Dmitry Mostovoy 2026-07-28, Committer Hauke Mehrtens)",
         "sicherheit": "mittel",
-        "bemerkung": "Beispielpraefix aus einem Exemplar"
+        "bemerkung": "Beispielpräfix aus einem Exemplar"
       }
     ],
     "verfuegbarkeit": [
