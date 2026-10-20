@@ -43,6 +43,10 @@ beim Erzeugen der Selector-Ansicht.
   (Forum, abgeleitet). Unbekannt ist erlaubt: dann das Feld weglassen und
   einen offenen Faden notieren. **Nie raten**, vor allem nicht bei PoE-Spannung,
   Hardware-Version, Flash und RAM.
+- **`widerlegt`** (optional, je Eintrag): Ein Wert, der sich nach Prüfung als falsch
+  herausgestellt hat, wird nicht gelöscht, sondern bekommt `"widerlegt": "<Begründung mit
+  Beleg>"`. Die Anzeige übergeht ihn; wer nachliest, sieht, was einmal behauptet wurde
+  und warum es nicht stimmt.
 - **`offene_faeden`**: jede URL, die noch Daten verspricht, aber nicht
   ausgewertet ist (FCC-Fotos, Anatel, Datenblatt-PDF, Forumsthread).
 

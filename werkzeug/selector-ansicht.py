@@ -84,6 +84,8 @@ def auswahl(eintraege, quellen, fakt=False):
     for e in eintraege if isinstance(eintraege, list) else [eintraege]:
         if not isinstance(e, dict):
             e = {'wert': e}
+        if e.get('widerlegt'):   # nach Pruefung verworfen, bleibt nur zur Nachvollziehbarkeit stehen
+            continue
         t = text(e.get('wert'))
         if not t or schluessel(t).strip('"()- ') in ('unbekannt', 'unknown', 'none', 'null', '', '?',
                                                     'keins', 'keine', 'kein', 'keins ("-")'):
