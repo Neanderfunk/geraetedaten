@@ -1651,7 +1651,7 @@
         "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
         "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Eingangsbereich PoE-in gesamt (802.3af/at oder passiv) laut Produktseite/Broschüre; auch als Gehäuseprägung \"ETH PoE in 10-60V\" am FCC-Gerät 2015 (https://fccid.io/TV7MAPL2ND/Label/Label-Info-2856372); 11-57 V aus Quick Guide/Handbuch liegt darin"
       },
       {
         "wert": "10-60",
@@ -1659,7 +1659,7 @@
         "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP_lite_171010.pdf",
         "stand": "PDF ohne Datum (Dateiname 171010)",
         "sicherheit": "hoch",
-        "bemerkung": "802.3af/at oder passiv"
+        "bemerkung": "802.3af/at oder passiv; Eingangsbereich PoE-in gesamt (802.3af/at oder passiv) laut Produktseite/Broschüre; auch als Gehäuseprägung \"ETH PoE in 10-60V\" am FCC-Gerät 2015 (https://fccid.io/TV7MAPL2ND/Label/Label-Info-2856372); 11-57 V aus Quick Guide/Handbuch liegt darin"
       },
       {
         "wert": "11-57",
@@ -1667,7 +1667,7 @@
         "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP-Lite-qg_190553.pdf",
         "stand": "Document #49227, Modified on 09.MAY.2019",
         "sicherheit": "hoch",
-        "bemerkung": "passiv"
+        "bemerkung": "passiv; Angabe nur für passives PoE (Quick Guide/Handbuch, seit 2015 unverändert); engerer, konservativer Bereich innerhalb der 10-60 V aus Produktseite/Broschüre/Gehäuseprägung; 802.3af-Betrieb (44-57 V) liegt in beiden"
       },
       {
         "wert": "11-57",
@@ -1675,7 +1675,7 @@
         "beleg": "https://manual.mikrotik.com/hardware/map-lite/",
         "stand": "Seite am 2026-10-20",
         "sicherheit": "hoch",
-        "bemerkung": "passiv"
+        "bemerkung": "passiv; Angabe nur für passives PoE (Quick Guide/Handbuch, seit 2015 unverändert); engerer, konservativer Bereich innerhalb der 10-60 V aus Produktseite/Broschüre/Gehäuseprägung; 802.3af-Betrieb (44-57 V) liegt in beiden"
       },
       {
         "wert": "11-57",
@@ -1683,7 +1683,7 @@
         "beleg": "https://fccid.io/TV7MAPL2ND/User-Manual/User-Manual-2856375",
         "stand": "Exhibit 2015-12-24 (Dokument 9-Sep-15)",
         "sicherheit": "hoch",
-        "bemerkung": "passiv"
+        "bemerkung": "passiv; Angabe nur für passives PoE (Quick Guide/Handbuch, seit 2015 unverändert); engerer, konservativer Bereich innerhalb der 10-60 V aus Produktseite/Broschüre/Gehäuseprägung; 802.3af-Betrieb (44-57 V) liegt in beiden"
       },
       {
         "wert": "10-60",
@@ -1691,7 +1691,7 @@
         "beleg": "https://fccid.io/TV7MAPL2ND/Label/Label-Info-2856372",
         "stand": "Exhibit 2015-12-24 (PDF 2015-12-10)",
         "sicherheit": "niedrig",
-        "bemerkung": "Gehäuseprägung im unscharfen Foto"
+        "bemerkung": "Gehäuseprägung im unscharfen Foto; Eingangsbereich PoE-in gesamt (802.3af/at oder passiv) laut Produktseite/Broschüre; auch als Gehäuseprägung \"ETH PoE in 10-60V\" am FCC-Gerät 2015 (https://fccid.io/TV7MAPL2ND/Label/Label-Info-2856372); 11-57 V aus Quick Guide/Handbuch liegt darin"
       },
       {
         "wert": "5-60",
@@ -1699,7 +1699,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "",
+        "widerlegt": "5 V gilt nur für den Micro-USB-Eingang; PoE-in laut Hersteller 10-60 V (https://mikrotik.com/product/RBmAPL-2nD, Broschüre: \"5 V (USB); 10 - 60 V (PoE in)\") bzw. passiv 11-57 V (https://manual.mikrotik.com/hardware/map-lite/); ToH vermischt beide Eingänge"
       }
     ],
     "poe_pinbelegung": [
@@ -2520,6 +2521,16 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Permalink a1421552 aus Feld uebernommen, Produktseite per heise direkt abgerufen (1 Abruf); 9 Datenblattzeilen + Gelistet seit nach roh.geizhals, 10 Felder ergaenzt; keine EAN/ASIN"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "poe_spannung_v: 5-60 (toh) widerlegt, 5 V ist nur Micro-USB; PoE-in laut Hersteller 10-60 V bzw. passiv 11-57 V"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: 10-60 V = PoE-in gesamt (Produktseite, Broschüre, Gehäuseprägung FCC-Foto); 11-57 V = Quick-Guide/Handbuch-Angabe für passives PoE, liegt im 10-60-V-Bereich"
+      ],
+      "offen": []
     }
   }
 }

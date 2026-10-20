@@ -969,7 +969,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/c90487556229ae264dec33305e5c71c4ef7dd1c5",
         "stand": "Commit 2024-04-11 (Autor), gemergt 2024-05-05",
         "sicherheit": "hoch",
-        "bemerkung": "Samsung KLM4G1FEPD, 4 GB eMMC"
+        "bemerkung": "Samsung KLM4G1FEPD, 4 GB eMMC; Nennkapazitaet des eMMC-Chips Samsung KLM4G1FEPD (4 GB); nutzbarer User-Bereich laut Kernel 7634944 Sektoren = 3727 MiB, siehe Eintrag openwrt_wiki"
       },
       {
         "wert": 4096,
@@ -977,7 +977,7 @@
         "beleg": "https://web.archive.org/web/20180131005517/https://www.linksys.com/us/p/P-WHW0301/",
         "stand": "Webarchiv-Snapshot 2018-01-31",
         "sicherheit": "hoch",
-        "bemerkung": "\"4 GB Flash\""
+        "bemerkung": "\"4 GB Flash\"; Nennkapazitaet des eMMC-Chips Samsung KLM4G1FEPD (4 GB); nutzbarer User-Bereich laut Kernel 7634944 Sektoren = 3727 MiB, siehe Eintrag openwrt_wiki"
       },
       {
         "wert": 4096,
@@ -985,7 +985,7 @@
         "beleg": "https://deviwiki.com/wiki/Linksys_Velop_(WHW03)",
         "stand": "Seitenrevision 2019-07-05 02:39",
         "sicherheit": "mittel",
-        "bemerkung": "fla1=4 GiB, Samsung KLM4G1FEPD"
+        "bemerkung": "fla1=4 GiB, Samsung KLM4G1FEPD; Nennkapazitaet des eMMC-Chips Samsung KLM4G1FEPD (4 GB); nutzbarer User-Bereich laut Kernel 7634944 Sektoren = 3727 MiB, siehe Eintrag openwrt_wiki"
       },
       {
         "wert": 3727,
@@ -993,7 +993,7 @@
         "beleg": "https://openwrt.org/toh/linksys/whw03_v1",
         "stand": "Seitenrevision 2026-06-05 08:48",
         "sicherheit": "mittel",
-        "bemerkung": "Bootlog: mmcblk0 4FPD3R 3.64 GiB; OpenWrt nutzt ab Werk nur die 136-MiB-Partition kernel (ca. 80 MiB frei), Rest per Umpartitionieren"
+        "bemerkung": "Bootlog: mmcblk0 4FPD3R 3.64 GiB; OpenWrt nutzt ab Werk nur die 136-MiB-Partition kernel (ca. 80 MiB frei), Rest per Umpartitionieren; gilt fuer den nutzbaren User-Bereich (gdisk: /dev/mmcblk0 7634944 Sektoren x 512 B = 3727 MiB) desselben 4-GB-eMMC (Nennwert 4096), kein anderer Chip"
       },
       {
         "wert": "eMMC",
@@ -1001,7 +1001,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/linksys/linksys_whw03_v1",
         "stand": "Seitenrevision 2026-04-02 18:29",
         "sicherheit": "mittel",
-        "bemerkung": "Feld Flash MB enthält nur \"eMMC\", Kommentar \"4GB eMMC\""
+        "bemerkung": "Feld Flash MB enthält nur \"eMMC\", Kommentar \"4GB eMMC\"",
+        "widerlegt": "kein Groessenwert, sondern der Flash-Typ (steht in flash_typ); der Kommentar derselben Seite \"4GB eMMC\" stuetzt 4096, vgl. https://github.com/openwrt/openwrt/commit/c90487556229ae264dec33305e5c71c4ef7dd1c5 (Samsung KLM4G1FEPD, 4 GB eMMC)"
       }
     ],
     "flash_typ": [
@@ -2081,6 +2082,16 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "Produktseite a1557604 über heise (1 Abruf, Permalink vorhanden): Datenblatt ohne Hardware-Version, SKU WHW0301 gilt auch für V2; nur geizhals_url und roh.geizhals, keine normalisierten Werte. Keine EAN/ASIN auf der Seite."
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: \"eMMC\" (openwrt_hwdata) widerlegt, Typangabe statt Groesse"
+      ],
+      "beide_richtig": [
+        "flash_mb: 4096 = Nennkapazitaet 4-GB-eMMC KLM4G1FEPD, 3727 = nutzbarer User-Bereich in MiB (7634944 Sektoren) desselben Chips"
+      ],
+      "offen": []
     }
   }
 }

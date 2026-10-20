@@ -1501,7 +1501,7 @@
         "beleg": "https://web.archive.org/web/20140327214200/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
         "stand": "Datenblatt PDF 2013-09-26, Webarchiv-Snapshot 2014-03-27",
         "sicherheit": "hoch",
-        "bemerkung": "mehr als 20 V führt laut Hersteller zum Garantieverlust"
+        "bemerkung": "mehr als 20 V führt laut Hersteller zum Garantieverlust; gilt als zulässige Obergrenze laut Hersteller; Nennbereich laut Typenschild 12-18 V"
       },
       {
         "wert": "12-18",
@@ -1509,7 +1509,7 @@
         "beleg": "https://web.archive.org/web/20140228091453/http://www.open-mesh.com/products/om2p-hs.html",
         "stand": "Webarchiv-Snapshot 2014-02-28",
         "sicherheit": "hoch",
-        "bemerkung": "Quick Overview; Beschreibung nennt 12-24 V, Highlights 12-20 V"
+        "bemerkung": "Quick Overview; Beschreibung nennt 12-24 V, Highlights 12-20 V; Nennbereich, deckt sich mit dem Typenschild (DC Input 12~18 V); 12-20 V im Datenblatt ist die zulässige Obergrenze"
       },
       {
         "wert": "18-24",
@@ -1517,7 +1517,8 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/a462412977cc25b79a7a3479527e754d85c23fd7",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-28",
         "sicherheit": "mittel",
-        "bemerkung": "eth1, passiv, Mode B"
+        "bemerkung": "eth1, passiv, Mode B",
+        "widerlegt": "Obergrenze 24 V gilt nicht für v1: Hersteller-Datenblatt 2013 nennt 12-20 V passiv (non-802.3af), über 20 V Garantieverlust (https://web.archive.org/web/20140327214200/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf); Typenschild 12~18 V (https://fccid.io/WT8OM2PHS/Label/Label-and-Location-1811017); Commit-Text wortgleich mit OM2P-HS v2"
       },
       {
         "wert": "18-24",
@@ -1525,7 +1526,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-hs_v1",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "",
+        "widerlegt": "übernimmt die Angabe aus Commit a4624129 (Text wortgleich mit v2); für v1 nennt das Hersteller-Datenblatt 12-20 V passiv, über 20 V Garantieverlust (https://web.archive.org/web/20140327214200/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf)"
       },
       {
         "wert": "18",
@@ -1533,7 +1535,7 @@
         "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-HS",
         "stand": "Seitenrevision 2019-07-05T05:11:55Z",
         "sicherheit": "mittel",
-        "bemerkung": "\"Passive PoE feed with pins +4,5 and -7,8 at 18 VDC\""
+        "bemerkung": "\"Passive PoE feed with pins +4,5 and -7,8 at 18 VDC\"; Einzelwert = Spannung des Open-Mesh-PoE-Injektors/18-V-Netzteils, liegt im Bereich 12-18/12-20 V; kein Widerspruch"
       }
     ],
     "poe_pinbelegung": [
@@ -1615,7 +1617,8 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/a462412977cc25b79a7a3479527e754d85c23fd7",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-28",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "",
+        "widerlegt": "Typenschild v1 (FCC WT8OM2PHS): DC Input 12~18 V, 1~1.25 A (https://fccid.io/WT8OM2PHS/Label/Label-and-Location-1811017); Hersteller-Datenblatt: über 20 V Garantieverlust; Commit-Text wortgleich mit v2"
       },
       {
         "wert": "12-24",
@@ -1623,7 +1626,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-hs_v1",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "",
+        "widerlegt": "übernimmt Commit a4624129; Typenschild v1: DC Input 12~18 V (https://fccid.io/WT8OM2PHS/Label/Label-and-Location-1811017)"
       },
       {
         "wert": "12-18",
@@ -1631,7 +1635,7 @@
         "beleg": "https://fccid.io/WT8OM2PHS/Label/Label-and-Location-1811017",
         "stand": "Exhibit 2012-10-09 (Zeichnung Rev.001, PDF 2012-10-02)",
         "sicherheit": "hoch",
-        "bemerkung": "DC Input 12~18V"
+        "bemerkung": "DC Input 12~18V; Nennbereich laut Typenschild, gilt für v1"
       },
       {
         "wert": "12",
@@ -1639,7 +1643,7 @@
         "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-HS",
         "stand": "Seitenrevision 2019-07-05T05:11:55Z",
         "sicherheit": "mittel",
-        "bemerkung": "pwr_v"
+        "bemerkung": "pwr_v; Einzelwert = Nennspannung des Netzteils; FCC-Testmuster mit DVE DSA-15P-12 (12 V, 1.25 A), siehe https://fccid.io/WT8OM2PHS/External-Photos/External-Photos-1811016 Seite 2; liegt im Bereich 12-18 V"
       }
     ],
     "dc_strom_a": [
@@ -2231,6 +2235,18 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "heise-Suche (1 Treffer) + Produktseite a1480565 (2 Abrufe); Artikel ohne Hardware-Version, nur Link und roh.geizhals übernommen, keine normalisierten Hardwarewerte; keine EAN/ASIN auf der Seite"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "poe_spannung_v: 18-24 (openwrt_git_ath79, toh) widerlegt, v1 laut Datenblatt 12-20 V passiv, Typenschild 12~18 V",
+        "dc_spannung_v: 12-24 (openwrt_git_ath79, toh) widerlegt, Typenschild v1 DC Input 12~18 V"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: 12-18 (Nennbereich Shop/Typenschild) und 12-20 (zulässige Obergrenze Datenblatt); 18 = Injektor-/Netzteilspannung",
+        "dc_spannung_v: 12 = Nennspannung des beiliegenden 12-V-Netzteils (FCC-Aussenfotos), im Bereich 12-18 V"
+      ],
+      "offen": []
     }
   }
 }

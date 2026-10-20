@@ -1023,7 +1023,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_srr60",
         "stand": "Seitenrevision 2026-09-09 22:21",
         "sicherheit": "niedrig",
-        "bemerkung": "Live-Seite widerspricht Dump und allen anderen Quellen (vermutlich Auswahlfeld ohne 4096); als Widerspruch stehen gelassen"
+        "bemerkung": "Live-Seite widerspricht Dump und allen anderen Quellen (vermutlich Auswahlfeld ohne 4096); als Widerspruch stehen gelassen",
+        "widerlegt": "Flash ist 4 GB eMMC (4096 MB): Commit 2cb24b3f \"FLASH: 4GB EMMC\" (https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa), NETGEAR_HW_ID ...+4096+512+... in generic.mk, OEM-Bootlog \"EMMC flash 4096MB\" / mmcblk0 3.53 GiB (https://openwrt.org/toh/netgear/srr60); \"32\" ist ein Fehleintrag im Auswahlfeld der Live-hwdata-Seite"
       },
       {
         "wert": 4096,
@@ -1288,7 +1289,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
         "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
         "sicherheit": "hoch",
-        "bemerkung": "zwei 5-GHz-Radios"
+        "bemerkung": "zwei 5-GHz-Radios; Gilt für die zwei getrennten 5-GHz-Radios: IPQ4019 intern 2x2:2 (Client-WLAN) und QCA9984 4x4:4 (laut ToH Backhaul); Commit 2cb24b3f nennt beide"
       },
       {
         "wert": "4x4 Backhaul + 2x2 Client",
@@ -1296,7 +1297,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_srr60",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "WLAN Comments: MIMO 4x4 for backhaul AC, 2x2 for client"
+        "bemerkung": "WLAN Comments: MIMO 4x4 for backhaul AC, 2x2 for client; Gleiche Aussage wie Commit 2cb24b3f, nur nach Verwendung benannt: 4x4 = QCA9984 (Backhaul), 2x2 = IPQ4019 (Client); kein Zahlenwiderspruch"
       },
       {
         "wert": "2 + 4",
@@ -1304,7 +1305,7 @@
         "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Pro_Router_(SRR60)",
         "stand": "Seitenrevision 2019-07-05 02:37",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "2 = IPQ4019 (2x2:2), 4 = QCA9984 (4x4:4), zwei getrennte 5-GHz-Radios"
       }
     ],
     "wlan_5_baender": [
@@ -2456,6 +2457,16 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Artikel a2041109 (Einzelrouter SRR60-100EUS, Modell ohne Hardware-Versionen), 19 Datenblattzeilen übernommen; keine EAN/ASIN, keine Leistungs-/Gewichtsangaben"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 4096 (4 GB eMMC) gilt; \"32, eMMC\" (openwrt_hwdata live) widerlegt durch Commit 2cb24b3f, NETGEAR_HW_ID und OEM-Bootlog"
+      ],
+      "beide_richtig": [
+        "wlan_5_streams: alle Quellen meinen dasselbe - zwei 5-GHz-Radios, IPQ4019 2x2:2 (Client) + QCA9984 4x4:4 (Backhaul); nur unterschiedlich formuliert"
+      ],
+      "offen": []
     }
   }
 }

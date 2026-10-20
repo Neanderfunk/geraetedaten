@@ -1493,7 +1493,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr600_v1",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "\"12 VDC, 2.0A\""
+        "bemerkung": "\"12 VDC, 2.0A\"; gilt als Nennwert am unteren Ende des zulässigen DC-Eingangsbereichs 12-24 V (OpenWrt-Commit 4b35999, https://github.com/openwrt/openwrt/commit/4b35999588ee6dbe1fd818760b358b1191ddd0be); 12-V-Netzteil passt"
       },
       {
         "wert": 12,
@@ -1501,7 +1501,7 @@
         "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR600",
         "stand": "Seitenrevision 2019-07-05T02:42:31Z",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "gilt als Nennwert am unteren Ende des zulässigen DC-Eingangsbereichs 12-24 V (OpenWrt-Commit 4b35999); 12-V-Netzteil passt"
       },
       {
         "wert": "12-24",
@@ -1509,7 +1509,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/4b35999588ee6dbe1fd818760b358b1191ddd0be",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
         "sicherheit": "mittel",
-        "bemerkung": "\"12-24V 1A DC\""
+        "bemerkung": "\"12-24V 1A DC\"; zulässiger Eingangsbereich der DC-Buchse; 12 V (ToH/DeviWiki) und das 20-V-Herstellernetzteil liegen beide darin"
       },
       {
         "wert": 20,
@@ -1517,7 +1517,7 @@
         "beleg": "https://web.archive.org/web/20141109163527/http://www.open-mesh.com/mr600-dual-band-cloud-access-point.html",
         "stand": "Webarchiv-Snapshot 2014-11-09",
         "sicherheit": "mittel",
-        "bemerkung": "\"compatible with the 20v international power supply\""
+        "bemerkung": "\"compatible with the 20v international power supply\"; Spannung des optionalen Open-Mesh-Netzteils PS20VINT (20 V, 1.2 A, 5.5/2.1 mm), kein Nennwert des Geräts; liegt im Bereich 12-24 V (Commit 4b35999)"
       }
     ],
     "dc_strom_a": [
@@ -2022,6 +2022,14 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "Kein Geizhals-Artikel zum Open-Mesh MR600: heise-Suche 'Open-Mesh MR600' liefert nur MR1750 (a1480594); Suche 'Open-Mesh' listet A40/A42/A60/A62/MR1750/OM2P/OM2P-HS/OM5P-AC/OM5P-AN/S8, kein MR600. 2 heise-Abrufe."
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "dc_spannung_v: 12 V (ToH, DeviWiki) und 20 V (Herstellernetzteil) liegen beide im DC-Eingangsbereich 12-24 V laut OpenWrt-Commit 4b35999; 20 V = Spannung des optionalen Netzteils PS20VINT, 12 V = unteres Ende/Nennwert"
+      ],
+      "offen": []
     }
   }
 }

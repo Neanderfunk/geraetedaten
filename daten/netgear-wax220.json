@@ -1305,7 +1305,8 @@
         "beleg": "https://www.netgear.com/business/wifi/access-points/wax220/",
         "stand": "Live-Seite 2026-10-19 (ohne Datum)",
         "sicherheit": "hoch",
-        "bemerkung": "Widerspruch zu FCC (3 Ketten); Datenblatt schreibt 'Dual band 4x4'; Rechnung 3603 Mbps passt zu 3x3 bei 160 MHz"
+        "bemerkung": "Widerspruch zu FCC (3 Ketten); Datenblatt schreibt 'Dual band 4x4'; Rechnung 3603 Mbps passt zu 3x3 bei 160 MHz",
+        "widerlegt": "FCC-Antennenbericht RFBBQZ-WTW-P22060198-5 S. 3/4: 5 GHz nur Chain 0-2 (Ant 0-2), Nss1-3 bis HE160 = 3x3; Netgear-Rate 3603 Mbps (HE160) ergibt 3 Streams. '4x4' ist Marketingangabe (auch Datenblatt 'Dual band 4x4'). https://fccid.io/PY322200567/Test-Report/Test-report-Antenna-Spec-6196246"
       },
       {
         "wert": "3T3R, sstreams 2",
@@ -1313,7 +1314,7 @@
         "beleg": "https://wikidevi.wi-cat.ru/Netgear_WAX220",
         "stand": "Seitenrevision 2024-09-04T00:07:26Z (Omega)",
         "sicherheit": "mittel",
-        "bemerkung": "WikiDevi-Feld sstreams=2 widerspricht eigener Ratenzeile '3SS'"
+        "bemerkung": "WikiDevi-Feld sstreams=2 widerspricht eigener Ratenzeile '3SS'; Pruefung 2026-10-20: 3T3R stimmt (FCC-Antennenbericht, Chain 0-2), das Feld sstreams=2 ist falsch (FCC: Nss bis 3)"
       }
     ],
     "wlan_klasse": [
@@ -2533,6 +2534,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise a2950245 (WAX220-100), 2 Abrufe; Datenblatt nach roh.geizhals, 17 Felder ergänzt; keine EAN/ASIN, kein Netzteil/Gewicht/Montage auf der Seite"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_5_streams: 3x3 (FCC-Antennenbericht Chain 0-2, Nss bis 3, 3603 Mbps bei HE160); Netgear-Angabe 4x4 widerlegt; WikiDevi 3T3R bestaetigt, sstreams=2 falsch (bemerkung)"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

@@ -1547,7 +1547,7 @@
         "beleg": "https://fccid.io/WT8-OM2PHSV2/Label/Label-pdf-2228181",
         "stand": "Exhibit 2014-03-28 (PDF 2014-03-18)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Typenschild (Hersteller-Nennwerte): passiv 12-24 V an eth1/WAN, 802.3af (48 V nominal) an eth0/LAN; massgeblich"
       },
       {
         "wert": "18-24 (passiv)",
@@ -1555,7 +1555,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/f096accce26bc46831e859ccd40b3f88e404cc7e",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-28",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "passiver Bereich am eth1/WAN laut OpenWrt-Commit; liegt innerhalb der Typenschild-Angabe 12-24 V (untere Grenze 18 V vermutlich Empfehlung wegen Spannungsabfall auf dem Kabel)"
       },
       {
         "wert": "18-24 (passiv)",
@@ -1563,7 +1563,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-hs_v2",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "aus OpenWrt-Commit uebernommen; innerhalb Typenschild 12-24 V passiv"
       },
       {
         "wert": "12-24 (passiv)",
@@ -1571,7 +1571,7 @@
         "beleg": "https://web.archive.org/web/20150316043953/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
         "stand": "PDF 2014-07-15 (Webarchiv-Kopie 2015-03-16)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "passiver Bereich, deckt sich mit Typenschild; 802.3af zusaetzlich am zweiten Port"
       },
       {
         "wert": "12-20 (passiv) laut Highlights, 12-24 laut Beschreibung",
@@ -1579,7 +1579,7 @@
         "beleg": "https://web.archive.org/web/20150227204403/http://www.open-mesh.com/products/access-points/om2p-hs.html",
         "stand": "Webarchiv-Kopie 2015-02-27",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "12-20 V nur im Highlight-Kasten, Fliesstext und Typenschild nennen 12-24 V passiv"
       },
       {
         "wert": "18 (passiv)",
@@ -1587,7 +1587,7 @@
         "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-HSv2",
         "stand": "Seitenrevision 2019-07-05T05:04:45Z",
         "sicherheit": "mittel",
-        "bemerkung": "\"Passive PoE feed ... at 18 VDC\""
+        "bemerkung": "\"Passive PoE feed ... at 18 VDC\"; 18 V = Ausgangsspannung der Open-Mesh-Passiv-Injektoren, kein Bereich; liegt innerhalb 12-24 V"
       },
       {
         "wert": "24 (passiv, EnGenius EPE-24R) und 48 (EnGenius EPE-48GR)",
@@ -1595,7 +1595,7 @@
         "beleg": "https://fccid.io/WT8-OM2PHSV2/Test-Report/Test-Report-pdf-2228184",
         "stand": "RF140210C06, issued 2014-03-07",
         "sicherheit": "hoch",
-        "bemerkung": "im Test verwendete PoE-Injektoren (Support Units)"
+        "bemerkung": "im Test verwendete PoE-Injektoren (Support Units); Spannungen der im FCC-Test verwendeten Injektoren (24 V passiv, 48 V 802.3af), keine Bereichsgrenzen"
       }
     ],
     "poe_pinbelegung": [
@@ -1791,7 +1791,8 @@
         "beleg": "https://fccid.io/WT8-OM2PHSV2/User-Manual/User-Manual-pdf-2228186",
         "stand": "Exhibit 2014-03-28 (PDF 2014-03-14/27)",
         "sicherheit": "niedrig",
-        "bemerkung": "EnGenius-Vorlagentext (nennt sogar \"EOA200\"); widerspricht Fotos und Datenblatt"
+        "bemerkung": "EnGenius-Vorlagentext (nennt sogar \"EOA200\"); widerspricht Fotos und Datenblatt",
+        "widerlegt": "EnGenius-Vorlagentext (nennt EOA200), kein Geraetebezug. FCC-Aussenfotos zeigen Kunststoffgehaeuse mit Lueftungsschlitzen, Gummifuessen, offenen RJ45-/DC-Buchsen ohne Abdichtung und ohne Mastschelle = Innengeraet (https://fccid.io/WT8-OM2PHSV2/External-Photos/External-Photos-pdf-2228178); Datenblatt: aussen nur im separaten Outdoor-Gehaeuse (Zubehoer), Betrieb 0-50 °C (https://web.archive.org/web/20150316043953/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf)"
       }
     ],
     "temperatur_betrieb": [
@@ -2285,6 +2286,16 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "a1480565 (Open Mesh OM2P-HS GRP-OM2P-HS) ohne Versionsangabe: nur Permalink + roh, keine normalisierten Werte; 1 heise-Abruf, kein EAN/ASIN"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "einsatzort: innen (FCC-Aussenfotos, Datenblatt); fcc_handbuch 'innen oder außen, Mastmontage' widerlegt (EnGenius-Vorlagentext)"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: passiv 12-24 V (Typenschild/Datenblatt) an eth1, 802.3af 48 V an eth0; 18-24 (OpenWrt) und 18 (DeviWiki, Injektor) liegen im Bereich, 24/48 = Testinjektoren; 12-20 nur Highlight der Produktseite"
+      ],
+      "offen": []
     }
   }
 }

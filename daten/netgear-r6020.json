@@ -759,7 +759,8 @@
         "beleg": "https://github.com/openwrt/openwrt/pull/1706",
         "stand": "PR 2019-01-01, geschlossen ohne Merge",
         "sicherheit": "niedrig",
-        "bemerkung": "verworfener erster Port (\"identical to the R6120\"); von allen anderen Quellen und den Bootlogs widerlegt"
+        "bemerkung": "verworfener erster Port (\"identical to the R6120\"); von allen anderen Quellen und den Bootlogs widerlegt",
+        "widerlegt": "Verworfener PR-Entwurf (\"identical to the R6120\"); OEM- und OpenWrt-Bootlog zeigen spi-nor mx25l6405d (8192 Kbytes), gemergter Commit und DTS-Partitionen enden bei 0x800000 = 8 MB (https://openwrt.org/toh/netgear/r6020, https://github.com/openwrt/openwrt/commit/edbc8e5512dccc2e0b6925258e34b3f21d66679c)"
       }
     ],
     "flash_typ": [
@@ -963,7 +964,8 @@
         "beleg": "https://deviwiki.com/wiki/Netgear_R6020",
         "stand": "Seitenrevision 2019-07-05T05:06:46Z",
         "sicherheit": "mittel",
-        "bemerkung": "1x1:1; \"5GHz radio may be limited to 1SS in software\""
+        "bemerkung": "1x1:1; \"5GHz radio may be limited to 1SS in software\"",
+        "widerlegt": "Nur Vermutung (\"may be limited to 1SS in software\"); 5-GHz-Chip MT7612E ist 2x2, beide U.FL-Buchsen \"5G ANT0/ANT1\" bestückt, OEM-Bootlog des 5-GHz-Treibers (Phy Mode 49) meldet \"MCS Set = ff ff\" (MCS 0-15 = 2 Streams) und TX0/TX1 (https://openwrt.org/toh/netgear/r6020, https://openwrt.org/_media/media/netgear/r6020/pcb_front_with_shields.jpg)"
       },
       {
         "wert": 1,
@@ -971,7 +973,8 @@
         "beleg": "https://www.downloads.netgear.com/files/GDC/R6020/R6020_UM_EN.pdf",
         "stand": "User Manual 202-11750-05, August 2019 (PDF 2019-08-09)",
         "sicherheit": "niedrig",
-        "bemerkung": "abgeleitet aus \"Up to 433 Mbps at 5 GHz\" (= 1 Stream bei 80 MHz); Hersteller-Firmware, unter OpenWrt nicht belegt"
+        "bemerkung": "abgeleitet aus \"Up to 433 Mbps at 5 GHz\" (= 1 Stream bei 80 MHz); Hersteller-Firmware, unter OpenWrt nicht belegt",
+        "widerlegt": "Aus Marketing-Rate \"433 Mbps\" abgeleitet, nicht aus Ketten; Hardware MT7612E 2x2, OEM-Bootlog des 5-GHz-Treibers zeigt \"MCS Set = ff ff\" und TX0/TX1 power compensation = 2 Ketten; Gluon/OpenWrt nutzt kmod-mt76x2 ohne Begrenzung im DTS (https://openwrt.org/toh/netgear/r6020, https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7628an_netgear_r6xxx.dtsi)"
       },
       {
         "wert": "zwei U.FL-Buchsen \"5G ANT0\" und \"5G ANT1\" bestückt",
@@ -980,6 +983,14 @@
         "stand": "Fotos aufgenommen 2020-05-29 (EXIF)",
         "sicherheit": "niedrig",
         "bemerkung": "Hinweis auf 2 Ketten in Hardware, Streams unter OpenWrt nicht gemessen"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/netgear/r6020",
+        "stand": "Seitenrevision 2026-06-10 10:53",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog, 5-GHz-Treiber rlt_wifi/mt76x2 (Phy Mode = 49): \"AntCfgInit: primary/secondary ant 0/1\", \"MCS Set = ff ff 00 00 01\" (HT-MCS 0-15 = 2 Streams), \"TX0/TX1 power compensation\", vga chain0/chain1; OpenWrt-Bootlog: mt76x2e ASIC revision 76120044 (MT7612E, 2x2). Herstellerangabe 433 Mbps ist die Marketing-Rate der Stock-Firmware (AC750)."
       }
     ],
     "wlan_klasse": [
@@ -1849,6 +1860,15 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "2 heise-Suchen (\"Netgear R6020\", \"R6020-100\") ohne Artikel zur R6020; nur andere Netgear-Router (R6100, R6120, R6220 usw.) bzw. Fremdtreffer. Nichts eingetragen."
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 8 MB (Bootlog mx25l6405d 8192 KB, DTS); 16 aus verworfenem PR 1706 widerlegt",
+        "wlan_5_streams: 2 (MT7612E 2x2, zwei 5G-U.FL bestückt, OEM-Bootlog MCS ff ff + TX0/TX1); 1 von DeviWiki und Handbuch widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

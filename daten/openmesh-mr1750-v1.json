@@ -1434,7 +1434,7 @@
         "beleg": "https://fccid.io/WT8-MR1750/Operational-Description/Operational-Description-pdf-2517974",
         "stand": "Exhibit 2015-01-29",
         "sicherheit": "hoch",
-        "bemerkung": "\"powered by 12Vdc adapter or 48Vdc POE\""
+        "bemerkung": "\"powered by 12Vdc adapter or 48Vdc POE\"; gilt für das FCC-Testnetzteil (Powertron PA1024-120HUB200, 12 V 2,0 A, Typenschild auf dem Netzteil im Außenfoto); liegt im Eingangsbereich 12-24 V laut https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a"
       },
       {
         "wert": 12,
@@ -1442,7 +1442,7 @@
         "beleg": "https://fccid.io/WT8-MR1750/External-Photos/External-Photos-pdf-2517970",
         "stand": "Exhibit 2015-01-29 (4 Seiten)",
         "sicherheit": "hoch",
-        "bemerkung": "Netzteil des Testmusters 12 V"
+        "bemerkung": "Netzteil des Testmusters 12 V; gilt für das FCC-Testnetzteil (Powertron PA1024-120HUB200, 12 V 2,0 A, Typenschild auf dem Netzteil im Außenfoto); liegt im Eingangsbereich 12-24 V laut https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a"
       },
       {
         "wert": 12,
@@ -1450,7 +1450,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr1750_v1",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "12 VDC, 2.0 A"
+        "bemerkung": "12 VDC, 2.0 A; Angabe eines 12-V-Netzteils (wie FCC-Testmuster), kein Widerspruch zum Eingangsbereich 12-24 V laut OpenWrt-Commit"
       },
       {
         "wert": "12-24",
@@ -1458,7 +1458,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/ae7680dc4bf914d640dba32c8f1c36631768a56a",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
         "sicherheit": "hoch",
-        "bemerkung": "\"12-24V 1A DC\""
+        "bemerkung": "\"12-24V 1A DC\"; zulässiger Eingangsbereich der DC-Buchse; 12 V (FCC-Testnetzteil) und 24 V (Hersteller-Zubehörnetzteil) liegen beide darin"
       },
       {
         "wert": 24,
@@ -1466,7 +1466,15 @@
         "beleg": "https://web.archive.org/web/20150811200307/http://www.open-mesh.com:80/products/mr1750-ac-cloud-access-point.html",
         "stand": "Webarchiv 2015-08-11",
         "sicherheit": "hoch",
-        "bemerkung": "Zubehör \"24v Universal Power Supply\"; Widerspruch zu 12 V des FCC-Testmusters, laut Commit beides im zulässigen Bereich"
+        "bemerkung": "Zubehör \"24v Universal Power Supply\"; Widerspruch zu 12 V des FCC-Testmusters, laut Commit beides im zulässigen Bereich; gilt für das als Zubehör verkaufte Hersteller-Netzteil, nicht für die Untergrenze; Gerät nimmt laut OpenWrt-Commit 12-24 V"
+      },
+      {
+        "wert": 24,
+        "quelle": "openmesh_datenblatt",
+        "beleg": "https://web.archive.org/web/20161108233105/https://www.open-mesh.com/skin/frontend/rwd/default/media/MR-2016-03.pdf",
+        "stand": "PDF 2016-03-14 (MR Series Datasheet)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Power supply options: Universal 24v (US, EU, UK, AU)\", \"802.3af PoE recommended\"; gilt für das Hersteller-Zubehörnetzteil, Eingangsbereich laut OpenWrt-Commit 12-24 V"
       }
     ],
     "dc_strom_a": [
@@ -1992,6 +2000,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "Artikel a1480594 \"Open Mesh MR1750\" (GRP-MR1750, gelistet seit 21.07.2016) ohne Hardware-Version, MR1750 gibt es als v1 und v2: nur Permalink und roh.geizhals übernommen, keine normalisierten Werte; keine EAN/ASIN auf der Seite; 2 Abrufe heise"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "dc_spannung_v: Eingangsbereich 12-24 V (OpenWrt-Commit ae7680dc4b); 12 V = FCC-Testnetzteil Powertron PA1024-120HUB200 (Typenschild Netzteil im Außenfoto, Betriebsbeschreibung), auch ToH; 24 V = Hersteller-Zubehörnetzteil (Shop 2015, Datenblatt MR-2016-03); Geräte-Typenschild nennt keine Spannung"
+      ],
+      "offen": []
     }
   }
 }

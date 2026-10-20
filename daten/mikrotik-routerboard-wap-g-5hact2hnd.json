@@ -2027,7 +2027,7 @@
         "beleg": "https://mikrotik.com/product/RBwAPG-5HacT2HnD",
         "stand": "Live-Seite 2026-10-20 (ohne Datum, Status Discontinued)",
         "sicherheit": "hoch",
-        "bemerkung": "PoE in input Voltage"
+        "bemerkung": "PoE in input Voltage; zulaessiger Eingangsbereich am Ethernet-Port (802.3af/at und passiv); beiliegendes Netzteil liefert 24 V"
       },
       {
         "wert": "11-57",
@@ -2035,7 +2035,7 @@
         "beleg": "https://cdn.mikrotik.com/web-assets/product_files/wAP_ac_170414.pdf",
         "stand": "PDF erstellt 2017-04-05",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "zulaessiger Eingangsbereich am Ethernet-Port (802.3af/at und passiv); beiliegendes Netzteil liefert 24 V"
       },
       {
         "wert": "11-57",
@@ -2043,7 +2043,7 @@
         "beleg": "https://cdn.mikrotik.com/web-assets/product_files/RBwAPG-5HacT2HnDqg_190801.pdf",
         "stand": "Document #51168, Modified on 2019-08-01",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "zulaessiger Eingangsbereich am Ethernet-Port (802.3af/at und passiv); beiliegendes Netzteil liefert 24 V"
       },
       {
         "wert": "12-57",
@@ -2051,7 +2051,8 @@
         "beleg": "https://forum.openwrt.org/t/ar71xx-mikrotik-mikrotik-wap-ac-support/4541",
         "stand": "Thread 2017-06-22 bis 2020-05-09 (35 Beitraege, alle gelesen)",
         "sicherheit": "niedrig",
-        "bemerkung": "Kommentar aus MikroTik-GPL in Beitrag #3: \"PoE AT - DC.in (12 - 57)V\""
+        "bemerkung": "Kommentar aus MikroTik-GPL in Beitrag #3: \"PoE AT - DC.in (12 - 57)V\"",
+        "widerlegt": "Untergrenze 12 V stammt aus einem Kommentar im Board-Patch eines Forumsnutzers (Beitrag #3), keine Herstellerangabe; MikroTik nennt 11-57 V: Broschuere https://cdn.mikrotik.com/web-assets/product_files/wAP_ac_170414.pdf (\"Supported input voltage 11 V - 57 V\") und Quick Guide https://cdn.mikrotik.com/web-assets/product_files/RBwAPG-5HacT2HnDqg_190801.pdf (\"802.3af/at PoE 11-57 V DC\")"
       },
       {
         "wert": "24 (beiliegendes Netzteil)",
@@ -2059,7 +2060,7 @@
         "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_wAP_ac_(RBwAPG-5HacT2HnD)",
         "stand": "Seitenrevision 2019-07-05T02:45:15Z",
         "sicherheit": "mittel",
-        "bemerkung": "pwr_v=24"
+        "bemerkung": "pwr_v=24; gilt fuer das beiliegende Netzteil (Quick Guide: \"Switching Power Supply 24 V, 0.2 A\", ueber passiven PoE-Injektor), nicht fuer den Eingangsbereich; liegt innerhalb 11-57 V"
       }
     ],
     "poe_hinweis": [
@@ -3044,6 +3045,16 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Permalinks a1469061 (weiß) und a1469065 (schwarz, -BE) aus felder.geizhals_url direkt über heise abgerufen (2 Abrufe); beide nennen RBwAPG-5HacT2HnD; Datenblätter nach roh.geizhals / roh.geizhals_heise_schwarz, 18 Feldeinträge (davon 2 geizhals_url) ergänzt; keine EAN/ASIN, kein Gewicht, keine Montage/Antennenzahl auf den Seiten"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "poe_spannung_v: 11-57 V gilt (MikroTik Broschuere + Quick Guide); 12-57 (Patch-Kommentar im OpenWrt-Forum) widerlegt"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: 11-57 V = Eingangsbereich, 24 V = beiliegendes Netzteil (Quick Guide)"
+      ],
+      "offen": []
     }
   }
 }

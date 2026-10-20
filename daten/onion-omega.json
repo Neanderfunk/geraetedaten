@@ -1116,7 +1116,7 @@
         "beleg": "https://i.imgur.com/5wN5KKe.png",
         "stand": "Diagramm v1.1 vom 2016-05-04",
         "sicherheit": "hoch",
-        "bemerkung": "Pin VIN 3.3V am Modul"
+        "bemerkung": "Pin VIN 3.3V am Modul; gilt fuer das Modul selbst (Gluon-Image): VIN 3.3 V, z. B. vom Regler eines Docks oder direkt eingespeist (Omega-Hardware.md: 'regulators to provide the Omega with a constant 3.3V')"
       },
       {
         "wert": 3.3,
@@ -1124,7 +1124,7 @@
         "beleg": "https://github.com/OnionIoT/wiki/blob/master/Documentation/Hardware/Omega-Hardware.md",
         "stand": "Repo-Stand 2016-05-12 (letzte Aenderung der Datei)",
         "sicherheit": "hoch",
-        "bemerkung": "Versorgung des Moduls durch Regler auf dem Dock"
+        "bemerkung": "Versorgung des Moduls durch Regler auf dem Dock; gilt fuer das Modul selbst (Gluon-Image): VIN 3.3 V, z. B. vom Regler eines Docks oder direkt eingespeist (Omega-Hardware.md: 'regulators to provide the Omega with a constant 3.3V')"
       },
       {
         "wert": 5,
@@ -1132,7 +1132,7 @@
         "beleg": "https://github.com/OnionIoT/wiki/blob/master/Documentation/Hardware/Omega-Hardware.md",
         "stand": "Repo-Stand 2016-05-12 (letzte Aenderung der Datei)",
         "sicherheit": "hoch",
-        "bemerkung": "Eingang der Docks per Micro-USB, nicht des Moduls"
+        "bemerkung": "Eingang der Docks per Micro-USB, nicht des Moduls; gilt nur fuer die Docks (Micro-USB-Eingang 5 V, Regler auf 3.3 V), nicht fuer das Modul (Omega-Hardware.md: 'The Docks receive 5V through the Micro-USB connector')"
       },
       {
         "wert": 5,
@@ -1140,7 +1140,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/onion/onion_omega?do=export_raw",
         "stand": "Seitenrevision 2026-03-08 19:44",
         "sicherheit": "mittel",
-        "bemerkung": "hwdata 'Power Supply: 5 VDC' (Dump '¿'); gilt fuer die Docks"
+        "bemerkung": "hwdata 'Power Supply: 5 VDC' (Dump '¿'); gilt fuer die Docks; gilt nur fuer die Docks (Micro-USB-Eingang 5 V, Regler auf 3.3 V), nicht fuer das Modul (Omega-Hardware.md: 'The Docks receive 5V through the Micro-USB connector')"
       }
     ],
     "stromaufnahme_ma": [
@@ -1639,6 +1639,14 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "heise-Suche \"Onion Omega\" (1 Abruf): nur 3 unkategorisierte Zubehoer-Angebote (Breadboard OM-D-BB, SparkFun Qwiic Kit, Proto Expansion fuer Omega2), kein Geizhals-Artikel zum Omega1-Modul"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "dc_spannung_v: 3.3 V = Modul-VIN, 5 V = Micro-USB-Eingang der Docks (Regler auf 3.3 V), Beleg OnionIoT/wiki Omega-Hardware.md"
+      ],
+      "offen": []
     }
   }
 }

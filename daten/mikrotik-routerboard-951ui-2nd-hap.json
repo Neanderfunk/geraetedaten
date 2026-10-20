@@ -1697,7 +1697,8 @@
         "beleg": "https://cdn.mikrotik.com/web-assets/product_files/hAP-qg_190540.pdf",
         "stand": "Document #49214 Modified on 08.MAY.2019 (PDF 2019-05-08)",
         "sicherheit": "hoch",
-        "bemerkung": "Quick Guide 2019"
+        "bemerkung": "Quick Guide 2019",
+        "widerlegt": "Quick Guide 2019 (10-30 V) vom Hersteller ersetzt: aktuelle Herstellerangabe 10-28 V (https://mikrotik.com/product/RB951Ui-2nD, https://manual.mikrotik.com/hardware/hap/); fuer den Betrieb gilt der engere aktuelle Bereich, keine Hardware-Version mit abweichendem Bereich benannt"
       },
       {
         "wert": "8-30",
@@ -1705,7 +1706,8 @@
         "beleg": "https://fccid.io/TV7RB951UI-2ND/User-Manual/User-Manual-2781627",
         "stand": "Exhibit 2015-10-14 (Dokument 22-Sep-15, PDF 2015-09-22)",
         "sicherheit": "hoch",
-        "bemerkung": "Handbuch 2015"
+        "bemerkung": "Handbuch 2015",
+        "widerlegt": "Handbuch 2015 (8-30 V) vom Hersteller ersetzt: aktuelle Herstellerangabe 10-28 V (https://mikrotik.com/product/RB951Ui-2nD, https://manual.mikrotik.com/hardware/hap/); schon der Quick Guide 2019 nennt fuer PoE 10-30 V, keine Hardware-Version mit abweichendem Bereich benannt"
       },
       {
         "wert": "6-30",
@@ -1713,7 +1715,8 @@
         "beleg": "https://cdn.mikrotik.com/web-assets/product_files/hAP_170908.pdf",
         "stand": "PDF 2017-09-27",
         "sicherheit": "hoch",
-        "bemerkung": "Broschüre 2017: 'Supported input voltage 6 V - 30 V (Jack or Passive PoE)'"
+        "bemerkung": "Broschüre 2017: 'Supported input voltage 6 V - 30 V (Jack or Passive PoE)'",
+        "widerlegt": "Broschuere 2017 (6-30 V) widerspricht allen anderen Herstellerdokumenten, auch den zeitgleichen (Handbuch 2015 8-30 V, Quick Guide 2019 10-30 V); aktuelle Herstellerangabe 10-28 V (https://mikrotik.com/product/RB951Ui-2nD, https://manual.mikrotik.com/hardware/hap/)"
       }
     ],
     "poe_ausgang": [
@@ -1835,7 +1838,8 @@
         "beleg": "https://cdn.mikrotik.com/web-assets/product_files/hAP-qg_190540.pdf",
         "stand": "Document #49214 Modified on 08.MAY.2019 (PDF 2019-05-08)",
         "sicherheit": "hoch",
-        "bemerkung": "Quick Guide 2019"
+        "bemerkung": "Quick Guide 2019",
+        "widerlegt": "Quick Guide 2019 (8-30 V) vom Hersteller ersetzt: aktuelle Herstellerangabe 10-28 V (https://mikrotik.com/product/RB951Ui-2nD, https://manual.mikrotik.com/hardware/hap/); keine Hardware-Version mit abweichendem Bereich benannt"
       },
       {
         "wert": "8-30",
@@ -1843,7 +1847,8 @@
         "beleg": "https://fccid.io/TV7RB951UI-2ND/User-Manual/User-Manual-2781627",
         "stand": "Exhibit 2015-10-14 (Dokument 22-Sep-15, PDF 2015-09-22)",
         "sicherheit": "hoch",
-        "bemerkung": "Handbuch 2015"
+        "bemerkung": "Handbuch 2015",
+        "widerlegt": "Handbuch 2015 (8-30 V) vom Hersteller ersetzt: aktuelle Herstellerangabe 10-28 V (https://mikrotik.com/product/RB951Ui-2nD, https://manual.mikrotik.com/hardware/hap/); keine Hardware-Version mit abweichendem Bereich benannt"
       },
       {
         "wert": "6-30",
@@ -1851,7 +1856,8 @@
         "beleg": "https://cdn.mikrotik.com/web-assets/product_files/hAP_170908.pdf",
         "stand": "PDF 2017-09-27",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "",
+        "widerlegt": "Broschuere 2017 (6-30 V) widerspricht allen anderen Herstellerdokumenten (Handbuch 2015 und Quick Guide 2019: 8-30 V); aktuelle Herstellerangabe 10-28 V (https://mikrotik.com/product/RB951Ui-2nD, https://manual.mikrotik.com/hardware/hap/)"
       }
     ],
     "netzteil_beiliegend": [
@@ -2540,6 +2546,15 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Produktseite a1411268 über heise (1 Abruf), Datenblatt-Tabelle nach roh.geizhals, 12 Felder ergänzt; keine EAN/ASIN auf der Seite (gtin leer)"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "poe_spannung_v: 10-28 V (Produktseite + Handbuch aktuell, OpenWrt-Commit); 10-30/8-30/6-30 V aus Quick Guide 2019, FCC-Handbuch 2015, Broschuere 2017 widerlegt",
+        "dc_spannung_v: 10-28 V (Produktseite + Handbuch aktuell); 8-30/6-30 V aus Quick Guide 2019, FCC-Handbuch 2015, Broschuere 2017 widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

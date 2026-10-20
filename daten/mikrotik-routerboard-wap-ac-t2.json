@@ -2250,7 +2250,7 @@
         "beleg": "https://mikrotik.com/product/RBwAPG-5HacT2HnD",
         "stand": "Live-Seite 2026-10-20 (ohne Datum, Status Discontinued)",
         "sicherheit": "hoch",
-        "bemerkung": "PoE in input Voltage"
+        "bemerkung": "PoE in input Voltage; gilt: Eingangsbereich am Ethernet-Port, 802.3af/at und passives PoE (geraetespezifischer Quick Guide 2019)"
       },
       {
         "wert": "11-57",
@@ -2258,7 +2258,7 @@
         "beleg": "https://cdn.mikrotik.com/web-assets/product_files/wAP_ac_170414.pdf",
         "stand": "PDF erstellt 2017-04-05",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "gilt: Eingangsbereich am Ethernet-Port, 802.3af/at und passives PoE (geraetespezifischer Quick Guide 2019)"
       },
       {
         "wert": "11-57",
@@ -2266,7 +2266,7 @@
         "beleg": "https://cdn.mikrotik.com/web-assets/product_files/RBwAPG-5HacT2HnDqg_190801.pdf",
         "stand": "Document #51168, Modified on 2019-08-01",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "gilt: Eingangsbereich am Ethernet-Port, 802.3af/at und passives PoE (geraetespezifischer Quick Guide 2019)"
       },
       {
         "wert": "12-57",
@@ -2274,7 +2274,8 @@
         "beleg": "https://forum.openwrt.org/t/ar71xx-mikrotik-mikrotik-wap-ac-support/4541",
         "stand": "Thread 2017-06-22 bis 2020-05-09 (35 Beitraege, alle gelesen)",
         "sicherheit": "niedrig",
-        "bemerkung": "Kommentar aus MikroTik-GPL in Beitrag #3: \"PoE AT - DC.in (12 - 57)V\""
+        "bemerkung": "Kommentar aus MikroTik-GPL in Beitrag #3: \"PoE AT - DC.in (12 - 57)V\"",
+        "widerlegt": "Kommentar im MikroTik-GPL-Quelltext, keine Spezifikation; Hersteller-Quick-Guide 2019 (https://cdn.mikrotik.com/web-assets/product_files/RBwAPG-5HacT2HnDqg_190801.pdf), Broschuere 2017 und Produktseite https://mikrotik.com/product/RBwAPG-5HacT2HnD nennen 11-57 V"
       },
       {
         "wert": "24 (beiliegendes Netzteil)",
@@ -2282,7 +2283,7 @@
         "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_wAP_ac_(RBwAPG-5HacT2HnD)",
         "stand": "Seitenrevision 2019-07-05T02:45:15Z",
         "sicherheit": "mittel",
-        "bemerkung": "pwr_v=24"
+        "bemerkung": "pwr_v=24; kein Eingangsbereich, sondern Spannung des mitgelieferten Netzteils (24 V 0,8 A, laut Broschuere am Gigabit-PoE-Injektor); liegt im Bereich 11-57 V, daher kein Widerspruch"
       },
       {
         "wert": "12-57",
@@ -2290,7 +2291,16 @@
         "beleg": "https://fccid.io/TV7RBWAP5AC2D/User-Manual/User-Manual-3191434",
         "stand": "Exhibit 2016-11-09 (Dokument datiert 30-Apr-15, PDF 2015-04-30)",
         "sicherheit": "mittel",
-        "bemerkung": "generisches wAP-Serien-Handbuch; Produktseite/Broschüre/Quick Guide: 11-57"
+        "bemerkung": "generisches wAP-Serien-Handbuch; Produktseite/Broschüre/Quick Guide: 11-57",
+        "widerlegt": "generisches wAP-Serien-Handbuch von 2015 (Vorlagentext, nennt auch DC-Buchse, die der wAP ac nicht hat); geraetespezifisch nennen Quick Guide 2019 (https://cdn.mikrotik.com/web-assets/product_files/RBwAPG-5HacT2HnDqg_190801.pdf), Broschuere 2017 und Produktseite https://mikrotik.com/product/RBwAPG-5HacT2HnD einheitlich 11-57 V"
+      },
+      {
+        "wert": "24 (beiliegendes Netzteil)",
+        "quelle": "mikrotik_broschuere",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/wAP_ac_170414.pdf",
+        "stand": "PDF erstellt 2017-04-05",
+        "sicherheit": "hoch",
+        "bemerkung": "Lieferumfang: \"24V 0.8A Power adapter\" und \"Gigabit PoE injector\"; Netzteilspannung, nicht Eingangsbereich (der ist 11-57 V)"
       }
     ],
     "poe_hinweis": [
@@ -3415,6 +3425,16 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Permalinks a1469061 (weiß) und a1469065 (schwarz, -BE) aus felder.geizhals_url direkt über heise abgerufen (2 Abrufe); beide nennen RBwAPG-5HacT2HnD; Datenblätter nach roh.geizhals / roh.geizhals_heise_schwarz, 18 Feldeinträge (davon 2 geizhals_url) ergänzt; keine EAN/ASIN auf den Seiten. \"Revisionen\"-Hinweis ist nur der allgemeine Open-/DD-WRT-Hinweis."
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "poe_spannung_v: 11-57 V gilt (Quick Guide 2019, Broschuere, Produktseite); 12-57 aus generischem FCC-Serienhandbuch 2015 und GPL-Code-Kommentar (Forum 4541) widerlegt"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: 24 V (wikidevi) ist die Spannung des beiliegenden Netzteils 24 V 0,8 A, 11-57 V der Eingangsbereich; Broschuere als Beleg ergaenzt"
+      ],
+      "offen": []
     }
   }
 }

@@ -808,7 +808,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_srs60",
         "stand": "Seitenrevision 2026-09-09 22:23",
         "sicherheit": "niedrig",
-        "bemerkung": "Live-Seite \"32, eMMC\" (geaendert gegenueber Dump 4096) - widerspricht Commit, DTS-Partitionierung (~4 GB) und HW_ID; vermutlich Eingabefehler, nicht geprueft"
+        "bemerkung": "Live-Seite \"32, eMMC\" (geaendert gegenueber Dump 4096) - widerspricht Commit, DTS-Partitionierung (~4 GB) und HW_ID; vermutlich Eingabefehler, nicht geprueft",
+        "widerlegt": "Live-hwdata '32' ist Eingabefehler: Partitionstabelle im DTS legt firmware-2 bei 44881K und reserved (102737K) dahinter an, also weit ueber 32 MB (https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4019-srs60.dts); Support-Commit nennt 4GB eMMC (https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa), NETGEAR_HW_ID ...+4096+512... in generic.mk"
       }
     ],
     "flash_typ": [
@@ -968,7 +969,7 @@
         "beleg": "https://web.archive.org/web/20240617045328/https://www.downloads.netgear.com/files/GDC/SRK60/SRK60_UM_EN.pdf",
         "stand": "User Manual 202-11824-08, May 2021 (PDF 2021-05-14)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "zwei getrennte 5-GHz-Radios: 2 Streams Fronthaul (IPQ4019, 866 Mbit/s) und 4 Streams Backhaul (QCA9984, 1733 Mbit/s); inhaltlich gleich wie openwrt_git, keine Summe"
       },
       {
         "wert": "IPQ4019 2x2:2 + QCA9984 4x4:4",
@@ -976,7 +977,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
         "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "zwei getrennte 5-GHz-Radios: IPQ4019 2x2:2 (Fronthaul) und QCA9984 4x4:4 (Backhaul); inhaltlich gleich wie netgear_handbuch"
       }
     ],
     "wlan_5_baender": [
@@ -1993,6 +1994,16 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Suche \"Netgear SRS60\" + Produktseite a1723990 (2 Abrufe): Einzel-Satellit SRS60-100 eindeutig, Modell ohne bekannte Hardware-Versionen; geizhals_url, roh.geizhals (18 Datenblattzeilen) und 12 Felder eingetragen; keine EAN/ASIN auf der Seite; Abmessungen widersprechen Netgear-Datenblatt"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 4096 (4 GB eMMC) gilt; 32 aus Live-hwdata widerlegt (DTS-Partitionen reichen weit ueber 32 MB, Commit 4GB eMMC, HW_ID 4096)"
+      ],
+      "beide_richtig": [
+        "wlan_5_streams: kein Widerspruch, beide Quellen beschreiben zwei 5-GHz-Radios mit 2 (IPQ4019, Fronthaul) und 4 Streams (QCA9984, Backhaul)"
+      ],
+      "offen": []
     }
   }
 }

@@ -901,7 +901,8 @@
         "beleg": "https://fccid.io/WT8OMA42/User-Manual/Users-Manual-4344206",
         "stand": "Exhibit 2019-09-04 (PDF 'A42 User Guide 1.1', erstellt 2017-07-27)",
         "sicherheit": "hoch",
-        "bemerkung": "\"Memory 128MB DRAM\" im User Guide 1.1 (2017); Widerspruch zu Datenblatt und OpenWrt-Commit"
+        "bemerkung": "\"Memory 128MB DRAM\" im User Guide 1.1 (2017); Widerspruch zu Datenblatt und OpenWrt-Commit",
+        "widerlegt": "128 MB stammt aus der Spezifikationstabelle des 'A42 User Guide 1.1' (Vorlagentext, nennt dort auch 1430 Mbps im 5-GHz-Band statt der 867 Mbps eines 2x2-Radios); Herstellerdatenblatt nennt '256MB DRAM' (https://web.archive.org/web/20191114085121/https://www.openmesh.com/resource-downloads/A42_Datasheet.pdf), der OpenWrt-Support-Commit des Open-Mesh-Entwicklers Sven Eckelmann '256 MB of RAM' (https://github.com/openwrt/openwrt/commit/86e18f6706e1f2c881fb6a2b9facf108573416e6); RAM-Aufdruck auf den FCC-Innenfotos nicht lesbar"
       },
       {
         "wert": 128,
@@ -909,7 +910,8 @@
         "beleg": "https://deviwiki.com/wiki/Open_Mesh_A42",
         "stand": "Seitenrevision 2019-07-05T02:41:39Z",
         "sicherheit": "niedrig",
-        "bemerkung": "nach eigener Angabe aus dem FCC-Handbuch übernommen"
+        "bemerkung": "nach eigener Angabe aus dem FCC-Handbuch übernommen",
+        "widerlegt": "nach eigener Angabe aus dem FCC-Handbuch (User Guide 1.1) uebernommen, dessen Tabelle Vorlagenfehler enthaelt; Datenblatt '256MB DRAM' (https://web.archive.org/web/20191114085121/https://www.openmesh.com/resource-downloads/A42_Datasheet.pdf) und OpenWrt-Commit des Herstellerentwicklers '256 MB of RAM' (https://github.com/openwrt/openwrt/commit/86e18f6706e1f2c881fb6a2b9facf108573416e6)"
       }
     ],
     "flash_mb": [
@@ -1577,7 +1579,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/86e18f6706e1f2c881fb6a2b9facf108573416e6",
         "stand": "Commit 2017-11-30 (Autor Sven Eckelmann), gemergt 2018-01-13",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Gilt je Buchse: Ethernet 1 = 802.3af (Spannung nach Norm 44-57 V, Typenschild 48-54 V), Ethernet 2 = passiv 18-24 V Mode B (Typenschild 24 V 1 A, beiliegendes Injektor-Netzteil EnGenius EPA2410GP 24 V 1 A)"
       },
       {
         "wert": "48-54 V ⎓ 0,5 A bzw. 24 V ⎓ 1 A",
@@ -1585,7 +1587,7 @@
         "beleg": "https://fccid.io/WT8OMA42/Label/Product-Label-3489951",
         "stand": "Exhibit 2017-07-31 (PDF 2017-07-12)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Typenschild nennt beide Eingaenge: 48-54 V 0,5 A = 802.3af an Ethernet 1, 24 V 1 A = passives PoE an Ethernet 2 (laut OpenWrt-Commit und Datenblatt 18-24 V)"
       },
       {
         "wert": "passiv 18-24 V",
@@ -1593,7 +1595,7 @@
         "beleg": "https://web.archive.org/web/20191114085121/https://www.openmesh.com/resource-downloads/A42_Datasheet.pdf",
         "stand": "Webarchiv-Aufnahme 2019-11-14 (PDF ohne Datum)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "gilt nur fuer den passiven Eingang (Ethernet 2); zusaetzlich 802.3af an Ethernet 1 (Datenblatt: 'Standard 802.3af or passive 18-24V')"
       }
     ],
     "poe_pinbelegung": [
@@ -2188,6 +2190,16 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Suche 1 Treffer a1838903 (Open Mesh A42 GRP-A42); Datenblatt (13 Zeilen) nach roh.geizhals, 17 Felder ergänzt; keine EAN/ASIN auf der Seite; Leistungsaufnahme keine Angabe; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ram_mb: 256 MB (Datenblatt, OpenWrt-Commit des Herstellerentwicklers); 128 MB aus FCC-User-Guide-Vorlage und davon abgeleitetem DeviWiki widerlegt"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: zwei Eingaenge - Ethernet 1 802.3af (Typenschild 48-54 V), Ethernet 2 passiv 18-24 V (Typenschild 24 V 1 A)"
+      ],
+      "offen": []
     }
   }
 }

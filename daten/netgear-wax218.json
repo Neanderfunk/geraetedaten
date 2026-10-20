@@ -804,7 +804,8 @@
         "beleg": "https://fccid.io/A8J-EWS377APV3/RF-Exposure-Info/RF-Exposure-report-4878756",
         "stand": "A Test Lab Techno 2007FS17 Rev.01, Issue 2020-08-17",
         "sicherheit": "niedrig",
-        "bemerkung": "\"DDR4 RAM is 1 GB\" gilt für EnGenius EWS377AP v3 unter derselben FCC-ID; für WAX218 nicht belegt, widerspricht ToH"
+        "bemerkung": "\"DDR4 RAM is 1 GB\" gilt für EnGenius EWS377AP v3 unter derselben FCC-ID; für WAX218 nicht belegt, widerspricht ToH",
+        "widerlegt": "1 GB laut RF-Exposure-Bericht gilt fuer EnGenius EWS377AP v3/ECW230 v3 (FCC-Family-Brief nennt nur diese Modelle; RAM-Groesse ist nicht zulassungsrelevant, BOM kann abweichen). Fuer WAX218 meldet der OpenWrt-Portierungscommit 366 MB fuer das OS verfuegbar; bei IPQ8072 mit ~120-140 MB reservierten Bereichen (NSS/TZ/Q6) passt das nur zu 512 MB, bei 1 GB waeren es ~850 MB. Beleg: https://github.com/openwrt/openwrt/commit/7801161c4bb2413817b3dfd01695050e2da27bf3, https://fccid.io/A8J-EWS377APV3/Letter/Family-Model-Letter-4878750"
       }
     ],
     "ram_typ": [
@@ -2170,6 +2171,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Suche \"Netgear WAX218\" (1 Treffer) + Produktseite a2457408 (2 Abrufe); 15 Datenblattzeilen nach roh.geizhals, 13 Felder ergänzt; keine EAN/ASIN auf der Seite"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ram_mb: 512 gilt; 1024 (FCC RF-Exposure, EWS377AP v3) widerlegt - OpenWrt-Commit 366 MB fuer OS verfuegbar passt nur zu 512 MB"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

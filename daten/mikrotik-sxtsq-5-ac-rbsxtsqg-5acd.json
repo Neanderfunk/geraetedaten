@@ -1882,7 +1882,8 @@
         "beleg": "https://cdn.mikrotik.com/web-assets/product_files/SXTsqplus5plusac_171235.pdf",
         "stand": "PDF 2017-11-23",
         "sicherheit": "hoch",
-        "bemerkung": "\"10 V - 30 V, passive PoE\" (Brochure 2017, Widerspruch zu Produktseite/Anleitung)"
+        "bemerkung": "\"10 V - 30 V, passive PoE\" (Brochure 2017, Widerspruch zu Produktseite/Anleitung)",
+        "widerlegt": "Brochure 2017 übernimmt offenbar den Wert der SXTsq-Lite-Modelle; MikroTik Quick Guide 2019 trennt ausdrücklich \"SXTsq Lite2/Lite5 accepts 10-30 V\" vs. \"SXTsq 5 ac accepts 10-28 V\" (https://cdn.mikrotik.com/web-assets/product_files/SXTsq_series_qg_HA_190900.pdf), ebenso Produktseite (https://mikrotik.com/product/sxtsq_5_ac) und Handbuch 2025; Bestückungsdruck \"POE in …0-28V\" schon auf der Platine der FCC-Innenfotos 2017 (https://fccid.io/TV7LHG5ACD/Internal-Photos/Internal-photos-3620773, Foto angesehen)"
       },
       {
         "wert": "10-28",
@@ -1914,7 +1915,7 @@
         "beleg": "https://fccid.io/TV7LHG5ACD/Internal-Photos/Internal-photos-3620773",
         "stand": "MiCOM Labs MIKO60, Issue Date 2017-09-25",
         "sicherheit": "mittel",
-        "bemerkung": "Bestückungsdruck neben der Buchse, erste Ziffer verdeckt"
+        "bemerkung": "Bestückungsdruck neben der Buchse, erste Ziffer verdeckt; Ausschnitt 2026-10-20 erneut angesehen: \"POE in\" / \"…0-28V\" neben der Ethernet-Buchse, stützt 10-28 V"
       }
     ],
     "poe_ausgang": [
@@ -2659,6 +2660,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Produktseite a2110984 (vorhandener Permalink) über heise abgerufen, Datenblatt nach roh.geizhals, 13 Felder ergänzt; kein EAN/ASIN, keine Angaben zu Netzteil, Gewicht, Antennenzahl, Montage"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "poe_spannung_v: 10-28 V gilt; 10-30 V (Brochure 2017) widerlegt durch Quick Guide 2019 (Lite 10-30 V, 5 ac 10-28 V), Produktseite, Handbuch und Platinendruck in den FCC-Innenfotos 2017"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

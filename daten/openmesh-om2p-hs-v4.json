@@ -1390,7 +1390,7 @@
         "beleg": "https://fccid.io/WT8-OM2PHSV4/Label/Label-Sample-Label-location-pdf-3198720",
         "stand": "Exhibit 2016-11-28 (Zeichnung Senao 6710A3663170, 2016-10-26)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "massgeblich (Typenschild): passiv 18-24 V an eth0/WAN, 802.3af 48 V an eth1/LAN"
       },
       {
         "wert": "24 (passiv)",
@@ -1398,7 +1398,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/5b37b52e69884c6c843738cc45ed8a1deba0eba3",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-28",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "Nennwert des Passiv-PoE-Netzteils; liegt in der Spanne 18-24 V laut Typenschild"
       },
       {
         "wert": "12-24 (passiv)",
@@ -1406,7 +1406,8 @@
         "beleg": "https://fccid.io/WT8-OM2PHSV4/User-Manual/Users-Manual-rev-pdf-3198726",
         "stand": "Exhibit 2016-11-28 (PDF erstellt 2016-11-11, \"Version 1.0\")",
         "sicherheit": "hoch",
-        "bemerkung": "Widerspruch zum Typenschild (18-24 V)"
+        "bemerkung": "Widerspruch zum Typenschild (18-24 V)",
+        "widerlegt": "Typenschild genau dieses Modells (FCC-Label-Zeichnung OM2P-HSv4) nennt 'PoE Input: 18-24V Passive PoE'; 12-24 V gilt dort nur fuer den DC-Eingang ('Input: 12-24Vdc 1-1.2A'), das Handbuch hat die DC-Spanne auf Passiv-PoE uebertragen; https://fccid.io/WT8-OM2PHSV4/Label/Label-Sample-Label-location-pdf-3198720"
       },
       {
         "wert": "24 (passiv)",
@@ -1414,7 +1415,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-hs_v4",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "Nennwert des Passiv-PoE-Netzteils; liegt in der Spanne 18-24 V laut Typenschild"
       },
       {
         "wert": "24-48",
@@ -1422,7 +1423,7 @@
         "beleg": "https://fccid.io/WT8-OM2PHSV4/Test-Report/Test-Report-rev-3-pdf-3198724",
         "stand": "Bureau Veritas RF160826C07, 2016-10-18",
         "sicherheit": "hoch",
-        "bemerkung": "Power Supply Rating \"24~48Vdc from POE\"; getestet mit EnGenius EPE-1212 an 24-V-Netzteil und EPE-4818G an 48 V"
+        "bemerkung": "Power Supply Rating \"24~48Vdc from POE\"; getestet mit EnGenius EPE-1212 an 24-V-Netzteil und EPE-4818G an 48 V; Zusammenfassung beider PoE-Arten der Pruefung, keine durchgehende Spanne: 24 V passiv (EPE-1212) und 48 V 802.3af (EPE-4818G)"
       }
     ],
     "poe_pinbelegung": [
@@ -2049,6 +2050,16 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "Einziger Treffer a1480565 \"Open Mesh OM2P-HS\" (GRP-OM2P-HS) ohne Versionsangabe, gelistet seit 21.07.2016 (vor der v4-FCC-Zulassung 11/2016); nur Link + roh, keine normalisierten Werte, keine EAN/ASIN"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "poe_spannung_v: Passiv 18-24 V laut Typenschild; Handbuch-Wert 12-24 V widerlegt (DC-Spanne uebertragen)"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: 24 V (Commit/ToH) = Nennwert innerhalb 18-24 V; 24-48 V (Testbericht) = 24 V passiv und 48 V 802.3af zusammengefasst"
+      ],
+      "offen": []
     }
   }
 }

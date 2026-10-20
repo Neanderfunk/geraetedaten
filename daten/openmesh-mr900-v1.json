@@ -1830,7 +1830,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v1",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "'12 VDC, 2.0A'"
+        "bemerkung": "'12 VDC, 2.0A'; gilt für das 12-V-Netzteil (12 V, 2 A) aus dem FCC-Lieferumfang 2013; der DC-Eingang verträgt laut OpenWrt-Commit e06c9eec 12-24 V, 20 V (Open-Mesh-Zubehörnetzteil) ist daher ebenfalls richtig"
       },
       {
         "wert": 12,
@@ -1838,7 +1838,7 @@
         "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v1",
         "stand": "Seitenrevision 2019-07-05T02:51:16Z",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "gilt für das 12-V-Netzteil aus dem FCC-Lieferumfang 2013; Eingangsbereich laut OpenWrt-Commit e06c9eec 12-24 V"
       },
       {
         "wert": 12,
@@ -1846,7 +1846,7 @@
         "beleg": "https://fccid.io/WT8-MR900/Test-Report/Test-Report-DTS-pdf-2074131",
         "stand": "Bureau Veritas RF130628C31A, Exhibit 2013-09-17 (PDF 2013-09-12, 98 Seiten)",
         "sicherheit": "hoch",
-        "bemerkung": "Prüfnetzteil 12 Vdc"
+        "bemerkung": "Prüfnetzteil 12 Vdc; Prüfnetzteil Powertron PA1024-2HU (12 V, 2 A) der Zulassung 2013, keine Eingangsgrenze; Typenschild (https://fccid.io/WT8-MR900/Label/Label-pdf-2074127) nennt keine Spannung"
       },
       {
         "wert": "12-24",
@@ -1854,7 +1854,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/e06c9eec5dc8a3721df768ab952712cf015d4e6f",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
         "sicherheit": "mittel",
-        "bemerkung": "'12-24V 1A DC'"
+        "bemerkung": "'12-24V 1A DC'; zulässiger DC-Eingangsbereich; deckt 12-V-Netzteil (FCC 2013) und 20-V-Zubehörnetzteil (Open-Mesh 2014) ab"
       },
       {
         "wert": 20,
@@ -1862,7 +1862,7 @@
         "beleg": "https://web.archive.org/web/20141109132826/http://www.open-mesh.com:80/products/mr900-dual-band-cloud-access-point.html",
         "stand": "Webarchiv-Snapshot 2014-11-09",
         "sicherheit": "mittel",
-        "bemerkung": "kompatibel mit dem 20-V-Netzteil (Zubehör)"
+        "bemerkung": "kompatibel mit dem 20-V-Netzteil (Zubehör); gilt für das optionale Open-Mesh-Netzteil PS20VINT (20 V, 1.2 A, 5.5/2.1 mm, für alle OM- und MR-Modelle, https://web.archive.org/web/20150214235113/http://www.open-mesh.com/products/power-and-poe/international-ps.html); liegt im Eingangsbereich 12-24 V laut OpenWrt-Commit e06c9eec"
       }
     ],
     "dc_strom_a": [
@@ -2461,6 +2461,14 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "kein Geizhals-Artikel zum MR900: heise-Suchen 'Open-Mesh MR900' (nur MR1750), 'MR900' (nur Fremdprodukte) und 'Open Mesh' (alle 10 Open-Mesh-Artikel: A40, A42, A60, A62, MR1750, OM2P, OM2P-HS, OM5P-AC, OM5P-AN, S8-L) ohne MR900; 3 Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "dc_spannung_v: 12 V (FCC-Prüfnetzteil/Lieferumfang 2013) und 20 V (Open-Mesh-Zubehörnetzteil PS20VINT 2014) liegen beide im DC-Eingangsbereich 12-24 V laut OpenWrt-Commit e06c9eec"
+      ],
+      "offen": []
     }
   }
 }

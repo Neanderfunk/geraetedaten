@@ -1640,7 +1640,7 @@
         "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
         "stand": "Live-Seite 2026-10-19 (ohne Datum)",
         "sicherheit": "hoch",
-        "bemerkung": "PoE in input Voltage"
+        "bemerkung": "PoE in input Voltage; Eingangsbereich laut Datenblatt fuer PoE-in gesamt (802.3af/at oder passiv), Grenzwerte; gilt neben 11-57 V"
       },
       {
         "wert": "10-60",
@@ -1648,7 +1648,7 @@
         "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP_lite_171010.pdf",
         "stand": "PDF 2017-10-16",
         "sicherheit": "hoch",
-        "bemerkung": "802.3af/at oder passiv"
+        "bemerkung": "802.3af/at oder passiv; Eingangsbereich laut Datenblatt fuer PoE-in gesamt (802.3af/at oder passiv), Grenzwerte; gilt neben 11-57 V"
       },
       {
         "wert": "10-60",
@@ -1656,7 +1656,7 @@
         "beleg": "https://fccid.io/TV7MAPL2ND/Label/Label-Info-2856372",
         "stand": "Exhibit 2015-12-24 (PDF 2015-12-10)",
         "sicherheit": "hoch",
-        "bemerkung": "Gehäuseaufdruck 'ETH PoE in 10-60V' (unscharf)"
+        "bemerkung": "Gehäuseaufdruck 'ETH PoE in 10-60V' (unscharf); Eingangsbereich laut Datenblatt fuer PoE-in gesamt (802.3af/at oder passiv), Grenzwerte; gilt neben 11-57 V"
       },
       {
         "wert": "11-57",
@@ -1664,7 +1664,7 @@
         "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP-Lite-qg_190553.pdf",
         "stand": "Dokument #49227, geaendert 2019-05-09",
         "sicherheit": "hoch",
-        "bemerkung": "passives PoE"
+        "bemerkung": "passives PoE; Handbuch/Quick Guide nennt fuer passives PoE 11-57 V DC (engerer, vom Hersteller fuer passive Einspeisung genannter Bereich); 802.3af separat; Datenblatt nennt 10-60 V als Gesamtbereich"
       },
       {
         "wert": "11-57",
@@ -1672,7 +1672,7 @@
         "beleg": "https://fccid.io/TV7MAPL2ND/User-Manual/User-Manual-2856375",
         "stand": "Exhibit 2015-12-24 (PDF 2015-09-09)",
         "sicherheit": "hoch",
-        "bemerkung": "passives PoE"
+        "bemerkung": "passives PoE; Handbuch/Quick Guide nennt fuer passives PoE 11-57 V DC (engerer, vom Hersteller fuer passive Einspeisung genannter Bereich); 802.3af separat; Datenblatt nennt 10-60 V als Gesamtbereich"
       },
       {
         "wert": "11-57",
@@ -1680,7 +1680,7 @@
         "beleg": "https://manual.mikrotik.com/hardware/map-lite/",
         "stand": "Live-Seite 2026-10-19 (Manual 7.26)",
         "sicherheit": "hoch",
-        "bemerkung": "passives PoE"
+        "bemerkung": "passives PoE; Handbuch/Quick Guide nennt fuer passives PoE 11-57 V DC (engerer, vom Hersteller fuer passive Einspeisung genannter Bereich); 802.3af separat; Datenblatt nennt 10-60 V als Gesamtbereich"
       },
       {
         "wert": "5-60",
@@ -1688,7 +1688,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
         "stand": "Dump 2026-10-18",
         "sicherheit": "niedrig",
-        "bemerkung": "ToH-Feld Power Supply; Untergrenze 5 V in keiner Herstellerquelle"
+        "bemerkung": "ToH-Feld Power Supply; Untergrenze 5 V in keiner Herstellerquelle",
+        "widerlegt": "Untergrenze 5 V stammt vom Micro-USB-Eingang (5 V), nicht vom PoE-Eingang; MikroTik nennt fuer PoE-in 10-60 V (https://cdn.mikrotik.com/web-assets/product_files/mAP_lite_171010.pdf, https://mikrotik.com/product/RBmAPL-2nD) bzw. passiv 11-57 V (https://manual.mikrotik.com/hardware/map-lite/)"
       }
     ],
     "poe_pinbelegung": [
@@ -2496,6 +2497,16 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Suche \"MikroTik RBmAPL-2nD\" -> einziger Treffer a1421552, Produktseite abgerufen (2 Abrufe); Datenblatt nach roh.geizhals, 12 Felder ergänzt; keine EAN/ASIN auf der Seite, Netzteil/Gewicht nicht angegeben"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "poe_spannung_v: 5-60 (toh) widerlegt, 5 V ist der USB-Eingang; Hersteller nennt PoE-in 10-60 V bzw. passiv 11-57 V"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: 10-60 V = Datenblatt-Gesamtbereich PoE-in (802.3af/at oder passiv, auch FCC-Typenschild); 11-57 V = Handbuch/Quick Guide fuer passives PoE"
+      ],
+      "offen": []
     }
   }
 }

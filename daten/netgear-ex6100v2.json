@@ -1133,7 +1133,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_ex6100_v2",
         "stand": "Seitenrevision 2025-11-09 07:13",
         "sicherheit": "niedrig",
-        "bemerkung": "nur pauschaler WLAN-Kommentar \"2x2:2 MIMO\" (gleich wie EX6150v2-Eintrag), widerspricht FCC"
+        "bemerkung": "nur pauschaler WLAN-Kommentar \"2x2:2 MIMO\" (gleich wie EX6150v2-Eintrag), widerspricht FCC",
+        "widerlegt": "2x2:2 ist der pauschale WLAN-Kommentar, identisch mit dem EX6150v2-Eintrag (AC1200). FCC-Testbericht NII RF160719C19-1 fuehrt fuer 5 GHz in allen Modi (11a/n/ac, VHT20/40/80) nur 1TX, max. 433.3 Mbps (https://fccid.io/PY316100333/Test-Report/Test-Report-NII-rev-2-3116888); AC750 = 300 Mbps (2.4 GHz 2x2) + 433 Mbps (5 GHz 1x1); OpenWrt-Commit 970f1914 nennt 5 GHz 1x1 (EX6100) gegenueber 2x2 (EX6150) (https://github.com/openwrt/openwrt/commit/970f1914be3f299fb302ca74a214589397000858)"
       }
     ],
     "wlan_klasse": [
@@ -2115,6 +2116,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "a1082555 (EX6100-100PES), ohne Versionsangabe, gelistet seit 2014 (v1-Zeit); nur Link und roh, keine normalisierten Werte; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_5_streams: 1 gilt; openwrt_hwdata (2, pauschaler 2x2:2-Kommentar wie EX6150v2) widerlegt durch FCC-NII-Testbericht (5 GHz nur 1TX, 433 Mbps), AC750-Klasse und OpenWrt-Commit 970f1914"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

@@ -150,6 +150,18 @@
       "stand": "Gelistet seit 02.05.2018; abgerufen 2026-10-20",
       "abgerufen": "2026-10-20",
       "datei": "cache/mikrotik-hap-ac2/geizhals/produkt_a1812710.html"
+    },
+    "fcc_innenfotos_2020": {
+      "url": "https://fccid.io/TV7RBD52-5ACD2ND/Internal-Photos/Internal-Photos-4494490",
+      "stand": "Class II Permissive Change, Grant 2020-02-19 (PDF erstellt 2019-10-23)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "2 Fotos 1065x799, als Bild ausgewertet: Typenschild innen \"ID: RBD52G-5HacD2HnD\", SN .../907/r2; RAM-Chip Nanya (Typaufdruck bei dieser Aufloesung unlesbar); Platinenaufdruck weiter \"10-28V PoE in ETH1\" und \"10-28V DC\"; Cache cache/mikrotik-hap-ac2/pruefung/"
+    },
+    "fcc_aussenfotos_2020": {
+      "url": "https://fccid.io/TV7RBD52-5ACD2ND/External-Photos/External-Photos-4494489",
+      "stand": "Class II Permissive Change, Grant 2020-02-19",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "6 Fotos, als Bild ausgewertet: Tischgeraet/Wandhalterungsschlitze, kein Wetterschutz; Rueckseite Gehaeuseaufdruck \"DC 12-28V\" (r2-Muster)"
     }
   },
   "roh": {
@@ -1161,7 +1173,8 @@
         "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_hAP_ac_2_(RBD52G-5HacD2HnD-TC)",
         "stand": "Seitenrevision 2021-04-26T10:45:13Z (Omega)",
         "sicherheit": "niedrig",
-        "bemerkung": "Infobox ram1=256 (frühe Geräte/FCC-Muster); Notiz: neuere Geräte 128 MiB"
+        "bemerkung": "Infobox ram1=256 (frühe Geräte/FCC-Muster); Notiz: neuere Geräte 128 MiB",
+        "widerlegt": "Infobox-Wert vom FCC-Muster/fruehen Geraeten (WikiDevi-Notiz selbst: neuere Geraete 128 MiB); fuer dieses Image 128 MB laut OpenWrt-DTS (https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4018-hap-ac2.dts) und Hersteller (https://mikrotik.com/product/hap_ac2)"
       },
       {
         "wert": 256,
@@ -1169,7 +1182,8 @@
         "beleg": "https://fccid.io/TV7RBD52-5ACD2ND/Internal-Photos/Internal-photo-3714211",
         "stand": "MiCOM Labs MIKO65, Issue Date 2017-12-11 (Exhibit 2018-07-14)",
         "sicherheit": "hoch",
-        "bemerkung": "FCC-Muster 2017: Nanya NT5CC128M16IP-DI (2 Gbit); Seriengeräte laut Hersteller 128 MB"
+        "bemerkung": "FCC-Muster 2017: Nanya NT5CC128M16IP-DI (2 Gbit); Seriengeräte laut Hersteller 128 MB",
+        "widerlegt": "Gilt nur fuer das FCC-Muster 2017 (Nanya NT5CC128M16IP-DI, 2 Gbit); fuer dieses Image 128 MB: OpenWrt-DTS memory reg 0x08000000 = 128 MiB (https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4018-hap-ac2.dts), Hersteller 128 MB (https://mikrotik.com/product/hap_ac2), Serien-Boot-Log im OpenWrt-Wiki 'Memory size: 128 MiB'; Seriengeraete r2 siehe https://fccid.io/TV7RBD52-5ACD2ND/Internal-Photos/Internal-Photos-4494490"
       }
     ],
     "ram_chip": [
@@ -1976,7 +1990,8 @@
         "beleg": "https://fccid.io/TV7RBD52-5ACD2ND/User-Manual/Users-Manual-3714227",
         "stand": "Document #37042, modified on 12/04/17 (PDF 2017-12-21, Exhibit 2018-07-14)",
         "sicherheit": "hoch",
-        "bemerkung": "Handbuch Stand 12/2017 (FCC-Muster)"
+        "bemerkung": "Handbuch Stand 12/2017 (FCC-Muster)",
+        "widerlegt": "Handbuch-Stand 12/2017 (FCC-Muster); Hersteller nennt seit Quick Guide 01/2019 durchgehend 18-28 V passiv (https://cdn.mikrotik.com/web-assets/product_files/hAPac2-qg-v_190103.pdf, https://mikrotik.com/product/hap_ac2, Brochure 2022)"
       },
       {
         "wert": "10-28",
@@ -1984,7 +1999,8 @@
         "beleg": "https://fccid.io/TV7RBD52-5ACD2ND/Internal-Photos/Internal-photo-3714211",
         "stand": "MiCOM Labs MIKO65, Issue Date 2017-12-11 (Exhibit 2018-07-14)",
         "sicherheit": "mittel",
-        "bemerkung": "Platinenaufdruck \"10-28V PoE in ETH1\""
+        "bemerkung": "Platinenaufdruck \"10-28V PoE in ETH1\"",
+        "widerlegt": "Platinenaufdruck, keine Herstellerangabe fuer den Betrieb (steht unveraendert auch auf r2-Platine 2020, https://fccid.io/TV7RBD52-5ACD2ND/Internal-Photos/Internal-Photos-4494490); Hersteller gibt 18-28 V passiv an (https://mikrotik.com/product/hap_ac2, Quick Guide 2019)"
       },
       {
         "wert": "18-28",
@@ -2056,7 +2072,7 @@
         "beleg": "https://mikrotik.com/product/hap_ac2",
         "stand": "Live-Seite 2026-10-19 (ohne Datum)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Aktuelle Herstellerangabe (seit Quick Guide 01/2019); das Gehaeuse traegt auch auf r2-Geraeten (FCC 2020) den Aufdruck \"DC 12-28V\", im Zweifel 12-28 V einhalten"
       },
       {
         "wert": "12-30",
@@ -2064,7 +2080,7 @@
         "beleg": "https://cdn.mikrotik.com/web-assets/product_files/hAPac2-qg-v_190103.pdf",
         "stand": "Document #46743, modified on 01/17/19 (PDF 2019-01-17)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Aktuelle Herstellerangabe (seit Quick Guide 01/2019); das Gehaeuse traegt auch auf r2-Geraeten (FCC 2020) den Aufdruck \"DC 12-28V\", im Zweifel 12-28 V einhalten"
       },
       {
         "wert": "12-30",
@@ -2072,7 +2088,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbd52g-5hacd2hnd-tc_hap_ac2",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "Aktuelle Herstellerangabe (seit Quick Guide 01/2019); das Gehaeuse traegt auch auf r2-Geraeten (FCC 2020) den Aufdruck \"DC 12-28V\", im Zweifel 12-28 V einhalten"
       },
       {
         "wert": "12-28",
@@ -2080,7 +2096,7 @@
         "beleg": "https://fccid.io/TV7RBD52-5ACD2ND/User-Manual/Users-Manual-3714227",
         "stand": "Document #37042, modified on 12/04/17 (PDF 2017-12-21, Exhibit 2018-07-14)",
         "sicherheit": "hoch",
-        "bemerkung": "Stand 12/2017"
+        "bemerkung": "Stand 12/2017; Gehaeuseaufdruck bzw. Handbuch 2017; Aufdruck unveraendert auf r2 (FCC 2020); Datenblatt heute 12-30 V - beide Herstellerangaben, 12-28 V ist der fuer alle Geraete sichere Bereich"
       },
       {
         "wert": "12-28",
@@ -2088,7 +2104,7 @@
         "beleg": "https://fccid.io/TV7RBD52-5ACD2ND/External-Photos/External-photo-3714203",
         "stand": "MiCOM Labs MIKO65, Issue Date 2017-12-11 (Exhibit 2018-07-14)",
         "sicherheit": "hoch",
-        "bemerkung": "Gehäuseaufdruck \"DC 12-28V\" am FCC-Muster"
+        "bemerkung": "Gehäuseaufdruck \"DC 12-28V\" am FCC-Muster; Gehaeuseaufdruck bzw. Handbuch 2017; Aufdruck unveraendert auf r2 (FCC 2020); Datenblatt heute 12-30 V - beide Herstellerangaben, 12-28 V ist der fuer alle Geraete sichere Bereich"
       },
       {
         "wert": "10-28",
@@ -2096,7 +2112,8 @@
         "beleg": "https://fccid.io/TV7RBD52-5ACD2ND/Internal-Photos/Internal-photo-3714211",
         "stand": "MiCOM Labs MIKO65, Issue Date 2017-12-11 (Exhibit 2018-07-14)",
         "sicherheit": "mittel",
-        "bemerkung": "Platinenaufdruck \"10-28V DC\""
+        "bemerkung": "Platinenaufdruck \"10-28V DC\"",
+        "widerlegt": "Platinenaufdruck, keine Herstellerangabe fuer den Betrieb (Gehaeuse: \"DC 12-28V\", https://fccid.io/TV7RBD52-5ACD2ND/External-Photos/External-Photos-4494489; Datenblatt 12-30 V, https://mikrotik.com/product/hap_ac2); Untergrenze laut Hersteller 12 V"
       },
       {
         "wert": 24,
@@ -2104,7 +2121,15 @@
         "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_hAP_ac_2_(RBD52G-5HacD2HnD-TC)",
         "stand": "Seitenrevision 2021-04-26T10:45:13Z (Omega)",
         "sicherheit": "niedrig",
-        "bemerkung": "pwr_v=24 (Netzteil)"
+        "bemerkung": "pwr_v=24: Nennspannung des mitgelieferten Netzteils (24 V 0.8 A laut https://mikrotik.com/product/hap_ac2), kein Eingangsbereich; liegt innerhalb 12-28/12-30 V"
+      },
+      {
+        "wert": "12-28",
+        "quelle": "fcc_aussenfotos_2020",
+        "beleg": "https://fccid.io/TV7RBD52-5ACD2ND/External-Photos/External-Photos-4494489",
+        "stand": "Class II Permissive Change, Grant 2020-02-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Gehaeuseaufdruck \"DC 12-28V\" auf der Rueckseite des r2-Musters (Rueckansicht, als Bild ausgewertet)"
       }
     ],
     "netzteil_beiliegend": [
@@ -2806,7 +2831,7 @@
     {
       "url": "https://fccid.io/TV7RBD52-5ACD2ND/Internal-Photos/Internal-Photos-4494490",
       "kategorie": "ram_mb",
-      "grund": "Innenfotos der Änderungszulassung 2020 (280 KB) nicht abgerufen (fccid.io-Grenze 5 Abrufe); könnten die 128-MB-Revision (RAM-Chip) zeigen"
+      "grund": "2026-10-20 ausgewertet: Typenschild innen SN .../907/r2 (stuetzt r2-Kennzeichnung), RAM-Chip Nanya, Typaufdruck bei 1065x799 unlesbar; Kapazitaet der r2 per Foto weiter offen (Image nutzt laut DTS ohnehin 128 MiB)"
     },
     {
       "url": "https://fccid.io/TV7RBD52-5ACD2ND/Test-Report/Test-report-3712415",
@@ -2853,6 +2878,19 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Permalink a1812710 vorhanden, Produktseite direkt abgerufen (1 Abruf): 20 Datenblattzeilen, keine EAN/ASIN; Abweichungen zur Archivkopie 2019: 2.4 GHz jetzt 300 statt 400 Mbit/s"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ram_mb: 128 gilt (DTS 128 MiB, Hersteller, Serien-Boot-Log); 256 von FCC-Muster 2017/WikiDevi widerlegt",
+        "poe_spannung_v: 18-28 V passiv gilt (Hersteller seit 2019); 12-28 (Handbuch 2017) und 10-28 (Platinenaufdruck) widerlegt",
+        "dc_spannung_v: 10-28 (Platinenaufdruck) widerlegt"
+      ],
+      "beide_richtig": [
+        "dc_spannung_v: 12-30 = aktuelles Datenblatt, 12-28 = Gehaeuseaufdruck (auch r2 2020) und Handbuch 2017; sicher 12-28 V",
+        "dc_spannung_v: 24 (WikiDevi) = Nennspannung des mitgelieferten Netzteils, kein Eingangsbereich"
+      ],
+      "offen": []
     }
   }
 }

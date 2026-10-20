@@ -1545,7 +1545,7 @@
         "beleg": "https://mikrotik.com/product/RB750Gr3",
         "stand": "Produktseite am 2026-10-19",
         "sicherheit": "hoch",
-        "bemerkung": "DC jack input Voltage"
+        "bemerkung": "DC jack input Voltage; gilt als zulässiger Eingangsspannungsbereich der DC-Buchse"
       },
       {
         "wert": "8-30",
@@ -1553,7 +1553,7 @@
         "beleg": "https://cdn.mikrotik.com/web-assets/product_files/RBhEX_191018.pdf",
         "stand": "Dokument #49563, geändert 01.10.2019",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "gilt als zulässiger Eingangsspannungsbereich der DC-Buchse"
       },
       {
         "wert": "24",
@@ -1561,7 +1561,7 @@
         "beleg": "https://deviwiki.com/wiki/MikroTik_RouterBOARD_hEX_v3_(RB750Gr3)",
         "stand": "Seitenrevision 2019-07-07T03:58:09Z",
         "sicherheit": "mittel",
-        "bemerkung": "pwr_v=24 (Netzteilwert)"
+        "bemerkung": "pwr_v=24 (Netzteilwert); gilt als Nennspannung des beiliegenden Netzteils (24 V/0.38 A laut Herstellerhandbuch RBhEX_191018.pdf), liegt im Bereich 8-30 V; kein Widerspruch"
       },
       {
         "wert": "24",
@@ -1569,7 +1569,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rb750gr3",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "Dump '24 VDC, 0.8 A' (Netzteilangabe, Strom weicht vom Hersteller ab)"
+        "bemerkung": "Dump '24 VDC, 0.8 A' (Netzteilangabe, Strom weicht vom Hersteller ab); gilt als Nennspannung des beiliegenden Netzteils (24 V/0.38 A laut Herstellerhandbuch RBhEX_191018.pdf), liegt im Bereich 8-30 V; kein Widerspruch"
       }
     ],
     "dc_strom_a": [
@@ -2342,6 +2342,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Produktseite a1679274 (RB750Gr3) per heise abgerufen, 1 Abruf; Datenblatt nach roh.geizhals, 6 Felder ergänzt, keine EAN/ASIN"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "dc_spannung_v: 8-30 V = Eingangsbereich DC-Buchse (Hersteller), 24 V = beiliegendes Netzteil (Handbuch), beides richtig"
+      ],
+      "offen": []
     }
   }
 }

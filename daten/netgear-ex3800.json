@@ -1268,7 +1268,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_ex3800",
         "stand": "Seitenrevision 2026-05-01 15:36",
         "sicherheit": "mittel",
-        "bemerkung": "WLAN Comments: 5Ghz 1x1:1 MIMO"
+        "bemerkung": "WLAN Comments: 5Ghz 1x1:1 MIMO",
+        "widerlegt": "1x1 widerlegt: FCC-Testbericht RF141117E18H-1 (S. 47) misst im 5-GHz-Band in allen Modi bis VHT80 zwei Sendeketten (Chain 0 und Chain 1, nahezu gleiche Leistung), Hersteller erklärt 2TX/2RX; Innenfotos zeigen MT7612EN (2x2) mit zwei Antennenanschlüssen ANT0/ANT1 (beide Antennen laut Bericht 2.4+5 GHz). AC750 (433 Mbit/s) ist die Netgear-Werkskonfiguration, keine Kettenzahl. https://fccid.io/PY315300318/Test-Report/Test-Report-NII-2837493 ; https://fccid.io/PY315300318/Internal-Photos/Internal-Photos-2813660"
       },
       {
         "wert": 1,
@@ -1276,7 +1277,8 @@
         "beleg": "https://deviwiki.com/wiki/Netgear_EX3800",
         "stand": "Seitenrevision 2019-07-05T05:00:43Z",
         "sicherheit": "mittel",
-        "bemerkung": "1 TX / 1 RX / 1 Stream"
+        "bemerkung": "1 TX / 1 RX / 1 Stream",
+        "widerlegt": "wi2_txchains=1/rxchains=1 widerlegt: FCC-Testbericht RF141117E18H-1 (S. 47) misst bei 5 GHz Chain 0 und Chain 1, Hersteller erklärt 2TX/2RX; MT7612EN auf den FCC-Innenfotos ist ein 2x2-Chip. https://fccid.io/PY315300318/Test-Report/Test-Report-NII-2837493"
       },
       {
         "wert": 2,
@@ -1284,7 +1286,7 @@
         "beleg": "https://fccid.io/PY315300318/Test-Report/Test-Report-NII-2837493",
         "stand": "Bericht RF141117E18H-1, PDF 2015-12-08",
         "sicherheit": "hoch",
-        "bemerkung": "Herstellerangabe im FCC-Bericht: 5 GHz 2TX 2RX, VHT bis Nss=2, 802.11ac bis 866.7 Mbps - Widerspruch zu ToH/DeviWiki und zur Verkaufsbezeichnung AC750 (300 + 433 Mbps entspräche 1x1); Hardware evtl. 2x2, Stock-Firmware auf 1 Stream begrenzt - offen"
+        "bemerkung": "Herstellerangabe im FCC-Bericht: 5 GHz 2TX 2RX, VHT bis Nss=2, 802.11ac bis 866.7 Mbps; Messung S. 47 mit Chain 0 und Chain 1 in allen 5-GHz-Modi. Verkaufsbezeichnung AC750 (433 Mbit/s bei 5 GHz) = Werkskonfiguration der Netgear-Firmware; gleiche Basisplatine läuft als EX6130 mit AC1200 (OpenWrt-Commit 0cbd2c7). Ob mt76 unter OpenWrt/Gluon beide Ketten nutzt, hängt vom EEPROM ab - am Gerät per iw phy nicht geprüft"
       },
       {
         "wert": 1,
@@ -1292,7 +1294,8 @@
         "beleg": "https://preisvergleich.heise.de/netgear-wi-fi-range-extender-ex3800-ex3800-100pes-a1258121.html",
         "stand": "Gelistet seit 17.04.2015; abgerufen 2026-10-20",
         "sicherheit": "mittel",
-        "bemerkung": "abgeleitet: 433 Mbit/s bei 5 GHz = 1 Stream 802.11ac VHT80"
+        "bemerkung": "abgeleitet: 433 Mbit/s bei 5 GHz = 1 Stream 802.11ac VHT80",
+        "widerlegt": "aus 433 Mbit/s (AC750) abgeleitet = Werkskonfiguration von Netgear, nicht Zahl der Ketten; FCC-Testbericht RF141117E18H-1 (S. 47) misst bei 5 GHz zwei Sendeketten. https://fccid.io/PY315300318/Test-Report/Test-Report-NII-2837493"
       }
     ],
     "wlan_klasse": [
@@ -2247,6 +2250,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise a1258121 (EX3800-100PES), nur eine Hardware-Version bekannt; Datenblatt nach roh.geizhals, Felder ergaenzt; keine EAN (gtin leer), keine Leistungsangabe; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_5_streams: 2 (FCC-Messung zweier 5-GHz-Ketten, MT7612EN mit ANT0/ANT1); 1x1-Angaben aus ToH/DeviWiki/Geizhals widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

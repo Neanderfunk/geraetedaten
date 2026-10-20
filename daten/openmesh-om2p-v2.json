@@ -1468,7 +1468,8 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/ff9e48e75c191e0d7e08a14791853559d509ca2e",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "",
+        "widerlegt": "Untergrenze 18 V für v2 nicht belegt: Typenschild OM2P v2 'PoE Input: 12~24V Passive PoE' (https://fccid.io/WT8-OM2PV2/Label/Label-and-Location-pdf-2199250), Gehäuseaufdruck '12-24V POE' auf den FCC-Außenfotos (https://fccid.io/WT8-OM2PV2/External-Photos/External-Photos-pdf-2199249), FCC-Test mit 12 V und 24 V über PoE (https://fccid.io/WT8-OM2PV2/Test-Report/Test-Report-pdf-2199254); Commit-Text gleichlautend über mehrere Open-Mesh-Geräte, nicht modellspezifisch"
       },
       {
         "wert": "12-24",
@@ -1476,7 +1477,7 @@
         "beleg": "https://fccid.io/WT8-OM2PV2/Label/Label-and-Location-pdf-2199250",
         "stand": "Exhibit 2014-02-24 (PDF 2013-11-01, Titel \"OM2P v2_Body Label_v1\")",
         "sicherheit": "hoch",
-        "bemerkung": "Typenschild"
+        "bemerkung": "Typenschild 'PoE Input: 12~24V Passive PoE', passiv (nicht 802.3af); Gehäuseaufdruck '12-24V POE' über der RJ45-Buchse (FCC-Außenfotos S. 2)"
       },
       {
         "wert": "12-24",
@@ -1484,7 +1485,7 @@
         "beleg": "https://web.archive.org/web/20150316043953/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
         "stand": "PDF 2014-07-15 (Webarchiv-Kopie 2015-03-16)",
         "sicherheit": "mittel",
-        "bemerkung": "mehr als 24 V oder PoE-Switch: Garantie erlischt, nicht 48 V"
+        "bemerkung": "mehr als 24 V oder PoE-Switch: Garantie erlischt, nicht 48 V; passiv (non-802.3af), deckt sich mit Typenschild"
       },
       {
         "wert": "18-24",
@@ -1492,7 +1493,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p_v2",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "",
+        "widerlegt": "übernimmt 18-24 V aus dem OpenWrt-Commit ff9e48e7; Typenschild OM2P v2 nennt 12~24 V passiv (https://fccid.io/WT8-OM2PV2/Label/Label-and-Location-pdf-2199250), Gehäuseaufdruck '12-24V POE' (https://fccid.io/WT8-OM2PV2/External-Photos/External-Photos-pdf-2199249)"
       },
       {
         "wert": "12 oder 24",
@@ -1500,7 +1502,7 @@
         "beleg": "https://fccid.io/WT8-OM2PV2/Test-Report/Test-Report-pdf-2199254",
         "stand": "RF131212C11, issued 2014-01-03",
         "sicherheit": "hoch",
-        "bemerkung": "getestet mit EnGenius EPE-1212 (12-24 V) an 12-V- bzw. 24-V-Netzteil"
+        "bemerkung": "getestet mit EnGenius EPE-1212 (12-24 V) an 12-V- bzw. 24-V-Netzteil; Prüfspannungen (Power Supply '12Vdc or 24Vdc (POE)'), kein Bereich; beide liegen im Typenschild-Bereich 12-24 V passiv"
       },
       {
         "wert": "12-18",
@@ -1508,7 +1510,8 @@
         "beleg": "https://openwrt.org/toh/openmesh/om2p",
         "stand": "Seitenrevision 2025-11-03 06:33",
         "sicherheit": "niedrig",
-        "bemerkung": "Seitenkopf \"passive 12-18v (NON 802.3af)\", beschreibt v1"
+        "bemerkung": "Seitenkopf \"passive 12-18v (NON 802.3af)\", beschreibt v1",
+        "widerlegt": "Seitenkopf beschreibt OM2P v1; für v2 nennen Typenschild 'PoE Input: 12~24V Passive PoE' (https://fccid.io/WT8-OM2PV2/Label/Label-and-Location-pdf-2199250) und Gehäuseaufdruck '12-24V POE' (https://fccid.io/WT8-OM2PV2/External-Photos/External-Photos-pdf-2199249) die Obergrenze 24 V"
       }
     ],
     "poe_pinbelegung": [
@@ -1644,7 +1647,7 @@
         "beleg": "https://web.archive.org/web/20150316043953/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
         "stand": "PDF 2014-07-15 (Webarchiv-Kopie 2015-03-16)",
         "sicherheit": "mittel",
-        "bemerkung": "empfohlene Gehäuse: Outdoor, Wall Plug"
+        "bemerkung": "empfohlene Gehäuse: Outdoor, Wall Plug; Gerät selbst ist Innengerät (FCC-Außenfotos), außen nur im separaten Outdoor-Gehäuse"
       },
       {
         "wert": "außen, Mastmontage",
@@ -1652,7 +1655,8 @@
         "beleg": "https://fccid.io/WT8-OM2PV2/User-Manual/User-Manual-rev-pdf-2199256",
         "stand": "Exhibit 2014-02-24 (PDF 2014-02-24, Titel \"OM2P v2_UM_for FCC & CE & IC apply_v2\")",
         "sicherheit": "niedrig",
-        "bemerkung": "EnGenius-Vorlagentext, widerspricht Gehäuse"
+        "bemerkung": "EnGenius-Vorlagentext, widerspricht Gehäuse",
+        "widerlegt": "FCC-Außenfotos zeigen ein weißes Kunststoff-Tischgehäuse mit Gummifüßen, Lüftungsschlitzen, offenen RJ45-/DC-Buchsen und zwei Schlüssellöchern, ohne Wetterschutz, Kabelabdichtung oder Mastschelle (https://fccid.io/WT8-OM2PV2/External-Photos/External-Photos-pdf-2199249); Handbuch ist EnGenius-Vorlagentext (ENH-Serie); Außeneinsatz nur im optionalen Open-Mesh-Outdoor-Gehäuse (Datenblatt)"
       }
     ],
     "temperatur_betrieb": [
@@ -2212,6 +2216,17 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "heise a1480590 \"Open Mesh OM2P (GRP-OM2P)\" ohne Versionsangabe: Permalink und roh.geizhals übernommen, keine Hardwarewerte; keine EAN/ASIN; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "poe_spannung_v: 12-24 V passiv laut Typenschild, Gehäuseaufdruck und FCC-Test; 18-24 (openwrt_git_ath79, toh) und 12-18 (openwrt_wiki, v1) widerlegt",
+        "einsatzort: innen (FCC-Außenfotos: Tischgehäuse ohne Wetterschutz); außen/Mastmontage (fcc_handbuch, EnGenius-Vorlage) widerlegt"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: fcc_testbericht 12 oder 24 V = Prüfspannungen innerhalb 12-24 V"
+      ],
+      "offen": []
     }
   }
 }

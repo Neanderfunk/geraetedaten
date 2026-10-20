@@ -865,7 +865,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_wax202",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "Bestückter RAM: ein Nanya NT5CC256M16ER-EK (DDR3L 4 Gbit = 512 MiB), Chip laut PR 9690 und WikiDevi; Stock-Kernel mappt 0x1c000000@0 + 0x04000000@0x20000000 = 512 MiB (https://github.com/openwrt/openwrt/pull/9690)"
       },
       {
         "wert": 512,
@@ -873,7 +873,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/0f068e7c4a83bcbf20c4e52a5f8a3f1fe2af2246",
         "stand": "Commit 2022-07-02 (Autor), gemergt 2022-07-19",
         "sicherheit": "hoch",
-        "bemerkung": "NT5CC256M16ER-EK"
+        "bemerkung": "NT5CC256M16ER-EK; Bestückter RAM: ein Nanya NT5CC256M16ER-EK (DDR3L 4 Gbit = 512 MiB), Chip laut PR 9690 und WikiDevi; Stock-Kernel mappt 0x1c000000@0 + 0x04000000@0x20000000 = 512 MiB (https://github.com/openwrt/openwrt/pull/9690)"
       },
       {
         "wert": 512,
@@ -881,7 +881,7 @@
         "beleg": "https://wikidevi.wi-cat.ru/Netgear_WAX202",
         "stand": "Seitenrevision 2024-05-17T20:40:53Z",
         "sicherheit": "mittel",
-        "bemerkung": "Nanya NT5CC256M16ER-EK"
+        "bemerkung": "Nanya NT5CC256M16ER-EK; Bestückter RAM: ein Nanya NT5CC256M16ER-EK (DDR3L 4 Gbit = 512 MiB), Chip laut PR 9690 und WikiDevi; Stock-Kernel mappt 0x1c000000@0 + 0x04000000@0x20000000 = 512 MiB (https://github.com/openwrt/openwrt/pull/9690)"
       },
       {
         "wert": 448,
@@ -889,7 +889,7 @@
         "beleg": "https://github.com/openwrt/openwrt/pull/9690",
         "stand": "PR eröffnet 2022-04-09, gemergt 2022-07-19",
         "sicherheit": "mittel",
-        "bemerkung": "Stock-U-Boot meldet \"DRAM: 448 MiB\" (MT7621 adressiert ohne Highmem-Trick 448 MiB); OpenWrt nutzt laut Wiki-Bootlog zusätzlich 0x20000000-0x23ffffff (Memory 458752K gesamt)"
+        "bemerkung": "Stock-U-Boot meldet \"DRAM: 448 MiB\" (MT7621 adressiert ohne Highmem-Trick 448 MiB); OpenWrt nutzt laut Wiki-Bootlog zusätzlich 0x20000000-0x23ffffff (Memory 458752K gesamt); gilt als nutzbarer RAM, nicht als Bestückung: MT7621-Adressfenster lässt unten nur 448 MiB zu, Stock-U-Boot meldet 448 MiB, OpenWrt-Kernel nutzt laut Wiki-Bootlog 25.12.4 458752K = 448 MiB (https://openwrt.org/toh/netgear/wax202); bestückt sind 512 MiB"
       }
     ],
     "ram_typ": [
@@ -2297,6 +2297,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Artikel a2582973 (Netgear Essentials WAX202, AX1800, WAX202-100), gelistet seit 2021-08-16; Datenblatt nach roh.geizhals, 13 Felder ergänzt; keine EAN/ASIN (gtin leer); 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "ram_mb: 512 = bestückter Chip NT5CC256M16ER-EK (4 Gbit), 448 = vom Stock-U-Boot gemeldeter und unter OpenWrt nutzbarer RAM (MT7621-Adressfenster); keine Angabe widerlegt"
+      ],
+      "offen": []
     }
   }
 }

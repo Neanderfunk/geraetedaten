@@ -128,6 +128,12 @@
       "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/open-mesh*",
       "stand": "Abfrage 2026-10-20: leer (auch geizhals.de/openmesh*, geizhals.at/open-mesh*)",
       "abgerufen": "2026-10-20"
+    },
+    "openmesh_produktseite_2014": {
+      "url": "https://web.archive.org/web/20141015234220/http://www.open-mesh.com:80/products/access-points/om2p-lc.html?options=cart",
+      "stand": "Archiv 2014-10-15",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Kurzbeschreibung und Highlights: passive 12-24V (NON 802.3af) PoE; Cache pruefung/om_produktseite_2014.html"
     }
   },
   "roh": {
@@ -1503,7 +1509,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Angabe von 2020 (Sven Eckelmann), engerer Bereich; Hersteller nannte 2014 12-24 V, FCC-Test lief mit 12 V. 18 V liegt in allen Herstellerbereichen"
       },
       {
         "wert": "18-24",
@@ -1511,7 +1517,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "uebernommen aus OpenWrt-Commit eb3a5ddb (2020)"
       },
       {
         "wert": "12-20",
@@ -1519,7 +1525,7 @@
         "beleg": "https://web.archive.org/web/20130118060939/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/om2p.pdf",
         "stand": "PDF 2012-12-23 (Archiv 2013-01-18)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Herstellerangabe Stand Ende 2012"
       },
       {
         "wert": "12-18",
@@ -1527,7 +1533,7 @@
         "beleg": "https://web.archive.org/web/20131023010253/http://www.open-mesh.com:80/products/om2p-lc.html",
         "stand": "Archiv 2013-10-23",
         "sicherheit": "hoch",
-        "bemerkung": "Kurzbeschreibung; im Fließtext 12-24 V, in den Highlights 12-20 V"
+        "bemerkung": "Kurzbeschreibung; im Fließtext 12-24 V, in den Highlights 12-20 V; Herstellerangabe Stand 2013; spaeter (2014) auf 12-24 V erweitert"
       },
       {
         "wert": "18",
@@ -1535,7 +1541,7 @@
         "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
         "stand": "Seitenrevision 2019-07-05T05:05:36Z",
         "sicherheit": "mittel",
-        "bemerkung": "\"Passive PoE feed ... at 18 VDC\""
+        "bemerkung": "\"Passive PoE feed ... at 18 VDC\"; Einzelwert, kein Bereich; liegt in allen genannten Bereichen"
       },
       {
         "wert": "12",
@@ -1543,7 +1549,7 @@
         "beleg": "https://fccid.io/WT8OM2PLC/Test-Report/Test-Report-1796090",
         "stand": "Bureau Veritas RF120627C02, 2012-08-15",
         "sicherheit": "hoch",
-        "bemerkung": "EnGenius EPE-1212 im Test, 12 V 0.6 A"
+        "bemerkung": "EnGenius EPE-1212 im Test, 12 V 0.6 A; Einzelwert der Zulassungsmessung (Testinjektor), kein Bereich"
       },
       {
         "wert": "12-18",
@@ -1551,7 +1557,16 @@
         "beleg": "https://openwrt.org/toh/openmesh/om2p",
         "stand": "Live-Seite 2026-10-20 (Revision nicht abgefragt)",
         "sicherheit": "niedrig",
-        "bemerkung": "OM2P (v1)-Seite, nicht LC"
+        "bemerkung": "OM2P (v1)-Seite, nicht LC",
+        "widerlegt": "Seite beschreibt das OM2P (v1, AR7240), nicht das OM2P-LC; fuer das LC gelten die Herstellerangaben (2013: 12-18 V, 2014: 12-24 V, https://web.archive.org/web/20141015234220/http://www.open-mesh.com:80/products/access-points/om2p-lc.html?options=cart)"
+      },
+      {
+        "wert": "12-24",
+        "quelle": "openmesh_produktseite_2014",
+        "beleg": "https://web.archive.org/web/20141015234220/http://www.open-mesh.com:80/products/access-points/om2p-lc.html?options=cart",
+        "stand": "Archiv 2014-10-15",
+        "sicherheit": "hoch",
+        "bemerkung": "Herstellerangabe Stand 2014: \"passive 12-24V (NON 802.3af) PoE\"; juengste Herstellerangabe"
       }
     ],
     "poe_pinbelegung": [
@@ -1625,7 +1640,7 @@
         "beleg": "https://fccid.io/WT8OM2PLC/Label/Label-and-Location-1796086",
         "stand": "Exhibit 2012-09-19 (Zeichnung Rev.001, PDF 2012-08-11)",
         "sicherheit": "hoch",
-        "bemerkung": "\"DC Input:12~18V\""
+        "bemerkung": "\"DC Input:12~18V\"; Typenschild der Zulassung 2012 (\"DC Input:12~18V, 1~1.25A\"); Nennbereich zum Zulassungsstand"
       },
       {
         "wert": "12-24",
@@ -1633,7 +1648,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/eb3a5ddba0d4d0c4ab1f21ccbfbcf9aa0254bce9",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Angabe von 2020 (\"12-24V 1A DC\"); passt zur spaeteren Herstellerangabe 12-24 V fuer die PoE-Speisung (2014) [abgeleitet: gleicher Eingangswandler]"
       },
       {
         "wert": "12-24",
@@ -1641,7 +1656,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-lc",
         "stand": "Seitenrevision 2026-04-12 20:06",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "uebernommen aus OpenWrt-Commit eb3a5ddb (2020)"
       },
       {
         "wert": "12",
@@ -1649,7 +1664,7 @@
         "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P-LC",
         "stand": "Seitenrevision 2019-07-05T05:05:36Z",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "Einzelwert (Netzteil), kein Bereich"
       },
       {
         "wert": "12",
@@ -1657,7 +1672,7 @@
         "beleg": "https://fccid.io/WT8OM2PLC/Test-Report/Test-Report-1796090",
         "stand": "Bureau Veritas RF120627C02, 2012-08-15",
         "sicherheit": "hoch",
-        "bemerkung": "Testnetzteil"
+        "bemerkung": "Testnetzteil; Einzelwert: Testnetzteil 12 V 1.0 A, kein Bereich"
       }
     ],
     "dc_strom_a": [
@@ -2300,6 +2315,17 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "2 Suchen ueber preisvergleich.heise.de (\"Open-Mesh OM2P-LC\", \"OM2P-LC\"): Geizhals fuehrt in Access Points nur Open Mesh OM2P (GRP-OM2P, a1480590) und OM2P-HS (GRP-OM2P-HS, a1480565), keinen OM2P-LC-Artikel; nichts eingetragen"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "poe_spannung_v: Eintrag openwrt_wiki_om2p (12-18) widerlegt, Quelle betrifft OM2P v1"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: 12-18 (2013), 12-20 (2012), 12-24 (2014, neu belegt) sind Herstellerangaben verschiedener Jahre, 18-24 engere OpenWrt-Angabe 2020; 12 und 18 Einzelwerte (FCC-Test, DeviWiki)",
+        "dc_spannung_v: 12-18 Typenschild-Nennbereich 2012, 12-24 spaetere Angabe (OpenWrt 2020, passend zu Hersteller 2014); 12 Einzelwert Testnetzteil"
+      ],
+      "offen": []
     }
   }
 }

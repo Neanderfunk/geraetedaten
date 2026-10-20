@@ -1379,7 +1379,8 @@
         "beleg": "https://www.downloads.netgear.com/files/GDC/datasheet/en/WNDR4300.pdf",
         "stand": "Datenblatt D-WNDR4300-2, PDF 2014-10-06",
         "sicherheit": "niedrig",
-        "bemerkung": "Datenblatt schreibt \"2x2 (2.4GHz) + 2x2 (5GHz)\", widerspricht der eigenen Angabe 300+450 Mbps und dem FCC-Bericht; vermutlich Fehler im Datenblatt"
+        "bemerkung": "Datenblatt schreibt \"2x2 (2.4GHz) + 2x2 (5GHz)\", widerspricht der eigenen Angabe 300+450 Mbps und dem FCC-Bericht; vermutlich Fehler im Datenblatt",
+        "widerlegt": "5 GHz ist 3x3: Netgear-HW-ID in OpenWrt nand.mk \"29763948+0+128+128+2x2+3x3\" (https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/nand.mk), FCC-Testbericht 15C: 802.11a/an 3TX, \"three completed transmitters and three receivers\", bis 450 Mbps (https://fccid.io/PY312100187/Test-Report/Test-Report-15C-1728011); das Datenblatt selbst nennt 300+450 Mbps, 450 Mbps braucht 3 Streams - \"2x2 (5GHz)\" ist ein Datenblattfehler"
       }
     ],
     "wlan_klasse": [
@@ -2701,6 +2702,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "Artikel a840468 \"Netgear N750 Wireless-N (WNDR4300)\" ohne Versionsangabe, Modell hat v1 und v2 (QCA9563): nur Link und roh.geizhals, keine normalisierten Werte; keine EAN/ASIN auf der Seite"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_5_streams: 3 gilt (nand.mk-HW-ID 2x2+3x3, FCC-Testbericht 3TX/3RX, 450 Mbps); Datenblatt-Wert 2 widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

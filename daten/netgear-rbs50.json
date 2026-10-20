@@ -1194,7 +1194,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
         "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
         "sicherheit": "mittel",
-        "bemerkung": "4GB EMMC"
+        "bemerkung": "4GB EMMC | Prüfung 2026-10-20: Nennkapazität des eMMC (4 GB), gilt als Flash-Größe dieses Images"
       },
       {
         "wert": 4096,
@@ -1202,7 +1202,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "4096 eMMC"
+        "bemerkung": "4096 eMMC | Prüfung 2026-10-20: Nennkapazität des eMMC (4 GB), gilt als Flash-Größe dieses Images"
       },
       {
         "wert": 32,
@@ -1210,7 +1210,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
         "stand": "Seitenrevision 2026-09-09 23:10",
         "sicherheit": "mittel",
-        "bemerkung": "'32, eMMC' - Widerspruch zum Dump; 32 MB entspricht dem NOR-Wert aus U-Boot/DeviWiki"
+        "bemerkung": "'32, eMMC' - Widerspruch zum Dump; 32 MB entspricht dem NOR-Wert aus U-Boot/DeviWiki",
+        "widerlegt": "Mehrfachauswahl '32, eMMC' mischt eine NOR-Angabe mit dem eMMC; 32 MiB ist die SPI-NOR-Angabe (W25Q256FVFG laut DeviWiki), nicht der Firmware-Speicher: OpenWrt/Gluon bootet und läuft vom eMMC (root=/dev/mmcblk0p20, https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4019-rbs50.dts; '4GB EMMC' https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa). Auf den FCC-Innenfotos RBR50/RBS50 rev (https://fccid.io/PY316200341/Internal-Photos/Internal-Photos-RBR50-RBS50-rev-pdf-3926901, S. 9) ist der SOIC-16-Platz U20 neben dem IPQ4019 unbestückt, OEM-U-Boot meldet 'SPI Flash not found' (https://openwrt.org/toh/netgear/rbs_50). Flash-Größe dieses Images: 4 GB eMMC."
       },
       {
         "wert": 32,
@@ -1218,7 +1219,8 @@
         "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
         "stand": "Seitenrevision 2019-07-05 02:58",
         "sicherheit": "mittel",
-        "bemerkung": "SPI-NOR Winbond W25Q256FVFG; Text: '4 GB of flash is claimed by Netgear'"
+        "bemerkung": "SPI-NOR Winbond W25Q256FVFG; Text: '4 GB of flash is claimed by Netgear'",
+        "widerlegt": "32 MiB ist die SPI-NOR-Angabe (W25Q256FVFG laut DeviWiki), nicht der Firmware-Speicher: OpenWrt/Gluon bootet und läuft vom eMMC (root=/dev/mmcblk0p20, https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4019-rbs50.dts; '4GB EMMC' https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa). Auf den FCC-Innenfotos RBR50/RBS50 rev (https://fccid.io/PY316200341/Internal-Photos/Internal-Photos-RBR50-RBS50-rev-pdf-3926901, S. 9) ist der SOIC-16-Platz U20 neben dem IPQ4019 unbestückt, OEM-U-Boot meldet 'SPI Flash not found' (https://openwrt.org/toh/netgear/rbs_50). Flash-Größe dieses Images: 4 GB eMMC."
       },
       {
         "wert": 3727,
@@ -1226,7 +1228,7 @@
         "beleg": "https://openwrt.org/toh/netgear/rbs_50",
         "stand": "Seitenrevision 2026-09-09 23:07",
         "sicherheit": "mittel",
-        "bemerkung": "Bootlog 'mmcblk0: 4FPD3R 3.64 GiB' (eMMC); U-Boot: 'NOR flash 32MB; EMMC flash 4000MB', aber 'SPI Flash not found'"
+        "bemerkung": "Bootlog 'mmcblk0: 4FPD3R 3.64 GiB' (eMMC); U-Boot: 'NOR flash 32MB; EMMC flash 4000MB', aber 'SPI Flash not found' | Prüfung 2026-10-20: dasselbe 4-GB-eMMC (4FPD3R = Samsung KLM4G1FEPD) wie 4096; 3727 MiB ist der vom Kernel gemeldete nutzbare User-Bereich (3.64 GiB), kein Widerspruch zur Nennkapazität"
       },
       {
         "wert": 4000,
@@ -1234,7 +1236,7 @@
         "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/image/generic.mk",
         "stand": "Branch main am 2026-10-20",
         "sicherheit": "mittel",
-        "bemerkung": "NETGEAR_HW_ID 29765352+0+4000+512+..."
+        "bemerkung": "NETGEAR_HW_ID 29765352+0+4000+512+... | Prüfung 2026-10-20: Netgear-Angabe des eMMC in der Board-Kennung (U-Boot 'EMMC flash 4000MB'), dasselbe 4-GB-eMMC wie 4096; Nennkapazität 4 GB"
       }
     ],
     "flash_typ": [
@@ -2470,6 +2472,18 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "a1497682 (RBS50-100PES/-100UKS) ohne Versionsangabe, RBS50 hat v1 und v2 (RBS50v2), kein eigener v2-Artikel; nur Link und roh.geizhals, keine normalisierten Werte; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 4096 (4 GB eMMC) gilt; 32 (deviwiki, openwrt_hwdata) widerlegt - SPI-NOR-Platz U20 auf FCC-Innenfotos 2018 unbestückt, U-Boot 'SPI Flash not found', OpenWrt/Gluon nutzt nur das eMMC"
+      ],
+      "beide_richtig": [
+        "flash_mb: 3727 (openwrt_wiki, nutzbarer User-Bereich laut Kernel) und 4000 (Netgear-HW-ID/U-Boot) sind dasselbe 4-GB-eMMC wie 4096"
+      ],
+      "offen": [
+        "flash_mb: ob frühe Serien (FCC-Innenfotos 2016) einen W25Q256FVFG bestückt hatten, nicht prüfbar (fccid.io 403); für das Image ohne Belang"
+      ]
     }
   }
 }
