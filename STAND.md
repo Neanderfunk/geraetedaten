@@ -19,6 +19,9 @@
   mehrere Versionen), Datenblatt-Tabelle in `roh.geizhals`; 51 nicht gelistet. heise antwortete zweimal 403.
 
 ## Offen
+- **Prüfung** (`werkzeug/pruefen.py`, Bericht `laeufe/pruefung-<datum>.md`): 20.10. 145 Geräte mit
+  Zahlenwidersprüchen von Agenten entschieden (auch Fotos), 209 Werte `widerlegt`, 89 Fälle „beide
+  richtig“ (Variante/Messart, mit Bemerkung), 3 offen (OM2P-HS v3 PoE-Spannung, NBG6716 Flash, RBS50 Flash).
 - **EAN/ASIN:** Geizhals-Seiten (über heise) nennen keine EAN; 0 von 362 bisher. Offen, falls je gebraucht.
 - **Zweiter Durchgang** über FCC-Fotos und Anatel für Hohlstecker-Maß, Netzteil-Typenschild, Lüfter,
   LEDs, serielle Konsole je Charge (offene Fäden in den Einträgen).
