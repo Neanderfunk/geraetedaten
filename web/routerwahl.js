@@ -367,7 +367,7 @@
      Erklaerung beim Darueberfahren; die Legende aller Level steht im Seitenkopf. */
   /* Legende aller Level im Seitenkopf (#finder-legende), einmal fuer alle Karten. */
   function legendeZeichnen() {
-    var d = $('#finder-legende');
+    var d = $('#finder-legende-tabelle');
     if (!d || d.querySelector('dl')) return;
     var dl = el('dl');
     LEVEL_REIHE.forEach(function (l) {
