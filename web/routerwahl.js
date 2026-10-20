@@ -108,6 +108,10 @@
   var ALLE = [];
   GRUPPEN.forEach(function (g) { g.filter.forEach(function (f) { ALLE.push(f); }); });
 
+  /* Nicht unterstuetzte Versionen eines Modells, von dem wir eine andere
+     Version bauen (geraete/nicht-unterstuetzt.json): schlichte Karten hinter
+     den Geschwistern, damit klar ist, dass genau diese Version nicht geht. */
+  var nichtKarten = [];
   var geraete = [];      // [{image, modell, ...facetten, level, ...}]
   var wahl = {};         // id -> [werte]
   /* Geraete mit fehlenden Angaben werden standardmaessig gezeigt (adorfer
@@ -383,7 +387,42 @@
     return p;
   }
 
+  function nichtKarte(nk) {
+    var k = el('article', 'finder-karte finder-nicht');
+    var rumpf = el('div', 'finder-rumpf');
+    rumpf.appendChild(el('h2', null, nk.modell));
+    rumpf.appendChild(el('p', 'finder-nicht-marke', 'Nicht unterstützt'));
+    if (nk.grund) rumpf.appendChild(el('p', null, 'Grund: ' + nk.grund + '.'));
+    if (nk.erkennung) rumpf.appendChild(el('p', 'finder-level', nk.erkennung));
+    var p = el('p', null, 'Freifunk-Firmware gibt es für ');
+    nk.geschwister.forEach(function (img, i) {
+      if (i) p.appendChild(document.createTextNode(i === nk.geschwister.length - 1 ? ' und ' : ', '));
+      var g = geraete.filter(function (x) { return x.image === img; })[0];
+      var a = el('a', null, g ? g.modell : img);
+      a.href = '?geraet=' + encodeURIComponent(img);
+      p.appendChild(a);
+    });
+    p.appendChild(document.createTextNode('.'));
+    rumpf.appendChild(p);
+    if (nk.quelle) {
+      var q = el('p', 'finder-level');
+      var qa = el('a', null, 'Quelle');
+      qa.href = nk.quelle; qa.rel = 'noopener'; qa.target = '_blank';
+      q.appendChild(qa);
+      rumpf.appendChild(q);
+    }
+    k.appendChild(rumpf);
+    return k;
+  }
+
   function listeZeichnen() {
+    var einzeln = nurGeraet && nichtKarten.filter(function (nk) { return nk.id === nurGeraet; })[0];
+    if (einzeln) {
+      $('#finder-anzahl').textContent = 'Diese Version wird nicht unterstützt';
+      $('#finder-liste').textContent = '';
+      $('#finder-liste').appendChild(nichtKarte(einzeln));
+      return;
+    }
     var treffer = sortieren(filtern(null));
     $('#finder-anzahl').textContent = treffer.length === 1 ? '1 Gerät passt' : treffer.length + ' Geräte passen';
     var alle = $('#finder-alle');
@@ -402,6 +441,7 @@
         (mitUnbekannt ? '' : ' Oder lass dir auch Geräte zeigen, bei denen Angaben fehlen.')));
       return;
     }
+    var kartenVon = {};
     treffer.forEach(function (t) {
       var g = t.g;
       var k = el('article', 'finder-karte');
@@ -461,7 +501,20 @@
       });
       k.appendChild(rumpf);
       ziel.appendChild(k);
+      kartenVon[g.image] = k;
       if (nurGeraet) det.click();
+    });
+    /* Nicht unterstuetzte Versionen hinter die letzte angezeigte Geschwisterkarte */
+    var letzte = {};
+    nichtKarten.forEach(function (nk) {
+      var nach = letzte[nk.geschwister.join(' ')];
+      if (!nach) {
+        treffer.forEach(function (t) { if (nk.geschwister.indexOf(t.g.image) > -1) nach = kartenVon[t.g.image]; });
+      }
+      if (!nach) return;
+      var k = nichtKarte(nk);
+      nach.parentNode.insertBefore(k, nach.nextSibling);
+      letzte[nk.geschwister.join(' ')] = k;
     });
   }
 
@@ -588,12 +641,15 @@
           if (x) { g.level = x.level; g.risiko = x.risiko; g.status = x.status; g.url = x.url; }
           geraete.push(g);
         });
+        holen('geraete/nicht-unterstuetzt.json', function (n) {
+        nichtKarten = (n && n.karten) || [];
         zustandLesen();
         $('#finder-unbekannt').addEventListener('change', function (e) { mitUnbekannt = !e.target.checked; neu(); });
         $('#finder-naechste').addEventListener('change', function (e) { mitNaechster = e.target.checked; neu(); });
         $('#finder-sortierung').addEventListener('change', function (e) { sortierung = e.target.value; neu(); });
         $('#finder-leeren').addEventListener('click', function () { wahl = {}; nurGeraet = null; neu(); });
         neu();
+        });
       });
     });
   }
