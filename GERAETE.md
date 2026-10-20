@@ -40,13 +40,13 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| AP-303 | `aruba-ap-303` | [erfasst](daten/aruba-ap-303.json): 78 Felder, 9 offene Fäden, teilweise |  | recommended |
-| AP-303H | `aruba-ap-303h` | [erfasst](daten/aruba-ap-303h.json): 90 Felder, 11 offene Fäden, teilweise |  | recommended |
-| AP-365 | `aruba-ap-365` | [erfasst](daten/aruba-ap-365.json): 75 Felder, 8 offene Fäden, teilweise |  | recommended |
+| AP-303 | `aruba-ap-303` | [erfasst](daten/aruba-ap-303.json): 82 Felder, 9 offene Fäden, teilweise |  | recommended |
+| AP-303H | `aruba-ap-303h` | [erfasst](daten/aruba-ap-303h.json): 92 Felder, 11 offene Fäden, teilweise |  | recommended |
+| AP-365 | `aruba-ap-365` | [erfasst](daten/aruba-ap-365.json): 82 Felder, 8 offene Fäden, teilweise |  | recommended |
 | aruba-ap-32x | `aruba-ap-32x` | [erfasst](daten/aruba-ap-32x.json): 64 Felder, 11 offene Fäden, teilweise |  |  |
-| Instant On AP11 | `aruba-instant-on-ap11` | [erfasst](daten/aruba-instant-on-ap11.json): 81 Felder, 10 offene Fäden, teilweise |  | recommended |
-| Instant On AP11D | `aruba-instant-on-ap11d` | [erfasst](daten/aruba-instant-on-ap11d.json): 68 Felder, 10 offene Fäden, teilweise |  | recommended |
-| Instant On AP17 | `aruba-instant-on-ap17` | [erfasst](daten/aruba-instant-on-ap17.json): 75 Felder, 10 offene Fäden, teilweise |  | recommended |
+| Instant On AP11 | `aruba-instant-on-ap11` | [erfasst](daten/aruba-instant-on-ap11.json): 84 Felder, 10 offene Fäden, teilweise |  | recommended |
+| Instant On AP11D | `aruba-instant-on-ap11d` | [erfasst](daten/aruba-instant-on-ap11d.json): 75 Felder, 10 offene Fäden, teilweise |  | recommended |
+| Instant On AP17 | `aruba-instant-on-ap17` | [erfasst](daten/aruba-instant-on-ap17.json): 76 Felder, 10 offene Fäden, teilweise |  | recommended |
 
 ## Asus
 
@@ -58,33 +58,33 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | RT-AC57U v1 | `asus-rt-ac57u-v1` | [erfasst](daten/asus-rt-ac57u-v1.json): 84 Felder, 6 offene Fäden, teilweise |  | recommended |
 | RT-AX52 | `asus-rt-ax52` | [erfasst](daten/asus-rt-ax52.json): 90 Felder, 7 offene Fäden, teilweise |  | recommended |
 | RT-AX53U | `asus-rt-ax53u` | [erfasst](daten/asus-rt-ax53u.json): 84 Felder, 8 offene Fäden, teilweise |  | recommended |
-| TUF-AX4200 | `asus-tuf-ax4200` | [erfasst](daten/asus-tuf-ax4200.json): 86 Felder, 9 offene Fäden, teilweise |  | recommended |
-| TUF-AX6000 | `asus-tuf-ax6000` | [erfasst](daten/asus-tuf-ax6000.json): 87 Felder, 6 offene Fäden, teilweise |  | recommended |
+| TUF-AX4200 | `asus-tuf-ax4200` | [erfasst](daten/asus-tuf-ax4200.json): 92 Felder, 10 offene Fäden, teilweise |  | recommended |
+| TUF-AX6000 | `asus-tuf-ax6000` | [erfasst](daten/asus-tuf-ax6000.json): 93 Felder, 6 offene Fäden, teilweise |  | recommended |
 
 ## AVM
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| FRITZ!Box 3370 v2 Hynix | `avm-fritz-box-3370-rev-2-hynix-nand` | [erfasst](daten/avm-fritz-box-3370-rev-2-hynix-nand.json): 75 Felder, 7 offene Fäden, teilweise |  | recommended |
-| FRITZ!Box 3370 v2 Micron | `avm-fritz-box-3370-rev-2-micron-nand` | [erfasst](daten/avm-fritz-box-3370-rev-2-micron-nand.json): 85 Felder, 6 offene Fäden, teilweise |  | recommended |
-| FRITZ!Box 3390 | `avm-fritz-box-3390` | [erfasst](daten/avm-fritz-box-3390.json): 79 Felder, 8 offene Fäden, teilweise |  | recommended |
-| FRITZ!Box 4020 | `avm-fritz-box-4020` | [erfasst](daten/avm-fritz-box-4020.json): 86 Felder, 8 offene Fäden, teilweise |  | recommended |
-| FRITZ!Box 4040 | `avm-fritz-box-4040` | [erfasst](daten/avm-fritz-box-4040.json): 79 Felder, 16 offene Fäden, teilweise |  | recommended |
+| FRITZ!Box 3370 v2 Hynix | `avm-fritz-box-3370-rev-2-hynix-nand` | [erfasst](daten/avm-fritz-box-3370-rev-2-hynix-nand.json): 76 Felder, 7 offene Fäden, teilweise |  | recommended |
+| FRITZ!Box 3370 v2 Micron | `avm-fritz-box-3370-rev-2-micron-nand` | [erfasst](daten/avm-fritz-box-3370-rev-2-micron-nand.json): 86 Felder, 6 offene Fäden, teilweise |  | recommended |
+| FRITZ!Box 3390 | `avm-fritz-box-3390` | [erfasst](daten/avm-fritz-box-3390.json): 80 Felder, 8 offene Fäden, teilweise |  | recommended |
+| FRITZ!Box 4020 | `avm-fritz-box-4020` | [erfasst](daten/avm-fritz-box-4020.json): 87 Felder, 8 offene Fäden, teilweise |  | recommended |
+| FRITZ!Box 4040 | `avm-fritz-box-4040` | [erfasst](daten/avm-fritz-box-4040.json): 82 Felder, 16 offene Fäden, teilweise |  | recommended |
 | FRITZ!Box 4040 bootloader | `avm-fritz-box-4040-bootloader` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=avm-fritz-box-4040-bootloader.json&value=%7B%0A%20%22image%22%3A%20%22avm-fritz-box-4040-bootloader%22%2C%0A%20%22modell%22%3A%20%22AVM%20FRITZ%21Box%204040%20bootloader%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  | recommended |
-| FRITZ!Box 7312 | `avm-fritz-box-7312` | [erfasst](daten/avm-fritz-box-7312.json): 83 Felder, 5 offene Fäden, teilweise |  | recommended |
+| FRITZ!Box 7312 | `avm-fritz-box-7312` | [erfasst](daten/avm-fritz-box-7312.json): 84 Felder, 5 offene Fäden, teilweise |  | recommended |
 | FRITZ!Box 7360 SL | `avm-fritz-box-7360-sl` | [erfasst](daten/avm-fritz-box-7360-sl.json): 88 Felder, 8 offene Fäden, teilweise |  | recommended |
-| FRITZ!Box 7360 v1 | `avm-fritz-box-7360-v1` | [erfasst](daten/avm-fritz-box-7360-v1.json): 82 Felder, 9 offene Fäden, teilweise |  | recommended |
-| FRITZ!Box 7360 v2 | `avm-fritz-box-7360-v2` | [erfasst](daten/avm-fritz-box-7360-v2.json): 87 Felder, 6 offene Fäden, teilweise |  | recommended |
-| FRITZ!Box 7362 SL | `avm-fritz-box-7362-sl` | [erfasst](daten/avm-fritz-box-7362-sl.json): 80 Felder, 10 offene Fäden, teilweise |  | recommended |
-| FRITZ!Box 7412 | `avm-fritz-box-7412` | [erfasst](daten/avm-fritz-box-7412.json): 81 Felder, 9 offene Fäden, teilweise |  | recommended |
-| FRITZ!Box 7430 | `avm-fritz-box-7430` | [erfasst](daten/avm-fritz-box-7430.json): 80 Felder, 10 offene Fäden, teilweise |  | recommended |
-| FRITZ!Box 7520 | `avm-fritz-box-7520` | [erfasst](daten/avm-fritz-box-7520.json): 91 Felder, 10 offene Fäden, teilweise |  | recommended |
+| FRITZ!Box 7360 v1 | `avm-fritz-box-7360-v1` | [erfasst](daten/avm-fritz-box-7360-v1.json): 83 Felder, 9 offene Fäden, teilweise |  | recommended |
+| FRITZ!Box 7360 v2 | `avm-fritz-box-7360-v2` | [erfasst](daten/avm-fritz-box-7360-v2.json): 88 Felder, 6 offene Fäden, teilweise |  | recommended |
+| FRITZ!Box 7362 SL | `avm-fritz-box-7362-sl` | [erfasst](daten/avm-fritz-box-7362-sl.json): 81 Felder, 10 offene Fäden, teilweise |  | recommended |
+| FRITZ!Box 7412 | `avm-fritz-box-7412` | [erfasst](daten/avm-fritz-box-7412.json): 82 Felder, 9 offene Fäden, teilweise |  | recommended |
+| FRITZ!Box 7430 | `avm-fritz-box-7430` | [erfasst](daten/avm-fritz-box-7430.json): 81 Felder, 10 offene Fäden, teilweise |  | recommended |
+| FRITZ!Box 7520 | `avm-fritz-box-7520` | [erfasst](daten/avm-fritz-box-7520.json): 92 Felder, 10 offene Fäden, teilweise |  | recommended |
 | FRITZ!Box 7530 | `avm-fritz-box-7530` | [erfasst](daten/avm-fritz-box-7530.json): 82 Felder, 8 offene Fäden, teilweise |  | recommended |
-| FRITZ!Repeater 1200 | `avm-fritz-repeater-1200` | [erfasst](daten/avm-fritz-repeater-1200.json): 73 Felder, 11 offene Fäden, teilweise |  | recommended |
+| FRITZ!Repeater 1200 | `avm-fritz-repeater-1200` | [erfasst](daten/avm-fritz-repeater-1200.json): 77 Felder, 11 offene Fäden, teilweise |  | recommended |
 | FRITZ!Repeater 3000 | `avm-fritz-repeater-3000` | [erfasst](daten/avm-fritz-repeater-3000.json): 87 Felder, 12 offene Fäden, teilweise |  | recommended |
-| FRITZ!WLAN Repeater 1750E | `avm-fritz-wlan-repeater-1750e` | [erfasst](daten/avm-fritz-wlan-repeater-1750e.json): 65 Felder, 5 offene Fäden, teilweise |  | recommended |
-| FRITZ!WLAN Repeater 300E | `avm-fritz-wlan-repeater-300e` | [erfasst](daten/avm-fritz-wlan-repeater-300e.json): 78 Felder, 12 offene Fäden, teilweise |  | recommended |
-| FRITZ!WLAN Repeater 450E | `avm-fritz-wlan-repeater-450e` | [erfasst](daten/avm-fritz-wlan-repeater-450e.json): 80 Felder, 7 offene Fäden, teilweise |  | recommended |
+| FRITZ!WLAN Repeater 1750E | `avm-fritz-wlan-repeater-1750e` | [erfasst](daten/avm-fritz-wlan-repeater-1750e.json): 67 Felder, 5 offene Fäden, teilweise |  | recommended |
+| FRITZ!WLAN Repeater 300E | `avm-fritz-wlan-repeater-300e` | [erfasst](daten/avm-fritz-wlan-repeater-300e.json): 79 Felder, 12 offene Fäden, teilweise |  | recommended |
+| FRITZ!WLAN Repeater 450E | `avm-fritz-wlan-repeater-450e` | [erfasst](daten/avm-fritz-wlan-repeater-450e.json): 84 Felder, 7 offene Fäden, teilweise |  | recommended |
 
 ## Avm
 
@@ -101,8 +101,8 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 |---|---|---|---|---|
 | buffalo-wzr-hp-g450h-wzr-450hp | `buffalo-wzr-hp-g450h-wzr-450hp` | [erfasst](daten/buffalo-wzr-hp-g450h-wzr-450hp.json): 87 Felder, 11 offene Fäden, teilweise |  |  |
 | WZR-600DHP v2 | `buffalo-wzr-600dhp` | [erfasst](daten/buffalo-wzr-600dhp.json): 82 Felder, 10 offene Fäden, teilweise |  | recommended |
-| WZR-HP-AG300H | `buffalo-wzr-hp-ag300h` | [erfasst](daten/buffalo-wzr-hp-ag300h.json): 85 Felder, 10 offene Fäden, teilweise |  | recommended |
-| WZR-HP-G300NH v1 - rtl8366s | `buffalo-wzr-hp-g300nh-rtl8366s` | [erfasst](daten/buffalo-wzr-hp-g300nh-rtl8366s.json): 60 Felder, 8 offene Fäden, teilweise |  | recommended |
+| WZR-HP-AG300H | `buffalo-wzr-hp-ag300h` | [erfasst](daten/buffalo-wzr-hp-ag300h.json): 89 Felder, 10 offene Fäden, teilweise |  | recommended |
+| WZR-HP-G300NH v1 - rtl8366s | `buffalo-wzr-hp-g300nh-rtl8366s` | [erfasst](daten/buffalo-wzr-hp-g300nh-rtl8366s.json): 61 Felder, 8 offene Fäden, teilweise |  | recommended |
 
 ## Comfast
 
@@ -114,15 +114,15 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| AP3000 Outdoor v1 | `cudy-ap3000-outdoor-v1` | [erfasst](daten/cudy-ap3000-outdoor-v1.json): 93 Felder, 16 offene Fäden, teilweise |  | recommended |
-| AP3000 v1 | `cudy-ap3000-v1` | [erfasst](daten/cudy-ap3000-v1.json): 99 Felder, 9 offene Fäden, fertig |  | recommended |
-| AP3000 wall-v1 | `cudy-ap3000-wall-v1` | [erfasst](daten/cudy-ap3000-wall-v1.json): 74 Felder, 10 offene Fäden, teilweise |  | recommended |
-| cudy-ap1300-outdoor-v1 | `cudy-ap1300-outdoor-v1` | [erfasst](daten/cudy-ap1300-outdoor-v1.json): 94 Felder, 14 offene Fäden, teilweise |  |  |
+| AP3000 Outdoor v1 | `cudy-ap3000-outdoor-v1` | [erfasst](daten/cudy-ap3000-outdoor-v1.json): 96 Felder, 16 offene Fäden, teilweise |  | recommended |
+| AP3000 v1 | `cudy-ap3000-v1` | [erfasst](daten/cudy-ap3000-v1.json): 100 Felder, 9 offene Fäden, fertig |  | recommended |
+| AP3000 wall-v1 | `cudy-ap3000-wall-v1` | [erfasst](daten/cudy-ap3000-wall-v1.json): 77 Felder, 10 offene Fäden, teilweise |  | recommended |
+| cudy-ap1300-outdoor-v1 | `cudy-ap1300-outdoor-v1` | [erfasst](daten/cudy-ap1300-outdoor-v1.json): 96 Felder, 14 offene Fäden, teilweise |  |  |
 | cudy-wr3000p-v1 | `cudy-wr3000p-v1` | [erfasst](daten/cudy-wr3000p-v1.json): 71 Felder, 8 offene Fäden, teilweise |  |  |
 | cudy-wr3000u-v1 | `cudy-wr3000u-v1` | [erfasst](daten/cudy-wr3000u-v1.json): 64 Felder, 9 offene Fäden, teilweise |  |  |
-| M1800 | `cudy-m1800` | [erfasst](daten/cudy-m1800.json): 84 Felder, 9 offene Fäden, teilweise |  | recommended |
-| M3000 v1 | `cudy-m3000-v1` | [erfasst](daten/cudy-m3000-v1.json): 88 Felder, 9 offene Fäden, fertig |  | recommended |
-| M3000 v2-with-motorcomm-yt8821 | `cudy-m3000-v2-with-motorcomm-yt8821` | [erfasst](daten/cudy-m3000-v2-with-motorcomm-yt8821.json): 91 Felder, 10 offene Fäden, teilweise |  | recommended |
+| M1800 | `cudy-m1800` | [erfasst](daten/cudy-m1800.json): 85 Felder, 9 offene Fäden, teilweise |  | recommended |
+| M3000 v1 | `cudy-m3000-v1` | [erfasst](daten/cudy-m3000-v1.json): 89 Felder, 9 offene Fäden, fertig |  | recommended |
+| M3000 v2-with-motorcomm-yt8821 | `cudy-m3000-v2-with-motorcomm-yt8821` | [erfasst](daten/cudy-m3000-v2-with-motorcomm-yt8821.json): 93 Felder, 10 offene Fäden, teilweise |  | recommended |
 | RE3000 v1 | `cudy-re3000-v1` | [erfasst](daten/cudy-re3000-v1.json): 63 Felder, 10 offene Fäden, teilweise |  | recommended |
 | TR1200 v1 | `cudy-tr1200-v1` | [erfasst](daten/cudy-tr1200-v1.json): 92 Felder, 8 offene Fäden, teilweise |  | recommended |
 | TR3000 v1 | `cudy-tr3000-v1` | [erfasst](daten/cudy-tr3000-v1.json): 95 Felder, 10 offene Fäden, teilweise |  | recommended |
@@ -132,7 +132,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | WR2100 | `cudy-wr2100` | [erfasst](daten/cudy-wr2100.json): 82 Felder, 7 offene Fäden, teilweise |  | recommended |
 | WR3000 E v1 | `cudy-wr3000e-v1` | [erfasst](daten/cudy-wr3000e-v1.json): 89 Felder, 10 offene Fäden, teilweise |  | recommended |
 | WR3000 H (AX3000) v1 | `cudy-wr3000h-v1` | [erfasst](daten/cudy-wr3000h-v1.json): 105 Felder, 15 offene Fäden, teilweise |  | recommended |
-| WR3000 S v1 | `cudy-wr3000s-v1` | [erfasst](daten/cudy-wr3000s-v1.json): 73 Felder, 14 offene Fäden, teilweise |  | recommended |
+| WR3000 S v1 | `cudy-wr3000s-v1` | [erfasst](daten/cudy-wr3000s-v1.json): 80 Felder, 14 offene Fäden, teilweise |  | recommended |
 | WR3000 v1 | `cudy-wr3000-v1` | [erfasst](daten/cudy-wr3000-v1.json): 103 Felder, 9 offene Fäden, teilweise |  | recommended |
 | X6 v1 | `cudy-x6-v1` | [erfasst](daten/cudy-x6-v1.json): 86 Felder, 10 offene Fäden, teilweise |  | recommended |
 | X6 v2 | `cudy-x6-v2` | [erfasst](daten/cudy-x6-v2.json): 91 Felder, 8 offene Fäden, teilweise |  | recommended |

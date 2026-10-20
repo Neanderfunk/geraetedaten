@@ -164,6 +164,12 @@
       "stand": "Suche 2026-10-19",
       "abgerufen": "2026-10-19",
       "bemerkung": "nur Release-Post 24673 und Selector-Bilder-Aufruf 23821, keine Hardwaredaten"
+    },
+    "geizhals": {
+      "url": "https://preisvergleich.heise.de/cudy-m1800-m1800-a2949549.html",
+      "stand": "Gelistet seit 16.05.2023; abgerufen 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Geizhals-Artikel \"Cudy M1800, AX1800, 1er\" ohne Hardware-Version; weitere Artikel: 2er-Pack a2756974, 3er-Pack a2949537; verlinkte Bedienungsanleitung Stand 24.06.2022, Datenblatt Stand 19.10.2023"
     }
   },
   "roh": {
@@ -541,6 +547,27 @@
       "stufe": "fortgeschritten",
       "zwischenfirmware": "openwrt-22.03.2-ramips-mt7621-cudy_m1800v2-squashfs-flash.bin (Ordner M1800+V2)",
       "vorbehalt": "Cudy bietet die Zwischenfirmware nur für M1800 V2 an; OpenWrt und Gluon kennen nur M1800 ohne Version; ob beides zusammenpasst, ist nicht geprüft"
+    },
+    "geizhals": {
+      "WAN": "1x RJ-45 (10/100/1000Base-T)",
+      "LAN": "1x RJ-45 (10/100/1000Base-T)",
+      "Wireless": "Wi-Fi 6 (802.11a/b/g/n/ac/ax), simultan",
+      "Übertragungsrate": "574Mbit/s (2.4GHz), 1201Mbit/s (5GHz)",
+      "Pseudoklasse": "AX1800",
+      "Sicherheit": "WPA, WPA2, WPA3",
+      "Antennen": "intern",
+      "Band-Fähigkeiten": "Dual Band (simultan)",
+      "Mesh": "Roaming, Mesh (geteiltes Band)",
+      "Stromversorgung": "externes Netzteil; Lieferumfang: Netzteil (12V/1A/12W)",
+      "Leistungsaufnahme": "12V/1A/12W (max. Netzteilleistung)",
+      "Farbe": "weiß",
+      "Besonderheiten": "MU-MIMO, IPv6, VPN passthrough (L2TP/PPTP)",
+      "802.11ax (Wi-Fi 6 / Wi-Fi 6E) 2.4GHz": "574Mbit/s (2x2, 40MHz, 1024-QAM)",
+      "802.11ax (Wi-Fi 6 / Wi-Fi 6E) 5GHz": "1201Mbit/s (2x2, 80MHz, 1024-QAM)",
+      "Hinweis zu alternativer Firmware": "Open-/DD-WRT ist möglicherweise nur für bestimmte Revisionen verfügbar, bitte weiterführende Links beachten!",
+      "Hinweis zur Leistungsaufnahme": "In einigen Fällen entspricht die maximale Verbrauchsangabe des Herstellers nur der maximalen Ausgabeleistung des Netzteils und ist daher keine aussagekräftige Auskunft für den Stromverbrauch im Alltag.",
+      "Letztes Preisupdate": "-",
+      "Gelistet seit": "16.05.2023, 11:36"
     }
   },
   "felder": {
@@ -2257,6 +2284,16 @@
         "sicherheit": "niedrig",
         "bemerkung": "in OpenWrt mit broken-flash-reset und Kernelfix behoben"
       }
+    ],
+    "geizhals_url": [
+      {
+        "wert": "https://geizhals.de/cudy-m1800-m1800-a2949549.html",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/cudy-m1800-m1800-a2949549.html",
+        "stand": "Gelistet seit 16.05.2023; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Geizhals-Eintrag deckt mehrere Hardware-Versionen ab (Artikel nennt keine Version, Cudy führt M1800 1.0 und 2.0); Einzelgerät, daneben 2er-Pack a2756974 und 3er-Pack a2949537"
+      }
     ]
   },
   "offene_faeden": [
@@ -2310,6 +2347,11 @@
     "datum": "2026-10-19",
     "status": "teilweise",
     "anfragen": 57,
-    "notiz": "Nicht im ToH-Dump; Live-hwdata (v2), OpenWrt-Wiki (Titel v2, v1 nicht installierbar), Commit f6d394e9, PR #9465 komplett, DTS, mt7621.mk, Gluon main (kein Eintrag; Gerät nur per Neanderfunk-Patch), WikiDevi-Spiegel mit 3 Platinenfotos, DeviWiki ohne Treffer, FCC 2APRGMS01 (QIG, Label, Modellunterschied, Außen- und Innenfotos), Cudy-Produktseite M1800 2.0, Download-Center, Datenblatt, Werkstatt cudy-installation.md und RAMpe-Anleitung. Seriell: J2 unbestückt (Lötpunkte), 3.3 V, 115200, Pinbelegung offen. Widersprüche: Flash 32 MB (Chip EN25QH256A, OpenWrt) vs. 16 MB (Cudy); Netzteil 12 V 1.5 A (FCC-Netzteil, WikiDevi, hwdata) vs. 1 A (Cudy); Versionserkennung per Firmware 1.x/2.x (Wiki) vs. V2-Firmware 1.16.14 (Cudy). Blockade: eigener Cudy-Spiegel liefert 403 für M1800+V2.zip."
+    "notiz": "Nicht im ToH-Dump; Live-hwdata (v2), OpenWrt-Wiki (Titel v2, v1 nicht installierbar), Commit f6d394e9, PR #9465 komplett, DTS, mt7621.mk, Gluon main (kein Eintrag; Gerät nur per Neanderfunk-Patch), WikiDevi-Spiegel mit 3 Platinenfotos, DeviWiki ohne Treffer, FCC 2APRGMS01 (QIG, Label, Modellunterschied, Außen- und Innenfotos), Cudy-Produktseite M1800 2.0, Download-Center, Datenblatt, Werkstatt cudy-installation.md und RAMpe-Anleitung. Seriell: J2 unbestückt (Lötpunkte), 3.3 V, 115200, Pinbelegung offen. Widersprüche: Flash 32 MB (Chip EN25QH256A, OpenWrt) vs. 16 MB (Cudy); Netzteil 12 V 1.5 A (FCC-Netzteil, WikiDevi, hwdata) vs. 1 A (Cudy); Versionserkennung per Firmware 1.x/2.x (Wiki) vs. V2-Firmware 1.16.14 (Cudy). Blockade: eigener Cudy-Spiegel liefert 403 für M1800+V2.zip.",
+    "geizhals": {
+      "datum": "2026-10-20",
+      "zuordnung": "mehrere_versionen",
+      "ergebnis": "Artikel a2949549 (1er) ohne Versionsangabe; nur geizhals_url und roh.geizhals, keine normalisierten Hardwarewerte; 2 heise-Abrufe"
+    }
   }
 }

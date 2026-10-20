@@ -1,2067 +1,2072 @@
 {
- "image": "cudy-tr3000-256mb-v1",
- "modell": "Cudy TR3000 256MB v1",
- "quellen": {
-  "toh": {
-   "url": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-   "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Kein Treffer im lokalen Dump quellen-toh-2026-10-18.tsv.gz (toh_suche ohne TR3000). Live-Datenseite gilt für TR3000 v1 (128NAND), eine eigene Datenseite für die 256-MB-Variante gibt es nicht; Werte nur übernommen, wo die Variante sie teilt"
-  },
-  "openwrt_wiki": {
-   "url": "https://openwrt.org/toh/cudy/tr3000?do=export_raw",
-   "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Gemeinsame Seite für 128 MB und 256 MB (Tags 128NAND 256NAND); Installationsabschnitt nennt die 256-MB-Zwischenfirmware ausdrücklich"
-  },
-  "openwrt_commit": {
-   "url": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-   "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-   "abgerufen": "2026-10-19"
-  },
-  "openwrt_commit_2410": {
-   "url": "https://github.com/openwrt/openwrt/commit/0ec28e59a815bb43c359328c8fd644f399d344da",
-   "stand": "Backport openwrt-24.10, Commit 2025-06-22, gemergt 2025-07-10 (PR 19348)",
-   "abgerufen": "2026-10-19"
-  },
-  "openwrt_commit_128mb": {
-   "url": "https://github.com/openwrt/openwrt/commit/63b8d98dd0d2f7797ea5b5f25978590982bbbb5d",
-   "stand": "Commit 2024-05-07 (Luis Mita), gemergt 2024-05-09",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Support-Commit der 128-MB-Variante; Seriell, MAC-Schema"
-  },
-  "openwrt_pr_19167": {
-   "url": "https://github.com/openwrt/openwrt/pull/19167",
-   "stand": "PR 2025-06-17 bis 2025-09-12 (letzter Kommentar)",
-   "abgerufen": "2026-10-19"
-  },
-  "openwrt_git_suche": {
-   "url": "https://api.github.com/search/commits?q=tr3000+repo:openwrt/openwrt",
-   "stand": "Suchergebnis vom 2026-10-19 (8 Commits, neuester 2026-02-11)",
-   "abgerufen": "2026-10-19"
-  },
-  "openwrt_dts": {
-   "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-256mb-v1.dts",
-   "stand": "Branch main am 2026-10-19",
-   "abgerufen": "2026-10-19",
-   "dateien": [
-    "mt7981b-cudy-tr3000-256mb-v1.dts",
-    "mt7981b-cudy-tr3000-v1.dtsi"
-   ]
-  },
-  "openwrt_image_mk": {
-   "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
-   "stand": "Branch main am 2026-10-19",
-   "abgerufen": "2026-10-19"
-  },
-  "openwrt_release_pruefung": {
-   "url": "https://github.com/openwrt/openwrt/blob/v24.10.3/target/linux/mediatek/image/filogic.mk",
-   "stand": "Tags/Branches am 2026-10-19: v24.10.2 ohne, v24.10.3, openwrt-24.10 und openwrt-25.12 mit cudy_tr3000-256mb-v1",
-   "abgerufen": "2026-10-19"
-  },
-  "openwrt_issue_17505": {
-   "url": "https://github.com/openwrt/openwrt/issues/17505",
-   "stand": "Issue vom 2025-01-07, offen",
-   "abgerufen": "2026-10-19"
-  },
-  "gluon_targets": {
-   "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/mediatek-filogic",
-   "stand": "Branch main am 2026-10-19",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Gluon führt nur cudy-tr3000-v1, nicht die 256-MB-Variante"
-  },
-  "neanderfunk_patch": {
-   "url": "https://github.com/Neanderfunk/FirmwareConfigs/blob/67870ea3b4e88b5065d3931b0c177fc8abc8f526/patches/add-cudy-3000-gluon.patch",
-   "stand": "Commit 67870ea vom 2026-09-09 (FirmwareConfigs v2025.1.x)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Neanderfunk ergänzt device('cudy-tr3000-256mb-v1', 'cudy_tr3000-256mb-v1', {factory = false})"
-  },
-  "forum_256mb": {
-   "url": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838",
-   "stand": "Thread 2025-06-06 bis 2025-07-24 (geschlossen)",
-   "abgerufen": "2026-10-19"
-  },
-  "forum_bootlog_cudy": {
-   "url": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/1",
-   "stand": "Beitrag #1 vom 2025-06-06 (aiyunyuner)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Von Cudy bereitgestellter OpenWrt-Bootlog eines 256-MB-Geräts (Linux 6.6.83) plus Cudy-DTS"
-  },
-  "forum_typenschild": {
-   "url": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/31",
-   "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Zwei Fotos (Karton, Geräteunterseite mit Typenschild) als Bild ausgewertet; MAC/SN des Nutzergeräts nicht übernommen"
-  },
-  "hersteller": {
-   "url": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-   "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Chinesische Produktseite; 256-MB-Variante nur dort (laut PR 19167 nur in China verkauft). Spezifikation gilt für TR3000 1.0 mit 128 MB oder optional 256 MB"
-  },
-  "hersteller_downloads": {
-   "url": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
-   "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Sprachwahl chinesisch nötig; R103-Firmware = 256 MB, R47 = 128 MB"
-  },
-  "hersteller_kurzanleitung": {
-   "url": "https://www.cudy.com/cdn/shop/files/TR3000_ZH_QIG.pdf?v=5796422902345933869",
-   "stand": "PDF ohne Datum (Druck-Nr. 810600557), abgerufen 2026-10-19",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Chinesische Kurzanleitung TR3000 (ohne Flash-Angabe), nur Grafik, als Bild ausgewertet"
-  },
-  "wikidevi": {
-   "url": "https://wikidevi.wi-cat.ru/Cudy_TR3000?action=raw",
-   "stand": "Seitenrevision 2025-07-26T12:53:12Z (Olek210)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Beschreibt die 128-MB-Variante (Flash ESMT F50L1G41LB); nur in roh, Felder nur markiert übernommen"
-  },
-  "deviwiki": {
-   "url": "https://deviwiki.com/w/index.php?search=TR3000&fulltext=1",
-   "stand": "Suche 2026-10-19",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "keine Treffer"
-  },
-  "fccid": {
-   "url": "https://fccid.io/2APRGRT02",
-   "stand": "Grant 2023-06-08 (Original Equipment)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Grant für WR3000 (Label 'Model: WR3000'); TR3000 nur per Erklärung 'electrically identical' mitgenannt. Für die China-Variante 256 MB keine FCC-Unterlagen"
-  },
-  "fcc_modellerklaerung": {
-   "url": "https://fccid.io/2APRGRT02/Letter/Letter-of-declaration-model-difference-6580979",
-   "stand": "Brief vom 2023-04-17, Exhibit 2023-06-08",
-   "abgerufen": "2026-10-19"
-  },
-  "fcc_label": {
-   "url": "https://fccid.io/2APRGRT02/Label/Label-and-label-location-6580976",
-   "stand": "Exhibit 2023-06-08 (PDF 2023-04-13)",
-   "abgerufen": "2026-10-19"
-  },
-  "werkstatt": {
-   "url": "router-werkstatt/docs/cudy-installation.md",
-   "stand": "Repo routerwerkstatt, Commit 998ec38 vom 2026-10-16 (Tabelle Stand 15.10.2026)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Eigene Anleitung: Zwischenfirmware und Sonderfall TR3000 128/256 MB"
-  },
-  "werkstatt_erstinstallation": {
-   "url": "router-werkstatt/docs/erstinstallation-ohne-factory.md",
-   "stand": "Repo routerwerkstatt, Stand 2026-10-19",
-   "abgerufen": "2026-10-19"
-  },
-  "werkstatt_rtl8221b": {
-   "url": "router-werkstatt/docs/rtl8221b-2g5-wan-intern.md",
-   "stand": "Repo routerwerkstatt, Stand 2026-10-19",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Feldfall TR3000 (21_dias); Flash-Variante des Feldgeräts dort nicht genannt"
-  }
- },
- "roh": {
-  "toh": {
-   "Device Type_devicetype": "Travel Router",
-   "Brand": "Cudy",
-   "Model": "TR3000",
-   "Versions": "v1",
-   "FCCID_urls": "https://fccid.io/2APRGRT02",
-   "Availability_availability": "Available 2025",
-   "Where available": "amazon.com",
-   "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=63b8d98dd0d2f7797ea5b5f25978590982bbbb5d",
-   "Supported Since Rel_releasesince": "23.05.4",
-   "Supported Current Rel_releasecurrent": "25.12.5",
-   "Image too big_releasecurrents": "",
-   "Unsupported Functions_unsupporteds": "",
-   "Gluon support_gluonsupport": "unknown",
-   "Target_target": "mediatek",
-   "Subtarget": "filogic",
-   "Package architecture_pkg-arch": "aarch64_cortex-a53",
-   "Bootloader_bootloader": "U-Boot",
-   "CPU": "MediaTek MT7981BA",
-   "CPU Cores_numcores_": "2",
-   "CPU MHz": "1300",
-   "Flash MB_mbflashs": "128NAND",
-   "RAM MB_mbram": "512",
-   "Ethernet 100M ports_numethport": "-",
-   "Ethernet 1Gbit ports_numethport": "1",
-   "Ethernet 2.5Gbit ports_numethport": "1",
-   "Ethernet 5Gbit ports_numethport": "-",
-   "Ethernet 10Gbit ports_numethport": "-",
-   "SFP ports_port-sfp": "-",
-   "SFP+ ports_port-sfp": "-",
-   "Switch": "MediaTek MT7981BA",
-   "VLAN_yesno": "Yes",
-   "Modem_modem": "-",
-   "Comments network ports_": "Realtek RTL8221B 2.5Gbe Phy",
-   "WLAN Hardwares": "MediaTek MT7981BA, MediaTek MT7976CN",
-   "WLAN 2.4GHz_wlan24": "b/g/n/ax",
-   "WLAN 5.0GHz_wlan50": "a/n/ac/ax",
-   "WLAN 6.0GHz_wlan60": "-",
-   "WLAN 60.0GHz_wlan60g": "-",
-   "WLAN Comments_": "2.4GHz: 2x2:2 MIMO, 5GHz: 2X3:2 MIMO",
-   "WLAN driver_wlan-drivers": "mt76",
-   "Detachable Antennas_numdetachantenna": "-",
-   "Bluetooth_bluetooth": "-",
-   "miniPCI ports_port-minipci": "-",
-   "USB ports_port-usbs": "1x 3.0",
-   "SATA ports_numsataport": "-",
-   "Comments USB SATA ports_": "",
-   "Video ports_port-videos": "-",
-   "Audio ports_port-audios": "-",
-   "Phone ports_port-phones": "-",
-   "Comments AV ports_": "",
-   "Serial_yesno": "Yes",
-   "Serial connection parameters_serialparam": "115200 / 8N1",
-   "Serial connection voltage_serialvoltage": "3.3",
-   "JTAG_yesno": "No",
-   "LED count_numled": "2",
-   "Button count_numbutton": "2",
-   "GPIOs_numgpio": "¿",
-   "Power Supply": "5 VDC, 3A via USB Type-C",
-   "Outdoor_yesno": "No",
-   "OpenVPN performance": "¿",
-   "Wireguard performance": "¿",
-   "Device Page_page": "toh:cudy:tr3000",
-   "Device Techdata_hidden": "View/Edit data",
-   "OWrt Forum Topic URL_urls": "https://forum.openwrt.org/t/supporting-the-cudy-tr3000-in-openwrt/184912",
-   "Forum search_search-forums": "TR3000",
-   "Git search_search-gits": "TR3000",
-   "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/Cudy_TR3000",
-   "WikiDevi ID_hwinfo-ids": "Cudy_TR3000",
-   "OEM Device Homepage URL_url": "https://www.cudy.com/products/tr3000-1-0",
-   "Firmware OEM Stock URL_url": "https://www.cudy.com/pages/download-center/tr3000-1-0",
-   "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/mediatek/filogic/openwrt-25.12.5-mediatek-filogic-cudy_tr3000-v1-initramfs-kernel.bin",
-   "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/mediatek/filogic/openwrt-25.12.5-mediatek-filogic-cudy_tr3000-v1-squashfs-sysupgrade.bin",
-   "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-cudy_tr3000-v1-initramfs-kernel.bin",
-   "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-cudy_tr3000-v1-squashfs-sysupgrade.bin",
-   "Installation method(s)_method-installations": "see devicepage",
-   "Comment installation": "",
-   "Recovery method(s)_method-recoverys": "see devicepage",
-   "Comment recovery": "",
-   "Picture_img100s": "media:cudy:cudy-tr3000_front.png, media:cudy:cudy-tr3000_back.png",
-   "Comments_": "Separate U-Boot Mod Image (UBI) is available for TR3000 128MB model to utilize full NAND storage space (additional ~45 MB).  See Device Page for more info."
-  },
-  "openwrt_wiki": {
-   "Einleitung": "The Cudy TR3000 is a router designed for travel and portable use. It's powered with USB-C and features a USB3 port, Wi-Fi 6, and 1x2.5G WAN + 1x1G LAN port",
-   "Hardware Highlights": "The router has 3 WiFi antennas (two non-detachable external, and one internal). The internal antenna is for zero-wait DFS functionality only.",
-   "OEM easy installation": [
-    "Determine the size of the flash on your device: 128 MB or 256 MB. You can find it on the carton or the label on your device (exact wording varies by market).",
-    "Download the Intermediate Firmware: https://www.cudy.com/blogs/faq/openwrt-software-download (Google Drive). ... Note that the 256 MB version has a separate firmware in the \"TR3000 256 MB Flash V1 (Not for TR3000 V1)\" folder. Wrong firmware will be rejected and will not brick your device.",
-    "If you are with 256 MB flash version and downloaded the 256 MB version, you already got the extracted version \"cudy_tr3000-256mb-v1-sysupgrade.bin\".",
-    "Enter the web interface at http://192.168.10.1/ with the default password \"admin\" (or the password you set during the initial setup of newer stock firmware). Go to \"Upgrade Firmware\" ... Wait 2 minutes.",
-    "Intermediate firmware: connect via Ethernet, LuCI at http://192.168.1.1/, then flash sysupgrade from firmware-selector.openwrt.org"
-   ],
-   "TFTP-Werte": {
-    "tftp server IPv4": "192.168.1.88",
-    "Image": "Name must contain initramfs",
-    "TFTP transfer window": "10 seconds"
-   },
-   "OpenWrt U-Boot layout": "default available router space ~45 MB in the 128 MB version; OpenWrt U-Boot increases to 93 MB (nur 128-MB-Variante, Image cudy_tr3000-v1-ubootmod)",
-   "Debricking": "Cudy bootloader starts a TFTP client for OEM recovery using the Reset button, accepts only OEM firmware. Hard bricks: mtk_uartboot with mt7981-ram-ddr3-bl2.bin",
-   "Flash Layout (128 MB)": "SLC SPI-NAND 128 MiB: BL2 1 MiB | u-boot-env 512 KiB | factory 2 MiB | bdinfo 256 KiB | FIP 2 MiB | ubi",
-   "Network interfaces": {
-    "eth1": "1G LAN port",
-    "eth0": "2.5G WAN port, DHCP",
-    "br-lan": "LAN & WiFi"
-   },
-   "Buttons": {
-    "Reset": "reset",
-    "Slider button": "BTN_0"
-   },
-   "Opening the case": "Remove the 4 rubber pads underneath (heat slightly), remove 4 Philips screws, bottom clipped to top with small tabs",
-   "Serial / UART": "On the bottom of the PCB you can find two small test points. If your PCB has the ethernet ports at left and the LEDs at right, then the left test point is RX and the right is TX. GND: any GND point on the board. Solder wires or use needles. 115200, 8N1, 3.3V",
-   "Warnung": "Cudy TR3000 request special tools for uart jumper as picture near end of the page.",
-   "Notes": [
-    "https://forum.openwrt.org/t/supporting-the-cudy-tr3000-in-openwrt/184912",
-    "https://forum.openwrt.org/t/support-for-cudy-tr3000/234467",
-    "https://forum.openwrt.org/t/ubootmod-layout-for-cudy-tr3000/232058",
-    "https://forum.openwrt.org/t/cudy-started-using-a-new-flash-chip-in-their-ax3000-devices-its-currently-unsupported/243547"
-   ],
-   "Tags": "U-boot mediatek filogic 2core ARMv8 MT7981 2NIC 2.5GigabitEthernet GigabitEthernet \"no switch\" wlan 2WNIC 2x2 802.11ax wifi6 NonDetachableAntenna 2Ant 512RAM 128NAND 256NAND 1USB USB3.1 2button \"portable router\" \"5v powered\" \"usb powered\""
-  },
-  "openwrt_commit": {
-   "Titel": "mediatek: add support for Cudy TR3000  256MB  v1 flash version",
-   "Text": "This device is similar to the Cudy TR3000 v1 128MB version. The difference is that the flash memory is 128mb and the other is 256mb",
-   "SoC": "MediaTek MT7981B",
-   "CPU": "2x 1.3 GHz Cortex-A53",
-   "Flash": "256 MiB SPI NAND",
-   "RAM": "512 MiB",
-   "WLAN": "2.4 GHz, 5 GHz (MediaTek MT7976CN, 802.11ax)",
-   "Ethernet": "1x 10/100/1000/2500 Mbps RTL8221B WAN, 1x10/100/1000 Mbps MT7981 LAN",
-   "USB": "USB 3.0 port",
-   "Buttons": "1 Reset button, 1 slider button",
-   "LEDs": "1x Red, 1x White",
-   "Power": "5 VDC, 3 A",
-   "Installation": "Cudy intermediate firmware from https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0, upgrade on stock web page, then sysupgrade via 192.168.1.1",
-   "Recovery": "Ask Cudy CN customer service for original firmware; router off, hold RESET while powering on for at least 5 seconds, u-boot shell opens; LAN, own IP 192.168.1.88/24, TFTP server with recovery.bin",
-   "Dateien": [
-    "05_set_preinit_iface",
-    "mt7981b-cudy-tr3000-256mb-v1.dts",
-    "02_network",
-    "11_fix_wifi_mac",
-    "filogic.mk"
-   ]
-  },
-  "openwrt_commit_128mb": {
-   "Serial console": "internal test points, 115200 8n1",
-   "MAC addresses": {
-    "WAN": "80:af:ca:xx:xx:x1 (label+1)",
-    "LAN": "80:af:ca:xx:xx:x0 (label)",
-    "WLAN 2g": "80:af:ca:xx:xx:x0 (label)",
-    "WLAN 5g": "82:af:ca:xx:xx:x0"
-   },
-   "Installation": "TFTP by disassembling the router: UART, hold RESET >=5 s at power on, u-boot shell, 192.168.1.88/24, setenv bootfile initramfs-kernel.bin; tftpboot; bootm"
-  },
-  "openwrt_pr_19167": {
-   "hauke 2025-06-21": "I can not find the R103 on https://www.cudy.com/de-de/pages/download-center/tr3000-1-0",
-   "grinderz 2025-06-21": "256MB offically available only in China, DTS and firmware download on China page https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
-   "ayufan 2025-07-23": "How did you know whether you have 128MB or 256MB version?",
-   "aiyunyuner 2025-07-23": "256mb have clear mark, like https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/31",
-   "fildunsky 2025-09-12": "do not flash TR3000-R47-2.4.7-...-sysupgrade.bin (128-MB-Stock) otherwise you will come back to factory Cudy firmware. Just flash cudy_tr3000-256mb-v1-sysupgrade.bin (Zwischenfirmware, 12932 kB) -> OpenWrt sysupgrade",
-   "777vip 2025-09-08": "ImmortalWrt cudy_tr3000-256mb-v1 sysupgrade nach Cudy-Zwischenfirmware: Gerät bootete nicht (unbeantwortet)"
-  },
-  "openwrt_dts": {
-   "model": "Cudy TR3000 256MB v1",
-   "compatible": "cudy,tr3000-256mb-v1, mediatek,mt7981",
-   "include": "mt7981b-cudy-tr3000-v1.dtsi",
-   "spi_nand": "spi-cal-enable (read-data 'SPINAND'), mediatek,nmbm, bmt-max-ratio 1, bmt-max-reserved-blocks 64",
-   "ubi": "reg = <0x5c0000 0xe600000> (230 MiB)",
-   "dtsi_aliases": "label-mac-device = gmac1; led-boot/failsafe = rot; led-running/upgrade = weiß; serial0 = uart0; stdout-path serial0:115200n8",
-   "dtsi_gpio_keys": {
-    "reset": "KEY_RESTART, GPIO 1 active low",
-    "mode": "BTN_0, EV_SW (Schalter), GPIO 0 active low, debounce 60"
-   },
-   "dtsi_leds": {
-    "led-0": "rot, LED_FUNCTION_POWER, GPIO 11",
-    "led-1": "weiß, LED_FUNCTION_STATUS, GPIO 10"
-   },
-   "dtsi_usb_vbus": "regulator 5 V, GPIO 9 active low",
-   "dtsi_gmac0": "2500base-x, phy@1 ethernet-phy-ieee802.3-c45, reset GPIO 39, IRQ GPIO 38, realtek,aldps-enable, MAC bdinfo 0xde00 +1",
-   "dtsi_gmac1": "gmii, int_gbe_phy, MAC bdinfo 0xde00 +0",
-   "dtsi_spi_nand": "spi-max-frequency 52 MHz, Quad (tx/rx bus width 4)",
-   "dtsi_partitionen": {
-    "BL2": "0x0-0x100000 ro",
-    "u-boot-env": "0x100000 +0x80000 ro",
-    "Factory": "0x180000 +0x200000 ro (WLAN-EEPROM)",
-    "bdinfo": "0x380000 +0x40000 ro (MAC 0xde00)",
-    "FIP": "0x3c0000 +0x200000 ro",
-    "ubi": "ab 0x5c0000"
-   }
-  },
-  "openwrt_image_mk": {
-   "DEVICE_VENDOR": "Cudy",
-   "DEVICE_MODEL": "TR3000",
-   "DEVICE_VARIANT": "256mb v1",
-   "DEVICE_DTS": "mt7981b-cudy-tr3000-256mb-v1",
-   "SUPPORTED_DEVICES": "+= R103",
-   "UBINIZE_OPTS": "-E 5",
-   "BLOCKSIZE": "128k",
-   "PAGESIZE": "2048",
-   "IMAGE_SIZE": "235520k",
-   "KERNEL_IN_UBI": "1",
-   "IMAGE/sysupgrade.bin": "sysupgrade-tar | append-metadata",
-   "DEVICE_PACKAGES": "kmod-usb3 kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware",
-   "ubootmod": "nur cudy_tr3000-v1-ubootmod (128 MB), keine ubootmod-Variante für 256 MB"
-  },
-  "forum_bootlog_cudy": {
-   "Machine model": "Cudy TR3000 v1 (Cudy-Build, Linux 6.6.83, ImmortalWrt/OpenWrt-Basis)",
-   "Memory": "496272K/524288K available",
-   "spi-nand": "Micron SPI NAND was found. 256 MiB, block size: 128 KiB, page size: 2048, OOB size: 128",
-   "NMBM": "Signature found at block 2047; management region starts at block 1920",
-   "MTD": "BL2 0x0-0x100000, u-boot-env 0x100000-0x180000, Factory 0x180000-0x380000, bdinfo 0x380000-0x3c0000, FIP 0x3c0000-0x5c0000, ubi 0x5c0000-0xebc0000",
-   "ubi": "attached mtd5 (name ubi, size 230 MiB); rootfs_data UBIFS 197 MiB",
-   "eth1": "PHY [mdio-bus:00] driver [MediaTek MT7981 PHY], 1Gbps",
-   "eth0": "PHY [mdio-bus:01] driver [RTL8221B-VB-CG 2.5Gbps PHY (C45)], 2500base-x; vorher 'rtl822xb_config_init failed: -110' / 'SerDes setup timed out, retrying'",
-   "wifi": "mt798x-wmac 18000000.wifi, WED v2, WM/WA Firmware 20240823"
-  },
-  "forum_typenschild": {
-   "Karton": "cudy, Aufdruck oben rechts '256MB 大闪存' (Chip-Symbol), 'AX3000双频 便携式Wi-Fi 6路由器(2.5G口)', '型号: TR3000 (256MB闪存版)'",
-   "Typenschild Unterseite": "Stempel '256MB闪存版' oben links; 产品型号: TR3000; 电源规格: 5V⎓3A; 管理地址: 192.168.10.1; 管理域名: http://cudy.net/; Hersteller 深圳市多酷科技有限公司, 中国制造; Felder 无线名称 Cudy-XXXX-5G / Cudy-XXXX, 无线密码 (8 Ziffern), CMIIT ID: 24J44R8D2652; MAC 80AFCA...; SN: TR3000...ZH1.0",
-   "Gehäuse": "Unterseite mit Lüftungsschlitzen und vier runden Gummifüßen"
-  },
-  "hersteller": {
-   "Titel": "AX3000 Wi-Fi 6 便携路由器, TR3000 1.0",
-   "Kurzbeschreibung": "有 128MB 和 256MB 两种闪存大小可选 (zwei Flash-Größen 128 MB und 256 MB wählbar)",
-   "Werbetext 256MB": "超大256MB闪存轻松实现网络的自由定制和功能拓展",
-   "型号版本": "TR3000 1.0",
-   "CPU": "1.3GHz 双核, ARM Cortex-A53",
-   "ROM": "128MB (1Gbit) NAND; 256MB (2Gbit) NAND 版本可选",
-   "RAM": "512MB (4Gbit) DDR3",
-   "5GHz 频段最高速率": "2402Mbps",
-   "2.4GHz 频段最高速率": "574Mbps",
-   "5GHz Wi-Fi 空间流": "2 条空间流",
-   "2.4GHz Wi-Fi 空间流": "2 条空间流",
-   "天线": "2× 不可拆卸, 1× 内置",
-   "5GHz 天线最高增益": "4.8dBi",
-   "2.4GHz 天线最高增益": "3.9dBi",
-   "功率放大器": "5GHz: 3× 内置; 2.4GHz: 2× 内置",
-   "Beamforming": "ja",
-   "覆盖半径": "最大: 180 m",
-   "2.5G RJ45 网口": "1",
-   "千兆 RJ45 网口": "1",
-   "以太网口备注": "2.5G 口为 WAN 口，千兆口为 LAN 口",
-   "USB-A 3.0": "1",
-   "电源": "USB-C 口供电",
-   "LED 指示灯": "系统",
-   "按钮": "重置按钮, 可配置DIP开关",
-   "受电方式": "USB-C",
-   "受电规格": "5V⎓3A, PD",
-   "电源适配器": "输入: 100-240V~ 50/60Hz; 输出: 5V⎓3A",
-   "最大功耗 (W)": "11.5w",
-   "待机功耗(W)": "4.2w",
-   "运行环境": "运行环境温度: 0 ℃ ~ 40 ℃; 运行湿度: 10% ~ 90% 非凝结; 储存湿度: 5% ~ 95% 非凝结",
-   "安装方式": "桌面安装",
-   "产品尺寸": "主体: 118×80×27.5 mm",
-   "产品重量": "160g",
-   "包装清单": "TR3000, 电源适配器, 网线, 快速安装指南",
-   "零售包装": "413g, 176×140.5×56mm; 装箱数量 40; 外箱 60×30×37.5 cm, 17.4kg brutto, 16.5kg netto",
-   "无线标准": "Wi-Fi 6",
-   "最高调制技术": "1024-QAM",
-   "无线效率技术": "OFDMA, MU-MIMO, BSS Color",
-   "终端数量上限": "512",
-   "推荐终端数量上限": "70",
-   "最大 Wi-Fi 频宽": "160 MHz",
-   "Werbetexte": [
-    "USB-C电源口 ... 包装内包含一个USB-C电源",
-    "侧面带一个自定义开关，开关LED、开关异地组网",
-    "可用笔记本电脑和充电宝供电",
-    "支持 Cudy Mesh"
-   ]
-  },
-  "hersteller_downloads": {
-   "R103-2.5.21": "2026-07-10, m_upgrade_TR3000_256MB_Flash-R103-2.5.21-20260708-181324-sysupgrade_81571.zip, 26.6 MB; 仅适用于256MB版本",
-   "R103-2.4.21": "2025-10-17, m_upgrade_TR3000_256MB_Flash-R103-2.4.21-20251009-115734-sysupgrade_44834.zip, 25.7 MB",
-   "TR3000 256MB DTS": "2025-05-19, DTS_and_intermediate_firmware.zip, 25.8 MB: 适用于TR3000 256MB V1.0版本开发OpenWrt固件的DTS文件和页面升级用的中间固件。警告：禁止用于升级TR3000 128MB版本，也不要用TR3000 128MB版本的OpenWrt固件升级TR3000 256MB版本，无法正常工作。",
-   "R103-2.3.9": "2025-02-25, m_upgrade_TR3000_256MB_Flash-R103-2.3.9-20250208-171917-sysupgrade_23456.zip, 25.7 MB: TR3000 V1.0 256MB Flash版本首次发布固件",
-   "R47 (128 MB)": "2.2.7 (2024-12-17) bis 2.5.12/2.5.21 (2026-07-10); Hinweis jeweils 该固件不支持256MB版本升级",
-   "R47-2.4.22 Hinweis": "Cudy在2025年11月开始生产的TR3000 (SN码为2544 或者之后的批次)使用了新的Flash F50L1G41LC (betrifft 128-MB-Variante)",
-   "R47-2.3.7 Hinweis": "中兴F50的供电功率较高，目前不能直接通过TR3000的USB口供电",
-   "GPL": "21.02, 2024-04-16",
-   "Dokument": "安装说明书 TR3000_ZH_QIG.pdf"
-  },
-  "hersteller_kurzanleitung": {
-   "Schritt 1": "找一个输出为5V (2A或更高) 的USB-C电源适配器，将电源适配器连接到路由器，并等待系统指示灯常亮",
-   "Schritt 2": "将路由器的 2.5G WAN端口连接到光纤宽带Modem(光猫)或小区宽带接口",
-   "Rückseite (Grafik, v.l.n.r.)": "USB-A, LAN, WAN (2.5G), USB-C",
-   "Verwaltung": "cudy.net oder 192.168.10.1; beim ersten Aufruf 创建管理员密码 (Admin-Passwort anlegen)",
-   "Betriebsarten": "无线路由, 无线接入点 AP, 无线扩展, 无线中继, 客户端 Client",
-   "LED": {
-    "熄灭": "未上电",
-    "红色闪烁": "系统启动中",
-    "红色": "未连接到互联网",
-    "白色闪烁": "正在连接",
-    "白色": "已连接到互联网"
-   },
-   "USB 3.0": "连接USB设备，支持文件共享和网络共享",
-   "2.5G WAN": "连接光纤宽带Modem(光猫)或小区宽带接口等，以通网络",
-   "LAN": "连接以太网设备，为其提供网络",
-   "Power": "USB-C 电源口，可用PD充电头、笔记本电脑、充电宝等为路由器供电",
-   "开关": "出厂默认无功能。登录管理界面，进入高级设置->系统->切换按钮，可启用VPN或LED开关",
-   "RESET": "按2-3秒可将路由器恢复出厂设置",
-   "IPv6": "本产品IPv6功能默认关闭",
-   "Garantie": "1 Jahr (Cudy产品售后服务承诺: 1年保修)"
-  },
-  "wikidevi": {
-   "brand": "Cudy",
-   "model": "TR3000",
-   "revision": "(Rev1.2)",
-   "series": "AX3000",
-   "ean": "6971690793050",
-   "asin": "B0BXNCRVRC",
-   "manuf_country": "China",
-   "availability": "Currently Shipping",
-   "est_release_date": "03/2023",
-   "fcc_date": "06/08/2023",
-   "fcc_id": "2APRGRT02",
-   "pcb_id": "300100153",
-   "type": "travel router, wireless router",
-   "pwr_v": "5",
-   "pwr_amp": "3",
-   "pwr_conn": "USB (Type-C) Female",
-   "cpu1": "MediaTek MT7981BA 1.3 GHz, 2 cores",
-   "fla1": "128",
-   "fla1_brand": "ESMT",
-   "fla1_model": "F50L1G41LB-104YG2M",
-   "ram1": "512",
-   "ram1_brand": "ESMT",
-   "ram1_model": "M15T4G16256A-DEB",
-   "expansion": "USB 3.0 x1",
-   "wi1": "MT7981BA + MT7976CN, bgn+ax, U.FL (internal), 2T2R, 2 SS",
-   "wi2": "MT7981BA + MT7976CN, an+ac+ax, U.FL (internal), 2T3R, 2 SS",
-   "eth": "CPU + Realtek RTL8221B; LAN 1x 1GbE, WAN 1x 2.5GbE",
-   "flags": "Wi-Fi 6, MU-MIMO, WPA3, Mesh, heatsink",
-   "default_ssid": "Cudy-XXXX-5G, Cudy-XXXX",
-   "default_ip": "192.168.10.1",
-   "default_pass": "admin",
-   "oui": "80:AF:CA",
-   "Hardware specification": "Flash 128MB (SPI NAND) @104MHz; Memory 512MB (DDR3L); 2x2 2.4GHz + 3x3 5GHz (2x2 + Zero-wait DFS); Power 5V/3A via USB Type-C",
-   "Images": "Cudy TR3000 Top.jpeg (Board Top), Cudy TR3000 Bottom.jpeg (Board Bottom)"
-  },
-  "fccid": {
-   "FCC ID": "2APRGRT02",
-   "Applicant": "Shenzhen Cudy Technology Co., Ltd.",
-   "Equipment Class": "Wi-Fi Router (DTS, UNII)",
-   "Test Firm": "Shenzhen LCS Compliance Testing Laboratory Ltd.",
-   "Frequenzen": "2412-2462 MHz; 5180-5240 MHz (weitere UNII-Bänder in Testberichten)",
-   "Final Action Date": "2023-06-08",
-   "Model": "RT02",
-   "Composite Device": "Yes",
-   "Label": "Wi-Fi Router, Model: WR3000, FCC ID: 2APRGRT02 (Label 4.5 x 5.5 cm)",
-   "Modellerklärung 2023-04-17": "WR3000, WR3000 Plus, WR1500, TR3000, M3000, RE3000, AP3000, AP3000 Outdoor are identical in hardware and software, the only differences model was model name",
-   "Handbuch": "Kurzanleitung WR3000 (WAN, LAN1-3, WPS, RESET, POWER) - nicht TR3000",
-   "Exhibits": "User manual, Internal/External photos, Label, Test setup photos, Antenna information, Test reports 2.4G/5G/DFS, RF exposure, Letters"
-  },
-  "werkstatt": {
-   "cudy-installation.md, Tabelle 'Welche Zwischenfirmware für welches Modell'": "TR3000 256 MB v1 | cudy-tr3000-256mb.bin | Cudy-Eintrag 'TR3000 256MB Flash V1 (not for TR3000 V1)' | MD5 93615f1c40cdd64179753aee5a32aa06",
-   "cudy-installation.md, Abschnitt 'Sonderfälle'": "TR3000 v1 und die 256-MB-Variante nicht verwechseln ... ausdrücklich nicht austauschbar: cudy-tr3000.bin für die normale v1, cudy-tr3000-256mb.bin nur für die Variante mit 256 MB Flash. Cudy schreibt das selbst in den Ordnernamen. Im Zweifel nichts ausprobieren, sondern melden.",
-   "erstinstallation-ohne-factory.md, Abschnitt 'A: Cudy'": "zweistufig: Cudy-signierte Zwischenfirmware, danach Gluon-sysupgrade; im Spiegel liegt die 256-MB-Variante, deren Verzeichnisname ausdrücklich 'not for TR3000 V1' sagt",
-   "rtl8221b-2g5-wan-intern.md": "TR3000: gmac0 = RTL8221B 2500base-x, realtek,aldps-enable; Feldfall 21_dias: WAN-Link hing nach Firmwarewechsel, zurück erst nach Neustart ohne gestecktes Kabel; ethtool vorübergehend in den Images für TR3000 (beide)"
-  }
- },
- "felder": {
-  "hersteller": [
-   {
-    "wert": "Cudy",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "Cudy (Shenzhen Cudy Technology Co., Ltd., 深圳市多酷科技有限公司)",
-    "quelle": "forum_typenschild",
-    "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
-    "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "modell_name": [
-   {
-    "wert": "TR3000",
-    "quelle": "forum_typenschild",
-    "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
-    "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
-    "sicherheit": "mittel",
-    "bemerkung": "Typenschild '产品型号: TR3000'; Karton '型号: TR3000 (256MB闪存版)'"
-   },
-   {
-    "wert": "TR3000 256MB v1",
-    "quelle": "openwrt_dts",
-    "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-256mb-v1.dts",
-    "stand": "Branch main am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": "DTS model 'Cudy TR3000 256MB v1'"
-   },
-   {
-    "wert": "TR3000 1.0 (256MB Flash)",
-    "quelle": "hersteller_downloads",
-    "beleg": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
-    "sicherheit": "hoch",
-    "bemerkung": "Downloadseite 'TR3000 V1.0 256MB Flash版本'"
-   }
-  ],
-  "hw_version": [
-   {
-    "wert": "1.0",
-    "quelle": "hersteller_downloads",
-    "beleg": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
-    "sicherheit": "hoch",
-    "bemerkung": "'TR3000 V1.0 256MB Flash'"
-   },
-   {
-    "wert": "ZH1.0",
-    "quelle": "forum_typenschild",
-    "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
-    "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
-    "sicherheit": "mittel",
-    "bemerkung": "Seriennummer endet auf 'ZH1.0' (China-Markt, Version 1.0); ein Gerät"
-   },
-   {
-    "wert": "v1",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": "Image-Name cudy_tr3000-256mb-v1"
-   }
-  ],
-  "erkennung_typenschild": [
-   {
-    "wert": "Typenschild unten mit eigenem Stempel '256MB闪存版' oben links; Karton mit '256MB 大闪存' und '型号: TR3000 (256MB闪存版)'. Ohne diesen Aufdruck ist es die 128-MB-Variante",
-    "quelle": "forum_typenschild",
-    "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
-    "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
-    "sicherheit": "mittel",
-    "bemerkung": "Fotos eines China-Geräts; Karton: https://forum.openwrt.org/uploads/default/original/3X/b/e/bed9621ab7f03be918f6383b751613bd543621dc.jpeg"
-   },
-   {
-    "wert": "Flash-Größe steht auf Karton oder Typenschild (Wortlaut je Markt verschieden)",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/cudy/tr3000",
-    "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "Stock-Firmware heißt TR3000_256MB_Flash-R103-…, die der 128-MB-Variante TR3000-R47-…",
-    "quelle": "hersteller_downloads",
-    "beleg": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
-    "sicherheit": "hoch",
-    "bemerkung": "Forum #29 (LITUATUI) nennt dasselbe; OpenWrt SUPPORTED_DEVICES += R103"
-   },
-   {
-    "wert": "'256mb have clear mark'",
-    "quelle": "openwrt_pr_19167",
-    "beleg": "https://github.com/openwrt/openwrt/pull/19167",
-    "stand": "Kommentar 2025-07-23 (aiyunyuner)",
-    "sicherheit": "niedrig",
-    "bemerkung": ""
-   }
-  ],
-  "andere_namen": [
-   {
-    "wert": [
-     "TR3000 256MB闪存版",
-     "TR3000 256MB Flash",
-     "TR3000_256MB_Flash (R103)"
-    ],
-    "quelle": "hersteller_downloads",
-    "beleg": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": [
-     "cudy,tr3000-256mb-v1",
-     "R103"
-    ],
-    "quelle": "openwrt_image_mk",
-    "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
-    "stand": "Branch main am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": "Board-Name und SUPPORTED_DEVICES"
-   }
-  ],
-  "verwandte_modelle": [
-   {
-    "wert": "Cudy TR3000 v1 (128 MB, Image cudy-tr3000-v1); Images nicht austauschbar",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "FCC-Erklärung: WR3000, WR3000 Plus, WR1500, TR3000, M3000, RE3000, AP3000, AP3000 Outdoor 'electrically identical'",
-    "quelle": "fcc_modellerklaerung",
-    "beleg": "https://fccid.io/2APRGRT02/Letter/Letter-of-declaration-model-difference-6580979",
-    "stand": "Brief vom 2023-04-17, Exhibit 2023-06-08",
-    "sicherheit": "niedrig",
-    "bemerkung": "Behauptung gegenüber der FCC; TR3000 unterscheidet sich offensichtlich (USB-C, RTL8221B, 2 Ports)"
-   }
-  ],
-  "vertrieb": [
-   {
-    "wert": "nur China",
-    "quelle": "openwrt_pr_19167",
-    "beleg": "https://github.com/openwrt/openwrt/pull/19167",
-    "stand": "Kommentar 2025-06-21 (grinderz)",
-    "sicherheit": "niedrig",
-    "bemerkung": "'256MB offically available only in China'; Forum #26 ebenso; Cudy-Downloads nur auf der chinesischen Seite"
-   }
-  ],
-  "erscheinungsdatum": [
-   {
-    "wert": "2025-02 (erste Stock-Firmware R103 2.3.9 vom 2025-02-08, veröffentlicht 2025-02-25)",
-    "quelle": "hersteller_downloads",
-    "beleg": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
-    "sicherheit": "hoch",
-    "bemerkung": "'TR3000 V1.0 256MB Flash版本首次发布固件'"
-   }
-  ],
-  "fcc_id": [
-   {
-    "wert": "2APRGRT02",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-    "sicherheit": "niedrig",
-    "bemerkung": "ToH-Eintrag gilt für TR3000 v1 (128 MB); der Grant ist für WR3000 ausgestellt, TR3000 nur per Modellerklärung mitgenannt"
-   },
-   {
-    "wert": "2APRGRT02",
-    "quelle": "fcc_modellerklaerung",
-    "beleg": "https://fccid.io/2APRGRT02/Letter/Letter-of-declaration-model-difference-6580979",
-    "stand": "Brief vom 2023-04-17, Exhibit 2023-06-08",
-    "sicherheit": "niedrig",
-    "bemerkung": "Label im Grant: 'Model: WR3000'. Für die China-Variante mit 256 MB keine FCC-Unterlagen bekannt"
-   }
-  ],
-  "cmiit_id": [
-   {
-    "wert": "24J44R8D2652",
-    "quelle": "forum_typenschild",
-    "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
-    "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
-    "sicherheit": "mittel",
-    "bemerkung": "Chinesische Funkzulassung, vom Typenschild eines Geräts abgelesen"
-   }
-  ],
-  "zertifizierungen": [
-   {
-    "wert": [
-     "CMIIT (China)"
-    ],
-    "quelle": "forum_typenschild",
-    "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
-    "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "soc": [
-   {
-    "wert": "MediaTek MT7981B",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "MediaTek MT7981BA",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-    "sicherheit": "mittel",
-    "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
-   }
-  ],
-  "cpu_kerne": [
-   {
-    "wert": 2,
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 2,
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "cpu_mhz": [
-   {
-    "wert": 1300,
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 1300,
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "cpu_arch": [
-   {
-    "wert": "ARM Cortex-A53 (aarch64)",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "ARM Cortex-A53",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": "aarch64_cortex-a53",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-    "sicherheit": "mittel",
-    "bemerkung": "Paketarchitektur"
-   }
-  ],
-  "ram_mb": [
-   {
-    "wert": 512,
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 512,
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "'512MB (4Gbit) DDR3', gilt für beide Flash-Größen"
-   },
-   {
-    "wert": 512,
-    "quelle": "forum_bootlog_cudy",
-    "beleg": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/1",
-    "stand": "Beitrag #1 vom 2025-06-06 (aiyunyuner)",
-    "sicherheit": "mittel",
-    "bemerkung": "Bootlog: 'Memory: 496272K/524288K available'"
-   }
-  ],
-  "ram_typ": [
-   {
-    "wert": "DDR3",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": "DDR3L",
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR3000",
-    "stand": "Seitenrevision 2025-07-26T12:53:12Z (Olek210)",
-    "sicherheit": "niedrig",
-    "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
-   }
-  ],
-  "ram_chip": [
-   {
-    "wert": "ESMT M15T4G16256A-DEB",
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR3000",
-    "stand": "Seitenrevision 2025-07-26T12:53:12Z (Olek210)",
-    "sicherheit": "niedrig",
-    "bemerkung": "Nur für die 128-MB-Variante belegt; bei der 256-MB-Variante nicht geprüft"
-   }
-  ],
-  "flash_mb": [
-   {
-    "wert": 256,
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": "'Flash: 256 MiB SPI NAND'"
-   },
-   {
-    "wert": 256,
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "'256MB (2Gbit) NAND 版本可选'"
-   },
-   {
-    "wert": 256,
-    "quelle": "forum_bootlog_cudy",
-    "beleg": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/1",
-    "stand": "Beitrag #1 vom 2025-06-06 (aiyunyuner)",
-    "sicherheit": "mittel",
-    "bemerkung": "'spi-nand spi0.0: 256 MiB, block size: 128 KiB, page size: 2048'"
-   },
-   {
-    "wert": 256,
-    "quelle": "forum_typenschild",
-    "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
-    "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
-    "sicherheit": "mittel",
-    "bemerkung": "Stempel '256MB闪存版'"
-   }
-  ],
-  "flash_typ": [
-   {
-    "wert": "NAND (SPI-NAND)",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "NAND",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "flash_chip": [
-   {
-    "wert": "Micron SPI-NAND, 256 MiB (genaue Typbezeichnung nicht im Log)",
-    "quelle": "forum_bootlog_cudy",
-    "beleg": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/1",
-    "stand": "Beitrag #1 vom 2025-06-06 (aiyunyuner)",
-    "sicherheit": "mittel",
-    "bemerkung": "Treibermeldung 'Micron SPI NAND was found' aus Cudys eigenem Bootlog; kein Platinenfoto der 256-MB-Variante gefunden"
-   }
-  ],
-  "flash_layout": [
-   {
-    "wert": "BL2 1 MiB | u-boot-env 512 KiB | Factory 2 MiB | bdinfo 256 KiB | FIP 2 MiB | ubi 230 MiB (0x5c0000-0xebc0000), NMBM aktiv",
-    "quelle": "openwrt_dts",
-    "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-256mb-v1.dts",
-    "stand": "Branch main am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": "Rest bis 256 MiB = NMBM-Reserve (Bootlog: Management-Region ab Block 1920)"
-   },
-   {
-    "wert": "BL2 0x0-0x100000, u-boot-env -0x180000, Factory -0x380000, bdinfo -0x3c0000, FIP -0x5c0000, ubi -0xebc0000 (230 MiB); rootfs_data 197 MiB unter Cudys Firmware",
-    "quelle": "forum_bootlog_cudy",
-    "beleg": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/1",
-    "stand": "Beitrag #1 vom 2025-06-06 (aiyunyuner)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "image_groesse_kb": [
-   {
-    "wert": 235520,
-    "quelle": "openwrt_image_mk",
-    "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
-    "stand": "Branch main am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": "IMAGE_SIZE; zum Vergleich 128-MB-Variante deutlich kleiner"
-   }
-  ],
-  "wlan_chips": [
-   {
-    "wert": "MediaTek MT7981B (2.4 und 5 GHz integriert) + MT7976CN (Front-End)",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "MediaTek MT7981BA, MediaTek MT7976CN",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-    "sicherheit": "mittel",
-    "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
-   }
-  ],
-  "wlan_treiber": [
-   {
-    "wert": "mt76 (kmod-mt7915e, mt7981-wo-firmware)",
-    "quelle": "openwrt_image_mk",
-    "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
-    "stand": "Branch main am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "mt76",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "wlan_24_standard": [
-   {
-    "wert": "802.11b/g/n/ax",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-    "sicherheit": "mittel",
-    "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
-   },
-   {
-    "wert": "Wi-Fi 6 (802.11ax), 574 Mbit/s",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "wlan_5_standard": [
-   {
-    "wert": "802.11a/n/ac/ax",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-    "sicherheit": "mittel",
-    "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
-   },
-   {
-    "wert": "Wi-Fi 6 (802.11ax), 2402 Mbit/s",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "wlan_24_streams": [
-   {
-    "wert": 2,
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "'2 条空间流'"
-   },
-   {
-    "wert": 2,
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-    "sicherheit": "mittel",
-    "bemerkung": "'2.4GHz: 2x2:2 MIMO'"
-   }
-  ],
-  "wlan_5_streams": [
-   {
-    "wert": 2,
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "'2 条空间流'"
-   },
-   {
-    "wert": 2,
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-    "sicherheit": "mittel",
-    "bemerkung": "'5GHz: 2X3:2 MIMO'"
-   }
-  ],
-  "wlan_24_ketten": [
-   {
-    "wert": "2 Verstärker",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "'功率放大器 2.4GHz: 2× 内置'"
-   },
-   {
-    "wert": "2T2R",
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR3000",
-    "stand": "Seitenrevision 2025-07-26T12:53:12Z (Olek210)",
-    "sicherheit": "niedrig",
-    "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
-   }
-  ],
-  "wlan_5_ketten": [
-   {
-    "wert": "3 Verstärker",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "'功率放大器 5GHz: 3× 内置'; dritte Kette für Zero-Wait-DFS"
-   },
-   {
-    "wert": "2x3",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-    "sicherheit": "mittel",
-    "bemerkung": "'2X3:2 MIMO'"
-   },
-   {
-    "wert": "2T3R",
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR3000",
-    "stand": "Seitenrevision 2025-07-26T12:53:12Z (Olek210)",
-    "sicherheit": "niedrig",
-    "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut; 'Zero-wait DFS'"
-   }
-  ],
-  "wlan_klasse": [
-   {
-    "wert": "AX3000",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": "AX3000",
-    "quelle": "forum_typenschild",
-    "beleg": "https://forum.openwrt.org/uploads/default/original/3X/b/e/bed9621ab7f03be918f6383b751613bd543621dc.jpeg",
-    "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
-    "sicherheit": "mittel",
-    "bemerkung": "Karton 'AX3000双频'"
-   }
-  ],
-  "wlan_kanalbreite": [
-   {
-    "wert": "bis 160 MHz",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "wlan_modulation": [
-   {
-    "wert": "1024-QAM, OFDMA, MU-MIMO, BSS Color, Beamforming",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "antennen_art": [
-   {
-    "wert": "extern fest (2 nicht abnehmbar) + 1 intern",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "'2× 不可拆卸, 1× 内置'"
-   },
-   {
-    "wert": "extern fest (2) + 1 intern; die interne nur für Zero-Wait-DFS",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/cudy/tr3000",
-    "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "antennen_anzahl": [
-   {
-    "wert": 3,
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": 3,
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/cudy/tr3000",
-    "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "antennen_anschluss": [
-   {
-    "wert": "intern U.FL (Antennen nicht abnehmbar)",
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR3000",
-    "stand": "Seitenrevision 2025-07-26T12:53:12Z (Olek210)",
-    "sicherheit": "niedrig",
-    "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
-   }
-  ],
-  "antennen_gewinn_dbi": [
-   {
-    "wert": {
-     "2.4 GHz": 3.9,
-     "5 GHz": 4.8
+  "image": "cudy-tr3000-256mb-v1",
+  "modell": "Cudy TR3000 256MB v1",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+      "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Kein Treffer im lokalen Dump quellen-toh-2026-10-18.tsv.gz (toh_suche ohne TR3000). Live-Datenseite gilt für TR3000 v1 (128NAND), eine eigene Datenseite für die 256-MB-Variante gibt es nicht; Werte nur übernommen, wo die Variante sie teilt"
     },
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "Höchstgewinn je Band"
-   }
-  ],
-  "antennen_charakteristik": [
-   {
-    "wert": "rund (Rundstrahler-Stabantennen), Reichweite laut Hersteller bis 180 m",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "niedrig",
-    "bemerkung": "Charakteristik nicht ausdrücklich angegeben, aus Bauform abgeleitet; 180 m = '覆盖半径 最大'"
-   }
-  ],
-  "ports": [
-   {
-    "wert": [
-     {
-      "name": "WAN",
-      "geschwindigkeit": "2.5G",
-      "art": "RJ45",
-      "phy": "Realtek RTL8221B",
-      "linux": "eth0"
-     },
-     {
-      "name": "LAN",
-      "geschwindigkeit": "1G",
-      "art": "RJ45",
-      "phy": "MT7981 intern",
-      "linux": "eth1"
-     }
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/cudy/tr3000?do=export_raw",
+      "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Gemeinsame Seite für 128 MB und 256 MB (Tags 128NAND 256NAND); Installationsabschnitt nennt die 256-MB-Zwischenfirmware ausdrücklich"
+    },
+    "openwrt_commit": {
+      "url": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+      "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_commit_2410": {
+      "url": "https://github.com/openwrt/openwrt/commit/0ec28e59a815bb43c359328c8fd644f399d344da",
+      "stand": "Backport openwrt-24.10, Commit 2025-06-22, gemergt 2025-07-10 (PR 19348)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_commit_128mb": {
+      "url": "https://github.com/openwrt/openwrt/commit/63b8d98dd0d2f7797ea5b5f25978590982bbbb5d",
+      "stand": "Commit 2024-05-07 (Luis Mita), gemergt 2024-05-09",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Support-Commit der 128-MB-Variante; Seriell, MAC-Schema"
+    },
+    "openwrt_pr_19167": {
+      "url": "https://github.com/openwrt/openwrt/pull/19167",
+      "stand": "PR 2025-06-17 bis 2025-09-12 (letzter Kommentar)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=tr3000+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-19 (8 Commits, neuester 2026-02-11)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-256mb-v1.dts",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "dateien": [
+        "mt7981b-cudy-tr3000-256mb-v1.dts",
+        "mt7981b-cudy-tr3000-v1.dtsi"
+      ]
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_release_pruefung": {
+      "url": "https://github.com/openwrt/openwrt/blob/v24.10.3/target/linux/mediatek/image/filogic.mk",
+      "stand": "Tags/Branches am 2026-10-19: v24.10.2 ohne, v24.10.3, openwrt-24.10 und openwrt-25.12 mit cudy_tr3000-256mb-v1",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_issue_17505": {
+      "url": "https://github.com/openwrt/openwrt/issues/17505",
+      "stand": "Issue vom 2025-01-07, offen",
+      "abgerufen": "2026-10-19"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/mediatek-filogic",
+      "stand": "Branch main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Gluon führt nur cudy-tr3000-v1, nicht die 256-MB-Variante"
+    },
+    "neanderfunk_patch": {
+      "url": "https://github.com/Neanderfunk/FirmwareConfigs/blob/67870ea3b4e88b5065d3931b0c177fc8abc8f526/patches/add-cudy-3000-gluon.patch",
+      "stand": "Commit 67870ea vom 2026-09-09 (FirmwareConfigs v2025.1.x)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Neanderfunk ergänzt device('cudy-tr3000-256mb-v1', 'cudy_tr3000-256mb-v1', {factory = false})"
+    },
+    "forum_256mb": {
+      "url": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838",
+      "stand": "Thread 2025-06-06 bis 2025-07-24 (geschlossen)",
+      "abgerufen": "2026-10-19"
+    },
+    "forum_bootlog_cudy": {
+      "url": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/1",
+      "stand": "Beitrag #1 vom 2025-06-06 (aiyunyuner)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Von Cudy bereitgestellter OpenWrt-Bootlog eines 256-MB-Geräts (Linux 6.6.83) plus Cudy-DTS"
+    },
+    "forum_typenschild": {
+      "url": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/31",
+      "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Zwei Fotos (Karton, Geräteunterseite mit Typenschild) als Bild ausgewertet; MAC/SN des Nutzergeräts nicht übernommen"
+    },
+    "hersteller": {
+      "url": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+      "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Chinesische Produktseite; 256-MB-Variante nur dort (laut PR 19167 nur in China verkauft). Spezifikation gilt für TR3000 1.0 mit 128 MB oder optional 256 MB"
+    },
+    "hersteller_downloads": {
+      "url": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
+      "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Sprachwahl chinesisch nötig; R103-Firmware = 256 MB, R47 = 128 MB"
+    },
+    "hersteller_kurzanleitung": {
+      "url": "https://www.cudy.com/cdn/shop/files/TR3000_ZH_QIG.pdf?v=5796422902345933869",
+      "stand": "PDF ohne Datum (Druck-Nr. 810600557), abgerufen 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Chinesische Kurzanleitung TR3000 (ohne Flash-Angabe), nur Grafik, als Bild ausgewertet"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/Cudy_TR3000?action=raw",
+      "stand": "Seitenrevision 2025-07-26T12:53:12Z (Olek210)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Beschreibt die 128-MB-Variante (Flash ESMT F50L1G41LB); nur in roh, Felder nur markiert übernommen"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=TR3000&fulltext=1",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "keine Treffer"
+    },
+    "fccid": {
+      "url": "https://fccid.io/2APRGRT02",
+      "stand": "Grant 2023-06-08 (Original Equipment)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Grant für WR3000 (Label 'Model: WR3000'); TR3000 nur per Erklärung 'electrically identical' mitgenannt. Für die China-Variante 256 MB keine FCC-Unterlagen"
+    },
+    "fcc_modellerklaerung": {
+      "url": "https://fccid.io/2APRGRT02/Letter/Letter-of-declaration-model-difference-6580979",
+      "stand": "Brief vom 2023-04-17, Exhibit 2023-06-08",
+      "abgerufen": "2026-10-19"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/2APRGRT02/Label/Label-and-label-location-6580976",
+      "stand": "Exhibit 2023-06-08 (PDF 2023-04-13)",
+      "abgerufen": "2026-10-19"
+    },
+    "werkstatt": {
+      "url": "router-werkstatt/docs/cudy-installation.md",
+      "stand": "Repo routerwerkstatt, Commit 998ec38 vom 2026-10-16 (Tabelle Stand 15.10.2026)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Eigene Anleitung: Zwischenfirmware und Sonderfall TR3000 128/256 MB"
+    },
+    "werkstatt_erstinstallation": {
+      "url": "router-werkstatt/docs/erstinstallation-ohne-factory.md",
+      "stand": "Repo routerwerkstatt, Stand 2026-10-19",
+      "abgerufen": "2026-10-19"
+    },
+    "werkstatt_rtl8221b": {
+      "url": "router-werkstatt/docs/rtl8221b-2g5-wan-intern.md",
+      "stand": "Repo routerwerkstatt, Stand 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Feldfall TR3000 (21_dias); Flash-Variante des Feldgeräts dort nicht genannt"
+    }
+  },
+  "roh": {
+    "toh": {
+      "Device Type_devicetype": "Travel Router",
+      "Brand": "Cudy",
+      "Model": "TR3000",
+      "Versions": "v1",
+      "FCCID_urls": "https://fccid.io/2APRGRT02",
+      "Availability_availability": "Available 2025",
+      "Where available": "amazon.com",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=63b8d98dd0d2f7797ea5b5f25978590982bbbb5d",
+      "Supported Since Rel_releasesince": "23.05.4",
+      "Supported Current Rel_releasecurrent": "25.12.5",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "unknown",
+      "Target_target": "mediatek",
+      "Subtarget": "filogic",
+      "Package architecture_pkg-arch": "aarch64_cortex-a53",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "MediaTek MT7981BA",
+      "CPU Cores_numcores_": "2",
+      "CPU MHz": "1300",
+      "Flash MB_mbflashs": "128NAND",
+      "RAM MB_mbram": "512",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "1",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "MediaTek MT7981BA",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "Realtek RTL8221B 2.5Gbe Phy",
+      "WLAN Hardwares": "MediaTek MT7981BA, MediaTek MT7976CN",
+      "WLAN 2.4GHz_wlan24": "b/g/n/ax",
+      "WLAN 5.0GHz_wlan50": "a/n/ac/ax",
+      "WLAN 6.0GHz_wlan60": "-",
+      "WLAN 60.0GHz_wlan60g": "-",
+      "WLAN Comments_": "2.4GHz: 2x2:2 MIMO, 5GHz: 2X3:2 MIMO",
+      "WLAN driver_wlan-drivers": "mt76",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "1x 3.0",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "No",
+      "LED count_numled": "2",
+      "Button count_numbutton": "2",
+      "GPIOs_numgpio": "¿",
+      "Power Supply": "5 VDC, 3A via USB Type-C",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:cudy:tr3000",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "https://forum.openwrt.org/t/supporting-the-cudy-tr3000-in-openwrt/184912",
+      "Forum search_search-forums": "TR3000",
+      "Git search_search-gits": "TR3000",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/Cudy_TR3000",
+      "WikiDevi ID_hwinfo-ids": "Cudy_TR3000",
+      "OEM Device Homepage URL_url": "https://www.cudy.com/products/tr3000-1-0",
+      "Firmware OEM Stock URL_url": "https://www.cudy.com/pages/download-center/tr3000-1-0",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/mediatek/filogic/openwrt-25.12.5-mediatek-filogic-cudy_tr3000-v1-initramfs-kernel.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/mediatek/filogic/openwrt-25.12.5-mediatek-filogic-cudy_tr3000-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-cudy_tr3000-v1-initramfs-kernel.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-cudy_tr3000-v1-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "see devicepage",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "see devicepage",
+      "Comment recovery": "",
+      "Picture_img100s": "media:cudy:cudy-tr3000_front.png, media:cudy:cudy-tr3000_back.png",
+      "Comments_": "Separate U-Boot Mod Image (UBI) is available for TR3000 128MB model to utilize full NAND storage space (additional ~45 MB).  See Device Page for more info."
+    },
+    "openwrt_wiki": {
+      "Einleitung": "The Cudy TR3000 is a router designed for travel and portable use. It's powered with USB-C and features a USB3 port, Wi-Fi 6, and 1x2.5G WAN + 1x1G LAN port",
+      "Hardware Highlights": "The router has 3 WiFi antennas (two non-detachable external, and one internal). The internal antenna is for zero-wait DFS functionality only.",
+      "OEM easy installation": [
+        "Determine the size of the flash on your device: 128 MB or 256 MB. You can find it on the carton or the label on your device (exact wording varies by market).",
+        "Download the Intermediate Firmware: https://www.cudy.com/blogs/faq/openwrt-software-download (Google Drive). ... Note that the 256 MB version has a separate firmware in the \"TR3000 256 MB Flash V1 (Not for TR3000 V1)\" folder. Wrong firmware will be rejected and will not brick your device.",
+        "If you are with 256 MB flash version and downloaded the 256 MB version, you already got the extracted version \"cudy_tr3000-256mb-v1-sysupgrade.bin\".",
+        "Enter the web interface at http://192.168.10.1/ with the default password \"admin\" (or the password you set during the initial setup of newer stock firmware). Go to \"Upgrade Firmware\" ... Wait 2 minutes.",
+        "Intermediate firmware: connect via Ethernet, LuCI at http://192.168.1.1/, then flash sysupgrade from firmware-selector.openwrt.org"
+      ],
+      "TFTP-Werte": {
+        "tftp server IPv4": "192.168.1.88",
+        "Image": "Name must contain initramfs",
+        "TFTP transfer window": "10 seconds"
+      },
+      "OpenWrt U-Boot layout": "default available router space ~45 MB in the 128 MB version; OpenWrt U-Boot increases to 93 MB (nur 128-MB-Variante, Image cudy_tr3000-v1-ubootmod)",
+      "Debricking": "Cudy bootloader starts a TFTP client for OEM recovery using the Reset button, accepts only OEM firmware. Hard bricks: mtk_uartboot with mt7981-ram-ddr3-bl2.bin",
+      "Flash Layout (128 MB)": "SLC SPI-NAND 128 MiB: BL2 1 MiB | u-boot-env 512 KiB | factory 2 MiB | bdinfo 256 KiB | FIP 2 MiB | ubi",
+      "Network interfaces": {
+        "eth1": "1G LAN port",
+        "eth0": "2.5G WAN port, DHCP",
+        "br-lan": "LAN & WiFi"
+      },
+      "Buttons": {
+        "Reset": "reset",
+        "Slider button": "BTN_0"
+      },
+      "Opening the case": "Remove the 4 rubber pads underneath (heat slightly), remove 4 Philips screws, bottom clipped to top with small tabs",
+      "Serial / UART": "On the bottom of the PCB you can find two small test points. If your PCB has the ethernet ports at left and the LEDs at right, then the left test point is RX and the right is TX. GND: any GND point on the board. Solder wires or use needles. 115200, 8N1, 3.3V",
+      "Warnung": "Cudy TR3000 request special tools for uart jumper as picture near end of the page.",
+      "Notes": [
+        "https://forum.openwrt.org/t/supporting-the-cudy-tr3000-in-openwrt/184912",
+        "https://forum.openwrt.org/t/support-for-cudy-tr3000/234467",
+        "https://forum.openwrt.org/t/ubootmod-layout-for-cudy-tr3000/232058",
+        "https://forum.openwrt.org/t/cudy-started-using-a-new-flash-chip-in-their-ax3000-devices-its-currently-unsupported/243547"
+      ],
+      "Tags": "U-boot mediatek filogic 2core ARMv8 MT7981 2NIC 2.5GigabitEthernet GigabitEthernet \"no switch\" wlan 2WNIC 2x2 802.11ax wifi6 NonDetachableAntenna 2Ant 512RAM 128NAND 256NAND 1USB USB3.1 2button \"portable router\" \"5v powered\" \"usb powered\""
+    },
+    "openwrt_commit": {
+      "Titel": "mediatek: add support for Cudy TR3000  256MB  v1 flash version",
+      "Text": "This device is similar to the Cudy TR3000 v1 128MB version. The difference is that the flash memory is 128mb and the other is 256mb",
+      "SoC": "MediaTek MT7981B",
+      "CPU": "2x 1.3 GHz Cortex-A53",
+      "Flash": "256 MiB SPI NAND",
+      "RAM": "512 MiB",
+      "WLAN": "2.4 GHz, 5 GHz (MediaTek MT7976CN, 802.11ax)",
+      "Ethernet": "1x 10/100/1000/2500 Mbps RTL8221B WAN, 1x10/100/1000 Mbps MT7981 LAN",
+      "USB": "USB 3.0 port",
+      "Buttons": "1 Reset button, 1 slider button",
+      "LEDs": "1x Red, 1x White",
+      "Power": "5 VDC, 3 A",
+      "Installation": "Cudy intermediate firmware from https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0, upgrade on stock web page, then sysupgrade via 192.168.1.1",
+      "Recovery": "Ask Cudy CN customer service for original firmware; router off, hold RESET while powering on for at least 5 seconds, u-boot shell opens; LAN, own IP 192.168.1.88/24, TFTP server with recovery.bin",
+      "Dateien": [
+        "05_set_preinit_iface",
+        "mt7981b-cudy-tr3000-256mb-v1.dts",
+        "02_network",
+        "11_fix_wifi_mac",
+        "filogic.mk"
+      ]
+    },
+    "openwrt_commit_128mb": {
+      "Serial console": "internal test points, 115200 8n1",
+      "MAC addresses": {
+        "WAN": "80:af:ca:xx:xx:x1 (label+1)",
+        "LAN": "80:af:ca:xx:xx:x0 (label)",
+        "WLAN 2g": "80:af:ca:xx:xx:x0 (label)",
+        "WLAN 5g": "82:af:ca:xx:xx:x0"
+      },
+      "Installation": "TFTP by disassembling the router: UART, hold RESET >=5 s at power on, u-boot shell, 192.168.1.88/24, setenv bootfile initramfs-kernel.bin; tftpboot; bootm"
+    },
+    "openwrt_pr_19167": {
+      "hauke 2025-06-21": "I can not find the R103 on https://www.cudy.com/de-de/pages/download-center/tr3000-1-0",
+      "grinderz 2025-06-21": "256MB offically available only in China, DTS and firmware download on China page https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
+      "ayufan 2025-07-23": "How did you know whether you have 128MB or 256MB version?",
+      "aiyunyuner 2025-07-23": "256mb have clear mark, like https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/31",
+      "fildunsky 2025-09-12": "do not flash TR3000-R47-2.4.7-...-sysupgrade.bin (128-MB-Stock) otherwise you will come back to factory Cudy firmware. Just flash cudy_tr3000-256mb-v1-sysupgrade.bin (Zwischenfirmware, 12932 kB) -> OpenWrt sysupgrade",
+      "777vip 2025-09-08": "ImmortalWrt cudy_tr3000-256mb-v1 sysupgrade nach Cudy-Zwischenfirmware: Gerät bootete nicht (unbeantwortet)"
+    },
+    "openwrt_dts": {
+      "model": "Cudy TR3000 256MB v1",
+      "compatible": "cudy,tr3000-256mb-v1, mediatek,mt7981",
+      "include": "mt7981b-cudy-tr3000-v1.dtsi",
+      "spi_nand": "spi-cal-enable (read-data 'SPINAND'), mediatek,nmbm, bmt-max-ratio 1, bmt-max-reserved-blocks 64",
+      "ubi": "reg = <0x5c0000 0xe600000> (230 MiB)",
+      "dtsi_aliases": "label-mac-device = gmac1; led-boot/failsafe = rot; led-running/upgrade = weiß; serial0 = uart0; stdout-path serial0:115200n8",
+      "dtsi_gpio_keys": {
+        "reset": "KEY_RESTART, GPIO 1 active low",
+        "mode": "BTN_0, EV_SW (Schalter), GPIO 0 active low, debounce 60"
+      },
+      "dtsi_leds": {
+        "led-0": "rot, LED_FUNCTION_POWER, GPIO 11",
+        "led-1": "weiß, LED_FUNCTION_STATUS, GPIO 10"
+      },
+      "dtsi_usb_vbus": "regulator 5 V, GPIO 9 active low",
+      "dtsi_gmac0": "2500base-x, phy@1 ethernet-phy-ieee802.3-c45, reset GPIO 39, IRQ GPIO 38, realtek,aldps-enable, MAC bdinfo 0xde00 +1",
+      "dtsi_gmac1": "gmii, int_gbe_phy, MAC bdinfo 0xde00 +0",
+      "dtsi_spi_nand": "spi-max-frequency 52 MHz, Quad (tx/rx bus width 4)",
+      "dtsi_partitionen": {
+        "BL2": "0x0-0x100000 ro",
+        "u-boot-env": "0x100000 +0x80000 ro",
+        "Factory": "0x180000 +0x200000 ro (WLAN-EEPROM)",
+        "bdinfo": "0x380000 +0x40000 ro (MAC 0xde00)",
+        "FIP": "0x3c0000 +0x200000 ro",
+        "ubi": "ab 0x5c0000"
+      }
+    },
+    "openwrt_image_mk": {
+      "DEVICE_VENDOR": "Cudy",
+      "DEVICE_MODEL": "TR3000",
+      "DEVICE_VARIANT": "256mb v1",
+      "DEVICE_DTS": "mt7981b-cudy-tr3000-256mb-v1",
+      "SUPPORTED_DEVICES": "+= R103",
+      "UBINIZE_OPTS": "-E 5",
+      "BLOCKSIZE": "128k",
+      "PAGESIZE": "2048",
+      "IMAGE_SIZE": "235520k",
+      "KERNEL_IN_UBI": "1",
+      "IMAGE/sysupgrade.bin": "sysupgrade-tar | append-metadata",
+      "DEVICE_PACKAGES": "kmod-usb3 kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware",
+      "ubootmod": "nur cudy_tr3000-v1-ubootmod (128 MB), keine ubootmod-Variante für 256 MB"
+    },
+    "forum_bootlog_cudy": {
+      "Machine model": "Cudy TR3000 v1 (Cudy-Build, Linux 6.6.83, ImmortalWrt/OpenWrt-Basis)",
+      "Memory": "496272K/524288K available",
+      "spi-nand": "Micron SPI NAND was found. 256 MiB, block size: 128 KiB, page size: 2048, OOB size: 128",
+      "NMBM": "Signature found at block 2047; management region starts at block 1920",
+      "MTD": "BL2 0x0-0x100000, u-boot-env 0x100000-0x180000, Factory 0x180000-0x380000, bdinfo 0x380000-0x3c0000, FIP 0x3c0000-0x5c0000, ubi 0x5c0000-0xebc0000",
+      "ubi": "attached mtd5 (name ubi, size 230 MiB); rootfs_data UBIFS 197 MiB",
+      "eth1": "PHY [mdio-bus:00] driver [MediaTek MT7981 PHY], 1Gbps",
+      "eth0": "PHY [mdio-bus:01] driver [RTL8221B-VB-CG 2.5Gbps PHY (C45)], 2500base-x; vorher 'rtl822xb_config_init failed: -110' / 'SerDes setup timed out, retrying'",
+      "wifi": "mt798x-wmac 18000000.wifi, WED v2, WM/WA Firmware 20240823"
+    },
+    "forum_typenschild": {
+      "Karton": "cudy, Aufdruck oben rechts '256MB 大闪存' (Chip-Symbol), 'AX3000双频 便携式Wi-Fi 6路由器(2.5G口)', '型号: TR3000 (256MB闪存版)'",
+      "Typenschild Unterseite": "Stempel '256MB闪存版' oben links; 产品型号: TR3000; 电源规格: 5V⎓3A; 管理地址: 192.168.10.1; 管理域名: http://cudy.net/; Hersteller 深圳市多酷科技有限公司, 中国制造; Felder 无线名称 Cudy-XXXX-5G / Cudy-XXXX, 无线密码 (8 Ziffern), CMIIT ID: 24J44R8D2652; MAC 80AFCA...; SN: TR3000...ZH1.0",
+      "Gehäuse": "Unterseite mit Lüftungsschlitzen und vier runden Gummifüßen"
+    },
+    "hersteller": {
+      "Titel": "AX3000 Wi-Fi 6 便携路由器, TR3000 1.0",
+      "Kurzbeschreibung": "有 128MB 和 256MB 两种闪存大小可选 (zwei Flash-Größen 128 MB und 256 MB wählbar)",
+      "Werbetext 256MB": "超大256MB闪存轻松实现网络的自由定制和功能拓展",
+      "型号版本": "TR3000 1.0",
+      "CPU": "1.3GHz 双核, ARM Cortex-A53",
+      "ROM": "128MB (1Gbit) NAND; 256MB (2Gbit) NAND 版本可选",
+      "RAM": "512MB (4Gbit) DDR3",
+      "5GHz 频段最高速率": "2402Mbps",
+      "2.4GHz 频段最高速率": "574Mbps",
+      "5GHz Wi-Fi 空间流": "2 条空间流",
+      "2.4GHz Wi-Fi 空间流": "2 条空间流",
+      "天线": "2× 不可拆卸, 1× 内置",
+      "5GHz 天线最高增益": "4.8dBi",
+      "2.4GHz 天线最高增益": "3.9dBi",
+      "功率放大器": "5GHz: 3× 内置; 2.4GHz: 2× 内置",
+      "Beamforming": "ja",
+      "覆盖半径": "最大: 180 m",
+      "2.5G RJ45 网口": "1",
+      "千兆 RJ45 网口": "1",
+      "以太网口备注": "2.5G 口为 WAN 口，千兆口为 LAN 口",
+      "USB-A 3.0": "1",
+      "电源": "USB-C 口供电",
+      "LED 指示灯": "系统",
+      "按钮": "重置按钮, 可配置DIP开关",
+      "受电方式": "USB-C",
+      "受电规格": "5V⎓3A, PD",
+      "电源适配器": "输入: 100-240V~ 50/60Hz; 输出: 5V⎓3A",
+      "最大功耗 (W)": "11.5w",
+      "待机功耗(W)": "4.2w",
+      "运行环境": "运行环境温度: 0 ℃ ~ 40 ℃; 运行湿度: 10% ~ 90% 非凝结; 储存湿度: 5% ~ 95% 非凝结",
+      "安装方式": "桌面安装",
+      "产品尺寸": "主体: 118×80×27.5 mm",
+      "产品重量": "160g",
+      "包装清单": "TR3000, 电源适配器, 网线, 快速安装指南",
+      "零售包装": "413g, 176×140.5×56mm; 装箱数量 40; 外箱 60×30×37.5 cm, 17.4kg brutto, 16.5kg netto",
+      "无线标准": "Wi-Fi 6",
+      "最高调制技术": "1024-QAM",
+      "无线效率技术": "OFDMA, MU-MIMO, BSS Color",
+      "终端数量上限": "512",
+      "推荐终端数量上限": "70",
+      "最大 Wi-Fi 频宽": "160 MHz",
+      "Werbetexte": [
+        "USB-C电源口 ... 包装内包含一个USB-C电源",
+        "侧面带一个自定义开关，开关LED、开关异地组网",
+        "可用笔记本电脑和充电宝供电",
+        "支持 Cudy Mesh"
+      ]
+    },
+    "hersteller_downloads": {
+      "R103-2.5.21": "2026-07-10, m_upgrade_TR3000_256MB_Flash-R103-2.5.21-20260708-181324-sysupgrade_81571.zip, 26.6 MB; 仅适用于256MB版本",
+      "R103-2.4.21": "2025-10-17, m_upgrade_TR3000_256MB_Flash-R103-2.4.21-20251009-115734-sysupgrade_44834.zip, 25.7 MB",
+      "TR3000 256MB DTS": "2025-05-19, DTS_and_intermediate_firmware.zip, 25.8 MB: 适用于TR3000 256MB V1.0版本开发OpenWrt固件的DTS文件和页面升级用的中间固件。警告：禁止用于升级TR3000 128MB版本，也不要用TR3000 128MB版本的OpenWrt固件升级TR3000 256MB版本，无法正常工作。",
+      "R103-2.3.9": "2025-02-25, m_upgrade_TR3000_256MB_Flash-R103-2.3.9-20250208-171917-sysupgrade_23456.zip, 25.7 MB: TR3000 V1.0 256MB Flash版本首次发布固件",
+      "R47 (128 MB)": "2.2.7 (2024-12-17) bis 2.5.12/2.5.21 (2026-07-10); Hinweis jeweils 该固件不支持256MB版本升级",
+      "R47-2.4.22 Hinweis": "Cudy在2025年11月开始生产的TR3000 (SN码为2544 或者之后的批次)使用了新的Flash F50L1G41LC (betrifft 128-MB-Variante)",
+      "R47-2.3.7 Hinweis": "中兴F50的供电功率较高，目前不能直接通过TR3000的USB口供电",
+      "GPL": "21.02, 2024-04-16",
+      "Dokument": "安装说明书 TR3000_ZH_QIG.pdf"
+    },
+    "hersteller_kurzanleitung": {
+      "Schritt 1": "找一个输出为5V (2A或更高) 的USB-C电源适配器，将电源适配器连接到路由器，并等待系统指示灯常亮",
+      "Schritt 2": "将路由器的 2.5G WAN端口连接到光纤宽带Modem(光猫)或小区宽带接口",
+      "Rückseite (Grafik, v.l.n.r.)": "USB-A, LAN, WAN (2.5G), USB-C",
+      "Verwaltung": "cudy.net oder 192.168.10.1; beim ersten Aufruf 创建管理员密码 (Admin-Passwort anlegen)",
+      "Betriebsarten": "无线路由, 无线接入点 AP, 无线扩展, 无线中继, 客户端 Client",
+      "LED": {
+        "熄灭": "未上电",
+        "红色闪烁": "系统启动中",
+        "红色": "未连接到互联网",
+        "白色闪烁": "正在连接",
+        "白色": "已连接到互联网"
+      },
+      "USB 3.0": "连接USB设备，支持文件共享和网络共享",
+      "2.5G WAN": "连接光纤宽带Modem(光猫)或小区宽带接口等，以通网络",
+      "LAN": "连接以太网设备，为其提供网络",
+      "Power": "USB-C 电源口，可用PD充电头、笔记本电脑、充电宝等为路由器供电",
+      "开关": "出厂默认无功能。登录管理界面，进入高级设置->系统->切换按钮，可启用VPN或LED开关",
+      "RESET": "按2-3秒可将路由器恢复出厂设置",
+      "IPv6": "本产品IPv6功能默认关闭",
+      "Garantie": "1 Jahr (Cudy产品售后服务承诺: 1年保修)"
+    },
+    "wikidevi": {
+      "brand": "Cudy",
+      "model": "TR3000",
+      "revision": "(Rev1.2)",
+      "series": "AX3000",
+      "ean": "6971690793050",
+      "asin": "B0BXNCRVRC",
+      "manuf_country": "China",
+      "availability": "Currently Shipping",
+      "est_release_date": "03/2023",
+      "fcc_date": "06/08/2023",
+      "fcc_id": "2APRGRT02",
+      "pcb_id": "300100153",
+      "type": "travel router, wireless router",
+      "pwr_v": "5",
+      "pwr_amp": "3",
+      "pwr_conn": "USB (Type-C) Female",
+      "cpu1": "MediaTek MT7981BA 1.3 GHz, 2 cores",
+      "fla1": "128",
+      "fla1_brand": "ESMT",
+      "fla1_model": "F50L1G41LB-104YG2M",
+      "ram1": "512",
+      "ram1_brand": "ESMT",
+      "ram1_model": "M15T4G16256A-DEB",
+      "expansion": "USB 3.0 x1",
+      "wi1": "MT7981BA + MT7976CN, bgn+ax, U.FL (internal), 2T2R, 2 SS",
+      "wi2": "MT7981BA + MT7976CN, an+ac+ax, U.FL (internal), 2T3R, 2 SS",
+      "eth": "CPU + Realtek RTL8221B; LAN 1x 1GbE, WAN 1x 2.5GbE",
+      "flags": "Wi-Fi 6, MU-MIMO, WPA3, Mesh, heatsink",
+      "default_ssid": "Cudy-XXXX-5G, Cudy-XXXX",
+      "default_ip": "192.168.10.1",
+      "default_pass": "admin",
+      "oui": "80:AF:CA",
+      "Hardware specification": "Flash 128MB (SPI NAND) @104MHz; Memory 512MB (DDR3L); 2x2 2.4GHz + 3x3 5GHz (2x2 + Zero-wait DFS); Power 5V/3A via USB Type-C",
+      "Images": "Cudy TR3000 Top.jpeg (Board Top), Cudy TR3000 Bottom.jpeg (Board Bottom)"
+    },
+    "fccid": {
+      "FCC ID": "2APRGRT02",
+      "Applicant": "Shenzhen Cudy Technology Co., Ltd.",
+      "Equipment Class": "Wi-Fi Router (DTS, UNII)",
+      "Test Firm": "Shenzhen LCS Compliance Testing Laboratory Ltd.",
+      "Frequenzen": "2412-2462 MHz; 5180-5240 MHz (weitere UNII-Bänder in Testberichten)",
+      "Final Action Date": "2023-06-08",
+      "Model": "RT02",
+      "Composite Device": "Yes",
+      "Label": "Wi-Fi Router, Model: WR3000, FCC ID: 2APRGRT02 (Label 4.5 x 5.5 cm)",
+      "Modellerklärung 2023-04-17": "WR3000, WR3000 Plus, WR1500, TR3000, M3000, RE3000, AP3000, AP3000 Outdoor are identical in hardware and software, the only differences model was model name",
+      "Handbuch": "Kurzanleitung WR3000 (WAN, LAN1-3, WPS, RESET, POWER) - nicht TR3000",
+      "Exhibits": "User manual, Internal/External photos, Label, Test setup photos, Antenna information, Test reports 2.4G/5G/DFS, RF exposure, Letters"
+    },
+    "werkstatt": {
+      "cudy-installation.md, Tabelle 'Welche Zwischenfirmware für welches Modell'": "TR3000 256 MB v1 | cudy-tr3000-256mb.bin | Cudy-Eintrag 'TR3000 256MB Flash V1 (not for TR3000 V1)' | MD5 93615f1c40cdd64179753aee5a32aa06",
+      "cudy-installation.md, Abschnitt 'Sonderfälle'": "TR3000 v1 und die 256-MB-Variante nicht verwechseln ... ausdrücklich nicht austauschbar: cudy-tr3000.bin für die normale v1, cudy-tr3000-256mb.bin nur für die Variante mit 256 MB Flash. Cudy schreibt das selbst in den Ordnernamen. Im Zweifel nichts ausprobieren, sondern melden.",
+      "erstinstallation-ohne-factory.md, Abschnitt 'A: Cudy'": "zweistufig: Cudy-signierte Zwischenfirmware, danach Gluon-sysupgrade; im Spiegel liegt die 256-MB-Variante, deren Verzeichnisname ausdrücklich 'not for TR3000 V1' sagt",
+      "rtl8221b-2g5-wan-intern.md": "TR3000: gmac0 = RTL8221B 2500base-x, realtek,aldps-enable; Feldfall 21_dias: WAN-Link hing nach Firmwarewechsel, zurück erst nach Neustart ohne gestecktes Kabel; ethtool vorübergehend in den Images für TR3000 (beide)"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Cudy",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Cudy (Shenzhen Cudy Technology Co., Ltd., 深圳市多酷科技有限公司)",
+        "quelle": "forum_typenschild",
+        "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
+        "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
     ],
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": "Schnittstellennamen aus Wiki/02_network"
-   },
-   {
-    "wert": [
-     {
-      "name": "WAN",
-      "geschwindigkeit": "2.5G"
-     },
-     {
-      "name": "LAN",
-      "geschwindigkeit": "1G"
-     }
+    "modell_name": [
+      {
+        "wert": "TR3000",
+        "quelle": "forum_typenschild",
+        "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
+        "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
+        "sicherheit": "mittel",
+        "bemerkung": "Typenschild '产品型号: TR3000'; Karton '型号: TR3000 (256MB闪存版)'"
+      },
+      {
+        "wert": "TR3000 256MB v1",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-256mb-v1.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "DTS model 'Cudy TR3000 256MB v1'"
+      },
+      {
+        "wert": "TR3000 1.0 (256MB Flash)",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
+        "sicherheit": "hoch",
+        "bemerkung": "Downloadseite 'TR3000 V1.0 256MB Flash版本'"
+      }
     ],
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "'2.5G 口为 WAN 口，千兆口为 LAN 口'"
-   },
-   {
-    "wert": "Rückseite v.l.n.r.: USB-A, LAN, WAN (2.5G), USB-C",
-    "quelle": "hersteller_kurzanleitung",
-    "beleg": "https://www.cudy.com/cdn/shop/files/TR3000_ZH_QIG.pdf?v=5796422902345933869",
-    "stand": "PDF ohne Datum (Druck-Nr. 810600557), abgerufen 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": "aus der Grafik abgelesen"
-   }
-  ],
-  "ports_anzahl": [
-   {
-    "wert": 2,
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 2,
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "nur_eine_buchse": [
-   {
-    "wert": false,
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "wan_phy": [
-   {
-    "wert": "Realtek RTL8221B (2500base-x, Clause 45)",
-    "quelle": "openwrt_dts",
-    "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1.dtsi",
-    "stand": "Branch main am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "RTL8221B-VB-CG",
-    "quelle": "forum_bootlog_cudy",
-    "beleg": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/1",
-    "stand": "Beitrag #1 vom 2025-06-06 (aiyunyuner)",
-    "sicherheit": "mittel",
-    "bemerkung": "Treibermeldung im Cudy-Bootlog"
-   }
-  ],
-  "switch_chip": [
-   {
-    "wert": "kein Switch (zwei getrennte GMACs)",
-    "quelle": "openwrt_dts",
-    "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1.dtsi",
-    "stand": "Branch main am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": "Wiki-Tag 'no switch'; ToH trägt 'MediaTek MT7981BA' ein"
-   }
-  ],
-  "vlan": [
-   {
-    "wert": "ja",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-    "sicherheit": "mittel",
-    "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
-   }
-  ],
-  "usb": [
-   {
-    "wert": "1x USB 3.0 Typ A",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "Dateifreigabe und USB-Tethering; Stromversorgung über GPIO 9 schaltbar (DTS)"
-   },
-   {
-    "wert": "1x USB 3.0",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "poe_eingang": [
-   {
-    "wert": "nein",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "mittel",
-    "bemerkung": "abgeleitet: einzige Stromversorgung laut Datenblatt 'USB-C 口供电'; PoE nirgends erwähnt"
-   }
-  ],
-  "dc_buchse": [
-   {
-    "wert": "USB-C (USB Power Delivery)",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "'受电方式 USB-C', '5V⎓3A, PD'; auch Laptop oder Powerbank"
-   },
-   {
-    "wert": "USB-C",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "dc_spannung_v": [
-   {
-    "wert": 5,
-    "quelle": "forum_typenschild",
-    "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
-    "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
-    "sicherheit": "mittel",
-    "bemerkung": "Typenschild '电源规格: 5V⎓3A'"
-   },
-   {
-    "wert": 5,
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": 5,
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "dc_strom_a": [
-   {
-    "wert": 3,
-    "quelle": "forum_typenschild",
-    "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
-    "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
-    "sicherheit": "mittel",
-    "bemerkung": "Typenschild"
-   },
-   {
-    "wert": 3,
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": "2 oder mehr",
-    "quelle": "hersteller_kurzanleitung",
-    "beleg": "https://www.cudy.com/cdn/shop/files/TR3000_ZH_QIG.pdf?v=5796422902345933869",
-    "stand": "PDF ohne Datum (Druck-Nr. 810600557), abgerufen 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": "'找一个输出为5V (2A或更高) 的USB-C电源适配器' - Mindestanforderung an fremde Netzteile"
-   }
-  ],
-  "netzteil_beiliegend": [
-   {
-    "wert": true,
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "Packliste 'TR3000, 电源适配器, 网线, 快速安装指南'; Netzkabel/USB-C-Kabel nicht getrennt aufgeführt"
-   }
-  ],
-  "netzteil_daten": [
-   {
-    "wert": "Eingang 100-240 V~ 50/60 Hz, Ausgang 5 V ⎓ 3 A, USB-C",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "Steckerform (China-Markt) nicht angegeben"
-   }
-  ],
-  "leistung_w_max": [
-   {
-    "wert": 11.5,
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "leistung_w_standby": [
-   {
-    "wert": 4.2,
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "'待机功耗'"
-   }
-  ],
-  "einsatzort": [
-   {
-    "wert": "innen",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "Reiserouter, Tischgerät, 0-40 °C"
-   },
-   {
-    "wert": "innen",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-    "sicherheit": "mittel",
-    "bemerkung": "Outdoor: No"
-   }
-  ],
-  "temperatur_betrieb": [
-   {
-    "wert": "0 bis 40 °C",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "luftfeuchte": [
-   {
-    "wert": "Betrieb 10-90 %, Lagerung 5-95 %, nicht kondensierend",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "montage": [
-   {
-    "wert": "Tisch",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "'桌面安装'"
-   }
-  ],
-  "abmessungen_mm": [
-   {
-    "wert": "118 x 80 x 27.5 (ohne Antennen)",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "'主体'"
-   }
-  ],
-  "gewicht_g": [
-   {
-    "wert": 160,
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "gehaeuse_oeffnen": [
-   {
-    "wert": "4 Gummifüße abziehen (leicht erwärmen), 4 Kreuzschlitzschrauben, Boden ist zusätzlich eingeclipst",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/cudy/tr3000",
-    "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
-    "sicherheit": "mittel",
-    "bemerkung": "Wiki-Seite für beide Varianten"
-   }
-  ],
-  "leds": [
-   {
-    "wert": "1 System-LED, zweifarbig rot/weiß: aus = kein Strom, rot blinkt = startet, rot = kein Internet, weiß blinkt = verbindet, weiß = online (Stock)",
-    "quelle": "hersteller_kurzanleitung",
-    "beleg": "https://www.cudy.com/cdn/shop/files/TR3000_ZH_QIG.pdf?v=5796422902345933869",
-    "stand": "PDF ohne Datum (Druck-Nr. 810600557), abgerufen 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": "rot (GPIO 11, Boot/Failsafe), weiß (GPIO 10, Running/Upgrade)",
-    "quelle": "openwrt_dts",
-    "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1.dtsi",
-    "stand": "Branch main am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "led_abschaltbar": [
-   {
-    "wert": "ja, per Schiebeschalter (Stock: Funktion in Einstellungen wählbar)",
-    "quelle": "hersteller_kurzanleitung",
-    "beleg": "https://www.cudy.com/cdn/shop/files/TR3000_ZH_QIG.pdf?v=5796422902345933869",
-    "stand": "PDF ohne Datum (Druck-Nr. 810600557), abgerufen 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": "'开关：出厂默认无功能 ... 可启用VPN或LED开关'; unter OpenWrt Schalter als BTN_0"
-   }
-  ],
-  "knoepfe": [
-   {
-    "wert": "Reset-Taster, Schiebeschalter (BTN_0, EV_SW)",
-    "quelle": "openwrt_dts",
-    "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1.dtsi",
-    "stand": "Branch main am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "重置按钮, 可配置开关 (seitlich)",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "'侧面带一个自定义开关'"
-   }
-  ],
-  "reset_knopf": [
-   {
-    "wert": "vorhanden; Stock: 2-3 s drücken = Werkseinstellungen",
-    "quelle": "hersteller_kurzanleitung",
-    "beleg": "https://www.cudy.com/cdn/shop/files/TR3000_ZH_QIG.pdf?v=5796422902345933869",
-    "stand": "PDF ohne Datum (Druck-Nr. 810600557), abgerufen 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": "Lage am Gehäuse in den Quellen nicht beschrieben"
-   },
-   {
-    "wert": "Reset beim Einschalten mindestens 5 s halten öffnet die U-Boot-Shell (TFTP-Recovery)",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "seriell_zugang": [
-   {
-    "wert": "innen Lötpunkte: zwei kleine Testpunkte (RX, TX) auf der Platinenunterseite, ohne Stiftleiste",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/cudy/tr3000",
-    "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
-    "sicherheit": "mittel",
-    "bemerkung": "Wiki gilt für beide Flash-Varianten; Foto vermutlich 128-MB-Gerät: https://openwrt.org/_media/media/cudy/cudy-tr3000_uart.jpg"
-   },
-   {
-    "wert": "innen: 'internal test points'",
-    "quelle": "openwrt_commit_128mb",
-    "beleg": "https://github.com/openwrt/openwrt/commit/63b8d98dd0d2f7797ea5b5f25978590982bbbb5d",
-    "stand": "Commit 2024-05-07 (Luis Mita), gemergt 2024-05-09",
-    "sicherheit": "mittel",
-    "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
-   }
-  ],
-  "seriell_pinbelegung": [
-   {
-    "wert": "Platinenunterseite, Ethernet-Buchsen links und LEDs rechts: linker Testpunkt RX, rechter TX; GND an beliebigem Massepunkt",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/cudy/tr3000",
-    "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "seriell_pegel_v": [
-   {
-    "wert": 3.3,
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/cudy/tr3000",
-    "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 3.3,
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "seriell_baud": [
-   {
-    "wert": "115200 8N1",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/cudy/tr3000",
-    "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "115200 8N1",
-    "quelle": "openwrt_dts",
-    "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1.dtsi",
-    "stand": "Branch main am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": "stdout-path serial0:115200n8"
-   }
-  ],
-  "seriell_hinweis": [
-   {
-    "wert": "Testpunkte sehr klein: Drähte anlöten oder Nadeln/Prüfspitzen; Wiki warnt, man brauche 'special tools'",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/cudy/tr3000",
-    "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "openwrt_target": [
-   {
-    "wert": "mediatek/filogic",
-    "quelle": "openwrt_image_mk",
-    "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
-    "stand": "Branch main am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "openwrt_profil": [
-   {
-    "wert": "cudy_tr3000-256mb-v1",
-    "quelle": "openwrt_image_mk",
-    "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
-    "stand": "Branch main am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "openwrt_seit": [
-   {
-    "wert": "24.10.3",
-    "quelle": "openwrt_release_pruefung",
-    "beleg": "https://github.com/openwrt/openwrt/blob/v24.10.3/target/linux/mediatek/image/filogic.mk",
-    "stand": "Tags am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": "v24.10.2 noch ohne; Backport 0ec28e59 vom 2025-07-10"
-   },
-   {
-    "wert": "Snapshot seit 2025-06-22",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "openwrt_support_commit": [
-   {
-    "wert": "594da824a4f2f9582941e612f1a912773d43ff1d (main), 0ec28e59a815bb43c359328c8fd644f399d344da (openwrt-24.10)",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "openwrt_aktuell": [
-   {
-    "wert": "25.12.x (im Branch openwrt-25.12 enthalten)",
-    "quelle": "openwrt_release_pruefung",
-    "beleg": "https://github.com/openwrt/openwrt/blob/openwrt-25.12/target/linux/mediatek/image/filogic.mk",
-    "stand": "Branch am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": "ToH nennt für TR3000 v1 25.12.5"
-   }
-  ],
-  "gluon_support": [
-   {
-    "wert": "nicht in Gluon upstream (nur cudy-tr3000-v1)",
-    "quelle": "gluon_targets",
-    "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/mediatek-filogic",
-    "stand": "Branch main am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "Neanderfunk-Patch: device('cudy-tr3000-256mb-v1', 'cudy_tr3000-256mb-v1', {factory = false})",
-    "quelle": "neanderfunk_patch",
-    "beleg": "https://github.com/Neanderfunk/FirmwareConfigs/blob/67870ea3b4e88b5065d3931b0c177fc8abc8f526/patches/add-cudy-3000-gluon.patch",
-    "stand": "Commit 67870ea vom 2026-09-09 (FirmwareConfigs v2025.1.x)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "bootloader": [
-   {
-    "wert": "U-Boot (Cudy)",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "keine OpenWrt-ubootmod-Variante für 256 MB (nur cudy_tr3000-v1-ubootmod für 128 MB)",
-    "quelle": "openwrt_image_mk",
-    "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
-    "stand": "Branch main am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "stock_os": [
-   {
-    "wert": "Cudy-Firmware auf OpenWrt-Basis (Linux 6.6.83), Kennung R103",
-    "quelle": "forum_bootlog_cudy",
-    "beleg": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/1",
-    "stand": "Beitrag #1 vom 2025-06-06 (aiyunyuner)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "stock_firmware_url": [
-   {
-    "wert": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
-    "quelle": "hersteller_downloads",
-    "beleg": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
-    "sicherheit": "hoch",
-    "bemerkung": "Nur auf der chinesischen Seite; neueste R103 2.5.21 vom 2026-07-10"
-   }
-  ],
-  "stock_ip": [
-   {
-    "wert": "192.168.10.1 bzw. http://cudy.net/",
-    "quelle": "forum_typenschild",
-    "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
-    "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
-    "sicherheit": "mittel",
-    "bemerkung": "Typenschild"
-   },
-   {
-    "wert": "192.168.10.1",
-    "quelle": "hersteller_kurzanleitung",
-    "beleg": "https://www.cudy.com/cdn/shop/files/TR3000_ZH_QIG.pdf?v=5796422902345933869",
-    "stand": "PDF ohne Datum (Druck-Nr. 810600557), abgerufen 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "stock_passwort": [
-   {
-    "wert": "beim ersten Aufruf selbst anlegen",
-    "quelle": "hersteller_kurzanleitung",
-    "beleg": "https://www.cudy.com/cdn/shop/files/TR3000_ZH_QIG.pdf?v=5796422902345933869",
-    "stand": "PDF ohne Datum (Druck-Nr. 810600557), abgerufen 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": "'创建管理员密码'"
-   },
-   {
-    "wert": "admin (ältere Firmware) oder das bei der Ersteinrichtung gesetzte",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/cudy/tr3000",
-    "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "installation": [
-   {
-    "wert": "Cudy-Zwischenfirmware 'TR3000 256MB Flash V1 (not for TR3000 V1)' (cudy_tr3000-256mb-v1-sysupgrade.bin) über die Cudy-Oberfläche einspielen, danach Gluon-sysupgrade. Nie die 128-MB-Dateien verwenden",
-    "quelle": "werkstatt",
-    "beleg": "router-werkstatt/docs/cudy-installation.md (Tabelle 'Welche Zwischenfirmware für welches Modell' und Abschnitt 'Sonderfälle')",
-    "stand": "Repo routerwerkstatt, Commit 998ec38 vom 2026-10-16 (Tabelle Stand 15.10.2026)",
-    "sicherheit": "hoch",
-    "bemerkung": "unsere Datei cudy-tr3000-256mb.bin, MD5 93615f1c40cdd64179753aee5a32aa06"
-   },
-   {
-    "wert": "Cudy-Zwischenfirmware von der chinesischen Downloadseite (DTS_and_intermediate_firmware.zip vom 2025-05-19), dann OpenWrt-sysupgrade über 192.168.1.1",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "Zwischenfirmware aus Cudys Ordner 'TR3000 256 MB Flash V1 (Not for TR3000 V1)'; falsche Firmware wird abgelehnt",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/cudy/tr3000",
-    "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "zweistufig: Cudy-signierte Zwischenfirmware, dann Gluon-sysupgrade (Weg A, nicht automatisierbar)",
-    "quelle": "werkstatt_erstinstallation",
-    "beleg": "router-werkstatt/docs/erstinstallation-ohne-factory.md (Abschnitt 'A: Cudy')",
-    "stand": "Repo routerwerkstatt, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "recovery": [
-   {
-    "wert": "Reset beim Einschalten >= 5 s halten, U-Boot-Shell, PC 192.168.1.88/24, TFTP mit recovery.bin (Original-Firmware nur über Cudy-CN-Support)",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
-    "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
-    "sicherheit": "mittel",
-    "bemerkung": "U-Boot-Shell braucht seriellen Zugang"
-   },
-   {
-    "wert": "Cudy-U-Boot startet per Reset einen TFTP-Client, nimmt aber nur OEM-Firmware; harte Bricks mit mtk_uartboot",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/cudy/tr3000",
-    "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
-    "sicherheit": "mittel",
-    "bemerkung": "Wiki schreibt es für die 128-MB-Variante; mtk_uartboot-FIP dort für cudy_tr3000-v1-ubootmod"
-   }
-  ],
-  "mac_schema": [
-   {
-    "wert": "bdinfo 0xde00: LAN = Basis (Label-MAC), WAN = Basis+1",
-    "quelle": "openwrt_dts",
-    "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1.dtsi",
-    "stand": "Branch main am 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": "gemeinsame DTSI beider Varianten"
-   },
-   {
-    "wert": "LAN/WLAN 2.4 GHz = Label, WAN = Label+1, WLAN 5 GHz = 82:af:ca:… (lokal verwaltet)",
-    "quelle": "openwrt_commit_128mb",
-    "beleg": "https://github.com/openwrt/openwrt/commit/63b8d98dd0d2f7797ea5b5f25978590982bbbb5d",
-    "stand": "Commit 2024-05-07 (Luis Mita), gemergt 2024-05-09",
-    "sicherheit": "niedrig",
-    "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
-   }
-  ],
-  "varianten": [
-   {
-    "wert": "TR3000 v1 mit 128 MB (Image cudy-tr3000-v1, Stock R47) und TR3000 v1 mit 256 MB (dieses Image, Stock R103); Images und Zwischenfirmware nicht austauschbar",
-    "quelle": "hersteller_downloads",
-    "beleg": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
-    "sicherheit": "hoch",
-    "bemerkung": "Cudy: '不要用TR3000 128MB版本的OpenWrt固件升级TR3000 256MB版本，无法正常工作'"
-   },
-   {
-    "wert": "128-MB-Geräte ab SN 2544 (ab 11/2025) mit Flash ESMT F50L1G41LC; betrifft nicht die 256-MB-Variante",
-    "quelle": "hersteller_downloads",
-    "beleg": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
-    "sicherheit": "hoch",
-    "bemerkung": "Hinweis zu R47 2.4.22"
-   }
-  ],
-  "bekannte_probleme": [
-   {
-    "wert": "Cudys eigener Bootlog: RTL8221B 'rtl822xb_config_init failed: -110', 'SerDes setup timed out, retrying', danach Link 2500base-x",
-    "quelle": "forum_bootlog_cudy",
-    "beleg": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/1",
-    "stand": "Beitrag #1 vom 2025-06-06 (aiyunyuner)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "TR3000: Ethernet hängt (NETDEV WATCHDOG eth0 transmit queue timed out), nur Neustart hilft",
-    "quelle": "openwrt_issue_17505",
-    "beleg": "https://github.com/openwrt/openwrt/issues/17505",
-    "stand": "Issue vom 2025-01-07, offen",
-    "sicherheit": "niedrig",
-    "bemerkung": "Flash-Variante im Issue nicht genannt"
-   },
-   {
-    "wert": "Feldfall TR3000: WAN-Link (RTL8221B) hing, zurück erst nach Neustart ohne Kabel",
-    "quelle": "werkstatt_rtl8221b",
-    "beleg": "router-werkstatt/docs/rtl8221b-2g5-wan-intern.md (Abschnitt 'Fall 1')",
-    "stand": "Repo routerwerkstatt, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": "Flash-Variante des Feldgeräts nicht dokumentiert"
-   },
-   {
-    "wert": "ImmortalWrt-256MB-Image nach Cudy-Zwischenfirmware bootete bei einem Nutzer nicht",
-    "quelle": "openwrt_pr_19167",
-    "beleg": "https://github.com/openwrt/openwrt/pull/19167",
-    "stand": "Kommentar 2025-09-08 (777vip)",
-    "sicherheit": "niedrig",
-    "bemerkung": "unbeantwortet, betrifft nicht OpenWrt/Gluon"
-   }
-  ],
-  "toh_seite": [
-   {
-    "wert": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
-    "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
-    "sicherheit": "mittel",
-    "bemerkung": "Datenseite nur TR3000 v1 (128 MB)"
-   }
-  ],
-  "openwrt_wiki": [
-   {
-    "wert": "https://openwrt.org/toh/cudy/tr3000",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/cudy/tr3000",
-    "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "wikidevi": [
-   {
-    "wert": "https://wikidevi.wi-cat.ru/Cudy_TR3000",
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR3000",
-    "stand": "Seitenrevision 2025-07-26T12:53:12Z (Olek210)",
-    "sicherheit": "niedrig",
-    "bemerkung": "Seite beschreibt 128-MB-Variante"
-   }
-  ],
-  "hersteller_seite": [
-   {
-    "wert": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "datenblatt": [
-   {
-    "wert": "https://www.cudy.com/zh-cn/products/tr3000-1-0 (Reiter 参数)",
-    "quelle": "hersteller",
-    "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-    "stand": "Live-Seite 2026-10-19 (ohne Datum)",
-    "sicherheit": "hoch",
-    "bemerkung": "kein eigenes PDF-Datenblatt gefunden"
-   }
-  ],
-  "forum_thread": [
-   {
-    "wert": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838",
-    "quelle": "forum_256mb",
-    "beleg": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838",
-    "stand": "Thread 2025-06-06 bis 2025-07-24 (geschlossen)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ]
- },
- "offene_faeden": [
-  {
-   "url": "https://www.cudy.com/cdn/shop/files/DTS_and_intermediate_firmware.zip?v=9640780418167355303",
-   "kategorie": "flash_chip/dts",
-   "grund": "Cudys DTS_and_intermediate_firmware.zip (25.8 MB, 2025-05-19) nicht geladen; Cudy-DTS könnte Flash-Typ und Abweichungen zur OpenWrt-DTS zeigen"
+    "hw_version": [
+      {
+        "wert": "1.0",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
+        "sicherheit": "hoch",
+        "bemerkung": "'TR3000 V1.0 256MB Flash'"
+      },
+      {
+        "wert": "ZH1.0",
+        "quelle": "forum_typenschild",
+        "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
+        "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
+        "sicherheit": "mittel",
+        "bemerkung": "Seriennummer endet auf 'ZH1.0' (China-Markt, Version 1.0); ein Gerät"
+      },
+      {
+        "wert": "v1",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": "Image-Name cudy_tr3000-256mb-v1"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild unten mit eigenem Stempel '256MB闪存版' oben links; Karton mit '256MB 大闪存' und '型号: TR3000 (256MB闪存版)'. Ohne diesen Aufdruck ist es die 128-MB-Variante",
+        "quelle": "forum_typenschild",
+        "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
+        "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
+        "sicherheit": "mittel",
+        "bemerkung": "Fotos eines China-Geräts; Karton: https://forum.openwrt.org/uploads/default/original/3X/b/e/bed9621ab7f03be918f6383b751613bd543621dc.jpeg"
+      },
+      {
+        "wert": "Flash-Größe steht auf Karton oder Typenschild (Wortlaut je Markt verschieden)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr3000",
+        "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Stock-Firmware heißt TR3000_256MB_Flash-R103-…, die der 128-MB-Variante TR3000-R47-…",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
+        "sicherheit": "hoch",
+        "bemerkung": "Forum #29 (LITUATUI) nennt dasselbe; OpenWrt SUPPORTED_DEVICES += R103"
+      },
+      {
+        "wert": "'256mb have clear mark'",
+        "quelle": "openwrt_pr_19167",
+        "beleg": "https://github.com/openwrt/openwrt/pull/19167",
+        "stand": "Kommentar 2025-07-23 (aiyunyuner)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "TR3000 256MB闪存版",
+          "TR3000 256MB Flash",
+          "TR3000_256MB_Flash (R103)"
+        ],
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "cudy,tr3000-256mb-v1",
+          "R103"
+        ],
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Board-Name und SUPPORTED_DEVICES"
+      }
+    ],
+    "verwandte_modelle": [
+      {
+        "wert": "Cudy TR3000 v1 (128 MB, Image cudy-tr3000-v1); Images nicht austauschbar",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "FCC-Erklärung: WR3000, WR3000 Plus, WR1500, TR3000, M3000, RE3000, AP3000, AP3000 Outdoor 'electrically identical'",
+        "quelle": "fcc_modellerklaerung",
+        "beleg": "https://fccid.io/2APRGRT02/Letter/Letter-of-declaration-model-difference-6580979",
+        "stand": "Brief vom 2023-04-17, Exhibit 2023-06-08",
+        "sicherheit": "niedrig",
+        "bemerkung": "Behauptung gegenüber der FCC; TR3000 unterscheidet sich offensichtlich (USB-C, RTL8221B, 2 Ports)"
+      }
+    ],
+    "vertrieb": [
+      {
+        "wert": "nur China",
+        "quelle": "openwrt_pr_19167",
+        "beleg": "https://github.com/openwrt/openwrt/pull/19167",
+        "stand": "Kommentar 2025-06-21 (grinderz)",
+        "sicherheit": "niedrig",
+        "bemerkung": "'256MB offically available only in China'; Forum #26 ebenso; Cudy-Downloads nur auf der chinesischen Seite"
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "2025-02 (erste Stock-Firmware R103 2.3.9 vom 2025-02-08, veröffentlicht 2025-02-25)",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
+        "sicherheit": "hoch",
+        "bemerkung": "'TR3000 V1.0 256MB Flash版本首次发布固件'"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "2APRGRT02",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+        "sicherheit": "niedrig",
+        "bemerkung": "ToH-Eintrag gilt für TR3000 v1 (128 MB); der Grant ist für WR3000 ausgestellt, TR3000 nur per Modellerklärung mitgenannt"
+      },
+      {
+        "wert": "2APRGRT02",
+        "quelle": "fcc_modellerklaerung",
+        "beleg": "https://fccid.io/2APRGRT02/Letter/Letter-of-declaration-model-difference-6580979",
+        "stand": "Brief vom 2023-04-17, Exhibit 2023-06-08",
+        "sicherheit": "niedrig",
+        "bemerkung": "Label im Grant: 'Model: WR3000'. Für die China-Variante mit 256 MB keine FCC-Unterlagen bekannt"
+      }
+    ],
+    "cmiit_id": [
+      {
+        "wert": "24J44R8D2652",
+        "quelle": "forum_typenschild",
+        "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
+        "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
+        "sicherheit": "mittel",
+        "bemerkung": "Chinesische Funkzulassung, vom Typenschild eines Geräts abgelesen"
+      }
+    ],
+    "zertifizierungen": [
+      {
+        "wert": [
+          "CMIIT (China)"
+        ],
+        "quelle": "forum_typenschild",
+        "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
+        "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "MediaTek MT7981B",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7981BA",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 1300,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1300,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "ARM Cortex-A53 (aarch64)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ARM Cortex-A53",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "aarch64_cortex-a53",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "Paketarchitektur"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 512,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 512,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'512MB (4Gbit) DDR3', gilt für beide Flash-Größen"
+      },
+      {
+        "wert": 512,
+        "quelle": "forum_bootlog_cudy",
+        "beleg": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/1",
+        "stand": "Beitrag #1 vom 2025-06-06 (aiyunyuner)",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog: 'Memory: 496272K/524288K available'"
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR3",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DDR3L",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR3000",
+        "stand": "Seitenrevision 2025-07-26T12:53:12Z (Olek210)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "ESMT M15T4G16256A-DEB",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR3000",
+        "stand": "Seitenrevision 2025-07-26T12:53:12Z (Olek210)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Nur für die 128-MB-Variante belegt; bei der 256-MB-Variante nicht geprüft"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 256,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": "'Flash: 256 MiB SPI NAND'"
+      },
+      {
+        "wert": 256,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'256MB (2Gbit) NAND 版本可选'"
+      },
+      {
+        "wert": 256,
+        "quelle": "forum_bootlog_cudy",
+        "beleg": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/1",
+        "stand": "Beitrag #1 vom 2025-06-06 (aiyunyuner)",
+        "sicherheit": "mittel",
+        "bemerkung": "'spi-nand spi0.0: 256 MiB, block size: 128 KiB, page size: 2048'"
+      },
+      {
+        "wert": 256,
+        "quelle": "forum_typenschild",
+        "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
+        "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
+        "sicherheit": "mittel",
+        "bemerkung": "Stempel '256MB闪存版'"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NAND (SPI-NAND)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NAND",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "Micron SPI-NAND, 256 MiB (genaue Typbezeichnung nicht im Log)",
+        "quelle": "forum_bootlog_cudy",
+        "beleg": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/1",
+        "stand": "Beitrag #1 vom 2025-06-06 (aiyunyuner)",
+        "sicherheit": "mittel",
+        "bemerkung": "Treibermeldung 'Micron SPI NAND was found' aus Cudys eigenem Bootlog; kein Platinenfoto der 256-MB-Variante gefunden"
+      }
+    ],
+    "flash_layout": [
+      {
+        "wert": "BL2 1 MiB | u-boot-env 512 KiB | Factory 2 MiB | bdinfo 256 KiB | FIP 2 MiB | ubi 230 MiB (0x5c0000-0xebc0000), NMBM aktiv",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-256mb-v1.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Rest bis 256 MiB = NMBM-Reserve (Bootlog: Management-Region ab Block 1920)"
+      },
+      {
+        "wert": "BL2 0x0-0x100000, u-boot-env -0x180000, Factory -0x380000, bdinfo -0x3c0000, FIP -0x5c0000, ubi -0xebc0000 (230 MiB); rootfs_data 197 MiB unter Cudys Firmware",
+        "quelle": "forum_bootlog_cudy",
+        "beleg": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/1",
+        "stand": "Beitrag #1 vom 2025-06-06 (aiyunyuner)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "image_groesse_kb": [
+      {
+        "wert": 235520,
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "IMAGE_SIZE; zum Vergleich 128-MB-Variante deutlich kleiner"
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "MediaTek MT7981B (2.4 und 5 GHz integriert) + MT7976CN (Front-End)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7981BA, MediaTek MT7976CN",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "mt76 (kmod-mt7915e, mt7981-wo-firmware)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "mt76",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n/ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
+      },
+      {
+        "wert": "Wi-Fi 6 (802.11ax), 574 Mbit/s",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac/ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
+      },
+      {
+        "wert": "Wi-Fi 6 (802.11ax), 2402 Mbit/s",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'2 条空间流'"
+      },
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "'2.4GHz: 2x2:2 MIMO'"
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'2 条空间流'"
+      },
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "'5GHz: 2X3:2 MIMO'"
+      }
+    ],
+    "wlan_24_ketten": [
+      {
+        "wert": "2 Verstärker",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'功率放大器 2.4GHz: 2× 内置'"
+      },
+      {
+        "wert": "2T2R",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR3000",
+        "stand": "Seitenrevision 2025-07-26T12:53:12Z (Olek210)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
+      }
+    ],
+    "wlan_5_ketten": [
+      {
+        "wert": "3 Verstärker",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'功率放大器 5GHz: 3× 内置'; dritte Kette für Zero-Wait-DFS"
+      },
+      {
+        "wert": "2x3",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "'2X3:2 MIMO'"
+      },
+      {
+        "wert": "2T3R",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR3000",
+        "stand": "Seitenrevision 2025-07-26T12:53:12Z (Olek210)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut; 'Zero-wait DFS'"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AX3000",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AX3000",
+        "quelle": "forum_typenschild",
+        "beleg": "https://forum.openwrt.org/uploads/default/original/3X/b/e/bed9621ab7f03be918f6383b751613bd543621dc.jpeg",
+        "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
+        "sicherheit": "mittel",
+        "bemerkung": "Karton 'AX3000双频'"
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "bis 160 MHz",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_modulation": [
+      {
+        "wert": "1024-QAM, OFDMA, MU-MIMO, BSS Color, Beamforming",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "extern fest (2 nicht abnehmbar) + 1 intern",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'2× 不可拆卸, 1× 内置'"
+      },
+      {
+        "wert": "extern fest (2) + 1 intern; die interne nur für Zero-Wait-DFS",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr3000",
+        "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 3,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr3000",
+        "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "intern U.FL (Antennen nicht abnehmbar)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR3000",
+        "stand": "Seitenrevision 2025-07-26T12:53:12Z (Olek210)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4 GHz": 3.9,
+          "5 GHz": 4.8
+        },
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Höchstgewinn je Band"
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "rund (Rundstrahler-Stabantennen), Reichweite laut Hersteller bis 180 m",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Charakteristik nicht ausdrücklich angegeben, aus Bauform abgeleitet; 180 m = '覆盖半径 最大'"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "WAN",
+            "geschwindigkeit": "2.5G",
+            "art": "RJ45",
+            "phy": "Realtek RTL8221B",
+            "linux": "eth0"
+          },
+          {
+            "name": "LAN",
+            "geschwindigkeit": "1G",
+            "art": "RJ45",
+            "phy": "MT7981 intern",
+            "linux": "eth1"
+          }
+        ],
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": "Schnittstellennamen aus Wiki/02_network"
+      },
+      {
+        "wert": [
+          {
+            "name": "WAN",
+            "geschwindigkeit": "2.5G"
+          },
+          {
+            "name": "LAN",
+            "geschwindigkeit": "1G"
+          }
+        ],
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'2.5G 口为 WAN 口，千兆口为 LAN 口'"
+      },
+      {
+        "wert": "Rückseite v.l.n.r.: USB-A, LAN, WAN (2.5G), USB-C",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR3000_ZH_QIG.pdf?v=5796422902345933869",
+        "stand": "PDF ohne Datum (Druck-Nr. 810600557), abgerufen 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "aus der Grafik abgelesen"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wan_phy": [
+      {
+        "wert": "Realtek RTL8221B (2500base-x, Clause 45)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "RTL8221B-VB-CG",
+        "quelle": "forum_bootlog_cudy",
+        "beleg": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/1",
+        "stand": "Beitrag #1 vom 2025-06-06 (aiyunyuner)",
+        "sicherheit": "mittel",
+        "bemerkung": "Treibermeldung im Cudy-Bootlog"
+      }
+    ],
+    "switch_chip": [
+      {
+        "wert": "kein Switch (zwei getrennte GMACs)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Wiki-Tag 'no switch'; ToH trägt 'MediaTek MT7981BA' ein"
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "1x USB 3.0 Typ A",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Dateifreigabe und USB-Tethering; Stromversorgung über GPIO 9 schaltbar (DTS)"
+      },
+      {
+        "wert": "1x USB 3.0",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet: einzige Stromversorgung laut Datenblatt 'USB-C 口供电'; PoE nirgends erwähnt"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "USB-C (USB Power Delivery)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'受电方式 USB-C', '5V⎓3A, PD'; auch Laptop oder Powerbank"
+      },
+      {
+        "wert": "USB-C",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 5,
+        "quelle": "forum_typenschild",
+        "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
+        "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
+        "sicherheit": "mittel",
+        "bemerkung": "Typenschild '电源规格: 5V⎓3A'"
+      },
+      {
+        "wert": 5,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 3,
+        "quelle": "forum_typenschild",
+        "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
+        "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
+        "sicherheit": "mittel",
+        "bemerkung": "Typenschild"
+      },
+      {
+        "wert": 3,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2 oder mehr",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR3000_ZH_QIG.pdf?v=5796422902345933869",
+        "stand": "PDF ohne Datum (Druck-Nr. 810600557), abgerufen 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "'找一个输出为5V (2A或更高) 的USB-C电源适配器' - Mindestanforderung an fremde Netzteile"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Packliste 'TR3000, 电源适配器, 网线, 快速安装指南'; Netzkabel/USB-C-Kabel nicht getrennt aufgeführt"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "Eingang 100-240 V~ 50/60 Hz, Ausgang 5 V ⎓ 3 A, USB-C",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Steckerform (China-Markt) nicht angegeben"
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 11.5,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_standby": [
+      {
+        "wert": 4.2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'待机功耗'"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Reiserouter, Tischgerät, 0-40 °C"
+      },
+      {
+        "wert": "innen",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "Betrieb 10-90 %, Lagerung 5-95 %, nicht kondensierend",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Tisch",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'桌面安装'"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "118 x 80 x 27.5 (ohne Antennen)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'主体'"
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 160,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "4 Gummifüße abziehen (leicht erwärmen), 4 Kreuzschlitzschrauben, Boden ist zusätzlich eingeclipst",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr3000",
+        "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
+        "sicherheit": "mittel",
+        "bemerkung": "Wiki-Seite für beide Varianten"
+      }
+    ],
+    "leds": [
+      {
+        "wert": "1 System-LED, zweifarbig rot/weiß: aus = kein Strom, rot blinkt = startet, rot = kein Internet, weiß blinkt = verbindet, weiß = online (Stock)",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR3000_ZH_QIG.pdf?v=5796422902345933869",
+        "stand": "PDF ohne Datum (Druck-Nr. 810600557), abgerufen 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "rot (GPIO 11, Boot/Failsafe), weiß (GPIO 10, Running/Upgrade)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "ja, per Schiebeschalter (Stock: Funktion in Einstellungen wählbar)",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR3000_ZH_QIG.pdf?v=5796422902345933869",
+        "stand": "PDF ohne Datum (Druck-Nr. 810600557), abgerufen 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "'开关：出厂默认无功能 ... 可启用VPN或LED开关'; unter OpenWrt Schalter als BTN_0"
+      }
+    ],
+    "knoepfe": [
+      {
+        "wert": "Reset-Taster, Schiebeschalter (BTN_0, EV_SW)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "重置按钮, 可配置开关 (seitlich)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "'侧面带一个自定义开关'"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "vorhanden; Stock: 2-3 s drücken = Werkseinstellungen",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR3000_ZH_QIG.pdf?v=5796422902345933869",
+        "stand": "PDF ohne Datum (Druck-Nr. 810600557), abgerufen 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Lage am Gehäuse in den Quellen nicht beschrieben"
+      },
+      {
+        "wert": "Reset beim Einschalten mindestens 5 s halten öffnet die U-Boot-Shell (TFTP-Recovery)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte: zwei kleine Testpunkte (RX, TX) auf der Platinenunterseite, ohne Stiftleiste",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr3000",
+        "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
+        "sicherheit": "mittel",
+        "bemerkung": "Wiki gilt für beide Flash-Varianten; Foto vermutlich 128-MB-Gerät: https://openwrt.org/_media/media/cudy/cudy-tr3000_uart.jpg"
+      },
+      {
+        "wert": "innen: 'internal test points'",
+        "quelle": "openwrt_commit_128mb",
+        "beleg": "https://github.com/openwrt/openwrt/commit/63b8d98dd0d2f7797ea5b5f25978590982bbbb5d",
+        "stand": "Commit 2024-05-07 (Luis Mita), gemergt 2024-05-09",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "Platinenunterseite, Ethernet-Buchsen links und LEDs rechts: linker Testpunkt RX, rechter TX; GND an beliebigem Massepunkt",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr3000",
+        "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr3000",
+        "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr3000",
+        "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "stdout-path serial0:115200n8"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "Testpunkte sehr klein: Drähte anlöten oder Nadeln/Prüfspitzen; Wiki warnt, man brauche 'special tools'",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr3000",
+        "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "mediatek/filogic",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "cudy_tr3000-256mb-v1",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "24.10.3",
+        "quelle": "openwrt_release_pruefung",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v24.10.3/target/linux/mediatek/image/filogic.mk",
+        "stand": "Tags am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "v24.10.2 noch ohne; Backport 0ec28e59 vom 2025-07-10"
+      },
+      {
+        "wert": "Snapshot seit 2025-06-22",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_support_commit": [
+      {
+        "wert": "594da824a4f2f9582941e612f1a912773d43ff1d (main), 0ec28e59a815bb43c359328c8fd644f399d344da (openwrt-24.10)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.x (im Branch openwrt-25.12 enthalten)",
+        "quelle": "openwrt_release_pruefung",
+        "beleg": "https://github.com/openwrt/openwrt/blob/openwrt-25.12/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "ToH nennt für TR3000 v1 25.12.5"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "nicht in Gluon upstream (nur cudy-tr3000-v1)",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/mediatek-filogic",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Neanderfunk-Patch: device('cudy-tr3000-256mb-v1', 'cudy_tr3000-256mb-v1', {factory = false})",
+        "quelle": "neanderfunk_patch",
+        "beleg": "https://github.com/Neanderfunk/FirmwareConfigs/blob/67870ea3b4e88b5065d3931b0c177fc8abc8f526/patches/add-cudy-3000-gluon.patch",
+        "stand": "Commit 67870ea vom 2026-09-09 (FirmwareConfigs v2025.1.x)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot (Cudy)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "keine OpenWrt-ubootmod-Variante für 256 MB (nur cudy_tr3000-v1-ubootmod für 128 MB)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/image/filogic.mk",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_os": [
+      {
+        "wert": "Cudy-Firmware auf OpenWrt-Basis (Linux 6.6.83), Kennung R103",
+        "quelle": "forum_bootlog_cudy",
+        "beleg": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/1",
+        "stand": "Beitrag #1 vom 2025-06-06 (aiyunyuner)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
+        "sicherheit": "hoch",
+        "bemerkung": "Nur auf der chinesischen Seite; neueste R103 2.5.21 vom 2026-07-10"
+      }
+    ],
+    "stock_ip": [
+      {
+        "wert": "192.168.10.1 bzw. http://cudy.net/",
+        "quelle": "forum_typenschild",
+        "beleg": "https://forum.openwrt.org/uploads/default/original/3X/d/9/d925afce87a920904cfd772ab04f46de21c06ab1.jpeg",
+        "stand": "Beitrag #31 vom 2025-07-14 (aiyunyuner), Fotos vom 2025-07-14",
+        "sicherheit": "mittel",
+        "bemerkung": "Typenschild"
+      },
+      {
+        "wert": "192.168.10.1",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR3000_ZH_QIG.pdf?v=5796422902345933869",
+        "stand": "PDF ohne Datum (Druck-Nr. 810600557), abgerufen 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_passwort": [
+      {
+        "wert": "beim ersten Aufruf selbst anlegen",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/TR3000_ZH_QIG.pdf?v=5796422902345933869",
+        "stand": "PDF ohne Datum (Druck-Nr. 810600557), abgerufen 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "'创建管理员密码'"
+      },
+      {
+        "wert": "admin (ältere Firmware) oder das bei der Ersteinrichtung gesetzte",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr3000",
+        "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Cudy-Zwischenfirmware 'TR3000 256MB Flash V1 (not for TR3000 V1)' (cudy_tr3000-256mb-v1-sysupgrade.bin) über die Cudy-Oberfläche einspielen, danach Gluon-sysupgrade. Nie die 128-MB-Dateien verwenden",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/cudy-installation.md (Tabelle 'Welche Zwischenfirmware für welches Modell' und Abschnitt 'Sonderfälle')",
+        "stand": "Repo routerwerkstatt, Commit 998ec38 vom 2026-10-16 (Tabelle Stand 15.10.2026)",
+        "sicherheit": "hoch",
+        "bemerkung": "unsere Datei cudy-tr3000-256mb.bin, MD5 93615f1c40cdd64179753aee5a32aa06"
+      },
+      {
+        "wert": "Cudy-Zwischenfirmware von der chinesischen Downloadseite (DTS_and_intermediate_firmware.zip vom 2025-05-19), dann OpenWrt-sysupgrade über 192.168.1.1",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Zwischenfirmware aus Cudys Ordner 'TR3000 256 MB Flash V1 (Not for TR3000 V1)'; falsche Firmware wird abgelehnt",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr3000",
+        "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "zweistufig: Cudy-signierte Zwischenfirmware, dann Gluon-sysupgrade (Weg A, nicht automatisierbar)",
+        "quelle": "werkstatt_erstinstallation",
+        "beleg": "router-werkstatt/docs/erstinstallation-ohne-factory.md (Abschnitt 'A: Cudy')",
+        "stand": "Repo routerwerkstatt, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "recovery": [
+      {
+        "wert": "Reset beim Einschalten >= 5 s halten, U-Boot-Shell, PC 192.168.1.88/24, TFTP mit recovery.bin (Original-Firmware nur über Cudy-CN-Support)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/594da824a4f2f9582941e612f1a912773d43ff1d",
+        "stand": "Commit 2025-06-22 (Autor cheng wang/aiyunyuner), gemergt 2025-06-22",
+        "sicherheit": "mittel",
+        "bemerkung": "U-Boot-Shell braucht seriellen Zugang"
+      },
+      {
+        "wert": "Cudy-U-Boot startet per Reset einen TFTP-Client, nimmt aber nur OEM-Firmware; harte Bricks mit mtk_uartboot",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr3000",
+        "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
+        "sicherheit": "mittel",
+        "bemerkung": "Wiki schreibt es für die 128-MB-Variante; mtk_uartboot-FIP dort für cudy_tr3000-v1-ubootmod"
+      }
+    ],
+    "mac_schema": [
+      {
+        "wert": "bdinfo 0xde00: LAN = Basis (Label-MAC), WAN = Basis+1",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-tr3000-v1.dtsi",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "gemeinsame DTSI beider Varianten"
+      },
+      {
+        "wert": "LAN/WLAN 2.4 GHz = Label, WAN = Label+1, WLAN 5 GHz = 82:af:ca:… (lokal verwaltet)",
+        "quelle": "openwrt_commit_128mb",
+        "beleg": "https://github.com/openwrt/openwrt/commit/63b8d98dd0d2f7797ea5b5f25978590982bbbb5d",
+        "stand": "Commit 2024-05-07 (Luis Mita), gemergt 2024-05-09",
+        "sicherheit": "niedrig",
+        "bemerkung": "Quelle beschreibt die 128-MB-Variante (TR3000 v1); für die 256-MB-Variante nur übertragen, weil OpenWrt beide aus derselben DTSI baut"
+      }
+    ],
+    "varianten": [
+      {
+        "wert": "TR3000 v1 mit 128 MB (Image cudy-tr3000-v1, Stock R47) und TR3000 v1 mit 256 MB (dieses Image, Stock R103); Images und Zwischenfirmware nicht austauschbar",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
+        "sicherheit": "hoch",
+        "bemerkung": "Cudy: '不要用TR3000 128MB版本的OpenWrt固件升级TR3000 256MB版本，无法正常工作'"
+      },
+      {
+        "wert": "128-MB-Geräte ab SN 2544 (ab 11/2025) mit Flash ESMT F50L1G41LC; betrifft nicht die 256-MB-Variante",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/zh-cn/pages/download-center/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19, neuester Eintrag 2026-07-10",
+        "sicherheit": "hoch",
+        "bemerkung": "Hinweis zu R47 2.4.22"
+      }
+    ],
+    "bekannte_probleme": [
+      {
+        "wert": "Cudys eigener Bootlog: RTL8221B 'rtl822xb_config_init failed: -110', 'SerDes setup timed out, retrying', danach Link 2500base-x",
+        "quelle": "forum_bootlog_cudy",
+        "beleg": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838/1",
+        "stand": "Beitrag #1 vom 2025-06-06 (aiyunyuner)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TR3000: Ethernet hängt (NETDEV WATCHDOG eth0 transmit queue timed out), nur Neustart hilft",
+        "quelle": "openwrt_issue_17505",
+        "beleg": "https://github.com/openwrt/openwrt/issues/17505",
+        "stand": "Issue vom 2025-01-07, offen",
+        "sicherheit": "niedrig",
+        "bemerkung": "Flash-Variante im Issue nicht genannt"
+      },
+      {
+        "wert": "Feldfall TR3000: WAN-Link (RTL8221B) hing, zurück erst nach Neustart ohne Kabel",
+        "quelle": "werkstatt_rtl8221b",
+        "beleg": "router-werkstatt/docs/rtl8221b-2g5-wan-intern.md (Abschnitt 'Fall 1')",
+        "stand": "Repo routerwerkstatt, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Flash-Variante des Feldgeräts nicht dokumentiert"
+      },
+      {
+        "wert": "ImmortalWrt-256MB-Image nach Cudy-Zwischenfirmware bootete bei einem Nutzer nicht",
+        "quelle": "openwrt_pr_19167",
+        "beleg": "https://github.com/openwrt/openwrt/pull/19167",
+        "stand": "Kommentar 2025-09-08 (777vip)",
+        "sicherheit": "niedrig",
+        "bemerkung": "unbeantwortet, betrifft nicht OpenWrt/Gluon"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_tr3000_v1",
+        "stand": "Seitenrevision 2026-08-21 06:40 (raylynnknight)",
+        "sicherheit": "mittel",
+        "bemerkung": "Datenseite nur TR3000 v1 (128 MB)"
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/cudy/tr3000",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/tr3000",
+        "stand": "Seitenrevision 2026-09-21 18:35 (frollic)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/Cudy_TR3000",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_TR3000",
+        "stand": "Seitenrevision 2025-07-26T12:53:12Z (Olek210)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Seite beschreibt 128-MB-Variante"
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://www.cudy.com/zh-cn/products/tr3000-1-0 (Reiter 参数)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+        "stand": "Live-Seite 2026-10-19 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "kein eigenes PDF-Datenblatt gefunden"
+      }
+    ],
+    "forum_thread": [
+      {
+        "wert": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838",
+        "quelle": "forum_256mb",
+        "beleg": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838",
+        "stand": "Thread 2025-06-06 bis 2025-07-24 (geschlossen)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ]
   },
-  {
-   "url": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838",
-   "kategorie": "flash_chip",
-   "grund": "Kein Platinenfoto der 256-MB-Variante gefunden; genauer Micron-Typ offen (Bootlog nennt nur 'Micron SPI NAND')"
-  },
-  {
-   "url": "https://openwrt.org/_media/media/cudy/cudy-tr3000_back.png",
-   "kategorie": "reset_knopf/schalter",
-   "grund": "Wiki-Gerätefotos (front/back, open1/2, pcbtop) nicht angesehen; Lage von Reset-Taster und Schiebeschalter offen"
-  },
-  {
-   "url": "https://openwrt.org/_media/media/cudy/cudy-tr3000_uartfast.jpg",
-   "kategorie": "seriell",
-   "grund": "zweites UART-Foto (Nadeladapter) nicht angesehen; Serial an einem 256-MB-Gerät nicht ausdrücklich bestätigt"
-  },
-  {
-   "url": "https://forum.openwrt.org/t/support-for-cudy-tr3000/234467",
-   "kategorie": "knoepfe",
-   "grund": "Thread zur BTN_0-Belegung nicht gelesen"
-  },
-  {
-   "url": "https://wikidevi.wi-cat.ru/File:Cudy_TR3000_Bottom.jpeg",
-   "kategorie": "platine",
-   "grund": "WikiDevi-Platinenfotos (128-MB-Variante) nicht geladen; Lüfter/Kühlkörper ('heatsink'-Flag) nicht geprüft"
-  },
-  {
-   "url": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
-   "kategorie": "luefter",
-   "grund": "Lüfter in keiner Quelle erwähnt; Feld weggelassen"
-  },
-  {
-   "url": "https://fccid.io/2APRGRT02",
-   "kategorie": "fcc",
-   "grund": "FCC-Grant gehört zum WR3000; Innenfotos zeigen nicht den TR3000. Für die China-Variante wäre die CMIIT-Datenbank (24J44R8D2652) die Quelle, nicht abgefragt"
-  },
-  {
-   "url": "https://www.cudy.com/products/tr3000-1-0",
-   "kategorie": "hersteller_en",
-   "grund": "Englische Produktseite nicht geladen (256 MB laut PR 19167 dort nicht geführt)"
+  "offene_faeden": [
+    {
+      "url": "https://www.cudy.com/cdn/shop/files/DTS_and_intermediate_firmware.zip?v=9640780418167355303",
+      "kategorie": "flash_chip/dts",
+      "grund": "Cudys DTS_and_intermediate_firmware.zip (25.8 MB, 2025-05-19) nicht geladen; Cudy-DTS könnte Flash-Typ und Abweichungen zur OpenWrt-DTS zeigen"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/support-for-cudy-tr3000-256mb/233838",
+      "kategorie": "flash_chip",
+      "grund": "Kein Platinenfoto der 256-MB-Variante gefunden; genauer Micron-Typ offen (Bootlog nennt nur 'Micron SPI NAND')"
+    },
+    {
+      "url": "https://openwrt.org/_media/media/cudy/cudy-tr3000_back.png",
+      "kategorie": "reset_knopf/schalter",
+      "grund": "Wiki-Gerätefotos (front/back, open1/2, pcbtop) nicht angesehen; Lage von Reset-Taster und Schiebeschalter offen"
+    },
+    {
+      "url": "https://openwrt.org/_media/media/cudy/cudy-tr3000_uartfast.jpg",
+      "kategorie": "seriell",
+      "grund": "zweites UART-Foto (Nadeladapter) nicht angesehen; Serial an einem 256-MB-Gerät nicht ausdrücklich bestätigt"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/support-for-cudy-tr3000/234467",
+      "kategorie": "knoepfe",
+      "grund": "Thread zur BTN_0-Belegung nicht gelesen"
+    },
+    {
+      "url": "https://wikidevi.wi-cat.ru/File:Cudy_TR3000_Bottom.jpeg",
+      "kategorie": "platine",
+      "grund": "WikiDevi-Platinenfotos (128-MB-Variante) nicht geladen; Lüfter/Kühlkörper ('heatsink'-Flag) nicht geprüft"
+    },
+    {
+      "url": "https://www.cudy.com/zh-cn/products/tr3000-1-0",
+      "kategorie": "luefter",
+      "grund": "Lüfter in keiner Quelle erwähnt; Feld weggelassen"
+    },
+    {
+      "url": "https://fccid.io/2APRGRT02",
+      "kategorie": "fcc",
+      "grund": "FCC-Grant gehört zum WR3000; Innenfotos zeigen nicht den TR3000. Für die China-Variante wäre die CMIIT-Datenbank (24J44R8D2652) die Quelle, nicht abgefragt"
+    },
+    {
+      "url": "https://www.cudy.com/products/tr3000-1-0",
+      "kategorie": "hersteller_en",
+      "grund": "Englische Produktseite nicht geladen (256 MB laut PR 19167 dort nicht geführt)"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 38,
+    "notiz": "Kein ToH-Eintrag für die 256-MB-Variante (Dump ohne TR3000, Live-Datenseite nur v1 mit 128NAND). Ausgewertet: ToH-Datenseite TR3000 v1 und Wiki (Rev. 2026-09-21), Support-Commits 256 MB (594da824, Backport 0ec28e59 → 24.10.3) und 128 MB, PR 19167, DTS/DTSI und filogic.mk main, Gluon-Targets, Neanderfunk-Patch, Forum-Thread 233838 mit Cudy-Bootlog (Micron-NAND 256 MiB, RTL8221B-VB-CG) und Typenschildfotos, Cudy-CN-Produktseite (Datenblatt), CN-Downloadseite, CN-Kurzanleitung (Bild), WikiDevi (128 MB), FCC 2APRGRT02 (WR3000-Grant, nur Modellerklärung), Werkstatt-Anleitungen. DeviWiki ohne Treffer. Variante nur in China verkauft. Offen: genauer Flash-Chip, Lage Reset/Schalter, Lüfter.",
+    "geizhals": {
+      "datum": "2026-10-20",
+      "zuordnung": "unsicher",
+      "ergebnis": "heise-Suche \"Cudy TR3000\": ein Treffer, Artikel a3236399 \"Cudy TR3000\" (https://preisvergleich.heise.de/cudy-tr3000-a3236399.html), gelistet seit 22.07.2024, ohne Flash-Angabe. Die 256-MB-Variante gibt es erst seit 2025 und laut PR 19167 nur in China; der Artikel gilt sehr wahrscheinlich der 128-MB-Variante (cudy-tr3000-v1). Nichts uebernommen. Seiten im Cache. 2 heise-Abrufe."
+    }
   }
- ],
- "lauf": {
-  "datum": "2026-10-19",
-  "status": "teilweise",
-  "anfragen": 38,
-  "notiz": "Kein ToH-Eintrag für die 256-MB-Variante (Dump ohne TR3000, Live-Datenseite nur v1 mit 128NAND). Ausgewertet: ToH-Datenseite TR3000 v1 und Wiki (Rev. 2026-09-21), Support-Commits 256 MB (594da824, Backport 0ec28e59 → 24.10.3) und 128 MB, PR 19167, DTS/DTSI und filogic.mk main, Gluon-Targets, Neanderfunk-Patch, Forum-Thread 233838 mit Cudy-Bootlog (Micron-NAND 256 MiB, RTL8221B-VB-CG) und Typenschildfotos, Cudy-CN-Produktseite (Datenblatt), CN-Downloadseite, CN-Kurzanleitung (Bild), WikiDevi (128 MB), FCC 2APRGRT02 (WR3000-Grant, nur Modellerklärung), Werkstatt-Anleitungen. DeviWiki ohne Treffer. Variante nur in China verkauft. Offen: genauer Flash-Chip, Lage Reset/Schalter, Lüfter."
- }
 }
