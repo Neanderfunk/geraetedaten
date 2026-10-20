@@ -78,6 +78,19 @@ selbst sperrt Abrufe; Permalinks findet man über das Webarchiv
 (`https://web.archive.org/cdx/search/cdx?url=geizhals.de/<hersteller>-<modell>*&output=json&fl=original&collapse=urlkey`),
 die EAN oft im archivierten Geizhals-Datenblatt oder im Hersteller-Datenblatt.
 
+**Geizhals über heise:** `preisvergleich.heise.de` liefert dieselben Seiten wie
+Geizhals (gleiche Artikelnummer `-a<ID>.html`) und sperrt nicht. Suche:
+`https://preisvergleich.heise.de/?fs=<suchbegriff>&hloc=de`, Produktseite:
+`https://preisvergleich.heise.de/<name>-a<ID>.html`. Gespeichert wird der
+Geizhals-Permalink `https://geizhals.de/<name>-a<ID>.html`. Die Datenblatt-Tabelle
+der Produktseite kommt unverändert nach `roh.geizhals` (Quelle `geizhals`,
+`sicherheit: mittel`), daraus z. B. `netzteil_daten`, `leistung_w_max`,
+`abmessungen_mm`, `antennen_anzahl`. Gilt ein Geizhals-Eintrag für mehrere
+Hardware-Versionen („verschiedene Revisionen“), wird nur der Link übernommen,
+keine versionsabhängigen Werte. Preise werden nicht gespeichert, sie veralten
+täglich. Abrufe langsam: höchstens 3 je Gerät, mindestens 30 s Abstand
+(das Freifunk-Wiki drosselt seinen Preisvergleich auf 5 je Minute).
+
 Level, Risiko, Verwechslung, Kaufstatus und Anleitung kommen nicht von den
 Agenten. Sie stehen im RAMpe-Inventar (gluon-rampe-installer) und werden
 beim Erzeugen der Selector-Ansicht dazugenommen.
