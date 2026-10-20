@@ -5,7 +5,7 @@ Erzeugt von `werkzeug/geraeteliste.py`, nicht von Hand ändern.
 
 - Image-Namen: `quellen/images-21_dias-2026-10-19.txt`
 - Modellnamen: `quellen/selector-modelle-2026-10-19.json`
-- **320 von 384 Geräten erfasst.**
+- **324 von 384 Geräten erfasst.**
 
 Mithelfen: Bei einem Gerät ohne Daten führt „anlegen“ auf GitHub zu einer neuen Datei
 mit fertiger Vorlage. Aufbau und Feldnamen stehen in [schema/felder.md](schema/felder.md).
@@ -119,7 +119,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | AP3000 wall-v1 | `cudy-ap3000-wall-v1` | [erfasst](daten/cudy-ap3000-wall-v1.json): 74 Felder, 10 offene Fäden, teilweise |  | recommended |
 | cudy-ap1300-outdoor-v1 | `cudy-ap1300-outdoor-v1` | [erfasst](daten/cudy-ap1300-outdoor-v1.json): 94 Felder, 14 offene Fäden, teilweise |  |  |
 | cudy-wr3000p-v1 | `cudy-wr3000p-v1` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=cudy-wr3000p-v1.json&value=%7B%0A%20%22image%22%3A%20%22cudy-wr3000p-v1%22%2C%0A%20%22modell%22%3A%20%22Cudy%20cudy-wr3000p-v1%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
-| cudy-wr3000u-v1 | `cudy-wr3000u-v1` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=cudy-wr3000u-v1.json&value=%7B%0A%20%22image%22%3A%20%22cudy-wr3000u-v1%22%2C%0A%20%22modell%22%3A%20%22Cudy%20cudy-wr3000u-v1%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| cudy-wr3000u-v1 | `cudy-wr3000u-v1` | [erfasst](daten/cudy-wr3000u-v1.json): 64 Felder, 9 offene Fäden, teilweise |  |  |
 | M1800 | `cudy-m1800` | [erfasst](daten/cudy-m1800.json): 84 Felder, 9 offene Fäden, teilweise |  | recommended |
 | M3000 v1 | `cudy-m3000-v1` | [erfasst](daten/cudy-m3000-v1.json): 88 Felder, 9 offene Fäden, fertig |  | recommended |
 | M3000 v2-with-motorcomm-yt8821 | `cudy-m3000-v2-with-motorcomm-yt8821` | [erfasst](daten/cudy-m3000-v2-with-motorcomm-yt8821.json): 91 Felder, 10 offene Fäden, teilweise |  | recommended |
@@ -304,12 +304,12 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | RB951Ui-2nD (hAP) | `mikrotik-routerboard-951ui-2nd-hap` | [erfasst](daten/mikrotik-routerboard-951ui-2nd-hap.json): 82 Felder, 8 offene Fäden, teilweise |  | recommended |
 | RBD52G-5HacD2HnD-TC (hAP ac²) | `mikrotik-hap-ac2` | [erfasst](daten/mikrotik-hap-ac2.json): 84 Felder, 8 offene Fäden, teilweise |  | recommended |
 | RBDiscG-5acD (DISC Lite5 ac) | `mikrotik-discg-5acd` | [erfasst](daten/mikrotik-discg-5acd.json): 78 Felder, 8 offene Fäden, teilweise |  | recommended |
-| RBmAPL-2nD (mAP lite) | `mikrotik-routerboard-map-lite` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=mikrotik-routerboard-map-lite.json&value=%7B%0A%20%22image%22%3A%20%22mikrotik-routerboard-map-lite%22%2C%0A%20%22modell%22%3A%20%22Mikrotik%20RBmAPL-2nD%20%28mAP%20lite%29%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  | recommended |
+| RBmAPL-2nD (mAP lite) | `mikrotik-routerboard-map-lite` | [erfasst](daten/mikrotik-routerboard-map-lite.json): 82 Felder, 8 offene Fäden, teilweise |  | recommended |
 | RBmAPL-2nD (mAP lite) | `mikrotik-routerboard-mapl-2nd` | [erfasst](daten/mikrotik-routerboard-mapl-2nd.json): 83 Felder, 9 offene Fäden, teilweise |  | recommended |
 | RBSXTsqG-5acD (SXTsq 5 ac) | `mikrotik-sxtsq-5-ac-rbsxtsqg-5acd` | [erfasst](daten/mikrotik-sxtsq-5-ac-rbsxtsqg-5acd.json): 81 Felder, 8 offene Fäden, teilweise |  | recommended |
 | RBwAPG-5HacD2HnD (wAP ac) | `mikrotik-routerboard-wap-ac-d2` | [erfasst](daten/mikrotik-routerboard-wap-ac-d2.json): 84 Felder, 8 offene Fäden, teilweise |  | recommended |
 | RBwAPG-5HacD2HnD (wAP ac) | `mikrotik-wap-ac` | [erfasst](daten/mikrotik-wap-ac.json): 83 Felder, 9 offene Fäden, teilweise |  | recommended |
-| RBwAPG-5HacT2HnD (wAP ac) | `mikrotik-routerboard-wap-ac-t2` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=mikrotik-routerboard-wap-ac-t2.json&value=%7B%0A%20%22image%22%3A%20%22mikrotik-routerboard-wap-ac-t2%22%2C%0A%20%22modell%22%3A%20%22Mikrotik%20RBwAPG-5HacT2HnD%20%28wAP%20ac%29%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  | recommended |
+| RBwAPG-5HacT2HnD (wAP ac) | `mikrotik-routerboard-wap-ac-t2` | [erfasst](daten/mikrotik-routerboard-wap-ac-t2.json): 95 Felder, 6 offene Fäden, teilweise |  | recommended |
 | RBwAPG-5HacT2HnD (wAP ac) | `mikrotik-routerboard-wap-g-5hact2hnd` | [erfasst](daten/mikrotik-routerboard-wap-g-5hact2hnd.json): 93 Felder, 10 offene Fäden, teilweise |  | recommended |
 | RBwAPR-2nD (wAP R) | `mikrotik-routerboard-wapr-2nd` | [erfasst](daten/mikrotik-routerboard-wapr-2nd.json): 86 Felder, 7 offene Fäden, teilweise |  | recommended |
 
@@ -356,7 +356,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| nexx-wt3020-8m | `nexx-wt3020-8m` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=nexx-wt3020-8m.json&value=%7B%0A%20%22image%22%3A%20%22nexx-wt3020-8m%22%2C%0A%20%22modell%22%3A%20%22Nexx%20nexx-wt3020-8m%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| nexx-wt3020-8m | `nexx-wt3020-8m` | [erfasst](daten/nexx-wt3020-8m.json): 79 Felder, 6 offene Fäden, teilweise |  |  |
 | WT3020AD | `nexx-wt3020ad` | [erfasst](daten/nexx-wt3020ad.json): 48 Felder, 9 offene Fäden, teilweise |  | recommended |
 | WT3020F | `nexx-wt3020f` | [erfasst](daten/nexx-wt3020f.json): 74 Felder, 7 offene Fäden, teilweise |  | recommended |
 | WT3020H | `nexx-wt3020h` | [erfasst](daten/nexx-wt3020h.json): 73 Felder, 7 offene Fäden, teilweise |  | recommended |

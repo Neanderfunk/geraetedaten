@@ -1,0 +1,2414 @@
+{
+  "image": "mikrotik-routerboard-map-lite",
+  "modell": "MikroTik RouterBOARD mAP lite (RBmAPL-2nD)",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-20",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15677386"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite?do=export_raw",
+      "stand": "Seitenrevision 2026-03-11 02:27",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Live-Seite neuer als Dump: Supported Since Commit eb38af78 (ath79) statt c59fa94e (ar71xx), aktuell 25.12.0 statt 23.05.0, Target ath79 statt ar71xx-ath79, zusätzlich Serial voltage 3.3, Outdoor No, Gluon support No, miniPCI -"
+    },
+    "openwrt_wiki_common": {
+      "url": "https://openwrt.org/toh/mikrotik/common",
+      "stand": "Seitenrevision 2026-02-10 19:51",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Keine eigene Geräteseite (Device Page im ToH leer, Wiki-Suche 'mapl' findet nur common und rb941-2nd). Common-Seite nennt mapl-2nd als erfolgreich getestet mit *squashfs-sysupgrade-v7.bin (Stand 2026-02-10)"
+    },
+    "openwrt_git_ar71xx": {
+      "url": "https://github.com/openwrt/openwrt/commit/c59fa94eeecf16c79254ab4bc78f5b31c7387039",
+      "stand": "Commit 2017-02-07 (Autor), committet 2017-02-15",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "in v18.06.0 enthalten, in v17.01.0 nicht (gh compare)"
+    },
+    "openwrt_git_ath79": {
+      "url": "https://github.com/openwrt/openwrt/commit/eb38af788180d624e5b37aa5db1fe3766b138dc8",
+      "stand": "Commit 2022-02-28 (Autor), committet 2022-03-08",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "in v22.03.0 enthalten (gh compare: ahead)"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9533_mikrotik_routerboard-mapl-2nd.dts",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/mikrotik.mk",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-mikrotik",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Upstream-Gluon (main) kennt das Gerät nicht: ath79-mikrotik enthält nur 951ui-2nd-hap und wapr-2nd; gh search code mapl-2nd: 0 Treffer"
+    },
+    "neanderfunk_patch": {
+      "url": "https://github.com/Neanderfunk/gluon-patches-hardware/blob/main/targets/targets-ath79-mikrotik.patch",
+      "stand": "Repo-Stand 51881c5a (2026-10-17)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "lokal /home/adorfer/projekte/freifunk/neanderfunk/gluon-patches-hardware, eingeführt 845a95f (2026-09-27, aus FirmwareConfigs herausgelöst)"
+    },
+    "mikrotik_produktseite": {
+      "url": "https://mikrotik.com/product/RBmAPL-2nD",
+      "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+      "abgerufen": "2026-10-20"
+    },
+    "mikrotik_broschuere": {
+      "url": "https://cdn.mikrotik.com/web-assets/product_files/mAP_lite_171010.pdf",
+      "stand": "PDF ohne Datum (Dateiname 171010)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "auf der Produktseite als Brochure verlinkt; PDF-Metadaten ohne Datum"
+    },
+    "mikrotik_quickguide": {
+      "url": "https://cdn.mikrotik.com/web-assets/product_files/mAP-Lite-qg_190553.pdf",
+      "stand": "Document #49227, Modified on 09.MAY.2019",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "auf der Produktseite als Quick Guide verlinkt; dazu https://help.mikrotik.com/docs/display/QG/Quick+Guide+RBmAPL-2nD (nicht abgerufen)"
+    },
+    "mikrotik_handbuch": {
+      "url": "https://manual.mikrotik.com/hardware/map-lite/",
+      "stand": "Seite am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Quick Guide als Webseite; Sicherheitshinweise teils Vorlagentext (\"installed in the rackmount\")"
+    },
+    "mikrotik_eu_konformitaet": {
+      "url": "https://cdn.mikrotik.com/web-assets/product_files/ID021.6_RBmAPL-2nD_DOC_260535.pdf",
+      "stand": "EU-DoC ID-021.6, Riga 13 May 2026",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc": {
+      "url": "https://fccid.io/TV7MAPL2ND",
+      "stand": "Grant 2015-12-24 (Original Equipment)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Mikrotikls SIA, Testlabor Rogers Labs; 10 Exhibits, Block Diagram/Schematics/Operational Description vertraulich; 4 Abrufe bei fccid.io"
+    },
+    "fcc_handbuch": {
+      "url": "https://fccid.io/TV7MAPL2ND/User-Manual/User-Manual-2856375",
+      "stand": "Exhibit 2015-12-24 (Dokument 9-Sep-15)",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/TV7MAPL2ND/Label/Label-Info-2856372",
+      "stand": "Exhibit 2015-12-24 (PDF 2015-12-10)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet (Gehäusefoto nur 389x363 Pixel)"
+    },
+    "fcc_innenfotos": {
+      "url": "https://fccid.io/TV7MAPL2ND/Internal-Photos/Internal-Photos-2856371",
+      "stand": "Exhibit 2015-12-24 (PDF 2015-12-10)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet, 2 Seiten (Unter- und Oberseite der Platine mit Lineal)"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+      "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Inhalt identisch mit DeviWiki-Seite gleichen Namens"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/wiki/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+      "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+      "abgerufen": "2026-10-20"
+    },
+    "deviwiki_lite2": {
+      "url": "https://deviwiki.com/wiki/MikroTik_RouterBOARD_mAP_lite_2_(RBmAPL-2nD)",
+      "stand": "Seitenrevision 2019-07-05T04:59:25Z",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "zweite DeviWiki-Seite zum selben Produktcode, nennt Gemtek als ODM und Platinenkennung GMT03070415; Verweis auf FCC-ID TV7RBMAP2ND dort ist die des mAP, nicht des mAP lite"
+    },
+    "deviwiki_platinenfotos": {
+      "url": "https://deviwiki.com/wiki/File:MAPl_back.jpg",
+      "stand": "Upload 2019-12-05 (MAPl_front.jpg, MAPl_back.jpg)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet; Bilder https://deviwiki.com/w/images/5/58/MAPl_front.jpg und https://deviwiki.com/w/images/7/78/MAPl_back.jpg"
+    },
+    "geizhals_archiv": {
+      "url": "https://web.archive.org/web/20230821220019/https://geizhals.de/mikrotik-routerboard-map-lite-rbmapl-2nd-a1421552.html?t=v&hloc=de&va=b",
+      "stand": "Archivkopie 2023-08-21",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Geizhals selbst nicht abgerufen (gesperrt), Archivkopie über web.archive.org; keine EAN im Datenblatt"
+    },
+    "werkstatt": {
+      "url": "router-werkstatt/docs/erstinstallation-ohne-factory.md",
+      "stand": "Arbeitskopie 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "nur Einordnung in Installationsgruppe H (Mikrotik netinstall), keine Messung"
+    },
+    "neanderfunk_installer": {
+      "url": "installer/devices/mikrotik-routerboard-mapl-2nd.sh (gluon-rampe-installer)",
+      "stand": "Arbeitskopie 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Rezept-Entwurf RAMpe, ungetestet; lokale Pfade nicht öffentlich"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "15677386",
+      "devicetype": "WiFi AP",
+      "brand": "MikroTik",
+      "model": "RBmAPL-2nD (mAP lite)",
+      "version": "rev1,rev2",
+      "fccid": "https://fcc.io/TV7/MAPL2ND",
+      "availability": "Available 2023",
+      "whereavailable": "amazon.com, amazon.de, omg.de, mikrotik-store.eu",
+      "supportedsincecommit": "https://git.lede-project.org/?p=source.git;a=commit;h=c59fa94eeecf16c79254ab4bc78f5b31c7387039",
+      "supportedsincerel": "18.06.0",
+      "supportedcurrentrel": "23.05.0",
+      "unsupported_functions": "NULL",
+      "target": "ar71xx-ath79",
+      "subtarget": "mikrotik",
+      "packagearchitecture": "mips_24kc",
+      "bootloader": "RouterBOOT",
+      "cpu": "Qualcomm Atheros QCA9533",
+      "cpucores": "1",
+      "cpumhz": "650",
+      "flashmb": "16",
+      "rammb": "64",
+      "ethernet100mports": "1",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "-",
+      "ethernet2_5gports": "-",
+      "ethernet5gports": "-",
+      "ethernet10gports": "-",
+      "sfp_ports": "-",
+      "sfp_plus_ports": "-",
+      "switch": "-",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "Qualcomm Atheros QCA9533",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "-",
+      "wlancomments": "",
+      "wlandriver": "ath9k",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "1x µUSB (power)",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "115200 / 8N1",
+      "jtag": "Yes",
+      "ledcount": "4",
+      "buttoncount": "1",
+      "gpios": "¿",
+      "powersupply": "5 VDC, 1.0 A (µUSB), PoE 5-60 VDC 3.5W",
+      "devicepage": "",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "RBmAPL-2nD (mAP lite)",
+      "gitsearch": "RBmAPL-2nD (mAP lite)",
+      "wikideviurl": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+      "oemdevicehomepageurl": "https://routerboard.com/RBmAPL-2nD",
+      "firmwareoemstockurl": "http://www.mikrotik.com/download",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/mikrotik/openwrt-23.05.0-ath79-mikrotik-mikrotik_routerboard-mapl-2nd-initramfs-kernel.bin",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/mikrotik/openwrt-23.05.0-ath79-mikrotik-mikrotik_routerboard-mapl-2nd-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/openwrt-ath79-mikrotik-mikrotik_routerboard-mapl-2nd-initramfs-kernel.bin",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/openwrt-ath79-mikrotik-mikrotik_routerboard-mapl-2nd-squashfs-sysupgrade.bin",
+      "installationmethods": "Mikrotik TFTP",
+      "commentinstallation": "",
+      "recoverymethods": "Mikrotik TFTP",
+      "commentrecovery": "",
+      "picture": "media:mikrotik:rbmapl-2nd.jpg",
+      "comments": "",
+      "page": "toh:hwdata:mikrotik:mikrotik_rbmapl2nd_map_lite"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi AP",
+      "Brand": "MikroTik",
+      "Model": "RBmAPL-2nD (mAP lite)",
+      "Versions": "rev1, rev2",
+      "FCCID_urls": "https://fcc.io/TV7/MAPL2ND",
+      "Availability_availability": "Available 2023",
+      "Where available": "amazon.com, amazon.de, omg.de, mikrotik-store.eu",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=eb38af788180d624e5b37aa5db1fe3766b138dc8",
+      "Supported Since Rel_releasesince": "18.06.0",
+      "Supported Current Rel_releasecurrent": "25.12.0",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "No",
+      "Target_target": "ath79",
+      "Subtarget": "mikrotik",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "RouterBOOT",
+      "CPU": "Qualcomm Atheros QCA9533",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "650",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "64",
+      "Ethernet 100M ports_numethport": "1",
+      "Ethernet 1Gbit ports_numethport": "-",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "-",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Qualcomm Atheros QCA9533",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "-",
+      "WLAN Comments_": "",
+      "WLAN driver_wlan-drivers": "ath9k",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "1x µUSB (power)",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "Yes",
+      "LED count_numled": "4",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "¿",
+      "Power Supply": "5 VDC, 1.0A (µUSB), PoE: 5-60 VDC 3.5W",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "RBmAPL-2nD (mAP lite)",
+      "Git search_search-gits": "RBmAPL-2nD (mAP lite)",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+      "WikiDevi ID_hwinfo-id": "MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+      "OEM Device Homepage URL_url": "https://routerboard.com/RBmAPL-2nD",
+      "Firmware OEM Stock URL_url": "http://www.mikrotik.com/download",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/mikrotik/openwrt-25.12.0-ath79-mikrotik-mikrotik_routerboard-mapl-2nd-initramfs-kernel.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/mikrotik/openwrt-25.12.0-ath79-mikrotik-mikrotik_routerboard-mapl-2nd-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/openwrt-ath79-mikrotik-mikrotik_routerboard-mapl-2nd-initramfs-kernel.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/openwrt-ath79-mikrotik-mikrotik_routerboard-mapl-2nd-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "Mikrotik TFTP",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "Mikrotik TFTP",
+      "Comment recovery": "",
+      "Picture_img100s": "media:mikrotik:rbmapl-2nd.jpg",
+      "Comments_": ""
+    },
+    "openwrt_wiki_common": {
+      "hinweis_v7": "Status 2026-02-10: The next OpenWrt release 25.12.0 (currently -rc4) has additional sysupgrade images named *squashfs-sysupgrade-v7.bin that should work with recent MikroTik RouterOS v7 bootloaders (successfully tested on mikrotik_routerboard-mapl-2nd). The images *squashfs-sysupgrade.bin (without -v7) are obviously for MikroTik RouterOS v6 bootloaders.",
+      "warnung_v7": "OpenWrt is not compatible with the bootloader of RouterOS v7. Do NOT upgrade the firmware on your device to RouterOS v7 or, if you did, downgrade to RouterOS Firmware v6 before installing OpenWrt. (laut Seite seit 2025-09-12 mit RouterOS 7.19.6 teilweise überholt)",
+      "tftp_groesse": "MikroTik's bootloader (RouterBOOT) may have a size limitation for TFTP images, approximately 7MiB.",
+      "netboot": "RouterBOOT default boot protocol BOOTP; Netboot per Reset-Taster oder serieller Konsole (115200 8N1)"
+    },
+    "openwrt_git_ar71xx": {
+      "titel": "ar71xx: add support for RB mAP L-2nD",
+      "autor": "Thibaut VARENE",
+      "SoC": "Qualcomm QCA9533 (650MHz)",
+      "RAM": "64MB",
+      "Storage": "16MB NOR SPI flash",
+      "Wireless": "builtin QCA9533, 2x2:2",
+      "Ethernet": "1x100M",
+      "Hinweis": "Maschinendatei mach-rbspi.c für weitere 16M-SPI-NOR-RouterBOARDs"
+    },
+    "openwrt_git_ath79": {
+      "titel": "ath79: add support for MikroTik RouterBOARD mAP lite",
+      "autor": "Thibaut VARÈNE",
+      "Beschreibung": "The MikroTik RouterBOARD mAPL-2nd (sold as mAP Lite) is a small 2.4 GHz 802.11b/g/n PoE-capable AP.",
+      "SoC": "Qualcomm Atheros QCA9533",
+      "RAM": "64 MB",
+      "Storage": "16 MB NOR",
+      "Wireless": "Atheros AR9531 (SoC) 802.11b/g/n 2x2:2, 1.5 dBi antenna",
+      "Ethernet": "Atheros AR8229 (SoC), 1x 10/100 port, 802.3af/at PoE in",
+      "LEDs": "4 user-controllable LEDs: 1x power (green), 1x user (green), 1x lan (green), 1x wlan (green)",
+      "Flashing": "TFTP boot initramfs image and then perform sysupgrade. Follow common MikroTik procedure as in https://openwrt.org/toh/mikrotik/common.",
+      "Netzwerk": "The network setup avoids using the integrated switch and connects the single Ethernet port directly. This way, link speed (10/100 Mbps) is properly reported by eth0."
+    },
+    "openwrt_dts": {
+      "compatible": "mikrotik,routerboard-mapl-2nd, qca,qca9533",
+      "model": "MikroTik RouterBOARD mAPL-2nD (mAP lite)",
+      "include": "qca9533_mikrotik_routerboard-16m.dtsi",
+      "leds": "power GPIO17 (grün, default on), lan GPIO4, green:user GPIO14 (boot/failsafe/running/upgrade); wlan-LED über wmac led-sources 11",
+      "wmac": "qca,no-eeprom (Kalibrierdaten aus RouterBOOT-Partition per hotplug 10-ath9k-eeprom)",
+      "eth0": "phy-handle swphy0, switch-phy-swap 1",
+      "reset": "GPIO16 active low (aus qca9533_mikrotik_routerboard-16m.dtsi)",
+      "serial0": "&uart (aus dtsi)"
+    },
+    "openwrt_image_mk": {
+      "Device": "mikrotik_routerboard-mapl-2nd",
+      "basis": "Device/mikrotik_nor",
+      "SOC": "qca9533",
+      "DEVICE_MODEL": "RouterBOARD mAPL-2nD (mAP lite)",
+      "IMAGE_SIZE": "16256k"
+    },
+    "gluon_targets": {
+      "ath79-mikrotik": "device('mikrotik-routerboard-951ui-2nd-hap', ...), device('mikrotik-routerboard-wapr-2nd', ...)",
+      "mikrotik.inc": "factory = '-initramfs-kernel' (Netboot per TFTP, dann sysupgrade)"
+    },
+    "neanderfunk_patch": {
+      "targets-ath79-mikrotik.patch": "device('mikrotik-routerboard-mapl-2nd', 'mikrotik_routerboard-mapl-2nd', { aliases = {'mikrotik-routerboard-map-lite'}, factory = false, })",
+      "additionaltargets.sh": "apply_patch targets-ath79-mikrotik.patch targets/ath79-mikrotik 'mikrotik_routerboard-mapl-2nd'"
+    },
+    "mikrotik_produktseite": {
+      "Kurztext": "Tiny size 2.4GHz Dual Chain access point with a 650MHz CPU, 64MB RAM and one Ethernet",
+      "Beschreibung": "The mAP lite is our smallest wireless access point. It is barely larger than a matchbox, we even had to use a special Ethernet port to match it's slim profile. ... dual chain 802.11 b/g/n device and operates in 2GHz.",
+      "Product code": "RBmAPL-2nD",
+      "Suggested price": "$30.00",
+      "Architecture": "MIPSBE",
+      "CPU": "QCA9533",
+      "CPU core count": "1",
+      "CPU nominal frequency": "650 MHz",
+      "Dimensions": "48x49x11mm",
+      "RouterOS license": "4",
+      "Operating System": "RouterOS",
+      "Size of RAM": "64 MB",
+      "Storage size": "16 MB",
+      "Storage type": "FLASH",
+      "MTBF": "Approximately 100'000 hours at 25C",
+      "Tested ambient temperature": "-30°C to 70°C",
+      "Wireless 2.4 GHz Max data rate": "300 Mbit/s",
+      "Wireless 2.4 GHz Number of chains": "2",
+      "Wireless 2.4 GHz standards": "802.11b/g/n",
+      "Antenna gain dBi for 2.4 GHz": "1.5",
+      "Wireless 2.4 GHz chip model": "QCA9533",
+      "Wireless 2.4 GHz generation": "Wi-Fi 4",
+      "10/100 Ethernet ports": "1",
+      "MicroUSB input Voltage": "5 V",
+      "Number of DC inputs": "2 (PoE-IN, MicroUSB)",
+      "Max power consumption": "3.5 W",
+      "PoE in": "802.3af/at",
+      "Cooling type": "Passive",
+      "PoE in input Voltage": "10-60 V",
+      "Certification": "CE, FCC, IC, EAC, ROHS",
+      "IP": "IP20",
+      "Included parts": "5V 1A power adapter, K-44 mount kit",
+      "Wireless Specification 2.4 GHz (Tx dBm / Rx dBm)": "1MBit/s 22/-96; 11MBit/s 22/-89; 6MBit/s 20/-93; 54MBit/s 18/-74; MCS0 20/-93; MCS7 16/-71",
+      "Ethernet test results (QCA9533 100M one port, 1518/512/64 byte Mbps)": "Bridging fast path 98.4/96.3/88.9; Bridging 25 filter rules 98.4/96.3/42.1; Routing fast path 98.4/96.3/82.3; Routing 25 simple queues 98.4/96.3/60.8; Routing 25 ip filter rules 98.4/96.3/27.6",
+      "RouterOS stable": "v7.24.5 (mipsbe)",
+      "Dokumente": "Brochure mAP_lite_171010.pdf; Quick Guide mAP-Lite-qg_190553.pdf und help.mikrotik.com; FCC 2690UC15_GRANT_170518.pdf; DoC ID021.6_RBmAPL-2nD_DOC_260535.pdf; Block Diagram; User Manual manual.mikrotik.com/hardware/map-lite/",
+      "Produktbilder": "https://cdn.mikrotik.com/web-assets/rb_images/1160_hi_res.png bis 1168_hi_res.png"
+    },
+    "mikrotik_broschuere": {
+      "Product code": "RBmAPL-2nD",
+      "CPU": "QCA9533",
+      "CPU nominal frequency": "650 MHz",
+      "CPU core count": "1",
+      "Size of RAM": "64 MB",
+      "10/100 Ethernet ports": "1",
+      "Wireless": "2.4 GHz 802.11b/g/n, dual-chain",
+      "Wireless regulations": "Specific frequency range can be limited by country regulations",
+      "PoE in": "Passive and 802.3af/at (+4,5/-7,8 or +3,6/-1,2)",
+      "Supported input voltage": "5 V (USB); 10 - 60 V (PoE in - 802.3af/at or passive)",
+      "Dimensions": "48 x 49 x 11 mm",
+      "License level": "4",
+      "Operating System": "RouterOS",
+      "Max Power consumption": "3.5 W",
+      "Wireless specifications (Tx/Rx)": "1MBit/s 22/-96; 11MBit/s 22/-89; 6MBit/s 20/-93; 54MBit/s 18/-74; MCS0 20/-93; MCS7 16/-71",
+      "Included": "5 V 1 A power adapter, K-44 mount kit"
+    },
+    "mikrotik_quickguide": {
+      "Beschreibung": "The mAP is a small wireless access point with one ethernet port, the ethernet port supports powering by PoE.",
+      "Powering": "Micro USB power jack accepts 5 V DC, a USB 5 V adapter is included with the product. The Ethernet port accepts passive Power over Ethernet 11-57 V DC. The Ethernet port also accepts PoE power from a 802.3af switch over the pins +4,5/-7,8 or +3,6/-1,2.",
+      "Leistung": "Under maximum load, the power consumption of this device is 4 W.",
+      "Ports": "One 10/100 Ethernet port (Auto MDI/X); One Integrated Wireless 2.4GHz 802.11b/g/n 2x2 MIMO, Onboard PIF antennas, max gain 2dBi; One microUSB 2.0 port for powering only.",
+      "Reset": "Hold before power on: backup boot loader; release when green LED starts flashing: reset RouterOS configuration; release after LED no longer flashing (~20 seconds): look for Netinstall servers.",
+      "OS": "The device supports RouterOS software version 6.",
+      "FCC ID": "TV7MAPL2ND",
+      "IC": "7442A-MAPL2ND",
+      "EU-Frequenztabelle": "2412-2472 MHz, Kanäle 1-13, 20 dBm EIRP (5-GHz-Zeilen sind Vorlagentext, Gerät hat kein 5 GHz)"
+    },
+    "mikrotik_handbuch": {
+      "Sicherheit": "This product is intended to be installed indoors. Keep this product away from water, fire, humidity or hot environments.",
+      "Powering": "Micro USB 5 V DC (USB 5 V adapter included); passive PoE 11-57 V DC; 802.3af over +4,5/-7,8 or +3,6/-1,2; max 4 W",
+      "Ports": "One 10/100 Ethernet port (Auto MDI/X); 2.4GHz 802.11b/g/n 2x2 MIMO, Onboard PIF antennas, max gain 2dBi; microUSB 2.0 for powering only",
+      "OS": "The device supports RouterOS v7 and above.",
+      "FCC ID": "TV7MAPL2ND",
+      "IC": "TV7MAPL2ND (so auf der Seite; Quick Guide 2019 und FCC-Handbuch nennen 7442A-MAPL2ND)",
+      "EU": "2400-2483.5 MHz, Kanäle 1-13, 20 dBm EIRP",
+      "NOM": "2400-2483.5 MHz (30 dBm)",
+      "Ukraine": "2400-2483.5 MHz (20 dBm)",
+      "EAC": "Herstelldatum am Ende der Seriennummer auf dem Aufkleber nach Schrägstrich: erste Ziffer Jahr (letzte Stelle), dann zwei Ziffern Woche",
+      "Herkunft": "Сделано в Китае, Латвии или Литве (China, Lettland oder Litauen, siehe Verpackung)"
+    },
+    "mikrotik_eu_konformitaet": {
+      "Marketing name": "mAP lite",
+      "Description": "WLAN 802.11b/g/n router",
+      "Model": "RBmAPL-2nD",
+      "Normen": "EN IEC 62311:2020, EN IEC 62368-1:2020/A11:2020, EN 301 489-1 V2.2.3, EN 301 489-17 V3.2.4, EN 300 328 V2.2.2, EN 18031-1:2024, EN 18031-2:2024, EN IEC 63000:2018, EN 301 549 V3.2.1",
+      "Datum": "Riga, 13 May 2026",
+      "Dokument": "ID-021.6"
+    },
+    "fcc": {
+      "FCC ID": "TV7MAPL2ND",
+      "Grantee": "Mikrotikls SIA (TV7)",
+      "Equipment Class": "DTS - Digital Transmission System",
+      "Frequency Range": "2412-2462 MHz",
+      "Output": "0.161 W (conducted)",
+      "Rules": "15C",
+      "Final Action Date": "2015-12-24",
+      "Test Firm": "Rogers Labs, Inc.",
+      "Long-Term Confidentiality": "Yes (Block Diagram, Schematics, Operational Description)",
+      "Grant Comments": "Power listed is conducted. ... This is a MIMO device and has 20 and 40MHz bandwidth modes.",
+      "Exhibits": "User Manual, Internal Photos, External Photos, Label Info, Test Setup Photos, Test Report, Authorization Letter, Confidentiality Letter, DoC, RF Exposure Info"
+    },
+    "fcc_handbuch": {
+      "Titel": "RouterBOARD mAP lite Quick Setup Guide and Warranty Information (9-Sep-15)",
+      "Powering": "micro USB power jack accepts 5V DC, a USB 5V adapter is included; passive PoE 11-57V DC; 802.3af over +4,5/-7,8 or +3,6/-1,2; max 4W",
+      "Seriell": "This device doesn't come fitted with a Serial Port connector, so initial connection has to be done via the Ethernet cable.",
+      "Ports": "One 10/100 Ethernet port (Auto MDI/X); 2.4GHz 802.11b/g/n 2x2 MIMO, Onboard PIF antennas, max gain 2dBi; One microUSB 2.0 port for powering only",
+      "Taster": "5 s: Reset RouterOS-Konfiguration; 10 s: LED leuchtet dauerhaft, CAPs-Modus; 15 s: LED aus, Netinstall-Suche",
+      "OS": "MikroTik RouterOS starting from version 6.30",
+      "IC": "7442A-MAPL2ND"
+    },
+    "fcc_label": {
+      "Aufkleber": "zwei Aufkleber auf der Gehäuseunterseite: 'FCC ID: TV7MAPL2ND Model:RBmAP L-2nD' und 'IC: 7442A-MAPL2ND Model:RBmAP L-2nD'",
+      "Gehäusefoto": "Unterseite mit eingeprägten FCC/CE-Zeichen und Beschriftung über den Anschlüssen (unscharf, lesbar etwa '5V', 'ETH PoE in 10-60V', 'WPS/MODE/RESET')"
+    },
+    "fcc_innenfotos": {
+      "Oberseite": "U5 RAM, U100 SoC (Qualcomm), Y900 Quarz, Leiterplattenantennen CH0/CH1, LEDs PWR/CAP/ETH/WLN, J1 micro-USB, J300 Ethernet, Taster an der Platinenkante neben der Ethernet-Buchse",
+      "Unterseite": "Aufdruck 'RouterBOARD mAP_lite', 10 Lötpads (2x5) neben micro-USB, Platine etwa 5 x 5 cm"
+    },
+    "wikidevi": {
+      "brand": "MikroTik",
+      "model": "RouterBOARD mAP",
+      "revision": "lite (RBmAPL-2nD)",
+      "asin": "B01BMMJVLI;FR;",
+      "fcc_date": "12/24/2015",
+      "manuf_country": "Latvia",
+      "is_manuf": "No",
+      "manuf": "Wistron NeWeb",
+      "availability": "common",
+      "type": "access point",
+      "fcc_id": "TV7MAPL2ND",
+      "pwr_v": "5",
+      "pwr_conn": "Micro USB",
+      "pwr_poe": "at",
+      "cpu1_brand": "Qualcomm Atheros",
+      "cpu1_model": "QCA9533;QCA9533-BL3A;",
+      "cpu1_cspeed": "650",
+      "fla1": "16",
+      "fla1_brand": "Winbond",
+      "fla1_model": "W25Q128FVSG",
+      "ram1": "64",
+      "ram1_brand": "Nanya",
+      "ram1_model": "NT5TU32M16EG-AC",
+      "jtag": "yes,, 10-pad header,,",
+      "serial": "yes,, 4-pad header,,",
+      "wi1_chip1_brand": "Qualcomm Atheros",
+      "wi1_chip1_model": "QCA9533;QCA9533-BL3A;",
+      "wi1_802dot11_protocols": "bgn",
+      "wi1_txchains": "2",
+      "wi1_rxchains": "2",
+      "wi1_sstreams": "2",
+      "eth_cpu": "true",
+      "sw_cpu": "true",
+      "lan_speed": "100M",
+      "lan_ports": "1",
+      "stock_boot": "RouterBOOT",
+      "stock_os": "RouterOS;Level 4;",
+      "tp_firmware": "OpenWrt",
+      "802dot11_protocols": "bgn",
+      "default_ip": "192.168.88.1",
+      "default_user": "admin"
+    },
+    "deviwiki": {
+      "brand": "MikroTik",
+      "model": "RouterBOARD mAP",
+      "revision": "lite (RBmAPL-2nD)",
+      "asin": "B01BMMJVLI;FR;",
+      "fcc_date": "12/24/2015",
+      "manuf_country": "Latvia",
+      "is_manuf": "No",
+      "manuf": "Wistron NeWeb",
+      "availability": "common",
+      "type": "access point",
+      "fcc_id": "TV7MAPL2ND",
+      "pwr_v": "5",
+      "pwr_conn": "Micro USB",
+      "pwr_poe": "at",
+      "cpu1_brand": "Qualcomm Atheros",
+      "cpu1_model": "QCA9533;QCA9533-BL3A;",
+      "cpu1_cspeed": "650",
+      "fla1": "16",
+      "fla1_brand": "Winbond",
+      "fla1_model": "W25Q128FVSG",
+      "ram1": "64",
+      "ram1_brand": "Nanya",
+      "ram1_model": "NT5TU32M16EG-AC",
+      "jtag": "yes,, 10-pad header,,",
+      "serial": "yes,, 4-pad header,,",
+      "wi1_chip1_brand": "Qualcomm Atheros",
+      "wi1_chip1_model": "QCA9533;QCA9533-BL3A;",
+      "wi1_802dot11_protocols": "bgn",
+      "wi1_txchains": "2",
+      "wi1_rxchains": "2",
+      "wi1_sstreams": "2",
+      "eth_cpu": "true",
+      "sw_cpu": "true",
+      "lan_speed": "100M",
+      "lan_ports": "1",
+      "stock_boot": "RouterBOOT",
+      "stock_os": "RouterOS;Level 4;",
+      "tp_firmware": "OpenWrt",
+      "802dot11_protocols": "bgn",
+      "default_ip": "192.168.88.1",
+      "default_user": "admin"
+    },
+    "deviwiki_lite2": {
+      "brand": "MikroTik",
+      "model": "RouterBOARD mAP",
+      "revision": "lite 2 (RBmAPL-2nD)",
+      "asin": "B01BMMJVLI;,",
+      "fcc_date": "12/24/2015",
+      "manuf_country": "Latvia",
+      "is_manuf": "No",
+      "manuf": "Gemtek",
+      "availability": "common",
+      "type": "access point",
+      "fcc_id": "TV7MAPL2ND",
+      "pcb_id": "GMT03070415",
+      "pwr_v": "5",
+      "pwr_amp": "1",
+      "pwr_conn": "Micro USB",
+      "pwr_poe": "at",
+      "cpu1_brand": "Qualcomm Atheros",
+      "cpu1_model": "QCA9533;QCA9533-BL3A;",
+      "cpu1_cspeed": "650",
+      "fla1": "16",
+      "fla1_brand": "Winbond",
+      "fla1_model": "W25Q128FVSG",
+      "ram1": "64",
+      "ram1_brand": "Nanya",
+      "ram1_model": "NT5TU32M16EG-AC",
+      "jtag": "yes,, 10-pad header,,",
+      "serial": "yes,, 4-pad header,,",
+      "wi1_chip1_brand": "Qualcomm Atheros",
+      "wi1_chip1_model": "QCA9533;QCA9533-BL3A;",
+      "wi1_802dot11_protocols": "bgn",
+      "wi1_txchains": "2",
+      "wi1_rxchains": "2",
+      "wi1_sstreams": "2",
+      "eth_cpu": "true",
+      "sw_cpu": "true",
+      "lan_speed": "100M",
+      "lan_ports": "1",
+      "stock_boot": "RouterBOOT",
+      "stock_os": "RouterOS;Level 4;",
+      "tp_firmware": "",
+      "802dot11_protocols": "bgn",
+      "default_ip": "192.168.88.1",
+      "default_user": "admin",
+      "oui": "00:0C:42, 4C:5E:0C",
+      "oui_eth": "00:0C:42, 4C:5E:0C"
+    },
+    "deviwiki_platinenfotos": {
+      "MAPl_front.jpg": "Oberseite: LEDs PWR, CAP, ETH, WLN; U5 Nanya NT5TU32M16EG-AC (Datecode 1628); U100 QCA9533-BL3A; Leiterplattenantennen CH0 und CH1; J1 micro-USB; Übertrager NS681679; Taster an der Platinenkante",
+      "MAPl_back.jpg": "Unterseite: Platinenkennung GMT03070415, Aufdruck 'RouterBOARD mAP_lite'; 10 Pads 2x5 (eins eckig) neben micro-USB; 4 Pads 2x2 (eins eckig) am Platinenrand auf der Gegenseite, unbeschriftet"
+    },
+    "geizhals_archiv": {
+      "LAN": "1x 100Base-TX (PoE PD)",
+      "Wireless": "WLAN 802.11b/g/n (Wi-Fi 4)",
+      "Übertragungsrate": "300Mbps (2.4GHz)",
+      "Antennen": "intern",
+      "Anschlüsse": "N/A",
+      "Leistungsaufnahme": "3.5W (Verbrauch, Betrieb), keine Angabe (max. Netzteilleistung)",
+      "Abmessungen": "49x48x11mm",
+      "Besonderheiten": "VLAN, RouterOS",
+      "Band-Fähigkeit": "Single Band",
+      "Gelistet seit": "06.04.2016, 09:23",
+      "Datenblatt": "Stand 06.04.2016 (PDF)",
+      "Preisbereich 2023-08-21": "€ 27,42 bis € 52,00",
+      "Permalink": "https://geizhals.de/mikrotik-routerboard-map-lite-rbmapl-2nd-a1421552.html"
+    },
+    "werkstatt": {
+      "Tabelle": "H - Mikrotik netinstall | 3 | mikrotik (2), mt7621 (1) | RB750Gr3, mAPL-2nD, wAP G-5HacT2HnD | Werkzeug vorhanden"
+    },
+    "neanderfunk_installer": {
+      "Kopf": "MikroTik RouterBOARD mAPL-2nD (mAP lite) (ath79-mikrotik, QCA9533, 64 MB RAM, 16 MB NOR)",
+      "Weg": "RouterBOOT-Netboot (BOOTP/DHCP + TFTP), RAMpe im RAM, danach Community-sysupgrade über die Upload-Seite",
+      "Gluon": "Gluon v2025.1.3 kennt das Gerät nicht; Neanderfunk trägt es per gluon-patches-hardware ein (Alias mikrotik-routerboard-map-lite, factory = false)",
+      "Werte": "OpenWrt-initramfs 6529 KB, OpenWrt-sysupgrade 6912 KB, IMAGE_SIZE 16256k",
+      "Status": "Ungetestet"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "MikroTik",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MikroTik",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "mAP lite (RBmAPL-2nD)",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "RouterBOARD mAPL-2nD (mAP lite)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/mikrotik.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "DEVICE_MODEL"
+      },
+      {
+        "wert": "RBmAP L-2nD",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TV7MAPL2ND/Label/Label-Info-2856372",
+        "stand": "Exhibit 2015-12-24 (PDF 2015-12-10)",
+        "sicherheit": "hoch",
+        "bemerkung": "Schreibweise auf dem FCC-Aufkleber"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "rev1, rev2",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "ohne Beleg im ToH, keine Unterscheidungsmerkmale genannt"
+      },
+      {
+        "wert": "keine Versionen genannt",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": "Hersteller führt nur den Produktcode RBmAPL-2nD"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Aufkleber auf der Gehäuseunterseite: Model RBmAP L-2nD, FCC ID TV7MAPL2ND bzw. IC 7442A-MAPL2ND",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TV7MAPL2ND/Label/Label-Info-2856372",
+        "stand": "Exhibit 2015-12-24 (PDF 2015-12-10)",
+        "sicherheit": "hoch",
+        "bemerkung": "keine Revisionsangabe auf dem Aufkleber erkennbar"
+      },
+      {
+        "wert": "Herstelldatum am Ende der Seriennummer nach Schrägstrich: Jahresziffer + Kalenderwoche",
+        "quelle": "mikrotik_handbuch",
+        "beleg": "https://manual.mikrotik.com/hardware/map-lite/",
+        "stand": "Seite am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "aus dem EAC-Abschnitt"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "TV7MAPL2ND",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TV7MAPL2ND",
+        "stand": "Grant 2015-12-24 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TV7MAPL2ND",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TV7MAPL2ND/Label/Label-Info-2856372",
+        "stand": "Exhibit 2015-12-24 (PDF 2015-12-10)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TV7MAPL2ND",
+        "quelle": "mikrotik_quickguide",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP-Lite-qg_190553.pdf",
+        "stand": "Document #49227, Modified on 09.MAY.2019",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TV7MAPL2ND",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TV7MAPL2ND",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "als https://fcc.io/TV7/MAPL2ND"
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "7442A-MAPL2ND",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TV7MAPL2ND/Label/Label-Info-2856372",
+        "stand": "Exhibit 2015-12-24 (PDF 2015-12-10)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "7442A-MAPL2ND",
+        "quelle": "mikrotik_quickguide",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP-Lite-qg_190553.pdf",
+        "stand": "Document #49227, Modified on 09.MAY.2019",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "7442A-MAPL2ND",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TV7MAPL2ND/User-Manual/User-Manual-2856375",
+        "stand": "Exhibit 2015-12-24 (Dokument 9-Sep-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TV7MAPL2ND",
+        "quelle": "mikrotik_handbuch",
+        "beleg": "https://manual.mikrotik.com/hardware/map-lite/",
+        "stand": "Seite am 2026-10-20",
+        "sicherheit": "niedrig",
+        "bemerkung": "so auf manual.mikrotik.com; vermutlich Verwechslung mit der FCC-ID"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "mAP lite",
+          "RBmAPL-2nD",
+          "RBmAP L-2nD",
+          "mAPL-2nD",
+          "RB mAP L-2nD"
+        ],
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": "RBmAP L-2nD vom FCC-Aufkleber, RB mAP L-2nD aus dem ar71xx-Commit"
+      },
+      {
+        "wert": [
+          "mikrotik-routerboard-mapl-2nd",
+          "mikrotik-routerboard-map-lite"
+        ],
+        "quelle": "neanderfunk_patch",
+        "beleg": "https://github.com/Neanderfunk/gluon-patches-hardware/blob/main/targets/targets-ath79-mikrotik.patch",
+        "stand": "Repo-Stand 51881c5a (2026-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon-Imagename und Alias im Neanderfunk-Patch"
+      },
+      {
+        "wert": "MikroTik RouterBOARD mAP lite 2 (RBmAPL-2nD)",
+        "quelle": "deviwiki_lite2",
+        "beleg": "https://deviwiki.com/wiki/MikroTik_RouterBOARD_mAP_lite_2_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-05T04:59:25Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "Seitentitel bei DeviWiki; kein Herstellername, Bezug unklar"
+      }
+    ],
+    "odm": [
+      {
+        "wert": "Wistron NeWeb",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Gemtek",
+        "quelle": "deviwiki_lite2",
+        "beleg": "https://deviwiki.com/wiki/MikroTik_RouterBOARD_mAP_lite_2_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-05T04:59:25Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "Platinenkennung GMT03070415 passt zum Gemtek-Präfix GMT [abgeleitet]"
+      }
+    ],
+    "platinen_kennung": [
+      {
+        "wert": "GMT03070415",
+        "quelle": "deviwiki_platinenfotos",
+        "beleg": "https://deviwiki.com/wiki/File:MAPl_back.jpg",
+        "stand": "Upload 2019-12-05 (MAPl_front.jpg, MAPl_back.jpg)",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufdruck Platinenunterseite"
+      },
+      {
+        "wert": "GMT03070415",
+        "quelle": "deviwiki_lite2",
+        "beleg": "https://deviwiki.com/wiki/MikroTik_RouterBOARD_mAP_lite_2_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-05T04:59:25Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "erhältlich (Produktseite aktiv, Preisempfehlung $30, EU-DoC vom 13.05.2026)",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Available 2023",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "common",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "FCC-Zulassung 2015-12-24",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TV7MAPL2ND",
+        "stand": "Grant 2015-12-24 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "bei Geizhals gelistet seit 2016-04-06",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20230821220019/https://geizhals.de/mikrotik-routerboard-map-lite-rbmapl-2nd-a1421552.html?t=v&hloc=de&va=b",
+        "stand": "Archivkopie 2023-08-21",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm Atheros QCA9533",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9533",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9533",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb38af788180d624e5b37aa5db1fe3766b138dc8",
+        "stand": "Commit 2022-02-28 (Autor), committet 2022-03-08",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9533-BL3A",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9533-BL3A",
+        "quelle": "deviwiki_platinenfotos",
+        "beleg": "https://deviwiki.com/wiki/File:MAPl_back.jpg",
+        "stand": "Upload 2019-12-05 (MAPl_front.jpg, MAPl_back.jpg)",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufdruck U100 im Foto"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 650,
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 650,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 650,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c59fa94eeecf16c79254ab4bc78f5b31c7387039",
+        "stand": "Commit 2017-02-07 (Autor), committet 2017-02-15",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "MIPSBE",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "mips_24kc",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 64,
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb38af788180d624e5b37aa5db1fe3766b138dc8",
+        "stand": "Commit 2022-02-28 (Autor), committet 2022-03-08",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_chip": [
+      {
+        "wert": "Nanya NT5TU32M16EG-AC",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Nanya NT5TU32M16EG-AC",
+        "quelle": "deviwiki_platinenfotos",
+        "beleg": "https://deviwiki.com/wiki/File:MAPl_back.jpg",
+        "stand": "Upload 2019-12-05 (MAPl_front.jpg, MAPl_back.jpg)",
+        "sicherheit": "mittel",
+        "bemerkung": "Aufdruck U5 im Foto"
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR2",
+        "quelle": "deviwiki_lite2",
+        "beleg": "https://deviwiki.com/wiki/MikroTik_RouterBOARD_mAP_lite_2_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-05T04:59:25Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "nur im HTML-Kommentar der Seite"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb38af788180d624e5b37aa5db1fe3766b138dc8",
+        "stand": "Commit 2022-02-28 (Autor), committet 2022-03-08",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c59fa94eeecf16c79254ab4bc78f5b31c7387039",
+        "stand": "Commit 2017-02-07 (Autor), committet 2017-02-15",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NOR",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb38af788180d624e5b37aa5db1fe3766b138dc8",
+        "stand": "Commit 2022-02-28 (Autor), committet 2022-03-08",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "Winbond W25Q128FVSG",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "switch": [
+      {
+        "wert": "im SoC (AR8229), wird nicht genutzt: Port direkt an eth0",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb38af788180d624e5b37aa5db1fe3766b138dc8",
+        "stand": "Commit 2022-02-28 (Autor), committet 2022-03-08",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "-",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": true,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "QCA9533 (im SoC)",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9533",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Atheros AR9531 (SoC)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb38af788180d624e5b37aa5db1fe3766b138dc8",
+        "stand": "Commit 2022-02-28 (Autor), committet 2022-03-08",
+        "sicherheit": "mittel",
+        "bemerkung": "so im Commit; gemeint ist der WMAC im QCA9533"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath9k",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n (Wi-Fi 4)",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": "2x2:2",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb38af788180d624e5b37aa5db1fe3766b138dc8",
+        "stand": "Commit 2022-02-28 (Autor), committet 2022-03-08",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": "Number of chains"
+      },
+      {
+        "wert": "2T2R, 2 Streams",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "keins",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "-",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "N300",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet aus Max data rate 300 Mbit/s"
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "20 und 40 MHz",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TV7MAPL2ND",
+        "stand": "Grant 2015-12-24 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": "2412-2462 MHz",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TV7MAPL2ND",
+        "stand": "Grant 2015-12-24 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": 22,
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": "1/11 MBit/s; 20 bei 6 MBit/s/MCS0, 18 bei 54 MBit/s, 16 bei MCS7"
+      },
+      {
+        "wert": 22,
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TV7MAPL2ND",
+        "stand": "Grant 2015-12-24 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "0.161 W leitungsgebunden"
+      },
+      {
+        "wert": 20,
+        "quelle": "mikrotik_handbuch",
+        "beleg": "https://manual.mikrotik.com/hardware/map-lite/",
+        "stand": "Seite am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "EU-Grenze EIRP Kanal 1-13"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern (Leiterplattenantennen)",
+        "quelle": "mikrotik_quickguide",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP-Lite-qg_190553.pdf",
+        "stand": "Document #49227, Modified on 09.MAY.2019",
+        "sicherheit": "hoch",
+        "bemerkung": "Onboard PIF antennas"
+      },
+      {
+        "wert": "intern",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20230821220019/https://geizhals.de/mikrotik-routerboard-map-lite-rbmapl-2nd-a1421552.html?t=v&hloc=de&va=b",
+        "stand": "Archivkopie 2023-08-21",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "nicht abnehmbar",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas -"
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TV7MAPL2ND/Internal-Photos/Internal-Photos-2856371",
+        "stand": "Exhibit 2015-12-24 (PDF 2015-12-10)",
+        "sicherheit": "mittel",
+        "bemerkung": "CH0 und CH1 auf der Platine"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": 1.5,
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.5,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb38af788180d624e5b37aa5db1fe3766b138dc8",
+        "stand": "Commit 2022-02-28 (Autor), committet 2022-03-08",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.5,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "mikrotik_quickguide",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP-Lite-qg_190553.pdf",
+        "stand": "Document #49227, Modified on 09.MAY.2019",
+        "sicherheit": "hoch",
+        "bemerkung": "max gain 2dBi"
+      },
+      {
+        "wert": 2,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TV7MAPL2ND/User-Manual/User-Manual-2856375",
+        "stand": "Exhibit 2015-12-24 (Dokument 9-Sep-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "max gain 2dBi"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "ETH",
+            "geschwindigkeit": "10/100",
+            "rolle": "einziger Port, PoE-Eingang"
+          }
+        ],
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": "flache Sonderbauform der Buchse (\"special Ethernet port to match it's slim profile\")"
+      },
+      {
+        "wert": [
+          {
+            "name": "eth0",
+            "geschwindigkeit": "10/100",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb38af788180d624e5b37aa5db1fe3766b138dc8",
+        "stand": "Commit 2022-02-28 (Autor), committet 2022-03-08",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": true,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb38af788180d624e5b37aa5db1fe3766b138dc8",
+        "stand": "Commit 2022-02-28 (Autor), committet 2022-03-08",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "keine Daten-USB; micro-USB nur zur Stromversorgung",
+        "quelle": "mikrotik_quickguide",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP-Lite-qg_190553.pdf",
+        "stand": "Document #49227, Modified on 09.MAY.2019",
+        "sicherheit": "hoch",
+        "bemerkung": "One microUSB 2.0 port for powering only"
+      },
+      {
+        "wert": "1x µUSB (power)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "802.3af/at und passiv",
+        "quelle": "mikrotik_broschuere",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP_lite_171010.pdf",
+        "stand": "PDF ohne Datum (Dateiname 171010)",
+        "sicherheit": "hoch",
+        "bemerkung": "Passive and 802.3af/at (+4,5/-7,8 or +3,6/-1,2)"
+      },
+      {
+        "wert": "802.3af/at",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.3af und passiv",
+        "quelle": "mikrotik_quickguide",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP-Lite-qg_190553.pdf",
+        "stand": "Document #49227, Modified on 09.MAY.2019",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.3af und passiv",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TV7MAPL2ND/User-Manual/User-Manual-2856375",
+        "stand": "Exhibit 2015-12-24 (Dokument 9-Sep-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.3af/at",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb38af788180d624e5b37aa5db1fe3766b138dc8",
+        "stand": "Commit 2022-02-28 (Autor), committet 2022-03-08",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "at",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "PoE (ohne Norm)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": "10-60",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "10-60",
+        "quelle": "mikrotik_broschuere",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP_lite_171010.pdf",
+        "stand": "PDF ohne Datum (Dateiname 171010)",
+        "sicherheit": "hoch",
+        "bemerkung": "802.3af/at oder passiv"
+      },
+      {
+        "wert": "11-57",
+        "quelle": "mikrotik_quickguide",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP-Lite-qg_190553.pdf",
+        "stand": "Document #49227, Modified on 09.MAY.2019",
+        "sicherheit": "hoch",
+        "bemerkung": "passiv"
+      },
+      {
+        "wert": "11-57",
+        "quelle": "mikrotik_handbuch",
+        "beleg": "https://manual.mikrotik.com/hardware/map-lite/",
+        "stand": "Seite am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "passiv"
+      },
+      {
+        "wert": "11-57",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TV7MAPL2ND/User-Manual/User-Manual-2856375",
+        "stand": "Exhibit 2015-12-24 (Dokument 9-Sep-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "passiv"
+      },
+      {
+        "wert": "10-60",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TV7MAPL2ND/Label/Label-Info-2856372",
+        "stand": "Exhibit 2015-12-24 (PDF 2015-12-10)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Gehäuseprägung im unscharfen Foto"
+      },
+      {
+        "wert": "5-60",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_pinbelegung": [
+      {
+        "wert": "+4,5/-7,8 oder +3,6/-1,2",
+        "quelle": "mikrotik_broschuere",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP_lite_171010.pdf",
+        "stand": "PDF ohne Datum (Dateiname 171010)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "+4,5/-7,8 oder +3,6/-1,2",
+        "quelle": "mikrotik_quickguide",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP-Lite-qg_190553.pdf",
+        "stand": "Document #49227, Modified on 09.MAY.2019",
+        "sicherheit": "hoch",
+        "bemerkung": "für 802.3af"
+      }
+    ],
+    "poe_ausgang": [
+      {
+        "wert": "nein",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "mittel",
+        "bemerkung": "nur ein Port, kein PoE-out genannt"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "micro-USB, 5 V",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": "MicroUSB input Voltage 5 V"
+      },
+      {
+        "wert": "micro-USB, 5 V 1 A",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Micro USB, 5 V",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "micro-USB (J1)",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TV7MAPL2ND/Internal-Photos/Internal-Photos-2856371",
+        "stand": "Exhibit 2015-12-24 (PDF 2015-12-10)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 5,
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 1.0,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "deviwiki_lite2",
+        "beleg": "https://deviwiki.com/wiki/MikroTik_RouterBOARD_mAP_lite_2_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-05T04:59:25Z",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": "5V 1A power adapter"
+      },
+      {
+        "wert": true,
+        "quelle": "mikrotik_quickguide",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP-Lite-qg_190553.pdf",
+        "stand": "Document #49227, Modified on 09.MAY.2019",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": true,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TV7MAPL2ND/User-Manual/User-Manual-2856375",
+        "stand": "Exhibit 2015-12-24 (Dokument 9-Sep-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "USB-Netzteil 5 V 1 A",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "5 V 1 A",
+        "quelle": "mikrotik_broschuere",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP_lite_171010.pdf",
+        "stand": "PDF ohne Datum (Dateiname 171010)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 3.5,
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.5,
+        "quelle": "mikrotik_broschuere",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP_lite_171010.pdf",
+        "stand": "PDF ohne Datum (Dateiname 171010)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.5,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.5,
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20230821220019/https://geizhals.de/mikrotik-routerboard-map-lite-rbmapl-2nd-a1421552.html?t=v&hloc=de&va=b",
+        "stand": "Archivkopie 2023-08-21",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "mikrotik_quickguide",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP-Lite-qg_190553.pdf",
+        "stand": "Document #49227, Modified on 09.MAY.2019",
+        "sicherheit": "hoch",
+        "bemerkung": "Under maximum load"
+      },
+      {
+        "wert": 4,
+        "quelle": "mikrotik_handbuch",
+        "beleg": "https://manual.mikrotik.com/hardware/map-lite/",
+        "stand": "Seite am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TV7MAPL2ND/User-Manual/User-Manual-2856375",
+        "stand": "Exhibit 2015-12-24 (Dokument 9-Sep-15)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "mikrotik_handbuch",
+        "beleg": "https://manual.mikrotik.com/hardware/map-lite/",
+        "stand": "Seite am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "This product is intended to be installed indoors."
+      },
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Seitenrevision 2026-03-11 02:27",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": "Kategorie Indoor wireless, IP20"
+      }
+    ],
+    "ip_schutzart": [
+      {
+        "wert": "IP20",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "-30 bis 70 °C",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": "Tested ambient temperature"
+      }
+    ],
+    "mtbf_h": [
+      {
+        "wert": 100000,
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": "bei 25 °C"
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Montagesatz K-44 liegt bei",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": "Art der Befestigung nicht beschrieben; Handbuch nennt 'rackmount' nur im Vorlagentext"
+      },
+      {
+        "wert": "Montagesatz K-44 liegt bei",
+        "quelle": "mikrotik_broschuere",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP_lite_171010.pdf",
+        "stand": "PDF ohne Datum (Dateiname 171010)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "48 x 49 x 11",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "48 x 49 x 11",
+        "quelle": "mikrotik_broschuere",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP_lite_171010.pdf",
+        "stand": "PDF ohne Datum (Dateiname 171010)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "49 x 48 x 11",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20230821220019/https://geizhals.de/mikrotik-routerboard-map-lite-rbmapl-2nd-a1421552.html?t=v&hloc=de&va=b",
+        "stand": "Archivkopie 2023-08-21",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": "Cooling type: Passive"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 4,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb38af788180d624e5b37aa5db1fe3766b138dc8",
+        "stand": "Commit 2022-02-28 (Autor), committet 2022-03-08",
+        "sicherheit": "hoch",
+        "bemerkung": "power, user, lan, wlan (alle grün)"
+      },
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TV7MAPL2ND/Internal-Photos/Internal-Photos-2856371",
+        "stand": "Exhibit 2015-12-24 (PDF 2015-12-10)",
+        "sicherheit": "hoch",
+        "bemerkung": "Bestückungsdruck PWR, CAP, ETH, WLN"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "vorhanden, RouterBOOT-Reset-Taster (Konfig-Reset, CAPs-Modus, Netinstall/Netboot, Backup-Bootloader)",
+        "quelle": "mikrotik_quickguide",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP-Lite-qg_190553.pdf",
+        "stand": "Document #49227, Modified on 09.MAY.2019",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Taster an der Platinenkante neben der Ethernet-Buchse",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/TV7MAPL2ND/Internal-Photos/Internal-Photos-2856371",
+        "stand": "Exhibit 2015-12-24 (PDF 2015-12-10)",
+        "sicherheit": "mittel",
+        "bemerkung": "aus dem Foto; Gehäuseprägung 'RESET' an derselben Seite im Label-Foto [unscharf]"
+      },
+      {
+        "wert": "GPIO16, active low",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9533_mikrotik_routerboard-mapl-2nd.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte: 4 Pads (2x2, eines eckig) am Rand der Platinenunterseite, unbeschriftet, ohne Stecker",
+        "quelle": "deviwiki_platinenfotos",
+        "beleg": "https://deviwiki.com/wiki/File:MAPl_back.jpg",
+        "stand": "Upload 2019-12-05 (MAPl_front.jpg, MAPl_back.jpg)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Deutung als UART aus der DeviWiki-Angabe '4-pad header'"
+      },
+      {
+        "wert": "innen Lötpunkte (4-pad header)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "mittel",
+        "bemerkung": "serial=yes,, 4-pad header"
+      },
+      {
+        "wert": "kein Stecker bestückt",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TV7MAPL2ND/User-Manual/User-Manual-2856375",
+        "stand": "Exhibit 2015-12-24 (Dokument 9-Sep-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "This device doesn't come fitted with a Serial Port connector"
+      },
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Seitenrevision 2026-03-11 02:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "jtag": [
+      {
+        "wert": "10 Pads (Header unbestückt)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "mittel",
+        "bemerkung": "jtag=yes,, 10-pad header"
+      },
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "10 Pads 2x5 auf der Platinenunterseite neben micro-USB",
+        "quelle": "deviwiki_platinenfotos",
+        "beleg": "https://deviwiki.com/wiki/File:MAPl_back.jpg",
+        "stand": "Upload 2019-12-05 (MAPl_front.jpg, MAPl_back.jpg)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Zuordnung zu JTAG aus WikiDevi"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/mikrotik",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Seitenrevision 2026-03-11 02:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath79/mikrotik",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/mikrotik.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ar71xx-ath79/mikrotik",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump: ar71xx bis 19.07, ath79 ab 22.03"
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "mikrotik_routerboard-mapl-2nd",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/mikrotik.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "IMAGE_SIZE 16256k"
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "18.06.0 (ar71xx)",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c59fa94eeecf16c79254ab4bc78f5b31c7387039",
+        "stand": "Commit 2017-02-07 (Autor), committet 2017-02-15",
+        "sicherheit": "hoch",
+        "bemerkung": "gh compare: in v18.06.0, nicht in v17.01.0"
+      },
+      {
+        "wert": "22.03.0 (ath79)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb38af788180d624e5b37aa5db1fe3766b138dc8",
+        "stand": "Commit 2022-02-28 (Autor), committet 2022-03-08",
+        "sicherheit": "hoch",
+        "bemerkung": "gh compare: in v22.03.0"
+      },
+      {
+        "wert": "18.06.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.0",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Seitenrevision 2026-03-11 02:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "23.05.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump-Stand"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "RouterBOOT",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "RouterBOOT; mit RouterOS-v7-Bootloader ab OpenWrt 25.12 sysupgrade-v7-Image nötig (am mapl-2nd getestet)",
+        "quelle": "openwrt_wiki_common",
+        "beleg": "https://openwrt.org/toh/mikrotik/common",
+        "stand": "Seitenrevision 2026-02-10 19:51",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Mikrotik TFTP (initramfs per Netzboot, dann sysupgrade)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "siehe https://openwrt.org/toh/mikrotik/common"
+      },
+      {
+        "wert": "TFTP boot initramfs image and then perform sysupgrade",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/eb38af788180d624e5b37aa5db1fe3766b138dc8",
+        "stand": "Commit 2022-02-28 (Autor), committet 2022-03-08",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Gruppe H - Mikrotik netinstall, Werkzeug vorhanden",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/erstinstallation-ohne-factory.md",
+        "stand": "Arbeitskopie 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "Abschnitt Übersichtstabelle der Installationsgruppen"
+      },
+      {
+        "wert": "RouterBOOT-Netboot (BOOTP/DHCP + TFTP), RAMpe im RAM, dann sysupgrade; ungetestet",
+        "quelle": "neanderfunk_installer",
+        "beleg": "installer/devices/mikrotik-routerboard-mapl-2nd.sh (gluon-rampe-installer)",
+        "stand": "Arbeitskopie 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "nein (nicht in Upstream-Gluon)",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-mikrotik",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "No",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Seitenrevision 2026-03-11 02:27",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, per Neanderfunk-Patch: ath79-mikrotik, Image mikrotik-routerboard-mapl-2nd mit Alias mikrotik-routerboard-map-lite, factory = false",
+        "quelle": "neanderfunk_patch",
+        "beleg": "https://github.com/Neanderfunk/gluon-patches-hardware/blob/main/targets/targets-ath79-mikrotik.patch",
+        "stand": "Repo-Stand 51881c5a (2026-10-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://mikrotik.com/download",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "RouterOS 7.24.5 mipsbe",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "routeros_lizenz": [
+      {
+        "wert": "Level 4",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/mikrotik/common",
+        "quelle": "openwrt_wiki_common",
+        "beleg": "https://openwrt.org/toh/mikrotik/common",
+        "stand": "Seitenrevision 2026-02-10 19:51",
+        "sicherheit": "mittel",
+        "bemerkung": "keine eigene Geräteseite"
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "https://deviwiki.com/wiki/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://deviwiki.com/wiki/MikroTik_RouterBOARD_mAP_lite_2_(RBmAPL-2nD)",
+        "quelle": "deviwiki_lite2",
+        "beleg": "https://deviwiki.com/wiki/MikroTik_RouterBOARD_mAP_lite_2_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-05T04:59:25Z",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://mikrotik.com/product/RBmAPL-2nD",
+        "quelle": "mikrotik_produktseite",
+        "beleg": "https://mikrotik.com/product/RBmAPL-2nD",
+        "stand": "Seite am 2026-10-20 (RouterOS 7.24.5 gelistet)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://manual.mikrotik.com/hardware/map-lite/",
+        "quelle": "mikrotik_handbuch",
+        "beleg": "https://manual.mikrotik.com/hardware/map-lite/",
+        "stand": "Seite am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://cdn.mikrotik.com/web-assets/product_files/mAP_lite_171010.pdf",
+        "quelle": "mikrotik_broschuere",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP_lite_171010.pdf",
+        "stand": "PDF ohne Datum (Dateiname 171010)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://cdn.mikrotik.com/web-assets/product_files/mAP-Lite-qg_190553.pdf",
+        "quelle": "mikrotik_quickguide",
+        "beleg": "https://cdn.mikrotik.com/web-assets/product_files/mAP-Lite-qg_190553.pdf",
+        "stand": "Document #49227, Modified on 09.MAY.2019",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "geizhals_url": [
+      {
+        "wert": "https://geizhals.de/mikrotik-routerboard-map-lite-rbmapl-2nd-a1421552.html",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20230821220019/https://geizhals.de/mikrotik-routerboard-map-lite-rbmapl-2nd-a1421552.html?t=v&hloc=de&va=b",
+        "stand": "Archivkopie 2023-08-21",
+        "sicherheit": "hoch",
+        "bemerkung": "gelistet seit 2016-04-06"
+      }
+    ],
+    "amazon_asin": [
+      {
+        "wert": "B01BMMJVLI",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/MikroTik_RouterBOARD_mAP_lite_(RBmAPL-2nD)",
+        "stand": "Seitenrevision 2019-07-07T03:59:27Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "Marktplatz-Kennung 'FR' (amazon.fr) laut WikiDevi; deviwiki_lite2 ohne Marktplatz"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/TV7MAPL2ND/External-Photos/External-Photos-2856370",
+      "kategorie": "gehaeuse",
+      "grund": "Außenfotos (Gehäuse, Prägung über den Anschlüssen, Lage Reset-Taster, Befestigung) nicht ausgewertet; fccid.io-Abrufe auf 5 begrenzt"
+    },
+    {
+      "url": "https://fccid.io/TV7MAPL2ND/Test-Report/Test-Report-2856367",
+      "kategorie": "wlan",
+      "grund": "Testbericht (1.5 MB) nicht ausgewertet: Antennengewinn, Sendeleistung je Kette"
+    },
+    {
+      "url": "https://deviwiki.com/w/images/7/78/MAPl_back.jpg",
+      "kategorie": "seriell",
+      "grund": "4 unbeschriftete Pads (2x2) auf der Platinenunterseite vermutlich UART; Pinbelegung und Bestätigung fehlen"
+    },
+    {
+      "url": "https://lanmarket.ua/stats/obzor-i-testirovanie-tochki-dostupa-map-lite",
+      "kategorie": "seriell",
+      "grund": "Test mit Innenfotos laut DeviWiki, nicht abgerufen"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/mikrotik/mikrotik_rbmapl2nd_map_lite",
+      "kategorie": "hw_version",
+      "grund": "ToH nennt rev1, rev2 ohne Beleg und ohne Unterscheidungsmerkmal; DeviWiki führt zwei Seiten mit verschiedenen ODMs (Wistron NeWeb / Gemtek GMT03070415) - ob das die Revisionen sind, ist offen"
+    },
+    {
+      "url": "https://help.mikrotik.com/docs/display/QG/Quick+Guide+RBmAPL-2nD",
+      "kategorie": "montage",
+      "grund": "Quick Guide als Webseite, evtl. Montagehinweise zu K-44; nicht abgerufen"
+    },
+    {
+      "url": "https://cdn.mikrotik.com/web-assets/product_files/2690UC15_GRANT_170518.pdf",
+      "kategorie": "zulassung",
+      "grund": "auf der Produktseite als FCC-Dokument verlinkt, nicht abgerufen"
+    },
+    {
+      "url": "https://mikrotik.com/product/RBmAPL-2nD",
+      "kategorie": "gewicht",
+      "grund": "Gewicht in keiner Quelle gefunden"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-20",
+    "status": "teilweise",
+    "anfragen": 38,
+    "notiz": "Imagename mikrotik-routerboard-map-lite ist Neanderfunk-Alias von mikrotik-routerboard-mapl-2nd (gluon-patches-hardware); Upstream-Gluon kennt das Gerät nicht. Ausgewertet: ToH-Dump + Live-hwdata (2026-03-11), OpenWrt-Wiki common (keine Geräteseite), Commits c59fa94e (ar71xx, ab 18.06.0) und eb38af78 (ath79, ab 22.03.0), DTS, mikrotik.mk; MikroTik Produktseite, Broschüre, Quick Guide 2019, Handbuch-Webseite, EU-DoC 2026; FCC TV7MAPL2ND (Übersicht, Handbuch 2015, Label, Innenfotos); WikiDevi/DeviWiki (2 Seiten) + Platinenfotos; Geizhals über Webarchiv; Werkstatt-Doku und RAMpe-Rezept. Widersprüche: PoE-Spannung 10-60 V (Produktseite/Broschüre) vs. passiv 11-57 V (Quick Guide/Handbuch/FCC) vs. 5-60 V (ToH); Leistung 3.5 W vs. 4 W; Antenne 1.5 vs. max 2 dBi; IC-ID 7442A-MAPL2ND vs. TV7MAPL2ND (Handbuch-Webseite); ODM Wistron NeWeb vs. Gemtek. Seriell: 4 unbeschriftete Pads, Pinbelegung offen; ToH 115200 8N1, 3.3 V. Keine Werkstatt-Messung, keine EAN. Abrufdatum tatsächlich 2026-10-20."
+  }
+}
