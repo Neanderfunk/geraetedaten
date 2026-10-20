@@ -275,6 +275,8 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
+| mercusys-mr80x-v2 | `mercusys-mr80x-v2` | [erfasst](daten/mercusys-mr80x-v2.json): 84 Felder, 12 offene Fäden, teilweise |  |  |
+| mercusys-mr80x-v3 | `mercusys-mr80x-v3` | [erfasst](daten/mercusys-mr80x-v3.json): 58 Felder, 9 offene Fäden, teilweise |  |  |
 | MR70X v1 | `mercusys-mr70x-v1` | [erfasst](daten/mercusys-mr70x-v1.json): 92 Felder, 14 offene Fäden, teilweise |  | recommended |
 | MR90X v1 | `mercusys-mr90x-v1` | [erfasst](daten/mercusys-mr90x-v1.json): 92 Felder, 13 offene Fäden, teilweise |  | recommended |
 

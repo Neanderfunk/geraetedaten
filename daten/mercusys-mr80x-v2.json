@@ -1,0 +1,2286 @@
+{
+  "image": "mercusys-mr80x-v2",
+  "modell": "Mercusys MR80X v2",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr80x_v2",
+      "stand": "Dump 2026-10-18 (kein Eintrag)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Dump quellen-toh-2026-10-18.tsv.gz enthält keine Zeile für MR80X oder MR3000X (toh_suche.py liefert nur MR90X v1 mit Score 0.2, nicht übernommen)."
+    },
+    "toh_seite": {
+      "url": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr80x_v2",
+      "stand": "Datenseite existiert nicht (Stand 2026-10-20)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "?do=export_raw: erst HTTP 500, beim zweiten Versuch HTML-Seite statt Rohtext (Seite nicht angelegt)."
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/mercusys/mr80x",
+      "stand": "Geräteseite existiert nicht (Stand 2026-10-20)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "toh:mercusys:mr80x 'This topic does not exist yet'; toh:mercusys:mr80x_v3 ebenfalls nicht angelegt."
+    },
+    "openwrt_commit": {
+      "url": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+      "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "per gh api; Commit-Nachricht, DTS ipq5018-mr80x-v2.dts und Image-Definition in ipq50xx.mk ausgewertet (Cache commit_938f67a.json, commit_patches.txt)."
+    },
+    "gh_pr_24919": {
+      "url": "https://github.com/openwrt/openwrt/pull/24919",
+      "stand": "PR 24919 (c127dev) erstellt 2026-08-26, gemergt 2026-10-02, 7 Kommentare",
+      "abgerufen": "2026-10-20"
+    },
+    "forum_252380": {
+      "url": "https://forum.openwrt.org/t/mercusys-mr80x-v2-working-openwrt-with-patched-ath11k/252380",
+      "stand": "Thread 2026-08-02 bis 2026-10-02, 21 Beiträge (20 sichtbare geladen)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Discourse-JSON /t/252380.json"
+    },
+    "forum_241918": {
+      "url": "https://forum.openwrt.org/t/openwrt-support-for-mercusys-mr80x-v2-ax3000-dual-band-wi-fi-6-router/241918",
+      "stand": "Thread 2025-10-17 bis 2026-06-23 (geschlossen), 59 Beiträge (alle sichtbaren geladen)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Discourse-JSON /t/241918.json plus /posts.json; Beitrag #1 ist laut Forum KI-generiert, daraus nichts übernommen."
+    },
+    "gameplayer_repo": {
+      "url": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+      "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Community-Port vor dem Upstream-Commit; Gerät des Autors ist ein MR3000X (EU) mit hw_ver 2."
+    },
+    "blog_c127": {
+      "url": "https://www.c127.dev/posts/rtl8367s-sgmii-mr80x-v2-20/",
+      "stand": "Blogbeitrag vom 2026-08-05 (Johan Alvarado, Autor des OpenWrt-Ports)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Nur die Hardware-Abschnitte ausgewertet (Gerät, UART, Partitionen, Radios, GPL); Abschnitte zum Root-Zugang bewusst nicht übernommen."
+    },
+    "blog_drejo": {
+      "url": "https://www.drejo.com/blog/mr80x-teardown-openwrt/",
+      "stand": "Blogbeitrag vom 2023-10-01 (Fotos laut EXIF 2023-10-01)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Version im Text nicht genannt; Bootlog zeigt IPQ0509 und config@mp02.1 wie beim v2-Port, im OpenWrt-Forum 241918 #28 als v2-Teardown verlinkt. Zwei Fotos geladen (Rückseite offen, UART)."
+    },
+    "drejo_uart_log": {
+      "url": "https://www.drejo.com/img/blog-images/mr80x-teardown-openwrt/MR80X-default-image-serial-aurt.log.txt",
+      "stand": "Bootlog Stock-Firmware (U-Boot 2016.01 und Kernel 4.4.60, beide gebaut 2022-07-12), veröffentlicht 2023-10-01",
+      "abgerufen": "2026-10-20"
+    },
+    "hersteller": {
+      "url": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+      "stand": "Produktseite MR80X v2 ohne Datum",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Weiterleitung von /en/product/details/mr80x/v2; Versionsauswahl V1, V2, V2.20, V3, V6"
+    },
+    "hersteller_v2_20": {
+      "url": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2.20/",
+      "stand": "Produktseite MR80X v2.20 ohne Datum",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Spezifikationen gleich V2, nur Netzteilangabe '12V/1.5' ohne Einheit, ohne Leistungsangaben, zusätzlich App-Port 30001/TCP"
+    },
+    "hersteller_downloads_v2": {
+      "url": "https://www.mercusys.com/en/download/mr80x/v2/",
+      "stand": "Downloadseite V2, jüngste Firmware MR80X(EU)_V2_1.4.0 Build 20260427 veröffentlicht 2026-08-03",
+      "abgerufen": "2026-10-20"
+    },
+    "hersteller_downloads_v2_20": {
+      "url": "https://www.mercusys.com/en/download/mr80x/v2.20/",
+      "stand": "Downloadseite V2.20, jüngste Firmware MR80X(EU)_V2.20_1.4.0 Build 20260427 veröffentlicht 2026-08-03",
+      "abgerufen": "2026-10-20"
+    },
+    "hersteller_datenblatt": {
+      "url": "https://static.mercusys.com/manual/MR80X(EU)_1.0&2.0-datasheet20220628071251.pdf",
+      "stand": "Datenblatt MR80X(EU) 1.0 und 2.0, PDF erstellt 2022-03-28 (URL-Zeitstempel 2022-06-28)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "gilt laut Dateiname für Hardware 1.0 und 2.0"
+    },
+    "hersteller_handbuch": {
+      "url": "https://static.mercusys.com/manual/1910080071_MR80X_UG_REV1.0.020220406063629.pdf",
+      "stand": "User Guide REV1.0.0 (1910080071), PDF erstellt 2022-03-25",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "auf den Downloadseiten V2 und V2.20 verlinkt; 83 Seiten, 5,9 MB, per pdftotext ausgewertet"
+    },
+    "hersteller_mr3000x_downloads_v2": {
+      "url": "https://www.mercusys.com/en/download/mr3000x/v2/",
+      "stand": "Downloadseite MR3000X V2, jüngste Firmware 1.4.0 Build 20260427 (Datei 2026-08-03)",
+      "abgerufen": "2026-10-20"
+    },
+    "hersteller_mr3000x_datenblatt": {
+      "url": "https://static.mercusys.com/manual/MR3000X(EU)_2.0-datasheet20230613025321.pdf",
+      "stand": "Datenblatt MR3000X(EU) 2.0, PDF erstellt 2023-06-12",
+      "abgerufen": "2026-10-20"
+    },
+    "hersteller_mr3000x_v5": {
+      "url": "https://www.mercusys.com/en/product/wifi-router/mr3000x/v5/",
+      "stand": "Produktseite MR3000X v5 ohne Datum",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "/en/product/details/mr3000x leitet auf V5; Versionsauswahl nennt nur V5. Nur zur Abgrenzung."
+    },
+    "geizhals": {
+      "url": "https://preisvergleich.heise.de/mercusys-mr80x-a3023047.html",
+      "stand": "Gelistet seit 18.09.2023, 10:26; Datenblatt abgerufen 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "2 heise-Abrufe (Suche + Produktseite); Eintrag 'Mercusys MR80X, AX3000' mit Hinweis 'Verschiedene Revisionen verfügbar' (V2 Qualcomm, V3 MediaTek)"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=MR80X&fulltext=1",
+      "stand": "Volltextsuche 2026-10-20: keine Treffer",
+      "abgerufen": "2026-10-20"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/index.php?search=MR80X&fulltext=1",
+      "stand": "Suche 2026-10-20: nur Mercusys_MR80X_v3 und MR85X",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "keine Seite für MR80X v2 oder MR3000X"
+    },
+    "werkstatt": {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md",
+      "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "eigenes Gerät am Testplatz grw: Typenschild MR3000X EU/2.0, laut Protokoll dasselbe Board wie MR80X v2; Stock-Bestandsaufnahme, OpenWrt main, Gluon-2025.1-Backport, Messungen"
+    },
+    "gluon_backport": {
+      "url": "/home/adorfer/projekte/freifunk/neanderfunk/gluon-patches-hardware/parked/ipq50xx-mercusys-mr80x-v2/",
+      "stand": "gluon-patches-hardware v2025.1.x, parked/, Commit 51881c5 vom 2026-10-17",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "44 Patches, nicht in apply.sh; targets-qualcommax-ipq50xx.patch definiert das Image"
+    },
+    "neanderfunk_karte": {
+      "url": "https://neander.map.freifunk.space/#/de/map/088af198df34",
+      "stand": "meshviewer.json 2026-10-20 23:37",
+      "abgerufen": "2026-10-20"
+    },
+    "adorfer": {
+      "url": "",
+      "stand": "Aussage im Chat, 2026-10-20",
+      "abgerufen": "2026-10-20"
+    }
+  },
+  "roh": {
+    "toh": {
+      "hinweis": "kein Eintrag im Dump 2026-10-18; keine Datenseite, keine Geräteseite"
+    },
+    "openwrt_commit": {
+      "nachricht": "qualcommax: add support for Mercusys MR80X v2\n\nHardware:\n  SoC:    Qualcomm IPQ5018 (2x Cortex-A53)\n  RAM:    256 MiB DDR3\n  Flash:  128 MiB SPI-NAND (ESMT)\n  Switch: Realtek RTL8367S, 4x GbE (3x LAN + 1x WAN), SGMII CPU port\n  WiFi:   IPQ5018 2.4 GHz, QCN6122 5 GHz, both 802.11ax\n  LEDs:   system (green/amber), WAN, LAN1-3\n  Button: reset\n  UART:   115200 8N1, 3.3V, on-board header\n\nWi-Fi is left disabled: 256 MiB is too few for ath11k, same as on the\nELECOM WRC-X3000GS2.\n\nNotes:\n- The label reads \"Ver 2.20\", but the vendor firmware only ever calls the\n  board V2: the GPL tree is GPL_MR80Xv2, PRODUCT_NAME is MR80Xv2, the\n  running system reports \"MR80X V2\" and the fwup support list carries\n  product_ver 2.0.0. The trailing digits are a production sub-revision,\n  so the port is named v2.\n- MAC1 runs sgmii through the UNIPHY PCS to RTL8367S port 6. The link is\n  wired for HSGMII and 2500base-x does come up, but only when gmac1 and\n  the CPU port carry the same phy-mode: the UNIPHY PCS belongs to the\n  conduit (pcs-handle = <&uniphy0> in ipq5018-ess.dtsi), so setting the\n  CPU port alone leaves the switch running HSGMII into a SerDes still\n  clocked for SGMII.\n  With both ends at 2500base-x the trunk still dies on some boots: over\n  12 reboots, 2 came up with the CPU port passing no traffic at all -\n  eth0 transmitting while s00_p06_ifInOctets stayed at 0, no FCS errors,\n  the link reporting 2.5 Gbps. That matches the bring-up ordering race\n  described in openwrt/openwrt#25153, where the switch end of the trunk\n  is configured before the IPQ5018 UNIPHY resets and recalibrates its\n  PLL. sgmii has not reproduced it, so the port ships at sgmii until\n  that fix lands.\n- MAC addresses come from default-mac in the vendor tp_data UBI volume,\n  6 raw bytes at offset 0, mounted read-only during preinit:\n    label   default-mac\n    LAN     default-mac\n    WAN     default-mac + 1\n    2.4 GHz default-mac - 1\n    5 GHz   default-mac - 2\n- Sysupgrade A/B ping-pongs rootfs/rootfs_1 via tp_boot_idx, switched\n  only after the new slot is fully written. primaryboot stays 0, the\n  stock loader and the button recovery rely on it.\n- factory.bin is wrapped in the Mercusys fwup container the stock web UI\n  accepts (scripts/mercusys-fwup.py). The generic tplink-image-2022\n  container is rejected: the loader picks its verification algorithm from\n  the fw-type string, which that container does not write.\n- The board needs the backported spi-qpic-snand ECC context fix,\n  otherwise about half of the boots end in \"Waiting for root device\n  /dev/ubiblock0_1\".\n\nInstallation:\n  In the stock web UI go to Advanced -> System -> Firmware Update ->\n  Local Update, browse for\n  openwrt-qualcommax-ipq50xx-mercusys_mr80x-v2-squashfs-factory.bin\n  and press UPDATE.\n\n  Tested on stock firmware MR80X(EU)_V2.20_1.1.7 Build 20250415\n  (Multi-language).\n\n  The U-Boot web recovery does not accept this image: it verifies an\n  RSA1024 signature and has no keyless path. Use the stock web UI.\n\nSigned-off-by: Johan Alvarado <contact@c127.dev>\nLink: https://github.com/openwrt/openwrt/pull/24919\nSigned-off-by: Robert Marko <robimarko@gmail.com>",
+      "dateien": [
+        "package/boot/uboot-tools/uboot-envtools/files/qualcommax_ipq50xx",
+        "target/linux/qualcommax/dts/ipq5018-mr80x-v2.dts",
+        "target/linux/qualcommax/image/ipq50xx.mk",
+        "target/linux/qualcommax/ipq50xx/base-files/etc/board.d/01_leds",
+        "target/linux/qualcommax/ipq50xx/base-files/etc/board.d/02_network",
+        "target/linux/qualcommax/ipq50xx/base-files/etc/hotplug.d/firmware/11-ath11k-caldata",
+        "target/linux/qualcommax/ipq50xx/base-files/lib/preinit/09_mount_tp_data",
+        "target/linux/qualcommax/ipq50xx/base-files/lib/upgrade/platform.sh"
+      ],
+      "image_definition": {
+        "DEVICE_VENDOR": "MERCUSYS",
+        "DEVICE_MODEL": "MR80X",
+        "DEVICE_VARIANT": "v2",
+        "SOC": "ipq5018",
+        "DEVICE_DTS_CONFIG": "config@mp02.1",
+        "BLOCKSIZE": "128k",
+        "PAGESIZE": "2048",
+        "NAND_SIZE": "128m",
+        "KERNEL_IN_UBI": "1",
+        "IMAGE_SIZE": "43008k",
+        "DEVICE_PACKAGES": "kmod-dsa-rtl8365mb",
+        "IMAGES": "factory.bin (Mercusys-fwup-Container)",
+        "SupportList": [
+          "{product_name:MR80X,product_ver:2.0.0,special_id:45550000}",
+          "{product_name:MR80X,product_ver:2.0.0,special_id:55530000}"
+        ]
+      },
+      "dts": {
+        "model": "Mercusys MR80X v2",
+        "compatible": [
+          "mercusys,mr80x-v2",
+          "qcom,ipq5018"
+        ],
+        "reset_gpio": 14,
+        "leds": {
+          "sys-green": "GPIO 13 (boot/running)",
+          "sys-orange": "GPIO 12 (failsafe/upgrade)",
+          "wan": "GPIO 10",
+          "lan1": "GPIO 33",
+          "lan2": "GPIO 11",
+          "lan3": "GPIO 32"
+        },
+        "switch": "realtek,rtl8365mb, Reset GPIO 26; port@0 wan, port@1 lan1, port@2 lan2, port@3 lan3, port@6 cpu (sgmii)",
+        "gmac0": "interner GE-PHY, deaktiviert (keine Buchse)",
+        "wifi": "ath11k-Knoten status disabled, qcom,ath11k-fw-memory-mode 2"
+      }
+    },
+    "gh_pr_24919": {
+      "titel": " qualcommax: add support for Mercusys MR80X v2",
+      "beschreibung": "This patch series adds support for the Mercusys MR80X v2.\r\n\r\n```\r\nSoC:    Qualcomm IPQ5018 (2x Cortex-A53)\r\nRAM:    256 MiB DDR3\r\nFlash:  128 MiB SPI-NAND (ESMT)\r\nSwitch: Realtek RTL8367S, 4x GbE (3x LAN + 1x WAN), SGMII CPU port\r\nWiFi:   IPQ5018 2.4 GHz, QCN6122 5 GHz, both 802.11ax\r\nLEDs:   system (green/amber), WAN, LAN1-3\r\nButton: reset\r\nUART:   115200 8N1, 3.3V, on-board header\r\n```\r\n\r\nNote: Wi-Fi related peripherals are disabled to save available memory, same as on the [ELECOM WRC-X3000GS2](https://github.com/openwrt/openwrt/pull/18543).\r\n\r\n---\r\n\r\nUsefull Links:\r\n\r\n- The spi-qpic-snand fix is submitted upstream: https://git.kernel.org/pub/scm/linux/kernel/git/broonie/spi.git/commit/?id=f94c9b68bb5fdbef9f841da493d5305ff634ebb5\r\n- Device thread on the forum: https://forum.openwrt.org/t/mercusys-mr80x-v2-working-openwrt-with-patched-ath11k/252380\r\n- The RTL8367S SerDes bring-up, the MDIO capture and the phylink PCS work behind this: https://www.c127.dev/posts/rtl8367s-sgmii-mr80x-v2-20/",
+      "kommentare_kurz": [
+        "namiltd 2026-09-19: verweist auf PR 25153 (2500base-x)",
+        "c127dev 2026-09-19: mit 930-09-Patch aus 25153 16/16 HSGMII-Starts ok, ohne 2/12 Fehlstarts; 38/38 SGMII-Starts ok; CPU-Port zurück auf sgmii",
+        "robimarko 2026-10-02: rebased und gemergt"
+      ]
+    },
+    "forum_252380": {
+      "#1 Gameplayer-1-8 2026-08-02": "OpenWrt auf MR80X v2 mit gepatchtem ath11k, WLAN (QCN6102) läuft, 24 h stabil",
+      "#3 Gameplayer-1-8": "Repo openwrt_mrx80_v2; beide Radios, DSA wan/lan1-3, ~50 MB RAM frei, 5 GHz bis ~350 Mbit; NAND-ECC 4 statt 8; Switch-Reset GPIO 26; CPU-Link-Messungen",
+      "#11 Gameplayer-1-8": "Kernel 6.18.39 mit Patches aus PR 24197; 2.5 Gbit CPU-Port ok; MAC aus tp_data",
+      "#16 c127dev 2026-08-19": "Gerät MR80X v2.20, U-Boot meldet MR80X v2; /proc/mtd (16 Partitionen); tp_data: default-mac, device-id, https_cert, pin, product-info, user-config; MAC-Schema laut /sbin/network_get_firm: lan base, wan +1, 2.4 -1, 5 GHz -2",
+      "#17 FabianoTSS 2026-08-21": "MR80X V5 äußerlich fast gleiche Platine; initramfs aus c127dev-Branch lief auf V5",
+      "#19 c127dev 2026-08-26": "PR 24919 eingereicht, nur kabelgebunden, WLAN aus",
+      "#20 Gameplayer-1-8 2026-09-11": "ESMT F50D1G41LB OTP-Problem unter 6.18; ath11k-Ringe verkleinert: MemAvailable ~0 -> ~32 MB mit beiden Radios",
+      "#21 c127dev 2026-09-12": "2500base-x geht, wenn gmac1 und CPU-Port gleich gesetzt; 8/8 Starts ok; ausgeliefert sgmii"
+    },
+    "forum_241918": {
+      "#9 ARahmanAR 2025-10-18": "Aufkleber mit CE, UKCA, R-NZ, EAC, keine FCC-ID",
+      "#11 ARahmanAR": "Qualcomm IPQ0509 dual core CPU, Qualcomm QCN6102 radio chip (Fotos)",
+      "#12 anon63541380": "Realtek-Logo (Switch); vier TTL-Pins unten links neben dem großen Schirmblech",
+      "#28 long76": "Verweis auf drejo.com-Teardown",
+      "#30 slh": "laut Teardown 256 MB RAM",
+      "#53 notmarek 2025-12-24": "Stock-DTS (IPQ5018/AP-MP03.3) als Gist",
+      "#55 za_creature 2026-02-23": "Bootlog per pastebin",
+      "#56 Player_Dimhat 2026-06-05": "V2.2 in Bangladesch verbreitet",
+      "#58 frollic": "Bootlog bestätigt 'DRAM: ... 256 MiB'",
+      "#64 sdmnsfi": "V2.20 nach V3 erschienen, in Südasien verbreitet",
+      "#65 Player_Dimhat": "Preis etwa 3500 BDT (28 USD)"
+    },
+    "gameplayer_repo": {
+      "Marketing name": "Mercusys MR3000X / AX3000 Dual-Band Wi-Fi 6 Router",
+      "OpenWrt name": "mercusys,mr80x-v2",
+      "SoC": "Qualcomm IPQ5018, dual Cortex-A53 @ 1.008 GHz",
+      "RAM": "256 MB",
+      "Flash": "128 MB SPI-NAND, ESMT F50D1G41LB, 4-bit ECC",
+      "WiFi 2.4 GHz": "IPQ5018 built-in (c000000.wifi), ath11k",
+      "WiFi 5 GHz": "QCN6122 (b00a040.wifi), ath11k multipd, userpd 2",
+      "Switch": "Realtek RTL8367S on MDIO1, DSA (rtl8365mb)",
+      "CPU to switch": "2.5 Gbit (2500base-x) on switch port 6",
+      "Serial": "115200 8N1, blsp1_uart1 @ 0x78af000",
+      "product-info": "product_name:MR3000X, hw_ver:00000002, special_id:45550000 (EU)",
+      "Ports/LEDs": "port@0 WAN green:wan GPIO10; port@1 LAN1 GPIO33; port@2 LAN2 GPIO11; port@3 LAN3 GPIO32; Status grün GPIO13, orange GPIO12; GPL ALL_LED=10,33,11,32,13,12",
+      "UART-Lage": "vorne rechts auf der Platine, von hinten (LAN-Seite) gesehen; Pads RX, TX, GND beschriftet; 3.3 V, nicht 5-V-tolerant",
+      "U-Boot": "192.168.1.1, Autoboot 1 s, machid 0x8040000 (mp02.1); 0:APPSBLENV mit falscher CRC am Gerät des Autors",
+      "MAC": "kein MAC in 0:art; tp_data/default-mac; Tabelle im README (+2/+3 für WLAN) laut Forum #16 falsch",
+      "RAM-Messung": "mit Patch 911: MemFree 54400 kB, MemAvailable 32584 kB; ohne: 18976 kB / 0 kB"
+    },
+    "blog_c127": {
+      "Karton": "Model: MR80X(US) Ver:2.20",
+      "Gekauft": "7. Mai 2026, etwa 40-45 USD",
+      "Hardware": "IPQ5018, 256 MB DDR, 128 MB 'GigaDevice F50D1G41LB' SPI-NAND, 2.4 GHz im SoC, QCN6122 für 5 GHz, RTL8367S für die Ports; HF-Pigtails angelötet",
+      "Platine": "zwei Schirmbleche über IPQ5018 (links) und QCN6122 (rechts), RTL8367S darüber, Übertrager und vier Buchsen an der Oberkante; UART-Stiftleiste unten links",
+      "UART": "4-pin Header 3V3, GND, RX, TX; RX/TX-Vorwiderstände bestückt; 3V3 frei lassen; 115200 8N1; U-Boot-Prompt IPQ5018# ohne Passwort",
+      "Stock": "Kernel 4.4.60 und U-Boot 2016.01 (Sept. 2024), Userspace 32-bit (musl), FIT mit 24 DTBs, genutzt fdt@mp02.1",
+      "Radios": "BDF IPQ5018/bdwlan.b24 (Boardid 24) und qcn6122/bdwlan.b60 (Boardid 60); Regionen US/EU je MR1800X, MR3000X, MR70X, MR80X",
+      "GPL": "GPL_MR80Xv2.tar20230105023043.gz (U-Boot 2016.01, Linux 4.4.60, Realtek-Switch-Quellen)",
+      "Treiber": "rtl8365mb SGMII/HSGMII als phylink PCS in net-next (Linux 7.3), gemergt 2026-07-22"
+    },
+    "blog_drejo": {
+      "SoC": "Qualcomm IPQ0509",
+      "RAM": "256Mbyte",
+      "Flash": "Gigadevice 128Mbyte SD-NAND",
+      "Ethernet Switch": "Realtek RTL8367S",
+      "AX WLAN": "QCN6102",
+      "Serial": "RX/TX/GND angeschlossen, 115200 8N1, Shell per minicom",
+      "Foto Rückseite (abgelesen)": "von links DC-Buchse, Taster, WAN (hellgrau), 3× LAN; vier Antennen am Gehäuserand, Kabel innen an die Platine gelötet; kein Lüfter sichtbar",
+      "Foto UART (abgelesen)": "vier Durchkontaktierungen ohne Stiftleiste, beschriftet TX, RX, GND, 3V3, nahe 'TOP' an der Platinenkante"
+    },
+    "drejo_uart_log": {
+      "U-Boot": "U-Boot 2016.01 (Jul 12 2022 - 17:26:29 +0800)",
+      "DRAM": "smem ram ptable found: ver: 1 len: 4 / 256 MiB",
+      "NAND": "Serial Nand Device Found With ID : 0xc8 0x41; Manufacturer GD5F1GQ5RExIG; Device Size 128 MiB, Page size 2048, Spare Size 128, ECC 4-bit",
+      "machid": "8040000",
+      "Hinweis U-Boot": "eth0/eth1 MAC Address from ART is not valid",
+      "Kernel": "Linux version 4.4.60 ... #1 SMP PREEMPT Tue Jul 12 18:00:08 CST 2022",
+      "CPU": "ARMv7 Processor [51af8014]; CPU: IPQ0509, SoC Version: 1.1; 2 CPUs",
+      "Machine model": "Qualcomm Technologies, Inc. IPQ5018/AP-MP02.1",
+      "Memory": "186628K/196608K available",
+      "Switch": "rtl8367_gpio_reset: GPIO33 reset switch done; rtk_switch_init ok",
+      "nand (Kernel)": "GigaDevice GD5F1GQ5RExIG SPI NAND 1G 1.8V, 128 MiB, SLC, erase size 128 KiB, page size 2048, OOB size 128"
+    },
+    "hersteller": {
+      "Titel": "MR80X [V1, V2, V2.20, V3, V6] | AX3000 Dual-Band Wi-Fi 6 Router",
+      "Wi-Fi Class": "AX3000",
+      "Wi-Fi (2.4 GHz)": "574Mbps",
+      "Wi-Fi (5 GHz)": "2402Mbps",
+      "Wireless Standards": "802.11ax/ac/a/b/g/n",
+      "Max Channel Width": "160MHz",
+      "Reception Sensitivity": "5G: 11a 6Mbps:-97dBm, 11a 54Mbps:-79dBm, 11ac VHT20 MCS8:-75dBm, 11ac VHT40 MCS8:-71dBm, 11ac VHT80 MCS8:-67dBm, 11ax VHT20 MCS11:-67dBm, 11ax VHT40 MCS11:-64dBm, 11ax VHT80 MCS11:-61dBm; 2.4G: 11g 6Mbps: -97dBm, 11g 54Mbps: -79dBm, 11n HT40 MCS7:-74dBm, 11n HT20 MCS7:-77dBm",
+      "Max Wi-Fi Modulation": "1024 QAM",
+      "Wireless Security": "WPA/WPA2/WPA3",
+      "Wireless Functions": "Guest Network, Smart Connect, Wireless Schedule, WPS, AP Isolation, Airtime Fairness",
+      "Dimensions": "208.8 × 171.6 × 41.7 mm (8.2 × 6.8 × 1.6 in)",
+      "Interfaces": "1× GE WAN, 3× GE LAN",
+      "Antenna": "2× 5G External Antennas(5dBi), 2× 2.4G External Antennas(5dBi)",
+      "Button": "1× WPS/ Reset Button",
+      "Installation": "Desktop, Wall-mount",
+      "LED": "1× SYS",
+      "Retail Package Dimension": "389 × 290 × 67mm",
+      "Units per Carton": "10",
+      "Carton Dimension": "590 × 400 × 345mm",
+      "Power": "Input: 100~240V, 50/60Hz; Output: 12V/1.5A",
+      "Max Power Consumption": "Networked standby 5.5 W; networked standby with all wired ports connected and all wireless ports activated 7.1 W; switch to networked standby after 20 minutes",
+      "Operation Mode": "Router/AP mode",
+      "Protocols": "IPv4, IPv6",
+      "IPTV": "IGMP Proxy, IGMP Snooping, Bridge, Tag VLAN",
+      "VPN": "Server und Client: OpenVPN, PPTP, L2TP/IPSec, WireGuard",
+      "Easymesh": "Easymesh Compatible",
+      "ISP Feature": "CWMP, ISP Preset (Agile Config), Superadmin",
+      "LED Management": "LED Control, Night Mode",
+      "Network Services Enabled by Default": "Web 80/443 TCP; DHCP 67 UDP; DNS 53 TCP/UDP; App 20001 TCP, 20002 UDP",
+      "Package Contents": "AX3000 Wi-Fi 6 Router MR80X, Power Adapter, Quick Installation Guide, RJ45 Ethernet Cable",
+      "Environment": "Operating Temperature 0°C~40°C; Operating Humidity 10%~90% non-condensing; Storage Humidity 5%~90% non-condensing"
+    },
+    "hersteller_v2_20": {
+      "Titel": "MR80X v2.20 | AX3000 Dual-Band Wi-Fi 6 Router",
+      "Abweichungen zu V2": "Power Output '12V/1.5' (ohne Einheit), keine Leistungsangaben; App management zusätzlich Port 30001/TCP; sonst gleiche Spezifikation"
+    },
+    "hersteller_downloads_v2": {
+      "Dokumente": [
+        "MR80X(EU)_V2_Datasheet",
+        "MR80X_V2_User Guide (REV1.0.0)",
+        "Mercusys Router (EU1, 12 Languages) QIG 2023-10-31"
+      ],
+      "Firmware": [
+        "MR80X(EU)_V2_1.4.0 Build 20260427 (2026-08-03, 24.62 MB)",
+        "1.3.3 Build 20260303 (2026-06-25)",
+        "1.2.0 Build 20250904 (2025-11-19)",
+        "1.1.9 Build 20250604 (2025-07-08)",
+        "1.1.8 Build 20250422 (2025-05-16)",
+        "1.1.7 Build 20250415 (2025-04-18)",
+        "1.1.4 Build 20240923 (2025-02-11)",
+        "1.1.3 Build 20240718 (2024-09-30)",
+        "1.1.2 Build 20240617 (2024-09-23)",
+        "MR80X(US)_V2_1.1.1 Build 20230905 (2023-09-21)",
+        "MR80X(EU)_V2_1.1.1 Build 20230905 (2023-09-21)",
+        "1.1.0 Build 20220712 (2022-08-03)",
+        "1.1.0 Build 20220531",
+        "220114"
+      ],
+      "GPL": "GPL_MR80Xv2.tar20230105023043.gz",
+      "Produktbild": "https://static.mercusys.com/product-image/MR80X_EU_2.0_01_normal20220222075957.jpg"
+    },
+    "hersteller_downloads_v2_20": {
+      "Firmware": [
+        "MR80X(EU)_V2.20_1.4.0 Build 20260427 (2026-08-03)",
+        "1.3.3 Build 20260303 (2026-06-25)",
+        "1.2.0 Build 20250904 (2025-11-19)",
+        "1.1.9 Build 20250604 (2025-07-08)",
+        "1.1.8 Build 20250422 (2025-05-16)",
+        "1.1.7 Build 20250415 (2025-04-18)"
+      ],
+      "Hinweis": "ab 1.2.0: 'This firmware cannot be degraded to the previous version'",
+      "GPL": "GPL_MR80Xv2.tar20230105023043.gz"
+    },
+    "hersteller_datenblatt": {
+      "Ports": "1× Gigabit WAN Port + 3× Gigabit LAN Ports",
+      "Button": "Reset/WPS Button",
+      "Dimensions (W x D x H)": "8.2 × 6.8 × 1.6 in (208.8 × 171.6 × 41.7 mm)",
+      "Antennas": "4× 5 dBi Fixed Omni-Directional Antennas",
+      "Wireless": "2402 Mbps (5 GHz) + 574 Mbps (2.4 GHz), 11ax/ac/a/b/g/n; OFDMA, MU-MIMO, 160 MHz, 1024-QAM, Smart Connect, Access Point Mode",
+      "Power EIRP": "2.4 GHz < 20dBm (EIRP); 5 GHz < 23dBm (band1, band2); 5 GHz < 30dBm (band3)",
+      "Reception Sensitivity": "11g 6Mbps -97, 11g 54Mbps -79, 11n HT40 MCS7 -74, 11n HT20 MCS7 -77, 11a 6Mbps -97, 11a 54Mbps -79, 11ac VHT20 MCS8 -75, VHT40 MCS9 -71, VHT80 MCS9 -67, 11ax VHT20 MCS11 -67, VHT40 MCS11 -64, VHT80 MCS11 -61 (dBm)",
+      "Highlights": "Robust Qualcomm Dual-Core Processor",
+      "Package Contents": "AX3000 Wi-Fi 6 Router MR80X, Power Adapter, Quick Installation Guide, RJ45 Ethernet Cable",
+      "Environment": "Operating Temperature 0°C~40°C; Operating Humidity 10%~90% non-condensing; Storage Humidity 5%~90% non-condensing"
+    },
+    "hersteller_handbuch": {
+      "CE Operating Frequency": "2412-2472 MHz (20 dBm); 5150-5250 MHz (23 dBm); 5250-5350 MHz (23 dBm); 5470-5725 MHz (30 dBm)",
+      "National restrictions": "This device may only be used indoors in all EU member states, EFTA countries and Northern Ireland; indoors in Great Britain",
+      "Front Panel": "System LED: aus = kein Strom; grün dauerhaft = Betrieb, WLAN an; grün schnell blinkend = WPS; grün langsam blinkend = Start/Update; orange dauerhaft = WLAN aus",
+      "Rear Panel (von links)": "POWER Socket; RESET/WPS Button (>5 s Reset, 1 s WPS); WAN Port; LAN Ports; Wireless Antennas",
+      "Port-LEDs": "WAN Port LED und LAN Port LED: an = verbunden",
+      "Label": "SSID und WLAN-Passwort auf dem Etikett an der Unterseite"
+    },
+    "hersteller_mr3000x_datenblatt": {
+      "Ports": "1× Gigabit WAN Port + 3× Gigabit LAN Ports",
+      "Button": "Reset/WPS Button",
+      "Dimensions": "208.8 × 171.6 × 41.7 mm",
+      "Antennas": "4× 5 dBi Fixed Omni-Directional Antennas",
+      "Power EIRP": "2.4 GHz < 20dBm; 5 GHz < 23dBm (band1, band2); 5 GHz < 30dBm (band3)",
+      "Highlights": "Robust Qualcomm Dual-Core Processor",
+      "Environment": "Operating Temperature 0°C~40°C; Humidity 10%~90% / 5%~90%"
+    },
+    "hersteller_mr3000x_downloads_v2": {
+      "Dokumente": [
+        "MR3000X(EU)_2.0-datasheet (2023-06-13)",
+        "MR3000X UG REV2.0.0 (1910080100, 2023-06-26)"
+      ],
+      "Firmware-Dateien": [
+        "MR3000X(EU)_V2.0_230511",
+        "MR3000X(EU)_V2.0_240718",
+        "MR3000X_V2_240617",
+        "MR3000X(EU)_V2_240923",
+        "MR3000X_V2_1.1.8 Build 20250422",
+        "MR3000X(EU)_V2_1.2.0 Build 20250904",
+        "MR3000X_V2.20_1.2.10 Build 20250905",
+        "MR3000X(EU)_V2_1.3.3 Build 20260303",
+        "MR3000X_V2_1.4.0 Build 20260427"
+      ],
+      "GPL": "GPL_MR3000Xv220240819061946.tar.gz"
+    },
+    "hersteller_mr3000x_v5": {
+      "Dimensions": "175.6 × 157.2 × 45 mm",
+      "Interfaces": "1× Gigabit WAN Port + 3× Gigabit LAN Ports",
+      "Button": "Reset Button, WPS Button",
+      "Antenna Type": "4× 5 dBi Fixed Omni-Directional Antennas"
+    },
+    "geizhals": {
+      "Name": "Mercusys MR80X, AX3000",
+      "WAN": "1x RJ-45 (10/100/1000Base-T)",
+      "LAN": "3x RJ-45 (10/100/1000Base-T)",
+      "Wireless": "Wi-Fi 6 (802.11a/b/g/n/ac/ax), simultan",
+      "Übertragungsrate": "574Mbit/s (2.4GHz), 2402Mbit/s (5GHz)",
+      "Pseudoklasse": "AX3000",
+      "Sicherheit": "WEP, WPA, WPA2, WPA3, WPS",
+      "Antennen": "4x extern",
+      "Band-Fähigkeiten": "Dual Band (simultan)",
+      "Mesh": "Mesh (geteiltes Band)",
+      "System Info": "Qualcomm IPQ0518, MediaTek MT7981, MediaTek MT7976 (V2 mit Qualcomm Chipsatz, V3 mit MediaTek Chipsatz); Qualcomm IPQ0518, 2x Cortex-A53 (1.00GHz), ARMv8-A oder MediaTek Filogic 820, 2x Cortex-A53 (1.30GHz), ARMv8-A (V2 mit Qualcomm Chipsatz, V3 mit MediaTek Chipsatz)",
+      "Abmessungen": "208.8x171.6x41.7mm",
+      "Besonderheiten": "MU-MIMO, IPv6, VPN passthrough (L2TP/PPTP)",
+      "802.11ax 2.4GHz": "574Mbit/s (2x2, 40MHz, 1024-QAM)",
+      "802.11ax 5GHz": "2402Mbit/s (2x2, 160MHz, 1024-QAM)",
+      "Hinweis": "Verschiedene Revisionen verfügbar.",
+      "Hinweis zu alternativer Firmware": "Open-/DD-WRT ist möglicherweise nur für bestimmte Revisionen verfügbar",
+      "Gelistet seit": "18.09.2023, 10:26"
+    },
+    "deviwiki": {
+      "ergebnis": "Volltextsuche MR80X: keine Treffer"
+    },
+    "wikidevi": {
+      "ergebnis": "Treffer nur Mercusys_MR80X_v3 und Mercusys_MR85X"
+    },
+    "werkstatt": {
+      "Typenschild": "Model MR3000X, 'AX3000 Dual-Band Wi-Fi 6 Router', S/N-Zusatz EU/2.0, 12 V 1,5 A, Default Access mwlogin.net",
+      "Hardwareversion (Firmware)": "MR3000X v2.0",
+      "Firmware ab Werk": "1.2.0 Build 20250904 rel.80221(4555); online angeboten 13.10.2026: 1.4.0 Build 20260427 rel.65006",
+      "Auto-Update": "ab Werk an, 3 bis 5 Uhr",
+      "Shell ab Werk": "kein SSH, kein Telnet, auch nicht Port 20001",
+      "Offene Ports ab Werk": "LAN TCP 53, 80, 443, 1900; LAN UDP 53, 67, 1900, 5351, 20002 open|filtered; WAN alles gefiltert außer 20001/TCP closed",
+      "OpenWrt am Gerät": "c127dev v2026.10.02.63, OpenWrt main 47b6ae3, Kernel 6.18.54, kmod-ath11k-smallbuffers; Zugang 192.168.1.1, root ohne Passwort",
+      "MACs": "LAN 08:8a:f1:98:df:34 (= Aufkleber), WAN :35, 2.4 GHz :33, 5 GHz :32",
+      "Durchsatz OpenWrt main": "5 GHz 80 MHz (VHT-MCS9, NSS2) 328/208 Mbit/s; 2.4 GHz 20 MHz 66/48 Mbit/s",
+      "Gluon-Backport": "ipq50xx, ath11k (IPQ5018/QCN6122, smallbuffers), rtl8365mb SGMII; 44 Patches; Image gluon-nef-21_dias-...-ipq50xx-mercusys-mr80x-v2-sysupgrade.bin",
+      "Bootschleife 6.6": "thermal top-glue-thermal critical temperature reached nach 1,5 s; Ursache nvmem-qfprom-Bitoffsets, Fix 0043",
+      "Ethernet 6.6": "UNIPHY wartete auf SGMII-AN; Fix 0044 setzt Force-Bit nach Reset",
+      "Stand 17.10.2026": "26101706bro vom Flash, 51-52 °C, eth0 ok, MemAvailable 64 MB, sechs Mesh-Nachbarn",
+      "Speicher unter Gluon": "MemTotal 186 MB; Ruhe used ~89 MB, MemAvailable ~64 MB; Client-Last MemAvailable 31-34 MB",
+      "ohne smallbuffers": "OOM nach 96 s (usteerd), panic_on_oom, Neustartschleife",
+      "Durchsatz Gluon": "2.4 GHz Client 46/75, 5 GHz Client 340/208; batctl tp Mesh 5 GHz 59/36, 2.4 GHz 17,5; 802.11s direkt mesh1 141/444, mesh0 148/106 Mbit/s",
+      "Regdomain": "radio0/1 country TW durch 215-neanderfunk-txpower-fix; ath11k self-managed"
+    },
+    "gluon_backport": {
+      "device": "device('mercusys-mr80x-v2', 'mercusys_mr80x-v2', { aliases = { 'mercusys-mr3000x-v2' } })",
+      "Patches": "0001-0044 (qca-ssdk/nss-dp ipq50xx, Target ipq50xx, SPI-NAND-Fixes, ath11k QCN6122 + smallbuffers, ath11k-firmware, ipq-wifi Boarddaten MR80X v2, mercusys-fwup, Geräteunterstützung, WLAN an, factory.bin auch für MR3000X, nvmem-Fix, qca-ssdk-UNIPHY-Fix)"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Mercusys",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "MR80X (AX3000 Dual-Band Wi-Fi 6 Router)",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Mercusys MR80X v2",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": "DTS model = \"Mercusys MR80X v2\", compatible mercusys,mr80x-v2"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "v2",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": "Typenschild der Port-Geräte 'Ver 2.20'; Herstellerfirmware nennt das Board durchweg MR80Xv2 (GPL_MR80Xv2, PRODUCT_NAME MR80Xv2, Support-List product_ver 2.0.0). Die Ziffern nach dem Punkt sind laut Commit eine Produktions-Unterrevision."
+      },
+      {
+        "wert": "V2 und V2.20 (eigene Produkt- und Downloadseiten)",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "Versionsauswahl: V1, V2, V2.20, V3, V6. V2 und V2.20 bekommen dieselben Firmwarestände (1.1.7 bis 1.4.0); nach schema/felder.md zählt bei Mercusys nur die Hauptversion."
+      },
+      {
+        "wert": "MR3000X v2.0 (Typenschild 'EU/2.0', Firmware meldet 'MR3000X v2.0')",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Gerät",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": "Eigenes Gerät; laut Protokoll dasselbe Board wie MR80X v2 (Stock-UI nahm das MR80X-v2-factory.bin mit ergänzter MR3000X-SupportList an)."
+      },
+      {
+        "wert": "Ver 2.20 (Karton 'Model: MR80X(US) Ver:2.20')",
+        "quelle": "blog_c127",
+        "beleg": "https://www.c127.dev/posts/rtl8367s-sgmii-mr80x-v2-20/",
+        "stand": "Blogbeitrag vom 2026-08-05 (Johan Alvarado, Autor des OpenWrt-Ports)",
+        "sicherheit": "mittel",
+        "bemerkung": "U-Boot meldet das Gerät als MR80X v2"
+      },
+      {
+        "wert": "hw_ver 00000002 (tp_data/product-info: product_name MR3000X, special_id 45550000 = EU)",
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild 'Model MR3000X', 'AX3000 Dual-Band Wi-Fi 6 Router', S/N-Zusatz 'EU/2.0', 12 V 1,5 A, Default Access mwlogin.net",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Gerät",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Aufkleber 'Ver 2.20'; zählt als v2",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Aufkleber zeigt CE, UKCA, R-NZ und EAC, aber keine FCC-ID (US-Gerät)",
+        "quelle": "forum_241918",
+        "beleg": "https://forum.openwrt.org/t/openwrt-support-for-mercusys-mr80x-v2-ax3000-dual-band-wi-fi-6-router/241918/9",
+        "stand": "Thread 2025-10-17 bis 2026-06-23 (geschlossen), 59 Beiträge (alle sichtbaren geladen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Fotos im Beitrag nicht geladen"
+      },
+      {
+        "wert": "OpenWrt-factory.bin trägt SupportList product_name MR80X, product_ver 2.0.0, special_id 45550000 und 55530000",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": "Gluon-Backport ergänzt einen Eintrag für MR3000X 2.0.0 (Patch 0042)"
+      },
+      {
+        "wert": "Hardwareversion in der Stock-Weboberfläche unter System > Firmware-Upgrade (Online-Upgrade: Firmwareversion, Hardwareversion)",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Weboberfläche Schritt für Schritt",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": "Mercusys MR3000X v2 (EU/2.0), gleiches Board",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Kurzfassung",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MR3000X / AX3000 Dual-Band Wi-Fi 6 Router, im Repo 'MRX80 V2'",
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": "EU-Boarddaten von MR80X und MR3000X byte-identisch"
+      },
+      {
+        "wert": "Gluon-Alias mercusys-mr3000x-v2",
+        "quelle": "gluon_backport",
+        "beleg": "/home/adorfer/projekte/freifunk/neanderfunk/gluon-patches-hardware/parked/ipq50xx-mercusys-mr80x-v2/targets-qualcommax-ipq50xx.patch",
+        "stand": "gluon-patches-hardware v2025.1.x, parked/, Commit 51881c5 vom 2026-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "keine auf dem Aufkleber",
+        "quelle": "forum_241918",
+        "beleg": "https://forum.openwrt.org/t/openwrt-support-for-mercusys-mr80x-v2-ax3000-dual-band-wi-fi-6-router/241918/9",
+        "stand": "Thread 2025-10-17 bis 2026-06-23 (geschlossen), 59 Beiträge (alle sichtbaren geladen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Aussage des Forumsnutzers zu seinem US-Gerät"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm IPQ5018",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm IPQ5018",
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm IPQ0509 (Aufdruck)",
+        "quelle": "blog_drejo",
+        "beleg": "https://www.drejo.com/blog/mr80x-teardown-openwrt/",
+        "stand": "Blogbeitrag vom 2023-10-01 (Fotos laut EXIF 2023-10-01)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "IPQ0509, SoC Version 1.1 (Kernel-Bootlog)",
+        "quelle": "drejo_uart_log",
+        "beleg": "https://www.drejo.com/img/blog-images/mr80x-teardown-openwrt/MR80X-default-image-serial-aurt.log.txt",
+        "stand": "Bootlog Stock-Firmware (U-Boot 2016.01 und Kernel 4.4.60, beide gebaut 2022-07-12), veröffentlicht 2023-10-01",
+        "sicherheit": "mittel",
+        "bemerkung": "Machine model IPQ5018/AP-MP02.1, machid 8040000"
+      },
+      {
+        "wert": "Qualcomm IPQ0509 (Aufdruck)",
+        "quelle": "forum_241918",
+        "beleg": "https://forum.openwrt.org/t/openwrt-support-for-mercusys-mr80x-v2-ax3000-dual-band-wi-fi-6-router/241918/11",
+        "stand": "Thread 2025-10-17 bis 2026-06-23 (geschlossen), 59 Beiträge (alle sichtbaren geladen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm IPQ0518",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr80x-a3023047.html",
+        "stand": "Gelistet seit 18.09.2023, 10:26; Datenblatt abgerufen 2026-10-20",
+        "sicherheit": "niedrig",
+        "bemerkung": "Widerspruch zu IPQ0509 (Bootlog, Fotos); Geizhals-Eintrag deckt V2 und V3 ab"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": "2x Cortex-A53"
+      },
+      {
+        "wert": 2,
+        "quelle": "drejo_uart_log",
+        "beleg": "https://www.drejo.com/img/blog-images/mr80x-teardown-openwrt/MR80X-default-image-serial-aurt.log.txt",
+        "stand": "Bootlog Stock-Firmware (U-Boot 2016.01 und Kernel 4.4.60, beide gebaut 2022-07-12), veröffentlicht 2023-10-01",
+        "sicherheit": "mittel",
+        "bemerkung": "'Brought up 2 CPUs'"
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 1008,
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": "'dual Cortex-A53 @ 1.008 GHz'"
+      },
+      {
+        "wert": 1000,
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr80x-a3023047.html",
+        "stand": "Gelistet seit 18.09.2023, 10:26; Datenblatt abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "'2x Cortex-A53 (1.00GHz)'"
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "ARMv8-A, Cortex-A53 (aarch64)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt-Target qualcommax ist 64-bit"
+      },
+      {
+        "wert": "Stock-Firmware läuft 32-bit (Kernel 4.4.60 meldet ARMv7)",
+        "quelle": "drejo_uart_log",
+        "beleg": "https://www.drejo.com/img/blog-images/mr80x-teardown-openwrt/MR80X-default-image-serial-aurt.log.txt",
+        "stand": "Bootlog Stock-Firmware (U-Boot 2016.01 und Kernel 4.4.60, beide gebaut 2022-07-12), veröffentlicht 2023-10-01",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 256,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": "256 MiB DDR3"
+      },
+      {
+        "wert": 256,
+        "quelle": "drejo_uart_log",
+        "beleg": "https://www.drejo.com/img/blog-images/mr80x-teardown-openwrt/MR80X-default-image-serial-aurt.log.txt",
+        "stand": "Bootlog Stock-Firmware (U-Boot 2016.01 und Kernel 4.4.60, beide gebaut 2022-07-12), veröffentlicht 2023-10-01",
+        "sicherheit": "mittel",
+        "bemerkung": "U-Boot 'DRAM: ... 256 MiB'; Kernel 'Memory: 186628K/196608K available'"
+      },
+      {
+        "wert": 256,
+        "quelle": "forum_241918",
+        "beleg": "https://forum.openwrt.org/t/openwrt-support-for-mercusys-mr80x-v2-ax3000-dual-band-wi-fi-6-router/241918/58",
+        "stand": "Thread 2025-10-17 bis 2026-06-23 (geschlossen), 59 Beiträge (alle sichtbaren geladen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Bootlog in #55 (pastebin), RAM-Zeile in #58 zitiert"
+      },
+      {
+        "wert": 256,
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 256,
+        "quelle": "blog_c127",
+        "beleg": "https://www.c127.dev/posts/rtl8367s-sgmii-mr80x-v2-20/",
+        "stand": "Blogbeitrag vom 2026-08-05 (Johan Alvarado, Autor des OpenWrt-Ports)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 256,
+        "quelle": "blog_drejo",
+        "beleg": "https://www.drejo.com/blog/mr80x-teardown-openwrt/",
+        "stand": "Blogbeitrag vom 2023-10-01 (Fotos laut EXIF 2023-10-01)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR3",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_verfuegbar": [
+      {
+        "wert": "MemTotal 186 MB unter Gluon (26101706bro); in Ruhe MemAvailable ~64 MB, unter Client-Last 31-34 MB",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Durchsatz und Speicher unter Gluon (26101706bro, 17.10.2026)",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "OpenWrt main mit beiden APs (c127dev-Build mit kmod-ath11k-smallbuffers): MemAvailable 57 MB, nach Durchsatztest 46 MB",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#OpenWrt am Gerät",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 128,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "drejo_uart_log",
+        "beleg": "https://www.drejo.com/img/blog-images/mr80x-teardown-openwrt/MR80X-default-image-serial-aurt.log.txt",
+        "stand": "Bootlog Stock-Firmware (U-Boot 2016.01 und Kernel 4.4.60, beide gebaut 2022-07-12), veröffentlicht 2023-10-01",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "blog_c127",
+        "beleg": "https://www.c127.dev/posts/rtl8367s-sgmii-mr80x-v2-20/",
+        "stand": "Blogbeitrag vom 2026-08-05 (Johan Alvarado, Autor des OpenWrt-Ports)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "blog_drejo",
+        "beleg": "https://www.drejo.com/blog/mr80x-teardown-openwrt/",
+        "stand": "Blogbeitrag vom 2023-10-01 (Fotos laut EXIF 2023-10-01)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NAND (SPI-NAND)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NAND (SPI-NAND, SLC, Seite 2048 B, Erase 128 KiB, ECC 4 Bit)",
+        "quelle": "drejo_uart_log",
+        "beleg": "https://www.drejo.com/img/blog-images/mr80x-teardown-openwrt/MR80X-default-image-serial-aurt.log.txt",
+        "stand": "Bootlog Stock-Firmware (U-Boot 2016.01 und Kernel 4.4.60, beide gebaut 2022-07-12), veröffentlicht 2023-10-01",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "ESMT (Typ nicht genannt)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ESMT F50D1G41LB, 4-bit ECC",
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ESMT F50D1G41LB",
+        "quelle": "forum_252380",
+        "beleg": "https://forum.openwrt.org/t/mercusys-mr80x-v2-working-openwrt-with-patched-ath11k/252380/20",
+        "stand": "Thread 2026-08-02 bis 2026-10-02, 21 Beiträge (20 sichtbare geladen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "GigaDevice F50D1G41LB",
+        "quelle": "blog_c127",
+        "beleg": "https://www.c127.dev/posts/rtl8367s-sgmii-mr80x-v2-20/",
+        "stand": "Blogbeitrag vom 2026-08-05 (Johan Alvarado, Autor des OpenWrt-Ports)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Herstellerangabe widerspricht der Teilenummer (F50D1G41LB ist ESMT)"
+      },
+      {
+        "wert": "GigaDevice GD5F1GQ5RExIG (ID 0xc8 0x41)",
+        "quelle": "drejo_uart_log",
+        "beleg": "https://www.drejo.com/img/blog-images/mr80x-teardown-openwrt/MR80X-default-image-serial-aurt.log.txt",
+        "stand": "Bootlog Stock-Firmware (U-Boot 2016.01 und Kernel 4.4.60, beide gebaut 2022-07-12), veröffentlicht 2023-10-01",
+        "sicherheit": "mittel",
+        "bemerkung": "Gerät von 2023; es gibt also mindestens zwei Flash-Bestückungen"
+      },
+      {
+        "wert": "Gigadevice 128 MByte SPI-NAND",
+        "quelle": "blog_drejo",
+        "beleg": "https://www.drejo.com/blog/mr80x-teardown-openwrt/",
+        "stand": "Blogbeitrag vom 2023-10-01 (Fotos laut EXIF 2023-10-01)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_layout": [
+      {
+        "wert": "0:sbl1 512K, 0:mibib 512K, 0:bootconfig 256K, 0:bootconfig1 256K, 0:qsee 1M, 0:devcfg 256K, 0:cdt 256K, 0:appsblenv 512K, 0:appsbl 1.25M, 0:art 1M, 0:training 512K, rootfs 42M, rootfs_1 42M, tp_data 8.25M, radio 4.25M, data 512K",
+        "quelle": "forum_252380",
+        "beleg": "https://forum.openwrt.org/t/mercusys-mr80x-v2-working-openwrt-with-patched-ath11k/252380/16",
+        "stand": "Thread 2026-08-02 bis 2026-10-02, 21 Beiträge (20 sichtbare geladen)",
+        "sicherheit": "mittel",
+        "bemerkung": "/proc/mtd von c127dev; A/B-Rootfs; MAC in tp_data/default-mac"
+      },
+      {
+        "wert": "16 Partitionen, A/B mit rootfs/rootfs_1 je 42 MB, dazu tp_data, radio, data",
+        "quelle": "blog_c127",
+        "beleg": "https://www.c127.dev/posts/rtl8367s-sgmii-mr80x-v2-20/",
+        "stand": "Blogbeitrag vom 2026-08-05 (Johan Alvarado, Autor des OpenWrt-Ports)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "OpenWrt: IMAGE_SIZE 43008k, UBI, Sysupgrade wechselt rootfs/rootfs_1 über tp_boot_idx",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "2.4 GHz: IPQ5018 (im SoC); 5 GHz: QCN6122",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2.4 GHz: IPQ5018 (c000000.wifi); 5 GHz: QCN6122 (b00a040.wifi, ath11k multipd, userpd 2)",
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2.4 GHz im IPQ5018, 5 GHz QCN6122",
+        "quelle": "blog_c127",
+        "beleg": "https://www.c127.dev/posts/rtl8367s-sgmii-mr80x-v2-20/",
+        "stand": "Blogbeitrag vom 2026-08-05 (Johan Alvarado, Autor des OpenWrt-Ports)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCN6102",
+        "quelle": "blog_drejo",
+        "beleg": "https://www.drejo.com/blog/mr80x-teardown-openwrt/",
+        "stand": "Blogbeitrag vom 2023-10-01 (Fotos laut EXIF 2023-10-01)",
+        "sicherheit": "mittel",
+        "bemerkung": "Widerspruch QCN6102 (Aufdruck laut Teardown und Forum) vs. QCN6122 (OpenWrt-Commit, Treiber)"
+      },
+      {
+        "wert": "Qualcomm QCN6102 (Aufdruck)",
+        "quelle": "forum_241918",
+        "beleg": "https://forum.openwrt.org/t/openwrt-support-for-mercusys-mr80x-v2-ax3000-dual-band-wi-fi-6-router/241918/11",
+        "stand": "Thread 2025-10-17 bis 2026-06-23 (geschlossen), 59 Beiträge (alle sichtbaren geladen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCN6102",
+        "quelle": "forum_252380",
+        "beleg": "https://forum.openwrt.org/t/mercusys-mr80x-v2-working-openwrt-with-patched-ath11k/252380/1",
+        "stand": "Thread 2026-08-02 bis 2026-10-02, 21 Beiträge (20 sichtbare geladen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath11k",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n/ax",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "'Wireless Standards 802.11ax/ac/a/b/g/n'"
+      },
+      {
+        "wert": "802.11ax",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr80x-a3023047.html",
+        "stand": "Gelistet seit 18.09.2023, 10:26; Datenblatt abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "'574Mbit/s (2x2, 40MHz, 1024-QAM)'"
+      },
+      {
+        "wert": 2,
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Durchsatz und Speicher unter Gluon (26101706bro, 17.10.2026)",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": "Client mit MCS 15 (HT, 2 Streams) gemessen"
+      },
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "mittel",
+        "bemerkung": "2× 2.4G-Antennen, 574 Mbit/s [abgeleitet]"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac/ax",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11ax",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr80x-a3023047.html",
+        "stand": "Gelistet seit 18.09.2023, 10:26; Datenblatt abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "'2402Mbit/s (2x2, 160MHz, 1024-QAM)'"
+      },
+      {
+        "wert": 2,
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#OpenWrt am Gerät",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": "VHT-MCS9 NSS2 gemessen; im Mesh HE-MCS 6 NSS 2"
+      },
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "mittel",
+        "bemerkung": "2× 5G-Antennen, 2402 Mbit/s [abgeleitet]"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AX3000",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AX3000",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr80x-a3023047.html",
+        "stand": "Gelistet seit 18.09.2023, 10:26; Datenblatt abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_kanalbreite_max": [
+      {
+        "wert": "160 MHz (5 GHz)",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": "2.4 GHz < 20 dBm EIRP; 5 GHz < 23 dBm (Band 1, 2), < 30 dBm (Band 3)",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://static.mercusys.com/manual/MR80X(EU)_1.0&2.0-datasheet20220628071251.pdf",
+        "stand": "Datenblatt MR80X(EU) 1.0 und 2.0, PDF erstellt 2022-03-28 (URL-Zeitstempel 2022-06-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2412-2472 MHz 20 dBm; 5150-5350 MHz 23 dBm; 5470-5725 MHz 30 dBm",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080071_MR80X_UG_REV1.0.020220406063629.pdf",
+        "stand": "User Guide REV1.0.0 (1910080071), PDF erstellt 2022-03-25",
+        "sicherheit": "hoch",
+        "bemerkung": "CE-Angaben"
+      }
+    ],
+    "wlan_empfindlichkeit": [
+      {
+        "wert": "5 GHz: 11a 6M -97, 11a 54M -79, VHT20 MCS8 -75, VHT40 MCS8 -71, VHT80 MCS8 -67, HE20 MCS11 -67, HE40 MCS11 -64, HE80 MCS11 -61 dBm; 2.4 GHz: 11g 6M -97, 11g 54M -79, HT40 MCS7 -74, HT20 MCS7 -77 dBm",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_hinweis": [
+      {
+        "wert": "Im offiziellen OpenWrt-Image ist WLAN abgeschaltet: 256 MiB reichen laut Commit nicht für ath11k (wie beim ELECOM WRC-X3000GS2)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Gluon-2025.1-Backport läuft nur mit kmod-ath11k-smallbuffers; mit normalem ath11k OOM-Killer nach 96 s und Neustartschleife, ohne Last",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Durchsatz und Speicher unter Gluon (26101706bro, 17.10.2026)",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Mit verkleinerten ath11k-Ringen (Patch 911) MemAvailable ~32 MB mit beiden Radios, ohne den Patch 0 kB",
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_durchsatz_gemessen": [
+      {
+        "wert": "Gluon 26101706bro: 2.4 GHz Client 46/75 Mbit/s, 5 GHz Client 340/208 Mbit/s (hoch/runter); Mesh 5 GHz 802.11s direkt 141/444 Mbit/s, 2.4 GHz 148/106 Mbit/s",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Durchsatz und Speicher unter Gluon (26101706bro, 17.10.2026)",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "OpenWrt main: 5 GHz 80 MHz 328/208 Mbit/s, 2.4 GHz 20 MHz 66/48 Mbit/s",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#OpenWrt am Gerät",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "extern fest",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://static.mercusys.com/manual/MR80X(EU)_1.0&2.0-datasheet20220628071251.pdf",
+        "stand": "Datenblatt MR80X(EU) 1.0 und 2.0, PDF erstellt 2022-03-28 (URL-Zeitstempel 2022-06-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "'4× 5 dBi Fixed Omni-Directional Antennas'"
+      },
+      {
+        "wert": "extern fest",
+        "quelle": "blog_c127",
+        "beleg": "https://www.c127.dev/posts/rtl8367s-sgmii-mr80x-v2-20/",
+        "stand": "Blogbeitrag vom 2026-08-05 (Johan Alvarado, Autor des OpenWrt-Ports)",
+        "sicherheit": "mittel",
+        "bemerkung": "HF-Pigtails an die Platine gelötet, keine Stecker"
+      },
+      {
+        "wert": "extern fest",
+        "quelle": "blog_drejo",
+        "beleg": "https://www.drejo.com/blog/mr80x-teardown-openwrt/",
+        "stand": "Blogbeitrag vom 2023-10-01 (Fotos laut EXIF 2023-10-01)",
+        "sicherheit": "mittel",
+        "bemerkung": "Foto: Antennenkabel innen an die Platine gelötet [abgelesen]"
+      },
+      {
+        "wert": "extern",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr80x-a3023047.html",
+        "stand": "Gelistet seit 18.09.2023, 10:26; Datenblatt abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 4,
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://static.mercusys.com/manual/MR80X(EU)_1.0&2.0-datasheet20220628071251.pdf",
+        "stand": "Datenblatt MR80X(EU) 1.0 und 2.0, PDF erstellt 2022-03-28 (URL-Zeitstempel 2022-06-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr80x-a3023047.html",
+        "stand": "Gelistet seit 18.09.2023, 10:26; Datenblatt abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "getrennt: 2× 5 GHz, 2× 2.4 GHz",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": 5,
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://static.mercusys.com/manual/MR80X(EU)_1.0&2.0-datasheet20220628071251.pdf",
+        "stand": "Datenblatt MR80X(EU) 1.0 und 2.0, PDF erstellt 2022-03-28 (URL-Zeitstempel 2022-06-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "rund (omnidirektional)",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://static.mercusys.com/manual/MR80X(EU)_1.0&2.0-datasheet20220628071251.pdf",
+        "stand": "Datenblatt MR80X(EU) 1.0 und 2.0, PDF erstellt 2022-03-28 (URL-Zeitstempel 2022-06-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "WAN",
+            "geschwindigkeit": "1G",
+            "rolle": "WAN"
+          },
+          {
+            "name": "LAN1",
+            "geschwindigkeit": "1G",
+            "rolle": "LAN"
+          },
+          {
+            "name": "LAN2",
+            "geschwindigkeit": "1G",
+            "rolle": "LAN"
+          },
+          {
+            "name": "LAN3",
+            "geschwindigkeit": "1G",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "'1× GE WAN, 3× GE LAN'"
+      },
+      {
+        "wert": "4× GbE (3× LAN + 1× WAN) am Realtek RTL8367S; OpenWrt-Ports wan, lan1, lan2, lan3",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Rückseite von links: POWER-Buchse, RESET/WPS-Taster, WAN, LAN",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080071_MR80X_UG_REV1.0.020220406063629.pdf",
+        "stand": "User Guide REV1.0.0 (1910080071), PDF erstellt 2022-03-25",
+        "sicherheit": "hoch",
+        "bemerkung": "Kapitel 1.2.2 Rear Panel"
+      },
+      {
+        "wert": "Rückseite: DC-Buchse, Taster, WAN (hellgrau), 3× LAN (schwarz)",
+        "quelle": "blog_drejo",
+        "beleg": "https://www.drejo.com/blog/mr80x-teardown-openwrt/",
+        "stand": "Blogbeitrag vom 2023-10-01 (Fotos laut EXIF 2023-10-01)",
+        "sicherheit": "mittel",
+        "bemerkung": "Foto MR80X-rear-ports.jpg [abgelesen]"
+      },
+      {
+        "wert": "WAN 1x RJ-45 (10/100/1000Base-T), LAN 3x RJ-45 (10/100/1000Base-T)",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr80x-a3023047.html",
+        "stand": "Gelistet seit 18.09.2023, 10:26; Datenblatt abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 4,
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "1 WAN + 3 LAN"
+      }
+    ],
+    "switch_chip": [
+      {
+        "wert": "Realtek RTL8367S, CPU-Port 6 per SGMII (1G) an IPQ5018 MAC1 über UNIPHY",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": "HSGMII/2500base-x geht, wenn gmac1 und CPU-Port gleich eingestellt sind; ausgeliefert wird SGMII"
+      },
+      {
+        "wert": "Realtek RTL8367S",
+        "quelle": "blog_drejo",
+        "beleg": "https://www.drejo.com/blog/mr80x-teardown-openwrt/",
+        "stand": "Blogbeitrag vom 2023-10-01 (Fotos laut EXIF 2023-10-01)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Realtek RTL8367S, Reset an GPIO 26",
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": 0,
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "Schnittstellenliste nennt nur 1× WAN, 3× LAN"
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "mittel",
+        "bemerkung": "Versorgung über externes Netzteil 12 V; kein PoE genannt"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": true,
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080071_MR80X_UG_REV1.0.020220406063629.pdf",
+        "stand": "User Guide REV1.0.0 (1910080071), PDF erstellt 2022-03-25",
+        "sicherheit": "hoch",
+        "bemerkung": "'POWER Socket' auf der Rückseite"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 12,
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "Netzteil 'Output: 12V/1.5A'"
+      },
+      {
+        "wert": 12,
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Gerät",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild MR3000X EU/2.0"
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 1.5,
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.5,
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Gerät",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "Package Contents: Power Adapter"
+      },
+      {
+        "wert": true,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://static.mercusys.com/manual/MR80X(EU)_1.0&2.0-datasheet20220628071251.pdf",
+        "stand": "Datenblatt MR80X(EU) 1.0 und 2.0, PDF erstellt 2022-03-28 (URL-Zeitstempel 2022-06-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "Eingang 100-240 V, 50/60 Hz; Ausgang 12 V, 1,5 A",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_bereitschaft": [
+      {
+        "wert": "5,5 W (Networked Standby); 7,1 W (Networked Standby, alle Ports verbunden, WLAN an)",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "ErP-Angaben, keine Maximalleistung; auf der V2.20-Seite fehlen sie"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080071_MR80X_UG_REV1.0.020220406063629.pdf",
+        "stand": "User Guide REV1.0.0 (1910080071), PDF erstellt 2022-03-25",
+        "sicherheit": "hoch",
+        "bemerkung": "'This device may only be used indoors in all EU member states'"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://static.mercusys.com/manual/MR80X(EU)_1.0&2.0-datasheet20220628071251.pdf",
+        "stand": "Datenblatt MR80X(EU) 1.0 und 2.0, PDF erstellt 2022-03-28 (URL-Zeitstempel 2022-06-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "Betrieb 10-90 %, Lagerung 5-90 %, nicht kondensierend",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Tisch, Wand",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "'Installation: Desktop, Wall-mount'"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "208,8 × 171,6 × 41,7",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "208,8 × 171,6 × 41,7 (B × T × H)",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://static.mercusys.com/manual/MR80X(EU)_1.0&2.0-datasheet20220628071251.pdf",
+        "stand": "Datenblatt MR80X(EU) 1.0 und 2.0, PDF erstellt 2022-03-28 (URL-Zeitstempel 2022-06-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "208,8 × 171,6 × 41,7",
+        "quelle": "hersteller_mr3000x_datenblatt",
+        "beleg": "https://static.mercusys.com/manual/MR3000X(EU)_2.0-datasheet20230613025321.pdf",
+        "stand": "Datenblatt MR3000X(EU) 2.0, PDF erstellt 2023-06-12",
+        "sicherheit": "hoch",
+        "bemerkung": "MR3000X(EU) 2.0 gleich groß"
+      },
+      {
+        "wert": "208,8 × 171,6 × 41,7",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr80x-a3023047.html",
+        "stand": "Gelistet seit 18.09.2023, 10:26; Datenblatt abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "verpackung_mm": [
+      {
+        "wert": "389 × 290 × 67",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": "Retail Package Dimension; 10 Stück je Karton 590 × 400 × 345 mm"
+      }
+    ],
+    "leds": [
+      {
+        "wert": "System grün/orange, WAN, LAN1-3 (alle grün)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": "GPIO: sys grün 13, sys orange 12, WAN 10, LAN1 33, LAN2 11, LAN3 32"
+      },
+      {
+        "wert": "1× SYS",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "System-LED vorne (grün: Betrieb/WPS/Start, orange: WLAN aus); WAN- und LAN-Port-LEDs",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080071_MR80X_UG_REV1.0.020220406063629.pdf",
+        "stand": "User Guide REV1.0.0 (1910080071), PDF erstellt 2022-03-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "ja (Stock: LED Control, Night Mode)",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja (Stock: System > LED-Steuerung)",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Weboberfläche Schritt für Schritt",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "knoepfe": [
+      {
+        "wert": "1× WPS/Reset",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "reset (GPIO 14)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "Rückseite, zwischen Strombuchse und WAN; kombiniert WPS/Reset: 1 s = WPS, > 5 s = Reset",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080071_MR80X_UG_REV1.0.020220406063629.pdf",
+        "stand": "User Guide REV1.0.0 (1910080071), PDF erstellt 2022-03-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luefter": [
+      {
+        "wert": false,
+        "quelle": "blog_drejo",
+        "beleg": "https://www.drejo.com/blog/mr80x-teardown-openwrt/",
+        "stand": "Blogbeitrag vom 2023-10-01 (Fotos laut EXIF 2023-10-01)",
+        "sicherheit": "niedrig",
+        "bemerkung": "auf den Teardown-Fotos kein Lüfter [abgeleitet]"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte",
+        "quelle": "blog_drejo",
+        "beleg": "https://www.drejo.com/blog/mr80x-teardown-openwrt/",
+        "stand": "Blogbeitrag vom 2023-10-01 (Fotos laut EXIF 2023-10-01)",
+        "sicherheit": "mittel",
+        "bemerkung": "Foto MR80X-Serial-Uart.jpg: 4 Durchkontaktierungen ohne Stiftleiste, Bestückungsdruck TX, RX, GND, 3V3 [abgelesen]"
+      },
+      {
+        "wert": "innen Lötpunkte",
+        "quelle": "blog_c127",
+        "beleg": "https://www.c127.dev/posts/rtl8367s-sgmii-mr80x-v2-20/",
+        "stand": "Blogbeitrag vom 2026-08-05 (Johan Alvarado, Autor des OpenWrt-Ports)",
+        "sicherheit": "mittel",
+        "bemerkung": "'4-pin UART header', RX/TX-Vorwiderstände bereits bestückt; drei Drähte angelötet"
+      },
+      {
+        "wert": "innen Stiftleiste ('on-board header')",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": "ob bestückt, sagt der Commit nicht"
+      },
+      {
+        "wert": "innen, Pads mit Bestückungsdruck RX, TX, GND",
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": "vorne rechts, von hinten (LAN-Seite) gesehen"
+      },
+      {
+        "wert": "innen; Konsole am Testplatz an /dev/ttyUSB0 betrieben",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Bootschleife geklärt: tsens-Kalibrierung unter 6.6 (17.10.2026)",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": "wie angeschlossen wurde, steht nicht im Protokoll"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "TX, RX, GND, 3V3",
+        "quelle": "blog_drejo",
+        "beleg": "https://www.drejo.com/blog/mr80x-teardown-openwrt/",
+        "stand": "Blogbeitrag vom 2023-10-01 (Fotos laut EXIF 2023-10-01)",
+        "sicherheit": "mittel",
+        "bemerkung": "Reihenfolge laut Bestückungsdruck auf dem Foto [abgelesen]"
+      },
+      {
+        "wert": "3V3, GND, RX, TX",
+        "quelle": "blog_c127",
+        "beleg": "https://www.c127.dev/posts/rtl8367s-sgmii-mr80x-v2-20/",
+        "stand": "Blogbeitrag vom 2026-08-05 (Johan Alvarado, Autor des OpenWrt-Ports)",
+        "sicherheit": "mittel",
+        "bemerkung": "von der anderen Seite gezählt; 3V3 nicht anschließen"
+      },
+      {
+        "wert": "RX, TX, GND beschriftet; gekreuzt anschließen, VCC frei lassen",
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": "nicht 5-V-tolerant"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1"
+      },
+      {
+        "wert": 115200,
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Bootschleife geklärt: tsens-Kalibrierung unter 6.6 (17.10.2026)",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": "8N1"
+      },
+      {
+        "wert": 115200,
+        "quelle": "blog_drejo",
+        "beleg": "https://www.drejo.com/blog/mr80x-teardown-openwrt/",
+        "stand": "Blogbeitrag vom 2023-10-01 (Fotos laut EXIF 2023-10-01)",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1"
+      },
+      {
+        "wert": 115200,
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1, keine Flusssteuerung"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "U-Boot-Prompt IPQ5018# mit Enter in der Startsekunde",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Bootschleife geklärt: tsens-Kalibrierung unter 6.6 (17.10.2026)",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Autoboot-Wartezeit nur 1 s; U-Boot nutzt 192.168.1.1, initramfs per TFTP ladbar; RTL8367S wird von U-Boot nur am Prompt initialisiert",
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Unter Linux keine pinctrl-Umschaltung der UART-Pins, sonst kein Konsolen-Empfang",
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "qualcommax/ipq50xx",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": "Gerätename mercusys_mr80x-v2, DEVICE_DTS_CONFIG config@mp02.1, Paket kmod-dsa-rtl8365mb"
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "main/Snapshot seit 2026-10-02",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": "nach dem Werkstatt-Protokoll nur in main, in keiner Release"
+      }
+    ],
+    "openwrt_support_commit": [
+      {
+        "wert": "938f67a519de64dcec10759b2b7203aca086f97a",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": "dazu e7eaa9851ff1 (spi-qpic-snand ECC-Fix) und d0cf4c8b3ebd (rtl8365mb SGMII/HSGMII, 2026-07-24)"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "nein in Gluon 2025.1 (kein Target ipq50xx); lokaler Backport mit Target qualcommax-ipq50xx, 44 Patches, geparkt",
+        "quelle": "gluon_backport",
+        "beleg": "/home/adorfer/projekte/freifunk/neanderfunk/gluon-patches-hardware/parked/ipq50xx-mercusys-mr80x-v2/",
+        "stand": "gluon-patches-hardware v2025.1.x, parked/, Commit 51881c5 vom 2026-10-17",
+        "sicherheit": "hoch",
+        "bemerkung": "Image mercusys-mr80x-v2, Alias mercusys-mr3000x-v2; nicht in apply.sh"
+      },
+      {
+        "wert": "Gluon-Backport (26101706bro) läuft am Gerät: startet vom Flash, Mesh über WLAN und LAN, VPN",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Bootschleife geklärt: tsens-Kalibrierung unter 6.6 (17.10.2026)",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": "braucht Kernel-Fix nvmem bit offsets (0043) und qca-ssdk-UNIPHY-Fix (0044); offen: batman meldet MTU 1500 an br-mesh_other"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot 2016.01 (Prompt IPQ5018#)",
+        "quelle": "drejo_uart_log",
+        "beleg": "https://www.drejo.com/img/blog-images/mr80x-teardown-openwrt/MR80X-default-image-serial-aurt.log.txt",
+        "stand": "Bootlog Stock-Firmware (U-Boot 2016.01 und Kernel 4.4.60, beide gebaut 2022-07-12), veröffentlicht 2023-10-01",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot 2016.01, Stock-Kernel 4.4.60",
+        "quelle": "blog_c127",
+        "beleg": "https://www.c127.dev/posts/rtl8367s-sgmii-mr80x-v2-20/",
+        "stand": "Blogbeitrag vom 2026-08-05 (Johan Alvarado, Autor des OpenWrt-Ports)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_os": [
+      {
+        "wert": "OpenWrt-Ableger mit TP-Link-Userspace, Kernel 4.4.60, Userspace 32-bit",
+        "quelle": "blog_c127",
+        "beleg": "https://www.c127.dev/posts/rtl8367s-sgmii-mr80x-v2-20/",
+        "stand": "Blogbeitrag vom 2026-08-05 (Johan Alvarado, Autor des OpenWrt-Ports)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.mercusys.com/en/download/mr80x/v2/",
+        "quelle": "hersteller_downloads_v2",
+        "beleg": "https://www.mercusys.com/en/download/mr80x/v2/",
+        "stand": "Downloadseite V2, jüngste Firmware MR80X(EU)_V2_1.4.0 Build 20260427 veröffentlicht 2026-08-03",
+        "sicherheit": "hoch",
+        "bemerkung": "jüngste: MR80X(EU)_V2_1.4.0 Build 20260427 (2026-08-03)"
+      },
+      {
+        "wert": "https://www.mercusys.com/en/download/mr80x/v2.20/",
+        "quelle": "hersteller_downloads_v2_20",
+        "beleg": "https://www.mercusys.com/en/download/mr80x/v2.20/",
+        "stand": "Downloadseite V2.20, jüngste Firmware MR80X(EU)_V2.20_1.4.0 Build 20260427 veröffentlicht 2026-08-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://www.mercusys.com/en/download/mr3000x/v2/",
+        "quelle": "hersteller_mr3000x_downloads_v2",
+        "beleg": "https://www.mercusys.com/en/download/mr3000x/v2/",
+        "stand": "Downloadseite MR3000X V2, jüngste Firmware 1.4.0 Build 20260427 (Datei 2026-08-03)",
+        "sicherheit": "hoch",
+        "bemerkung": "für MR3000X V2, u. a. MR3000X_V2_1.4.0 Build 20260427"
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Stock-Weboberfläche: Advanced > System > Firmware Update > Local Update mit openwrt-qualcommax-ipq50xx-mercusys_mr80x-v2-squashfs-factory.bin; getestet auf MR80X(EU)_V2.20_1.1.7 Build 20250415",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MR3000X-Stock-UI lehnt das Original-factory.bin ab ('Ungültiger Dateityp'), nimmt es mit zusätzlichem SupportList-Eintrag für MR3000X 2.0.0 an; danach Gluon per sysupgrade -n",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#OpenWrt am Gerät",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "recovery": [
+      {
+        "wert": "U-Boot-Web-Recovery nimmt nur signierte Herstellerfirmware, nicht das OpenWrt-Image",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Nach mehreren gescheiterten Starts zeigt U-Boot von selbst die Recovery-Seite 'Firmware upgrade' unter http://192.168.1.1",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Gluon-2025.1-Backport am Gerät (14.10.2026)",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "UART + TFTP: initramfs aus U-Boot starten, sysupgrade überschreibt U-Boot nicht",
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_ip": [
+      {
+        "wert": "192.168.1.1, mwlogin.net; DHCP-Pool .2-.253",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Aufbau am Testplatz",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_ports_offen": [
+      {
+        "wert": "LAN: TCP 53, 80, 443, 1900; UDP 53, 67, 1900, 5351; WAN: alles gefiltert, 20001/TCP closed",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Offene Ports ab Werk",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": "MR3000X v2.0, Firmware 1.2.0 Build 20250904"
+      },
+      {
+        "wert": "Web 80/443 TCP, DHCP 67 UDP, DNS 53, App 20001/TCP und 20002/UDP",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "mac_schema": [
+      {
+        "wert": "LAN/Label = default-mac (tp_data), WAN +1, 2.4 GHz -1, 5 GHz -2",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "LAN = Aufkleber, WAN +1, 2.4 GHz -1, 5 GHz -2 (am Gerät 08:8a:f1:98:df:34/35/33/32)",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#OpenWrt am Gerät",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "wie Stock-Skript /sbin/network_get_firm: LAN base, WAN +1, 2.4 GHz -1, 5 GHz -2",
+        "quelle": "forum_252380",
+        "beleg": "https://forum.openwrt.org/t/mercusys-mr80x-v2-working-openwrt-with-patched-ath11k/252380/16",
+        "stand": "Thread 2026-08-02 bis 2026-10-02, 21 Beiträge (20 sichtbare geladen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "LAN base, WAN +1, 2.4 GHz +2, 5 GHz +3, eth0 +4",
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": "",
+        "widerlegt": "Stock-Skript /sbin/network_get_firm und OpenWrt-Commit 938f67a519 nennen -1/-2; am Werkstattgerät bestätigt (router-werkstatt docs/mercusys-mr3000x-v2.md, OpenWrt am Gerät)"
+      }
+    ],
+    "verwechslung_versionen": [
+      {
+        "wert": "MR80X v3 ist ein anderes Gerät: MediaTek MT7981B, Target mediatek/filogic (Commit 7921e48d43)",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#OpenWrt",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Hersteller führt V1, V2, V2.20, V3 und V6",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Geizhals-Eintrag mischt V2 (Qualcomm) und V3 (MediaTek)",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr80x-a3023047.html",
+        "stand": "Gelistet seit 18.09.2023, 10:26; Datenblatt abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MR80X V5: Platine sehr ähnlich, RTL8367S-VB; nicht vom v2-Image abgedeckt",
+        "quelle": "forum_252380",
+        "beleg": "https://forum.openwrt.org/t/mercusys-mr80x-v2-working-openwrt-with-patched-ath11k/252380/17",
+        "stand": "Thread 2026-08-02 bis 2026-10-02, 21 Beiträge (20 sichtbare geladen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MR3000X v5 hat ein anderes Gehäuse (175,6 × 157,2 × 45 mm); nur MR3000X v2.0 ist dasselbe Board",
+        "quelle": "hersteller_mr3000x_v5",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr3000x/v5/",
+        "stand": "Produktseite MR3000X v5 ohne Datum",
+        "sicherheit": "mittel",
+        "bemerkung": "Hardware des v5 nicht geprüft"
+      }
+    ],
+    "openwrt_bekannte_probleme": [
+      {
+        "wert": "WLAN im offiziellen Image aus (256 MiB); spi-qpic-snand-ECC-Fix nötig, sonst etwa jeder zweite Start 'Waiting for root device'",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/938f67a519de64dcec10759b2b7203aca086f97a",
+        "stand": "Commit 938f67a519 vom 2026-10-02 (Autor Johan Alvarado/c127dev, Autordatum 2026-08-26; Committer Robert Marko)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Unter Kernel 6.6 (Gluon 2025.1) Notabschaltung nach 1,5 s durch falsche tsens-Kalibrierung (nvmem-Bit-Offsets) und kein Ethernet-Empfang (UNIPHY Force-Bit); beides im Backport behoben",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Bootschleife geklärt: tsens-Kalibrierung unter 6.6 (17.10.2026)",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Kernel 6.18: ESMT-OTP-Registrierung lässt den Flash im OTP-Modus hängen (liest 0xff)",
+        "quelle": "gameplayer_repo",
+        "beleg": "https://github.com/Gameplayer-1-8/openwrt_mrx80_v2",
+        "stand": "README, letzter Commit b429b145cd vom 2026-08-03",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "bei Geizhals gelistet seit 18.09.2023",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr80x-a3023047.html",
+        "stand": "Gelistet seit 18.09.2023, 10:26; Datenblatt abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "V2.20 in Südasien (z. B. Bangladesch) 2026 verbreitet, etwa 28 USD",
+        "quelle": "forum_241918",
+        "beleg": "https://forum.openwrt.org/t/openwrt-support-for-mercusys-mr80x-v2-ax3000-dual-band-wi-fi-6-router/241918/56",
+        "stand": "Thread 2025-10-17 bis 2026-06-23 (geschlossen), 59 Beiträge (alle sichtbaren geladen)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "fabrikneues MR3000X v2.0 mit Firmware 1.2.0 Build 20250904",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md#Gerät",
+        "stand": "Protokoll Stand 17.10.2026 (Commit f9b1785 in router-werkstatt)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+        "stand": "Produktseite MR80X v2 ohne Datum",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://static.mercusys.com/manual/MR80X(EU)_1.0&2.0-datasheet20220628071251.pdf",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://static.mercusys.com/manual/MR80X(EU)_1.0&2.0-datasheet20220628071251.pdf",
+        "stand": "Datenblatt MR80X(EU) 1.0 und 2.0, PDF erstellt 2022-03-28 (URL-Zeitstempel 2022-06-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://static.mercusys.com/manual/MR3000X(EU)_2.0-datasheet20230613025321.pdf",
+        "quelle": "hersteller_mr3000x_datenblatt",
+        "beleg": "https://static.mercusys.com/manual/MR3000X(EU)_2.0-datasheet20230613025321.pdf",
+        "stand": "Datenblatt MR3000X(EU) 2.0, PDF erstellt 2023-06-12",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "handbuch": [
+      {
+        "wert": "https://static.mercusys.com/manual/1910080071_MR80X_UG_REV1.0.020220406063629.pdf",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080071_MR80X_UG_REV1.0.020220406063629.pdf",
+        "stand": "User Guide REV1.0.0 (1910080071), PDF erstellt 2022-03-25",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gpl_code": [
+      {
+        "wert": "https://static.mercusys.com/gpl/GPL_MR80Xv2.tar20230105023043.gz",
+        "quelle": "hersteller_downloads_v2",
+        "beleg": "https://www.mercusys.com/en/download/mr80x/v2/",
+        "stand": "Downloadseite V2, jüngste Firmware MR80X(EU)_V2_1.4.0 Build 20260427 veröffentlicht 2026-08-03",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://static.mercusys.com/gpl/GPL_MR3000Xv220240819061946.tar.gz",
+        "quelle": "hersteller_mr3000x_downloads_v2",
+        "beleg": "https://www.mercusys.com/en/download/mr3000x/v2/",
+        "stand": "Downloadseite MR3000X V2, jüngste Firmware 1.4.0 Build 20260427 (Datei 2026-08-03)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "geizhals_url": [
+      {
+        "wert": "https://geizhals.de/mercusys-mr80x-a3023047.html",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr80x-a3023047.html",
+        "stand": "Gelistet seit 18.09.2023, 10:26; Datenblatt abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Geizhals-Eintrag deckt mehrere Hardware-Versionen ab (V2 Qualcomm, V3 MediaTek)"
+      }
+    ],
+    "gluon_wlan": [
+      {
+        "wert": "WLAN läuft unter der Neanderfunk-Firmware (2.4 und 5 GHz; im upstream-OpenWrt-Commit 938f67a519 ist es wegen 256 MB RAM abgeschaltet)",
+        "quelle": "neanderfunk_karte",
+        "beleg": "https://neander.map.freifunk.space/#/de/map/088af198df34",
+        "stand": "Knoten dias-MR80X-df34, Firmware 26101706bro-ipq50xx, 20.10.2026: 1 Client im 5-GHz-WLAN, Speicher 66 % belegt",
+        "sicherheit": "hoch",
+        "bemerkung": "eigene Beobachtung im Netz"
+      }
+    ],
+    "einrichtung_erprobt": [
+      {
+        "wert": "ja, Einspielen der Freifunk-Firmware getestet",
+        "quelle": "adorfer",
+        "beleg": "",
+        "stand": "Aussage adorfer 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "Status der RAMpe-Anleitung pflegt das Buildsystem"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://static.mercusys.com/product-image/MR80X_EU_2.0_01_normal20220222075957.jpg",
+      "kategorie": "dc_buchse_mass",
+      "grund": "Hohlsteckermaß und Polarität in keiner Quelle; Produktbilder, Netzteil-Typenschild oder Messung am Werkstattgerät nötig"
+    },
+    {
+      "url": "https://www.mercusys.com/en/ce?model=MR80X&async=1",
+      "kategorie": "netzteil/konformitaet",
+      "grund": "CE-Liste nicht abgerufen; könnte Netzteilmodell nennen (bei MR70X lieferten die PDFs 403)"
+    },
+    {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/mercusys-mr3000x-v2.md",
+      "kategorie": "ean",
+      "grund": "EAN in keiner Quelle (Datenblatt, Produktseite, heise ohne EAN); Karton/Typenschild des Werkstattgeräts nicht ausgewertet"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/mercusys-mr80x*&output=json&fl=original&collapse=urlkey",
+      "kategorie": "ean",
+      "grund": "archivierte Geizhals-Seite nicht geprüft; heise-Datenblatt enthält keine EAN"
+    },
+    {
+      "url": "https://www.c127.dev/images/mr80x/uart-header.jpg",
+      "kategorie": "seriell",
+      "grund": "Foto der UART-Stelle mit angelöteten Drähten nicht geladen; Stiftleiste vs. Lötpunkte am v2.20-Gerät gegenprüfen"
+    },
+    {
+      "url": "https://www.c127.dev/images/mr80x/board-top.jpg",
+      "kategorie": "platine",
+      "grund": "Platinenfoto MR80X v2.20 nicht geladen"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/openwrt-support-for-mercusys-mr80x-v2-ax3000-dual-band-wi-fi-6-router/241918/9",
+      "kategorie": "erkennung_typenschild",
+      "grund": "zwei Fotos des Aufklebers (US-Gerät, ohne FCC-ID) nicht geladen"
+    },
+    {
+      "url": "https://static.mercusys.com/manual/1910080100_MR3000X_UG_REV2.0.020230626054105.pdf",
+      "kategorie": "handbuch",
+      "grund": "MR3000X User Guide REV2.0.0 nicht ausgewertet (Rückseite, LEDs, Wandmontage)"
+    },
+    {
+      "url": "https://gist.github.com/notmarek/4b8287921b0c43104a36700c8fd15343",
+      "kategorie": "stock_dts",
+      "grund": "Stock-DTS (AP-MP03.3, 'MP_256') nicht ausgewertet"
+    },
+    {
+      "url": "https://static.mercusys.com/gpl/GPL_MR80Xv2.tar20230105023043.gz",
+      "kategorie": "gpl_code",
+      "grund": "GPL-Archiv nicht geladen (groß); enthält laut Forum/Blog Produktkonfiguration (ALL_LED u. a.)"
+    },
+    {
+      "url": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+      "kategorie": "montage",
+      "grund": "Wandmontage angegeben, Lochabstand und Art (Schlüssellöcher) nicht belegt"
+    },
+    {
+      "url": "https://www.mercusys.com/en/product/wifi-router/mr80x/v2/",
+      "kategorie": "leistung",
+      "grund": "nur ErP-Bereitschaftswerte 5,5/7,1 W; Maximalleistung unbekannt (Netzteil 12 V 1,5 A = 18 W Obergrenze)"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-20",
+    "status": "teilweise",
+    "anfragen": 31,
+    "notiz": "Kein ToH-Eintrag (Dump, Datenseite, Wiki), keine DeviWiki/WikiDevi-Seite, keine FCC-ID. Ausgewertet: OpenWrt-Commit 938f67a519 + PR 24919, Forum 252380 und 241918, Gameplayer-Repo, Blogs c127.dev und drejo.com (mit Stock-Bootlog und zwei Fotos), Mercusys Produktseiten V2/V2.20, Downloadseiten, Datenblatt 1.0&2.0, User Guide REV1.0.0, MR3000X-V2-Downloads und Datenblatt 2.0, heise/Geizhals, eigenes Werkstatt-Protokoll (MR3000X EU/2.0) und Gluon-Backport. Widersprüche: SoC IPQ5018 (Commit) vs. Aufdruck IPQ0509 vs. IPQ0518 (Geizhals); 5-GHz-Chip QCN6122 (Commit) vs. QCN6102 (Aufdruck); Flash ESMT F50D1G41LB vs. GigaDevice GD5F1GQ5RExIG (verschiedene Bestückungen); MAC-Schema im Gameplayer-README widerlegt. Offen: Hohlsteckermaß, EAN, Maximalleistung, Wandmontage-Details."
+  }
+}
