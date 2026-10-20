@@ -474,6 +474,14 @@
       f.appendChild(a);
     });
     box.appendChild(f);
+    /* "Fehler melden" (fehler-melden.js aus firmware-selector-config) */
+    if (window.ffnefFehlerMelden && d.image) {
+      var titel = [];
+      ['oben', 'mitte', 'technik'].forEach(function (t) {
+        (d[t] || []).forEach(function (z) { if (z.titel && titel.indexOf(z.titel) < 0) titel.push(z.titel); });
+      });
+      window.ffnefFehlerMelden(box, { image: d.image, modell: d.modell, zeilen: titel });
+    }
     return box;
   }
 
