@@ -1,4 +1,4 @@
-# Stand (19.10.2026)
+# Stand (20.10.2026)
 
 ## Erledigt
 - Pilot mit 10 Geräten (Agenten, 19.10.), Bericht: [laeufe/2026-10-19-pilot.md](laeufe/2026-10-19-pilot.md).
@@ -8,12 +8,17 @@
   als zweiter Webroot `/var/www/routerwahl.ffnef.de`. Texte von Content (freifunk-content
   `vorschlaege/routerwahl-texte.md`, `selector-geraetedaten-texte.md`).
 - Im Selector zeigt `ffnef-geraete.js` nur noch, was für die Installation zählt, und verlinkt auf routerwahl.
+- **Volllauf** 19./20.10.: 362 Einträge (alle Images ausser `laeufe/keine-geraete.txt` und zwei
+  URL-kodierten Dubletten `%2B`), 17 "fertig", 345 "teilweise". Verteilt auf direkte Abrufe und
+  SOCKS-Tunnel (kollektor6, OVH-Kollektor-VM, Mesh-Knoten), 4 Agenten je Stapel. Skripte und
+  Sperrliste der Hosts: siehe Workflow-Skripte der Supernode-Session; Kurzfassung der Sperren in
+  `schema/felder.md` (Handel).
+- Nicht unterstützte Hardware-Versionen mit Grund (Selector `versionen-toh.json`, routerwahl-Kaufhinweis).
 
 ## Offen
-- **Volllauf** für die übrigen 374 Geräte: Recherche ruht auf Anweisung von adorfer (19.10.).
-  Vorschläge für den Lauf: zweiter Anlauf nur bei "festgefahren" oder fehlendem Strom/Einsatzort/
-  Hardware-Version (die Schwelle "≥ 5 Lücken" griff bei allen 10), GitHub-Token gegen das Rate-Limit,
-  3 Agenten gleichzeitig. Pilot: rund 350 000 Tokens und 10 Minuten je Gerät mit zweitem Anlauf.
+- **Handelsdaten-Nachlauf** (EAN, Amazon-ASIN, Geizhals-Permalink): 263 Einträge haben noch keins
+  der drei Felder, meist aus den Stapeln vor der Handelsdaten-Anweisung. Engpass ist die CDX-API des
+  Webarchivs (zeitweise 503/504); geizhals.de, idealo und ean-search.org sperren direkt.
 - **Zweiter Durchgang** über FCC-Fotos und Anatel für Hohlstecker-Maß, Netzteil-Typenschild, Lüfter,
   LEDs, serielle Konsole je Charge (offene Fäden in den Einträgen).
 - **Eigene Messungen** aus der Router-Werkstatt (`docs/validierung/`) als Quelle "werkstatt" mit hoher
