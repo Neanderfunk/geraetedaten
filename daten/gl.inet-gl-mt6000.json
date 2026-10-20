@@ -93,12 +93,6 @@
       "stand": "Datenblatt ver. 20260914",
       "abgerufen": "2026-10-20"
     },
-    "geizhals": {
-      "url": "https://web.archive.org/web/20250617174635/https://geizhals.de/gl-inet-flint-2-gl-mt6000-a3168078.html?hloc=at&hloc=de&nocookie=1",
-      "stand": "Webarchiv-Snapshot 2025-06-17 17:46",
-      "abgerufen": "2026-10-20",
-      "bemerkung": "über web.archive.org; CDX: https://web.archive.org/cdx/search/cdx?url=geizhals.de/gl-inet-*"
-    },
     "cnx": {
       "url": "https://www.cnx-software.com/2023/12/26/gl-inet-gl-mt6000-flint-2-wifi-6-router-review-unboxing-teardown-first-try/",
       "stand": "Artikel 2023-12-26, aktualisiert 2024-01-27",
@@ -119,6 +113,18 @@
       "stand": "long-term-todo.md, Stand 01.10.2026; Patch-Commit 8dbae18 vom 2026-10-01",
       "abgerufen": "2026-10-20",
       "bemerkung": "kein Messprotokoll in docs/validierung/; nur Gluon-Unterstützung per Neanderfunk-Patch belegt"
+    },
+    "geizhals_archiv": {
+      "url": "https://web.archive.org/web/20250617174635/https://geizhals.de/gl-inet-flint-2-gl-mt6000-a3168078.html?hloc=at&hloc=de&nocookie=1",
+      "stand": "Webarchiv-Snapshot 2025-06-17 17:46",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "über web.archive.org; CDX: https://web.archive.org/cdx/search/cdx?url=geizhals.de/gl-inet-*"
+    },
+    "geizhals": {
+      "url": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+      "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Geizhals-Produktseite über preisvergleich.heise.de, Artikel a3168078"
     }
   },
   "roh": {
@@ -546,7 +552,19 @@
       "Storage Temperature": "-20°C ~ 70°C",
       "Besonderheit": "ExpressVPN-Oberfläche, 12 Monate ExpressVPN Advanced"
     },
-    "geizhals": {
+    "cnx": {
+      "lieferumfang": "router with four antennas, 12V/4A power supply with a plug adapter (US-type plug), Ethernet cable, Quick Start and Support sheet, registration card",
+      "teardown": "bottom cover sticker with default IP, SSID and WiFi key; two wall mounting holes; four rubber feet with screws; plastic clips; huge heatsink; four 2.4 GHz and four 5 GHz wires to the four antennas; acrylic plate with four screws on the bottom side"
+    },
+    "gluon": {
+      "targets_mediatek_filogic": "kein Eintrag für glinet_gl-mt6000 (Branch main 2026-10-20)",
+      "issue_3439": "GL.iNet GL-MT6000 (Flint2) - Gluon hardware support? (closed, completed, 2025-02-06)"
+    },
+    "werkstatt": {
+      "long_term_todo": "Teil A, Profil schon in OpenWrt 24.10, nur Gluon-Zeile: GL-MT6000, RT-AX59U, WR3000P v1, EAP613 v1 - gluon-patches-hardware 8dbae18",
+      "patch": "device('gl.inet-gl-mt6000', 'glinet_gl-mt6000', { factory = false, })"
+    },
+    "geizhals_archiv": {
       "Produkt": "GL.iNet Flint 2, AX6000 (GL-MT6000)",
       "WAN": "2x RJ-45 (2.5GBase-T)",
       "LAN": "4x RJ-45 (10/100/1000Base-T)",
@@ -565,17 +583,27 @@
       "Preisbereich (Snapshot)": "€ 159,90 bis € 174,00",
       "Dokument": "Datenblatt, Stand 09.04.2024, PDF 7.24 MB"
     },
-    "cnx": {
-      "lieferumfang": "router with four antennas, 12V/4A power supply with a plug adapter (US-type plug), Ethernet cable, Quick Start and Support sheet, registration card",
-      "teardown": "bottom cover sticker with default IP, SSID and WiFi key; two wall mounting holes; four rubber feet with screws; plastic clips; huge heatsink; four 2.4 GHz and four 5 GHz wires to the four antennas; acrylic plate with four screws on the bottom side"
-    },
-    "gluon": {
-      "targets_mediatek_filogic": "kein Eintrag für glinet_gl-mt6000 (Branch main 2026-10-20)",
-      "issue_3439": "GL.iNet GL-MT6000 (Flint2) - Gluon hardware support? (closed, completed, 2025-02-06)"
-    },
-    "werkstatt": {
-      "long_term_todo": "Teil A, Profil schon in OpenWrt 24.10, nur Gluon-Zeile: GL-MT6000, RT-AX59U, WR3000P v1, EAP613 v1 - gluon-patches-hardware 8dbae18",
-      "patch": "device('gl.inet-gl-mt6000', 'glinet_gl-mt6000', { factory = false, })"
+    "geizhals": {
+      "WAN": "2x RJ-45 (2.5GBase-T)",
+      "LAN": "4x RJ-45 (10/100/1000Base-T)",
+      "Wireless": "Wi-Fi 6 (802.11a/b/g/n/ac/ax), simultan",
+      "Übertragungsrate": "1148Mbit/s (2.4GHz), 4804Mbit/s (5GHz)",
+      "Pseudoklasse": "AX6000",
+      "Sicherheit": "WPA, WPA2, WPA3",
+      "Antennen": "4x extern",
+      "Anschlüsse": "1x USB-A 3.0 (5Gb/s)",
+      "Band-Fähigkeiten": "Dual Band (simultan)",
+      "Stromversorgung": "externes Netzteil\nLieferumfang: Netzteil (12V/4A/48W)",
+      "Leistungsaufnahme": "20W (Verbrauch, Betrieb), 12V/4A/48W (max. Netzteilleistung)",
+      "Farbe": "schwarz",
+      "Abmessungen": "233x137x53mm",
+      "Besonderheiten": "MU-MIMO, IPv6, VPN passthrough, unterstützt Mobilfunkmodems (3G/4G)",
+      "802.11ax (Wi-Fi 6 / Wi-Fi 6E) 2.4GHz": "1148Mbit/s",
+      "802.11ax (Wi-Fi 6 / Wi-Fi 6E) 5GHz": "4804Mbit/s",
+      "Hinweis zu alternativer Firmware": "Open-/DD-WRT ist möglicherweise nur für bestimmte Revisionen verfügbar, bitte weiterführende Links beachten!",
+      "Hinweis zur Leistungsaufnahme": "In einigen Fällen entspricht die maximale Verbrauchsangabe des Herstellers nur der maximalen Ausgabeleistung des Netzteils und ist daher keine aussagekräftige Auskunft für den Stromverbrauch im Alltag.",
+      "Letztes Preisupdate": "20.10.2026, 12:00",
+      "Gelistet seit": "09.04.2024, 12:40"
     }
   },
   "felder": {
@@ -658,11 +686,21 @@
         "wert": [
           "GL.iNet Flint 2, AX6000"
         ],
-        "quelle": "geizhals",
+        "quelle": "geizhals_archiv",
         "beleg": "https://web.archive.org/web/20250617174635/https://geizhals.de/gl-inet-flint-2-gl-mt6000-a3168078.html?hloc=at&hloc=de&nocookie=1",
         "stand": "Webarchiv-Snapshot 2025-06-17 17:46",
         "sicherheit": "mittel",
         "bemerkung": ""
+      },
+      {
+        "wert": [
+          "GL.iNet Flint 2, AX6000"
+        ],
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Produkttitel"
       }
     ],
     "erkennung_typenschild": [
@@ -782,11 +820,19 @@
       },
       {
         "wert": "2024-04-09",
-        "quelle": "geizhals",
+        "quelle": "geizhals_archiv",
         "beleg": "https://web.archive.org/web/20250617174635/https://geizhals.de/gl-inet-flint-2-gl-mt6000-a3168078.html?hloc=at&hloc=de&nocookie=1",
         "stand": "Webarchiv-Snapshot 2025-06-17 17:46",
         "sicherheit": "mittel",
         "bemerkung": "Gelistet seit 09.04.2024 bei Geizhals"
+      },
+      {
+        "wert": "2024-04-09",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Gelistet seit 09.04.2024, 12:40 bei Geizhals"
       }
     ],
     "soc": [
@@ -1224,6 +1270,14 @@
         "stand": "Seitenrevision 2025-09-01T03:36:00Z",
         "sicherheit": "mittel",
         "bemerkung": ""
+      },
+      {
+        "wert": "802.11ax",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Zeile \"802.11ax (Wi-Fi 6 / Wi-Fi 6E) 2.4GHz: 1148Mbit/s\"; Gesamtangabe Wi-Fi 6 (802.11a/b/g/n/ac/ax), Dual Band simultan"
       }
     ],
     "wlan_24_streams": [
@@ -1284,6 +1338,14 @@
         "stand": "Seitenrevision 2025-09-01T03:36:00Z",
         "sicherheit": "mittel",
         "bemerkung": ""
+      },
+      {
+        "wert": "802.11ax",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Zeile \"802.11ax (Wi-Fi 6 / Wi-Fi 6E) 5GHz: 4804Mbit/s\""
       }
     ],
     "wlan_5_streams": [
@@ -1323,7 +1385,7 @@
       },
       {
         "wert": "AX6000",
-        "quelle": "geizhals",
+        "quelle": "geizhals_archiv",
         "beleg": "https://web.archive.org/web/20250617174635/https://geizhals.de/gl-inet-flint-2-gl-mt6000-a3168078.html?hloc=at&hloc=de&nocookie=1",
         "stand": "Webarchiv-Snapshot 2025-06-17 17:46",
         "sicherheit": "mittel",
@@ -1336,6 +1398,14 @@
         "stand": "Seitenrevision 2025-09-01T03:36:00Z",
         "sicherheit": "mittel",
         "bemerkung": "series=AX6000"
+      },
+      {
+        "wert": "AX6000",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Pseudoklasse"
       }
     ],
     "wlan_kanalbreite": [
@@ -1448,6 +1518,14 @@
         "stand": "Exhibit 2023-12-06 (Spezifikation REV A, 2023-09-21)",
         "sicherheit": "hoch",
         "bemerkung": "Antennenspezifikation \"2.4/5.85G 外置天线\" mit festen Kabeln (Ø1.37 mm, 110/268 mm) zur Platine"
+      },
+      {
+        "wert": "extern",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Antennen: 4x extern; fest oder abnehmbar nicht angegeben"
       }
     ],
     "antennen_anschluss": [
@@ -1484,6 +1562,14 @@
         "stand": "Datenblatt ver. 20251103",
         "sicherheit": "hoch",
         "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Antennen: 4x extern"
       }
     ],
     "antennen_je_band": [
@@ -1601,11 +1687,34 @@
       },
       {
         "wert": "2x RJ-45 2.5GBase-T (WAN), 4x RJ-45 1000Base-T (LAN)",
-        "quelle": "geizhals",
+        "quelle": "geizhals_archiv",
         "beleg": "https://web.archive.org/web/20250617174635/https://geizhals.de/gl-inet-flint-2-gl-mt6000-a3168078.html?hloc=at&hloc=de&nocookie=1",
         "stand": "Webarchiv-Snapshot 2025-06-17 17:46",
         "sicherheit": "mittel",
         "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "WAN",
+            "anzahl": 2,
+            "geschwindigkeit": "2.5 Gbit/s",
+            "rolle": "WAN",
+            "art": "RJ-45"
+          },
+          {
+            "name": "LAN",
+            "anzahl": 4,
+            "geschwindigkeit": "1 Gbit/s",
+            "rolle": "LAN",
+            "art": "RJ-45"
+          }
+        ],
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "WAN: 2x RJ-45 (2.5GBase-T); LAN: 4x RJ-45 (10/100/1000Base-T)"
       }
     ],
     "ports_anzahl": [
@@ -1624,6 +1733,14 @@
         "stand": "Datenblatt ver. 20251103",
         "sicherheit": "hoch",
         "bemerkung": ""
+      },
+      {
+        "wert": 6,
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "2x WAN + 4x LAN"
       }
     ],
     "nur_eine_buchse": [
@@ -1678,6 +1795,14 @@
         "stand": "Exhibit 2023-12-06 (Druckvorlage ver. 20230914)",
         "sicherheit": "hoch",
         "bemerkung": "Zeichnung \"USB3.0 port\" an der Seitenwand"
+      },
+      {
+        "wert": "1x USB-A 3.0 (5 Gbit/s)",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Anschlüsse"
       }
     ],
     "modem": [
@@ -1691,9 +1816,17 @@
       },
       {
         "wert": "USB-Mobilfunkmodem möglich",
-        "quelle": "geizhals",
+        "quelle": "geizhals_archiv",
         "beleg": "https://web.archive.org/web/20250617174635/https://geizhals.de/gl-inet-flint-2-gl-mt6000-a3168078.html?hloc=at&hloc=de&nocookie=1",
         "stand": "Webarchiv-Snapshot 2025-06-17 17:46",
+        "sicherheit": "mittel",
+        "bemerkung": "Besonderheiten: unterstützt Mobilfunkmodems (3G/4G)"
+      },
+      {
+        "wert": "USB-Mobilfunkmodem möglich",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
         "sicherheit": "mittel",
         "bemerkung": "Besonderheiten: unterstützt Mobilfunkmodems (3G/4G)"
       }
@@ -1812,6 +1945,14 @@
         "stand": "Commit 2023-09-24 (Autor), gemergt 2023-09-28",
         "sicherheit": "mittel",
         "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "aus Netzteilangabe 12V/4A/48W"
       }
     ],
     "dc_strom_a": [
@@ -1838,6 +1979,14 @@
         "stand": "Exhibit 2023-12-06 (PDF erstellt 2023-11-28)",
         "sicherheit": "hoch",
         "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "aus Netzteilangabe 12V/4A/48W"
       }
     ],
     "netzteil_beiliegend": [
@@ -1864,6 +2013,14 @@
         "stand": "Artikel 2023-12-26, aktualisiert 2024-01-27",
         "sicherheit": "niedrig",
         "bemerkung": "12V/4A-Netzteil mit Steckeradapter (Testgerät: US-Stecker)"
+      },
+      {
+        "wert": true,
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Lieferumfang: Netzteil (12V/4A/48W)"
       }
     ],
     "netzteil_daten": [
@@ -1877,7 +2034,7 @@
       },
       {
         "wert": "12 V / 4 A / 48 W",
-        "quelle": "geizhals",
+        "quelle": "geizhals_archiv",
         "beleg": "https://web.archive.org/web/20250617174635/https://geizhals.de/gl-inet-flint-2-gl-mt6000-a3168078.html?hloc=at&hloc=de&nocookie=1",
         "stand": "Webarchiv-Snapshot 2025-06-17 17:46",
         "sicherheit": "mittel",
@@ -1890,6 +2047,14 @@
         "stand": "Seitenrevision 2026-10-18 23:00",
         "sicherheit": "mittel",
         "bemerkung": "Notes: relatively short 3ft (1m) cable"
+      },
+      {
+        "wert": "12 V / 4 A / 48 W",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Stromversorgung: externes Netzteil, Lieferumfang Netzteil (12V/4A/48W)"
       }
     ],
     "leistung_w_max": [
@@ -1911,11 +2076,19 @@
       },
       {
         "wert": 20,
-        "quelle": "geizhals",
+        "quelle": "geizhals_archiv",
         "beleg": "https://web.archive.org/web/20250617174635/https://geizhals.de/gl-inet-flint-2-gl-mt6000-a3168078.html?hloc=at&hloc=de&nocookie=1",
         "stand": "Webarchiv-Snapshot 2025-06-17 17:46",
         "sicherheit": "mittel",
         "bemerkung": "20W (Verbrauch, Betrieb)"
+      },
+      {
+        "wert": 20,
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Leistungsaufnahme: 20W (Verbrauch, Betrieb); 48 W ist nur die max. Netzteilleistung"
       }
     ],
     "leistung_w_typ": [
@@ -2063,11 +2236,19 @@
       },
       {
         "wert": "233 x 137 x 53",
-        "quelle": "geizhals",
+        "quelle": "geizhals_archiv",
         "beleg": "https://web.archive.org/web/20250617174635/https://geizhals.de/gl-inet-flint-2-gl-mt6000-a3168078.html?hloc=at&hloc=de&nocookie=1",
         "stand": "Webarchiv-Snapshot 2025-06-17 17:46",
         "sicherheit": "mittel",
         "bemerkung": ""
+      },
+      {
+        "wert": "233 x 137 x 53",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Abmessungen: 233x137x53mm"
       }
     ],
     "gewicht_g": [
@@ -2606,11 +2787,56 @@
     "geizhals_url": [
       {
         "wert": "https://geizhals.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
-        "quelle": "geizhals",
+        "quelle": "geizhals_archiv",
         "beleg": "https://web.archive.org/web/20250617174635/https://geizhals.de/gl-inet-flint-2-gl-mt6000-a3168078.html?hloc=at&hloc=de&nocookie=1",
         "stand": "Webarchiv-Snapshot 2025-06-17 17:46",
         "sicherheit": "mittel",
         "bemerkung": "Permalink aus Webarchiv-CDX; GL-MT6000 hat keine Hardware-Versionen, Fortify-Variante dort nicht erwähnt"
+      },
+      {
+        "wert": "https://geizhals.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Permalink von der heise-Seite übernommen (gleiche Artikelnummer); GL-MT6000 hat keine Hardware-Versionen"
+      }
+    ],
+    "wlan_datenrate_mbit": [
+      {
+        "wert": {
+          "2.4 GHz": 1148,
+          "5 GHz": 4804
+        },
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Übertragungsrate brutto"
+      }
+    ],
+    "wlan_verschluesselung": [
+      {
+        "wert": [
+          "WPA",
+          "WPA2",
+          "WPA3"
+        ],
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Sicherheit"
+      }
+    ],
+    "farbe": [
+      {
+        "wert": "schwarz",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/gl-inet-flint-2-gl-mt6000-a3168078.html",
+        "stand": "Gelistet seit 09.04.2024; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
       }
     ]
   },
@@ -2660,6 +2886,11 @@
     "datum": "2026-10-20",
     "status": "fertig",
     "anfragen": 31,
-    "notiz": "ToH-Dump + Live-hwdata, OpenWrt-Wiki (inkl. Foto der Seriell/JTAG-Beschriftung), Support-Commit fe10f97, DTS und filogic.mk (main), WikiDevi-Spiegel (Chips, EAN, ASIN, DC-Buchse), FCC 2AFIW-MT6000 (Faltblatt, Label, Antennenspezifikation), GL.iNet Produktseite und Datenblätter Flint 2 (20251103) und Fortify (20260914), Geizhals per Webarchiv, CNX-Teardown, Gluon-Target und Neanderfunk-Patch. DeviWiki ohne Eintrag. Keine Hardware-Versionen bekannt (Platine MT6000-V1.0). Seriell: 4 unbestückte Lötpunkte GND/TX/RX/VCC, 3.3 V, 115200 8N1. Widerspruch Antennen abnehmbar (Dump) vs. fest (Live-hwdata, Wiki, FCC). Lüfter nur abgeleitet (nein)."
+    "notiz": "ToH-Dump + Live-hwdata, OpenWrt-Wiki (inkl. Foto der Seriell/JTAG-Beschriftung), Support-Commit fe10f97, DTS und filogic.mk (main), WikiDevi-Spiegel (Chips, EAN, ASIN, DC-Buchse), FCC 2AFIW-MT6000 (Faltblatt, Label, Antennenspezifikation), GL.iNet Produktseite und Datenblätter Flint 2 (20251103) und Fortify (20260914), Geizhals per Webarchiv, CNX-Teardown, Gluon-Target und Neanderfunk-Patch. DeviWiki ohne Eintrag. Keine Hardware-Versionen bekannt (Platine MT6000-V1.0). Seriell: 4 unbestückte Lötpunkte GND/TX/RX/VCC, 3.3 V, 115200 8N1. Widerspruch Antennen abnehmbar (Dump) vs. fest (Live-hwdata, Wiki, FCC). Lüfter nur abgeleitet (nein).",
+    "geizhals": {
+      "datum": "2026-10-20",
+      "zuordnung": "genau",
+      "ergebnis": "heise-Produktseite a3168078 abgerufen (1 Abruf), Datenblatt nach roh.geizhals, Felder ergänzt; alte Webarchiv-Daten als geizhals_archiv umbenannt; keine EAN/ASIN auf der Seite"
+    }
   }
 }
