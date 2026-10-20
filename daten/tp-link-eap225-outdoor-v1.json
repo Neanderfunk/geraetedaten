@@ -1247,7 +1247,7 @@
         "beleg": "https://fccid.io/TE7EAP225OD/Test-Report/TE7EAP225OD-RF-test-report-2-4GHz-1208-3674619",
         "stand": "Sporton FR790815AA Rev. 01, 2017-11-20",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Testbericht Abschnitt 1: 'For WLAN 2.4GHz (2TX/2RX)' = 2x2"
       },
       {
         "wert": "2 TX / 2 RX, sstreams 3",
@@ -1263,7 +1263,8 @@
         "beleg": "https://www.omadanetworks.com/en/business-networking/omada-wifi-outdoor/eap225-outdoor/v1/",
         "stand": "Live-Seite 2026-10-19 (ohne Datum)",
         "sicherheit": "niedrig",
-        "bemerkung": "vermutlich Fehler der Herstellerseite; Datenblatt nennt 300 Mbps = 2 Streams"
+        "bemerkung": "vermutlich Fehler der Herstellerseite; Datenblatt nennt 300 Mbps = 2 Streams",
+        "widerlegt": "falsch: 2.4 GHz hat 2 Ketten. FCC-Testbericht FR790815AA: 'For WLAN 2.4GHz (2TX/2RX)', Nant 2TX fuer b/g/n (https://fccid.io/TE7EAP225OD/Test-Report/TE7EAP225OD-RF-test-report-2-4GHz-1208-3674619); OpenWrt-Commit 4f86edf 'b/g/n 2x2' (https://github.com/openwrt/openwrt/commit/4f86edf477edbc0f20b5a49a69f658fa82158284); Datenblatt 300 Mbps = MCS15 = 2 Streams. QCA9563 kann 3x3, bestueckt sind nur 2 Ketten; die NSS-3-Angabe passt auch nicht zur Hoechstrate 300 Mbps derselben Zeile"
       }
     ],
     "wlan_5_standard": [
@@ -1323,7 +1324,7 @@
         "beleg": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20%26%20Wi-Fi%205%20Outdoor%20AP.pdf",
         "stand": "PDF 2023-11-07, geaendert 2024-03-11",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "NSS 1-2 = Datenraten fuer 1 und 2 Spatial Streams, hoechstens 2 Streams; deckt sich mit 2x2 (867 Mbps = VHT80 MCS9 NSS2)"
       }
     ],
     "wlan_klasse": [
@@ -1770,7 +1771,7 @@
         "beleg": "https://fccid.io/TE7EAP225OD/Label/TE7EAP225OD-Label-and-location-3674820",
         "stand": "Exhibit 2017-12-13 (PDF 2017-11-24)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Typenschild v1 (FCC 2017): beide Speisearten zulaessig, 24 V 0.5 A Passiv-PoE oder 36-57 V 0.35 A 802.3af"
       },
       {
         "wert": "passiv 24",
@@ -1778,7 +1779,7 @@
         "beleg": "https://static.tp-link.com/upload/product-overview/2024/202403/20240313/Datasheet_Wi-Fi%204%20%26%20Wi-Fi%205%20Outdoor%20AP.pdf",
         "stand": "PDF 2023-11-07, geaendert 2024-03-11",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Eintrag gibt nur die Passiv-Speisung wieder; Datenblatt nennt '802.3af PoE or 24 V Passive PoE' (siehe roh), also wie Typenschild"
       },
       {
         "wert": "passiv 24 (TL-POE2412G)",
@@ -1786,7 +1787,7 @@
         "beleg": "https://fccid.io/TE7EAP225OD/Test-Report/TE7EAP225OD-RF-test-report-2-4GHz-1208-3674619",
         "stand": "Sporton FR790815AA Rev. 01, 2017-11-20",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "nur die Speisung im FCC-Testaufbau (beiliegender Injektor TL-POE2412G, 24 V passiv); schliesst 802.3af nicht aus"
       }
     ],
     "poe_strom_a": [
@@ -2512,6 +2513,17 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "Artikel a1813547 'TP-Link Omada EAP225-Outdoor' mit Hinweis 'Verschiedene Revisionen verfügbar' (v1/v3); nur Link und Rohdaten, keine normalisierten Hardwarewerte, keine EAN/ASIN; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_24_streams: 2 (2x2); Omada-Produktseite 'NSS 1 bis 3' widerlegt (FCC-Testbericht 2TX/2RX, OpenWrt-Commit 2x2, 300 Mbps)"
+      ],
+      "beide_richtig": [
+        "wlan_5_streams: Datenblatt 'NSS 1-2' = hoechstens 2 Streams, gleichbedeutend mit 2x2",
+        "poe_spannung_v: 24 V passiv und 802.3af 36-57 V beide zulaessig (Typenschild, Datenblatt); Testbericht nennt nur den Testinjektor"
+      ],
+      "offen": []
     }
   }
 }

@@ -1637,7 +1637,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/1699c1dc7f26b332f868d338457abfbe716d6ba0",
         "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-16 (Hauke Mehrtens)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Eingangsbereich passiv PoE an Ethernet 1 (eth1/WAN, mode B); zusaetzlich 802.3af an Ethernet 2 (eth0/LAN), Typenschild nennt dafuer die Nennwerte 24 V / 48 V"
       },
       {
         "wert": "passiv 24, 802.3af 48",
@@ -1645,7 +1645,7 @@
         "beleg": "https://fccid.io/WT8OM5PAC2/Label/Label-Info-2622078",
         "stand": "Exhibit 2015-05-22 (PDF \"OM5P-AC_Body Label_0513\" 2015-05-13)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Nennwerte vom Typenschild: 24 V passiv an Ethernet 1 (eth1/WAN, Eingangsbereich 18-24 V lt. Quick Start Guide v1.1 und OpenWrt-Commit), 48 V 802.3af an Ethernet 2 (eth0/LAN); kein Widerspruch zu 18-24"
       },
       {
         "wert": "passiv 24, 802.3af 48",
@@ -1653,7 +1653,7 @@
         "beleg": "https://fccid.io/WT8OM5PAC/Label/Label-Sample-pdf-2629585",
         "stand": "Exhibit 2015-05-29 (PDF 2015-05-28)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Nennwerte vom Typenschild: 24 V passiv an Ethernet 1 (eth1/WAN, Eingangsbereich 18-24 V lt. Quick Start Guide v1.1 und OpenWrt-Commit), 48 V 802.3af an Ethernet 2 (eth0/LAN); kein Widerspruch zu 18-24"
       },
       {
         "wert": "passiv 12-24",
@@ -1661,7 +1661,8 @@
         "beleg": "https://web.archive.org/web/20170914075057/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM5P-AC%20User%20Guide.pdf",
         "stand": "User Guide Version 1.0, PDF 2016-01-22, Archivkopie 2017-09-14",
         "sicherheit": "hoch",
-        "bemerkung": "Widerspruch zu 18-24 V im Commit und in der Quick Start Guide"
+        "bemerkung": "Widerspruch zu 18-24 V im Commit und in der Quick Start Guide",
+        "widerlegt": "12-24 V ist der DC-Eingangsbereich (Typenschild: \"DC Input 12-24V 1A\", getrennt davon \"PoE Input: 24V Passive PoE\", https://fccid.io/WT8OM5PAC2/Label/Label-Info-2622078); fuer passives PoE nennen die neuere Quick Start Guide v1.1 (2016-11, https://web.archive.org/web/20170914095139/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM5P-AC%20Quick%20Start%20Guide%20v1_1.pdf) und die OpenWrt-Commits fuer v1 und v2 (https://github.com/openwrt/openwrt/commit/1699c1dc7f26b332f868d338457abfbe716d6ba0) 18-24 V; User Guide 1.0 (2016-01) aelter"
       },
       {
         "wert": "passiv 18-24",
@@ -1669,7 +1670,7 @@
         "beleg": "https://web.archive.org/web/20170914095139/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM5P-AC%20Quick%20Start%20Guide%20v1_1.pdf",
         "stand": "Quick Start Guide v1.1, PDF 2016-11-29, Archivkopie 2017-09-14",
         "sicherheit": "hoch",
-        "bemerkung": "\"Ethernet 1, 18-24V PoE\""
+        "bemerkung": "\"Ethernet 1, 18-24V PoE\"; Eingangsbereich passiv PoE an Ethernet 1 (eth1/WAN, mode B); zusaetzlich 802.3af an Ethernet 2 (eth0/LAN), Typenschild nennt dafuer die Nennwerte 24 V / 48 V"
       }
     ],
     "poe_pinbelegung": [
@@ -2319,6 +2320,16 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "a1480564 \"Open Mesh OM5P-AC GRP-OM5P-AC\" mit Hinweis \"Verschiedene Revisionen verfügbar\" (OM5P-AC v1/v2): nur Link + roh, keine Hardwarewerte; keine EAN/ASIN; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "poe_spannung_v: passiv 12-24 (openmesh_handbuch) widerlegt, 12-24 V ist DC-Eingang; passives PoE 18-24 V (QSG v1.1, OpenWrt-Commits v1/v2)"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: Typenschild 24 V passiv / 48 V 802.3af = Nennwerte, 18-24 V = Eingangsbereich passiv an Ethernet 1 (eth1/WAN); 802.3af an Ethernet 2 (eth0/LAN)"
+      ],
+      "offen": []
     }
   }
 }

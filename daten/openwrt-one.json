@@ -1427,7 +1427,8 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/797904b3cb4a5c575641c19e7f3989926e4c7902",
         "stand": "Commit 2024-04-04 (Autor), gemergt 2024-05-21",
         "sicherheit": "niedrig",
-        "bemerkung": "Commit-Text 128MB NAND - Vorserie, mit ee798653 auf 256 MB korrigiert"
+        "bemerkung": "Commit-Text 128MB NAND - Vorserie, mit ee798653 auf 256 MB korrigiert",
+        "widerlegt": "Vorserien-Angabe; Serienplatine hat 256 MB SPI-NAND laut OpenWrt-Commit ee798653 ('The final version of the PCB has 256MB NAND instead of 128MB.') https://github.com/openwrt/openwrt/commit/ee798653f3a9f5cd2fcd2c483f764fecd9ce80c9 und BPI-Doku https://docs.banana-pi.org/en/OpenWRT-One/BananaPi_OpenWRT-One"
       },
       {
         "wert": 128,
@@ -1435,7 +1436,8 @@
         "beleg": "https://github.com/freifunk-gluon/gluon/commit/55d654ffdc86d3b6dfb31e5a7d8c9215f69ccc8e",
         "stand": "Commit 2025-03-09 (PR #3446, eroeffnet 2025-03-05)",
         "sicherheit": "niedrig",
-        "bemerkung": "Spezifikation aus dem OpenWrt-Commit übernommen (veraltet)"
+        "bemerkung": "Spezifikation aus dem OpenWrt-Commit übernommen (veraltet)",
+        "widerlegt": "Spezifikation aus OpenWrt-Commit 797904b (Vorserie) uebernommen; Serie 256 MB SPI-NAND laut https://github.com/openwrt/openwrt/commit/ee798653f3a9f5cd2fcd2c483f764fecd9ce80c9"
       },
       {
         "wert": 128,
@@ -1443,7 +1445,8 @@
         "beleg": "https://one.openwrt.org/hardware/BPI_OpenWRT_ONE_V10_SCH_20240618-R.pdf",
         "stand": "Schaltplan V1.0, 2024-06-18 (8 Seiten)",
         "sicherheit": "niedrig",
-        "bemerkung": "Schaltplan V1.0 vom 2024-06-18: SPIM-NAND 128MB, W25N01GVZEIG"
+        "bemerkung": "Schaltplan V1.0 vom 2024-06-18: SPIM-NAND 128MB, W25N01GVZEIG",
+        "widerlegt": "Schaltplan V1.0 vom 2024-06-18 zeigt noch W25N01GV (128 MB); Serienplatine laut OpenWrt-Commit ee798653 (2024-08/09) mit 256 MB NAND: https://github.com/openwrt/openwrt/commit/ee798653f3a9f5cd2fcd2c483f764fecd9ce80c9"
       },
       {
         "wert": 128,
@@ -1451,7 +1454,8 @@
         "beleg": "https://sfconservancy.org/activities/openwrt-one.html",
         "stand": "Live-Seite 2026-10-19 (ohne Datum)",
         "sicherheit": "niedrig",
-        "bemerkung": "'128 MiB SPI NAND + 4 MiB SPI NOR' - Angaben aus der Entwurfsphase"
+        "bemerkung": "'128 MiB SPI NAND + 4 MiB SPI NOR' - Angaben aus der Entwurfsphase",
+        "widerlegt": "Entwurfsangabe (128 MiB NAND + 4 MiB NOR); Serie 256 MB SPI-NAND + 16 MB SPI-NOR laut https://github.com/openwrt/openwrt/commit/ee798653f3a9f5cd2fcd2c483f764fecd9ce80c9 und https://docs.banana-pi.org/en/OpenWRT-One/BananaPi_OpenWRT-One"
       }
     ],
     "flash_nand_mb": [
@@ -2333,7 +2337,8 @@
         "beleg": "https://sfconservancy.org/activities/openwrt-one.html",
         "stand": "Live-Seite 2026-10-19 (ohne Datum)",
         "sicherheit": "niedrig",
-        "bemerkung": "'direct power via the USB-C power port with 12V USB-PD' - Entwurfsangabe"
+        "bemerkung": "'direct power via the USB-C power port with 12V USB-PD' - Entwurfsangabe",
+        "widerlegt": "Entwurfsangabe 12 V; Schaltplan bestueckt PD-Sink CH224K mit CFG1 56K = 15 V (Blockdiagramm 'USB TYPEC PD,15V') https://one.openwrt.org/hardware/BPI_OpenWRT_ONE_V10_SCH_20240618-R.pdf, BPI-Doku 15V USB-PD https://docs.banana-pi.org/en/OpenWRT-One/BananaPi_OpenWRT-One"
       },
       {
         "wert": "12-25",
@@ -2341,7 +2346,8 @@
         "beleg": "https://forum.openwrt.org/t/openwrt-one-celebrating-20-years-of-openwrt/183684",
         "stand": "Thread 2024-01-09 bis 2024-07-22 (367 Beitraege), Beitrag #1 vom 2024-01-09 (bearbeitet 2024-01-15)",
         "sicherheit": "niedrig",
-        "bemerkung": "Projektvorschlag 2024-01: 'USB-PD 12-25V'"
+        "bemerkung": "Projektvorschlag 2024-01: 'USB-PD 12-25V'",
+        "widerlegt": "Projektvorschlag 2024-01 ('USB-PD 12-25V'), nicht das Serienprodukt; Serie fordert per CH224K fest 15 V an: https://one.openwrt.org/hardware/BPI_OpenWRT_ONE_V10_SCH_20240618-R.pdf, https://docs.banana-pi.org/en/OpenWRT-One/BananaPi_OpenWRT-One"
       }
     ],
     "dc_strom_a": [
@@ -3069,6 +3075,15 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Artikel a3338412 'OpenWrt One' (gelistet seit 25.10.2024), Datenblatt übernommen; keine EAN/ASIN auf der Seite; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 256 (Serie, OpenWrt-Commit ee798653 + BPI-Doku); 128 aus openwrt_git, gluon_commit, one_schaltplan, sfc widerlegt (Vorserie/Entwurf)",
+        "dc_spannung_v: 15 (USB-PD, CH224K auf 15 V bestueckt laut Schaltplan, BPI-Doku); 12 (sfc) und 12-25 (Forum-Projektvorschlag) widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

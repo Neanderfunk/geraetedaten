@@ -1424,7 +1424,8 @@
         "beleg": "https://web.archive.org/web/20160116002028/http://geizhals.de/tp-link-cpe510-a1156684.html",
         "stand": "Webarchiv-Kopie 2016-01-16",
         "sicherheit": "niedrig",
-        "bemerkung": "Stand 2016 = v1-Daten"
+        "bemerkung": "Stand 2016 = v1-Daten",
+        "widerlegt": "Stand 2016 vor Erscheinen von v2 = CPE510-v1-Daten (v1 hat 2 Ports); v2 hat nur einen Port: OpenWrt-DTS bindet ar9344_tplink_cpe_1port.dtsi ein (https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9344_tplink_cpe510-v2.dts), V2-Spezifikation \"1 10/100Mbps Shielded Ethernet Port (LAN0,Passive PoE in)\" (https://www.tp-link.com/en/business-networking/outdoor-radio/cpe510/v2/), FCC-Außenfotos zeigen eine RJ45"
       },
       {
         "wert": "2 (\"Dual Ethernet Ports √\")",
@@ -1432,7 +1433,16 @@
         "beleg": "https://www.tp-link.com/en/business-networking/outdoor-radio/cpe510/v2/",
         "stand": "Live-Seite 2026-10-20 (ohne Datum), Version V2 gewählt",
         "sicherheit": "niedrig",
-        "bemerkung": "Vergleichstabelle der Serie auf derselben Seite, widerspricht der V2-Spezifikation"
+        "bemerkung": "Vergleichstabelle der Serie auf derselben Seite, widerspricht der V2-Spezifikation",
+        "widerlegt": "Serien-Vergleichstabelle (alle Spalten gleich, nicht versionsbezogen); die V2-Spezifikation derselben Seite nennt \"1 10/100Mbps Shielded Ethernet Port (LAN0,Passive PoE in)\", OpenWrt-DTS bindet ar9344_tplink_cpe_1port.dtsi ein (https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9344_tplink_cpe510-v2.dts)"
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9344_tplink_cpe510-v2.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "#include \"ar9344_tplink_cpe_1port.dtsi\" (Ein-Port-Variante der CPE-Serie)"
       }
     ],
     "nur_eine_buchse": [
@@ -1518,7 +1528,7 @@
         "beleg": "https://www.tp-link.com/en/business-networking/outdoor-radio/cpe510/v2/",
         "stand": "Live-Seite 2026-10-20 (ohne Datum), Version V2 gewählt",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Nennwert 24 V passives PoE und zulässiger Bereich 16-27 VDC, beide aus der V2-Spezifikation"
       },
       {
         "wert": "16-27",
@@ -1526,7 +1536,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe510_v2",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "zulässiger Eingangsspannungsbereich (passives PoE, laut V2-Spezifikation \"Voltage range: 16-27VDC\"); Nennwert 24 V"
       },
       {
         "wert": 24,
@@ -1534,7 +1544,7 @@
         "beleg": "https://fccid.io/TE7CPE510V2/Label/label-CPE510-FCC-2017-07-20-3532313",
         "stand": "Exhibit 2017-08-29 (Zeichnung \"CPE510(UN) 2.0 壳体丝印\" vom 2017-02-06, PDF 2017-07-20)",
         "sicherheit": "hoch",
-        "bemerkung": "Gravur \"24V ⎓ 0.6A\""
+        "bemerkung": "Gravur \"24V ⎓ 0.6A\"; Nennwert 24 V passives PoE; zulässiger Bereich 16-27 V"
       },
       {
         "wert": 24,
@@ -1542,7 +1552,7 @@
         "beleg": "https://fccid.io/TE7CPE510V2/Test-Report/1722006R-RF-FCC-FCC-Part15-407-5GHz-300Mbps-13dBi-Outdoor-CPE-CPE510-V1-2-2017-0-3532318",
         "stand": "DEKRA 1722006R-RF-US-P09V02 V1.2, 2017-07-10",
         "sicherheit": "hoch",
-        "bemerkung": "EUT Voltage DC 24V"
+        "bemerkung": "EUT Voltage DC 24V; Nennwert 24 V passives PoE; zulässiger Bereich 16-27 V"
       }
     ],
     "poe_pinbelegung": [
@@ -2336,6 +2346,16 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "Artikel a1156684 \"TP-Link Pharos CPE510\" (Hinweis \"Verschiedene Revisionen verfügbar.\", gelistet seit 25.08.2014); nur Link und Rohdaten übernommen, keine Hardwarewerte; keine EAN/ASIN auf der Seite; 1 heise-Abruf"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ports_anzahl: 1 (OpenWrt-DTS cpe_1port, V2-Spezifikation, FCC-Außenfotos); 2 aus geizhals_2016 (v1-Stand) und aus der Serien-Vergleichstabelle widerlegt"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: 24 V ist der Nennwert (Typenschild-Gravur, Testbericht), 16-27 V der zulässige Eingangsbereich (V2-Spezifikation, ToH)"
+      ],
+      "offen": []
     }
   }
 }

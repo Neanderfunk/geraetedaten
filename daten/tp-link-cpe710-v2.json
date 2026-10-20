@@ -1361,7 +1361,7 @@
         "beleg": "https://www.tp-link.com/de/business-networking/pharos-cpe/cpe710/",
         "stand": "Live-Seite 2026-10-20 (ohne Datum, Seite als data-version V1 markiert)",
         "sicherheit": "mittel",
-        "bemerkung": "\"Voltage range: 16-27V DC\"; Produktseite ohne Versionsangabe"
+        "bemerkung": "\"Voltage range: 16-27V DC\"; Produktseite ohne Versionsangabe; 24 V = Nennwert des Adapters, 16-27 V = zulässiger Eingangsbereich, beides gilt"
       },
       {
         "wert": "16-27",
@@ -1369,7 +1369,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe710_v2",
         "stand": "Seitenrevision 2026-08-01 08:26",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "Zulässiger Eingangsspannungsbereich passive PoE (\"16-27 VDC passive PoE\"); Nennwert des mitgelieferten Adapters 24 V (Datenblatt)"
       },
       {
         "wert": 24,
@@ -1377,7 +1377,7 @@
         "beleg": "https://static.tp-link.com/upload/product-overview/2026/202609/20260924/CPE%20series-Datasheet(CPE210,%20CPE220,%20CPE510,%20CPE605,%20CPE610,%20CPE710).pdf",
         "stand": "PDF 2023-08-28, geändert 2026-09-24",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Nennspannung des mitgelieferten Passive-PoE-Adapters (\"24 VDC / 0.25 A Passive PoE\", Installation Guide: \"24 V passive PoE adapter included\"); zulässiger Eingangsbereich am Gerät 16-27 V DC (Produktseite)"
       }
     ],
     "poe_pinbelegung": [
@@ -1982,6 +1982,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "Permalink a2661954 direkt abgerufen (1 heise-Abruf); Artikel \"TP-Link Pharos CPE710\" mit Hinweis \"Verschiedene Revisionen verfügbar.\", keine Versionsangabe; nur geizhals_url und roh.geizhals eingetragen, keine normalisierten Hardwarewerte, keine EAN/ASIN auf der Seite"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "poe_spannung_v: 24 V = Nennspannung des mitgelieferten Passive-PoE-Adapters (Datenblatt, Installation Guide), 16-27 V DC = zulässiger Eingangsbereich (Produktseite, OpenWrt hwdata)"
+      ],
+      "offen": []
     }
   }
 }

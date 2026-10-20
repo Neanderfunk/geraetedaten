@@ -1163,7 +1163,7 @@
         "beleg": "https://www.plasma-cloud.com/product-detail/pa300e/",
         "stand": "Live-Seite 2026-10-20 (ohne Datum)",
         "sicherheit": "hoch",
-        "bemerkung": "passiv"
+        "bemerkung": "passiv; gilt fuer den passiven PoE-Eingang (24 V/1 A, Mode B); das Geraet hat zusaetzlich einen 802.3af/at-Eingang (48-54 V), beide Werte richtig"
       },
       {
         "wert": 24,
@@ -1171,7 +1171,7 @@
         "beleg": "https://www.plasma-cloud.com/wp-content/uploads/2021/12/QSG-PA300-PA300E_v1.3.pdf",
         "stand": "QSG v1.3, PDF 2020-12-03",
         "sicherheit": "hoch",
-        "bemerkung": "passiv, Injektor 24V/1A"
+        "bemerkung": "passiv, Injektor 24V/1A; gilt fuer den passiven PoE-Eingang (24 V/1 A, Mode B); das Geraet hat zusaetzlich einen 802.3af/at-Eingang (48-54 V), beide Werte richtig"
       },
       {
         "wert": 24,
@@ -1179,7 +1179,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/17e592049005f3f7e65429966b21b2d834f9c2f0",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-22",
         "sicherheit": "mittel",
-        "bemerkung": "passiv Mode B"
+        "bemerkung": "passiv Mode B; gilt fuer den passiven PoE-Eingang (24 V/1 A, Mode B); das Geraet hat zusaetzlich einen 802.3af/at-Eingang (48-54 V), beide Werte richtig"
       },
       {
         "wert": 24,
@@ -1187,7 +1187,7 @@
         "beleg": "https://www.plasma-cloud.com/wp-content/uploads/2019/02/plasma-cloud-pa300-pa300e-rear.jpg",
         "stand": "Bild hochgeladen 2019-02 (Pfad)",
         "sicherheit": "hoch",
-        "bemerkung": "an Ethernet 2 beschriftet"
+        "bemerkung": "an Ethernet 2 beschriftet; gilt fuer den passiven PoE-Eingang (24 V/1 A, Mode B); das Geraet hat zusaetzlich einen 802.3af/at-Eingang (48-54 V), beide Werte richtig"
       },
       {
         "wert": "48-54",
@@ -1195,7 +1195,7 @@
         "beleg": "https://www.plasma-cloud.com/wp-content/uploads/2021/12/QSG-PA300-PA300E_v1.3.pdf",
         "stand": "QSG v1.3, PDF 2020-12-03",
         "sicherheit": "hoch",
-        "bemerkung": "802.3af/at, Injektor 48-54V/0.5A"
+        "bemerkung": "802.3af/at, Injektor 48-54V/0.5A; gilt fuer den 802.3af/at-PoE-Eingang; das Geraet hat zusaetzlich einen passiven 24-V-Eingang, beide Werte richtig (QSG: 'powered by ... 24V/1A passive PoE injector ... 48-54V/0.5A PoE injector (802.3af/at)')"
       },
       {
         "wert": "48-54",
@@ -1203,7 +1203,7 @@
         "beleg": "https://www.plasma-cloud.com/wp-content/uploads/2019/02/plasma-cloud-pa300-pa300e-rear.jpg",
         "stand": "Bild hochgeladen 2019-02 (Pfad)",
         "sicherheit": "hoch",
-        "bemerkung": "an Ethernet 1 beschriftet"
+        "bemerkung": "an Ethernet 1 beschriftet; gilt fuer den 802.3af/at-PoE-Eingang; das Geraet hat zusaetzlich einen passiven 24-V-Eingang, beide Werte richtig (QSG: 'powered by ... 24V/1A passive PoE injector ... 48-54V/0.5A PoE injector (802.3af/at)')"
       }
     ],
     "poe_pinbelegung": [
@@ -1938,6 +1938,14 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "Kein Geizhals-Artikel: heise-Suche 'Plasma Cloud PA300E' nur unscharfe Fremdtreffer (Switches, HDDs, Objektive), Suche 'Plasma Cloud' 3 Fremdtreffer (Asics, UAG), Hersteller Plasma Cloud bei Geizhals nicht gelistet. 2 heise-Abrufe."
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "poe_spannung_v: 24 (passiver PoE-Eingang) und 48-54 (802.3af/at-Eingang) gelten beide; zwei getrennte PoE-Eingaenge laut QSG v1.3, Datenblatt v1.2 und OpenWrt-Commit 17e5920"
+      ],
+      "offen": []
     }
   }
 }

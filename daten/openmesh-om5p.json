@@ -1829,7 +1829,8 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/80713657b20d58c2fb7fa503e24cbf7db379550f",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
         "sicherheit": "mittel",
-        "bemerkung": "Widerspruch zur Herstellerangabe 12-24 V"
+        "bemerkung": "Widerspruch zur Herstellerangabe 12-24 V",
+        "widerlegt": "Typenschild nennt \"PoE Input: 12~24V Passive PoE\" (https://fccid.io/WT8OM5P/Label/Label-and-Location-pdf-1976126), Hersteller-Shopseite \"passive 12-24v PoE\" (https://web.archive.org/web/20140724075503/http://www.open-mesh.com:80/products/access-points/om5p.html); FCC-Test lief mit 12 V ueber PoE-Injektor EnGenius EPE-1212 (https://fccid.io/WT8OM5P/Test-Report/Test-Report-DTS-pdf-1976130) - Untergrenze 18 V ist fuer dieses Geraet falsch"
       },
       {
         "wert": 12,
@@ -1837,7 +1838,7 @@
         "beleg": "https://fccid.io/WT8OM5P/Test-Report/Test-Report-DTS-pdf-1976130",
         "stand": "Bureau Veritas RF130313C16, issued 2013-03-27",
         "sicherheit": "mittel",
-        "bemerkung": "Testaufbau \"12Vdc (Adapter or POE)\" mit PoE-Injektor EnGenius EPE-1212"
+        "bemerkung": "Testaufbau \"12Vdc (Adapter or POE)\" mit PoE-Injektor EnGenius EPE-1212; nur Pruefspannung im FCC-Test, kein Bereich - liegt im Bereich 12-24 V des Typenschilds"
       }
     ],
     "poe_pinbelegung": [
@@ -1911,7 +1912,8 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/80713657b20d58c2fb7fa503e24cbf7db379550f",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-30",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "",
+        "widerlegt": "Typenschild (Herstellerangabe) nennt \"DC Input: 12~20V, 1~1.2A\" (https://fccid.io/WT8OM5P/Label/Label-and-Location-pdf-1976126); 24 V nennt der Hersteller nur fuer den Passive-PoE-Eingang, keine Herstellerquelle fuer 24 V an der DC-Buchse; Commit-Text vermischt vermutlich DC- und PoE-Bereich"
       },
       {
         "wert": "12-24",
@@ -1919,7 +1921,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "\"12-24 VDC, 1.0 A\""
+        "bemerkung": "\"12-24 VDC, 1.0 A\"",
+        "widerlegt": "Typenschild (Herstellerangabe) nennt \"DC Input: 12~20V, 1~1.2A\" (https://fccid.io/WT8OM5P/Label/Label-and-Location-pdf-1976126); 24 V nennt der Hersteller nur fuer den Passive-PoE-Eingang, keine Herstellerquelle fuer 24 V an der DC-Buchse; ToH uebernimmt die Angabe des OpenWrt-Commits 80713657"
       },
       {
         "wert": 12,
@@ -1927,7 +1930,7 @@
         "beleg": "https://fccid.io/WT8OM5P/Test-Report/Test-Report-DTS-pdf-1976130",
         "stand": "Bureau Veritas RF130313C16, issued 2013-03-27",
         "sicherheit": "hoch",
-        "bemerkung": "Testnetzteil 12 V"
+        "bemerkung": "Testnetzteil 12 V; nur Pruefspannung (Netzteil DVE DSA-15P-12, 12 V 1.25 A), kein Bereich - liegt im Bereich 12-20 V des Typenschilds"
       }
     ],
     "dc_strom_a": [
@@ -2559,6 +2562,15 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "heise-Suche 'Open-Mesh OM5P' und 'OM5P' (2 Abrufe): nur Open Mesh OM5P-AN (a1480555) und OM5P-AC GRP-OM5P-AC (a1480564), beides Schwestermodelle mit eigenem Image; kein Artikel fuer das einbandige OM5P"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "poe_spannung_v: 12-24 V passiv (Typenschild, Herstellerseite, FCC-Test mit 12 V PoE); 18-24 V aus OpenWrt-Commit widerlegt",
+        "dc_spannung_v: 12-20 V (Typenschild); 12-24 V aus OpenWrt-Commit und ToH widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

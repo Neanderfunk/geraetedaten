@@ -956,7 +956,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_eap613_v1",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "Dump-Wert, zählt Threads; Live-Seite inzwischen 2"
+        "bemerkung": "Dump-Wert, zählt Threads; Live-Seite inzwischen 2",
+        "widerlegt": "Zählt Hardware-Threads statt Kerne: MT7621AT = 2 MIPS-1004Kc-Kerne mit je 2 VPE; OpenWrt-Bootlog eines EAP613 v1 'VPE topology {2,2} total 4' (https://openwrt.org/toh/tp-link/eap610_v3?do=export_raw), Live-hwdata inzwischen 2 (https://openwrt.org/toh/hwdata/tp-link/tp-link_eap613_v1?do=export_raw)"
       }
     ],
     "cpu_mhz": [
@@ -1527,7 +1528,7 @@
         "beleg": "https://fccid.io/2AXJ4EAP610V3/Label/4-Label-and-location-5852921",
         "stand": "Exhibit 2022-05-05 (Zeichnung EAP610(EU) 3.0 vom 2021-11-24)",
         "sicherheit": "hoch",
-        "bemerkung": "Beleg gilt für den baugleichen EAP610 v3; EAP613 v1 ist laut OpenWrt/firmware-utils ein Rebrand davon"
+        "bemerkung": "Beleg gilt für den baugleichen EAP610 v3; EAP613 v1 ist laut OpenWrt/firmware-utils ein Rebrand davon; gilt für den Eingang nach IEEE 802.3af/at (Normbereich am Typenschild des EAP610 v3), nicht für passives PoE"
       },
       {
         "wert": "48 (passiv)",
@@ -1535,7 +1536,7 @@
         "beleg": "https://www.omadanetworks.com/en/business-networking/omada-wifi-ceiling-mount/eap613/v1/",
         "stand": "Produktseite V1, abgerufen 2026-10-20 (ohne Datumsangabe)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "gilt für passives 48-V-PoE, das laut Produktseite V1 zusätzlich zu 802.3at-PoE unterstützt wird; schließt den Normbereich 36-57 V nicht aus"
       }
     ],
     "poe_strom_a": [
@@ -2137,6 +2138,16 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "a2929693 (TP-Link Omada EAP613, AX1800) ohne Versionsangabe, V1 und V2 existieren: nur Link und roh.geizhals, keine normalisierten Werte; keine EAN/ASIN; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "cpu_kerne: 2 (MT7621AT, 2 Kerne x 2 Threads); toh-Wert 4 widerlegt"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: 36-57 V gilt für 802.3af/at-PoE (Typenschild EAP610 v3), 48 V für passives PoE (Produktseite V1); Gerät kann beides"
+      ],
+      "offen": []
     }
   }
 }

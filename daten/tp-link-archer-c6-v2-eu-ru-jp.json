@@ -1077,7 +1077,8 @@
         "beleg": "router-werkstatt/docs/freigabe-2025.1-pruefpunkte.md Abschnitt \"Feld-Testlauf 26100702bro (adorfer, 10.10.2026)\", Zeile 301",
         "stand": "Dokumente Stand 2026-10-19 (Abschnitte vom 10.10. und 14.10.2026)",
         "sicherheit": "hoch",
-        "bemerkung": "WIDERSPRUCH: Feldknoten im Feld-Testlauf 26100702bro mit \"64 MB\" notiert; Wert stammt aus Kartendaten (respondd nicht erreichbar), nicht aus eigener Messung am Gerät; alle anderen Quellen und Bootlogs nennen 128 MB"
+        "bemerkung": "WIDERSPRUCH: Feldknoten im Feld-Testlauf 26100702bro mit \"64 MB\" notiert; Wert stammt aus Kartendaten (respondd nicht erreichbar), nicht aus eigener Messung am Gerät; alle anderen Quellen und Bootlogs nennen 128 MB",
+        "widerlegt": "64 MB stammt aus Kartendaten eines Feldknotens, nicht aus Messung am Gerät; RAM-Chip Zentel A3R1GE40JBF = 128 MiB DDR2 laut OpenWrt-Support-Commit (https://github.com/openwrt/openwrt/commit/d03aae1a09fce5a5d5747855bc07ee1f54388e03), Bootlogs im OpenWrt-Wiki: U-Boot \"DRAM: 128 MB\", Kernel \"memory: 08000000\" (https://openwrt.org/toh/tp-link/archer_c6_v2)"
       }
     ],
     "ram_typ": [
@@ -1356,7 +1357,7 @@
         "beleg": "https://static.tp-link.com/2019/201903/20190308/Archer%20C6(EU)2.0_Datasheet.pdf",
         "stand": "PDF 2019-03-08",
         "sicherheit": "hoch",
-        "bemerkung": "2.4 GHz bis 300 Mbit/s"
+        "bemerkung": "2.4 GHz bis 300 Mbit/s; gilt für räumliche Streams (2 SS, max. 300 Mbit/s bei 2.4 GHz; FCC-Grant \"2x2 Spatial Multiplexing\", https://fccid.io/TE7A6); die Funkketten sind 3 (3T3R, siehe Einträge \"3x3 (Ketten)\")"
       },
       {
         "wert": 2,
@@ -1364,7 +1365,7 @@
         "beleg": "https://fccid.io/TE7A6",
         "stand": "Grant 2018-12-04 (Original Equipment)",
         "sicherheit": "hoch",
-        "bemerkung": "\"2x2 Spatial Multiplexing MIMO configuration\""
+        "bemerkung": "\"2x2 Spatial Multiplexing MIMO configuration\"; gilt für räumliche Streams (2 SS, max. 300 Mbit/s bei 2.4 GHz; FCC-Grant \"2x2 Spatial Multiplexing\", https://fccid.io/TE7A6); die Funkketten sind 3 (3T3R, siehe Einträge \"3x3 (Ketten)\")"
       },
       {
         "wert": 2,
@@ -1372,7 +1373,7 @@
         "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C6_v2.x",
         "stand": "Seitenrevision 2019-07-19T02:24:19Z",
         "sicherheit": "mittel",
-        "bemerkung": "Infobox: wi1_txchains 2, wi1_rxchains 2, wi1_sstreams 2"
+        "bemerkung": "Infobox: wi1_txchains 2, wi1_rxchains 2, wi1_sstreams 2; gilt für räumliche Streams (2 SS, max. 300 Mbit/s bei 2.4 GHz; FCC-Grant \"2x2 Spatial Multiplexing\", https://fccid.io/TE7A6); die Funkketten sind 3 (3T3R, siehe Einträge \"3x3 (Ketten)\"); Infobox-Angabe txchains/rxchains 2 widerspricht der eigenen Chipzeile \"QCA9563 int. (3x3)\" und dem FCC-MPE-Bericht"
       },
       {
         "wert": "3x3 (Ketten)",
@@ -1380,7 +1381,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/d03aae1a09fce5a5d5747855bc07ee1f54388e03",
         "stand": "Commit 2018-12-28 (Autor), gemergt 2018-12-31",
         "sicherheit": "hoch",
-        "bemerkung": "\"2.4GHz (bgn) QCA9563 integrated (3x3)\"; Widerspruch zu 2 Streams nur scheinbar: drei Antennen/Ketten, zwei räumliche Streams"
+        "bemerkung": "\"2.4GHz (bgn) QCA9563 integrated (3x3)\"; Widerspruch zu 2 Streams nur scheinbar: drei Antennen/Ketten, zwei räumliche Streams; gilt für Sende-/Empfangsketten (3T3R: drei 2.4-GHz-Antennen 2.4G ANT 1-3 laut FCC-MPE-Bericht https://fccid.io/TE7A6/RF-Exposure-Info/13-FCC-MPE-4086312 und Innenfotos); räumliche Streams nur 2 (300 Mbit/s)"
       },
       {
         "wert": "3x3 (Ketten)",
@@ -1388,7 +1389,7 @@
         "beleg": "https://fccid.io/TE7A6/RF-Exposure-Info/13-FCC-MPE-4086312",
         "stand": "BTL-FCCP-3-1808C223 R00, Tests 2018-10-08 bis 2018-10-23",
         "sicherheit": "hoch",
-        "bemerkung": "\"This EUT supports MIMO 3X3\", drei 2.4-GHz-Antennen"
+        "bemerkung": "\"This EUT supports MIMO 3X3\", drei 2.4-GHz-Antennen; gilt für Sende-/Empfangsketten (3T3R: drei 2.4-GHz-Antennen 2.4G ANT 1-3 laut FCC-MPE-Bericht https://fccid.io/TE7A6/RF-Exposure-Info/13-FCC-MPE-4086312 und Innenfotos); räumliche Streams nur 2 (300 Mbit/s)"
       },
       {
         "wert": 2,
@@ -1396,7 +1397,7 @@
         "beleg": "https://preisvergleich.heise.de/tp-link-archer-c6-v2-0-a2257565.html",
         "stand": "Gelistet seit 24.03.2020; abgerufen 2026-10-20",
         "sicherheit": "mittel",
-        "bemerkung": "abgeleitet aus Übertragungsrate \"300Mbps (2.4GHz)\""
+        "bemerkung": "abgeleitet aus Übertragungsrate \"300Mbps (2.4GHz)\"; gilt für räumliche Streams (2 SS, max. 300 Mbit/s bei 2.4 GHz; FCC-Grant \"2x2 Spatial Multiplexing\", https://fccid.io/TE7A6); die Funkketten sind 3 (3T3R, siehe Einträge \"3x3 (Ketten)\")"
       }
     ],
     "wlan_5_standard": [
@@ -2707,6 +2708,16 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Suche: Versionsartikel a2257565 \"TP-Link Archer C6 V2.0\" (daneben Sammelartikel a1908352 ohne Version); Datenblatt nach roh.geizhals, 13 Felder ergänzt; Leistungsaufnahme keine Angabe; keine EAN/ASIN auf der Seite; Hinweis \"Verschiedene Revisionen\" und einziges Angebot V6.0 in bemerkung; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ram_mb: 64 MB (werkstatt, Kartendaten) widerlegt; 128 MB laut Chip Zentel A3R1GE40JBF (OpenWrt-Commit d03aae1) und Bootlogs"
+      ],
+      "beide_richtig": [
+        "wlan_24_streams: 3 Ketten (3T3R, drei 2.4-GHz-Antennen, FCC-MPE) und 2 räumliche Streams (300 Mbit/s, FCC-Grant 2x2 Spatial Multiplexing); nach Ketten-Definition gilt 3"
+      ],
+      "offen": []
     }
   }
 }

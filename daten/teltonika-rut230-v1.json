@@ -193,6 +193,12 @@
       "stand": "Gelistet seit 03.08.2022; abgerufen 2026-10-20",
       "bemerkung": "Artikel \"Teltonika RUT230\" ohne Hardware-Versionsangabe; RUT230 gibt es als v0 (HW Ver 01-04) und v1 (HW Ver ab 05); Seite verweist auf OpenWrt-Techdata RUT230",
       "abgerufen": "2026-10-20"
+    },
+    "wikidevi_ar9331": {
+      "url": "https://wikidevi.wi-cat.ru/Atheros_AR9331",
+      "stand": "Wiki-Seite (Rohtext) am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "datei": "cache/teltonika-rut230-v1/pruefung/wikidevi_ar9331.txt"
     }
   },
   "roh": {
@@ -1128,7 +1134,16 @@
         "beleg": "https://github.com/openwrt/openwrt/pull/2873",
         "stand": "PR 2020-03-31, geschlossen ohne Merge 2020-07-29",
         "sicherheit": "niedrig",
-        "bemerkung": "nicht gemergter PR von 2020; Widerspruch zu 1T1R im gemergten Commit und zu nur einem WLAN-Antennenanschluss"
+        "bemerkung": "nicht gemergter PR von 2020; Widerspruch zu 1T1R im gemergten Commit und zu nur einem WLAN-Antennenanschluss",
+        "widerlegt": "AR9330/AR9331 (Hornet) hat nur ein integriertes 1T1R-Radio (WikiDevi: 802.11bgn 1T1R, https://wikidevi.wi-cat.ru/Atheros_AR9331); gemergter OpenWrt-Commit nennt 'AR9331 1T1R' (https://github.com/openwrt/openwrt/commit/6cf1dfd7e1d6b5c6a94b87eb065408bb489574c0); der PR selbst nennt nur 1x RP-SMA fuer WLAN"
+      },
+      {
+        "wert": "1x1 (1T1R)",
+        "quelle": "wikidevi_ar9331",
+        "beleg": "https://wikidevi.wi-cat.ru/Atheros_AR9331",
+        "stand": "Wiki-Seite (Rohtext) am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "SoC-Angabe: AR9331 'WiSoC 802.11bgn 1T1R (1x2:1)', max. 150 Mbit/s bei 40 MHz; RUT230 v1 nutzt AR9331 (DTS ar9331_teltonika_rut230-v1.dts)"
       }
     ],
     "wlan_5_standard": [
@@ -1310,7 +1325,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/teltonika/teltonika_rut230",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "ToH-Wert vermutlich unvollständig"
+        "bemerkung": "ToH-Wert vermutlich unvollständig",
+        "widerlegt": "Hersteller nennt 2 x RJ45 10/100 (1 WAN + 1 LAN, https://web.archive.org/web/20210121214028/https://teltonika-networks.com/product/rut230/); OpenWrt-DTS nutzt eth0 (LAN ueber Switch) und eth1 (WAN), https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9331_teltonika_rut230-v1.dts; ToH-Feld unvollstaendig"
       }
     ],
     "nur_eine_buchse": [
@@ -1987,6 +2003,15 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "a2784271 \"Teltonika RUT230\", gelistet seit 03.08.2022, ohne Hardware-Versionsangabe (Modell hat v0/v1). Nur Link + roh, keine Hardwarewerte; keine EAN/ASIN auf der Seite. 2 heise-Abrufe."
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_24_streams: 1x1 (1T1R); 2x2 aus nicht gemergtem PR 2873 widerlegt (AR9331 nur 1T1R)",
+        "ports_anzahl: 2; ToH-Wert 1 widerlegt (Hersteller 1 WAN + 1 LAN, DTS eth0+eth1)"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

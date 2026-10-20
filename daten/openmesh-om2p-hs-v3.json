@@ -134,6 +134,13 @@
       "stand": "Gelistet seit 21.07.2016; abgerufen 2026-10-20",
       "abgerufen": "2026-10-20",
       "bemerkung": "Artikel \"Open Mesh OM2P-HS (GRP-OM2P-HS)\" ohne Versionsangabe; einziger Treffer der heise-Suche nach \"Open Mesh OM2P-HS\""
+    },
+    "hersteller_poe_seite": {
+      "url": "https://web.archive.org/web/20170112070223/http://www.open-mesh.com/poe/",
+      "stand": "Archiv 2017-01-12",
+      "abgerufen": "2026-10-20",
+      "datei": "cache/openmesh-om2p-hs-v3/pruefung/om_poe_2016.html",
+      "bemerkung": "Open-Mesh-Seite \"12-24v Passive PoE\": Überschrift \"Every Open Mesh OM Series access point is compatible with passive 12-24v PoE\", Tabelle \"Passive 18-24v PoE\" (OM2P-HS v2 ab April 2014 zusätzlich 802.3af), empfohlene Netzteile 18 V (Nordamerika) oder 24 V (universal); ohne Hardware-Version 3"
     }
   },
   "roh": {
@@ -1302,7 +1309,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/75900a25ed2acd4201bcd9a5516bdf7cdb9a8e73",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2020-12-28",
         "sicherheit": "mittel",
-        "bemerkung": "passiv an eth1"
+        "bemerkung": "passiv an eth1; Bereich passiv laut OpenWrt-Commit und Hersteller-PoE-Tabelle (Passive 18-24v PoE, Netzteile 18 V oder 24 V). Beide Angaben stehen beim Hersteller nebeneinander (https://web.archive.org/web/20170112070223/http://www.open-mesh.com/poe/): 12-24 V = zulässiger Eingangsbereich, 18-24 V = vom Hersteller vorgesehene PoE-Speisung; 802.3af (44-57 V) am anderen Port zusätzlich."
       },
       {
         "wert": "18-24",
@@ -1310,7 +1317,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om2p-hs_v3",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "passiv"
+        "bemerkung": "passiv; Bereich passiv laut OpenWrt-Commit und Hersteller-PoE-Tabelle (Passive 18-24v PoE, Netzteile 18 V oder 24 V). Beide Angaben stehen beim Hersteller nebeneinander (https://web.archive.org/web/20170112070223/http://www.open-mesh.com/poe/): 12-24 V = zulässiger Eingangsbereich, 18-24 V = vom Hersteller vorgesehene PoE-Speisung; 802.3af (44-57 V) am anderen Port zusätzlich."
       },
       {
         "wert": "12-24",
@@ -1318,7 +1325,7 @@
         "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
         "stand": "Datenblatt OM-2016-06 (PDF erstellt 2017-02-01, Archiv 2017-06-15)",
         "sicherheit": "hoch",
-        "bemerkung": "gilt für die OM2P-HS-Serie, Hardware-Version nicht genannt; für v3 nicht eigens belegt; passiv"
+        "bemerkung": "gilt für die OM2P-HS-Serie, Hardware-Version nicht genannt; für v3 nicht eigens belegt; passiv; Eingangsbereich passiv laut Hersteller-Datenblatt und Typenschild OM2P-HS v2 (12~24 V). Beide Angaben stehen beim Hersteller nebeneinander (https://web.archive.org/web/20170112070223/http://www.open-mesh.com/poe/): 12-24 V = zulässiger Eingangsbereich, 18-24 V = vom Hersteller vorgesehene PoE-Speisung; 802.3af (44-57 V) am anderen Port zusätzlich."
       },
       {
         "wert": "12-24",
@@ -1326,7 +1333,15 @@
         "beleg": "https://fccid.io/WT8-OM2PHSV2/Label/Label-pdf-2228181",
         "stand": "Exhibit 2014-03-28",
         "sicherheit": "niedrig",
-        "bemerkung": "Typenschild OM2P-HS v2 (\"PoE Input: 12~24V Passive PoE\", \"PoE Input: 48V 802.3af PoE\"); für v3 nicht belegt"
+        "bemerkung": "Typenschild OM2P-HS v2 (\"PoE Input: 12~24V Passive PoE\", \"PoE Input: 48V 802.3af PoE\"); für v3 nicht belegt; Eingangsbereich passiv laut Hersteller-Datenblatt und Typenschild OM2P-HS v2 (12~24 V). Beide Angaben stehen beim Hersteller nebeneinander (https://web.archive.org/web/20170112070223/http://www.open-mesh.com/poe/): 12-24 V = zulässiger Eingangsbereich, 18-24 V = vom Hersteller vorgesehene PoE-Speisung; 802.3af (44-57 V) am anderen Port zusätzlich."
+      },
+      {
+        "wert": "18-24",
+        "quelle": "hersteller_poe_seite",
+        "beleg": "https://web.archive.org/web/20170112070223/http://www.open-mesh.com/poe/",
+        "stand": "Archiv 2017-01-12",
+        "sicherheit": "mittel",
+        "bemerkung": "passiv; Hersteller-Tabelle \"Passive 18-24v PoE\" für OM2P-HS (v2 ab April 2014), Überschrift derselben Seite nennt 12-24v für die ganze OM-Serie; Hardware-Version 3 nicht genannt"
       }
     ],
     "poe_pinbelegung": [
@@ -1926,6 +1941,16 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "Artikel a1480565 (Kurzlink aus Forum) ohne Versionsangabe, Modell hat v1-v4; nur Permalink und roh.geizhals, keine Hardwarewerte; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "poe_spannung_v: 12-24 V = passiver Eingangsbereich (Datenblatt OM-2016-06, Typenschild v2), 18-24 V = vom Hersteller vorgesehene passive PoE-Speisung (PoE-Seite 2017, OpenWrt-Commit); dieselbe Herstellerseite nennt beides"
+      ],
+      "offen": [
+        "poe_spannung_v: kein Typenschild-Foto und keine eigene FCC-ID für v3, Werte nur für Serie/v2 belegt"
+      ]
     }
   }
 }

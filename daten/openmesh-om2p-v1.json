@@ -1018,7 +1018,8 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/8143709c90c3aa0a84e14cf4a9dfbcb365b0d966",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2022-01-16",
         "sicherheit": "mittel",
-        "bemerkung": "\"32 MB of RAM\"; Widerspruch zu ToH/Bootlog"
+        "bemerkung": "\"32 MB of RAM\"; Widerspruch zu ToH/Bootlog",
+        "widerlegt": "OM2P v1 hat 64 MB: Bootlog eines v1 (AR7240 + AR9285) im OpenWrt-Wiki 'Memory: 61272k/65536k available' (https://openwrt.org/toh/openmesh/om2p), ToH 64 MB; RAM-Chip auf den FCC-Innenfotos unter Aufkleber, nicht ablesbar (https://fccid.io/WT8-OM2P/Internal-Photos/Internal-Photos-1495256); 32 MB ohne Chip- oder Bootlog-Beleg"
       },
       {
         "wert": 32,
@@ -1026,7 +1027,8 @@
         "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P_v1",
         "stand": "Seitenrevision 2019-07-05T05:03:56Z",
         "sicherheit": "mittel",
-        "bemerkung": "ram1=32"
+        "bemerkung": "ram1=32",
+        "widerlegt": "OM2P v1 hat 64 MB: Bootlog eines v1 (AR7240 + AR9285) im OpenWrt-Wiki 'Memory: 61272k/65536k available' (https://openwrt.org/toh/openmesh/om2p), ToH 64 MB; RAM-Chip auf den FCC-Innenfotos unter Aufkleber, nicht ablesbar (https://fccid.io/WT8-OM2P/Internal-Photos/Internal-Photos-1495256); 32 MB ohne Chip- oder Bootlog-Beleg; DeviWiki ohne RAM-Chipangabe"
       }
     ],
     "flash_mb": [
@@ -1594,7 +1596,8 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/8143709c90c3aa0a84e14cf4a9dfbcb365b0d966",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2022-01-16",
         "sicherheit": "mittel",
-        "bemerkung": "Widerspruch zu Datenblatt/DeviWiki/Wiki (12-18 V)"
+        "bemerkung": "Widerspruch zu Datenblatt/DeviWiki/Wiki (12-18 V)",
+        "widerlegt": "gilt nicht fuer v1: Open-Mesh-Datenblatt OM2P (2011) nennt 'POE: 12-18v (non-802.3af)' (https://web.archive.org/web/20130122181818/http://dashboard.open-mesh.com/datasheets/om2p.pdf), ebenso OpenWrt-Wiki und DeviWiki; kein PoE-Aufdruck am v1-Gehaeuse (FCC-Aussenfotos https://fccid.io/WT8-OM2P/External-Photos/External-Photos-1495254), Typenschild nur 'DC Input 12V 1A'; Commit-Text entspricht den Commits der spaeteren Modelle (v2-Typenschild 12~24 V)"
       },
       {
         "wert": "12-18",
@@ -1602,7 +1605,7 @@
         "beleg": "https://web.archive.org/web/20130122181818/http://dashboard.open-mesh.com/datasheets/om2p.pdf",
         "stand": "PDF 2011-10-18, Webarchiv 2013-01-22",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "passiv, non-802.3af; Herstellerangabe fuer v1"
       },
       {
         "wert": "12-18",
@@ -1610,7 +1613,7 @@
         "beleg": "https://deviwiki.com/wiki/Open-Mesh_OM2P_v1",
         "stand": "Seitenrevision 2019-07-05T05:03:56Z",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "passiv, non-802.3af; Herstellerangabe fuer v1"
       },
       {
         "wert": "12-18",
@@ -1618,7 +1621,7 @@
         "beleg": "https://openwrt.org/toh/openmesh/om2p",
         "stand": "Seitenrevision 2025-11-03 06:33",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "passiv, non-802.3af; Herstellerangabe fuer v1"
       }
     ],
     "poe_pinbelegung": [
@@ -2422,6 +2425,15 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "heise-Suche 2 Treffer; a1480590 'Open Mesh OM2P' (GRP-OM2P) ohne Versionsangabe, gelistet seit 21.07.2016: nur Link + roh.geizhals, keine Hardwarewerte; keine EAN/ASIN auf der Seite; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ram_mb: 64 MB (Bootlog v1 im OpenWrt-Wiki); 32 MB (Commit 8143709c, DeviWiki) widerlegt",
+        "poe_spannung_v: 12-18 V passiv (Hersteller-Datenblatt 2011); 18-24 V (Commit 8143709c) fuer v1 widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

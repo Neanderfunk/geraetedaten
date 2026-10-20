@@ -1896,7 +1896,7 @@
         "beleg": "https://fccid.io/TE7CPE210V2/Label/CPE210-Label-Location-2016-11-30-3212154",
         "stand": "Exhibit 2016-11-30 (Zeichnung CPE210(UN) 2.0, 2016-09-27)",
         "sicherheit": "hoch",
-        "bemerkung": "\"Power: 24V ⎓ 0.6A\""
+        "bemerkung": "\"Power: 24V ⎓ 0.6A\"; gilt als Nennspannung (Typenschild bzw. mitgelieferter 24-V-Passive-PoE-Adapter), liegt im Eingangsbereich 16-27 V"
       },
       {
         "wert": 24,
@@ -1904,7 +1904,7 @@
         "beleg": "https://fccid.io/TE7CPE210V2/User-Manual/CPE210-User-Manual-2016-11-30-3212160",
         "stand": "Exhibit 2016-11-30 (PDF 2016-09-27)",
         "sicherheit": "hoch",
-        "bemerkung": "24V Passive PoE Adapter"
+        "bemerkung": "24V Passive PoE Adapter; gilt als Nennspannung (Typenschild bzw. mitgelieferter 24-V-Passive-PoE-Adapter), liegt im Eingangsbereich 16-27 V"
       },
       {
         "wert": 24,
@@ -1912,7 +1912,7 @@
         "beleg": "https://fccid.io/TE7CPE210V2/Test-Report/16A2003R-RF-FCC-FCC-Part15-247-CPE210-2-4GHz-300Mbps-9dBi-Outdoor-CPE-V1-1-3212158",
         "stand": "Report 16A2003R-RF-US-P06V01, Eingang Prüfling 2016-10-09",
         "sicherheit": "hoch",
-        "bemerkung": "EUT Voltage POE(24V)"
+        "bemerkung": "EUT Voltage POE(24V); gilt als Nennspannung (Typenschild bzw. mitgelieferter 24-V-Passive-PoE-Adapter), liegt im Eingangsbereich 16-27 V"
       },
       {
         "wert": "16-27",
@@ -1920,7 +1920,7 @@
         "beleg": "https://web.archive.org/web/20170630120840/https://www.tp-link.com/en/products/details/cat-37_CPE210.html",
         "stand": "Webarchiv-Schnappschuss 2017-06-30 12:08:40",
         "sicherheit": "hoch",
-        "bemerkung": "Voltage range 16-27VDC"
+        "bemerkung": "Voltage range 16-27VDC; gilt als zulässiger Eingangsspannungsbereich (Passive PoE), Nennwert des Adapters/Typenschilds ist 24 V"
       },
       {
         "wert": "16-27",
@@ -1928,7 +1928,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_cpe210_v2",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "\"Passive PoE 16-27 VDC, 0.6 A\""
+        "bemerkung": "\"Passive PoE 16-27 VDC, 0.6 A\"; gilt als zulässiger Eingangsspannungsbereich (Passive PoE), Nennwert des Adapters/Typenschilds ist 24 V"
       }
     ],
     "poe_pinbelegung": [
@@ -2741,6 +2741,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "a1189570 per heise direkt abgerufen (1 Abruf), \"Verschiedene Revisionen verfügbar\": nur Link und roh.geizhals, keine normalisierten Hardwarewerte; keine EAN/ASIN auf der Seite; alte Webarchiv-Auswertung 2019 umbenannt in geizhals_webarchiv_2019"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "poe_spannung_v: 24 V = Nennspannung laut Typenschild/Adapter (FCC-Label, Handbuch, Testbericht); 16-27 V = zulässiger Eingangsbereich laut TP-Link-Produktseite 2017 und ToH; beide richtig, bemerkung ergänzt"
+      ],
+      "offen": []
     }
   }
 }

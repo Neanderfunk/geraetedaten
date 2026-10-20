@@ -1357,7 +1357,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
         "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "gilt für den passiven PoE-Port (eth1/WAN, Mode B); 802.3af-Port (eth0) getrennt. Deckt sich mit dem Gehäuseaufdruck '18-24v POE'"
       },
       {
         "wert": "24 (passiv), 48 (802.3af)",
@@ -1365,7 +1365,7 @@
         "beleg": "https://fccid.io/WT8OM5PAC/Label/Label-Sample-pdf-2629585",
         "stand": "Exhibit 2015-05-29 (PDF 2015-05-28)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Typenschild nennt den Nennwert 24 V passiv (liegt im Bereich 18-24 V laut Gehäuseaufdruck/Commit) und 48 V für den 802.3af-Port; 802.3af = 44-57 V am PSE"
       },
       {
         "wert": "12-24 (passiv)",
@@ -1373,7 +1373,8 @@
         "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
         "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
         "sicherheit": "hoch",
-        "bemerkung": "Widerspruch zum Commit (18-24 V)"
+        "bemerkung": "Widerspruch zum Commit (18-24 V)",
+        "widerlegt": "Untergrenze 12 V gilt nicht für passives PoE: am Gerät ist der Port mit '18-24v POE' beschriftet (FCC-Außenfotos 2015 und 2016, https://fccid.io/WT8OM5PAC/External-Photos/External-Photos-pdf-2629582), OpenWrt-Commit nennt 18-24V passive PoE (https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477), Typenschild 24 V passiv; 12-24 V ist der Bereich der DC-Buchse (dc_spannung_v)"
       },
       {
         "wert": "12-24 (passiv)",
@@ -1381,7 +1382,16 @@
         "beleg": "https://web.archive.org/web/20160406015009/http://www.open-mesh.com:80/products/access-points/om5p-ac-cloud-access-point.html",
         "stand": "Webarchiv 2016-04-06",
         "sicherheit": "hoch",
-        "bemerkung": "Fließtext nennt 'passive 24v PoE'"
+        "bemerkung": "Fließtext nennt 'passive 24v PoE'",
+        "widerlegt": "Untergrenze 12 V gilt nicht für passives PoE: am Gerät ist der Port mit '18-24v POE' beschriftet (FCC-Außenfotos 2015 und 2016, https://fccid.io/WT8OM5PAC/External-Photos/External-Photos-pdf-2629582), OpenWrt-Commit nennt 18-24V passive PoE (https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477), Typenschild 24 V passiv; 12-24 V ist der Bereich der DC-Buchse (dc_spannung_v)"
+      },
+      {
+        "wert": "18-24 (passiv)",
+        "quelle": "fcc_aussenfotos_2015",
+        "beleg": "https://fccid.io/WT8OM5PAC/External-Photos/External-Photos-pdf-2629582",
+        "stand": "Exhibit 2015-08-27 (PDF 2015-05-28, Projekt 150417C34)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gehäuseaufdruck über den RJ45-Buchsen: '18-24v POE' und '802.3af POE' (Foto Rückseite, als Bild ausgewertet; ebenso FCC-Außenfotos 2016, https://fccid.io/WT8OM5PAC/External-Photos/External-Photos-pdf-2893520)"
       }
     ],
     "poe_pinbelegung": [
@@ -1950,6 +1960,16 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "Artikel a1480564 'Open Mesh OM5P-AC (GRP-OM5P-AC)' ohne Versionsangabe, Hinweis 'Verschiedene Revisionen verfügbar'; nur Link und Rohdaten übernommen, keine EAN/ASIN"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "poe_spannung_v: passiv 18-24 V (Gehäuseaufdruck FCC-Außenfotos, OpenWrt-Commit); 12-24 V aus Datenblatt OM-2016-06 und Shopseite widerlegt (Bereich der DC-Buchse)"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: Typenschild 24 V passiv = Nennwert im Bereich 18-24 V; 48 V gilt für den 802.3af-Port"
+      ],
+      "offen": []
     }
   }
 }

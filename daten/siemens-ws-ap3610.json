@@ -1077,7 +1077,8 @@
         "beleg": "https://openwrt.org/toh/siemens/ws-ap3610_ws-ap3620?do=export_raw",
         "stand": "Seitenrevision 2026-08-26 00:42",
         "sicherheit": "niedrig",
-        "bemerkung": "Einleitung: \"2x gigabit ethernet ports\" - widerspricht Datenblatt und DTS; zweite RJ45-Buchse ist die Konsole"
+        "bemerkung": "Einleitung: \"2x gigabit ethernet ports\" - widerspricht Datenblatt und DTS; zweite RJ45-Buchse ist die Konsole",
+        "widerlegt": "Nur ein Ethernet-Port: DTS aktiviert nur eth0 (BCM5481, kein eth1), 02_network setzt nur lan eth0 (https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar7161_siemens_ws-ap3610.dts, https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/generic/base-files/etc/board.d/02_network); Datenblatt 2012: 1x 10/100/1000 Base-T plus Console port (https://web.archive.org/web/20130203012254/http://www.enterasys.com/company/literature/AP36xx-ds.pdf); die zweite RJ45-Buchse ist die serielle Konsole, Wiki-Tag selbst '1port'"
       }
     ],
     "nur_eine_buchse": [
@@ -1856,6 +1857,14 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "Kein kategorisierter Geizhals-Artikel (-a<ID>.html). heise-Suche \"WS-AP3610\" liefert nur 1 nicht kategorisiertes Händlerangebot \"Enterasys WS-AP3610\" (https://preisvergleich.heise.de/3160413774, canonical https://geizhals.de/3160413774, it-market.com) ohne Datenblatt, EAN oder Gelistet-seit; nicht eingetragen. 2 heise-Abrufe."
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ports_anzahl: 1 gilt (DTS nur eth0, 02_network lan eth0, Datenblatt 2012 1x Gigabit + Konsole); Wiki-Wert 2 widerlegt (zweite RJ45 = Konsole)"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

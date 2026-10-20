@@ -1556,7 +1556,8 @@
         "beleg": "https://static.tp-link.com/resources/document/Archer_C5_V1_Datasheet.pdf",
         "stand": "PDF 2014-04-25, Titel 'Archer C5 1.0'",
         "sicherheit": "hoch",
-        "bemerkung": "WIDERSPRUCH: Datenblatt und Handbuch nennen 2.4 GHz 'Up to 300Mbps'; Hardware laut FCC/Commit 3x3, SmallNetBuilder: Linkrate nicht begrenzt (450)"
+        "bemerkung": "WIDERSPRUCH: Datenblatt und Handbuch nennen 2.4 GHz 'Up to 300Mbps'; Hardware laut FCC/Commit 3x3, SmallNetBuilder: Linkrate nicht begrenzt (450)",
+        "widerlegt": "300 Mbit/s ist die Werbe-/Handbuchangabe, keine Kettenzahl: FCC-Prüfbericht für Modell C5 nennt 'three completed transmitters and three receivers', 802.11n 3TX bis 450 Mbit/s, Messwerte CHAIN 0-2 bei 2412-2462 MHz (https://fccid.io/TE7C5/Test-Report/Test-Report-DTS-2322698); OpenWrt-Commit: QCA9558 integrated 3T3R (https://github.com/openwrt/openwrt/commit/438605454980ee815a506a9a2a4a3532ab378922); SmallNetBuilder (zitiert bei https://deviwiki.com/wiki/TP-LINK_Archer_C5_v1.x): 2.4-GHz-Linkrate nicht begrenzt, 450 Mbit/s mit 3x3-Client. 2.4 GHz = 3 Ketten"
       },
       {
         "wert": "11n bis 300 Mbit/s",
@@ -1564,7 +1565,8 @@
         "beleg": "https://fccid.io/TE7C5/User-Manual/User-Manual-rev-2322730",
         "stand": "FCC-Exhibit 2014-07-14, REV1.1.0 1910011055 (PDF erstellt 2014-05-05, geändert 2014-06-26)",
         "sicherheit": "hoch",
-        "bemerkung": "Appendix C Radio Data Rate"
+        "bemerkung": "Appendix C Radio Data Rate",
+        "widerlegt": "300 Mbit/s ist die Werbe-/Handbuchangabe, keine Kettenzahl: FCC-Prüfbericht für Modell C5 nennt 'three completed transmitters and three receivers', 802.11n 3TX bis 450 Mbit/s, Messwerte CHAIN 0-2 bei 2412-2462 MHz (https://fccid.io/TE7C5/Test-Report/Test-Report-DTS-2322698); OpenWrt-Commit: QCA9558 integrated 3T3R (https://github.com/openwrt/openwrt/commit/438605454980ee815a506a9a2a4a3532ab378922); SmallNetBuilder (zitiert bei https://deviwiki.com/wiki/TP-LINK_Archer_C5_v1.x): 2.4-GHz-Linkrate nicht begrenzt, 450 Mbit/s mit 3x3-Client. 2.4 GHz = 3 Ketten"
       }
     ],
     "wlan_5_standard": [
@@ -1616,7 +1618,8 @@
         "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C5_v1.x",
         "stand": "Seitenrevision 2019-07-05T02:55:39Z",
         "sicherheit": "mittel",
-        "bemerkung": "tx/rx chains 3, spatial streams 2; 867 Mbit/s bei 80 MHz"
+        "bemerkung": "tx/rx chains 3, spatial streams 2; 867 Mbit/s bei 80 MHz",
+        "widerlegt": "2 = Spatial-Stream-/Linkratenbegrenzung der Herstellerfirmware (867 statt 1300 Mbit/s, SmallNetBuilder laut https://deviwiki.com/wiki/TP-LINK_Archer_C5_v1.x), nicht die Kettenzahl: QCA9880-BR4A 3T3R (https://github.com/openwrt/openwrt/commit/438605454980ee815a506a9a2a4a3532ab378922), FCC-Prüfbericht Modell C5: 802.11ac (80 MHz) 3TX bei 5745-5825 MHz, drei Sender/Empfänger (https://fccid.io/TE7C5/Test-Report/Test-Report-DTS-2322698); DeviWiki selbst: tx/rx chains 3. 5 GHz = 3 Ketten"
       },
       {
         "wert": "bis 867 Mbit/s (entspricht 2 Streams)",
@@ -1624,7 +1627,8 @@
         "beleg": "https://static.tp-link.com/resources/document/Archer_C5_V1_Datasheet.pdf",
         "stand": "PDF 2014-04-25, Titel 'Archer C5 1.0'",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "",
+        "widerlegt": "2 = Spatial-Stream-/Linkratenbegrenzung der Herstellerfirmware (867 statt 1300 Mbit/s, SmallNetBuilder laut https://deviwiki.com/wiki/TP-LINK_Archer_C5_v1.x), nicht die Kettenzahl: QCA9880-BR4A 3T3R (https://github.com/openwrt/openwrt/commit/438605454980ee815a506a9a2a4a3532ab378922), FCC-Prüfbericht Modell C5: 802.11ac (80 MHz) 3TX bei 5745-5825 MHz, drei Sender/Empfänger (https://fccid.io/TE7C5/Test-Report/Test-Report-DTS-2322698); DeviWiki selbst: tx/rx chains 3. 5 GHz = 3 Ketten"
       },
       {
         "wert": "3T3R (QCA9880-BR4A)",
@@ -1641,6 +1645,14 @@
         "stand": "Prüfbericht RF130508C34B, ausgestellt 2014-06-12 (Exhibit 2014-07-14)",
         "sicherheit": "hoch",
         "bemerkung": "WIDERSPRUCH zu Datenblatt/DeviWiki (867 Mbit/s, 2 Streams); FCC-Bericht vermutlich mit C7-v2-Angaben, Firmware-Begrenzung möglich - unter OpenWrt nicht geprüft"
+      },
+      {
+        "wert": 3,
+        "quelle": "fcc_dts",
+        "beleg": "https://fccid.io/TE7C5/Test-Report/Test-Report-DTS-2322698",
+        "stand": "Prüfbericht RF130508C34B, ausgestellt 2014-06-12 (Exhibit 2014-07-14)",
+        "sicherheit": "hoch",
+        "bemerkung": "Kettenzahl 5 GHz: Bericht gilt für MODEL NO. C5 ('three completed transmitters and three receivers', 802.11ac 80 MHz 3TX); deckt sich mit OpenWrt-Commit 438605454980 (QCA9880-BR4A 3T3R). Herstellerfirmware begrenzt auf 867 Mbit/s; ob Gluon/ath10k-ct 1300 Mbit/s erreicht, nicht geprüft"
       }
     ],
     "wlan_klasse": [
@@ -3083,6 +3095,15 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Suche 'TP-Link Archer C5' (2 Abrufe): Artikel 1030378 'TP-Link Archer C5 V1' (eigene Artikel für V2/V4); Datenblatt nach roh.geizhals, 12 Felder ergänzt; Leistungsaufnahme 'keine Angabe', keine EAN/ASIN"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_24_streams: 3 (FCC-Prüfbericht C5 3TX/3RX, OpenWrt-Commit 3T3R); 300 Mbit/s aus Datenblatt/Handbuch widerlegt",
+        "wlan_5_streams: 3 Ketten (FCC 3TX 802.11ac, QCA9880 3T3R); '2' aus Datenblatt/DeviWiki = Linkratenbegrenzung der Herstellerfirmware, widerlegt; Eintrag wert 3 (fcc_dts) ergänzt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

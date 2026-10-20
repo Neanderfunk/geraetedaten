@@ -1681,7 +1681,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/31172e53f9d0971204e6fa7e3541c0695d99618a",
         "stand": "Commit 2020-11-23 (Autor), gemergt 2021-01-19",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "Eingangsbereich der DC-Buchse (\"12-24V 1A DC\"); 12 V (FCC/OEM-Netzteil) und 20 V (Open-Mesh-Netzteil) liegen beide darin"
       },
       {
         "wert": "12-24",
@@ -1689,7 +1689,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_mr900_v2",
         "stand": "Seitenrevision 2026-08-06 01:36",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "Eingangsbereich der DC-Buchse (\"12-24 VDC, 1.0A\"); 12 V und 20 V liegen beide darin"
       },
       {
         "wert": 12,
@@ -1697,7 +1697,7 @@
         "beleg": "https://deviwiki.com/wiki/Open-Mesh_MR900_v2",
         "stand": "Seitenrevision 2019-07-05T02:42:06Z",
         "sicherheit": "mittel",
-        "bemerkung": "pwr_v=12, pwr_amp=2"
+        "bemerkung": "pwr_v=12, pwr_amp=2; Nennspannung des OEM-/FCC-Netzteils (Powertron PA1024, 12 V/2 A), nicht Untergrenze/Obergrenze des Eingangs; Eingang laut OpenWrt 12-24 V"
       },
       {
         "wert": 12,
@@ -1705,7 +1705,7 @@
         "beleg": "https://fccid.io/WT8-MR900V2/Test-Report/Test-Report-DTS-rev-pdf-2219925",
         "stand": "Bureau Veritas RF131230C23A, PDF 2014-03-19",
         "sicherheit": "hoch",
-        "bemerkung": "\"12Vdc (Adapter)\""
+        "bemerkung": "\"12Vdc (Adapter)\"; Spannung des im FCC-Test verwendeten Netzteils (OEM-Lieferumfang 12V/2A laut FCC-Handbuch); Eingang laut OpenWrt 12-24 V"
       },
       {
         "wert": 20,
@@ -1713,7 +1713,7 @@
         "beleg": "https://web.archive.org/web/20150317110246/https://www.open-mesh.com/skin/frontend/default/open-mesh/images/MR900.pdf",
         "stand": "PDF \"MR SERIES DATASHEET\", erstellt 2014-10-22, Archivkopie 2015-03-17",
         "sicherheit": "hoch",
-        "bemerkung": "Netzteiloption \"International 20v (US/EU/UK/AU)\""
+        "bemerkung": "Netzteiloption \"International 20v (US/EU/UK/AU)\"; Spannung des von Open-Mesh angebotenen optionalen Netzteils (\"International 20v\", Shop: \"20v Universal Power Supply\"); liegt im Eingangsbereich 12-24 V laut OpenWrt; Typenschild nennt keine Eingangsspannung"
       }
     ],
     "dc_strom_a": [
@@ -2335,6 +2335,14 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "heise-Suche \"Open-Mesh MR900\" und \"Open Mesh MR900\": einziger Open-Mesh-Treffer ist MR1750 (a1480594), kein MR900-Artikel gelistet; nichts eingetragen"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "dc_spannung_v: 12-24 V = Eingangsbereich (OpenWrt-Commit/hwdata), 12 V = OEM-/FCC-Netzteil, 20 V = optionales Open-Mesh-Netzteil; alle vereinbar"
+      ],
+      "offen": []
     }
   }
 }
