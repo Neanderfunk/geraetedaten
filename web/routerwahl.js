@@ -74,7 +74,7 @@
       { id: 'usb', titel: 'USB', typ: 'ja' },
       { id: 'sfp', titel: 'SFP-Modul', typ: 'ja' }
     ] },
-    { titel: 'Rechenleistung und Leistungsaufnahme', filter: [
+    { titel: 'Ausstattung', filter: [
       { id: 'speicher', titel: 'Speicher für Updates', typ: 'eins',
         werte: [['reichlich', 'reichlich'], ['ausreichend', 'ausreichend'], ['knapp', 'knapp'], ['zu wenig', 'zu wenig']] },
       { id: 'ram', titel: 'Arbeitsspeicher (RAM)', typ: 'min',
