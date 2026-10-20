@@ -143,6 +143,13 @@
         "/home/adorfer/projekte/freifunk/FirmwareConfigs-2025.1/templates/common/image-customization.lua"
       ],
       "bemerkung": "kein Validierungsprotokoll in docs/validierung/; nur Feldbeobachtung und Installationshinweis"
+    },
+    "geizhals": {
+      "url": "https://preisvergleich.heise.de/cudy-wr1000-a2077083.html",
+      "stand": "Gelistet seit 14.06.2019; abgerufen 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "datei": "cache/cudy-wr1000/geizhals/produkt_a2077083.html",
+      "bemerkung": "über preisvergleich.heise.de (gleiche Artikelnummer); einziger Treffer der Suche \"Cudy WR1000\"; Artikel ohne Hardware-Version, v2 existiert (OpenWrt-Forum 56965), daher keine normalisierten Hardwarewerte"
     }
   },
   "roh": {
@@ -793,6 +800,28 @@
       "ramdruck-64mb.md": "Stand 14.09.2026: Cudy WR1000 in lowmem_dualradio (4c53abf); Feld: Betreiber schugy (dias-b44bd6204134) auf 26091402bro MemAvailable 11,3 MB (vorher 12,3 MB auf 25122513sta), Refaults 0, zram unbenutzt; Hänger 12.-14.09. (30 h, kein Reboot, nur Powercycle half) lag eher nicht am RAM. Ungemessen: mt76 (R6120, WR1000, C50 v3).",
       "long-term-todo.md": "Ohne OWE bleiben bei uns die 64-MB-Dual-Radio-Geräte (R6120, C20i, C50 v3, WR1000)",
       "rtl8221b-2g5-wan-intern.md": "WR1000 steht neben dem TR3000 (Feld), war während dessen Ausfall online"
+    },
+    "geizhals": {
+      "titel": "Cudy WR1000",
+      "Modem": "N/A",
+      "WAN": "1x 100Base-TX",
+      "LAN": "2x 100Base-TX",
+      "Wireless": "WLAN 802.11a/b/g/n/ac (Wi-Fi 5), simultan",
+      "Übertragungsrate": "300Mbps (2.4GHz), 867Mbps (5GHz)",
+      "Sicherheit": "WEP, WPA, WPA2, WPS",
+      "Antennen": "2x extern",
+      "Anschlüsse": "N/A",
+      "Leistungsaufnahme": "keine Angabe (Verbrauch, Betrieb), keine Angabe (max. Netzteilleistung)",
+      "Besonderheiten": "IPv6, VPN passthrough (IPSec/PPTP/L2TP)",
+      "Band-Fähigkeit": "Dual Band (simultan)",
+      "Herstellergarantie": "drei Jahre",
+      "Letztes Preisupdate": "-",
+      "Gelistet seit": "14.06.2019, 12:23",
+      "Dokumente": [
+        "Datenblatt Stand: 14.06.2019 .pdf [1.01 MB] (englisch) https://gzhls.at/blob/ldb/d/b/5/a/312d25d88fed0593a78db1b6a02fdba03cfa.pdf",
+        "Bedienungsanleitung Stand: 14.06.2019 .pdf [1.40 MB] (englisch) https://gzhls.at/blob/ldb/5/4/7/e/afcaf4d5653ccbd36420fc4bfa74d30e9536.pdf",
+        "Bedienungsanleitung Stand: 14.06.2019 .pdf [6.45 MB] (multilanguage) https://gzhls.at/blob/ldb/1/2/e/2/9b4bdd5a3362266ac95d82670c084f05e205.pdf"
+      ]
     }
   },
   "felder": {
@@ -2684,6 +2713,16 @@
         "sicherheit": "niedrig",
         "bemerkung": "v2-Thread"
       }
+    ],
+    "geizhals_url": [
+      {
+        "wert": "https://geizhals.de/cudy-wr1000-a2077083.html",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/cudy-wr1000-a2077083.html",
+        "stand": "Gelistet seit 14.06.2019; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Geizhals-Eintrag deckt mehrere Hardware-Versionen ab (Artikel \"Cudy WR1000\" ohne Versionsangabe; v1 und v2 bekannt)"
+      }
     ]
   },
   "offene_faeden": [
@@ -2732,6 +2771,11 @@
     "datum": "2026-10-19",
     "status": "teilweise",
     "anfragen": 41,
-    "notiz": "ToH-Dump (pid 15679417) und Live-hwdata (neuer: Discontinued 2023, 25.12.2, Antennen \"detachable\" im Widerspruch), keine OpenWrt-Geräteseite, Commit 7c91144 + PR 2062 + MAC-Fix, DTS/Image/board.d, WikiDevi/DeviWiki (unterschiedliche Stände: 9 V vs. 12 V), FCC 2APRGWR1000V1: Grant, Typenschild (9 V 800 mA, Innenkontakt plus, keine HW-Version), Innenfotos (V1.0, 4 unbestückte UART-Pads, kein Lüfter, Dualband-Antennen fest angelötet), JCG-Handbuch; Cudy-Produktseite nur noch per Wayback (12 V 1 A, 0-40 °C, Wandmontage); OpenWrt-Forum 56965: v2 existiert, nicht unterstützt, Original-UI lehnt factory.bin ab. Werkstatt: Feldknoten, lowmem_dualradio, kein OWE. Blockaden: fccid.io 403 nach 4 PDFs, fcc.report Cloudflare 403, apps.fcc.gov 403. Offen: Außenfotos/Abmessungen, Testberichte (Netzteil), UART-Pinbelegung, Erkennung v2."
+    "notiz": "ToH-Dump (pid 15679417) und Live-hwdata (neuer: Discontinued 2023, 25.12.2, Antennen \"detachable\" im Widerspruch), keine OpenWrt-Geräteseite, Commit 7c91144 + PR 2062 + MAC-Fix, DTS/Image/board.d, WikiDevi/DeviWiki (unterschiedliche Stände: 9 V vs. 12 V), FCC 2APRGWR1000V1: Grant, Typenschild (9 V 800 mA, Innenkontakt plus, keine HW-Version), Innenfotos (V1.0, 4 unbestückte UART-Pads, kein Lüfter, Dualband-Antennen fest angelötet), JCG-Handbuch; Cudy-Produktseite nur noch per Wayback (12 V 1 A, 0-40 °C, Wandmontage); OpenWrt-Forum 56965: v2 existiert, nicht unterstützt, Original-UI lehnt factory.bin ab. Werkstatt: Feldknoten, lowmem_dualradio, kein OWE. Blockaden: fccid.io 403 nach 4 PDFs, fcc.report Cloudflare 403, apps.fcc.gov 403. Offen: Außenfotos/Abmessungen, Testberichte (Netzteil), UART-Pinbelegung, Erkennung v2.",
+    "geizhals": {
+      "datum": "2026-10-20",
+      "zuordnung": "mehrere_versionen",
+      "ergebnis": "heise-Suche \"Cudy WR1000\": einziger Treffer a2077083 \"Cudy WR1000\" (gelistet seit 14.06.2019, ohne Versionsangabe; v2 existiert); 2 Abrufe; nur Permalink + roh.geizhals, keine normalisierten Werte; keine EAN/ASIN auf der Seite, Leistungsaufnahme \"keine Angabe\""
+    }
   }
 }
