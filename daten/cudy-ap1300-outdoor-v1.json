@@ -1,0 +1,3004 @@
+{
+  "image": "cudy-ap1300-outdoor-v1",
+  "modell": "Cudy AP1300 Outdoor v1",
+  "quellen": {
+    "toh": {
+      "url": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "kein Eintrag im Dump (toh_suche.py: nur andere Cudy-Modelle mit Score <= 0.63); Daten deshalb von der ToH-Datenseite (toh_seite)"
+    },
+    "toh_seite": {
+      "url": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+      "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "per ?do=export_raw, Revisionen per ?do=revisions; 5 Revisionen, letzte: Update fuer 25.12.5"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/cudy/ap1300_outdoor",
+      "stand": "Abruf 2026-10-20: Seite existiert nicht",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "\"This topic does not exist\"; ToH-Datenseite hat keine Device Page"
+    },
+    "openwrt_wiki_dfs": {
+      "url": "https://openwrt.org/unsupported/dfs",
+      "stand": "Seitentext mit Stand 2026-03-26 (Revision nicht abgefragt)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "per ?do=export_raw; Liste der Geraete wird per ToH-Abfrage (Unsupported Functions = DFS) erzeugt, im Rohtext nicht enthalten"
+    },
+    "openwrt_commit": {
+      "url": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+      "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "per gh api; Backport-Commit c6e59d06 im lokalen Checkout gelesen (Link PR 20710)"
+    },
+    "openwrt_pr_20268": {
+      "url": "https://github.com/openwrt/openwrt/pull/20268",
+      "stand": "PR 2025-10-01 (LuisMitaHL), gemergt 2025-11-09; 3 Kommentare, 2 Review-Kommentare",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "per gh api"
+    },
+    "openwrt_pr_16265": {
+      "url": "https://github.com/openwrt/openwrt/pull/16265",
+      "stand": "PR 2024-08-26 (DanielRIOT), ungemergt geschlossen 2025-11-09; 10 Kommentare, 8 Review-Kommentare",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "per gh api; erster Portierungsversuch (Daniel de Kock), Vorgaenger-PR 16235"
+    },
+    "openwrt_macfix": {
+      "url": "https://github.com/openwrt/openwrt/commit/66b6791abe6f08dec2924b5d9e9e7dac93f37bc4",
+      "stand": "Commit 66b6791a vom 2026-01-14 (Steffen Förster), gemergt 2026-01-15; in openwrt-24.10 als 49862b1c (ab v24.10.6)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "PR 21543/21561"
+    },
+    "openwrt_dts_historie": {
+      "url": "https://github.com/openwrt/openwrt/commits/main/target/linux/ramips/dts/mt7621_cudy_ap1300-outdoor-v1.dts",
+      "stand": "main, neuester Commit 3e42e349 vom 2026-04-08 (nur Leerzeichen)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "per gh api commits?path=; 3 Commits: 8fb644e9, 66b6791a, 3e42e349"
+    },
+    "openwrt_git_lokal": {
+      "url": "https://github.com/openwrt/openwrt/blob/v24.10.8/target/linux/ramips/dts/mt7621_cudy_ap1300-outdoor-v1.dts",
+      "stand": "openwrt-24.10 v24.10.8-14-g77b198aa72 (OpenWrt-Pin von Gluon v2025.1.3, lokaler Checkout)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "lokaler Checkout firmware-2025.1/gluon/openwrt: DTS, image/mt7621.mk, board.d/01_leds, 02_network; Link zeigt auf Tag v24.10.8"
+    },
+    "gluon_target": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.3/targets/ramips-mt7621",
+      "stand": "Gluon v2025.1.3 (lokaler Checkout, Tag-Commit e2fe4b52)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "dazu platform.lua (is_outdoor_device) und docs/user/supported_devices.rst; Geraet ab Tag v2025.1.1 enthalten (Commit 273cf32 vom 2025-12-15), in Release Notes nicht erwaehnt"
+    },
+    "gluon_pr": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/3640",
+      "stand": "PR 3640 vom 2025-12-15 (ambassador86), gemergt 2026-01-23; Backport-PR 3688 nach v2025.1.x gemergt 2026-02-10",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "per gh api, mit Kommentaren"
+    },
+    "gluon_issue_3787": {
+      "url": "https://github.com/freifunk-gluon/gluon/issues/3787",
+      "stand": "Issue 3787 vom 2026-07-09 (Kistelini), offen, 6 Kommentare bis 2026-07-10",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "per gh api; betrifft Outdoor-Modus mit MT7613BE, Bericht vom Archer C6 v3"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+      "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "per api.php (prop=revisions); Seitenliste per allpages apprefix=Cudy"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=AP1300+Outdoor&fulltext=1",
+      "stand": "Suche 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "kein Geraeteeintrag; einziger Treffer \"Full List of OpenWrt supported devices\""
+    },
+    "fccid": {
+      "url": "https://fccid.io/2APRG",
+      "stand": "Grantee-Liste 2APRG (26 IDs), Abruf 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "keine FCC-ID fuer AP1300 Outdoor in der Grantee-Liste von Cudy (2APRG)"
+    },
+    "hersteller": {
+      "url": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+      "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Produkt-JSON (.json) und HTML-Seite mit Spezifikationstabelle (Hardware/Software Specs); Preis-Platzhalter 9999.00, kein Barcode/SKU"
+    },
+    "hersteller_downloads": {
+      "url": "https://www.cudy.com/pages/download-center/ap1300-outdoor-1-0",
+      "stand": "Abruf 2026-10-20; neueste Firmware 2.4.4 vom 11-Aug-2025; GPL 17.01 vom 21-Jun-2024",
+      "abgerufen": "2026-10-20"
+    },
+    "hersteller_datenblatt": {
+      "url": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+      "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "geladen ueber cdn.shopify.com (gleiche Datei), pdftotext"
+    },
+    "hersteller_kurzanleitung": {
+      "url": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_Quick_Installation_Instructions-EN.pdf?v=1406581268350481678",
+      "stand": "Dokumentnummer 810600181, ohne Datum, 2 Seiten",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "englische Kurzanleitung AP1300 Outdoor mit EU-Konformitaetserklaerung; Abbildungen (LED-Tabelle, Montage) nur als Zeichnung"
+    },
+    "hersteller_kurzanleitung_mehrsprachig": {
+      "url": "https://www.cudy.com/cdn/shop/files/AP1200_AP1300_AP3000_Outdoor_Quick_Installation_Guide.pdf?v=3241487330644210822",
+      "stand": "Dokumentnummer 810600312, ohne Datum, 2 Seiten",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "gemeinsame Anleitung AP1200/AP1300/AP3000 Outdoor, nicht modellspezifisch"
+    },
+    "hersteller_regulatorik": {
+      "url": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_AP1300_Outdoor.pdf?v=7885389874158422780",
+      "stand": "FCC-Teil Issue Date 2024-05-13; 9 Seiten",
+      "abgerufen": "2026-10-20"
+    },
+    "hersteller_psti": {
+      "url": "https://www.cudy.com/cdn/shop/files/Statements_of_PSTI_Compliance_AP1300_Outdoor.pdf?v=73831375054494601",
+      "stand": "Ausstellungsdatum 2024-04-12",
+      "abgerufen": "2026-10-20"
+    },
+    "hersteller_foto_unten": {
+      "url": "https://cdn.shopify.com/s/files/1/0673/4748/0820/files/AP1300-OD__1_63.png?v=1713747209",
+      "stand": "Bild hochgeladen 2024-04-22 (v=1713747209)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Produktfoto Unterseite mit geoeffneter Abdeckung (900 px); geladen und abgelesen"
+    },
+    "hersteller_foto_mast": {
+      "url": "https://cdn.shopify.com/s/files/1/0673/4748/0820/files/AP1300-OD__1_65.png?v=1713747209",
+      "stand": "Bild hochgeladen 2024-04-22 (v=1713747209)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Produktfoto am Mast (900 px); geladen und angesehen"
+    },
+    "hersteller_eol_liste": {
+      "url": "https://www.cudy.com/collections/end-of-life-products",
+      "stand": "Shopify-Collection, Abruf 2026-10-19 (131 Produkte)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "nicht neu abgerufen (Cudy-Kontingent); Abruf aus dem Lauf cudy-ap3000-outdoor-v1 (cache/cudy-ap3000-outdoor-v1/l2-cudy-eol.json)"
+    },
+    "werkstatt_doku": {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/cudy-installation.md",
+      "stand": "routerwerkstatt Commit a9781bd vom 2026-10-15 (Tabelle Stand 15.10.2026)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "nicht oeffentlich (git.ideenwerk.me/neanderfunk/routerwerkstatt); Abschnitt \"Welche Zwischenfirmware fuer welches Modell\" mit Fussnote 4; keine eigene Messung am Geraet"
+    },
+    "webarchiv_geizhals": {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/cudy-*&output=json&fl=original,timestamp,statuscode&collapse=urlkey",
+      "stand": "CDX-Abfrage 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "geizhals.de/cudy-ap1300* leer; geizhals.de/cudy-* 45 URLs, geizhals.at/cudy-* 12 URLs, keine fuer AP1300 Outdoor"
+    }
+  },
+  "roh": {
+    "toh": {
+      "eintrag": "keiner",
+      "kandidaten_toh_suche": "Cudy WR1000 v1, X6, WR1300 v1, WR3000 v1 (je 0.63), WR2100 (0.33), WR1300 v2/v3 (0.03) - alle unpassend"
+    },
+    "toh_seite": {
+      "Device Type_devicetype": "WiFi Router",
+      "Brand": "Cudy",
+      "Model": "AP1300 Outdoor",
+      "Versions": "v1",
+      "FCCID_urls": "",
+      "Availability_availability": "Discontinued",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+      "Supported Since Rel_releasesince": "24.10.5",
+      "Supported Current Rel_releasecurrent": "25.12.5",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "DFS",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "ramips",
+      "Subtarget": "mt7621",
+      "Package architecture_pkg-arch": "mipsel_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "MediaTek MT7621DAT",
+      "CPU Cores_numcores_": "2",
+      "CPU MHz": "880",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "-",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "MediaTek MT7603E, MediaTek MT7613BEN",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN 6.0GHz_wlan60": "-",
+      "WLAN 60.0GHz_wlan60g": "-",
+      "WLAN Comments_": "",
+      "WLAN driver_wlan-drivers": "mt76",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "¿",
+      "Serial connection voltage_serialvoltage": "¿",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "5",
+      "Button count_numbutton": "2",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "802.3af PoE",
+      "Outdoor_yesno": "Yes",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "AP1300 Outdoor",
+      "Git search_search-gits": "AP1300 Outdoor",
+      "WikiDevi URL_urls": "",
+      "WikiDevi ID_hwinfo-ids": "",
+      "OEM Device Homepage URL_url": "https://www.cudy.com/en-us/products/ap1300-outdoor-1-0",
+      "Firmware OEM Stock URL_url": "https://www.cudy.com/en-us/pages/download-center/ap1300-outdoor-1-0",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/ramips/mt7621/openwrt-25.12.5-ramips-mt7621-cudy_ap1300-outdoor-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/ramips/mt7621/openwrt-25.12.5-ramips-mt7621-cudy_ap1300-outdoor-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots//targets/ramips/mt7621/openwrt-ramips-mt7621-cudy_ap1300-outdoor-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots//targets/ramips/mt7621/openwrt-ramips-mt7621-cudy_ap1300-outdoor-v1-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "GUI OEM, U-Boot TFTP recovery, see git-commit",
+      "Comment installation": "Need a signed OpenWrt intermediary image from Cudy before installing official OpenWrt image.",
+      "Recovery method(s)_method-recoverys": "U-Boot TFTP recovery",
+      "Comment recovery": "",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "openwrt_commit": {
+      "titel": "ramips: mt7621: add support for Cudy AP1300 Outdoor v1",
+      "SoC": "MediaTek MT7621DAT",
+      "Flash": "16 MiB XM25QH128C",
+      "RAM": "128 MiB",
+      "WLAN": "2.4 GHz (MT7603E, 11n), 5 GHz (MediaTek MT7613BEN, 11ac)",
+      "Ethernet": "1x10/100/1000 Mbps LAN",
+      "Buttons": "1 Reset button, 1 WPS button",
+      "LEDs": "5x Green",
+      "Serial Console": "unpopulated header 115200 8n1 (silkscreen on PCB)",
+      "Power": "POE 802.3af (37-57V DC)",
+      "MAC addresses": {
+        "LAN": "80:af:ca:xx:xx:x0 (label)",
+        "WLAN 2g": "80:af:ca:xx:xx:x0 (label)",
+        "WLAN 5g": "82:af:ca:xx:xx:x1 (+1)"
+      },
+      "Installation": "The factory firmware is locked: you can only work with Cudy signed firmware. Download a intermediate firmware signed by Cudy here: https://www.cudy.com/blogs/faq/openwrt-software-download. After that, login to the router (192.168.10.254, password \"admin\") and install the intermediate firmware. If you can reach LuCI or SSH now on the intermediate firmware, just use the sysupgrade image with the 'Keep settings' option turned off.",
+      "Dateien": [
+        "target/linux/ramips/dts/mt7621_cudy_ap1300-outdoor-v1.dts",
+        "target/linux/ramips/image/mt7621.mk",
+        "target/linux/ramips/mt7621/base-files/etc/board.d/01_leds",
+        "target/linux/ramips/mt7621/base-files/etc/board.d/02_network"
+      ],
+      "Co-Authored-By": [
+        "Daniel de Kock",
+        "Hauke Mehrtens"
+      ],
+      "Link": [
+        "https://github.com/openwrt/openwrt/pull/20268",
+        "Backport: https://github.com/openwrt/openwrt/pull/20710"
+      ]
+    },
+    "openwrt_pr_20268": {
+      "Tested and working": "Ethernet LAN (including correct MAC); Wi-Fi 2.4GHz, 5GHz (including correct MAC); 5x LEDs; Failsafe",
+      "Kommentar LuisMitaHL 2025-10-01": "I added \"v1\" on the router name, according to the Cudy sticker on the router. Boost SPI Clock from 10 MHz to 40 MHz. The flash chip (XM25QH128C) works good at 40 MHz on routers like Cudy TR1200.",
+      "Review achterin/LuisMitaHL 2025-11-09": "-uboot-envtools in DEVICE_PACKAGES, weil im Target standardmaessig enthalten"
+    },
+    "openwrt_pr_16265": {
+      "Beschreibung": "Cudy AP1300 Outdoor is an outdoor unit with IEEE802.11ac and IEEE802.11 b/g/n radios",
+      "SoC": "Mediatek MT7621",
+      "Flash": "16 MiB XM25QH128C",
+      "RAM": "128 MiB",
+      "WLAN": "2x2 5GHz (MTY7613BE), 2x2 2.4GHz (MT7603E)",
+      "Ethernet": "1x 10/100/1000 Mbps LAN",
+      "Buttons": "1 Reset button, 1 WPS button",
+      "LEDs": "5x Green (Status, Internet,LAN, Wifi2.4Ghz, Wifi5Ghz)",
+      "Serial Console": "unpopulated header 115200 8n1 (silkscreen on PCB)",
+      "Power": "POE 802.3af (37-57V DC)",
+      "Installation": "Installation can only be done after the unlocked firmware has been installed. Unlocked firmware is available from Cudy on request or may be available on their website",
+      "TFTP boot": "Hold RESET for about 5 seconds while powering on and the device will request a \"recovery.bin\" via TFTP - TFTP server at 192.168.1.88, Filename: recovery.bin. The unlocked firmware is based on LEDE 17 and does not have LUCI so SSH/SCP sysupgrade should be used to upload the OpenWRT sysupgrade image - LEDE IP: 192.168.10.1, username/password: root/admin",
+      "Kommentar DanielRIOT 2024-09-18": "Indoor-AP1300 vermutlich gleiches Design, evtl. andere GPIOs/Switchports; Cudy schickt auf Anfrage ein LEDE-Image, das per Web-Firmwareupdate auch den Bootloader ersetzt",
+      "Kommentar aso824 2025-07-30": "AP1300 Outdoor mit eigenem, von Cudy signiertem Build geflasht; Datei openwrt-ramips-mt7621-cudy_ap1300-outdoor-squashfs-flash.bin.zip angehaengt",
+      "Kommentar Mixanic-705 2025-10-20": "dieses Image auf Cudy AP1300 v1.0 (nicht Outdoor) per Flash-Programmer geschrieben, laeuft; dortige Stock-Firmware heisst R38",
+      "Review DragonBluep 2025-03-16": "keine gmac1 bei Ein-Port-Geraeten; \"Only one port, no WAN interface on this model.\""
+    },
+    "openwrt_macfix": {
+      "titel": "ramips: fix gmac definition for cudy ap1300 outdoor",
+      "text": "The gmac definition has an offset of 1 at the moment. This leads to an off by one error in downstream projects that rely on the package label mac."
+    },
+    "openwrt_git_lokal": {
+      "dts_compatible": "cudy,ap1300-outdoor-v1, mediatek,mt7621-soc",
+      "dts_model": "Cudy AP1300 Outdoor v1",
+      "bootargs": "console=ttyS0,115200",
+      "keys": {
+        "reset": "GPIO 8 active low, KEY_RESTART",
+        "wps": "GPIO 10 active low, KEY_WPS_BUTTON"
+      },
+      "leds": {
+        "status (led-boot/failsafe/running/upgrade)": "GPIO 4, gruen",
+        "internet (WAN_ONLINE)": "GPIO 3, gruen",
+        "lan": "GPIO 46, gruen",
+        "wifi2g": "GPIO 47, gruen, phy0tpt",
+        "wifi5g": "GPIO 45, gruen, phy1tpt"
+      },
+      "watchdog": "linux,wdt-gpio GPIO 7, hw_algo toggle, hw_margin_ms 10000 (Kommentar: Geraet etwa 30 s), always-running",
+      "flash": "jedec,spi-nor, spi-max-frequency 40 MHz",
+      "partitionen": {
+        "u-boot": "0x0-0x30000 ro",
+        "u-boot-env": "0x30000 +0x10000 ro",
+        "factory": "0x40000 +0x10000 ro (EEPROM 2.4 GHz @0x0, 5 GHz @0x8000)",
+        "firmware": "0x50000 +0xf80000 (denx,uimage)",
+        "debug": "0xfd0000 +0x10000 ro",
+        "backup": "0xfe0000 +0x10000 ro",
+        "bdinfo": "0xff0000 +0x10000 ro (Basis-MAC @0xde00)"
+      },
+      "wlan": {
+        "pcie0": "mt76, 2.4 GHz (ieee80211-freq-limit 2400-2500 MHz), MAC bdinfo+0",
+        "pcie1": "mt76, 5 GHz (5000-6000 MHz), MAC bdinfo+1"
+      },
+      "ethernet": "gmac0 (MAC bdinfo+0), switch0 port@4 label lan",
+      "02_network": "ucidef_set_interface_lan \"lan\"",
+      "01_leds": "ucidef_set_led_netdev \"lan\" \"lan\" \"green:lan\" \"lan\"",
+      "image_mk": {
+        "DEVICE_VENDOR": "Cudy",
+        "DEVICE_MODEL": "AP1300 Outdoor",
+        "DEVICE_VARIANT": "v1",
+        "IMAGE_SIZE": "15872k",
+        "UIMAGE_NAME": "R39",
+        "SUPPORTED_DEVICES": "+= R39",
+        "DEVICE_PACKAGES": "kmod-mt7603 kmod-mt7615e kmod-mt7663-firmware-ap -uboot-envtools",
+        "Basis": "Device/dsa-migration, Device/uimage-lzma-loader"
+      }
+    },
+    "gluon_target": {
+      "targets/ramips-mt7621": "device('cudy-ap1300-outdoor-v1', 'cudy_ap1300-outdoor-v1', { factory = false })",
+      "platform.lua is_outdoor_device": "ramips/mt7621: 'cudy,ap1300-outdoor-v1'",
+      "supported_devices.rst": "Cudy - AP1300 Outdoor (v1)",
+      "erstes_tag": "v2025.1.1"
+    },
+    "gluon_pr": {
+      "Checkliste": "flashable via intermediate firmware supplied by Cudy; sysupgrade ok; image name cudy-ap1300-outdoor-v1; Reset/WPS -> config mode; Primary MAC: one above the actual printed MAC (spaeter durch OpenWrt-Fix behoben); alle Ports, Funk, Mesh, LEDs ok; is_outdoor_device eingetragen",
+      "Hardware": "SoC MT7621DAT; Flash 16 MiB XM25QH128C; RAM 128 MiB; WLAN MT7603E 11n / MT7613BEN 11ac; 1x10/100/1000 LAN; Reset + WPS; 5 LEDs gruen; Serial unpopulated header 115200 8n1; Power POE 802.3af (37-57V DC)",
+      "Kommentar ambassador86 2025-12-20": "Actually no interface has the mac address written on the label. It is off by one.",
+      "Kommentar ambassador86 2026-01-14": "With the gmac definition adjusted to offset 0 the integration checklist is done. Testgeraet https://map.chemnitz.freifunk.net/#!/de/map/80afca5f9b98"
+    },
+    "gluon_issue_3787": {
+      "titel": "Outdoor mode broken on TP-Link Archer C6 v3 (missing DFS support for MT7613BE)",
+      "kern": "5-GHz-Funk mit MT7613BE kommt im Outdoor-Modus (DFS-Kanaele) nicht hoch",
+      "Kommentar Kistelini 2026-07-09": "Affected devices in Gluon: Cudy AP1300 Outdoor, Cudy TR1200, TP-Link Archer C50 v6, TP-Link Archer C6 v3, TP-Link TL-WR902AC v4, Wavlink WS-WN572HP3 4G",
+      "Kommentar Kistelini 2026-07-10": "Moeglich waere, Outdoor-Geraete auf Kanal 149-173 (ohne DFS) zu zwingen, dann nur 25 mW",
+      "status": "offen, Labels bug / hardware"
+    },
+    "openwrt_wiki_dfs": {
+      "MT7613 radio": "The open source mt76 driver supports DFS, but does not contain the code yet for implementing DFS functionality on Mediatek MT7613 radio phy chip.",
+      "Hinweis": "Currently users can only configure non-DFS channels on 5Ghz MT7613 radio. Trying to configure DFS channels would otherwise result in NO WIFI SIGNAL (2021-02-22)",
+      "Verweise": [
+        "https://forum.openwrt.org/t/mt76-mt7613-radio-and-dfs-support/88915/12",
+        "https://github.com/openwrt/mt76/issues/925"
+      ]
+    },
+    "wikidevi": {
+      "brand": "Cudy",
+      "model": "AP1300",
+      "series": "AC1200",
+      "manuf_country": "China",
+      "is_manuf": "Yes",
+      "type": "access point",
+      "pwr_v": "24-57",
+      "pwr_conn": "Ethernet (PoE)",
+      "pwr_poe": "at/af",
+      "cpu1_brand": "MediaTek",
+      "cpu1_model": "MT7621DAT",
+      "cpu1_cspeed": "880",
+      "cpu1_cores": "2",
+      "fla1": "16",
+      "fla1_brand": "XMC",
+      "fla1_model": "XM25QH128C",
+      "ram1": "128",
+      "ram1_brand": "MediaTek",
+      "ram1_model": "MT7621DAT",
+      "serial": "yes,, 4-pin header,, 3.3V TTL,, (115200 8N1),, J4",
+      "wi1_chip1_brand": "MediaTek",
+      "wi1_chip1_model": "MT7603EN",
+      "wi1_802dot11_protocols": "bgn",
+      "wi1_ant_conn": "soldered",
+      "wi1_txchains": "2",
+      "wi1_rxchains": "2",
+      "wi1_sstreams": "2",
+      "wi2_chip1_brand": "MediaTek",
+      "wi2_chip1_model": "MT7613BE",
+      "wi2_802dot11_protocols": "abgn+ac",
+      "wi2_ant_conn": "soldered",
+      "wi2_txchains": "2",
+      "wi2_rxchains": "2",
+      "wi2_sstreams": "2",
+      "eth_cpu": "true",
+      "sw_cpu": "true",
+      "lan_speed": "1GbE",
+      "lan_ports": "1",
+      "tp_firmware": "OpenWrt",
+      "802dot11_protocols": "abgn+ac",
+      "_tagline": "AC1300 Outdoor Wi-Fi 5 Access Point",
+      "_datenraten": "300 Mbps - 2SS 2.4GHz 802.11n (40MHz chan.); 867 Mbps - 2SS 5GHz 802.11ac (80MHz chan.) = AC1300 class",
+      "_produktseite": "https://www.cudy.com/products/ap1300-outdoor-1-0"
+    },
+    "deviwiki": {
+      "ergebnis": "kein Geraeteeintrag"
+    },
+    "fccid": {
+      "grantee": "2APRG (Shenzhen Cudy Technology)",
+      "ids": "2APRG-AX200, 2APRGAP01, 2APRGLT01, 2APRGLT02, 2APRGLT03, 2APRGLTOD, 2APRGM3600, 2APRGMS01, 2APRGMS30, 2APRGP5, 2APRGRE01, 2APRGRE12, 2APRGRE300V1, 2APRGRE3600, 2APRGRT01, 2APRGRT02, 2APRGUX01, 2APRGUX02, 2APRGUX03, 2APRGWR1000V1, 2APRGWR3000H, 2APRGWR3000SE, 2APRGWR3600E, 2APRGWR3600H, 2APRGWR6500H, 2APRGWU650"
+    },
+    "hersteller": {
+      "titel": "Indoor/Outdoor AC1200 Wi-Fi Access Point, AP1300 Outdoor 1.0",
+      "kurzbeschreibung": "A pole/wall-mounted WiFi AP with IP65 casing, PoE, and Cudy Mesh features, ideal for park, farm, and parking lot environments.",
+      "tags": "24V Passive PoE, 48V Passive PoE, 802.3af/at/bt, Gigabit, Outdoor AP",
+      "product_type": "AP",
+      "preis": "9999.00 (Platzhalter)",
+      "kurzmerkmale": "IP65, -40~65°C (-40~149°F), 4kV Surge; 4-Stream Dual-Band Wi-Fi 5; 867 Mbps + 300 Mbps Wi-Fi; 1× Shielded GbE PoE In; 802.3at/af, Passive PoE; Watchdog, Schedule Reboot; Max 170 m (550 ft) Range; 100 Connected Devices; Multi-AP Management",
+      "kompatible_geraete": "C200P, C500P",
+      "kompatibles_zubehoer": "POE200, POE300 2.0, POE400 2.0, POE350 2.0, POE200H, POE400X, POE350 3.0, POE400 3.0, POE300 3.0, POE24-12W",
+      "feature_text_funk": "With MU-MIMO and dual-band features, the AC1200 Wi-Fi AP can connect to over 30 devices ... maximum number of simultaneous connections per AP is 128 devices. ... Beamforming technology and two external antennas.",
+      "feature_text_wetter": "The AP is protected by an IP65 standard case, shielding it from rain and dust when installed vertically. It also features 4 kV Lightning/Surge and 8 kV ESD protection ... Its working temperatures span from -40 °F to 149 °F (-40 ℃ to 65 ℃).",
+      "feature_text_strom": "Gigabit Port with Two PoE Options - Supports two powering methods: 802.3at PoE (Max power: 18 W, Idle: 5 W); 48-57 V Passive PoE (Adapter included, not waterproof)",
+      "feature_text_montage": "Mounting Kit Included - Wall-Mounting, Pole-Mounting",
+      "feature_text_mesh": "Requires firmware newer than 1.15.28",
+      "spezifikation_hardware": {
+        "Model Version": "AP1300 Outdoor 1.0",
+        "CPU / CPU Details": "880 MHz Dual-Core CPU",
+        "Memory/Storage / Flash/ROM": "16 MB (128 Mbit) NOR",
+        "Memory/Storage / DDR/RAM": "128 MB (1 Gbit) DDR3",
+        "Wireless / 5 GHz Wi-Fi Speed": "867 Mbps",
+        "Wireless / 2.4 GHz Wi-Fi Speed": "300 Mbps",
+        "Wireless / 5 GHz Wi-Fi Streams": "2 Spatial Streams",
+        "Wireless / 2.4 GHz Wi-Fi Streams": "2 Spatial Streams",
+        "Wireless / Wi-Fi Antennas": "2× Detachable",
+        "Wireless / FEM or PA/LNA": "5 GHz: 2× Internal, 2.4 GHz: 2× Internal",
+        "Wireless / Detachable Wi-Fi Antennas Connector": "RP-SMA Female",
+        "Wireless / Beamforming": "ja (Haken-Symbol)",
+        "Wireless / Range Performance": "Max: 170 m (558 ft); Park: 150 m (492 ft); Street: 50 m (164 ft); Woods: 30 m (98 ft)",
+        "Interfaces / Gigabit RJ45 Ports": "1",
+        "Interfaces / Ethernet Notes": "ETH0: PoE In",
+        "Buttons and LEDs / LED": "5 GHz Wi-Fi, 2.4 GHz Wi-Fi, LAN, Internet, System",
+        "Buttons and LEDs / Physical Buttons": "Reset Button",
+        "Power / Power Input Type": "PoE via Ethernet Port",
+        "Power / Power Methods": "802.3at/af PoE; Passive PoE",
+        "Power / Power Input": "PoE: 802.3at/af; Passive PoE: 24-57V⎓",
+        "Power / Max Power Consumption (W)": "11W",
+        "Power / Idle Power Consumption (W)": "7.5W",
+        "Power / Power Adapter In the Box": "Input: 100-240V~, 50/60Hz; Output: 48V⎓ Passive PoE",
+        "Reliability / Advanced": "Hardware Watchdog",
+        "Reliability / EMC": "ESD: Contact: 4kV; Air: 8kV; IEC/EN 61000-4-5, Level 4 Surge: Power: DM 2kV, CM 4kV; RJ45: CM 4kV",
+        "Reliability / Environment": "Operating Temperature: -20 ℃ ~ 60 ℃ (-4 ℉ ~140 ℉); Extend Operating Temperature with Industrial Grade SIM Card: -40 ℃ ~ 65 ℃ (-40 ℉ ~ 149 ℉); Storage Temperature: -40 ℃ ~ 70 ℃ (-40 ℉ ~ 158 ℉); Operating Humidity: 10% ~ 90% non-condensing; Storage Humidity: 5% ~ 90% non-condensing",
+        "Reliability / Ingress Protection Rating": "IP65 When devices is installed vertically",
+        "Compatibility / Compatible Products": "C200P 1.0, C500P 1.0",
+        "Compatibility / Compatible Accessories": "POE200 2.0, POE300 2.0, POE400 2.0, POE350 2.0, POE200H 1.0, POE400X 2.0, POE350 3.0, POE400 3.0, POE300 3.0, POE24-12W 1.0",
+        "Certifications": "FCC, CE",
+        "Mechanical / Installation": "Wall-mount; Pole-mount",
+        "Mechanical / Dimension": "Main Part: 240×100×53.7 mm (9.45×3.94×2.11 inches); Antenna: 197.5×21.6×15.5 mm (7.78×0.85×0.61 inches)",
+        "Mechanical / Product Weight": "410.3 g (14.47 oz.)",
+        "Package Content": "AP1300 Outdoor; Detachable Antennas; PoE Adapter; Power Cord; Mounting Kit; Ethernet Cable; Installation Guide",
+        "Ordering Information / Retail Package Weight": "EU: 865 g (30.51 oz.)",
+        "Ordering Information / Retail Package Dimension": "324×107×86 mm; 12.76×4.21×3.39 inches",
+        "Ordering Information / Units per Carton": "20",
+        "Ordering Information / Carton Net Weight": "EU: 17.3 kg (38.14 lbs)",
+        "Ordering Information / Carton Gross Weight": "EU: 18.2 kg (40.12 lbs)",
+        "Ordering Information / Carton Dimension": "46×33.7×45 cm; 18.11×13.27×17.72 inches"
+      },
+      "spezifikation_software": {
+        "Model Version": "AP1300 Outdoor 1.0",
+        "Wireless / Wi-Fi Standards": "Wi-Fi 5",
+        "Wireless / Max Wi-Fi Modulation": "256-QAM",
+        "Wireless / Wi-Fi Efficiency": "MU-MIMO",
+        "Wireless / Wi-Fi Efficiency Note": "MU-MIMO available on 5 GHz",
+        "Wireless / Max Capacity": "128",
+        "Wireless / Recommended Client Upper Limit": "100",
+        "Wireless / Wi-Fi Channel Width": "Auto/20/40/80 MHz",
+        "Wireless / Wi-Fi Security": "WPA/WPA2/WPA3",
+        "Wireless / Multi-SSID (Max Number)": "8 SSIDs (Up to 4 SSIDs on each band), VLAN Support",
+        "Wireless / WPS": "ja (Haken-Symbol)",
+        "General / Operation Modes": "Wi-Fi Router; Access Point; Range Extender; WISP; Client",
+        "General / Mesh": "Cudy Mesh",
+        "General / Mesh Backhaul": "Wireless Backhaul; Wired Backhaul",
+        "General / Multi-Band Backhaul": "ja (Haken-Symbol)",
+        "General / WAN Mode": "DHCP; Static IP; PPPOE; PPTP; L2TP",
+        "General / Internet Failover Sequence": "WAN; WISP",
+        "Management / Multi-AP Management": "Via Cudy AP Controller",
+        "Management / All Devices Management": "Wi-Fi Time Schedule; MAC Filter; IP/MAC Binding",
+        "Management / Per-Devices Management": "Internet On/Off; VPN On/Off; Online Time Schedule; Device Rename",
+        "Management / Content Management": "Domain Filter; IP Filter",
+        "Network / QoS": "Per-User Rate Limiting",
+        "Network / DHCP": "Address Reservation; DHCP Client List; Server",
+        "Network / IP Versions": "IPv4/IPv6",
+        "Network / IPv6 Protocols": "Relay; Dynamic (SLAAC/DHCPv6); Static (Fixed IP); Passthrough; 464XLAT; MAP-E; DS-Lite",
+        "Network / Multicast": "ja (Haken-Symbol)",
+        "Network / IPTV/VLAN": "Tag VLAN",
+        "Network / TTL Customization": "Extend; Spoof; Custom",
+        "Network / IGMP": "IGMP Proxy; IGMP Snooping",
+        "Network / Forwarding": "Port Forwarding; Port Triggering; UPnP; DMZ",
+        "Network / Firewall": "SPI Firewall; DoS Protection; Block PING",
+        "Network / Application Layer Gateway": "IPSec Passthrough; L2TP Passthrough; PPTP Passthrough; FTP Passthrough; TFTP Passthrough; H323 Passthrough; SIP Passthrough; RTSP Passthrough",
+        "Utilities / Captive Portal": "ja (Haken-Symbol)",
+        "Utilities / Captive Portal Authentication": "No Authentication, Local Password, External Portal Server",
+        "Utilities / VPN Server": "WireGuard; OpenVPN; IPsec; Zerotier; PPTP; L2TP",
+        "Utilities / VPN Client": "WireGuard; OpenVPN; IPsec; Zerotier; PPTP; L2TP",
+        "Utilities / DNS Options": "DNS over TLS; Manual DNS; Rebind Protection; Override Clients' DNS",
+        "Utilities / DNS over TLS Providers": "Cloudflare; Google; Quad9; Custom",
+        "Utilities / Wake on LAN": "ja (Haken-Symbol)",
+        "Utilities / Online Detection": "ja (Haken-Symbol)",
+        "System / LED Control": "ja (Haken-Symbol)",
+        "System / Local Control Method": "Config Web Page; App Control",
+        "System / Remote Control Method": "Config Page via HTTPS; App Control; TR069/TR098/TR111/TR143/TR181",
+        "System / Firmware Upgrade": "Local Update; App (Over the Air); Online Update",
+        "System / Reliability": "Timed Reboot; Backup and Restore",
+        "System / Diagnostic Tools": "Diagnosis; Ping; Traceroute; NSLookup; System Log",
+        "System / Languages": "English; Bengali; Catalan; Czech; German; Greek; Spanish; French; Hebrew; Croatian; Hungarian; Italian; Japanese; Khmer; Korean; Dutch; Norwegian; Polish; Portuguese; Romanian; Russian; Slovak; Swedish; Thai; Turkish; Ukrainian; Vietnamese; Simplified Chinese; Traditional Chinese",
+        "Dashboard / Panel": "Internet Status; Mesh Status; Devices Management; WAN Status; LAN Status; WISP Status; Wi-Fi Status; VPN Status; DHCP Server Status; System Version",
+        "Dashboard / Charts": "Mesh Topology; Internet Speed; WISP Speed; Wi-Fi Speed"
+      },
+      "bilder": [
+        "AP1300-OD__1_61.png",
+        "AP1300-OD__1_62.png",
+        "AP1300-OD__1_63.png",
+        "AP1300-OD__1_65.png",
+        "AP1300-Outdoor.png"
+      ]
+    },
+    "hersteller_downloads": {
+      "firmware": [
+        {
+          "version": "2.4.4",
+          "datum": "11-Aug-2025",
+          "datei": "AP1300Outdoor-R39-2.4.4-20250808-095945-flash.zip",
+          "groesse": "11.6 MB",
+          "release_note": "Add support for management via Cudy AP Controller; multiple SSIDs; captive portal with local authentication; SSID VLAN; bug fixes"
+        },
+        {
+          "version": "2.2.6",
+          "datum": "21-Aug-2024",
+          "datei": "AP1300Outdoor-R39-2.2.6-20240815-095129-flash.zip",
+          "groesse": "11.51 MB",
+          "release_note": "Add Parental Control support; bug fixes"
+        },
+        {
+          "version": "2.1.14",
+          "datum": "27-Jun-2024",
+          "datei": "AP1300Outdoor-R39-2.1.14-20240626-115830-flash.zip",
+          "groesse": "11.7 MB",
+          "release_note": "Add APP support; administrator password mechanism per ETSI EN 303 645; bug fixes"
+        },
+        {
+          "version": "1.16.18",
+          "datum": "25-Dec-2023",
+          "datei": "AP1300Outdoor-R39-1.16.18-20231222-184136-flash.zip",
+          "groesse": "10.5 MB",
+          "release_note": "Add Client Mode; IPTV/VLAN; Captive Portal; bug fixes"
+        }
+      ],
+      "dokumente": [
+        "Datasheet",
+        "Installation Guide English",
+        "Installation Guide Multilingual",
+        "Regulatory Compliance",
+        "CE Doc",
+        "PSTI Doc"
+      ],
+      "gpl": {
+        "version": "17.01",
+        "datum": "21-Jun-2024",
+        "link": "https://drive.google.com/file/d/1sDSWjrw51HYsv-NPoADaDgPwrUE7EtgL/view?usp=drive_link"
+      },
+      "treiber": "keine"
+    },
+    "hersteller_datenblatt": {
+      "titel": "Outdoor AC1200 MU-MIMO Wireless Access Point, Model: AP1300 Outdoor",
+      "Highlights": "AC1200 Dual-Band Wi-Fi: 867 Mbps on 5 GHz and 300 Mbps on 2.4 GHz; Flexible Power Supply: Support 802.3af/at, 24-57 V Passive PoE (48 V PoE Adapter Included); MU-MIMO, Band Steering, Beamforming; Weatherproof: IP65 waterproof and 4 KV lightning surge protection at the Ethernet port",
+      "CPU": "880 MHz Dual-Core Processors",
+      "Chip": "MT7621DA+MT7613B+MT7603E",
+      "Flash": "16 MB (128 Mbit)",
+      "DDR": "128 MB (1 Gbit)",
+      "Interface": "1× Gigabit Ethernet (RJ-45) Port (Supports IEEE802.3af PoE or 24-57 V Passive PoE); 1× Reset Button; 1× WPS Button",
+      "Power Supply": "802.3af/at PoE; 24-57 V Passive PoE (+4,5pins; -7,8pins)",
+      "Dimensions": "Access Point (without Antennas): 240×100×53.7 mm; Wi-Fi Antennas: 197.5×21.6×15.5 mm each",
+      "Mounting": "Pole/Wall Mounting (Kits included)",
+      "Wireless Standards": "Wi-Fi 5 (802.11ac/n/g/b/a)",
+      "Frequency": "2.4 GHz and 5 GHz",
+      "Signal Rate": "5 GHz: Up to 867 Mbps; 2.4 GHz: Up to 300 Mbps",
+      "Bandwidth": "20/40/80 MHz",
+      "Wireless Functions": "Fast Roaming with Cudy Mesh; Multiple SSID; Enable/Disable Wireless Radio; Transmit Power Control; QoS(WMM); Band Steering; MU-MIMO; Beamforming; Rate Limit; Reboot Schedule; Wireless Schedule; Mesh (Requires a Cudy Mesh unit/Mesh router/AC as the gateway with firmware newer than 15.28)",
+      "Wireless Encryption": "WPA-PSK; WPA2-PSK; WPA-PSK/WPA2-PSK",
+      "Security": "Access Control; Mac Filtering; Wireless Isolation Clients; VPN Server and Client (Zerotier, Wireguard, OpenVPN, IPSec, L2TP, PPTP); DNS over TLS (CloudFlare, Google, Quad9)",
+      "Operation Modes": "Wireless Access Point Mode; Wireless Router Mode; Wireless Extender Mode; WISP Mode",
+      "Environments": "Operating Temperature: -20–60 °C (-4–140 °F); Extend Operating Temperature: -40–65 °C (-40–149 °F); Storage Temperature: -40–70 °C (-40–158 °F); Operating Humidity: 10–90% RH non-condensing; Storage Humidity: 5–90% RH non-condensing",
+      "Package Contents": "Outdoor Access Point; 2× Detachable Wi-Fi Antennas; 48 V Passive PoE Adapter; Ethernet Cable (Length: 1 m); Mounting Kit; Installation Guide",
+      "System Requirements": "Microsoft Windows XP, Vista, Windows 7, Windows 8, Windows10, Linux"
+    },
+    "hersteller_kurzanleitung": {
+      "dokumentnummer": "810600181",
+      "schritte": "1 Install the Wi-Fi Antennas (Grip the base section of the antennas and tighten them; Position the antennas at a 45-degree angle for optimal downward Wi-Fi coverage); 2 Power the AP with the PoE adapter or a PoE Switch; 3 Software Configuration (Cudy Mesh oder Standard); 4 Check the system status via LED; 5 Mount the AP (a/b: Mast/Wand, nur Zeichnung)",
+      "beschriftung_unterseite": "LAN/WAN PoE IN; WPS; Reset",
+      "packungsinhalt": "a. Access Point; b. Wi-Fi Antennas; c. Ethernet Cable; d. PoE Adapter; e. Power Cord; f. Clamp; g. Screw",
+      "werkseinstellung": "WLAN \"Cudy-Outdoor\" / \"Cudy-Outdoor-5G\", Passwort \"password\"; Weboberflaeche http://cudyap.net, Passwort admin",
+      "mesh_hinweis": "If the AP was configured before, press and hold the Reset button for 5s to enable Mesh adoption.",
+      "konformitaet": "2014/53/EU, 2011/65/EU, (EU) 2015/863; http://www.cudy.com/ce"
+    },
+    "hersteller_kurzanleitung_mehrsprachig": {
+      "dokumentnummer": "810600312",
+      "geltung": "AP1200/AP1300/AP3000 Outdoor",
+      "packungsinhalt": "a. Access Point; b. Wi-Fi Antennas; c. Ethernet Cable; d. PoE Adapter; e. Power Cord; f. Clamp; g. Screw",
+      "schritte": "Antennen anschrauben (45 Grad), Strom per PoE-Adapter oder PoE-Switch"
+    },
+    "hersteller_regulatorik": {
+      "Product name": "Indoor/Outdoor AC1200 Wireless Access Point",
+      "Model Number": "AP1300 Outdoor",
+      "I.T.E. Power Supply": "RP023-4800320ZG",
+      "FCC": "Supplier's-Declaration-Text (part 15, Class B), keine FCC-ID genannt; Issue Date 2024-05-13",
+      "Maximum transmitted power (EU)": "2400-2483.5 MHz: 20 dBm; 5150-5250 MHz: 23 dBm; 5250-5350 MHz: 23 dBm; 5470-5725 MHz: 30 dBm",
+      "National Restrictions": "In EU member states, EFTA countries and Northern Ireland, the operation in the frequency range 5150MHz-5350MHz is only permitted indoors.",
+      "Safety": "Adapter should be used indoors where the ambient temperature is lower than or equal to 40 ℃; Operation Temperature: -20 ~ 60 °C; Extend -40 ~ 65°C (Booted up in advance. Performance may drop slightly.)",
+      "Label": "The product label can be found at the bottom of the product and its I.T.E. power supply.",
+      "weitere": "IC (CAN ICES-3 (B)/NMB-3(B)), UkrSEPRO, Anatel-Hinweis ohne Nummer, UKCA, WEEE"
+    },
+    "hersteller_psti": {
+      "Product Name": "Indoor/Outdoor AC1200 Gigabit Wireless Access Point",
+      "Model Number": "AP1300 Outdoor",
+      "Product Version": "V1",
+      "Support period": "The defined support period will end in 2 years after the product's last end-of-life date.",
+      "Date of issue": "2024-04-12"
+    },
+    "hersteller_foto_unten": {
+      "beschriftung": "LAN/WAN PoE IN; WPS; RESET",
+      "sichtbar": "eine geschirmte RJ45-Buchse und zwei Taster (WPS, RESET) an der Unterseite unter einer aufklappbaren Abdeckung; zwei Antennenfuesse oben"
+    },
+    "hersteller_foto_mast": {
+      "sichtbar": "Montage senkrecht am Mast, zwei Stabantennen oben, LED-Leiste mit 5 gruenen LEDs an der Seite, Kabel unten"
+    },
+    "hersteller_eol_liste": {
+      "ergebnis": "AP1300 Outdoor nicht enthalten; enthalten ist nur das Innen-Modell \"AC1200 Gigabit Wi-Fi Access Point, AP1300 1.0 / AP1300_P 1.0\""
+    },
+    "werkstatt_doku": {
+      "tabellenzeile": "AP1300 Outdoor v1 ⁴ | -- | AP1300 Outdoor V1.0.zip | 22012cf6803c8c084a1fd9e88c998711",
+      "fussnote_4": "Steht nicht in devices.js des Downloaders, es gibt also keine Freifunk-Firmware dafuer. Die Zwischenfirmware ist dokumentiert, weil wir sie 2025 geholt hatten; im Spiegel liegt nur Cudys ZIP, ohne eigenen Namen.",
+      "weiterer_hinweis": "AP1300 Outdoor ist hier dokumentiert, steht aber nicht in devices.js."
+    },
+    "webarchiv_geizhals": {
+      "ergebnis": "kein Geizhals-Eintrag fuer AP1300 Outdoor im Webarchiv"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Cudy",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Shenzhen Cudy Technology Co., Ltd. (Regulatorik/PSTI)"
+      },
+      {
+        "wert": "Cudy",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Cudy",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "AP1300 Outdoor",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Produkttitel \"Indoor/Outdoor AC1200 Wi-Fi Access Point, AP1300 Outdoor 1.0\""
+      },
+      {
+        "wert": "AP1300 Outdoor",
+        "quelle": "hersteller_regulatorik",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_AP1300_Outdoor.pdf?v=7885389874158422780",
+        "stand": "FCC-Teil Issue Date 2024-05-13; 9 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Model Number"
+      },
+      {
+        "wert": "AP1300 Outdoor",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AP1300 Outdoor",
+        "quelle": "openwrt_git_lokal",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v24.10.8/target/linux/ramips/image/mt7621.mk",
+        "stand": "openwrt-24.10 v24.10.8-14-g77b198aa72 (OpenWrt-Pin von Gluon v2025.1.3, lokaler Checkout)",
+        "sicherheit": "hoch",
+        "bemerkung": "DEVICE_MODEL; DTS model \"Cudy AP1300 Outdoor v1\""
+      },
+      {
+        "wert": "AP1300",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "model=AP1300, Seitentitel Cudy AP1300 Outdoor"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "1.0",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Model Version \"AP1300 Outdoor 1.0\"; andere Versionen auf der Herstellerseite nicht gelistet"
+      },
+      {
+        "wert": "V1",
+        "quelle": "hersteller_psti",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Statements_of_PSTI_Compliance_AP1300_Outdoor.pdf?v=73831375054494601",
+        "stand": "Ausstellungsdatum 2024-04-12",
+        "sicherheit": "hoch",
+        "bemerkung": "Product Version: V1"
+      },
+      {
+        "wert": "v1",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": "Versions: v1"
+      },
+      {
+        "wert": "v1",
+        "quelle": "openwrt_pr_20268",
+        "beleg": "https://github.com/openwrt/openwrt/pull/20268",
+        "stand": "PR 2025-10-01 (LuisMitaHL), gemergt 2025-11-09; 3 Kommentare, 2 Review-Kommentare",
+        "sicherheit": "mittel",
+        "bemerkung": "\"I added v1 on the router name, according to the Cudy sticker on the router\""
+      },
+      {
+        "wert": "V1.0",
+        "quelle": "werkstatt_doku",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/cudy-installation.md",
+        "stand": "routerwerkstatt Commit a9781bd vom 2026-10-15 (Tabelle Stand 15.10.2026)",
+        "sicherheit": "hoch",
+        "bemerkung": "Cudys Zwischenfirmware heisst \"AP1300 Outdoor V1.0.zip\""
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild an der Unterseite des Geräts (und am Netzteil)",
+        "quelle": "hersteller_regulatorik",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_AP1300_Outdoor.pdf?v=7885389874158422780",
+        "stand": "FCC-Teil Issue Date 2024-05-13; 9 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "\"The product label can be found at the bottom of the product and its I.T.E. power supply.\""
+      },
+      {
+        "wert": "Aufkleber nennt v1",
+        "quelle": "openwrt_pr_20268",
+        "beleg": "https://github.com/openwrt/openwrt/pull/20268",
+        "stand": "PR 2025-10-01 (LuisMitaHL), gemergt 2025-11-09; 3 Kommentare, 2 Review-Kommentare",
+        "sicherheit": "mittel",
+        "bemerkung": "LuisMitaHL: Name \"v1\" nach dem Cudy-Aufkleber; Wortlaut des Aufklebers nicht zitiert"
+      },
+      {
+        "wert": "Modell und Version auf dem Aufkleber unter dem Gerät",
+        "quelle": "werkstatt_doku",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/cudy-installation.md",
+        "stand": "routerwerkstatt Commit a9781bd vom 2026-10-15 (Tabelle Stand 15.10.2026)",
+        "sicherheit": "hoch",
+        "bemerkung": "allgemein fuer Cudy-Router"
+      },
+      {
+        "wert": "Stock-Firmware-Kennung R39 (Dateiname AP1300Outdoor-R39-...); Innen-Modell AP1300 v1.0 hat R38",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/pages/download-center/ap1300-outdoor-1-0",
+        "stand": "Abruf 2026-10-20; neueste Firmware 2.4.4 vom 11-Aug-2025; GPL 17.01 vom 21-Jun-2024",
+        "sicherheit": "hoch",
+        "bemerkung": "R39 auch als UIMAGE_NAME/SUPPORTED_DEVICES in OpenWrt; R38 laut PR-16265-Kommentar (Mixanic-705) fuer das Innen-Modell"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "Indoor/Outdoor AC1200 Wi-Fi Access Point",
+          "AP1300 Outdoor 1.0"
+        ],
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "Outdoor AC1200 MU-MIMO Wireless Access Point"
+        ],
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "Indoor/Outdoor AC1200 Wireless Access Point"
+        ],
+        "quelle": "hersteller_regulatorik",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_AP1300_Outdoor.pdf?v=7885389874158422780",
+        "stand": "FCC-Teil Issue Date 2024-05-13; 9 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "Indoor/Outdoor AC1200 Gigabit Wireless Access Point"
+        ],
+        "quelle": "hersteller_psti",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Statements_of_PSTI_Compliance_AP1300_Outdoor.pdf?v=73831375054494601",
+        "stand": "Ausstellungsdatum 2024-04-12",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "R39",
+          "cudy_ap1300-outdoor-v1"
+        ],
+        "quelle": "openwrt_git_lokal",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v24.10.8/target/linux/ramips/image/mt7621.mk",
+        "stand": "openwrt-24.10 v24.10.8-14-g77b198aa72 (OpenWrt-Pin von Gluon v2025.1.3, lokaler Checkout)",
+        "sicherheit": "hoch",
+        "bemerkung": "UIMAGE_NAME/SUPPORTED_DEVICES R39; OpenWrt-Profilname"
+      },
+      {
+        "wert": [
+          "AC1300 Outdoor Wi-Fi 5 Access Point"
+        ],
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "TagLine; series AC1200"
+      },
+      {
+        "wert": [
+          "ap1300outdoor",
+          "cudy_ap1300-outdoor"
+        ],
+        "quelle": "openwrt_pr_16265",
+        "beleg": "https://github.com/openwrt/openwrt/pull/16265",
+        "stand": "PR 2024-08-26 (DanielRIOT), ungemergt geschlossen 2025-11-09; 10 Kommentare, 8 Review-Kommentare",
+        "sicherheit": "niedrig",
+        "bemerkung": "Namen im ersten PR bzw. im Cudy-signierten Image von aso824"
+      }
+    ],
+    "ce_konformitaet": [
+      {
+        "wert": "2014/53/EU, 2011/65/EU, (EU) 2015/863",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_Quick_Installation_Instructions-EN.pdf?v=1406581268350481678",
+        "stand": "Dokumentnummer 810600181, ohne Datum, 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "FCC, CE",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Certifications"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "MediaTek MT7621DAT",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7621DAT",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7621DAT",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7621DA",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Chip: MT7621DA+MT7613B+MT7603E"
+      },
+      {
+        "wert": "MediaTek MT7621",
+        "quelle": "openwrt_pr_16265",
+        "beleg": "https://github.com/openwrt/openwrt/pull/16265",
+        "stand": "PR 2024-08-26 (DanielRIOT), ungemergt geschlossen 2025-11-09; 10 Kommentare, 8 Review-Kommentare",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "880 MHz Dual-Core CPU"
+      },
+      {
+        "wert": 2,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 880,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 880,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 880,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 880,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "MIPS, mipsel_24kc",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": "Package architecture mipsel_24kc"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 128,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "128 MB (1 Gbit) DDR3"
+      },
+      {
+        "wert": 128,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "im SoC (ram1_model=MT7621DAT)"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_pr_16265",
+        "beleg": "https://github.com/openwrt/openwrt/pull/16265",
+        "stand": "PR 2024-08-26 (DanielRIOT), ungemergt geschlossen 2025-11-09; 10 Kommentare, 8 Review-Kommentare",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR3, im SoC integriert",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "ram1_brand MediaTek, ram1_model MT7621DAT"
+      },
+      {
+        "wert": "DDR3",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "16 MB (128 Mbit) NOR"
+      },
+      {
+        "wert": 16,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_pr_16265",
+        "beleg": "https://github.com/openwrt/openwrt/pull/16265",
+        "stand": "PR 2024-08-26 (DanielRIOT), ungemergt geschlossen 2025-11-09; 10 Kommentare, 8 Review-Kommentare",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_git_lokal",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v24.10.8/target/linux/ramips/dts/mt7621_cudy_ap1300-outdoor-v1.dts",
+        "stand": "openwrt-24.10 v24.10.8-14-g77b198aa72 (OpenWrt-Pin von Gluon v2025.1.3, lokaler Checkout)",
+        "sicherheit": "hoch",
+        "bemerkung": "DTS: letzte Partition endet bei 0x1000000"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_git_lokal",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v24.10.8/target/linux/ramips/dts/mt7621_cudy_ap1300-outdoor-v1.dts",
+        "stand": "openwrt-24.10 v24.10.8-14-g77b198aa72 (OpenWrt-Pin von Gluon v2025.1.3, lokaler Checkout)",
+        "sicherheit": "hoch",
+        "bemerkung": "jedec,spi-nor"
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "XMC XM25QH128C",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": "im DTS mit 40 MHz SPI-Takt"
+      },
+      {
+        "wert": "XMC XM25QH128C",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "XM25QH128C",
+        "quelle": "openwrt_pr_16265",
+        "beleg": "https://github.com/openwrt/openwrt/pull/16265",
+        "stand": "PR 2024-08-26 (DanielRIOT), ungemergt geschlossen 2025-11-09; 10 Kommentare, 8 Review-Kommentare",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_layout": [
+      {
+        "wert": "u-boot 192 KiB, u-boot-env 64 KiB, factory 64 KiB, firmware 15872 KiB (0x50000-0xfd0000), debug 64 KiB, backup 64 KiB, bdinfo 64 KiB",
+        "quelle": "openwrt_git_lokal",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v24.10.8/target/linux/ramips/dts/mt7621_cudy_ap1300-outdoor-v1.dts",
+        "stand": "openwrt-24.10 v24.10.8-14-g77b198aa72 (OpenWrt-Pin von Gluon v2025.1.3, lokaler Checkout)",
+        "sicherheit": "hoch",
+        "bemerkung": "IMAGE_SIZE 15872k; Funk-EEPROM in factory, Basis-MAC in bdinfo @0xde00"
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": [
+          "MediaTek MT7603E (2.4 GHz)",
+          "MediaTek MT7613BEN (5 GHz)"
+        ],
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "MediaTek MT7603E",
+          "MediaTek MT7613BEN"
+        ],
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "MediaTek MT7603EN (2.4 GHz)",
+          "MediaTek MT7613BE (5 GHz)"
+        ],
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "MT7613B",
+          "MT7603E"
+        ],
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "MT7613BE (5 GHz, im PR \"MTY7613BE\")",
+          "MT7603E (2.4 GHz)"
+        ],
+        "quelle": "openwrt_pr_16265",
+        "beleg": "https://github.com/openwrt/openwrt/pull/16265",
+        "stand": "PR 2024-08-26 (DanielRIOT), ungemergt geschlossen 2025-11-09; 10 Kommentare, 8 Review-Kommentare",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "mt76",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "mt76: kmod-mt7603, kmod-mt7615e, kmod-mt7663-firmware-ap",
+        "quelle": "openwrt_git_lokal",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v24.10.8/target/linux/ramips/image/mt7621.mk",
+        "stand": "openwrt-24.10 v24.10.8-14-g77b198aa72 (OpenWrt-Pin von Gluon v2025.1.3, lokaler Checkout)",
+        "sicherheit": "hoch",
+        "bemerkung": "DEVICE_PACKAGES"
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11n",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": "\"2.4 GHz (MT7603E, 11n)\""
+      },
+      {
+        "wert": "Wi-Fi 5 (802.11ac/n/g/b/a)",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Angabe fuer das Geraet, 2.4 GHz bis 300 Mbps"
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "2 Spatial Streams, 300 Mbps"
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "2T2R, 2 SS"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_pr_16265",
+        "beleg": "https://github.com/openwrt/openwrt/pull/16265",
+        "stand": "PR 2024-08-26 (DanielRIOT), ungemergt geschlossen 2025-11-09; 10 Kommentare, 8 Review-Kommentare",
+        "sicherheit": "mittel",
+        "bemerkung": "2x2"
+      }
+    ],
+    "wlan_24_ketten": [
+      {
+        "wert": "2T2R",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "abgn+ac"
+      },
+      {
+        "wert": "802.11ac",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Wi-Fi 5",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "867 Mbps, MU-MIMO auf 5 GHz, 256-QAM"
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "2 Spatial Streams, 867 Mbps"
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "2T2R, 2 SS"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_pr_16265",
+        "beleg": "https://github.com/openwrt/openwrt/pull/16265",
+        "stand": "PR 2024-08-26 (DanielRIOT), ungemergt geschlossen 2025-11-09; 10 Kommentare, 8 Review-Kommentare",
+        "sicherheit": "mittel",
+        "bemerkung": "2x2"
+      }
+    ],
+    "wlan_5_ketten": [
+      {
+        "wert": "2T2R",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AC1200",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AC1200",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AC1200",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "series=AC1200; die Datenraten-Box rechnet \"AC1300 class\" (300+867)"
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "20/40/80 MHz",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Auto/20/40/80 MHz"
+      },
+      {
+        "wert": "20/40/80 MHz",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_modulation": [
+      {
+        "wert": "256-QAM",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_mu_mimo": [
+      {
+        "wert": "ja, nur 5 GHz",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"MU-MIMO available on 5 GHz\"; Beamforming"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": {
+          "2400-2483.5 MHz": 20,
+          "5150-5250 MHz": 23,
+          "5250-5350 MHz": 23,
+          "5470-5725 MHz": 30
+        },
+        "quelle": "hersteller_regulatorik",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_AP1300_Outdoor.pdf?v=7885389874158422780",
+        "stand": "FCC-Teil Issue Date 2024-05-13; 9 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Operating Frequency (Maximum transmitted power)\" im CE-Abschnitt; 5150-5350 MHz in der EU nur innen"
+      }
+    ],
+    "wlan_5_dfs": [
+      {
+        "wert": "nicht unterstützt",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": "Unsupported Functions: DFS (Revision 2026-03-26, wfgriffin88)"
+      },
+      {
+        "wert": "nicht unterstützt (MT7613)",
+        "quelle": "openwrt_wiki_dfs",
+        "beleg": "https://openwrt.org/unsupported/dfs",
+        "stand": "Seitentext mit Stand 2026-03-26 (Revision nicht abgefragt)",
+        "sicherheit": "mittel",
+        "bemerkung": "mt76 hat keinen DFS-Code fuer MT7613; nur Nicht-DFS-Kanaele nutzbar, DFS-Kanal fuehrt zu \"NO WIFI SIGNAL\""
+      },
+      {
+        "wert": "nicht unterstützt; 5-GHz-AP im Gluon-Outdoor-Modus kommt nicht hoch",
+        "quelle": "gluon_issue_3787",
+        "beleg": "https://github.com/freifunk-gluon/gluon/issues/3787",
+        "stand": "Issue 3787 vom 2026-07-09 (Kistelini), offen, 6 Kommentare bis 2026-07-10",
+        "sicherheit": "niedrig",
+        "bemerkung": "am Archer C6 v3 beobachtet; Cudy AP1300 Outdoor in der Liste betroffener Geraete (abgeleitet aus dem ToH-Feld); Issue offen"
+      }
+    ],
+    "gluon_outdoor": [
+      {
+        "wert": "ja (is_outdoor_device)",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.3/package/gluon-core/luasrc/usr/lib/lua/gluon/platform.lua",
+        "stand": "Gluon v2025.1.3 (lokaler Checkout, Tag-Commit e2fe4b52)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon schaltet damit den Outdoor-Modus (5 GHz nur Outdoor-Kanaele mit DFS) - siehe wlan_5_dfs"
+      },
+      {
+        "wert": "ja",
+        "quelle": "gluon_pr",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/3640",
+        "stand": "PR 3640 vom 2025-12-15 (ambassador86), gemergt 2026-01-23; Backport-PR 3688 nach v2025.1.x gemergt 2026-02-10",
+        "sicherheit": "hoch",
+        "bemerkung": "Checkliste: board name in is_outdoor_device eingetragen"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "extern abnehmbar",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Wi-Fi Antennas: 2× Detachable; Feature-Text \"two external antennas\""
+      },
+      {
+        "wert": "extern abnehmbar",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Packungsinhalt 2× Detachable Wi-Fi Antennas"
+      },
+      {
+        "wert": "extern abnehmbar",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_Quick_Installation_Instructions-EN.pdf?v=1406581268350481678",
+        "stand": "Dokumentnummer 810600181, ohne Datum, 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Schritt 1: Antennen am Fuss greifen und festdrehen"
+      },
+      {
+        "wert": "extern",
+        "quelle": "hersteller_foto_mast",
+        "beleg": "https://cdn.shopify.com/s/files/1/0673/4748/0820/files/AP1300-OD__1_65.png?v=1713747209",
+        "stand": "Bild hochgeladen 2024-04-22 (v=1713747209)",
+        "sicherheit": "hoch",
+        "bemerkung": "zwei Stabantennen oben"
+      },
+      {
+        "wert": "gelötet (soldered)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "wi1/wi2_ant_conn=soldered - Widerspruch zu Hersteller/Fotos; vermutlich Anschluss auf der Platine gemeint"
+      },
+      {
+        "wert": "keine abnehmbaren Antennen",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Detachable Antennas: \"-\" - Widerspruch zum Hersteller, vermutlich nicht ausgefuellt"
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "RP-SMA (Buchse am Gerät)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Detachable Wi-Fi Antennas Connector: RP-SMA Female"
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Aufteilung je Band nicht angegeben; FEM: 5 GHz 2× intern, 2.4 GHz 2× intern"
+      },
+      {
+        "wert": 2,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "hersteller_foto_mast",
+        "beleg": "https://cdn.shopify.com/s/files/1/0673/4748/0820/files/AP1300-OD__1_65.png?v=1713747209",
+        "stand": "Bild hochgeladen 2024-04-22 (v=1713747209)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_abmessungen_mm": [
+      {
+        "wert": "197.5×21.6×15.5",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "197.5×21.6×15.5",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "je Antenne"
+      }
+    ],
+    "antennen_ausrichtung": [
+      {
+        "wert": "45 Grad nach unten geneigt für Abdeckung nach unten",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_Quick_Installation_Instructions-EN.pdf?v=1406581268350481678",
+        "stand": "Dokumentnummer 810600181, ohne Datum, 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_reichweite": [
+      {
+        "wert": "max. 170 m; Park 150 m; Straße 50 m; Wald 30 m",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "mittel",
+        "bemerkung": "Herstellerangabe \"Range Performance\""
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "LAN/WAN PoE IN (ETH0)",
+            "geschwindigkeit": "1 Gbit/s",
+            "rolle": "LAN/WAN, PoE-Eingang",
+            "geschirmt": true
+          }
+        ],
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"1× Shielded GbE PoE In\", \"ETH0: PoE In\""
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN/WAN PoE IN",
+            "geschwindigkeit": "1 Gbit/s"
+          }
+        ],
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "1× Gigabit Ethernet (RJ-45) Port"
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN/WAN PoE IN",
+            "lage": "Unterseite unter Abdeckung"
+          }
+        ],
+        "quelle": "hersteller_foto_unten",
+        "beleg": "https://cdn.shopify.com/s/files/1/0673/4748/0820/files/AP1300-OD__1_63.png?v=1713747209",
+        "stand": "Bild hochgeladen 2024-04-22 (v=1713747209)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "lan",
+            "geschwindigkeit": "10/100/1000 Mbit/s",
+            "rolle": "lan"
+          }
+        ],
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "lan (switch0 port 4, gmac0)",
+            "rolle": "lan"
+          }
+        ],
+        "quelle": "openwrt_git_lokal",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v24.10.8/target/linux/ramips/dts/mt7621_cudy_ap1300-outdoor-v1.dts",
+        "stand": "openwrt-24.10 v24.10.8-14-g77b198aa72 (OpenWrt-Pin von Gluon v2025.1.3, lokaler Checkout)",
+        "sicherheit": "hoch",
+        "bemerkung": "02_network: ucidef_set_interface_lan \"lan\"; kein WAN-Interface (Review DragonBluep: \"Only one port, no WAN interface\")"
+      },
+      {
+        "wert": [
+          {
+            "name": "1GbE",
+            "rolle": "einziger Port"
+          }
+        ],
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": "Ethernet 1Gbit ports: 1"
+      },
+      {
+        "wert": 1,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "ein RJ45 fuer Daten und Strom (PoE)"
+      },
+      {
+        "wert": true,
+        "quelle": "hersteller_foto_unten",
+        "beleg": "https://cdn.shopify.com/s/files/1/0673/4748/0820/files/AP1300-OD__1_63.png?v=1713747209",
+        "stand": "Bild hochgeladen 2024-04-22 (v=1713747209)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": true,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "switch_chip": [
+      {
+        "wert": "MT7621 intern (DSA, Port 4)",
+        "quelle": "openwrt_git_lokal",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v24.10.8/target/linux/ramips/dts/mt7621_cudy_ap1300-outdoor-v1.dts",
+        "stand": "openwrt-24.10 v24.10.8-14-g77b198aa72 (OpenWrt-Pin von Gluon v2025.1.3, lokaler Checkout)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MT7621 intern",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "eth_cpu/sw_cpu=true"
+      },
+      {
+        "wert": "keiner angegeben",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Switch: \"-\""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja (Tag VLAN, SSID-VLAN)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Stock-Firmware"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": "SFP/SFP+ ports: -"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "nein",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": "USB ports: -"
+      },
+      {
+        "wert": "nein",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "mittel",
+        "bemerkung": "Spezifikation nennt nur einen RJ45-Port"
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": [
+          "802.3af",
+          "802.3at",
+          "passiv"
+        ],
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power Methods \"802.3at/af PoE; Passive PoE\"; Feature-Text nennt nur \"802.3at PoE\" und 48-57 V passiv; Tags \"24V Passive PoE, 48V Passive PoE, 802.3af/at/bt\""
+      },
+      {
+        "wert": [
+          "802.3af",
+          "802.3at",
+          "passiv"
+        ],
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "802.3af/at PoE; 24-57 V Passive PoE"
+      },
+      {
+        "wert": [
+          "802.3af"
+        ],
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": "\"POE 802.3af (37-57V DC)\""
+      },
+      {
+        "wert": [
+          "802.3af"
+        ],
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": "Power Supply: 802.3af PoE"
+      },
+      {
+        "wert": [
+          "802.3af",
+          "802.3at"
+        ],
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "pwr_poe=at/af, pwr_v=24-57"
+      },
+      {
+        "wert": [
+          "802.3af"
+        ],
+        "quelle": "openwrt_pr_16265",
+        "beleg": "https://github.com/openwrt/openwrt/pull/16265",
+        "stand": "PR 2024-08-26 (DanielRIOT), ungemergt geschlossen 2025-11-09; 10 Kommentare, 8 Review-Kommentare",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": {
+          "passiv": "24-57"
+        },
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power Input \"Passive PoE: 24-57V\"; Feature-Text dagegen \"48-57 V Passive PoE\" - Widerspruch auf derselben Seite"
+      },
+      {
+        "wert": {
+          "passiv": "24-57"
+        },
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "802.3af": "37-57"
+        },
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "24-57",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "pwr_v ohne Unterscheidung passiv/802.3"
+      }
+    ],
+    "poe_passiv_pinbelegung": [
+      {
+        "wert": "+ an Pins 4,5; - an Pins 7,8",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "\"24-57 V Passive PoE (+4,5pins; -7,8pins)\""
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "nein",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power Input Type: PoE via Ethernet Port"
+      },
+      {
+        "wert": "nein",
+        "quelle": "hersteller_foto_unten",
+        "beleg": "https://cdn.shopify.com/s/files/1/0673/4748/0820/files/AP1300-OD__1_63.png?v=1713747209",
+        "stand": "Bild hochgeladen 2024-04-22 (v=1713747209)",
+        "sicherheit": "hoch",
+        "bemerkung": "nur RJ45 und zwei Taster sichtbar"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "PoE-Adapter 48 V passiv plus Netzkabel; Feature-Text: \"Adapter included, not waterproof\""
+      },
+      {
+        "wert": true,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "48 V Passive PoE Adapter"
+      },
+      {
+        "wert": true,
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_Quick_Installation_Instructions-EN.pdf?v=1406581268350481678",
+        "stand": "Dokumentnummer 810600181, ohne Datum, 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "d. PoE Adapter, e. Power Cord"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "Eingang 100-240 V~ 50/60 Hz, Ausgang 48 V passives PoE",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Strom des Adapters nicht angegeben"
+      },
+      {
+        "wert": "I.T.E. Power Supply RP023-4800320ZG; nur innen bis 40 °C",
+        "quelle": "hersteller_regulatorik",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_AP1300_Outdoor.pdf?v=7885389874158422780",
+        "stand": "FCC-Teil Issue Date 2024-05-13; 9 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 11,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Spezifikationstabelle \"Max Power Consumption 11W\""
+      },
+      {
+        "wert": 18,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "mittel",
+        "bemerkung": "Feature-Text \"802.3at PoE (Max power: 18 W, Idle: 5 W)\" - Widerspruch zur Tabelle"
+      }
+    ],
+    "leistung_w_typ": [
+      {
+        "wert": 7.5,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Idle Power Consumption 7.5W (Tabelle)"
+      },
+      {
+        "wert": 5,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "mittel",
+        "bemerkung": "Feature-Text Idle 5 W - Widerspruch zur Tabelle"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "außen (auch innen)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Indoor/Outdoor\"; IP65; Park, Bauernhof, Parkplatz"
+      },
+      {
+        "wert": "außen",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: Yes"
+      },
+      {
+        "wert": "außen",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.3/package/gluon-core/luasrc/usr/lib/lua/gluon/platform.lua",
+        "stand": "Gluon v2025.1.3 (lokaler Checkout, Tag-Commit e2fe4b52)",
+        "sicherheit": "hoch",
+        "bemerkung": "is_outdoor_device"
+      }
+    ],
+    "ip_schutzart": [
+      {
+        "wert": "IP65 (nur bei senkrechter Montage)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"IP65 When devices is installed vertically\""
+      },
+      {
+        "wert": "IP65",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "-20 bis 60 °C; erweitert -40 bis 65 °C",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Erweiterung in der Tabelle mit sinnfremdem Zusatz \"with Industrial Grade SIM Card\"; Kurzmerkmale und Feature-Text nennen nur -40 bis 65 °C"
+      },
+      {
+        "wert": "-20 bis 60 °C; erweitert -40 bis 65 °C",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "-20 bis 60 °C; erweitert -40 bis 65 °C (vorher eingeschaltet, Leistung kann etwas sinken)",
+        "quelle": "hersteller_regulatorik",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_AP1300_Outdoor.pdf?v=7885389874158422780",
+        "stand": "FCC-Teil Issue Date 2024-05-13; 9 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Booted up in advance. Performance may drop slightly.\""
+      }
+    ],
+    "temperatur_lager": [
+      {
+        "wert": "-40 bis 70 °C",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "-40 bis 70 °C",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "Betrieb 10-90 %, Lager 5-90 %, nicht kondensierend",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Betrieb 10-90 %, Lager 5-90 %, nicht kondensierend",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ueberspannungsschutz": [
+      {
+        "wert": "ESD Kontakt 4 kV, Luft 8 kV; Surge IEC/EN 61000-4-5 Level 4: Strom DM 2 kV, CM 4 kV; RJ45 CM 4 kV",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "4 kV Blitz-/Surge-Schutz am Ethernet-Port",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": [
+          "Wand",
+          "Mast"
+        ],
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Montagekit liegt bei"
+      },
+      {
+        "wert": [
+          "Wand",
+          "Mast"
+        ],
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Pole/Wall Mounting (Kits included)"
+      },
+      {
+        "wert": [
+          "Wand",
+          "Mast"
+        ],
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_Quick_Installation_Instructions-EN.pdf?v=1406581268350481678",
+        "stand": "Dokumentnummer 810600181, ohne Datum, 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "Schelle (Clamp) und Schrauben im Lieferumfang"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "240×100×53.7",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "ohne Antennen"
+      },
+      {
+        "wert": "240×100×53.7",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": "B×T×H ohne Antennen"
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 410.3,
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Produktgewicht; Verpackung EU 865 g"
+      }
+    ],
+    "verpackung": [
+      {
+        "wert": "324×107×86 mm, EU 865 g; 20 Stück je Karton",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leds": [
+      {
+        "wert": "5 grün: System, Internet, LAN, 2.4 GHz, 5 GHz",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "5 grün",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "status (GPIO 4), internet (GPIO 3), lan (GPIO 46), wifi2g (GPIO 47), wifi5g (GPIO 45), alle grün",
+        "quelle": "openwrt_git_lokal",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v24.10.8/target/linux/ramips/dts/mt7621_cudy_ap1300-outdoor-v1.dts",
+        "stand": "openwrt-24.10 v24.10.8-14-g77b198aa72 (OpenWrt-Pin von Gluon v2025.1.3, lokaler Checkout)",
+        "sicherheit": "hoch",
+        "bemerkung": "Status-LED fuer boot/failsafe/running/upgrade; Internet-LED unter OpenWrt ohne Vorbelegung"
+      },
+      {
+        "wert": 5,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": "LED count"
+      },
+      {
+        "wert": "LED-Leiste an der Seite",
+        "quelle": "hersteller_foto_mast",
+        "beleg": "https://cdn.shopify.com/s/files/1/0673/4748/0820/files/AP1300-OD__1_65.png?v=1713747209",
+        "stand": "Bild hochgeladen 2024-04-22 (v=1713747209)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "ja (Stock-Firmware)",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "mittel",
+        "bemerkung": "LED Control in den Software Specs"
+      }
+    ],
+    "knoepfe": [
+      {
+        "wert": [
+          "Reset",
+          "WPS"
+        ],
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "Reset",
+          "WPS"
+        ],
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "Reset",
+          "WPS"
+        ],
+        "quelle": "hersteller_foto_unten",
+        "beleg": "https://cdn.shopify.com/s/files/1/0673/4748/0820/files/AP1300-OD__1_63.png?v=1713747209",
+        "stand": "Bild hochgeladen 2024-04-22 (v=1713747209)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "Reset (GPIO 8)",
+          "WPS (GPIO 10)"
+        ],
+        "quelle": "openwrt_git_lokal",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v24.10.8/target/linux/ramips/dts/mt7621_cudy_ap1300-outdoor-v1.dts",
+        "stand": "openwrt-24.10 v24.10.8-14-g77b198aa72 (OpenWrt-Pin von Gluon v2025.1.3, lokaler Checkout)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": "Button count"
+      },
+      {
+        "wert": [
+          "Reset"
+        ],
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "mittel",
+        "bemerkung": "Spezifikationstabelle nennt nur Reset - Widerspruch zu Datenblatt/Foto"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "Unterseite neben der RJ45-Buchse, unter der aufklappbaren Abdeckung",
+        "quelle": "hersteller_foto_unten",
+        "beleg": "https://cdn.shopify.com/s/files/1/0673/4748/0820/files/AP1300-OD__1_63.png?v=1713747209",
+        "stand": "Bild hochgeladen 2024-04-22 (v=1713747209)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Reset und WPS bringen Gluon in den Config Mode",
+        "quelle": "gluon_pr",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/3640",
+        "stand": "PR 3640 vom 2025-12-15 (ambassador86), gemergt 2026-01-23; Backport-PR 3688 nach v2025.1.x gemergt 2026-02-10",
+        "sicherheit": "hoch",
+        "bemerkung": "Checkliste abgehakt"
+      },
+      {
+        "wert": "Reset 5 s gedrückt halten (Stock: Mesh-Aufnahme)",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_Quick_Installation_Instructions-EN.pdf?v=1406581268350481678",
+        "stand": "Dokumentnummer 810600181, ohne Datum, 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "watchdog": [
+      {
+        "wert": "Hardware-Watchdog",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "GPIO-Watchdog an GPIO 7 (toggle, always-running, Marge im DTS 10 s, laut Kommentar etwa 30 s)",
+        "quelle": "openwrt_git_lokal",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v24.10.8/target/linux/ramips/dts/mt7621_cudy_ap1300-outdoor-v1.dts",
+        "stand": "openwrt-24.10 v24.10.8-14-g77b198aa72 (OpenWrt-Pin von Gluon v2025.1.3, lokaler Checkout)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "nicht beschrieben",
+        "quelle": "hersteller_regulatorik",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Regulatory_Compliance_AP1300_Outdoor.pdf?v=7885389874158422780",
+        "stand": "FCC-Teil Issue Date 2024-05-13; 9 Seiten",
+        "sicherheit": "niedrig",
+        "bemerkung": "nur \"Do not attempt to disassemble\"; keine Quelle beschreibt das Oeffnen"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte (Stiftleiste nicht bestückt, Belegung auf der Platine beschriftet)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": "\"unpopulated header 115200 8n1 (silkscreen on PCB)\""
+      },
+      {
+        "wert": "innen, 4-polig, J4",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "serial=yes, 4-pin header, 3.3V TTL, 115200 8N1, J4; Bestueckung nicht gesagt"
+      },
+      {
+        "wert": "ja",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial: Yes; Parameter und Spannung \"¿\""
+      },
+      {
+        "wert": "innen Lötpunkte",
+        "quelle": "openwrt_pr_16265",
+        "beleg": "https://github.com/openwrt/openwrt/pull/16265",
+        "stand": "PR 2024-08-26 (DanielRIOT), ungemergt geschlossen 2025-11-09; 10 Kommentare, 8 Review-Kommentare",
+        "sicherheit": "mittel",
+        "bemerkung": "gleicher Wortlaut wie Commit"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": "8n1"
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_git_lokal",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v24.10.8/target/linux/ramips/dts/mt7621_cudy_ap1300-outdoor-v1.dts",
+        "stand": "openwrt-24.10 v24.10.8-14-g77b198aa72 (OpenWrt-Pin von Gluon v2025.1.3, lokaler Checkout)",
+        "sicherheit": "hoch",
+        "bemerkung": "bootargs console=ttyS0,115200"
+      },
+      {
+        "wert": 115200,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "3.3V TTL"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "Pinbelegung ist laut Commit auf der Platine aufgedruckt; keine Quelle nennt die Reihenfolge",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ramips/mt7621",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ramips/mt7621",
+        "quelle": "openwrt_git_lokal",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v24.10.8/target/linux/ramips/image/mt7621.mk",
+        "stand": "openwrt-24.10 v24.10.8-14-g77b198aa72 (OpenWrt-Pin von Gluon v2025.1.3, lokaler Checkout)",
+        "sicherheit": "hoch",
+        "bemerkung": "Profil cudy_ap1300-outdoor-v1"
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "24.10.5",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": "Supported Since Rel"
+      },
+      {
+        "wert": "24.10.5",
+        "quelle": "openwrt_git_lokal",
+        "beleg": "https://github.com/openwrt/openwrt/commit/c6e59d06afca02ccb2541631cacc769ae4d6569f",
+        "stand": "openwrt-24.10 v24.10.8-14-g77b198aa72 (OpenWrt-Pin von Gluon v2025.1.3, lokaler Checkout)",
+        "sicherheit": "hoch",
+        "bemerkung": "Backport c6e59d06 ist ab Tag v24.10.5 enthalten; Snapshot ab 2025-11-09"
+      }
+    ],
+    "openwrt_support_commit": [
+      {
+        "wert": "8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": "main; Backport openwrt-24.10: c6e59d06afca02ccb2541631cacc769ae4d6569f"
+      },
+      {
+        "wert": "8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.5",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": "Supported Current Rel; Install- und Upgrade-URL beide sysupgrade.bin"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, ab v2025.1.1 (ramips-mt7621, factory = false)",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.3/targets/ramips-mt7621",
+        "stand": "Gluon v2025.1.3 (lokaler Checkout, Tag-Commit e2fe4b52)",
+        "sicherheit": "hoch",
+        "bemerkung": "Commit 273cf32 vom 2025-12-15; in v2025.1.3 enthalten; OpenWrt-Pin enthaelt den MAC-Fix 49862b1c"
+      },
+      {
+        "wert": "ja",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": "Gluon support: Yes"
+      },
+      {
+        "wert": "ja",
+        "quelle": "gluon_pr",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/3640",
+        "stand": "PR 3640 vom 2025-12-15 (ambassador86), gemergt 2026-01-23; Backport-PR 3688 nach v2025.1.x gemergt 2026-02-10",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_os": [
+      {
+        "wert": "Cudy-Firmware (Kennung R39), aktuell 2.4.4 vom 11.08.2025; GPL-Paket Version 17.01",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/pages/download-center/ap1300-outdoor-1-0",
+        "stand": "Abruf 2026-10-20; neueste Firmware 2.4.4 vom 11-Aug-2025; GPL 17.01 vom 21-Jun-2024",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Cudy-Zwischenfirmware auf LEDE-17-Basis ohne LuCI",
+        "quelle": "openwrt_pr_16265",
+        "beleg": "https://github.com/openwrt/openwrt/pull/16265",
+        "stand": "PR 2024-08-26 (DanielRIOT), ungemergt geschlossen 2025-11-09; 10 Kommentare, 8 Review-Kommentare",
+        "sicherheit": "niedrig",
+        "bemerkung": "Stand 2024; aktuelle Zwischenfirmware nicht geprueft"
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.cudy.com/pages/download-center/ap1300-outdoor-1-0",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/pages/download-center/ap1300-outdoor-1-0",
+        "stand": "Abruf 2026-10-20; neueste Firmware 2.4.4 vom 11-Aug-2025; GPL 17.01 vom 21-Jun-2024",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://www.cudy.com/en-us/pages/download-center/ap1300-outdoor-1-0",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Stock-Firmware nimmt nur von Cudy signierte Images: erst Cudy-Zwischenfirmware über die Weboberfläche (192.168.10.254, Passwort admin), dann OpenWrt-sysupgrade ohne Einstellungen behalten",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "GUI OEM, U-Boot TFTP recovery, see git-commit; vorher signiertes Zwischen-Image von Cudy",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Zwischenfirmware \"AP1300 Outdoor V1.0.zip\", MD5 22012cf6803c8c084a1fd9e88c998711; nicht im Downloader (devices.js)",
+        "quelle": "werkstatt_doku",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/cudy-installation.md",
+        "stand": "routerwerkstatt Commit a9781bd vom 2026-10-15 (Tabelle Stand 15.10.2026)",
+        "sicherheit": "hoch",
+        "bemerkung": "nur Dokumentation, keine eigene Installation am Geraet"
+      },
+      {
+        "wert": "Gluon: nur sysupgrade-Image (factory = false), Weg über Cudy-Zwischenfirmware",
+        "quelle": "gluon_pr",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/3640",
+        "stand": "PR 3640 vom 2025-12-15 (ambassador86), gemergt 2026-01-23; Backport-PR 3688 nach v2025.1.x gemergt 2026-02-10",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "recovery": [
+      {
+        "wert": "U-Boot TFTP recovery",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Reset beim Einschalten etwa 5 s halten, Gerät holt recovery.bin per TFTP von 192.168.1.88",
+        "quelle": "openwrt_pr_16265",
+        "beleg": "https://github.com/openwrt/openwrt/pull/16265",
+        "stand": "PR 2024-08-26 (DanielRIOT), ungemergt geschlossen 2025-11-09; 10 Kommentare, 8 Review-Kommentare",
+        "sicherheit": "niedrig",
+        "bemerkung": "nur im ungemergten ersten PR, nicht im Commit"
+      }
+    ],
+    "stock_ip": [
+      {
+        "wert": "192.168.10.254, Passwort admin",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "http://cudyap.net, Passwort admin; WLAN Cudy-Outdoor / Cudy-Outdoor-5G mit Passwort password",
+        "quelle": "hersteller_kurzanleitung",
+        "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_Quick_Installation_Instructions-EN.pdf?v=1406581268350481678",
+        "stand": "Dokumentnummer 810600181, ohne Datum, 2 Seiten",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "mac_schema": [
+      {
+        "wert": "LAN = WLAN 2.4 GHz = Label-MAC (80:af:ca:..:x0), WLAN 5 GHz +1 (82:af:ca:..:x1)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+        "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": "Basis-MAC aus bdinfo @0xde00"
+      },
+      {
+        "wert": "im ersten OpenWrt-Stand war gmac0 = Label +1; behoben, gmac0 = Label-MAC",
+        "quelle": "openwrt_macfix",
+        "beleg": "https://github.com/openwrt/openwrt/commit/66b6791abe6f08dec2924b5d9e9e7dac93f37bc4",
+        "stand": "Commit 66b6791a vom 2026-01-14 (Steffen Förster), gemergt 2026-01-15; in openwrt-24.10 als 49862b1c (ab v24.10.6)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon-PR 3640: \"no interface has the mac address written on the label. It is off by one.\" - nach dem Fix erledigt"
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Discontinued",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Produktseite online, Preis-Platzhalter 9999.00",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "nicht in der EOL-Liste",
+        "quelle": "hersteller_eol_liste",
+        "beleg": "https://www.cudy.com/collections/end-of-life-products",
+        "stand": "Shopify-Collection, Abruf 2026-10-19 (131 Produkte)",
+        "sicherheit": "hoch",
+        "bemerkung": "dort nur das Innen-Modell AP1300 1.0"
+      }
+    ],
+    "hersteller_support_ende": [
+      {
+        "wert": "Sicherheitsupdates bis 2 Jahre nach dem letzten EOL-Datum",
+        "quelle": "hersteller_psti",
+        "beleg": "https://www.cudy.com/cdn/shop/files/Statements_of_PSTI_Compliance_AP1300_Outdoor.pdf?v=73831375054494601",
+        "stand": "Ausstellungsdatum 2024-04-12",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "einsatz_erfahrung": [
+      {
+        "wert": "Gluon-Testgerät in Chemnitz",
+        "quelle": "gluon_pr",
+        "beleg": "https://map.chemnitz.freifunk.net/#!/de/map/80afca5f9b98",
+        "stand": "PR 3640 vom 2025-12-15 (ambassador86), gemergt 2026-01-23; Backport-PR 3688 nach v2025.1.x gemergt 2026-02-10",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Ethernet, WLAN 2.4/5 GHz, LEDs, Failsafe getestet",
+        "quelle": "openwrt_pr_20268",
+        "beleg": "https://github.com/openwrt/openwrt/pull/20268",
+        "stand": "PR 2025-10-01 (LuisMitaHL), gemergt 2025-11-09; 3 Kommentare, 2 Review-Kommentare",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "noch nicht am Gerät erprobt (Neanderfunk)",
+        "quelle": "werkstatt_doku",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/cudy-installation.md",
+        "stand": "routerwerkstatt Commit a9781bd vom 2026-10-15 (Tabelle Stand 15.10.2026)",
+        "sicherheit": "hoch",
+        "bemerkung": "keine Werkstatt-Messung vorhanden"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
+        "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "quelle": "hersteller",
+        "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+        "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://www.cudy.com/en-us/products/ap1300-outdoor-1-0",
+        "quelle": "toh_seite",
+        "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_ap1300_outdoor_v1",
+        "stand": "Seitenrevision 2026-08-06 01:52 (kjoshj); angelegt 2025-12-20 17:02 (kjoshj)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
+        "quelle": "hersteller_downloads",
+        "beleg": "https://www.cudy.com/pages/download-center/ap1300-outdoor-1-0",
+        "stand": "Abruf 2026-10-20; neueste Firmware 2.4.4 vom 11-Aug-2025; GPL 17.01 vom 21-Jun-2024",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "keine Geräteseite",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/cudy/ap1300_outdoor",
+        "stand": "Abruf 2026-10-20: Seite existiert nicht",
+        "sicherheit": "mittel",
+        "bemerkung": "toh/cudy/ap1300_outdoor existiert nicht"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/2APRG",
+      "kategorie": "fcc_id",
+      "grund": "keine FCC-ID: Grantee-Liste 2APRG ohne AP1300 Outdoor; Regulatory-PDF nur mit SDoC-Text ohne ID - nur am Typenschild ablesbar (FCC-Innenfotos fuer Seriell/Antennen fehlen deshalb)"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
+      "kategorie": "seriell_pinbelegung",
+      "grund": "Commit: unbestueckte Stiftleiste mit Beschriftung; WikiDevi: J4, 4-polig, 3.3 V. Reihenfolge der Pins und Platinenfoto in keiner Quelle"
+    },
+    {
+      "url": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+      "kategorie": "gehaeuse_oeffnen",
+      "grund": "wie das Gehaeuse aufgeht (Schrauben, Klebung, Dichtung), beschreibt keine Quelle"
+    },
+    {
+      "url": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+      "kategorie": "luefter",
+      "grund": "keine Quelle nennt Luefter oder Lueftlosigkeit"
+    },
+    {
+      "url": "https://www.cudy.com/products/ap1300-outdoor-1-0",
+      "kategorie": "antennen_gewinn_dbi",
+      "grund": "Antennengewinn weder in Spezifikation noch Datenblatt; FCC-Unterlagen fehlen"
+    },
+    {
+      "url": "https://github.com/freifunk-gluon/gluon/issues/3787",
+      "kategorie": "wlan_5_dfs",
+      "grund": "Gluon-Outdoor-Modus mit MT7613 (kein DFS): Verhalten am AP1300 Outdoor selbst nicht berichtet; Issue offen, Loesung (Kanal 149-173 oder Treiber) offen"
+    },
+    {
+      "url": "https://github.com/openwrt/mt76/issues/925",
+      "kategorie": "wlan_5_dfs",
+      "grund": "mt76-Issue zu MT7613-DFS nicht abgerufen"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/mt76-mt7613-radio-and-dfs-support/88915/12",
+      "kategorie": "wlan_5_dfs",
+      "grund": "Forumsthread zu MT7613-DFS nicht abgerufen"
+    },
+    {
+      "url": "https://www.cudy.com/en-us/blogs/faq/openwrt-software-download",
+      "kategorie": "installation",
+      "grund": "Cudy-FAQ mit Zwischenfirmware nicht neu abgerufen (www.cudy.com-Kontingent); Flash-Wechsel-Hinweis dort betrifft laut Wortlaut AX3000-Geraete mit NAND, AP1300 Outdoor nicht erwaehnt"
+    },
+    {
+      "url": "https://drive.google.com/file/d/1sDSWjrw51HYsv-NPoADaDgPwrUE7EtgL/view?usp=drive_link",
+      "kategorie": "gpl",
+      "grund": "GPL-Paket 17.01 (21.06.2024) nicht ausgewertet"
+    },
+    {
+      "url": "https://www.cudy.com/cdn/shop/files/CE_DOC_AP1300_Outdoor.pdf?v=2134286684102235041",
+      "kategorie": "ce_konformitaet",
+      "grund": "CE-Erklaerung (angewandte Normen, Datum) nicht geladen"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/cudy-*&output=json&fl=original,timestamp,statuscode&collapse=urlkey",
+      "kategorie": "geizhals_url",
+      "grund": "kein archivierter Geizhals-Eintrag fuer AP1300 Outdoor (geizhals.de und geizhals.at); EAN/ASIN in keiner Quelle (Shopify-Barcode leer)"
+    },
+    {
+      "url": "https://forum.openwrt.org/",
+      "kategorie": "forum_thread",
+      "grund": "ToH ohne Forumsthread; Forum-Suche nicht genutzt (search.json meiden)"
+    },
+    {
+      "url": "https://firmware.ffnef.de/other/Cudy_Intermediary_OpenWRT_Firmware-20251124/AP1300_Outdoor_V1.0/",
+      "kategorie": "installation",
+      "grund": "in der RAMpe-Anleitung (rampe-anleitungen/anleitungen/de/cudy-ap1300-outdoor-v1.md) verlinkter Spiegelordner liefert 404 (2026-10-20); uebersicht.json des Spiegels 20261015 hat keinen AP1300-Outdoor-Eintrag"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-20",
+    "status": "teilweise",
+    "anfragen": 39,
+    "notiz": "Nicht im ToH-Dump, ToH-Datenseite vorhanden, OpenWrt-Wikiseite fehlt. Aussengeraet IP65 (senkrecht), eine geschirmte GbE-Buchse, nur PoE (802.3af/at oder passiv 24-57 V, 48-V-Adapter liegt bei; Commit/ToH nur 802.3af 37-57 V). MT7621DAT, 128 MB RAM, 16 MB NOR. 2x2 MT7603E + 2x2 MT7613BEN, 2 abnehmbare RP-SMA-Antennen (WikiDevi: soldered). Seriell: unbestueckte Stiftleiste innen, 115200. Wichtig: MT7613 ohne DFS unter OpenWrt, Gluon setzt is_outdoor_device - 5-GHz-Outdoor-Betrieb fraglich (Gluon-Issue 3787). Widersprueche Hersteller: Leistung 11/7.5 W vs 18/5 W, passiv 24-57 vs 48-57 V, Knoepfe Reset vs Reset+WPS. Keine FCC-ID, kein Geizhals/EAN."
+  }
+}

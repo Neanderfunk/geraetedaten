@@ -1,0 +1,1586 @@
+{
+  "image": "zte-mf281",
+  "modell": "ZTE MF281 (Telekom Speedbox 2)",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-20",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "bemerkung": "Kein Eintrag fuer MF281 im Dump; toh_suche.py liefert nur andere ZTE-Modelle (MF283plus, Q7, MF286D, MF286R, MF282, MF287). Daten stattdessen aus der Live-hwdata-Seite (openwrt_hwdata)"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/zte/zte_mf281?do=export_raw",
+      "stand": "Seitenrevision 2026-03-09 05:38",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Seite angelegt 2024-03-08 (raylynnknight), letzte Aenderung 2026-03-09 \"Update for 25.12.0\"; Device Page leer"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/zte/mf281?do=export_raw",
+      "stand": "Seite existiert nicht (2026-10-20)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "\"This topic does not exist yet\"; keine Geraeteseite"
+    },
+    "openwrt_git": {
+      "url": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+      "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Autor David Bauer; Hardwareliste, UART, Installation"
+    },
+    "openwrt_git_refactor": {
+      "url": "https://github.com/openwrt/openwrt/commit/8bc4aaf45cee578f6e527b1582d0dcf065dc81c8",
+      "stand": "Commit 2023-04-10 (Autor), gemergt 2023-05-06",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "gemeinsame qca9563_zte_mf28x.dtsi fuer MF281/MF286"
+    },
+    "openwrt_git_bdf": {
+      "url": "https://github.com/openwrt/openwrt/commit/8951ac6f6517121c946a40beacb45ba4a90a3364",
+      "stand": "Commit 2025-02-03 (Autor), gemergt 2025-03-16",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "geraetespezifische QCA9888-Board-Datei (wie MF286C), Link PR 17620"
+    },
+    "openwrt_pr_17620": {
+      "url": "https://github.com/openwrt/openwrt/pull/17620",
+      "stand": "PR 2025-01-15, Kommentar 2025-02-24",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "PR fuer MF286C (Leo-PL); MF281 teilt die Board-Datei, am MF281 getestet"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=MF281+repo:openwrt/openwrt",
+      "stand": "Suchergebnis 2026-10-20 (3 Commits)",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_github_issues": {
+      "url": "https://api.github.com/search/issues?q=MF281+org:openwrt",
+      "stand": "Suchergebnis 2026-10-20 (9 Treffer)",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_asu_1339": {
+      "url": "https://github.com/openwrt/asu/issues/1339",
+      "stand": "Issue 2025-04-16",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Titel nennt \"ZTE MF281 (Telekom Speedbox 2)\""
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_zte_mf281.dts",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "dateien": [
+        "qca9563_zte_mf281.dts",
+        "qca9563_zte_mf28x.dtsi (nicht geladen)"
+      ]
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/nand.mk",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-nand",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_pr_2637": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/2637",
+      "stand": "PR 2022-09-10, gemergt 2022-09-12",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Checkliste: Installation nur ueber internen UART; Reset/WPS fuehrt in Config-Mode; Label-MAC passt"
+    },
+    "gluon_commit_dfa52aab": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/dfa52aab8faa",
+      "stand": "Commit 2023-06-21",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "\"ath79-nand: Explain why ZTE MF281 is broken\""
+    },
+    "gluon_git_suche": {
+      "url": "https://api.github.com/search/commits?q=MF281+repo:freifunk-gluon/gluon",
+      "stand": "Suchergebnis 2026-10-20 (4 Commits)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Release Notes v2022.1.1, v2022.1.2, v2023.1 nennen MF281 nicht (broken-Geraet)"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=MF281&fulltext=1",
+      "stand": "Suche 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "keine Treffer"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/api.php?action=query&list=search&srsearch=MF281&format=json",
+      "stand": "Suche 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "keine Treffer (auch \"Speedbox\" ohne Treffer)"
+    },
+    "fcc": {
+      "url": "",
+      "stand": "",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "keine FCC-ID bekannt (hwdata: http://¿); Geraet fuer den EU-/Telekom-Markt, keine FCC-Suche moeglich (search.php gesperrt)"
+    },
+    "geizhals": {
+      "url": "https://geizhals.de/telekom-speedbox-2-99930805-a2805933.html",
+      "stand": "Webarchiv-Kopie 2023-12-23 (gelistet seit 2022-09-06)",
+      "abgerufen": "2026-10-20",
+      "archiv": "https://web.archive.org/web/20231223083618/https://geizhals.de/telekom-speedbox-2-99930805-a2805933.html",
+      "bemerkung": "Eintrag \"Telekom Speedbox 2 (99930805)\"; Haendlerangebot \"Telekom Speedbox 2 ZTE MF281\""
+    },
+    "telekom_produktinfo": {
+      "url": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+      "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+      "abgerufen": "2026-10-20",
+      "archiv": "https://web.archive.org/web/20240703070424id_/https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+      "bemerkung": "Telekom \"Endgeraete-Produktinformation\" TELEKOM SPEEDBOX, 3 Seiten, auf Geizhals als Datenblatt verlinkt; nennt \"Speedbox 2\" im Lieferumfang, nicht MF281"
+    },
+    "telekom_kurzanleitung": {
+      "url": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+      "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+      "abgerufen": "2026-10-20",
+      "archiv": "https://web.archive.org/web/20240718200621id_/https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+      "bemerkung": "\"Speedbox (weiss) Kurzanleitung\", Satzdatei Speedbox2_QuickGuide, 64 Seiten; Etikett-Abbildung \"Model: MF281\", EU-Erklaerung \"Funkgeraet Typ ZTE MF281\". Inhaltsgleiche Doppelseiten-Fassung (PDF 2020-09-03) auf Geizhals: https://gzhls.at/blob/ldb/6/c/b/b/1b6bccc7cd588915a4022b09b01a857d4498.pdf"
+    },
+    "telekom_hilfe": {
+      "url": "https://www.telekom.de/hilfe/geraete-zubehoer/router/weitere-router/telekom-speedbox",
+      "stand": "Webarchiv-Kopie 2021-10-02",
+      "abgerufen": "2026-10-20",
+      "archiv": "https://web.archive.org/web/20211002100839/https://www.telekom.de/hilfe/geraete-zubehoer/router/weitere-router/telekom-speedbox?samChecked=true",
+      "bemerkung": "Hilfeseite Telekom Speedbox/Speedbox LTE mini; \"Speedbox (weiss)\" = MF281, \"Speedbox (schwarz)\" = Vorgaenger; Unterseite externe-antenne (Webarchiv 2024-07-21) ohne Steckertyp"
+    }
+  },
+  "roh": {
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "Travel Router - Battery powered",
+      "Brand": "ZTE",
+      "Model": "MF281",
+      "Versions": "",
+      "FCCID_urls": "http://¿",
+      "Availability_availability": "unknown 2022",
+      "Where available": "¿",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=1e1695f959e678868bb7911d059b847f38fc9cf4",
+      "Supported Since Rel_releasesince": "22.03.1",
+      "Supported Current Rel_releasecurrent": "25.12.0",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "unknown",
+      "Target_target": "ath79",
+      "Subtarget": "nand",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Qualcomm Atheros QCA9563",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "775",
+      "Flash MB_mbflashs": "2, 128NAND",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "¿",
+      "VLAN_yesno": "¿",
+      "Modem_modem": "LTE",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Qualcomm Atheros QCA9563, Qualcomm Atheros QCA9886",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN 6.0GHz_wlan60": "",
+      "WLAN 60.0GHz_wlan60g": "",
+      "WLAN Comments_": "2.4GHz 2T2R and 5GHz 2T2R",
+      "WLAN driver_wlan-drivers": "ath10k-ct",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "¿",
+      "USB ports_port-usbs": "¿",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "¿",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "1",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "¿",
+      "Power Supply": "4.100mAh battery or USB Type C",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "MF281",
+      "Git search_search-gits": "MF281",
+      "WikiDevi URL_urls": "http://¿",
+      "WikiDevi ID_hwinfo-ids": "",
+      "OEM Device Homepage URL_url": "http://¿",
+      "Firmware OEM Stock URL_url": "http://¿",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/nand/openwrt-25.12.0-ath79-nand-zte_mf281-squashfs-factory.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/nand/openwrt-25.12.0-ath79-nand-zte_mf281-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/nand/openwrt-ath79-nand-zte_mf281-squashfs-factory.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/nand/openwrt-ath79-nand-zte_mf281-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "see git-commit",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "see git-commit",
+      "Comment recovery": "",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "openwrt_git": {
+      "SoC": "Qualcomm Atheros QCA9563",
+      "RAM": "128M DDR2",
+      "FLASH": "2M SPI-NOR (GigaDevice GD25Q16); 128M SPI-NAND (GigaDevice)",
+      "WLAN": "QCA9563 2T2R 802.11 abgn; QCA9886 2T2R 802.11 nac",
+      "WWAN": "ASRMicro ASR1826",
+      "ETH": "Qualcomm Atheros QCA8337",
+      "UART": "115200 8n1; Unpopulated connector next to SIM slot; (SIM) GND - RX - TX - 3V3; Don't connect 3V3",
+      "BUTTON": "Reset - WPS",
+      "LED": "1x debug-LED (internal); LEDs on front of the device are controlled using the modem CPU and can not be controlled by OpenWrt",
+      "Installation": "1. serial console, interrupt autoboot; 2. TFTP server 192.168.1.66 on ethernet port, initramfs as \"speedbox-2.bin\"; 3. setenv serverip 192.168.1.66; setenv ipaddr 192.168.1.154; tftpboot 0x84000000 speedbox-2.bin; bootm; 4. mtd write factory.bin firmware",
+      "WWAN-Hinweis": "WWAN card running a modified OpenWrt, handles power-management and LED controller (AW9523); proto ncm on /dev/ttyACM0",
+      "02_network": "zte,mf281: ucidef_add_switch switch0 \"0@eth0\" \"5:lan\""
+    },
+    "openwrt_dts": {
+      "model": "ZTE MF281",
+      "compatible": "zte,mf281, qca,qca9563",
+      "label-mac-device": "eth0",
+      "led_debug": "green:debug, GPIO 7 active low; \"Hidden SMD LED below signal strength LEDs. Visible through slits underside of the case.\" (Commit 1e1695f)",
+      "keys": "reset GPIO 2, wps GPIO 1 (Commit 1e1695f)",
+      "gpio-restart": "GPIO 5, resets whole board including the modem",
+      "spi_nor_partitionen": "u-boot 0x0-0xa0000, u-boot-env 0xa0000+0x20000",
+      "spi_nand_partitionen": "fota-flag, art, mac, reserved2, cfg-param, log, oops, reserved3, web, firmware 0x1800000+0x1d00000 (kernel 6 MB, ubi 23 MB), data, fota",
+      "eth0": "SGMII an QCA8337 (phy0)",
+      "pcie": "ath10k (QCA9886), MAC +1, pre-calibration art@0x5000",
+      "wmac": "calibration art@0x1000",
+      "usb": "usb0/usb1 aktiv (intern, Modem)"
+    },
+    "openwrt_image_mk": {
+      "Device": "zte_mf281",
+      "SOC": "qca9563",
+      "DEVICE_VENDOR": "ZTE",
+      "DEVICE_MODEL": "MF281",
+      "BLOCKSIZE": "128k",
+      "PAGESIZE": "2048",
+      "KERNEL_SIZE": "6144k",
+      "IMAGE_SIZE": "29696k",
+      "IMAGES": "factory.bin (append-kernel | pad-to KERNEL_SIZE | append-ubi | check-size), sysupgrade.bin",
+      "DEVICE_PACKAGES": "kmod-usb2 kmod-ath10k-ct ath10k-firmware-qca9888-ct kmod-usb-net-rndis -ath10k-board-qca9888 ipq-wifi-zte_mf286c kmod-usb-acm comgt-ncm"
+    },
+    "openwrt_git_bdf": {
+      "Nachricht": "Using board definition file extracted from stock firmware yields 50% throughput improvement in RX direction under iperf3 test. ... The device uses same board file as the MF286C."
+    },
+    "openwrt_pr_17620": {
+      "Leo-PL 2025-02-24": "I had a chance to test this with MF281, which uses the same board file - and is included here",
+      "QCA9886 (MF286C)": "QCA9886 2x2 MIMO 802.11ac Wave2 radio"
+    },
+    "gluon_targets": {
+      "device": "device('zte-mf281', 'zte_mf281', { broken = true, -- case must be opened to install; packages = ATH10K_PACKAGES_QCA9888 })"
+    },
+    "gluon_pr_2637": {
+      "Flash from vendor firmware": "Other: Using internal UART header (Web interface/TFTP nicht angekreuzt)",
+      "sysupgrade": "ja",
+      "Reset/WPS returns into config mode": "ja",
+      "Primary MAC matches label": "ja",
+      "all network ports / correct WAN/LAN": "ja",
+      "AP/mesh all radios": "ja",
+      "Power/system LED lit / config mode blink": "ja",
+      "Radio LEDs": "nein",
+      "Switch port LEDs": "nein"
+    },
+    "openwrt_asu_1339": {
+      "Titel": "Attended Sysupgrade, Firmware Selector: Unsupported version: 24.10.1 for ZTE MF281 (Telekom Speedbox 2)"
+    },
+    "geizhals": {
+      "Titel": "Telekom Speedbox 2 (99930805)",
+      "Modem": "GSM (850/900/1800/1900), UMTS (850/900/1900/2100), LTE (B1/B3/B8/B20/B38)",
+      "Schnittstellen": "WLAN 802.11a/b/g/n/ac (Wi-Fi 5), 1x LAN",
+      "Abmessungen": "164x100x100mm",
+      "Gewicht": "565g",
+      "SIM-Formfaktor": "Nano-SIM",
+      "Stromversorgung": "Akkubetrieb (4100mAh), externes Netzteil (USB-C)",
+      "Besonderheiten": "Hotspot (64 Geräte), Antennenanschluss (Mobilfunk)",
+      "Hinweis": "Übertragungsrate WLAN: 300Mbps (2.4GHz), 867Mbps (5GHz).",
+      "Gelistet seit": "06.09.2022, 14:34",
+      "Dokumente": "Datenblatt (Stand 06.09.2022, 201.76 KB), Kurzanleitung (Stand 06.09.2022, 1.36 MB)",
+      "Info beim Hersteller": "https://www.telekom.de/hilfe/geraete-zubehoer/router/weitere-router/telekom-speedbox",
+      "Haendlerangebot": "Telekom Speedbox 2 ZTE MF281 | 4G LTE bis 300 Mbit/s 4.100 mAh Akku 2 ext. Ant Weiß",
+      "Preisbereich 2023-12-23": "€ 84,90 bis € 189,90"
+    },
+    "telekom_produktinfo": {
+      "Artikelnummer | EAN-Code": "99930805 | 6902176046681",
+      "Voraussichtlicher Verkaufsstart": "11-2020",
+      "Abmessungen und Gewicht": "100,0 x 100,0 x 164,0 mm | ca. 565 g",
+      "Farbe": "Weiß",
+      "Laufzeit": "210 Minuten",
+      "Akku": "Li-Ionen, 4.100 mAh",
+      "Betriebssystem": "Linux 3.3.8",
+      "Prozessor": "775 MHz, Typ Single Core, 74Kc",
+      "Arbeitsspeicher | Datenspeicher": "128 MB | 128 MB",
+      "Hardware und Schnittstellen": "Externer Antennenanschluß, USB-Typ C, W-LAN",
+      "Highlights": "bis zu 300 Mbit/s; bis zu 64 Geräte; 4.100mAh Akku für bis zu 3,5 Std.; Daten-Verbindung über LAN oder WLAN",
+      "Lieferumfang": "Speedbox 2, Steckernetzteil, USB-C-Kabel ca. 1,5 m, Kurzanleitung, Router-Pass",
+      "Netz-Standards": "GSM 850/900/1800/1900; 3G/HSPA bis 42/5,76 Mbit/s, 850/900/1900/2100 MHz; 4G/LTE bis 300/50 Mbit/s, 800/900/1800/2100/2600 MHz",
+      "SIM": "Single-SIM-Karten Slot: Nano-SIM (4FF)",
+      "WLAN": "Max. 64 Nutzer, 802.11 b/g/n/ac, 2,4 GHz & 5 GHz, 802.11n bis zu 300 MBit/s, 802.11ac bis zu 1.166 MBit/s",
+      "Anschlüsse": "2 x Antennenanschluss, 1 x LAN Anschluß, 1 x SIM Kartenslot, 1 x Stromanschluß, WPS-Taste",
+      "Software": "Linux 3.3.8; Menüsprachen deutsch, englisch; SIM-Lock: kein Lock"
+    },
+    "telekom_kurzanleitung": {
+      "Bedienelemente": "1 Ein-/Aus-Taste (ca. 3 s); 2 SIGNAL; 3 WLAN; 4 Power-Anzeige; 5 Deko-Anzeige; 6 Nano-SIM-Karten-Steckplatz (unter SIM-Karten-Klappe); 7 RESET (unter SIM-Karten-Klappe, Büroklammer, 3 s); 8 Typ-C-USB-Ladeanschluss; 9 LAN-Anschluss; 10 WPS-Taste; 11 Externe Antennenanschlüsse",
+      "Anzeigen": "SIGNAL rot/gelb(2G)/grün(3G)/blau(4G); WLAN grün, blinkend WPS; Power blau = Ladegerät angeschlossen, sonst Akkustand grün/gelb/rot; Deko pink, abschaltbar",
+      "Etikett": "Model: MF281, ZTE Corporation, Gerätepasswort, WLAN-Name/-Schlüssel 2,4GHz und 5GHz; Etikett auf der Unterseite",
+      "FAQ Reset": "RESET-Taste auf der Unterseite der Speedbox; ca. 3 s bis Betriebsanzeige blinkt",
+      "Aufstellort": "Fensternähe (z. B. Fensterbank oder anderer möglichst hoch gelegener Ort)",
+      "Temperatur": "optimale Betriebstemperatur 0 °C bis 35 °C, Lagerung -20 °C bis 45 °C",
+      "EU-Erklärung": "Funkgerät Typ ZTE MF281, Richtlinie 2014/53/EU, https://certification.ztedevices.com; 5150-5350 MHz nur Innenbereich",
+      "Sendeleistung": "GSM 850/900: 32 dBm; GSM 1800/1900: 29 dBm; UMTS-BAND 1/2/5/8: 22.5 dBm; LTE-BAND 1/3/7/8/20/28/38: 22.5 dBm; 802.11 a/b/g/n/ac: 2,4-GHz-Band < 20 dBm; 5-GHz-Band I/II/III/IV < 20 dBm",
+      "Satzdatei": "p_Speedbox2_QuickGuide_105x105mm_44_O20019_2.indd, 04.09.20"
+    },
+    "telekom_hilfe": {
+      "Titel": "Telekom Speedbox/Speedbox LTE mini",
+      "Bedienungsanleitungen": "Speedbox (schwarz) Kurzanleitung Stand 11/2018; Speedbox (weiß) Kurzanleitung Stand 11/2020; Speedbox LTE mini Schnellstartanleitung Stand 03/2016",
+      "Externe Antenne": "Ja, eine externe Antenne lässt sich anschließen. Lassen Sie sich gerne im Fachhandel zur Auswahl von Antennen und Adaptern beraten.",
+      "Konfiguration": "Speedbox (schwarz) http://192.168.8.1, Speedbox (weiß) ... (Text abgeschnitten)"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "ZTE",
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": "EU-Erklärung: \"Die ZTE Corporation erklärt hiermit, dass das Funkgerät Typ ZTE MF281 ...\"; vertrieben von Telekom Deutschland"
+      },
+      {
+        "wert": "ZTE",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "MF281",
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": "Etikett \"Model: MF281\""
+      },
+      {
+        "wert": "MF281",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": "Telekom Speedbox 2",
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": "Produktinformation \"TELEKOM SPEEDBOX\", Lieferumfang \"Speedbox 2\"; MF281 dort nicht genannt, Zuordnung über Telekom-Kurzanleitung (Satzdatei Speedbox2_QuickGuide, Model: MF281)"
+      },
+      {
+        "wert": "Telekom Speedbox (weiß)",
+        "quelle": "telekom_hilfe",
+        "beleg": "https://www.telekom.de/hilfe/geraete-zubehoer/router/weitere-router/telekom-speedbox",
+        "stand": "Webarchiv-Kopie 2021-10-02",
+        "sicherheit": "mittel",
+        "bemerkung": "Telekom-Hilfe unterscheidet Speedbox (schwarz) und Speedbox (weiß); die Kurzanleitung \"weiß\" nennt Model: MF281"
+      },
+      {
+        "wert": "Telekom Speedbox 2 (99930805)",
+        "quelle": "geizhals",
+        "beleg": "https://geizhals.de/telekom-speedbox-2-99930805-a2805933.html",
+        "stand": "Webarchiv-Kopie 2023-12-23 (gelistet seit 2022-09-06)",
+        "sicherheit": "mittel",
+        "bemerkung": "Händlerangebot: \"Telekom Speedbox 2 ZTE MF281\""
+      },
+      {
+        "wert": "Telekom Speedbox 2",
+        "quelle": "openwrt_asu_1339",
+        "beleg": "https://github.com/openwrt/asu/issues/1339",
+        "stand": "Issue 2025-04-16",
+        "sicherheit": "niedrig",
+        "bemerkung": "Issue-Titel \"ZTE MF281 (Telekom Speedbox 2)\""
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Etikett auf der Unterseite: \"Model: MF281\", \"ZTE Corporation\", dazu Gerätepasswort und WLAN-Daten",
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": "Abbildung Router-Pass/Etikett; Gerät trägt Telekom-Namen \"Speedbox\""
+      },
+      {
+        "wert": "Label-MAC = eth0",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_zte_mf281.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "label-mac-device = &eth0"
+      }
+    ],
+    "hersteller_artikelnummer": [
+      {
+        "wert": "99930805",
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": "Telekom-Artikelnummer"
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "unknown 2022",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Verkaufsstart voraussichtlich 11-2020",
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "gelistet seit 2022-09-06, Angebote bis mindestens 2023-12-23",
+        "quelle": "geizhals",
+        "beleg": "https://geizhals.de/telekom-speedbox-2-99930805-a2805933.html",
+        "stand": "Webarchiv-Kopie 2023-12-23 (gelistet seit 2022-09-06)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "2020-11",
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Voraussichtlicher Verkaufsstart 11-2020\""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm Atheros QCA9563",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9563",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9563",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/nand.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "SOC := qca9563"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Single Core\""
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 775,
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 775,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "MIPS 74Kc",
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Typ Single Core, 74Kc\""
+      },
+      {
+        "wert": "mips_24kc",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt-Paketarchitektur"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 128,
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": "Arbeitsspeicher 128 MB"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": "128M DDR2"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR2",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 128,
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": "Datenspeicher 128 MB"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": "128 MB SPI-NAND, dazu 2 MB SPI-NOR nur für U-Boot"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": "\"2, 128NAND\""
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NAND (SPI) + NOR (SPI, 2 MB, U-Boot)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "NOR: GigaDevice GD25Q16; NAND: GigaDevice (Typ nicht genannt)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "firmware_partition_kb": [
+      {
+        "wert": 29696,
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/nand.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "IMAGE_SIZE 29696k, davon Kernel 6144k; Partition firmware 0x1d00000 auf dem NAND"
+      }
+    ],
+    "switch": [
+      {
+        "wert": "Qualcomm Atheros QCA8337",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": "an eth0 per SGMII; nur Switch-Port 5 als LAN herausgeführt"
+      },
+      {
+        "wert": "¿",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "QCA9563 (2.4 GHz, im SoC), QCA9886 (5 GHz, PCIe)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9563, Qualcomm Atheros QCA9886",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath10k-ct",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath10k-ct mit ath10k-firmware-qca9888-ct, Board-Datei aus ipq-wifi-zte_mf286c",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/nand.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "2.4 GHz über den SoC (wmac)"
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": "Commit schreibt \"QCA9563 2T2R 802.11 abgn\"; QCA9563 funkt nur im 2.4-GHz-Band"
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"802.11 b/g/n/ac, Frequenzband 2,4 GHz & 5 GHz\""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": "2T2R"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": "\"2.4GHz 2T2R\""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11n/ac",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": "\"QCA9886 2T2R 802.11 nac\""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": "2T2R"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": "\"5GHz 2T2R\""
+      }
+    ],
+    "wlan_wave2": [
+      {
+        "wert": true,
+        "quelle": "openwrt_pr_17620",
+        "beleg": "https://github.com/openwrt/openwrt/pull/17620",
+        "stand": "PR 2025-01-15, Kommentar 2025-02-24",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: PR beschreibt den QCA9886 im MF286C als \"802.11ac Wave2 radio\"; für MF281 nicht ausdrücklich"
+      }
+    ],
+    "wlan_datenrate_mbit": [
+      {
+        "wert": "300 (2.4 GHz) / 867 (5 GHz)",
+        "quelle": "geizhals",
+        "beleg": "https://geizhals.de/telekom-speedbox-2-99930805-a2805933.html",
+        "stand": "Webarchiv-Kopie 2023-12-23 (gelistet seit 2022-09-06)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11n bis 300, 802.11ac bis 1166",
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": "1166 Mbit/s passt nicht zu 2x2 VHT80 (867); Widerspruch zu Geizhals"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AC1200",
+        "quelle": "geizhals",
+        "beleg": "https://geizhals.de/telekom-speedbox-2-99930805-a2805933.html",
+        "stand": "Webarchiv-Kopie 2023-12-23 (gelistet seit 2022-09-06)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet aus 300 + 867 Mbit/s"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": "< 20 (2.4 GHz), < 20 (5 GHz)",
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": "Nenngrenzwerte laut EU-Angaben in der Kurzanleitung"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas: \"-\""
+      },
+      {
+        "wert": "intern (WLAN); 2 Anschlüsse für externe Mobilfunkantennen",
+        "quelle": "geizhals",
+        "beleg": "https://geizhals.de/telekom-speedbox-2-99930805-a2805933.html",
+        "stand": "Webarchiv-Kopie 2023-12-23 (gelistet seit 2022-09-06)",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"Antennenanschluss (Mobilfunk)\", Händlerangebot \"2 ext. Ant\""
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "2 externe Antennenanschlüsse (Mobilfunk)",
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": "Typ des Steckers nicht genannt; Telekom-Hilfe verweist auf Fachhandel für Antennen und Adapter"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "geschwindigkeit": "1000",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": "Ethernet 1Gbit ports: 1"
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN-Anschluss",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": "Geschwindigkeit nicht genannt"
+      },
+      {
+        "wert": [
+          {
+            "name": "lan (QCA8337 Port 5)",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": "02_network: \"0@eth0\" \"5:lan\""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"1 x LAN Anschluß\""
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "geizhals",
+        "beleg": "https://geizhals.de/telekom-speedbox-2-99930805-a2805933.html",
+        "stand": "Webarchiv-Kopie 2023-12-23 (gelistet seit 2022-09-06)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"1x LAN\""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": "1 x LAN, Strom per USB-C"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "kein USB-Datenport nach außen; USB-C nur Ladeanschluss",
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Typ-C-USB-Ladeanschluss\""
+      },
+      {
+        "wert": "USB intern (usb0/usb1) für das LTE-Modem",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_zte_mf281.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "¿",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "LTE, ASRMicro ASR1826 (eigene Modem-CPU mit angepasstem OpenWrt, NCM über /dev/ttyACM0)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "LTE bis 300/50 Mbit/s, 800/900/1800/2100/2600 MHz; HSPA bis 42 Mbit/s; GSM",
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": "Nano-SIM, kein SIM-Lock"
+      },
+      {
+        "wert": "LTE-Bänder 1/3/7/8/20/28/38, UMTS 1/2/5/8, GSM 850/900/1800/1900",
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": "aus den EU-Sendeleistungsangaben"
+      },
+      {
+        "wert": "LTE B1/B3/B8/B20/B38, UMTS 850/900/1900/2100, GSM 850/900/1800/1900",
+        "quelle": "geizhals",
+        "beleg": "https://geizhals.de/telekom-speedbox-2-99930805-a2805933.html",
+        "stand": "Webarchiv-Kopie 2023-12-23 (gelistet seit 2022-09-06)",
+        "sicherheit": "mittel",
+        "bemerkung": "Widerspruch zu Telekom-Angaben (B7, B28)"
+      },
+      {
+        "wert": "LTE",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "sim_formfaktor": [
+      {
+        "wert": "Nano-SIM (4FF), 1 Slot",
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": "\"-\""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: Strom laut Hersteller nur über USB-C-Steckernetzteil oder Akku, PoE nicht genannt"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "USB-C (Ladeanschluss)",
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Typ-C-USB-Ladeanschluss\""
+      },
+      {
+        "wert": "USB-C",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": "\"4.100mAh battery or USB Type C\""
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": "Lieferumfang: Steckernetzteil, USB-C-Kabel ca. 1,5 m"
+      }
+    ],
+    "akku": [
+      {
+        "wert": "Li-Ionen, 4100 mAh, Laufzeit bis 210 min",
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "4100 mAh",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "4100 mAh",
+        "quelle": "geizhals",
+        "beleg": "https://geizhals.de/telekom-speedbox-2-99930805-a2805933.html",
+        "stand": "Webarchiv-Kopie 2023-12-23 (gelistet seit 2022-09-06)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": "Schutz vor Regen und Feuchtigkeit; 5150-5350 MHz nur Innenbereich; Betrieb 0-35 °C"
+      },
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 35 °C",
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": "\"optimale Betriebstemperatur\""
+      }
+    ],
+    "temperatur_lager": [
+      {
+        "wert": "-20 bis 45 °C",
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Tisch (aufstellen, z. B. Fensterbank)",
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": "Wandmontage nicht erwähnt"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "100 x 100 x 164",
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "164 x 100 x 100",
+        "quelle": "geizhals",
+        "beleg": "https://geizhals.de/telekom-speedbox-2-99930805-a2805933.html",
+        "stand": "Webarchiv-Kopie 2023-12-23 (gelistet seit 2022-09-06)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 565,
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": "ca. 565 g"
+      },
+      {
+        "wert": 565,
+        "quelle": "geizhals",
+        "beleg": "https://geizhals.de/telekom-speedbox-2-99930805-a2805933.html",
+        "stand": "Webarchiv-Kopie 2023-12-23 (gelistet seit 2022-09-06)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 4,
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": "sichtbar: SIGNAL, WLAN, Power, Deko"
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": "von OpenWrt steuerbar"
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": "interne Debug-LED; Front-LEDs hängen an der Modem-CPU (LED-Controller AW9523) und sind unter OpenWrt nicht steuerbar"
+      }
+    ],
+    "led_openwrt": [
+      {
+        "wert": "nur grüne Debug-LED (SMD unter den Signal-LEDs), durch Schlitze an der Unterseite sichtbar; dient als Boot-/Failsafe-/Upgrade-/Status-LED",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_zte_mf281.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Kommentar im DTS aus Commit 1e1695f"
+      }
+    ],
+    "tasten": [
+      {
+        "wert": "Ein-/Aus-Taste, WPS-Taste, RESET (unter SIM-Klappe)",
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Reset, WPS (GPIO)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "unter der SIM-Karten-Klappe, mit Büroklammer durch kleines Loch; FAQ: \"auf der Unterseite\"",
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": "3 s halten für Werkseinstellung (Stock)"
+      },
+      {
+        "wert": "Reset/WPS führt in den Gluon-Config-Mode",
+        "quelle": "gluon_pr_2637",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2637",
+        "stand": "PR 2022-09-10, gemergt 2022-09-12",
+        "sicherheit": "mittel",
+        "bemerkung": "Checkliste PR 2637"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte (Steckverbinder unbestückt) neben dem SIM-Slot",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Unpopulated connector next to SIM slot\""
+      },
+      {
+        "wert": "innen (UART-Header)",
+        "quelle": "gluon_pr_2637",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2637",
+        "stand": "PR 2022-09-10, gemergt 2022-09-12",
+        "sicherheit": "mittel",
+        "bemerkung": "\"Using internal UART header\""
+      },
+      {
+        "wert": "Gehäuse muss zur Installation geöffnet werden",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-nand",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "\"case must be opened to install\""
+      },
+      {
+        "wert": "ja",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial: Yes"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "(SIM-Seite) GND - RX - TX - 3V3",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": "3V3 nicht anschließen"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": "8n1"
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": "115200 / 8N1"
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/nand",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath79/nand",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/nand.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "zte_mf281",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/nand.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "22.03.1",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Snapshot ab 2022-09-08",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.0",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot (Autoboot über serielle Konsole unterbrechbar)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "serielle Konsole, U-Boot unterbrechen, OpenWrt-Initramfs per TFTP (Server 192.168.1.66, Datei speedbox-2.bin) booten, dann factory.bin per mtd in die Partition firmware schreiben",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "see git-commit",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "broken",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-nand",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "\"case must be opened to install\"; Image zte-mf281 mit ATH10K_PACKAGES_QCA9888"
+      },
+      {
+        "wert": "aufgenommen 2022-09-12 (Gluon-Commit 94249bfa)",
+        "quelle": "gluon_pr_2637",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2637",
+        "stand": "PR 2022-09-10, gemergt 2022-09-12",
+        "sicherheit": "mittel",
+        "bemerkung": "Checkliste vollständig bis auf Radio-/Port-LEDs"
+      },
+      {
+        "wert": "unknown",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bekannte_probleme": [
+      {
+        "wert": "5-GHz-Empfangsdurchsatz vor 2025-03 rund ein Drittel niedriger: gerätespezifische Board-Datei bringt +50 % RX (iperf3)",
+        "quelle": "openwrt_git_bdf",
+        "beleg": "https://github.com/openwrt/openwrt/commit/8951ac6f6517121c946a40beacb45ba4a90a3364",
+        "stand": "Commit 2025-02-03 (Autor), gemergt 2025-03-16",
+        "sicherheit": "mittel",
+        "bemerkung": "betrifft Builds ohne Commit 8951ac6"
+      },
+      {
+        "wert": "Front-LEDs unter OpenWrt nicht nutzbar (Modem-CPU)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1e1695f959e678868bb7911d059b847f38fc9cf4",
+        "stand": "Commit 2022-09-05 (Autor), gemergt 2022-09-08",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "eth0",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_zte_mf281.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "label-mac-device"
+      },
+      {
+        "wert": "Primäre MAC entspricht Etikett",
+        "quelle": "gluon_pr_2637",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2637",
+        "stand": "PR 2022-09-10, gemergt 2022-09-12",
+        "sicherheit": "mittel",
+        "bemerkung": "Checkliste PR 2637"
+      }
+    ],
+    "stock_firmware": [
+      {
+        "wert": "Linux 3.3.8, Menü deutsch/englisch, kein SIM-Lock",
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+        "stand": "Seitenrevision 2026-03-09 05:38",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.telekom.de/hilfe/geraete-zubehoer/router/weitere-router/telekom-speedbox",
+        "quelle": "telekom_hilfe",
+        "beleg": "https://www.telekom.de/hilfe/geraete-zubehoer/router/weitere-router/telekom-speedbox",
+        "stand": "Webarchiv-Kopie 2021-10-02",
+        "sicherheit": "mittel",
+        "bemerkung": "Telekom-Hilfeseite (Vertrieb); keine ZTE-Produktseite gefunden"
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": "Telekom-Produktinformation"
+      }
+    ],
+    "handbuch": [
+      {
+        "wert": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "quelle": "telekom_kurzanleitung",
+        "beleg": "https://www.telekom.de/hilfe/downloads/kurzanleitung-speedbox-weiss.pdf",
+        "stand": "PDF 2020-09-04, Telekom: Stand 11/2020",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ean": [
+      {
+        "wert": "6902176046681",
+        "quelle": "telekom_produktinfo",
+        "beleg": "https://gzhls.at/blob/ldb/e/f/9/4/854b1c09205c9f4d1cbb3fa1fd93c919a919.pdf",
+        "stand": "PDF 2020-10-20 (Geizhals: Stand 06.09.2022)",
+        "sicherheit": "hoch",
+        "bemerkung": "Telekom Speedbox 2 (Artikelnummer 99930805), weiß; MF281 nicht im Dokument genannt, Zuordnung über Kurzanleitung"
+      }
+    ],
+    "geizhals_url": [
+      {
+        "wert": "https://geizhals.de/telekom-speedbox-2-99930805-a2805933.html",
+        "quelle": "geizhals",
+        "beleg": "https://geizhals.de/telekom-speedbox-2-99930805-a2805933.html",
+        "stand": "Webarchiv-Kopie 2023-12-23 (gelistet seit 2022-09-06)",
+        "sicherheit": "mittel",
+        "bemerkung": "Eintrag \"Telekom Speedbox 2 (99930805)\"; keine Hardware-Versionen bekannt; Permalink aus Webarchiv-CDX"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://certification.ztedevices.com",
+      "kategorie": "netzteil",
+      "grund": "Netzteil liegt bei (Steckernetzteil + USB-C-Kabel), Spannung/Strom/Leistung nirgends genannt; EU-Konformitätserklärung oder Netzteil-Typenschild prüfen"
+    },
+    {
+      "url": "https://www.telekom.de/hilfe/geraete-zubehoer/router/weitere-router/telekom-speedbox/externe-antenne",
+      "kategorie": "antennen",
+      "grund": "Steckertyp der 2 externen Mobilfunk-Antennenanschlüsse unbekannt (Seite nennt keinen Typ)"
+    },
+    {
+      "url": "https://forum.openwrt.org/search?q=MF281",
+      "kategorie": "seriell",
+      "grund": "Forumssuche 429; Fotos zur Lage des UART-Anschlusses, Gehäuseöffnung und Lüfter fehlen (keine Geräteseite im OpenWrt-Wiki, ToH-Bild generisch)"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9563_zte_mf28x.dtsi",
+      "kategorie": "hardware",
+      "grund": "gemeinsame DTSI (GPIOs, Tasten, Debug-LED, Flash-Anbindung) nicht geladen"
+    },
+    {
+      "url": "https://web.archive.org/web/20221128082534/https://www.telekom.de/hilfe/geraete-zubehoer/router/weitere-router/telekom-speedbox/werkseinstellung",
+      "kategorie": "hilfe",
+      "grund": "weitere archivierte Telekom-Hilfeseiten (werkseinstellung, wlan, position) nicht ausgewertet"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/zte/zte_mf281",
+      "kategorie": "hw_version",
+      "grund": "keine Hardware-Versionen bekannt (Versions-Feld leer); Leistungsaufnahme, Lüfter und Akku-Wechselbarkeit unbelegt"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-20",
+    "status": "teilweise",
+    "anfragen": 41,
+    "notiz": "Kein Eintrag im ToH-Dump; Live-hwdata (Rev. 2026-03-09), OpenWrt-Commit 1e1695f, DTS/nand.mk main, BDF-Commit 8951ac6/PR 17620, Gluon-Target (broken: Gehäuse öffnen) und PR 2637, Geizhals-Archiv (Telekom Speedbox 2, EAN aus Telekom-Produktinformation), Telekom-Kurzanleitung (Model: MF281, Tasten, Temperatur, EU-Sendeleistung), Telekom-Hilfe ausgewertet. DeviWiki/WikiDevi ohne Treffer, keine FCC-ID, keine OpenWrt-Wiki-Seite, kein Werkstatt-Protokoll. Akku-/USB-C-Gerät für innen, 1x Gigabit-LAN, UART innen unbestückt (115200, GND-RX-TX-3V3). Offen: Netzteildaten, Antennenstecker, Fotos/UART-Lage, Lüfter."
+  }
+}

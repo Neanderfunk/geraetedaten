@@ -1,0 +1,1920 @@
+{
+  "image": "openmesh-om5p-ac-v1",
+  "modell": "OpenMesh OM5P-AC v1",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-20",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15681512",
+      "bemerkung": "werkzeug/toh_suche.py fand keinen Kandidaten (Marke im Dump 'Open-Mesh', Image 'openmesh'); Zeile per grep im Dump gefunden. Dump-Eintrag gilt für 'v1,v2'; daneben eigener v2-Eintrag pid 15677591 (open-mesh_om5p-ac_v2, fast nur Platzhalter ¿)"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac?do=export_raw",
+      "stand": "Seitenrevision 2026-08-06 01:33",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Live-Seite neuer als Dump: Versions nur 'v1', Discontinued, Target ath79, CPU QCA9558 (Dump: QCA9557), WLAN QCA9558+QCA9882, Treiber ath9k+ath10k-ct, 2x AR8035, aktuell 25.12.5, Outdoor No, Gluon support Yes"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/open-mesh/om5p-ac?do=export_raw",
+      "stand": "Seite existiert nicht (2026-10-20)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "keine Geräteseite; Namespace toh:open-mesh enthält nur mr600_v1/mr600_v2; ToH-Feld Device Page leer"
+    },
+    "openwrt_git_ath79": {
+      "url": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+      "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "aus lokalem OpenWrt-Klon (firmware-2025.1/gluon/openwrt) gelesen, per GitHub-API bestätigt; in v22.03.0 enthalten (compare: behind)"
+    },
+    "openwrt_git_ath79_v2": {
+      "url": "https://github.com/openwrt/openwrt/commit/1699c1dc7f26b332f868d338457abfbe716d6ba0",
+      "stand": "Commit 2020-11-23 (Autor), gemergt 2022-01-16",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "OM5P-AC v2 zum Vergleich: 4 LEDs + Reset-Taste, eth1 mit AR8031 statt AR8035"
+    },
+    "openwrt_git_ar71xx": {
+      "url": "https://github.com/openwrt/openwrt/commit/0211fa12531f60f31e8eba1798a5e9f657da98e9",
+      "stand": "Commit 2016-04-09 (SVN r49148)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Profil/Image OM5PAC; Kernel 69965212bd (r49141, mach-om5pac.c), Userspace 2fa2d97ae2; v2 als eigener Maschinentyp 886cb9a744 (r49149)"
+    },
+    "openwrt_git_ar71xx_kernel": {
+      "url": "https://github.com/openwrt/openwrt/commit/69965212bd5c796dc9229b71479c0d8071f06f63",
+      "stand": "Commit 2016-04-09 (SVN r49141)",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_om5p-ac-v1.dts",
+      "stand": "lokaler Klon (Gluon v2025.1.3, OpenWrt-Stand 2024-09-02, Zweig openwrt-24.10)",
+      "abgerufen": "2026-10-20",
+      "dateien": [
+        "qca9558_openmesh_om5p-ac-v1.dts",
+        "qca9558_openmesh_om5p-ac-v2.dts",
+        "image/generic.mk"
+      ]
+    },
+    "gluon_target": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/ath79-generic",
+      "stand": "lokaler Checkout v2025.1.3",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_release_v2016_2": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/docs/releases/v2016.2.rst",
+      "stand": "Release v2016.2",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "neue Geräte: 'OM5P-AC v1, v2 [#ath10k]'; Gluon 2021.1 (ar71xx): device openmesh-om5p-ac, alias openmesh-om5p-acv2"
+    },
+    "werkstatt": {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/setup-mode-ohne-knopf.md",
+      "stand": "Stand 08.10.2026",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Kein Validierungsprotokoll zum OM5P-AC. Erwähnt in setup-mode-ohne-knopf.md (Abschnitte Einleitung und Liste 'Ohne solche Taste') und erstinstallation-ohne-factory.md (Tabelle Weg C ap51-flash)"
+    },
+    "werkstatt_erstinstallation": {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erstinstallation-ohne-factory.md",
+      "stand": "2026-10 (Arbeitsstand Repo)",
+      "abgerufen": "2026-10-20"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/index.php?search=OM5P-AC&fulltext=1",
+      "stand": "Suche 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "keine Geräteseite; auch Suche 'Open Mesh OM5P' nur Listenseiten"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/index.php?search=OM5P-AC&fulltext=1",
+      "stand": "Suche 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "keine Geräteseite"
+    },
+    "fcc": {
+      "url": "https://fccid.io/WT8OM5PAC",
+      "stand": "Grant 2015-05-29 (Original), Class II 2016-02-02",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Grantee Datto, Inc. (Antrag 2015: Open Mesh, Inc.); Testlabor Bureau Veritas CPS (H.K.) Ltd., Taoyuan Branch. Zulassung 2015 = erste Hardware (v1, abgeleitet); Class-II-Änderung 2016 vermutlich v2 (abgeleitet)"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/WT8OM5PAC/Label/Label-Sample-pdf-2629585",
+      "stand": "Exhibit 2015-05-29 (PDF 2015-05-28)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet; Cache fcc/label-1.png"
+    },
+    "fcc_aenderung": {
+      "url": "https://fccid.io/WT8OM5PAC/Letter/Cover-Letter-Description-of-Change-pdf-2893519",
+      "stand": "Exhibit 2016-02-02 (Schreiben 2016-01-28, Ref. RF151124C19)",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_mpe": {
+      "url": "https://fccid.io/WT8OM5PAC/RF-Exposure-Info/RF-Exposure-Info-MPE-pdf-2629587",
+      "stand": "Bericht SA150417C34 vom 2015-05-21",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_aussenfotos_2015": {
+      "url": "https://fccid.io/WT8OM5PAC/External-Photos/External-Photos-pdf-2629582",
+      "stand": "Exhibit 2015-08-27 (PDF 2015-05-28, Projekt 150417C34)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "3 Fotos, als Bild ausgewertet; Muster steckt in einem Gehäuse mit Typenschild 'OM5P-AN' (FCC ID WT8-OM5PAN)"
+    },
+    "fcc_aussenfotos_2016": {
+      "url": "https://fccid.io/WT8OM5PAC/External-Photos/External-Photos-pdf-2893520",
+      "stand": "Exhibit 2016-02-02 (Projekt 151124C19)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "3 Fotos, als Bild ausgewertet (Vergleich: kantiges Gehäuse, 4 LED-Punkte)"
+    },
+    "fcc_innenfotos_2015": {
+      "url": "https://fccid.io/WT8OM5PAC/Internal-Photos/Internal-Photos-pdf-2629583",
+      "stand": "Exhibit 2015-08-27 (PDF 2015-05-28, Projekt 150417C34)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "8 Fotos 1136x852, als Bild ausgewertet; Cache fcc/img_int2015/"
+    },
+    "fcc_handbuch": {
+      "url": "https://fccid.io/WT8OM5PAC/User-Manual/User-Manual-rev-pdf-2629592",
+      "stand": "Exhibit 2015-05-29 (PDF 2015-01-14, geändert 2015-05-29)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "ODM-Handbuch 'EW-7679WA' (AC1200 Wall Mount AP, Edimax-Modellnummer) mit abnehmbaren Antennen, Reset, Console-Port; beschreibt nicht das OM5P-AC-Gehäuse; Spezifikationsseiten leer. Nur in roh"
+    },
+    "openmesh_shop_2016": {
+      "url": "https://web.archive.org/web/20160406015009/http://www.open-mesh.com:80/products/access-points/om5p-ac-cloud-access-point.html",
+      "stand": "Webarchiv 2016-04-06",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Herstellerseite (Shop), erste Archivkopie; keine Hardware-Version genannt"
+    },
+    "openmesh_datenblatt_2016_06": {
+      "url": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+      "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Seriendatenblatt OM2P/OM2P-HS/OM5P-AC; keine Hardware-Version genannt; OM-2015-09.pdf enthält das OM5P-AC noch nicht, OM-2016-03.pdf nicht archiviert"
+    },
+    "openmesh_userguide": {
+      "url": "https://web.archive.org/web/20170914075057/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM5P-AC%20User%20Guide.pdf",
+      "stand": "User Guide Version 1.0 (PDF 2016-01-22)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "PDF vor der OpenWrt-Unterstützung für v2 (2016-04) und vor der FCC-Änderung (2016-02); Spezifikation S. 18"
+    },
+    "geizhals_cdx": {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/open-mesh&matchType=prefix&output=json&fl=timestamp,original,statuscode&collapse=urlkey",
+      "stand": "Abfrage 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "geizhals.de/open-mesh-om5p* und /open-mesh* leer; /openmesh* 503 'Temporarily Offline'"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "15681512",
+      "devicetype": "WiFi AP",
+      "brand": "Open-Mesh",
+      "model": "OM5P-AC",
+      "version": "v1,v2",
+      "fccid": "https://fccid.io/WT8OM5PAC",
+      "availability": "Available 2017",
+      "whereavailable": "¿",
+      "supportedsincecommit": "https://git.lede-project.org/?p=source.git;a=commit;h=0211fa12531f60f31e8eba1798a5e9f657da98e9",
+      "supportedsincerel": "17.01.0",
+      "supportedcurrentrel": "19.07.10",
+      "unsupported_functions": "NULL",
+      "target": "ar71xx-ath79",
+      "subtarget": "generic",
+      "packagearchitecture": "mips_24kc",
+      "bootloader": "¿",
+      "cpu": "Qualcomm Atheros QCA9557",
+      "cpucores": "1",
+      "cpumhz": "720",
+      "flashmb": "16",
+      "rammb": "128",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "2",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "¿",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "Qualcomm Atheros QCA9882",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "a/n/ac",
+      "wlancomments": "",
+      "wlandriver": "ath10k",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "-",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "¿",
+      "jtag": "¿",
+      "ledcount": "4",
+      "buttoncount": "1",
+      "gpios": "-",
+      "powersupply": "PoE 802.3af",
+      "devicepage": "",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "OM5P-AC",
+      "gitsearch": "OM5P-AC",
+      "wikideviurl": "NULL",
+      "oemdevicehomepageurl": "http://www.open-mesh.com/products/grp-om5p-ac-cloud-access-point.html",
+      "firmwareoemstockurl": "",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/19.07.10/targets/ar71xx/generic/openwrt-19.07.10-ar71xx-generic-om5pac-squashfs-factory.bin",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/19.07.10/targets/ar71xx/generic/openwrt-19.07.10-ar71xx-generic-om5pac-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "NULL",
+      "firmwareopenwrtsnapshotupgradeurl": "NULL",
+      "installationmethods": "unknown",
+      "commentinstallation": "",
+      "recoverymethods": "unknown",
+      "commentrecovery": "",
+      "picture": "media:example:genericrouter1.png",
+      "comments": "",
+      "page": "toh:hwdata:open-mesh:open-mesh_om5p-ac"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi AP",
+      "Brand": "Open-Mesh",
+      "Model": "OM5P-AC",
+      "Versions": "v1",
+      "FCCID_urls": "https://fccid.io/WT8OM5PAC",
+      "Availability_availability": "Discontinued",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.lede-project.org/?p=source.git;a=commit;h=0211fa12531f60f31e8eba1798a5e9f657da98e9",
+      "Supported Since Rel_releasesince": "17.01.0",
+      "Supported Current Rel_releasecurrent": "25.12.5",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "¿",
+      "CPU": "Qualcomm Atheros QCA9558",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "720",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "128",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "2",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "2x Atheros AR8035 GbE Phy",
+      "WLAN Hardwares": "Qualcomm Atheros QCA9558, Qualcomm Atheros QCA9882",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN Comments_": "2x2:2 MIMO on both bands",
+      "WLAN driver_wlan-drivers": "ath9k, ath10k-ct",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "¿",
+      "Serial connection voltage_serialvoltage": "¿",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "4",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "PoE 802.3af",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "OM5P-AC",
+      "Git search_search-gits": "OM5P-AC",
+      "WikiDevi URL_urls": "",
+      "WikiDevi ID_hwinfo-id": "",
+      "OEM Device Homepage URL_url": "http://www.open-mesh.com/products/grp-om5p-ac-cloud-access-point.html",
+      "Firmware OEM Stock URL_url": "",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/generic/openwrt-25.12.5-ath79-generic-openmesh_om5p-ac-v1-initramfs-kernel.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/generic/openwrt-25.12.5-ath79-generic-openmesh_om5p-ac-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-openmesh_om5p-ac-v1-initramfs-kernel.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-openmesh_om5p-ac-v1-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "see git-commit",
+      "Comment installation": "See https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=97f561725962ddb8823b2e01563a0f37f7930477",
+      "Recovery method(s)_method-recoverys": "see git-commit",
+      "Comment recovery": "",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "openwrt_git_ath79": {
+      "titel": "ath79: Add support for OpenMesh OM5P-AC v1",
+      "geraetebeschreibung": [
+        "Qualcomm/Atheros QCA9558 ver 1 rev 0",
+        "720/600/240 MHz (CPU/DDR/AHB)",
+        "128 MB of RAM",
+        "16 MB of SPI NOR flash - 2x 7 MB available; but one of the 7 MB regions is the recovery image",
+        "2T2R 2.4 GHz Wi-Fi (11n)",
+        "2T2R 5 GHz Wi-Fi (11ac)",
+        "6x GPIO-LEDs (3x wifi, 2x ethernet, 1x power)",
+        "external h/w watchdog (enabled by default))",
+        "TTL pins are on board (arrow points to VCC, then follows: GND, TX, RX)",
+        "TI tmp423 (package kmod-hwmon-tmp421) for temperature monitoring",
+        "2x ethernet",
+        "eth0: AR8035 ethernet PHY (RGMII), 10/100/1000 Mbps Ethernet, 802.3af POE, used as LAN interface",
+        "eth1: AR8035 ethernet PHY (SGMII), 10/100/1000 Mbps Ethernet, 18-24V passive POE (mode B), used as WAN interface",
+        "12-24V 1A DC",
+        "internal antennas"
+      ],
+      "installation": "ap51-flash (https://github.com/ap51-flash/ap51-flash) überträgt das Image an U-Boot beim Start; alternativ über serielle Konsole in U-Boot initramfs per TFTP laden (setenv serverip/ipaddr, tftpboot 0c00000 ... && bootm), dann sysupgrade -n über den LAN-Port",
+      "dateien": [
+        "package/boot/uboot-envtools/files/ath79",
+        "target/linux/ath79/dts/qca9558_openmesh_om5p-ac-v1.dts",
+        "target/linux/ath79/generic/base-files/etc/board.d/01_leds",
+        "target/linux/ath79/generic/base-files/etc/hotplug.d/firmware/11-ath10k-caldata",
+        "target/linux/ath79/generic/base-files/lib/upgrade/platform.sh",
+        "target/linux/ath79/image/generic.mk"
+      ]
+    },
+    "openwrt_git_ath79_v2": {
+      "titel": "ath79: Add support for OpenMesh OM5P-AC v2",
+      "unterschiede_zu_v1": [
+        "720/600/200 MHz (CPU/DDR/AHB) statt 720/600/240",
+        "4x GPIO-LEDs (3x wifi, 1x power) statt 6x",
+        "1x GPIO-button (reset) (v1: keine Taste)",
+        "eth1: AR8031 ethernet PHY (RGMII) statt AR8035 (SGMII)"
+      ]
+    },
+    "openwrt_git_ar71xx": {
+      "kernel": "mach-om5pac.c: MIPS_MACHINE(ATH79_MACH_OM5P_AC, \"OM5P-AC\", \"OpenMesh OM5P AC\", om5p_ac_setup); LEDs power(GPIO18), red(23), yellow(22), green(21), lan(20), wan(19); I2C GPIO11/12 mit tmp423 @0x4c; eth0 RGMII PHY1, eth1 SGMII PHY2; keine Tasten registriert",
+      "board_erkennung": "ar71xx.sh: Maschinenname *\"OM5P AC\" -> om5p-ac; v2 (886cb9a744/7461604bd9): *\"OM5P ACv2\" -> om5p-acv2 mit Reset-Taste GPIO1",
+      "om_watchdog": "om5p-ac: GPIO 17 (0d69dbee5e)",
+      "led_netdev": "port1 om5pac:blue:lan an eth0, port2 om5pac:blue:wan an eth1"
+    },
+    "openwrt_dts": {
+      "compatible": "openmesh,om5p-ac-v1, qca,qca9558",
+      "model": "OpenMesh OM5P-AC v1",
+      "leds": "power_blue GPIO18 (boot/failsafe/running/upgrade), wan_blue GPIO19, lan_blue GPIO20, green:wifi GPIO21 (phy0tpt), yellow:wifi GPIO22, red:wifi GPIO23",
+      "tasten": "kein keys-Knoten (v2: reset GPIO1 KEY_RESTART)",
+      "i2c": "i2c-gpio SDA GPIO11, SCL GPIO12, ti,tmp423 @0x4c",
+      "watchdog": "linux,wdt-gpio GPIO17, toggle, hw_margin 300 s (Treiber 60 s), always-running",
+      "flash": "jedec,spi-nor 40 MHz; u-boot 0x000000+0x40000 (ro), u-boot-env 0x40000+0x10000, custom 0x50000+0x60000 (ro), inactive 0xb0000+0x7a0000, inactive2 0x850000+0x7a0000, ART 0xff0000+0x10000 (ro)",
+      "ethernet": "eth0 rgmii-id PHY1 (MAC ART+0), eth1 SGMII PHY2 (MAC ART+6), beide eee-broken",
+      "wlan": "wmac (2.4 GHz, Kalibrierung ART 0x1000); pcie1 qcom,ath10k (5 GHz, Kalibrierung ART 0x5000)",
+      "label_mac": "eth0",
+      "image_mk": "Device/openmesh_om5p-ac-v1: openmesh_common_64k, SOC qca9558, DEVICE_MODEL OM5P-AC, DEVICE_VARIANT v1, kmod-ath10k-ct ath10k-firmware-qca988x-ct, OPENMESH_CE_TYPE OM5PAC, SUPPORTED_DEVICES += om5p-ac"
+    },
+    "gluon_target": {
+      "device": "device('openmesh-om5p-ac-v1', 'openmesh_om5p-ac-v1', { packages = ATH10K_PACKAGES_QCA9880, factory = false })",
+      "gluon_2021_1_ar71xx": "device('openmesh-om5p-ac', 'om5pac', { profile = 'OM5PAC', aliases = {'openmesh-om5p-acv2'}, packages = ATH10K_PACKAGES })"
+    },
+    "werkstatt": {
+      "setup-mode-ohne-knopf.md": "Einige weitere Geräte, für die wir Firmware bauen, haben laut ihrer Gerätebeschreibung in OpenWrt ebenfalls keine Taste, die Gluon für den Einrichtungsmodus auswertet: Sophos AP15, OpenMesh OM5P-AC v1, VoCore2, 8devices Jalapeno und Sophos RED 15w. Für sie gibt es diesen Weg nicht. Bei uns ist keins davon im Einsatz (Karte, 08.10.2026). Aus dem Quelltext abgeleitet, nicht an den Geräten geprüft.",
+      "erstinstallation-ohne-factory.md": "Weg C - ap51-flash (Open-Mesh-Bootloader): ath79-generic, OM2P*, OM5P*, MR600/900/1750, A40/A60; eigenes Werkzeug, läuft schon"
+    },
+    "fcc": {
+      "FCC ID": "WT8OM5PAC",
+      "Grantee": "Datto, Inc.",
+      "Equipment Class": "Wireless Access Point",
+      "Test Firm": "Bureau Veritas CPS (H.K.) Ltd., Taoyuan Branch",
+      "Frequenzen": "2412-2462 MHz, 5180-5240 MHz (Original 2015-05-29 und Class II 2016-02-02)",
+      "Model": "OM5PAC",
+      "Composite Device": "Yes",
+      "Exhibits": "User Manual_rev.pdf (2015-05-29, 3.3 MB), Internal Photos.pdf (2015-08-27, 2.8 MB), Internal Photos_rev 2.pdf (2016-02-02, 1.9 MB), External Photos.pdf (2015-08-27 / 2016-02-02), Label Location.pdf, Label Sample.pdf, Test Set up photo (2015/2016), Test Report DTS/NII (2015/2016), Attestation, Confidentiality Requests, Agent Authorization, Description of Change (2016), RF Exposure MPE (2015/2016); Block Diagram, Schematics, Operational Description nur Metadaten (vertraulich)"
+    },
+    "fcc_label": {
+      "Model Name": "OM5P-AC",
+      "DC Input": "12V~24V/1A",
+      "PoE Input (1)": "24V Passive PoE",
+      "PoE Input (2)": "48V 802.3af PoE",
+      "FCC ID": "WT8OM5PAC",
+      "Marke": "Open Mesh",
+      "Herkunft": "Made in china",
+      "Zeichen": "WEEE, RCM, CE, (!) (Alarmzeichen), FCC",
+      "Etikettmaß": "24.4 x 23.7 mm",
+      "Hardware-Version": "nicht angegeben"
+    },
+    "fcc_aenderung": {
+      "Datum": "2016-01-28",
+      "Referenz": "RF151124C19",
+      "Änderungen": [
+        "Converting the DTS filing from 15.247 to 15.407 under new rule",
+        "Updating U-NII filing to under new rule.",
+        "Changing PCB RF layout (only effect RX only) and thermal pad.",
+        "Adding console pin.",
+        "Changing appearance of EUT.",
+        "Changing Capacitance and Resistor (for ISN LAN port)."
+      ]
+    },
+    "fcc_mpe": {
+      "Report": "SA150417C34",
+      "Test Model": "OM5P-AC",
+      "Brand": "Open Mesh",
+      "Applicant": "Open Mesh, Inc.",
+      "Sample Status": "Engineering sample",
+      "Test Date": "2015-05-16 bis 2015-05-19",
+      "2412-2462 MHz": "Max Power 26.73 dBm, Antenna Gain 6.15 dBi",
+      "5180-5240 MHz": "Max Power 16.95 dBm, Antenna Gain 6.15 dBi",
+      "5745-5825 MHz": "Max Power 26.57 dBm, Antenna Gain 6.15 dBi",
+      "Hinweis": "6.15 dBi = Directional gain über alle Antennen (10 log[(10^(G1/20)+...)^2/N])"
+    },
+    "fcc_fotos": {
+      "aussen_2015": "Gehäuse mit gewölbter Oberseite, Symbole und LEDs vorn; Rückseite: DC-Buchse, zwei gelbe RJ45 beschriftet '18-24v POE' und '802.3af POE'; Unterseite mit Gummifüßen, zwei Schlüssellochaufhängungen, kleines Loch; Typenschild des Musters 'Model Name: OM5P-AN', 'DC Input: 12-20V 1A', 'PoE Input: 12-24V Passive PoE', 'PoE Input: 48V 802.3af PoE', FCC ID WT8-OM5PAN, IC 10103A-OM5PAN, Feld 'EAN' vorhanden (unleserlich), 'Made in Taiwan'",
+      "aussen_2016": "kantiges Gehäuse mit vier LED-Punkten, Rückseite DC-Buchse und zwei gelbe RJ45 '18-24v POE' / '802.3af POE', Unterseite ohne Gummifüße mit zwei Langlöchern und kleinem Loch",
+      "innen_2015": "eine Platine; zwei gelbe RJ45, DC-Buchse, PoE-Übertrager (NS590168/T1502), zwei LAN-Übertrager; SoC und 5-GHz-Chip unter Abschirmung/Wärmeleitpads; vier u.FL-Anschlüsse mit Kabeln zu Kupfer-Folienantennen an den Gehäuseseiten; auf der Unterseite ein Taster in Platinenmitte; kein Lüfter, kein Kühlkörper außer Wärmeleitpads zum Gehäusedeckel"
+    },
+    "openmesh_shop_2016": {
+      "Kurzbeschreibung": "High speed, dual band 1.17 Gbps (300+867 Mbps) 802.11ac mini cloud-managed access point with 802.3af PoE support, dual Gigabit Ethernet ports and four internal antennas.",
+      "Netzteiloptionen": "Without Adapter; 24V Universal Power Supply (US UK EU AU) +$5.00",
+      "Zubehör": "OM Indoor Ethernet Jack Enclosure, OM Outdoor Pole/Wall Enclosure, OM Indoor Ceiling Enclosure, POE Injector for OM Series",
+      "PoE": "standard 802.3af Power over Ethernet (PoE) ... and passive 24v PoE; Feature-Liste: Support for 802.3af PoE and 12-24v passive PoE",
+      "Nachfolger von": "The OM5P-AC is our 802.11ac replacement for the OM5P-AN",
+      "MIMO": "2x2, 1.17 Gbps MIMO configuration",
+      "Firmware ab Werk": "6.1",
+      "Kompatible Gehäuse": "OM Indoor Ethernet, OM Indoor Ceiling, OM Indoor Wallplug, OM Outdoor, MR Outdoor",
+      "SKU": "OM5P-AC",
+      "Warranty": "1 year",
+      "Weight": "0.5200 (ohne Einheit)",
+      "Product Is For Sale": "Yes"
+    },
+    "openmesh_datenblatt_2016_06": {
+      "Best use": "High-density deployments where mesh is not required",
+      "Speed (rated)": "1.17 Gbps (300+867 Mbps)",
+      "Radio": "1 802.11b/g/n 2.4 GHz + 1 802.11a/n/ac 5 GHz",
+      "Antenna": "Two internal dual band, 2x2 (2.4 GHz) + 2x2 (5 GHz)",
+      "Power": "19 dBm (79 mw) flat power",
+      "Power consumption (approximate)": "4W idle, 7W normal load, 11W heavy load",
+      "Range (approximate)": "25-50' indoor (1-2 walls); 100'-200' outdoor",
+      "Processor": "720 MHz QCA9557 + QCA9882, MIPS 74K",
+      "Max users (recommended)": "20-50 per AP",
+      "Max real per-user speed": "TBC",
+      "WLAN standard": "802.11a/g/n/ac 2.4 + 5 GHz",
+      "Memory": "128MB DRAM",
+      "Hardware watchdog CPU": "Yes",
+      "SSIDs": "4",
+      "SSID to VLAN tagging": "Yes",
+      "Ethernet (WAN and LAN)": "2 x Gigabit",
+      "PoE": "Standard 802.3af and 12-24v Passive",
+      "Power supply options": "Universal 24V 1A (US, UK, EU, AU); US 12V 1A (bundled w/ wallplug enclosure)",
+      "LEDs": "Power, Ethernet (2), WiFi",
+      "Temperature": "-10-50C",
+      "Recommended enclosures": "All Enclosures",
+      "Size": "3.75\" x 2.75\" x 1\"",
+      "Certifications": "FCC (US), IC (Canada), CE (Europe), RCM (Australia, New Zealand)",
+      "Warranty": "1 year",
+      "Enclosures": "Outdoor Wall/Pole (Pole, wall; UV-stabilized ABS), Indoor Wall Plug (North American outlet, 12v NA PSU included), Indoor Ethernet Jack (1-gang NA box), Indoor Ceiling (9/16\" & 15/16\" drop ceiling rails; solid wall or ceiling); alle für OM5P-AC kompatibel"
+    },
+    "openmesh_userguide": {
+      "Data rate (aggregate)": "1.2 Gbps",
+      "Radio": "1 802.11b/g/n 2.4 GHz + 1 802.11a/n/ac 5 GHz",
+      "Antenna": "Four internal, 2x2 (2.4 GHz) + 2x2 (5 GHz)",
+      "Power": "19 dBm (79 mw) flat power",
+      "Range (approximate)": "50-100' indoor (2-3 walls)",
+      "WLAN standard": "802.11a/g/n/ac 2.4 + 5 GHz",
+      "Memory": "128MB DRAM",
+      "Hardware watchdog CPU": "Yes",
+      "SSIDs": "4",
+      "Ethernet (WAN and LAN)": "2 x Gigabit",
+      "PoE": "Standard 802.3af and 12-24v Passive",
+      "LEDs": "Power, Ethernet (2), WiFi",
+      "Temperature": "-10 - 50 C",
+      "Compatible enclosures": "Ceiling, Wall Plug, Ethernet",
+      "Size": "3.75\" x 2.75\" x 1\"",
+      "Certifications": "FCC, IC, CE, RCM",
+      "Warranty": "1 year",
+      "Montage": "When mounting Open Mesh access points directly onto a wall, use a minimum 30 mm screw length.",
+      "LED-Beschreibung (für OM2P, allgemein)": "Power light, Ethernet port 1 link light, Ethernet port 2 link light, Mesh quality light (signal bars) rot/gelb/grün"
+    },
+    "fcc_handbuch": {
+      "Titel": "AC1200 Wireless LAN 11ac Dual-Band Concurrent Wall Mount Access Point, User's Manual, EW-7679WA, 05-2014 / v1.0",
+      "Lieferumfang": "Access Point, Antennas x 2, Magnetic Wall Mount, Quick Installation Guide, Power Cord, Power Adapter",
+      "Anschlüsse": "12V DC IN, LAN 1 (PoE PD, IN), LAN 2 (PoE PSE, OUT), Reset",
+      "Console": "Console port on side panel, 115200 8N1, no flow control",
+      "Betrieb": "indoor use only; 0-40 °C mit Netzteil, 0-50 °C mit PoE-Switch",
+      "Hinweis": "ODM-Handbuch eines anderen Produkts (abnehmbare Antennen, PoE-Ausgang, Console außen); nicht auf das OM5P-AC übertragen"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Open Mesh",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM5PAC/Label/Label-Sample-pdf-2629585",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild 'Open Mesh'; FCC-Grantee heute Datto, Inc."
+      },
+      {
+        "wert": "Open-Mesh",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "OM5P-AC",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM5PAC/Label/Label-Sample-pdf-2629585",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Model Name: OM5P-AC"
+      },
+      {
+        "wert": "OM5P-AC",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "v1",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac?do=export_raw",
+        "stand": "Seitenrevision 2026-08-06 01:33",
+        "sicherheit": "mittel",
+        "bemerkung": "Live-Seite: Versions v1 (Dump: 'v1,v2')"
+      },
+      {
+        "wert": "v1",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_om5p-ac-v1.dts",
+        "stand": "lokaler Klon (Gluon v2025.1.3, OpenWrt-Stand 2024-09-02, Zweig openwrt-24.10)",
+        "sicherheit": "mittel",
+        "bemerkung": "model = \"OpenMesh OM5P-AC v1\"; SUPPORTED_DEVICES += om5p-ac (ar71xx-Name; v2 = om5p-acv2)"
+      },
+      {
+        "wert": "v1",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/ath79-generic",
+        "stand": "lokaler Checkout v2025.1.3",
+        "sicherheit": "mittel",
+        "bemerkung": "openmesh-om5p-ac-v1"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild zeigt nur 'Model Name: OM5P-AC', Eingänge, FCC ID WT8OM5PAC; keine Hardware-Version",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM5PAC/Label/Label-Sample-pdf-2629585",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "Muster-Typenschild 2015 (v1-Zeit)"
+      },
+      {
+        "wert": "v1 hat 6 LEDs (Power, LAN, WAN, WLAN dreifarbig) und keine Taste; v2 hat 4 LEDs (Power, WLAN dreifarbig) und eine Reset-Taste",
+        "quelle": "openwrt_git_ath79_v2",
+        "beleg": "https://github.com/openwrt/openwrt/commit/1699c1dc7f26b332f868d338457abfbe716d6ba0",
+        "stand": "Commit 2020-11-23 (Autor), gemergt 2022-01-16",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet aus den Gerätebeschreibungen der Commits 97f5617 (v1) und 1699c1d (v2); ob man die Ethernet-LEDs von außen als eigene Lichter sieht, ist nicht belegt"
+      },
+      {
+        "wert": "Bootloader meldet v1 als 'OM5P AC', v2 als 'OM5P ACv2' (ar71xx-Board-Erkennung)",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0211fa12531f60f31e8eba1798a5e9f657da98e9",
+        "stand": "Commit 2016-04-09 (SVN r49148)",
+        "sicherheit": "mittel",
+        "bemerkung": "nur am laufenden Gerät/Konsole sichtbar"
+      },
+      {
+        "wert": "FCC-Muster 2015 im gewölbten OM5P-AN-Gehäuse; Class-II-Änderung 2016 mit 'Changing appearance of EUT' zeigt kantiges Gehäuse mit vier LED-Punkten",
+        "quelle": "fcc_aussenfotos_2016",
+        "beleg": "https://fccid.io/WT8OM5PAC/External-Photos/External-Photos-pdf-2893520",
+        "stand": "Exhibit 2016-02-02 (Projekt 151124C19)",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: dass die Änderung 2016 der v2 entspricht, ist nicht belegt; das 2015er Muster trug ein OM5P-AN-Typenschild"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "WT8OM5PAC",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM5PAC/Label/Label-Sample-pdf-2629585",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WT8OM5PAC",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Discontinued",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac?do=export_raw",
+        "stand": "Seitenrevision 2026-08-06 01:33",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Available 2017",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump-Wert, veraltet"
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "FCC-Zulassung 2015-05-29",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/WT8OM5PAC",
+        "stand": "Grant 2015-05-29 (Original), Class II 2016-02-02",
+        "sicherheit": "hoch",
+        "bemerkung": "Muster getestet Mai 2015"
+      },
+      {
+        "wert": "erste Archivkopie der Shopseite 2016-04-06",
+        "quelle": "openmesh_shop_2016",
+        "beleg": "https://web.archive.org/web/20160406015009/http://www.open-mesh.com:80/products/access-points/om5p-ac-cloud-access-point.html",
+        "stand": "Webarchiv 2016-04-06",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "herstellungsland": [
+      {
+        "wert": "China",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM5PAC/Label/Label-Sample-pdf-2629585",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "'Made in china' auf dem Muster-Typenschild"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm Atheros QCA9558",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": "QCA9558 ver 1 rev 0"
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9558",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac?do=export_raw",
+        "stand": "Seitenrevision 2026-08-06 01:33",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9557",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Widerspruch zu Commit/Live-Seite"
+      },
+      {
+        "wert": "QCA9557",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "'720 MHz QCA9557 + QCA9882'; Widerspruch zum Commit (QCA9558)"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 720,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": "720/600/240 MHz (CPU/DDR/AHB)"
+      },
+      {
+        "wert": 720,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 720,
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "MIPS 74K",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "mips_24kc (Paketarchitektur)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 128,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "128MB DRAM"
+      },
+      {
+        "wert": 128,
+        "quelle": "openmesh_userguide",
+        "beleg": "https://web.archive.org/web/20170914075057/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM5P-AC%20User%20Guide.pdf",
+        "stand": "User Guide Version 1.0 (PDF 2016-01-22)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "flash_aufteilung": [
+      {
+        "wert": "u-boot 256 KB, u-boot-env 64 KB, custom 384 KB, inactive 7808 KB, inactive2 7808 KB, ART 64 KB",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_om5p-ac-v1.dts",
+        "stand": "lokaler Klon (Gluon v2025.1.3, OpenWrt-Stand 2024-09-02, Zweig openwrt-24.10)",
+        "sicherheit": "hoch",
+        "bemerkung": "zwei Firmware-Bereiche je ~7 MB; einer ist laut Commit das Recovery-Image"
+      }
+    ],
+    "switch": [
+      {
+        "wert": "kein Switch, 2x Atheros AR8035 PHY",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac?do=export_raw",
+        "stand": "Seitenrevision 2026-08-06 01:33",
+        "sicherheit": "mittel",
+        "bemerkung": "Comments network ports: 2x Atheros AR8035 GbE Phy"
+      },
+      {
+        "wert": "kein Switch, eth0 AR8035 (RGMII), eth1 AR8035 (SGMII)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hardware_watchdog": [
+      {
+        "wert": "extern, GPIO 17, ab Werk aktiv",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": "external h/w watchdog (enabled by default); DTS: hw_margin 300 s"
+      },
+      {
+        "wert": "ja",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "Hardware watchdog CPU: Yes"
+      }
+    ],
+    "temperatursensor": [
+      {
+        "wert": "TI TMP423 (I2C 0x4c), Paket kmod-hwmon-tmp421",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "QCA9558 (2.4 GHz, im SoC) + QCA9882 (5 GHz, PCIe)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac?do=export_raw",
+        "stand": "Seitenrevision 2026-08-06 01:33",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9882 (5 GHz)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9557 + QCA9882",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2.4 GHz über SoC-WMAC, 5 GHz ath10k an PCIe1",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_om5p-ac-v1.dts",
+        "stand": "lokaler Klon (Gluon v2025.1.3, OpenWrt-Stand 2024-09-02, Zweig openwrt-24.10)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon: ATH10K_PACKAGES_QCA9880"
+      }
+    ],
+    "wlan_radios": [
+      {
+        "wert": 2,
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "1x 2.4 GHz + 1x 5 GHz, gleichzeitig"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath9k, ath10k-ct",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac?do=export_raw",
+        "stand": "Seitenrevision 2026-08-06 01:33",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath10k",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11n",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": "2x2",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": "2T2R"
+      },
+      {
+        "wert": "2x2:2",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac?do=export_raw",
+        "stand": "Seitenrevision 2026-08-06 01:33",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2x2",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11ac",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": "2x2",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": "2T2R"
+      },
+      {
+        "wert": "2x2:2",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac?do=export_raw",
+        "stand": "Seitenrevision 2026-08-06 01:33",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2x2",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AC1200",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet aus '1.17 Gbps (300+867 Mbps)'; User Guide nennt 1.2 Gbps"
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": "2412-2462 MHz, 5180-5240 MHz, 5745-5825 MHz",
+        "quelle": "fcc_mpe",
+        "beleg": "https://fccid.io/WT8OM5PAC/RF-Exposure-Info/RF-Exposure-Info-MPE-pdf-2629587",
+        "stand": "Bericht SA150417C34 vom 2015-05-21",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant listet 2412-2462 und 5180-5240 MHz; MPE-Bericht rechnet zusätzlich 5745-5825 MHz"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": 19,
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "19 dBm (79 mw) flat power"
+      },
+      {
+        "wert": 19,
+        "quelle": "openmesh_userguide",
+        "beleg": "https://web.archive.org/web/20170914075057/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM5P-AC%20User%20Guide.pdf",
+        "stand": "User Guide Version 1.0 (PDF 2016-01-22)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2.4 GHz 26.73, 5.2 GHz 16.95, 5.8 GHz 26.57 (max. leitungsgebunden, Summe)",
+        "quelle": "fcc_mpe",
+        "beleg": "https://fccid.io/WT8OM5PAC/RF-Exposure-Info/RF-Exposure-Info-MPE-pdf-2629587",
+        "stand": "Bericht SA150417C34 vom 2015-05-21",
+        "sicherheit": "hoch",
+        "bemerkung": "FCC-Messwerte, nicht Betriebswert"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": "internal antennas"
+      },
+      {
+        "wert": "intern",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "keine abnehmbaren",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas: -"
+      },
+      {
+        "wert": "intern, Kupfer-Folienantennen an den Gehäuseseiten, per u.FL-Kabel an der Platine",
+        "quelle": "fcc_innenfotos_2015",
+        "beleg": "https://fccid.io/WT8OM5PAC/Internal-Photos/Internal-Photos-pdf-2629583",
+        "stand": "Exhibit 2015-08-27 (PDF 2015-05-28, Projekt 150417C34)",
+        "sicherheit": "hoch",
+        "bemerkung": "FCC-Muster 2015"
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 4,
+        "quelle": "openmesh_userguide",
+        "beleg": "https://web.archive.org/web/20170914075057/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM5P-AC%20User%20Guide.pdf",
+        "stand": "User Guide Version 1.0 (PDF 2016-01-22)",
+        "sicherheit": "hoch",
+        "bemerkung": "Four internal, 2x2 (2.4 GHz) + 2x2 (5 GHz)"
+      },
+      {
+        "wert": 4,
+        "quelle": "openmesh_shop_2016",
+        "beleg": "https://web.archive.org/web/20160406015009/http://www.open-mesh.com:80/products/access-points/om5p-ac-cloud-access-point.html",
+        "stand": "Webarchiv 2016-04-06",
+        "sicherheit": "hoch",
+        "bemerkung": "four internal antennas"
+      },
+      {
+        "wert": 2,
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "'Two internal dual band'; Widerspruch zu User Guide und Shopseite"
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "dualband",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "mittel",
+        "bemerkung": "'Two internal dual band'; User Guide nennt vier Antennen, Aufteilung offen"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": 6.15,
+        "quelle": "fcc_mpe",
+        "beleg": "https://fccid.io/WT8OM5PAC/RF-Exposure-Info/RF-Exposure-Info-MPE-pdf-2629587",
+        "stand": "Bericht SA150417C34 vom 2015-05-21",
+        "sicherheit": "hoch",
+        "bemerkung": "Directional gain aller Antennen zusammen (MPE-Rechnung), nicht Einzelantenne"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "eth0 / '802.3af POE'",
+            "geschwindigkeit": "1 Gbit/s",
+            "rolle": "LAN",
+            "poe": "802.3af PD",
+            "phy": "AR8035 (RGMII)"
+          },
+          {
+            "name": "eth1 / '18-24v POE'",
+            "geschwindigkeit": "1 Gbit/s",
+            "rolle": "WAN",
+            "poe": "passiv 18-24 V Mode B",
+            "phy": "AR8035 (SGMII)"
+          }
+        ],
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": "Buchsenbeschriftung laut FCC-Außenfotos '18-24v POE' und '802.3af POE'"
+      },
+      {
+        "wert": "2x 1 Gbit/s",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2 x Gigabit (WAN und LAN)",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac?do=export_raw",
+        "stand": "Seitenrevision 2026-08-06 01:33",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "802.3af (eth0) und passiv (eth1)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.3af und passiv",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM5PAC/Label/Label-Sample-pdf-2629585",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "PoE Input: 24V Passive PoE / 48V 802.3af PoE"
+      },
+      {
+        "wert": "802.3af und passiv",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "Standard 802.3af and 12-24v Passive"
+      },
+      {
+        "wert": "802.3af und passiv",
+        "quelle": "openmesh_shop_2016",
+        "beleg": "https://web.archive.org/web/20160406015009/http://www.open-mesh.com:80/products/access-points/om5p-ac-cloud-access-point.html",
+        "stand": "Webarchiv 2016-04-06",
+        "sicherheit": "hoch",
+        "bemerkung": "802.3af PoE and 12-24v passive PoE / passive 24v PoE"
+      },
+      {
+        "wert": "802.3af",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Power Supply: PoE 802.3af"
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": "18-24 (passiv)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "24 (passiv), 48 (802.3af)",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM5PAC/Label/Label-Sample-pdf-2629585",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "12-24 (passiv)",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "Widerspruch zum Commit (18-24 V)"
+      },
+      {
+        "wert": "12-24 (passiv)",
+        "quelle": "openmesh_shop_2016",
+        "beleg": "https://web.archive.org/web/20160406015009/http://www.open-mesh.com:80/products/access-points/om5p-ac-cloud-access-point.html",
+        "stand": "Webarchiv 2016-04-06",
+        "sicherheit": "hoch",
+        "bemerkung": "Fließtext nennt 'passive 24v PoE'"
+      }
+    ],
+    "poe_pinbelegung": [
+      {
+        "wert": "passiv Mode B (Adern 4/5 und 7/8) an eth1",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": "'18-24V passive POE (mode B)'; Adernangabe = Mode-B-Definition, abgeleitet"
+      }
+    ],
+    "poe_ausgang": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "mittel",
+        "bemerkung": "Commit nennt nur PoE-Eingänge; abgeleitet"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "ja",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": "12-24V 1A DC"
+      },
+      {
+        "wert": "ja",
+        "quelle": "fcc_aussenfotos_2015",
+        "beleg": "https://fccid.io/WT8OM5PAC/External-Photos/External-Photos-pdf-2629582",
+        "stand": "Exhibit 2015-08-27 (PDF 2015-05-28, Projekt 150417C34)",
+        "sicherheit": "hoch",
+        "bemerkung": "Hohlstecker-Buchse auf der Rückseite neben den RJ45"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": "12-24",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "12-24",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM5PAC/Label/Label-Sample-pdf-2629585",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-28)",
+        "sicherheit": "hoch",
+        "bemerkung": "DC Input: 12V~24V/1A"
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 1,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM5PAC/Label/Label-Sample-pdf-2629585",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": "nein (optional)",
+        "quelle": "openmesh_shop_2016",
+        "beleg": "https://web.archive.org/web/20160406015009/http://www.open-mesh.com:80/products/access-points/om5p-ac-cloud-access-point.html",
+        "stand": "Webarchiv 2016-04-06",
+        "sicherheit": "hoch",
+        "bemerkung": "Auswahl 'Without Adapter' oder '24V Universal Power Supply +$5.00'"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "Universal 24 V 1 A (US, UK, EU, AU); US 12 V 1 A mit Wandstecker-Gehäuse",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "leistung_w_typ": [
+      {
+        "wert": 7,
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "4 W idle, 7 W normal load (ca.)"
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 11,
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "heavy load (ca.)"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac?do=export_raw",
+        "stand": "Seitenrevision 2026-08-06 01:33",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen; außen nur im OM-Outdoor-Gehäuse (Zubehör)",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gehäuse 'Outdoor Wall/Pole' für OM5P-AC kompatibel"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "-10 bis 50 °C",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "-10 bis 50 °C",
+        "quelle": "openmesh_userguide",
+        "beleg": "https://web.archive.org/web/20170914075057/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM5P-AC%20User%20Guide.pdf",
+        "stand": "User Guide Version 1.0 (PDF 2016-01-22)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Tisch, Wand",
+        "quelle": "openmesh_userguide",
+        "beleg": "https://web.archive.org/web/20170914075057/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM5P-AC%20User%20Guide.pdf",
+        "stand": "User Guide Version 1.0 (PDF 2016-01-22)",
+        "sicherheit": "mittel",
+        "bemerkung": "Wandmontage mit Schrauben >= 30 mm; zwei Schlüssellochaufhängungen auf der Unterseite (FCC-Fotos)"
+      },
+      {
+        "wert": "Decke, Ethernet-Wanddose, Steckdose (US), außen Wand/Mast - jeweils mit OM-Gehäuse (Zubehör)",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage_zubehoer": [
+      {
+        "wert": "OM Indoor Ethernet Jack, OM Indoor Ceiling, OM Indoor Wall Plug, OM Outdoor Wall/Pole, MR Outdoor",
+        "quelle": "openmesh_shop_2016",
+        "beleg": "https://web.archive.org/web/20160406015009/http://www.open-mesh.com:80/products/access-points/om5p-ac-cloud-access-point.html",
+        "stand": "Webarchiv 2016-04-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "95 x 70 x 25",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "3.75\" x 2.75\" x 1\", umgerechnet"
+      },
+      {
+        "wert": "95 x 70 x 25",
+        "quelle": "openmesh_userguide",
+        "beleg": "https://web.archive.org/web/20170914075057/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM5P-AC%20User%20Guide.pdf",
+        "stand": "User Guide Version 1.0 (PDF 2016-01-22)",
+        "sicherheit": "hoch",
+        "bemerkung": "3.75\" x 2.75\" x 1\""
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "fcc_innenfotos_2015",
+        "beleg": "https://fccid.io/WT8OM5PAC/Internal-Photos/Internal-Photos-pdf-2629583",
+        "stand": "Exhibit 2015-08-27 (PDF 2015-05-28, Projekt 150417C34)",
+        "sicherheit": "mittel",
+        "bemerkung": "kein Lüfter auf den Innenfotos, nur Wärmeleitpads zum Deckel"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 6,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": "6 GPIO-LEDs: 3x WLAN (grün/gelb/rot), 2x Ethernet, 1x Power"
+      },
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "LED count (nutzerkonfigurierbar)"
+      },
+      {
+        "wert": "Power, Ethernet (2), WiFi",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "vier Leuchtpositionen"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "keine Taste",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "mittel",
+        "bemerkung": "Commit nennt keine Taste; DTS ohne keys-Knoten, ar71xx registrierte keine Taste (v2 dagegen Reset an GPIO1)"
+      },
+      {
+        "wert": "keine von Gluon auswertbare Taste; Einrichtungsmodus nicht per Taste erreichbar",
+        "quelle": "werkstatt",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/setup-mode-ohne-knopf.md",
+        "stand": "Stand 08.10.2026",
+        "sicherheit": "hoch",
+        "bemerkung": "setup-mode-ohne-knopf.md, Einleitung und Liste; dort selbst als aus dem Quelltext abgeleitet und nicht am Gerät geprüft bezeichnet"
+      },
+      {
+        "wert": "1 Taste",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Button count: 1; Widerspruch zum Commit"
+      },
+      {
+        "wert": "Taster auf der Platinenunterseite, unter einem Loch im Gehäuseboden",
+        "quelle": "fcc_innenfotos_2015",
+        "beleg": "https://fccid.io/WT8OM5PAC/Internal-Photos/Internal-Photos-pdf-2629583",
+        "stand": "Exhibit 2015-08-27 (PDF 2015-05-28, Projekt 150417C34)",
+        "sicherheit": "niedrig",
+        "bemerkung": "FCC-Muster 2015 im OM5P-AN-Gehäuse; ob der Taster bei v1 an der Software hängt, ist nicht belegt"
+      }
+    ],
+    "zulassungen": [
+      {
+        "wert": "FCC, IC, CE, RCM",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "FCC, CE, RCM, WEEE-Zeichen",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/WT8OM5PAC/Label/Label-Sample-pdf-2629585",
+        "stand": "Exhibit 2015-05-29 (PDF 2015-05-28)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen, TTL-Pins auf der Platine (ob Stiftleiste oder Lötpunkte, nicht belegt)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "mittel",
+        "bemerkung": "'TTL pins are on board'"
+      },
+      {
+        "wert": "vorhanden",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial: Yes"
+      },
+      {
+        "wert": "Konsolen-Pin erst mit der Class-II-Änderung 2016 hinzugefügt",
+        "quelle": "fcc_aenderung",
+        "beleg": "https://fccid.io/WT8OM5PAC/Letter/Cover-Letter-Description-of-Change-pdf-2893519",
+        "stand": "Exhibit 2016-02-02 (Schreiben 2016-01-28, Ref. RF151124C19)",
+        "sicherheit": "niedrig",
+        "bemerkung": "'Adding console pin'; bezieht sich vermutlich auf die v2-Platine; ob v1 dort nur Lötpunkte hat, ist offen"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "Pfeil markiert VCC, danach GND, TX, RX",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/generic",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac?do=export_raw",
+        "stand": "Seitenrevision 2026-08-06 01:33",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ar71xx-ath79/generic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "ar71xx bis 19.07, ath79 ab 22.03"
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "openmesh_om5p-ac-v1",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_om5p-ac-v1.dts",
+        "stand": "lokaler Klon (Gluon v2025.1.3, OpenWrt-Stand 2024-09-02, Zweig openwrt-24.10)",
+        "sicherheit": "hoch",
+        "bemerkung": "ar71xx: Profil OM5PAC, Image om5pac"
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "17.01.0 (ar71xx)",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac?do=export_raw",
+        "stand": "Seitenrevision 2026-08-06 01:33",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "22.03.0 (ath79)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": "Commit 97f5617 ist in v22.03.0 enthalten (GitHub compare)"
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.5",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac?do=export_raw",
+        "stand": "Seitenrevision 2026-08-06 01:33",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "19.07.10",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump-Wert, ar71xx"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": "Installation über U-Boot-Shell bzw. ap51-flash beim Start"
+      }
+    ],
+    "installation": [
+      {
+        "wert": "ap51-flash beim Start, oder serielle Konsole: initramfs per TFTP, dann sysupgrade -n",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/97f561725962ddb8823b2e01563a0f37f7930477",
+        "stand": "Commit 2020-11-23 (Autor Sven Eckelmann), gemergt 2022-01-09",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Weg C: ap51-flash (Open-Mesh-Bootloader)",
+        "quelle": "werkstatt_erstinstallation",
+        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erstinstallation-ohne-factory.md",
+        "stand": "2026-10 (Arbeitsstand Repo)",
+        "sicherheit": "hoch",
+        "bemerkung": "erstinstallation-ohne-factory.md, Übersichtstabelle"
+      },
+      {
+        "wert": "kein Factory-Image (factory = false)",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/ath79-generic",
+        "stand": "lokaler Checkout v2025.1.3",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja (ath79-generic, openmesh-om5p-ac-v1)",
+        "quelle": "gluon_target",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/ath79-generic",
+        "stand": "lokaler Checkout v2025.1.3",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "seit v2016.2 (ar71xx, damals openmesh-om5p-ac)",
+        "quelle": "gluon_release_v2016_2",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/docs/releases/v2016.2.rst",
+        "stand": "Release v2016.2",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Yes",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac?do=export_raw",
+        "stand": "Seitenrevision 2026-08-06 01:33",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "MAC von eth0 (ART-Offset 0)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9558_openmesh_om5p-ac-v1.dts",
+        "stand": "lokaler Klon (Gluon v2025.1.3, OpenWrt-Stand 2024-09-02, Zweig openwrt-24.10)",
+        "sicherheit": "mittel",
+        "bemerkung": "label-mac-device = &eth0"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "http://www.open-mesh.com/products/grp-om5p-ac-cloud-access-point.html",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "nur noch im Webarchiv"
+      },
+      {
+        "wert": "https://web.archive.org/web/20160406015009/http://www.open-mesh.com:80/products/access-points/om5p-ac-cloud-access-point.html",
+        "quelle": "openmesh_shop_2016",
+        "beleg": "https://web.archive.org/web/20160406015009/http://www.open-mesh.com:80/products/access-points/om5p-ac-cloud-access-point.html",
+        "stand": "Webarchiv 2016-04-06",
+        "sicherheit": "hoch",
+        "bemerkung": "Archivkopie 2016-04-06"
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "quelle": "openmesh_datenblatt_2016_06",
+        "beleg": "https://web.archive.org/web/20170615214418/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-06.pdf",
+        "stand": "OM Series Datasheet OM-2016-06 (PDF 2017-02-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "OM Series Datasheet OM-2016-06"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/WT8OM5PAC/Internal-Photos/Internal-Photos-rev-2-pdf-2893521",
+      "kategorie": "seriell",
+      "grund": "Innenfotos der Class-II-Änderung 2016 ('Adding console pin') nicht ausgewertet; Vergleich zeigt, ob v1 nur Lötpunkte hat"
+    },
+    {
+      "url": "https://fccid.io/WT8OM5PAC/Test-Report/Test-Report-DTS-rev-pdf-2629589",
+      "kategorie": "netzteil",
+      "grund": "Testbericht 2015 (4 MB) nicht gelesen; Netzteil-/PoE-Testaufbau und evtl. Leistungsaufnahme"
+    },
+    {
+      "url": "https://fccid.io/WT8OM5PAC/Label/Label-Location-pdf-2629584",
+      "kategorie": "typenschild",
+      "grund": "Lage des Typenschilds nicht ausgewertet"
+    },
+    {
+      "url": "https://web.archive.org/web/20160406015009/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM-2016-03.pdf",
+      "kategorie": "datenblatt",
+      "grund": "Datenblatt OM-2016-03 (v1-Zeit) unter diesem Zeitstempel nicht archiviert (404); andere Kopie suchen"
+    },
+    {
+      "url": "https://web.archive.org/web/20170914095139/https://www.open-mesh.com/skin/frontend/rwd/default/media/OM5P-AC%20Quick%20Start%20Guide%20v1_1.pdf",
+      "kategorie": "handbuch",
+      "grund": "Quick Start Guide v1_1 (2017, vermutlich v2-Zeit) nicht gelesen"
+    },
+    {
+      "url": "https://web.archive.org/web/20160707223101/http://www.open-mesh.com:80/products/grp-om5p-ac-cloud-access-point.html",
+      "kategorie": "hersteller",
+      "grund": "Shopseite Juli 2016 nicht gelesen (evtl. Hinweis auf v2/Gehäusewechsel)"
+    },
+    {
+      "url": "https://fccid.io/WT8OM5PAC/External-Photos/External-Photos-pdf-2629582",
+      "kategorie": "dc_buchse",
+      "grund": "Maß der DC-Buchse (z. B. 5.5x2.1) in keiner Quelle genannt"
+    },
+    {
+      "url": "https://web.archive.org/web/20160406015009/http://www.open-mesh.com:80/products/access-points/om5p-ac-cloud-access-point.html",
+      "kategorie": "gewicht",
+      "grund": "Shop nennt 'Weight 0.5200' ohne Einheit (vermutlich Versandgewicht); Gerätegewicht offen"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/openmesh&matchType=prefix&output=json&fl=timestamp,original,statuscode&collapse=urlkey",
+      "kategorie": "handel",
+      "grund": "Geizhals-CDX: open-mesh* leer, openmesh* 503 'Temporarily Offline'; EAN/ASIN nicht gefunden (Typenschild hat ein EAN-Feld, auf FCC-Fotos unleserlich)"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac",
+      "kategorie": "seriell",
+      "grund": "Baudrate und Pegel der Konsole in keiner Quelle für das OM5P-AC genannt (ODM-Handbuch EW-7679WA: 115200 8N1, anderes Produkt)"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-20",
+    "status": "teilweise",
+    "anfragen": 32,
+    "notiz": "ToH-Dump (pid 15681512, 'v1,v2'; toh_suche.py ohne Treffer) + Live-hwdata (Rev. 2026-08-06, nur v1), keine Wiki-Geräteseite; OpenWrt-Commits ath79 v1/v2 und ar71xx aus lokalem Klon, DTS/generic.mk; Gluon-Target v2025.1.3 und v2016.2-Release; Werkstatt-Doku (kein Protokoll); DeviWiki/WikiDevi ohne Seite; FCC WT8OM5PAC: Typenschild, Änderungsschreiben 2016, MPE, Außenfotos 2015/2016, Innenfotos 2015 ausgewertet, Handbuch ist ODM-Handbuch (Edimax EW-7679WA); Open-Mesh-Shopseite 2016-04, Datenblatt OM-2016-06 und User Guide 1.0 (2016-01) aus dem Webarchiv. Widersprüche: SoC QCA9558 (Commit, Live-ToH) vs. QCA9557 (Dump, Datenblatt); passive PoE 18-24 V (Commit) vs. 24 V (Typenschild) vs. 12-24 V (Datenblatt); Antennen 4 (User Guide, Shop) vs. 2 Dualband (Datenblatt); Taste: keine (Commit/DTS/Werkstatt) vs. 1 (ToH). v1/v2 außen nur über LEDs/Taste unterscheidbar (abgeleitet). Geizhals-CDX leer/503, kein EAN/ASIN."
+  }
+}
