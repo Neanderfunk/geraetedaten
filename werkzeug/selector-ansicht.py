@@ -405,8 +405,8 @@ NACHKOMMA_ZAEHLT = {'TP-Link|CPE210'}
 
 def hauptversion(v, schluessel):
     v = v.lower().strip()
-    if schluessel in NACHKOMMA_ZAEHLT:
-        return v
+    if schluessel in NACHKOMMA_ZAEHLT and v.startswith('v1.'):
+        return v   # nur CPE210 v1.1
     return re.sub(r'^(v\d+)\.\d+$', r'\1', v)
 
 
@@ -601,6 +601,41 @@ def main():
         # Gibt es das Image im stable-Zweig? Sonst kommt die Firmware erst
         # mit der naechsten Version (routerwahl blendet es zunaechst aus).
         fac[d['image']]['stable'] = (d['image'] in STABLE) if STABLE else None
+    # Nicht unterstuetzte Hardware-Versionen eines Modells, von dem wir eine
+    # andere Version bauen: eigene schlichte Karten auf routerwahl, hinter den
+    # unterstuetzten Geschwistern (adorfer 20.10.2026).
+    nu = {}
+    for img in sorted(liste):
+        schl = modell_schluessel(img)
+        e = VERSIONEN.get(schl or '', {})
+        if not e.get('belege'):
+            continue
+        gruppe = nu.setdefault(schl, {'hersteller': schl.split('|')[0], 'modell': schl.split('|')[1],
+                                      'geschwister': [], 'versionen': {}})
+        gruppe['geschwister'].append(img)
+        for b in e['belege']:
+            grund = b.get('art') or re.split(r'\.\s', re.sub(r'^Grund:\s*', '', b.get('grund') or ''))[0].rstrip('.')
+            for v in b.get('nicht_unterstuetzt') or []:
+                v = hauptversion(v, schl)
+                gruppe['versionen'].setdefault(v, {
+                    'grund': grund, 'erkennung': b.get('erkennung') or b.get('erkennbar_an') or '',
+                    'quelle': b.get('quelle') or ''})
+    karten = []
+    for schl, gr in sorted(nu.items()):
+        eigene = set()
+        for img in gr['geschwister']:
+            m = re.search(r'-(v\d+(?:\.\d+)?)(?:-|$)', img)
+            if m:
+                eigene.add(hauptversion(m.group(1), schl))
+        for v, w in sorted(gr['versionen'].items(), key=lambda x: [int(n) for n in re.findall(r'\d+', x[0])]):
+            if v in eigene:
+                continue
+            karten.append({'id': re.sub(r'[^a-z0-9.]+', '-', (gr['hersteller'] + ' ' + gr['modell']).lower()).strip('-') + '-' + v,
+                           'modell': '%s %s %s' % (gr['hersteller'], gr['modell'], v), 'version': v,
+                           'geschwister': gr['geschwister'], **w})
+    with open(os.path.join(a.aus, 'nicht-unterstuetzt.json'), 'w', encoding='utf-8') as fh:
+        json.dump({'quelle': 'firmware-selector-config ffnef/versionen-anzeige.json', 'karten': karten},
+                  fh, ensure_ascii=False, indent=1)
     with open(os.path.join(a.aus, 'index.json'), 'w', encoding='utf-8') as fh:
         json.dump({'quelle': 'https://github.com/Neanderfunk/geraetedaten', 'lizenz': 'CC BY-SA 4.0',
                    'geraete': liste}, fh, ensure_ascii=False, indent=1)
