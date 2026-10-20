@@ -320,8 +320,9 @@
     /* Andere Versionen ohne Firmware nur kurz nennen; warum sie nicht gehen,
        ist bei diesem Geraet egal (adorfer 20.10.). */
     var nicht = (g.nicht_unterstuetzt || []).map(function (n) { return n.version; });
-    var nichtText = nicht.length ? (nicht.length === 1 ? nicht[0] + ' geht' :
-      nicht.slice(0, -1).join(', ') + ' und ' + nicht[nicht.length - 1] + ' gehen') + ' nicht' : '';
+    /* "nicht für v2 und v5": "gehen nicht" klaenge nach kaputtem Geraet (Content) */
+    var nichtText = nicht.length ? 'nicht für ' + (nicht.length === 1 ? nicht[0] :
+      nicht.slice(0, -1).join(', ') + ' und ' + nicht[nicht.length - 1]) : '';
     /* Gibt es nur diese Version und ist das Geraet eingestellt, hilft der Hinweis niemandem. */
     if (version && g.versionen !== 'abgeschlossen') p.appendChild(el('span', 'finder-kaufen-hinweis',
       ' Achte beim Kauf auf die Hardware-Version ' + version + (nichtText ? ' (' + nichtText + ')' : '') +
@@ -394,7 +395,7 @@
     rumpf.appendChild(el('p', 'finder-nicht-marke', 'Nicht unterstützt'));
     if (nk.grund) rumpf.appendChild(el('p', null, 'Grund: ' + nk.grund + '.'));
     if (nk.erkennung) rumpf.appendChild(el('p', 'finder-level', nk.erkennung));
-    var p = el('p', null, 'Freifunk-Firmware gibt es für ');
+    var p = el('p', null, 'Freifunk-Firmware gibt es nur für ');
     nk.geschwister.forEach(function (img, i) {
       if (i) p.appendChild(document.createTextNode(i === nk.geschwister.length - 1 ? ' und ' : ', '));
       var g = geraete.filter(function (x) { return x.image === img; })[0];
