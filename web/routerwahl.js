@@ -462,7 +462,7 @@
       if (g.stable === false) {
         rumpf.appendChild(el('p', 'finder-nicht-marke', 'Kommt eventuell in zukünftiger Firmware'));
         rumpf.appendChild(el('p', 'finder-naechste-hinweis',
-          'Für dieses Gerät gibt es bisher nur eine Testfassung der Freifunk-Firmware. Ob und wann sie freigegeben wird, steht noch nicht fest.'));
+          'Für dieses Gerät gibt es noch keine freigegebene Freifunk-Firmware. Ob und wann sie kommt, steht noch nicht fest.'));
       }
       if (g.speicher) {
         var sp = el('p', 'finder-speicher');
