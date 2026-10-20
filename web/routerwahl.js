@@ -644,6 +644,9 @@
           g.image = img;
           var x = a[img];
           if (x) { g.level = x.level; g.risiko = x.risiko; g.status = x.status; g.url = x.url; }
+          /* Ohne Anleitung ist das Geraet auch nicht von uns erprobt; "unbekannt" wuerde
+             es bei eingeblendeten unvollstaendigen Angaben als Treffer zaehlen (adorfer). */
+          if (!g.status) g.status = 'ungeprüft';
           geraete.push(g);
         });
         legendeZeichnen();
