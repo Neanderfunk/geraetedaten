@@ -1,2058 +1,2231 @@
 {
- "image": "mercusys-mr90x-v1",
- "modell": "Mercusys MR90X v1",
- "quellen": {
-  "toh": {
-   "url": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-   "stand": "Dump 2026-10-18",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "lokal aus quellen/quellen-toh-2026-10-18.tsv.gz per werkzeug/toh_suche.py --alle; Datenseite selbst nicht live abgerufen"
+  "image": "mercusys-mr90x-v1",
+  "modell": "Mercusys MR90X v1",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "lokal aus quellen/quellen-toh-2026-10-18.tsv.gz per werkzeug/toh_suche.py --alle; Datenseite selbst nicht live abgerufen"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/mercusys/mr90x_v1",
+      "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Rohtext per ?do=export_raw, Revisionsliste per ?do=revisions"
+    },
+    "openwrt_wiki_foto_uart": {
+      "url": "https://openwrt.org/_media/media/mercusys/mr90x-v1_uart.jpeg",
+      "stand": "Foto im Wiki, Stand 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Foto angesehen (Platinenausschnitt UART)"
+    },
+    "openwrt_commit": {
+      "url": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+      "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Patch per gh api; Hardwarebeschreibung, DTS, Image-Definition (Stock-U-Boot-Layout)"
+    },
+    "openwrt_commit_eeprom": {
+      "url": "https://github.com/openwrt/openwrt/commit/85b0d7592c454f2e4e02be043a1e433c67df4e41",
+      "stand": "Commit 85b0d759 vom 2023-10-02",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_commit_ubi": {
+      "url": "https://github.com/openwrt/openwrt/commit/ee8df790cae843f11f78511dd9ffac7e80a4d707",
+      "stand": "Commit ee8df790 vom 2024-11-30 (PR 16744)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "OpenWrt-U-Boot-(UBI)-Layout; zugehörig 77cc4b71 (uboot-mediatek) und 2ea9ede7 (ATF)"
+    },
+    "openwrt_commit_spinand": {
+      "url": "https://github.com/openwrt/openwrt/commit/ea78c9d915efb066df3e2873edef0ae86946fd12",
+      "stand": "Commit ea78c9d9 vom 2026-09-26 (PR 25246)",
+      "abgerufen": "2026-10-19"
+    },
+    "openwrt_tag_pruefung": {
+      "url": "https://github.com/openwrt/openwrt/blob/v23.05.0/target/linux/mediatek/dts/mt7986b-mercusys-mr90x-v1.dts",
+      "stand": "Tags v23.05.0-rc2 und v23.05.0 geprüft 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per gh api contents: DTS fehlt in v23.05.0-rc2, vorhanden in v23.05.0"
+    },
+    "openwrt_commit_suche": {
+      "url": "https://github.com/search?q=repo%3Aopenwrt%2Fopenwrt+mr90x&type=commits",
+      "stand": "Commit-Suche 2026-10-19, 11 Treffer",
+      "abgerufen": "2026-10-19"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+      "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "per API; 'Mercusys MR90X' ist Weiterleitung (Revision 387034, 2024-12-29)"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/w/api.php?action=query&list=allpages&apprefix=Mercusys&aplimit=200",
+      "stand": "keine Seite (Präfixliste und Volltextsuche 2026-10-19)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Volltextsuche 'MR90X' ohne Treffer; Präfixliste Mercusys enthält kein MR90X"
+    },
+    "fccid_suche": {
+      "url": "https://fccid.io/search?q=MR90X",
+      "stand": "Suche 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "einziger Treffer fremd (MR9ENYA-91096, Ennyah, 1996); keine FCC-ID für MR90X; ToH-Feld FCCID '¿'"
+    },
+    "hersteller": {
+      "url": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+      "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Weiterleitung von /en/product/details/mr90x; Versionsauswahl V1, V1.20"
+    },
+    "hersteller_datenblatt": {
+      "url": "https://static.mercusys.com/manual/MR90X(EU)_1.0_Datasheet20220507111826.pdf",
+      "stand": "Datenblatt MR90X(EU) 1.0, PDF erstellt 2022-05-05",
+      "abgerufen": "2026-10-19"
+    },
+    "hersteller_handbuch": {
+      "url": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
+      "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
+      "abgerufen": "2026-10-19"
+    },
+    "hersteller_downloads_v1": {
+      "url": "https://www.mercusys.com/en/download/mr90x/v1/",
+      "stand": "Downloadseite V1, jüngste Firmware veröffentlicht 2025-01-06",
+      "abgerufen": "2026-10-19"
+    },
+    "hersteller_downloads_v1_20": {
+      "url": "https://www.mercusys.com/en/download/mr90x/v1.20/",
+      "stand": "Downloadseite V1.20, Firmware veröffentlicht 2024-01-23",
+      "abgerufen": "2026-10-19"
+    },
+    "hersteller_ce_liste": {
+      "url": "https://www.mercusys.com/en/ce?model=MR90X&async=1",
+      "stand": "CE-Liste: V1, Datei 2022-11-03 (Zeitstempel im Dateinamen)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "PDF static.mercusys.com/ce/MR90X_CE DOC20221103074700.pdf lieferte 403 AccessDenied (S3)"
+    },
+    "forum_159282": {
+      "url": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
+      "stand": "Thread 2023-05-03 bis 2026-07-25, 166 Beiträge; gelesen #1-#20 und #141-#164",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Discourse-JSON /t/159282.json und /t/159282/147.json"
+    },
+    "forum_202489": {
+      "url": "https://forum.openwrt.org/t/installing-openwrt-on-mercusys-mr90x-v1-2/202489",
+      "stand": "Thread 2024-06-29 bis 2025-01-29, 30 Beiträge; gelesen #1-#22 (20 Beiträge)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Discourse-JSON; erster Abruf mit ?print=true lieferte 422 (Rate-Limit), zweiter ohne Parameter 200"
+    },
+    "gluon_docs": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/docs/releases/v2025.1.1.rst",
+      "stand": "lokaler Gluon-Checkout e2fe4b52 (2026-08-18), docs/releases/v2025.1.1.rst, targets/mediatek-filogic (Commit de80bcd vom 2026-02-10)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "öffentlich im Gluon-Repo; lokal gelesen"
+    },
+    "werkstatt": {
+      "url": "router-werkstatt/docs/",
+      "stand": "router-werkstatt Git 998ec38 (2026-10-16)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "eigene Messungen/Notizen: rtl8221b-2g5-wan-intern.md, wifi-kanalplanung-verfahren.md, wifi-mesh-kanalplanung.md, freigabe-2025.1-pruefpunkte.md, erstinstallation-ohne-factory.md, geraetefotos.md, long-term-todo.md, chronik.md"
+    },
+    "geizhals": {
+      "url": "https://preisvergleich.heise.de/mercusys-mr90x-a3007855.html",
+      "stand": "Gelistet seit 24.08.2023; abgerufen 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Artikel 3007855 \"Mercusys MR90X, AX6000\", über preisvergleich.heise.de abgerufen (Suche 1 Treffer); Datenblatt = vollständige Produkteigenschaften; Zeilen 'Letztes Preisupdate' und Preise nicht übernommen; Zero-Width-Spaces entfernt; keine Herstellernummer, EAN oder ASIN auf der Seite"
+    }
   },
-  "openwrt_wiki": {
-   "url": "https://openwrt.org/toh/mercusys/mr90x_v1",
-   "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Rohtext per ?do=export_raw, Revisionsliste per ?do=revisions"
+  "roh": {
+    "toh": {
+      "pid": "29496964",
+      "devicetype": "WiFi Router",
+      "brand": "MERCUSYS",
+      "model": "MR90X",
+      "version": "v1",
+      "fccid": "http://¿",
+      "availability": "Available 2023",
+      "whereavailable": "www.dns-shop.ru",
+      "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=e4fe3097ef6a961874b66932a0ac4be18070630a",
+      "supportedsincerel": "",
+      "supportedcurrentrel": "23.05.2",
+      "unsupported_functions": "NULL",
+      "target": "mediatek",
+      "subtarget": "filogic",
+      "packagearchitecture": "aarch64_cortex-a53",
+      "bootloader": "U-Boot",
+      "cpu": "MediaTek MT7986BLA",
+      "cpucores": "4",
+      "cpumhz": "1600",
+      "flashmb": "128",
+      "rammb": "512",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "3",
+      "ethernet2_5gports": "1",
+      "ethernet5gports": "-",
+      "ethernet10gports": "-",
+      "sfp_ports": "-",
+      "sfp_plus_ports": "-",
+      "switch": "MediaTek MT7531AE",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "2.5GbE port - MaxLinear GPY211C0VC (SLNW8)",
+      "wlanhardware": "MediaTek MT7975N,MediaTek MT7975P(N)",
+      "wlan24ghz": "b/g/n/ax",
+      "wlan50ghz": "a/n/ac/ax",
+      "wlancomments": "MIMO 4x4",
+      "wlandriver": "mt76",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "-",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "115200 / 8N1",
+      "jtag": "No",
+      "ledcount": "6",
+      "buttoncount": "1",
+      "gpios": "¿",
+      "powersupply": "12 VDC, 2 A",
+      "devicepage": "toh:mercusys:mr90x_v1",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "MR90X",
+      "gitsearch": "MR90X",
+      "wikideviurl": "http://¿",
+      "oemdevicehomepageurl": "https://www.mercusys.com/en/product/details/mr90x",
+      "firmwareoemstockurl": "https://static.mercusys.com/software/MR90X(EU)_V1.0_22091620230726073639.zip",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.0/targets/mediatek/filogic/openwrt-23.05.0-mediatek-filogic-mercusys_mr90x-v1-initramfs-kernel.bin",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/mediatek/filogic/openwrt-23.05.0-mediatek-filogic-mercusys_mr90x-v1-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-mercusys_mr90x-v1-initramfs-kernel.bin",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-mercusys_mr90x-v1-squashfs-sysupgrade.bin",
+      "installationmethods": "see devicepage",
+      "commentinstallation": "",
+      "recoverymethods": "U-Boot web recovery",
+      "commentrecovery": "see devicepage",
+      "picture": "media:mercusys:mr90x-v1_common.jpg",
+      "comments": "",
+      "page": "toh:hwdata:mercusys:mercusys_mr90x_v1"
+    },
+    "openwrt_wiki": {
+      "Einleitung": "The MERCUSYS MR90X(EU) v1 router supports 4 802.11ax streams on both 2.4GHz @40MHz and 5GHz @160MHz for a combined 6000Mbps wireless speed. It is based on the MediaTek MT7986B SoC. / The Chinese model X60G(AX6000) is NOT the same device.",
+      "Supported Versions": "OpenWrt can be installed on HW v1.0 and v1.2 both. v1.2 has the ability to be mounted on a wall.",
+      "Installation (Stock bootloader)": "LAN1 anschließen; SSH root Port 20001 (Web-Passwort); fw_printenv | grep tp_boot_idx (bei tp_boot_idx=1 Stock-Firmware per Web neu installieren); /etc/hotplug.d/iface/65-iptv: 'telnetd -l /bin/login.sh' nach #!/bin/sh; IPTV/VLAN Enable umschalten; telnet Port 23 ohne Login; busybox (aarch64, ArchLinux ARM) nach /tmp; ubirmvol /dev/ubi0 -N kernel; ubimkvol /dev/ubi0 -n 1 -N kernel -s 9MiB; ./busybox ubiupdatevol /dev/ubi0_1 /tmp/initramfs-kernel.bin; reboot; in OpenWrt fw_setenv (baudrate, bootargs, mtdparts, tp_boot_idx 0 u. a.); sysupgrade -n",
+      "Installation (Stock bootloader, using serial console)": "tftp 192.168.1.2, Ctrl-C, tftpboot initramfs-kernel.bin, bootm, fw_setenv ..., sysupgrade -n",
+      "Installation U-Boot layout": "seit OpenWrt 24.10.0: Dateien ubi-bl31-uboot.fip, ubi-initramfs-recovery.itb, ubi-preloader.bin, ubi-squashfs-sysupgrade.itb; Root wie oben; Sicherung mtd0 (boot) und mtd5 (tp_data) sowie /tp_data (MT7986_EEPROM.bin, default-mac); initramfs-recovery per ubiupdatevol; UBI neu formatieren, fip/ubootenv/ubootenv2 anlegen; kmod-mtd-rw; factory aus EEPROM + default-mac bauen; bl2 schreiben; sysupgrade -n",
+      "Flash Layout": "boot 0x0-0x200000; u-boot-env 0x200000-0x300000; ubi0 0x300000-0x3500000; ubi1 0x3500000-0x6700000; userconfig 0x6700000-0x6f00000; tp_data 0x6f00000-0x7300000",
+      "UBI structure": "Volumes uboot (0, static), kernel (1), rootfs (2); uboot = secondary u-boot in UBI; U-Boot 2022.01-rc4 (Sep 15 2022); MAC in tp_data/default-mac, WLAN-EEPROM tp_data/MT7986_EEPROM.bin",
+      "OEM easy installation": "None at this time.",
+      "OEM installation using the TFTP method": "None at this time.",
+      "Debricking (Stock bootloader)": "Reset halten und einschalten, nach ~10 s loslassen; U-Boot-Web-Recovery http://192.168.1.1/, OEM-Firmware hochladen",
+      "Debricking (OpenWrt U-Boot)": "initramfs-recovery.itb auf TFTP 192.168.1.254; Reset beim Einschalten ~10 s",
+      "Debricking (Full disaster)": "mtk_uartboot -p mt7986-ram-ddr3-bl2.bin --aarch64 -f ...ubi-bl31-uboot.fip -s /dev/ttyUSB0",
+      "Return to stock": "Stock-Bootloader: Web-Recovery; OpenWrt-U-Boot: boot.bin zurückschreiben, ubi löschen, Web-Recovery, danach tp_data.bin zurückschreiben, Werksreset",
+      "Network interfaces": "br-lan 192.168.1.1/24 (LAN & WiFi); wan DHCP",
+      "Switch Ports": "WAN/LAN 2.5Gbps = wan; WAN/LAN 1Gbps = lan0; LAN1 = lan1; LAN2 = lan2",
+      "Buttons": "Reset = reset",
+      "Opening the case": "Unscrew the screws. There are also clips around the edge of the case you will need to prize open, using, for example, a plastic card. Be careful. Case latches are very tight.",
+      "Serial": "R3 and R6 are absent on the PCB. You should solder them or solder the jumpers. Skizze: +3.3V (don't connect), GND, (leer), (leer), Markierung V am rechten Ende. 115200, 8N1, 3.3V",
+      "JTAG": "None so far.",
+      "Bootloader mods": "None so far.",
+      "Hardware mods": "None so far.",
+      "OEM bootlog (Auszug)": "BL2 v2.6 (Sep 15 2022); EMI: Using DDR3 settings; Detected DRAM size: 512MB; SPI_NAND Page size 2048, Block size 131072, size 134217728; U-Boot 2022.01-rc4; Model mt7986-rfb; GigaDevice SPI NAND 128 MiB; Linux 5.4.124 (Stock); Machine model: MediaTek MT7986b RFB; mt7530 DSA lan0-lan3",
+      "Notes": "SSH zum Stock braucht ggf. -o HostKeyAlgorithms +ssh-rsa -o PubkeyAcceptedKeyTypes +ssh-rsa und OpenSSL-SHA1-Freigabe",
+      "Tags": "mediatek MT7986 MT7986B 4core 4thread 128NAND SPI-NAND 512RAM 4Port 2.5GigabitEthernet GigabitEthernet 2wnic 4x4 802.11bgn 802.11anac 802.11ax wifi6 8Ant NonDetachableAntenna u-boot ARMv8 cortexa53 Filogic 0usb 2button Serial 12v_powered Dual_firmware",
+      "Revisionen (Auszug)": "2026-09-01 16:12 csharper2005 [Debricking] (aktuell); 2026-08-29 [Tags]; 2026-08-07 mehrere [Return to stock]/[Debricking]"
+    },
+    "openwrt_wiki_foto_uart": {
+      "Beschreibung": "Platinenausschnitt: 4 Durchkontaktierungen in Rahmen ohne Stiftleiste, Dreieck über einem Ende; darunter Pads R6 und R3 mit eingezeichneten Brücken ('Bridges'); daneben TP3V3, C483, R7, R268 (Foto um 180° gedreht, Beschriftung steht auf dem Kopf)"
+    },
+    "openwrt_commit": {
+      "SoC Type": "MediaTek MT7986BLA, Cortex-A53, 64-bit",
+      "RAM": "MediaTek MT7986BLA (512MB)",
+      "Flash": "SPI NAND GigaDevice GD5F1GQ5UEYIGY (128 MB)",
+      "Ethernet": "MediaTek MT7531AE + 2.5GbE MaxLinear GPY211C0VC (SLNW8); 1x2.5Gbe (WAN/LAN 2.5Gbps), 3xGbE (WAN/LAN 1Gbps, LAN1, LAN2)",
+      "WLAN 2g": "MediaTek MT7975N, b/g/n/ax, MIMO 4x4",
+      "WLAN 5g": "MediaTek MT7975P(N), a/n/ac/ax, MIMO 4x4",
+      "LEDs": "1 orange and 1 green status LEDs, 4 green gpio-controlled LEDs on ethernet ports",
+      "Button": "1 (Reset)",
+      "USB ports": "No",
+      "Power": "12 VDC, 2 A",
+      "Connector": "Barrel",
+      "Bootloader": "Main U-Boot - U-Boot 2022.01-rc4. Additionally, both UBI slots contain \"seconduboot\" (also U-Boot 2022.01-rc4)",
+      "Serial console (UART)": "+3.3V | GND | TX | RX (V-Markierung über RX); +3.3V: Don't connect. The R3 (TX line) and R6 (RX line) are absent on the PCB. You should solder them or solder the jumpers.",
+      "Installation (UART)": "tftp 192.168.1.2, Ctrl-C, tftpboot initramfs-kernel.bin, bootm, fw_setenv ... tp_boot_idx 0, sysupgrade -n",
+      "Installation (without UART)": "SSH Port 20001, 65-iptv-hotplug mit telnetd, IPTV/VLAN umschalten, telnet 23, initramfs hochladen, busybox-arm64, ubirmvol/ubimkvol kernel 9MiB, ubiupdatevol, fw_setenv ..., reboot, sysupgrade -n",
+      "Recovery": "Press Reset button and power on the router; U-Boot recovery web server http://192.168.1.1/, OEM firmware",
+      "Recovery (UART)": "tftpboot initramfs-kernel.bin, bootm",
+      "Stock layout": "boot, u-boot-env, ubi0, ubi1, userconfig, tp_data (siehe flash_layout)",
+      "ubi0/ubi1 format": "U-Boot prüft Volumes uboot (0), kernel (1), rootfs (2)",
+      "MAC addresses": "label 00:eb:xx:xx:xx:be; LAN = label; WAN = label+1; WLAN 2g = label; WLAN 5g = label-1; label MAC in tp_data/default-mac; WLAN-EEPROM tp_data/MT7986_EEPROM.bin",
+      "DTS": "compatible mercusys,mr90x-v1 / mediatek,mt7986b; Speicher 0x20000000 (512 MiB); reset gpio 10; LEDs green:lan2 (7), green:lan1 (9), green:lan0 (12), green:wan (13), orange:status (16), green:status (17); gmac0/gmac1 2500base-x; PHY c45 an Adresse 6 (reset gpio 6); MT7531 an 31 (reset gpio 5), Ports lan0-lan2",
+      "Image": "DEVICE_VENDOR Mercusys, DEVICE_MODEL MR90X v1, DEVICE_DTS mt7986b-mercusys-mr90x-v1, DEVICE_PACKAGES kmod-mt7986-firmware mt7986-wo-firmware, IMAGE_SIZE 51200k, sysupgrade-tar"
+    },
+    "openwrt_commit_eeprom": {
+      "Nachricht": "Commit mt76 e3aa645b (drop default eeprom file for mt7986-firmware) brach EEPROM-Laden für MR90X v1, WLAN ging gar nicht; MR90X in caldata-Skript aufgenommen, 81_fix_eeprom entfernt"
+    },
+    "openwrt_commit_ubi": {
+      "Nachricht": "OpenWrt U-Boot (UBI) layout; Stock U-Boot UBI size 50 MiB, OpenWrt U-Boot UBI size 126 MiB; Recovery: initramfs-recovery.itb per TFTP 192.168.1.254, Reset ~10 s beim Einschalten; BL2/FIP-Recovery per mtk_uartboot",
+      "77cc4b71": "uboot-mediatek: add MERCUSYS MR90X v1 support (U-Boot replacement loader, more flash space), 2024-11-30",
+      "2ea9ede7": "arm-trusted-firmware-mediatek: add mt7986-spim-nand-ddr3 build, 2024-11-30"
+    },
+    "openwrt_commit_spinand": {
+      "Nachricht": "spi-max-frequency 20 MHz -> 52 MHz; GD5F1GQ5UEYIGY kann bis 133 MHz; dd 16 MB aus /dev/mtd3: 2.71 s -> 1.37 s",
+      "9fba5528": "dasselbe für uboot-mediatek, 2026-09-26"
+    },
+    "openwrt_commit_suche": {
+      "Treffer": [
+        "9fba5528d6 2026-09-26 uboot-mediatek: increase SPI-NAND frequency for Mercusys MR90X v1",
+        "ea78c9d915 2026-09-26 mediatek: increase SPI-NAND frequency for Mercusys MR90X v1",
+        "770a32e117 2026-07-20 mediatek: filogic: set label MAC address on TP-Link BE450",
+        "77cc4b7127 2024-11-30 uboot-mediatek: add MERCUSYS MR90X v1 support",
+        "85b0d7592c 2023-10-02 mediatek: fix eeprom loading (Mercusys MR90X v1)",
+        "ee8df790ca 2024-11-30 mediatek: MERCUSYS MR90X v1: add OpenWrt U-Boot (UBI) layout",
+        "2ea9ede7a8 2024-11-30 arm-trusted-firmware-mediatek: add mt7986-spim-nand-ddr3 build",
+        "bcdab30467 2024-01-06 mediatek: MERCUSYS MR90X v1: remove deprecated led \"label\" properties",
+        "49d5fc505f 2025-05-19 mediatek: filogic: fix WiFi MAC address invalid length dtc warnings",
+        "9e49593ff7 2024-07-04 mediatek: filogic: add support for TP-LINK RE6000XD",
+        "e4fe3097ef 2023-06-25 mediatek: add support for Mercusys MR90X v1"
+      ]
+    },
+    "openwrt_tag_pruefung": {
+      "v23.05.0-rc2": "DTS nicht vorhanden (404)",
+      "v23.05.0": "DTS vorhanden (sha 8b8858cc)"
+    },
+    "wikidevi": {
+      "brand": "Mercusys",
+      "model": "MR90X",
+      "revision": "v1",
+      "series": "AX6000",
+      "is_manuf": "No",
+      "availability": "now",
+      "est_release_date": "2023",
+      "type": "wireless router",
+      "pwr_v": "12",
+      "pwr_amp": "2",
+      "pwr_conn": "barrel",
+      "cpu1_brand": "MediaTek",
+      "cpu1_model": "MT7986B;MT7986BLA;",
+      "cpu1_cspeed": "1.6 GHz",
+      "cpu1_cores": "4",
+      "fla1": "128",
+      "fla1_brand": "GigaDevice",
+      "fla1_model": "GD5F1GQ5UEYIGY",
+      "ram1": "512",
+      "ram1_brand": "MediaTek",
+      "ram1_model": "MT7986BLA",
+      "serial": "yes",
+      "wi1_chip1_brand": "MediaTek",
+      "wi1_chip1_model": "MT7986B;MT7986BLA;",
+      "wi1_chip2_brand": "MediaTek",
+      "wi1_chip2_model": "MT7975N",
+      "wi1_802dot11_protocols": "bgn+ax",
+      "wi1_txchains": "4",
+      "wi1_rxchains": "4",
+      "wi1_sstreams": "4",
+      "wi2_chip1_brand": "MediaTek",
+      "wi2_chip1_model": "MT7986B;MT7986BLA;",
+      "wi2_chip2_brand": "MediaTek",
+      "wi2_chip2_model": "MT7975PN",
+      "wi2_802dot11_protocols": "an+ac+ax",
+      "wi2_txchains": "4",
+      "wi2_rxchains": "4",
+      "wi2_sstreams": "4",
+      "eth_cpu": "true",
+      "eth_chip2_brand": "MaxLinear",
+      "eth_chip2_model": "GPY211;MXL, GPY211C0VC, SLNW8;",
+      "sw_brand": "MediaTek",
+      "sw_model": "MT7531AE",
+      "lan_speed": "1GbE",
+      "lan_ports": "3",
+      "wan_speed": "2.5GbE",
+      "wan_ports": "1",
+      "stock_boot": "U-Boot;;",
+      "tp_firmware": "OpenWRT",
+      "802dot11_protocols": "abgn+ac+ax",
+      "Text": "1148 Mbps - 4SS 2.4GHz 802.11ax (40MHz chan., 1024-QAM); 4804 Mbps - 4SS 5GHz 802.11ax (160MHz chan., 1024-QAM) = AX6000 class"
+    },
+    "deviwiki": {
+      "Ergebnis": "keine Seite zu MR90X; Mercusys-Seiten: AC10 V1, AC12G V1, AC12 V1/V2, MR30G V1, MR50G V1, MR70X v1.0, MU6H V1, MW150US, MW300UH, MW300UM, MW301R, MW302R, MW305R, MW306R, MW325R, MW330HP"
+    },
+    "fccid_suche": {
+      "Ergebnis": "Found 1 matching FCC ID: MR9ENYA-91096 (I/O Card, Ennyah International Trading, 1996) - nicht das Gerät"
+    },
+    "hersteller": {
+      "Titel": "MR90X [V1, V1.20] | AX6000 8-Stream Wi-Fi 6 Router",
+      "Wireless Standards": "Compatible with 802.11ax/ac/a/b/g/n Wi-Fi standards",
+      "WiFi Speeds": "4804 Mbps (5 GHz) + 1148 Mbps (2.4 GHz)",
+      "Reception Sensitivity": "11g 6Mbps: -97dBm; 11g 54Mbps: -79dBm; 11n HT40 MCS7: -74dBm; 11n HT20 MCS7: -77dBm; 11a 6Mbps: -97dBm; 11a 54Mbps: -79dBm; 11ac VHT20 MCS8: -75dBm; 11ac VHT40 MCS9: -71dBm; 11ac VHT80 MCS9: -67dBm; 11ax VHT20 MCS11: -67dBm; 11ax VHT40 MCS11: -64dBm; 11ax VHT80 MCS11: -61dBm",
+      "Transmission Power": "2.4 GHz < 20dBm (EIRP); 5 GHz < 23dBm (band1, band2); 5 GHz < 30dBm (band3)",
+      "Wireless Security": "WPA / WPA2-Personal, WPA2 / WPA3-Personal",
+      "Wireless Functions": "Enable/Disable Wireless Radio, WMM",
+      "Dimensions": "8.2 × 6.8 × 1.6 in (209 × 172.2 × 42.4 mm)",
+      "Interfaces": "1× 2.5 Gbps WAN/LAN Port + 1× Gigabit WAN/LAN Port + 2× Gigabit LAN Ports",
+      "Button": "Reset/WPS Button",
+      "Antenna Type": "8× Fixed Omni-Directional Antennas",
+      "WAN Type": "Dynamic IP/Static IP/PPPoE/L2TP/PPTP",
+      "Management": "Access Control, Local Management, Remote Management",
+      "NAT Forwarding": "Port Forwarding, Port Triggering, UPnP, DMZ",
+      "Firewall Security": "SPI Firewall, IP and MAC Address Binding",
+      "Guest Network": "2.4 GHz Guest Network, 5 GHz Guest Network",
+      "DHCP": "Server, DHCP Client List",
+      "VPN Server": "OpenVPN, PPTP supported",
+      "Network Services Enabled by Default": "Web Server 80/443 TCP; DHCP Server 67 UDP; DNS 53 TCP & UDP; App management 20001 TCP, 20002 UDP",
+      "Package Contents": "AX6000 8-Stream Wi-Fi 6 Router MR90X; Power Adapter; Quick Installation Guide; RJ45 Ethernet Cable",
+      "Environment": "Operating Temperature: 0°C~40°C (32°F~104°F); Operating Humidity: 10%~90% Non-Condensing; Storage Humidity: 5%~90% Non-Condensing",
+      "Werbetext": "Quad-core 1.6 GHz processor; up to 256 devices; 8 High-Gain Antennas, Beamforming; OFDMA, 4×4 MU-MIMO, BSS Coloring; TR-069, ISP Preset (Agile Config); EasyMesh"
+    },
+    "hersteller_datenblatt": {
+      "Ports": "1× 2.5 Gigabit WAN/LAN Port + 1× 1 Gigabit WAN/LAN Port + 2× Gigabit LAN Ports",
+      "Button": "Reset/WPS Button",
+      "Dimensions (W x D x H)": "8.2 × 6.8 × 1.6 in (208.8 × 171.6 × 41.7 mm)",
+      "Antennas": "8× Fixed Omni-Directional Antennas",
+      "Power": "(Wert nicht im Text, nur Überschrift/Grafik)",
+      "Wireless": "4804 Mbps (5 GHz) + 1148 Mbps (2.4 GHz), 11ax/ac/a/b/g/n; OFDMA, MU-MIMO, 160 MHz, 1024-QAM, Smart Connect, Access Point Mode",
+      "Reception Sensitivity 2G": "11g 6Mbps -97; 11g 54Mbps -79; 11n HT20 MCS7 -78; 11n HT40 MCS7 -75; 11ax HE20 MCS11 -66.5; 11ax HE40 MCS11 -65.5 dBm",
+      "Reception Sensitivity 5G": "11a 6Mbps -95; 11a 54Mbps -76.5; 11n HT20 MCS7 -76; 11n HT40 MCS7 -73; 11ac VHT20 MCS8 -71.5; 11ac VHT40 MCS9 -67; 11ac VHT80 MCS9 -63.5; 11ax HE20 MCS11 -64.5; 11ax HE40 MCS11 -63; 11ax HE80 MCS11 -58.5; 11ax HE160 MCS11 -56 dBm",
+      "EIRP": "2.4 GHz < 20dBm; 5 GHz < 23dBm (band1, band2); 5 GHz < 30dBm (band3)",
+      "Security": "WPA-PSK/WPA2-PSK/WPA3-SAE; SPI Firewall, Access Control, IP and MAC Address Binding",
+      "Package Contents": "AX6000 Wi-Fi 6 Router MR90X; Power Adapter; Quick Installation Guide; RJ45 Ethernet Cable",
+      "Environment": "Operating Temperature 0°C~40°C; Operating Humidity 10%~90% Non-Condensing; Storage Humidity 5%~90% Non-Condensing",
+      "Features": "Parental Controls, Guest Network, QoS, Access Point Mode, IPTV (IGMP Proxy/Snooping, Bridge, Tag VLAN), IPv6, ISP Preset, TR-069"
+    },
+    "hersteller_handbuch": {
+      "Operating frequency": "2412-2472 MHz (20 dBm); 5150-5250 MHz (23 dBm); 5250-5350 MHz (23 dBm); 5470-5725 MHz (30 dBm)",
+      "National restrictions": "This device may only be used indoors in all EU member states, EFTA countries and Northern Ireland; GB nur innen",
+      "Safety": "Adapter shall be installed near the equipment and shall be easily accessible; use only power supplies provided by manufacturer; Operating Temperature 0-40 °C",
+      "Symbole Typenschild": "Class II equipment; DC voltage; Indoor use only; Polarity of output terminals; Energy efficiency Marking; Caution; Operator's manual; WEEE",
+      "Front Panel": "System LED: aus = kein Strom; grün an = normal, WLAN an; grün schnell blinkend = WPS; grün langsam blinkend = Start/Update; orange an = WLAN aus",
+      "Rear Panel (links nach rechts)": "POWER Socket; RESET/WPS Button (> 5 s Reset, 1 s WPS); 2.5Gbps WAN/LAN Port; 1Gbps WAN/LAN Port; LAN Ports; Wireless Antennas; WAN Port LED, LAN Port LED (an = verbunden)",
+      "Position Your Router": "not exposed to moisture or excessive heat; can be placed on a shelf or desktop",
+      "LED Control": "Night Mode: LED-Aus-Zeitraum täglich",
+      "Internet Port": "Ob 1Gbps- oder 2.5Gbps-Port WAN ist, wird unter Advanced > Network > Internet Port gewählt"
+    },
+    "hersteller_downloads_v1": {
+      "Dokumente": "MR90X(EU)_V1_Datasheet; MR90X(EU)_V1_User Guide (1910080077 REV1.0.0); MERCUSYS Router(EU1_12 Languages)_Quick Installation Guide (7107500294, 2023-10-31); MR90X(EU)_V1_Quick Installation Guide (7107500190, 2022-10-19)",
+      "Firmware": "MR90(EU)_V1_1.0.3 Build 20240829 (2025-01-06, 23.56 MB, 'Enhanced the system stability'); MR90X(EU)_V1_1.0.1 Build 20230808 (2023-10-09, 24.24 MB, EasyMesh neu); MR90X(EU)_V1_1.1.0 Build 20220916 (2023-07-26, 24.05 MB, First firmware release)",
+      "Firmware-URLs": "https://static.mercusys.com/software/MR90X(EU)_V1_24082920250106060420.zip; https://static.mercusys.com/software/MR90X(EU)_V1.0_23080820231009074639.zip; https://static.mercusys.com/software/MR90X(EU)_V1.0_22091620230726073639.zip",
+      "GPL Code": "MR90X V1, 1.72 GB, https://static.mercusys.com/gpl/gpl_MR90X.tar.gz"
+    },
+    "hersteller_downloads_v1_20": {
+      "Dokumente": "MERCUSYS Router(EU1_12 Languages)_Quick Installation Guide",
+      "Firmware": "MR90X(EU)_V1.20_230808 (2024-01-23, 24.23 MB, First firmware released), https://static.mercusys.com/software/MR90X(EU)_V1.20_23080820240123090924.zip"
+    },
+    "hersteller_ce_liste": {
+      "MR90X V1": "1.39MB, https://static.mercusys.com/ce/MR90X_CE DOC20221103074700.pdf (403)"
+    },
+    "forum_159282": {
+      "#1 csharper2005 2023-05-03": "CPU MT7986BLA; Ethernet MT7531AE + GPY211C0VC (SLNW8); SPI NAND GD5F1GQ5UEYIGY 128 MB; RAM im MT7986BLA 512 MB; WLAN MT7975N / MT7975P(N)",
+      "#2 csharper2005": "Stock-Layout, U-Boot 2022.01-rc4 (Sep 15 2022), ubi0-Volumes uboot/kernel/rootfs",
+      "#3 daniel": "Smells a bit like TP-LINK TL-XAP6030GI",
+      "#4 csharper2005": "OpenWrt startete nicht mit leerem uboot-Volume (Hashfehler)",
+      "#5 Ljukee 2023-05-11": "Same HW as Mercusys Halo H90X",
+      "#6 csharper2005": "Halo H90X has almost the same hardware and almost the same firmware; mt76 works great",
+      "#9 csharper2005 2023-06-13": "It's not so easy (open the case && connect the UART). Case latches are very tight. There is no warranty label. We don't need UART to install OpenWrt.",
+      "#11 csharper2005": "SSH 'root' has no power; telnetd trick needed for real root",
+      "#14 csharper2005": "Backport nach 23.05 eingereicht",
+      "#143 csharper2005 2024-11-09": "MIMO 4x4 works",
+      "#147 KamuiX 2024-12-28": "OpenWrt 23.05 im Stock-Layout: ubi0 48.4 MiB, Overlay schnell voll",
+      "#150 csharper2005 2025-01-06": "seit 24.10-rc4 zwei Installationsarten: Stock-U-Boot-Layout und OpenWrt-U-Boot-Layout; UBI 50 MiB vs 126 MiB",
+      "#152 csharper2005": "Wechsel von Stock- zu UBI-Layout: zurück zu Stock, dann neu installieren",
+      "#157 jamesdoherty 2025-02-07": "24.10 UBI-Layout: WLAN-Abbrüche bei hohem Durchsatz",
+      "#160 aneg 2025-05-03": "Bootschleife (grün kurz, orange ~20 s); Recovery mit Reset meldet sich unter 192.0.2.1, endet trotzdem in Bootschleife",
+      "#164 aneg": "Gerät v1.2; Warnung 'Bad CRC, using default environment'; nicht alle fw_setenv ausgeführt, sysupgrade über LuCI"
+    },
+    "forum_202489": {
+      "#1 ping456 2024-06-29": "MR90X(EU) v1.2; Weboberfläche: Firmware 1.0.2 Build 20230808 rel.59994(4555), Hardware Version: MR90X v1.0; fw_printenv ohne tp_boot_idx; V1.20- und V1-Firmware 20230808 enthalten dieselbe .bin",
+      "#3 ping456": "fw_printenv: Warning: Bad CRC, using default environment",
+      "#4 ping456": "mit Firmware 1.0.0 Build 20220916 rel.57784: tp_boot_idx=1",
+      "#5 hecatae": "tp_boot_idx ist Secure Boot: 1 = an, 0 = aus",
+      "#6 ping456 2024-07-06": "mit tp_boot_idx 0 und Neuinstallation nach Anleitung lief OpenWrt auf v1.2",
+      "#21/#22 Titillate 2025-01-27": "v1.2: ubirmvol 'Operation not permitted', fw_setenv 'Can't open /dev/mtd1: Permission denied'"
+    },
+    "gluon_docs": {
+      "docs/releases/v2025.1.1.rst": "Added hardware support, mediatek-filogic, Mercusys MR90X (v1)",
+      "targets/mediatek-filogic": "device('mercusys-mr90x-v1', 'mercusys_mr90x-v1', { factory = false })",
+      "docs/user/supported_devices.rst": "MR90X (v1)"
+    },
+    "werkstatt": {
+      "rtl8221b-2g5-wan-intern.md, Nachtrag 14.09. abends": "PHY-Typen: MR90X am Testknoten per dmesg GPY211C",
+      "wifi-kanalplanung-verfahren.md, Ein Scan tötet den Unicast": "Paketseite sah an einem MR90X (MT7986) unter 2023.2 20 von 20 Scans mit totem Unicast, unter Gluon 2025.1.3 0 von 20; ping6 auf Link-Local über mesh0/mesh1 kam nicht mehr durch",
+      "wifi-kanalplanung-verfahren.md, Nachtrag Messreihe": "MR90X (MT7986, 2023.2): wifi down/up heilt das gescannte Radio nach 6 bis 9 s; 'iw scan lowpri repariert' für MT7986 widerlegt",
+      "wifi-mesh-kanalplanung.md, Nachtrag 04.10.2026": "scan-guard-Anlass: mt76 unter 2023.2 (MR90X, NWA50AX Pro)",
+      "freigabe-2025.1-pruefpunkte.md": "WLAN-Temperaturen am MR90X plausibel; MR90X ohne Kabel nur über Mesh erreichbar - beim Massenflashen zuerst und einzeln",
+      "erstinstallation-ohne-factory.md, Sonderfall MR90X v1": "netzbasierter Weg (SSH 20001, hotplug-telnetd, tp_boot_idx); Stolpersteine fw_setenv-Rechte und Web-Recovery-Erfolgsmeldung ohne Boot (OpenWrt-Issue 19301); 'MT7986BLA, 512 MB RAM, 128 MB SPI-NAND, U-Boot 2022.01-rc4'; Kopfnotiz: tp_boot_idx-+-Web-Recovery-Angabe nicht belegt",
+      "long-term-todo.md": "MR80X: Installationsweg wie beim MR90X prüfen; Achtung MR90X unter 2023.2 Scan legt Unicast lahm",
+      "geraetefotos.md": "MERCUSYS MR90X v1, 2 Knoten auf der Karte, Testknoten GRW-MR90X-mesh-e2a9; Foto fehlt",
+      "chronik.md": "04.12.2025: Erster Mercusys MR90X (Filogic, 4x4) mit Gluon"
+    },
+    "geizhals": {
+      "WAN": "1x RJ-45 (2.5GBase-T, shared mit LAN), 1x RJ-45 (10/100/1000Base-T, shared mit LAN)",
+      "LAN": "2x RJ-45 (10/100/1000Base-T), 1x RJ-45 (2.5GBase-T, shared mit WAN), 1x RJ-45 (10/100/1000Base-T, shared mit WAN)",
+      "Wireless": "Wi-Fi 6 (802.11a/b/g/n/ac/ax), simultan",
+      "Übertragungsrate": "1148Mbit/s (2.4GHz), 4804Mbit/s (5GHz)",
+      "Pseudoklasse": "AX6000",
+      "Sicherheit": "WPA, WPA2, WPA3",
+      "Antennen": "8x extern",
+      "Band-Fähigkeiten": "Dual Band (simultan)",
+      "Farbe": "schwarz",
+      "Abmessungen": "208.8x171.6x41.7mm",
+      "Besonderheiten": "MU-MIMO, IPv6, VPN passthrough (L2TP/PPTP)",
+      "802.11ax (Wi-Fi 6 / Wi-Fi 6E) 2.4GHz": "1148Mbit/s (4x4, 40MHz, 1024-QAM)",
+      "802.11ax (Wi-Fi 6 / Wi-Fi 6E) 5GHz": "4804Mbit/s (4x4, 160MHz, 1024-QAM)",
+      "Hinweis zu alternativer Firmware": "Open-/DD-WRT ist möglicherweise nur für bestimmte Revisionen verfügbar, bitte weiterführende Links beachten!",
+      "Gelistet seit": "24.08.2023, 08:41"
+    }
   },
-  "openwrt_wiki_foto_uart": {
-   "url": "https://openwrt.org/_media/media/mercusys/mr90x-v1_uart.jpeg",
-   "stand": "Foto im Wiki, Stand 2026-10-19",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Foto angesehen (Platinenausschnitt UART)"
-  },
-  "openwrt_commit": {
-   "url": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-   "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Patch per gh api; Hardwarebeschreibung, DTS, Image-Definition (Stock-U-Boot-Layout)"
-  },
-  "openwrt_commit_eeprom": {
-   "url": "https://github.com/openwrt/openwrt/commit/85b0d7592c454f2e4e02be043a1e433c67df4e41",
-   "stand": "Commit 85b0d759 vom 2023-10-02",
-   "abgerufen": "2026-10-19"
-  },
-  "openwrt_commit_ubi": {
-   "url": "https://github.com/openwrt/openwrt/commit/ee8df790cae843f11f78511dd9ffac7e80a4d707",
-   "stand": "Commit ee8df790 vom 2024-11-30 (PR 16744)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "OpenWrt-U-Boot-(UBI)-Layout; zugehörig 77cc4b71 (uboot-mediatek) und 2ea9ede7 (ATF)"
-  },
-  "openwrt_commit_spinand": {
-   "url": "https://github.com/openwrt/openwrt/commit/ea78c9d915efb066df3e2873edef0ae86946fd12",
-   "stand": "Commit ea78c9d9 vom 2026-09-26 (PR 25246)",
-   "abgerufen": "2026-10-19"
-  },
-  "openwrt_tag_pruefung": {
-   "url": "https://github.com/openwrt/openwrt/blob/v23.05.0/target/linux/mediatek/dts/mt7986b-mercusys-mr90x-v1.dts",
-   "stand": "Tags v23.05.0-rc2 und v23.05.0 geprüft 2026-10-19",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "per gh api contents: DTS fehlt in v23.05.0-rc2, vorhanden in v23.05.0"
-  },
-  "openwrt_commit_suche": {
-   "url": "https://github.com/search?q=repo%3Aopenwrt%2Fopenwrt+mr90x&type=commits",
-   "stand": "Commit-Suche 2026-10-19, 11 Treffer",
-   "abgerufen": "2026-10-19"
-  },
-  "wikidevi": {
-   "url": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-   "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "per API; 'Mercusys MR90X' ist Weiterleitung (Revision 387034, 2024-12-29)"
-  },
-  "deviwiki": {
-   "url": "https://deviwiki.com/w/api.php?action=query&list=allpages&apprefix=Mercusys&aplimit=200",
-   "stand": "keine Seite (Präfixliste und Volltextsuche 2026-10-19)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Volltextsuche 'MR90X' ohne Treffer; Präfixliste Mercusys enthält kein MR90X"
-  },
-  "fccid_suche": {
-   "url": "https://fccid.io/search?q=MR90X",
-   "stand": "Suche 2026-10-19",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "einziger Treffer fremd (MR9ENYA-91096, Ennyah, 1996); keine FCC-ID für MR90X; ToH-Feld FCCID '¿'"
-  },
-  "hersteller": {
-   "url": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-   "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Weiterleitung von /en/product/details/mr90x; Versionsauswahl V1, V1.20"
-  },
-  "hersteller_datenblatt": {
-   "url": "https://static.mercusys.com/manual/MR90X(EU)_1.0_Datasheet20220507111826.pdf",
-   "stand": "Datenblatt MR90X(EU) 1.0, PDF erstellt 2022-05-05",
-   "abgerufen": "2026-10-19"
-  },
-  "hersteller_handbuch": {
-   "url": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
-   "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
-   "abgerufen": "2026-10-19"
-  },
-  "hersteller_downloads_v1": {
-   "url": "https://www.mercusys.com/en/download/mr90x/v1/",
-   "stand": "Downloadseite V1, jüngste Firmware veröffentlicht 2025-01-06",
-   "abgerufen": "2026-10-19"
-  },
-  "hersteller_downloads_v1_20": {
-   "url": "https://www.mercusys.com/en/download/mr90x/v1.20/",
-   "stand": "Downloadseite V1.20, Firmware veröffentlicht 2024-01-23",
-   "abgerufen": "2026-10-19"
-  },
-  "hersteller_ce_liste": {
-   "url": "https://www.mercusys.com/en/ce?model=MR90X&async=1",
-   "stand": "CE-Liste: V1, Datei 2022-11-03 (Zeitstempel im Dateinamen)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "PDF static.mercusys.com/ce/MR90X_CE DOC20221103074700.pdf lieferte 403 AccessDenied (S3)"
-  },
-  "forum_159282": {
-   "url": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
-   "stand": "Thread 2023-05-03 bis 2026-07-25, 166 Beiträge; gelesen #1-#20 und #141-#164",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Discourse-JSON /t/159282.json und /t/159282/147.json"
-  },
-  "forum_202489": {
-   "url": "https://forum.openwrt.org/t/installing-openwrt-on-mercusys-mr90x-v1-2/202489",
-   "stand": "Thread 2024-06-29 bis 2025-01-29, 30 Beiträge; gelesen #1-#22 (20 Beiträge)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "Discourse-JSON; erster Abruf mit ?print=true lieferte 422 (Rate-Limit), zweiter ohne Parameter 200"
-  },
-  "gluon_docs": {
-   "url": "https://github.com/freifunk-gluon/gluon/blob/main/docs/releases/v2025.1.1.rst",
-   "stand": "lokaler Gluon-Checkout e2fe4b52 (2026-08-18), docs/releases/v2025.1.1.rst, targets/mediatek-filogic (Commit de80bcd vom 2026-02-10)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "öffentlich im Gluon-Repo; lokal gelesen"
-  },
-  "werkstatt": {
-   "url": "router-werkstatt/docs/",
-   "stand": "router-werkstatt Git 998ec38 (2026-10-16)",
-   "abgerufen": "2026-10-19",
-   "bemerkung": "eigene Messungen/Notizen: rtl8221b-2g5-wan-intern.md, wifi-kanalplanung-verfahren.md, wifi-mesh-kanalplanung.md, freigabe-2025.1-pruefpunkte.md, erstinstallation-ohne-factory.md, geraetefotos.md, long-term-todo.md, chronik.md"
-  }
- },
- "roh": {
-  "toh": {
-   "pid": "29496964",
-   "devicetype": "WiFi Router",
-   "brand": "MERCUSYS",
-   "model": "MR90X",
-   "version": "v1",
-   "fccid": "http://¿",
-   "availability": "Available 2023",
-   "whereavailable": "www.dns-shop.ru",
-   "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=e4fe3097ef6a961874b66932a0ac4be18070630a",
-   "supportedsincerel": "",
-   "supportedcurrentrel": "23.05.2",
-   "unsupported_functions": "NULL",
-   "target": "mediatek",
-   "subtarget": "filogic",
-   "packagearchitecture": "aarch64_cortex-a53",
-   "bootloader": "U-Boot",
-   "cpu": "MediaTek MT7986BLA",
-   "cpucores": "4",
-   "cpumhz": "1600",
-   "flashmb": "128",
-   "rammb": "512",
-   "ethernet100mports": "-",
-   "ethernetgbitports": "NULL",
-   "ethernet1gports": "3",
-   "ethernet2_5gports": "1",
-   "ethernet5gports": "-",
-   "ethernet10gports": "-",
-   "sfp_ports": "-",
-   "sfp_plus_ports": "-",
-   "switch": "MediaTek MT7531AE",
-   "vlan": "Yes",
-   "modem": "-",
-   "commentsnetworkports": "2.5GbE port - MaxLinear GPY211C0VC (SLNW8)",
-   "wlanhardware": "MediaTek MT7975N,MediaTek MT7975P(N)",
-   "wlan24ghz": "b/g/n/ax",
-   "wlan50ghz": "a/n/ac/ax",
-   "wlancomments": "MIMO 4x4",
-   "wlandriver": "mt76",
-   "detachableantennas": "-",
-   "bluetooth": "-",
-   "usbports": "-",
-   "sataports": "-",
-   "commentsusbsataports": "",
-   "videoports": "-",
-   "audioports": "-",
-   "phoneports": "-",
-   "commentsavports": "",
-   "serial": "Yes",
-   "serialconnectionparameters": "115200 / 8N1",
-   "jtag": "No",
-   "ledcount": "6",
-   "buttoncount": "1",
-   "gpios": "¿",
-   "powersupply": "12 VDC, 2 A",
-   "devicepage": "toh:mercusys:mr90x_v1",
-   "device_techdata": "View/Edit data",
-   "owrt_forum_topic_url": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
-   "lede_forum_topic_url": "NULL",
-   "forumsearch": "MR90X",
-   "gitsearch": "MR90X",
-   "wikideviurl": "http://¿",
-   "oemdevicehomepageurl": "https://www.mercusys.com/en/product/details/mr90x",
-   "firmwareoemstockurl": "https://static.mercusys.com/software/MR90X(EU)_V1.0_22091620230726073639.zip",
-   "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.0/targets/mediatek/filogic/openwrt-23.05.0-mediatek-filogic-mercusys_mr90x-v1-initramfs-kernel.bin",
-   "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/mediatek/filogic/openwrt-23.05.0-mediatek-filogic-mercusys_mr90x-v1-squashfs-sysupgrade.bin",
-   "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-mercusys_mr90x-v1-initramfs-kernel.bin",
-   "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/openwrt-mediatek-filogic-mercusys_mr90x-v1-squashfs-sysupgrade.bin",
-   "installationmethods": "see devicepage",
-   "commentinstallation": "",
-   "recoverymethods": "U-Boot web recovery",
-   "commentrecovery": "see devicepage",
-   "picture": "media:mercusys:mr90x-v1_common.jpg",
-   "comments": "",
-   "page": "toh:hwdata:mercusys:mercusys_mr90x_v1"
-  },
-  "openwrt_wiki": {
-   "Einleitung": "The MERCUSYS MR90X(EU) v1 router supports 4 802.11ax streams on both 2.4GHz @40MHz and 5GHz @160MHz for a combined 6000Mbps wireless speed. It is based on the MediaTek MT7986B SoC. / The Chinese model X60G(AX6000) is NOT the same device.",
-   "Supported Versions": "OpenWrt can be installed on HW v1.0 and v1.2 both. v1.2 has the ability to be mounted on a wall.",
-   "Installation (Stock bootloader)": "LAN1 anschließen; SSH root Port 20001 (Web-Passwort); fw_printenv | grep tp_boot_idx (bei tp_boot_idx=1 Stock-Firmware per Web neu installieren); /etc/hotplug.d/iface/65-iptv: 'telnetd -l /bin/login.sh' nach #!/bin/sh; IPTV/VLAN Enable umschalten; telnet Port 23 ohne Login; busybox (aarch64, ArchLinux ARM) nach /tmp; ubirmvol /dev/ubi0 -N kernel; ubimkvol /dev/ubi0 -n 1 -N kernel -s 9MiB; ./busybox ubiupdatevol /dev/ubi0_1 /tmp/initramfs-kernel.bin; reboot; in OpenWrt fw_setenv (baudrate, bootargs, mtdparts, tp_boot_idx 0 u. a.); sysupgrade -n",
-   "Installation (Stock bootloader, using serial console)": "tftp 192.168.1.2, Ctrl-C, tftpboot initramfs-kernel.bin, bootm, fw_setenv ..., sysupgrade -n",
-   "Installation U-Boot layout": "seit OpenWrt 24.10.0: Dateien ubi-bl31-uboot.fip, ubi-initramfs-recovery.itb, ubi-preloader.bin, ubi-squashfs-sysupgrade.itb; Root wie oben; Sicherung mtd0 (boot) und mtd5 (tp_data) sowie /tp_data (MT7986_EEPROM.bin, default-mac); initramfs-recovery per ubiupdatevol; UBI neu formatieren, fip/ubootenv/ubootenv2 anlegen; kmod-mtd-rw; factory aus EEPROM + default-mac bauen; bl2 schreiben; sysupgrade -n",
-   "Flash Layout": "boot 0x0-0x200000; u-boot-env 0x200000-0x300000; ubi0 0x300000-0x3500000; ubi1 0x3500000-0x6700000; userconfig 0x6700000-0x6f00000; tp_data 0x6f00000-0x7300000",
-   "UBI structure": "Volumes uboot (0, static), kernel (1), rootfs (2); uboot = secondary u-boot in UBI; U-Boot 2022.01-rc4 (Sep 15 2022); MAC in tp_data/default-mac, WLAN-EEPROM tp_data/MT7986_EEPROM.bin",
-   "OEM easy installation": "None at this time.",
-   "OEM installation using the TFTP method": "None at this time.",
-   "Debricking (Stock bootloader)": "Reset halten und einschalten, nach ~10 s loslassen; U-Boot-Web-Recovery http://192.168.1.1/, OEM-Firmware hochladen",
-   "Debricking (OpenWrt U-Boot)": "initramfs-recovery.itb auf TFTP 192.168.1.254; Reset beim Einschalten ~10 s",
-   "Debricking (Full disaster)": "mtk_uartboot -p mt7986-ram-ddr3-bl2.bin --aarch64 -f ...ubi-bl31-uboot.fip -s /dev/ttyUSB0",
-   "Return to stock": "Stock-Bootloader: Web-Recovery; OpenWrt-U-Boot: boot.bin zurückschreiben, ubi löschen, Web-Recovery, danach tp_data.bin zurückschreiben, Werksreset",
-   "Network interfaces": "br-lan 192.168.1.1/24 (LAN & WiFi); wan DHCP",
-   "Switch Ports": "WAN/LAN 2.5Gbps = wan; WAN/LAN 1Gbps = lan0; LAN1 = lan1; LAN2 = lan2",
-   "Buttons": "Reset = reset",
-   "Opening the case": "Unscrew the screws. There are also clips around the edge of the case you will need to prize open, using, for example, a plastic card. Be careful. Case latches are very tight.",
-   "Serial": "R3 and R6 are absent on the PCB. You should solder them or solder the jumpers. Skizze: +3.3V (don't connect), GND, (leer), (leer), Markierung V am rechten Ende. 115200, 8N1, 3.3V",
-   "JTAG": "None so far.",
-   "Bootloader mods": "None so far.",
-   "Hardware mods": "None so far.",
-   "OEM bootlog (Auszug)": "BL2 v2.6 (Sep 15 2022); EMI: Using DDR3 settings; Detected DRAM size: 512MB; SPI_NAND Page size 2048, Block size 131072, size 134217728; U-Boot 2022.01-rc4; Model mt7986-rfb; GigaDevice SPI NAND 128 MiB; Linux 5.4.124 (Stock); Machine model: MediaTek MT7986b RFB; mt7530 DSA lan0-lan3",
-   "Notes": "SSH zum Stock braucht ggf. -o HostKeyAlgorithms +ssh-rsa -o PubkeyAcceptedKeyTypes +ssh-rsa und OpenSSL-SHA1-Freigabe",
-   "Tags": "mediatek MT7986 MT7986B 4core 4thread 128NAND SPI-NAND 512RAM 4Port 2.5GigabitEthernet GigabitEthernet 2wnic 4x4 802.11bgn 802.11anac 802.11ax wifi6 8Ant NonDetachableAntenna u-boot ARMv8 cortexa53 Filogic 0usb 2button Serial 12v_powered Dual_firmware",
-   "Revisionen (Auszug)": "2026-09-01 16:12 csharper2005 [Debricking] (aktuell); 2026-08-29 [Tags]; 2026-08-07 mehrere [Return to stock]/[Debricking]"
-  },
-  "openwrt_wiki_foto_uart": {
-   "Beschreibung": "Platinenausschnitt: 4 Durchkontaktierungen in Rahmen ohne Stiftleiste, Dreieck über einem Ende; darunter Pads R6 und R3 mit eingezeichneten Brücken ('Bridges'); daneben TP3V3, C483, R7, R268 (Foto um 180° gedreht, Beschriftung steht auf dem Kopf)"
-  },
-  "openwrt_commit": {
-   "SoC Type": "MediaTek MT7986BLA, Cortex-A53, 64-bit",
-   "RAM": "MediaTek MT7986BLA (512MB)",
-   "Flash": "SPI NAND GigaDevice GD5F1GQ5UEYIGY (128 MB)",
-   "Ethernet": "MediaTek MT7531AE + 2.5GbE MaxLinear GPY211C0VC (SLNW8); 1x2.5Gbe (WAN/LAN 2.5Gbps), 3xGbE (WAN/LAN 1Gbps, LAN1, LAN2)",
-   "WLAN 2g": "MediaTek MT7975N, b/g/n/ax, MIMO 4x4",
-   "WLAN 5g": "MediaTek MT7975P(N), a/n/ac/ax, MIMO 4x4",
-   "LEDs": "1 orange and 1 green status LEDs, 4 green gpio-controlled LEDs on ethernet ports",
-   "Button": "1 (Reset)",
-   "USB ports": "No",
-   "Power": "12 VDC, 2 A",
-   "Connector": "Barrel",
-   "Bootloader": "Main U-Boot - U-Boot 2022.01-rc4. Additionally, both UBI slots contain \"seconduboot\" (also U-Boot 2022.01-rc4)",
-   "Serial console (UART)": "+3.3V | GND | TX | RX (V-Markierung über RX); +3.3V: Don't connect. The R3 (TX line) and R6 (RX line) are absent on the PCB. You should solder them or solder the jumpers.",
-   "Installation (UART)": "tftp 192.168.1.2, Ctrl-C, tftpboot initramfs-kernel.bin, bootm, fw_setenv ... tp_boot_idx 0, sysupgrade -n",
-   "Installation (without UART)": "SSH Port 20001, 65-iptv-hotplug mit telnetd, IPTV/VLAN umschalten, telnet 23, initramfs hochladen, busybox-arm64, ubirmvol/ubimkvol kernel 9MiB, ubiupdatevol, fw_setenv ..., reboot, sysupgrade -n",
-   "Recovery": "Press Reset button and power on the router; U-Boot recovery web server http://192.168.1.1/, OEM firmware",
-   "Recovery (UART)": "tftpboot initramfs-kernel.bin, bootm",
-   "Stock layout": "boot, u-boot-env, ubi0, ubi1, userconfig, tp_data (siehe flash_layout)",
-   "ubi0/ubi1 format": "U-Boot prüft Volumes uboot (0), kernel (1), rootfs (2)",
-   "MAC addresses": "label 00:eb:xx:xx:xx:be; LAN = label; WAN = label+1; WLAN 2g = label; WLAN 5g = label-1; label MAC in tp_data/default-mac; WLAN-EEPROM tp_data/MT7986_EEPROM.bin",
-   "DTS": "compatible mercusys,mr90x-v1 / mediatek,mt7986b; Speicher 0x20000000 (512 MiB); reset gpio 10; LEDs green:lan2 (7), green:lan1 (9), green:lan0 (12), green:wan (13), orange:status (16), green:status (17); gmac0/gmac1 2500base-x; PHY c45 an Adresse 6 (reset gpio 6); MT7531 an 31 (reset gpio 5), Ports lan0-lan2",
-   "Image": "DEVICE_VENDOR Mercusys, DEVICE_MODEL MR90X v1, DEVICE_DTS mt7986b-mercusys-mr90x-v1, DEVICE_PACKAGES kmod-mt7986-firmware mt7986-wo-firmware, IMAGE_SIZE 51200k, sysupgrade-tar"
-  },
-  "openwrt_commit_eeprom": {
-   "Nachricht": "Commit mt76 e3aa645b (drop default eeprom file for mt7986-firmware) brach EEPROM-Laden für MR90X v1, WLAN ging gar nicht; MR90X in caldata-Skript aufgenommen, 81_fix_eeprom entfernt"
-  },
-  "openwrt_commit_ubi": {
-   "Nachricht": "OpenWrt U-Boot (UBI) layout; Stock U-Boot UBI size 50 MiB, OpenWrt U-Boot UBI size 126 MiB; Recovery: initramfs-recovery.itb per TFTP 192.168.1.254, Reset ~10 s beim Einschalten; BL2/FIP-Recovery per mtk_uartboot",
-   "77cc4b71": "uboot-mediatek: add MERCUSYS MR90X v1 support (U-Boot replacement loader, more flash space), 2024-11-30",
-   "2ea9ede7": "arm-trusted-firmware-mediatek: add mt7986-spim-nand-ddr3 build, 2024-11-30"
-  },
-  "openwrt_commit_spinand": {
-   "Nachricht": "spi-max-frequency 20 MHz -> 52 MHz; GD5F1GQ5UEYIGY kann bis 133 MHz; dd 16 MB aus /dev/mtd3: 2.71 s -> 1.37 s",
-   "9fba5528": "dasselbe für uboot-mediatek, 2026-09-26"
-  },
-  "openwrt_commit_suche": {
-   "Treffer": [
-    "9fba5528d6 2026-09-26 uboot-mediatek: increase SPI-NAND frequency for Mercusys MR90X v1",
-    "ea78c9d915 2026-09-26 mediatek: increase SPI-NAND frequency for Mercusys MR90X v1",
-    "770a32e117 2026-07-20 mediatek: filogic: set label MAC address on TP-Link BE450",
-    "77cc4b7127 2024-11-30 uboot-mediatek: add MERCUSYS MR90X v1 support",
-    "85b0d7592c 2023-10-02 mediatek: fix eeprom loading (Mercusys MR90X v1)",
-    "ee8df790ca 2024-11-30 mediatek: MERCUSYS MR90X v1: add OpenWrt U-Boot (UBI) layout",
-    "2ea9ede7a8 2024-11-30 arm-trusted-firmware-mediatek: add mt7986-spim-nand-ddr3 build",
-    "bcdab30467 2024-01-06 mediatek: MERCUSYS MR90X v1: remove deprecated led \"label\" properties",
-    "49d5fc505f 2025-05-19 mediatek: filogic: fix WiFi MAC address invalid length dtc warnings",
-    "9e49593ff7 2024-07-04 mediatek: filogic: add support for TP-LINK RE6000XD",
-    "e4fe3097ef 2023-06-25 mediatek: add support for Mercusys MR90X v1"
-   ]
-  },
-  "openwrt_tag_pruefung": {
-   "v23.05.0-rc2": "DTS nicht vorhanden (404)",
-   "v23.05.0": "DTS vorhanden (sha 8b8858cc)"
-  },
-  "wikidevi": {
-   "brand": "Mercusys",
-   "model": "MR90X",
-   "revision": "v1",
-   "series": "AX6000",
-   "is_manuf": "No",
-   "availability": "now",
-   "est_release_date": "2023",
-   "type": "wireless router",
-   "pwr_v": "12",
-   "pwr_amp": "2",
-   "pwr_conn": "barrel",
-   "cpu1_brand": "MediaTek",
-   "cpu1_model": "MT7986B;MT7986BLA;",
-   "cpu1_cspeed": "1.6 GHz",
-   "cpu1_cores": "4",
-   "fla1": "128",
-   "fla1_brand": "GigaDevice",
-   "fla1_model": "GD5F1GQ5UEYIGY",
-   "ram1": "512",
-   "ram1_brand": "MediaTek",
-   "ram1_model": "MT7986BLA",
-   "serial": "yes",
-   "wi1_chip1_brand": "MediaTek",
-   "wi1_chip1_model": "MT7986B;MT7986BLA;",
-   "wi1_chip2_brand": "MediaTek",
-   "wi1_chip2_model": "MT7975N",
-   "wi1_802dot11_protocols": "bgn+ax",
-   "wi1_txchains": "4",
-   "wi1_rxchains": "4",
-   "wi1_sstreams": "4",
-   "wi2_chip1_brand": "MediaTek",
-   "wi2_chip1_model": "MT7986B;MT7986BLA;",
-   "wi2_chip2_brand": "MediaTek",
-   "wi2_chip2_model": "MT7975PN",
-   "wi2_802dot11_protocols": "an+ac+ax",
-   "wi2_txchains": "4",
-   "wi2_rxchains": "4",
-   "wi2_sstreams": "4",
-   "eth_cpu": "true",
-   "eth_chip2_brand": "MaxLinear",
-   "eth_chip2_model": "GPY211;MXL, GPY211C0VC, SLNW8;",
-   "sw_brand": "MediaTek",
-   "sw_model": "MT7531AE",
-   "lan_speed": "1GbE",
-   "lan_ports": "3",
-   "wan_speed": "2.5GbE",
-   "wan_ports": "1",
-   "stock_boot": "U-Boot;;",
-   "tp_firmware": "OpenWRT",
-   "802dot11_protocols": "abgn+ac+ax",
-   "Text": "1148 Mbps - 4SS 2.4GHz 802.11ax (40MHz chan., 1024-QAM); 4804 Mbps - 4SS 5GHz 802.11ax (160MHz chan., 1024-QAM) = AX6000 class"
-  },
-  "deviwiki": {
-   "Ergebnis": "keine Seite zu MR90X; Mercusys-Seiten: AC10 V1, AC12G V1, AC12 V1/V2, MR30G V1, MR50G V1, MR70X v1.0, MU6H V1, MW150US, MW300UH, MW300UM, MW301R, MW302R, MW305R, MW306R, MW325R, MW330HP"
-  },
-  "fccid_suche": {
-   "Ergebnis": "Found 1 matching FCC ID: MR9ENYA-91096 (I/O Card, Ennyah International Trading, 1996) - nicht das Gerät"
-  },
-  "hersteller": {
-   "Titel": "MR90X [V1, V1.20] | AX6000 8-Stream Wi-Fi 6 Router",
-   "Wireless Standards": "Compatible with 802.11ax/ac/a/b/g/n Wi-Fi standards",
-   "WiFi Speeds": "4804 Mbps (5 GHz) + 1148 Mbps (2.4 GHz)",
-   "Reception Sensitivity": "11g 6Mbps: -97dBm; 11g 54Mbps: -79dBm; 11n HT40 MCS7: -74dBm; 11n HT20 MCS7: -77dBm; 11a 6Mbps: -97dBm; 11a 54Mbps: -79dBm; 11ac VHT20 MCS8: -75dBm; 11ac VHT40 MCS9: -71dBm; 11ac VHT80 MCS9: -67dBm; 11ax VHT20 MCS11: -67dBm; 11ax VHT40 MCS11: -64dBm; 11ax VHT80 MCS11: -61dBm",
-   "Transmission Power": "2.4 GHz < 20dBm (EIRP); 5 GHz < 23dBm (band1, band2); 5 GHz < 30dBm (band3)",
-   "Wireless Security": "WPA / WPA2-Personal, WPA2 / WPA3-Personal",
-   "Wireless Functions": "Enable/Disable Wireless Radio, WMM",
-   "Dimensions": "8.2 × 6.8 × 1.6 in (209 × 172.2 × 42.4 mm)",
-   "Interfaces": "1× 2.5 Gbps WAN/LAN Port + 1× Gigabit WAN/LAN Port + 2× Gigabit LAN Ports",
-   "Button": "Reset/WPS Button",
-   "Antenna Type": "8× Fixed Omni-Directional Antennas",
-   "WAN Type": "Dynamic IP/Static IP/PPPoE/L2TP/PPTP",
-   "Management": "Access Control, Local Management, Remote Management",
-   "NAT Forwarding": "Port Forwarding, Port Triggering, UPnP, DMZ",
-   "Firewall Security": "SPI Firewall, IP and MAC Address Binding",
-   "Guest Network": "2.4 GHz Guest Network, 5 GHz Guest Network",
-   "DHCP": "Server, DHCP Client List",
-   "VPN Server": "OpenVPN, PPTP supported",
-   "Network Services Enabled by Default": "Web Server 80/443 TCP; DHCP Server 67 UDP; DNS 53 TCP & UDP; App management 20001 TCP, 20002 UDP",
-   "Package Contents": "AX6000 8-Stream Wi-Fi 6 Router MR90X; Power Adapter; Quick Installation Guide; RJ45 Ethernet Cable",
-   "Environment": "Operating Temperature: 0°C~40°C (32°F~104°F); Operating Humidity: 10%~90% Non-Condensing; Storage Humidity: 5%~90% Non-Condensing",
-   "Werbetext": "Quad-core 1.6 GHz processor; up to 256 devices; 8 High-Gain Antennas, Beamforming; OFDMA, 4×4 MU-MIMO, BSS Coloring; TR-069, ISP Preset (Agile Config); EasyMesh"
-  },
-  "hersteller_datenblatt": {
-   "Ports": "1× 2.5 Gigabit WAN/LAN Port + 1× 1 Gigabit WAN/LAN Port + 2× Gigabit LAN Ports",
-   "Button": "Reset/WPS Button",
-   "Dimensions (W x D x H)": "8.2 × 6.8 × 1.6 in (208.8 × 171.6 × 41.7 mm)",
-   "Antennas": "8× Fixed Omni-Directional Antennas",
-   "Power": "(Wert nicht im Text, nur Überschrift/Grafik)",
-   "Wireless": "4804 Mbps (5 GHz) + 1148 Mbps (2.4 GHz), 11ax/ac/a/b/g/n; OFDMA, MU-MIMO, 160 MHz, 1024-QAM, Smart Connect, Access Point Mode",
-   "Reception Sensitivity 2G": "11g 6Mbps -97; 11g 54Mbps -79; 11n HT20 MCS7 -78; 11n HT40 MCS7 -75; 11ax HE20 MCS11 -66.5; 11ax HE40 MCS11 -65.5 dBm",
-   "Reception Sensitivity 5G": "11a 6Mbps -95; 11a 54Mbps -76.5; 11n HT20 MCS7 -76; 11n HT40 MCS7 -73; 11ac VHT20 MCS8 -71.5; 11ac VHT40 MCS9 -67; 11ac VHT80 MCS9 -63.5; 11ax HE20 MCS11 -64.5; 11ax HE40 MCS11 -63; 11ax HE80 MCS11 -58.5; 11ax HE160 MCS11 -56 dBm",
-   "EIRP": "2.4 GHz < 20dBm; 5 GHz < 23dBm (band1, band2); 5 GHz < 30dBm (band3)",
-   "Security": "WPA-PSK/WPA2-PSK/WPA3-SAE; SPI Firewall, Access Control, IP and MAC Address Binding",
-   "Package Contents": "AX6000 Wi-Fi 6 Router MR90X; Power Adapter; Quick Installation Guide; RJ45 Ethernet Cable",
-   "Environment": "Operating Temperature 0°C~40°C; Operating Humidity 10%~90% Non-Condensing; Storage Humidity 5%~90% Non-Condensing",
-   "Features": "Parental Controls, Guest Network, QoS, Access Point Mode, IPTV (IGMP Proxy/Snooping, Bridge, Tag VLAN), IPv6, ISP Preset, TR-069"
-  },
-  "hersteller_handbuch": {
-   "Operating frequency": "2412-2472 MHz (20 dBm); 5150-5250 MHz (23 dBm); 5250-5350 MHz (23 dBm); 5470-5725 MHz (30 dBm)",
-   "National restrictions": "This device may only be used indoors in all EU member states, EFTA countries and Northern Ireland; GB nur innen",
-   "Safety": "Adapter shall be installed near the equipment and shall be easily accessible; use only power supplies provided by manufacturer; Operating Temperature 0-40 °C",
-   "Symbole Typenschild": "Class II equipment; DC voltage; Indoor use only; Polarity of output terminals; Energy efficiency Marking; Caution; Operator's manual; WEEE",
-   "Front Panel": "System LED: aus = kein Strom; grün an = normal, WLAN an; grün schnell blinkend = WPS; grün langsam blinkend = Start/Update; orange an = WLAN aus",
-   "Rear Panel (links nach rechts)": "POWER Socket; RESET/WPS Button (> 5 s Reset, 1 s WPS); 2.5Gbps WAN/LAN Port; 1Gbps WAN/LAN Port; LAN Ports; Wireless Antennas; WAN Port LED, LAN Port LED (an = verbunden)",
-   "Position Your Router": "not exposed to moisture or excessive heat; can be placed on a shelf or desktop",
-   "LED Control": "Night Mode: LED-Aus-Zeitraum täglich",
-   "Internet Port": "Ob 1Gbps- oder 2.5Gbps-Port WAN ist, wird unter Advanced > Network > Internet Port gewählt"
-  },
-  "hersteller_downloads_v1": {
-   "Dokumente": "MR90X(EU)_V1_Datasheet; MR90X(EU)_V1_User Guide (1910080077 REV1.0.0); MERCUSYS Router(EU1_12 Languages)_Quick Installation Guide (7107500294, 2023-10-31); MR90X(EU)_V1_Quick Installation Guide (7107500190, 2022-10-19)",
-   "Firmware": "MR90(EU)_V1_1.0.3 Build 20240829 (2025-01-06, 23.56 MB, 'Enhanced the system stability'); MR90X(EU)_V1_1.0.1 Build 20230808 (2023-10-09, 24.24 MB, EasyMesh neu); MR90X(EU)_V1_1.1.0 Build 20220916 (2023-07-26, 24.05 MB, First firmware release)",
-   "Firmware-URLs": "https://static.mercusys.com/software/MR90X(EU)_V1_24082920250106060420.zip; https://static.mercusys.com/software/MR90X(EU)_V1.0_23080820231009074639.zip; https://static.mercusys.com/software/MR90X(EU)_V1.0_22091620230726073639.zip",
-   "GPL Code": "MR90X V1, 1.72 GB, https://static.mercusys.com/gpl/gpl_MR90X.tar.gz"
-  },
-  "hersteller_downloads_v1_20": {
-   "Dokumente": "MERCUSYS Router(EU1_12 Languages)_Quick Installation Guide",
-   "Firmware": "MR90X(EU)_V1.20_230808 (2024-01-23, 24.23 MB, First firmware released), https://static.mercusys.com/software/MR90X(EU)_V1.20_23080820240123090924.zip"
-  },
-  "hersteller_ce_liste": {
-   "MR90X V1": "1.39MB, https://static.mercusys.com/ce/MR90X_CE DOC20221103074700.pdf (403)"
-  },
-  "forum_159282": {
-   "#1 csharper2005 2023-05-03": "CPU MT7986BLA; Ethernet MT7531AE + GPY211C0VC (SLNW8); SPI NAND GD5F1GQ5UEYIGY 128 MB; RAM im MT7986BLA 512 MB; WLAN MT7975N / MT7975P(N)",
-   "#2 csharper2005": "Stock-Layout, U-Boot 2022.01-rc4 (Sep 15 2022), ubi0-Volumes uboot/kernel/rootfs",
-   "#3 daniel": "Smells a bit like TP-LINK TL-XAP6030GI",
-   "#4 csharper2005": "OpenWrt startete nicht mit leerem uboot-Volume (Hashfehler)",
-   "#5 Ljukee 2023-05-11": "Same HW as Mercusys Halo H90X",
-   "#6 csharper2005": "Halo H90X has almost the same hardware and almost the same firmware; mt76 works great",
-   "#9 csharper2005 2023-06-13": "It's not so easy (open the case && connect the UART). Case latches are very tight. There is no warranty label. We don't need UART to install OpenWrt.",
-   "#11 csharper2005": "SSH 'root' has no power; telnetd trick needed for real root",
-   "#14 csharper2005": "Backport nach 23.05 eingereicht",
-   "#143 csharper2005 2024-11-09": "MIMO 4x4 works",
-   "#147 KamuiX 2024-12-28": "OpenWrt 23.05 im Stock-Layout: ubi0 48.4 MiB, Overlay schnell voll",
-   "#150 csharper2005 2025-01-06": "seit 24.10-rc4 zwei Installationsarten: Stock-U-Boot-Layout und OpenWrt-U-Boot-Layout; UBI 50 MiB vs 126 MiB",
-   "#152 csharper2005": "Wechsel von Stock- zu UBI-Layout: zurück zu Stock, dann neu installieren",
-   "#157 jamesdoherty 2025-02-07": "24.10 UBI-Layout: WLAN-Abbrüche bei hohem Durchsatz",
-   "#160 aneg 2025-05-03": "Bootschleife (grün kurz, orange ~20 s); Recovery mit Reset meldet sich unter 192.0.2.1, endet trotzdem in Bootschleife",
-   "#164 aneg": "Gerät v1.2; Warnung 'Bad CRC, using default environment'; nicht alle fw_setenv ausgeführt, sysupgrade über LuCI"
-  },
-  "forum_202489": {
-   "#1 ping456 2024-06-29": "MR90X(EU) v1.2; Weboberfläche: Firmware 1.0.2 Build 20230808 rel.59994(4555), Hardware Version: MR90X v1.0; fw_printenv ohne tp_boot_idx; V1.20- und V1-Firmware 20230808 enthalten dieselbe .bin",
-   "#3 ping456": "fw_printenv: Warning: Bad CRC, using default environment",
-   "#4 ping456": "mit Firmware 1.0.0 Build 20220916 rel.57784: tp_boot_idx=1",
-   "#5 hecatae": "tp_boot_idx ist Secure Boot: 1 = an, 0 = aus",
-   "#6 ping456 2024-07-06": "mit tp_boot_idx 0 und Neuinstallation nach Anleitung lief OpenWrt auf v1.2",
-   "#21/#22 Titillate 2025-01-27": "v1.2: ubirmvol 'Operation not permitted', fw_setenv 'Can't open /dev/mtd1: Permission denied'"
-  },
-  "gluon_docs": {
-   "docs/releases/v2025.1.1.rst": "Added hardware support, mediatek-filogic, Mercusys MR90X (v1)",
-   "targets/mediatek-filogic": "device('mercusys-mr90x-v1', 'mercusys_mr90x-v1', { factory = false })",
-   "docs/user/supported_devices.rst": "MR90X (v1)"
-  },
-  "werkstatt": {
-   "rtl8221b-2g5-wan-intern.md, Nachtrag 14.09. abends": "PHY-Typen: MR90X am Testknoten per dmesg GPY211C",
-   "wifi-kanalplanung-verfahren.md, Ein Scan tötet den Unicast": "Paketseite sah an einem MR90X (MT7986) unter 2023.2 20 von 20 Scans mit totem Unicast, unter Gluon 2025.1.3 0 von 20; ping6 auf Link-Local über mesh0/mesh1 kam nicht mehr durch",
-   "wifi-kanalplanung-verfahren.md, Nachtrag Messreihe": "MR90X (MT7986, 2023.2): wifi down/up heilt das gescannte Radio nach 6 bis 9 s; 'iw scan lowpri repariert' für MT7986 widerlegt",
-   "wifi-mesh-kanalplanung.md, Nachtrag 04.10.2026": "scan-guard-Anlass: mt76 unter 2023.2 (MR90X, NWA50AX Pro)",
-   "freigabe-2025.1-pruefpunkte.md": "WLAN-Temperaturen am MR90X plausibel; MR90X ohne Kabel nur über Mesh erreichbar - beim Massenflashen zuerst und einzeln",
-   "erstinstallation-ohne-factory.md, Sonderfall MR90X v1": "netzbasierter Weg (SSH 20001, hotplug-telnetd, tp_boot_idx); Stolpersteine fw_setenv-Rechte und Web-Recovery-Erfolgsmeldung ohne Boot (OpenWrt-Issue 19301); 'MT7986BLA, 512 MB RAM, 128 MB SPI-NAND, U-Boot 2022.01-rc4'; Kopfnotiz: tp_boot_idx-+-Web-Recovery-Angabe nicht belegt",
-   "long-term-todo.md": "MR80X: Installationsweg wie beim MR90X prüfen; Achtung MR90X unter 2023.2 Scan legt Unicast lahm",
-   "geraetefotos.md": "MERCUSYS MR90X v1, 2 Knoten auf der Karte, Testknoten GRW-MR90X-mesh-e2a9; Foto fehlt",
-   "chronik.md": "04.12.2025: Erster Mercusys MR90X (Filogic, 4x4) mit Gluon"
-  }
- },
- "felder": {
-  "hersteller": [
-   {
-    "wert": "Mercusys",
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": "MERCUSYS Technologies Co., Ltd."
-   },
-   {
-    "wert": "MERCUSYS",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "modell_name": [
-   {
-    "wert": "AX6000 8-Stream Wi-Fi 6 Router MR90X",
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": "MERCUSYS MR90X(EU) v1",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "hw_version": [
-   {
-    "wert": "V1",
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": "Versionsauswahl der Produkt- und Downloadseite: V1 und V1.20"
-   },
-   {
-    "wert": "v1.0 und v1.2",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": "'OpenWrt can be installed on HW v1.0 and v1.2 both.'"
-   },
-   {
-    "wert": "v1",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "erkennung_typenschild": [
-   {
-    "wert": "MR90X(EU) v1.2 zeigt in der Stock-Weboberfläche 'Hardware Version: MR90X v1.0'; die Hardwareversion aus der Weboberfläche unterscheidet v1.0 und v1.2 also nicht",
-    "quelle": "forum_202489",
-    "beleg": "https://forum.openwrt.org/t/installing-openwrt-on-mercusys-mr90x-v1-2/202489",
-    "stand": "Thread 2024-06-29 bis 2025-01-29, 30 Beiträge; gelesen #1-#22 (20 Beiträge)",
-    "sicherheit": "niedrig",
-    "bemerkung": "#1 ping456: Firmware 1.0.2 Build 20230808 rel.59994(4555); Typenschildfoto fehlt"
-   },
-   {
-    "wert": "v1.2 lässt sich an die Wand hängen",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": "'v1.2 has the ability to be mounted on a wall.' - möglicher äußerer Unterschied, nicht bestätigt"
-   },
-   {
-    "wert": "nicht verwechseln mit dem chinesischen Modell X60G (AX6000)",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": "'The Chinese model X60G(AX6000) is NOT the same device.'"
-   }
-  ],
-  "fcc_id": [
-   {
-    "wert": "keine gefunden",
-    "quelle": "fccid_suche",
-    "beleg": "https://fccid.io/search?q=MR90X",
-    "stand": "Suche 2026-10-19",
-    "sicherheit": "niedrig",
-    "bemerkung": "Suche MR90X ohne passenden Treffer; ToH-Feld '¿'"
-   }
-  ],
-  "andere_namen": [
-   {
-    "wert": "MR90X(EU) v1",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "verwandte_geraete": [
-   {
-    "wert": "Mercusys Halo H90X: fast gleiche Hardware und Firmware",
-    "quelle": "forum_159282",
-    "beleg": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
-    "stand": "Thread 2023-05-03 bis 2026-07-25, 166 Beiträge; gelesen #1-#20 und #141-#164",
-    "sicherheit": "niedrig",
-    "bemerkung": "#5 Ljukee, #6 csharper2005 bestätigt 'almost the same hardware'"
-   },
-   {
-    "wert": "ähnlich TP-Link TL-XAP6030GI (Vermutung)",
-    "quelle": "forum_159282",
-    "beleg": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
-    "stand": "Thread 2023-05-03 bis 2026-07-25, 166 Beiträge; gelesen #1-#20 und #141-#164",
-    "sicherheit": "niedrig",
-    "bemerkung": "#3 daniel 'Smells a bit like'; nicht bestätigt"
-   }
-  ],
-  "soc": [
-   {
-    "wert": "MediaTek MT7986BLA (Cortex-A53, 64 bit)",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": "Commit: 'MediaTek MT7986BLA, Cortex-A53, 64-bit'; DTS mt7986b"
-   },
-   {
-    "wert": "MediaTek MT7986BLA",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "MediaTek MT7986B / MT7986BLA",
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "MediaTek MT7986B",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "cpu_kerne": [
-   {
-    "wert": 4,
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 4,
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "cpu_mhz": [
-   {
-    "wert": 1600,
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 1600,
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": "1.6 GHz"
-   },
-   {
-    "wert": 1600,
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": "'Quad-core 1.6 GHz processor'"
-   }
-  ],
-  "cpu_arch": [
-   {
-    "wert": "aarch64_cortex-a53",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "ram_mb": [
-   {
-    "wert": 512,
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 512,
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": "'RAM: MediaTek MT7986BLA (512MB)' - im SoC-Gehäuse"
-   },
-   {
-    "wert": 512,
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 512,
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": "OEM-Bootlog: 'EMI: Detected DRAM size: 512MB'"
-   }
-  ],
-  "ram_typ": [
-   {
-    "wert": "DDR3",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": "OEM-Bootlog: 'EMI: Using DDR3 settings'; mtk_uartboot mit mt7986-ram-ddr3-bl2.bin"
-   }
-  ],
-  "flash_mb": [
-   {
-    "wert": 128,
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 128,
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 128,
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 128,
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": "Bootlog: 'GigaDevice SPI NAND was found. 128 MiB'"
-   }
-  ],
-  "flash_typ": [
-   {
-    "wert": "NAND",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": "SPI-NAND"
-   }
-  ],
-  "flash_chip": [
-   {
-    "wert": "GigaDevice GD5F1GQ5UEYIGY",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "GigaDevice GD5F1GQ5UEYIGY",
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "flash_layout": [
-   {
-    "wert": "Stock: boot 0x0-0x200000, u-boot-env 0x200000-0x300000, ubi0 0x300000-0x3500000, ubi1 0x3500000-0x6700000, userconfig 0x6700000-0x6f00000, tp_data 0x6f00000-0x7300000; IMAGE_SIZE 51200k",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": "Dual-Firmware (ubi0/ubi1), je 50 MiB"
-   },
-   {
-    "wert": "OpenWrt-U-Boot-(UBI)-Layout: UBI 126 MiB statt 50 MiB beim Stock-U-Boot",
-    "quelle": "openwrt_commit_ubi",
-    "beleg": "https://github.com/openwrt/openwrt/commit/ee8df790cae843f11f78511dd9ffac7e80a4d707",
-    "stand": "Commit ee8df790 vom 2024-11-30 (PR 16744)",
-    "sicherheit": "mittel",
-    "bemerkung": "seit OpenWrt 24.10.0; ersetzt den Bootloader"
-   }
-  ],
-  "flash_hinweis": [
-   {
-    "wert": "SPI-NAND-Takt in OpenWrt ab 2026-09-26 von 20 auf 52 MHz erhöht (Lesen 16 MB: 2.71 s -> 1.37 s)",
-    "quelle": "openwrt_commit_spinand",
-    "beleg": "https://github.com/openwrt/openwrt/commit/ea78c9d915efb066df3e2873edef0ae86946fd12",
-    "stand": "Commit ea78c9d9 vom 2026-09-26 (PR 25246)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "wlan_chips": [
-   {
-    "wert": "MediaTek MT7986 (WLAN im SoC) + Front-End MT7975N (2.4 GHz) und MT7975P(N) (5 GHz)",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "MediaTek MT7975N, MediaTek MT7975P(N)",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "MT7986B/MT7986BLA + MT7975N (2.4 GHz), MT7975PN (5 GHz)",
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "wlan_treiber": [
-   {
-    "wert": "mt76",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "wlan_24_standard": [
-   {
-    "wert": "b/g/n/ax",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "b/g/n/ax",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "b/g/n/ax",
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "wlan_24_streams": [
-   {
-    "wert": 4,
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": "MIMO 4x4"
-   },
-   {
-    "wert": 4,
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": "4 TX/4 RX, 4 Streams"
-   },
-   {
-    "wert": 4,
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": "'MIMO 4x4'"
-   }
-  ],
-  "wlan_5_standard": [
-   {
-    "wert": "a/n/ac/ax",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "a/n/ac/ax",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "a/n/ac/ax",
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "wlan_5_streams": [
-   {
-    "wert": 4,
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": "MIMO 4x4"
-   },
-   {
-    "wert": 4,
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": "4 TX/4 RX, 4 Streams"
-   },
-   {
-    "wert": 4,
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": "'MIMO 4x4'"
-   }
-  ],
-  "wlan_klasse": [
-   {
-    "wert": "AX6000",
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": "4804 Mbps (5 GHz) + 1148 Mbps (2.4 GHz)"
-   },
-   {
-    "wert": "AX6000",
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "wlan_kanalbreite": [
-   {
-    "wert": "2.4 GHz bis 40 MHz, 5 GHz bis 160 MHz",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "wlan_sendeleistung_dbm": [
-   {
-    "wert": "2.4 GHz < 20 dBm EIRP; 5 GHz < 23 dBm (Band 1, 2), < 30 dBm (Band 3) EIRP",
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": "2412-2472 MHz 20 dBm; 5150-5250 und 5250-5350 MHz 23 dBm; 5470-5725 MHz 30 dBm",
-    "quelle": "hersteller_handbuch",
-    "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
-    "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
-    "sicherheit": "hoch",
-    "bemerkung": "EU-Konformitätsangaben"
-   }
-  ],
-  "wlan_merkmale": [
-   {
-    "wert": "Wi-Fi 6, OFDMA, 4x4 MU-MIMO, 160 MHz, 1024-QAM, BSS Coloring, Beamforming, WPA3, TWT",
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "wlan_empfindlichkeit": [
-   {
-    "wert": "11g 6M -97, 11g 54M -79, HT40 MCS7 -74, HT20 MCS7 -77, 11a 6M -97, 11a 54M -79, VHT20 MCS8 -75, VHT40 MCS9 -71, VHT80 MCS9 -67, HE20 MCS11 -67, HE40 MCS11 -64, HE80 MCS11 -61 dBm",
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": "2.4 GHz: 11g 6M -97, 11g 54M -79, HT20 MCS7 -78, HT40 MCS7 -75, HE20 MCS11 -66.5, HE40 MCS11 -65.5; 5 GHz: 11a 6M -95, 11a 54M -76.5, HT20 MCS7 -76, HT40 MCS7 -73, VHT20 MCS8 -71.5, VHT40 MCS9 -67, VHT80 MCS9 -63.5, HE20 MCS11 -64.5, HE40 MCS11 -63, HE80 MCS11 -58.5, HE160 MCS11 -56 dBm",
-    "quelle": "hersteller_datenblatt",
-    "beleg": "https://static.mercusys.com/manual/MR90X(EU)_1.0_Datasheet20220507111826.pdf",
-    "stand": "Datenblatt MR90X(EU) 1.0, PDF erstellt 2022-05-05",
-    "sicherheit": "hoch",
-    "bemerkung": "weicht von der Produktseite ab"
-   }
-  ],
-  "wlan_hinweis": [
-   {
-    "wert": "unter Gluon 2023.2 (mt76) legte jeder WLAN-Scan den Unicast auf dem gescannten Radio lahm (20 von 20 Scans), unter Gluon 2025.1.3 0 von 20; wifi down/up heilt nach 6-9 s",
-    "quelle": "werkstatt",
-    "beleg": "router-werkstatt/docs/wifi-kanalplanung-verfahren.md, Abschnitt 'Ein Scan tötet den Unicast auf dem gescannten Radio' und 'Nachtrag: Messreihe der Paketseite und Nachtests'",
-    "stand": "router-werkstatt Git 998ec38 (2026-10-16)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": "Kalibrierdaten (MT7986_EEPROM.bin) aus tp_data; Commit behebt 2023 ausgefallenes WLAN nach mt76-Änderung",
-    "quelle": "openwrt_commit_eeprom",
-    "beleg": "https://github.com/openwrt/openwrt/commit/85b0d7592c454f2e4e02be043a1e433c67df4e41",
-    "stand": "Commit 85b0d759 vom 2023-10-02",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "ein Nutzer meldete unter OpenWrt 24.10 (UBI-Layout) WLAN-Abbrüche bei hohem Durchsatz",
-    "quelle": "forum_159282",
-    "beleg": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
-    "stand": "Thread 2023-05-03 bis 2026-07-25, 166 Beiträge; gelesen #1-#20 und #141-#164",
-    "sicherheit": "niedrig",
-    "bemerkung": "#157 jamesdoherty, 2025-02-07; ohne Antwort im gelesenen Teil"
-   }
-  ],
-  "wlan_temperatur": [
-   {
-    "wert": "Temperaturwerte der WLAN-phys am MR90X plausibel (Gegenprobe zu NWA50AX Pro)",
-    "quelle": "werkstatt",
-    "beleg": "router-werkstatt/docs/freigabe-2025.1-pruefpunkte.md, Abschnitt 'Unsinnige WLAN-Temperaturen (NWA50AX Pro, 13.10.2026)'",
-    "stand": "router-werkstatt Git 998ec38 (2026-10-16)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "antennen_art": [
-   {
-    "wert": "extern fest",
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": "'8× Fixed Omni-Directional Antennas'"
-   },
-   {
-    "wert": "extern fest",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": "Detachable Antennas: '-'"
-   },
-   {
-    "wert": "extern fest",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": "Tags 8Ant, NonDetachableAntenna"
-   }
-  ],
-  "antennen_anzahl": [
-   {
-    "wert": 8,
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": 8,
-    "quelle": "hersteller_datenblatt",
-    "beleg": "https://static.mercusys.com/manual/MR90X(EU)_1.0_Datasheet20220507111826.pdf",
-    "stand": "Datenblatt MR90X(EU) 1.0, PDF erstellt 2022-05-05",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "antennen_charakteristik": [
-   {
-    "wert": "rund (Omni-Directional)",
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "ports": [
-   {
-    "wert": [
-     {
-      "name": "2.5 Gbps WAN/LAN",
-      "geschwindigkeit": "2.5G",
-      "rolle": "WAN/LAN",
-      "openwrt": "wan"
-     },
-     {
-      "name": "1 Gbps WAN/LAN",
-      "geschwindigkeit": "1G",
-      "rolle": "WAN/LAN",
-      "openwrt": "lan0"
-     },
-     {
-      "name": "LAN1",
-      "geschwindigkeit": "1G",
-      "rolle": "LAN",
-      "openwrt": "lan1"
-     },
-     {
-      "name": "LAN2",
-      "geschwindigkeit": "1G",
-      "rolle": "LAN",
-      "openwrt": "lan2"
-     }
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Mercusys",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "MERCUSYS Technologies Co., Ltd."
+      },
+      {
+        "wert": "MERCUSYS",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
     ],
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": "Tabelle 'Switch Ports (for VLANs)'; OpenWrt-Standard: wan = 2.5G-Port, lan0-lan2 im br-lan"
-   },
-   {
-    "wert": "1× 2.5 Gbps WAN/LAN + 1× Gigabit WAN/LAN + 2× Gigabit LAN",
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "ports_anzahl": [
-   {
-    "wert": 4,
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": 4,
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": "3× 1G + 1× 2.5G"
-   },
-   {
-    "wert": 4,
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": "3 LAN 1GbE + 1 WAN 2.5GbE"
-   }
-  ],
-  "nur_eine_buchse": [
-   {
-    "wert": false,
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": "4 RJ45-Buchsen"
-   }
-  ],
-  "switch_chip": [
-   {
-    "wert": "MediaTek MT7531AE",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "MediaTek MT7531AE",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "MediaTek MT7531AE",
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "phy_2g5": [
-   {
-    "wert": "MaxLinear GPY211C0VC (SLNW8)",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "MaxLinear GPY211C0VC (SLNW8)",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "GPY211C (per dmesg am Testknoten)",
-    "quelle": "werkstatt",
-    "beleg": "router-werkstatt/docs/rtl8221b-2g5-wan-intern.md, Abschnitt 'Nachtrag 14.09. abends'",
-    "stand": "router-werkstatt Git 998ec38 (2026-10-16)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "vlan": [
-   {
-    "wert": "ja",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "sfp": [
-   {
-    "wert": "nein",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": "SFP ports: '-'"
-   }
-  ],
-  "usb": [
-   {
-    "wert": "nein",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": "USB ports: '-'"
-   },
-   {
-    "wert": "nein",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": "'USB ports: No'"
-   },
-   {
-    "wert": "nein",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": "Tag 0usb"
-   }
-  ],
-  "modem": [
-   {
-    "wert": "nein",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "bluetooth": [
-   {
-    "wert": "nein",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "poe_eingang": [
-   {
-    "wert": "nein",
-    "quelle": "hersteller_handbuch",
-    "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
-    "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
-    "sicherheit": "niedrig",
-    "bemerkung": "abgeleitet: keine Quelle nennt PoE; Strom laut Handbuch über POWER-Buchse mit beiliegendem Netzteil"
-   }
-  ],
-  "dc_buchse": [
-   {
-    "wert": "ja, Hohlstecker",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": "'Connector: Barrel'"
-   },
-   {
-    "wert": "ja, POWER-Buchse auf der Rückseite (links außen)",
-    "quelle": "hersteller_handbuch",
-    "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
-    "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": "ja, Hohlstecker",
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": "pwr_conn=barrel"
-   }
-  ],
-  "dc_spannung_v": [
-   {
-    "wert": 12,
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 12,
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 12,
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 12,
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": "Tag 12v_powered"
-   }
-  ],
-  "dc_strom_a": [
-   {
-    "wert": 2,
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 2,
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": 2,
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "netzteil_beiliegend": [
-   {
-    "wert": true,
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": "Package Contents: Power Adapter"
-   },
-   {
-    "wert": true,
-    "quelle": "hersteller_datenblatt",
-    "beleg": "https://static.mercusys.com/manual/MR90X(EU)_1.0_Datasheet20220507111826.pdf",
-    "stand": "Datenblatt MR90X(EU) 1.0, PDF erstellt 2022-05-05",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "netzteil_hinweis": [
-   {
-    "wert": "nur das beiliegende Netzteil verwenden; Typenschild-Symbole: Class II, Gleichspannung, Polarität des Ausgangs",
-    "quelle": "hersteller_handbuch",
-    "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
-    "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "einsatzort": [
-   {
-    "wert": "innen",
-    "quelle": "hersteller_handbuch",
-    "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
-    "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
-    "sicherheit": "hoch",
-    "bemerkung": "'This device may only be used indoors in all EU member states'; Symbol 'Indoor use only'"
-   }
-  ],
-  "temperatur_betrieb": [
-   {
-    "wert": "0 bis 40 °C",
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": "0 bis 40 °C",
-    "quelle": "hersteller_handbuch",
-    "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
-    "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "luftfeuchte": [
-   {
-    "wert": "Betrieb 10-90 %, Lager 5-90 %, nicht kondensierend",
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "montage": [
-   {
-    "wert": "Tisch/Regal",
-    "quelle": "hersteller_handbuch",
-    "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
-    "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
-    "sicherheit": "hoch",
-    "bemerkung": "'The router can be placed on a shelf or desktop.' (Handbuch REV1.0.0 für V1)"
-   },
-   {
-    "wert": "v1.2: auch Wand",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": "'v1.2 has the ability to be mounted on a wall.'"
-   }
-  ],
-  "abmessungen_mm": [
-   {
-    "wert": "209 × 172.2 × 42.4",
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": "8.2 × 6.8 × 1.6 in"
-   },
-   {
-    "wert": "208.8 × 171.6 × 41.7",
-    "quelle": "hersteller_datenblatt",
-    "beleg": "https://static.mercusys.com/manual/MR90X(EU)_1.0_Datasheet20220507111826.pdf",
-    "stand": "Datenblatt MR90X(EU) 1.0, PDF erstellt 2022-05-05",
-    "sicherheit": "hoch",
-    "bemerkung": "W × D × H; weicht von der Produktseite ab"
-   }
-  ],
-  "leds": [
-   {
-    "wert": "Status-LED grün und orange, 4 grüne GPIO-LEDs an den Ethernet-Ports (wan, lan0-lan2)",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": "DTS: green:status, orange:status, green:wan, green:lan0-2"
-   },
-   {
-    "wert": "1 System-LED vorne (grün/orange) plus LED je Port",
-    "quelle": "hersteller_handbuch",
-    "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
-    "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": "6",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "led_abschaltbar": [
-   {
-    "wert": "Stock: Night Mode (LED-Aus-Zeitraum)",
-    "quelle": "hersteller_handbuch",
-    "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
-    "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
-    "sicherheit": "hoch",
-    "bemerkung": "unter OpenWrt GPIO-LEDs, per LED-Konfiguration schaltbar"
-   }
-  ],
-  "knoepfe": [
-   {
-    "wert": 1,
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "1 (Reset/WPS kombiniert)",
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "reset_knopf": [
-   {
-    "wert": "Rückseite, RESET/WPS kombiniert; > 5 s halten = Werksreset, 1 s = WPS",
-    "quelle": "hersteller_handbuch",
-    "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
-    "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   },
-   {
-    "wert": "beim Einschalten etwa 10 s halten = U-Boot-Web-Recovery (Stock) bzw. TFTP-Recovery (OpenWrt-U-Boot)",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "gehaeuse_oeffnen": [
-   {
-    "wert": "Schrauben lösen, dann Clips am Rand mit Plastikkarte lösen; Rastnasen sehr fest",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "Rastnasen sehr fest, kein Garantiesiegel",
-    "quelle": "forum_159282",
-    "beleg": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
-    "stand": "Thread 2023-05-03 bis 2026-07-25, 166 Beiträge; gelesen #1-#20 und #141-#164",
-    "sicherheit": "niedrig",
-    "bemerkung": "#9 csharper2005"
-   }
-  ],
-  "seriell_zugang": [
-   {
-    "wert": "innen erst nach Nachbestücken von Widerständen oder Lötbrücken",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": "'The R3 (TX line) and R6 (RX line) are absent on the PCB. You should solder them or solder the jumpers.'"
-   },
-   {
-    "wert": "innen erst nach Nachbestücken von Widerständen oder Lötbrücken",
-    "quelle": "openwrt_wiki_foto_uart",
-    "beleg": "https://openwrt.org/_media/media/mercusys/mr90x-v1_uart.jpeg",
-    "stand": "Foto im Wiki, Stand 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": "Foto: 4 Durchkontaktierungen ohne Stiftleiste, Dreieck-Markierung an einem Ende, Brücken an R3 und R6 eingezeichnet"
-   }
-  ],
-  "seriell_pinbelegung": [
-   {
-    "wert": "+3.3V, GND, TX, RX (3.3V nicht anschließen; Markierung 'V' über dem RX-Ende)",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": "aus ASCII-Skizze des Commits; im Wiki fehlen TX/RX-Beschriftungen. Auf dem Wiki-Foto liegt R3 (TX) am Pad mit Dreieck - Zuordnung vor dem Anschluss nachmessen"
-   }
-  ],
-  "seriell_pegel_v": [
-   {
-    "wert": 3.3,
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "seriell_baud": [
-   {
-    "wert": "115200 8N1",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "115200 8N1",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "seriell_hinweis": [
-   {
-    "wert": "R3/R6 fehlen; ohne Brücken kein TX/RX. Für Installation nicht nötig (netzbasierter Weg); UART nur für Notfall (mtk_uartboot bei zerstörtem BL2/FIP)",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "jtag": [
-   {
-    "wert": "nein",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "openwrt_target": [
-   {
-    "wert": "mediatek/filogic",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "openwrt_seit": [
-   {
-    "wert": "23.05.0",
-    "quelle": "openwrt_tag_pruefung",
-    "beleg": "https://github.com/openwrt/openwrt/blob/v23.05.0/target/linux/mediatek/dts/mt7986b-mercusys-mr90x-v1.dts",
-    "stand": "Tags v23.05.0-rc2 und v23.05.0 geprüft 2026-10-19",
-    "sicherheit": "mittel",
-    "bemerkung": "DTS in v23.05.0 vorhanden, in v23.05.0-rc2 nicht"
-   },
-   {
-    "wert": "23.05.0",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "niedrig",
-    "bemerkung": "Feld supportedsincerel leer; Install-URL der ToH zeigt auf releases/23.05.0"
-   }
-  ],
-  "openwrt_support_commit": [
-   {
-    "wert": "e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "openwrt_aktuell": [
-   {
-    "wert": "23.05.2",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": "veraltet: Gerät ist in 24.10 und jünger enthalten (UBI-Layout seit 24.10.0)"
-   }
-  ],
-  "openwrt_layouts": [
-   {
-    "wert": "zwei Images: mercusys_mr90x-v1 (Stock-U-Boot, UBI 50 MiB) und mercusys_mr90x-v1-ubi (OpenWrt-U-Boot, UBI 126 MiB, seit 24.10.0)",
-    "quelle": "openwrt_commit_ubi",
-    "beleg": "https://github.com/openwrt/openwrt/commit/ee8df790cae843f11f78511dd9ffac7e80a4d707",
-    "stand": "Commit ee8df790 vom 2024-11-30 (PR 16744)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "gluon_support": [
-   {
-    "wert": "ja, seit v2025.1.1 (mediatek-filogic)",
-    "quelle": "gluon_docs",
-    "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/docs/releases/v2025.1.1.rst",
-    "stand": "lokaler Gluon-Checkout e2fe4b52 (2026-08-18), docs/releases/v2025.1.1.rst, targets/mediatek-filogic (Commit de80bcd vom 2026-02-10)",
-    "sicherheit": "hoch",
-    "bemerkung": "Gluon-Image mercusys-mr90x-v1 = OpenWrt-Profil mercusys_mr90x-v1 (Stock-U-Boot-Layout), factory = false (kein Erstinstallations-Image)"
-   }
-  ],
-  "bootloader": [
-   {
-    "wert": "U-Boot 2022.01-rc4; zusätzlich 'seconduboot' in beiden UBI-Slots",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "U-Boot",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "secure_boot": [
-   {
-    "wert": "U-Boot-Variable tp_boot_idx: 1 = Secure Boot an, 0 = aus (für OpenWrt nötig)",
-    "quelle": "forum_202489",
-    "beleg": "https://forum.openwrt.org/t/installing-openwrt-on-mercusys-mr90x-v1-2/202489",
-    "stand": "Thread 2024-06-29 bis 2025-01-29, 30 Beiträge; gelesen #1-#22 (20 Beiträge)",
-    "sicherheit": "niedrig",
-    "bemerkung": "#5 hecatae; Commit/Wiki setzen tp_boot_idx 0"
-   }
-  ],
-  "installation": [
-   {
-    "wert": "ohne Öffnen: SSH auf Stock Port 20001 (Passwort = Web-Passwort, eingeschränkter root), telnetd über /etc/hotplug.d/iface/65-iptv per IPTV/VLAN-Umschalter starten, Telnet Port 23 als echter root, initramfs per ubiupdatevol (fremdes busybox) in ubi0 kernel schreiben, U-Boot-Variablen setzen, sysupgrade -n",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "drei Wege: Stock-Bootloader über SSH/Telnet, Stock-Bootloader per UART + TFTP, OpenWrt-U-Boot-Layout (seit 24.10.0, ersetzt BL2/FIP, Sicherung von boot und tp_data nötig)",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "eingeordnet als netzbasierter Weg ohne Gehäuseöffnung, Skript lohnt sich; Angabe 'tp_boot_idx + Web-Recovery' laut eigenem Nachtrag durch Commit und Wiki nicht belegt",
-    "quelle": "werkstatt",
-    "beleg": "router-werkstatt/docs/erstinstallation-ohne-factory.md, Abschnitt 'Sonderfall mit Potenzial: Mercusys MR90X v1'",
-    "stand": "router-werkstatt Git 998ec38 (2026-10-16)",
-    "sicherheit": "mittel",
-    "bemerkung": "Zusammenfassung aus Wiki/Forum, keine eigene Messung"
-   },
-   {
-    "wert": "v1.2 mit Firmware 1.0.2 (20230808): fw_printenv meldet Bad CRC, tp_boot_idx fehlt; Weg über Firmware 1.0.0, tp_boot_idx 0 setzen, danach Anleitung von vorn; bei manchen scheitern fw_setenv und ubirmvol an Rechten",
-    "quelle": "forum_202489",
-    "beleg": "https://forum.openwrt.org/t/installing-openwrt-on-mercusys-mr90x-v1-2/202489",
-    "stand": "Thread 2024-06-29 bis 2025-01-29, 30 Beiträge; gelesen #1-#22 (20 Beiträge)",
-    "sicherheit": "niedrig",
-    "bemerkung": "#1-#6 ping456, #21-#22 Titillate"
-   }
-  ],
-  "recovery": [
-   {
-    "wert": "Reset halten und einschalten, U-Boot-Web-Recovery unter http://192.168.1.1, OEM-Firmware hochladen; UART: tftpboot von 192.168.1.2",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "OpenWrt-U-Boot: initramfs-recovery.itb per TFTP von 192.168.1.254, Reset beim Einschalten etwa 10 s halten; BL2/FIP kaputt: mtk_uartboot über UART",
-    "quelle": "openwrt_commit_ubi",
-    "beleg": "https://github.com/openwrt/openwrt/commit/ee8df790cae843f11f78511dd9ffac7e80a4d707",
-    "stand": "Commit ee8df790 vom 2024-11-30 (PR 16744)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "Web-Recovery meldete sich bei einem v1.2 unter 192.0.2.1 und zeigte Erfolg, Gerät bootete danach trotzdem im Kreis",
-    "quelle": "forum_159282",
-    "beleg": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
-    "stand": "Thread 2023-05-03 bis 2026-07-25, 166 Beiträge; gelesen #1-#20 und #141-#164",
-    "sicherheit": "niedrig",
-    "bemerkung": "#160 aneg; nach unvollständiger Installation"
-   }
-  ],
-  "stock_dienste": [
-   {
-    "wert": "Web 80/443 TCP, DHCP 67 UDP, DNS 53, App-Verwaltung 20001 TCP und 20002 UDP",
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": "'Network Services Enabled by Default'; Port 20001 ist auch der SSH-Zugang laut Wiki"
-   }
-  ],
-  "stock_firmware_url": [
-   {
-    "wert": "https://www.mercusys.com/en/download/mr90x/v1/",
-    "quelle": "hersteller_downloads_v1",
-    "beleg": "https://www.mercusys.com/en/download/mr90x/v1/",
-    "stand": "Downloadseite V1, jüngste Firmware veröffentlicht 2025-01-06",
-    "sicherheit": "hoch",
-    "bemerkung": "1.0.3 Build 20240829 (2025-01-06), 1.0.1 Build 20230808 (2023-10-09), 1.1.0 Build 20220916 (2023-07-26)"
-   },
-   {
-    "wert": "https://www.mercusys.com/en/download/mr90x/v1.20/",
-    "quelle": "hersteller_downloads_v1_20",
-    "beleg": "https://www.mercusys.com/en/download/mr90x/v1.20/",
-    "stand": "Downloadseite V1.20, Firmware veröffentlicht 2024-01-23",
-    "sicherheit": "hoch",
-    "bemerkung": "V1.20_230808 (2024-01-23)"
-   }
-  ],
-  "mac_schema": [
-   {
-    "wert": "Label-MAC aus tp_data/default-mac; LAN = Label, WAN = Label +1, WLAN 2.4 GHz = Label, WLAN 5 GHz = Label -1",
-    "quelle": "openwrt_commit",
-    "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
-    "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "verfuegbarkeit": [
-   {
-    "wert": "Available 2023 (www.dns-shop.ru)",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   },
-   {
-    "wert": "verfügbar, Markteinführung etwa 2023",
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "gpl_code": [
-   {
-    "wert": "gpl_MR90X.tar.gz, 1.72 GB (V1)",
-    "quelle": "hersteller_downloads_v1",
-    "beleg": "https://www.mercusys.com/en/download/mr90x/v1/",
-    "stand": "Downloadseite V1, jüngste Firmware veröffentlicht 2025-01-06",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "werkstatt_bestand": [
-   {
-    "wert": "Testknoten GRW-MR90X-mesh-e2a9 am Testplatz; erster MR90X mit Gluon am 04.12.2025",
-    "quelle": "werkstatt",
-    "beleg": "router-werkstatt/docs/geraetefotos.md (Tabelle) und chronik.md (04.12.2025)",
-    "stand": "router-werkstatt Git 998ec38 (2026-10-16)",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "toh_seite": [
-   {
-    "wert": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "openwrt_wiki": [
-   {
-    "wert": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "quelle": "openwrt_wiki",
-    "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
-    "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "wikidevi": [
-   {
-    "wert": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "quelle": "wikidevi",
-    "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
-    "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "deviwiki": [
-   {
-    "wert": "keine Seite",
-    "quelle": "deviwiki",
-    "beleg": "https://deviwiki.com/w/api.php?action=query&list=allpages&apprefix=Mercusys&aplimit=200",
-    "stand": "keine Seite (Präfixliste und Volltextsuche 2026-10-19)",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ],
-  "hersteller_seite": [
-   {
-    "wert": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "quelle": "hersteller",
-    "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
-    "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "datenblatt": [
-   {
-    "wert": "https://static.mercusys.com/manual/MR90X(EU)_1.0_Datasheet20220507111826.pdf",
-    "quelle": "hersteller_datenblatt",
-    "beleg": "https://static.mercusys.com/manual/MR90X(EU)_1.0_Datasheet20220507111826.pdf",
-    "stand": "Datenblatt MR90X(EU) 1.0, PDF erstellt 2022-05-05",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "handbuch": [
-   {
-    "wert": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
-    "quelle": "hersteller_handbuch",
-    "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
-    "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
-    "sicherheit": "hoch",
-    "bemerkung": ""
-   }
-  ],
-  "forum": [
-   {
-    "wert": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
-    "quelle": "toh",
-    "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-    "stand": "Dump 2026-10-18",
-    "sicherheit": "mittel",
-    "bemerkung": ""
-   }
-  ]
- },
- "offene_faeden": [
-  {
-   "url": "https://www.mercusys.com/en/ce?model=MR90X&async=1",
-   "kategorie": "netzteil/konformitaet",
-   "grund": "CE-DoC V1 (static.mercusys.com/ce/MR90X_CE DOC20221103074700.pdf) lieferte 403 AccessDenied; Netzteilmodell evtl. darin"
+    "modell_name": [
+      {
+        "wert": "AX6000 8-Stream Wi-Fi 6 Router MR90X",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MERCUSYS MR90X(EU) v1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "V1",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Versionsauswahl der Produkt- und Downloadseite: V1 und V1.20"
+      },
+      {
+        "wert": "v1.0 und v1.2",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": "'OpenWrt can be installed on HW v1.0 and v1.2 both.'"
+      },
+      {
+        "wert": "v1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "MR90X(EU) v1.2 zeigt in der Stock-Weboberfläche 'Hardware Version: MR90X v1.0'; die Hardwareversion aus der Weboberfläche unterscheidet v1.0 und v1.2 also nicht",
+        "quelle": "forum_202489",
+        "beleg": "https://forum.openwrt.org/t/installing-openwrt-on-mercusys-mr90x-v1-2/202489",
+        "stand": "Thread 2024-06-29 bis 2025-01-29, 30 Beiträge; gelesen #1-#22 (20 Beiträge)",
+        "sicherheit": "niedrig",
+        "bemerkung": "#1 ping456: Firmware 1.0.2 Build 20230808 rel.59994(4555); Typenschildfoto fehlt"
+      },
+      {
+        "wert": "v1.2 lässt sich an die Wand hängen",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": "'v1.2 has the ability to be mounted on a wall.' - möglicher äußerer Unterschied, nicht bestätigt"
+      },
+      {
+        "wert": "nicht verwechseln mit dem chinesischen Modell X60G (AX6000)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": "'The Chinese model X60G(AX6000) is NOT the same device.'"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "keine gefunden",
+        "quelle": "fccid_suche",
+        "beleg": "https://fccid.io/search?q=MR90X",
+        "stand": "Suche 2026-10-19",
+        "sicherheit": "niedrig",
+        "bemerkung": "Suche MR90X ohne passenden Treffer; ToH-Feld '¿'"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": "MR90X(EU) v1",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "verwandte_geraete": [
+      {
+        "wert": "Mercusys Halo H90X: fast gleiche Hardware und Firmware",
+        "quelle": "forum_159282",
+        "beleg": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
+        "stand": "Thread 2023-05-03 bis 2026-07-25, 166 Beiträge; gelesen #1-#20 und #141-#164",
+        "sicherheit": "niedrig",
+        "bemerkung": "#5 Ljukee, #6 csharper2005 bestätigt 'almost the same hardware'"
+      },
+      {
+        "wert": "ähnlich TP-Link TL-XAP6030GI (Vermutung)",
+        "quelle": "forum_159282",
+        "beleg": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
+        "stand": "Thread 2023-05-03 bis 2026-07-25, 166 Beiträge; gelesen #1-#20 und #141-#164",
+        "sicherheit": "niedrig",
+        "bemerkung": "#3 daniel 'Smells a bit like'; nicht bestätigt"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "MediaTek MT7986BLA (Cortex-A53, 64 bit)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": "Commit: 'MediaTek MT7986BLA, Cortex-A53, 64-bit'; DTS mt7986b"
+      },
+      {
+        "wert": "MediaTek MT7986BLA",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7986B / MT7986BLA",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7986B",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 1600,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1600,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "1.6 GHz"
+      },
+      {
+        "wert": 1600,
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "'Quad-core 1.6 GHz processor'"
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "aarch64_cortex-a53",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 512,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 512,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": "'RAM: MediaTek MT7986BLA (512MB)' - im SoC-Gehäuse"
+      },
+      {
+        "wert": 512,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 512,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog: 'EMI: Detected DRAM size: 512MB'"
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR3",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog: 'EMI: Using DDR3 settings'; mtk_uartboot mit mt7986-ram-ddr3-bl2.bin"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 128,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog: 'GigaDevice SPI NAND was found. 128 MiB'"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NAND",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": "SPI-NAND"
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "GigaDevice GD5F1GQ5UEYIGY",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "GigaDevice GD5F1GQ5UEYIGY",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_layout": [
+      {
+        "wert": "Stock: boot 0x0-0x200000, u-boot-env 0x200000-0x300000, ubi0 0x300000-0x3500000, ubi1 0x3500000-0x6700000, userconfig 0x6700000-0x6f00000, tp_data 0x6f00000-0x7300000; IMAGE_SIZE 51200k",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": "Dual-Firmware (ubi0/ubi1), je 50 MiB"
+      },
+      {
+        "wert": "OpenWrt-U-Boot-(UBI)-Layout: UBI 126 MiB statt 50 MiB beim Stock-U-Boot",
+        "quelle": "openwrt_commit_ubi",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ee8df790cae843f11f78511dd9ffac7e80a4d707",
+        "stand": "Commit ee8df790 vom 2024-11-30 (PR 16744)",
+        "sicherheit": "mittel",
+        "bemerkung": "seit OpenWrt 24.10.0; ersetzt den Bootloader"
+      }
+    ],
+    "flash_hinweis": [
+      {
+        "wert": "SPI-NAND-Takt in OpenWrt ab 2026-09-26 von 20 auf 52 MHz erhöht (Lesen 16 MB: 2.71 s -> 1.37 s)",
+        "quelle": "openwrt_commit_spinand",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ea78c9d915efb066df3e2873edef0ae86946fd12",
+        "stand": "Commit ea78c9d9 vom 2026-09-26 (PR 25246)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "MediaTek MT7986 (WLAN im SoC) + Front-End MT7975N (2.4 GHz) und MT7975P(N) (5 GHz)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7975N, MediaTek MT7975P(N)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MT7986B/MT7986BLA + MT7975N (2.4 GHz), MT7975PN (5 GHz)",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "mt76",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "b/g/n/ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "b/g/n/ax",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "b/g/n/ax",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ax (Wi-Fi 6), 1148 Mbit/s",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr90x-a3007855.html",
+        "stand": "Gelistet seit 24.08.2023; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Wireless: \"Wi-Fi 6 (802.11a/b/g/n/ac/ax), simultan\"; Zeile 802.11ax 2.4GHz: \"1148Mbit/s (4x4, 40MHz, 1024-QAM)\"; ältere Standards je Band nicht getrennt genannt"
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 4,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": "MIMO 4x4"
+      },
+      {
+        "wert": 4,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "4 TX/4 RX, 4 Streams"
+      },
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "'MIMO 4x4'"
+      },
+      {
+        "wert": 4,
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr90x-a3007855.html",
+        "stand": "Gelistet seit 24.08.2023; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "802.11ax 2.4GHz: \"4x4\""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "a/n/ac/ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "a/n/ac/ax",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "a/n/ac/ax",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ax (Wi-Fi 6), 4804 Mbit/s",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr90x-a3007855.html",
+        "stand": "Gelistet seit 24.08.2023; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Wireless: \"Wi-Fi 6 (802.11a/b/g/n/ac/ax), simultan\"; Zeile 802.11ax 5GHz: \"4804Mbit/s (4x4, 160MHz, 1024-QAM)\""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 4,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": "MIMO 4x4"
+      },
+      {
+        "wert": 4,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "4 TX/4 RX, 4 Streams"
+      },
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "'MIMO 4x4'"
+      },
+      {
+        "wert": 4,
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr90x-a3007855.html",
+        "stand": "Gelistet seit 24.08.2023; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "802.11ax 5GHz: \"4x4\""
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AX6000",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "4804 Mbps (5 GHz) + 1148 Mbps (2.4 GHz)"
+      },
+      {
+        "wert": "AX6000",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AX6000",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr90x-a3007855.html",
+        "stand": "Gelistet seit 24.08.2023; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Pseudoklasse: \"AX6000\""
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "2.4 GHz bis 40 MHz, 5 GHz bis 160 MHz",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2.4 GHz bis 40 MHz, 5 GHz bis 160 MHz",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr90x-a3007855.html",
+        "stand": "Gelistet seit 24.08.2023; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "aus den 802.11ax-Zeilen je Band"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": "2.4 GHz < 20 dBm EIRP; 5 GHz < 23 dBm (Band 1, 2), < 30 dBm (Band 3) EIRP",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2412-2472 MHz 20 dBm; 5150-5250 und 5250-5350 MHz 23 dBm; 5470-5725 MHz 30 dBm",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
+        "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
+        "sicherheit": "hoch",
+        "bemerkung": "EU-Konformitätsangaben"
+      }
+    ],
+    "wlan_merkmale": [
+      {
+        "wert": "Wi-Fi 6, OFDMA, 4x4 MU-MIMO, 160 MHz, 1024-QAM, BSS Coloring, Beamforming, WPA3, TWT",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Dual Band simultan, MU-MIMO, 1024-QAM, WPA/WPA2/WPA3",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr90x-a3007855.html",
+        "stand": "Gelistet seit 24.08.2023; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Band-Fähigkeiten, Besonderheiten, Sicherheit; außerdem IPv6, VPN passthrough (L2TP/PPTP)"
+      }
+    ],
+    "wlan_empfindlichkeit": [
+      {
+        "wert": "11g 6M -97, 11g 54M -79, HT40 MCS7 -74, HT20 MCS7 -77, 11a 6M -97, 11a 54M -79, VHT20 MCS8 -75, VHT40 MCS9 -71, VHT80 MCS9 -67, HE20 MCS11 -67, HE40 MCS11 -64, HE80 MCS11 -61 dBm",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2.4 GHz: 11g 6M -97, 11g 54M -79, HT20 MCS7 -78, HT40 MCS7 -75, HE20 MCS11 -66.5, HE40 MCS11 -65.5; 5 GHz: 11a 6M -95, 11a 54M -76.5, HT20 MCS7 -76, HT40 MCS7 -73, VHT20 MCS8 -71.5, VHT40 MCS9 -67, VHT80 MCS9 -63.5, HE20 MCS11 -64.5, HE40 MCS11 -63, HE80 MCS11 -58.5, HE160 MCS11 -56 dBm",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://static.mercusys.com/manual/MR90X(EU)_1.0_Datasheet20220507111826.pdf",
+        "stand": "Datenblatt MR90X(EU) 1.0, PDF erstellt 2022-05-05",
+        "sicherheit": "hoch",
+        "bemerkung": "weicht von der Produktseite ab"
+      }
+    ],
+    "wlan_hinweis": [
+      {
+        "wert": "unter Gluon 2023.2 (mt76) legte jeder WLAN-Scan den Unicast auf dem gescannten Radio lahm (20 von 20 Scans), unter Gluon 2025.1.3 0 von 20; wifi down/up heilt nach 6-9 s",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/wifi-kanalplanung-verfahren.md, Abschnitt 'Ein Scan tötet den Unicast auf dem gescannten Radio' und 'Nachtrag: Messreihe der Paketseite und Nachtests'",
+        "stand": "router-werkstatt Git 998ec38 (2026-10-16)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Kalibrierdaten (MT7986_EEPROM.bin) aus tp_data; Commit behebt 2023 ausgefallenes WLAN nach mt76-Änderung",
+        "quelle": "openwrt_commit_eeprom",
+        "beleg": "https://github.com/openwrt/openwrt/commit/85b0d7592c454f2e4e02be043a1e433c67df4e41",
+        "stand": "Commit 85b0d759 vom 2023-10-02",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ein Nutzer meldete unter OpenWrt 24.10 (UBI-Layout) WLAN-Abbrüche bei hohem Durchsatz",
+        "quelle": "forum_159282",
+        "beleg": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
+        "stand": "Thread 2023-05-03 bis 2026-07-25, 166 Beiträge; gelesen #1-#20 und #141-#164",
+        "sicherheit": "niedrig",
+        "bemerkung": "#157 jamesdoherty, 2025-02-07; ohne Antwort im gelesenen Teil"
+      }
+    ],
+    "wlan_temperatur": [
+      {
+        "wert": "Temperaturwerte der WLAN-phys am MR90X plausibel (Gegenprobe zu NWA50AX Pro)",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/freigabe-2025.1-pruefpunkte.md, Abschnitt 'Unsinnige WLAN-Temperaturen (NWA50AX Pro, 13.10.2026)'",
+        "stand": "router-werkstatt Git 998ec38 (2026-10-16)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "extern fest",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "'8× Fixed Omni-Directional Antennas'"
+      },
+      {
+        "wert": "extern fest",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas: '-'"
+      },
+      {
+        "wert": "extern fest",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": "Tags 8Ant, NonDetachableAntenna"
+      },
+      {
+        "wert": "extern",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr90x-a3007855.html",
+        "stand": "Gelistet seit 24.08.2023; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Antennen: \"8x extern\"; fest oder abnehmbar nicht angegeben"
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 8,
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 8,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://static.mercusys.com/manual/MR90X(EU)_1.0_Datasheet20220507111826.pdf",
+        "stand": "Datenblatt MR90X(EU) 1.0, PDF erstellt 2022-05-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 8,
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr90x-a3007855.html",
+        "stand": "Gelistet seit 24.08.2023; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Antennen: \"8x extern\""
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "rund (Omni-Directional)",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "2.5 Gbps WAN/LAN",
+            "geschwindigkeit": "2.5G",
+            "rolle": "WAN/LAN",
+            "openwrt": "wan"
+          },
+          {
+            "name": "1 Gbps WAN/LAN",
+            "geschwindigkeit": "1G",
+            "rolle": "WAN/LAN",
+            "openwrt": "lan0"
+          },
+          {
+            "name": "LAN1",
+            "geschwindigkeit": "1G",
+            "rolle": "LAN",
+            "openwrt": "lan1"
+          },
+          {
+            "name": "LAN2",
+            "geschwindigkeit": "1G",
+            "rolle": "LAN",
+            "openwrt": "lan2"
+          }
+        ],
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": "Tabelle 'Switch Ports (for VLANs)'; OpenWrt-Standard: wan = 2.5G-Port, lan0-lan2 im br-lan"
+      },
+      {
+        "wert": "1× 2.5 Gbps WAN/LAN + 1× Gigabit WAN/LAN + 2× Gigabit LAN",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          {
+            "name": "WAN/LAN",
+            "geschwindigkeit": "2.5GBase-T",
+            "rolle": "WAN/LAN"
+          },
+          {
+            "name": "WAN/LAN",
+            "geschwindigkeit": "10/100/1000Base-T",
+            "rolle": "WAN/LAN"
+          },
+          {
+            "name": "LAN",
+            "geschwindigkeit": "10/100/1000Base-T",
+            "rolle": "LAN"
+          },
+          {
+            "name": "LAN",
+            "geschwindigkeit": "10/100/1000Base-T",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr90x-a3007855.html",
+        "stand": "Gelistet seit 24.08.2023; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "WAN: \"1x RJ-45 (2.5GBase-T, shared mit LAN), 1x RJ-45 (10/100/1000Base-T, shared mit LAN)\", LAN: \"2x RJ-45 (10/100/1000Base-T), ...shared mit WAN\""
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 4,
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "3× 1G + 1× 2.5G"
+      },
+      {
+        "wert": 4,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "3 LAN 1GbE + 1 WAN 2.5GbE"
+      },
+      {
+        "wert": 4,
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr90x-a3007855.html",
+        "stand": "Gelistet seit 24.08.2023; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "2 WAN/LAN (shared) + 2 LAN"
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "4 RJ45-Buchsen"
+      }
+    ],
+    "switch_chip": [
+      {
+        "wert": "MediaTek MT7531AE",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7531AE",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7531AE",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "phy_2g5": [
+      {
+        "wert": "MaxLinear GPY211C0VC (SLNW8)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MaxLinear GPY211C0VC (SLNW8)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "GPY211C (per dmesg am Testknoten)",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/rtl8221b-2g5-wan-intern.md, Abschnitt 'Nachtrag 14.09. abends'",
+        "stand": "router-werkstatt Git 998ec38 (2026-10-16)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "ja",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "SFP ports: '-'"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "USB ports: '-'"
+      },
+      {
+        "wert": "nein",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": "'USB ports: No'"
+      },
+      {
+        "wert": "nein",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": "Tag 0usb"
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
+        "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: keine Quelle nennt PoE; Strom laut Handbuch über POWER-Buchse mit beiliegendem Netzteil"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "ja, Hohlstecker",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": "'Connector: Barrel'"
+      },
+      {
+        "wert": "ja, POWER-Buchse auf der Rückseite (links außen)",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
+        "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ja, Hohlstecker",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": "pwr_conn=barrel"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 12,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": "Tag 12v_powered"
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "Package Contents: Power Adapter"
+      },
+      {
+        "wert": true,
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://static.mercusys.com/manual/MR90X(EU)_1.0_Datasheet20220507111826.pdf",
+        "stand": "Datenblatt MR90X(EU) 1.0, PDF erstellt 2022-05-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_hinweis": [
+      {
+        "wert": "nur das beiliegende Netzteil verwenden; Typenschild-Symbole: Class II, Gleichspannung, Polarität des Ausgangs",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
+        "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
+        "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
+        "sicherheit": "hoch",
+        "bemerkung": "'This device may only be used indoors in all EU member states'; Symbol 'Indoor use only'"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "0 bis 40 °C",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
+        "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "Betrieb 10-90 %, Lager 5-90 %, nicht kondensierend",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Tisch/Regal",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
+        "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
+        "sicherheit": "hoch",
+        "bemerkung": "'The router can be placed on a shelf or desktop.' (Handbuch REV1.0.0 für V1)"
+      },
+      {
+        "wert": "v1.2: auch Wand",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": "'v1.2 has the ability to be mounted on a wall.'"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "209 × 172.2 × 42.4",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "8.2 × 6.8 × 1.6 in"
+      },
+      {
+        "wert": "208.8 × 171.6 × 41.7",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://static.mercusys.com/manual/MR90X(EU)_1.0_Datasheet20220507111826.pdf",
+        "stand": "Datenblatt MR90X(EU) 1.0, PDF erstellt 2022-05-05",
+        "sicherheit": "hoch",
+        "bemerkung": "W × D × H; weicht von der Produktseite ab"
+      },
+      {
+        "wert": "208.8 × 171.6 × 41.7",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr90x-a3007855.html",
+        "stand": "Gelistet seit 24.08.2023; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Abmessungen: \"208.8x171.6x41.7mm\"; wie Hersteller-Datenblatt, abweichend von der Produktseite"
+      }
+    ],
+    "leds": [
+      {
+        "wert": "Status-LED grün und orange, 4 grüne GPIO-LEDs an den Ethernet-Ports (wan, lan0-lan2)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": "DTS: green:status, orange:status, green:wan, green:lan0-2"
+      },
+      {
+        "wert": "1 System-LED vorne (grün/orange) plus LED je Port",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
+        "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "6",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "Stock: Night Mode (LED-Aus-Zeitraum)",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
+        "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
+        "sicherheit": "hoch",
+        "bemerkung": "unter OpenWrt GPIO-LEDs, per LED-Konfiguration schaltbar"
+      }
+    ],
+    "knoepfe": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1 (Reset/WPS kombiniert)",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "Rückseite, RESET/WPS kombiniert; > 5 s halten = Werksreset, 1 s = WPS",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
+        "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "beim Einschalten etwa 10 s halten = U-Boot-Web-Recovery (Stock) bzw. TFTP-Recovery (OpenWrt-U-Boot)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "Schrauben lösen, dann Clips am Rand mit Plastikkarte lösen; Rastnasen sehr fest",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Rastnasen sehr fest, kein Garantiesiegel",
+        "quelle": "forum_159282",
+        "beleg": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
+        "stand": "Thread 2023-05-03 bis 2026-07-25, 166 Beiträge; gelesen #1-#20 und #141-#164",
+        "sicherheit": "niedrig",
+        "bemerkung": "#9 csharper2005"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen erst nach Nachbestücken von Widerständen oder Lötbrücken",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": "'The R3 (TX line) and R6 (RX line) are absent on the PCB. You should solder them or solder the jumpers.'"
+      },
+      {
+        "wert": "innen erst nach Nachbestücken von Widerständen oder Lötbrücken",
+        "quelle": "openwrt_wiki_foto_uart",
+        "beleg": "https://openwrt.org/_media/media/mercusys/mr90x-v1_uart.jpeg",
+        "stand": "Foto im Wiki, Stand 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Foto: 4 Durchkontaktierungen ohne Stiftleiste, Dreieck-Markierung an einem Ende, Brücken an R3 und R6 eingezeichnet"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "+3.3V, GND, TX, RX (3.3V nicht anschließen; Markierung 'V' über dem RX-Ende)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": "aus ASCII-Skizze des Commits; im Wiki fehlen TX/RX-Beschriftungen. Auf dem Wiki-Foto liegt R3 (TX) am Pad mit Dreieck - Zuordnung vor dem Anschluss nachmessen"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "R3/R6 fehlen; ohne Brücken kein TX/RX. Für Installation nicht nötig (netzbasierter Weg); UART nur für Notfall (mtk_uartboot bei zerstörtem BL2/FIP)",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "jtag": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "mediatek/filogic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "23.05.0",
+        "quelle": "openwrt_tag_pruefung",
+        "beleg": "https://github.com/openwrt/openwrt/blob/v23.05.0/target/linux/mediatek/dts/mt7986b-mercusys-mr90x-v1.dts",
+        "stand": "Tags v23.05.0-rc2 und v23.05.0 geprüft 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "DTS in v23.05.0 vorhanden, in v23.05.0-rc2 nicht"
+      },
+      {
+        "wert": "23.05.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "niedrig",
+        "bemerkung": "Feld supportedsincerel leer; Install-URL der ToH zeigt auf releases/23.05.0"
+      }
+    ],
+    "openwrt_support_commit": [
+      {
+        "wert": "e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "23.05.2",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "veraltet: Gerät ist in 24.10 und jünger enthalten (UBI-Layout seit 24.10.0)"
+      }
+    ],
+    "openwrt_layouts": [
+      {
+        "wert": "zwei Images: mercusys_mr90x-v1 (Stock-U-Boot, UBI 50 MiB) und mercusys_mr90x-v1-ubi (OpenWrt-U-Boot, UBI 126 MiB, seit 24.10.0)",
+        "quelle": "openwrt_commit_ubi",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ee8df790cae843f11f78511dd9ffac7e80a4d707",
+        "stand": "Commit ee8df790 vom 2024-11-30 (PR 16744)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, seit v2025.1.1 (mediatek-filogic)",
+        "quelle": "gluon_docs",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/docs/releases/v2025.1.1.rst",
+        "stand": "lokaler Gluon-Checkout e2fe4b52 (2026-08-18), docs/releases/v2025.1.1.rst, targets/mediatek-filogic (Commit de80bcd vom 2026-02-10)",
+        "sicherheit": "hoch",
+        "bemerkung": "Gluon-Image mercusys-mr90x-v1 = OpenWrt-Profil mercusys_mr90x-v1 (Stock-U-Boot-Layout), factory = false (kein Erstinstallations-Image)"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot 2022.01-rc4; zusätzlich 'seconduboot' in beiden UBI-Slots",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "secure_boot": [
+      {
+        "wert": "U-Boot-Variable tp_boot_idx: 1 = Secure Boot an, 0 = aus (für OpenWrt nötig)",
+        "quelle": "forum_202489",
+        "beleg": "https://forum.openwrt.org/t/installing-openwrt-on-mercusys-mr90x-v1-2/202489",
+        "stand": "Thread 2024-06-29 bis 2025-01-29, 30 Beiträge; gelesen #1-#22 (20 Beiträge)",
+        "sicherheit": "niedrig",
+        "bemerkung": "#5 hecatae; Commit/Wiki setzen tp_boot_idx 0"
+      }
+    ],
+    "installation": [
+      {
+        "wert": "ohne Öffnen: SSH auf Stock Port 20001 (Passwort = Web-Passwort, eingeschränkter root), telnetd über /etc/hotplug.d/iface/65-iptv per IPTV/VLAN-Umschalter starten, Telnet Port 23 als echter root, initramfs per ubiupdatevol (fremdes busybox) in ubi0 kernel schreiben, U-Boot-Variablen setzen, sysupgrade -n",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "drei Wege: Stock-Bootloader über SSH/Telnet, Stock-Bootloader per UART + TFTP, OpenWrt-U-Boot-Layout (seit 24.10.0, ersetzt BL2/FIP, Sicherung von boot und tp_data nötig)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "eingeordnet als netzbasierter Weg ohne Gehäuseöffnung, Skript lohnt sich; Angabe 'tp_boot_idx + Web-Recovery' laut eigenem Nachtrag durch Commit und Wiki nicht belegt",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/erstinstallation-ohne-factory.md, Abschnitt 'Sonderfall mit Potenzial: Mercusys MR90X v1'",
+        "stand": "router-werkstatt Git 998ec38 (2026-10-16)",
+        "sicherheit": "mittel",
+        "bemerkung": "Zusammenfassung aus Wiki/Forum, keine eigene Messung"
+      },
+      {
+        "wert": "v1.2 mit Firmware 1.0.2 (20230808): fw_printenv meldet Bad CRC, tp_boot_idx fehlt; Weg über Firmware 1.0.0, tp_boot_idx 0 setzen, danach Anleitung von vorn; bei manchen scheitern fw_setenv und ubirmvol an Rechten",
+        "quelle": "forum_202489",
+        "beleg": "https://forum.openwrt.org/t/installing-openwrt-on-mercusys-mr90x-v1-2/202489",
+        "stand": "Thread 2024-06-29 bis 2025-01-29, 30 Beiträge; gelesen #1-#22 (20 Beiträge)",
+        "sicherheit": "niedrig",
+        "bemerkung": "#1-#6 ping456, #21-#22 Titillate"
+      }
+    ],
+    "recovery": [
+      {
+        "wert": "Reset halten und einschalten, U-Boot-Web-Recovery unter http://192.168.1.1, OEM-Firmware hochladen; UART: tftpboot von 192.168.1.2",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "OpenWrt-U-Boot: initramfs-recovery.itb per TFTP von 192.168.1.254, Reset beim Einschalten etwa 10 s halten; BL2/FIP kaputt: mtk_uartboot über UART",
+        "quelle": "openwrt_commit_ubi",
+        "beleg": "https://github.com/openwrt/openwrt/commit/ee8df790cae843f11f78511dd9ffac7e80a4d707",
+        "stand": "Commit ee8df790 vom 2024-11-30 (PR 16744)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Web-Recovery meldete sich bei einem v1.2 unter 192.0.2.1 und zeigte Erfolg, Gerät bootete danach trotzdem im Kreis",
+        "quelle": "forum_159282",
+        "beleg": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
+        "stand": "Thread 2023-05-03 bis 2026-07-25, 166 Beiträge; gelesen #1-#20 und #141-#164",
+        "sicherheit": "niedrig",
+        "bemerkung": "#160 aneg; nach unvollständiger Installation"
+      }
+    ],
+    "stock_dienste": [
+      {
+        "wert": "Web 80/443 TCP, DHCP 67 UDP, DNS 53, App-Verwaltung 20001 TCP und 20002 UDP",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "'Network Services Enabled by Default'; Port 20001 ist auch der SSH-Zugang laut Wiki"
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.mercusys.com/en/download/mr90x/v1/",
+        "quelle": "hersteller_downloads_v1",
+        "beleg": "https://www.mercusys.com/en/download/mr90x/v1/",
+        "stand": "Downloadseite V1, jüngste Firmware veröffentlicht 2025-01-06",
+        "sicherheit": "hoch",
+        "bemerkung": "1.0.3 Build 20240829 (2025-01-06), 1.0.1 Build 20230808 (2023-10-09), 1.1.0 Build 20220916 (2023-07-26)"
+      },
+      {
+        "wert": "https://www.mercusys.com/en/download/mr90x/v1.20/",
+        "quelle": "hersteller_downloads_v1_20",
+        "beleg": "https://www.mercusys.com/en/download/mr90x/v1.20/",
+        "stand": "Downloadseite V1.20, Firmware veröffentlicht 2024-01-23",
+        "sicherheit": "hoch",
+        "bemerkung": "V1.20_230808 (2024-01-23)"
+      }
+    ],
+    "mac_schema": [
+      {
+        "wert": "Label-MAC aus tp_data/default-mac; LAN = Label, WAN = Label +1, WLAN 2.4 GHz = Label, WLAN 5 GHz = Label -1",
+        "quelle": "openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e4fe3097ef6a961874b66932a0ac4be18070630a",
+        "stand": "Commit e4fe3097, verfasst 2023-05-13, übernommen 2023-06-25 (Mikhail Zhilkin)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Available 2023 (www.dns-shop.ru)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "verfügbar, Markteinführung etwa 2023",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "bei Geizhals gelistet seit 24.08.2023, am 2026-10-20 mit Angeboten",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr90x-a3007855.html",
+        "stand": "Gelistet seit 24.08.2023; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Preise nicht gespeichert"
+      }
+    ],
+    "gpl_code": [
+      {
+        "wert": "gpl_MR90X.tar.gz, 1.72 GB (V1)",
+        "quelle": "hersteller_downloads_v1",
+        "beleg": "https://www.mercusys.com/en/download/mr90x/v1/",
+        "stand": "Downloadseite V1, jüngste Firmware veröffentlicht 2025-01-06",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "werkstatt_bestand": [
+      {
+        "wert": "Testknoten GRW-MR90X-mesh-e2a9 am Testplatz; erster MR90X mit Gluon am 04.12.2025",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/geraetefotos.md (Tabelle) und chronik.md (04.12.2025)",
+        "stand": "router-werkstatt Git 998ec38 (2026-10-16)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/mercusys/mr90x_v1",
+        "stand": "Seitenrevision 2026-09-01 16:12 (csharper2005, Debricking)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/Mercusys_MR90X_v1",
+        "stand": "Revision 383744 vom 2024-05-02T11:48:42Z (Olek210)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "keine Seite",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/w/api.php?action=query&list=allpages&apprefix=Mercusys&aplimit=200",
+        "stand": "keine Seite (Präfixliste und Volltextsuche 2026-10-19)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "quelle": "hersteller",
+        "beleg": "https://www.mercusys.com/en/product/wifi-router/mr90x/v1/",
+        "stand": "Produktseite 'MR90X [V1, V1.20]' ohne Datum, Stand 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://static.mercusys.com/manual/MR90X(EU)_1.0_Datasheet20220507111826.pdf",
+        "quelle": "hersteller_datenblatt",
+        "beleg": "https://static.mercusys.com/manual/MR90X(EU)_1.0_Datasheet20220507111826.pdf",
+        "stand": "Datenblatt MR90X(EU) 1.0, PDF erstellt 2022-05-05",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "handbuch": [
+      {
+        "wert": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
+        "quelle": "hersteller_handbuch",
+        "beleg": "https://static.mercusys.com/manual/1910080077_MR90X_UG_REV1.0.020221101080417.pdf",
+        "stand": "User Guide REV1.0.0 (1910080077), PDF erstellt 2022-11-01",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "forum": [
+      {
+        "wert": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "geizhals_url": [
+      {
+        "wert": "https://geizhals.de/mercusys-mr90x-a3007855.html",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr90x-a3007855.html",
+        "stand": "Gelistet seit 24.08.2023; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Artikel ohne Versionsangabe; MR90X hat nur Hardware-Version V1 (V1.20 = nur Firmware-/Bootloader-Stand); Hinweis 'nur für bestimmte Revisionen' ist der allgemeine Geizhals-Text zu alternativer Firmware"
+      }
+    ],
+    "farbe": [
+      {
+        "wert": "schwarz",
+        "quelle": "geizhals",
+        "beleg": "https://preisvergleich.heise.de/mercusys-mr90x-a3007855.html",
+        "stand": "Gelistet seit 24.08.2023; abgerufen 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Farbe: \"schwarz\""
+      }
+    ]
   },
-  {
-   "url": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-   "kategorie": "dc_buchse_mass",
-   "grund": "Hohlsteckermaß, Polarität, Netzteilmodell in keiner Quelle; Typenschild-/Netzteilfoto fehlt (eigenes Gerät im Bestand: Typenschild ablesen)"
-  },
-  {
-   "url": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
-   "kategorie": "leistung",
-   "grund": "Leistungsaufnahme in keiner Quelle; am eigenen Testknoten messbar"
-  },
-  {
-   "url": "https://www.mercusys.com/en/download/mr90x/v1.20/",
-   "kategorie": "hw_version/montage",
-   "grund": "Unterschied v1.0/v1.2 außen (Wandmontage laut Wiki) und am Typenschild nicht belegt; kein Handbuch für V1.20, Foto von Unterseite/Typenschild fehlt"
-  },
-  {
-   "url": "https://static.mercusys.com/manual/7107500190_Mercusys_router_V120221019024946.pdf",
-   "kategorie": "netzteil/anschluss",
-   "grund": "Quick Installation Guide V1 nicht geladen"
-  },
-  {
-   "url": "https://static.mercusys.com/manual/7107500294_Mercusys_Router(EU1_12Languages)_QIG20231031060616.pdf",
-   "kategorie": "netzteil/anschluss",
-   "grund": "Quick Installation Guide EU (auch V1.20) nicht geladen"
-  },
-  {
-   "url": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
-   "kategorie": "forum",
-   "grund": "Beiträge #21-#140 und #165-#166 nicht gelesen (166 Beiträge)"
-  },
-  {
-   "url": "https://forum.openwrt.org/t/installing-openwrt-on-mercusys-mr90x-v1-2/202489",
-   "kategorie": "forum",
-   "grund": "Beiträge #23-#30 nicht gelesen"
-  },
-  {
-   "url": "https://github.com/openwrt/openwrt/issues/19301",
-   "kategorie": "recovery",
-   "grund": "in Werkstatt-Doku genannt (Web-Recovery meldet Erfolg, bootet nicht); nicht abgerufen"
-  },
-  {
-   "url": "https://openwrt.org/_media/media/mercusys/mr90x-v1_common.jpg",
-   "kategorie": "gehaeuse/montage",
-   "grund": "Gerätefoto im Wiki nicht angesehen"
-  },
-  {
-   "url": "https://github.com/openwrt/openwrt/pull/16744",
-   "kategorie": "installation",
-   "grund": "PR zum UBI-Layout, Diskussion nicht gelesen"
-  },
-  {
-   "url": "https://www.mercusys.com/en/product/details/halo-h90x/v1/2-pack/",
-   "kategorie": "verwechslung",
-   "grund": "Halo H90X laut Forum fast gleiche Hardware; nicht geprüft"
-  },
-  {
-   "url": "https://openwrt.org/toh/mercusys/mr90x_v1",
-   "kategorie": "luefter",
-   "grund": "keine Quelle nennt Lüfter oder passiv; kein Innenfoto der ganzen Platine im Wiki"
+  "offene_faeden": [
+    {
+      "url": "https://www.mercusys.com/en/ce?model=MR90X&async=1",
+      "kategorie": "netzteil/konformitaet",
+      "grund": "CE-DoC V1 (static.mercusys.com/ce/MR90X_CE DOC20221103074700.pdf) lieferte 403 AccessDenied; Netzteilmodell evtl. darin"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+      "kategorie": "dc_buchse_mass",
+      "grund": "Hohlsteckermaß, Polarität, Netzteilmodell in keiner Quelle; Typenschild-/Netzteilfoto fehlt (eigenes Gerät im Bestand: Typenschild ablesen)"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/mercusys/mercusys_mr90x_v1",
+      "kategorie": "leistung",
+      "grund": "Leistungsaufnahme in keiner Quelle; am eigenen Testknoten messbar"
+    },
+    {
+      "url": "https://www.mercusys.com/en/download/mr90x/v1.20/",
+      "kategorie": "hw_version/montage",
+      "grund": "Unterschied v1.0/v1.2 außen (Wandmontage laut Wiki) und am Typenschild nicht belegt; kein Handbuch für V1.20, Foto von Unterseite/Typenschild fehlt"
+    },
+    {
+      "url": "https://static.mercusys.com/manual/7107500190_Mercusys_router_V120221019024946.pdf",
+      "kategorie": "netzteil/anschluss",
+      "grund": "Quick Installation Guide V1 nicht geladen"
+    },
+    {
+      "url": "https://static.mercusys.com/manual/7107500294_Mercusys_Router(EU1_12Languages)_QIG20231031060616.pdf",
+      "kategorie": "netzteil/anschluss",
+      "grund": "Quick Installation Guide EU (auch V1.20) nicht geladen"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/adding-support-for-mercusys-mr90x/159282",
+      "kategorie": "forum",
+      "grund": "Beiträge #21-#140 und #165-#166 nicht gelesen (166 Beiträge)"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/installing-openwrt-on-mercusys-mr90x-v1-2/202489",
+      "kategorie": "forum",
+      "grund": "Beiträge #23-#30 nicht gelesen"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/issues/19301",
+      "kategorie": "recovery",
+      "grund": "in Werkstatt-Doku genannt (Web-Recovery meldet Erfolg, bootet nicht); nicht abgerufen"
+    },
+    {
+      "url": "https://openwrt.org/_media/media/mercusys/mr90x-v1_common.jpg",
+      "kategorie": "gehaeuse/montage",
+      "grund": "Gerätefoto im Wiki nicht angesehen"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/pull/16744",
+      "kategorie": "installation",
+      "grund": "PR zum UBI-Layout, Diskussion nicht gelesen"
+    },
+    {
+      "url": "https://www.mercusys.com/en/product/details/halo-h90x/v1/2-pack/",
+      "kategorie": "verwechslung",
+      "grund": "Halo H90X laut Forum fast gleiche Hardware; nicht geprüft"
+    },
+    {
+      "url": "https://openwrt.org/toh/mercusys/mr90x_v1",
+      "kategorie": "luefter",
+      "grund": "keine Quelle nennt Lüfter oder passiv; kein Innenfoto der ganzen Platine im Wiki"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-19",
+    "status": "teilweise",
+    "anfragen": 27,
+    "notiz": "ToH-Dump-Eintrag vollständig übernommen; Wiki-Geräteseite (Rohtext + Revisionen + UART-Foto), Support-Commit e4fe3097 und Folge-Commits per gh, WikiDevi-Spiegel, Mercusys Produktseite, Datenblatt, Handbuch, Downloadseiten V1/V1.20, CE-Liste, Forum 159282 (teilweise) und 202489 ausgewertet. DeviWiki ohne Seite, keine FCC-ID. Eigene Werkstatt-Doku: GPY211C per dmesg, Scan-Unicast-Fehler unter 2023.2. Widersprüche: Abmessungen Produktseite 209×172.2×42.4 vs Datenblatt 208.8×171.6×41.7; Empfindlichkeitswerte Produktseite vs Datenblatt; ToH openwrt_aktuell 23.05.2 veraltet. Offen: Hohlsteckermaß/Polarität, Leistungsaufnahme, Unterschied v1.0/v1.2, Lüfter, TX/RX-Zuordnung am Foto. Blockade: static.mercusys.com/ce/ 403 AccessDenied; openwrt.org lehnt TLS mit nur X25519 ab (handshake failure), mit --curves X25519:prime256v1 ging es.",
+    "geizhals": {
+      "datum": "2026-10-20",
+      "zuordnung": "genau",
+      "ergebnis": "heise-Suche 1 Treffer a3007855 (Mercusys MR90X, AX6000), ohne Versionsangabe, Modell hat nur HW-Version V1; Datenblatt nach roh.geizhals, 15 Feldeinträge ergänzt; keine Netzteil-/Leistungs-/Gewichtsangaben, keine EAN/ASIN auf der Seite; 2 heise-Abrufe"
+    }
   }
- ],
- "lauf": {
-  "datum": "2026-10-19",
-  "status": "teilweise",
-  "anfragen": 27,
-  "notiz": "ToH-Dump-Eintrag vollständig übernommen; Wiki-Geräteseite (Rohtext + Revisionen + UART-Foto), Support-Commit e4fe3097 und Folge-Commits per gh, WikiDevi-Spiegel, Mercusys Produktseite, Datenblatt, Handbuch, Downloadseiten V1/V1.20, CE-Liste, Forum 159282 (teilweise) und 202489 ausgewertet. DeviWiki ohne Seite, keine FCC-ID. Eigene Werkstatt-Doku: GPY211C per dmesg, Scan-Unicast-Fehler unter 2023.2. Widersprüche: Abmessungen Produktseite 209×172.2×42.4 vs Datenblatt 208.8×171.6×41.7; Empfindlichkeitswerte Produktseite vs Datenblatt; ToH openwrt_aktuell 23.05.2 veraltet. Offen: Hohlsteckermaß/Polarität, Leistungsaufnahme, Unterschied v1.0/v1.2, Lüfter, TX/RX-Zuordnung am Foto. Blockade: static.mercusys.com/ce/ 403 AccessDenied; openwrt.org lehnt TLS mit nur X25519 ab (handshake failure), mit --curves X25519:prime256v1 ging es."
- }
 }
