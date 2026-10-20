@@ -74,14 +74,14 @@
       { id: 'usb', titel: 'USB', typ: 'ja' },
       { id: 'sfp', titel: 'SFP-Modul', typ: 'ja' }
     ] },
-    { titel: 'Leistung und Verbrauch', filter: [
+    { titel: 'Rechenleistung und Leistungsaufnahme', filter: [
       { id: 'speicher', titel: 'Speicher für Updates', typ: 'eins',
         werte: [['reichlich', 'reichlich'], ['ausreichend', 'ausreichend'], ['knapp', 'knapp'], ['zu wenig', 'zu wenig']] },
       { id: 'ram', titel: 'Arbeitsspeicher (RAM)', typ: 'min',
         werte: [['128', 'ab 128 MB'], ['256', 'ab 256 MB'], ['512', 'ab 512 MB']] },
       { id: 'flash', titel: 'Flash-Speicher', typ: 'min', werte: [['16', 'ab 16 MB'], ['128', 'ab 128 MB']] },
       { id: 'kerne', titel: 'Prozessor', typ: 'min', werte: [['2', 'ab 2 Kernen'], ['4', 'ab 4 Kernen']] },
-      { id: 'leistung', titel: 'Stromverbrauch', typ: 'max', werte: [['10', 'bis 10 W'], ['15', 'bis 15 W']] },
+      { id: 'leistung', titel: 'Leistungsaufnahme', typ: 'max', werte: [['10', 'bis 10 W'], ['15', 'bis 15 W']] },
       { id: 'luefter', titel: 'lautlos (ohne Lüfter)', typ: 'nein' }
     ] },
     { titel: 'Einrichtung', filter: [
@@ -99,7 +99,7 @@
     ram_mb: 'Arbeitsspeicher', flash_mb: 'Flash-Speicher', cpu_mhz: 'Prozessortakt',
     cpu_kerne: 'Prozessorkerne', poe_spannung_v: 'PoE-Spannung', dc_spannung_v: 'Netzteil-Spannung',
     ip_schutzart: 'Schutzart', temperatur_betrieb: 'Temperatur', antennen_anzahl: 'Zahl der Antennen',
-    ports_anzahl: 'Zahl der Buchsen', leistung_w_typ: 'Stromverbrauch', leistung_w_max: 'Stromverbrauch',
+    ports_anzahl: 'Zahl der Buchsen', leistung_w_typ: 'Leistungsaufnahme', leistung_w_max: 'Leistungsaufnahme',
     einsatzort: 'Einsatzort', poe_eingang: 'PoE',
     wlan_24_streams: 'Streams 2.4 GHz', wlan_5_streams: 'Streams 5 GHz', wlan_6_streams: 'Streams 6 GHz',
     wlan_24_standard: 'WLAN-Standard 2.4 GHz', wlan_5_standard: 'WLAN-Standard 5 GHz',
@@ -346,7 +346,7 @@
     if (g.port_mbit) c.push(g.port_mbit >= 1000 ? (g.port_mbit / 1000) + ' Gbit/s' : g.port_mbit + ' Mbit/s');
     if (g.ports) c.push(g.ports === 1 ? '1 Buchse' : g.ports + ' Buchsen');
     if (g.usb) c.push('USB');
-    if (g.leistung) c.push('bis ' + g.leistung + ' W Verbrauch');
+    if (g.leistung) c.push('bis ' + g.leistung + ' W Leistungsaufnahme');
     return c;
   }
 
@@ -458,10 +458,11 @@
       }
       var rumpf = el('div', 'finder-rumpf');
       rumpf.appendChild(el('h2', null, g.modell));
+      /* Nichts versprechen (adorfer 20.10.): "eventuell", kein Termin */
       if (g.stable === false) {
-        rumpf.appendChild(el('p', 'finder-nicht-marke', 'Noch nicht unterstützt'));
+        rumpf.appendChild(el('p', 'finder-nicht-marke', 'Kommt eventuell in zukünftiger Firmware'));
         rumpf.appendChild(el('p', 'finder-naechste-hinweis',
-          'Die Freifunk-Firmware für dieses Gerät kommt erst mit der nächsten Version. Sie wird gerade getestet.'));
+          'Für dieses Gerät gibt es bisher nur eine Testfassung der Freifunk-Firmware. Ob und wann sie freigegeben wird, steht noch nicht fest.'));
       }
       if (g.speicher) {
         var sp = el('p', 'finder-speicher');

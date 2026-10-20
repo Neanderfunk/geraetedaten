@@ -353,7 +353,7 @@ def ansicht(d, idx):
         ('Speicher', [(lambda t: 'RAM ' + einheit('MB')(t), s.get('ram_mb')),
                       (lambda t: 'Flash ' + einheit('MB')(t) + (' (' + s['flash_typ']['wert'] + ')' if s.get('flash_typ') else ''),
                        s.get('flash_mb'))], ', '),
-        ('Stromverbrauch', [(lambda t: 'typisch ' + einheit('W')(t), s.get('leistung_w_typ')),
+        ('Leistungsaufnahme', [(lambda t: 'typisch ' + einheit('W')(t), s.get('leistung_w_typ')),
                                (lambda t: 'höchstens ' + einheit('W')(t), s.get('leistung_w_max'))], ', '),
         ('Montage', [('', s.get('montage')), ('Befestigung:', s.get('montageloecher'))], '; '),
         ('USB', [(lambda t: 'keiner' if nein(t) else t, s.get('usb'))], '; '),
