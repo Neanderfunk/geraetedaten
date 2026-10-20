@@ -121,6 +121,26 @@
      nicht unterstuetzter Versionen und die "noch nicht unterstuetzten" (Image
      nur im Testzweig, stable: false). Standardmaessig aus. */
   var mitNicht = false;
+  /* Suche nach Namen (adorfer 20.10.): Teilwort irgendwo im Modellnamen, Image-Namen
+     oder in weiteren Namen (andere_namen, Geizhals-Artikel), ohne Gross-/Kleinschreibung,
+     Leerzeichen und Bindestriche. */
+  var namensSuche = '';
+  function dicht(t) { return String(t || '').toLowerCase().replace(/[\s\-_./()]+/g, ''); }
+  /* Treffer nur an Wortanfaengen ("lte" nicht mitten in "Filter"); auch der
+     Wechsel Buchstabe/Ziffer zaehlt als Wortanfang ("3000" findet "WR3000"). */
+  function woerter(t) {
+    return String(t || '').toLowerCase().replace(/([a-z])(\d)|(\d)([a-z])/g, '$1$3 $2$4')
+      .split(/[\s\-_./()+,;:]+/).filter(Boolean);
+  }
+  function passtName(g) {
+    if (!namensSuche) return true;
+    var n = dicht(namensSuche);
+    return [g.modell, g.image].concat(g.namen || []).some(function (t) {
+      var w = woerter(t);
+      for (var i = 0; i < w.length; i++) if (w.slice(i).join('').indexOf(n) === 0) return true;
+      return false;
+    });
+  }
   var sortierung = 'einfach';
   var nurGeraet = null;     // ?geraet=<image>: nur dieses Geraet, Daten gleich offen
 
@@ -199,6 +219,7 @@
     var aus = [];
     geraete.forEach(function (g) {
       if (nurGeraet && g.image !== nurGeraet) return;
+      if (!passtName(g)) return;
       if (!mitNicht && g.stable === false && g.image !== nurGeraet) return;
       var fehlt = [];
       for (var i = 0; i < ALLE.length; i++) {
@@ -601,6 +622,7 @@
     });
     if (!mitUnbekannt) teile.push('unbekannt=0');
     if (mitNicht) teile.push('nicht=1');
+    if (namensSuche) teile.push('name=' + encodeURIComponent(namensSuche));
     if (sortierung !== 'einfach') teile.push('sort=' + sortierung);
     if (nurGeraet) teile.push('geraet=' + encodeURIComponent(nurGeraet));
     history.replaceState(null, '', teile.length ? '?' + teile.join('&') : location.pathname);
@@ -612,6 +634,7 @@
       var kv = p.split('=');
       var k = decodeURIComponent(kv[0]), v = decodeURIComponent(kv[1] || '');
       if (k === 'unbekannt') { mitUnbekannt = v !== '0'; return; }
+      if (k === 'name') { namensSuche = v; return; }
       if (k === 'nicht' || k === 'naechste') { mitNicht = v === '1'; return; }   // naechste: alter Name
       if (k === 'sort') { sortierung = v; return; }
       if (k === 'geraet') { nurGeraet = v; return; }
@@ -621,6 +644,7 @@
     });
     $('#finder-unbekannt').checked = !mitUnbekannt;
     $('#finder-nicht').checked = mitNicht;
+    $('#finder-name').value = namensSuche;
     $('#finder-sortierung').value = sortierung;
   }
 
@@ -656,7 +680,14 @@
         $('#finder-unbekannt').addEventListener('change', function (e) { mitUnbekannt = !e.target.checked; neu(); });
         $('#finder-nicht').addEventListener('change', function (e) { mitNicht = e.target.checked; neu(); });
         $('#finder-sortierung').addEventListener('change', function (e) { sortierung = e.target.value; neu(); });
-        $('#finder-leeren').addEventListener('click', function () { wahl = {}; nurGeraet = null; neu(); });
+        var warte = null;
+        $('#finder-name').addEventListener('input', function (e) {
+          clearTimeout(warte);
+          warte = setTimeout(function () { namensSuche = e.target.value.trim(); neu(); }, 200);
+        });
+        $('#finder-leeren').addEventListener('click', function () {
+          wahl = {}; nurGeraet = null; namensSuche = ''; $('#finder-name').value = ''; neu();
+        });
         neu();
         });
       });

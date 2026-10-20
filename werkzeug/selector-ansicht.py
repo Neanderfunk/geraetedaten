@@ -558,6 +558,21 @@ def facetten(d):
     fa['luefter'] = (False if nein(lu['wert']) else True if ja(lu['wert']) else None) if lu else None
     fa['versionen'] = versionen_lage(d, s)
     fa['nicht_unterstuetzt'] = nicht_unterstuetzt(d) or None
+    # weitere Namen fuer die Namenssuche auf routerwahl: andere_namen und der
+    # Geizhals-Artikelname (aus dem Permalink), beides nur kurz und ohne Quellen
+    namen = []
+    for e in f.get('andere_namen', []):
+        if isinstance(e, dict) and not e.get('widerlegt'):
+            w = e.get('wert')
+            for t in (w if isinstance(w, list) else [w]):
+                t = text(t)
+                if t and len(t) <= 80 and t not in namen:
+                    namen.append(t)
+    for e in f.get('geizhals_url', []):
+        m = re.search(r'/([a-z0-9.+-]+)-a\d+\.html$', e.get('wert', '') if isinstance(e, dict) else '')
+        if m and m.group(1).replace('-', ' ') not in namen:
+            namen.append(m.group(1).replace('-', ' '))
+    fa['namen'] = namen[:12] or None
     gz = s.get('geizhals_url')
     fa['geizhals'] = gz['wert'] if gz and gz['wert'].startswith('https://geizhals.') else None
     fa['unsicher'] = sorted(set(unsicher)) or None
