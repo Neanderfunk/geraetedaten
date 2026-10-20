@@ -1,0 +1,2433 @@
+{
+  "image": "netgear-rbs50",
+  "modell": "NETGEAR Orbi Satellite RBS50 (v1)",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-20",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "19353557",
+      "bemerkung": "Dump-Stand älter als die Live-Seite: Flash '4096 eMMC', Verfügbarkeit 'unknown 2022', aktuell 22.03.5, Bootloader ¿, FCC-ID leer"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50?do=export_raw",
+      "stand": "Seitenrevision 2026-09-09 23:10",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Live-Seite: Version v1, FCC PY316200341, Discontinued 2023, aktuell 25.12.2, Flash '32, eMMC', Bootloader CFE, seriell 3.3 V, Outdoor No, Gluon support unknown"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/netgear/rbs_50?do=export_raw",
+      "stand": "Seitenrevision 2026-09-09 23:07",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Geräteseite v1; OEM-Bootlog ohne Modellangabe, der 'OpenWrt bootlog' stammt laut 'Machine model: NETGEAR RBR50' vom Router RBR50"
+    },
+    "openwrt_wiki_bild_seriell": {
+      "url": "https://openwrt.org/_media/media/netgear/rbs50v1/rbs50-v1_serial_ports.jpg",
+      "stand": "Bild auf Wiki-Seite, Seitenrevision 2026-09-09 23:07",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet"
+    },
+    "openwrt_wiki_bild_typenschild": {
+      "url": "https://openwrt.org/_media/media/netgear/rbs50v1/rbs50-v1_case_label.jpg",
+      "stand": "Bild auf Wiki-Seite, Seitenrevision 2026-09-09 23:07",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet (Typenschild Rückseite, int. Fassung ohne FCC-Zeile)"
+    },
+    "openwrt_git": {
+      "url": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+      "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Unterstützung SRR60/SRS60 und RBR50/RBS50; getestet nur an SRS60 und RBR50"
+    },
+    "openwrt_git_dsa": {
+      "url": "https://github.com/openwrt/openwrt/commit/8d921167e9",
+      "stand": "Commit 2022-10-04",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "ipq40xx: convert to DSA and enable Netgear Orbi devices"
+    },
+    "openwrt_git_split": {
+      "url": "https://github.com/openwrt/openwrt/commit/314dbb7fec81c8fbadf22f87837ae98dbd268a29",
+      "stand": "Commit 2025-11-22 (Autor), gemergt 2025-12-16",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Router/Satellit getrennt: Satellit alle Ports 'Ethernet' (lan1-lan4), in openwrt-25.12, nicht in openwrt-24.10"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=RBS50+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-20 (2 Commits)",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4019-rbs50.dts",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "dateien": [
+        "qcom-ipq4019-rbs50.dts",
+        "qcom-ipq4019-orbi-satellite.dtsi",
+        "qcom-ipq4019-orbi.dtsi"
+      ]
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/image/generic.mk",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_02_network": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/base-files/etc/board.d/02_network",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "main und openwrt-25.12: lan1-4; openwrt-24.10: lan1-3 + wan"
+    },
+    "openwrt_02_network_2410": {
+      "url": "https://github.com/openwrt/openwrt/blob/openwrt-24.10/target/linux/ipq40xx/base-files/etc/board.d/02_network",
+      "stand": "Branch openwrt-24.10 am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_git": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/ad3f7237240ac52c7cef5c29a48cf0e0706b9e12",
+      "stand": "Commit 2025-11-17, enthalten ab Gluon v2025.1 (2025-12-31)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "ipq40xx-generic: add support for Netgear RBR50v1/RBS50v1; Gluon-Releases v2025.1, v2025.1.1-3 enthalten den Commit"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ipq40xx-generic",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+      "stand": "Seitenrevision 2019-07-05 02:58",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Seite angelegt 2017-05-30, 5 Bearbeitungen"
+    },
+    "deviwiki_rbr50": {
+      "url": "https://deviwiki.com/wiki/Netgear_Orbi_Router_(RBR50)",
+      "stand": "Abruf 2026-10-20 (Revision nicht ermittelt)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Router-Gegenstück, nur für RAM-Hersteller (Nanya) herangezogen"
+    },
+    "deviwiki_v2": {
+      "url": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50v2)",
+      "stand": "Abruf 2026-10-20 (Revision nicht ermittelt)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "RBS50v2, andere FCC-ID, von OpenWrt nicht unterstützt"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/Netgear_Orbi_Satellite_(RBS50)",
+      "stand": "Abruf 2026-10-20 (Revision nicht ermittelt, action=info gesperrt)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Spiegel, inhaltlich wie DeviWiki (Formatunterschiede)"
+    },
+    "fcc": {
+      "url": "https://fccid.io/PY316200341",
+      "stand": "Grant 2016-08-23, letzte Änderung 2018-07-17",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Orbi Router, Orbi Pro Router, Orbi Satellite, Orbi Pro Satellite (RBR50, RBS50, SRR60, SRS60); Testlabor Bureau Veritas Taoyuan"
+    },
+    "fcc_kurzanleitung": {
+      "url": "https://fccid.io/PY316200341/User-Manual/Users-Manual-3108569",
+      "stand": "Exhibit 2017-02-19 (Quick Start Guide Juni 2016, PDF 2016-08-16)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Orbi Router and Orbi Satellite Quick Start Guide, 2 Seiten"
+    },
+    "fcc_typenschild": {
+      "url": "https://fccid.io/PY316200341/Label/Label-Sample-RBS50-3108557",
+      "stand": "Exhibit 2016-08-23 (Zeichnung AW-13528-01 Rev 03, 2016-06-06)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet (150 und 600 dpi Ausschnitt)"
+    },
+    "fcc_innenfotos": {
+      "url": "https://fccid.io/PY316200341/Internal-Photos/Internal-Photos-RBR50-RBS50-rev-pdf-3926901",
+      "stand": "Exhibit 2019-01-13 (PDF 2018-07-13)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Internal Photos_RBR50, RBS50 rev, 11 Seiten, Übersicht als Bild ausgewertet"
+    },
+    "fcc_testbericht": {
+      "url": "https://fccid.io/PY316200341/Test-Report/Test-Report-DTS-WLAN-rev-2-pdf-3926909",
+      "stand": "Bericht RF160621C27V, PDF 2018-07-17",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Test Report (DTS-WLAN) rev 2, Testmodell RBR50, Serienmodelle RBS50/SRR60/SRS60"
+    },
+    "fcc_aenderung_2018": {
+      "url": "https://fccid.io/PY316200341/Letter/Description-of-Change-rev-1-pdf-3926898",
+      "stand": "Exhibit 2019-01-13 (Brief 2018-07)",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_aenderung_2017": {
+      "url": "https://fccid.io/PY316200341/Letter/Cover-Letter-Description-of-Change-rev-2-pdf-3510567",
+      "stand": "Brief 2017-08-14",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_v2": {
+      "url": "https://fccid.io/PY318300419",
+      "stand": "Grant 2018-12-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "RBS50v2 (andere Hardware)"
+    },
+    "fcc_v2_typenschild": {
+      "url": "https://fccid.io/PY318300419/Label/Label-4110884",
+      "stand": "Exhibit 2018-12-20 (Zeichnung AW-14109-01 Rev 02, 2018-09-10)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "19353557",
+      "devicetype": "WiFi Router",
+      "brand": "NETGEAR",
+      "model": "RBS50",
+      "version": "NULL",
+      "fccid": "http://¿",
+      "availability": "unknown 2022",
+      "whereavailable": "¿",
+      "supportedsincecommit": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+      "supportedsincerel": "22.03.0",
+      "supportedcurrentrel": "22.03.5",
+      "unsupported_functions": "NULL",
+      "target": "ipq40xx",
+      "subtarget": "generic",
+      "packagearchitecture": "arm_cortex-a7_neon-vfpv4",
+      "bootloader": "¿",
+      "cpu": "Qualcomm Atheros IPQ4019",
+      "cpucores": "4",
+      "cpumhz": "717",
+      "flashmb": "4096 eMMC",
+      "rammb": "512",
+      "ethernet100mports": "-",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "4",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "Qualcomm Atheros QCA8075",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "Qualcomm Atheros IPQ4019,Qualcomm Atheros QCA9984",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "a/n/ac",
+      "wlancomments": "",
+      "wlandriver": "ath10k-ct",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "1x 2.0",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "115200 / 8N1",
+      "jtag": "¿",
+      "ledcount": "10",
+      "buttoncount": "2",
+      "gpios": "-",
+      "powersupply": "12 VDC, 3.5 A",
+      "devicepage": "",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "RBS50",
+      "gitsearch": "RBS50",
+      "wikideviurl": "https://wikidevi.wi-cat.ru/Netgear_Orbi_Satellite_(RBS50)",
+      "oemdevicehomepageurl": "http://¿",
+      "firmwareoemstockurl": "http://¿",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/22.03.5/targets/ipq40xx/generic/openwrt-22.03.5-ipq40xx-generic-netgear_rbs50-squashfs-factory.img",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/22.03.5/targets/ipq40xx/generic/openwrt-22.03.5-ipq40xx-generic-netgear_rbs50-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-netgear_rbs50-squashfs-factory.img",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-netgear_rbs50-squashfs-sysupgrade.bin",
+      "installationmethods": "GUI OEM,nmrpflash,see git-commit",
+      "commentinstallation": "",
+      "recoverymethods": "nmrpflash",
+      "commentrecovery": "",
+      "picture": "media:example:genericrouter1.png",
+      "comments": "",
+      "page": "toh:hwdata:netgear:netgear_rbs50"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi Router",
+      "Brand": "NETGEAR",
+      "Model": "RBS50",
+      "Versions": "v1",
+      "FCCID_urls": "https://fcc.io/PY316200341",
+      "Availability_availability": "Discontinued 2023",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+      "Supported Since Rel_releasesince": "22.03.0",
+      "Supported Current Rel_releasecurrent": "25.12.2",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "unknown",
+      "Target_target": "ipq40xx",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "arm_cortex-a7_neon-vfpv4",
+      "Bootloader_bootloader": "CFE",
+      "CPU": "Qualcomm Atheros IPQ4019",
+      "CPU Cores_numcores_": "4",
+      "CPU MHz": "717",
+      "Flash MB_mbflashs": "32, eMMC",
+      "RAM MB_mbram": "512",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "4",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "Qualcomm Atheros QCA8075",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Qualcomm Atheros IPQ4019, Qualcomm Atheros QCA9984",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN 6.0GHz_wlan60": "-",
+      "WLAN 60.0GHz_wlan60g": "-",
+      "WLAN Comments_": "MIMO 4x4 for backhaul AC, 2x2 for client 2.4Ghz and 5Ghz, Tri-band",
+      "WLAN driver_wlan-drivers": "ath10k-ct",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "USB ports_port-usbs": "1x 2.0",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "10",
+      "Button count_numbutton": "2",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "12 VDC, 3.5A via barrel",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:netgear:rbs_50",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "RBS50",
+      "Git search_search-gits": "RBS50",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/Netgear_Orbi_Satellite_(RBS50)",
+      "WikiDevi ID_hwinfo-ids": "Netgear_Orbi_Satellite_(RBS50)",
+      "OEM Device Homepage URL_url": "https://www.netgear.com/support/product/rbs50/",
+      "Firmware OEM Stock URL_url": "https://www.downloads.netgear.com/files/GDC/RBK50/RBS50-V2.7.6.6.zip",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/ipq40xx/generic/openwrt-25.12.2-ipq40xx-generic-netgear_rbs50-squashfs-factory.img",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/ipq40xx/generic/openwrt-25.12.2-ipq40xx-generic-netgear_rbs50-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-netgear_rbs50-squashfs-factory.img",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-ipq40xx-generic-netgear_rbs50-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "GUI OEM, see git-commit",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "",
+      "Comment recovery": "",
+      "Picture_img100s": "https://www.netgear.com/zone3/cid/fit/1024x633/to/jpg/https/www.netgear.com/in/media/RBS50_productcarousel_hero_image_tcm165-98541.png",
+      "Comments_": ""
+    },
+    "openwrt_wiki": {
+      "einleitung": "The RBS50 is the satellite part of the RBK50 kit, which consists of a router and one or more satellites, all of them being AC-3000 devices. The current instructions are for the v1 of the RBK50 devices only! There currently is no stable v2 release.",
+      "supported_versions": {
+        "v1": "ToH-Tabelle",
+        "v2": "Currently not supported."
+      },
+      "installation_v1": "NMRPflash Method (Port near the power button, reset button held with a pin while powering on, power LED flashes red; factory image) / Vendor-UI Method (Vendor web interface flashes the partition currently not booted; switch to boot partition 2 first, then flash factory image via Vendor-UI)",
+      "revert_to_stock": "nmrpflash with official Netgear firmware (e.g. RBS50-V2.2.1.210.img)",
+      "debricking_v1": "nmrpflash",
+      "flash_layout": "FIXME (nicht ausgefüllt)",
+      "network_interfaces": "FIXME, nur EXAMPLE-Werte",
+      "buttons": {
+        "Reset": "restart",
+        "WPS": "wps"
+      },
+      "opening_the_case": [
+        "Remove the label on the backside to reveal two screws",
+        "Unscrew the screws using a TR10 (Torx) bit",
+        "Remove the two smaller rubber feets on the bottom",
+        "Slide the front part of the case (with the \"Orbi\" text) down a bit",
+        "\"Unfold\" the case"
+      ],
+      "main_pcb": "Insert photo of PCB (fehlt)",
+      "serial": "Foto rbs50-v1_serial_ports.jpg; Serial connection parameters for NETGEAR RBS 50 v1: 115200, 8N1, Voltage unknown",
+      "jtag": "nicht dokumentiert",
+      "hardware_mods": "None so far.",
+      "oem_bootlog_auszug": [
+        "U-Boot 2012.07 [Barrier Breaker unknown,unknown] (Jan 04 2017 - 13:54:09)",
+        "U-boot dni1 V1.4 for DNI HW ID: 29765352; NOR flash 32MB; EMMC flash 4000MB; RAM 512MB",
+        "DRAM:  512 MiB",
+        "ipq_spi: SPI Flash not found (bus/cs/speed/mode) = (0/0/48000000/0)",
+        "MMC:   qca_mmc: 0",
+        "Machine model: Qualcomm Technologies, Inc. IPQ40xx/AP-DK04.1-C1",
+        "Flash name: EMMC",
+        "mmcblk0: mmc0:0001 4FPD3R 3.64 GiB",
+        "S - DDR Frequency, 672 MHz",
+        "wifi0: boardData_1_0_IPQ4019_DK04_2G.bin; wifi1: boardData_1_0_IPQ4019_DK04_5G.bin; QCA9984: boardData_QCA9984_CUS239_high_band_5G_v1_006.bin"
+      ],
+      "openwrt_bootlog_auszug": [
+        "OF: fdt: Machine model: NETGEAR RBR50 (Bootlog stammt vom Router, nicht vom RBS50)",
+        "Memory: 505776K/524288K available",
+        "mmcblk0: mmc0:0001 4FPD3R 3.64 GiB"
+      ],
+      "notes": {
+        "boot_partition": "Uboot shell via UART: boot_partition_show / boot_partition_set 1",
+        "mac": {
+          "LAN": "XX:XX:XX:XX:XX:69",
+          "WAN": "XX:XX:XX:XX:XX:6a",
+          "WIFI 2G": "XX:XX:XX:XX:XX:6a",
+          "WIFI 5G": "XX:XX:XX:XX:XX:6b",
+          "WIFI 5G (2nd)": "XX:XX:XX:XX:XX:6c",
+          "LABEL": "XX:XX:XX:XX:XX:69"
+        }
+      },
+      "bilder": [
+        "rbs50-v1_front.jpg",
+        "rbs50-v1_case_front.jpg",
+        "rbs50-v1_case_back.jpg",
+        "rbs50-v1_case_label.jpg",
+        "rbs50-v1_case_no_label.jpg",
+        "rbs50-v1_case_slide_down.jpg",
+        "rbs50-v1_case_open.jpg",
+        "rbs50-v1_serial_ports.jpg"
+      ]
+    },
+    "openwrt_wiki_bild_seriell": {
+      "beschriftung": "4-polige bestückte Stiftleiste neben einem Block Jumper-Stiftleisten (BR957-BR960, BR182); von links: Pin unbeschriftet, TXD, RXD, GND (rote Pfeile des Wiki-Autors)",
+      "daneben": "Lötpunkte P43 mit Aufdruck 'eMMC' / 'SPI NAND'"
+    },
+    "openwrt_wiki_bild_typenschild": {
+      "text": "NETGEAR Orbi Satellite RBS50; WiFi Network Name (SSID); Network Key (Password); SERIAL; MAC; Part-15-Hinweis; NETGEAR INTL LTD Cork, Ireland; Polaritätssymbol Mitte plus; 12V ⎓ 3.5A; RCM; R-NZ; CE; KC MSIP-CMM-NGR-RBK50; WEEE; Made in China; 272-12691-04",
+      "versionsangabe": "keine"
+    },
+    "openwrt_git": {
+      "titel": "ipq40xx: add support for Netgear SRR60/SRS60 and RBR50/RBS50",
+      "hardware": {
+        "SoC": "Qualcomm IPQ4019 (717 MHz, 4 cores 4 threads)",
+        "RAM": "512MB DDR3",
+        "FLASH": "4GB EMMC",
+        "ETH": [
+          "3x 10/100/1000 Mbps Ethernet",
+          "1x 10/100/1000 Mbps Ethernet (WAN)"
+        ],
+        "WIFI": [
+          "2.4GHz: 1x IPQ4019 (2x2:2)",
+          "5GHz: 1x IPQ4019 (2x2:2)",
+          "5GHz: 1x QCA9984 (4x4:4)",
+          "6 internal antennas"
+        ],
+        "BTN": [
+          "1x Reset button",
+          "1x Sync button",
+          "1x ON/OFF button"
+        ],
+        "LEDS": [
+          "8 leds controlled by TLC59208F (they can be switched on/off independendently but the color can by changed by GPIOs)",
+          "1x Red led (Power)",
+          "1x Green led (Power)"
+        ],
+        "UART": "115200-8-N-1"
+      },
+      "hinweise": [
+        "The RBR50 and RBS50 (sold together as RBK50) have a different external shape but they have an USB 2.0 port on the back.",
+        "This patch has been tested only on SRS60 and RBR50, but should work on SRR60 and RBS50.",
+        "These routers have a dual partition system. However this firmware works only on boot partition 1 and the OEM web interface will always flash on the partition currently not booted.",
+        "NMRPflash: connect your pc to the router using the port near the power button."
+      ],
+      "mac": {
+        "LAN": "XX:XX:XX:XX:XX:69",
+        "WAN": "XX:XX:XX:XX:XX:6a",
+        "WIFI 2G": "XX:XX:XX:XX:XX:69",
+        "WIFI 5G": "XX:XX:XX:XX:XX:6b",
+        "WIFI 5G (2nd)": "XX:XX:XX:XX:XX:6c",
+        "LABEL": "XX:XX:XX:XX:XX:69"
+      }
+    },
+    "openwrt_git_split": {
+      "titel": "ipq40xx: split orbi devices in router and satellite",
+      "text": "Router units have a designated WAN port while satellite units have all available ports labeled as \"Ethernet\".",
+      "pr": "https://github.com/openwrt/openwrt/pull/20877"
+    },
+    "openwrt_dts": {
+      "model": "NETGEAR RBS50",
+      "compatible": "netgear,rbs50",
+      "include": "qcom-ipq4019-orbi-satellite.dtsi -> qcom-ipq4019-orbi.dtsi",
+      "rootfs": "root=/dev/mmcblk0p20 (eMMC)",
+      "ports": [
+        "lan1",
+        "lan2",
+        "lan3",
+        "lan4"
+      ],
+      "usb": "usb2 und usb3 Controller aktiviert",
+      "qca9984": "ieee80211-freq-limit = <5470000 5875000>; calibration-variant Netgear-Orbi-Pro-SRK60",
+      "ipq4019_wifi": "calibration-variant Netgear-Orbi-Pro-SRK60",
+      "keys": {
+        "reset": "GPIO 18, KEY_RESTART",
+        "wps": "GPIO 49, KEY_WPS_BUTTON"
+      },
+      "leds": "Power grün (GPIO 63), Power rot (GPIO 64), Status grün/rot/blau/weiß (GPIO 53/54/57/60), 8 weiße Backlight-LEDs am TLC59208F (I2C 0x27)",
+      "uart": "blsp1_uart1 auf gpio16/gpio17",
+      "label_mac": "gmac"
+    },
+    "openwrt_image_mk": {
+      "device": "netgear_rbs50 (über netgear_rbx50 -> netgear_orbi)",
+      "DEVICE_MODEL": "RBS50",
+      "DEVICE_VARIANT": "v1",
+      "NETGEAR_BOARD_ID": "RBS50",
+      "NETGEAR_HW_ID": "29765352+0+4000+512+2x2+2x2+4x4",
+      "KERNEL_SIZE": "3932160",
+      "ROOTFS_SIZE": "32243712",
+      "IMAGE_SIZE": "36175872",
+      "DEVICE_PACKAGES": "e2fsprogs kmod-fs-ext4 losetup kmod-leds-tlc591xx ath10k-firmware-qca9984-ct",
+      "factory": "factory.img (netgear-dni)"
+    },
+    "openwrt_02_network": {
+      "main": "netgear,rbs50: ucidef_set_interface_lan \"lan1 lan2 lan3 lan4\"",
+      "openwrt-25.12": "netgear,rbs50: ucidef_set_interface_lan \"lan1 lan2 lan3 lan4\"",
+      "openwrt-24.10": "netgear,rbs50: ucidef_set_interfaces_lan_wan \"lan1 lan2 lan3\" \"wan\""
+    },
+    "gluon_git": {
+      "titel": "ipq40xx-generic: add support for Netgear RBR50v1/RBS50v1",
+      "text": "Even though the RBS50 has no wan port labeled, they are both configured identical, so the leftmost port is WAN on both devices.",
+      "device": "device('netgear-rbs50', 'netgear_rbs50', { factory_ext = '.img', packages = ATH10K_PACKAGES_IPQ40XX_QCA9984 })",
+      "supported_devices": "RBS50 (v1)"
+    },
+    "deviwiki": {
+      "brand": "Netgear",
+      "model": "Orbi Satellite",
+      "revision": "RBS50",
+      "asin": "B01LZG4KPC;US;",
+      "newegg": "N82E16833122915",
+      "price": "250",
+      "est_release_date": "11/01/2016",
+      "fcc_date": "08/23/2016",
+      "manuf_country": "China",
+      "is_manuf": "No",
+      "availability": "new",
+      "type": "wireless router",
+      "fcc_id": "PY316200341",
+      "pwr_v": "12",
+      "pwr_amp": "3.5",
+      "pwr_conn": "barrel",
+      "cpu1_brand": "Qualcomm",
+      "cpu1_model": "IPQ4019",
+      "cpu1_cspeed": "710 MHz",
+      "cpu1_cores": "4",
+      "fla1": "32 MiB",
+      "fla1_brand": "Winbond",
+      "fla1_model": "W25Q256FVFG",
+      "ram1": "512 MiB",
+      "expansion_if_types": "USB 2.0",
+      "expansion_usb_num": "1",
+      "wi1_chip1_brand": "Qualcomm",
+      "wi1_chip1_model": "IPQ4019",
+      "wi1_chip2_brand": "Qualcomm",
+      "wi1_chip2_model": "IPQ4019",
+      "wi1_802dot11_protocols": "abgn+ac",
+      "wi1_txchains": "2",
+      "wi1_rxchains": "2",
+      "wi1_sstreams": "2",
+      "wi2_chip1_brand": "Qualcomm Atheros",
+      "wi2_chip1_model": "QCA9984",
+      "wi2_802dot11_protocols": "an+ac",
+      "wi2_txchains": "4",
+      "wi2_rxchains": "4",
+      "wi2_sstreams": "4",
+      "eth_cpu": "true",
+      "sw_brand": "Qualcomm Atheros",
+      "sw_model": "QCA8075",
+      "lan_speed": "1G",
+      "lan_ports": "4",
+      "wan_ports": "0",
+      "addl_chips": "2.4GHz WLAN Power Amplifier Module;Skyworks;SKY2623L;;2; ,,,\n5GHz WLAN Power Amplifier Module;RFMD;RFPA5542;;2; ,,,\n5GHz Backhaul Power Amplifier Module;RFMD;RFPA5542;;4; ,,,\nBluetooth 4.1 SoC;Cambridge Silicon Radio (CSR);CSR8811;;1;",
+      "flags": "Wave2, MU-MIMO, Bluetooth LE,",
+      "stock_boot": "CFE",
+      "stock_os": "Linux",
+      "802dot11_protocols": "abgn+ac",
+      "default_ssid": "ORBI50",
+      "default_ip": "192.168.1.1",
+      "default_user": "admin",
+      "default_pass": "password",
+      "expansion_sfp_num": "",
+      "_text": "<div style=\"border: solid thin gray; background-color: #EDEDED; overflow:auto; width:480px;\"><small>\n:• '''1733Mbps''' - 4-stream 802.11ac backhaul (433Mbps per stream),\n:• '''866Mbps''' - 2-stream 802.11ac device (433Mbps per stream),\n:• '''400Mbps''' - QAM-256 2.4GHz channel = '''''3000 Mbps'' class'''\n</small></div>\n<span style=\"color: darkblue;\"><big>{{TagLine|Orbi High-Performance AC3000 Tri-Band WiFi Satellite}}</big></span>\n<br><small>''802.11ac Two-Stream Wave2 WiFi plus Dedicated Quad-Stream Wireless Backhaul''</small>\n:{{ProductPage|https://www.netgear.com/orbi/rbk50.aspx}} {{SupportPage|vendor=Netgear|model=rbs50}}\n\nIdentical to the [[Netgear Orbi Router (RBR50)]] except all four ethernet ports are for LAN.\n\n*Netgear Orbi Kit (RBK50): Orbi Router (RBR50) + Orbi Satellite (RBS50)\n*Netgear Orbi Kit (RBK53): Orbi Router (RBR50) + 2x Orbi Satellite (RBS50)\n\n:Setup GUI available at http://orbilogin.com when connected via Wi-Fi.\n\n===Product features===\n*Dedicated four stream 802.11ac wireless backhaul\n*4 GB of flash is claimed by Netgear\n\n===Reviews===\n*[https://www.smallnetbuilder.com/wireless/wireless-reviews/33028-netgear-orbi-reviewed ''NETGEAR Orbi'' on '''SmallNetBuilder''']\n\n===Forum threads===\n*[https://community.netgear.com/t5/Orbi/Orbi-Router-Firmware-RBR50/td-p/1130054 ''Orbi Router Firmware RBR50'' on '''NETGEAR Community''']\n:Mentions that the stock firmware is a variant of OpenWRT\n\n===See also===\n*[[List of Four Stream Hardware]]\n*[[Netgear Orbi Router (RBR50)]] - [[Netgear]] ''Orbi Router'' • [http://www.netgear.com/home/products/networking/orbi/ PPage]\n:[[Qualcomm]] IPQ4019 (Dakota) 2x 2T2R, QCA9984 (Cascade) 4T4R AC\n*[[Netgear Orbi Satellite (RBS50)]] - [[Netgear]] ''Orbi Satellite'' • ''Orbi Kit (RBK50)''\n:[[Qualcomm]] IPQ4019 (Dakota) 2x 2T2R, QCA9984 (Cascade) 4T4R AC\n*[[Netgear Orbi Router (RBR40)]] - \n*[[Netgear Orbi Satellite (RBS40)]] - \n*[[Netgear Orbi Wall Plug Satellite (RBW30)]] - \n*Netgear Orbi WiFi System ([https://www.netgear.com/orbi/rbk50.aspx RBK50]) - AC3000 (RBR50 + RBS50)\n*Netgear Orbi WiFi System ([https://www.netgear.com/orbi/rbk40.aspx RBK40]) - AC2200 (RBR40 + RBS40)\n*Netgear Orbi WiFi System ([https://www.netgear.com/orbi/rbk30.aspx RBK30]) - AC2200 (RBR40 + RBW30)\n\n__NOTOC__"
+    },
+    "deviwiki_rbr50_auszug": {
+      "fla1": "32",
+      "fla1_brand": "Winbond",
+      "fla1_model": "W25Q256FVFG",
+      "ram1": "512",
+      "ram1_brand": "Nanya",
+      "pwr_v": "12",
+      "pwr_amp": "3.5",
+      "pwr_conn": "barrel",
+      "fcc_id": "PY316200341"
+    },
+    "deviwiki_v2": {
+      "brand": "Netgear",
+      "model": "Orbi Satellite",
+      "revision": "(RBS50v2)",
+      "series": "AC3000",
+      "fcc_date": "12/20/2018",
+      "manuf_country": "China",
+      "is_manuf": "No",
+      "type": "wireless system",
+      "fcc_id": "PY318300419",
+      "pwr_v": "12",
+      "pwr_amp": "2.5",
+      "pwr_conn": "barrel",
+      "wi1_802dot11_protocols": "abgn+ac",
+      "wi1_txchains": "2",
+      "wi1_rxchains": "2",
+      "wi1_sstreams": "2",
+      "wi2_802dot11_protocols": "an+ac",
+      "wi2_txchains": "4",
+      "wi2_rxchains": "4",
+      "wi2_sstreams": "4",
+      "802dot11_protocols": "abgn+ac"
+    },
+    "wikidevi": {
+      "brand": "Netgear",
+      "model": "Orbi Satellite",
+      "revision": "RBS50",
+      "series": "AC3000",
+      "asin": "B01LZG4KPC;US;",
+      "newegg": "N82E16833122915",
+      "price": "250",
+      "manuf_country": "China",
+      "is_manuf": "No",
+      "availability": "now",
+      "est_release_date": "11/01/2016",
+      "fcc_date": "08/23/2016",
+      "fcc_id": "PY316200341",
+      "type": "wireless system",
+      "pwr_v": "12",
+      "pwr_amp": "3.5",
+      "pwr_conn": "barrel",
+      "cpu1_brand": "Qualcomm",
+      "cpu1_model": "IPQ4019",
+      "cpu1_cspeed": "710",
+      "cpu1_cores": "4",
+      "fla1": "32",
+      "fla1_brand": "Winbond",
+      "fla1_model": "W25Q256FVFG",
+      "ram1": "512",
+      "expansion_if_types": "USB 2.0",
+      "expansion_usb_num": "1",
+      "wi1_chip1_brand": "Qualcomm",
+      "wi1_chip1_model": "IPQ4019",
+      "wi1_chip2_brand": "Qualcomm",
+      "wi1_chip2_model": "IPQ4019",
+      "wi1_802dot11_protocols": "abgn+ac",
+      "wi1_txchains": "2",
+      "wi1_rxchains": "2",
+      "wi1_sstreams": "2",
+      "wi2_chip1_brand": "Qualcomm Atheros",
+      "wi2_chip1_model": "QCA9984",
+      "wi2_802dot11_protocols": "an+ac",
+      "wi2_txchains": "4",
+      "wi2_rxchains": "4",
+      "wi2_sstreams": "4",
+      "eth_cpu": "true",
+      "sw_brand": "Qualcomm Atheros",
+      "sw_model": "QCA8075",
+      "lan_speed": "1GbE",
+      "lan_ports": "4",
+      "addl_chips": "2.4GHz WLAN Power Amplifier Module;Skyworks;SKY2623L;;2; ,,,\n5GHz WLAN Power Amplifier Module;RFMD;RFPA5542;;2; ,,,\n5GHz Backhaul Power Amplifier Module;RFMD;RFPA5542;;4; ,,,\nBluetooth 4.1 SoC;Cambridge Silicon Radio (CSR);CSR8811;;1;",
+      "flags": "Wi-Fi 5, Wave2, MU-MIMO, Bluetooth 4.1 LE",
+      "stock_boot": "CFE",
+      "stock_os": "Linux",
+      "802dot11_protocols": "abgn+ac",
+      "default_ssid": "ORBI50",
+      "default_ip": "192.168.1.1",
+      "default_user": "admin",
+      "default_pass": "password",
+      "_text": "<div style=\"border: solid thin gray; background-color: #EDEDED; overflow:auto; width:500px;\"><small>\n:• '''1733Mbps''' - 4-stream 802.11ac backhaul (433Mbps per stream),\n:• '''866Mbps''' - 2-stream 802.11ac device (433Mbps per stream),\n:• '''400Mbps''' - QAM-256 2.4GHz channel = '''''AC3000'' class'''\n</small></div>\n{{TagLine|Orbi High-Performance AC3000 Tri-Band WiFi Satellite}}\n:<small>''802.11ac Two-Stream Wave2 WiFi plus Dedicated Quad-Stream Wireless Backhaul''</small>\n:{{ProductPage|https://www.netgear.com/orbi/rbk50.aspx}} {{SupportPage|vendor=Netgear|model=rbs50}}\n\nIdentical to the [[Netgear Orbi Router (RBR50)]] except all four ethernet ports are for LAN.\n\n*Netgear Orbi Kit (RBK50): Orbi Router (RBR50) + Orbi Satellite (RBS50)\n*Netgear Orbi Kit (RBK53): Orbi Router (RBR50) + 2x Orbi Satellite (RBS50)\n\n:Setup GUI available at • http://orbilogin.com when connected via Wi-Fi.\n\n===Product features===\n*4 GB of flash is claimed by [[Netgear]]\n*Dedicated four stream 802.11ac wireless backhaul\n\n===Reviews===\n*[https://www.smallnetbuilder.com/wireless/wireless-reviews/33028-netgear-orbi-reviewed ''Netgear Orbi'' on '''SmallNetBuilder''']\n\n===Forum threads===\n*[https://community.netgear.com/t5/Orbi/Orbi-Router-Firmware-RBR50/td-p/1130054 ''Orbi Router Firmware RBR50'' on '''Netgear Community''']\n:Mentions that the stock firmware is a variant of OpenWrt\n\n===See also===\n*[[Netgear Orbi Devices]] • [[List of Four Stream Hardware]]\n*[[Netgear Orbi Router (RBR50)]] - [[Netgear]] ''Orbi Router'' • [http://www.netgear.com/home/products/networking/orbi/ PPage]\n:[[Qualcomm]] IPQ4019 (Dakota) 2x 2T2R, QCA9984 (Cascade) 4T4R AC\n:*[[Netgear Orbi Satellite (RBS50)]] - [[Netgear]] ''Orbi Satellite'' • ''Orbi Kit (RBK50)''\n*[[Netgear Orbi Router (RBR40)]] - \n:*[[Netgear Orbi Satellite (RBS40)]] - \n:*[[Netgear Orbi Wall Plug Satellite (RBW30)]] - \n*Netgear Orbi WiFi System ([https://www.netgear.com/orbi/rbk50.aspx RBK50]) - AC3000 (RBR50 + RBS50)\n*Netgear Orbi WiFi System ([https://www.netgear.com/orbi/rbk40.aspx RBK40]) - AC2200 (RBR40 + RBS40)\n*Netgear Orbi WiFi System ([https://www.netgear.com/orbi/rbk30.aspx RBK30]) - AC2200 (RBR40 + RBW30)\n\n__NOTOC__"
+    },
+    "fcc": {
+      "grantee": "Netgear Incorporated (PY3)",
+      "equipment": "Orbi Router, Orbi Pro Router, Orbi Satellite, Orbi Pro Satellite",
+      "testlabor": "Bureau Veritas CPS (H.K.) Ltd., Taoyuan Branch",
+      "frequenzen": [
+        "2412-2462 MHz Original Equipment 2016-08-23",
+        "5180-5240 MHz Original Equipment 2016-08-23",
+        "2402-2480 MHz Class II 2017-08-14",
+        "5180-5240 MHz Class II 2017-08-14",
+        "5180-5240 MHz Class II 2017-12-08",
+        "2402-2480 MHz Class II 2018-07-17",
+        "5180-5240 MHz Class II 2018-07-17"
+      ],
+      "dokumente": [
+        "Users Manual 2017-02-19 1.9 MB",
+        "Users Manual (Statement)_rev 2017-02-19",
+        "Internal Photos_RBR50, RBS50 rev.pdf 2019-01-13 2.2 MB",
+        "Internal Photos_SRR60, SRS60 rev.pdf 2019-01-13 1.9 MB",
+        "Internal Photos-1.pdf / -2.pdf 2018-06-07",
+        "Internal Photos-1.pdf / -2.pdf 2018-02-10",
+        "Internal Photos_rev 2017-02-19 5.5 MB",
+        "External Photos_RBR50, RBS50 rev.pdf 2019-01-13 3 MB",
+        "External Photos_SRR60, SRS60 rev.pdf 2019-01-13",
+        "External Photos.pdf 2018-06-07",
+        "External Photos_rev.pdf 2018-02-10",
+        "External Photos 2017-02-19 2.8 MB",
+        "Label Sample (RBR50) 2016-08-23",
+        "Label Sample (RBS50) 2016-08-23",
+        "label Location 2016-08-23",
+        "Test Setup Photos (4x)",
+        "Test Reports DTS-BT LE / DTS-WLAN / NII / DFS (2016-2018)",
+        "Attestation (DFS Master Declaration) 2017-12-08",
+        "Attestation (Channel and Mode Declaration) 2016-08-23",
+        "Cover Letters / Description of Change (2016-2018)",
+        "RF Exposure Info (MPE) (3x)"
+      ]
+    },
+    "fcc_kurzanleitung": {
+      "titel": "Orbi Router and Orbi Satellite Quick Start Guide (June 2016)",
+      "lieferumfang": [
+        "Orbi router (Model RBR50)",
+        "Orbi satellite (Model RBS50)",
+        "Ethernet cable",
+        "Power adapters (2) (varies by region)"
+      ],
+      "satellit_uebersicht": [
+        "1 Ring LED",
+        "2 Sync/WPS button",
+        "4 Ethernet ports",
+        "5 USB port",
+        "6 Power On/Off button and Power LED",
+        "7 DC Power connector",
+        "8 Reset button"
+      ],
+      "hinweis": "3 Internet port (the Orbi satellite does not have an Internet port)",
+      "aufstellung": "Place the Orbi satellite in the middle of your house to get the best WiFi coverage.",
+      "leds": "Power LED on the back; ring LED pulses white, magenta (keine Verbindung), green/amber (Verbindungsqualität)"
+    },
+    "fcc_typenschild": {
+      "titel": "RBS50,NAS,PLBL,AW,V1 (P/N AW-13528-01 Rev 03)",
+      "text": "NETGEAR Orbi Satellite RBS50; WiFi Network Name (SSID); Network Key (Password); SERIAL; MAC; FCC ID: PY316200341; Polaritätssymbol Mitte plus; 12V ⎓ 3.5A; Made in China; 272-12679-01",
+      "qr": "NETGEAR SERIAL NUMBER,MAC ADDRESS"
+    },
+    "fcc_innenfotos": {
+      "seiten": "Reference No. 160621C27, 180516C02, Seiten 9-19",
+      "beschriftungen": [
+        "5G U-NII-3 Band Module 2",
+        "2.4G+5G U-NII-1Band Module 1",
+        "BT Module"
+      ],
+      "beobachtung": "großer Aluminium-Kühlkörper über der Platine, kein Lüfter; Platine mit 4 RJ45, USB-A, DC-Hohlbuchse, Stiftleisten am oberen Rand"
+    },
+    "fcc_testbericht": {
+      "test_model": "RBR50",
+      "series_model": "RBS50, SRR60, SRS60",
+      "power_supply_rating": "12Vdc from adapter",
+      "2_4ghz_output_power": "CDD Mode: 907.156mW; Beamforming NSS1 Mode: 891.322mW",
+      "2_4ghz_transfer_rate": "802.11n: up to 400Mbps",
+      "kanaele": "11 for 802.11b/g/n (HT20), 7 for 802.11n (HT40)",
+      "modelle": "All models are electrically identical except the firmware. RBS50 Orbi Satellite: Module 1, firmware RBS50_V1.1.0.16, Master mode and Client mode for 5.50 ~ 5.70GHz and 5.745 ~ 5.825GHz band. SRR60/SRS60: different housing, no USB port.",
+      "rf_module": "RF Module 1: WLAN 2.4GHz, 5.18-5.24 und 5.26-5.32 GHz; RF Module 2: 5.50-5.70 und 5.745-5.825 GHz",
+      "mimo": "2.4GHz 2TX (802.11b/g/n), Beamforming bei 802.11n",
+      "antennen": {
+        "typ": "Dipole",
+        "anschluss": "I-PEX (WLAN)",
+        "gewinn_dbi": {
+          "2.4G": 2.61,
+          "5G Band 1": 4.18,
+          "5G Band 2": 4.18,
+          "5G Band 3": 7.43,
+          "5G Band 4 Nss1": 7.43,
+          "5G Band 4 Nss2": 4.86
+        }
+      },
+      "antenna_requirement": "Antenna connector is I-PEX not a standard connector.",
+      "netzteile": [
+        {
+          "brand": "NETGEAR",
+          "model": "AD2080F20",
+          "pn": "332-10883-01",
+          "input": "100-240Vdc, 50/60Hz 1.0A",
+          "output": "12Vdc, 3.5A",
+          "kabel": "1.8m"
+        },
+        {
+          "brand": "NETGEAR",
+          "model": "2ABN042F NA",
+          "pn": "332-10888-01",
+          "input": "100-240Vdc, 50/60Hz 1.3A",
+          "output": "12Vdc, 3.5A",
+          "kabel": "1.85m"
+        }
+      ],
+      "kabel": "1.95m RJ45 non-shielded cable w/o core"
+    },
+    "fcc_aenderung_2017": {
+      "text": "1. adding BT LE function through software enabling 2. adding 2nd source of filter component and modifying EUT spec. 3. adding model names and product name for marking purpose."
+    },
+    "fcc_aenderung_2018": {
+      "text": "1. All of the RF specifications (include antenna type and location) are identical and the difference between RBR50, RBS50 & SRR60, SRS60 is USB port. 2. Added 2nd source for 2.4G RF PA, Dakota TR switch, Heat sink and DR filter."
+    },
+    "fcc_v2_typenschild": {
+      "titel": "AW,RBS50,NAS,PLBL,V2 (P/N AW-14109-01 Rev 02)",
+      "text": "NETGEAR Orbi Satellite RBS50v2; FCC ID: PY318300419; Polaritätssymbol Mitte plus; 12V ⎓ 2.5A; Made in China; 272-13137-01",
+      "revisionen": [
+        "01 INITIAL DOCUMENT CREATION 09AUG18",
+        "02 CHANGE PA RATING TO 2.5A 10SEP18"
+      ]
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "NETGEAR",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Netgear",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "Orbi Satellite RBS50",
+        "quelle": "fcc_typenschild",
+        "beleg": "https://fccid.io/PY316200341/Label/Label-Sample-RBS50-3108557",
+        "stand": "Exhibit 2016-08-23 (Zeichnung AW-13528-01 Rev 03, 2016-06-06)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Orbi Satellite RBS50",
+        "quelle": "openwrt_wiki_bild_typenschild",
+        "beleg": "https://openwrt.org/_media/media/netgear/rbs50v1/rbs50-v1_case_label.jpg",
+        "stand": "Bild auf Wiki-Seite, Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "hoch",
+        "bemerkung": "Foto eines Seriengeräts"
+      },
+      {
+        "wert": "RBS50",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Orbi Satellite (RBS50)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "v1",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "mittel",
+        "bemerkung": "Versions: v1"
+      },
+      {
+        "wert": "v1",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/image/generic.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "DEVICE_VARIANT := v1"
+      },
+      {
+        "wert": "v1",
+        "quelle": "gluon_git",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/ad3f7237240ac52c7cef5c29a48cf0e0706b9e12",
+        "stand": "Commit 2025-11-17, enthalten ab Gluon v2025.1 (2025-12-31)",
+        "sicherheit": "mittel",
+        "bemerkung": "Gluon: 'RBS50 (v1)'"
+      },
+      {
+        "wert": "v2 nicht unterstützt",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/netgear/rbs_50",
+        "stand": "Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "mittel",
+        "bemerkung": "v2: Currently not supported."
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "v1: Typenschild \"Orbi Satellite RBS50\" ohne Versionszusatz, 12V ⎓ 3.5A, FCC ID PY316200341",
+        "quelle": "fcc_typenschild",
+        "beleg": "https://fccid.io/PY316200341/Label/Label-Sample-RBS50-3108557",
+        "stand": "Exhibit 2016-08-23 (Zeichnung AW-13528-01 Rev 03, 2016-06-06)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "v1: Typenschild \"Orbi Satellite RBS50\", 12V ⎓ 3.5A, keine Versionsangabe (Fassung mit CE/RCM/KC ohne FCC-Zeile)",
+        "quelle": "openwrt_wiki_bild_typenschild",
+        "beleg": "https://openwrt.org/_media/media/netgear/rbs50v1/rbs50-v1_case_label.jpg",
+        "stand": "Bild auf Wiki-Seite, Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "hoch",
+        "bemerkung": "Typenschild unter dem Aufkleber auf der Rückseite liegen die Gehäuseschrauben"
+      },
+      {
+        "wert": "v2: Typenschild \"Orbi Satellite RBS50v2\", 12V ⎓ 2.5A, FCC ID PY318300419",
+        "quelle": "fcc_v2_typenschild",
+        "beleg": "https://fccid.io/PY318300419/Label/Label-4110884",
+        "stand": "Exhibit 2018-12-20 (Zeichnung AW-14109-01 Rev 02, 2018-09-10)",
+        "sicherheit": "hoch",
+        "bemerkung": "v2 ist andere Hardware und wird von OpenWrt/Gluon nicht unterstützt"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "PY316200341",
+        "quelle": "fcc_typenschild",
+        "beleg": "https://fccid.io/PY316200341/Label/Label-Sample-RBS50-3108557",
+        "stand": "Exhibit 2016-08-23 (Zeichnung AW-13528-01 Rev 03, 2016-06-06)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "PY316200341",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump: leer ('http://¿')"
+      },
+      {
+        "wert": "PY316200341",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "PY318300419",
+        "quelle": "fcc_v2_typenschild",
+        "beleg": "https://fccid.io/PY318300419/Label/Label-4110884",
+        "stand": "Exhibit 2018-12-20 (Zeichnung AW-14109-01 Rev 02, 2018-09-10)",
+        "sicherheit": "hoch",
+        "bemerkung": "nur RBS50v2"
+      }
+    ],
+    "kc_id": [
+      {
+        "wert": "MSIP-CMM-NGR-RBK50",
+        "quelle": "openwrt_wiki_bild_typenschild",
+        "beleg": "https://openwrt.org/_media/media/netgear/rbs50v1/rbs50-v1_case_label.jpg",
+        "stand": "Bild auf Wiki-Seite, Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "Orbi Satellite",
+          "Orbi AC3000 Satellit",
+          "Teil von RBK50 (RBR50 + RBS50)",
+          "Teil von RBK53 (RBR50 + 2x RBS50)"
+        ],
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "Teil des Kits RBK50"
+        ],
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/netgear/rbs_50",
+        "stand": "Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "varianten": [
+      {
+        "wert": "RBR50: Router-Gegenstück, gleiche Hardware, Ports als 3x LAN + 1x WAN (Internet)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "SRS60 (Orbi Pro Satellite): elektrisch gleich, anderes Gehäuse, kein USB, eigenes Image",
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/PY316200341/Test-Report/Test-Report-DTS-WLAN-rev-2-pdf-3926909",
+        "stand": "Bericht RF160621C27V, PDF 2018-07-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "RBS50v2: andere FCC-ID (PY318300419), Netzteil 12 V 2.5 A, nicht unterstützt",
+        "quelle": "deviwiki_v2",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50v2)",
+        "stand": "Abruf 2026-10-20 (Revision nicht ermittelt)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "abgekündigt 2023",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "mittel",
+        "bemerkung": "Discontinued 2023"
+      },
+      {
+        "wert": "unbekannt (2022)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "unknown 2022"
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "2016-11-01 (geschätzt)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": "est_release_date=11/01/2016; FCC-Grant 2016-08-23"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm IPQ4019",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros IPQ4019",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm IPQ4019",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 4,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 717,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 717,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 710,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": "cpu1_cspeed=710 MHz"
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "ARMv7 Cortex-A7 (arm_cortex-a7_neon-vfpv4)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 512,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 512,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 512,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 512,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/netgear/rbs_50",
+        "stand": "Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM-Bootlog 'DRAM: 512 MiB' (Gerät nicht benannt)"
+      },
+      {
+        "wert": 512,
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/image/generic.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "NETGEAR_HW_ID ...+512+..."
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR3",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Nanya",
+        "quelle": "deviwiki_rbr50",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Router_(RBR50)",
+        "stand": "Abruf 2026-10-20 (Revision nicht ermittelt)",
+        "sicherheit": "niedrig",
+        "bemerkung": "nur Hersteller, auf der RBR50-Seite; RBS50 laut DeviWiki baugleich"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 4096,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": "4GB EMMC"
+      },
+      {
+        "wert": 4096,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "4096 eMMC"
+      },
+      {
+        "wert": 32,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "mittel",
+        "bemerkung": "'32, eMMC' - Widerspruch zum Dump; 32 MB entspricht dem NOR-Wert aus U-Boot/DeviWiki"
+      },
+      {
+        "wert": 32,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": "SPI-NOR Winbond W25Q256FVFG; Text: '4 GB of flash is claimed by Netgear'"
+      },
+      {
+        "wert": 3727,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/netgear/rbs_50",
+        "stand": "Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog 'mmcblk0: 4FPD3R 3.64 GiB' (eMMC); U-Boot: 'NOR flash 32MB; EMMC flash 4000MB', aber 'SPI Flash not found'"
+      },
+      {
+        "wert": 4000,
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/image/generic.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "NETGEAR_HW_ID 29765352+0+4000+512+..."
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "eMMC",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "eMMC",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4019-rbs50.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "root=/dev/mmcblk0p20"
+      },
+      {
+        "wert": "eMMC",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "SPI-NOR (32 MiB) + eMMC (4 GB laut Netgear)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "Winbond W25Q256FVFG (SPI-NOR)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": "im OEM-Bootlog des Wikis wird kein SPI-Flash gefunden"
+      },
+      {
+        "wert": "eMMC 4FPD3R, 3.64 GiB",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/netgear/rbs_50",
+        "stand": "Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "mittel",
+        "bemerkung": "Name aus dem Bootlog, Hersteller nicht genannt"
+      }
+    ],
+    "switch": [
+      {
+        "wert": "Qualcomm Atheros QCA8075",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA8075",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": true,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": [
+          "Qualcomm IPQ4019 (2.4 GHz 2x2)",
+          "Qualcomm IPQ4019 (5 GHz 2x2)",
+          "Qualcomm QCA9984 (5 GHz 4x4)"
+        ],
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "Qualcomm Atheros IPQ4019",
+          "Qualcomm Atheros QCA9984"
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "Qualcomm IPQ4019 (2x)",
+          "Qualcomm Atheros QCA9984"
+        ],
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": "Zusatzchips: 2x Skyworks SKY2623L (2.4 GHz PA), 2x RFMD RFPA5542 (5 GHz PA), 4x RFMD RFPA5542 (Backhaul-PA), CSR8811 (Bluetooth 4.1)"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath10k-ct",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath10k (ATH10K_PACKAGES_IPQ40XX_QCA9984)",
+        "quelle": "gluon_git",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/ad3f7237240ac52c7cef5c29a48cf0e0706b9e12",
+        "stand": "Commit 2025-11-17, enthalten ab Gluon v2025.1 (2025-12-31)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n, bis 400 Mbit/s (256-QAM)",
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/PY316200341/Test-Report/Test-Report-DTS-WLAN-rev-2-pdf-3926909",
+        "stand": "Bericht RF160621C27V, PDF 2018-07-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n/ac (abgn+ac, gemeinsame Angabe für IPQ4019)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": "2x2:2"
+      },
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "WLAN Comments live: 2x2 for client 2.4Ghz and 5Ghz"
+      },
+      {
+        "wert": 2,
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/PY316200341/Test-Report/Test-Report-DTS-WLAN-rev-2-pdf-3926909",
+        "stand": "Bericht RF160621C27V, PDF 2018-07-17",
+        "sicherheit": "hoch",
+        "bemerkung": "2TX"
+      },
+      {
+        "wert": 2,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac (Wave2, MU-MIMO)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": {
+          "clients_ipq4019": 2,
+          "backhaul_qca9984": 4
+        },
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": "zwei 5-GHz-Radios"
+      },
+      {
+        "wert": {
+          "clients": 2,
+          "backhaul": 4
+        },
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "mittel",
+        "bemerkung": "MIMO 4x4 for backhaul AC, 2x2 for client, Tri-band"
+      },
+      {
+        "wert": {
+          "clients": 2,
+          "backhaul": 4
+        },
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": "866 Mbit/s Clients, 1733 Mbit/s Backhaul"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AC3000",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AC3000",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AC3000",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/netgear/rbs_50",
+        "stand": "Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "mittel",
+        "bemerkung": "AC-3000"
+      }
+    ],
+    "wlan_wave2": [
+      {
+        "wert": true,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": "flags: Wave2, MU-MIMO"
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": "2412-2462 MHz; 5180-5240 MHz (Grant); Modul 1: 2.4 GHz, 5.18-5.32 GHz; Modul 2: 5.50-5.70 und 5.745-5.825 GHz",
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/PY316200341/Test-Report/Test-Report-DTS-WLAN-rev-2-pdf-3926909",
+        "stand": "Bericht RF160621C27V, PDF 2018-07-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9984 in OpenWrt auf 5470-5875 MHz begrenzt (ieee80211-freq-limit)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4019-rbs50.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": 29.6,
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/PY316200341/Test-Report/Test-Report-DTS-WLAN-rev-2-pdf-3926909",
+        "stand": "Bericht RF160621C27V, PDF 2018-07-17",
+        "sicherheit": "hoch",
+        "bemerkung": "2.4 GHz leitungsgebunden, CDD-Modus 907.156 mW (umgerechnet), FCC-Messung, nicht EU-Grenzwert"
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "Bluetooth 4.1 LE (CSR8811)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "BT LE per Software freigeschaltet (Änderung 2017), 2402-2480 MHz",
+        "quelle": "fcc_aenderung_2017",
+        "beleg": "https://fccid.io/PY316200341/Letter/Cover-Letter-Description-of-Change-rev-2-pdf-3510567",
+        "stand": "Brief 2017-08-14",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "'-' - bezieht sich wohl auf Unterstützung unter OpenWrt"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": "6 internal antennas"
+      },
+      {
+        "wert": "intern",
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/PY316200341/Test-Report/Test-Report-DTS-WLAN-rev-2-pdf-3926909",
+        "stand": "Bericht RF160621C27V, PDF 2018-07-17",
+        "sicherheit": "hoch",
+        "bemerkung": "Dipole mit I-PEX-Steckern im Gehäuse"
+      },
+      {
+        "wert": "intern",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas: -"
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "I-PEX (intern)",
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/PY316200341/Test-Report/Test-Report-DTS-WLAN-rev-2-pdf-3926909",
+        "stand": "Bericht RF160621C27V, PDF 2018-07-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 6,
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4 GHz": 2.61,
+          "5 GHz Band 1": 4.18,
+          "5 GHz Band 2": 4.18,
+          "5 GHz Band 3": 7.43,
+          "5 GHz Band 4 (1 Stream)": 7.43,
+          "5 GHz Band 4 (2 Streams)": 4.86
+        },
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/PY316200341/Test-Report/Test-Report-DTS-WLAN-rev-2-pdf-3926909",
+        "stand": "Bericht RF160621C27V, PDF 2018-07-17",
+        "sicherheit": "hoch",
+        "bemerkung": "Directional Antenna Gain"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "Ethernet ports (4)",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "fcc_kurzanleitung",
+        "beleg": "https://fccid.io/PY316200341/User-Manual/Users-Manual-3108569",
+        "stand": "Exhibit 2017-02-19 (Quick Start Guide Juni 2016, PDF 2016-08-16)",
+        "sicherheit": "hoch",
+        "bemerkung": "Satellit hat keinen Internet-Port; Geschwindigkeit dort nicht genannt"
+      },
+      {
+        "wert": [
+          {
+            "name": "lan1",
+            "geschwindigkeit": "1000",
+            "rolle": "LAN"
+          },
+          {
+            "name": "lan2",
+            "geschwindigkeit": "1000",
+            "rolle": "LAN"
+          },
+          {
+            "name": "lan3",
+            "geschwindigkeit": "1000",
+            "rolle": "LAN"
+          },
+          {
+            "name": "lan4",
+            "geschwindigkeit": "1000",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "openwrt_02_network",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/base-files/etc/board.d/02_network",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "OpenWrt main und 25.12 (seit Commit 314dbb7f)"
+      },
+      {
+        "wert": [
+          {
+            "name": "wan (linke Buchse)",
+            "geschwindigkeit": "1000",
+            "rolle": "WAN"
+          },
+          {
+            "name": "lan1",
+            "geschwindigkeit": "1000",
+            "rolle": "LAN"
+          },
+          {
+            "name": "lan2",
+            "geschwindigkeit": "1000",
+            "rolle": "LAN"
+          },
+          {
+            "name": "lan3",
+            "geschwindigkeit": "1000",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "gluon_git",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/ad3f7237240ac52c7cef5c29a48cf0e0706b9e12",
+        "stand": "Commit 2025-11-17, enthalten ab Gluon v2025.1 (2025-12-31)",
+        "sicherheit": "mittel",
+        "bemerkung": "Gluon v2025.1 (OpenWrt 24.10): 'the leftmost port is WAN on both devices'"
+      },
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "anzahl": 4,
+            "geschwindigkeit": "1000"
+          }
+        ],
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": "lan_ports=4, wan_ports=0"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 4,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "fcc_kurzanleitung",
+        "beleg": "https://fccid.io/PY316200341/User-Manual/Users-Manual-3108569",
+        "stand": "Exhibit 2017-02-19 (Quick Start Guide Juni 2016, PDF 2016-08-16)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "mittel",
+        "bemerkung": "SFP/SFP+: -"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "1x USB 2.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x USB 2.0 (Rückseite)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x USB",
+        "quelle": "fcc_kurzanleitung",
+        "beleg": "https://fccid.io/PY316200341/User-Manual/Users-Manual-3108569",
+        "stand": "Exhibit 2017-02-19 (Quick Start Guide Juni 2016, PDF 2016-08-16)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1x USB 2.0",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: ToH-Feld 'Power Supply' (soll PoE nennen) sagt nur '12 VDC, 3.5A via barrel'; keine Quelle nennt PoE"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "Hohlbuchse",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "mittel",
+        "bemerkung": "via barrel"
+      },
+      {
+        "wert": "Hohlbuchse",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": "pwr_conn=barrel"
+      },
+      {
+        "wert": "DC Power connector (Rückseite)",
+        "quelle": "fcc_kurzanleitung",
+        "beleg": "https://fccid.io/PY316200341/User-Manual/Users-Manual-3108569",
+        "stand": "Exhibit 2017-02-19 (Quick Start Guide Juni 2016, PDF 2016-08-16)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 12,
+        "quelle": "fcc_typenschild",
+        "beleg": "https://fccid.io/PY316200341/Label/Label-Sample-RBS50-3108557",
+        "stand": "Exhibit 2016-08-23 (Zeichnung AW-13528-01 Rev 03, 2016-06-06)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "openwrt_wiki_bild_typenschild",
+        "beleg": "https://openwrt.org/_media/media/netgear/rbs50v1/rbs50-v1_case_label.jpg",
+        "stand": "Bild auf Wiki-Seite, Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 3.5,
+        "quelle": "fcc_typenschild",
+        "beleg": "https://fccid.io/PY316200341/Label/Label-Sample-RBS50-3108557",
+        "stand": "Exhibit 2016-08-23 (Zeichnung AW-13528-01 Rev 03, 2016-06-06)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.5,
+        "quelle": "openwrt_wiki_bild_typenschild",
+        "beleg": "https://openwrt.org/_media/media/netgear/rbs50v1/rbs50-v1_case_label.jpg",
+        "stand": "Bild auf Wiki-Seite, Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.5,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.5,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2.5,
+        "quelle": "fcc_v2_typenschild",
+        "beleg": "https://fccid.io/PY318300419/Label/Label-4110884",
+        "stand": "Exhibit 2018-12-20 (Zeichnung AW-14109-01 Rev 02, 2018-09-10)",
+        "sicherheit": "hoch",
+        "bemerkung": "nur RBS50v2"
+      }
+    ],
+    "dc_polaritaet": [
+      {
+        "wert": "Mitte plus",
+        "quelle": "fcc_typenschild",
+        "beleg": "https://fccid.io/PY316200341/Label/Label-Sample-RBS50-3108557",
+        "stand": "Exhibit 2016-08-23 (Zeichnung AW-13528-01 Rev 03, 2016-06-06)",
+        "sicherheit": "hoch",
+        "bemerkung": "Polaritätssymbol"
+      },
+      {
+        "wert": "Mitte plus",
+        "quelle": "openwrt_wiki_bild_typenschild",
+        "beleg": "https://openwrt.org/_media/media/netgear/rbs50v1/rbs50-v1_case_label.jpg",
+        "stand": "Bild auf Wiki-Seite, Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "hoch",
+        "bemerkung": "Polaritätssymbol"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "fcc_kurzanleitung",
+        "beleg": "https://fccid.io/PY316200341/User-Manual/Users-Manual-3108569",
+        "stand": "Exhibit 2017-02-19 (Quick Start Guide Juni 2016, PDF 2016-08-16)",
+        "sicherheit": "hoch",
+        "bemerkung": "Kit: 'Power adapters (2) (varies by region)'"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": [
+          "NETGEAR AD2080F20 (PN 332-10883-01), 100-240 V, 12 V 3.5 A",
+          "NETGEAR 2ABN042F NA (PN 332-10888-01), 100-240 V, 12 V 3.5 A"
+        ],
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/PY316200341/Test-Report/Test-Report-DTS-WLAN-rev-2-pdf-3926909",
+        "stand": "Bericht RF160621C27V, PDF 2018-07-17",
+        "sicherheit": "hoch",
+        "bemerkung": "US-Prüfmuster; Steckerart je Region"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "niedrig",
+        "bemerkung": "Außenvariante ist das eigene Modell RBS50Y (Netgear Orbi Outdoor Satellite)"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "fcc_innenfotos",
+        "beleg": "https://fccid.io/PY316200341/Internal-Photos/Internal-Photos-RBR50-RBS50-rev-pdf-3926901",
+        "stand": "Exhibit 2019-01-13 (PDF 2018-07-13)",
+        "sicherheit": "mittel",
+        "bemerkung": "passiver Aluminium-Kühlkörper, auf den FCC-Innenfotos kein Lüfter"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 10,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "8 Ring-LEDs (TLC59208F) + Power rot/grün",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Power grün/rot, Status grün/rot/blau/weiß, 8 weiße Ring-LEDs",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4019-orbi.dtsi",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "tasten": [
+      {
+        "wert": [
+          "Reset",
+          "Sync/WPS",
+          "Ein/Aus"
+        ],
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": [
+          "Sync/WPS",
+          "Power On/Off",
+          "Reset"
+        ],
+        "quelle": "fcc_kurzanleitung",
+        "beleg": "https://fccid.io/PY316200341/User-Manual/Users-Manual-3108569",
+        "stand": "Exhibit 2017-02-19 (Quick Start Guide Juni 2016, PDF 2016-08-16)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Button count (ohne Power)"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "versenkt, mit Stift zu drücken",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/netgear/rbs_50",
+        "stand": "Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "mittel",
+        "bemerkung": "'holding down the reset button with a pin'"
+      },
+      {
+        "wert": "auf der Anschlussseite (Rückseite)",
+        "quelle": "fcc_kurzanleitung",
+        "beleg": "https://fccid.io/PY316200341/User-Manual/Users-Manual-3108569",
+        "stand": "Exhibit 2017-02-19 (Quick Start Guide Juni 2016, PDF 2016-08-16)",
+        "sicherheit": "hoch",
+        "bemerkung": "Nr. 8 in der Satelliten-Übersicht"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Stiftleiste (4-polig, bestückt)",
+        "quelle": "openwrt_wiki_bild_seriell",
+        "beleg": "https://openwrt.org/_media/media/netgear/rbs50v1/rbs50-v1_serial_ports.jpg",
+        "stand": "Bild auf Wiki-Seite, Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "mittel",
+        "bemerkung": "Gehäuse öffnen nötig; Leiste neben den Jumper-Stiftleisten BR957-BR960 am Platinenrand unter dem Kühlkörper"
+      },
+      {
+        "wert": "vorhanden",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial: Yes"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "4 Pins: unbeschriftet, TXD, RXD, GND (Reihenfolge wie auf dem Wiki-Foto von links)",
+        "quelle": "openwrt_wiki_bild_seriell",
+        "beleg": "https://openwrt.org/_media/media/netgear/rbs50v1/rbs50-v1_serial_ports.jpg",
+        "stand": "Bild auf Wiki-Seite, Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "mittel",
+        "bemerkung": "Bedeutung des ersten Pins nicht angegeben (nicht anschließen)"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/netgear/rbs_50",
+        "stand": "Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial connection voltage: 3.3; Wiki-Seite sagt 'Voltage unknown'"
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "Typenschild-Aufkleber hinten abziehen, 2 Torx-Schrauben TR10 lösen, die zwei kleineren Gummifüße unten entfernen, Vorderteil mit 'Orbi'-Schriftzug etwas nach unten schieben, Gehäuse aufklappen",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/netgear/rbs_50",
+        "stand": "Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ipq40xx/generic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ipq40xx/generic",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/image/generic.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "netgear_rbs50",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/image/generic.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "22.03.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Commit 2cb24b3f (gemergt 2021-10-31); DSA-Umstellung 8d921167e9 (2022-10-04)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.2",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "22.03.5",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump-Stand veraltet"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot 2012.07 (DNI 'U-boot dni1 V1.4')",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/netgear/rbs_50",
+        "stand": "Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "mittel",
+        "bemerkung": "aus dem OEM-Bootlog"
+      },
+      {
+        "wert": "CFE",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "niedrig",
+        "bemerkung": "widerspricht dem Bootlog"
+      },
+      {
+        "wert": "CFE",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "niedrig",
+        "bemerkung": "stock_boot=CFE; widerspricht dem Bootlog"
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Hersteller-Weboberfläche (factory.img; vorher Boot-Partition 2 aktiv machen, siehe Wiki) oder nmrpflash",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/netgear/rbs_50",
+        "stand": "Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "GUI OEM, nmrpflash, see git-commit",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Hersteller-Weboberfläche mit factory.img, Boot-Partition muss 02 sein",
+        "quelle": "gluon_git",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/ad3f7237240ac52c7cef5c29a48cf0e0706b9e12",
+        "stand": "Commit 2025-11-17, enthalten ab Gluon v2025.1 (2025-12-31)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "recovery": [
+      {
+        "wert": "nmrpflash",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "nmrpflash (auch Rückweg zur Stock-Firmware)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/netgear/rbs_50",
+        "stand": "Seitenrevision 2026-09-09 23:07",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.downloads.netgear.com/files/GDC/RBK50/RBS50-V2.7.6.6.zip",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://www.netgear.com/support/product/rbs50/",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "mittel",
+        "bemerkung": "OEM Device Homepage"
+      }
+    ],
+    "mac_label": [
+      {
+        "wert": "Etikett-MAC = LAN-MAC (…:69)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/2cb24b3f3cd89692f3c0bd137f3f560ada359bfa",
+        "stand": "Commit 2020-09-02 (Autor), gemergt 2021-10-31",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "label-mac-device = gmac",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4019-orbi.dtsi",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja, ab Gluon v2025.1 (Image netgear-rbs50, factory .img)",
+        "quelle": "gluon_git",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/ad3f7237240ac52c7cef5c29a48cf0e0706b9e12",
+        "stand": "Commit 2025-11-17, enthalten ab Gluon v2025.1 (2025-12-31)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "unbekannt",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "mittel",
+        "bemerkung": "Gluon support: unknown (veraltet)"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/netgear/rbs_50",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "mittel",
+        "bemerkung": "Device Page: toh:netgear:rbs_50"
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/Netgear_Orbi_Satellite_(RBS50)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.netgear.com/support/product/rbs50/",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/netgear/netgear_rbs50",
+        "stand": "Seitenrevision 2026-09-09 23:10",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://www.netgear.com/orbi/rbk50.aspx",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": "ProductPage (alt)"
+      }
+    ],
+    "amazon_asin": [
+      {
+        "wert": "B01LZG4KPC",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": "amazon.com (US); Version nicht genannt, Seite beschreibt RBS50 (v1)"
+      }
+    ],
+    "newegg_id": [
+      {
+        "wert": "N82E16833122915",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/Netgear_Orbi_Satellite_(RBS50)",
+        "stand": "Seitenrevision 2019-07-05 02:58",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/netgear-orbi-rbs50*&output=json&fl=timestamp,original&collapse=urlkey",
+      "kategorie": "handel",
+      "grund": "Geizhals-Permalink und EAN: Webarchiv am 2026-10-20 'Temporarily Offline'; Präfix geizhals.de/netgear-orbi* enthielt nur RBK50 (a1497655) und RBR50 (a1497674), beide Status 421; RBS50-Einzelseite noch suchen (Präfixe geizhals.de/netgear-rbs50*, geizhals.at/...)"
+    },
+    {
+      "url": "https://www.netgear.com/support/product/rbs50/",
+      "kategorie": "datenblatt",
+      "grund": "Support-Seite wird per JavaScript geladen (curl liefert keinen Inhalt); Datenblatt/Handbuch mit Abmessungen, Gewicht, EAN nicht gefunden (downloads.netgear.com/files/GDC/datasheet/en/RBK50.pdf: AccessDenied)"
+    },
+    {
+      "url": "https://fccid.io/PY316200341/External-Photos/External-Photos-RBR50-RBS50-rev-pdf-3926899",
+      "kategorie": "abmessungen",
+      "grund": "Außenfotos mit Maßstab (3 MB), nicht ausgewertet: Abmessungen, Rückseite, Bauform (Standgerät?)"
+    },
+    {
+      "url": "https://fccid.io/PY316200341/Internal-Photos/Internal-Photos-RBR50-RBS50-rev-pdf-3926901",
+      "kategorie": "seriell",
+      "grund": "Innenfotos nur als Übersicht gesichtet; Lage der seriellen Stiftleiste und SPI-NOR-Bestückung (W25Q256 laut DeviWiki, im Bootlog nicht gefunden) in hoher Auflösung prüfen"
+    },
+    {
+      "url": "https://openwrt.org/toh/netgear/rbs_50",
+      "kategorie": "seriell",
+      "grund": "Bedeutung des ersten (unbeschrifteten) Pins der seriellen Leiste und Pegel (Wiki: 'Voltage unknown', hwdata: 3.3) bestätigen"
+    },
+    {
+      "url": "https://openwrt.org/toh/netgear/rbs_50",
+      "kategorie": "flash",
+      "grund": "Widerspruch Flash: hwdata live '32, eMMC' gegen Dump '4096 eMMC'; U-Boot meldet 'NOR flash 32MB' aber 'SPI Flash not found'. OEM-Bootlog ohne Modellnennung, OpenWrt-Bootlog stammt vom RBR50"
+    },
+    {
+      "url": "https://fccid.io/PY318300419",
+      "kategorie": "hw_version",
+      "grund": "RBS50v2: Hardware (SoC/Flash) unbekannt; Innenfotos und Handbuch dort nicht ausgewertet - nur relevant, um v2 sicher abzugrenzen"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-20",
+    "status": "teilweise",
+    "anfragen": 59,
+    "notiz": "ToH-Dump + Live-hwdata, OpenWrt-Wiki (inkl. Fotos serielle Leiste und Typenschild), OpenWrt-Commits 2cb24b3f/8d921167/314dbb7f, DTS/Image-Makefile/02_network (main, 24.10, 25.12), Gluon-Commit ad3f7237 (ab v2025.1), DeviWiki RBS50/RBS50v2/RBR50, WikiDevi-Spiegel, FCC PY316200341 (Kurzanleitung, Typenschild, Innenfotos-Übersicht, DTS-Testbericht 2018, Änderungsbriefe 2017/2018) und PY318300419 (Typenschild v2) ausgewertet. Wichtig: Satellit hat 4 Gigabit-Ports ohne Internet-Port; unter Gluon 2025.1 (OpenWrt 24.10) ist die linke Buchse WAN, ab OpenWrt 25.12 alle vier LAN. v1/v2 am Typenschild unterscheidbar (RBS50 12V 3.5A vs. RBS50v2 12V 2.5A). Keine Abmessungen/Gewicht/EAN/Geizhals (Webarchiv offline, Netgear-Seite JS-only). luefter aus FCC-Innenfotos (kein Lüfter), poe_eingang nur abgeleitet."
+  }
+}

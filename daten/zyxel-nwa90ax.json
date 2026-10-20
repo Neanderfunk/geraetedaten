@@ -1,0 +1,3225 @@
+{
+  "image": "zyxel-nwa90ax",
+  "modell": "Zyxel NWA90AX",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+      "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Nicht im lokalen ToH-Dump 2026-10-18 (toh_suche.py liefert nur ältere ZyXEL-Geräte, Score 0.5); Datenseite angelegt 2026-05-27, Daten daher von der Live-Seite per ?do=export_raw, Revisionen per ?do=revisions. Device Page und WikiDevi-Link zeigen auf den NWA50AX.",
+      "datei": "cache/zyxel-nwa90ax/toh_hwdata.txt"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/zyxel/nwa50ax",
+      "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Gemeinsame Geräteseite NWA50AX/NWA90AX (ToH-Filter \"^NWA50AX$|^NWA90AX$\"), Satz \"The NWA90AX is hardware-wise identical to the NWA50AX.\" Inhalt bytegleich mit dem Abruf des Laufs zyxel-nwa50ax vom 2026-10-19."
+    },
+    "openwrt_git": {
+      "url": "https://github.com/openwrt/openwrt/commit/41934223776dc45e410ac372c6713e6a2713ff33",
+      "stand": "Commit 2025-10-05 (Autor Christian Weiske), gemergt 2025-10-19 (Hauke Mehrtens), PR 20308",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "\"ramips: add support for Zyxel NWA90AX access point\": nur mt7621.mk (compat-models \"6b e1 6f e1 77 e1\", DEVICE_ALT0 Zyxel NWA90AX im Profil zyxel_nwa50ax)"
+    },
+    "openwrt_pr_20308": {
+      "url": "https://github.com/openwrt/openwrt/pull/20308",
+      "stand": "PR 2025-10-05, gemergt 2025-10-19",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Beschreibung und 10 Kommentare per gh api gelesen"
+    },
+    "openwrt_git_suche": {
+      "url": "https://github.com/search?q=repo%3Aopenwrt%2Fopenwrt+nwa90ax&type=commits",
+      "stand": "Suche 2026-10-20 (gh api search/commits, 3 Treffer: 41934223, e34e874a, 2cc8d3e3; die beiden letzten betreffen den NWA90AX Pro)",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_forum_241294": {
+      "url": "https://forum.openwrt.org/t/support-for-zyxel-nwa90ax/241294",
+      "stand": "Beiträge 2025-09-30 bis 2025-10-05 (geschlossen 2025-10-15)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Thread des Commit-Autors zum NWA90AX ohne Pro; per /t/241294.json, Datei aus dem Cache des Laufs zyxel-nwa90ax-pro (Abruf 2026-10-20), nicht erneut abgerufen"
+    },
+    "zyxel_datenblatt": {
+      "url": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+      "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "PDF 302651 Byte, 4 Seiten, Text per pdftotext"
+    },
+    "zyxel_produktseite": {
+      "url": "https://www.zyxel.com/global/en/products/wireless/nwa90ax/specifications",
+      "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Specifications-Tab, inhaltsgleich mit Datenblatt v5; ToH verlinkt https://www.zyxel.com/de/de/products/wireless/ax1800-4-stream-wifi-6-dual-radio-nebulaflex-access-point-nwa90ax (Weiterleitung auf /global/en/products/wireless/nwa90ax)"
+    },
+    "zyxel_downloadseite": {
+      "url": "https://www.zyxel.com/global/en/support/download?model=nwa90ax",
+      "stand": "Live-Seite 2026-10-20, neueste Firmware 7.12(ACCV.0)C0 vom 2026-07-29",
+      "abgerufen": "2026-10-20"
+    },
+    "zyxel_antennen": {
+      "url": "https://download.zyxel.com/NWA90AX/antenna_specification_matrix/NWA90AX_1.pdf",
+      "stand": "Antenna Specification Matrix Version 1 (Last-Modified 2022-03-07)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Nur HEAD abgerufen: 4664195 Byte wie NWA50AX_1.pdf; Text aus dem Cache des Laufs zyxel-nwa50ax (Spalte \"NWA90AX/NWA50AX\")"
+    },
+    "zyxel_zert_lvd": {
+      "url": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-02-00798.pdf",
+      "stand": "CoC LVD, Wendell Electrical Testing Lab., Testbericht WL20K2703-L1 vom 2021-11-29",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "PDF 145151 Byte, 1 Seite; Type Designation \"NWA50AX, NWA90AX\""
+    },
+    "zyxel_zert_ised": {
+      "url": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00538.pdf",
+      "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO Job 6434-21, 2021-12-28",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "PDF 303153 Byte, 3 Seiten; HVIN/PMN NWA90AX, Type of Service \"Existing Family/ Modification (C1PC)\""
+    },
+    "zyxel_zert_ncc": {
+      "url": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00539.pdf",
+      "stand": "NCC-Typzulassung (耕興/Sporton), 110年11月30日 = 2021-11-30, PDF 2021-12-29",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Scan ohne Textebene, Seite 1 als Bild abgelesen (chinesisch); Cache ncc_png/"
+    },
+    "zyxel_zert_wifi": {
+      "url": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-05-00093.pdf",
+      "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "PDF 76664 Byte, 3 Seiten; dasselbe Zertifikat wie beim NWA50AX (Model Number NWA90AX, Product Model Variant NWA50AX)"
+    },
+    "zyxel_eu_doc": {
+      "url": "https://download.zyxel.com/NWA90AX/declaration/NWA90AX_007.214-01-01435.zip",
+      "stand": "EU DoC 2025-09-18, ErP Information 20250918, UK PSTI SoC 2025-07-18, REACH DoC 20250718, PPWR DoC, Safety Warnings 20240117",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "ZIP 3541485 Byte, 6 PDFs (Pfade mit Backslash); gelesen: EU DoC, ErP, UK PSTI, Safety Warnings"
+    },
+    "fcc_handbuch_sammel": {
+      "url": "https://fccid.io/I8803911/User-Manual/Users-Manual-6335969",
+      "stand": "PDF 2023-01-18 (Exhibit 2023-07-18), Firmware-Stand 6.29",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Sammelhandbuch NWA50AX PRO/NWA90AX PRO/NWA55AXE Series mit Table 1 (Spalten NWA50AX, NWA90AX, NWA55AXE); Text aus dem Cache des Laufs zyxel-nwa50ax-pro, nicht erneut abgerufen"
+    },
+    "hersteller_handbuch_web": {
+      "url": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+      "stand": "Web-User-Guide NWA30-50-55-90 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Kapitel Intro (WiFi 6 Models Comparison Table, Spalte NWA90ax) und Hardware (gemeinsam \"NWA50AX, NWA90AX, NWA50AX PRO, and NWA90AX PRO\") aus dem Cache des Laufs zyxel-nwa50ax; Download-Seite NWA90AX verlinkt https://download.zyxel.com/NWA90AX/user_guide_web/index.html"
+    },
+    "fcc_I8811AXAP22": {
+      "url": "https://fccid.io/I8811AXAP22",
+      "stand": "Grant 2020-05-13 (Original Equipment), Label-Exhibit PDF 2020-04-29",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Zur Prüfung der Forenangabe, ein NWA90AX trage I8811AXAP22 (ohne A). Etikettenentwürfe nennen nur NWA110AX und WAX510D; Label per pdf.php?id=4710526 (Weiterleitung) als Bild gelesen"
+    },
+    "fcc_I8811AXAP22A": {
+      "url": "https://fccid.io/I8811AXAP22A",
+      "stand": "Grant 2021-05-07 (Original Equipment)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Seite aus dem Cache des Laufs zyxel-nwa50ax; nennt nur FCC-Modell 11AXAP22A und keine Erweiterung für NWA90AX"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/ZyXEL_NWA90AX",
+      "stand": "keine Seite (action=raw 404, api.php: missing); 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Seite ZyXEL_NWA50AX listet [[ZyXEL NWA90AX]] nur als roten Link; ToH verlinkt auf ZyXEL_NWA50AX"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/wiki/ZyXEL_NWA90AX",
+      "stand": "keine Seite (action=raw 404 am 2026-10-20; Volltextsuche \"NWA90AX\" ohne Treffer laut Lauf zyxel-nwa90ax-pro am 2026-10-20)",
+      "abgerufen": "2026-10-20"
+    },
+    "geizhals_archiv": {
+      "url": "https://web.archive.org/web/20250517045935/https://geizhals.at/zyxel-nwa90ax-v107306.html",
+      "stand": "Archivkopie 2025-05-17 der geizhals.at-Variantenseite v107306",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Archivseite aus dem Cache des Laufs zyxel-nwa90ax-pro (geizhals_at_v107306.html); CDX geizhals.de/zyxel-nwa90ax* leer (Lauf -pro), eigene CDX-Abfragen geizhals.de/ und geizhals.at/zyxel-nwa90ax-nwa90ax-eu010* am 2026-10-20 leer"
+    },
+    "gluon": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.3/targets/ramips-mt7621",
+      "stand": "lokaler Checkout firmware-2025.1/gluon, v2025.1.3",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "upstream nur device('zyxel-nwa50ax', 'zyxel_nwa50ax') ohne Alias; lokal gelesen"
+    },
+    "neanderfunk_patches": {
+      "url": "https://github.com/Neanderfunk/gluon-patches-hardware/tree/main/devices/zyxel-nwa90ax",
+      "stand": "Commit 9263f242b86a943e62671ec445f08dd9eb2dfbd2 (2026-10-01)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "eigenes Repo, lokal gelesen: README.md, targets-zyxel-nwa90ax.patch (aliases = {'zyxel-nwa90ax'} an zyxel-nwa50ax), Backport 0001 = OpenWrt 41934223; Übersicht devices/neue-geraete-2026-10.md"
+    },
+    "werkstatt": {
+      "url": "werkstatt:router-werkstatt/docs/long-term-todo.md",
+      "stand": "Stand 2026-10 (Eintrag zu gluon-patches-hardware 9263f24)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "keine Messung, kein Validierungsprotokoll; nur Vermerk \"Bisher nur Probelauf (fuzzprobe), kein Build mit Gerät, keine Hardware\". In router-werkstatt/docs/validierung/ nichts zum NWA90AX."
+    },
+    "nwa50ax_eintrag": {
+      "url": "daten/zyxel-nwa50ax.json",
+      "stand": "Lauf 2 vom 2026-10-19",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Geräteeintrag des hardwaregleichen NWA50AX; daraus übernommene Werte stehen unter Quellennamen mit Präfix nwa50ax_ (Quellenangaben unverändert kopiert)"
+    },
+    "nwa50ax_wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+      "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quelle zum NWA50AX, übernommen aus daten/zyxel-nwa50ax.json. Rohtext per index.php?title=ZyXEL_NWA50AX&action=raw, Revisionen per api.php; Seite angelegt/aktualisiert von Olek210 2024-12-27"
+    },
+    "nwa50ax_openwrt_wiki": {
+      "url": "https://openwrt.org/toh/zyxel/nwa50ax",
+      "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quelle zum NWA50AX, übernommen aus daten/zyxel-nwa50ax.json. Geräteseite per ?do=export_raw; vorletzte Revision 2026-05-27 (cweiske1, Supported Versions). Flash-Layout, TFTP-Werte, Netzwerk-/Knopf-Tabellen sind noch FIXME-Vorlagen; keine echten Fotos ausser Übersichtsbild"
+    },
+    "nwa50ax_fcc_innenfotos": {
+      "url": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+      "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quelle zum NWA50AX, übernommen aus daten/zyxel-nwa50ax.json. PDF 2038646 Byte (sha256 d969fb8e5c1083c2...), 18 Seiten, 36 Fotos 800x600 abgelesen (Chipaufdrucke, Platine, Kühlblech)"
+    },
+    "nwa50ax_openwrt_commit": {
+      "url": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+      "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quelle zum NWA50AX, übernommen aus daten/zyxel-nwa50ax.json. Support-Commit 'ramips: add support for ZyXEL NWA50AX / NWA55AXE' (in ToH als git.openwrt.org-Link), per GitHub .patch geladen"
+    },
+    "nwa50ax_openwrt_dts_main": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_zyxel_nwa-ax.dtsi",
+      "stand": "OpenWrt main am 2026-10-19, letzter Commit an der dtsi 1180dd6b vom 2025-08-13 (Rosen Penev, \"mt7621: zyxel nwa-ax: set mac address in dts\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quelle zum NWA50AX, übernommen aus daten/zyxel-nwa50ax.json. per raw.githubusercontent.com geladen, dazu https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_zyxel_nwa50ax.dts; Commit-Historie per GitHub-API (3 letzte Commits)"
+    },
+    "nwa50ax_openwrt_image_main": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+      "stand": "OpenWrt main am 2026-10-19",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quelle zum NWA50AX, übernommen aus daten/zyxel-nwa50ax.json. Device/zyxel_nwa-ax und Device/zyxel_nwa50ax"
+    },
+    "nwa50ax_fcc_rf_exposure": {
+      "url": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+      "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quelle zum NWA50AX, übernommen aus daten/zyxel-nwa50ax.json. PDF 267639 Byte, 8 Seiten; Antennen- und Zubehörangaben"
+    },
+    "nwa50ax_fcc_testbericht_24": {
+      "url": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+      "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quelle zum NWA50AX, übernommen aus daten/zyxel-nwa50ax.json. PDF 2573066 Byte (sha256 0ff013a7e9a99272...), 132 Seiten, Sporton; PDF über .../Test-Report-2-4G-5231152.pdf (ViewExhibitReport.cfm liefert nur eine HTML-Huelle)"
+    },
+    "nwa50ax_fcc_handbuch": {
+      "url": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-1-5231166",
+      "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021 (PDF 2021-04-22, Exhibit 5231166)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quelle zum NWA50AX, übernommen aus daten/zyxel-nwa50ax.json. PDF 4237633 Byte (sha256 153e09ef692a576f...), 226 Seiten, Text per pdftotext"
+    },
+    "nwa50ax_zyxel_community_12454": {
+      "url": "https://community.zyxel.com/en/discussion/12454/nwa50ax-nwa210ax-questions",
+      "stand": "Thread vom 2022-01-12 bis 2022-05-15 (Fragesteller undsie, Antworten Zyxel_Silvia/Zyxel_Dick/Zyxel_CSO)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quelle zum NWA50AX, übernommen aus daten/zyxel-nwa50ax.json. per Community-API (/api/v2/discussions/12454 und /api/v2/comments?discussionID=12454) gelesen; gefunden über /api/v2/search?query=NWA50AX PoE af"
+    },
+    "nwa50ax_fcc_aussenfotos": {
+      "url": "https://fccid.io/I8811AXAP22A/External-Photos/External-Photos-5231162",
+      "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231162)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quelle zum NWA50AX, übernommen aus daten/zyxel-nwa50ax.json. PDF 518100 Byte (sha256 b9a8ea7fab060277...), 6 Seiten, 11 Fotos (Gerät, Anschlussfeld, Netzteil mit Typenschild, Stecker) abgelesen"
+    },
+    "nwa50ax_hersteller_handbuch_web": {
+      "url": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+      "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quelle zum NWA50AX, übernommen aus daten/zyxel-nwa50ax.json. HTML-Fassung des User's Guide V7.12 (PDF NWA50AX-UG.pdf ist 14.9 MB und wurde deshalb nicht geladen). Gelesen: Kapitel h_Intro, h_Hardware, h_System unter /NWA50AX/user_guide_web/NWA30-50-55-90_7-40/. Das Handbuch deckt NWA50AX, NWA90AX, NWA55AXE, NWA50AX PRO, NWA55AX PRO, NWA90AX PRO und WiFi-7-Modelle ab; Port-Tabelle gilt gemeinsam für NWA50AX/NWA90AX/NWA50AX PRO/NWA90AX PRO"
+    },
+    "nwa50ax_connect_test": {
+      "url": "https://www.connect.de/vergleich/wi-fi-6-router-zyxel-nwa50ax-test-review-3202346-9380.html",
+      "stand": "Artikel vom 29.3.2022 (Hannes Ruegheimer), connect Praxistest",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quelle zum NWA50AX, übernommen aus daten/zyxel-nwa50ax.json. Fachzeitschrift; Messwert Leistungsaufnahme mit mitgeliefertem Steckernetzteil"
+    },
+    "nwa50ax_zyxel_community_15328": {
+      "url": "https://community.zyxel.com/en/discussion/15328/nwa50ax-poe-voltage",
+      "stand": "Thread vom 2022-12-15, letzte Antwort 2024-03-25 (Zyxel_Kay, Zyxel Employee)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quelle zum NWA50AX, übernommen aus daten/zyxel-nwa50ax.json. Zyxel-Community; Antworten von Zyxel-Mitarbeitern"
+    },
+    "nwa50ax_zyxel_community_suche": {
+      "url": "https://community.zyxel.com/api/v2/search?query=NWA50AX%20802.3af&limit=30",
+      "stand": "Suchergebnis am 2026-10-19 (Beitraege 2022-2026)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quelle zum NWA50AX, übernommen aus daten/zyxel-nwa50ax.json. Treffer u. a. Kommentar 49089 (2023-03-01, GS1920-24HP), Kommentar 48989 (2023-02-24, GS1900-8HP)"
+    },
+    "nwa50ax_quick_start_guide": {
+      "url": "https://download.zyxel.com/NWA50AX/quick_start_guide/NWA50AX_008.pdf",
+      "stand": "QSG Version 008 (NWA50AX_web_QSG_20250416_v08, PDF 2025-04-16, Last-Modified 2025-04-25)",
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Quelle zum NWA50AX, übernommen aus daten/zyxel-nwa50ax.json. PDF 39598748 Byte (sha256 f797973b5a6ad79d...): Größe war vor dem Laden unbekannt, liegt über der 10-MB-Grenze; Text als Pfade (pdftotext leer), nur Inhaltsverzeichnis und Abschnitt Hardware Connections als Bild abgelesen. Zweiter Lauf 2026-10-19: Abschnitt Mounting Options (Wall/Ceiling, T-bar, Desk) aus der bereits lokal liegenden Kopie per pdftoppm gerendert und abgelesen, kein erneuter Download"
+    }
+  },
+  "roh": {
+    "toh": {
+      "Device Type_devicetype": "WiFi AP",
+      "Brand": "Zyxel",
+      "Model": "NWA90AX",
+      "Versions": "",
+      "FCCID_urls": "https://fccid.io/CCAF21LP0660T1",
+      "Availability_availability": "Available 2026",
+      "Where available": "amazon.com,otto.de",
+      "Supported Since Commit_git": "https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=41934223776dc45e410ac372c6713e6a2713ff33",
+      "Supported Since Rel_releasesince": "25.12.0",
+      "Supported Current Rel_releasecurrent": "25.12.4",
+      "Image too big_releasecurrents": "",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "ramips",
+      "Subtarget": "mt7621",
+      "Package architecture_pkg-arch": "mipsel_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "MediaTek MT7621AT",
+      "CPU Cores_numcores_": "2",
+      "CPU MHz": "880",
+      "Flash MB_mbflashs": "128NAND",
+      "RAM MB_mbram": "256",
+      "Ethernet 100M ports_numethport": "-",
+      "Ethernet 1Gbit ports_numethport": "1",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "Switch": "",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "MediaTek MT7915",
+      "WLAN 2.4GHz_wlan24": "b/g/n/ax",
+      "WLAN 5.0GHz_wlan50": "a/n/ac/ax",
+      "WLAN 6.0GHz_wlan60": "-",
+      "WLAN 60.0GHz_wlan60g": "-",
+      "WLAN Comments_": "DBDC",
+      "WLAN driver_wlan-drivers": "mt76",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "-",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "-",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "-",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "1",
+      "Button count_numbutton": "1",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "12 VDC, 1.5A or PoE (802.3at)",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:zyxel:nwa50ax",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "NWA90AX",
+      "Git search_search-gits": "NWA90AX",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+      "WikiDevi ID_hwinfo-ids": "ZyXEL_NWA50AX",
+      "OEM Device Homepage URL_url": "https://www.zyxel.com/de/de/products/wireless/ax1800-4-stream-wifi-6-dual-radio-nebulaflex-access-point-nwa90ax",
+      "Firmware OEM Stock URL_url": "https://www.zyxel.com/de/de/support/download?model=nwa90ax",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/ramips/mt7621/openwrt-25.12.2-ramips-mt7621-zyxel_nwa50ax-squashfs-factory.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.2/targets/ramips/mt7621/openwrt-25.12.2-ramips-mt7621-zyxel_nwa50ax-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-zyxel_nwa50ax-squashfs-factory.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-zyxel_nwa55axe-squashfs-factory.bin",
+      "Recovery method(s)_method-recoverys": "unknown",
+      "Picture_img100s": "media:zyxel:nwa50ax:zyxel_nwa50ax.png",
+      "Comments_": ""
+    },
+    "openwrt_git": {
+      "sha": "41934223776dc45e410ac372c6713e6a2713ff33",
+      "autor": {
+        "name": "Christian Weiske",
+        "email": "cweiske@cweiske.de",
+        "date": "2025-10-05T11:41:34Z"
+      },
+      "committer": {
+        "name": "Hauke Mehrtens",
+        "email": "hauke@hauke-m.de",
+        "date": "2025-10-19T21:02:17Z"
+      },
+      "nachricht": "ramips: add support for Zyxel NWA90AX access point\n\nThe NWA90AX is hardware-wise identical to the NWA50AX which is\nalready supported.\n\nThe NWA90AX magic model code bytes are `77 E1`,\nand they are added to the DTS to mark the NWA50AX firmware\nas being compatible with the 90 model.\n\nWithout the compat-models change, uploading the OpenWrt NWA50AX\nfirmware with the official Zyxel web interface yields an error:\n> errno: -25007\n> errmsg: Firmware content error!\n\nAs described on the NWA50AX firmware page[1] on the wiki, the\n\"current image\" slot for firmware updates has to be \"1\".\nIf it is 0, flashing will fail.\n\n[1] https://openwrt.org/toh/zyxel/nwa50ax\n\nVendor product page:\nhttps://www.zyxel.com/global/en/products/wireless/ax1800-4-stream-wifi-6-dual-radio-nebulaflex-access-point-nwa90ax\n\nVendor support page stating that the hardware is identical:\nhttps://support.zyxel.eu/hc/en-us/articles/4416989548178-Access-Point-NWA50-55AXEE-90AX-110AX-210AX-Differences-in-Hardware-and-Features\n> NWA90AX: Identical hardware as in NWA50AX, but with added features\n> like Captive portal for Guest access and WPA Enterprise for\n> AD/Radius (Credential) authentication.\n\nSigned-off-by: Christian Weiske <cweiske@cweiske.de>\nLink: https://github.com/openwrt/openwrt/pull/20308\nSigned-off-by: Hauke Mehrtens <hauke@hauke-m.de>",
+      "dateien": [
+        {
+          "datei": "target/linux/ramips/image/mt7621.mk",
+          "patch": "@@ -228,8 +228,9 @@ define Build/zytrx-header\n endef\n \n define Build/zyxel-nwa-fit\n+\t# \"77 e1\" is NWA90AX\n \t$(TOPDIR)/scripts/mkits-zyxel-fit.sh \\\n-\t\t$@.its $@ \"6b e1 6f e1 ff ff ff ff ff ff\"\n+\t\t$@.its $@ \"6b e1 6f e1 77 e1 ff ff ff ff\"\n \tPATH=$(LINUX_DIR)/scripts/dtc:$(PATH) mkimage -f $@.its $@.new\n \t@mv $@.new $@\n endef\n@@ -3717,6 +3718,8 @@ endef\n define Device/zyxel_nwa50ax\n   $(Device/zyxel_nwa-ax)\n   DEVICE_MODEL := NWA50AX\n+  DEVICE_ALT0_VENDOR := Zyxel\n+  DEVICE_ALT0_MODEL := NWA90AX\n endef\n TARGET_DEVICES += zyxel_nwa50ax\n "
+        }
+      ]
+    },
+    "openwrt_pr_20308": {
+      "titel": "ramips: add support for Zyxel NWA90AX access point",
+      "erstellt": "2025-10-05T13:21:55Z",
+      "gemergt": "2025-10-19T21:03:12Z",
+      "beschreibung": "The NWA90AX is hardware-wise identical to the NWA50AX which is already supported.\r\n\r\nThe NWA90AX magic model code bytes are `77 E1`, and they are added to the DTS to mark the NWA50AX firmware as being compatible with the 90 model.\r\n\r\nWithout the compat-models change, uploading the OpenWrt NWA50AX firmware with the official Zyxel web interface yields an error:\r\n> errno: -25007\r\n> errmsg: Firmware content error!\r\n\r\nAs described on the NWA50AX firmware page[1] on the wiki, the \"current image\" slot for firmware updates has to be \"1\". If it is 0, flashing will fail.\r\n\r\n[1] https://openwrt.org/toh/zyxel/nwa50ax\r\n\r\nVendor product page:\r\nhttps://www.zyxel.com/global/en/products/wireless/ax1800-4-stream-wifi-6-dual-radio-nebulaflex-access-point-nwa90ax\r\n\r\nVendor support page stating that the hardware is identical: https://support.zyxel.eu/hc/en-us/articles/4416989548178-Access-Point-NWA50-55AXEE-90AX-110AX-210AX-Differences-in-Hardware-and-Features\r\n> NWA90AX: Identical hardware as in NWA50AX, but with added features\r\n> like Captive portal for Guest access and WPA Enterprise for\r\n> AD/Radius (Credential) authentication.\r\n\r\n",
+      "kommentare": [
+        {
+          "von": "castiel652",
+          "am": "2025-10-05T16:20:36Z",
+          "text": "I think you should mention in the commit that the NWA90AX uses `77 e1`."
+        },
+        {
+          "von": "cweiske",
+          "am": "2025-10-05T17:14:04Z",
+          "text": "> I think you should mention in the commit\r\n\r\nDone."
+        },
+        {
+          "von": "cweiske",
+          "am": "2025-10-07T06:30:39Z",
+          "text": "(just rebased against current master)"
+        },
+        {
+          "von": "castiel652",
+          "am": "2025-10-07T06:32:24Z",
+          "text": "> This patch only adds the magic bytes to mark it as compatible model\r\nfor the NWA50AX firmware: `77 E1`.\r\n\r\nDo you mind rewording this? Make it clearly indicate that NWA90AX's magic byte is `77 E1`."
+        },
+        {
+          "von": "cweiske",
+          "am": "2025-10-07T06:44:32Z",
+          "text": "> Make it clearly indicate that NWA90AX's magic byte is 77 E1.\r\n\r\nDone"
+        },
+        {
+          "von": "cweiske",
+          "am": "2025-10-10T05:11:59Z",
+          "text": "Could someone please review this? Maybe @hauke; you have merged some other ramips patches this week."
+        },
+        {
+          "von": "cweiske",
+          "am": "2025-10-19T13:29:02Z",
+          "text": "anyone?"
+        },
+        {
+          "von": "cweiske",
+          "am": "2025-10-20T04:10:39Z",
+          "text": "Thank you @hauke!"
+        },
+        {
+          "von": "Neustradamus",
+          "am": "2025-10-25T08:19:49Z",
+          "text": "@cweiske: Very good job!"
+        }
+      ]
+    },
+    "openwrt_git_suche": [
+      {
+        "sha": "41934223776dc45e410ac372c6713e6a2713ff33",
+        "datum": "2025-10-05T13:41:34.000+02:00",
+        "titel": "ramips: add support for Zyxel NWA90AX access point"
+      },
+      {
+        "sha": "2cc8d3e382c0b8b919cef2e9f1cfec9ec7954150",
+        "datum": "2025-11-13T08:51:49.000-07:00",
+        "titel": "mediatek: add Zyxel NWA90AX PRO model identifier"
+      },
+      {
+        "sha": "e34e874a11f0506ff17365819bc101a455dc503e",
+        "datum": "2025-06-29T12:58:18.000+02:00",
+        "titel": "mediatek: add support for Zyxel NWA90AX PRO"
+      }
+    ],
+    "openwrt_forum_241294": {
+      "titel": "Support for Zyxel NWA90AX",
+      "beitraege": [
+        {
+          "nr": 1,
+          "von": "cweiske",
+          "am": "2025-09-30T11:33:22.975Z",
+          "text": "I have a Zyxel NWA90AX (without \"Pro\" suffix) access point and would like to get OpenWrt running on it.\nOpenWrt already has support for the NWA90AX Pro, which has the same hardware has the NWA50AX Pro - but the \"Pro\" versions have completely different hardware than the non-pro ones.\nOpenWrt also has support for the NWA50AX, which has the exact same hardware as my NWA90AX. I confirmed this by a) inspecting the FCC ID I8811AXAP22A photos and b) finding an official Zyxel support page stating this:\n\nNWA90AX: Identical hardware as in NWA50AX, but with added features like Captive portal for Guest access and WPA Enterprise for AD/Radius (Credential) authentication.\n\nSo the difference between 50 and 90 is only a feature unlocked in software.\n(There is another thread about this device, but it's a different revision: mine has FCC ID I8811AXAP22A, Zyxel NWA90AX PoE AP has I8811AXAP22 (without the A at the end)\n\nI updated the access point to the latest firmware version V7.10(3) dated 2025-06-29 03:25:20 to get the Current Image num to 1 as suggested by the wiki, and then tried flashing the OpenWrt NWA50AX firmware.\nAt first I got an error\n\nerrno: -25000\nerrmsg: Warning ULCGI unalbe to parse CGI query!\n\nbut the wiki told me to make the file name shorter, and that indeed helped getting around this problem.\nBut with a shorter name, I also get an error:\n\nerrno: -25007\nerrmsg: Firmware content error!\n\nThe firmware is not accepted; and this is where I am stuck at.\n\nI looked at the commit that added NWA90AX Pro support and did the same for my NWA90AX in target/linux/ramips/image/mt7621.mk - simply adding DEVICE_ALT0_VENDOR + DEVICE_ALT0_MODEL.\nThis let me select the NWA90AX in make menuconfig, but the firmware I compiled did yield the same upload error.\n\nDo the Zyxel devices need a certain flag set to discover that the firmware is indeed for them, and not some other model in the same line?"
+        },
+        {
+          "nr": 3,
+          "von": "cweiske",
+          "am": "2025-10-01T06:48:47.409Z",
+          "text": "The commit that added support for the NWA50AX contains a call to a script mkits-zyxel-fit.sh that defines compat-models. It is called from mt7621.mk as follows:\ndefine Build/zyxel-nwa-fit                  \n        $(TOPDIR)/scripts/mkits-zyxel-fit.sh \\\n                $@.its $@ \"6b e1 6f e1 ff ff ff ff ff ff\"\n        PATH=$(LINUX_DIR)/scripts/dtc:$(PATH) mkimage -f $@.its $@.new\n        @mv $@.new $@\nendef\n\nThere is no explanation for the structure of 6b e1 6f e1 ff ff ff ff ff ff, though.\nIt looks to me as if 2 models are in there - 6b and 6f, with e1 being a separator and the ff could be the end-of-data marker. But this compat-models key seems to be unique to the Zyxel DTS file; I've found no other mentions of this on the internet."
+        },
+        {
+          "nr": 4,
+          "von": "cweiske",
+          "am": "2025-10-04T11:24:27.420Z",
+          "text": "I could flash an official NWA50AX 7.10(ACCV.3)C0 firmware on my NWA90AX without any problems, so there does not seem to be a check for whitelisted devices taking place - and the problem must be elsewhere.\nWhen viewing official and OpenWRT firmware files in a hex editor, something sticks out:\nThe end contains a checksum, and something that looks like what the hash/checksum is built with:\n|...*firmware....|\n|.........../none|\n|........hash....|\n|....... ...J..;.|\n|..$T.J......c<{.|\n|..51.6..........|\n|.......;sha256..|\n|................|\n|....description.|\n|compat-models.fw|\n|_version.data.ty|\n|pe.compression.a|\n|lgo.timestamp.va|\n|lue.............|\n\nThe OpenWrt builds have a something off:\n|............firm|\n|ware............|\n|...3none........|\n|hash@1..........|\n|...N6..ta.C.@l..|\n|.....;9.........|\n|...?sha1........|\n|................|\n|description.comp|\n|at-models.#addre|\n|ss-cells.data.ty|\n|pe.compression.a|\n|lgo.timestamp.va|\n|lue.............|\n\nThis #address-cells looks suspicious.  Does it have to be there?\n\nLooks like this is just the dts.\nI wonder if the files work at all, since all firmwares since 22.03.7 bring the same \"-25007 / Firmware content error!\":\n\nopenwrt-22.03.7-ramips-mt7621-zyxel_nwa50ax-squashfs-factory.bin\nopenwrt-23.05.6-ramips-mt7621-zyxel_nwa50ax-squashfs-factory.bin\nopenwrt-24.10.2-ramips-mt7621-zyxel_nwa50ax-squashfs-factory.bin\n\nCould someone confirm that the factory images work on a NWA50AX?"
+        },
+        {
+          "nr": 5,
+          "von": "cweiske",
+          "am": "2025-10-05T06:18:51.917Z",
+          "text": "I tried to downgrade to an earlier official firmware and got the \"errno: -25007 / errmsg: Firmware content error!\" with all lower firmware versions.\nMy current official firmware is V7.10(3), and downgrading to the following NWA50AX firmware versions gave me this error:\n\n6.25 https://download.zyxel.com/NWA50AX/firmware/NWA50AX_6.25(ABYW.8)C0.zip\n7.00 https://download.zyxel.com/NWA50AX/firmware/NWA50AX_7.00(ABYW.2)C0.zip\n\nIt looks to me as if the firmware has a downgrade protection in place, which prevents installing OpenWrt firmware - just as it prevents installing older firmware.\nThat downgrade protection does not seem to be in earlier firmware versions: A libe.net blog post reports a working upgrade from V6.29 (ABYW.1), which a github issue confirms.\n\nUploading NWA90AX_7.00(ACCV.2)C0 from https://download.zyxel.com/NWA90AX/firmware/NWA90AX_7.00(ACCV.2)C0.zip did work, and the web interface now shows Firmware Version: V7.00(2) / 2024-08-15 01:59:19\nDowngrading to a NWA90AX firmware NWA90AX_6.29(ACCV.4)C0 (from https://download.zyxel.com/NWA90AX/firmware/NWA90AX_6.29(ACCV.4)C0.zip) works - so it's no downgrade protection, but a check if the firmware is for the right device."
+        },
+        {
+          "nr": 6,
+          "von": "cweiske",
+          "am": "2025-10-05T12:38:25.543Z",
+          "text": "When trying to flash firmware 7.10#3 for the NWA50AX on the currently installed NWA90AX firmware with the same version, I saw something in my browser's network inspector:\n----- kernel cmdline -----\nconsole=ttyS0,115200 loglevel=1 bootImage=1 bootVer=V1.03 rootfstype=squashfs,jffs2\n------- FW version -------\nFIRMWARE_VER=6.29(ACCV.4)\nBUILD_DATE=2024-01-10 14:37:56\nMODEL_ID=NWA90AX\nCOMPATIBLE_PRODUCT_MODEL_0=77E1\nCOMPATIBLE_PRODUCT_MODEL_1=FFFF\nCOMPATIBLE_PRODUCT_MODEL_2=FFFF\nCOMPATIBLE_PRODUCT_MODEL_3=FFFF\nCOMPATIBLE_PRODUCT_MODEL_4=FFFF\n\n77E1 is the model number code!\nAfter adding that to the scripts/mkits-zyxel-fit.sh call in target/linux/ramips/image/mt7621.mk and re-building the firmware, I could flash it!\nI'll submit a patch: https://github.com/openwrt/openwrt/pull/20308"
+        }
+      ]
+    },
+    "zyxel_datenblatt": {
+      "Model": "NWA90AX",
+      "Product name": "802.11ax (WiFi 6) Dual-Radio PoE Access Point",
+      "Standard": "IEEE 802.11 ax/ac/n/g/b/a",
+      "MIMO": "MU-MIMO",
+      "Wireless speed": "2.4 GHz 575 Mbps; 5 GHz 1200 Mbps",
+      "Frequency band 2.4 GHz": "USA (FCC): 2.412 to 2.462 GHz; Europe (ETSI): 2.412 to 2.472 GHz",
+      "Frequency band 5 GHz": "USA (FCC): 5.15 to 5.35 GHz; 5.470 to 5.850 GHz; European (ETSI): 5.15 to 5.35 GHz; 5.470 to 5.725 GHz",
+      "Bandwidth": "20-, 40-, 80-MHz",
+      "Conducted typical transmit output power (2.4 GHz/5 GHz)": "US 23/26 dBm; EU 20/25 dBm",
+      "Antenna type": "Internal antenna",
+      "Antenna gain": "2.4 GHz 3 dBi, 2x2: 2SS; 5 GHz 4 dBi, 2x2: 2SS",
+      "Minimum receive sensitivity": "Min. Rx sensitivity up to -99 dBm",
+      "Band steering": "Yes",
+      "WDS/Mesh": "Yes",
+      "Fast roaming": "Pre-authentication, PMK caching, and 802.11r/k/v",
+      "DCS": "Yes",
+      "Load balancing": "No",
+      "Encryption": "WEP/WPA/WPA2/WPA3",
+      "Authentication": "IEEE 802.1X/RADIUS authentication",
+      "Access management": "L2-isolation/MAC filtering/Rogue AP detection",
+      "IPv6": "Yes",
+      "VLANs": "Yes",
+      "WMM": "Yes",
+      "U-APSD": "Yes",
+      "Operating mode": "Cloud managed/standalone",
+      "Web UI/CLI": "Yes",
+      "SNMP": "No",
+      "Item Dimensions (WxDxH)(mm/in.)": "140 x 140 x 37.5/5.51 x 5.51 x 1.48",
+      "Item Weight (g/lb.)": "290/0.64",
+      "Packing Dimensions (WxDxH)(mm/in.)": "240 x 155 x 60/9.45 x 6.10 x 2.36",
+      "Packing Weight (g/lb.)": "600/1.32",
+      "Included accessories": "Power adapter; Mount plate; Mounting screws",
+      "MTBF (hr)": "1,010,980",
+      "Ethernet port": "1 x 10/100/1000M LAN",
+      "Power": "Power adapter: AC 100 - 240 V - 50/60 Hz 0.3 A; Output: DC +12 V 1.5 A; PoE (802.3at): power draw 16 W",
+      "Operating Temperature": "0°C to 50°C/32°F to 122°F",
+      "Operating Humidity": "10% to 90% (non-condensing)",
+      "Storage Temperature": "-40°C to 70°C/-40°F to 158°F",
+      "Storage Humidity": "10% to 90% (non-condensing)",
+      "Certifications Radio": "FCC Part 15C, FCC Part 15E; ETSI EN 300 328, EN 301 893; LP0002, EN 60601-1-2",
+      "Certifications EMC": "FCC Part 15B, EN 301 489-1; EN 301 489-17, EN55022, EN55024, EN61000-3-2/-3, BSMI CNS13438",
+      "Certifications Safety": "EN 60950-1, IEC 60950-1; BSMI CNS14336-1",
+      "Fußnote": "*1 Conducted typical transmit output power excludes antenna gain. *2 WDS, ZyMesh, Smart Mesh and Industry's Open Mesh, Easy Mesh are different mesh systems that do not work with one another.",
+      "Fußzeile": "08/04/24"
+    },
+    "zyxel_produktseite": {
+      "Titel": "AX1800 4-Stream WiFi 6 Dual-Radio NebulaFlex Access Point NWA90AX",
+      "Hinweis": "Specifications-Tab inhaltsgleich mit Datenblatt v5 (Operating mode: Nebula cloud managed / Standalone; SNMP: NO)",
+      "Power": "Power Adapter: AC 100 - 240V - 50/60 Hz 0.3A; Output: DC +12V 1.5A; PoE (802.3at): power draw 16 W"
+    },
+    "zyxel_downloadseite": {
+      "Firmware": [
+        "7.12(ACCV.0)C0 2026-07-29",
+        "7.10(ACCV.4)C0 2026-01-21",
+        "7.10(ACCV.3)C0 2025-07-25"
+      ],
+      "Quick Start Guide": "006, 2025-04-25, https://download.zyxel.com/NWA90AX/quick_start_guide/NWA90AX_006.pdf",
+      "Declaration": "003.BSMI DoC 2024-12-31; 007.214-01-01435 (EU DoC u. a.)",
+      "Datasheet": "5, 2024-04-08",
+      "Certification": [
+        "001.WFA Certificate 2023-08-15",
+        "001.JP RF 2023-06-14 (zip)",
+        "001.IC RF 2022-01-10",
+        "001.NCC RF 2022-01-10",
+        "001.CE Safety 2021-12-13"
+      ],
+      "Antenna Specification Matrix": "1, 2022-03-07",
+      "weitere": [
+        "https://download.zyxel.com/NWA90AX/user_guide/NWA90AX-UG.pdf",
+        "https://download.zyxel.com/NWA90AX/user_guide_web/index.html",
+        "https://download.zyxel.com/NWA90AX/cli_reference_guide/NWA90AX_V7.12.pdf"
+      ]
+    },
+    "zyxel_antennen": {
+      "Model": "NWA90AX/NWA50AX",
+      "Space": "Embedded / Embedded",
+      "Frequency band (MHz)": "2400 - 2500 / 5150 - 5825",
+      "Gain": "3 dBi / 4 dBi",
+      "VSWR": "2:1 Max.",
+      "Polarization": "Vertical & Horizontal"
+    },
+    "zyxel_zert_lvd": {
+      "Product": "802.11ax (WiFi 6) Dual-Radio PoE Access Point",
+      "Type Designation": "NWA50AX, NWA90AX",
+      "Applicant": "Zyxel Communications Corporation",
+      "Standards": "IEC 62368-1:2014 (Second Edition); EN 62368-1:2014; /AC:2015; /A11:2017",
+      "Test Report No": "WL20K2703-L1",
+      "Issued Date": "November 29, 2021",
+      "Lab": "Wendell Electrical Testing Lab."
+    },
+    "zyxel_zert_ised": {
+      "Certification No.": "IC: 2468C-11AXAP22A",
+      "Datum": "December 28, 2021",
+      "Job Number": "6434-21",
+      "Tested By": "Sporton International Inc. Hsinchu Laboratory (4086D)",
+      "Type of Equipment": "Wireless Local Area Network Device (Indoor Only)",
+      "Type of Service": "Existing Family/ Modification (C1PC)",
+      "HVIN": "NWA90AX",
+      "FVIN": "N/A",
+      "PMN": "NWA90AX",
+      "HMN": "N/A",
+      "Tabelle": [
+        [
+          "2412-2462 MHz",
+          "15M9G1D",
+          "0.457 W",
+          "PIFA / Max gain 3.4dBi"
+        ],
+        [
+          "2412-2462 MHz",
+          "23M9D1D",
+          "0.375 W",
+          "PIFA / Max gain 3.4dBi"
+        ],
+        [
+          "2422-2452 MHz",
+          "37M7D1D",
+          "0.115 W",
+          "PIFA / Max gain 3.4dBi"
+        ],
+        [
+          "5210 MHz",
+          "76M8D1D",
+          "0.070 W",
+          "PIFA / Max gain 4.5dBi"
+        ],
+        [
+          "5260-5320 MHz",
+          "18M9D1D",
+          "0.067 W",
+          "PIFA / Max gain 4.5dBi"
+        ],
+        [
+          "5270-5310 MHz",
+          "37M5D1D",
+          "0.067 W",
+          "PIFA / Max gain 4.5dBi"
+        ],
+        [
+          "5290 MHz",
+          "76M8D1D",
+          "0.067 W",
+          "PIFA / Max gain 4.5dBi"
+        ],
+        [
+          "5510-5550 MHz",
+          "37M6D1D",
+          "0.224 W",
+          "PIFA / Max gain 4.5dBi"
+        ],
+        [
+          "5670-5710 MHz",
+          "37M6D1D",
+          "0.248 W",
+          "PIFA / Max gain 4.5dBi"
+        ],
+        [
+          "5530 MHz",
+          "76M9D1D",
+          "0.114 W",
+          "PIFA / Max gain 4.5dBi"
+        ],
+        [
+          "5690 MHz",
+          "72M9D1D",
+          "0.233 W",
+          "PIFA / Max gain 4.5dBi"
+        ],
+        [
+          "5755-5795 MHz",
+          "46M4D1D",
+          "0.607 W",
+          "PIFA / Max gain 4.5dBi"
+        ],
+        [
+          "5775 MHz",
+          "77M1D1D",
+          "0.325 W",
+          "PIFA / Max gain 4.5dBi"
+        ]
+      ],
+      "Spezifikation": "RSS-247 Issue 2 Feb. 2017; RSS-102 Issue 5; RSS-Gen Issue 5"
+    },
+    "zyxel_zert_ncc": {
+      "申請者": "合勤科技股份有限公司",
+      "製造廠商": "合勤科技股份有限公司",
+      "器材名稱": "802.11ax (WiFi 6) 雙頻 POE 無線網路接取器",
+      "廠牌": "ZYXEL",
+      "型號": "NWA90AX",
+      "審驗日期": "110年11月30日 (2021-11-30)",
+      "審驗合格標籤式樣": "CCAF21LP066AT0",
+      "配件": "充電器 廠牌/型號: DVE/DSA-18PFCA-12 120150; 電線、充電器、配件、外接線: Plug*1 (DVE/Plug)",
+      "Hinweis": "aus Scan abgelesen, Seite 2 nicht ausgewertet"
+    },
+    "zyxel_zert_wifi": {
+      "Certification ID": "WFA126044",
+      "Date of Certification": "July 27, 2023",
+      "Company": "Zyxel Networks Corporation",
+      "Product Name": "802.11ax (WiFi 6) Dual-Radio PoE Access Point",
+      "Product Model Variant": "NWA50AX",
+      "Model Number": "NWA90AX",
+      "Category": "Routers",
+      "OS": "Linux Kernel 4.4.198",
+      "Firmware": "V6.29",
+      "RF": "2.4 GHz Tx 2 Rx 2; 5 GHz Tx 2 Rx 2",
+      "Zertifizierungen": "Wi-Fi CERTIFIED 6, a, ac, b, g, n; WMM; Agile Multiband; PMF; WPA2-Personal 2021-01; WPA3-Personal 2022-06; WPA-Personal; 2.4 GHz 20/40 MHz; 5 GHz 20/40/80 MHz"
+    },
+    "zyxel_eu_doc": {
+      "EU DoC": {
+        "Product": "802.11ax (WiFi 6) Dual-Radio PoE Access Point",
+        "Model": "NWA90AX",
+        "Date": "2025-09-18",
+        "maximum RF power": "2400-2483.5 MHz 98.86 mW; 5150-5350 MHz 199.07 mW; 5470-5725 MHz 979.49 mW",
+        "Abstand": "minimum distance of 20 cm"
+      },
+      "ErP": {
+        "Off mode": "N/A",
+        "Network standby (Wireless 5G)": "4.14 W",
+        "Network standby (All port)": "4.47 W",
+        "The period to network standby": "< 1 min",
+        "Supported Accessory": "DSA-18PFCA-12 120150",
+        "Accessory Specification": "Input: 100-240V ~ 50/60Hz 0.6A; Output: 12.0V 1.5A 18.0W",
+        "Accessory manufacturer": "DEE VAN ENTERPRISE CO., LTD",
+        "Average active efficiency": "87.483 %",
+        "Efficiency at low load": "82.914%",
+        "No-load power consumption": "0.0668 W"
+      },
+      "UK PSTI": {
+        "Product type": "Access Point",
+        "Model": "NWA90AX",
+        "security support period": "December 31,2025 (Extended support may be provided)",
+        "Date": "2025-07-18"
+      },
+      "Safety Warnings": "Do not use the device outside, and make sure all the connections are indoors. / Please refer to the device back label, datasheet or box specifications catalog information for rated power of device and operating temperature. / restricted to indoor use when operating in the 5150 to 5350 MHz frequency range"
+    },
+    "fcc_handbuch_sammel": {
+      "Tabelle": "Table 1 Zyxel Device Product Feature Table, Spalte NWA90AX",
+      "Supported WiFi Standards": "IEEE 802.11a/b/g/n/ac/ax",
+      "Supported Frequency Bands": "2.4 GHz, 5 GHz",
+      "Supported Channel Width": "2.4G: 20/40 MHz; 5G: 20/40/80 MHz",
+      "Available Security Modes": "None, Enhanced-open, WEP, WPA2-MIX / WPA3 - Personal & Enterprise",
+      "Number of SSID Profiles": "64",
+      "Number of WiFi Radios": "2",
+      "Security Profile Radius Settings": "Yes",
+      "Security Profile Enterprise Authentication Settings": "Yes",
+      "Rogue AP Detection": "Yes",
+      "WDS - Root AP & Repeater Modes": "Yes",
+      "Wireless Bridge VLAN": "No",
+      "Layer-2 Isolation": "Yes",
+      "Supported PoE Standards": "IEEE 802.3at",
+      "Power Detection": "No",
+      "External Antennas": "No",
+      "Internal Antennas": "Yes",
+      "Console Port": "4-Pin Serial",
+      "Reset button": "Yes",
+      "LED Locator": "Yes",
+      "LED Suppression": "Yes",
+      "AC (AP Controller) Discovery": "No",
+      "NCC Discovery": "Yes",
+      "802.11r Fast Roaming Support": "Yes",
+      "802.11k/v Assisted Roaming": "Yes",
+      "Ethernet Storm Control": "No",
+      "Grounding": "No",
+      "Power Jack": "Yes",
+      "Maximum number of log messages": "512 event logs",
+      "Latest Firmware Version Supported": "6.29"
+    },
+    "hersteller_handbuch_web": {
+      "Tabelle": "WiFi 6 Models Comparison Table, Spalte NWA90ax",
+      "Multi-Link Operation (MLO)": "No",
+      "Supported Channel Width": "2.4G: 20 / 40 MHz; 5G: 20 / 40 / 80 MHz",
+      "Available Security Modes": "None / Enhanced-open / WEP / WPA2-MIX / WPA3 -Personal & Enterprise",
+      "Security Profile Radius Settings": "Yes",
+      "Layer-2 Isolation": "Yes",
+      "Supported PoE Standards": "IEEE 802.3at",
+      "Power Detection": "No",
+      "External Antennas": "No",
+      "Internal Antennas": "Yes",
+      "Console Port": "4-Pin Serial",
+      "Reset button": "Yes",
+      "LED Locator": "Yes",
+      "LED Suppression": "Yes",
+      "Grounding": "No",
+      "Power Jack": "Yes",
+      "Latest Firmware Version Supported": "7.12",
+      "Kapitel Hardware": "gemeinsamer Abschnitt \"NWA50AX, NWA90AX, NWA50AX PRO, and NWA90AX PRO\" (Details im Eintrag zyxel-nwa50ax)"
+    },
+    "fcc_I8811AXAP22": {
+      "Titel": "802.11ax (WiFi 6) Dual-Radio Unified Access Point / 802.11ax (WiFi 6) Dual-Radio PoE Access Point",
+      "Grant": "2020-05-13 Original Equipment, 2412-2462 MHz und 5180-5240 MHz",
+      "Test Firm": "International Certification Corp.",
+      "Label Seite 1": "Model Number NWA110AX, 802.11ax (WiFi 6) 雙頻POE無線網路接取器, Power Rating 12V 1.5A, Power Consumption 15 Watt max., FCC ID I88 11AXAP22, IC 2468C-11AXAP22",
+      "Label Seite 2": "Model Number WAX510D, 802.11ax (WiFi 6) 雙頻整合式無線網路接取器, 12V 1.5A, 15 Watt max., FCC ID I8811AXAP22, IC 2468C-11AXAP22",
+      "Label Seite 3": "Lageskizze Etikett"
+    },
+    "geizhals_archiv": {
+      "Titel": "Zyxel NWA90AX | Preisvergleich Geizhals Österreich",
+      "Wireless": "Wi-Fi 6 (802.11a/b/g/n/ac/ax), simultan",
+      "Übertragungsrate": "574Mbit/s (2.4GHz), 1201Mbit/s (5GHz)",
+      "Pseudoklasse": "AX1800",
+      "Sicherheit": "64/128bit WEP, WPA, WPA2, WPA3",
+      "Antennen": "intern",
+      "Band-Fähigkeiten": "Dual Band (simultan)",
+      "Mesh": "Roaming, Mesh (geteiltes Band)",
+      "Leistungsaufnahme": "16W (Verbrauch, Betrieb)",
+      "Farbe": "weiß",
+      "Abmessungen": "140x140x37.5mm",
+      "Besonderheiten": "MU-MIMO, IPv6, VLAN",
+      "Herstellergarantie": "zwei Jahre",
+      "802.11ax 2.4GHz": "574Mbit/s (Spatial Streams: 2x2:2, Bandwidth: 40MHz, Modulation: 1024-QAM)",
+      "802.11ax 5GHz": "1201Mbit/s (Spatial Streams: 2x2:2, Bandwidth: 80MHz, Modulation: 1024-QAM)",
+      "Varianten": [
+        {
+          "name": "AX1800",
+          "sku": "NWA90AX-EU0102F",
+          "link": "zyxel-nwa90ax-nwa90ax-eu0102f-a2699911.html",
+          "angebote": "keine Angebote"
+        },
+        {
+          "name": "AX1800, 3er-Pack",
+          "sku": "NWA90AX-EU0103F",
+          "link": "zyxel-nwa90ax-nwa90ax-eu0103f-a2774032.html",
+          "angebote": "keine Angebote"
+        }
+      ],
+      "Preis": "Derzeit keine Angebote"
+    },
+    "wikidevi": {
+      "ergebnis": "Seite ZyXEL NWA90AX existiert nicht"
+    },
+    "deviwiki": {
+      "ergebnis": "keine Seite"
+    },
+    "gluon": {
+      "targets/ramips-mt7621": "device('zyxel-nwa50ax', 'zyxel_nwa50ax')"
+    },
+    "neanderfunk_patches": {
+      "targets-zyxel-nwa90ax.patch (ramips)": "device('zyxel-nwa50ax', 'zyxel_nwa50ax', {\n\taliases = {'zyxel-nwa90ax'},\n})",
+      "0001": "ramips: add support for Zyxel NWA90AX access point (cherry picked from 41934223, backport to openwrt-24.10: unchanged)"
+    },
+    "werkstatt": {
+      "long-term-todo.md": "Teil B, Backport aus OpenWrt 25.12: ... NWA90AX/Pro (Alias) ... Bisher nur Probelauf (fuzzprobe), kein Build mit Gerät, keine Hardware."
+    },
+    "openwrt_wiki": {
+      "Hinweis": "Inhalt im Eintrag zyxel-nwa50ax (roh.openwrt_wiki); für den NWA90AX relevant: \"The NWA90AX is hardware-wise identical to the NWA50AX.\" und ToH-Filter auf NWA50AX|NWA90AX"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "Zyxel",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Zyxel Networks Corporation / Zyxel Communications Corporation",
+        "quelle": "zyxel_eu_doc",
+        "beleg": "https://download.zyxel.com/NWA90AX/declaration/NWA90AX_007.214-01-01435.zip",
+        "stand": "EU DoC 2025-09-18, ErP Information 20250918, UK PSTI SoC 2025-07-18, REACH DoC 20250718, PPWR DoC, Safety Warnings 20240117",
+        "sicherheit": "hoch",
+        "bemerkung": "EU DoC 2025-09-18"
+      },
+      {
+        "wert": "ZyXEL Communications Corporation",
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00538.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO Job 6434-21, 2021-12-28",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "NWA90AX",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NWA90AX",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NWA90AX",
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00538.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO Job 6434-21, 2021-12-28",
+        "sicherheit": "hoch",
+        "bemerkung": "HVIN und PMN NWA90AX"
+      },
+      {
+        "wert": "NWA90AX",
+        "quelle": "zyxel_zert_ncc",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00539.pdf",
+        "stand": "NCC-Typzulassung (耕興/Sporton), 110年11月30日 = 2021-11-30, PDF 2021-12-29",
+        "sicherheit": "hoch",
+        "bemerkung": "型號 NWA90AX, 牌 ZYXEL"
+      },
+      {
+        "wert": "Zyxel NWA90AX (DEVICE_ALT0 im OpenWrt-Profil zyxel_nwa50ax)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/41934223776dc45e410ac372c6713e6a2713ff33",
+        "stand": "Commit 2025-10-05 (Autor Christian Weiske), gemergt 2025-10-19 (Hauke Mehrtens), PR 20308",
+        "sicherheit": "mittel",
+        "bemerkung": "kein eigenes OpenWrt-Profil, kein eigenes DTS (DTS-Modell \"Zyxel NWA50AX\")"
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "keine Revision geführt",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Feld Versions leer"
+      },
+      {
+        "wert": "keine Revision geführt; HVIN NWA90AX",
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00538.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO Job 6434-21, 2021-12-28",
+        "sicherheit": "hoch",
+        "bemerkung": "ISED Hardware Version Id Number = NWA90AX, FVIN N/A"
+      }
+    ],
+    "varianten": [
+      {
+        "wert": "NWA90AX mit FCC-ID I8811AXAP22A (hardwaregleich mit NWA50AX); ein anderer Thread beschreibe eine abweichende Revision \"Zyxel NWA90AX PoE AP\" mit FCC-ID I8811AXAP22",
+        "quelle": "openwrt_forum_241294",
+        "beleg": "https://forum.openwrt.org/t/support-for-zyxel-nwa90ax/241294",
+        "stand": "Beiträge 2025-09-30 bis 2025-10-05 (geschlossen 2025-10-15)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beitrag #1 (cweiske, 2025-09-30); der genannte andere Thread ist nicht verlinkt"
+      },
+      {
+        "wert": "I8811AXAP22 gehört laut FCC-Etikettenentwürfen zu NWA110AX und WAX510D (Unified AP, 15 W max.), nicht zum NWA90AX",
+        "quelle": "fcc_I8811AXAP22",
+        "beleg": "https://fccid.io/I8811AXAP22",
+        "stand": "Grant 2020-05-13 (Original Equipment), Label-Exhibit PDF 2020-04-29",
+        "sicherheit": "hoch",
+        "bemerkung": "Forenangabe zur zweiten NWA90AX-Revision damit nicht belegt; offen, ob es einen NWA90AX mit anderer Hardware gibt"
+      },
+      {
+        "wert": "NWA90AX und NWA90AX Pro sind verschiedene Geräte (Pro: MediaTek MT7981, eigenes Gluon-Image zyxel-nwa90ax-pro)",
+        "quelle": "openwrt_forum_241294",
+        "beleg": "https://forum.openwrt.org/t/support-for-zyxel-nwa90ax/241294",
+        "stand": "Beiträge 2025-09-30 bis 2025-10-05 (geschlossen 2025-10-15)",
+        "sicherheit": "mittel",
+        "bemerkung": "Beitrag #1: \"the 'Pro' versions have completely different hardware than the non-pro ones\"; Pro siehe daten/zyxel-nwa90ax-pro.json"
+      }
+    ],
+    "hardwaregleich": [
+      {
+        "wert": "NWA50AX",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/41934223776dc45e410ac372c6713e6a2713ff33",
+        "stand": "Commit 2025-10-05 (Autor Christian Weiske), gemergt 2025-10-19 (Hauke Mehrtens), PR 20308",
+        "sicherheit": "mittel",
+        "bemerkung": "\"The NWA90AX is hardware-wise identical to the NWA50AX which is already supported.\""
+      },
+      {
+        "wert": "NWA50AX",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel)",
+        "sicherheit": "mittel",
+        "bemerkung": "\"The NWA90AX is hardware-wise identical to the NWA50AX.\""
+      },
+      {
+        "wert": "NWA50AX",
+        "quelle": "openwrt_forum_241294",
+        "beleg": "https://forum.openwrt.org/t/support-for-zyxel-nwa90ax/241294",
+        "stand": "Beiträge 2025-09-30 bis 2025-10-05 (geschlossen 2025-10-15)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Nutzer verglich die FCC-Fotos I8811AXAP22A und zitiert Zyxel-Supportartikel 4416989548178: \"NWA90AX: Identical hardware as in NWA50AX, but with added features like Captive portal for Guest access and WPA Enterprise\"; NWA50AX-Firmware 7.10(ACCV.3) lief auf dem NWA90AX"
+      },
+      {
+        "wert": "NWA50AX",
+        "quelle": "zyxel_zert_lvd",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-02-00798.pdf",
+        "stand": "CoC LVD, Wendell Electrical Testing Lab., Testbericht WL20K2703-L1 vom 2021-11-29",
+        "sicherheit": "hoch",
+        "bemerkung": "eine LVD-Bescheinigung für \"NWA50AX, NWA90AX\""
+      },
+      {
+        "wert": "NWA50AX",
+        "quelle": "zyxel_zert_wifi",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-05-00093.pdf",
+        "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+        "sicherheit": "hoch",
+        "bemerkung": "Model Number NWA90AX, Product Model Variant NWA50AX"
+      },
+      {
+        "wert": "NWA50AX",
+        "quelle": "zyxel_antennen",
+        "beleg": "https://download.zyxel.com/NWA90AX/antenna_specification_matrix/NWA90AX_1.pdf",
+        "stand": "Antenna Specification Matrix Version 1 (Last-Modified 2022-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "gemeinsame Spalte \"NWA90AX/NWA50AX\""
+      },
+      {
+        "wert": "NWA50AX",
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00538.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO Job 6434-21, 2021-12-28",
+        "sicherheit": "mittel",
+        "bemerkung": "IC 2468C-11AXAP22A wie NWA50AX, Zulassung als \"Existing Family/ Modification (C1PC)\""
+      },
+      {
+        "wert": "Unterschied nur Firmware-Funktionen: Captive Portal, WPA2/WPA3-Enterprise, RADIUS, Layer-2-Isolation",
+        "quelle": "fcc_handbuch_sammel",
+        "beleg": "https://fccid.io/I8803911/User-Manual/Users-Manual-6335969",
+        "stand": "PDF 2023-01-18 (Exhibit 2023-07-18), Firmware-Stand 6.29",
+        "sicherheit": "hoch",
+        "bemerkung": "Table 1: Security Profile Radius/Enterprise und Layer-2 Isolation beim NWA90AX Yes, beim NWA50AX No; alle Hardwarezeilen gleich"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Modellname NWA90AX auf dem Etikett; Pflichtangabe \"IC: 2468C-11AXAP22A\"",
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00538.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO Job 6434-21, 2021-12-28",
+        "sicherheit": "mittel",
+        "bemerkung": "Auflage der Zulassung, kein Foto"
+      },
+      {
+        "wert": "Etikett auf der Rückseite mit Leistungsangabe und Betriebstemperatur",
+        "quelle": "zyxel_eu_doc",
+        "beleg": "https://download.zyxel.com/NWA90AX/declaration/NWA90AX_007.214-01-01435.zip",
+        "stand": "EU DoC 2025-09-18, ErP Information 20250918, UK PSTI SoC 2025-07-18, REACH DoC 20250718, PPWR DoC, Safety Warnings 20240117",
+        "sicherheit": "mittel",
+        "bemerkung": "Safety Warnings: \"Please refer to the device back label ... for power rating of the device and operating temperature\""
+      },
+      {
+        "wert": "NCC-Kennzeichen CCAF21LP066AT0 (Taiwan)",
+        "quelle": "zyxel_zert_ncc",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00539.pdf",
+        "stand": "NCC-Typzulassung (耕興/Sporton), 110年11月30日 = 2021-11-30, PDF 2021-12-29",
+        "sicherheit": "hoch",
+        "bemerkung": "Etikettenmuster 審驗合格標籤式樣 im Zertifikat"
+      },
+      {
+        "wert": "Nicht verwechseln mit NWA90AX Pro (anderes Gehäuse und Hardware, 2.5G-Port); Stock-Firmware meldet MODEL_ID=NWA90AX, Modellcode 77E1",
+        "quelle": "openwrt_forum_241294",
+        "beleg": "https://forum.openwrt.org/t/support-for-zyxel-nwa90ax/241294",
+        "stand": "Beiträge 2025-09-30 bis 2025-10-05 (geschlossen 2025-10-15)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Beitrag #6: Diagnoseausgabe der Zyxel-Firmware"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "I8811AXAP22A",
+        "quelle": "openwrt_forum_241294",
+        "beleg": "https://forum.openwrt.org/t/support-for-zyxel-nwa90ax/241294",
+        "stand": "Beiträge 2025-09-30 bis 2025-10-05 (geschlossen 2025-10-15)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Nutzerangabe am eigenen Gerät"
+      },
+      {
+        "wert": "I8811AXAP22A",
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00538.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO Job 6434-21, 2021-12-28",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: IC-Nummer 2468C-11AXAP22A mit HVIN NWA90AX trägt denselben Produktcode wie die FCC-ID des NWA50AX; FCC-Grant selbst nennt nur Modell 11AXAP22A"
+      },
+      {
+        "wert": "https://fccid.io/CCAF21LP0660T1 (Taiwan-NCC-ID des NWA50AX, keine FCC-ID)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "ToH-Feld FCCID_urls; auf der NWA50AX-Datenseite wurde derselbe Link am 2026-05-30 durch I8811AXAP22A ersetzt, beim NWA90AX nicht"
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "2468C-11AXAP22A",
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00538.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO Job 6434-21, 2021-12-28",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "ncc_id": [
+      {
+        "wert": "CCAF21LP066AT0",
+        "quelle": "zyxel_zert_ncc",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00539.pdf",
+        "stand": "NCC-Typzulassung (耕興/Sporton), 110年11月30日 = 2021-11-30, PDF 2021-12-29",
+        "sicherheit": "hoch",
+        "bemerkung": "aus Scan abgelesen; NWA50AX hat CCAF21LP0660T1"
+      },
+      {
+        "wert": "CCAF21LP0660T1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "steht im FCCID-Link der ToH-Seite, ist aber die NCC-ID des NWA50AX"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "AX1800 4-Stream WiFi 6 Dual-Radio NebulaFlex Access Point"
+        ],
+        "quelle": "zyxel_produktseite",
+        "beleg": "https://www.zyxel.com/global/en/products/wireless/nwa90ax/specifications",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "Produkttitel"
+      },
+      {
+        "wert": [
+          "802.11ax (WiFi 6) Dual-Radio PoE Access Point"
+        ],
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "Produktname"
+      },
+      {
+        "wert": [
+          "11AXAP22A"
+        ],
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00538.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO Job 6434-21, 2021-12-28",
+        "sicherheit": "mittel",
+        "bemerkung": "Produktcode der IC-Nummer"
+      }
+    ],
+    "artikelnummern": [
+      {
+        "wert": [
+          "NWA90AX-EU0102F",
+          "NWA90AX-EU0103F"
+        ],
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20250517045935/https://geizhals.at/zyxel-nwa90ax-v107306.html",
+        "stand": "Archivkopie 2025-05-17 der geizhals.at-Variantenseite v107306",
+        "sicherheit": "mittel",
+        "bemerkung": "EU0102F Einzelgerät, EU0103F 3er-Pack (Geizhals-Variantenseite)"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "nwa50ax_wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "nwa50ax_openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; OEM-Bootlog 'MT7621AT ver 1, eco 3'"
+      },
+      {
+        "wert": "MediaTek MT7621AT",
+        "quelle": "nwa50ax_fcc_innenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Aufdruck 2040-AMTH"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "nwa50ax_wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 880,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 880,
+        "quelle": "nwa50ax_wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": 880,
+        "quelle": "nwa50ax_openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; U-Boot 'CPU: 880MHz'; Stock-Kernel meldet 'CPU Clock: 1000MHz'"
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "mipsel_24kc",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Paketarchitektur"
+      },
+      {
+        "wert": "MIPS 1004Kc",
+        "quelle": "nwa50ax_openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; OEM-Bootlog CPU0 revision"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 256,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 256,
+        "quelle": "nwa50ax_openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; DDR3"
+      },
+      {
+        "wert": 256,
+        "quelle": "nwa50ax_wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Nanya NT5CC128M16JR-EK"
+      },
+      {
+        "wert": 256,
+        "quelle": "nwa50ax_openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; U-Boot 'DRAM: 256 MiB'"
+      },
+      {
+        "wert": 256,
+        "quelle": "nwa50ax_fcc_innenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Chip NANYA NT5CC128M16JR-EK (DDR3, 2 Gbit, abgeleitet aus Teilenummer)"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 128,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "\"128NAND\""
+      },
+      {
+        "wert": 128,
+        "quelle": "nwa50ax_openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": 128,
+        "quelle": "nwa50ax_wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Macronix MX30LF1G28AD-TI"
+      },
+      {
+        "wert": 128,
+        "quelle": "nwa50ax_openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; U-Boot 'NAND: 128 MiB'"
+      },
+      {
+        "wert": 128,
+        "quelle": "nwa50ax_openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_zyxel_nwa-ax.dtsi",
+        "stand": "OpenWrt main am 2026-10-19, letzter Commit an der dtsi 1180dd6b vom 2025-08-13 (Rosen Penev, \"mt7621: zyxel nwa-ax: set mac address in dts\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; OpenWrt nutzt davon nur firmware 0x2800000 (40 MiB: 8 MiB Kernel + 32 MiB UBI); Rest Zyxel-Partitionen (zy_firmware_1, zy_rootfs_data, zy_logs, myzyxel)"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NAND",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "NAND",
+        "quelle": "nwa50ax_openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "NAND (SLC, Macronix MX30LF1G28AD-TI)",
+        "quelle": "nwa50ax_fcc_innenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Chipaufdruck"
+      },
+      {
+        "wert": "NAND mit NMBM (MediaTek Bad-Block-Management)",
+        "quelle": "nwa50ax_openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_zyxel_nwa-ax.dtsi",
+        "stand": "OpenWrt main am 2026-10-19, letzter Commit an der dtsi 1180dd6b vom 2025-08-13 (Rosen Penev, \"mt7621: zyxel nwa-ax: set mac address in dts\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": [
+          "MediaTek MT7915"
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "WLAN Comments \"DBDC\""
+      },
+      {
+        "wert": [
+          "MediaTek MT7915DAN",
+          "MediaTek MT7975DN"
+        ],
+        "quelle": "nwa50ax_wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": [
+          "MediaTek MT7915DAN",
+          "MediaTek MT7975DN"
+        ],
+        "quelle": "nwa50ax_fcc_innenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Chipaufdrucke"
+      },
+      {
+        "wert": [
+          "Mediatek MT7915"
+        ],
+        "quelle": "nwa50ax_openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; 2.4/5GHz 802.11ax 2x2 DBDC"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "mt76",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "mt76 (kmod-mt7915-firmware)",
+        "quelle": "nwa50ax_openwrt_image_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/image/mt7621.mk",
+        "stand": "OpenWrt main am 2026-10-19",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "b/g/n/ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n/ax",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "IEEE 802.11 ax/ac/n/g/b/a"
+      },
+      {
+        "wert": "802.11b/g/n/ax",
+        "quelle": "zyxel_zert_wifi",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-05-00093.pdf",
+        "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+        "sicherheit": "hoch",
+        "bemerkung": "Wi-Fi CERTIFIED 6, b, g, n; 20/40 MHz"
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": "2x2:2SS",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "2x2:2SS",
+        "quelle": "zyxel_produktseite",
+        "beleg": "https://www.zyxel.com/global/en/products/wireless/nwa90ax/specifications",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "zyxel_zert_wifi",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-05-00093.pdf",
+        "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+        "sicherheit": "hoch",
+        "bemerkung": "2.4 GHz Tx 2 Rx 2"
+      },
+      {
+        "wert": "2x2:2",
+        "quelle": "nwa50ax_wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; txchains 2, rxchains 2, sstreams 2"
+      },
+      {
+        "wert": "2TX/2RX",
+        "quelle": "nwa50ax_fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": 2,
+        "quelle": "nwa50ax_fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; alle Modi 2TX/2RX"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "a/n/ac/ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac/ax",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac/ax",
+        "quelle": "zyxel_zert_wifi",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-05-00093.pdf",
+        "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+        "sicherheit": "hoch",
+        "bemerkung": "Wi-Fi CERTIFIED 6, a, ac, n; 20/40/80 MHz"
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": "2x2:2SS",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "zyxel_zert_wifi",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-05-00093.pdf",
+        "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+        "sicherheit": "hoch",
+        "bemerkung": "5 GHz Tx 2 Rx 2"
+      },
+      {
+        "wert": "2x2:2",
+        "quelle": "nwa50ax_wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "2TX/2RX",
+        "quelle": "nwa50ax_fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      }
+    ],
+    "wlan_6_standard": [
+      {
+        "wert": "keins",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "WLAN 6.0GHz \"-\""
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AX1800",
+        "quelle": "zyxel_produktseite",
+        "beleg": "https://www.zyxel.com/global/en/products/wireless/nwa90ax/specifications",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": "2.4 GHz 575 Mbps, 5 GHz 1200 Mbps"
+      },
+      {
+        "wert": "AX1800",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"maximum data rate of 1800 Mbps\""
+      },
+      {
+        "wert": "AX1800",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20250517045935/https://geizhals.at/zyxel-nwa90ax-v107306.html",
+        "stand": "Archivkopie 2025-05-17 der geizhals.at-Variantenseite v107306",
+        "sicherheit": "mittel",
+        "bemerkung": "574 Mbit/s (2.4 GHz) + 1201 Mbit/s (5 GHz)"
+      }
+    ],
+    "wlan_kanalbreite_mhz": [
+      {
+        "wert": "20/40/80",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "kein 160 MHz"
+      },
+      {
+        "wert": {
+          "2.4": [
+            20,
+            40
+          ],
+          "5": [
+            20,
+            40,
+            80
+          ]
+        },
+        "quelle": "fcc_handbuch_sammel",
+        "beleg": "https://fccid.io/I8803911/User-Manual/Users-Manual-6335969",
+        "stand": "PDF 2023-01-18 (Exhibit 2023-07-18), Firmware-Stand 6.29",
+        "sicherheit": "hoch",
+        "bemerkung": "Table 1, Spalte NWA90AX"
+      },
+      {
+        "wert": {
+          "2.4": [
+            20,
+            40
+          ],
+          "5": [
+            20,
+            40,
+            80
+          ]
+        },
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": "WiFi 6 Models Comparison Table, Spalte NWA90ax"
+      },
+      {
+        "wert": {
+          "2.4": [
+            20,
+            40
+          ],
+          "5": [
+            20,
+            40,
+            80
+          ]
+        },
+        "quelle": "zyxel_zert_wifi",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-05-00093.pdf",
+        "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": {
+          "US": {
+            "2.4": 23,
+            "5": 26
+          },
+          "EU": {
+            "2.4": 20,
+            "5": 25
+          }
+        },
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "conducted typical, ohne Antennengewinn"
+      },
+      {
+        "wert": {
+          "EU_mW": {
+            "2400-2483.5": 98.86,
+            "5150-5350": 199.07,
+            "5470-5725": 979.49
+          }
+        },
+        "quelle": "zyxel_eu_doc",
+        "beleg": "https://download.zyxel.com/NWA90AX/declaration/NWA90AX_007.214-01-01435.zip",
+        "stand": "EU DoC 2025-09-18, ErP Information 20250918, UK PSTI SoC 2025-07-18, REACH DoC 20250718, PPWR DoC, Safety Warnings 20240117",
+        "sicherheit": "hoch",
+        "bemerkung": "maximum RF power laut EU DoC 2025-09-18 (NWA50AX-DoC: 99.77/199.07/997.7 mW)"
+      },
+      {
+        "wert": {
+          "IC_W": {
+            "2412-2462": 0.457,
+            "5755-5795": 0.607
+          }
+        },
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00538.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO Job 6434-21, 2021-12-28",
+        "sicherheit": "hoch",
+        "bemerkung": "Höchstwerte der ISED-Tabelle (R.F. Power)"
+      }
+    ],
+    "frequenzen_5ghz": [
+      {
+        "wert": "ETSI 5.15-5.35 GHz, 5.470-5.725 GHz; FCC 5.15-5.35, 5.470-5.850 GHz",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "5150-5350 MHz in der EU nur innen",
+        "quelle": "zyxel_eu_doc",
+        "beleg": "https://download.zyxel.com/NWA90AX/declaration/NWA90AX_007.214-01-01435.zip",
+        "stand": "EU DoC 2025-09-18, ErP Information 20250918, UK PSTI SoC 2025-07-18, REACH DoC 20250718, PPWR DoC, Safety Warnings 20240117",
+        "sicherheit": "hoch",
+        "bemerkung": "Safety Warnings"
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "\"-\""
+      },
+      {
+        "wert": "nein",
+        "quelle": "nwa50ax_fcc_handbuch",
+        "beleg": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-1-5231166",
+        "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021 (PDF 2021-04-22, Exhibit 5231166)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; BLE 'No'"
+      }
+    ],
+    "wifi_alliance_id": [
+      {
+        "wert": "WFA126044",
+        "quelle": "zyxel_zert_wifi",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-05-00093.pdf",
+        "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+        "sicherheit": "hoch",
+        "bemerkung": "gemeinsam mit NWA50AX"
+      }
+    ],
+    "mesh_hersteller": [
+      {
+        "wert": "WDS, ZyMesh, Smart Mesh, Easy Mesh (Stock-Firmware)",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "nur Stock-Firmware, für Gluon ohne Belang"
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "Internal antenna"
+      },
+      {
+        "wert": "intern",
+        "quelle": "zyxel_produktseite",
+        "beleg": "https://www.zyxel.com/global/en/products/wireless/nwa90ax/specifications",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "intern",
+        "quelle": "fcc_handbuch_sammel",
+        "beleg": "https://fccid.io/I8803911/User-Manual/Users-Manual-6335969",
+        "stand": "PDF 2023-01-18 (Exhibit 2023-07-18), Firmware-Stand 6.29",
+        "sicherheit": "hoch",
+        "bemerkung": "Table 1 NWA90AX: External Antennas No, Internal Antennas Yes"
+      },
+      {
+        "wert": "intern (PIFA)",
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00538.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO Job 6434-21, 2021-12-28",
+        "sicherheit": "hoch",
+        "bemerkung": "\"PIFA / Max gain 3.4dBi\" bzw. 4.5 dBi"
+      },
+      {
+        "wert": "keine abnehmbaren",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas \"-\""
+      },
+      {
+        "wert": "intern, PIFA mit I-PEX-Stecker",
+        "quelle": "nwa50ax_fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "intern, 2x PIFA LYNwave MLX21M-221AA0-A",
+        "quelle": "nwa50ax_fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "I-PEX (intern)",
+        "quelle": "nwa50ax_fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "U.FL (internal)",
+        "quelle": "nwa50ax_wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "I-PEX (intern)",
+        "quelle": "nwa50ax_fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "nwa50ax_fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; 2x LYNwave MLX21M-221AA0-A"
+      },
+      {
+        "wert": 2,
+        "quelle": "nwa50ax_fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; je Antenne dualband (2.4 und 5 GHz)"
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "dualband (beide Antennen für 2.4 und 5 GHz)",
+        "quelle": "nwa50ax_fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Port 1 und 2 für beide Bänder"
+      },
+      {
+        "wert": "dualband",
+        "quelle": "nwa50ax_fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; jede PIFA mit Gewinn für 2.4 und 5 GHz"
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4": 3,
+          "5": 4
+        },
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": {
+          "2.4": 3,
+          "5": 4
+        },
+        "quelle": "zyxel_antennen",
+        "beleg": "https://download.zyxel.com/NWA90AX/antenna_specification_matrix/NWA90AX_1.pdf",
+        "stand": "Antenna Specification Matrix Version 1 (Last-Modified 2022-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "Spalte NWA90AX/NWA50AX"
+      },
+      {
+        "wert": {
+          "2.4": 3.4,
+          "5": 4.5
+        },
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00538.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO Job 6434-21, 2021-12-28",
+        "sicherheit": "hoch",
+        "bemerkung": "Max gain"
+      },
+      {
+        "wert": {
+          "Ant1": {
+            "2.4": 3.4,
+            "5": 4.5
+          },
+          "Ant2": {
+            "2.4": 3.1,
+            "5": 4.2
+          }
+        },
+        "quelle": "nwa50ax_fcc_rf_exposure",
+        "beleg": "https://fccid.io/I8811AXAP22A/RF-Exposure-Info/MPE-Report-5231170",
+        "stand": "Report FA0D1029 Version 01 vom 2021-04-29 (Exhibit 5231170)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Herstellerangabe im FCC-Bericht"
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "eingebaut (Embedded), Polarisation vertikal und horizontal, VSWR 2:1",
+        "quelle": "zyxel_antennen",
+        "beleg": "https://download.zyxel.com/NWA90AX/antenna_specification_matrix/NWA90AX_1.pdf",
+        "stand": "Antenna Specification Matrix Version 1 (Last-Modified 2022-03-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "Diagramme nur als Grafik, nicht ausgewertet"
+      },
+      {
+        "wert": "rund (omni-directional)",
+        "quelle": "nwa50ax_zyxel_community_12454",
+        "beleg": "https://community.zyxel.com/en/discussion/12454/nwa50ax-nwa210ax-questions",
+        "stand": "Thread vom 2022-01-12 bis 2022-05-15 (Fragesteller undsie, Antworten Zyxel_Silvia/Zyxel_Dick/Zyxel_CSO)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Zyxel_Silvia: \"NWA50AX has omni-directional antenna\""
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "LAN",
+            "geschwindigkeit": "10/100/1000 Mbit/s",
+            "rolle": "einziger Ethernet-Port, PoE-Eingang"
+          }
+        ],
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "1 x 10/100/1000M LAN"
+      },
+      {
+        "wert": [
+          {
+            "name": "Ethernet",
+            "geschwindigkeit": "1 Gbit/s"
+          }
+        ],
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Ethernet 1Gbit ports 1"
+      },
+      {
+        "wert": [
+          {
+            "name": "UPLINK",
+            "geschwindigkeit": "1 Gbit/s",
+            "rolle": "einziger Port"
+          }
+        ],
+        "quelle": "nwa50ax_fcc_aussenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/External-Photos/External-Photos-5231162",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231162)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Beschriftung am Anschlussfeld"
+      },
+      {
+        "wert": [
+          {
+            "name": "lan",
+            "geschwindigkeit": "1 Gbit/s",
+            "rolle": "einziger Port (switch0 port@4)"
+          }
+        ],
+        "quelle": "nwa50ax_openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_zyxel_nwa-ax.dtsi",
+        "stand": "OpenWrt main am 2026-10-19, letzter Commit an der dtsi 1180dd6b vom 2025-08-13 (Rosen Penev, \"mt7621: zyxel nwa-ax: set mac address in dts\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "UPLINK (Port zu Router/Switch), CONSOLE, RESET, POWER",
+        "quelle": "nwa50ax_hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; gemeinsame Tabelle für NWA50AX/NWA90AX/NWA50AX PRO/NWA90AX PRO nennt zusätzlich LAN"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "ein Ethernet-Port; daneben DC-Buchse und Konsole"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "\"-\""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "USB ports \"-\""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "\"-\""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "802.3at",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "PoE (802.3at): power draw 16 W; ob 802.3af-Speisung reicht, sagt keine NWA90AX-Quelle"
+      },
+      {
+        "wert": "802.3at",
+        "quelle": "zyxel_produktseite",
+        "beleg": "https://www.zyxel.com/global/en/products/wireless/nwa90ax/specifications",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.3at",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "\"12 VDC, 1.5A or PoE (802.3at)\""
+      },
+      {
+        "wert": "802.3at",
+        "quelle": "fcc_handbuch_sammel",
+        "beleg": "https://fccid.io/I8803911/User-Manual/Users-Manual-6335969",
+        "stand": "PDF 2023-01-18 (Exhibit 2023-07-18), Firmware-Stand 6.29",
+        "sicherheit": "hoch",
+        "bemerkung": "Table 1 NWA90AX: Supported PoE Standards IEEE 802.3at, Power Detection No"
+      },
+      {
+        "wert": "802.3at",
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": "Spalte NWA90ax: IEEE 802.3at, Power Detection No"
+      },
+      {
+        "wert": "af/at",
+        "quelle": "nwa50ax_wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; pwr_poe=af/at"
+      },
+      {
+        "wert": "PoE-PD-Controller TI TPS23754",
+        "quelle": "nwa50ax_fcc_innenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Chipaufdruck"
+      },
+      {
+        "wert": "802.3at",
+        "quelle": "nwa50ax_connect_test",
+        "beleg": "https://www.connect.de/vergleich/wi-fi-6-router-zyxel-nwa50ax-test-review-3202346-9380.html",
+        "stand": "Artikel vom 29.3.2022 (Hannes Ruegheimer), connect Praxistest",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Switches oder PoE-Injektoren müssen 802.3at folgen"
+      },
+      {
+        "wert": "802.3at (PoE12-30W empfohlen, 16 W Bedarf)",
+        "quelle": "nwa50ax_zyxel_community_15328",
+        "beleg": "https://community.zyxel.com/en/discussion/15328/nwa50ax-poe-voltage",
+        "stand": "Thread vom 2022-12-15, letzte Antwort 2024-03-25 (Zyxel_Kay, Zyxel Employee)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "PoE (Adapter oder PoE geprüft)",
+        "quelle": "nwa50ax_fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; EUT Power Type From Power Adapter or PoE; Prüf-Injektor GLP PE-1000IAF (Norm des Injektors nicht angegeben)"
+      },
+      {
+        "wert": "lief an Zyxel GS1900-8HP und laut Zyxel an GS1920-24HP (af/at-Switches)",
+        "quelle": "nwa50ax_zyxel_community_suche",
+        "beleg": "https://community.zyxel.com/api/v2/search?query=NWA50AX%20802.3af&limit=30",
+        "stand": "Suchergebnis am 2026-10-19 (Beitraege 2022-2026)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; belegt nicht, dass reine 802.3af-Speisung genügt"
+      },
+      {
+        "wert": "lief an Ubiquiti U-POE-AT und anderen Injektoren ohne \"limited power\"",
+        "quelle": "nwa50ax_zyxel_community_12454",
+        "beleg": "https://community.zyxel.com/en/discussion/12454/nwa50ax-nwa210ax-questions",
+        "stand": "Thread vom 2022-01-12 bis 2022-05-15 (Fragesteller undsie, Antworten Zyxel_Silvia/Zyxel_Dick/Zyxel_CSO)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Nutzerangabe; \"limited power\" trat am NWA210AX auf, nicht am NWA50AX"
+      }
+    ],
+    "poe_hinweis": [
+      {
+        "wert": "Schalter \"Force override the power mode to full power\" für Injektoren ohne PoE-Aushandlung (passiv), sonst zieht das Gerät nicht die volle Leistung",
+        "quelle": "nwa50ax_hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Configuration > System > Power Mode, Sammelhandbuch"
+      },
+      {
+        "wert": "im Limited-Power-Modus nutzt der AP weniger Antennen (Ketten)",
+        "quelle": "nwa50ax_zyxel_community_12454",
+        "beleg": "https://community.zyxel.com/en/discussion/12454/nwa50ax-nwa210ax-questions",
+        "stand": "Thread vom 2022-01-12 bis 2022-05-15 (Fragesteller undsie, Antworten Zyxel_Silvia/Zyxel_Dick/Zyxel_CSO)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Zyxel_Silvia 2022-01-13, im Thread zu NWA50AX/NWA210AX, Aussage allgemein"
+      }
+    ],
+    "poe_spannung_v": [
+      {
+        "wert": "keine passive Spannung angegeben; Zyxel nennt nur 802.3at und 12 V für die DC-Buchse",
+        "quelle": "nwa50ax_zyxel_community_15328",
+        "beleg": "https://community.zyxel.com/en/discussion/15328/nwa50ax-poe-voltage",
+        "stand": "Thread vom 2022-12-15, letzte Antwort 2024-03-25 (Zyxel_Kay, Zyxel Employee)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Frage nach passiver PoE-Spannung beantwortet mit \"12V for input, as the adapter show\" (gemeint ist die DC-Buchse)"
+      }
+    ],
+    "poe_ausgang": [
+      {
+        "wert": "nein",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "nur ein Ethernet-Port"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "ja",
+        "quelle": "fcc_handbuch_sammel",
+        "beleg": "https://fccid.io/I8803911/User-Manual/Users-Manual-6335969",
+        "stand": "PDF 2023-01-18 (Exhibit 2023-07-18), Firmware-Stand 6.29",
+        "sicherheit": "hoch",
+        "bemerkung": "Table 1 NWA90AX: Power Jack Yes"
+      },
+      {
+        "wert": "ja",
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": "Power Jack Yes"
+      },
+      {
+        "wert": "ja, Hohlbuchse 'DC 12V'",
+        "quelle": "nwa50ax_fcc_aussenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/External-Photos/External-Photos-5231162",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231162)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "barrel",
+        "quelle": "nwa50ax_wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "stand": "Seitenrevision 390979 vom 2026-05-30T14:58:56Z (Omega, \"fixed ;\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      }
+    ],
+    "dc_polaritaet": [
+      {
+        "wert": "Plus innen, Minus außen",
+        "quelle": "nwa50ax_fcc_aussenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/External-Photos/External-Photos-5231162",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231162)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Polaritätssymbol auf dem mitgelieferten Netzteil (Foto abgelesen)"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 12,
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "Netzteil Output DC +12 V 1.5 A"
+      },
+      {
+        "wert": 12,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "zyxel_eu_doc",
+        "beleg": "https://download.zyxel.com/NWA90AX/declaration/NWA90AX_007.214-01-01435.zip",
+        "stand": "EU DoC 2025-09-18, ErP Information 20250918, UK PSTI SoC 2025-07-18, REACH DoC 20250718, PPWR DoC, Safety Warnings 20240117",
+        "sicherheit": "hoch",
+        "bemerkung": "ErP: Output voltage DC 12V"
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 1.5,
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "Netzteilausgang"
+      },
+      {
+        "wert": 1.5,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.5,
+        "quelle": "zyxel_eu_doc",
+        "beleg": "https://download.zyxel.com/NWA90AX/declaration/NWA90AX_007.214-01-01435.zip",
+        "stand": "EU DoC 2025-09-18, ErP Information 20250918, UK PSTI SoC 2025-07-18, REACH DoC 20250718, PPWR DoC, Safety Warnings 20240117",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "Included accessories: Power adapter, Mount plate, Mounting screws"
+      },
+      {
+        "wert": true,
+        "quelle": "zyxel_produktseite",
+        "beleg": "https://www.zyxel.com/global/en/products/wireless/nwa90ax/specifications",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "AC 100-240 V 50/60 Hz 0.3 A; DC +12 V 1.5 A",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DVE DSA-18PFCA-12 120150 (Dee Van Enterprise), Input 100-240 V ~ 50/60 Hz 0.6 A, Output 12.0 V 1.5 A 18.0 W; Effizienz 87.483 %, Leerlauf 0.0668 W",
+        "quelle": "zyxel_eu_doc",
+        "beleg": "https://download.zyxel.com/NWA90AX/declaration/NWA90AX_007.214-01-01435.zip",
+        "stand": "EU DoC 2025-09-18, ErP Information 20250918, UK PSTI SoC 2025-07-18, REACH DoC 20250718, PPWR DoC, Safety Warnings 20240117",
+        "sicherheit": "hoch",
+        "bemerkung": "ErP Information 20250918; Eingangsstrom 0.6 A statt 0.3 A wie im Datenblatt"
+      },
+      {
+        "wert": "DVE DSA-18PFCA-12 120150",
+        "quelle": "zyxel_zert_ncc",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00539.pdf",
+        "stand": "NCC-Typzulassung (耕興/Sporton), 110年11月30日 = 2021-11-30, PDF 2021-12-29",
+        "sicherheit": "hoch",
+        "bemerkung": "配件: 充電器 DVE/DSA-18PFCA-12 120150, Plug*1 (DVE/Plug)"
+      },
+      {
+        "wert": "Steckernetzteil DSA-18PFCA-12 120150 (Dee Van), +12.0 V 1.5 A, Effizienzklasse VI, US-Flachstecker im Prüfmuster",
+        "quelle": "nwa50ax_fcc_aussenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/External-Photos/External-Photos-5231162",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231162)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Foto abgelesen; EU-Stecker nicht belegt"
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 16,
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "PoE (802.3at): power draw 16 W"
+      },
+      {
+        "wert": 16,
+        "quelle": "zyxel_produktseite",
+        "beleg": "https://www.zyxel.com/global/en/products/wireless/nwa90ax/specifications",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20250517045935/https://geizhals.at/zyxel-nwa90ax-v107306.html",
+        "stand": "Archivkopie 2025-05-17 der geizhals.at-Variantenseite v107306",
+        "sicherheit": "mittel",
+        "bemerkung": "\"16W (Verbrauch, Betrieb)\""
+      }
+    ],
+    "leistung_w_typ": [
+      {
+        "wert": {
+          "network_standby_wireless_5g": 4.14,
+          "network_standby_all_port": 4.47
+        },
+        "quelle": "zyxel_eu_doc",
+        "beleg": "https://download.zyxel.com/NWA90AX/declaration/NWA90AX_007.214-01-01435.zip",
+        "stand": "EU DoC 2025-09-18, ErP Information 20250918, UK PSTI SoC 2025-07-18, REACH DoC 20250718, PPWR DoC, Safety Warnings 20240117",
+        "sicherheit": "hoch",
+        "bemerkung": "ErP nach (EU) 2023/826, Network standby, nicht Volllast; Werte wie NWA50AX"
+      },
+      {
+        "wert": 7.5,
+        "quelle": "nwa50ax_connect_test",
+        "beleg": "https://www.connect.de/vergleich/wi-fi-6-router-zyxel-nwa50ax-test-review-3202346-9380.html",
+        "stand": "Artikel vom 29.3.2022 (Hannes Ruegheimer), connect Praxistest",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; gemessen, \"mittlere gemessene Leistungsaufnahme\" mit mitgeliefertem 12-V-Netzteil an 230 V"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor \"No\""
+      },
+      {
+        "wert": "innen",
+        "quelle": "zyxel_zert_ised",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00538.pdf",
+        "stand": "ISED Technical Acceptance Certificate IC: 2468C-11AXAP22A, TIMCO Job 6434-21, 2021-12-28",
+        "sicherheit": "hoch",
+        "bemerkung": "Type of Equipment \"Wireless Local Area Network Device (Indoor Only)\""
+      },
+      {
+        "wert": "innen",
+        "quelle": "zyxel_eu_doc",
+        "beleg": "https://download.zyxel.com/NWA90AX/declaration/NWA90AX_007.214-01-01435.zip",
+        "stand": "EU DoC 2025-09-18, ErP Information 20250918, UK PSTI SoC 2025-07-18, REACH DoC 20250718, PPWR DoC, Safety Warnings 20240117",
+        "sicherheit": "hoch",
+        "bemerkung": "Safety Warnings: \"Do not use the device outside, and make sure all the connections are indoors.\""
+      },
+      {
+        "wert": "innen",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "mittel",
+        "bemerkung": "Betrieb 0-50 °C, keine IP-Schutzart angegeben"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "0 bis 50 °C",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "Luftfeuchte 10-90 % nicht kondensierend; Lagerung -40 bis 70 °C"
+      },
+      {
+        "wert": "0 bis 50 °C",
+        "quelle": "zyxel_produktseite",
+        "beleg": "https://www.zyxel.com/global/en/products/wireless/nwa90ax/specifications",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Montageplatte und Schrauben beiliegend",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "Included accessories: Mount plate, Mounting screws"
+      },
+      {
+        "wert": [
+          "Wand",
+          "Decke",
+          "T-Bar-Decke",
+          "Tisch"
+        ],
+        "quelle": "nwa50ax_quick_start_guide",
+        "beleg": "https://download.zyxel.com/NWA50AX/quick_start_guide/NWA50AX_008.pdf",
+        "stand": "QSG Version 008 (NWA50AX_web_QSG_20250416_v08, PDF 2025-04-16, Last-Modified 2025-04-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Mounting Options"
+      },
+      {
+        "wert": [
+          "Wand",
+          "Decke"
+        ],
+        "quelle": "nwa50ax_openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; 'designed for wall/ceiling mount'"
+      },
+      {
+        "wert": [
+          "Wand",
+          "Decke",
+          "T-Bar-Decke (Clips ACCESORY-ZZ0105F separat)",
+          "Tisch (Gummipad)"
+        ],
+        "quelle": "nwa50ax_quick_start_guide",
+        "beleg": "https://download.zyxel.com/NWA50AX/quick_start_guide/NWA50AX_008.pdf",
+        "stand": "QSG Version 008 (NWA50AX_web_QSG_20250416_v08, PDF 2025-04-16, Last-Modified 2025-04-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Wandhalterung (B) zum Aufschieben, rastet ein"
+      },
+      {
+        "wert": "Ports zeigen zum Betrachter, Wandmontagelöcher oben (Ausrichtung laut Port-Tabelle)",
+        "quelle": "nwa50ax_hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      }
+    ],
+    "montageloecher": [
+      {
+        "wert": {
+          "anzahl": 2,
+          "abstand_wand_mm": 62.4,
+          "abstand_decke_mm": [
+            62.4,
+            70.1
+          ],
+          "duebel": "2x, 8.00 x 30 mm",
+          "schrauben": "2x, 23 mm lang, Kopf 8.00 mm",
+          "t_bar_schrauben": "2x, 6.3 mm lang, Kopf 5.70 mm"
+        },
+        "quelle": "nwa50ax_quick_start_guide",
+        "beleg": "https://download.zyxel.com/NWA50AX/quick_start_guide/NWA50AX_008.pdf",
+        "stand": "QSG Version 008 (NWA50AX_web_QSG_20250416_v08, PDF 2025-04-16, Last-Modified 2025-04-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Bohrabstand der Halterung; Maße aus den Skizzen (\"Unit: mm\")"
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "140 x 140 x 37.5",
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "B x T x H; Verpackung 240 x 155 x 60"
+      },
+      {
+        "wert": "140 x 140 x 37.5",
+        "quelle": "zyxel_produktseite",
+        "beleg": "https://www.zyxel.com/global/en/products/wireless/nwa90ax/specifications",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "140 x 140 x 37.5",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20250517045935/https://geizhals.at/zyxel-nwa90ax-v107306.html",
+        "stand": "Archivkopie 2025-05-17 der geizhals.at-Variantenseite v107306",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gewicht_g": [
+      {
+        "wert": 290,
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": "verpackt 600 g"
+      },
+      {
+        "wert": 290,
+        "quelle": "zyxel_produktseite",
+        "beleg": "https://www.zyxel.com/global/en/products/wireless/nwa90ax/specifications",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "mtbf_h": [
+      {
+        "wert": 1010980,
+        "quelle": "zyxel_datenblatt",
+        "beleg": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "stand": "Datasheet NWA90AX Version 5 (Fußzeile 08/04/24, PDF 2024-04-03, Last-Modified 2024-04-08)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luefter": [
+      {
+        "wert": "nein",
+        "quelle": "nwa50ax_fcc_innenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; kein Lüfter, passiv über Aluminiumplatte mit Wärmeleitpads"
+      }
+    ],
+    "kuehlung": [
+      {
+        "wert": "passiv, Aluminium-Kühlplatte mit Wärmeleitpads",
+        "quelle": "nwa50ax_fcc_innenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      }
+    ],
+    "leds": [
+      {
+        "wert": "1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "LED count 1"
+      },
+      {
+        "wert": "1 Mehrfarben-LED (rot/grün/blau)",
+        "quelle": "nwa50ax_openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_zyxel_nwa-ax.dtsi",
+        "stand": "OpenWrt main am 2026-10-19, letzter Commit an der dtsi 1180dd6b vom 2025-08-13 (Rosen Penev, \"mt7621: zyxel nwa-ax: set mac address in dts\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; red:system gpio6, green:system gpio7, blue:system gpio8"
+      },
+      {
+        "wert": "1x Multi-Color",
+        "quelle": "nwa50ax_openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "eine LED: amber/grün/blau/rot je Zustand",
+        "quelle": "nwa50ax_fcc_handbuch",
+        "beleg": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-1-5231166",
+        "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021 (PDF 2021-04-22, Exhibit 5231166)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Tabelle 6"
+      },
+      {
+        "wert": "eine mehrfarbige System-LED (amber/grün/blau/weiß/rot)",
+        "quelle": "nwa50ax_hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "ja (Stock-Firmware: LED Suppression)",
+        "quelle": "fcc_handbuch_sammel",
+        "beleg": "https://fccid.io/I8803911/User-Manual/Users-Manual-6335969",
+        "stand": "PDF 2023-01-18 (Exhibit 2023-07-18), Firmware-Stand 6.29",
+        "sicherheit": "hoch",
+        "bemerkung": "Table 1 NWA90AX: LED Suppression Yes, LED Locator Yes"
+      },
+      {
+        "wert": true,
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": "LED Suppression Yes"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "1 Taster",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Button count 1"
+      },
+      {
+        "wert": "ja",
+        "quelle": "fcc_handbuch_sammel",
+        "beleg": "https://fccid.io/I8803911/User-Manual/Users-Manual-6335969",
+        "stand": "PDF 2023-01-18 (Exhibit 2023-07-18), Firmware-Stand 6.29",
+        "sicherheit": "hoch",
+        "bemerkung": "Table 1 NWA90AX: Reset button Yes"
+      },
+      {
+        "wert": "ja, Loch auf der Rückseite, ca. 10 s bis LED rot blinkt (Werksreset Stock)",
+        "quelle": "nwa50ax_openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "ja, RESET-Taste auf der Rückseite; etwa zehn Sekunden halten, bis die Power-LED blinkt",
+        "quelle": "nwa50ax_fcc_handbuch",
+        "beleg": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-1-5231166",
+        "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021 (PDF 2021-04-22, Exhibit 5231166)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "ja, gpio 30 (KEY_RESTART)",
+        "quelle": "nwa50ax_openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_zyxel_nwa-ax.dtsi",
+        "stand": "OpenWrt main am 2026-10-19, letzter Commit an der dtsi 1180dd6b vom 2025-08-13 (Rosen Penev, \"mt7621: zyxel nwa-ax: set mac address in dts\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "RESET-Beschriftung neben dem Etikett auf der Unterseite",
+        "quelle": "nwa50ax_quick_start_guide",
+        "beleg": "https://download.zyxel.com/NWA50AX/quick_start_guide/NWA50AX_008.pdf",
+        "stand": "QSG Version 008 (NWA50AX_web_QSG_20250416_v08, PDF 2025-04-16, Last-Modified 2025-04-25)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Skizze"
+      },
+      {
+        "wert": "ja; länger als 5 Sekunden drücken = Werkseinstellungen; RESET auf der Rückseite",
+        "quelle": "nwa50ax_hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; V6.20-Handbuch nennt etwa zehn Sekunden bis die LED blinkt"
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "FCC-Innenfotos zeigen zweischaliges Gehäuse, Platine unter Aluminiumplatte verschraubt",
+        "quelle": "nwa50ax_fcc_innenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/Internal-Photos/Internal-Photos-5231163",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231163)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Anleitung zum Oeffnen fehlt (Wiki FIXME)"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "außen zugänglich (Console Port 4-Pin Serial)",
+        "quelle": "fcc_handbuch_sammel",
+        "beleg": "https://fccid.io/I8803911/User-Manual/Users-Manual-6335969",
+        "stand": "PDF 2023-01-18 (Exhibit 2023-07-18), Firmware-Stand 6.29",
+        "sicherheit": "hoch",
+        "bemerkung": "Table 1 NWA90AX: Console Port 4-Pin Serial"
+      },
+      {
+        "wert": "außen zugänglich (4-Pin Serial)",
+        "quelle": "hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": "Spalte NWA90ax: Console Port 4-Pin Serial"
+      },
+      {
+        "wert": "vorhanden",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial Yes"
+      },
+      {
+        "wert": "außen zugänglich",
+        "quelle": "nwa50ax_openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; 2.54-mm-Stiftleiste unter weichem Kunststoffstopfen neben dem Ethernet-Port"
+      },
+      {
+        "wert": "außen zugänglich",
+        "quelle": "nwa50ax_openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; 'below the rubber cover next to the ethernet port'"
+      },
+      {
+        "wert": "außen zugänglich",
+        "quelle": "nwa50ax_fcc_aussenfotos",
+        "beleg": "https://fccid.io/I8811AXAP22A/External-Photos/External-Photos-5231162",
+        "stand": "Report EP0D1029 Version 01 vom 2021-04-21 (Exhibit 5231162)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Beschriftung 'CONSOLE ▲' im Anschlussfeld"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "Pin 1 (▲) 3.3 V Ausgang, Pin 2 TX (vom AP), Pin 3 RX (zum AP), Pin 4 GND",
+        "quelle": "nwa50ax_openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; Pin 1 nicht anschließen"
+      },
+      {
+        "wert": "von DC-/LAN-Seite her: GND - RX - TX - VCC",
+        "quelle": "nwa50ax_openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; VCC nicht anschließen; Reihenfolge passt zur Wiki-Angabe (▲ = VCC am äußeren Ende)"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "nwa50ax_openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": 3.3,
+        "quelle": "nwa50ax_openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": "115200 8N1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "115200",
+        "quelle": "openwrt_forum_241294",
+        "beleg": "https://forum.openwrt.org/t/support-for-zyxel-nwa90ax/241294",
+        "stand": "Beiträge 2025-09-30 bis 2025-10-05 (geschlossen 2025-10-15)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Kernel-Cmdline der Stock-Firmware \"console=ttyS0,115200\" (Beitrag #6)"
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "nwa50ax_openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "115200 8N1",
+        "quelle": "nwa50ax_openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "115200 8N1, Flow Control Off",
+        "quelle": "nwa50ax_hersteller_handbuch_web",
+        "beleg": "https://download.zyxel.com/NWA50AX/user_guide_web/index.html",
+        "stand": "Web-User-Guide NWA30-50-55-90_7-40 (Sammelhandbuch, Last-Modified 2026-08-03, \"Latest Firmware Version Supported 7.12\")",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "U-Boot-Abbruch per Enter; reduzierter Befehlssatz, weitere Befehle über 'atns \"...; tftpboot; bootm\"'",
+        "quelle": "nwa50ax_openwrt_commit",
+        "beleg": "https://github.com/openwrt/openwrt/commit/a0b7fef0ffe4cd9cca39a652a37e4f3ce8f0a681",
+        "stand": "Commit a0b7fef0 vom 2022-05-27 (David Bauer)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "U-Boot-Abbruch innerhalb 3 s nötig (atna/atns/atnz/atrs)",
+        "quelle": "nwa50ax_openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      },
+      {
+        "wert": "Konsole laut Hersteller nicht für Endnutzer vorgesehen",
+        "quelle": "nwa50ax_fcc_testbericht_24",
+        "beleg": "https://fccid.io/I8811AXAP22A/Test-Report/Test-Report-2-4G-5231152",
+        "stand": "Radio Test Report FR0D1029AA Version 01, Issued 2021-04-29 (Exhibit 5231152)",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; \"The manufacturer declared that the console port can not be used by the end-user.\""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ramips/mt7621",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ramips/mt7621, Profil zyxel_nwa50ax",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/41934223776dc45e410ac372c6713e6a2713ff33",
+        "stand": "Commit 2025-10-05 (Autor Christian Weiske), gemergt 2025-10-19 (Hauke Mehrtens), PR 20308",
+        "sicherheit": "mittel",
+        "bemerkung": "Images heißen ...-zyxel_nwa50ax-squashfs-factory.bin/-sysupgrade.bin"
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "25.12.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Supported Since Rel"
+      },
+      {
+        "wert": "Commit 41934223 (2025-10-05, gemergt 2025-10-19)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/41934223776dc45e410ac372c6713e6a2713ff33",
+        "stand": "Commit 2025-10-05 (Autor Christian Weiske), gemergt 2025-10-19 (Hauke Mehrtens), PR 20308",
+        "sicherheit": "mittel",
+        "bemerkung": "betrifft nur die Annahme des Factory-Images durch die Zyxel-Weboberfläche; Image selbst seit NWA50AX-Unterstützung (a0b7fef0, 22.03.2)"
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.4",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_modellkennung": [
+      {
+        "wert": "77 E1 (compat-models im Factory-FIT)",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/41934223776dc45e410ac372c6713e6a2713ff33",
+        "stand": "Commit 2025-10-05 (Autor Christian Weiske), gemergt 2025-10-19 (Hauke Mehrtens), PR 20308",
+        "sicherheit": "mittel",
+        "bemerkung": "\"6b e1 6f e1 77 e1 ff ff ff ff\"; 77 E1 = NWA90AX"
+      },
+      {
+        "wert": "MODEL_ID=NWA90AX, COMPATIBLE_PRODUCT_MODEL_0=77E1",
+        "quelle": "openwrt_forum_241294",
+        "beleg": "https://forum.openwrt.org/t/support-for-zyxel-nwa90ax/241294",
+        "stand": "Beiträge 2025-09-30 bis 2025-10-05 (geschlossen 2025-10-15)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Diagnoseausgabe der Zyxel-Firmware 6.29(ACCV.4), Beitrag #6"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "Yes",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Feld Gluon support"
+      },
+      {
+        "wert": "kein eigenes Gerät, kein Alias (nur zyxel-nwa50ax)",
+        "quelle": "gluon",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/v2025.1.3/targets/ramips-mt7621",
+        "stand": "lokaler Checkout firmware-2025.1/gluon, v2025.1.3",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Alias zyxel-nwa90ax an zyxel-nwa50ax (Dateien ...-zyxel-nwa90ax.bin und ...-zyxel-nwa90ax-sysupgrade.bin)",
+        "quelle": "neanderfunk_patches",
+        "beleg": "https://github.com/Neanderfunk/gluon-patches-hardware/tree/main/devices/zyxel-nwa90ax",
+        "stand": "Commit 9263f242b86a943e62671ec445f08dd9eb2dfbd2 (2026-10-01)",
+        "sicherheit": "hoch",
+        "bemerkung": "Backport von 41934223 auf openwrt-24.10 für Gluon v2025.1.x; README: geprüft per target_lib"
+      }
+    ],
+    "werkstatt_stand": [
+      {
+        "wert": "kein Gerät vorhanden, nur Probelauf (fuzzprobe), kein Build mit Gerät",
+        "quelle": "werkstatt",
+        "beleg": "werkstatt:router-werkstatt/docs/long-term-todo.md",
+        "stand": "Stand 2026-10 (Eintrag zu gluon-patches-hardware 9263f24)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Zyxel-U-Boot bootVer=V1.03, Dual-Image (bootImage=1)",
+        "quelle": "openwrt_forum_241294",
+        "beleg": "https://forum.openwrt.org/t/support-for-zyxel-nwa90ax/241294",
+        "stand": "Beiträge 2025-09-30 bis 2025-10-05 (geschlossen 2025-10-15)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Kernel-Cmdline der Stock-Firmware, Beitrag #6"
+      },
+      {
+        "wert": "U-Boot 2018.09 (Jan 22 2021), Zyxel version V1.03",
+        "quelle": "nwa50ax_openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich; OEM-Bootlog"
+      }
+    ],
+    "installation": [
+      {
+        "wert": "Factory-Image des NWA50AX über die Zyxel-Weboberfläche; Annahme erst mit Modellcode 77 E1 (Commit 41934223); \"current image\" muss 1 sein, sonst Fehler -25007",
+        "quelle": "openwrt_git",
+        "beleg": "https://github.com/openwrt/openwrt/commit/41934223776dc45e410ac372c6713e6a2713ff33",
+        "stand": "Commit 2025-10-05 (Autor Christian Weiske), gemergt 2025-10-19 (Hauke Mehrtens), PR 20308",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TFTP generic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Installation method(s); Recovery unknown"
+      },
+      {
+        "wert": "Weboberfläche: Dateiname kurz halten (sonst \"ULCGI unalbe to parse CGI query\"); ältere OpenWrt-Images ohne 77 E1 abgelehnt mit -25007 \"Firmware content error\"",
+        "quelle": "openwrt_forum_241294",
+        "beleg": "https://forum.openwrt.org/t/support-for-zyxel-nwa90ax/241294",
+        "stand": "Beiträge 2025-09-30 bis 2025-10-05 (geschlossen 2025-10-15)",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Web-UI der Stock-Firmware mit factory.bin; nur wenn aktiver Slot 1 (B) ist, sonst erst Zyxel-Firmware flashen; Dateiname kurz halten (factory.bin)",
+        "quelle": "nwa50ax_openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "stand": "Seitenrevision 2026-06-10 08:17 (fgbxramel, \"[Tags] Add appropriate tags\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      }
+    ],
+    "stock_login": [
+      {
+        "wert": "admin / 1234, DHCP oder 192.168.1.2",
+        "quelle": "nwa50ax_fcc_handbuch",
+        "beleg": "https://fccid.io/I8811AXAP22A/User-Manual/User-Manual-pt-1-5231166",
+        "stand": "User's Guide NWA50AX Version 6.20 Edition 1, 4/2021 (PDF 2021-04-22, Exhibit 5231166)",
+        "sicherheit": "hoch",
+        "bemerkung": "Quelle beschreibt den NWA50AX; NWA90AX laut Zyxel (LVD-CoC \"NWA50AX, NWA90AX\", Wi-Fi-Zertifikat WFA126044) und OpenWrt 41934223 hardwaregleich"
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.zyxel.com/de/de/support/download?model=nwa90ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://www.zyxel.com/global/en/support/download?model=nwa90ax",
+        "quelle": "zyxel_downloadseite",
+        "beleg": "https://www.zyxel.com/global/en/support/download?model=nwa90ax",
+        "stand": "Live-Seite 2026-10-20, neueste Firmware 7.12(ACCV.0)C0 vom 2026-07-29",
+        "sicherheit": "hoch",
+        "bemerkung": "Firmware 7.12(ACCV.0)C0 2026-07-29, 7.10(ACCV.4)C0 2026-01-21, 7.10(ACCV.3)C0 2025-07-25; Kennung ACCV (NWA50AX: ABYW)"
+      }
+    ],
+    "stock_os": [
+      {
+        "wert": "Linux Kernel 4.4.198, Firmware V6.29 (zum Zertifizierungszeitpunkt)",
+        "quelle": "zyxel_zert_wifi",
+        "beleg": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-05-00093.pdf",
+        "stand": "Wi-Fi CERTIFIED Certificate WFA126044 vom 2023-07-27",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "stock_sicherheitsupdates_bis": [
+      {
+        "wert": "2025-12-31 (UK PSTI, Verlängerung möglich)",
+        "quelle": "zyxel_eu_doc",
+        "beleg": "https://download.zyxel.com/NWA90AX/declaration/NWA90AX_007.214-01-01435.zip",
+        "stand": "EU DoC 2025-09-18, ErP Information 20250918, UK PSTI SoC 2025-07-18, REACH DoC 20250718, PPWR DoC, Safety Warnings 20240117",
+        "sicherheit": "hoch",
+        "bemerkung": "UK PSTI SoC 2025-07-18"
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/zyxel/nwa50ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "Device Page toh:zyxel:nwa50ax (gemeinsame Seite)"
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/ZyXEL_NWA50AX",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": "keine eigene NWA90AX-Seite"
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.zyxel.com/de/de/products/wireless/ax1800-4-stream-wifi-6-dual-radio-nebulaflex-access-point-nwa90ax",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+        "stand": "Seitenrevision 2026-05-27 06:37 (cweiske1, \"copy rest of data from nwa5...\")",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "https://www.zyxel.com/global/en/products/wireless/nwa90ax",
+        "quelle": "zyxel_produktseite",
+        "beleg": "https://www.zyxel.com/global/en/products/wireless/nwa90ax/specifications",
+        "stand": "Live-Seite 2026-10-20 (ohne Datum)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+        "quelle": "zyxel_downloadseite",
+        "beleg": "https://www.zyxel.com/global/en/support/download?model=nwa90ax",
+        "stand": "Live-Seite 2026-10-20, neueste Firmware 7.12(ACCV.0)C0 vom 2026-07-29",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "geizhals_url": [
+      {
+        "wert": "https://geizhals.de/zyxel-nwa90ax-nwa90ax-eu0102f-a2699911.html",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20250517045935/https://geizhals.at/zyxel-nwa90ax-v107306.html",
+        "stand": "Archivkopie 2025-05-17 der geizhals.at-Variantenseite v107306",
+        "sicherheit": "mittel",
+        "bemerkung": "Artikel-ID a2699911 (Einzelgerät NWA90AX-EU0102F) aus der archivierten geizhals.at-Variantenseite; Geizhals-Länderseiten teilen die Artikel-ID, die .de-URL ist nach demselben Schema gebildet und nicht archiviert; nur NWA90AX ohne Pro, \"Derzeit keine Angebote\" (Stand 2025-05-17)"
+      },
+      {
+        "wert": "https://geizhals.de/zyxel-nwa90ax-nwa90ax-eu0103f-a2774032.html",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20250517045935/https://geizhals.at/zyxel-nwa90ax-v107306.html",
+        "stand": "Archivkopie 2025-05-17 der geizhals.at-Variantenseite v107306",
+        "sicherheit": "mittel",
+        "bemerkung": "3er-Pack NWA90AX-EU0103F, Artikel-ID a2774032; Herleitung wie oben"
+      },
+      {
+        "wert": "https://geizhals.at/zyxel-nwa90ax-v107306.html",
+        "quelle": "geizhals_archiv",
+        "beleg": "https://web.archive.org/web/20250517045935/https://geizhals.at/zyxel-nwa90ax-v107306.html",
+        "stand": "Archivkopie 2025-05-17 der geizhals.at-Variantenseite v107306",
+        "sicherheit": "hoch",
+        "bemerkung": "Variantenseite (v-ID) über beide Artikel, archiviert 2025-05-17"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://download.zyxel.com/NWA90AX/user_guide/NWA90AX-UG.pdf",
+      "kategorie": "handbuch",
+      "grund": "User's Guide PDF nicht geladen (beim NWA50AX 14.9 MB, über 10-MB-Grenze); Inhalt als Web-Handbuch und FCC-Sammelhandbuch ausgewertet"
+    },
+    {
+      "url": "https://download.zyxel.com/NWA90AX/quick_start_guide/NWA90AX_006.pdf",
+      "kategorie": "montage/reset_knopf",
+      "grund": "Quick Start Guide 006 (2025-04-25) nicht geladen; beim NWA50AX reine Bild-PDF mit 39.6 MB; Montagewerte aus NWA50AX-QSG übernommen"
+    },
+    {
+      "url": "https://forum.openwrt.org/t/support-for-zyxel-nwa90ax/241294",
+      "kategorie": "varianten",
+      "grund": "Beitrag #1 verweist auf einen anderen Thread zu einem \"Zyxel NWA90AX PoE AP\" mit FCC-ID I8811AXAP22 und anderer Revision; Thread nicht gefunden (Forum-Suche gemieden). FCC-Etikett I8811AXAP22 nennt nur NWA110AX/WAX510D"
+    },
+    {
+      "url": "https://mysupport.zyxel.com/hc/en-us/articles/4416989548178-Access-Point-NWA50-55AXEE-90AX-110AX-210AX-Differences-in-Hardware-and-Features",
+      "kategorie": "hardware",
+      "grund": "Zyxel-Artikel zu Hardwareunterschieden; im Lauf zyxel-nwa50ax HTTP 403 (Cloudflare), hier nur als Zitat aus PR 20308/Forum"
+    },
+    {
+      "url": "https://fccid.io/I8811AXAP22A",
+      "kategorie": "typenschild",
+      "grund": "Foto eines echten NWA90AX-Typenschilds fehlt (FCC-Label-Exhibit des NWA50AX zeigt nur Platzhalter)"
+    },
+    {
+      "url": "https://download.zyxel.com/NWA90AX/certification/NWA90AX_001.351-03-00631.zip",
+      "kategorie": "zulassung",
+      "grund": "Japan-Zertifikat NWA90AX nicht geladen (NWA50AX-Zertifikat 020-230119 nennt \"NWA50AX or NWA90AX\")"
+    },
+    {
+      "url": "https://download.zyxel.com/NWA90AX/declaration/NWA90AX_003.214-01-01511.zip",
+      "kategorie": "zulassung",
+      "grund": "BSMI DoC (Taiwan) nicht geladen"
+    },
+    {
+      "url": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+      "kategorie": "dc_buchse_mass",
+      "grund": "Maß der DC-Hohlbuchse in keiner Quelle (auch nicht beim NWA50AX)"
+    },
+    {
+      "url": "https://download.zyxel.com/NWA90AX/datasheet/NWA90AX_5.pdf",
+      "kategorie": "poe",
+      "grund": "802.3af-Tauglichkeit offen: Zyxel nennt nur 802.3at (16 W); WikiDevi (NWA50AX) af/at"
+    },
+    {
+      "url": "https://web.archive.org/web/20250517045935/https://geizhals.at/zyxel-nwa90ax-v107306.html",
+      "kategorie": "ean",
+      "grund": "EAN in keiner Quelle; Geizhals-Artikelseiten a2699911/a2774032 weder auf .de noch .at archiviert"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/zyxel/zyxel_nwa90ax",
+      "kategorie": "toh",
+      "grund": "Datenseite 2026-05-27 angelegt, fehlt aber im ToH-Dump 2026-10-18; ToH-Snapshot-Upgrade-URL zeigt auf nwa55axe-factory.bin (Tippfehler in der Quelle)"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-20",
+    "status": "teilweise",
+    "anfragen": 26,
+    "notiz": "Kein Eintrag im ToH-Dump 2026-10-18; ToH-Live-Seite (Rev. 2026-05-27) vollständig in roh.toh. NWA90AX ist laut OpenWrt 41934223/PR 20308, OpenWrt-Wiki, Zyxel-LVD-CoC (NWA50AX, NWA90AX), Wi-Fi-Zertifikat WFA126044, Antennenmatrix und Forum 241294 hardwaregleich mit dem NWA50AX; Hardwarewerte ohne eigene NWA90AX-Quelle aus daten/zyxel-nwa50ax.json übernommen (Quellen mit Präfix nwa50ax_, Hinweis in der bemerkung). Eigene Abrufe: Zyxel-Datenblatt v5, Spezifikationsseite, Downloadliste, Zertifikate LVD/ISED/NCC/WFA, EU-DoC-Paket (ErP, PSTI, Safety), FCC I8811AXAP22 (Etikett: NWA110AX/WAX510D). WikiDevi und DeviWiki ohne Seite. Gluon upstream ohne Alias, nur Neanderfunk-Patch 9263f24 (Alias zyxel-nwa90ax an zyxel-nwa50ax); keine Werkstatt-Messung. Widersprüche: NCC-ID CCAF21LP066AT0 (Zertifikat) vs. CCAF21LP0660T1 (ToH, gehört zum NWA50AX); Forum nennt zweite NWA90AX-Revision mit FCC-ID I8811AXAP22, FCC-Etikett zeigt dafür nur NWA110AX/WAX510D. Geizhals-Permalinks .de aus Artikel-IDs der archivierten geizhals.at-Variantenseite gebildet. Offen: Typenschildfoto, DC-Buchsenmaß, EAN, 802.3af-Tauglichkeit."
+  }
+}

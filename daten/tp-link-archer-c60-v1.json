@@ -1,0 +1,2821 @@
+{
+  "image": "tp-link-archer-c60-v1",
+  "modell": "TP-Link Archer C60 v1",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-20",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15677787"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1?do=export_raw",
+      "stand": "Seitenrevision 2026-03-22 02:55",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Live-Seite neuer als Dump: Target ath79, aktuell 25.12.1, 'Unsupported Functions' leer (Dump: 'WiFi 5GHz'; Änderung achterin 2025-11-14 -273 B laut Revisionsliste), WLAN-Kommentar 2.4 GHz 3x3:3 / 5 GHz 2x2:2, Treiber ath9k/ath10k-ct, Serial 3.3 V, Outdoor No, Gluon support Broken"
+    },
+    "openwrt_hwdata_rev": {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1?do=revisions",
+      "stand": "Revisionsliste, neueste 2026-03-22 02:55",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "2026-03-22 raylynnknight +1 B; 2025-11-14 achterin -273 B; 2025-10-22 achterin -65 B; 2025-10-21 raylynnknight; 2025-09-06 kobbe1 +67 B"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/tp-link/archer_c60_v2?do=export_raw",
+      "stand": "Seitenrevision 2025-11-03 06:36",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Gemeinsame Geräteseite Archer C60 v1/v2/v3 (ToH-devicepage auch für v1). Serial-Tabelle und Bootlogs ausdrücklich für v2; Fotos ohne Versionsangabe"
+    },
+    "openwrt_git_ar71xx": {
+      "url": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+      "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_git_ath79": {
+      "url": "https://github.com/openwrt/openwrt/commit/6d313da6dc5f655d92aa86e2ec42ecfcf763df3d",
+      "stand": "Commit 2019-05-05 (Autor Adrian Schmutzler), gemergt 2019-07-18",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_git_lanfix": {
+      "url": "https://github.com/openwrt/openwrt/commit/d6baeb5c480f547f13f92b8994cf467d25e2ef7e",
+      "stand": "Commit 2017-02-16 (Henryk Heisig), gemergt 2017-02-17",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "ar71xx: fix lan ports on archer C59 and C60 (nur Titel ausgewertet)"
+    },
+    "openwrt_git_safeloader_fix": {
+      "url": "https://github.com/openwrt/openwrt/commit/8cd28140f112d05309048a3c6b3beb9c34a0badf",
+      "stand": "Commit 2017-07-01 (Henryk Heisig), gemergt 2017-07-09",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_git_qca9886": {
+      "url": "https://github.com/openwrt/openwrt/commit/34958c826915cf864833ed8ba6e5b49d44c6cb41",
+      "stand": "Commit 2017-06-29 (Henryk Heisig), gemergt 2017-10-26",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "dazu e917e51bf9 'fix board.bin used by QCA9886 in Archer C58/C59/C60' (gemergt 2017-10-27)"
+    },
+    "openwrt_git_kernelpartition": {
+      "url": "https://github.com/openwrt/openwrt/commit/ca6002c0efab2e847be91b13d558e5c38184b50a",
+      "stand": "Commit 2017-10-27 (Henryk Heisig), gemergt 2017-11-14",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Kernel-Partition vergrößert, Image-Bau für archer-c60-v1 wieder aktiviert (vorher f7a6fd3153 2017-10-22 deaktiviert)"
+    },
+    "openwrt_git_portreihenfolge": {
+      "url": "https://github.com/openwrt/openwrt/commit/b054729899560aa9faea594dd7df573883f0cf3f",
+      "stand": "Commit 2020-03-11 (Adrian Schmutzler)",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_git_mac": {
+      "url": "https://github.com/openwrt/openwrt/commit/88aead0a665dd349af4fb8afcfe1a16cf90515ae",
+      "stand": "Commit 2020-03-11 (Adrian Schmutzler)",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_git_kalibrierung": {
+      "url": "https://github.com/openwrt/openwrt/commit/9401b8b86d9b3a441555311542fa42fb90e0b170",
+      "stand": "Commit 2025-09-08 (Christoph Krapp), gemergt 2025-09-21",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "PR https://github.com/openwrt/openwrt/pull/19993; dazu ipq-wifi-Eintrag a7ca19962b (gemergt 2025-09-21). Backport auf Release-Zweige nicht geprüft"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=c60+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-20 (31 Commits, neuester 2026-09-10)",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_issue_14541": {
+      "url": "https://github.com/openwrt/openwrt/issues/14541",
+      "stand": "Issue 2024-02-02 bis 2026-09-10 (geschlossen, 288 Kommentare; nur Eröffnungsbeitrag gelesen)",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9561_tplink_archer-c60-v1.dts",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "dateien": [
+        "qca9561_tplink_archer-c60-v1.dts",
+        "qca9561_tplink_archer-c6x.dtsi"
+      ]
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-tp-link.mk",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_02_network": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/generic/base-files/etc/board.d/02_network",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "firmware_utils_safeloader": {
+      "url": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+      "stand": "Branch master am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_pr_3034": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/3034",
+      "stand": "PR 2023-10-25, gemergt 2023-10-26",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "ath79-generic: (re)add support for archer-c60; Checkliste vollständig abgehakt, Testgerät Freifunk Chemnitz"
+    },
+    "gluon_suche": {
+      "url": "https://api.github.com/search/issues?q=c60+repo:freifunk-gluon/gluon",
+      "stand": "Suche 2026-10-20 (18 Treffer)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "u. a. #2496 (2022, geschlossen), #2413 (ar71xx->ath79-Migration), #1281/#1275 (ar71xx 2017), #3425 (QCA9888-5-GHz-Prüfung, C60 im Eröffnungsbeitrag nicht genannt)"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+      "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+      "abgerufen": "2026-10-20"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/TP-LINK_Archer_C60_v1.x",
+      "stand": "Rohtext inhaltsgleich mit DeviWiki-Revision 2019-07-05 (nur Feldreihenfolge, auskommentierter 4pda-Link, __NOTOC__ anders)",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc": {
+      "url": "https://fccid.io/TE7C60",
+      "stand": "Grant 2016-12-09 (Original Equipment), Class II permissive change 2017-03-22",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Prüfmuster laut Platinenaufkleber 'Archer C60(EU) Ver:1.0'; Typenschild-Zeichnung dagegen 'Archer C60(US) Ver:2.0'"
+    },
+    "fcc_handbuch": {
+      "url": "https://fccid.io/TE7C60/User-Manual/User-Manual-3222561",
+      "stand": "Exhibit 2016-12-09, REV1.0.0 1910011738 (PDF erstellt 2016-05-11, geändert 2016-12-07)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "98 Seiten, pdftotext; Cache fcc/manual.pdf"
+    },
+    "fcc_label": {
+      "url": "https://fccid.io/TE7C60/Label/Label-3222555",
+      "stand": "Exhibit 2016-12-09 (Zeichnung 'Archer C60(US)_2.0_产品规格标贴' Version A1, fertig 2016-11-17)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet; Seite 2 Foto der Unterseite mit Typenschild-Lage"
+    },
+    "fcc_fotos_extern": {
+      "url": "https://fccid.io/TE7C60/External-Photos/External-Photo-3222553",
+      "stand": "Sporton EP642212-02 Rev. 01 (PDF 2016-11-17)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "als Bild ausgewertet"
+    },
+    "fcc_fotos_intern": {
+      "url": "https://fccid.io/TE7C60/Internal-Photos/Internal-Photo-3222554",
+      "stand": "Sporton EP642212-02 Rev. 01 (PDF 2016-11-17)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "13 Seiten, als Bild ausgewertet; Platinenaufkleber 'Archer C60(EU) Ver:1.0', Platine 2050500733, Datumscode 1619"
+    },
+    "fcc_dts": {
+      "url": "https://fccid.io/TE7C60/Test-Report/Test-Report-DTS-3222559",
+      "stand": "Prüfbericht FR642212-02AC Rev. 01, 2016-11-17",
+      "abgerufen": "2026-10-20"
+    },
+    "fcc_nii": {
+      "url": "https://fccid.io/TE7C60/Test-Report/Test-Report-NII-3222543",
+      "stand": "Prüfbericht FR642212-02AN (Original Equipment 2016-12-09)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "PDF 11.3 MB, nur Kopf und Antennentabelle ausgewertet"
+    },
+    "tplink_datenblatt": {
+      "url": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+      "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "verlinkt als Archer C60_V1_Datasheet (https://www.tp-link.com/en/document/46081/)"
+    },
+    "tplink_downloadseite": {
+      "url": "https://www.tp-link.com/en/support/download/archer-c60/v1/",
+      "stand": "Live-Seite 2026-10-20, neueste Firmware Archer C60(EU)_V1_160811 (2016-08-11)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Versionsauswahl v1, v2, v3; Dokumente: Archer C60(EU)_V1_UG (/en/document/62301/), Archer C60(EU)_V1_QIG (/en/document/62004/)"
+    },
+    "freifunk_forum_24139": {
+      "url": "https://forum.freifunk.net/t/24139",
+      "stand": "Thread 2024-07-07 bis 2024-07-14 (5 Beiträge, alle gelesen)",
+      "abgerufen": "2026-10-20",
+      "titel": "Fehler \"file-system partition too big\""
+    },
+    "freifunk_forum_suche": {
+      "url": "https://forum.freifunk.net/search.json?q=Archer%20C60",
+      "stand": "Suche 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "werkstatt": {
+      "url": "router-werkstatt/docs/ramdruck-64mb.md",
+      "stand": "Abschnitt 'Stand 15.09.2026: vm.min_free_kbytes 2048 bricht ath10k'",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Zuordnung zur Gerätegruppe 64 MB + ath10k; Messungen dort am Archer C25, nicht am C60 v1"
+    },
+    "geizhals_cdx": {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/tp-link-archer-c60*&output=json&fl=original,timestamp&collapse=urlkey",
+      "stand": "CDX-Abfrage 2026-10-20 (1 Treffer, Schnappschuss 2017-01-26)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "archivierte Seite nicht abrufbar (web.archive.org 429)"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "15677787",
+      "devicetype": "WiFi Router",
+      "brand": "TP-Link",
+      "model": "Archer C60",
+      "version": "v1",
+      "fccid": "https://fcc.io/TE7/C60",
+      "availability": "Discontinued",
+      "whereavailable": "",
+      "supportedsincecommit": "https://git.lede-project.org/?p=source.git;a=commit;h=e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+      "supportedsincerel": "18.06.0",
+      "supportedcurrentrel": "23.05.0",
+      "unsupported_functions": "WiFi 5GHz",
+      "target": "ar71xx-ath79",
+      "subtarget": "generic",
+      "packagearchitecture": "mips_24kc",
+      "bootloader": "U-Boot",
+      "cpu": "Qualcomm Atheros QCA9561",
+      "cpucores": "1",
+      "cpumhz": "775",
+      "flashmb": "8",
+      "rammb": "64",
+      "ethernet100mports": "5",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "-",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "Qualcomm Atheros QCA9561",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "Qualcomm Atheros QCA9561,Qualcomm Atheros QCA9886",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "a/n/ac",
+      "wlancomments": "",
+      "wlandriver": "ath10k",
+      "detachableantennas": "-",
+      "bluetooth": "-",
+      "usbports": "-",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "115200 / 8N1",
+      "jtag": "No",
+      "ledcount": "7",
+      "buttoncount": "2",
+      "gpios": "-",
+      "powersupply": "12 VDC, 1.0 A",
+      "devicepage": "toh:tp-link:archer_c60_v2",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "Archer C60",
+      "gitsearch": "Archer C60",
+      "wikideviurl": "https://wikidevi.wi-cat.ru/TP-LINK_Archer_C60_v1.x",
+      "oemdevicehomepageurl": "https://www.tp-link.com/en/products/details/cat-9_Archer-C60.html",
+      "firmwareoemstockurl": "https://www.tp-link.com/en/download/Archer-C60_V1.html",
+      "firmwareopenwrtinstallurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-tplink_archer-c60-v1-squashfs-factory.bin",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-tplink_archer-c60-v1-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-tplink_archer-c60-v1-squashfs-factory.bin",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-tplink_archer-c60-v1-squashfs-sysupgrade.bin",
+      "installationmethods": "GUI OEM,U-Boot TFTP recovery,see git-commit",
+      "commentinstallation": "Rename installation image to tp_recovery.bin, see ath79 git-commit",
+      "recoverymethods": "U-Boot TFTP recovery,U-Boot TFTP + serial recovery,see git-commit",
+      "commentrecovery": "see ath79 git commit",
+      "picture": "media:tplink:archer_c60-01.jpg",
+      "comments": "",
+      "page": "toh:hwdata:tp-link:tp-link_archer_c60_v1"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi Router",
+      "Brand": "TP-Link",
+      "Model": "Archer C60",
+      "Versions": "v1",
+      "FCCID_urls": "https://fcc.io/TE7/C60",
+      "Availability_availability": "Discontinued",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.lede-project.org/?p=source.git;a=commit;h=e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+      "Supported Since Rel_releasesince": "18.06.0",
+      "Supported Current Rel_releasecurrent": "25.12.1",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Broken",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Qualcomm Atheros QCA9561",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "775",
+      "Flash MB_mbflashs": "8",
+      "RAM MB_mbram": "64",
+      "Ethernet 100M ports_numethport": "5",
+      "Ethernet 1Gbit ports_numethport": "-",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "Qualcomm Atheros QCA9561",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Qualcomm Atheros QCA9561, Qualcomm Atheros QCA9886",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "a/n/ac",
+      "WLAN Comments_": "2.4Ghz 3x3:3 MIMO, 5Ghz 2x2:2 MIMO",
+      "WLAN driver_wlan-drivers": "ath9k, ath10k-ct",
+      "Detachable Antennas_numdetachantenna": "-",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "¿",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "115200 / 8N1",
+      "Serial connection voltage_serialvoltage": "3.3",
+      "JTAG_yesno": "No",
+      "LED count_numled": "7",
+      "Button count_numbutton": "2",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "12 VDC, 1.0A",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:tp-link:archer_c60_v2",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "Archer C60",
+      "Git search_search-gits": "Archer C60",
+      "WikiDevi URL_urls": "https://wikidevi.wi-cat.ru/TP-LINK_Archer_C60_v1.x",
+      "WikiDevi ID_hwinfo-id": "TP-LINK_Archer_C60_v1.x",
+      "OEM Device Homepage URL_url": "https://www.tp-link.com/en/products/details/cat-9_Archer-C60.html",
+      "Firmware OEM Stock URL_url": "https://www.tp-link.com/en/download/Archer-C60_V1.html",
+      "Firmware OpenWrt Install URL_urls": "",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.1/targets/ath79/generic/openwrt-25.12.1-ath79-generic-tplink_archer-c60-v1-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-tplink_archer-c60-v1-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "GUI OEM, U-Boot TFTP recovery, see git-commit",
+      "Comment installation": "Rename installation image to tp_recovery.bin, see ath79 git-commit",
+      "Recovery method(s)_method-recoverys": "U-Boot TFTP recovery, U-Boot TFTP + serial recovery, see git-commit",
+      "Comment recovery": "see ath79 git commit",
+      "Picture_img100s": "media:tplink:archer_c60-01.jpg",
+      "Comments_": ""
+    },
+    "openwrt_wiki": {
+      "einleitung": "Dual Band wireless 5GHz and 2.4GHz. Based on Atheros chipset. Four 100MB LAN ethernet. One 100MB WAN.",
+      "warnung": "The C60v3 is leaking LAN traffic through WAN port during boot, due to lack of port isolation.",
+      "installation_v1": "NOTE: At least for Archer C60 v1, using the WebUI to install OpenWRT works fine as of March 2022. The v1 devices haven't had a firmware update since 2016, so this is unlikely to stop working in the future.",
+      "oem_easy_installation": "For Archer C60 v1.x, v2.0, v2.1, v3.0 installing OpenWrt is confirmed to work by simply uploading the OpenWrt firmware in the stock OEM's firmware-upgrade page. ... refuse to install firmware uploaded with a long filename ... rename the file to something shorter like firmware.bin",
+      "tftp": "Latest OEM firmware seems to prevent flashing via TFTP.",
+      "uart_install": "Interrupt boot during Autoboot delay. You only have 1 second to type 'tpl<enter>' to get Ath> prompt. TFTP server 192.168.0.10 (Abschnitt für C60v2)",
+      "flash_chip_methode": "direkt auf Flash-Chip (W25Q64), getestet mit v3 und Dump von v2",
+      "flash_layout_mtd": "u-boot 0x30000, firmware 0x7a0000, kernel 0x180000, rootfs 0x620000, rootfs_data 0x360000, tplink 0x20000, art 0x10000 (Version nicht genannt, Layout passt nicht zum v1-DTS)",
+      "opening_the_case": "Remove Phillips screws on bottom of case. Gently pry top from base ... putty knife ... plastic catches ... near the ethernet ports at the back release the easiest",
+      "serial": "There is an unpopulated 4 pin serial header (J1) present on the left side of the PCB. The pin close to the rear of the unit (TX) is marked with a sideways triangle. Pins: TX, RX, Gnd, Vcc (3.3V). UART operates at 3.3V. Factory units do not have this header installed.",
+      "serial_parameter": "for TP-Link Archer C60 v2: 115200 (or 118000 for CH341A serial adapter), 8N1",
+      "jtag": "N/A",
+      "hardware_mods": "None so far.",
+      "oem_bootlog": "Archer C60(CA)_V2_161206: U-Boot 1.1.4 (Nov 29 2016), ap151 - Dragonfly 1.0, DRAM 64 MB, Flash Manuf Id 0xc8 (GigaDevice) 8MB; Kernel 3.3.8, 'MIPS: machine is TP-LINK ARCHER_C60V1 reference board', QCA9888/hw.2 boarddata",
+      "tags": "ath79 QCA9561 8Flash 64ram 5port fastethernet QCA9882 802.11ac 802.11abgn U-boot 12v_powered Serial",
+      "fotos": [
+        "media:tplink:archerc60:archer_c60.jpg",
+        "archer_c60_front.jpg",
+        "archer_c60_back.jpg",
+        "archer_c60_label.jpg",
+        "archer_c60_pcb.jpg",
+        "archer_c60_serial_header.jpg",
+        "archer_c60_serial_header_ann.jpg"
+      ],
+      "debricking": "https://forum.openwrt.org/t/help-in-unbricking-tp-link-archer-c60-v3/62642 (v3)"
+    },
+    "openwrt_git_ar71xx": {
+      "titel": "ar71xx: add support to TP-Link Archer C59v1 and C60v1",
+      "spezifikation_c60v1": [
+        "dual-band AC1350 router, based on Qualcomm/Atheros QCA9561+QCA9886",
+        "775/650/258 MHz (CPU/DDR/AHB)",
+        "64 MB of RAM (DDR2)",
+        "8 MB of FLASH (SPI NOR)",
+        "3T3R 2.4 GHz",
+        "2T2R 5 GHz",
+        "5x 10/100 Mbps Ethernet",
+        "7x LED, 2x button",
+        "UART header on PCB"
+      ],
+      "nicht_funktionierend": [
+        "Port LAN1 on C59, LAN4 on C60",
+        "WiFi 5GHz (missing ath10k firmware for QCA9886 chip)",
+        "Update from oficial web interface (tplink-saveloader not support product-info)"
+      ],
+      "flash_tftp": "PC 192.168.0.66, factory.bin als tp_recovery.bin, Reset beim Einschalten halten ~15 s, ~30 s Recovery",
+      "flash_uart": "tftp 0x81000000 ...-sysupgrade.bin; erase 0x9f020000 +$filesize; cp.b $fileaddr 0x9f020000 $filesize; reset"
+    },
+    "openwrt_git_ath79": {
+      "titel": "ath79: Add support for TP-Link Archer C60 v1",
+      "spezifikation": [
+        "QCA9561+QCA9886",
+        "775/650/258 MHz (CPU/DDR/AHB)",
+        "64 MB of RAM (DDR2)",
+        "8 MB of FLASH (SPI NOR)",
+        "3T3R 2.4 GHz",
+        "2T2R 5 GHz",
+        "5x 10/100 Mbps Ethernet",
+        "7x LED, 2x button",
+        "UART header on PCB"
+      ],
+      "flash_webui": "Download *-factory.bin image and upload it via the firmware upgrade function of the stock firmware WebUI.",
+      "flash_tftp": "PC 192.168.0.66, *-factory.bin als tp_recovery.bin, Reset beim Einschalten ~15 s halten, ~30 s warten",
+      "flash_uart": "tftp 0x81000000 ...-sysupgrade.bin; erase 0x9f020000 +$filesize; cp.b $fileaddr 0x9f020000 $filesize; reset"
+    },
+    "openwrt_git_safeloader_fix": {
+      "text": "This commit fixes build factory image for TP-Link Archer C60v1. Size of partition \"SupportList\" is only 256 bytes, and can contain only 3 entries."
+    },
+    "openwrt_git_portreihenfolge": {
+      "text": "The labels on the LAN ports of the TP-Link Archer C60 v1/v2 are actually inverted compared to the ports of the internal switch. ... same for to-be-supported v3"
+    },
+    "openwrt_git_mac": {
+      "lan": "*:7b label",
+      "wan": "*:7c label+1",
+      "2.4g": "*:7b label",
+      "5g": "*:7a label-1",
+      "hinweis": "Only one address is stored in <&mac 0x8>, corresponding to the label. This has been checked on revisions v1, v2 and v3."
+    },
+    "openwrt_git_kalibrierung": {
+      "commits": [
+        "a7ca19962b ipq-wifi: Add entry for TP-Link Archer C60 v1",
+        "9401b8b86d ath79: add calibtation variant for TP-Link Archer C60 v1"
+      ],
+      "pr": "https://github.com/openwrt/openwrt/pull/19993"
+    },
+    "openwrt_git_suche": {
+      "commits": [
+        "e39dc8d823 2017-01-26 ar71xx: add support to TP-Link Archer C59v1 and C60v1",
+        "d6baeb5c48 2017-02-17 ar71xx: fix lan ports on archer C59 and C60",
+        "7d21b4eed0 2017-06-29 firmware-utils: tplink-safeloader: add support for Archer C59/C60 RU",
+        "8cd28140f1 2017-07-09 firmware-utils: tplink-safeloader: fix Archer C60 factory image",
+        "f7a6fd3153 2017-10-22 ar71xx: deactivate some boards with too small kernel partitions",
+        "34958c8269 2017-10-26 ar71xx: Archer C58/C59/C60 fix qca9886 wireless interface",
+        "e917e51bf9 2017-10-27 ar71xx: fix board.bin used by QCA9886 in Archer C58/C59/C60",
+        "ca6002c0ef 2017-11-14 ar71xx: increase kernel partition size for some TP-Link boards",
+        "6d313da6dc 2019-07-18 ath79: Add support for TP-Link Archer C60 v1",
+        "14a07fa1f0 2020-03-11 ar71xx: fix port order on TP-Link Archer C60 v1/v2",
+        "b054729899 2020-03-11 ath79: fix port order on TP-Link Archer C60 v1/v2",
+        "88aead0a66 2020-03-11 ath79: fix swapped LAN/WAN MAC address for Archer C60 v1/v2",
+        "14eb54938b 2020-03-11 ar71xx: fix swapped LAN/WAN MAC address for Archer C60 v1/v2",
+        "a7ca19962b 2025-09-21 ipq-wifi: Add entry for TP-Link Archer C60 v1",
+        "9401b8b86d 2025-09-21 ath79: add calibtation variant for TP-Link Archer C60 v1"
+      ]
+    },
+    "openwrt_issue_14541": {
+      "titel": "ath10k: 5 GHz radio not detected.",
+      "geraet": "TP-Link Archer C60 v1",
+      "version": "SNAPSHOT r24969-44cd90c49a",
+      "log": "ath10k_pci: qca9888 hw2.0 ... failed to fetch board data for bus=pci,bmi-chip-id=0,bmi-board-id=20 from ath10k/QCA9888/hw2.0/board-2.bin"
+    },
+    "openwrt_dts": {
+      "compatible": "tplink,archer-c60-v1, qca,qca9561",
+      "model": "TP-Link Archer C60 v1",
+      "label-mac-device": "eth1",
+      "leds": {
+        "power": "GPIO 16 grün (dtsi)",
+        "wlan5g": "GPIO 18 (phy0tpt)",
+        "wan_green": "GPIO 20",
+        "lan": "GPIO 2",
+        "wan_amber": "GPIO 22",
+        "wps": "GPIO 19 grün",
+        "wlan2g": "WMAC led-sources 17"
+      },
+      "keys": {
+        "wifi": "GPIO 1 KEY_RFKILL",
+        "reset": "GPIO 21 KEY_RESTART"
+      },
+      "ath10k": "pre-calibration art 0x5000 (0x2f20), mac info_8 -1, calibration-variant TP-Link-Archer-c60-v1",
+      "spi_flash": "jedec,spi-nor, 25 MHz",
+      "partitionen": {
+        "u-boot": "0x000000 0x010000 ro",
+        "info": "0x010000 0x010000 ro (mac @0x8)",
+        "firmware": "0x020000 0x7c0000 (denx,uimage)",
+        "tplink": "0x7e0000 0x010000 ro",
+        "art": "0x7f0000 0x010000 ro (cal @0x1000 0x440, precal @0x5000 0x2f20)"
+      },
+      "eth0": "mac info_8 +1, phy-handle swphy4",
+      "eth1": "mac info_8 +0"
+    },
+    "openwrt_image_mk": {
+      "device": "tplink_archer-c60-v1",
+      "template": "tplink-safeloader-uimage",
+      "SOC": "qca9561",
+      "IMAGE_SIZE": "7936k",
+      "DEVICE_MODEL": "Archer C60",
+      "DEVICE_VARIANT": "v1",
+      "TPLINK_BOARD_ID": "ARCHER-C60-V1",
+      "DEVICE_PACKAGES": "kmod-ath10k-ct-smallbuffers ath10k-firmware-qca9888-ct ipq-wifi-tplink_archer-c60-v1",
+      "SUPPORTED_DEVICES": "archer-c60-v1"
+    },
+    "openwrt_02_network": {
+      "wan": "eth1",
+      "switch0": "\"0@eth0\" \"1:lan:4\" \"2:lan:3\" \"3:lan:2\" \"4:lan:1\"",
+      "gruppe": "buffalo,wzr-600dhp | buffalo,wzr-hp-ag300h | tplink,archer-c25-v1 | tplink,archer-c60-v1/v2/v3 | tplink,tl-wdr3500-v1 | tplink,tl-wr842n-v1/v3"
+    },
+    "firmware_utils_safeloader": {
+      "id": "ARCHER-C60-V1",
+      "support_list": [
+        "{product_name:Archer C60,product_ver:1.0.0,special_id:00000000}",
+        "{product_name:Archer C60,product_ver:1.0.0,special_id:43410000}",
+        "{product_name:Archer C60,product_ver:1.0.0,special_id:45550000}",
+        "{product_name:Archer C60,product_ver:1.0.0,special_id:55530000}"
+      ],
+      "soft_ver": "soft_ver:1.0.0",
+      "partitionen": {
+        "fs-uboot": "0x00000 0x10000",
+        "default-mac": "0x10000 0x00200",
+        "pin": "0x10200 0x00200",
+        "product-info": "0x10400 0x00100",
+        "partition-table": "0x10500 0x00800",
+        "soft-version": "0x11300 0x00200",
+        "support-list": "0x11500 0x00100",
+        "device-id": "0x11600 0x00100",
+        "profile": "0x11700 0x03900",
+        "default-config": "0x15000 0x04000",
+        "user-config": "0x19000 0x04000",
+        "firmware": "0x20000 0x7c8000",
+        "certyficate": "0x7e8000 0x08000",
+        "radio": "0x7f0000 0x10000"
+      },
+      "first_sysupgrade_partition": "os-image",
+      "last_sysupgrade_partition": "file-system"
+    },
+    "gluon_targets": {
+      "device": "device('tp-link-archer-c60-v1', 'tplink_archer-c60-v1', { packages = ATH10K_PACKAGES_SMALLBUFFERS_QCA9880, class = 'tiny', factory = false })"
+    },
+    "gluon_pr_3034": {
+      "titel": "ath79-generic: (re)add support for archer-c60",
+      "text": "This device was gone. I tried to use it with the smallbuffers wifi firmware and the device remained suprisingly stable.",
+      "testgeraet": "https://map.chemnitz.freifunk.net/#!v:m;n:50c7bf2cf5c8",
+      "kommentare": [
+        "blocktrron 2023-10-25: Archer C59 v1 has the same caveats, thus i think it is fine adding the device non-broken.",
+        "blocktrron 2023-10-26: support-list partition too big (more than 256 bytes) ... fine to only build sysupgrade images for now"
+      ]
+    },
+    "deviwiki": {
+      "infobox": {
+        "brand": "TP-LINK",
+        "model": "Archer C60",
+        "revision": "(EU/RU) v1.x",
+        "series": "AC1350",
+        "asin": "B01LX8Z8TP",
+        "fcc_date": "12/09/2016",
+        "manuf_country": "China",
+        "is_manuf": "Yes",
+        "availability": "now",
+        "type": "wireless router",
+        "fcc_id": "TE7C60",
+        "ic_id": "8853A-C60",
+        "pcb_id": "2050500733",
+        "pwr_v": "12",
+        "pwr_amp": "1",
+        "pwr_conn": "barrel",
+        "cpu1_brand": "Qualcomm Atheros",
+        "cpu1_model": "QCA9561;QCA9561-AL3A;",
+        "cpu1_cspeed": "775",
+        "fla1": "8",
+        "fla1_brand": "GigaDevice",
+        "fla1_model": "GD25Q64CSIG",
+        "ram1": "64",
+        "ram1_brand": "Winbond",
+        "ram1_model": "W9751G6KB-25",
+        "wi1_chip1_brand": "Qualcomm Atheros",
+        "wi1_chip1_model": "QCA9561;QCA9561-AL3A;",
+        "wi1_802dot11_protocols": "bgn",
+        "wi1_ant_conn": "U.FL",
+        "wi1_txchains": "3",
+        "wi1_rxchains": "3",
+        "wi1_sstreams": "3",
+        "wi2_chip1_brand": "Qualcomm Atheros",
+        "wi2_chip1_model": "QCA9886",
+        "wi2_802dot11_protocols": "an+ac",
+        "wi2_ant_conn": "U.FL",
+        "wi2_txchains": "2",
+        "wi2_rxchains": "2",
+        "wi2_sstreams": "2",
+        "eth_cpu": "true",
+        "sw_cpu": "true",
+        "lan_speed": "100M",
+        "lan_ports": "4",
+        "wan_ports": "1",
+        "stock_boot": "U-Boot;1.1.4;AP151 (Dragonfly 1.0);",
+        "stock_os": "Linux;3.3.8;",
+        "tp_firmware": "OpenWrt,",
+        "802dot11_protocols": "abgn+ac",
+        "default_ssid": "TP-LINK_XXXX,TP-LINK_XXXX_5G",
+        "default_ssid_regex": "^TP-LINK_[A-F0-9]{4}(_5G)?$",
+        "default_ip": "192.168.0.1",
+        "default_user": "admin",
+        "default_pass": "admin",
+        "oui": "50:C7:BF",
+        "oui_eth": "50:C7:BF"
+      },
+      "text": [
+        "\"2050500733\" and \"1619\" is silkscreened on the board in the FCC photos.",
+        "Archer C60(RU) Ver:2.0 (label) - id:52550000",
+        "SupportList (alt): special_id 00000000, 42520000, 45550000, 52550000, 55530000 (product_ver 1.0.0)",
+        "RedesZone (Archer C60(EU) v1.0): CPU QCA9561-AL3A (3T3R 2.4GHz), Flash GigaDevice GD25Q64CSIG (8MB SPI), RAM Winbond W9751G6KB-25 (64MB DDR2), WLAN QCA9886 (2T2R 5GHz), PSU 12V/1A (TP-LINK T120100-2C1)",
+        "Archer C60(EU) Ver:1.0 label (gecid): QCA9561-AL3A 3x3 802.11bgn, QCA9886 2x2 802.11an/ac"
+      ],
+      "siehe_auch": [
+        "TP-LINK Archer C60 v2.0",
+        "TP-LINK Archer C59 v1.x"
+      ]
+    },
+    "wikidevi": {
+      "hinweis": "inhaltsgleich mit DeviWiki-Rohtext"
+    },
+    "fcc": {
+      "grantee": "TP-Link Technologies Co., Ltd.",
+      "produktbezeichnung": "AC1350 Wireless Dual Band Router",
+      "testlabor": "SPORTON International Inc.",
+      "grants": [
+        {
+          "frequenz": "2412-2462 MHz",
+          "zweck": "Original Equipment",
+          "datum": "2016-12-09"
+        },
+        {
+          "frequenz": "5180-5240 MHz",
+          "zweck": "Original Equipment",
+          "datum": "2016-12-09"
+        },
+        {
+          "frequenz": "5180-5240 MHz",
+          "zweck": "Class II permissive change",
+          "datum": "2017-03-22"
+        }
+      ],
+      "grant_kommentar": "Power listed is maximum combined output power conducted. This device is restricted to indoor use only. Device operates with specific antennas in MIMO configurations ...",
+      "exhibits": [
+        "User Manual 2016-12-09 4.1 MB",
+        "Internal Photos 2016-12-09 2.5 MB",
+        "External Photos 2016-12-09 381.2 KB",
+        "Label 2016-12-09 2.6 MB",
+        "Test Setup Photos NII 2017-03-22 / DTS 2016-12-09 / NII 2016-12-09",
+        "Test Report NII 2017-03-22 1.3 MB",
+        "Test Report Co-Location 2016-12-09 1.5 MB",
+        "Test Report DTS 2016-12-09 2.4 MB",
+        "Test Report NII 2016-12-09 3.5 MB",
+        "Class II Permissive Change Letter 2017-03-22",
+        "MPE Report 2016-12-09 / 2017-03-22",
+        "Block Diagram, Schematics, Operational Description: nur Metadaten (vertraulich)"
+      ]
+    },
+    "fcc_handbuch": {
+      "titel": "Archer C60 User Guide, AC1350 Wireless Dual Band Router, REV1.0.0 1910011738",
+      "led": "Power, 2.4GHz Wireless, 5GHz Wireless, Ethernet, Internet (Blue On = Internet ok, Orange On = Port verbunden ohne Internet), WPS",
+      "rueckseite_links_nach_rechts": [
+        "Power Port",
+        "Power On/Off Button",
+        "WPS/Wi-Fi On/Off Button (2 s = WLAN an/aus)",
+        "Reset Button (ca. 7 s = Werkseinstellungen)",
+        "Internet Port",
+        "Ethernet Ports (1/2/3/4)",
+        "Antennas"
+      ],
+      "aufstellung": "The router can be placed on a shelf or desktop.",
+      "innen": "The device is restricted in indoor environment only."
+    },
+    "fcc_label": {
+      "modell": "Archer C60 AC1350 Wireless Dual Band Router",
+      "power": "12V 1A",
+      "default_access": "http://tplinkwifi.net",
+      "barcode": "Model:Archer C60(US) Ver:2.0, S/N, MAC, Wireless Password/PIN, SSID TP-Link_XXXX / TP-Link_XXXX_5G",
+      "fcc_id": "TE7C60",
+      "ic": "8853A-C60",
+      "hinweis": "for indoor use only",
+      "groesse": "82.8 x 39 mm ±0.2 mm",
+      "zeichnung": "Archer C60(US)_2.0_产品规格标贴, Version A1, 2016-11-17",
+      "lage": "Unterseite mittig"
+    },
+    "fcc_fotos_extern": {
+      "bericht": "EP642212-02",
+      "inhalt": [
+        "Router weiß mit 5 grauen Stabantennen, LED-Reihe vorne",
+        "Rückseite: 4 orange LAN-Buchsen, 1 blaue WAN-Buchse, kleine Öffnung, 2 runde Taster, DC-Buchse",
+        "US-Steckernetzteil TP-LINK T120100-2B1: Input 100-240V~ 50/60Hz 0.3A, Output 12V 1A, I.T.E. Power Supply, cULus E342511, Effizienz VI, Mitte positiv, Made in China"
+      ]
+    },
+    "fcc_fotos_intern": {
+      "bericht": "EP642212-02",
+      "inhalt": [
+        "Platinenaufkleber 'Archer C60(EU) Ver:1.0', 2BG6381000461, 3FC3-02",
+        "Platinennummer 2050500733, Datumscode 1619, 10558",
+        "Abschirmbleche über SoC/RAM und 5-GHz-Teil",
+        "Antennenports auf der Platine: Port 1-3 (2.4G), Port 1-2 (5G), U.FL",
+        "4-polige Stiftleiste bestückt neben dem SPI-Flash (8-Pin SOIC)",
+        "6 bedrahtete LEDs an der Vorderkante",
+        "Übertrager D20601 G / 1550-1",
+        "kein Lüfter"
+      ]
+    },
+    "fcc_dts": {
+      "bericht": "FR642212-02AC Rev. 01, 2016-11-17",
+      "muster_erhalten": "2016-06-23",
+      "getestet_bis": "2016-10-05",
+      "modi": "11b/11g/HT20 Kanal 1-11, HT40 Kanal 3-9, Nant 3, MCS0-23",
+      "antennen": [
+        {
+          "nr": 1,
+          "kategorie": "External",
+          "typ": "Dipole",
+          "gewinn_dbi": 2.54
+        },
+        {
+          "nr": 2,
+          "kategorie": "External",
+          "typ": "Dipole",
+          "gewinn_dbi": 2.32
+        },
+        {
+          "nr": 3,
+          "kategorie": "External",
+          "typ": "Dipole",
+          "gewinn_dbi": 2.25
+        }
+      ],
+      "netzteil": "TP-LINK T120100-2B1, I/P 100-240Vac 300mA, O/P 12Vdc 1000mA",
+      "stromversorgung": "External AC Adapter"
+    },
+    "fcc_nii": {
+      "bericht": "FR642212-02AN",
+      "modi": "5.2G und 5.8G: 11a, HT20/40, VHT20/40/80, Nant 2",
+      "antennen": [
+        {
+          "nr": 1,
+          "kategorie": "External",
+          "typ": "Dipole",
+          "gewinn_dbi_unii1": 2.47,
+          "gewinn_dbi_unii3": 3.23
+        },
+        {
+          "nr": 2,
+          "kategorie": "External",
+          "typ": "Dipole",
+          "gewinn_dbi_unii1": 2.58,
+          "gewinn_dbi_unii3": 3.36
+        }
+      ]
+    },
+    "tplink_datenblatt": {
+      "ethernet": "4 10/100Mbps LAN Ports & 1 10/100Mbps WAN Port",
+      "button": "WPS/Reset Button, Wireless On/Off Button, Power On/Off Button",
+      "rueckseitenbild_beschriftung": [
+        "Power On/Off",
+        "Internet",
+        "Reset",
+        "WPS/Wi-Fi On/Off",
+        "Ethernet LAN Ports"
+      ],
+      "external_power_supply": "12V/1A",
+      "dimensions": "9.1x5.7x1.5in (230x144x37mm)",
+      "antenna": "3 x 2.4GHz Antennas, 2 x 5GHz Antennas",
+      "features": [
+        "Three 2.4GHz antennas and two 5GHz antennas are placed in alternate order for omni-directional coverage",
+        "Single band antenna",
+        "High gain external antennas",
+        "Dedicated Wi-Fi button"
+      ],
+      "wireless_standards": "IEEE 802.11ac/n/a 5GHz, IEEE 802.11b/g/n 2.4GHz",
+      "signal_rate": "450Mbps at 2.4GHz, 867Mbps at 5GHz",
+      "transmit_power": "CE: <20dBm(2.4GHz), <20dBm(5GHz); FCC: <20dBm",
+      "reception_sensitivity": "5GHz: 11a 54M -76dBm, 11ac VHT20 MCS8 -70dBm, VHT40 MCS9 -65.5dBm, VHT80 MCS9 -61.5dBm; 2.4G: 11g 54M -76dBm, 11n HT20 MCS7 -74dBm, HT40 MCS7 -71dBm",
+      "package_contents": [
+        "AC1350 Wireless Dual Band Router Archer C60",
+        "Power Adapter",
+        "RJ45 Ethernet Cable",
+        "Quick Installation Guide"
+      ],
+      "certification": "CE, RoHS",
+      "environment": "Operating Temperature 0~40°C, Storage Temperature -40~70°C, Operating Humidity 10%~90% non-condensing, Storage Humidity 5%~90% non-condensing",
+      "guest_network": "2.4GHz x 1, 5GHz x 1",
+      "similar_products": "Archer C58"
+    },
+    "tplink_downloadseite": {
+      "firmware": [
+        {
+          "name": "Archer C60(EU)_V1_160811",
+          "datum": "2016-08-11",
+          "groesse": "8.19 MB",
+          "notiz": "For Archer C60(EU) 1.0"
+        },
+        {
+          "name": "Archer C60(EU)_V1_160712",
+          "datum": "2016-07-12",
+          "groesse": "8.14 MB",
+          "notiz": "First firmware released"
+        }
+      ],
+      "dokumente": [
+        "Archer C60_V1_Datasheet (/en/document/46081/)",
+        "Archer C60(EU)_V1_UG (/en/document/62301/)",
+        "Archer C60(EU)_V1_QIG (/en/document/62004/)",
+        "SOHO Wireless Router QIGs (/en/document/129044/, 132808, 132910)"
+      ],
+      "versionen": [
+        "v1",
+        "v2",
+        "v3"
+      ]
+    },
+    "freifunk_forum_24139": {
+      "kern": "Freifunk Bremen: Bau für Archer C6 v2 und Archer C60 v1 schlägt fehl mit 'file-system partition too big (more than 5477376 bytes)' nach Hinzufügen von ca-bundle/ca-certificates/libustream-openssl und Upgrade auf Gluon 2023.2.3; gelöst durch Gluon-Feature tls (mbedtls) statt openssl"
+    },
+    "werkstatt": {
+      "datei": "router-werkstatt/docs/ramdruck-64mb.md",
+      "auszug": "Betroffen: nur MemTotal < 64 MB (dort greift der Patch) und ath10k, also die 7 Modelle Archer C2 v3, C25 v1, C58 v1, C60 v1, D50 v1, TL-WR902AC v1, FRITZ!WLAN Repeater 1750E."
+    },
+    "geizhals_cdx": {
+      "treffer": [
+        {
+          "original": "http://geizhals.de/tp-link-archer-c60-a1565170.html",
+          "timestamp": "20170126114448"
+        }
+      ]
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "TP-Link",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TP-Link",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7C60",
+        "stand": "Grant 2016-12-09 (Original Equipment), Class II permissive change 2017-03-22",
+        "sicherheit": "hoch",
+        "bemerkung": "TP-LINK Technologies Co., Ltd., Shenzhen"
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "Archer C60",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Archer C60",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "AC1350 Wireless Dual Band Router"
+      },
+      {
+        "wert": "Archer C60",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C60/Label/Label-3222555",
+        "stand": "Exhibit 2016-12-09 (Zeichnung 'Archer C60(US)_2.0_产品规格标贴' Version A1, fertig 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "v1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "1.0 (Platinenaufkleber 'Archer C60(EU) Ver:1.0')",
+        "quelle": "fcc_fotos_intern",
+        "beleg": "https://fccid.io/TE7C60/Internal-Photos/Internal-Photo-3222554",
+        "stand": "Sporton EP642212-02 Rev. 01 (PDF 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "FCC-Prüfmuster ist die EU-Fassung v1.0"
+      },
+      {
+        "wert": "v1.x (EU/RU)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": "revision=(EU/RU) v1.x"
+      },
+      {
+        "wert": "1.0.0 (product_ver in der Supportliste, special_id 00000000/43410000/45550000/55530000)",
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+        "stand": "Branch master am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Hardware-Hauptversion 1; special_id-Kürzel CA/EU/US als Hex-ASCII, nicht weiter belegt"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Typenschild 82.8 x 39 mm mittig auf der Unterseite; links 'Model: Archer C60', 'Power: 12V 1A', Default Access http://tplinkwifi.net; rechts oben Barcode mit 'Model:Archer C60(<Region>)' und 'Ver:<Version>' rechts daneben, darunter S/N, MAC, Wireless Password/PIN, SSIDs TP-Link_XXXX und TP-Link_XXXX_5G; unten FCC ID TE7C60, IC 8853A-C60, 'for indoor use only'",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C60/Label/Label-3222555",
+        "stand": "Exhibit 2016-12-09 (Zeichnung 'Archer C60(US)_2.0_产品规格标贴' Version A1, fertig 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "Zeichnung für Archer C60(US) Ver:2.0 (2016-11-17); auf v1 steht laut DeviWiki/gecid-Foto 'Archer C60(EU) Ver:1.0'. Das Foto der Unterseite im selben Exhibit zeigt noch ein älteres Etikett mit 'TP-LINK'-Schriftzug"
+      },
+      {
+        "wert": "'Archer C60(EU) Ver:1.0' auf dem Typenschild",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Verweis auf Label-Foto https://ru.gecid.com/data/netlan/201702030804-47099/img/09_tp-link_archer_c60.jpg (nicht abgerufen)"
+      },
+      {
+        "wert": "Aufdruck '2050500733' und '1619' auf der Platine (Bestückungsseite)",
+        "quelle": "fcc_fotos_intern",
+        "beleg": "https://fccid.io/TE7C60/Internal-Photos/Internal-Photo-3222554",
+        "stand": "Sporton EP642212-02 Rev. 01 (PDF 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "auch DeviWiki: pcb_id 2050500733"
+      }
+    ],
+    "fcc_id": [
+      {
+        "wert": "TE7C60",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7C60",
+        "stand": "Grant 2016-12-09 (Original Equipment), Class II permissive change 2017-03-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TE7C60",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "TE7C60",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "als https://fcc.io/TE7/C60"
+      }
+    ],
+    "ic_id": [
+      {
+        "wert": "8853A-C60",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C60/Label/Label-3222555",
+        "stand": "Exhibit 2016-12-09 (Zeichnung 'Archer C60(US)_2.0_产品规格标贴' Version A1, fertig 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "8853A-C60",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "AC1350 Wireless Dual Band Router",
+          "Archer C60(EU) V1",
+          "Archer C60(RU) V1"
+        ],
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Tagline und revision=(EU/RU) v1.x"
+      },
+      {
+        "wert": [
+          "Archer C60(EU)_V1"
+        ],
+        "quelle": "tplink_downloadseite",
+        "beleg": "https://www.tp-link.com/en/support/download/archer-c60/v1/",
+        "stand": "Live-Seite 2026-10-20, neueste Firmware Archer C60(EU)_V1_160811 (2016-08-11)",
+        "sicherheit": "hoch",
+        "bemerkung": "Firmware 'For Archer C60(EU) 1.0'"
+      }
+    ],
+    "varianten": [
+      {
+        "wert": "Schwestermodell Archer C59 v1 (gleiche Plattform QCA9561+QCA9886, aber 128 MB RAM, 16 MB Flash, USB 2.0, 8 LEDs, 3 Taster); Archer C60 v2 und v3 sind eigene Images",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Gemeinsame Geräteseite Archer C60 v1/v2/v3; v3 leitet beim Booten LAN-Verkehr über den WAN-Port (Warnhinweis betrifft nur v3)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c60_v2",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Discontinued",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "nicht mehr im Handel; letzte Firmware Archer C60(EU)_V1_160811 vom 2016-08-11",
+        "quelle": "tplink_downloadseite",
+        "beleg": "https://www.tp-link.com/en/support/download/archer-c60/v1/",
+        "stand": "Live-Seite 2026-10-20, neueste Firmware Archer C60(EU)_V1_160811 (2016-08-11)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "now (Stand der Seite 2019)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "availability=now"
+      }
+    ],
+    "erscheinungsdatum": [
+      {
+        "wert": "erste Firmware 2016-07-12 (Archer C60(EU)_V1_160712, 'First firmware released')",
+        "quelle": "tplink_downloadseite",
+        "beleg": "https://www.tp-link.com/en/support/download/archer-c60/v1/",
+        "stand": "Live-Seite 2026-10-20, neueste Firmware Archer C60(EU)_V1_160811 (2016-08-11)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "FCC-Grant 2016-12-09",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": "fcc_date=12/09/2016"
+      }
+    ],
+    "hersteller_land": [
+      {
+        "wert": "China",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C60/Label/Label-3222555",
+        "stand": "Exhibit 2016-12-09 (Zeichnung 'Archer C60(US)_2.0_产品规格标贴' Version A1, fertig 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "MADE IN CHINA"
+      },
+      {
+        "wert": "China",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": "manuf_country=China"
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Qualcomm Atheros QCA9561",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9561-AL3A",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Qualcomm Atheros QCA9561",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6d313da6dc5f655d92aa86e2ec42ecfcf763df3d",
+        "stand": "Commit 2019-05-05 (Autor Adrian Schmutzler), gemergt 2019-07-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 775,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 775,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": "775/650/258 MHz (CPU/DDR/AHB)"
+      },
+      {
+        "wert": 775,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "mips_24kc (Paketarchitektur)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 64,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6d313da6dc5f655d92aa86e2ec42ecfcf763df3d",
+        "stand": "Commit 2019-05-05 (Autor Adrian Schmutzler), gemergt 2019-07-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/ramdruck-64mb.md",
+        "stand": "Abschnitt 'Stand 15.09.2026: vm.min_free_kbytes 2048 bricht ath10k'",
+        "sicherheit": "hoch",
+        "bemerkung": "in der Werkstatt-Doku als Gerät mit MemTotal < 64 MB und ath10k geführt; nicht am C60 v1 selbst gemessen"
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR2",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "ram_chips": [
+      {
+        "wert": "Winbond W9751G6KB-25",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": "nach RedesZone-Platinenfotos"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 8,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 8,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 8,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 8,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9561_tplink_archer-c60-v1.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Partitionen bis 0x800000"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": "'8 MB of FLASH (SPI NOR)'"
+      }
+    ],
+    "flash_chip": [
+      {
+        "wert": "GigaDevice GD25Q64CSIG",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "flash_layout": [
+      {
+        "wert": "u-boot 0x000000 64 KiB, info 0x010000 64 KiB (MAC bei 0x8), firmware 0x020000-0x7e0000 (7936 KiB), tplink 0x7e0000 64 KiB, art 0x7f0000 64 KiB",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9561_tplink_archer-c60-v1.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "IMAGE_SIZE 7936k laut generic-tp-link.mk"
+      },
+      {
+        "wert": "Stock-Partitionen: fs-uboot 0x0, default-mac 0x10000, pin, product-info, partition-table, soft-version, support-list (256 Byte), device-id, profile, default-config, user-config, firmware 0x20000 (0x7c8000), certyficate 0x7e8000, radio 0x7f0000",
+        "quelle": "firmware_utils_safeloader",
+        "beleg": "https://github.com/openwrt/firmware-utils/blob/master/src/tplink-safeloader.c",
+        "stand": "Branch master am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "switch": [
+      {
+        "wert": "Qualcomm Atheros QCA9561 (integriert)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "im SoC integriert (sw_cpu)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "vlan": [
+      {
+        "wert": true,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "Qualcomm Atheros QCA9561, Qualcomm Atheros QCA9886",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9561-AL3A (2.4 GHz, 3x3), QCA9886 (5 GHz, 2x2)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "QCA9561 + QCA9886",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6d313da6dc5f655d92aa86e2ec42ecfcf763df3d",
+        "stand": "Commit 2019-05-05 (Autor Adrian Schmutzler), gemergt 2019-07-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath10k meldet 'qca9888 hw2.0'",
+        "quelle": "openwrt_issue_14541",
+        "beleg": "https://github.com/openwrt/openwrt/issues/14541",
+        "stand": "Issue 2024-02-02 bis 2026-09-10 (geschlossen, 288 Kommentare; nur Eröffnungsbeitrag gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Treiberkennung, Firmwarepaket ath10k-firmware-qca9888-ct"
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath10k",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ath9k, ath10k-ct",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Seitenrevision 2026-03-22 02:55",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kmod-ath10k-ct-smallbuffers, ath10k-firmware-qca9888-ct, ipq-wifi-tplink_archer-c60-v1",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-tp-link.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "DEVICE_PACKAGES"
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11b/g/n",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": 3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Seitenrevision 2026-03-22 02:55",
+        "sicherheit": "mittel",
+        "bemerkung": "2.4Ghz 3x3:3 MIMO"
+      },
+      {
+        "wert": 3,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": "3T3R"
+      },
+      {
+        "wert": 3,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3,
+        "quelle": "fcc_dts",
+        "beleg": "https://fccid.io/TE7C60/Test-Report/Test-Report-DTS-3222559",
+        "stand": "Prüfbericht FR642212-02AC Rev. 01, 2016-11-17",
+        "sicherheit": "hoch",
+        "bemerkung": "Nant 3, MCS0-23"
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "802.11a/n/ac",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5_streams": [
+      {
+        "wert": 2,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Seitenrevision 2026-03-22 02:55",
+        "sicherheit": "mittel",
+        "bemerkung": "5Ghz 2x2:2 MIMO"
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": "2T2R"
+      },
+      {
+        "wert": 2,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "fcc_nii",
+        "beleg": "https://fccid.io/TE7C60/Test-Report/Test-Report-NII-3222543",
+        "stand": "Prüfbericht FR642212-02AN (Original Equipment 2016-12-09)",
+        "sicherheit": "hoch",
+        "bemerkung": "Nant 2, MCS0-15 / VHT MCS0-9"
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "AC1350",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "450 Mbit/s 2.4 GHz + 867 Mbit/s 5 GHz"
+      },
+      {
+        "wert": "AC1350",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C60/Label/Label-3222555",
+        "stand": "Exhibit 2016-12-09 (Zeichnung 'Archer C60(US)_2.0_产品规格标贴' Version A1, fertig 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_wave2": [
+      {
+        "wert": true,
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-tp-link.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "niedrig",
+        "bemerkung": "abgeleitet: Firmwarepaket für QCA9888 (802.11ac Wave 2); keine Quelle sagt es ausdrücklich"
+      }
+    ],
+    "wlan_kanalbreite": [
+      {
+        "wert": "20/40 MHz (2.4 GHz)",
+        "quelle": "fcc_dts",
+        "beleg": "https://fccid.io/TE7C60/Test-Report/Test-Report-DTS-3222559",
+        "stand": "Prüfbericht FR642212-02AC Rev. 01, 2016-11-17",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "20/40/80 MHz (5 GHz)",
+        "quelle": "fcc_nii",
+        "beleg": "https://fccid.io/TE7C60/Test-Report/Test-Report-NII-3222543",
+        "stand": "Prüfbericht FR642212-02AN (Original Equipment 2016-12-09)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_frequenzen_fcc": [
+      {
+        "wert": "2412-2462 MHz; 5180-5240 MHz",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7C60",
+        "stand": "Grant 2016-12-09 (Original Equipment), Class II permissive change 2017-03-22",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant-Liste; NII-Bericht prüft auch 5.8G (U-NII-3)"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": "CE: <20 dBm (2.4 GHz), <20 dBm (5 GHz); FCC: <20 dBm",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_empfindlichkeit": [
+      {
+        "wert": "5 GHz: 11a 54M -76 dBm, VHT20 MCS8 -70 dBm, VHT40 MCS9 -65.5 dBm, VHT80 MCS9 -61.5 dBm; 2.4 GHz: 11g 54M -76 dBm, HT20 MCS7 -74 dBm, HT40 MCS7 -71 dBm",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_5ghz_hinweis": [
+      {
+        "wert": "ar71xx-Erstunterstützung 2017 ohne 5 GHz (fehlende ath10k-Firmware für QCA9886); behoben Oktober 2017 (34958c8269, e917e51bf9)",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": "'Currently not working: ... WiFi 5GHz'"
+      },
+      {
+        "wert": "Nach NVMEM-Umbau (Snapshot 2024) 5-GHz-Radio nicht erkannt: board-2.bin für QCA9888 bmi-board-id=20 fehlt",
+        "quelle": "openwrt_issue_14541",
+        "beleg": "https://github.com/openwrt/openwrt/issues/14541",
+        "stand": "Issue 2024-02-02 bis 2026-09-10 (geschlossen, 288 Kommentare; nur Eröffnungsbeitrag gelesen)",
+        "sicherheit": "mittel",
+        "bemerkung": "Issue zum C60 v1 eröffnet, geschlossen 2026-09-10"
+      },
+      {
+        "wert": "Behoben durch Kalibrierungsvariante 'TP-Link-Archer-c60-v1' plus ipq-wifi-Boarddatei (main 2025-09-21)",
+        "quelle": "openwrt_git_kalibrierung",
+        "beleg": "https://github.com/openwrt/openwrt/commit/9401b8b86d9b3a441555311542fa42fb90e0b170",
+        "stand": "Commit 2025-09-08 (Christoph Krapp), gemergt 2025-09-21",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Unsupported Functions: WiFi 5GHz",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump-Stand; Live-Seite hat das Feld seit 2025-11-14 leer"
+      }
+    ],
+    "wlan_schalter": [
+      {
+        "wert": "WPS/Wi-Fi On/Off-Taster auf der Rückseite: ca. 2 s drücken schaltet WLAN an/aus, kurz drücken startet WPS",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C60/User-Manual/User-Manual-3222561",
+        "stand": "Exhibit 2016-12-09, REV1.0.0 1910011738 (PDF erstellt 2016-05-11, geändert 2016-12-07)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WiFi button GPIO 1 (KEY_RFKILL)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9561_tplink_archer-c60-v1.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "5 extern, nicht abnehmbar (innen per U.FL-Kabel angeschlossen)",
+        "quelle": "fcc_fotos_intern",
+        "beleg": "https://fccid.io/TE7C60/Internal-Photos/Internal-Photo-3222554",
+        "stand": "Sporton EP642212-02 Rev. 01 (PDF 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "Fotos: 5 Stabantennen mit fest durchgeführtem Kabel und U.FL-Stecker an der Platine"
+      },
+      {
+        "wert": "keine abnehmbaren Antennen",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Detachable Antennas '-'"
+      },
+      {
+        "wert": "3 x 2.4 GHz + 2 x 5 GHz extern",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "intern U.FL (2.4 und 5 GHz)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U.FL an der Platine, außen kein Stecker",
+        "quelle": "fcc_fotos_intern",
+        "beleg": "https://fccid.io/TE7C60/Internal-Photos/Internal-Photo-3222554",
+        "stand": "Sporton EP642212-02 Rev. 01 (PDF 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 5,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 5,
+        "quelle": "fcc_fotos_extern",
+        "beleg": "https://fccid.io/TE7C60/External-Photos/External-Photo-3222553",
+        "stand": "Sporton EP642212-02 Rev. 01 (PDF 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_je_band": [
+      {
+        "wert": "getrennt: 3 Antennen nur 2.4 GHz, 2 Antennen nur 5 GHz, abwechselnd angeordnet",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "'Single band antenna', 'placed in alternate order'"
+      },
+      {
+        "wert": "getrennt: Antennenports 1-3 (2.4G), Port 1-2 (5G) auf der Platine markiert",
+        "quelle": "fcc_fotos_intern",
+        "beleg": "https://fccid.io/TE7C60/Internal-Photos/Internal-Photo-3222554",
+        "stand": "Sporton EP642212-02 Rev. 01 (PDF 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_gewinn_dbi": [
+      {
+        "wert": {
+          "2.4": [
+            2.54,
+            2.32,
+            2.25
+          ]
+        },
+        "quelle": "fcc_dts",
+        "beleg": "https://fccid.io/TE7C60/Test-Report/Test-Report-DTS-3222559",
+        "stand": "Prüfbericht FR642212-02AC Rev. 01, 2016-11-17",
+        "sicherheit": "hoch",
+        "bemerkung": "Dipol, External"
+      },
+      {
+        "wert": {
+          "5_unii1": [
+            2.47,
+            2.58
+          ],
+          "5_unii3": [
+            3.23,
+            3.36
+          ]
+        },
+        "quelle": "fcc_nii",
+        "beleg": "https://fccid.io/TE7C60/Test-Report/Test-Report-NII-3222543",
+        "stand": "Prüfbericht FR642212-02AN (Original Equipment 2016-12-09)",
+        "sicherheit": "hoch",
+        "bemerkung": "Dipol, External"
+      }
+    ],
+    "antennen_charakteristik": [
+      {
+        "wert": "rund (Omni)",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "'omni-directional coverage'"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "Internet",
+            "geschwindigkeit": "10/100",
+            "rolle": "WAN",
+            "farbe": "blau"
+          },
+          {
+            "name": "Ethernet 1",
+            "geschwindigkeit": "10/100",
+            "rolle": "LAN",
+            "farbe": "orange"
+          },
+          {
+            "name": "Ethernet 2",
+            "geschwindigkeit": "10/100",
+            "rolle": "LAN",
+            "farbe": "orange"
+          },
+          {
+            "name": "Ethernet 3",
+            "geschwindigkeit": "10/100",
+            "rolle": "LAN",
+            "farbe": "orange"
+          },
+          {
+            "name": "Ethernet 4",
+            "geschwindigkeit": "10/100",
+            "rolle": "LAN",
+            "farbe": "orange"
+          }
+        ],
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "Geschwindigkeit aus Datenblatt; Farben aus FCC-Außenfotos; Namen aus Handbuch"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 5,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Ethernet 100M ports 5, Gigabit -"
+      },
+      {
+        "wert": 5,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "4 LAN + 1 WAN"
+      },
+      {
+        "wert": 5,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": "lan_ports=4, wan_ports=1"
+      }
+    ],
+    "ports_geschwindigkeit_max_mbit": [
+      {
+        "wert": 100,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "kein Gigabit"
+      },
+      {
+        "wert": 100,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": "lan_speed=100M"
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": false,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "5 RJ45-Buchsen"
+      }
+    ],
+    "switch_portzuordnung": [
+      {
+        "wert": "WAN = eth1; Switch-Port 0 = CPU (eth0), Port 1 = LAN 4, Port 2 = LAN 3, Port 3 = LAN 2, Port 4 = LAN 1",
+        "quelle": "openwrt_02_network",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/generic/base-files/etc/board.d/02_network",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Beschriftung der LAN-Ports umgekehrt zur Switch-Nummerierung (Commit b054729899)"
+      },
+      {
+        "wert": "LAN-Beschriftung gegenüber internen Switch-Ports vertauscht",
+        "quelle": "openwrt_git_portreihenfolge",
+        "beleg": "https://github.com/openwrt/openwrt/commit/b054729899560aa9faea594dd7df573883f0cf3f",
+        "stand": "Commit 2020-03-11 (Adrian Schmutzler)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "sfp": [
+      {
+        "wert": 0,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump '¿', Live-Seite '-'"
+      }
+    ],
+    "usb": [
+      {
+        "wert": "keins",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "keins",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "kein USB in Schnittstellenliste"
+      },
+      {
+        "wert": "keins",
+        "quelle": "fcc_fotos_extern",
+        "beleg": "https://fccid.io/TE7C60/External-Photos/External-Photo-3222553",
+        "stand": "Sporton EP642212-02 Rev. 01 (PDF 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "Rückseite ohne USB-Buchse"
+      }
+    ],
+    "modem": [
+      {
+        "wert": "keins",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": false,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "mittel",
+        "bemerkung": "keine PoE-Angabe in Datenblatt, Handbuch und FCC-Unterlagen; Strom nur über DC-Buchse"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "Hohlstecker-Buchse 'Power Port' außen rechts auf der Rückseite (neben dem Power-On/Off-Taster)",
+        "quelle": "fcc_fotos_extern",
+        "beleg": "https://fccid.io/TE7C60/External-Photos/External-Photo-3222553",
+        "stand": "Sporton EP642212-02 Rev. 01 (PDF 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "Handbuch: Power Port ganz links in Leserichtung der Rückseite (von hinten betrachtet)"
+      },
+      {
+        "wert": "barrel",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": "pwr_conn=barrel"
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 12,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "External Power Supply 12V/1A"
+      },
+      {
+        "wert": 12,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C60/Label/Label-3222555",
+        "stand": "Exhibit 2016-12-09 (Zeichnung 'Archer C60(US)_2.0_产品规格标贴' Version A1, fertig 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 12,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 1.0,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.0,
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C60/Label/Label-3222555",
+        "stand": "Exhibit 2016-12-09 (Zeichnung 'Archer C60(US)_2.0_产品规格标贴' Version A1, fertig 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "Power: 12V 1A"
+      },
+      {
+        "wert": 1.0,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1.0,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "dc_polaritaet": [
+      {
+        "wert": "Mitte positiv",
+        "quelle": "fcc_fotos_extern",
+        "beleg": "https://fccid.io/TE7C60/External-Photos/External-Photo-3222553",
+        "stand": "Sporton EP642212-02 Rev. 01 (PDF 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "Polaritätssymbol auf Netzteil T120100-2B1"
+      }
+    ],
+    "netzteil_beiliegend": [
+      {
+        "wert": true,
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "Package Contents: Power Adapter"
+      },
+      {
+        "wert": true,
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C60/User-Manual/User-Manual-3222561",
+        "stand": "Exhibit 2016-12-09, REV1.0.0 1910011738 (PDF erstellt 2016-05-11, geändert 2016-12-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "'via the provided power adapter'"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "TP-LINK T120100-2B1: Eingang 100-240 V~ 50/60 Hz 0.3 A, Ausgang 12 V DC 1 A, Effizienzklasse VI, cULus E342511 (US-Steckernetzteil)",
+        "quelle": "fcc_fotos_extern",
+        "beleg": "https://fccid.io/TE7C60/External-Photos/External-Photo-3222553",
+        "stand": "Sporton EP642212-02 Rev. 01 (PDF 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "Netzteil des FCC-Prüfmusters; DTS-Bericht nennt dasselbe Modell (I/P 100-240Vac 300mA, O/P 12Vdc 1000mA)"
+      },
+      {
+        "wert": "TP-LINK T120100-2C1, 12 V / 1 A",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "EU-Netzteil laut RedesZone-Test (Foto nicht abgerufen)"
+      }
+    ],
+    "ein_aus_schalter": [
+      {
+        "wert": "Power On/Off-Taster auf der Rückseite",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C60/User-Manual/User-Manual-3222561",
+        "stand": "Exhibit 2016-12-09, REV1.0.0 1910011738 (PDF erstellt 2016-05-11, geändert 2016-12-07)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Power On/Off Button",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Seitenrevision 2026-03-22 02:55",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C60/Label/Label-3222555",
+        "stand": "Exhibit 2016-12-09 (Zeichnung 'Archer C60(US)_2.0_产品规格标贴' Version A1, fertig 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": "'for indoor use only'"
+      },
+      {
+        "wert": "innen",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7C60",
+        "stand": "Grant 2016-12-09 (Original Equipment), Class II permissive change 2017-03-22",
+        "sicherheit": "hoch",
+        "bemerkung": "Grant: 'This device is restricted to indoor use only'"
+      },
+      {
+        "wert": "innen",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C60/User-Manual/User-Manual-3222561",
+        "stand": "Exhibit 2016-12-09, REV1.0.0 1910011738 (PDF erstellt 2016-05-11, geändert 2016-12-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "'restricted in indoor environment only'"
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": {
+          "min": 0,
+          "max": 40
+        },
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_lager": [
+      {
+        "wert": {
+          "min": -40,
+          "max": 70
+        },
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "Betrieb 10-90 %, Lager 5-90 %, nicht kondensierend",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": {
+          "breite": 230,
+          "tiefe": 144,
+          "hoehe": 37
+        },
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "9.1 x 5.7 x 1.5 in., ohne Antennen"
+      }
+    ],
+    "montage": [
+      {
+        "wert": "Tisch oder Regal",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C60/User-Manual/User-Manual-3222561",
+        "stand": "Exhibit 2016-12-09, REV1.0.0 1910011738 (PDF erstellt 2016-05-11, geändert 2016-12-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "'The router can be placed on a shelf or desktop.' Wandmontage nicht erwähnt"
+      }
+    ],
+    "gehaeuse_oeffnen": [
+      {
+        "wert": "Kreuzschlitzschrauben auf der Unterseite lösen, Oberteil mit Spachtel von der Unterschale lösen (Rastnasen, an den Ethernet-Buchsen beginnen)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c60_v2",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "niedrig",
+        "bemerkung": "Abschnitt 'Opening the case' der gemeinsamen C60-Seite, Version nicht genannt"
+      }
+    ],
+    "luefter": [
+      {
+        "wert": false,
+        "quelle": "fcc_fotos_intern",
+        "beleg": "https://fccid.io/TE7C60/Internal-Photos/Internal-Photo-3222554",
+        "stand": "Sporton EP642212-02 Rev. 01 (PDF 2016-11-17)",
+        "sicherheit": "mittel",
+        "bemerkung": "kein Lüfter auf den FCC-Innenfotos, nur Abschirmbleche"
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 7,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 7,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": "7x LED"
+      },
+      {
+        "wert": 7,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9561_tplink_archer-c60-v1.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "power, wlan5g, wan grün, lan, wps, wan amber + 2.4-GHz-LED am WMAC (led-sources 17)"
+      }
+    ],
+    "led_liste": [
+      {
+        "wert": "Power, 2.4 GHz, 5 GHz, Ethernet, Internet (blau/orange), WPS",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C60/User-Manual/User-Manual-3222561",
+        "stand": "Exhibit 2016-12-09, REV1.0.0 1910011738 (PDF erstellt 2016-05-11, geändert 2016-12-07)",
+        "sicherheit": "hoch",
+        "bemerkung": "Vorderseite von links nach rechts"
+      },
+      {
+        "wert": "power (GPIO 16), wlan5g (GPIO 18), wan grün (GPIO 20), wan amber (GPIO 22), lan (GPIO 2), wps (GPIO 19), wlan2g am WMAC (Pin 17)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9561_tplink_archer-c60-v1.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "led_abschaltbar": [
+      {
+        "wert": "in Stock-Firmware: Control LEDs / Night Mode (Handbuch 12.11)",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C60/User-Manual/User-Manual-3222561",
+        "stand": "Exhibit 2016-12-09, REV1.0.0 1910011738 (PDF erstellt 2016-05-11, geändert 2016-12-07)",
+        "sicherheit": "mittel",
+        "bemerkung": "nur Stock-Firmware"
+      }
+    ],
+    "knoepfe": [
+      {
+        "wert": "Power On/Off, WPS/Wi-Fi On/Off (kombiniert), Reset",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C60/User-Manual/User-Manual-3222561",
+        "stand": "Exhibit 2016-12-09, REV1.0.0 1910011738 (PDF erstellt 2016-05-11, geändert 2016-12-07)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WPS/Reset Button, Wireless On/Off Button, Power On/Off Button",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": "Widerspruch im Datenblatt selbst: Rückseitenbild beschriftet 'Reset' und 'WPS/Wi-Fi On/Off' getrennt"
+      },
+      {
+        "wert": "2 Taster (WiFi GPIO 1, Reset GPIO 21)",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9561_tplink_archer-c60-v1.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Button count (ohne Power)"
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "Reset-Taster auf der Rückseite zwischen WPS/Wi-Fi-Taster und Internet-Port; ca. 7 s drücken setzt die Stock-Firmware zurück",
+        "quelle": "fcc_handbuch",
+        "beleg": "https://fccid.io/TE7C60/User-Manual/User-Manual-3222561",
+        "stand": "Exhibit 2016-12-09, REV1.0.0 1910011738 (PDF erstellt 2016-05-11, geändert 2016-12-07)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "auf dem Rückseitenfoto als kleine Öffnung zwischen WAN-Buchse und den beiden runden Tastern",
+        "quelle": "fcc_fotos_extern",
+        "beleg": "https://fccid.io/TE7C60/External-Photos/External-Photo-3222553",
+        "stand": "Sporton EP642212-02 Rev. 01 (PDF 2016-11-17)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Sichtung Foto; ob versenkt (Stift nötig), nicht sicher erkennbar"
+      },
+      {
+        "wert": "Reset beim Einschalten gedrückt halten startet die TFTP-Recovery",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6d313da6dc5f655d92aa86e2ec42ecfcf763df3d",
+        "stand": "Commit 2019-05-05 (Autor Adrian Schmutzler), gemergt 2019-07-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Stiftleiste (4-polig, auf dem FCC-Prüfmuster bestückt, neben dem Flash-Chip)",
+        "quelle": "fcc_fotos_intern",
+        "beleg": "https://fccid.io/TE7C60/Internal-Photos/Internal-Photo-3222554",
+        "stand": "Sporton EP642212-02 Rev. 01 (PDF 2016-11-17)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Sichtung Foto EU v1.0; dass es der UART ist, belegt das Foto nicht"
+      },
+      {
+        "wert": "innen Lötpunkte (unbestückte 4-polige Stiftleiste J1, links auf der Platine)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c60_v2",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "niedrig",
+        "bemerkung": "gemeinsame C60-Seite; 'Factory units do not have this header installed'; Version nicht genannt, Parameter-Tabelle für v2"
+      },
+      {
+        "wert": "UART-Stiftleiste auf der Platine",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/e39dc8d823c86559eedbbdcee5f5c14b827fed0f",
+        "stand": "Commit 2016-12-27 (Autor Henryk Heisig), gemergt 2017-01-26",
+        "sicherheit": "mittel",
+        "bemerkung": "'UART header on PCB'"
+      },
+      {
+        "wert": "vorhanden",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Serial: Yes"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "TX (Pin mit Dreieck, zur Geräterückseite), RX, GND, VCC 3.3 V",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c60_v2",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "niedrig",
+        "bemerkung": "von der gemeinsamen C60-Seite (Tabelle für v2); für v1 nicht ausdrücklich belegt"
+      }
+    ],
+    "seriell_pegel_v": [
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Seitenrevision 2026-03-22 02:55",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3.3,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c60_v2",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "niedrig",
+        "bemerkung": "v2-Abschnitt"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "115200 / 8N1"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "U-Boot-Flash per UART: tftp 0x81000000 <sysupgrade.bin>; erase 0x9f020000 +$filesize; cp.b $fileaddr 0x9f020000 $filesize; reset",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6d313da6dc5f655d92aa86e2ec42ecfcf763df3d",
+        "stand": "Commit 2019-05-05 (Autor Adrian Schmutzler), gemergt 2019-07-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot-Prompt: innerhalb 1 s 'tpl' eingeben (Abschnitt beschreibt C60 v2)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c60_v2",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "niedrig",
+        "bemerkung": ""
+      }
+    ],
+    "jtag": [
+      {
+        "wert": false,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/generic",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Seitenrevision 2026-03-22 02:55",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ar71xx-ath79/generic",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump-Stand"
+      }
+    ],
+    "openwrt_profil": [
+      {
+        "wert": "tplink_archer-c60-v1 (TPLINK_BOARD_ID ARCHER-C60-V1, tplink-safeloader-uimage, IMAGE_SIZE 7936k)",
+        "quelle": "openwrt_image_mk",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic-tp-link.mk",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "18.06.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "ar71xx; Commit e39dc8d823 von 2017-01-26"
+      },
+      {
+        "wert": "ath79 seit Commit 2019-07-18 (erste Release mit ath79: 19.07)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6d313da6dc5f655d92aa86e2ec42ecfcf763df3d",
+        "stand": "Commit 2019-05-05 (Autor Adrian Schmutzler), gemergt 2019-07-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "25.12.1",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Seitenrevision 2026-03-22 02:55",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "23.05.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Dump-Stand"
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot 1.1.4, AP151 (Dragonfly 1.0)",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_os": [
+      {
+        "wert": "Linux 3.3.8",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "installation": [
+      {
+        "wert": "GUI OEM, U-Boot TFTP recovery",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Rename installation image to tp_recovery.bin, see ath79 git-commit"
+      },
+      {
+        "wert": "Stock-Web-UI mit factory-Image; oder TFTP: PC auf 192.168.0.66, factory-Image als tp_recovery.bin, Reset gedrückt halten und einschalten, ca. 15 s warten",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6d313da6dc5f655d92aa86e2ec42ecfcf763df3d",
+        "stand": "Commit 2019-05-05 (Autor Adrian Schmutzler), gemergt 2019-07-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Web-UI der Stock-Firmware funktioniert für C60 v1 (Stand März 2022); langen Dateinamen kürzen (z. B. firmware.bin)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c60_v2",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Gluon baut für dieses Gerät kein factory-Image (factory = false), nur sysupgrade: erst OpenWrt aufspielen, dann Gluon per sysupgrade",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": "Grund laut PR 3034: support-list-Bereich (256 Byte) zu klein für Gluon-Supportliste"
+      }
+    ],
+    "tftp_recovery": [
+      {
+        "wert": {
+          "server_ip": "192.168.0.66",
+          "dateiname": "tp_recovery.bin",
+          "ausloeser": "Reset beim Einschalten gedrückt halten, ca. 15 s"
+        },
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/6d313da6dc5f655d92aa86e2ec42ecfcf763df3d",
+        "stand": "Commit 2019-05-05 (Autor Adrian Schmutzler), gemergt 2019-07-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "https://www.tp-link.com/en/support/download/archer-c60/v1/",
+        "quelle": "tplink_downloadseite",
+        "beleg": "https://www.tp-link.com/en/support/download/archer-c60/v1/",
+        "stand": "Live-Seite 2026-10-20, neueste Firmware Archer C60(EU)_V1_160811 (2016-08-11)",
+        "sicherheit": "hoch",
+        "bemerkung": "neueste Archer C60(EU)_V1_160811 (2016-08-11)"
+      }
+    ],
+    "gluon_support": [
+      {
+        "wert": "ja (ath79-generic, tp-link-archer-c60-v1, class 'tiny', factory = false, Pakete ATH10K_PACKAGES_SMALLBUFFERS_QCA9880)",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "wieder aufgenommen 2023-10-26, nicht als broken (C59 v1 hat dieselben Einschränkungen)",
+        "quelle": "gluon_pr_3034",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/3034",
+        "stand": "PR 2023-10-25, gemergt 2023-10-26",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Broken",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Seitenrevision 2026-03-22 02:55",
+        "sicherheit": "mittel",
+        "bemerkung": "Herkunft des Eintrags nicht ermittelt"
+      }
+    ],
+    "gluon_hinweis": [
+      {
+        "wert": "Gehört zur Gruppe 64 MB RAM + ath10k; vm.min_free_kbytes=2048 ließ den ath10k-RX-Ring unter Last korrupt werden (am C25 gemessen), daher für 2023.2.6 entfernt",
+        "quelle": "werkstatt",
+        "beleg": "router-werkstatt/docs/ramdruck-64mb.md",
+        "stand": "Abschnitt 'Stand 15.09.2026: vm.min_free_kbytes 2048 bricht ath10k'",
+        "sicherheit": "hoch",
+        "bemerkung": "Datei router-werkstatt/docs/ramdruck-64mb.md, Abschnitt 'Stand 15.09.2026'"
+      },
+      {
+        "wert": "Gluon-Build mit openssl statt tls-Feature sprengt das Flash ('file-system partition too big'); mit gluon tls (mbedtls) passt es",
+        "quelle": "freifunk_forum_24139",
+        "beleg": "https://forum.freifunk.net/t/24139",
+        "stand": "Thread 2024-07-07 bis 2024-07-14 (5 Beiträge, alle gelesen)",
+        "sicherheit": "niedrig",
+        "bemerkung": "Freifunk Bremen, Gluon 2023.2.3; betrifft C6 v2 und C60 v1"
+      }
+    ],
+    "mac_schema": [
+      {
+        "wert": "LAN = Label-MAC, WAN = Label+1, WLAN 2.4 GHz = Label, WLAN 5 GHz = Label-1; nur eine Adresse in info-Partition Offset 0x8",
+        "quelle": "openwrt_git_mac",
+        "beleg": "https://github.com/openwrt/openwrt/commit/88aead0a665dd349af4fb8afcfe1a16cf90515ae",
+        "stand": "Commit 2020-03-11 (Adrian Schmutzler)",
+        "sicherheit": "mittel",
+        "bemerkung": "geprüft auf v1, v2, v3"
+      },
+      {
+        "wert": "eth1 = Label (label-mac-device), eth0 = +1, wmac = Label, ath10k = -1",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9561_tplink_archer-c60-v1.dts",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "oui": [
+      {
+        "wert": "50:C7:BF",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "werkseinstellungen": [
+      {
+        "wert": "http://tplinkwifi.net",
+        "quelle": "fcc_label",
+        "beleg": "https://fccid.io/TE7C60/Label/Label-3222555",
+        "stand": "Exhibit 2016-12-09 (Zeichnung 'Archer C60(US)_2.0_产品规格标贴' Version A1, fertig 2016-11-17)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "192.168.0.1, admin/admin, SSID TP-LINK_XXXX / TP-LINK_XXXX_5G",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/tp-link/archer_c60_v2",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/tp-link/archer_c60_v2",
+        "stand": "Seitenrevision 2025-11-03 06:36",
+        "sicherheit": "mittel",
+        "bemerkung": "gemeinsame Seite C60 v1-v3"
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/TP-LINK_Archer_C60_v1.x",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/TP-LINK_Archer_C60_v1.x",
+        "stand": "Rohtext inhaltsgleich mit DeviWiki-Revision 2019-07-05 (nur Feldreihenfolge, auskommentierter 4pda-Link, __NOTOC__ anders)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.tp-link.com/en/support/download/archer-c60/v1/",
+        "quelle": "tplink_downloadseite",
+        "beleg": "https://www.tp-link.com/en/support/download/archer-c60/v1/",
+        "stand": "Live-Seite 2026-10-20, neueste Firmware Archer C60(EU)_V1_160811 (2016-08-11)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "datenblatt": [
+      {
+        "wert": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "quelle": "tplink_datenblatt",
+        "beleg": "https://static.tp-link.com/Archer_C60_Datasheet_1.0_1473320095532g.pdf",
+        "stand": "PDF 2016-08-24, Titel 'Archer_C60_Datasheet_1.0'",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "fcc_seite": [
+      {
+        "wert": "https://fccid.io/TE7C60",
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/TE7C60",
+        "stand": "Grant 2016-12-09 (Original Equipment), Class II permissive change 2017-03-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "amazon_asin": [
+      {
+        "wert": "B01LX8Z8TP",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/TP-LINK_Archer_C60_v1.x",
+        "stand": "Seitenrevision 2019-07-05T05:33:12Z",
+        "sicherheit": "niedrig",
+        "bemerkung": "Marktplatz in der Quelle nicht angegeben; Seite beschreibt EU/RU v1.x, ob die ASIN nur v1 betrifft, ist offen"
+      }
+    ],
+    "geizhals_url": [
+      {
+        "wert": "https://geizhals.de/tp-link-archer-c60-a1565170.html",
+        "quelle": "geizhals_cdx",
+        "beleg": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/tp-link-archer-c60*&output=json&fl=original,timestamp&collapse=urlkey",
+        "stand": "CDX-Abfrage 2026-10-20 (1 Treffer, Schnappschuss 2017-01-26)",
+        "sicherheit": "mittel",
+        "bemerkung": "Permalink aus Webarchiv (Schnappschuss 2017-01-26, vor Erscheinen von v2/v3 im Handel); ob der Eintrag später mehrere Hardware-Versionen abdeckt, nicht geprüft"
+      }
+    ],
+    "preis_neu": [
+      {
+        "wert": "ca. 32 EUR im Angebot (Ende 2019)",
+        "quelle": "freifunk_forum_suche",
+        "beleg": "https://forum.freifunk.net/search.json?q=Archer%20C60",
+        "stand": "Suche 2026-10-20",
+        "sicherheit": "niedrig",
+        "bemerkung": "Forumsbeitrag Thread 21549, Version nicht genannt"
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://fccid.io/TE7C60/External-Photos/External-Photo-3222553",
+      "kategorie": "dc_buchse_mass",
+      "grund": "Hohlstecker-Maß in keiner Quelle; am Gerät oder Netzteil messen"
+    },
+    {
+      "url": "https://fccid.io/TE7C60",
+      "kategorie": "leistung_w",
+      "grund": "keine Leistungsaufnahme in Datenblatt, Handbuch oder Prüfberichten (nur Netzteil 12 V 1 A)"
+    },
+    {
+      "url": "https://openwrt.org/toh/tp-link/archer_c60_v2",
+      "kategorie": "seriell",
+      "grund": "Pinbelegung, Lage (J1 'links') und 'unbestückt' stehen auf der gemeinsamen C60-Seite ohne Versionsangabe; FCC-Muster v1.0 zeigt eine bestückte 4-polige Stiftleiste neben dem Flash. Wiki-Fotos archer_c60_serial_header*.jpg nicht abgerufen"
+    },
+    {
+      "url": "https://www.tp-link.com/en/document/62301/",
+      "kategorie": "handbuch_eu",
+      "grund": "EU-User-Guide Archer C60(EU)_V1_UG nicht geladen; FCC-Handbuch ausgewertet"
+    },
+    {
+      "url": "https://www.tp-link.com/en/document/62004/",
+      "kategorie": "qig_eu",
+      "grund": "EU-Quick-Installation-Guide nicht geladen; könnte EU-Netzteil und Wandmontage zeigen"
+    },
+    {
+      "url": "https://fccid.io/TE7C60/Label/Label-3222555",
+      "kategorie": "montageloecher",
+      "grund": "Unterseitenfoto zeigt keine eindeutigen Schlüssellöcher; Wandmontage in keiner Quelle"
+    },
+    {
+      "url": "https://fccid.io/TE7C60/Test-Report/Test-Report-NII-3326319",
+      "kategorie": "wlan",
+      "grund": "NII-Bericht der Class-II-Änderung 2017-03-22 (1.3 MB) nicht ausgewertet; Grund der Änderung unbekannt (evtl. Bezug auf US v2.0)"
+    },
+    {
+      "url": "https://web.archive.org/web/20170126114448/http://geizhals.de/tp-link-archer-c60-a1565170.html",
+      "kategorie": "ean",
+      "grund": "archivierte Geizhals-Seite nicht abrufbar (429); EAN und Versionsabdeckung dort vermutet, nicht gelesen"
+    },
+    {
+      "url": "https://www.redeszone.net/tp-link/archer-c60-ac1350/",
+      "kategorie": "platine",
+      "grund": "Test der EU v1.0 mit Platinenfotos (RAM/Flash-Typen, EU-Netzteil T120100-2C1) nicht abgerufen"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/issues/14541",
+      "kategorie": "wlan_5ghz",
+      "grund": "288 Kommentare nicht gelesen; Backport der Kalibrierungsvariante (9401b8b86d) in openwrt-24.10 bzw. Gluon-Pin nicht geprüft"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/tp-link/tp-link_archer_c60_v1?do=revisions",
+      "kategorie": "gluon_support",
+      "grund": "Herkunft des ToH-Eintrags 'Gluon support: Broken' nicht ermittelt; Gluon-Target führt das Gerät nicht als broken"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-20",
+    "status": "teilweise",
+    "anfragen": 42,
+    "notiz": "Erster Lauf: ToH-Dump und Live-Seite (+Revisionsliste), OpenWrt-Wiki (gemeinsame Seite C60 v1-v3, überwiegend v2-Inhalte), OpenWrt-Commits (ar71xx 2017, ath79 2019, Port-/MAC-Fixes 2020, 5-GHz-Kalibrierung 2025), DTS/DTSI, Image-Makefile, 02_network, Safeloader, Gluon-Target und PR 3034, DeviWiki/WikiDevi, FCC TE7C60 (Handbuch, Typenschild, Außen-/Innenfotos, DTS- und NII-Bericht), TP-Link-Datenblatt und Download-Seite, Freifunk-Forum 24139, Werkstatt-Doku ramdruck-64mb.md. FCC-Prüfmuster ist laut Platinenaufkleber Archer C60(EU) Ver:1.0, die Typenschild-Zeichnung aber für C60(US) Ver:2.0. Widersprüche: Datenblatt nennt 'WPS/Reset Button', Handbuch kombiniert WPS mit Wi-Fi On/Off und hat Reset separat; ToH 'Gluon support: Broken' gegen Gluon-Target (nicht broken, factory=false). web.archive.org lieferte 429. Offen: DC-Maß, Leistung, Serial-Lage/Pinbelegung für v1, EAN.",
+    "laeufe": [
+      {
+        "datum": "2026-10-20",
+        "anfragen": 42,
+        "status": "teilweise"
+      }
+    ]
+  }
+}

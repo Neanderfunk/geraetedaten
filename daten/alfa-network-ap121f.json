@@ -1,0 +1,1787 @@
+{
+  "image": "alfa-network-ap121f",
+  "modell": "ALFA Network AP121F",
+  "quellen": {
+    "toh": {
+      "url": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+      "stand": "Dump 2026-10-18",
+      "abgerufen": "2026-10-20",
+      "datei": "quellen/quellen-toh-2026-10-18.tsv.gz",
+      "pid": "15683100",
+      "bemerkung": "Dump-Werte aelter als Live-Seite: Device Type 'WiFi Router', aktuell 23.05.0, Spalte Outdoor fehlt"
+    },
+    "openwrt_hwdata": {
+      "url": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f?do=export_raw",
+      "stand": "Seitenrevision 2026-03-08 18:13",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Live-Seite: Device Type 'WiFi AP', aktuell 25.12.0, Outdoor No (Eintrag 2025-05-13), Gluon support Yes"
+    },
+    "openwrt_wiki": {
+      "url": "https://openwrt.org/toh/alfa_network/ap121f?do=export_raw",
+      "stand": "Seitenrevision 2026-08-20 11:50",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Seite weitgehend Vorlage; belegt: U-Boot-Recovery mit Konsolenausgabe, Serial (4 Pads, RX ueber R11), USB-Device-Mod, Bootlog, U-Boot-Umgebung"
+    },
+    "openwrt_git_ar71xx": {
+      "url": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+      "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Piotr Dymacz; Spezifikationsliste und Flash-Anleitung (U-Boot web recovery)"
+    },
+    "openwrt_git_ar71xx_mach": {
+      "url": "https://github.com/openwrt/openwrt/blob/0c6165d21ad274261bf8176828e122964e25c215/target/linux/ar71xx/files/arch/mips/ath79/mach-ap121f.c",
+      "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_git_ath79": {
+      "url": "https://github.com/openwrt/openwrt/commit/334bbc51987c6694e130af25876f178babf37140",
+      "stand": "Commit 2019-07-04 (Autor), gemergt 2019-07-31",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Roger Pueyo Centelles, ergaenzt von Piotr Dymacz; in v21.02.0 enthalten, nicht in v19.07.0 (Compare 'diverged')"
+    },
+    "openwrt_git_spi": {
+      "url": "https://github.com/openwrt/openwrt/commit/b329bb945667",
+      "stand": "Commit 2020-08-16",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "SPI-Takt erhoeht, fast-read (aktuelle DTSI: spi-max-frequency 50 MHz)"
+    },
+    "openwrt_git_suche": {
+      "url": "https://api.github.com/search/commits?q=ap121f+repo:openwrt/openwrt",
+      "stand": "Suchergebnis vom 2026-10-20 (8 Commits, neuester 2020-08-16)",
+      "abgerufen": "2026-10-20"
+    },
+    "openwrt_pr_2199": {
+      "url": "https://github.com/openwrt/openwrt/pull/2199",
+      "stand": "PR 2019-07-05 bis 2019-08-11",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Diskussion zu MAC-Adressen im ART, microSD-Zusatzplatine, USB-Device-Mod mit Platinenfotos (pepe2k)"
+    },
+    "openwrt_pr_2199_fotos": {
+      "url": "https://user-images.githubusercontent.com/2934612/61453129-a06c1000-a95d-11e9-93a2-fb98c325bfde.jpg",
+      "stand": "Fotos 2019-07-18 (Platinenaufdruck 2017/01/13)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "drei Platinenfotos als Bild ausgewertet; weitere: https://user-images.githubusercontent.com/2934612/61453131-a104a680-a95d-11e9-82a7-fd525d92b3cd.jpg"
+    },
+    "openwrt_dts": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9331_alfa-network_ap121f.dtsi",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "dateien": [
+        "ar9331_alfa-network_ap121f.dts",
+        "ar9331_alfa-network_ap121f.dtsi"
+      ]
+    },
+    "openwrt_image_mk": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/image/generic.mk",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_targets": {
+      "url": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20"
+    },
+    "gluon_pr_1404": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/1404",
+      "stand": "PR 2018-05-23",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "ar71xx-Unterstuetzung, Commit 33956cd (gemergt 2018-05-23, in v2018.1 enthalten)"
+    },
+    "gluon_pr_2583": {
+      "url": "https://github.com/freifunk-gluon/gluon/pull/2583",
+      "stand": "PR 2022-07-10",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "ath79-Unterstuetzung, Commit 4cbd748 (in v2022.1 enthalten); Checkliste Geraeteaufnahme"
+    },
+    "gluon_commit_4cbd748": {
+      "url": "https://github.com/freifunk-gluon/gluon/commit/4cbd748e5284fd2b913db44753bb129162873332",
+      "stand": "Commit 2022-07-07 (Autor), gemergt 2022-07-10",
+      "abgerufen": "2026-10-20"
+    },
+    "deviwiki": {
+      "url": "https://deviwiki.com/wiki/ALFA_Network_AP121F",
+      "stand": "Seitenrevision 2019-06-20 22:41",
+      "abgerufen": "2026-10-20"
+    },
+    "wikidevi": {
+      "url": "https://wikidevi.wi-cat.ru/ALFA_Network_AP121F",
+      "stand": "Spiegel, Stand unbekannt (WikiDevi-Abbild)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "wie DeviWiki, zusaetzlich type=access point"
+    },
+    "alfa_produktseite": {
+      "url": "https://www.alfa.com.tw/products/ap121f",
+      "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Beschreibung und Spezifikationen; Shopify-JSON: SKU AP121F, kein Barcode, Gewicht 0"
+    },
+    "alfa_produktfotos": {
+      "url": "https://cdn.shopify.com/s/files/1/0266/4880/5448/files/AP121F_1.jpg",
+      "stand": "Bilder AP121F_1..6 (v=1763446293)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "sechs Produktfotos als Bild ausgewertet"
+    },
+    "alfa_dateiserver": {
+      "url": "https://files.alfa.com.tw/?dir=%5B2%5D%20WiFi%20Home%20Router",
+      "stand": "Verzeichnis 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "kein AP121F-Verzeichnis (nur AP121, AP121U u. a.); laut PR 2199 keine eigene Herstellerfirmware, Auslieferung mit generischem OpenWrt/NetAidKit"
+    },
+    "fcc_grantee_uq2": {
+      "url": "https://fccid.io/UQ2",
+      "stand": "Liste 2026-10-20 (20 FCC-IDs, juengste 2012-10-18)",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "keine AP121F-Zulassung unter UQ2; UQ2121 ist der AP121 von 2012"
+    },
+    "geizhals_cdx": {
+      "url": "https://web.archive.org/cdx/search/cdx?url=geizhals.de/alfa*&output=json&fl=original&collapse=urlkey",
+      "stand": "Abfrage 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "18 Treffer, kein AP121F; auch geizhals.de/*ap121f* leer"
+    },
+    "freifunk_forum_suche": {
+      "url": "https://forum.freifunk.net/search.json?q=ap121f",
+      "stand": "Suche 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "nur Erwaehnungen (Firmware-Liste, fehlendes Selector-Bild), keine Hardwaredaten"
+    },
+    "werkstatt": {
+      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/",
+      "stand": "2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "kein Protokoll und kein Dokument zum AP121F (grep ap121f leer; 'Alfa' nur als Hersteller in Sammeltabelle erstinstallation-ohne-factory.md Zeile 46)"
+    }
+  },
+  "roh": {
+    "toh": {
+      "pid": "15683100",
+      "devicetype": "WiFi Router",
+      "brand": "ALFA Network",
+      "model": "AP121F",
+      "version": "NULL",
+      "fccid": "NULL",
+      "availability": "Discontinued",
+      "whereavailable": "",
+      "supportedsincecommit": "https://git.lede-project.org/?p=source.git;a=commit;h=0c6165d21ad274261bf8176828e122964e25c215",
+      "supportedsincerel": "17.01.3",
+      "supportedcurrentrel": "23.05.0",
+      "unsupported_functions": "NULL",
+      "target": "ar71xx-ath79",
+      "subtarget": "generic",
+      "packagearchitecture": "mips_24kc",
+      "bootloader": "U-Boot",
+      "cpu": "Atheros AR9331",
+      "cpucores": "1",
+      "cpumhz": "400",
+      "flashmb": "16",
+      "rammb": "64",
+      "ethernet100mports": "1",
+      "ethernetgbitports": "NULL",
+      "ethernet1gports": "-",
+      "ethernet2_5gports": "¿",
+      "ethernet5gports": "¿",
+      "ethernet10gports": "¿",
+      "sfp_ports": "¿",
+      "sfp_plus_ports": "¿",
+      "switch": "Atheros AR9331",
+      "vlan": "Yes",
+      "modem": "-",
+      "commentsnetworkports": "",
+      "wlanhardware": "Atheros AR9331",
+      "wlan24ghz": "b/g/n",
+      "wlan50ghz": "-",
+      "wlancomments": "",
+      "wlandriver": "ath9k",
+      "detachableantennas": "1",
+      "bluetooth": "-",
+      "usbports": "-",
+      "sataports": "-",
+      "commentsusbsataports": "",
+      "videoports": "-",
+      "audioports": "-",
+      "phoneports": "-",
+      "commentsavports": "",
+      "serial": "Yes",
+      "serialconnectionparameters": "¿",
+      "jtag": "¿",
+      "ledcount": "3",
+      "buttoncount": "2",
+      "gpios": "-",
+      "powersupply": "¿",
+      "devicepage": "toh:alfa_network:ap121f",
+      "device_techdata": "View/Edit data",
+      "owrt_forum_topic_url": "NULL",
+      "lede_forum_topic_url": "NULL",
+      "forumsearch": "AP121F",
+      "gitsearch": "AP121F",
+      "wikideviurl": "NULL",
+      "oemdevicehomepageurl": "",
+      "firmwareoemstockurl": "",
+      "firmwareopenwrtinstallurl": "NULL",
+      "firmwareopenwrtupgradeurl": "https://downloads.openwrt.org/releases/23.05.0/targets/ath79/generic/openwrt-23.05.0-ath79-generic-alfa-network_ap121f-squashfs-sysupgrade.bin",
+      "firmwareopenwrtsnapshotinstallurl": "NULL",
+      "firmwareopenwrtsnapshotupgradeurl": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-alfa-network_ap121f-squashfs-sysupgrade.bin",
+      "installationmethods": "U-Boot web recovery,see git-commit",
+      "commentinstallation": "",
+      "recoverymethods": "U-Boot web recovery",
+      "commentrecovery": "",
+      "picture": "media:example:genericrouter1.png",
+      "comments": "",
+      "page": "toh:hwdata:alfa_network:alfa_network_ap121f"
+    },
+    "openwrt_hwdata": {
+      "Device Type_devicetype": "WiFi AP",
+      "Brand": "ALFA Network",
+      "Model": "AP121F",
+      "Versions": "",
+      "FCCID_urls": "",
+      "Availability_availability": "Discontinued",
+      "Where available": "",
+      "Supported Since Commit_git": "https://git.lede-project.org/?p=source.git;a=commit;h=0c6165d21ad274261bf8176828e122964e25c215",
+      "Supported Since Rel_releasesince": "17.01.3",
+      "Supported Current Rel_releasecurrent": "25.12.0",
+      "Unsupported Functions_unsupporteds": "",
+      "Gluon support_gluonsupport": "Yes",
+      "Target_target": "ath79",
+      "Subtarget": "generic",
+      "Package architecture_pkg-arch": "mips_24kc",
+      "Bootloader_bootloader": "U-Boot",
+      "CPU": "Atheros AR9331",
+      "CPU Cores_numcores_": "1",
+      "CPU MHz": "400",
+      "Flash MB_mbflashs": "16",
+      "RAM MB_mbram": "64",
+      "Ethernet 100M ports_numethport": "1",
+      "Ethernet 1Gbit ports_numethport": "-",
+      "Ethernet 2.5Gbit ports_numethport": "-",
+      "Ethernet 5Gbit ports_numethport": "-",
+      "Ethernet 10Gbit ports_numethport": "-",
+      "SFP ports_port-sfp": "-",
+      "SFP+ ports_port-sfp": "-",
+      "Switch": "Atheros AR9331",
+      "VLAN_yesno": "Yes",
+      "Modem_modem": "-",
+      "Comments network ports_": "",
+      "WLAN Hardwares": "Atheros AR9331",
+      "WLAN 2.4GHz_wlan24": "b/g/n",
+      "WLAN 5.0GHz_wlan50": "-",
+      "WLAN Comments_": "",
+      "WLAN driver_wlan-drivers": "ath9k",
+      "Detachable Antennas_numdetachantenna": "1",
+      "Bluetooth_bluetooth": "-",
+      "miniPCI ports_port-minipci": "¿",
+      "USB ports_port-usbs": "-",
+      "SATA ports_numsataport": "-",
+      "Comments USB SATA ports_": "",
+      "Video ports_port-videos": "-",
+      "Audio ports_port-audios": "-",
+      "Phone ports_port-phones": "-",
+      "Comments AV ports_": "",
+      "Serial_yesno": "Yes",
+      "Serial connection parameters_serialparam": "¿",
+      "Serial connection voltage_serialvoltage": "¿",
+      "JTAG_yesno": "¿",
+      "LED count_numled": "3",
+      "Button count_numbutton": "2",
+      "GPIOs_numgpio": "-",
+      "Power Supply": "¿",
+      "Outdoor_yesno": "No",
+      "OpenVPN performance": "¿",
+      "Wireguard performance": "¿",
+      "Device Page_page": "toh:alfa_network:ap121f",
+      "Device Techdata_hidden": "View/Edit data",
+      "OWrt Forum Topic URL_urls": "",
+      "Forum search_search-forums": "AP121F",
+      "Git search_search-gits": "AP121F",
+      "WikiDevi URL_urls": "",
+      "WikiDevi ID_hwinfo-id": "",
+      "OEM Device Homepage URL_url": "",
+      "Firmware OEM Stock URL_url": "",
+      "Firmware OpenWrt Install URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/generic/openwrt-25.12.0-ath79-generic-alfa-network_ap121f-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt Upgrade URL_urls": "https://downloads.openwrt.org/releases/25.12.0/targets/ath79/generic/openwrt-25.12.0-ath79-generic-alfa-network_ap121f-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Install URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-alfa-network_ap121f-squashfs-sysupgrade.bin",
+      "Firmware OpenWrt snapshot Upgrade URL_urls": "https://downloads.openwrt.org/snapshots/targets/ath79/generic/openwrt-ath79-generic-alfa-network_ap121f-squashfs-sysupgrade.bin",
+      "Installation method(s)_method-installations": "U-Boot web recovery, see git-commit",
+      "Comment installation": "",
+      "Recovery method(s)_method-recoverys": "U-Boot web recovery",
+      "Comment recovery": "",
+      "Picture_img100s": "media:example:genericrouter1.png",
+      "Comments_": ""
+    },
+    "openwrt_wiki": {
+      "Recovery through u-boot": "Reset-Knopf beim Einschalten halten; U-Boot zeigt: 'Keep button pressed for at least: 3s for web based recovery, 5s for U-Boot console, 7s for network console'; nach 3 s: 'HTTP server is starting at IP: 192.168.1.1', Ethernet 1/100 Mbps",
+      "U-Boot-Ausgabe": {
+        "U-Boot": "1.1.4-cd95c190-dirty, Build 2017-03-17",
+        "BOARD": "ALFA NETWORK AP121F",
+        "SOC": "AR9330 rev. 1",
+        "CPU": "MIPS 24Kc",
+        "RAM": "64 MB DDR1 16-bit CL3-3-3-8",
+        "FLASH": "16 MB Macronix MX25L128",
+        "CLOCKS CPU/RAM/AHB/SPI/REF": "400/400/200/ 20/ 25 MHz (zweites Log: SPI 25)"
+      },
+      "Serial": "On the PCB, there is a 4 pad with solder on them on the top-upper-right of the PCB. At least TX is available on it. We have: [GND] [TX] [RX] [VCC?]. To get RX working I had to connect to the other side of R11.",
+      "Serial connection parameters": "115200, 8N1",
+      "Hardware mods / USB device": "It's possible to add support for USB device by connecting D+ and D- to the USB connector wires as seen on a picture in the pull request (PR 2199)",
+      "Pinouts": "There is a connector on the middle of the bottom of the top pcb: [VCC?][D+][D-][GND][?][VCC?]. For the serial connector: [GND] [TX] [RX] [VCC?]. TX<->R12<->?; \"RX\"<->R11<->SOC_RX",
+      "Bootlog Kernel": "SoC: Atheros AR9330 rev 1; Memory 64 MB; m25p80 spi0.0: mx25l12805d (16384 Kbytes); eth0: Atheros AG71xx, mode:MII, PHY uid=004dd041; ehci-platform USB 2.0, 1 port; OpenWrt 18.06.4 (ar71xx)",
+      "Kernel command line (ar71xx)": "board=AP121F mtdparts=spi0.0:192k(u-boot)ro,64k(u-boot-env),64k(art)ro,-(firmware) console=ttyATH0,115200",
+      "U-Boot-Umgebung": {
+        "bootargs": "console=ttyS0,115200 ... mtdparts=ath-nor0:256k(u-boot),64k(ART),1280k(kernel),14720k(rootfs),64k(config)",
+        "ipaddr": "192.168.1.1",
+        "serverip": "192.168.1.2",
+        "bootfile": "firmware.bin",
+        "hostname": "u-boot_alfa-ap121f",
+        "baudrate": "115200",
+        "bootdelay": "1"
+      },
+      "Tags": "ath79 AR9331 16flash 64ram 1port fastethernet 1core serial 2button 802.11bgn detachableantenna 1ant u-boot",
+      "Hinweis": "Abschnitte Installation, Flash Layout, Netzwerk, Buttons, Fotos noch Vorlage (FIXME)"
+    },
+    "openwrt_git_ar71xx": {
+      "Beschreibung": "ALFA Network AP121F is a pocket-size router dedicated for VPN/TOR users. Device is based on Atheros AR9331 WiSoC and is running a custom version (updated from OpenWrt CC to LEDE 17.01 release) of NetAidKit firmware.",
+      "Specification": [
+        "400/400/200 MHz (CPU/DDR/AHB)",
+        "64 MB of RAM (DDR1)",
+        "16 MB of FLASH (SPI NOR)",
+        "1x 10/100 Mbps Ethernet",
+        "1T1R 2.4 GHz",
+        "1x microSD (optional, on separate PCB)",
+        "3x LED, 1x button, 1x switch",
+        "UART header on PCB"
+      ],
+      "Flash instruction": "under U-Boot web recovery mode: PC 192.168.1.2/24, RJ45 verbinden, Reset druecken, Strom an, nach erstem Blinken aller LEDs Knopf weitere 3 Blinkzyklen halten, 192.168.1.1 im Browser, sysupgrade-Image hochladen"
+    },
+    "openwrt_git_ar71xx_mach": {
+      "GPIO": {
+        "LED LAN": 17,
+        "LED VPN": 27,
+        "LED WLAN": 0,
+        "microSD enable": 26,
+        "Taster reset": 12,
+        "Schalter switch": 21
+      },
+      "WMAC caldata": "ART 0x1000",
+      "eth": "ar933x phy4 switch, eth0 MAC aus ART 0x0",
+      "usb": "ath79_register_usb()"
+    },
+    "openwrt_git_ath79": {
+      "Beschreibung": "pocket-size router with 1 Ethernet and 2.4 GHz WiFi based on the AR9331 SoC",
+      "Image": {
+        "Device": "alfa-network_ap121f",
+        "SOC/ATH_SOC": "ar9331",
+        "DEVICE_PACKAGES (main)": "kmod-usb-chipidea2 kmod-usb-storage -swconfig",
+        "IMAGE_SIZE": "16064k",
+        "SUPPORTED_DEVICES": "ap121f"
+      },
+      "Partitionen": {
+        "u-boot": "0x000000-0x030000 ro",
+        "u-boot-env": "0x030000-0x040000",
+        "art": "0x040000-0x050000 ro",
+        "firmware": "0x050000-0x1000000"
+      },
+      "LEDs": [
+        "green:lan (GPIO 17)",
+        "green:vpn (GPIO 27, led-boot/failsafe/upgrade)",
+        "green:wlan (GPIO 0, phy0tpt)"
+      ],
+      "Tasten": [
+        "reset (GPIO 12)",
+        "switch BTN_0 (GPIO 21)"
+      ],
+      "USB": "dr_mode host",
+      "MAC": "label-mac-device = wmac; eth0 aus ART 0x0; wmac aus ART 0x1002 (aktuelle DTSI)"
+    },
+    "openwrt_pr_2199": {
+      "MAC": "pepe2k 2019-07-18: Label-MAC (fuer WLAN) bei ART 0x1002, eth0 = Label+1 bei ART 0x0, eth1 (unbenutzt) = Label+2 bei ART 0x6; von ALFA bestaetigt",
+      "Aufkleber": "rogerpueyo: Aufkleber auf dem RAM mit 'AGJDBD' und derselben MAC wie aussen am Geraet",
+      "Gehaeuse": "pepe2k: Gehaeuse oeffnen, 'be careful with plastic locks!'",
+      "Firmware": "pepe2k: 'This device doesn't have a dedicated/custom vendor firmware, AFAIK its sold with generic OpenWrt image.'",
+      "microSD": "optionaler microSD-Leser auf Zusatzplatine; Tester ohne SD-Karten-Platine",
+      "USB-Device-Mod": "drei Fotos: Widerstand entfernen, 10k Pull-down nachruesten, D+/D- vom Platinenrand an das USB-Kabel legen"
+    },
+    "openwrt_pr_2199_fotos": {
+      "Platine": "Aufdruck 'AP121F' und Datum '2017/01/13'; SoC Atheros AR9331-AL1A, Datumscode 1646",
+      "Antenne": "U.FL-Buchse (IPEX) an der Platinenecke",
+      "Stromkabel": "USB-Kabel mit vier Adern (rot, weiss, gruen, schwarz) direkt auf vier Loetpunkte gelötet",
+      "Stiftleiste": "4 Durchkontaktierungen in einer Reihe neben dem SoC (Foto 1 unbestueckt, Foto 2 mit eingeloeteten Stiften); laut Wiki serielle Konsole",
+      "Unterseite": "6er-Reihe Durchkontaktierungen am Rand (D+ und D- markiert)"
+    },
+    "gluon_pr_1404": {
+      "Beschreibung": "Alfa AP121F USB powered travel router (looks like an USB ethernet adapter). It has 16 MB flash and 64 MB memory and low power consumption. There is only a sysupgrade file for it.",
+      "WLAN": "maximum TX power is 17 dBm and wireless has 1x1 chains (max. 150 MBit/s)",
+      "Seriell": "The case be opened easily to access the UART interface.",
+      "Flashen": "PC 192.168.1.2, RJ45 verbinden, Reset beim Einschalten halten bis alle LEDs dreimal gleichzeitig geblinkt haben, http://192.168.1.1, sysupgrade-Datei flashen"
+    },
+    "gluon_pr_2583": {
+      "Flashen": "u-boot web based recovery, accepts sysupgrade image; TFTP should be available, but untested",
+      "LEDs": "drei LEDs green:vpn ('V'-Symbol, fuer VPN-Status der Herstellerfirmware), green:lan, green:wlan; kein led-running, VPN-LED zeigt Konfigurationsmodus",
+      "Outdoor": "N/A, indoor, mini USB travel router",
+      "Konfigurationsmodus": "Reset/WPS/... button must return device into config mode: [x]",
+      "MAC": "Primary MAC address should match address on device label: [x]",
+      "device_class": "frueher faelschlich als tiny markiert; Geraet hat 64 MB RAM"
+    },
+    "gluon_targets": {
+      "device": "device('alfa-network-ap121f', 'alfa-network_ap121f', { factory = false })"
+    },
+    "deviwiki": {
+      "brand": "ALFA Network",
+      "model": "AP121F",
+      "is_manuf": "No",
+      "cpu1_brand": "Atheros",
+      "cpu1_model": "AR9331",
+      "cpu1_cspeed": "400",
+      "cpu1_cores": "1",
+      "fla1": "16",
+      "ram1": "64",
+      "wi1_chip1_brand": "Atheros",
+      "wi1_chip1_model": "AR9331",
+      "wi1_802dot11_protocols": "bgn",
+      "stock_boot": "U-Boot",
+      "802dot11_protocols": "bgn"
+    },
+    "wikidevi": {
+      "brand": "ALFA Network",
+      "model": "AP121F",
+      "is_manuf": "No",
+      "type": "access point",
+      "cpu1_brand": "Atheros",
+      "cpu1_model": "AR9331",
+      "cpu1_cspeed": "400",
+      "fla1": "16",
+      "ram1": "64",
+      "wi1_chip1_brand": "Atheros",
+      "wi1_chip1_model": "AR9331",
+      "wi1_802dot11_protocols": "bgn",
+      "stock_boot": "U-Boot",
+      "802dot11_protocols": "bgn"
+    },
+    "alfa_produktseite": {
+      "Availability": "Out Of Stock",
+      "Description": {
+        "Easy Travel": "Ultra compact streamlined stylish design to easy carry with you when you travel to anywhere",
+        "USB Powered": "Simply Powered by USB standard type A connector, easy to powered by laptop or power bank, no power supply needed",
+        "High-Speed Wireless": "High-speed IEEE 802.11n up to 150 Mbps",
+        "Application Scenario": "WiFi Extender mode (such as Hotspot, Coffee shop Application); WiFi Router mode (such as Hotel Application)"
+      },
+      "Chipset": "AR9331",
+      "Standard": "IEEE 802.11b/g/n",
+      "Frequency Band": "2.4 GHz ISM Band",
+      "Flash": "16 MB",
+      "SD-RAM": "64 MB",
+      "Data Rate": "802.11b: Up to 11 Mbps; 802.11g: Up to 54 Mbps; 802.11n: Up to 150 Mbps",
+      "Antenna": "Integrated antenna",
+      "TX Power": "802.11b: 17 dBm; 802.11g: 15 dBm; 802.11n: 15 dBm",
+      "Receive Sensitivity": "-91 dBm@802.11b; -82 dBm@802.11g; -70 dBm@802.11n",
+      "WiFi Security": "WEP 64/128, WPA-PSK, WPA2-PSK, 802.1x",
+      "LED": "WiFi/ LAN / VPN",
+      "Interface": "1x RJ45 Ethernet WAN/LAN Port; 1x USB flip cable; 1x Reset button; 1x Switch",
+      "Dimension": "65 x 15.25 x 21.25 mm",
+      "Power": "USB 5V / 500 mA",
+      "Operating Temperature": "-20 ℃ - 65 ℃",
+      "Storage Temperature": "-10 ℃ - 70 ℃",
+      "Humidity": "5% - 90% (non-condensing)",
+      "Shopify": {
+        "id": 5859047178312,
+        "sku": "AP121F",
+        "barcode": null,
+        "created_at": "2020-11-11T18:10:36+08:00"
+      }
+    },
+    "alfa_produktfotos": {
+      "Gehaeuse": "silbern, laenglich abgerundet; Oberseite ALFA-Logo und drei LEDs mit Symbolen V (VPN), LAN, WLAN",
+      "Stirnseite": "RJ45-Buchse",
+      "USB": "fest angeschlossenes flaches weisses Kabel mit USB-A-Stecker, laesst sich in eine Mulde der Unterseite einklappen",
+      "Reset": "Loch mit Aufschrift 'Reset' auf der Unterseite neben der Kabelmulde",
+      "Antenne": "keine aussen sichtbare Antenne oder Antennenbuchse"
+    }
+  },
+  "felder": {
+    "hersteller": [
+      {
+        "wert": "ALFA Network",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "ALFA Network Inc.",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "modell_name": [
+      {
+        "wert": "AP121F",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AP121F",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "hw_version": [
+      {
+        "wert": "keine Versionsangabe",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Seitenrevision 2026-03-08 18:13",
+        "sicherheit": "mittel",
+        "bemerkung": "Feld Versions leer; ToH-Dump version NULL. Nur eine Ausführung bekannt"
+      }
+    ],
+    "erkennung_typenschild": [
+      {
+        "wert": "Aufkleber außen mit MAC-Adresse (= WLAN-MAC, ART 0x1002); gleiche MAC und Code 'AGJDBD' auf Aufkleber am RAM innen",
+        "quelle": "openwrt_pr_2199",
+        "beleg": "https://github.com/openwrt/openwrt/pull/2199",
+        "stand": "PR 2019-07-05 bis 2019-08-11",
+        "sicherheit": "mittel",
+        "bemerkung": "rogerpueyo/pepe2k 2019-07-17/18"
+      },
+      {
+        "wert": "Platinenaufdruck 'AP121F' und '2017/01/13'",
+        "quelle": "openwrt_pr_2199_fotos",
+        "beleg": "https://user-images.githubusercontent.com/2934612/61453129-a06c1000-a95d-11e9-93a2-fb98c325bfde.jpg",
+        "stand": "Fotos 2019-07-18",
+        "sicherheit": "hoch",
+        "bemerkung": "nur bei geöffnetem Gehäuse"
+      },
+      {
+        "wert": "Bauform: silberner Stick mit fest angeschlossenem, einklappbarem USB-A-Kabel, RJ45 an der Stirnseite, drei LEDs (V, LAN, WLAN)",
+        "quelle": "alfa_produktfotos",
+        "beleg": "https://cdn.shopify.com/s/files/1/0266/4880/5448/files/AP121F_3.jpg",
+        "stand": "Bilder AP121F_1..6",
+        "sicherheit": "hoch",
+        "bemerkung": "Produktfotos ALFA"
+      }
+    ],
+    "andere_namen": [
+      {
+        "wert": [
+          "NetAidKit (Herstellerfirmware)"
+        ],
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": "Commit: läuft mit angepasster NetAidKit-Firmware (OpenWrt CC/LEDE 17.01); kein anderer Gerätename belegt"
+      }
+    ],
+    "verfuegbarkeit": [
+      {
+        "wert": "Discontinued",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Out Of Stock (ausverkauft)",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "geraetetyp": [
+      {
+        "wert": "WiFi Router",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "WiFi AP",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Seitenrevision 2026-03-08 18:13",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "USB-gespeister Reiserouter",
+        "quelle": "gluon_pr_1404",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/1404",
+        "stand": "PR 2018-05-23",
+        "sicherheit": "mittel",
+        "bemerkung": "\"USB powered travel router (looks like an USB ethernet adapter)\""
+      },
+      {
+        "wert": "Taschenrouter für VPN/TOR-Nutzer",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": "\"pocket-size router dedicated for VPN/TOR users\""
+      }
+    ],
+    "soc": [
+      {
+        "wert": "Atheros AR9331",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Atheros AR9331",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AR9331",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Atheros AR9331",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/ALFA_Network_AP121F",
+        "stand": "Seitenrevision 2019-06-20 22:41",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AR9330 rev 1 (Ausgabe U-Boot/Kernel)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/alfa_network/ap121f",
+        "stand": "Seitenrevision 2026-08-20 11:50",
+        "sicherheit": "mittel",
+        "bemerkung": "U-Boot und Kernel melden AR9330 rev. 1; Platinenfoto zeigt AR9331-AL1A"
+      },
+      {
+        "wert": "Atheros AR9331-AL1A",
+        "quelle": "openwrt_pr_2199_fotos",
+        "beleg": "https://user-images.githubusercontent.com/2934612/61453129-a06c1000-a95d-11e9-93a2-fb98c325bfde.jpg",
+        "stand": "Fotos 2019-07-18",
+        "sicherheit": "hoch",
+        "bemerkung": "Chipaufdruck, Datumscode 1646"
+      }
+    ],
+    "cpu_kerne": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/ALFA_Network_AP121F",
+        "stand": "Seitenrevision 2019-06-20 22:41",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_mhz": [
+      {
+        "wert": 400,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 400,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": "400/400/200 MHz CPU/DDR/AHB"
+      },
+      {
+        "wert": 400,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/ALFA_Network_AP121F",
+        "stand": "Seitenrevision 2019-06-20 22:41",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "cpu_arch": [
+      {
+        "wert": "mips_24kc",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Paketarchitektur"
+      }
+    ],
+    "ram_mb": [
+      {
+        "wert": 64,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": "SD-RAM 64 MB"
+      },
+      {
+        "wert": 64,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/ALFA_Network_AP121F",
+        "stand": "Seitenrevision 2019-06-20 22:41",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 64,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/alfa_network/ap121f",
+        "stand": "Seitenrevision 2026-08-20 11:50",
+        "sicherheit": "mittel",
+        "bemerkung": "U-Boot: 64 MB DDR1 16-bit"
+      },
+      {
+        "wert": 64,
+        "quelle": "gluon_pr_2583",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2583",
+        "stand": "PR 2022-07-10",
+        "sicherheit": "mittel",
+        "bemerkung": "Korrektur: früher fälschlich als tiny (32 MB) markiert"
+      }
+    ],
+    "ram_typ": [
+      {
+        "wert": "DDR1",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "DDR1 16-bit CL3-3-3-8",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/alfa_network/ap121f",
+        "stand": "Seitenrevision 2026-08-20 11:50",
+        "sicherheit": "mittel",
+        "bemerkung": "U-Boot-Ausgabe"
+      }
+    ],
+    "flash_mb": [
+      {
+        "wert": 16,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/ALFA_Network_AP121F",
+        "stand": "Seitenrevision 2019-06-20 22:41",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 16,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/alfa_network/ap121f",
+        "stand": "Seitenrevision 2026-08-20 11:50",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog: mx25l12805d (16384 Kbytes)"
+      }
+    ],
+    "flash_typ": [
+      {
+        "wert": "NOR (SPI)",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": "\"16 MB of FLASH (SPI NOR)\""
+      },
+      {
+        "wert": "NOR (SPI), Macronix MX25L12805D",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/alfa_network/ap121f",
+        "stand": "Seitenrevision 2026-08-20 11:50",
+        "sicherheit": "mittel",
+        "bemerkung": "Bootlog"
+      }
+    ],
+    "vlan": [
+      {
+        "wert": "Yes",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "switch": [
+      {
+        "wert": "Atheros AR9331 (im SoC)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "nur ein Port genutzt; OpenWrt ohne swconfig (-swconfig)"
+      }
+    ],
+    "wlan_chips": [
+      {
+        "wert": "Atheros AR9331 (im SoC)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "AR9331",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_treiber": [
+      {
+        "wert": "ath9k",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_standard": [
+      {
+        "wert": "b/g/n",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "IEEE 802.11b/g/n",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "b/g/n",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/ALFA_Network_AP121F",
+        "stand": "Seitenrevision 2019-06-20 22:41",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_24_streams": [
+      {
+        "wert": "1x1",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": "\"1T1R 2.4 GHz\""
+      },
+      {
+        "wert": "1x1",
+        "quelle": "gluon_pr_1404",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/1404",
+        "stand": "PR 2018-05-23",
+        "sicherheit": "mittel",
+        "bemerkung": "\"wireless has 1x1 chains (max. 150 MBit/s)\""
+      }
+    ],
+    "wlan_5_standard": [
+      {
+        "wert": "keins (\"-\")",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "keins (nur 2.4 GHz ISM Band)",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "wlan_klasse": [
+      {
+        "wert": "N150",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": "802.11n up to 150 Mbps"
+      }
+    ],
+    "wlan_sendeleistung_dbm": [
+      {
+        "wert": 17,
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": "802.11b 17 dBm, 802.11g 15 dBm, 802.11n 15 dBm"
+      },
+      {
+        "wert": 17,
+        "quelle": "gluon_pr_1404",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/1404",
+        "stand": "PR 2018-05-23",
+        "sicherheit": "mittel",
+        "bemerkung": "\"maximum TX power is 17 dBm\""
+      }
+    ],
+    "wlan_empfindlichkeit": [
+      {
+        "wert": "-91 dBm (11b), -82 dBm (11g), -70 dBm (11n)",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "antennen_art": [
+      {
+        "wert": "intern",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Integrated antenna\""
+      },
+      {
+        "wert": "extern abnehmbar (1)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Spalte detachableantennas = 1; widerspricht Herstellerangabe und Produktfotos (keine Antennenbuchse außen). Vermutlich ist die interne U.FL-Buchse gemeint"
+      },
+      {
+        "wert": "intern, über U.FL-Buchse auf der Platine angeschlossen",
+        "quelle": "openwrt_pr_2199_fotos",
+        "beleg": "https://user-images.githubusercontent.com/2934612/61453129-a06c1000-a95d-11e9-93a2-fb98c325bfde.jpg",
+        "stand": "Fotos 2019-07-18",
+        "sicherheit": "mittel",
+        "bemerkung": "U.FL-Buchse auf Platinenfoto sichtbar; außen keine Buchse (Produktfotos)"
+      }
+    ],
+    "antennen_anschluss": [
+      {
+        "wert": "keiner außen; innen U.FL",
+        "quelle": "openwrt_pr_2199_fotos",
+        "beleg": "https://user-images.githubusercontent.com/2934612/61453129-a06c1000-a95d-11e9-93a2-fb98c325bfde.jpg",
+        "stand": "Fotos 2019-07-18",
+        "sicherheit": "mittel",
+        "bemerkung": "abgeleitet aus Platinen- und Produktfotos"
+      }
+    ],
+    "antennen_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "detachableantennas"
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": "1T1R"
+      }
+    ],
+    "ports": [
+      {
+        "wert": [
+          {
+            "name": "RJ45",
+            "geschwindigkeit": "10/100",
+            "rolle": "WAN/LAN"
+          }
+        ],
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"1x RJ45 Ethernet WAN/LAN Port\"; Geschwindigkeit aus Commit"
+      },
+      {
+        "wert": [
+          {
+            "name": "Ethernet",
+            "geschwindigkeit": "10/100",
+            "rolle": "LAN"
+          }
+        ],
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": "\"1x 10/100 Mbps Ethernet\""
+      },
+      {
+        "wert": [
+          {
+            "name": "eth0",
+            "geschwindigkeit": "10/100",
+            "rolle": "WAN (Gluon: PoE/Einzelport = WAN)"
+          }
+        ],
+        "quelle": "gluon_pr_2583",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2583",
+        "stand": "PR 2022-07-10",
+        "sicherheit": "mittel",
+        "bemerkung": "Checkliste: alle Ports, Zuordnung WAN/LAN korrekt"
+      }
+    ],
+    "ports_anzahl": [
+      {
+        "wert": 1,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "ethernet100mports"
+      },
+      {
+        "wert": 1,
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "nur_eine_buchse": [
+      {
+        "wert": true,
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": "einziger Netzwerkanschluss ist die RJ45-Buchse"
+      }
+    ],
+    "sfp": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "usb": [
+      {
+        "wert": "nein (\"-\")",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "kein USB-Port; fest angeschlossenes USB-A-Kabel ('USB flip cable') nur zur Stromversorgung",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "USB-Datenleitungen nicht am Kabel; USB-Device-Betrieb nur nach Umbau (D+/D- an Kabel, Widerstände ändern)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/alfa_network/ap121f",
+        "stand": "Seitenrevision 2026-08-20 11:50",
+        "sicherheit": "mittel",
+        "bemerkung": "Hardware mods / USB device; Fotos in PR 2199"
+      },
+      {
+        "wert": "USB-Host intern für optionalen microSD-Leser auf Zusatzplatine",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": "\"1x microSD (optional, on separate PCB)\"; GPIO 26 microSD enable"
+      }
+    ],
+    "microsd": [
+      {
+        "wert": "optional, auf separater Platine",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": "\"1x microSD (optional, on separate PCB)\""
+      },
+      {
+        "wert": "Testgeräte in PR 2199 ohne SD-Platine",
+        "quelle": "openwrt_pr_2199",
+        "beleg": "https://github.com/openwrt/openwrt/pull/2199",
+        "stand": "PR 2019-07-05 bis 2019-08-11",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "modem": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "bluetooth": [
+      {
+        "wert": "nein",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "poe_eingang": [
+      {
+        "wert": "nein",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": "Stromversorgung nur über USB 5 V"
+      }
+    ],
+    "dc_buchse": [
+      {
+        "wert": "nein; Strom über fest angeschlossenes USB-A-Kabel (5 V)",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Simply Powered by USB standard type A connector, easy to powered by laptop or power bank\""
+      }
+    ],
+    "dc_spannung_v": [
+      {
+        "wert": 5,
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": "USB 5V"
+      }
+    ],
+    "dc_strom_a": [
+      {
+        "wert": 0.5,
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": "USB 5V / 500 mA"
+      }
+    ],
+    "leistung_w_max": [
+      {
+        "wert": 2.5,
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": "abgeleitet aus USB 5 V / 500 mA (Angabe der Stromversorgung, keine Messung)"
+      }
+    ],
+    "netzteil_daten": [
+      {
+        "wert": "kein eigenes Netzteil nötig: USB-Port von Laptop, Powerbank oder USB-Netzteil (5 V, 500 mA)",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"no power supply needed\"; ob ein Netzteil beiliegt, sagt die Seite nicht"
+      }
+    ],
+    "einsatzort": [
+      {
+        "wert": "innen",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Seitenrevision 2026-03-08 18:13",
+        "sicherheit": "mittel",
+        "bemerkung": "Outdoor: No"
+      },
+      {
+        "wert": "innen",
+        "quelle": "gluon_pr_2583",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2583",
+        "stand": "PR 2022-07-10",
+        "sicherheit": "mittel",
+        "bemerkung": "\"N/A, indoor, mini USB travel router\""
+      }
+    ],
+    "temperatur_betrieb": [
+      {
+        "wert": "-20 bis 65 °C",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "temperatur_lager": [
+      {
+        "wert": "-10 bis 70 °C",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "luftfeuchte": [
+      {
+        "wert": "5-90 % nicht kondensierend",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "abmessungen_mm": [
+      {
+        "wert": "65 x 15.25 x 21.25",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "gehaeuse": [
+      {
+        "wert": "Kunststoff mit Rastnasen; vorsichtig öffnen",
+        "quelle": "openwrt_pr_2199",
+        "beleg": "https://github.com/openwrt/openwrt/pull/2199",
+        "stand": "PR 2019-07-05 bis 2019-08-11",
+        "sicherheit": "niedrig",
+        "bemerkung": "pepe2k: \"be careful with plastic locks!\"; Material nicht angegeben"
+      },
+      {
+        "wert": "leicht zu öffnen",
+        "quelle": "gluon_pr_1404",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/1404",
+        "stand": "PR 2018-05-23",
+        "sicherheit": "mittel",
+        "bemerkung": "\"The case be opened easily to access the UART interface.\""
+      }
+    ],
+    "led_anzahl": [
+      {
+        "wert": 3,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 3,
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": "WiFi / LAN / VPN"
+      }
+    ],
+    "leds": [
+      {
+        "wert": [
+          "green:lan (GPIO 17)",
+          "green:vpn (GPIO 27, Boot/Failsafe/Upgrade)",
+          "green:wlan (GPIO 0, phy0tpt)"
+        ],
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9331_alfa-network_ap121f.dtsi",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "VPN-LED ('V'-Symbol) zeigt Konfigurationsmodus; keine Dauer-Power-LED im Normalbetrieb",
+        "quelle": "gluon_pr_2583",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2583",
+        "stand": "PR 2022-07-10",
+        "sicherheit": "mittel",
+        "bemerkung": "kein led-running in DTS"
+      }
+    ],
+    "knopf_anzahl": [
+      {
+        "wert": 2,
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": "1x button, 1x switch"
+      }
+    ],
+    "schalter": [
+      {
+        "wert": "1x Switch",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": "Art (Schiebeschalter) nicht angegeben"
+      },
+      {
+        "wert": "switch, BTN_0, GPIO 21",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9331_alfa-network_ap121f.dtsi",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "reset_knopf": [
+      {
+        "wert": "ja",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"1x Reset button\""
+      },
+      {
+        "wert": "versenkt (Loch) auf der Unterseite neben der Mulde für das USB-Kabel, Aufschrift 'Reset'",
+        "quelle": "alfa_produktfotos",
+        "beleg": "https://cdn.shopify.com/s/files/1/0266/4880/5448/files/AP121F_2.jpg",
+        "stand": "Bilder AP121F_1..6",
+        "sicherheit": "mittel",
+        "bemerkung": "aus Produktfoto 2"
+      },
+      {
+        "wert": "Reset-Knopf bringt das Gerät in den Konfigurationsmodus",
+        "quelle": "gluon_pr_2583",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2583",
+        "stand": "PR 2022-07-10",
+        "sicherheit": "mittel",
+        "bemerkung": "Checkliste [x]"
+      }
+    ],
+    "seriell_zugang": [
+      {
+        "wert": "innen Lötpunkte",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/alfa_network/ap121f",
+        "stand": "Seitenrevision 2026-08-20 11:50",
+        "sicherheit": "mittel",
+        "bemerkung": "4 Pads oben rechts auf der Platine; RX laut Wiki erst nach Verbindung zur anderen Seite von R11 nutzbar"
+      },
+      {
+        "wert": "innen Lötpunkte (4 Durchkontaktierungen, unbestückt)",
+        "quelle": "openwrt_pr_2199_fotos",
+        "beleg": "https://user-images.githubusercontent.com/2934612/61453129-a06c1000-a95d-11e9-93a2-fb98c325bfde.jpg",
+        "stand": "Fotos 2019-07-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Foto 1 unbestückt, Foto 2 mit eingelöteter Stiftleiste"
+      },
+      {
+        "wert": "innen Stiftleiste/Header",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": "\"UART header on PCB\"; Lieferzustand laut Fotos unbestückt"
+      },
+      {
+        "wert": "innen erst nach Nachbestücken von Widerständen oder Lötbrücken (nur RX)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/alfa_network/ap121f",
+        "stand": "Seitenrevision 2026-08-20 11:50",
+        "sicherheit": "niedrig",
+        "bemerkung": "\"To get RX working I had to connect to the other side of R11.\" Einzelbericht"
+      }
+    ],
+    "seriell_pinbelegung": [
+      {
+        "wert": "GND, TX, RX, VCC? (Reihenfolge laut Wiki)",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/alfa_network/ap121f",
+        "stand": "Seitenrevision 2026-08-20 11:50",
+        "sicherheit": "mittel",
+        "bemerkung": "TX über R12, RX über R11 zum SoC"
+      }
+    ],
+    "seriell_baud": [
+      {
+        "wert": 115200,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/alfa_network/ap121f",
+        "stand": "Seitenrevision 2026-08-20 11:50",
+        "sicherheit": "mittel",
+        "bemerkung": "8N1"
+      },
+      {
+        "wert": 115200,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9331_alfa-network_ap121f.dtsi",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "Kernel console ttyATH0,115200 (Bootlog ar71xx)"
+      }
+    ],
+    "seriell_hinweis": [
+      {
+        "wert": "RX-Leitung über R11: bei einem Gerät erst nach Brücke an R11 funktionsfähig",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/alfa_network/ap121f",
+        "stand": "Seitenrevision 2026-08-20 11:50",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "Gehäuse lässt sich leicht öffnen, UART dann zugänglich",
+        "quelle": "gluon_pr_1404",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/1404",
+        "stand": "PR 2018-05-23",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_target": [
+      {
+        "wert": "ath79/generic (früher ar71xx)",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "target 'ar71xx-ath79'"
+      },
+      {
+        "wert": "ath79/generic",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Seitenrevision 2026-03-08 18:13",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_seit": [
+      {
+        "wert": "17.01.3",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "ar71xx"
+      },
+      {
+        "wert": "21.02.0 (ath79)",
+        "quelle": "openwrt_git_ath79",
+        "beleg": "https://github.com/openwrt/openwrt/commit/334bbc51987c6694e130af25876f178babf37140",
+        "stand": "Commit 2019-07-04 (Autor), gemergt 2019-07-31",
+        "sicherheit": "mittel",
+        "bemerkung": "Commit in v21.02.0 enthalten, in v19.07.0 nicht (GitHub-Compare)"
+      }
+    ],
+    "openwrt_aktuell": [
+      {
+        "wert": "23.05.0",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "25.12.0",
+        "quelle": "openwrt_hwdata",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Seitenrevision 2026-03-08 18:13",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "gluon_seit": [
+      {
+        "wert": "v2018.1 (ar71xx-generic)",
+        "quelle": "gluon_pr_1404",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/1404",
+        "stand": "PR 2018-05-23",
+        "sicherheit": "mittel",
+        "bemerkung": "Commit 33956cd in v2018.1 enthalten (GitHub-Compare); mit ar71xx-Abschaffung entfallen"
+      },
+      {
+        "wert": "v2022.1 (ath79-generic, wieder aufgenommen)",
+        "quelle": "gluon_commit_4cbd748",
+        "beleg": "https://github.com/freifunk-gluon/gluon/commit/4cbd748e5284fd2b913db44753bb129162873332",
+        "stand": "Commit 2022-07-07 (Autor), gemergt 2022-07-10",
+        "sicherheit": "mittel",
+        "bemerkung": "Commit 4cbd748 in v2022.1 enthalten (GitHub-Compare)"
+      }
+    ],
+    "gluon_factory_image": [
+      {
+        "wert": "nein (factory = false), nur sysupgrade",
+        "quelle": "gluon_targets",
+        "beleg": "https://github.com/freifunk-gluon/gluon/blob/main/targets/ath79-generic",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "bootloader": [
+      {
+        "wert": "U-Boot",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot 1.1.4-cd95c190-dirty (Build 2017-03-17) mit Web-Recovery",
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/alfa_network/ap121f",
+        "stand": "Seitenrevision 2026-08-20 11:50",
+        "sicherheit": "mittel",
+        "bemerkung": "Reset halten: 3 s Web-Recovery (HTTP 192.168.1.1), 5 s U-Boot-Konsole, 7 s Netzwerkkonsole"
+      }
+    ],
+    "installation": [
+      {
+        "wert": "U-Boot web recovery, see git-commit",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "Recovery: U-Boot web recovery"
+      },
+      {
+        "wert": "U-Boot-Web-Recovery: PC 192.168.1.2/24, sysupgrade-Image über http://192.168.1.1 hochladen",
+        "quelle": "openwrt_git_ar71xx",
+        "beleg": "https://github.com/openwrt/openwrt/commit/0c6165d21ad274261bf8176828e122964e25c215",
+        "stand": "Commit 2017-03-31 (Autor), gemergt 2017-07-22",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      },
+      {
+        "wert": "U-Boot-Web-Recovery nimmt sysupgrade-Image; TFTP vermutlich möglich, ungetestet",
+        "quelle": "gluon_pr_2583",
+        "beleg": "https://github.com/freifunk-gluon/gluon/pull/2583",
+        "stand": "PR 2022-07-10",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "stock_firmware_url": [
+      {
+        "wert": "keine eigene Herstellerfirmware; Auslieferung mit generischem OpenWrt (bzw. NetAidKit)",
+        "quelle": "openwrt_pr_2199",
+        "beleg": "https://github.com/openwrt/openwrt/pull/2199",
+        "stand": "PR 2019-07-05 bis 2019-08-11",
+        "sicherheit": "mittel",
+        "bemerkung": "pepe2k 2019-07-16; auch auf files.alfa.com.tw kein AP121F-Verzeichnis"
+      }
+    ],
+    "mac_adressen": [
+      {
+        "wert": "Label-MAC = WLAN (ART 0x1002); eth0 = Label+1 (ART 0x0); Label+2 (ART 0x6) unbenutzt",
+        "quelle": "openwrt_pr_2199",
+        "beleg": "https://github.com/openwrt/openwrt/pull/2199",
+        "stand": "PR 2019-07-05 bis 2019-08-11",
+        "sicherheit": "mittel",
+        "bemerkung": "von ALFA bestätigt (pepe2k 2019-07-18); einzelne frühe Geräte mit leerem ART-Anfang"
+      },
+      {
+        "wert": "label-mac-device = wmac; eth0 nvmem ART 0x0; wmac ART 0x1002",
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9331_alfa-network_ap121f.dtsi",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ],
+    "toh_seite": [
+      {
+        "wert": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "openwrt_wiki": [
+      {
+        "wert": "https://openwrt.org/toh/alfa_network/ap121f",
+        "quelle": "toh",
+        "beleg": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+        "stand": "Dump 2026-10-18",
+        "sicherheit": "mittel",
+        "bemerkung": "devicepage toh:alfa_network:ap121f"
+      }
+    ],
+    "deviwiki": [
+      {
+        "wert": "https://deviwiki.com/wiki/ALFA_Network_AP121F",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/ALFA_Network_AP121F",
+        "stand": "Seitenrevision 2019-06-20 22:41",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "wikidevi": [
+      {
+        "wert": "https://wikidevi.wi-cat.ru/ALFA_Network_AP121F",
+        "quelle": "wikidevi",
+        "beleg": "https://wikidevi.wi-cat.ru/ALFA_Network_AP121F",
+        "stand": "Spiegel, Stand unbekannt (WikiDevi-Abbild)",
+        "sicherheit": "mittel",
+        "bemerkung": ""
+      }
+    ],
+    "hersteller_seite": [
+      {
+        "wert": "https://www.alfa.com.tw/products/ap121f",
+        "quelle": "alfa_produktseite",
+        "beleg": "https://www.alfa.com.tw/products/ap121f",
+        "stand": "Live-Seite 2026-10-20 (Produkt angelegt 2020-11-11, ausverkauft)",
+        "sicherheit": "hoch",
+        "bemerkung": ""
+      }
+    ]
+  },
+  "offene_faeden": [
+    {
+      "url": "https://www.alfa.com.tw/products/ap121f",
+      "kategorie": "ean",
+      "grund": "Shopify-Eintrag ohne Barcode, kein Geizhals-Eintrag im Webarchiv; EAN/ASIN nur aus Verpackung oder Händlerseite zu finden"
+    },
+    {
+      "url": "https://fccid.io/UQ2",
+      "kategorie": "fcc_id",
+      "grund": "unter ALFA-Grantee UQ2 keine AP121F-Zulassung (jüngste 2012); FCC-ID unbekannt, evtl. anderer Grantee-Code oder keine US-Zulassung"
+    },
+    {
+      "url": "https://openwrt.org/toh/alfa_network/ap121f",
+      "kategorie": "seriell_pinbelegung",
+      "grund": "Pin-1-Lage und Pegel (vermutlich 3.3 V, nicht belegt) fehlen; R11-Brücke nur Einzelbericht, Pepe2k-Foto zeigt eingelötete Stiftleiste ohne Hinweis"
+    },
+    {
+      "url": "https://github.com/openwrt/openwrt/pull/2199",
+      "kategorie": "microsd",
+      "grund": "optionale microSD-Zusatzplatine: ob im Handel beigelegt und wie angeschlossen, unklar"
+    },
+    {
+      "url": "https://openwrt.org/toh/hwdata/alfa_network/alfa_network_ap121f",
+      "kategorie": "antennen_art",
+      "grund": "ToH 'Detachable Antennas 1' widerspricht Herstellerangabe 'Integrated antenna'; ToH-Eintrag korrigieren oder klären (vermutlich interne U.FL-Buchse)"
+    }
+  ],
+  "lauf": {
+    "datum": "2026-10-20",
+    "status": "teilweise",
+    "anfragen": 43,
+    "notiz": "ToH-Dump + Live-hwdata/Wiki (Revisionen), OpenWrt-Commits ar71xx/ath79/SPI, PR 2199 mit Platinenfotos, aktuelle DTS/DTSI/generic.mk, Gluon PRs 1404/2583 und Target, DeviWiki/WikiDevi, ALFA-Produktseite + Shopify-JSON + 6 Produktfotos, ALFA-Dateiserver, fccid.io Grantee UQ2, Geizhals-CDX, Freifunk-Forum-Suche ausgewertet. Kein Werkstatt-Protokoll. Keine FCC-ID, keine EAN/ASIN/Geizhals. Widerspruch Antenne (ToH abnehmbar vs. ALFA intern). OpenWrt-Forum nicht durchsucht (search.json gemieden)."
+  }
+}

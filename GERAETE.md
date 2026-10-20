@@ -5,7 +5,7 @@ Erzeugt von `werkzeug/geraeteliste.py`, nicht von Hand ändern.
 
 - Image-Namen: `quellen/images-21_dias-2026-10-19.txt`
 - Modellnamen: `quellen/selector-modelle-2026-10-19.json`
-- **333 von 384 Geräten erfasst.**
+- **362 von 384 Geräten erfasst.**
 
 Mithelfen: Bei einem Gerät ohne Daten führt „anlegen“ auf GitHub zu einer neuen Datei
 mit fertiger Vorlage. Aufbau und Feldnamen stehen in [schema/felder.md](schema/felder.md).
@@ -28,7 +28,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| AP121F | `alfa-network-ap121f` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=alfa-network-ap121f.json&value=%7B%0A%20%22image%22%3A%20%22alfa-network-ap121f%22%2C%0A%20%22modell%22%3A%20%22Alfa%20AP121F%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  | 8 32 |
+| AP121F | `alfa-network-ap121f` | [erfasst](daten/alfa-network-ap121f.json): 71 Felder, 5 offene Fäden, teilweise |  | 8 32 |
 
 ## Arcadyan
 
@@ -43,7 +43,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | AP-303 | `aruba-ap-303` | [erfasst](daten/aruba-ap-303.json): 78 Felder, 9 offene Fäden, teilweise |  | recommended |
 | AP-303H | `aruba-ap-303h` | [erfasst](daten/aruba-ap-303h.json): 90 Felder, 11 offene Fäden, teilweise |  | recommended |
 | AP-365 | `aruba-ap-365` | [erfasst](daten/aruba-ap-365.json): 75 Felder, 8 offene Fäden, teilweise |  | recommended |
-| aruba-ap-32x | `aruba-ap-32x` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=aruba-ap-32x.json&value=%7B%0A%20%22image%22%3A%20%22aruba-ap-32x%22%2C%0A%20%22modell%22%3A%20%22Aruba%20aruba-ap-32x%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| aruba-ap-32x | `aruba-ap-32x` | [erfasst](daten/aruba-ap-32x.json): 64 Felder, 11 offene Fäden, teilweise |  |  |
 | Instant On AP11 | `aruba-instant-on-ap11` | [erfasst](daten/aruba-instant-on-ap11.json): 81 Felder, 10 offene Fäden, teilweise |  | recommended |
 | Instant On AP11D | `aruba-instant-on-ap11d` | [erfasst](daten/aruba-instant-on-ap11d.json): 68 Felder, 10 offene Fäden, teilweise |  | recommended |
 | Instant On AP17 | `aruba-instant-on-ap17` | [erfasst](daten/aruba-instant-on-ap17.json): 75 Felder, 10 offene Fäden, teilweise |  | recommended |
@@ -52,8 +52,8 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| asus-lyra-map-ac2200 | `asus-lyra-map-ac2200` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=asus-lyra-map-ac2200.json&value=%7B%0A%20%22image%22%3A%20%22asus-lyra-map-ac2200%22%2C%0A%20%22modell%22%3A%20%22Asus%20asus-lyra-map-ac2200%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
-| asus-rt-ax59u | `asus-rt-ax59u` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=asus-rt-ax59u.json&value=%7B%0A%20%22image%22%3A%20%22asus-rt-ax59u%22%2C%0A%20%22modell%22%3A%20%22Asus%20asus-rt-ax59u%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| asus-lyra-map-ac2200 | `asus-lyra-map-ac2200` | [erfasst](daten/asus-lyra-map-ac2200.json): 93 Felder, 6 offene Fäden, teilweise |  |  |
+| asus-rt-ax59u | `asus-rt-ax59u` | [erfasst](daten/asus-rt-ax59u.json): 92 Felder, 10 offene Fäden, teilweise |  |  |
 | RT-AC51U | `asus-rt-ac51u` | [erfasst](daten/asus-rt-ac51u.json): 82 Felder, 9 offene Fäden, teilweise |  | recommended |
 | RT-AC57U v1 | `asus-rt-ac57u-v1` | [erfasst](daten/asus-rt-ac57u-v1.json): 84 Felder, 6 offene Fäden, teilweise |  | recommended |
 | RT-AX52 | `asus-rt-ax52` | [erfasst](daten/asus-rt-ax52.json): 90 Felder, 7 offene Fäden, teilweise |  | recommended |
@@ -108,7 +108,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| comfast-cf-ew71-v2 | `comfast-cf-ew71-v2` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=comfast-cf-ew71-v2.json&value=%7B%0A%20%22image%22%3A%20%22comfast-cf-ew71-v2%22%2C%0A%20%22modell%22%3A%20%22Comfast%20comfast-cf-ew71-v2%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| comfast-cf-ew71-v2 | `comfast-cf-ew71-v2` | [erfasst](daten/comfast-cf-ew71-v2.json): 84 Felder, 7 offene Fäden, teilweise |  |  |
 
 ## Cudy
 
@@ -192,7 +192,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| extreme-networks-ap3935 | `extreme-networks-ap3935` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=extreme-networks-ap3935.json&value=%7B%0A%20%22image%22%3A%20%22extreme-networks-ap3935%22%2C%0A%20%22modell%22%3A%20%22Extreme%20extreme-networks-ap3935%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| extreme-networks-ap3935 | `extreme-networks-ap3935` | [erfasst](daten/extreme-networks-ap3935.json): 84 Felder, 9 offene Fäden, teilweise |  |  |
 
 ## Extreme Networks
 
@@ -272,13 +272,13 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
 | E8450 | `linksys-e8450-ubi` | [erfasst](daten/linksys-e8450-ubi.json): 69 Felder, 11 offene Fäden, teilweise |  | recommended |
-| EA6350 v3 | `linksys-ea6350v3` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=linksys-ea6350v3.json&value=%7B%0A%20%22image%22%3A%20%22linksys-ea6350v3%22%2C%0A%20%22modell%22%3A%20%22Linksys%20EA6350%20v3%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  | small kernel part |
+| EA6350 v3 | `linksys-ea6350v3` | [erfasst](daten/linksys-ea6350v3.json): 95 Felder, 8 offene Fäden, teilweise |  | small kernel part |
 | EA8300 | `linksys-ea8300-dallas` | [erfasst](daten/linksys-ea8300-dallas.json): 77 Felder, 10 offene Fäden, teilweise |  | recommended |
 | linksys-mx5300 | `linksys-mx5300` | [erfasst](daten/linksys-mx5300.json): 86 Felder, 9 offene Fäden, teilweise |  |  |
 | linksys-vlp01 | `linksys-vlp01` | [erfasst](daten/linksys-vlp01.json): 85 Felder, 12 offene Fäden, teilweise |  |  |
 | linksys-whw01 | `linksys-whw01` | [erfasst](daten/linksys-whw01.json): 82 Felder, 8 offene Fäden, teilweise |  |  |
 | linksys-whw03-v2-velop | `linksys-whw03-v2-velop` | [erfasst](daten/linksys-whw03-v2-velop.json): 61 Felder, 8 offene Fäden, teilweise |  |  |
-| linksys-whw03-velop | `linksys-whw03-velop` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=linksys-whw03-velop.json&value=%7B%0A%20%22image%22%3A%20%22linksys-whw03-velop%22%2C%0A%20%22modell%22%3A%20%22Linksys%20linksys-whw03-velop%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| linksys-whw03-velop | `linksys-whw03-velop` | [erfasst](daten/linksys-whw03-velop.json): 68 Felder, 7 offene Fäden, teilweise |  |  |
 | MR8300 | `linksys-mr8300-dallas` | [erfasst](daten/linksys-mr8300-dallas.json): 90 Felder, 10 offene Fäden, teilweise |  | recommended |
 
 ## Meraki
@@ -298,7 +298,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| mikrotik-routerboard-wap-g-5hacd2hnd | `mikrotik-routerboard-wap-g-5hacd2hnd` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=mikrotik-routerboard-wap-g-5hacd2hnd.json&value=%7B%0A%20%22image%22%3A%20%22mikrotik-routerboard-wap-g-5hacd2hnd%22%2C%0A%20%22modell%22%3A%20%22Mikrotik%20mikrotik-routerboard-wap-g-5hacd2hnd%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| mikrotik-routerboard-wap-g-5hacd2hnd | `mikrotik-routerboard-wap-g-5hacd2hnd` | [erfasst](daten/mikrotik-routerboard-wap-g-5hacd2hnd.json): 86 Felder, 8 offene Fäden, teilweise |  |  |
 | RB750Gr3 (hEX) | `mikrotik-routerboard-750gr3` | [erfasst](daten/mikrotik-routerboard-750gr3.json): 69 Felder, 10 offene Fäden, teilweise |  | recommended |
 | RB750Gr3 (hEX) | `mikrotik-routerboard-hex-v3` | [erfasst](daten/mikrotik-routerboard-hex-v3.json): 75 Felder, 9 offene Fäden, fertig |  | recommended |
 | RB951Ui-2nD (hAP) | `mikrotik-routerboard-951ui-2nd-hap` | [erfasst](daten/mikrotik-routerboard-951ui-2nd-hap.json): 82 Felder, 8 offene Fäden, teilweise |  | recommended |
@@ -327,11 +327,11 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | EX6130 | `netgear-ex6130` | [erfasst](daten/netgear-ex6130.json): 74 Felder, 6 offene Fäden, teilweise |  | recommended |
 | EX6150 v1 | `netgear-ex6150` | [erfasst](daten/netgear-ex6150.json): 80 Felder, 7 offene Fäden, teilweise |  | recommended |
 | EX6150 v2 | `netgear-ex6150v2` | [erfasst](daten/netgear-ex6150v2.json): 81 Felder, 9 offene Fäden, teilweise |  | recommended |
-| netgear-rbr50 | `netgear-rbr50` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=netgear-rbr50.json&value=%7B%0A%20%22image%22%3A%20%22netgear-rbr50%22%2C%0A%20%22modell%22%3A%20%22Netgear%20netgear-rbr50%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
-| netgear-rbs50 | `netgear-rbs50` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=netgear-rbs50.json&value=%7B%0A%20%22image%22%3A%20%22netgear-rbs50%22%2C%0A%20%22modell%22%3A%20%22Netgear%20netgear-rbs50%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
-| netgear-srr60 | `netgear-srr60` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=netgear-srr60.json&value=%7B%0A%20%22image%22%3A%20%22netgear-srr60%22%2C%0A%20%22modell%22%3A%20%22Netgear%20netgear-srr60%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| netgear-rbr50 | `netgear-rbr50` | [erfasst](daten/netgear-rbr50.json): 82 Felder, 9 offene Fäden, teilweise |  |  |
+| netgear-rbs50 | `netgear-rbs50` | [erfasst](daten/netgear-rbs50.json): 76 Felder, 7 offene Fäden, teilweise |  |  |
+| netgear-srr60 | `netgear-srr60` | [erfasst](daten/netgear-srr60.json): 82 Felder, 7 offene Fäden, teilweise |  |  |
 | netgear-srs60 | `netgear-srs60` | [erfasst](daten/netgear-srs60.json): 78 Felder, 9 offene Fäden, teilweise |  |  |
-| netgear-wax218 | `netgear-wax218` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=netgear-wax218.json&value=%7B%0A%20%22image%22%3A%20%22netgear-wax218%22%2C%0A%20%22modell%22%3A%20%22Netgear%20netgear-wax218%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| netgear-wax218 | `netgear-wax218` | [erfasst](daten/netgear-wax218.json): 80 Felder, 8 offene Fäden, teilweise |  |  |
 | R6020 | `netgear-r6020` | [erfasst](daten/netgear-r6020.json): 78 Felder, 8 offene Fäden, teilweise |  | recommended |
 | R6120 | `netgear-r6120` | [erfasst](daten/netgear-r6120.json): 91 Felder, 9 offene Fäden, teilweise |  | recommended |
 | R6220 | `netgear-r6220` | [erfasst](daten/netgear-r6220.json): 80 Felder, 9 offene Fäden, teilweise |  | recommended |
@@ -365,7 +365,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| o2-box-6431 | `o2-box-6431` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=o2-box-6431.json&value=%7B%0A%20%22image%22%3A%20%22o2-box-6431%22%2C%0A%20%22modell%22%3A%20%22O2%20o2-box-6431%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| o2-box-6431 | `o2-box-6431` | [erfasst](daten/o2-box-6431.json): 79 Felder, 8 offene Fäden, teilweise |  |  |
 
 ## OCEDO
 
@@ -476,11 +476,11 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
 | tp-link-archer-a7-v5 | `tp-link-archer-a7-v5` | [erfasst](daten/tp-link-archer-a7-v5.json): 90 Felder, 9 offene Fäden, teilweise |  |  |
-| tp-link-archer-c25-v1 | `tp-link-archer-c25-v1` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=tp-link-archer-c25-v1.json&value=%7B%0A%20%22image%22%3A%20%22tp-link-archer-c25-v1%22%2C%0A%20%22modell%22%3A%20%22Tp%20tp-link-archer-c25-v1%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| tp-link-archer-c25-v1 | `tp-link-archer-c25-v1` | [erfasst](daten/tp-link-archer-c25-v1.json): 80 Felder, 7 offene Fäden, teilweise |  |  |
 | tp-link-archer-c50-v1 | `tp-link-archer-c50-v1` | [erfasst](daten/tp-link-archer-c50-v1.json): 86 Felder, 10 offene Fäden, teilweise |  |  |
 | tp-link-archer-c50-v3-bootloader | `tp-link-archer-c50-v3-bootloader` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=tp-link-archer-c50-v3-bootloader.json&value=%7B%0A%20%22image%22%3A%20%22tp-link-archer-c50-v3-bootloader%22%2C%0A%20%22modell%22%3A%20%22Tp%20tp-link-archer-c50-v3-bootloader%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
 | tp-link-archer-c50-v6-ca-eu-ru | `tp-link-archer-c50-v6-ca-eu-ru` | [erfasst](daten/tp-link-archer-c50-v6-ca-eu-ru.json): 80 Felder, 8 offene Fäden, teilweise |  |  |
-| tp-link-archer-c58-v1 | `tp-link-archer-c58-v1` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=tp-link-archer-c58-v1.json&value=%7B%0A%20%22image%22%3A%20%22tp-link-archer-c58-v1%22%2C%0A%20%22modell%22%3A%20%22Tp%20tp-link-archer-c58-v1%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| tp-link-archer-c58-v1 | `tp-link-archer-c58-v1` | [erfasst](daten/tp-link-archer-c58-v1.json): 79 Felder, 9 offene Fäden, teilweise |  |  |
 | tp-link-cpe210-v1 | `tp-link-cpe210-v1` | [erfasst](daten/tp-link-cpe210-v1.json): 94 Felder, 8 offene Fäden, teilweise |  |  |
 | tp-link-cpe210-v2 | `tp-link-cpe210-v2` | [erfasst](daten/tp-link-cpe210-v2.json): 91 Felder, 5 offene Fäden, teilweise |  |  |
 | tp-link-cpe210-v3 | `tp-link-cpe210-v3` | [erfasst](daten/tp-link-cpe210-v3.json): 89 Felder, 9 offene Fäden, teilweise |  |  |
@@ -489,9 +489,9 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | tp-link-cpe510-v2 | `tp-link-cpe510-v2` | [erfasst](daten/tp-link-cpe510-v2.json): 91 Felder, 9 offene Fäden, teilweise |  |  |
 | tp-link-cpe510-v3 | `tp-link-cpe510-v3` | [erfasst](daten/tp-link-cpe510-v3.json): 98 Felder, 13 offene Fäden, teilweise |  |  |
 | tp-link-eap613-v1 | `tp-link-eap613-v1` | [erfasst](daten/tp-link-eap613-v1.json): 83 Felder, 7 offene Fäden, teilweise |  |  |
-| tp-link-eap620-hd-v1 | `tp-link-eap620-hd-v1` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=tp-link-eap620-hd-v1.json&value=%7B%0A%20%22image%22%3A%20%22tp-link-eap620-hd-v1%22%2C%0A%20%22modell%22%3A%20%22Tp%20tp-link-eap620-hd-v1%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| tp-link-eap620-hd-v1 | `tp-link-eap620-hd-v1` | [erfasst](daten/tp-link-eap620-hd-v1.json): 84 Felder, 10 offene Fäden, teilweise |  |  |
 | tp-link-tl-mr3020-v3-bootloader | `tp-link-tl-mr3020-v3-bootloader` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=tp-link-tl-mr3020-v3-bootloader.json&value=%7B%0A%20%22image%22%3A%20%22tp-link-tl-mr3020-v3-bootloader%22%2C%0A%20%22modell%22%3A%20%22Tp%20tp-link-tl-mr3020-v3-bootloader%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
-| tp-link-tl-wr810n-v1 | `tp-link-tl-wr810n-v1` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=tp-link-tl-wr810n-v1.json&value=%7B%0A%20%22image%22%3A%20%22tp-link-tl-wr810n-v1%22%2C%0A%20%22modell%22%3A%20%22Tp%20tp-link-tl-wr810n-v1%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| tp-link-tl-wr810n-v1 | `tp-link-tl-wr810n-v1` | [erfasst](daten/tp-link-tl-wr810n-v1.json): 81 Felder, 8 offene Fäden, teilweise |  |  |
 | tp-link-tl-wr841n-v13-bootloader | `tp-link-tl-wr841n-v13-bootloader` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=tp-link-tl-wr841n-v13-bootloader.json&value=%7B%0A%20%22image%22%3A%20%22tp-link-tl-wr841n-v13-bootloader%22%2C%0A%20%22modell%22%3A%20%22Tp%20tp-link-tl-wr841n-v13-bootloader%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
 | tp-link-tl-wr902ac-v3-bootloader | `tp-link-tl-wr902ac-v3-bootloader` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=tp-link-tl-wr902ac-v3-bootloader.json&value=%7B%0A%20%22image%22%3A%20%22tp-link-tl-wr902ac-v3-bootloader%22%2C%0A%20%22modell%22%3A%20%22Tp%20tp-link-tl-wr902ac-v3-bootloader%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
 | tp-link-tl-wr902ac-v4-bootloader | `tp-link-tl-wr902ac-v4-bootloader` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=tp-link-tl-wr902ac-v4-bootloader.json&value=%7B%0A%20%22image%22%3A%20%22tp-link-tl-wr902ac-v4-bootloader%22%2C%0A%20%22modell%22%3A%20%22Tp%20tp-link-tl-wr902ac-v4-bootloader%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
@@ -515,11 +515,11 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | Archer C59 v1 | `tp-link-archer-c59-v1` | [erfasst](daten/tp-link-archer-c59-v1.json): 101 Felder, 10 offene Fäden, teilweise |  | recommended |
 | Archer C6 v2 (EU/RU/JP) | `tp-link-archer-c6-v2-eu-ru-jp` | [erfasst](daten/tp-link-archer-c6-v2-eu-ru-jp.json): 87 Felder, 9 offene Fäden, teilweise |  | recommended |
 | Archer C6 v3 | `tp-link-archer-c6-v3` | [erfasst](daten/tp-link-archer-c6-v3.json): 97 Felder, 11 offene Fäden, teilweise |  | recommended |
-| Archer C60 v1 | `tp-link-archer-c60-v1` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=tp-link-archer-c60-v1.json&value=%7B%0A%20%22image%22%3A%20%22tp-link-archer-c60-v1%22%2C%0A%20%22modell%22%3A%20%22TP-Link%20Archer%20C60%20v1%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  | ath10k lowmem |
+| Archer C60 v1 | `tp-link-archer-c60-v1` | [erfasst](daten/tp-link-archer-c60-v1.json): 104 Felder, 11 offene Fäden, teilweise |  | ath10k lowmem |
 | Archer C7 v2 | `tp-link-archer-c7-v2` | [erfasst](daten/tp-link-archer-c7-v2.json): 88 Felder, 14 offene Fäden, teilweise |  | recommended |
 | Archer C7 v4 | `tp-link-archer-c7-v4` | [erfasst](daten/tp-link-archer-c7-v4.json): 83 Felder, 9 offene Fäden, teilweise |  | recommended |
 | Archer C7 v5 | `tp-link-archer-c7-v5` | [erfasst](daten/tp-link-archer-c7-v5.json): 94 Felder, 10 offene Fäden, teilweise |  | recommended |
-| Archer D50 v1 | `tp-link-archer-d50-v1` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=tp-link-archer-d50-v1.json&value=%7B%0A%20%22image%22%3A%20%22tp-link-archer-d50-v1%22%2C%0A%20%22modell%22%3A%20%22TP-Link%20Archer%20D50%20v1%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  | ath10k lowmem |
+| Archer D50 v1 | `tp-link-archer-d50-v1` | [erfasst](daten/tp-link-archer-d50-v1.json): 83 Felder, 7 offene Fäden, teilweise |  | ath10k lowmem |
 | CPE710 v1 | `tp-link-cpe710-v1` | [erfasst](daten/tp-link-cpe710-v1.json): 86 Felder, 11 offene Fäden, teilweise |  | recommended |
 | CPE710 v2 | `tp-link-cpe710-v2` | [erfasst](daten/tp-link-cpe710-v2.json): 93 Felder, 10 offene Fäden, teilweise |  | recommended |
 | EAP225-Outdoor v1 | `tp-link-eap225-outdoor-v1` | [erfasst](daten/tp-link-eap225-outdoor-v1.json): 88 Felder, 8 offene Fäden, teilweise |  | recommended |
@@ -552,7 +552,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | TL-WR2543N/ND | `tp-link-tl-wr2543n-nd` | [erfasst](daten/tp-link-tl-wr2543n-nd.json): 84 Felder, 10 offene Fäden, teilweise |  | recommended |
 | TL-WR841N/ND v13 | `tp-link-tl-wr841n-v13` | [erfasst](daten/tp-link-tl-wr841n-v13.json): 86 Felder, 8 offene Fäden, teilweise |  | recommended |
 | TL-WR842N/ND v3 | `tp-link-tl-wr842n-v3` | [erfasst](daten/tp-link-tl-wr842n-v3.json): 89 Felder, 6 offene Fäden, teilweise |  | recommended |
-| TL-WR902AC v1 | `tp-link-tl-wr902ac-v1` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=tp-link-tl-wr902ac-v1.json&value=%7B%0A%20%22image%22%3A%20%22tp-link-tl-wr902ac-v1%22%2C%0A%20%22modell%22%3A%20%22TP-Link%20TL-WR902AC%20v1%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  | ath10k lowmem |
+| TL-WR902AC v1 | `tp-link-tl-wr902ac-v1` | [erfasst](daten/tp-link-tl-wr902ac-v1.json): 63 Felder, 7 offene Fäden, teilweise |  | ath10k lowmem |
 | TL-WR902AC v3 | `tp-link-tl-wr902ac-v3` | [erfasst](daten/tp-link-tl-wr902ac-v3.json): 64 Felder, 8 offene Fäden, teilweise |  | recommended |
 | TL-WR902AC v4 | `tp-link-tl-wr902ac-v4` | [erfasst](daten/tp-link-tl-wr902ac-v4.json): 75 Felder, 7 offene Fäden, teilweise |  | recommended |
 | WBS210 v1 | `tp-link-wbs210-v1` | [erfasst](daten/tp-link-wbs210-v1.json): 87 Felder, 7 offene Fäden, teilweise |  | recommended |
@@ -601,7 +601,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| wavlink-wl-wn573hx3 | `wavlink-wl-wn573hx3` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=wavlink-wl-wn573hx3.json&value=%7B%0A%20%22image%22%3A%20%22wavlink-wl-wn573hx3%22%2C%0A%20%22modell%22%3A%20%22Wavlink%20wavlink-wl-wn573hx3%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| wavlink-wl-wn573hx3 | `wavlink-wl-wn573hx3` | [erfasst](daten/wavlink-wl-wn573hx3.json): 79 Felder, 8 offene Fäden, teilweise |  |  |
 | WS-WN572HP3 (4G) | `wavlink-ws-wn572hp3-4g` | [erfasst](daten/wavlink-ws-wn572hp3-4g.json): 71 Felder, 10 offene Fäden, teilweise |  | recommended |
 
 ## x86
@@ -635,11 +635,11 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | Mi Router 4A (Gigabit Edition) v2 | `xiaomi-mi-router-4a-gigabit-edition-v2` | [erfasst](daten/xiaomi-mi-router-4a-gigabit-edition-v2.json): 61 Felder, 9 offene Fäden, teilweise |  | recommended |
 | Mi Router 4C | `xiaomi-mi-router-4c` | [erfasst](daten/xiaomi-mi-router-4c.json): 77 Felder, 9 offene Fäden, teilweise |  | recommended |
 | MiWiFi Mini | `xiaomi-miwifi-mini` | [erfasst](daten/xiaomi-miwifi-mini.json): 87 Felder, 8 offene Fäden, teilweise |  | recommended |
-| xiaomi-ax3600 | `xiaomi-ax3600` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=xiaomi-ax3600.json&value=%7B%0A%20%22image%22%3A%20%22xiaomi-ax3600%22%2C%0A%20%22modell%22%3A%20%22Xiaomi%20xiaomi-ax3600%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
-| xiaomi-mi-router-ac2100 | `xiaomi-mi-router-ac2100` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=xiaomi-mi-router-ac2100.json&value=%7B%0A%20%22image%22%3A%20%22xiaomi-mi-router-ac2100%22%2C%0A%20%22modell%22%3A%20%22Xiaomi%20xiaomi-mi-router-ac2100%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
-| xiaomi-mi-router-ax3000t | `xiaomi-mi-router-ax3000t` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=xiaomi-mi-router-ax3000t.json&value=%7B%0A%20%22image%22%3A%20%22xiaomi-mi-router-ax3000t%22%2C%0A%20%22modell%22%3A%20%22Xiaomi%20xiaomi-mi-router-ax3000t%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
-| xiaomi-mi-router-ax3000t-openwrt-u-boot-layout | `xiaomi-mi-router-ax3000t-openwrt-u-boot-layout` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=xiaomi-mi-router-ax3000t-openwrt-u-boot-layout.json&value=%7B%0A%20%22image%22%3A%20%22xiaomi-mi-router-ax3000t-openwrt-u-boot-layout%22%2C%0A%20%22modell%22%3A%20%22Xiaomi%20xiaomi-mi-router-ax3000t-openwrt-u-boot-layout%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
-| xiaomi-redmi-router-ac2100 | `xiaomi-redmi-router-ac2100` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=xiaomi-redmi-router-ac2100.json&value=%7B%0A%20%22image%22%3A%20%22xiaomi-redmi-router-ac2100%22%2C%0A%20%22modell%22%3A%20%22Xiaomi%20xiaomi-redmi-router-ac2100%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| xiaomi-ax3600 | `xiaomi-ax3600` | [erfasst](daten/xiaomi-ax3600.json): 92 Felder, 9 offene Fäden, teilweise |  |  |
+| xiaomi-mi-router-ac2100 | `xiaomi-mi-router-ac2100` | [erfasst](daten/xiaomi-mi-router-ac2100.json): 79 Felder, 7 offene Fäden, teilweise |  |  |
+| xiaomi-mi-router-ax3000t | `xiaomi-mi-router-ax3000t` | [erfasst](daten/xiaomi-mi-router-ax3000t.json): 69 Felder, 8 offene Fäden, teilweise |  |  |
+| xiaomi-mi-router-ax3000t-openwrt-u-boot-layout | `xiaomi-mi-router-ax3000t-openwrt-u-boot-layout` | [erfasst](daten/xiaomi-mi-router-ax3000t-openwrt-u-boot-layout.json): 77 Felder, 6 offene Fäden, teilweise |  |  |
+| xiaomi-redmi-router-ac2100 | `xiaomi-redmi-router-ac2100` | [erfasst](daten/xiaomi-redmi-router-ac2100.json): 84 Felder, 7 offene Fäden, teilweise |  |  |
 
 ## ZBT
 
@@ -672,5 +672,5 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| zyxel-nwa90ax | `zyxel-nwa90ax` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=zyxel-nwa90ax.json&value=%7B%0A%20%22image%22%3A%20%22zyxel-nwa90ax%22%2C%0A%20%22modell%22%3A%20%22Zyxel%20zyxel-nwa90ax%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
-| zyxel-nwa90ax-pro | `zyxel-nwa90ax-pro` | [anlegen](https://github.com/Neanderfunk/geraetedaten/new/main/daten?filename=zyxel-nwa90ax-pro.json&value=%7B%0A%20%22image%22%3A%20%22zyxel-nwa90ax-pro%22%2C%0A%20%22modell%22%3A%20%22Zyxel%20zyxel-nwa90ax-pro%22%2C%0A%20%22quellen%22%3A%20%7B%7D%2C%0A%20%22roh%22%3A%20%7B%7D%2C%0A%20%22felder%22%3A%20%7B%7D%2C%0A%20%22offene_faeden%22%3A%20%5B%5D%2C%0A%20%22lauf%22%3A%20%7B%0A%20%20%22datum%22%3A%20%22%22%2C%0A%20%20%22status%22%3A%20%22teilweise%22%2C%0A%20%20%22notiz%22%3A%20%22von%20Hand%2C%20siehe%20schema/felder.md%22%0A%20%7D%0A%7D%0A) |  |  |
+| zyxel-nwa90ax | `zyxel-nwa90ax` | [erfasst](daten/zyxel-nwa90ax.json): 92 Felder, 11 offene Fäden, teilweise |  |  |
+| zyxel-nwa90ax-pro | `zyxel-nwa90ax-pro` | [erfasst](daten/zyxel-nwa90ax-pro.json): 80 Felder, 9 offene Fäden, teilweise |  |  |
