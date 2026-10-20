@@ -4,7 +4,7 @@
     geraeteliste.py [--index <anleitungen/html/index.json>]
 
 Quellen im Repo:
-  quellen/images-*.txt             Image-Namen vom Firmware-Server (neueste Datei)
+  quellen/images-testing-*.txt     Image-Namen vom Firmware-Server (neueste Datei, werkzeug/image-liste.py)
   quellen/selector-modelle-*.json  Hersteller/Modell/Version aus devices.js (neueste Datei)
   daten/*.json                     vorhandene Eintraege
 
@@ -49,7 +49,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--index', help='anleitungen/html/index.json aus gluon-rampe-installer')
     a = ap.parse_args()
-    imgdatei = neueste('images-*.txt')
+    # Grundlage ist der Testzweig (werkzeug/image-liste.py testing): er hat die
+    # meisten Geraete; aeltere Listen (images-<domain>-*.txt) nur als Rueckfall.
+    imgdatei = neueste('images-testing-*.txt') or neueste('images-*.txt')
     modelldatei = neueste('selector-modelle-*.json')
     images = [z.strip() for z in open(imgdatei) if z.strip() and not z.startswith('#')]
     modelle = json.load(open(modelldatei))['modelle']
