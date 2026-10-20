@@ -58,7 +58,7 @@
         werte: [['1000', 'ab 1 Gbit/s'], ['2500', 'ab 2.5 Gbit/s']] },
       { id: 'ports', titel: 'Netzwerkbuchsen', typ: 'min', werte: [['2', 'ab 2'], ['4', 'ab 4']] },
       { id: 'usb', titel: 'USB', typ: 'ja' },
-      { id: 'sfp', titel: 'SFP-Modul (Glasfaser)', typ: 'ja' }
+      { id: 'sfp', titel: 'SFP-Modul', typ: 'ja' }
     ] },
     { titel: 'Leistung und Verbrauch', filter: [
       { id: 'speicher', titel: 'Speicher für Updates', typ: 'eins',
