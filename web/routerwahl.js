@@ -117,9 +117,10 @@
   /* Geraete mit fehlenden Angaben werden standardmaessig gezeigt (adorfer
      20.10.); das Haekchen blendet sie aus. */
   var mitUnbekannt = true;
-  /* Geraete, deren Firmware es nur im Testzweig gibt (stable: false), sind
-     zunaechst ausgeblendet; die Firmware kommt erst mit der naechsten Version. */
-  var mitNaechster = false;
+  /* Nicht unterstuetzte Geraete einblenden (adorfer 20.10.): die Karten
+     nicht unterstuetzter Versionen und die "noch nicht unterstuetzten" (Image
+     nur im Testzweig, stable: false). Standardmaessig aus. */
+  var mitNicht = false;
   var sortierung = 'einfach';
   var nurGeraet = null;     // ?geraet=<image>: nur dieses Geraet, Daten gleich offen
 
@@ -198,7 +199,7 @@
     var aus = [];
     geraete.forEach(function (g) {
       if (nurGeraet && g.image !== nurGeraet) return;
-      if (!mitNaechster && g.stable === false && g.image !== nurGeraet) return;
+      if (!mitNicht && g.stable === false && g.image !== nurGeraet) return;
       var fehlt = [];
       for (var i = 0; i < ALLE.length; i++) {
         var f = ALLE[i];
@@ -457,8 +458,11 @@
       }
       var rumpf = el('div', 'finder-rumpf');
       rumpf.appendChild(el('h2', null, g.modell));
-      if (g.stable === false) rumpf.appendChild(el('p', 'finder-naechste-hinweis',
-        'Die Freifunk-Firmware für dieses Gerät kommt erst mit der nächsten Version. Sie wird gerade getestet.'));
+      if (g.stable === false) {
+        rumpf.appendChild(el('p', 'finder-nicht-marke', 'Noch nicht unterstützt'));
+        rumpf.appendChild(el('p', 'finder-naechste-hinweis',
+          'Die Freifunk-Firmware für dieses Gerät kommt erst mit der nächsten Version. Sie wird gerade getestet.'));
+      }
       if (g.speicher) {
         var sp = el('p', 'finder-speicher');
         var stufe = { 'reichlich': 'reichlich', 'ausreichend': 'reicht', 'knapp': 'knapp', 'zu wenig': 'sackgasse' }[g.speicher] || 'knapp';
@@ -506,7 +510,7 @@
     });
     /* Nicht unterstuetzte Versionen hinter die letzte angezeigte Geschwisterkarte */
     var letzte = {};
-    nichtKarten.forEach(function (nk) {
+    if (mitNicht || nurGeraet) nichtKarten.forEach(function (nk) {
       var nach = letzte[nk.geschwister.join(' ')];
       if (!nach) {
         treffer.forEach(function (t) { if (nk.geschwister.indexOf(t.g.image) > -1) nach = kartenVon[t.g.image]; });
@@ -595,7 +599,7 @@
       teile.push(encodeURIComponent(k) + '=' + wahl[k].map(function (x) { return encodeURIComponent(String(x)); }).join(','));
     });
     if (!mitUnbekannt) teile.push('unbekannt=0');
-    if (mitNaechster) teile.push('naechste=1');
+    if (mitNicht) teile.push('nicht=1');
     if (sortierung !== 'einfach') teile.push('sort=' + sortierung);
     if (nurGeraet) teile.push('geraet=' + encodeURIComponent(nurGeraet));
     history.replaceState(null, '', teile.length ? '?' + teile.join('&') : location.pathname);
@@ -607,7 +611,7 @@
       var kv = p.split('=');
       var k = decodeURIComponent(kv[0]), v = decodeURIComponent(kv[1] || '');
       if (k === 'unbekannt') { mitUnbekannt = v !== '0'; return; }
-      if (k === 'naechste') { mitNaechster = v === '1'; return; }
+      if (k === 'nicht' || k === 'naechste') { mitNicht = v === '1'; return; }   // naechste: alter Name
       if (k === 'sort') { sortierung = v; return; }
       if (k === 'geraet') { nurGeraet = v; return; }
       var f = ALLE.filter(function (x) { return x.id === k; })[0];
@@ -615,7 +619,7 @@
       wahl[k] = (f.typ === 'ja' || f.typ === 'nein') ? [true] : v.split(',');
     });
     $('#finder-unbekannt').checked = !mitUnbekannt;
-    $('#finder-naechste').checked = mitNaechster;
+    $('#finder-nicht').checked = mitNicht;
     $('#finder-sortierung').value = sortierung;
   }
 
@@ -646,7 +650,7 @@
         nichtKarten = (n && n.karten) || [];
         zustandLesen();
         $('#finder-unbekannt').addEventListener('change', function (e) { mitUnbekannt = !e.target.checked; neu(); });
-        $('#finder-naechste').addEventListener('change', function (e) { mitNaechster = e.target.checked; neu(); });
+        $('#finder-nicht').addEventListener('change', function (e) { mitNicht = e.target.checked; neu(); });
         $('#finder-sortierung').addEventListener('change', function (e) { sortierung = e.target.value; neu(); });
         $('#finder-leeren').addEventListener('click', function () { wahl = {}; nurGeraet = null; neu(); });
         neu();
