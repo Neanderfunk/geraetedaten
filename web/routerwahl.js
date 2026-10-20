@@ -241,7 +241,10 @@
           block.appendChild(option(f, 'checkbox', true, 'ja', gewaehlt.length > 0, zaehle(f, true)));
         } else {
           var art = (f.typ === 'min' || f.typ === 'max') ? 'radio' : 'checkbox';
-          f.werte.forEach(function (wv) {
+          f.werte.forEach(function (wv, i) {
+            /* Zwischenzeile vor den umgekehrten Stufen ("ab L5"), damit "bis" und "ab" nicht verwirren */
+            if (String(wv[0]).indexOf('ab:') === 0 && !(i && String(f.werte[i - 1][0]).indexOf('ab:') === 0))
+              block.appendChild(el('p', 'finder-zwischen', 'Für Bastelfreudige:'));
             block.appendChild(option(f, art, wv[0], wv[1], gewaehlt.indexOf(wv[0]) > -1, zaehle(f, wv[0])));
           });
           if (art === 'radio' && gewaehlt.length) {
