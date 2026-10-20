@@ -34,7 +34,8 @@
     "openwrt_git_smp": {
       "url": "https://github.com/openwrt/openwrt/commit/084c20f6c54180f2dc6b3efc1c5ba9b62afbaf26",
       "stand": "Commit 2022-03-29 (Autor), gemergt 2022-11-18",
-      "abgerufen": "2026-10-19"
+      "abgerufen": "2026-10-19",
+      "bemerkung": "Commit-Text: 'Enabled CONFIG_MIPS_MT_SMP and CONFIG_SCHED_SMT. Tested on FRITZ!Box 7330 SL, 7312 and o2 Box 4421' (MT-SMP = Hardware-Threads eines Kerns); erneut abgerufen 2026-10-20"
     },
     "openwrt_git_suche": {
       "url": "https://api.github.com/search/commits?q=7312+repo:openwrt/openwrt",
@@ -861,7 +862,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7312",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "MIPS 34Kc mit MT: zwei Hardware-Threads (VPEs), SMP in OpenWrt seit 2022 aktiv"
+        "bemerkung": "MIPS 34Kc mit MT: zwei Hardware-Threads (VPEs), SMP in OpenWrt seit 2022 aktiv",
+        "widerlegt": "ARX188 hat einen MIPS-34Kc-Kern mit MT-Erweiterung; die 2 CPUs unter OpenWrt sind die zwei Hardware-Threads (VPEs) dieses einen Kerns, kein zweiter Kern: SMP-Commit aktiviert CONFIG_MIPS_MT_SMP + CONFIG_SCHED_SMT (getestet u. a. auf 7312) https://github.com/openwrt/openwrt/commit/084c20f6c54180f2dc6b3efc1c5ba9b62afbaf26 ; Bootlog 'CPU0/CPU1 revision 0001954c (MIPS 34Kc)', 'No VPEs reserved for AP/SP' https://openwrt.org/toh/avm/fritz.box.wlan.7312"
       },
       {
         "wert": 1,
@@ -877,7 +879,8 @@
         "beleg": "https://openwrt.org/toh/avm/fritz.box.wlan.7312",
         "stand": "Seitenrevision 2024-02-12 08:58",
         "sicherheit": "mittel",
-        "bemerkung": "Bootlog: \"Detected 1 available secondary CPU(s)\", \"smp: Brought up 1 node, 2 CPUs\""
+        "bemerkung": "Bootlog: \"Detected 1 available secondary CPU(s)\", \"smp: Brought up 1 node, 2 CPUs\"",
+        "widerlegt": "ARX188 hat einen MIPS-34Kc-Kern mit MT-Erweiterung; die 2 CPUs unter OpenWrt sind die zwei Hardware-Threads (VPEs) dieses einen Kerns, kein zweiter Kern: SMP-Commit aktiviert CONFIG_MIPS_MT_SMP + CONFIG_SCHED_SMT (getestet u. a. auf 7312) https://github.com/openwrt/openwrt/commit/084c20f6c54180f2dc6b3efc1c5ba9b62afbaf26 ; Bootlog 'CPU0/CPU1 revision 0001954c (MIPS 34Kc)', 'No VPEs reserved for AP/SP' https://openwrt.org/toh/avm/fritz.box.wlan.7312"
       }
     ],
     "cpu_mhz": [
@@ -2327,6 +2330,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Suche 1 Treffer a1165495 (FRITZ!Box 7312, 20002544); Datenblatt nach roh.geizhals, 9 Felder ergänzt; keine EAN/ASIN auf der Seite; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "cpu_kerne: 1 (ein MIPS-34Kc-Kern mit MT); Werte 2 (toh, openwrt_wiki) widerlegt, das sind 2 Hardware-Threads/VPEs (CONFIG_MIPS_MT_SMP, Commit 084c20f6)"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

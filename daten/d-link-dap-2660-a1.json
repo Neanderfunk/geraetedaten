@@ -2165,7 +2165,8 @@
         "beleg": "https://fccid.io/KA2AP2660A1/User-Manual/User-Manual-2251782",
         "stand": "Exhibit 2014-04-25 (PDF erstellt 2014-03-28)",
         "sicherheit": "niedrig",
-        "bemerkung": "Merkmalsliste \"two 10/100/1000M Ethernet ports\" - FCC-Handbuch von 2014 enthält offensichtlich Textbausteine eines anderen Modells (vermutlich DAP-2695: \"plenum-rated metal chassis\", 6 abnehmbare Antennen, 2 LAN-Ports, RJ-45-Konsole, 48 V); widerspricht Datenblatt, Fotos und OpenWrt"
+        "bemerkung": "Merkmalsliste \"two 10/100/1000M Ethernet ports\" - FCC-Handbuch von 2014 enthält offensichtlich Textbausteine eines anderen Modells (vermutlich DAP-2695: \"plenum-rated metal chassis\", 6 abnehmbare Antennen, 2 LAN-Ports, RJ-45-Konsole, 48 V); widerspricht Datenblatt, Fotos und OpenWrt",
+        "widerlegt": "Merkmalsliste des FCC-Handbuchs ist Vorlagentext (DAP-2695); dieselbe Handbuch-Hardwareuebersicht (S. 7) zeigt nur Reset, LAN (PoE) Port und Power Receptor. OpenWrt-DTS hat nur eth0 mit einem PHY (AR8035 an MDIO 4), Commit d7d87cedcf \"The device is a one-port\" (https://github.com/openwrt/openwrt/commit/d7d87cedcf, https://github.com/openwrt/openwrt/commit/8ec997d0063bbc1ac41d1025f4c94ae6337899fa); Datenblatt 2019 \"Gigabit PoE-capable LAN port\" (https://www.dlink.com/uk/en/-/media/business_products/dap/dap-2660/datasheet/dap_2660_nc_datasheet_en_eu.pdf)"
       },
       {
         "wert": 1,
@@ -3327,6 +3328,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Suche 'D-Link DAP-2660' -> einziger passender Treffer a1120178 (gelistet seit 26.05.2014), ohne Revisionsangabe; A1 und A2 laufen mit demselben Image, daher genau; 9 Datenblattzeilen nach roh.geizhals, 10 Felder ergaenzt; kein Netzteil/Gewicht/Montage auf der Seite, keine EAN/ASIN; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ports_anzahl: 1 gilt (OpenWrt-DTS/Commit one-port, Datenblatt, Handbuch-Hardwareuebersicht); 2 aus FCC-Handbuch-Merkmalsliste widerlegt (DAP-2695-Vorlagentext)"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

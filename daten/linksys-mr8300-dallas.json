@@ -1049,7 +1049,8 @@
         "beleg": "https://deviwiki.com/wiki/Linksys_MR8300",
         "stand": "Seitenrevision 2019-08-01T02:37:49Z",
         "sicherheit": "niedrig",
-        "bemerkung": "Infobox mit model=EA8300 und Nanya NT5CC128M16IP-DI - offensichtlich EA8300-Daten, widerspricht Bootlog und Hersteller"
+        "bemerkung": "Infobox mit model=EA8300 und Nanya NT5CC128M16IP-DI - offensichtlich EA8300-Daten, widerspricht Bootlog und Hersteller",
+        "widerlegt": "256 MB (Nanya NT5CC128M16IP-DI) sind EA8300-Daten (Infobox model=EA8300); MR8300 hat 512 MB: U-Boot 'DRAM: 512 MiB' in OEM- und OpenWrt-Bootlog (https://openwrt.org/toh/linksys/mr8300), OpenWrt-Commit 'RAM: 512M DDR3' (https://github.com/openwrt/openwrt/commit/a9071d02b5ab11fbd73ea42076a09f2fd8136517), Linksys-Produktseite 512 MB"
       },
       {
         "wert": 256,
@@ -1057,7 +1058,8 @@
         "beleg": "https://wikidevi.wi-cat.ru/index.php?title=Linksys_MR8300&action=raw",
         "stand": "Seitenrevision 2026-06-12T10:27:51Z (Omega)",
         "sicherheit": "niedrig",
-        "bemerkung": "wie DeviWiki (Nanya NT5CC128M16IP-DI), widerspricht Bootlog und Hersteller"
+        "bemerkung": "wie DeviWiki (Nanya NT5CC128M16IP-DI), widerspricht Bootlog und Hersteller",
+        "widerlegt": "Spiegel übernimmt 256 MB/Nanya von der EA8300-Infobox; MR8300 hat 512 MB: U-Boot 'DRAM: 512 MiB' und Kernel 'Memory: .../524288K' im Bootlog (https://openwrt.org/toh/linksys/mr8300), OpenWrt-Commit 'RAM: 512M DDR3' (https://github.com/openwrt/openwrt/commit/a9071d02b5ab11fbd73ea42076a09f2fd8136517), Linksys-Produktseite 512 MB"
       }
     ],
     "ram_typ": [
@@ -2497,6 +2499,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Artikel a2137255 (MR8300-EU) über preisvergleich.heise.de abgerufen (1 Abruf); Datenblatt nach roh.geizhals, Wayback-Einträge durch heise-Beleg ersetzt; Leistungsaufnahme keine Angabe; keine EAN/ASIN auf der Seite"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ram_mb: 512 MB; 256 MB (deviwiki, wikidevi) widerlegt - EA8300-Daten, Bootlogs (OEM+OpenWrt) zeigen DRAM 512 MiB, OpenWrt-Commit und Linksys 512 MB"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

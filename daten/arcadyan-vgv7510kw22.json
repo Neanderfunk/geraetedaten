@@ -967,7 +967,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/arcadyanastoria/arcadyanastoria_vgv7510kw22o2box6431",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "",
+        "widerlegt": "VRX288 hat einen MIPS-34Kc-Kern mit MT-Erweiterung (2 VPEs = Hardware-Threads, kein zweiter Kern): /proc/cpuinfo im OpenWrt-Wiki zeigt fuer processor 0 und 1 jeweils 'core: 0', 'ASEs implemented: ... mt'; https://openwrt.org/toh/arcadyan/vgv7510kw22 (Abschnitt 'Details (trunk r6420, SMP patch)')"
       },
       {
         "wert": 1,
@@ -976,6 +977,14 @@
         "stand": "Branch main am 2026-10-19",
         "sicherheit": "mittel",
         "bemerkung": "bootargs enthalten \"nosmp\": OpenWrt nutzt nur einen Kern; zweiter Kern laut Wiki per Neubau aktivierbar (\"SMP (dual core) can be activated by boot options (needs rebuild)\")"
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_wiki",
+        "beleg": "https://openwrt.org/toh/arcadyan/vgv7510kw22",
+        "stand": "Seitenrevision 2024-07-12 15:08",
+        "sicherheit": "hoch",
+        "bemerkung": "cpuinfo mit SMP-Patch: 2 logische CPUs (processor 0/1), beide 'package: 0, core: 0', MIPS 34Kc mit MT-ASE; das 'dual core' im Wiki meint die zwei VPEs (Hardware-Threads) eines Kerns"
       }
     ],
     "cpu_mhz": [
@@ -1590,7 +1599,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/arcadyanastoria/arcadyanastoria_vgv7510kw22o2box6431",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "nur 100M-LAN-Ports gezählt"
+        "bemerkung": "nur 100M-LAN-Ports gezählt",
+        "widerlegt": "zaehlt nur die 4 LAN-Buchsen; dazu kommt der WAN-Ethernet-Port ueber die graue DSL-RJ45-Buchse (IC+ IP101A): o2-Handbuch S. 56 (Foto Rueckseite: LAN 1-4 + DSL) und S. 57 ('WAN-Ethernet-Anschluss ueber die DSL-Buchse'), DTS port@0 label \"wan\" + lan1-4; https://static2.o9.de/resource/blob/69050/5958ddb75c2d75fefaaec16fc5bb9f0e/handbuch-o2-box-6431-download-data.pdf#page=57, https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_arcadyan_vgv7510kw22.dtsi"
       },
       {
         "wert": 5,
@@ -1614,7 +1624,8 @@
         "beleg": "https://static2.o9.de/resource/blob/69050/5958ddb75c2d75fefaaec16fc5bb9f0e/handbuch-o2-box-6431-download-data.pdf#page=57",
         "stand": "Handbuch Ausgabe 1.1, 07/13 (PDF erstellt 2013-07-26, geändert 2016-11-17)",
         "sicherheit": "hoch",
-        "bemerkung": "4 LAN; dazu WAN-Ethernet über die DSL-Buchse"
+        "bemerkung": "4 LAN; dazu WAN-Ethernet über die DSL-Buchse",
+        "widerlegt": "zaehlt nur die 4 LAN-Buchsen; dazu kommt der WAN-Ethernet-Port ueber die graue DSL-RJ45-Buchse (IC+ IP101A): o2-Handbuch S. 56 (Foto Rueckseite: LAN 1-4 + DSL) und S. 57 ('WAN-Ethernet-Anschluss ueber die DSL-Buchse'), DTS port@0 label \"wan\" + lan1-4; https://static2.o9.de/resource/blob/69050/5958ddb75c2d75fefaaec16fc5bb9f0e/handbuch-o2-box-6431-download-data.pdf#page=57, https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_arcadyan_vgv7510kw22.dtsi"
       },
       {
         "wert": 4,
@@ -1622,7 +1633,8 @@
         "beleg": "https://www.router-faq.de/?id=aliceinfo&hwa=o2box6431",
         "stand": "Seite ohne Datum, Abruf 2026-10-19 (Fußzeile © 2026)",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "",
+        "widerlegt": "zaehlt nur die 4 LAN-Buchsen; dazu kommt der WAN-Ethernet-Port ueber die graue DSL-RJ45-Buchse (IC+ IP101A): o2-Handbuch S. 56 (Foto Rueckseite: LAN 1-4 + DSL) und S. 57 ('WAN-Ethernet-Anschluss ueber die DSL-Buchse'), DTS port@0 label \"wan\" + lan1-4; https://static2.o9.de/resource/blob/69050/5958ddb75c2d75fefaaec16fc5bb9f0e/handbuch-o2-box-6431-download-data.pdf#page=57, https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_arcadyan_vgv7510kw22.dtsi"
       }
     ],
     "nur_eine_buchse": [
@@ -2640,6 +2652,15 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "Kein Artikel: heise-Suchen 'o2 Box 6431' und 'Arcadyan VGV7510KW22' liefern nur unscharfe Fremdtreffer (Provider-Gerät o2, nicht im Handel gelistet); 2 Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "cpu_kerne: 1 (MIPS 34Kc mit 2 VPEs/Hardware-Threads, cpuinfo im Wiki 'core: 0' fuer beide); toh-Wert 2 widerlegt",
+        "ports_anzahl: 5 (4x LAN + 1x WAN-Ethernet ueber DSL-RJ45-Buchse, Handbuch S. 56/57 + DTS); 4er-Werte (toh, o2_handbuch, router_faq) zaehlen nur LAN, widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   },
   "offene_faeden_erledigt": [

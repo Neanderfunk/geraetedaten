@@ -106,6 +106,12 @@
       "url": "https://preisvergleich.heise.de/devolo-dlan-pro-1200-wifi-ac-9546-a1298747.html",
       "stand": "Gelistet seit 20.07.2015; abgerufen 2026-10-20",
       "abgerufen": "2026-10-20"
+    },
+    "openwrt_dts_ar934x": {
+      "url": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar934x.dtsi",
+      "stand": "Branch main am 2026-10-20",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "SoC-DTS, eingebunden über ar9344.dtsi aus ar9344_devolo_dlan_wifi.dtsi; einziger CPU-Knoten cpu@0 mips74Kc"
     }
   },
   "roh": {
@@ -741,7 +747,16 @@
         "beleg": "https://deviwiki.com/wiki/Devolo_dLAN_pro_1200_WiFi_ac",
         "stand": "Seitenrevision 2019-07-05T00:51:48Z",
         "sicherheit": "niedrig",
-        "bemerkung": "gehört zur IPQ4019-Angabe, siehe soc"
+        "bemerkung": "gehört zur IPQ4019-Angabe, siehe soc",
+        "widerlegt": "Gerät hat Atheros AR9344 (OpenWrt-Commit 624b85e, DTS ar9344_devolo_dlan_wifi.dtsi, Bootlog 'Wasp 1.3'), ein MIPS-74Kc-Kern; ar934x.dtsi definiert nur cpu@0 (https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar934x.dtsi). 4 Kerne gehören zur falschen IPQ4019-Angabe der DeviWiki"
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_dts_ar934x",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar934x.dtsi",
+        "stand": "Branch main am 2026-10-20",
+        "sicherheit": "hoch",
+        "bemerkung": "nur cpu@0 (MIPS 74Kc); Gerät-DTS bindet ar9344.dtsi -> ar934x.dtsi ein"
       }
     ],
     "cpu_mhz": [
@@ -1782,6 +1797,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Artikel a1298747 (9546, Einzelgerät) über heise gefunden; Datenblatt mit 9 Zeilen nach roh.geizhals, normalisiert: Streams, Datenrate, Ports, Powerline-Modem, Montage, Artikelnummer. Keine Leistung/Abmessungen/Gewicht/EAN auf der Seite. 2 heise-Abrufe."
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "cpu_kerne: 1 gilt (AR9344, ein MIPS-74Kc-Kern laut OpenWrt-DTS); DeviWiki 4 widerlegt (gehört zur falschen IPQ4019-Angabe)"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

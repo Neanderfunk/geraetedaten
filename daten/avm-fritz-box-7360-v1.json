@@ -1088,7 +1088,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/avm/avm_fritz_box_7360sl",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "ToH-Feld \"16,32\" umfasst v2"
+        "bemerkung": "ToH-Feld \"16,32\" umfasst v2; fuer dieses Image (v1/SL) gilt 16 MB, 32 MB nur v2 (HWRevision 196)"
       },
       {
         "wert": 32,
@@ -1096,7 +1096,8 @@
         "beleg": "https://deviwiki.com/wiki/AVM_FRITZ!Box_Fon_WLAN_7360_v1",
         "stand": "Seitenrevision 2019-07-05T00:39:19Z",
         "sicherheit": "niedrig",
-        "bemerkung": "Widerspruch: MX29GL256 auf der v1-Seite; Platinenfoto mit Datecode 2015 ist vermutlich eine v2 (HW196)"
+        "bemerkung": "Widerspruch: MX29GL256 auf der v1-Seite; Platinenfoto mit Datecode 2015 ist vermutlich eine v2 (HW196)",
+        "widerlegt": "32 MB gilt fuer 7360 v2 (HWRevision 196), nicht v1 (HWRevision 183): BoxMatrix-Versionsvergleich nennt fuer v1 nor_size=16MB, mtd1 15744 KB (https://web.archive.org/web/20220625095730/https://boxmatrix.info/wiki/FRITZ%21Box_Fon_WLAN_7360_Versions), OpenWrt-DTS vr9_avm_fritz7360sl.dts NOR reg 0x1000000 = 16 MB (https://github.com/openwrt/openwrt/blob/main/target/linux/lantiq/dts/vr9_avm_fritz7360sl.dts), Gluon-Commit e4ec16d ordnet v1 dem 16-MB-Image zu; das DeviWiki-Platinenfoto (MX29GL256, Datecode 2015) zeigt eine v2"
       }
     ],
     "flash_typ": [
@@ -2257,6 +2258,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "a863898 \"FRITZ!Box 7360 (20002522)\", gelistet seit 12.11.2012, ohne Versionsangabe; Art.-Nr. 20002522 bei v1 und v2, Seite verlinkt OpenWrt-v2-Seite. Nur Link + roh, keine Hardwarewerte; keine EAN/ASIN auf der Seite. 2 heise-Abrufe."
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 16 MB gilt; DeviWiki-v1-Wert 32 MB widerlegt (gehoert zu v2, HWRevision 196; BoxMatrix nor_size=16MB fuer v1, OpenWrt-DTS NOR 0x1000000)"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

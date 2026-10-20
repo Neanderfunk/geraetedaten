@@ -1376,7 +1376,7 @@
         "beleg": "https://higherlogicdownload.s3.amazonaws.com/AIO/MigratedAttachments/783E81CB-7D60-4660-8A21-ABF1FD4D7DA4-2-Aruba%20AP17%20Installation%20Guide_DE.pdf",
         "stand": "Installationsanleitung Rev 01 Juli 2019 (PDF geändert 2019-08-01), S3 Last-Modified 2020-10-23",
         "sicherheit": "hoch",
-        "bemerkung": "'akzeptiert 48 VDC (Nennspannung)' als 802.3af-PD"
+        "bemerkung": "'akzeptiert 48 VDC (Nennspannung)' als 802.3af-PD; gilt als Nennspannung des 802.3af-PD (Anleitung: 'accepting 48Vdc (nominal)'); kein Widerspruch zu 57 V auf dem Typenschild"
       },
       {
         "wert": 48,
@@ -1384,7 +1384,7 @@
         "beleg": "https://fccid.io/Q9DAPEX017/User-Manual/User-Manual-20190723-v1-Q9DAPEX017-UM-4390036",
         "stand": "Exhibit 4390036, 'Aruba AP17 Installation Guide' (PDF geändert 2019-07-23), 12 Seiten",
         "sicherheit": "hoch",
-        "bemerkung": "'accepting 48Vdc (nominal)'"
+        "bemerkung": "'accepting 48Vdc (nominal)'; gilt als Nennspannung des 802.3af-PD (Anleitung: 'accepting 48Vdc (nominal)'); kein Widerspruch zu 57 V auf dem Typenschild"
       },
       {
         "wert": 57,
@@ -1392,7 +1392,7 @@
         "beleg": "https://fccid.io/Q9DAPEX017/Label/ID-Label-Location-Info-20190723-v1-Q9DAPEX017-Label-4390027",
         "stand": "Exhibit 4390027 (PDF 2019-07-11)",
         "sicherheit": "hoch",
-        "bemerkung": "'SPEC: 57V ⎓ 350mA (PoE)' auf dem Typenschild; Widerspruch zur Anleitung (48 V), beides im 802.3af-Bereich (Obergrenze 57 V)"
+        "bemerkung": "'SPEC: 57V ⎓ 350mA (PoE)' auf dem Typenschild; Widerspruch zur Anleitung (48 V), beides im 802.3af-Bereich (Obergrenze 57 V); gilt als Bemessungs-Höchstwert auf dem Typenschild (Obergrenze des 802.3af-Bereichs 44-57 V an der PSE), Nennspannung ist 48 V; beide Angaben richtig, nur ein 802.3af-Eingang (Datenblatt: 'Power over Ethernet (PoE): 802.3af')"
       }
     ],
     "poe_strom_ma": [
@@ -2015,6 +2015,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Geizhals a2121912 (R2X11A) über heise gefunden; Datenblatt nach roh.geizhals, 12 Felder ergänzt; kein PoE-Standard, keine Leistung/Gewicht/EAN/ASIN auf der Seite; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "poe_spannung_v: 48 V = Nennspannung (Installationsanleitung/FCC-Handbuch), 57 V = Höchstwert auf dem Typenschild (FCC-Exhibit 4390027, 'SPEC: 57V 350mA (PoE)'); beides 802.3af"
+      ],
+      "offen": []
     }
   }
 }

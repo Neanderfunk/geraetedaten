@@ -1146,7 +1146,8 @@
         "beleg": "https://github.com/gl-inet/docs3.x/blob/master/docs/specification/gl-xe300/index.md",
         "stand": "Inhalt Commit a2bd1880df 2022-09-19, letzter Commit 9fa81ce7e4 2023-10-19 (Bild-URLs)",
         "sicherheit": "mittel",
-        "bemerkung": "\"FLASH 8MB + NAND FLASH 128MB\" - widerspricht Datenblatt, Commit und Bootlog (w25q128, 16 MiB)"
+        "bemerkung": "\"FLASH 8MB + NAND FLASH 128MB\" - widerspricht Datenblatt, Commit und Bootlog (w25q128, 16 MiB)",
+        "widerlegt": "NOR ist 16 MB, nicht 8 MB: OEM- und OpenWrt-Bootlog melden 'w25q128 (16384 Kbytes)' (https://openwrt.org/toh/gl.inet/gl-xe300), Datenblatt ver.20230602 'NOR Flash 16MB + NAND Flash 128MB' (https://static.gl-inet.com/www/images/products/datasheet/xe300_datasheet_20230602.pdf), OpenWrt-Support-Commit 'SPI NOR 16M' (https://github.com/openwrt/openwrt/commit/af8a059bb41dd7afee49ce9a5d52e9a8e010bbd8); docs3.x-Tabelle vermutlich Kopierfehler"
       },
       {
         "wert": "16 NOR (w25q128) + 128 NAND (Macronix/Mxic SPI-NAND, Block 128 KiB, Page 2048)",
@@ -2484,6 +2485,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Suche 'GL.iNet GL-XE300' + Produktseite a2932608 (GL-XE300C4-E, EC25-E) (2 Abrufe); eine Hardware-Version, Geizhals trennt nur nach LTE-Modul/Region (5 Artikel, Variantenübersicht v128650); Datenblatt nach roh.geizhals, 11 Felder ergaenzt; keine Netzteildaten/Leistung/Antennen bei Geizhals; EAN/ASIN nicht genannt"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 16 NOR + 128 NAND gilt; '8 + 128 NAND' (gl_docs_v3_spec) widerlegt durch zwei Bootlogs (w25q128, 16 MiB), Datenblatt und OpenWrt-Commit"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

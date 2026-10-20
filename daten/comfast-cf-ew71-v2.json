@@ -184,6 +184,12 @@
       "stand": "grep 2026-10-20",
       "abgerufen": "2026-10-20",
       "bemerkung": "kein Protokoll und kein Dokument zu CF-EW71 / COMFAST"
+    },
+    "openwrt_pr_2822_ew72": {
+      "url": "https://github.com/openwrt/openwrt/pull/2822",
+      "stand": "PR 2020-03-10 (macromorgan), CF-EW72",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Spezifikationsblock des CF-EW72 (QCA9531+QCA9886, 128MB RAM, mit dmesg-Gist); im EW71-v2-Commit ee3a6adc wortgleich übernommen (Ethernet/PoE-, RAM-, Flash-, LED-Zeilen)"
     }
   },
   "roh": {
@@ -717,7 +723,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/comfast/comfast_cf-ew71_v2",
         "stand": "Seitenrevision 2026-04-30 02:31",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "",
+        "widerlegt": "ToH-Wert (Seite angelegt 2024-12-19, nach dem Commit) übernimmt die 128 MB aus Commit ee3a6adc, dessen Spezifikationsblock aus dem CF-EW72-PR https://github.com/openwrt/openwrt/pull/2822 kopiert ist; Hersteller-Datenblatt V2 https://www.encomfast.com/wp-content/uploads/2025/12/CF-EW71-V2.pdf nennt DDR 64MB. Prüfung 2026-10-20"
       },
       {
         "wert": 128,
@@ -725,7 +732,8 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/ee3a6adc6c22b2388eb3901bda335fd145c7355e",
         "stand": "Commit 2024-01-09 (Autor), gemergt 2024-04-14",
         "sicherheit": "hoch",
-        "bemerkung": "Commit-Text \"128MB RAM\" (Gerät des Autors)"
+        "bemerkung": "Commit-Text \"128MB RAM\" (Gerät des Autors)",
+        "widerlegt": "Zahl stammt nicht aus einer Messung am EW71 v2: der Spezifikationsblock im Commit ee3a6adc ist wortgleich aus dem CF-EW72-PR https://github.com/openwrt/openwrt/pull/2822 übernommen (EW72 = 128 MB, anderes Gerät); im PR https://github.com/openwrt/openwrt/pull/14459 wurden nur LEDs, Taster, MACs und Flashen getestet. Hersteller-Datenblatt eigens für V2 (https://www.encomfast.com/wp-content/uploads/2025/12/CF-EW71-V2.pdf, gegenüber v1 überarbeitet) nennt DDR 64MB, ebenso v1-Datenblatt und Hersteller-Quellcode 2019. Kein Bootlog/Chipfoto gefunden; 64 MB ist zudem die vorsichtige Annahme. Prüfung 2026-10-20"
       },
       {
         "wert": 64,
@@ -733,7 +741,7 @@
         "beleg": "https://www.encomfast.com/wp-content/uploads/2025/12/CF-EW71-V2.pdf",
         "stand": "PDF erstellt 2019-12-19, geändert 2025-06-24 (online seit 2025-12-08)",
         "sicherheit": "hoch",
-        "bemerkung": "\"DDR: 64MB\" - Widerspruch zu OpenWrt-Commit und ToH (128 MB)"
+        "bemerkung": "\"DDR: 64MB\" - Widerspruch zu OpenWrt-Commit und ToH (128 MB); gilt nach Prüfung 2026-10-20 (128 MB aus EW72-Text übernommen, s. openwrt_pr_2822_ew72)"
       },
       {
         "wert": 64,
@@ -1861,6 +1869,14 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "heise-Suchen \"Comfast CF-EW71\" und \"Comfast EW71\" (2 Abrufe) liefern nur unscharfe Fremdtreffer (Notebooks u. a.), kein COMFAST-Artikel; Webarchiv-CDX für geizhals.de war schon zuvor leer"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ram_mb: 64 MB (Hersteller-Datenblatt V2); 128 MB aus OpenWrt-Commit/ToH widerlegt, weil wortgleich aus CF-EW72-PR 2822 kopiert, nicht gemessen"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

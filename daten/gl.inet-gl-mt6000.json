@@ -1040,7 +1040,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/gl.inet/gl.inet_gl-mt6000",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "\"8192 eMMC\""
+        "bemerkung": "\"8192 eMMC\" | Prüfung 2026-10-20: Nennkapazität des eMMC (Hersteller 8 GB), gilt als Flash-Größe dieses Geräts; 7475 im OpenWrt-Wiki ist dieselbe eMMC als vom Kernel gemeldete Größe"
       },
       {
         "wert": 8192,
@@ -1048,7 +1048,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/fe10f9743935d6986e80e7cb082469e6bc5a03f0",
         "stand": "Commit 2023-09-24 (Autor), gemergt 2023-09-28",
         "sicherheit": "mittel",
-        "bemerkung": "8GB EMMC"
+        "bemerkung": "8GB EMMC | Prüfung 2026-10-20: Nennkapazität des eMMC (Hersteller 8 GB), gilt als Flash-Größe dieses Geräts; 7475 im OpenWrt-Wiki ist dieselbe eMMC als vom Kernel gemeldete Größe"
       },
       {
         "wert": 8192,
@@ -1056,7 +1056,7 @@
         "beleg": "https://static.gl-inet.com/www/images/products/datasheet/mt6000_datasheet_20251103.pdf",
         "stand": "Datenblatt ver. 20251103",
         "sicherheit": "hoch",
-        "bemerkung": "eMMC 8GB"
+        "bemerkung": "eMMC 8GB | Prüfung 2026-10-20: Nennkapazität des eMMC (Hersteller 8 GB), gilt als Flash-Größe dieses Geräts; 7475 im OpenWrt-Wiki ist dieselbe eMMC als vom Kernel gemeldete Größe"
       },
       {
         "wert": 8192,
@@ -1064,7 +1064,7 @@
         "beleg": "https://wikidevi.wi-cat.ru/GL.iNet_GL-MT6000_(Flint_2)",
         "stand": "Seitenrevision 2025-09-01T03:36:00Z",
         "sicherheit": "mittel",
-        "bemerkung": "8 GiB"
+        "bemerkung": "8 GiB | Prüfung 2026-10-20: Nennkapazität des eMMC (Hersteller 8 GB), gilt als Flash-Größe dieses Geräts; 7475 im OpenWrt-Wiki ist dieselbe eMMC als vom Kernel gemeldete Größe"
       },
       {
         "wert": 7475,
@@ -1072,7 +1072,7 @@
         "beleg": "https://openwrt.org/toh/gl.inet/gl-mt6000",
         "stand": "Seitenrevision 2026-10-18 23:00",
         "sicherheit": "mittel",
-        "bemerkung": "lsblk: mmcblk0 7.3G nutzbar (Herstellerangabe 8 GB dezimal); hwdata live nennt nur \"eMMC\" ohne Größe"
+        "bemerkung": "lsblk: mmcblk0 7.3G nutzbar (Herstellerangabe 8 GB dezimal); hwdata live nennt nur \"eMMC\" ohne Größe | Prüfung 2026-10-20: kein Widerspruch zur Nennkapazität 8 GB (Datenblatt https://static.gl-inet.com/www/images/products/datasheet/mt6000_datasheet_20251103.pdf), sondern Messart: lsblk zeigt mmcblk0 7.3G (OpenWrt-Wiki https://openwrt.org/toh/gl.inet/gl-mt6000), also die nutzbare Größe derselben 8-GB-eMMC"
       }
     ],
     "flash_typ": [
@@ -2891,6 +2891,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Produktseite a3168078 abgerufen (1 Abruf), Datenblatt nach roh.geizhals, Felder ergänzt; alte Webarchiv-Daten als geizhals_archiv umbenannt; keine EAN/ASIN auf der Seite"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "flash_mb: 8192 = Nennkapazität eMMC 8 GB (Datenblatt, OpenWrt-Commit), 7475 = von lsblk gemeldete Größe mmcblk0 7.3G derselben eMMC (OpenWrt-Wiki); Messart, kein Variantenunterschied"
+      ],
+      "offen": []
     }
   }
 }

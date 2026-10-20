@@ -1431,7 +1431,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "Dump: ethernet1gports \"-\", widerspricht Live-Datenseite (4)"
+        "bemerkung": "Dump: ethernet1gports \"-\", widerspricht Live-Datenseite (4)",
+        "widerlegt": "Dump-Feld ethernet1gports \"-\" (leer) als 0 gelesen; Live-Datenseite nennt 4 Gbit-Ports, OpenWrt-DTS qcom-ipq4029-ap-303h.dts aktiviert swport2-5 als lan1, lan2, lan3, wan (https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4029-ap-303h.dts)"
       },
       {
         "wert": 4,
@@ -1456,6 +1457,14 @@
         "stand": "Gelistet seit 27.08.2019; abgerufen 2026-10-20",
         "sicherheit": "mittel",
         "bemerkung": ""
+      },
+      {
+        "wert": 4,
+        "quelle": "openwrt_dts_main",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4029-ap-303h.dts",
+        "stand": "OpenWrt main, letzter Commit an der Datei ed21d383 vom 2026-07-22 (Julius Bairaktaris)",
+        "sicherheit": "hoch",
+        "bemerkung": "swport2-5 aktiv: lan1, lan2, lan3, wan (QCA8075 über PSGMII); PT-Durchreiche ist passiv und nicht mitgezählt"
       }
     ],
     "nur_eine_buchse": [
@@ -2567,6 +2576,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "a2121842 (R2X16A) über heise gefunden; Datenblatt-Tabelle (12 Zeilen) nach roh.geizhals, 20 Felder ergänzt; keine Leistung/Gewicht/Montage auf der Seite; keine EAN/ASIN; Bundle a2121849 (R3J26A) nicht abgerufen; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ports_anzahl: 4 gilt (OpenWrt-DTS lan1-3 + wan, ToH-Datenseite, FCC-Handbuch E0-E3); ToH-Dump 0 widerlegt (leeres Feld '-')"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

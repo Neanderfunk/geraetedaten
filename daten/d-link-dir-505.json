@@ -1550,7 +1550,32 @@
         "beleg": "https://www.dlink.com/uk/en/products/dir-505-shareport-mobile-companion",
         "stand": "Live-Seite 2026-10-19 (ohne Datum)",
         "sicherheit": "niedrig",
-        "bemerkung": "1 WAN + 4 LAN, widerspricht allen anderen Quellen"
+        "bemerkung": "1 WAN + 4 LAN, widerspricht allen anderen Quellen",
+        "widerlegt": "Spezifikationstabelle der Produktseite ('1 x Fast Ethernet WAN 4 x Fast Ethernet LAN') ist ein Vorlagenfehler: Datenblaetter A1 und A2 nennen nur 'WAN/LAN 10/100 Ethernet port' (https://ftp.dlink.de/dir/dir-505/documentation/DIR-505_ds_reva2_en_Datasheet.pdf, https://ftp.dlink.de/dir/dir-505/documentation/DIR-505_ds_reva1_en_Datasheet.pdf), OpenWrt-DTS aktiviert nur eth0, eth1 ohne Port (https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9330_dlink_dir-505.dts)"
+      },
+      {
+        "wert": 1,
+        "quelle": "dlink_datenblatt_a1",
+        "beleg": "https://ftp.dlink.de/dir/dir-505/documentation/DIR-505_ds_reva1_en_Datasheet.pdf",
+        "stand": "PDF 2012-05-04",
+        "sicherheit": "hoch",
+        "bemerkung": "\"WAN/LAN 10/100 Ethernet port\" (Rev. A1)"
+      },
+      {
+        "wert": 1,
+        "quelle": "dlink_datenblatt_a2",
+        "beleg": "https://ftp.dlink.de/dir/dir-505/documentation/DIR-505_ds_reva2_en_Datasheet.pdf",
+        "stand": "PDF 2013-04-09 (Ablage 2014-12-15)",
+        "sicherheit": "hoch",
+        "bemerkung": "\"WAN/LAN 10/100 Ethernet port\" (Rev. A2), Gehaeusebild beschriftet einen einzigen \"Internet/LAN Port\""
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/ar9330_dlink_dir-505.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "nur &eth0 als Netzwerkport; &eth1 nur syscon/simple-mfd ohne Port"
       }
     ],
     "nur_eine_buchse": [
@@ -2512,6 +2537,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "a796785 'D-Link DIR-505' ohne Revisionsangabe (A1/A2); nur geizhals_url und roh.geizhals, keine normalisierten Hardwarewerte; keine EAN/ASIN auf der Seite; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ports_anzahl: 1 (WAN/LAN-Port); 5 der Produktseite widerlegt (Vorlagenfehler), Datenblaetter A1/A2 und DTS ergaenzt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

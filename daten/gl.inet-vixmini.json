@@ -1024,7 +1024,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/gl.inet/gl.inet_vixmini?do=export_raw",
         "stand": "Seitenrevision 2026-04-05 01:42",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "2x2:2 = 2 Sende-/Empfangsketten, 2 räumliche Streams; Stream-Zahl 2"
       },
       {
         "wert": "2 Antennen (Antenna 0, Antenna 1)",
@@ -1032,7 +1032,7 @@
         "beleg": "https://fccid.io/2AFIW-300NV3/Operational-Description/17-VIXMINI-AntSpec-4085368",
         "stand": "Erklärung vom 2018-11-26, Exhibit 2018-11-27",
         "sicherheit": "hoch",
-        "bemerkung": "300 Mbit/s laut Hersteller passt zu 2 Streams"
+        "bemerkung": "Antennenzahl, kein Stream-Wert; zwei Antennen an MIMO-Gerät (FCC-Grant Note MO) passen zu 2 Streams. 300 Mbit/s laut Hersteller passt zu 2 Streams"
       },
       {
         "wert": "300 Mbit/s (2.4 GHz)",
@@ -1040,7 +1040,15 @@
         "beleg": "https://www.gl-inet.com/products/vixmini/",
         "stand": "Live-Seite 2026-10-19 (ohne Datum)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Brutto-Datenrate, kein Stream-Wert; 300 Mbit/s 802.11n = 2 Streams bei 40 MHz (Grant: 20/40 MHz)"
+      },
+      {
+        "wert": 2,
+        "quelle": "fcc",
+        "beleg": "https://fccid.io/2AFIW-300NV3",
+        "stand": "Grant 2018-11-27 (Original Equipment)",
+        "sicherheit": "hoch",
+        "bemerkung": "abgeleitet: Grant Note MO (MIMO, mehrere Sendesignale geprüft), 20/40 MHz, Notes '300M Mini Router'; zusammen mit 2 Antennen und 2x2:2 (OpenWrt) = 2 Streams 2.4 GHz"
       }
     ],
     "wlan_5_standard": [
@@ -2046,6 +2054,14 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "heise-Suche 'GL.iNet Vixmini' (62 Treffer, nur andere GL.iNet-Modelle, kein VIXMINI/GL-MT300N-V3) und 'vixmini' (nur Fremdtreffer: Trockner, Koerbe): kein Geizhals-Artikel; 2 Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "wlan_24_streams: 2x2:2 (OpenWrt), 2 Antennen (FCC) und 300 Mbit/s (GL.iNet) widersprechen sich nicht, alle = 2 Streams; Eintrag wert 2 aus FCC-Grant (MIMO, 20/40 MHz) ergänzt"
+      ],
+      "offen": []
     }
   }
 }

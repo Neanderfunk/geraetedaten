@@ -1008,7 +1008,8 @@
         "beleg": "https://www.cudy.com/products/m1800-2-0",
         "stand": "Live-Seite 2026-10-19 (Medien 2024-07)",
         "sicherheit": "hoch",
-        "bemerkung": "\"16 MB (128 Mbit) NOR\" für M1800 2.0 - Widerspruch zu Chip-Aufdruck und OpenWrt; ob es Geräte mit 16-MB-Flash gibt, ist offen"
+        "bemerkung": "\"16 MB (128 Mbit) NOR\" für M1800 2.0 - Widerspruch zu Chip-Aufdruck und OpenWrt; ob es Geräte mit 16-MB-Flash gibt, ist offen",
+        "widerlegt": "Für cudy-m1800 widerlegt: verbaut ist ein 32-MB-Chip cFeon EN25QH256A-104 (256 Mbit; Aufdruck auf dem Platinenfoto https://wikidevi.wi-cat.ru/images/9/92/Cudy_M1800_Bottom.jpeg lesbar), U-Boot meldet 'flash manufacture id: 1c, device id 70 19 / find flash: en25qh256' (https://github.com/openwrt/openwrt/pull/9465#issuecomment-1071084361), OpenWrt-DTS belegt Partitionen bis 0x2000000 (https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_cudy_m1800.dts). Cudy nennt vermutlich nur die von der Firmware genutzten unteren 16 MB (firmware-Partition endet bei 0x1000000); ein 16-MB-Gerät ist nirgends belegt"
       },
       {
         "wert": 16,
@@ -1016,7 +1017,8 @@
         "beleg": "https://www.cudy.com/cdn/shop/files/M1800_Datasheet.pdf?v=1627005318518675264",
         "stand": "PDF ohne Datum (7 Seiten), verlinkt im Download-Center M1800 2.0",
         "sicherheit": "hoch",
-        "bemerkung": "\"128 Mbit (16 MB)\", Datenblatt ohne Versionsangabe"
+        "bemerkung": "\"128 Mbit (16 MB)\", Datenblatt ohne Versionsangabe",
+        "widerlegt": "Für cudy-m1800 widerlegt: verbaut ist ein 32-MB-Chip cFeon EN25QH256A-104 (256 Mbit; Aufdruck auf dem Platinenfoto https://wikidevi.wi-cat.ru/images/9/92/Cudy_M1800_Bottom.jpeg lesbar), U-Boot meldet 'flash manufacture id: 1c, device id 70 19 / find flash: en25qh256' (https://github.com/openwrt/openwrt/pull/9465#issuecomment-1071084361), OpenWrt-DTS belegt Partitionen bis 0x2000000 (https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7621_cudy_m1800.dts). Cudy nennt vermutlich nur die von der Firmware genutzten unteren 16 MB (firmware-Partition endet bei 0x1000000); ein 16-MB-Gerät ist nirgends belegt"
       }
     ],
     "flash_typ": [
@@ -2352,6 +2354,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "Artikel a2949549 (1er) ohne Versionsangabe; nur geizhals_url und roh.geizhals, keine normalisierten Hardwarewerte; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 32 MB gilt (Chip EN25QH256A auf Platinenfoto, U-Boot-Flash-ID 1c 70 19, DTS bis 0x2000000); 16 MB von Cudy-Produktseite und Datenblatt widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

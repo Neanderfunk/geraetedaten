@@ -1712,7 +1712,8 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/19d770d7b91aaca1de18281dea0da8616df34c6c",
         "stand": "Commit 19d770d7 vom 2024-08-04 (Pawel Dembicki), gemergt 2024-08-25",
         "sicherheit": "mittel",
-        "bemerkung": "WIDERSPRUCH: Commit-Nachricht \"64MB SPI-NAND\"; IMAGE_SIZE 65536k und ubi 64 MiB ab 0x5C0000 (Ende 0x45C0000 = ca. 70 MiB, also groesser als 64 MiB) - OpenWrt nutzt nur 64 MiB fuer ubi"
+        "bemerkung": "WIDERSPRUCH: Commit-Nachricht \"64MB SPI-NAND\"; IMAGE_SIZE 65536k und ubi 64 MiB ab 0x5C0000 (Ende 0x45C0000 = ca. 70 MiB, also groesser als 64 MiB) - OpenWrt nutzt nur 64 MiB fuer ubi",
+        "widerlegt": "64 MiB ist nur die Groesse der ubi-Partition, nicht des Chips: die Partitionstabelle im DTS desselben Commits endet bei 0x5C0000+0x4000000=0x45C0000 (ca. 69,75 MiB) und passt nicht auf einen 64-MiB-Chip; Hersteller-Datenblatt V1.0 nennt 128 MB (1 Gbit) https://github.com/openwrt/openwrt/commit/19d770d7b91aaca1de18281dea0da8616df34c6c, https://www.cudy.com/cdn/shop/files/AP3000_Outdoor_V1.0_Datasheet.pdf?v=8442975441069648392"
       },
       {
         "wert": 128,
@@ -1728,7 +1729,8 @@
         "beleg": "https://github.com/openwrt/openwrt/pull/24567",
         "stand": "PR 2026-08-04 (unisequence), am selben Tag ungemergt geschlossen; 5 Kommentare",
         "sicherheit": "niedrig",
-        "bemerkung": "WIDERSPRUCH zu 128 (Hersteller) und 64 (Commit): Behauptung \"Both boards are fitted with an ESMT F50L2G41XA SPI-NAND (256 MiB)\" ohne eigenes Geraet; Kommentar brada4: \"The originals are kind of 128MB\"; PR ungemergt geschlossen"
+        "bemerkung": "WIDERSPRUCH zu 128 (Hersteller) und 64 (Commit): Behauptung \"Both boards are fitted with an ESMT F50L2G41XA SPI-NAND (256 MiB)\" ohne eigenes Geraet; Kommentar brada4: \"The originals are kind of 128MB\"; PR ungemergt geschlossen",
+        "widerlegt": "PR-Autor ohne Geraet (\"Not tested on real hardware\"), Chipangabe F50L2G41XA unbelegt und vom Innen-AP3000-Issue 24565 uebertragen; Kommentar brada4 \"originals are kind of 128MB\"; Hersteller-Datenblatt V1.0 und neuer Flash F50L1G41LC (1 Gbit) = 128 MB https://github.com/openwrt/openwrt/pull/24567, https://www.cudy.com/cdn/shop/files/AP3000_Outdoor_V1.0_Datasheet.pdf?v=8442975441069648392"
       },
       {
         "wert": 256,
@@ -1736,7 +1738,8 @@
         "beleg": "https://github.com/openwrt/openwrt/issues/24565",
         "stand": "Issue 2026-08-04 (champtar), offen, keine Kommentare",
         "sicherheit": "niedrig",
-        "bemerkung": "Bootlog \"spi-nand spi0.0: 256 MiB\" stammt vom AP3000 v1 (innen), nicht vom Outdoor; auf den Outdoor nur uebertragen im Issuetitel"
+        "bemerkung": "Bootlog \"spi-nand spi0.0: 256 MiB\" stammt vom AP3000 v1 (innen), nicht vom Outdoor; auf den Outdoor nur uebertragen im Issuetitel",
+        "widerlegt": "Bootlog \"256 MiB\" stammt laut Issue (Device: Cudy AP3000 v1) vom Innen-AP3000, anderes Modell; fuer den Outdoor kein eigener Beleg, Hersteller-Datenblatt AP3000 Outdoor V1.0 nennt 128 MB https://github.com/openwrt/openwrt/issues/24565, https://www.cudy.com/cdn/shop/files/AP3000_Outdoor_V1.0_Datasheet.pdf?v=8442975441069648392"
       },
       {
         "wert": 128,
@@ -3856,6 +3859,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Suche 1 Treffer a3652198 (Cudy AP3000 Outdoor, AX3000) + Produktseite (2 heise-Abrufe); Modell hat nur Hardware-Version V1.0; Datenblatt (24 Zeilen) nach roh.geizhals, Felder ergaenzt; keine EAN/ASIN auf der Seite"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 128 MB gilt (Hersteller-Datenblatt V1.0, Produktseite, neuer Flash F50L1G41LC = 1 Gbit); 64 widerlegt (nur ubi-Partition, DTS-Layout reicht bis ca. 69,75 MiB); 256 widerlegt (Bootlog vom Innen-AP3000 v1, PR 24567 ungetestet und ungemergt)"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   },
   "blockaden": [

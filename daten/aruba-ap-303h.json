@@ -2122,7 +2122,7 @@
         "beleg": "https://web.archive.org/web/20241003121004/https://www.arubanetworks.com/assets/ds/DS_AP303H.pdf",
         "stand": "DS_HPEANW303HHAP_RVK_040224 a00059878ENW (PDF 2024-04-02), Wayback-Snapshot 2024-10-03",
         "sicherheit": "hoch",
-        "bemerkung": "nominal"
+        "bemerkung": "nominal; gilt als Nennspannung am PoE-Eingang E0 (802.3af/at, Datenblatt \"48 Vdc (nominal)\"); kein Widerspruch zu 57 V, das ist der Höchstwert des Eingangsbereichs"
       },
       {
         "wert": 48,
@@ -2130,7 +2130,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/aruba/aruba_ap-303h",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "'48 VDC, PoE 802.3af/at'"
+        "bemerkung": "'48 VDC, PoE 802.3af/at'; Nennspannung (48 VDC nominal), wie Datenblatt; 57 V am Port ist der zulässige Höchstwert"
       },
       {
         "wert": "802.3at 56 V (nominal), 802.3af 48 V",
@@ -2138,7 +2138,7 @@
         "beleg": "https://fccid.io/Q9DAPINH303/User-Manual/User-Manual-1-of-2-3334542",
         "stand": "Exhibit 3334542 (verfügbar 2017-09-23), Installation Guide 0511xxx-01 November 2016, PDF geändert 2017-01-05",
         "sicherheit": "hoch",
-        "bemerkung": "wörtlich '802.3at 56VDC (nominal) and 802.3af 48VDC (maximum)'"
+        "bemerkung": "wörtlich '802.3at 56VDC (nominal) and 802.3af 48VDC (maximum)'; Nennwerte je PoE-Standard; 802.3at-PSE liefert nominal um 56 V, die Gehäuseaufschrift 57 V ist die Obergrenze"
       },
       {
         "wert": 57,
@@ -2146,7 +2146,7 @@
         "beleg": "https://fccid.io/Q9DAPINH303/External-Photos/External-Photos-3252183",
         "stand": "Exhibit 3252183 (PDF 2016-12-16, 6 Fotos)",
         "sicherheit": "hoch",
-        "bemerkung": "Aufdruck '57V 600mA' an E0 (auch Handbuch Figure 2)"
+        "bemerkung": "Aufdruck '57V 600mA' an E0 (auch Handbuch Figure 2); Höchstwert des Eingangsbereichs: Aufdruck \"57V 600mA\" direkt am Port E0 (FCC-Außenfoto Geräterückseite angesehen, ebenso Handbuch Figure 2); entspricht der 802.3af/at-PD-Obergrenze 57 V, Nennspannung 48 V"
       }
     ],
     "poe_strom_a": [
@@ -3122,6 +3122,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "a1634614 (JY678A); Datenblatt nach roh.geizhals, 16 Felder ergänzt, keine EAN/ASIN; FIPS/TAA-Variante a1634596 nicht abgerufen"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "poe_spannung_v: 48 V = Nennspannung PoE-Eingang (Datenblatt, ToH, Handbuch 802.3af), 57 V = Höchstwert laut Aufdruck '57V 600mA' an E0 (FCC-Außenfoto angesehen); 56 V = 802.3at nominal (Handbuch)"
+      ],
+      "offen": []
     }
   }
 }

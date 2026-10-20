@@ -707,7 +707,8 @@
         "beleg": "https://deviwiki.com/wiki/Aruba_Networks",
         "stand": "Listenseite, Revision nicht ermittelt",
         "sicherheit": "niedrig",
-        "bemerkung": "Widerspruch; nur Listeneintrag ohne Geräteseite"
+        "bemerkung": "Widerspruch; nur Listeneintrag ohne Geräteseite",
+        "widerlegt": "Falsch: OpenWrt-DTS (Commit d2a75029) memory@0 reg <0x41500000 0x1eb00000> endet bei 0x60000000 = 512 MiB ab 0x40000000; Commit nennt 2x Winbond W632GU6MB-12 (je 2 Gbit = 256 MiB) = 512 MiB, Werks-Bootlog 491 MB nutzbar. DeviWiki-Listeneintrag ohne Geraeteseite, nennt auch falschen SoC (IPQ8064 statt IPQ8068). https://github.com/openwrt/openwrt/commit/d2a75029a5f8e54e1fd2f252f73b9a430a030116"
       }
     ],
     "flash_mb": [
@@ -1205,7 +1206,7 @@
         "beleg": "https://web.archive.org/web/20200108133650/https://www.arubanetworks.com/assets/ds/DS_AP320Series.pdf",
         "stand": "Datenblatt DS_AP320Series_SK_100919 (PDF 2019-10-09), Archivkopie 2020-01-08",
         "sicherheit": "hoch",
-        "bemerkung": "48 Vdc nominal (802.3af/at)"
+        "bemerkung": "48 Vdc (nominal) 802.3af or 802.3at PoE laut Datenblatt; Nennangabe fuer dieselbe Norm-Speisung wie die 56 V im Installationshandbuch. 802.3af/at-PD akzeptiert etwa 37-57 V am Eingang, beide Werte liegen darin."
       },
       {
         "wert": 56,
@@ -1213,7 +1214,7 @@
         "beleg": "https://fccid.io/Q9DAPIN0324325/User-Manual/User-Manual-2681981",
         "stand": "Exhibit 2015-07-21 (veroeffentlicht 2016-01-13), Installation Guide 0511816-03, Mai 2015",
         "sicherheit": "hoch",
-        "bemerkung": "Handbuch: 'accepting 56V DC (nominal)'"
+        "bemerkung": "Handbuch: 'accepting 56V DC (nominal)' fuer 802.3af/at-Quellen; Aruba nennt hier die typische PSE-Ausgangsspannung (802.3at), Datenblatt 48 V nominal. Kein Widerspruch: beides 802.3af/at, PD-Eingangsbereich etwa 37-57 V."
       }
     ],
     "dc_buchse": [
@@ -1776,6 +1777,16 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "vorhandener Permalink a1377619 direkt abgerufen (1 heise-Abruf): IAP-325 Instant RW/JW325A, Hardware AP-325, nur hw v1; 16 Datenblattzeilen nach roh.geizhals, 16 Felder ergänzt; keine EAN/ASIN auf der Seite; Widerspruch PoE an einer statt zwei Buchsen"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ram_mb: 512 MB gilt (OpenWrt-DTS memory@0 bis 0x60000000, 2x W632GU6MB = 2x 256 MiB); DeviWiki 256 widerlegt"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: 48 V (Datenblatt) und 56 V (FCC-Installationshandbuch) sind beides Nennangaben fuer 802.3af/at-PoE, PD-Eingangsbereich etwa 37-57 V"
+      ],
+      "offen": []
     }
   }
 }

@@ -884,7 +884,8 @@
         "beleg": "https://github.com/openwrt/openwrt/pull/17551",
         "stand": "PR 2025-01-09 bis 2025-03-13 (Kommentare)",
         "sicherheit": "niedrig",
-        "bemerkung": "Inteno-Gerät eines Entwicklers meldete 128 MB; vermutlich Vorserie HW rev 0.3"
+        "bemerkung": "Inteno-Gerät eines Entwicklers meldete 128 MB; vermutlich Vorserie HW rev 0.3",
+        "widerlegt": "Gilt nicht fuer Seriengeraete dieses Images: der Melder (msandber) bestaetigt im selben PR nach Hinweis auf Vorserie 'HW rev 0.3', dass sein 128-MB-Geraet nicht zaehlt ('my bad'); Seriengeraet V1.0 (Typenschild-Foto https://openwrt.org/_media/media/inteno/pulse_ex400_bottom.jpg) zeigt im OEM-Bootlog 'DRAM: 256 MiB' (https://openwrt.org/toh/inteno/pulse_ex400), OpenWrt-Commit nennt 256 MB (https://github.com/openwrt/openwrt/commit/dd0c2839a81bb3c5067be99b02ec5c0adff93ac6). Quelle: https://github.com/openwrt/openwrt/pull/17551 Kommentare 2025-02-05"
       }
     ],
     "flash_mb": [
@@ -1836,6 +1837,15 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "kein Geizhals-Artikel: heise-Suche \"Genexis Pulse EX400\" nur Fremdtreffer (Corsair, Casio, Tetra ...), \"Genexis\" 0 Artikel, \"Inteno\" nur Intenso; Providergeraet ohne Handelslistung. 3 Abrufe preisvergleich.heise.de"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ram_mb: 256 gilt; 128 widerlegt (Vorserie HW rev 0.3, Melder im PR 17551 selbst zurueckgezogen; Serie V1.0 Bootlog DRAM 256 MiB)"
+      ],
+      "beide_richtig": [],
+      "offen": [],
+      "notiz": "Platinenfoto pulse_ex400__inside_pcb_1.jpg angesehen: NAND ESMT F59L2G81A (2 Gbit = 256 MB) lesbar, RAM-Chip unter Kuehlkoerper verdeckt, kein Aufdruck ablesbar"
     }
   }
 }

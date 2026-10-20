@@ -998,7 +998,8 @@
         "beleg": "https://openwrt.org/toh/aruba/ap-303",
         "stand": "Seitenrevision 2025-11-03 06:14 (dimmadont, \"warranty\")",
         "sicherheit": "mittel",
-        "bemerkung": "nutzbar für OpenWrt/Gluon: UBI-Partition 'ubi' (aos1) 32 MiB, Overlay ca. 20 MiB laut OpenWrt-Bootlog des AP-303; aos0 und aruba-ubifs bleiben Stock"
+        "bemerkung": "nutzbar für OpenWrt/Gluon: UBI-Partition 'ubi' (aos1) 32 MiB, Overlay ca. 20 MiB laut OpenWrt-Bootlog des AP-303; aos0 und aruba-ubifs bleiben Stock",
+        "widerlegt": "32 MiB ist nur die UBI-Partition aos1/'ubi' (0x2000000-0x4000000), die OpenWrt/Gluon nutzt, nicht die Flashgroesse. Eingebaut sind 128 MiB NAND Macronix MX30LF1G18AC (OEM-Bootlog des AP11 auf derselben Wikiseite 'NAND: 128 MiB', Screenshot https://forum.freifunk.net/uploads/default/original/3X/0/2/0229b78b19c4849ed447d61ea71788e57f1d7c5f.jpeg) plus 4 MiB SPI-NOR MX25R3235F, siehe https://github.com/openwrt/openwrt/commit/102c8c55f217606cdbdc9a449667e034676b3e75 und https://openwrt.org/toh/aruba/ap-303"
       }
     ],
     "flash_typ": [
@@ -2277,6 +2278,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Artikel a2121727 (R2W96A) über heise gefunden; Datenblatt-Tabelle nach roh.geizhals, 14 Felder ergänzt; keine Angaben zu Netzteil, Leistung, Gewicht, Montage; keine EAN/ASIN; 2 heise-Abrufe."
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 128 MiB NAND gilt; 32 (nutzbare UBI-Partition) widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

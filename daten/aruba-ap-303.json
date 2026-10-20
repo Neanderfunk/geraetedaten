@@ -1975,7 +1975,8 @@
         "beleg": "https://openwrt.org/toh/aruba/ap-303",
         "stand": "Seitenrevision 2025-11-03 06:14 (dimmadont, \"warranty\")",
         "sicherheit": "mittel",
-        "bemerkung": "nutzbar fuer OpenWrt: UBI-Partition 'ubi' (aos1) 32 MiB, Overlay-UBIFS 20 MiB laut Bootlog; aos0 und aruba-ubifs bleiben Stock"
+        "bemerkung": "nutzbar fuer OpenWrt: UBI-Partition 'ubi' (aos1) 32 MiB, Overlay-UBIFS 20 MiB laut Bootlog; aos0 und aruba-ubifs bleiben Stock",
+        "widerlegt": "32 MiB ist nur die UBI-Partition aos1/'ubi', die OpenWrt nutzt, nicht die Flashgroesse. Eingebaut sind 128 MiB NAND Macronix MX30LF1G18AC (Bootlog derselben Wikiseite 'NAND: 128 MiB', 'nand: 128 MiB, SLC') plus 4 MiB SPI-NOR MX25R3235F, siehe https://github.com/openwrt/openwrt/commit/102c8c55f217606cdbdc9a449667e034676b3e75 und https://openwrt.org/toh/aruba/ap-303"
       }
     ],
     "flash_typ": [
@@ -2802,7 +2803,7 @@
         "beleg": "https://sysnetcenter.com/documents/DS_AP303Series.pdf",
         "stand": "PDF erstellt 2019-10-09 (InDesign), Kopie auf Server Last-Modified 2023-11-20",
         "sicherheit": "hoch",
-        "bemerkung": "nominal, 802.3af"
+        "bemerkung": "nominal, 802.3af; Nennspannung 802.3af (Norm-Eingangsbereich 37-57 V am PD); der Gehaeuseaufdruck 57 V ist die Obergrenze, kein Widerspruch"
       },
       {
         "wert": 48,
@@ -2810,7 +2811,7 @@
         "beleg": "https://fccid.io/Q9DAPIN0303/User-Manual/User-Manual-20180120-v1-APIN0303-User-Manual-3745931",
         "stand": "Exhibit 3745931, Installation Guide Rev01 November 2017 (PDF erstellt 2017-12-14, geaendert 2017-12-21)",
         "sicherheit": "hoch",
-        "bemerkung": "'accepting 48Vdc (nominal)'"
+        "bemerkung": "'accepting 48Vdc (nominal)'; Nennspannung 802.3af (Norm-Eingangsbereich 37-57 V am PD); der Gehaeuseaufdruck 57 V ist die Obergrenze, kein Widerspruch"
       },
       {
         "wert": 48,
@@ -2818,7 +2819,7 @@
         "beleg": "https://adtek.vn/wp-content/uploads/2025/01/HPE-Aruba-Networking-303-Series-Access-Points-Data-Sheet-a00059875enw.pdf",
         "stand": "DS_hpeanwAP303Series_AG_110823 a00059875enw (PDF 2023-11-08, (c) 2023), Kopie auf Server Last-Modified 2025-01-22",
         "sicherheit": "hoch",
-        "bemerkung": "nominal"
+        "bemerkung": "nominal; Nennspannung 802.3af (Norm-Eingangsbereich 37-57 V am PD); der Gehaeuseaufdruck 57 V ist die Obergrenze, kein Widerspruch"
       },
       {
         "wert": 57,
@@ -2826,7 +2827,7 @@
         "beleg": "https://fccid.io/Q9DAPIN0303/External-Photos/External-Photos-20180120-v1-APIN0303-External-Photo-3745919",
         "stand": "Exhibit 3745919 (PDF 2017-12-21, Author JackyLee, 4 Seiten, 8 Fotos)",
         "sicherheit": "hoch",
-        "bemerkung": "Gehaeuseaufdruck \"ENET 57V ⎓ 350mA\" = Hoechstwert am Eingang, nicht Nennspannung"
+        "bemerkung": "Gehaeuseaufdruck \"ENET 57V ⎓ 350mA\" = Hoechstwert am Eingang, nicht Nennspannung; gilt als zulaessige Hoechstspannung am ENET-Eingang (802.3af-PD bis 57 V), Nennwert laut Datenblatt 48 V; Aufdruck im Foto c2_label nachgesehen 2026-10-20"
       }
     ],
     "poe_ausgang": [
@@ -3895,6 +3896,16 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Suche 'Aruba AP-303' -> a1809501 (JZ320A, AP-303 RW); Modell ohne Hardware-Versionen; 14 Datenblattzeilen uebernommen, keine EAN/ASIN; Widersprueche USB-A und Mobilfunkmodem; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 128 MiB NAND (+4 MiB SPI-NOR); 32 aus openwrt_wiki widerlegt, das ist nur die von OpenWrt genutzte UBI-Partition"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: 48 V = Nennspannung 802.3af (Datenblatt, Handbuch), 57 V = Hoechstwert laut Gehaeuseaufdruck 'ENET 57V 350mA' (FCC-Aussenfotos)"
+      ],
+      "offen": []
     }
   }
 }

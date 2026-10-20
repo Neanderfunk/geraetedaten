@@ -1555,7 +1555,8 @@
         "beleg": "https://www.cudy.com/cdn/shop/files/AP3000_AP3000_P_1.0_Datasheet_20250207.pdf?v=16540237407190805563",
         "stand": "Dateiname 20250207, PDF erstellt 2026-02-05; 7 Seiten",
         "sicherheit": "hoch",
-        "bemerkung": "Datenblatt nennt \"3T3R (3x3 MIMO)\" - widerspricht Produktseite, FCC und WikiDevi (2 Streams, dritte Antenne umschaltbar)"
+        "bemerkung": "Datenblatt nennt \"3T3R (3x3 MIMO)\" - widerspricht Produktseite, FCC und WikiDevi (2 Streams, dritte Antenne umschaltbar)",
+        "widerlegt": "3T3R im Datenblatt ist die Zahl der Ketten/Antennen (3 PCB-Antennen), nicht der Spatial Streams: dasselbe Datenblatt nennt '4-Stream Dual-Band' (2+2), die Produktseite https://www.cudy.com/products/ap3000-1-0 '2 Spatial Streams with 3T3R', der FCC-MPE-Report https://fccid.io/2APRGAP01/RF-Exposure-Info/MPE-Report-7189188 'one of the three antennas is used as an intelligent switching antenna ... NSS2'; AX3000 = 2402 Mbit/s bei 160 MHz = 2 Streams. Gilt: 2"
       },
       {
         "wert": 2,
@@ -2171,7 +2172,7 @@
         "beleg": "https://www.cudy.com/products/ap3000-1-0",
         "stand": "Shopify updated_at 2026-10-20T03:29:33+08:00 (Produkt angelegt 2024-03-05)",
         "sicherheit": "hoch",
-        "bemerkung": "\"Passive PoE: 48-57V\""
+        "bemerkung": "\"Passive PoE: 48-57V\"; zulaessiger Eingangsbereich fuer passives PoE laut Spezifikation (Datenblatt: 'Passive PoE: 48 ~ 57V'); daneben 802.3at/af"
       },
       {
         "wert": "48 (passiv, 0.32 A)",
@@ -2179,7 +2180,7 @@
         "beleg": "https://fccid.io/2APRGAP01/Label/ID-Label-Location-Info-7189219",
         "stand": "Exhibit 2024-03-22 (Zeichnung Cudy V1 vom 2023-08-17, PDF 2024-03-07)",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Nennwert auf dem Typenschild ('Passive PoE: 48V/0.32A', daneben 'PoE: 802.3at'); liegt im Bereich 48-57 V der Herstellerangabe, beiliegender PoE-Adapter (AP3000_P) liefert 48 V passiv"
       },
       {
         "wert": "48 (passiv, 0.32 A)",
@@ -2187,7 +2188,7 @@
         "beleg": "https://openwrt.org/_media/media/cudy/ap3000-v1_label.jpeg",
         "stand": "Foto auf der Wiki-Seite (Upload-Datum nicht ermittelt; Seite Stand 2026-08-28)",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "Nennwert auf dem Typenschild ('Passive PoE: 48V/0.32A', daneben 'PoE: 802.3at'); liegt im Bereich 48-57 V der Herstellerangabe, beiliegender PoE-Adapter (AP3000_P) liefert 48 V passiv"
       }
     ],
     "dc_buchse": [
@@ -3220,6 +3221,16 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Suche + Produktseite a3718150 (ohne PoE Injektor); a3718349 (inkl. PoE Injektor, AP3000_P) als zweiter Link aus der Trefferliste; keine EAN/ASIN auf der Seite; 2 Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_5_streams: 2 gilt; Datenblatt-Wert 3 (3T3R = Ketten/Antennen) widerlegt"
+      ],
+      "beide_richtig": [
+        "poe_spannung_v: 48 V passiv = Nennwert Typenschild, 48-57 V passiv = zulaessiger Eingangsbereich laut Hersteller"
+      ],
+      "offen": []
     }
   }
 }

@@ -1554,7 +1554,16 @@
         "beleg": "https://preisvergleich.heise.de/gl-inet-ar300m-gl-ar300m-lite-a1662271.html",
         "stand": "Gelistet seit 26.07.2017; abgerufen 2026-10-20",
         "sicherheit": "mittel",
-        "bemerkung": "Widerspruch: andere Quellen 1 Buchse"
+        "bemerkung": "Widerspruch: andere Quellen 1 Buchse",
+        "widerlegt": "Lite hat nur eine RJ45-Buchse (WAN); zweiter Port bei der Lite nicht bestueckt: Gehaeuse- und Platinenfoto zeigen eine Buchse, die zweite Position ist abgedeckt bzw. nur Loetaugen (https://openwrt.org/_media/media/gl.inet/gl-ar300m-lite/ar300m-lite.pcb-front.jpeg); DTS legt GMAC1 still (https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9531_glinet_gl-ar300m-lite.dts); Hersteller 1WAN (https://www.gl-inet.com/products/gl-ar300m/). Geizhals-Wert vermutlich vom GL-AR300M uebernommen"
+      },
+      {
+        "wert": 1,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ath79/dts/qca9531_glinet_gl-ar300m-lite.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "\"Disable\" unpopulated GMAC1: nur eth0 aktiv; 02_network setzt eth0 als LAN; Platinenfoto (openwrt_wiki_fotos) zeigt eine RJ45-Buchse"
       }
     ],
     "nur_eine_buchse": [
@@ -2526,6 +2535,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Suche 'GL.iNet GL-AR300M-Lite' -> einziger Treffer a1662271 (Herstellernummer GL-AR300M-Lite); Modell nur v1; 15 Datenblattzeilen uebernommen, keine EAN/ASIN; Widersprueche 2 Ports (WAN+LAN) und microSD-Kartenleser; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ports_anzahl: 1 (geizhals 2 widerlegt: Fotos zeigen eine Buchse, DTS GMAC1 unbestueckt, Hersteller 1WAN)"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

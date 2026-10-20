@@ -1169,7 +1169,8 @@
         "beleg": "https://web.archive.org/web/20170121173622/http://www.asus.com/Networking/RTAC51U/specifications/",
         "stand": "Webarchiv-Abzug 2017-01-21",
         "sicherheit": "niedrig",
-        "bemerkung": "ASUS-Spezifikation \"8 MB Flash\" - widerspricht Commit, DTS und Chipangabe (S25FL128S = 128 Mbit)"
+        "bemerkung": "ASUS-Spezifikation \"8 MB Flash\" - widerspricht Commit, DTS und Chipangabe (S25FL128S = 128 Mbit)",
+        "widerlegt": "Flash ist 16 MB: OpenWrt-DTS Partition firmware endet bei 0x1000000 (https://github.com/openwrt/openwrt/blob/main/target/linux/ramips/dts/mt7620a_asus_rt-ac5x.dtsi), Support-Commit/LEDE-PR 1085 nennt Spansion S25FL128SAIF00 = 128 Mbit (https://github.com/lede-project/source/pull/1085); ASUS-Angabe 8 MB falsch"
       }
     ],
     "flash_chip": [
@@ -1403,7 +1404,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/asus/asus_rt-ac51u",
         "stand": "Seitenrevision 2026-05-01 15:34",
         "sicherheit": "niedrig",
-        "bemerkung": "ToH-Kommentar \"2x2:2 MIMO on both bands\" - widerspricht Hersteller, DeviWiki und Antennenausstattung (1 interne 5-GHz-Antenne)"
+        "bemerkung": "ToH-Kommentar \"2x2:2 MIMO on both bands\" - widerspricht Hersteller, DeviWiki und Antennenausstattung (1 interne 5-GHz-Antenne)",
+        "widerlegt": "5 GHz ist 1x1: Funkchip MT7610EN ist ein 1T1R-Chip (DeviWiki-Infobox https://deviwiki.com/wiki/ASUS_RT-AC51U), ASUS-Spezifikation 5 GHz 1 x 1, Platinenfoto (https://deviwiki.com/wiki/File:Asusac51u_5.jpg) zeigt nur einen 5-GHz-Antennenanschluss (ANT1); ToH-Kommentar \"2x2:2 on both bands\" falsch"
       },
       {
         "wert": 1,
@@ -2555,6 +2557,15 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "Permalink a1228303 aus Webarchiv direkt über heise abgerufen (1 Abruf); Datenblatt nach roh.geizhals, 13 Felder ergänzt; keine EAN/ASIN auf der Seite, Leistungsaufnahme/Netzteil nicht angegeben"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 16 MB (DTS, Commit, Chip S25FL128S); ASUS-Angabe 8 MB widerlegt",
+        "wlan_5_streams: 1 (MT7610EN 1T1R, ASUS 1x1, Platinenfoto); ToH-Kommentar 2x2 widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

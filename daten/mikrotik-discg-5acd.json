@@ -1574,7 +1574,8 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/d1f1e5269ed992e6fc30d575b43b0913c9e58ca2",
         "stand": "Commit 2020-10-23 (Autor Roger Pueyo Centelles), gemergt 2021-04-29",
         "sicherheit": "mittel",
-        "bemerkung": "Angabe für SXTsq 5 ac"
+        "bemerkung": "Angabe für SXTsq 5 ac",
+        "widerlegt": "Wert gilt fuer das SXTsq 5 ac (Commit nennt nur dieses Geraet; MikroTik gibt SXTsq 5 ac und LDF 5 ac mit 10-28 V an). Fuer die DISC Lite5 ac nennt MikroTik einheitlich 'Passive PoE input 10 - 30 V': https://cdn.mikrotik.com/web-assets/product_files/DISCplusLite5plusac_180227.pdf, https://manual.mikrotik.com/hardware/disc-lite5-ac/, Hardwaretabelle https://deviwiki.com/wiki/MikroTik/Hardware (DISC Lite5 ac 10-30 V, SXTsq 5 ac 10-28 V)"
       },
       {
         "wert": "...0-28",
@@ -1582,7 +1583,16 @@
         "beleg": "https://fccid.io/TV7LHG5ACD/Internal-Photos/Internal-photos-3620773",
         "stand": "Exhibit 2018-04-25 (MiCOM Labs MIKO60, 2017-09-25)",
         "sicherheit": "niedrig",
-        "bemerkung": "Siebdruck 'POE in ?0-28V' auf der LHG_5ac-Modulplatine, erste Ziffer im Foto nicht lesbar"
+        "bemerkung": "Siebdruck 'POE in ?0-28V' auf der LHG_5ac-Modulplatine, erste Ziffer im Foto nicht lesbar",
+        "widerlegt": "Kein Produktwert: Siebdruck auf der gemeinsamen LHG_5ac-Platine (auch in SXTsq 5 ac / LDF 5 ac mit 10-28 V verbaut), erste Ziffer unleserlich. Fuer die DISC Lite5 ac gibt MikroTik 10-30 V an: https://cdn.mikrotik.com/web-assets/product_files/DISCplusLite5plusac_180227.pdf, https://manual.mikrotik.com/hardware/disc-lite5-ac/"
+      },
+      {
+        "wert": "10-30",
+        "quelle": "deviwiki",
+        "beleg": "https://deviwiki.com/wiki/MikroTik/Hardware",
+        "stand": "Seitenrevision 2019-02-25T23:33:42Z",
+        "sicherheit": "mittel",
+        "bemerkung": "Zeile 'DISC Lite5 ac': Passive PoE 10-30 V; dieselbe Tabelle nennt fuer SXTsq 5 ac und LDF 5 ac (gleiche Platine) 10-28 V"
       }
     ],
     "poe_ausgang": [
@@ -2215,6 +2225,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Suche 'MikroTik DISC Lite5 ac' -> ein Treffer a2772640 (RBDiscG-5acD), Produktseite ausgewertet (2 Abrufe); Datenblatt nach roh.geizhals, 11 Felder ergaenzt; keine EAN/ASIN auf der Seite"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "poe_spannung_v: 10-30 V gilt (MikroTik Broschuere/Handbuch/Produktseite fuer DISC Lite5 ac); 10-28 (openwrt_git, SXTsq 5 ac) und Siebdruck ...0-28 (fcc_innenfotos) widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

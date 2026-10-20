@@ -708,7 +708,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/2902b0a6fb98a79a1c54f447579095f64604332d",
         "stand": "Commit 2024-10-27 (Autor), gemergt 2024-10-27",
         "sicherheit": "mittel",
-        "bemerkung": "2GB LPDDR4X"
+        "bemerkung": "2GB LPDDR4X; Gilt für den ursprünglichen R3S (nur 2 GB) und die 2-GB-Variante des R3S LTS"
       },
       {
         "wert": 2048,
@@ -716,7 +716,7 @@
         "beleg": "http://web.archive.org/web/20250108122732/https://www.friendlyelec.com/index.php?route=product%2Fproduct&product_id=303",
         "stand": "Wayback-Snapshot 2025-01-08 12:27:32",
         "sicherheit": "hoch",
-        "bemerkung": "R3S 2406: nur 2 GB angeboten"
+        "bemerkung": "R3S 2406: nur 2 GB angeboten; Gilt für den ursprünglichen R3S (2406); die 1-GB-Variante gibt es nur beim R3S LTS"
       },
       {
         "wert": 2048,
@@ -724,7 +724,7 @@
         "beleg": "https://openwrt.org/toh/friendlyelec/nanopi_r3s",
         "stand": "Seitenrevision 2026-07-24 04:09",
         "sicherheit": "mittel",
-        "bemerkung": "Bootlog: Memory 2018252K/2095104K available"
+        "bemerkung": "Bootlog: Memory 2018252K/2095104K available; Gilt für den ursprünglichen R3S bzw. die 2-GB-Variante; RAM-Größe erkennt der Bootloader, ein Image für beide"
       },
       {
         "wert": [
@@ -735,7 +735,7 @@
         "beleg": "https://www.friendlyelec.com/index.php?route=product/product&product_id=311",
         "stand": "Shopseite abgerufen 2026-10-19 (ohne Datum)",
         "sicherheit": "hoch",
-        "bemerkung": "R3S LTS: Kaufoption 1 GB oder 2 GB"
+        "bemerkung": "R3S LTS: Kaufoption 1 GB oder 2 GB; 1 GB nur beim R3S LTS; Image friendlyarm_nanopi-r3s läuft laut https://forum.openwrt.org/t/openwrt-support-for-nanopi-r3s-lts/237172 auch auf dem LTS"
       },
       {
         "wert": [
@@ -746,7 +746,7 @@
         "beleg": "https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R3S",
         "stand": "Revision 28314 vom 2026-07-28T06:13:45Z (beschreibt R3S LTS)",
         "sicherheit": "hoch",
-        "bemerkung": "\"1GB/2GB LPDDR4X\""
+        "bemerkung": "\"1GB/2GB LPDDR4X\"; 1 GB/2 GB beschreibt den R3S LTS; der ursprüngliche R3S hatte nur 2 GB"
       },
       {
         "wert": 1024,
@@ -754,7 +754,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/12fa348112fe66b1d326e5c3ba2be7d7ecf95881",
         "stand": "Commit 2026-09-09 (Autor), gemergt 2026-09-13; Backport openwrt-25.12 2026-09-26",
         "sicherheit": "mittel",
-        "bemerkung": "Commit nennt ausdrücklich \"a 1 GiB NanoPi R3S\""
+        "bemerkung": "Commit nennt ausdrücklich \"a 1 GiB NanoPi R3S\"; Gilt für die 1-GB-Variante, die es nur als R3S LTS gibt (ursprünglicher R3S laut archivierter Shopseite nur 2 GB); gleiches Image, siehe https://forum.openwrt.org/t/openwrt-support-for-nanopi-r3s-lts/237172"
       }
     ],
     "ram_typ": [
@@ -1578,6 +1578,14 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "Kein Geizhals-Artikel: heise-Suche 'FriendlyElec NanoPi R3S' nur Fremdtreffer (NanoPi NEO u. a.), 'NanoPi R3S' nur 17 nicht kategorisierte Händlerangebote ohne Artikelnummer, alle R3S LTS (youyeetoo, APBVIHL); 2 Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "ram_mb: 2048 (R3S, R3S LTS 2 GB) und 1024 (nur R3S LTS 1 GB) gelten beide fürs Image friendlyarm_nanopi-r3s; LTS läuft mit demselben Image (https://forum.openwrt.org/t/openwrt-support-for-nanopi-r3s-lts/237172), RAM-Größe erkennt der Bootloader"
+      ],
+      "offen": []
     }
   }
 }

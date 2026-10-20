@@ -837,7 +837,8 @@
         "beleg": "https://openwrt.org/toh/friendlyarm/nanopi_r2s?do=export_raw",
         "stand": "Seitenrevision 2026-05-21 11:24",
         "sicherheit": "niedrig",
-        "bemerkung": "OEM-Bootlog im OpenWrt-Wiki meldet DDR 'Size=768MB' und U-Boot 'DRAM: 736 MiB'; Herkunft des Geraets unklar, nicht als Variante belegt"
+        "bemerkung": "OEM-Bootlog im OpenWrt-Wiki meldet DDR 'Size=768MB' und U-Boot 'DRAM: 736 MiB'; Herkunft des Geraets unklar, nicht als Variante belegt",
+        "widerlegt": "Fuer dieses Image 1024 MB: Hersteller nennt nur 1 GB DDR4 (https://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2S), Schaltplan V1.1 zeigt zwei DDR4-x16-Bausteine, Chips 2x Samsung K4A4G165WE (je 4 Gbit = 512 MB, https://wikidevi.wi-cat.ru/NanoPi_R2S), OpenWrt-Bootlog derselben Wiki-Seite 1046528K. Die im OEM-Log gedruckte Geometrie (32 bit, Col 10, Row 15, 4 Baenke x 2 Bankgruppen) ergibt selbst 1024 MB; 768 MB/736 MiB ist eine Einzelmessung des OEM-DDR-Loaders an einem Geraet unklarer Herkunft, keine Hardware-Variante (https://openwrt.org/toh/friendlyarm/nanopi_r2s?do=export_raw)"
       }
     ],
     "flash_typ": [
@@ -1651,6 +1652,14 @@
       "datum": "2026-10-20",
       "zuordnung": "nicht_gefunden",
       "ergebnis": "heise-Suche \"FriendlyElec NanoPi R2S\" nur unscharfe Fremdtreffer; Suche \"NanoPi R2S\" liefert 8 nicht kategorisierte Zubehoer-Angebote (Gehaeuse/Kuehler), keinen Geizhals-Artikel fuer das Board. 2 heise-Abrufe."
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ram_mb: 1024 MB gilt; 768 MB (OEM-Bootlog im OpenWrt-Wiki) widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

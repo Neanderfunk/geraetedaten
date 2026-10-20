@@ -878,7 +878,8 @@
         "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/mediatek/dts/mt7981b-cudy-ap3000wall-v1.dts",
         "stand": "Branch main am 2026-10-19; Historie: afad4c71f8 (2025-12-31), 53fa04d261 (2026-04-27, mtd-eeprom -> nvmem)",
         "sicherheit": "mittel",
-        "bemerkung": "nutzbar unter OpenWrt: ubi-Partition 0x4000000 = 64 MiB, IMAGE_SIZE 65536k; die Bauteilgröße ist 128 MiB"
+        "bemerkung": "nutzbar unter OpenWrt: ubi-Partition 0x4000000 = 64 MiB, IMAGE_SIZE 65536k; die Bauteilgröße ist 128 MiB",
+        "widerlegt": "64 MiB ist nur die UBI-Partition 'ubi' (reg <0x5c0000 0x4000000>, IMAGE_SIZE 65536k), die OpenWrt/Gluon nutzt, nicht die Flashgroesse. Eingebaut sind 128 MiB SPI-NAND: Bootlog im OpenWrt-Commit 'spi-nand spi0.0: 128 MiB' https://github.com/openwrt/openwrt/commit/afad4c71f8d558ca86b997781ca0236f321cf1e9, Hersteller-Datenblatt '128 MB (1 Gbit) NAND' https://www.cudy.com/cdn/shop/files/AP3000_Wall_Datasheet.pdf?v=17160777851264458301"
       },
       {
         "wert": 128,
@@ -2131,6 +2132,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "a3718473 \"Cudy AP3000 Wall, AX3000\" (gelistet seit 09.02.2026), Datenblatt nach roh.geizhals, Felder ergaenzt; keine EAN/ASIN auf der Seite; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 128 MiB SPI-NAND gilt (Commit-Bootlog, Datenblatt); 64 aus openwrt_dts widerlegt, das ist nur die von OpenWrt genutzte UBI-Partition"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

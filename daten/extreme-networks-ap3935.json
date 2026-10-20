@@ -644,7 +644,8 @@
         "beleg": "https://openwrt.org/toh/extreme_networks/ws-ap3935i",
         "stand": "Seitenrevision 2026-10-14 17:36",
         "sicherheit": "mittel",
-        "bemerkung": "U-Boot 'DRAM: 1004 MiB' (nutzbar), Kernel 'Memory: 992508K/1028096K'"
+        "bemerkung": "U-Boot 'DRAM: 1004 MiB' (nutzbar), Kernel 'Memory: 992508K/1028096K'",
+        "widerlegt": "1004 MiB ist der nutzbare Bereich (U-Boot 'DRAM: 1004 MiB', Kernel 1028096K), nicht der bestückte RAM: der memory-Knoten im DTS reicht von 0x41400000 bis 0x80000000, also bis zum Ende des 1-GiB-Fensters ab 0x40000000; die untersten 20 MiB sind ausgenommen. Bestückt sind 1024 MB (NANYA NT5CC256M16DP-DI, 4 Gbit je Chip, laut https://github.com/openwrt/openwrt/commit/3aef61060e3f51aa43fe494d5ff173e81dd43003; https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/dts/qcom-ipq8068-ap3935.dts)"
       },
       {
         "wert": 1004,
@@ -652,7 +653,8 @@
         "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/dts/qcom-ipq8068-ap3935.dts",
         "stand": "Branch main, letzte Änderung der Datei 2026-09-28",
         "sicherheit": "hoch",
-        "bemerkung": "memory reg 0x3ec00000 ab 0x41400000"
+        "bemerkung": "memory reg 0x3ec00000 ab 0x41400000",
+        "widerlegt": "reg <0x41400000 0x3ec00000> beschreibt nur den an Linux übergebenen Bereich; er endet bei 0x80000000 = Ende des 1-GiB-Fensters ab 0x40000000, die untersten 20 MiB sind ausgenommen. Bestückt sind 1024 MB (https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/dts/qcom-ipq8068-ap3935.dts; RAM-Chip laut https://github.com/openwrt/openwrt/commit/3aef61060e3f51aa43fe494d5ff173e81dd43003)"
       },
       {
         "wert": 1024,
@@ -660,7 +662,15 @@
         "beleg": "https://forum.openwrt.org/t/adding-openwrt-support-for-extreme-network-ap3935i/87234",
         "stand": "Thread 87234, Beiträge 2021-01-31 bis 2026-10-19 (103 Beiträge, 101 gelesen)",
         "sicherheit": "niedrig",
-        "bemerkung": "#62 '1GB RAM'"
+        "bemerkung": "#62 '1GB RAM'; bestückter RAM, durch DTS-Adressbereich bestätigt"
+      },
+      {
+        "wert": 1024,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq806x/dts/qcom-ipq8068-ap3935.dts",
+        "stand": "Branch main, letzte Änderung der Datei 2026-09-28",
+        "sicherheit": "hoch",
+        "bemerkung": "[abgeleitet] memory@0 reg <0x41400000 0x3ec00000> endet bei 0x80000000: RAM-Fenster 0x40000000-0x7FFFFFFF = 1024 MiB bestückt, davon 1004 MiB an Linux übergeben. Passt zu RAM-Chip NANYA NT5CC256M16DP-DI (4 Gbit = 512 MB je Chip, Commit 3aef610), also 2 Chips am 32-bit-DDR3-Bus des IPQ806x. FCC-Innenfotos (fccid.io/QXO-4411AC, 17 Bilder) zeigen nur Antennen/Kabel, keine Platine."
       }
     ],
     "ram_typ": [
@@ -1912,6 +1922,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "zwei Artikel gefunden: a1740807 (31013/WS-AP3935i-ROW, interne Antennen) und a1740812 (31015/WS-AP3935e-ROW, externe Antennen), beide ohne Angebote; Datenblatt ohne Leistungsaufnahme, Netzteil, Maße, Gewicht, EAN"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ram_mb: 1024 MB bestückt; 1004 (openwrt_wiki, openwrt_dts) widerlegt = nutzbarer Bereich nach 20 MiB Reservierung"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

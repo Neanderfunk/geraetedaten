@@ -1633,7 +1633,7 @@
         "beleg": "https://web.archive.org/web/20201111212454id_/https://www.arubanetworks.com/assets/ds/DS_AP360Series.pdf",
         "stand": "DS_AP360Series_SK_080220 a00059872enw (PDF 2020-08-05, (c) 2020), Archivkopie web.archive.org vom 2020-11-11",
         "sicherheit": "hoch",
-        "bemerkung": "\"48 Vdc (nominal) 802.3af-compliant source\""
+        "bemerkung": "\"48 Vdc (nominal) 802.3af-compliant source\"; gilt als Nennspannung einer 802.3af-Quelle (typisch 48 V, Norm-Bereich PSE 44-57 V). Beide Angaben beschreiben dieselbe 802.3af-Speisung, kein Widerspruch in der Sache"
       },
       {
         "wert": 57,
@@ -1641,7 +1641,7 @@
         "beleg": "https://fccid.io/Q9DAPEX0365367/User-Manual/TempConfidential-User-Manual-2017-01-22-3266625",
         "stand": "Exhibit 3266625, Installation Guide 0511953-01 October 2016 (PDF geändert 2017-01-22)",
         "sicherheit": "hoch",
-        "bemerkung": "\"accepts 57V DC (802.3af) nominal as a standard powered device\" - Widerspruch zum Datenblatt, beides 802.3af-Bereich"
+        "bemerkung": "\"accepts 57V DC (802.3af) nominal as a standard powered device\"; 57 V ist die Obergrenze des 802.3af-Bereichs (PSE 44-57 V), als 'nominal' unpraezise formuliert; das Handbuch nennt sonst nur '802.3af-compliant source'. Typenschild (FCC-Label 4012117-01) ohne Spannungsangabe"
       }
     ],
     "poe_ausgang": [
@@ -2402,6 +2402,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "a1704308 HPE Aruba AP-365 (JX966A), Modell ohne Hardware-Versionen; Datenblatt nach roh.geizhals, 21 Felder ergänzt; keine EAN/ASIN auf der Seite; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "poe_spannung_v: 48 V (Datenblatt, Nennwert) und 57 V (FCC-Handbuch, Obergrenze) liegen beide im 802.3af-Bereich 44-57 V"
+      ],
+      "offen": []
     }
   }
 }

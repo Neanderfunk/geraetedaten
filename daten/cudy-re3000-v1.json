@@ -1242,7 +1242,8 @@
         "beleg": "https://www.cudy.com/products/re3000-1-0",
         "stand": "Live-Seite 2026-10-19 (ohne Datum)",
         "sicherheit": "hoch",
-        "bemerkung": "Herstellerangabe \"3 Spatial Streams\" (vermutlich inkl. Zero-wait-DFS-Kette); Datenrate 2402 Mbps entspricht 2 Streams bei 160 MHz"
+        "bemerkung": "Herstellerangabe \"3 Spatial Streams\" (vermutlich inkl. Zero-wait-DFS-Kette); Datenrate 2402 Mbps entspricht 2 Streams bei 160 MHz",
+        "widerlegt": "Marketingangabe zaehlt die dritte, nur empfangende Kette des MT7976CN fuer Zero-wait DFS (Hintergrund-Radar-Scan) mit; fuer Daten 2 TX/3 RX, 2 Spatial Streams. Die eigene Datenrate 2402 Mbps (https://www.cudy.com/products/re3000-1-0) entspricht genau 2 SS bei HE160 MCS11 (2 x 1201 Mbps), 3 SS waeren 3603 Mbps. Gleichlautend ToH (\"5GHz: 2X3:2 MIMO\", https://openwrt.org/toh/hwdata/cudy/cudy_re3000_v1) und WikiDevi (wi2_sstreams=2, \"2x2 + Zero-wait DFS\", https://wikidevi.wi-cat.ru/Cudy_RE3000)."
       }
     ],
     "wlan_klasse": [
@@ -2176,6 +2177,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "Suche + Produktseite a3158176 über heise (2 Abrufe); Artikel 'Cudy AX3000 Range Extender (RE3000)' ohne Versionsangabe, daher nur geizhals_url und roh.geizhals, keine normalisierten Hardwarewerte; keine EAN/ASIN auf der Seite"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_5_streams: 2 gilt; Cudy-Produktseite '3 Spatial Streams' widerlegt (3. Kette nur RX fuer Zero-wait DFS, 2402 Mbps = 2 SS bei 160 MHz)"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

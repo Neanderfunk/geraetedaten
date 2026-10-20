@@ -2231,7 +2231,7 @@
         "beleg": "https://www.cudy.com/products/ap1300-outdoor-1-0",
         "stand": "Shopify updated_at 2026-10-20T08:48:29+08:00 (Produkt angelegt 2024-03-28)",
         "sicherheit": "hoch",
-        "bemerkung": "Power Input \"Passive PoE: 24-57V\"; Feature-Text dagegen \"48-57 V Passive PoE\" - Widerspruch auf derselben Seite"
+        "bemerkung": "Power Input \"Passive PoE: 24-57V\"; Feature-Text dagegen \"48-57 V Passive PoE\" - Widerspruch auf derselben Seite; Pruefung 2026-10-20: 24-57 V gilt fuer passives PoE (+4,5/-7,8); daneben 802.3af/at (Datenblatt \"802.3af/at PoE\", https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609), kein Widerspruch zum 802.3af-Eintrag"
       },
       {
         "wert": {
@@ -2241,7 +2241,7 @@
         "beleg": "https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609",
         "stand": "PDF ohne Datumsangabe (Dateiname AP1300_Outdoor_V1.0_Datasheet), 2 Seiten",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Pruefung 2026-10-20: 24-57 V gilt fuer passives PoE (+4,5/-7,8); daneben 802.3af/at (Datenblatt \"802.3af/at PoE\", https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609), kein Widerspruch zum 802.3af-Eintrag"
       },
       {
         "wert": {
@@ -2251,7 +2251,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/8fb644e9e8416df0d7051d8e35b57b06a030c05e",
         "stand": "Commit 8fb644e9 vom 2025-10-01 (Luis Mita), gemergt 2025-11-09 (main); Backport c6e59d06 nach openwrt-24.10 am 2025-11-29",
         "sicherheit": "hoch",
-        "bemerkung": ""
+        "bemerkung": "Pruefung 2026-10-20: 37-57 V ist der 802.3af-Bereich am Geraet; zusaetzlich passives PoE 24-57 V laut Hersteller-Datenblatt https://www.cudy.com/cdn/shop/files/AP1300_Outdoor_V1.0_Datasheet.pdf?v=2570640243007429609 - beide Angaben richtig, verschiedene Speisearten"
       },
       {
         "wert": "24-57",
@@ -2259,7 +2259,7 @@
         "beleg": "https://wikidevi.wi-cat.ru/Cudy_AP1300_Outdoor",
         "stand": "Revision 387060 vom 2025-01-02T18:34:53Z (Olek210)",
         "sicherheit": "mittel",
-        "bemerkung": "pwr_v ohne Unterscheidung passiv/802.3"
+        "bemerkung": "pwr_v ohne Unterscheidung passiv/802.3; Pruefung 2026-10-20: 24-57 V entspricht dem passiven PoE laut Hersteller-Datenblatt; 802.3af (37-57 V) zusaetzlich moeglich"
       },
       {
         "wert": {
@@ -3361,6 +3361,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise a3827286 (gelistet seit 27.05.2026), Titel ohne Version, Cudy hat nur V1.0; Datenblatt uebernommen, keine EAN/ASIN; Widersprueche: LAN 100 Mbit/s und passiv 24 V, Gewicht 415 g"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "poe_spannung_v: 24-57 V = passives PoE (Pins +4,5/-7,8), 37-57 V = 802.3af/at; Datenblatt nennt beide Speisearten"
+      ],
+      "offen": []
     }
   }
 }

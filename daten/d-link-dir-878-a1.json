@@ -163,6 +163,12 @@
       "stand": "Gelistet seit 25.10.2017; abgerufen 2026-10-20",
       "abgerufen": "2026-10-20",
       "bemerkung": "Artikel ohne Angabe der Hardware-Version (DIR-878 gibt es als A1 und R1); Seite nennt 4 Dokumente (Datenblatt Stand 25.10.2017, Bedienungsanleitung Stand 02.05.2019), nicht abgerufen"
+    },
+    "fcc_testbericht_dts": {
+      "url": "https://fccid.io/KA2IR878A1/Test-Report/Test-Report-DTS-3348837",
+      "stand": "FCC-Testbericht RF170113E13 (DTS), eingereicht 2017-04-07",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "Seite 9: MIMO-Tabelle 2.4 GHz und 5 GHz, alle Modi 4TX/4RX, VHT bis Nss=4; Chain 0-3 je Antennensatz (Seite 8)"
     }
   },
   "roh": {
@@ -1463,7 +1469,8 @@
         "beleg": "https://support.dlink.com/resource/PRODUCTS/DIR-878/REVA/DIR-878_REVA_DATASHEET_1.00_EN_US.pdf",
         "stand": "Datenblatt \"Updated Feb 16, 2017\" (PDF 2017-04-27)",
         "sicherheit": "hoch",
-        "bemerkung": "\"3 x 3 Streaming\", 600 Mbps"
+        "bemerkung": "\"3 x 3 Streaming\", 600 Mbps",
+        "widerlegt": "Hardware hat 4 Sende-/Empfangsketten je Band: FCC-Testbericht RF170113E13 S. 9 nennt für 2.4 GHz durchgehend 4TX/4RX und VHT bis Nss=4 (https://fccid.io/KA2IR878A1/Test-Report/Test-Report-DTS-3348837); \"3 x 3\" ist die Werbeangabe der Klasse AC1900 (600/1300 Mbps)"
       },
       {
         "wert": 3,
@@ -1471,7 +1478,8 @@
         "beleg": "https://support.dlink.com/resource/PRODUCTS/DIR-878/REVA/DIR-878_REVA_MANUAL_v1.02_WW.pdf",
         "stand": "Handbuch v1.02 WW (PDF 2020-02-17, geaendert 2021-03-24)",
         "sicherheit": "hoch",
-        "bemerkung": "\"3 x 3 MIMO antenna configuration\", bis 600 Mbps"
+        "bemerkung": "\"3 x 3 MIMO antenna configuration\", bis 600 Mbps",
+        "widerlegt": "Hardware hat 4 Sende-/Empfangsketten je Band: FCC-Testbericht RF170113E13 S. 9 nennt für 2.4 GHz durchgehend 4TX/4RX und VHT bis Nss=4 (https://fccid.io/KA2IR878A1/Test-Report/Test-Report-DTS-3348837); \"3 x 3\" ist die Werbeangabe der Klasse AC1900 (600/1300 Mbps)"
       },
       {
         "wert": "4x4:3",
@@ -1479,7 +1487,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/d-link/d-link_dir-878_a1",
         "stand": "Seitenrevision 2025-12-24 03:50",
         "sicherheit": "mittel",
-        "bemerkung": "WLAN Comments: \"4x4:3 MIMO both channels\""
+        "bemerkung": "WLAN Comments: \"4x4:3 MIMO both channels\"; als Kettenzahl gilt 4 (FCC-Testbericht 4TX/4RX), \":3\" folgt der D-Link-Werbeangabe, FCC testete bis Nss=4"
       },
       {
         "wert": 4,
@@ -1487,7 +1495,7 @@
         "beleg": "https://deviwiki.com/wiki/D-Link_DIR-878_rev_A1",
         "stand": "Seitenrevision 2019-07-05T00:49:21Z",
         "sicherheit": "mittel",
-        "bemerkung": "4 TX/4 RX, 4 Streams; Begründung: FCC-Testberichte zeigen vier Streams"
+        "bemerkung": "4 TX/4 RX, 4 Streams; Begründung: FCC-Testberichte zeigen vier Streams; bestätigt durch FCC-Testbericht RF170113E13 S. 9 (4TX/4RX, Nss bis 4)"
       },
       {
         "wert": 3,
@@ -1495,7 +1503,8 @@
         "beleg": "https://wikidevi.wi-cat.ru/D-Link_DIR-878_rev_A1",
         "stand": "Seitenrevision 2021-04-26T10:42:14Z",
         "sicherheit": "mittel",
-        "bemerkung": "4 TX/4 RX, 3 Streams"
+        "bemerkung": "4 TX/4 RX, 3 Streams",
+        "widerlegt": "Wert 3 = Spatial Streams nach D-Link-Werbeangabe; Ketten je Band sind 4 (WikiDevi selbst: 4 TX/4 RX; FCC-Testbericht RF170113E13 S. 9: 4TX/4RX, Nss bis 4, https://fccid.io/KA2IR878A1/Test-Report/Test-Report-DTS-3348837)"
       },
       {
         "wert": "bis zu 4x4",
@@ -1503,7 +1512,15 @@
         "beleg": "https://openwrt.org/toh/d-link/dir-878_a1",
         "stand": "Seitenrevision 2025-11-03 06:21",
         "sicherheit": "mittel",
-        "bemerkung": "\"capable of up to 4x4 streams on each band\""
+        "bemerkung": "\"capable of up to 4x4 streams on each band\"; bestätigt durch FCC-Testbericht RF170113E13 S. 9 (4TX/4RX, Nss bis 4)"
+      },
+      {
+        "wert": 4,
+        "quelle": "fcc_testbericht_dts",
+        "beleg": "https://fccid.io/KA2IR878A1/Test-Report/Test-Report-DTS-3348837",
+        "stand": "FCC-Testbericht RF170113E13, Seite 9",
+        "sicherheit": "hoch",
+        "bemerkung": "2.4 GHz: alle Modi 4TX/4RX, 802.11ac bis Nss=4"
       }
     ],
     "wlan_5_streams": [
@@ -1513,7 +1530,8 @@
         "beleg": "https://support.dlink.com/resource/PRODUCTS/DIR-878/REVA/DIR-878_REVA_DATASHEET_1.00_EN_US.pdf",
         "stand": "Datenblatt \"Updated Feb 16, 2017\" (PDF 2017-04-27)",
         "sicherheit": "hoch",
-        "bemerkung": "\"3 x 3 Streaming\", 1300 Mbps"
+        "bemerkung": "\"3 x 3 Streaming\", 1300 Mbps",
+        "widerlegt": "Hardware hat 4 Sende-/Empfangsketten je Band: FCC-Testbericht RF170113E13 S. 9 nennt für 5 GHz durchgehend 4TX/4RX und VHT bis Nss=4 (https://fccid.io/KA2IR878A1/Test-Report/Test-Report-DTS-3348837); \"3 x 3\" ist die Werbeangabe der Klasse AC1900 (600/1300 Mbps)"
       },
       {
         "wert": 3,
@@ -1521,7 +1539,8 @@
         "beleg": "https://support.dlink.com/resource/PRODUCTS/DIR-878/REVA/DIR-878_REVA_MANUAL_v1.02_WW.pdf",
         "stand": "Handbuch v1.02 WW (PDF 2020-02-17, geaendert 2021-03-24)",
         "sicherheit": "hoch",
-        "bemerkung": "\"3 x 3 MIMO antenna configuration\", bis 1300 Mbps"
+        "bemerkung": "\"3 x 3 MIMO antenna configuration\", bis 1300 Mbps",
+        "widerlegt": "Hardware hat 4 Sende-/Empfangsketten je Band: FCC-Testbericht RF170113E13 S. 9 nennt für 5 GHz durchgehend 4TX/4RX und VHT bis Nss=4 (https://fccid.io/KA2IR878A1/Test-Report/Test-Report-DTS-3348837); \"3 x 3\" ist die Werbeangabe der Klasse AC1900 (600/1300 Mbps)"
       },
       {
         "wert": "4x4:3",
@@ -1529,7 +1548,7 @@
         "beleg": "https://openwrt.org/toh/hwdata/d-link/d-link_dir-878_a1",
         "stand": "Seitenrevision 2025-12-24 03:50",
         "sicherheit": "mittel",
-        "bemerkung": "WLAN Comments: \"4x4:3 MIMO both channels\""
+        "bemerkung": "WLAN Comments: \"4x4:3 MIMO both channels\"; als Kettenzahl gilt 4 (FCC-Testbericht 4TX/4RX), \":3\" folgt der D-Link-Werbeangabe, FCC testete bis Nss=4"
       },
       {
         "wert": 4,
@@ -1537,7 +1556,7 @@
         "beleg": "https://deviwiki.com/wiki/D-Link_DIR-878_rev_A1",
         "stand": "Seitenrevision 2019-07-05T00:49:21Z",
         "sicherheit": "mittel",
-        "bemerkung": "4 TX/4 RX, 4 Streams"
+        "bemerkung": "4 TX/4 RX, 4 Streams; bestätigt durch FCC-Testbericht RF170113E13 S. 9 (4TX/4RX, Nss bis 4)"
       },
       {
         "wert": 3,
@@ -1545,7 +1564,8 @@
         "beleg": "https://wikidevi.wi-cat.ru/D-Link_DIR-878_rev_A1",
         "stand": "Seitenrevision 2021-04-26T10:42:14Z",
         "sicherheit": "mittel",
-        "bemerkung": "4 TX/4 RX, 3 Streams"
+        "bemerkung": "4 TX/4 RX, 3 Streams",
+        "widerlegt": "Wert 3 = Spatial Streams nach D-Link-Werbeangabe; Ketten je Band sind 4 (WikiDevi selbst: 4 TX/4 RX; FCC-Testbericht RF170113E13 S. 9: 4TX/4RX, Nss bis 4, https://fccid.io/KA2IR878A1/Test-Report/Test-Report-DTS-3348837)"
       },
       {
         "wert": "bis zu 4x4",
@@ -1553,7 +1573,15 @@
         "beleg": "https://openwrt.org/toh/d-link/dir-878_a1",
         "stand": "Seitenrevision 2025-11-03 06:21",
         "sicherheit": "mittel",
-        "bemerkung": "\"capable of up to 4x4 streams on each band\"; Tag vth160"
+        "bemerkung": "\"capable of up to 4x4 streams on each band\"; Tag vth160; bestätigt durch FCC-Testbericht RF170113E13 S. 9 (4TX/4RX, Nss bis 4)"
+      },
+      {
+        "wert": 4,
+        "quelle": "fcc_testbericht_dts",
+        "beleg": "https://fccid.io/KA2IR878A1/Test-Report/Test-Report-DTS-3348837",
+        "stand": "FCC-Testbericht RF170113E13, Seite 9",
+        "sicherheit": "hoch",
+        "bemerkung": "5 GHz: alle Modi 4TX/4RX, 802.11ac bis Nss=4"
       }
     ],
     "wlan_klasse": [
@@ -2751,6 +2779,15 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "heise-Suche 1 Treffer a1716923 \"D-Link EXO AC1900 DIR-878\" ohne Versionsangabe (A1/R1 existieren): nur geizhals_url + roh.geizhals, keine normalisierten Werte; keine EAN/ASIN auf der Seite; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "wlan_24_streams: 4 (FCC-Testbericht 4TX/4RX, Nss bis 4); 3 aus Datenblatt/Handbuch/WikiDevi widerlegt",
+        "wlan_5_streams: 4 (FCC-Testbericht 4TX/4RX, Nss bis 4); 3 aus Datenblatt/Handbuch/WikiDevi widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

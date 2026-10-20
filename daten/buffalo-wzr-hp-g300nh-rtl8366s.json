@@ -921,7 +921,7 @@
         "beleg": "https://github.com/openwrt/openwrt/commit/bc356de2850f14629cb1301be719772fa1212e72",
         "stand": "Commit 2020-09-07 (Autor), gemergt 2021-03-22",
         "sicherheit": "hoch",
-        "bemerkung": "3x3:2 2.4 GHz 802.11bgn"
+        "bemerkung": "3x3:2 2.4 GHz 802.11bgn; 3 Sende-/3 Empfangsketten (3x3), \":2\" = 2 Spatial Streams (max. 300 Mbit/s); stimmt mit 3x3 MIMO/3T3R ueberein"
       },
       {
         "wert": "3x3:2",
@@ -929,7 +929,7 @@
         "beleg": "https://deviwiki.com/wiki/Buffalo_WZR-HP-G300NH_(r1,_RTL8366SR)",
         "stand": "Seitenrevision 2019-07-05T00:45:03Z",
         "sicherheit": "mittel",
-        "bemerkung": "txchains 3, rxchains 3, sstreams 2"
+        "bemerkung": "txchains 3, rxchains 3, sstreams 2; 3x3 = 3 Ketten je Richtung, 2 Spatial Streams; deckt sich mit 3T3R (Buffalo) und 3x3 MIMO (OpenWrt-Wiki)"
       },
       {
         "wert": "3x3 MIMO",
@@ -937,7 +937,7 @@
         "beleg": "https://openwrt.org/toh/buffalo/wzr-hp-g300h",
         "stand": "Seitenrevision 2026-09-08 22:54",
         "sicherheit": "mittel",
-        "bemerkung": ""
+        "bemerkung": "3x3 = 3 Sende-/3 Empfangsketten; Zahl der Spatial Streams (2) hier nicht genannt, kein Widerspruch zu 3x3:2"
       },
       {
         "wert": "3T3R",
@@ -945,7 +945,7 @@
         "beleg": "https://www.buffalo.jp/product/detail/wzr-hp-g300nh.html",
         "stand": "Live-Seite 2026-10-19 (Produkt: Erscheinen 2009-03)",
         "sicherheit": "hoch",
-        "bemerkung": "3本送信、3本受信"
+        "bemerkung": "3本送信、3本受信; 3T3R = 3 Sende-/3 Empfangsketten; Spatial Streams (2) nicht genannt, kein Widerspruch zu 3x3:2"
       }
     ],
     "wlan_5_standard": [
@@ -1664,6 +1664,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "Artikel a431166 (Buffalo Wireless-N Nfiniti High Power WZR-HP-G300NH) ohne Versionsangabe, deckt beide Switch-Varianten ab; nur Link und roh.geizhals, keine normalisierten Werte; keine EAN/ASIN auf der Seite; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [],
+      "beide_richtig": [
+        "wlan_24_streams: 3x3:2, 3x3 MIMO und 3T3R meinen dasselbe - 3 Sende-/3 Empfangsketten im 2.4-GHz-Band (AR9132 + AR9103), 2 Spatial Streams; nur Schreibweise verschieden, Wert fuer Ketten = 3"
+      ],
+      "offen": []
     }
   }
 }

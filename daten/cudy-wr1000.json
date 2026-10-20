@@ -150,6 +150,18 @@
       "abgerufen": "2026-10-20",
       "datei": "cache/cudy-wr1000/geizhals/produkt_a2077083.html",
       "bemerkung": "über preisvergleich.heise.de (gleiche Artikelnummer); einziger Treffer der Suche \"Cudy WR1000\"; Artikel ohne Hardware-Version, v2 existiert (OpenWrt-Forum 56965), daher keine normalisierten Hardwarewerte"
+    },
+    "fcc_testbericht": {
+      "url": "https://fccid.io/2APRGWR1000V1/Test-Report/RF-Test-Report-1-3952108",
+      "stand": "Testbericht 18070575-FCC-R1, ausgestellt 2018-06-27, Exhibit 2018-08-06",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "S. 7 Input Power: Adapter S12A12-120A100-CJ, Input AC 100-240 V 0.5 A, Output DC 12 V 1 A"
+    },
+    "fcc_aussenfotos": {
+      "url": "https://fccid.io/2APRGWR1000V1/External-Photos/External-Photos-3952148",
+      "stand": "Fotobericht 18070575-FCC-E, PDF 2018-07-18, Exhibit 2018-08-06",
+      "abgerufen": "2026-10-20",
+      "bemerkung": "4 Seiten angesehen: Lieferumfang mit Steckernetzteil, Tischgerät, Unterseite mit Wandaufhängung, Prüfmuster ohne Typenschild; Netzteilfoto: SWITCHING ADAPTER MODEL S12A12-120A100-C.., OUTPUT 12 V"
     }
   },
   "roh": {
@@ -1893,7 +1905,8 @@
         "beleg": "https://fccid.io/2APRGWR1000V1/Label/Label-and-Label-Location-3952149",
         "stand": "Exhibit 2018-08-06 (PDF 2018-07-24)",
         "sicherheit": "hoch",
-        "bemerkung": "\"Power: 9V ⎓ 800mA\" (Zulassungsmuster 2018)"
+        "bemerkung": "\"Power: 9V ⎓ 800mA\" (Zulassungsmuster 2018)",
+        "widerlegt": "Typenschild-Zeichnung im selben FCC-Antrag nennt 9 V/800 mA, das Prüfmuster lief aber am beiliegenden Netzteil S12A12-120A100-CJ mit DC 12 V/1 A (Testbericht 18070575-FCC-R1 S. 7, https://fccid.io/2APRGWR1000V1/Test-Report/RF-Test-Report-1-3952108; Netzteilfoto https://fccid.io/2APRGWR1000V1/External-Photos/External-Photos-3952148 S. 4); Cudy-Datenblatt 2019 und 2023 ebenfalls 12 V/1 A"
       },
       {
         "wert": 9,
@@ -1901,7 +1914,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1000_v1",
         "stand": "Dump 2026-10-18",
         "sicherheit": "mittel",
-        "bemerkung": "\"9 VDC, 0.8 A\""
+        "bemerkung": "\"9 VDC, 0.8 A\"",
+        "widerlegt": "übernimmt die 9 V/0.8 A der FCC-Typenschild-Zeichnung; Netzteil des Prüfmusters und Cudy-Datenblatt: 12 V/1 A (https://fccid.io/2APRGWR1000V1/Test-Report/RF-Test-Report-1-3952108 S. 7)"
       },
       {
         "wert": 9,
@@ -1909,7 +1923,8 @@
         "beleg": "https://openwrt.org/toh/hwdata/cudy/cudy_wr1000_v1",
         "stand": "Seitenrevision 2026-04-05 01:49",
         "sicherheit": "mittel",
-        "bemerkung": "\"9 VDC, 0.8A via barrel\""
+        "bemerkung": "\"9 VDC, 0.8A via barrel\"",
+        "widerlegt": "übernimmt die 9 V/0.8 A der FCC-Typenschild-Zeichnung; Netzteil des Prüfmusters und Cudy-Datenblatt: 12 V/1 A (https://fccid.io/2APRGWR1000V1/Test-Report/RF-Test-Report-1-3952108 S. 7)"
       },
       {
         "wert": 9,
@@ -1917,7 +1932,8 @@
         "beleg": "https://deviwiki.com/wiki/Cudy_WR1000_V1",
         "stand": "Seitenrevision 2019-07-05T04:15:58Z",
         "sicherheit": "mittel",
-        "bemerkung": "pwr_v=9"
+        "bemerkung": "pwr_v=9",
+        "widerlegt": "Stand 2019, übernimmt die 9 V/0.8 A der FCC-Typenschild-Zeichnung; Netzteil des Prüfmusters und Cudy-Datenblatt: 12 V/1 A (https://fccid.io/2APRGWR1000V1/Test-Report/RF-Test-Report-1-3952108 S. 7)"
       },
       {
         "wert": 12,
@@ -1942,6 +1958,14 @@
         "stand": "Seitenrevision 2024-06-27T19:35:25Z",
         "sicherheit": "mittel",
         "bemerkung": "pwr_v=12 (Änderung 2024-06-17, vorher 9)"
+      },
+      {
+        "wert": 12,
+        "quelle": "fcc_testbericht",
+        "beleg": "https://fccid.io/2APRGWR1000V1/Test-Report/RF-Test-Report-1-3952108",
+        "stand": "Testbericht 18070575-FCC-R1, ausgestellt 2018-06-27",
+        "sicherheit": "hoch",
+        "bemerkung": "Prüfmuster mit beiliegendem Netzteil S12A12-120A100-CJ, Output DC 12 V 1 A (S. 7); Netzteilfoto in den FCC-Außenfotos S. 4 zeigt OUTPUT 12 V"
       }
     ],
     "dc_strom_a": [
@@ -2776,6 +2800,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "heise-Suche \"Cudy WR1000\": einziger Treffer a2077083 \"Cudy WR1000\" (gelistet seit 14.06.2019, ohne Versionsangabe; v2 existiert); 2 Abrufe; nur Permalink + roh.geizhals, keine normalisierten Werte; keine EAN/ASIN auf der Seite, Leistungsaufnahme \"keine Angabe\""
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "dc_spannung_v: 12 V gilt (FCC-Testbericht: Prüfmuster mit beiliegendem 12-V/1-A-Netzteil S12A12-120A100-CJ, Netzteilfoto, Cudy-Datenblatt 2019/2023); 9 V aus der FCC-Typenschild-Zeichnung und deren Kopien (toh, openwrt_hwdata, deviwiki) widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

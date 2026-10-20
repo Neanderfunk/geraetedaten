@@ -1143,7 +1143,16 @@
         "beleg": "https://gzhls.at/blob/ldb/5/0/5/3/0286a57c4367b842d428d112d18a818076ae.pdf",
         "stand": "PDF 2017-11-29 (Asus Computer GmbH, (c) 2018), bei Geizhals Stand 19.12.2017",
         "sicherheit": "hoch",
-        "bemerkung": "Widerspruch: deutsches Datenblatt nennt 'Flash 32 MB'; alle anderen Quellen und der Bootlog nennen 128 MB NAND"
+        "bemerkung": "Widerspruch: deutsches Datenblatt nennt 'Flash 32 MB'; alle anderen Quellen und der Bootlog nennen 128 MB NAND",
+        "widerlegt": "32 MB falsch fuer MAP-AC2200: OEM-Bootlog meldet NAND MX30LF1G18AC 'Density: 128 MByte' (https://openwrt.org/toh/asus/lyra_map-ac2200), OpenWrt-Commit 9ad3967f 'FLASH: 128 MiB (Macronix NAND)' (https://github.com/openwrt/openwrt/commit/9ad3967f140bd6d08796f1ec151b753186b3eb44), DTS-Partitionen enden bei 0x8000000 = 128 MiB, kein zweiter (NOR-)Flash"
+      },
+      {
+        "wert": 128,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4019-map-ac2200.dts",
+        "stand": "Branch main am 2026-10-20 (letzte Aenderung ed21d383, 2026-07-25)",
+        "sicherheit": "hoch",
+        "bemerkung": "abgeleitet: einziger Flash ist &nand, Partition 'ubi' reg <0x400000 0x7c00000> endet bei 0x8000000 = 128 MiB; kein SPI-NOR im DTS"
       }
     ],
     "flash_typ": [
@@ -2971,6 +2980,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "vorhandener Permalink a1713224 direkt abgerufen (1 heise-Abruf); Titel jetzt 'Single, 2er-Pack' (90IG04C0-BO0B20, 'Set bestehend aus 2x Router'); 24 Eintraege nach roh.geizhals (21 Datenblattzeilen ohne Preisupdate, dazu Titel, Herstellernummer, Dokumente), 20 Felder ergaenzt; keine EAN/ASIN; Widerspruch Abmessungen 140 vs. 149.8 mm"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 128 MB NAND gilt, 32 MB (asus_de_datenblatt) widerlegt per OEM-Bootlog MX30LF1G18AC, Commit 9ad3967f und DTS"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

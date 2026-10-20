@@ -1432,7 +1432,8 @@
         "beleg": "https://assets.avm.de/files/docs/fritzwlan/fritzrepeater-3000/fritzrepeater-3000_man_de.pdf",
         "stand": "PDF erstellt 2026-04-23 (95 Seiten, (c) FRITZ! GmbH 2019-2026)",
         "sicherheit": "niedrig",
-        "bemerkung": "zweite Tabelle 'Anschlüsse und Schnittstellen' S. 85 nennt einen Netzwerkanschluss - widerspricht S. 16/84 und Abbildungen, vermutlich Vorlagenrest"
+        "bemerkung": "zweite Tabelle 'Anschlüsse und Schnittstellen' S. 85 nennt einen Netzwerkanschluss - widerspricht S. 16/84 und Abbildungen, vermutlich Vorlagenrest",
+        "widerlegt": "Zweite Tabelle 'Anschlüsse und Schnittstellen' S. 85 ist Vorlagenrest (Ein-Port-Repeater); dieselbe Seite nennt zuvor 'zwei Netzwerkanschlüsse über RJ45-Buchsen', S. 16 zeigt zwei übereinanderliegende RJ45-Buchsen (LAN 1/LAN 2), OpenWrt-DTS hat swport4 = lan1 und swport5 = lan2: https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4019-fritzrepeater-3000.dts"
       },
       {
         "wert": 2,
@@ -1441,6 +1442,14 @@
         "stand": "Gelistet seit 03.09.2018; abgerufen 2026-10-20",
         "sicherheit": "mittel",
         "bemerkung": ""
+      },
+      {
+        "wert": 2,
+        "quelle": "openwrt_dts",
+        "beleg": "https://github.com/openwrt/openwrt/blob/main/target/linux/ipq40xx/dts/qcom-ipq4019-fritzrepeater-3000.dts",
+        "stand": "Branch main am 2026-10-19",
+        "sicherheit": "hoch",
+        "bemerkung": "&swport4 label lan1, &swport5 label lan2 (beide status okay)"
       }
     ],
     "nur_eine_buchse": [
@@ -2322,6 +2331,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Artikel a1879801 (Herstellernummer 20002856, Modell nur HW246); Datenblatt nach roh.geizhals, 13 Felder ergänzt; Abweichungen: Leistung 5.5 W (AVM ca. 6 W), Klasse AC2100 (DeviWiki AC3000); kein EAN/ASIN auf der Seite; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "ports_anzahl: 2 gilt (Handbuch S. 16/85 Tabelle 1, Abbildung zwei RJ45, OpenWrt-DTS lan1/lan2); Wert 1 aus zweiter Handbuch-Tabelle S. 85 widerlegt (Vorlagenrest)"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

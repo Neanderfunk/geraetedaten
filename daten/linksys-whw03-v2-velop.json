@@ -1054,7 +1054,8 @@
         "beleg": "https://web.archive.org/web/20191221055714/https://www.linksys.com/us/p/P-WHW0301/",
         "stand": "Webarchiv-Kopie 2019-12-21",
         "sicherheit": "niedrig",
-        "bemerkung": "\"Memory: 4 GB Flash\" auf der SKU-Seite WHW0301 (2019), die keine Hardware-Versionen trennt; widerspricht allen V2-Quellen (512 MB NAND), gilt vermutlich für die V1"
+        "bemerkung": "\"Memory: 4 GB Flash\" auf der SKU-Seite WHW0301 (2019), die keine Hardware-Versionen trennt; widerspricht allen V2-Quellen (512 MB NAND), gilt vermutlich für die V1",
+        "widerlegt": "Angabe der SKU-Seite WHW0301 (keine Hardware-Versionen getrennt) gilt für die V1 mit 4 GB eMMC (Samsung KLM4G1FEPD, https://github.com/openwrt/openwrt/commit/c90487556229ae264dec33305e5c71c4ef7dd1c5). Die V2 hat 512 MB SLC-NAND: OpenWrt-Support-Commit https://github.com/openwrt/openwrt/commit/9e4ede8344d60d4837e047e9275c21fd2a8f130b (MX30LF4G18AC) und FCC-Innenfotos Q87-08011 https://fccid.io/Q87-08011/Internal-Photos/Photos-Internal-1-pdf-3761366 (Chipaufdruck MXIC MX30LF4G18AC-XKI, 4 Gbit); Zweitbestückung SK hynix H27U4G8F2EDA laut OEM-Bootlog ebenfalls 512 MB"
       }
     ],
     "flash_typ": [
@@ -2078,6 +2079,14 @@
       "datum": "2026-10-20",
       "zuordnung": "mehrere_versionen",
       "ergebnis": "heise-Produktseite a1557604 (WHW0301-EU) ohne Revisionsangabe, gelistet seit 2017 vor V2: nur Link + roh; Webarchiv-Altdaten nach geizhals_webarchiv verschoben; keine EAN/ASIN (gtin leer)"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 512 MB NAND gilt (OpenWrt-Commit 9e4ede83 + FCC-Innenfoto Chipaufdruck MX30LF4G18AC-XKI); 4096 (Linksys-SKU-Seite) widerlegt, gilt für V1 (4 GB eMMC)"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }

@@ -1798,7 +1798,8 @@
         "beleg": "https://forum.openwrt.org/t/mediatek-filogic-add-support-for-cudy-m3000-v2/231357",
         "stand": "Thread 2025-05-01 bis 2025-05-10",
         "sicherheit": "niedrig",
-        "bemerkung": "Erstbeitrag behauptet für V2 256 MB NAND und 3x 1G LAN; widerspricht Cudy-Produktseite M3000 2.0 (128 MB, 1 LAN) - vermutlich falsch"
+        "bemerkung": "Erstbeitrag behauptet für V2 256 MB NAND und 3x 1G LAN; widerspricht Cudy-Produktseite M3000 2.0 (128 MB, 1 LAN) - vermutlich falsch",
+        "widerlegt": "Forum-Erstbeitrag (Behauptung ohne Beleg, nennt auch falsch 3x 1G LAN) - widerlegt durch Cudy-Produktseite M3000 2.0 (128 MB (1 Gbit) NAND, https://www.cudy.com/products/m3000-2-0), Datenblatt V1.0 (128 MB) und FCC-Innenfotos (Flash-Chip ESMT F50L1G41LB = 1 Gbit, https://fccid.io/2APRGMS30/Internal-Photos/Internal-Photos-7431508); ubi-Partition im DTS endet bei 0x45C0000 (~70 MB) passend zu 128 MB NAND; neuere Serien (SN ab 2543) nutzen F50L1G41LC, ebenfalls 1 Gbit"
       },
       {
         "wert": 128,
@@ -3351,6 +3352,14 @@
       "datum": "2026-10-20",
       "zuordnung": "genau",
       "ergebnis": "heise-Artikel a3211697 \"Cudy M3000 1.0, AX3000, schwarz\" (gelistet seit 17.06.2024); Datenblatt nach roh.geizhals, 20 Felder ergänzt; keine EAN/ASIN auf der Seite; 2 heise-Abrufe"
+    },
+    "pruefung": {
+      "datum": "2026-10-20",
+      "entschieden": [
+        "flash_mb: 128 MB gilt (Datenblatt, Produktseite 2.0, FCC-Chip F50L1G41LB 1 Gbit); 256 MB aus Forum 231357 widerlegt"
+      ],
+      "beide_richtig": [],
+      "offen": []
     }
   }
 }
