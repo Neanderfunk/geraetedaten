@@ -238,12 +238,75 @@ def mass(t):
     return t if 'mm' in t else t + ' mm'
 
 
-# Speicher fuer Updates. "reichlich" ab 32 MB Flash und 256 MB RAM: Reserve auch fuer kommende
-# Versionen (OpenWrt 25 und folgende) [abgeleitet, Schwelle adorfer/Supernode 19.10.2026].
+# Speicher fuer Updates: fuenf Stufen, die schlechtere von Flash und RAM zaehlt.
 STUFEN = {'reichlich': ('reichlich', 'viel Reserve, auch für künftige Versionen'),
+          'gut': ('gut', 'Reserve für künftige Versionen'),
           'reicht': ('ausreichend', 'genug Speicher für die aktuelle Firmware'),
           'knapp': ('knapp', 'läuft noch, aber mit wenig Reserve für künftige Versionen'),
           'sackgasse': ('zu wenig', 'nur noch alte Firmware (Sackgasse)')}
+REIHE = ['sackgasse', 'knapp', 'reicht', 'gut', 'reichlich']
+# Flash nach adorfer 21.10.2026: 8 MB sehr knapp, 16 reicht, 32 gut, 64 reichlich.
+FLASH_SCHWELLEN = (8, 16, 32, 64)
+# RAM haengt vor allem am WLAN-Treiber. Mindest-RAM fuer knapp, ausreichend, gut, reichlich.
+# Geeicht an der RAM-Belegung (MemTotal - MemAvailable) der Knoten auf der Karte am 21.10.2026,
+# Gluon 2023.2 und 2025.1: 64-MB-Geraete mit ath9k/mt76 um 85 % belegt (auch Single-Band wie
+# CPE210), Archer C7 v5 (ath10k, 128 MB) unter 2025.1 um 87 %, FRITZ!Box 4040 (IPQ4018, 256 MB)
+# um 60 %, MediaTek WLAN 6 mit 256 MB 40-55 %, Aruba AP-303 (IPQ4029, 512 MB) um 28 %.
+# ath11k mit 256 MB lehnen Gluon und OpenWrt ab [adorfer]; WLAN 7 wie ath11k [abgeleitet].
+RAM_KLASSEN = {
+    'klein': ('WLAN 4/5 mit ath9k oder mt76', (64, 128, 256, 512)),
+    'ath10k': ('WLAN 5 von Qualcomm (ath10k)', (128, 256, 512, 1024)),
+    'mt76-ax': ('WLAN 6 von MediaTek', (128, 256, 512, 1024)),
+    'ath11k': ('WLAN 6 von Qualcomm (ath11k)', (256, 512, 1024, 2048)),
+    'wlan7': ('WLAN 7', (256, 512, 1024, 2048)),
+}
+def _texte(s, ks, alle):
+    aus = []
+    for k in ks:
+        sel = s.get(k)
+        if sel:
+            aus.append(sel['wert'])
+            if alle:
+                aus += [a['wert'] for a in sel['abweichend'] + sel.get('weitere', [])]
+    return schluessel(' '.join(text(t) for t in aus))
+
+
+def ram_klasse(s):
+    """Treiberklasse fuer den RAM-Bedarf aus WLAN-Chips und SoC, zuerst nur die gewaehlten Werte;
+    der Treiber-Eintrag nur, wenn die Chips nichts hergeben (er ist oefter falsch, z. B. ath10k bei
+    reinen QCA9533-Geraeten)."""
+    for t in (_texte(s, ('wlan_chips', 'soc'), False), _texte(s, ('wlan_chips', 'soc'), True),
+              _texte(s, ('wlan_treiber',), True)):
+        if re.search(r'ath12k|qcn9274|ipq53\d\d|ipq95\d\d|mt799\d|be\d{4}', t):
+            return 'wlan7'
+        if re.search(r'ath11k|ipq807\d|ipq60\d\d|ipq50\d\d|qcn90\d\d|qcn61\d\d|qcn50\d\d', t):
+            return 'ath11k'
+        if re.search(r'mt79[0-9]\d|mt7915|mt7916', t):
+            return 'mt76-ax'
+        if re.search(r'ath10k|ipq40\d\d|qca99\d\d|qca988\d|qca9887|qca9888|qca9886|qca401[89]', t):
+            return 'ath10k'
+        if re.search(r'ath9k|mt76|mt7[0-9]{3}|rt[0-9]{4}|qca9[0-9]{3}|ar9[0-9]{3}|brcm|bcm', t):
+            return 'klein'
+    return 'klein'
+
+
+def triband(s):
+    """Drei Funkeinheiten: SoC mit zwei eingebauten Funkteilen plus ein zusaetzlicher Chip
+    (IPQ40xx + QCA99xx/QCA988x, IPQ807x + QCA99xx/QCA988x/QCN90xx, MT7986 + MT7915/MT7916). Sie
+    brauchen eine Stufe mehr RAM [abgeleitet]."""
+    t = _texte(s, ('wlan_chips', 'soc'), False)
+    return bool(re.search(r'ipq40\d\d', t) and re.search(r'qca99\d\d|qca988\d|qca9886|qca9888', t)
+                or re.search(r'ipq807\d|ipq60\d\d', t) and re.search(r'qca99\d\d|qca988\d|qcn90\d\d', t)
+                or re.search(r'mt798[16]', t) and re.search(r'mt791[56](?!e)', t))
+
+
+def stufe_nach(wert, schwellen):
+    st = 'sackgasse'
+    for name, ab in zip(REIHE[1:], schwellen):
+        if wert >= ab:
+            st = name
+    return st
+
 PASSIV_WARNUNG = ('Passives PoE: Nur mit dem passenden Netzteil oder Injektor betreiben und auf die '
                   'Spannung achten. Zu viel Spannung kann das Gerät zerstören, ein normaler PoE-Switch '
                   '(802.3af/at) versorgt es nicht.')
@@ -264,14 +327,29 @@ def sd_karte(s):
 KARTE_MB = 32768   # Platzhalter fuer "Speicherkarte": groesser als jeder Onboard-Flash
 
 
-def speicherstufe(flash, ram):
-    if flash >= 32 and ram >= 256:
-        return 'reichlich'
-    if flash >= 16 and ram >= 128:
-        return 'reicht'
-    if flash >= 8 and ram >= 64:
-        return 'knapp'
-    return 'sackgasse'
+def speicherstufe(flash, ram, klasse='klein', drei=False):
+    """Schlechtere Stufe aus Flash und RAM. Unterhalb der Klassen-Schwelle bleibt RAM "knapp";
+    "zu wenig" (Sackgasse) nur bei hoechstens 32 MB RAM."""
+    f = stufe_nach(flash, FLASH_SCHWELLEN)
+    schwellen = RAM_KLASSEN[klasse][1]
+    if drei:
+        schwellen = tuple(2 * x for x in schwellen)
+    r = 'sackgasse' if ram <= 32 else max('knapp', stufe_nach(ram, schwellen), key=REIHE.index)
+    return min(f, r, key=REIHE.index), f, r
+
+
+def abstriche_text(img):
+    """Passt die aktuelle Firmware nur mit Abstrichen (quellen/firmware-abstriche.json)? Dann
+    hoechstens "knapp": die Feldmessung zur RAM-Belegung zeigt solche Geraete schon gekuerzt."""
+    e = ABSTRICHE.get(img)
+    if not e:
+        return ''
+    teile = []
+    if e.get('ohne'):
+        teile.append('ohne ' + ', '.join(e['ohne'][:-1]) + (' und ' if len(e['ohne']) > 1 else '') + e['ohne'][-1])
+    if e.get('smallbuffers'):
+        teile.append(e['smallbuffers_text'])
+    return 'Unsere aktuelle Firmware passt nur mit Abstrichen: ' + '; '.join(teile) + '.'
 
 
 def ansicht(d, idx):
@@ -284,10 +362,19 @@ def ansicht(d, idx):
     if karte:
         flash = KARTE_MB
     if ram and flash:
-        stufe = speicherstufe(flash, ram)
+        kl, drei = ram_klasse(s), triband(s)
+        stufe, fs, rs = speicherstufe(flash, ram, kl, drei)
+        abst = abstriche_text(d['image'])
+        if abst:
+            stufe = min(stufe, 'knapp', key=REIHE.index)
         kennwort, rest = STUFEN[stufe]
+        bei = RAM_KLASSEN[kl][0] + (', drei Funkeinheiten' if drei else '')
+        erkl = '%s: %s; %g MB RAM bei %s: %s' % ('Speicherkarte' if karte else '%g MB Flash' % flash,
+                                                STUFEN[fs][0], ram, bei, STUFEN[rs][0])
+        if abst:
+            erkl += '. ' + abst
         oben.append({'titel': 'Speicher für Updates', 'stufe': stufe, 'kennwort': kennwort, 'wert': rest,
-                     'erklaerung': ('Speicherkarte, %g MB RAM' % ram) if karte else ('%g MB Flash, %g MB RAM' % (flash, ram)),
+                     'erklaerung': erkl,
                      'belege': (s['flash_typ']['belege'] if karte else s['flash_mb']['belege']) + s['ram_mb']['belege'],
                      'abweichend': ([] if karte else [{**a, 'wert': 'Flash ' + a['wert'] + ' MB'} for a in s['flash_mb']['abweichend']])
                      + [{**a, 'wert': 'RAM ' + a['wert'] + ' MB'} for a in s['ram_mb']['abweichend']],
@@ -386,6 +473,7 @@ def ansicht(d, idx):
 VERSIONEN = {}   # 'Hersteller|Modell' -> {'bekannt': [...], 'nicht_unterstuetzt': [...]} aus dem Selector
 MODELLE = {}     # image -> {'hersteller', 'modell', ...} aus quellen/selector-modelle-*.json
 STABLE = set()   # Images im stable-Zweig, aus quellen/images-stable-*.txt
+ABSTRICHE = {}   # image -> {'ohne': [...], 'smallbuffers': bool} aus quellen/firmware-abstriche.json
 
 
 def modell_schluessel(image):
@@ -492,7 +580,10 @@ def facetten(d):
     fa['sd'] = sd_karte(s) or None
     fa['flash'] = KARTE_MB if fa['sd'] else zahl(s.get('flash_mb'))
     if fa['ram'] and fa['flash']:
-        fa['speicher'] = STUFEN[speicherstufe(fa['flash'], fa['ram'])][0]
+        st = speicherstufe(fa['flash'], fa['ram'], ram_klasse(s), triband(s))[0]
+        if abstriche_text(d['image']):
+            st = min(st, 'knapp', key=REIHE.index)
+        fa['speicher'] = STUFEN[st][0]
     else:
         fa['speicher'] = None
     fa['kerne'] = zahl(s.get('cpu_kerne'))
@@ -589,6 +680,11 @@ def main():
     a = ap.parse_args()
     if os.path.exists(a.versionen):
         VERSIONEN.update(json.load(open(a.versionen, encoding='utf-8')).get('geraete', {}))
+    ab = os.path.join(WURZEL, 'quellen', 'firmware-abstriche.json')
+    if os.path.exists(ab):
+        ab = json.load(open(ab, encoding='utf-8'))
+        for img, e in ab['geraete'].items():
+            ABSTRICHE[img] = dict(e, smallbuffers_text=ab['smallbuffers_text'])
     st = sorted(glob.glob(os.path.join(WURZEL, 'quellen', 'images-stable-*.txt')))
     if st:   # werkzeug/image-liste.py stable
         STABLE.update(z.strip() for z in open(st[-1]) if z.strip())

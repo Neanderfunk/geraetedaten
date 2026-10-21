@@ -37,6 +37,9 @@
   Gerätenamen vom Firmware-Server nach `quellen/images-stable-<datum>.txt`. Daraus setzt
   `selector-ansicht.py` die Facette `stable`; routerwahl blendet Geräte ohne stable-Image
   zunächst aus („Firmware erst mit der nächsten Version“).
+- „Speicher für Updates“ seit 21.10.2026 fünfstufig (neu: „gut“), RAM je WLAN-Treiberklasse,
+  Geräte mit Firmware-Abstrichen höchstens „knapp“. Regeln und Eichung in schema/felder.md.
+  Nach Änderungen an image-customization.lua: `werkzeug/abstriche.py <FirmwareConfigs> <gluon>`.
 - Neu erzeugen nach jeder Datenänderung:
   `werkzeug/selector-ansicht.py` und `werkzeug/geraeteliste.py --index <installer>/anleitungen/html/index.json`,
   dann committen, pushen, Deploy durch adorfer.

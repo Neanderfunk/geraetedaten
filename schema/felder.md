@@ -98,3 +98,43 @@ täglich. Abrufe langsam: höchstens 3 je Gerät, mindestens 30 s Abstand
 Level, Risiko, Verwechslung, Kaufstatus und Anleitung kommen nicht von den
 Agenten. Sie stehen im RAMpe-Inventar (gluon-rampe-installer) und werden
 beim Erzeugen der Selector-Ansicht dazugenommen.
+
+## Speicher für Updates (abgeleitet, nicht erfasst)
+
+`werkzeug/selector-ansicht.py` bewertet Flash und RAM getrennt, angezeigt wird
+die schlechtere der beiden Stufen: zu wenig, knapp, ausreichend, gut, reichlich.
+
+- Flash (adorfer 21.10.2026): ab 8 MB knapp, 16 MB ausreichend, 32 MB gut,
+  64 MB reichlich. Startet das Gerät von einer Speicherkarte, zählt der Flash
+  als reichlich.
+- RAM: Der Bedarf hängt vor allem am WLAN-Treiber, deshalb gelten Schwellen je
+  Treiberklasse (Mindest-RAM für knapp / ausreichend / gut / reichlich, MB):
+
+  | Klasse | erkannt an | Schwellen |
+  |---|---|---|
+  | WLAN 4/5 mit ath9k oder mt76 | alles andere | 64 / 128 / 256 / 512 |
+  | WLAN 5 von Qualcomm (ath10k) | IPQ40xx, QCA988x, QCA9886/9888, QCA99xx | 128 / 256 / 512 / 1024 |
+  | WLAN 6 von MediaTek | MT7915, MT7916, MT79xx | 128 / 256 / 512 / 1024 |
+  | WLAN 6 von Qualcomm (ath11k) | IPQ807x, IPQ60xx, IPQ50xx, QCN90xx/61xx/50xx | 256 / 512 / 1024 / 2048 |
+  | WLAN 7 | ath12k, IPQ53xx/95xx, MT799x | wie ath11k [abgeleitet] |
+
+  Erkannt wird an `wlan_chips` und `soc` (zuerst nur der gewählte Wert),
+  `wlan_treiber` nur als Rückfall, weil er öfter falsch ist. Drei
+  Funkeinheiten (IPQ40xx oder IPQ807x mit Zusatzchip, MT7986 mit MT7915/MT7916)
+  verdoppeln die Schwellen. Unter der Klassen-Schwelle bleibt es bei „knapp“,
+  „zu wenig“ heißt höchstens 32 MB RAM oder unter 8 MB Flash.
+- Geeicht an der RAM-Belegung (`memory_usage` aus meshviewer.json mal RAM laut
+  Datenbank) der Knoten auf der Karte am 21.10.2026, Gluon 2023.2 und 2025.1:
+  64-MB-Geräte mit ath9k oder mt76 sind um 85 % belegt, auch Single-Band wie
+  die CPE210. Archer C7 v5 (ath10k, 128 MB) liegt unter 2025.1 um 87 %
+  (2023.2: 66 %), Archer C6 v2 um 86 %. FRITZ!Box 4040 (IPQ4018, 256 MB) liegt
+  um 60 %, MediaTek WLAN 6 mit 256 MB bei 40-55 %, Archer AX23 (WLAN 6 von
+  MediaTek, 128 MB) bei 92 %, Aruba AP-303 (IPQ4029, 512 MB) um 28 %. ath11k
+  mit 256 MB lehnen Gluon und OpenWrt grundsätzlich ab (adorfer).
+- Abstriche: Wer die aktuelle Firmware nur gekürzt bekommt, ist höchstens
+  „knapp“, und die Erklärung nennt die Kürzungen. Die Feldmessung zeigt diese
+  Geräte schon ohne die gestrichenen Funktionen, also mit zu wenig Bedarf.
+  Quelle ist `quellen/firmware-abstriche.json`, erzeugt von
+  `werkzeug/abstriche.py` aus FirmwareConfigs `image-customization.lua`
+  (`lowmem_dualradio`, `lowmem_singleradio`, `lowflash`) und den Gluon-Targets
+  (ath10k-smallbuffers). Ändern sich die Listen, `abstriche.py` neu laufen lassen.

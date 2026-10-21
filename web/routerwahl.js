@@ -76,7 +76,7 @@
     ] },
     { titel: 'Ausstattung', filter: [
       { id: 'speicher', titel: 'Speicher für Updates', typ: 'eins',
-        werte: [['reichlich', 'reichlich'], ['ausreichend', 'ausreichend'], ['knapp', 'knapp'], ['zu wenig', 'zu wenig']] },
+        werte: [['reichlich', 'reichlich'], ['gut', 'gut'], ['ausreichend', 'ausreichend'], ['knapp', 'knapp'], ['zu wenig', 'zu wenig']] },
       { id: 'ram', titel: 'Arbeitsspeicher (RAM)', typ: 'min',
         werte: [['128', 'ab 128 MB'], ['256', 'ab 256 MB'], ['512', 'ab 512 MB']] },
       { id: 'flash', titel: 'Flash-Speicher', typ: 'min', werte: [['16', 'ab 16 MB'], ['128', 'ab 128 MB']] },
@@ -478,7 +478,7 @@
       }
       if (g.speicher) {
         var sp = el('p', 'finder-speicher');
-        var stufe = { 'reichlich': 'reichlich', 'ausreichend': 'reicht', 'knapp': 'knapp', 'zu wenig': 'sackgasse' }[g.speicher] || 'knapp';
+        var stufe = { 'reichlich': 'reichlich', 'gut': 'gut', 'ausreichend': 'reicht', 'knapp': 'knapp', 'zu wenig': 'sackgasse' }[g.speicher] || 'knapp';
         sp.appendChild(document.createTextNode('Speicher für Updates: '));
         sp.appendChild(el('span', 'ffnef-stufe ffnef-stufe-' + stufe, g.speicher));
         rumpf.appendChild(sp);
