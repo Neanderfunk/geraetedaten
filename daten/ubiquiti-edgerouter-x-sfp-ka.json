@@ -113,31 +113,31 @@
       "uebernommen_aus": "daten/ubiquiti-edgerouter-x-sfp.json (Lauf 2026-10-19), gleiche Hardware; Rohdaten in cache/ubiquiti-edgerouter-x-sfp-ka/vom-sfp-lauf/"
     },
     "werkstatt": {
-      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erx-migration-howto.md",
+      "url": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/-/blob/main/docs/erx-migration-howto.md",
       "stand": "Stand 2026-09-09 (erx-migration-howto.md)",
       "abgerufen": "2026-10-19",
       "bemerkung": "eigene Migration am ER-X (ohne SFP); dazu erx-upgrade-anleitung.md. Gilt laut Dokument auch für den SFP (gleiches Layout), dort aber ungetestet",
       "uebernommen_aus": "daten/ubiquiti-edgerouter-x-sfp.json (Lauf 2026-10-19), gleiche Hardware; Rohdaten in cache/ubiquiti-edgerouter-x-sfp-ka/vom-sfp-lauf/"
     },
     "neanderfunk_patch": {
-      "url": "/home/adorfer/projekte/freifunk/firmware-2025.1/patches/erx-ka-imagename.sh",
+      "url": "https://github.com/Neanderfunk/gluon-patches-hardware/blob/v2025.1.x/devices/erx-ka-imagename.sh",
       "stand": "Commit b209af2 (FirmwareConfigs) 2026-09-09; in Patch-Repos nachgetragen (gluon-patches-hardware eb136fa, gepinnt FirmwareConfigs 445b110)",
       "abgerufen": "2026-10-20",
       "dateien": [
-        "/home/adorfer/projekte/freifunk/firmware-2025.1/patches/erx-ka-imagename.sh",
-        "/home/adorfer/projekte/freifunk/firmware-2025.1/patches/erx-ka-imagename-gluon.patch",
-        "/home/adorfer/projekte/freifunk/firmware-2025.1/patches/erx-ka-imagename-openwrt.patch"
+        "https://github.com/Neanderfunk/gluon-patches-hardware/blob/v2025.1.x/devices/erx-ka-imagename.sh",
+        "https://github.com/Neanderfunk/gluon-patches-hardware/blob/v2025.1.x/devices/erx-ka-imagename-gluon.patch",
+        "https://github.com/Neanderfunk/gluon-patches-hardware/blob/v2025.1.x/devices/erx-ka-imagename-openwrt.patch"
       ],
       "bemerkung": "Neanderfunk-eigene Umbenennung ubiquiti-edgerouter-x-sfp -> -ka unter Gluon 2025.1; DTS-model und Gluon-device(), compatible unverändert"
     },
     "neanderfunk_build": {
-      "url": "/home/adorfer/projekte/freifunk/firmware-2025.1/gluon/output/images/sysupgrade/gluon-dus-24_dusukw-26110910bro-ubiquiti-edgerouter-x-sfp-ka-sysupgrade.bin",
+      "url": "eigener Testbau (gluon-dus-24_dusukw-26110910bro-ubiquiti-edgerouter-x-sfp-ka-sysupgrade.bin)",
       "stand": "Bau 26110910bro, Datei vom 2026-09-09",
       "abgerufen": "2026-10-20",
       "bemerkung": "fwtool-Metadaten am Ende des Sysupgrade-Images gelesen"
     },
     "werkstatt_upgrade": {
-      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erx-upgrade-anleitung.md",
+      "url": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/-/blob/main/docs/erx-upgrade-anleitung.md",
       "stand": "erx-upgrade-anleitung.md, Commit 165e9f1 2026-10-06",
       "abgerufen": "2026-10-20",
       "bemerkung": "Anleitung für ER-X geschrieben, nennt den SFP-Dateinamen mit -ka"
@@ -872,7 +872,7 @@
       {
         "wert": "Ubiquiti EdgeRouter X SFP KA",
         "quelle": "neanderfunk_patch",
-        "beleg": "/home/adorfer/projekte/freifunk/firmware-2025.1/patches/erx-ka-imagename-openwrt.patch",
+        "beleg": "https://github.com/Neanderfunk/gluon-patches-hardware/blob/v2025.1.x/devices/erx-ka-imagename-openwrt.patch",
         "stand": "Commit b209af2 (FirmwareConfigs) 2026-09-09; in Patch-Repos nachgetragen (gluon-patches-hardware eb136fa, gepinnt FirmwareConfigs 445b110)",
         "sicherheit": "hoch",
         "bemerkung": "DTS-model im Neanderfunk-Image (Statusseite, Karte); KA = neues Flash-Layout, keine andere Hardware"
@@ -914,7 +914,7 @@
       {
         "wert": "Am Gerät nicht unterscheidbar: -ka ist dasselbe ER-X-SFP, nur mit neuem Flash-Layout. Erkennbar an der Software: Modell 'Ubiquiti EdgeRouter X SFP KA' (Statusseite/Karte), compat_version 2.0, eine Partition 'kernel' (6 MB) statt kernel1/kernel2",
         "quelle": "neanderfunk_patch",
-        "beleg": "/home/adorfer/projekte/freifunk/firmware-2025.1/patches/erx-ka-imagename.sh",
+        "beleg": "https://github.com/Neanderfunk/gluon-patches-hardware/blob/v2025.1.x/devices/erx-ka-imagename.sh",
         "stand": "Commit b209af2 (FirmwareConfigs) 2026-09-09; in Patch-Repos nachgetragen (gluon-patches-hardware eb136fa, gepinnt FirmwareConfigs 445b110)",
         "sicherheit": "hoch",
         "bemerkung": "ER-X-SFP ohne KA = Migration steht noch aus"
@@ -989,7 +989,7 @@
       {
         "wert": "ubiquiti-edgerouter-x-sfp-ka",
         "quelle": "werkstatt",
-        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erx-upgrade-anleitung.md (Abschnitt Einleitung, \"beim EdgeRouter X SFP\")",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/-/blob/main/docs/erx-upgrade-anleitung.md (Abschnitt Einleitung, \"beim EdgeRouter X SFP\")",
         "stand": "Stand 2026-09-09 (erx-migration-howto.md)",
         "sicherheit": "hoch",
         "bemerkung": "Neanderfunk-eigener Gluon-Imagename ab 2025.1 (Umbenennung wegen Partitionsmigration)"
@@ -997,7 +997,7 @@
       {
         "wert": "ubiquiti-edgerouter-x-sfp (Gluon-Imagename bis 2023.2 bzw. upstream)",
         "quelle": "neanderfunk_patch",
-        "beleg": "/home/adorfer/projekte/freifunk/firmware-2025.1/patches/erx-ka-imagename-gluon.patch",
+        "beleg": "https://github.com/Neanderfunk/gluon-patches-hardware/blob/v2025.1.x/devices/erx-ka-imagename-gluon.patch",
         "stand": "Commit b209af2 (FirmwareConfigs) 2026-09-09; in Patch-Repos nachgetragen (gluon-patches-hardware eb136fa, gepinnt FirmwareConfigs 445b110)",
         "sicherheit": "hoch",
         "bemerkung": "gleiche Hardware; ein Knoten mit diesem Namen ist noch nicht migriert"
@@ -1404,7 +1404,7 @@
       {
         "wert": "NAND (paralleles NAND, TSOP-48), keine SPI-Klammer möglich",
         "quelle": "werkstatt",
-        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erx-migration-howto.md (Abschnitt Voraussetzungen)",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/-/blob/main/docs/erx-migration-howto.md (Abschnitt Voraussetzungen)",
         "stand": "Stand 2026-09-09 (erx-migration-howto.md)",
         "sicherheit": "hoch",
         "bemerkung": "gemessen am ER-X (ohne SFP), gleiche Plattform"
@@ -1422,7 +1422,7 @@
       {
         "wert": "AMD/Spansion S34ML02G2, TSOP-48",
         "quelle": "werkstatt",
-        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erx-migration-howto.md (Abschnitt Voraussetzungen)",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/-/blob/main/docs/erx-migration-howto.md (Abschnitt Voraussetzungen)",
         "stand": "Stand 2026-09-09 (erx-migration-howto.md)",
         "sicherheit": "hoch",
         "bemerkung": "am ER-X (ohne SFP) festgestellt"
@@ -1516,7 +1516,7 @@
       {
         "wert": "Migration auf Gluon 2025.1 nur am ER-X erprobt, am ER-X-SFP ungetestet (\"--check\" als erster Schritt)",
         "quelle": "werkstatt",
-        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erx-migration-howto.md (Abschnitt \"Gilt auch fuer den ERX-SFP\")",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/-/blob/main/docs/erx-migration-howto.md (Abschnitt \"Gilt auch fuer den ERX-SFP\")",
         "stand": "Stand 2026-09-09 (erx-migration-howto.md)",
         "sicherheit": "hoch",
         "bemerkung": ""
@@ -1524,7 +1524,7 @@
       {
         "wert": "Nicht migrierte ER-X-SFP (Gluon 2023.2, altes Layout) finden keine Manifestzeile und bleiben auf 2023.2, bis sie migriert sind",
         "quelle": "neanderfunk_patch",
-        "beleg": "/home/adorfer/projekte/freifunk/firmware-2025.1/patches/erx-ka-imagename.sh",
+        "beleg": "https://github.com/Neanderfunk/gluon-patches-hardware/blob/v2025.1.x/devices/erx-ka-imagename.sh",
         "stand": "Commit b209af2 (FirmwareConfigs) 2026-09-09; in Patch-Repos nachgetragen (gluon-patches-hardware eb136fa, gepinnt FirmwareConfigs 445b110)",
         "sicherheit": "hoch",
         "bemerkung": "gewollt: verhindert tägliches Herunterladen und Verwerfen des 2025.1-Images"
@@ -1532,7 +1532,7 @@
       {
         "wert": "Bad Blocks in kernel1 können den Kernel bei der Migration still zerschneiden (mtd write überspringt sie)",
         "quelle": "werkstatt",
-        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erx-migration-howto.md (Abschnitt 'Noch offen')",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/-/blob/main/docs/erx-migration-howto.md (Abschnitt 'Noch offen')",
         "stand": "erx-migration-howto.md, Stand 2026-09-09 (Commit 575bb6d 2026-10-06)",
         "sicherheit": "hoch",
         "bemerkung": "Zurücklesen fängt die Folge ab; Gerät der Werkstatt war sauber"
@@ -2507,7 +2507,7 @@
       {
         "wert": 57600,
         "quelle": "werkstatt",
-        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erx-migration-howto.md (Abschnitt Voraussetzungen)",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/-/blob/main/docs/erx-migration-howto.md (Abschnitt Voraussetzungen)",
         "stand": "Stand 2026-09-09 (erx-migration-howto.md)",
         "sicherheit": "hoch",
         "bemerkung": "am ER-X (ohne SFP) genutzt, 57600 8N1"
@@ -2525,7 +2525,7 @@
       {
         "wert": "Ralink-U-Boot mit Nummernmenü, Ctrl-C wirkt nicht, es muss eine Ziffer getippt werden",
         "quelle": "werkstatt",
-        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erx-migration-howto.md (Abschnitt \"Wenn es schiefgeht\")",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/-/blob/main/docs/erx-migration-howto.md (Abschnitt \"Wenn es schiefgeht\")",
         "stand": "Stand 2026-09-09 (erx-migration-howto.md)",
         "sicherheit": "hoch",
         "bemerkung": "am ER-X"
@@ -2667,7 +2667,7 @@
       {
         "wert": "Von Gluon 2023.2 per Migrationsskript (erx-migrate.sh + Stufe 2, SSH, Dateien per ssh 'cat >', scp geht nicht); danach normale sysupgrades",
         "quelle": "werkstatt_upgrade",
-        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erx-upgrade-anleitung.md",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/-/blob/main/docs/erx-upgrade-anleitung.md",
         "stand": "erx-upgrade-anleitung.md, Commit 165e9f1 2026-10-06",
         "sicherheit": "hoch",
         "bemerkung": "Anleitung für ER-X geschrieben; am ER-X-SFP ungetestet"
@@ -2731,7 +2731,7 @@
       {
         "wert": "Neanderfunk-eigener Imagename ab Gluon 2025.1 (ramips-mt7621, factory = false); upstream Gluon kennt nur ubiquiti-edgerouter-x-sfp",
         "quelle": "neanderfunk_patch",
-        "beleg": "/home/adorfer/projekte/freifunk/firmware-2025.1/patches/erx-ka-imagename-gluon.patch",
+        "beleg": "https://github.com/Neanderfunk/gluon-patches-hardware/blob/v2025.1.x/devices/erx-ka-imagename-gluon.patch",
         "stand": "Commit b209af2 (FirmwareConfigs) 2026-09-09; in Patch-Repos nachgetragen (gluon-patches-hardware eb136fa, gepinnt FirmwareConfigs 445b110)",
         "sicherheit": "hoch",
         "bemerkung": "Patch auf Zeit, Rücknahme im Skriptkopf beschrieben"
@@ -2763,7 +2763,7 @@
       {
         "wert": "Neanderfunk 2025.1: als ubiquiti-edgerouter-x-sfp-ka, Migration mit Partitionsumstellung, am SFP ungetestet",
         "quelle": "werkstatt",
-        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erx-upgrade-anleitung.md",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/-/blob/main/docs/erx-upgrade-anleitung.md",
         "stand": "Stand 2026-09-09 (erx-migration-howto.md)",
         "sicherheit": "hoch",
         "bemerkung": ""
@@ -2857,7 +2857,7 @@
       {
         "wert": "u-boot 512 KB, u-boot-env 384 KB, factory 384 KB, kernel 6 MB (0x600000), ubi Rest (0x0f7c0000)",
         "quelle": "werkstatt_upgrade",
-        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erx-upgrade-anleitung.md (Abschnitt 5. Kontrolle)",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/-/blob/main/docs/erx-upgrade-anleitung.md (Abschnitt 5. Kontrolle)",
         "stand": "erx-upgrade-anleitung.md, Commit 165e9f1 2026-10-06",
         "sicherheit": "hoch",
         "bemerkung": "Sollausgabe /proc/mtd nach Migration, am ER-X; laut erx-migration-howto.md gleiche dtsi wie ER-X-SFP"
@@ -2865,7 +2865,7 @@
       {
         "wert": "neu: ein Kernel-Slot 6 MB; alt (bis Gluon 2023.2): kernel1 + kernel2 je 3 MB",
         "quelle": "neanderfunk_patch",
-        "beleg": "/home/adorfer/projekte/freifunk/firmware-2025.1/patches/erx-ka-imagename.sh",
+        "beleg": "https://github.com/Neanderfunk/gluon-patches-hardware/blob/v2025.1.x/devices/erx-ka-imagename.sh",
         "stand": "Commit b209af2 (FirmwareConfigs) 2026-09-09; in Patch-Repos nachgetragen (gluon-patches-hardware eb136fa, gepinnt FirmwareConfigs 445b110)",
         "sicherheit": "hoch",
         "bemerkung": ""
@@ -2875,7 +2875,7 @@
       {
         "wert": "2.0",
         "quelle": "neanderfunk_build",
-        "beleg": "/home/adorfer/projekte/freifunk/firmware-2025.1/gluon/output/images/sysupgrade/gluon-dus-24_dusukw-26110910bro-ubiquiti-edgerouter-x-sfp-ka-sysupgrade.bin",
+        "beleg": "eigener Testbau (gluon-dus-24_dusukw-26110910bro-ubiquiti-edgerouter-x-sfp-ka-sysupgrade.bin)",
         "stand": "Bau 26110910bro, Datei vom 2026-09-09",
         "sicherheit": "hoch",
         "bemerkung": "Image-Metadaten; altes Layout = 1.x"
@@ -2883,7 +2883,7 @@
       {
         "wert": "2.0",
         "quelle": "werkstatt_upgrade",
-        "beleg": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erx-upgrade-anleitung.md (Abschnitt 5. Kontrolle)",
+        "beleg": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/-/blob/main/docs/erx-upgrade-anleitung.md (Abschnitt 5. Kontrolle)",
         "stand": "erx-upgrade-anleitung.md, Commit 165e9f1 2026-10-06",
         "sicherheit": "hoch",
         "bemerkung": "uci system.@system[0].compat_version nach Migration"
@@ -2893,7 +2893,7 @@
       {
         "wert": 7517636,
         "quelle": "neanderfunk_build",
-        "beleg": "/home/adorfer/projekte/freifunk/firmware-2025.1/gluon/output/images/sysupgrade/gluon-dus-24_dusukw-26110910bro-ubiquiti-edgerouter-x-sfp-ka-sysupgrade.bin",
+        "beleg": "eigener Testbau (gluon-dus-24_dusukw-26110910bro-ubiquiti-edgerouter-x-sfp-ka-sysupgrade.bin)",
         "stand": "Bau 26110910bro, Datei vom 2026-09-09",
         "sicherheit": "hoch",
         "bemerkung": "Sysupgrade-Image Bau 26110910bro, Domain 24_dusukw"
@@ -2907,7 +2907,7 @@
           "ubiquiti,edgerouterx-sfp"
         ],
         "quelle": "neanderfunk_build",
-        "beleg": "/home/adorfer/projekte/freifunk/firmware-2025.1/gluon/output/images/sysupgrade/gluon-dus-24_dusukw-26110910bro-ubiquiti-edgerouter-x-sfp-ka-sysupgrade.bin",
+        "beleg": "eigener Testbau (gluon-dus-24_dusukw-26110910bro-ubiquiti-edgerouter-x-sfp-ka-sysupgrade.bin)",
         "stand": "Bau 26110910bro, Datei vom 2026-09-09",
         "sicherheit": "hoch",
         "bemerkung": "unverändert gegenüber Upstream; nur DTS-model geändert"
@@ -2972,7 +2972,7 @@
       "grund": "Hohlsteckermaß 5.5x2.1 nur aus DeviWiki/WikiDevi; kein Foto der Geräterückseite gefunden (case-back.jpg ist die Kartonrückseite); an einem Gerät nachmessen"
     },
     {
-      "url": "/home/adorfer/projekte/freifunk/router-werkstatt/docs/erx-migration-howto.md",
+      "url": "https://git.ideenwerk.me/neanderfunk/routerwerkstatt/-/blob/main/docs/erx-migration-howto.md",
       "kategorie": "installation",
       "grund": "Migration auf das -ka-Layout am ER-X-SFP ungetestet; erster Lauf mit --check protokollieren (Werkstatt)"
     },

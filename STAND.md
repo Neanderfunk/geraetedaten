@@ -40,6 +40,7 @@
 - „Speicher für Updates“ seit 21.10.2026 fünfstufig (neu: „gut“), RAM je WLAN-Treiberklasse,
   Geräte mit Firmware-Abstrichen höchstens „knapp“. Regeln und Eichung in schema/felder.md.
   Nach Änderungen an image-customization.lua: `werkzeug/abstriche.py <FirmwareConfigs> <gluon>`.
-- Neu erzeugen nach jeder Datenänderung:
+- Neu erzeugen nach jeder Datenänderung: zuerst `werkzeug/lokale-pfade.py` (lokale Pfade aus
+  Agentenläufen werden Links, Router-Werkstatt aufs GitLab, seit 22.10.2026), dann
   `werkzeug/selector-ansicht.py` und `werkzeug/geraeteliste.py --index <installer>/anleitungen/html/index.json`,
   dann committen, pushen, Deploy durch adorfer.
