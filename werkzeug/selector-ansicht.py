@@ -62,6 +62,10 @@ def text(w):
     if isinstance(w, list):
         return ', '.join(t for t in (text(x) for x in w) if t)
     if isinstance(w, dict):
+        # Bereiche ({'min': 0, 'max': 40} oder min_c/max_c) als "0 bis 40", sonst stand dort "0 40"
+        for lo, hi, e in (('min', 'max', ''), ('min_c', 'max_c', ' °C')):
+            if lo in w and hi in w:
+                return text(w[lo]) + ' bis ' + text(w[hi]) + e
         return ' '.join(t for t in (text(v) for v in w.values()) if t)
     return str(w)
 
@@ -214,6 +218,14 @@ def outdoor_optional(f):
                 if any(_optional_teil(teil) for teil in str(t).split(';')):
                     return True
     return False
+
+
+def temperatur(t):
+    """Temperaturbereich einheitlich: "-10 bis 70 °C" (aus "-10 bis 70", "0-40 °C", "0 °C bis +40 °C")."""
+    t = re.sub(r'\+(?=\d)', '', t)
+    t = re.sub(r'^(-?\d+(?:[.,]\d+)?)\s*(?:°\s*C)?\s*(?:-|–|bis)\s*(-?\d+(?:[.,]\d+)?)\s*(?:°\s*C)?',
+               r'\1 bis \2 °C', t)
+    return t
 
 
 def poe(t):
@@ -445,7 +457,7 @@ def ansicht(d, idx):
             oben.append(z)
     else:
         oben.append(kombi('Einsatzort', [(ort, eo)] +
-                          ([('Schutzart', s.get('ip_schutzart')), ('Temperatur', s.get('temperatur_betrieb'))]
+                          ([('Schutzart', s.get('ip_schutzart')), (lambda t: 'Temperatur ' + temperatur(t), s.get('temperatur_betrieb'))]
                            if aussen else []), trenner=', '))
     pe = s.get('poe_eingang')
     passiv = pe and 'passives' in poe(pe['wert'])
