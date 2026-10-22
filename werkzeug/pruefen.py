@@ -57,7 +57,7 @@ def main():
         for k, v in f.items():
             if not isinstance(v, list) or any(not isinstance(e, dict) or "wert" not in e or not e.get("quelle") for e in v):
                 befunde["1 Aufbau"].append("`%s`: Feld %s ist keine Liste von {wert, quelle}" % (name, k))
-        s = {k: sa.auswahl(v, q, k in sa.FAKT or k in WIDERSPRUCH) for k, v in f.items()}
+        s = {k: sa.auswahl(v, q, k in sa.FAKT or k in WIDERSPRUCH, k) for k, v in f.items()}
 
         # 2 Widersprueche
         for k in WIDERSPRUCH:

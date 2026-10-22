@@ -82,7 +82,7 @@ FAKT = {'ram_mb', 'flash_mb', 'cpu_mhz', 'cpu_kerne', 'poe_spannung_v', 'dc_span
         'netzteil_beiliegend', 'nur_eine_buchse'}
 
 
-def auswahl(eintraege, quellen, fakt=False):
+def auswahl(eintraege, quellen, fakt=False, feld=None):
     """Liste von Quellen-Eintraegen -> {wert, abweichend, belege} oder None."""
     gruppen = {}
     for e in eintraege if isinstance(eintraege, list) else [eintraege]:
@@ -109,7 +109,7 @@ def auswahl(eintraege, quellen, fakt=False):
     belege, abweichend = list(beste['belege']), []
     weitere = []
     for g in sortiert[1:]:
-        if vertraeglich(beste['wert'], g['wert']):
+        if vertraeglich(beste['wert'], g['wert'], feld):
             belege += g['belege']        # dasselbe, nur anders oder genauer gesagt
         elif fakt:
             abweichend.append({'wert': g['wert'], 'belege': g['belege']})
@@ -122,12 +122,41 @@ def zahlen(t):
     return set(re.findall(r'\d+(?:\.\d+)?', t.replace(',', '.')))
 
 
-def vertraeglich(a, b):
+SPANNUNG = {'poe_spannung_v', 'dc_spannung_v'}
+POE_FENSTER = (44, 57)   # 802.3af/at am Geraet; 48 V nominal, 54 V ueblich am Injektor
+
+
+def _volt_teile(t):
+    """Spannungsangaben einer Quelle als Liste von Bereichen. Getrennt an , ; und/oder/bzw.;
+    Zahlen mit A dahinter (Strom) zaehlen nicht. Teile im PoE-Fenster fallen weg: 802.3af/at
+    steht schon in der PoE-Zeile, 48 V nominal und 54 V Hoechstwert sind dasselbe."""
+    aus = []
+    t = re.sub(r'802\.3\w*', '', t)   # Normnamen sind keine Spannungen
+    for teil in re.split(r'[,;]|\bund\b|\boder\b|\bbzw\.?', t):
+        z = [float(x.replace(',', '.')) for x in re.findall(r'(\d+(?:[.,]\d+)?)(?!\s*(?:[.,]\d)|\d|\s*a\b|\s*ma\b)', teil)]
+        if z:
+            r = (min(z), max(z))
+            if not (POE_FENSTER[0] <= r[0] and r[1] <= POE_FENSTER[1]):
+                aus.append(r)
+    return aus
+
+
+def vertraeglich(a, b, feld=None):
     """Widersprechen sich zwei Angaben? Nein, wenn die eine in der anderen
-    steckt oder die Zahlen der kuerzeren alle in der laengeren vorkommen."""
+    steckt oder die Zahlen der kuerzeren alle in der laengeren vorkommen.
+    Spannungen (adorfer 22.10.2026): Nennwert und Hoechstwert sind kein Widerspruch.
+    Liegt jeder Teil der einen Angabe in einem Bereich der anderen, ist es dasselbe;
+    Werte im PoE-Fenster 44 bis 57 V (48 V nominal, 54 V Injektor) zaehlen nicht mit."""
     ka, kb = schluessel(a), schluessel(b)
     if ka in kb or kb in ka:
         return True
+    if feld in SPANNUNG:
+        ta, tb = _volt_teile(ka), _volt_teile(kb)
+        if not ta or not tb:
+            return True
+        drin = lambda x, r: r[0] <= x[0] and x[1] <= r[1]
+        if all(any(drin(x, r) for r in tb) for x in ta) or all(any(drin(x, r) for r in ta) for x in tb):
+            return True
     za, zb = zahlen(ka), zahlen(kb)
     kurz, lang = (za, zb) if len(ka) <= len(kb) else (zb, za)
     return bool(kurz) and kurz <= lang
@@ -414,7 +443,7 @@ def abstriche_text(img):
 
 def ansicht(d, idx):
     f, q = d.get('felder', {}), d.get('quellen', {})
-    s = {k: auswahl(v, q, k in FAKT) for k, v in f.items()}
+    s = {k: auswahl(v, q, k in FAKT, k) for k, v in f.items()}
     oben, mitte, technik = [], [], []
 
     ram, flash = zahl(s.get('ram_mb')), zahl(s.get('flash_mb'))
@@ -627,7 +656,7 @@ def facetten(d):
     """Maschinenlesbare Werte fuer die Geraetesuche. None = unbekannt.
     'unsicher' nennt Felder, bei denen sich Quellen widersprechen."""
     f, q = d.get('felder', {}), d.get('quellen', {})
-    s = {k: auswahl(v, q, k in FAKT) for k, v in f.items()}
+    s = {k: auswahl(v, q, k in FAKT, k) for k, v in f.items()}
     unsicher = []
 
     def alle(k):

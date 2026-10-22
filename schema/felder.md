@@ -158,3 +158,14 @@ mit optionalem passendem Outdoor-Gehäuse“ (adorfer 22.10.2026).
 UniFi AC Pro und AC HD sind Dual-Use (innen und geschützt außen) und bleiben
 unter beiden, mit IP54 (Angabe adorfer, 22.10.2026).
 
+
+## Spannungen: Nennwert und Höchstwert sind kein Widerspruch
+
+`poe_spannung_v` und `dc_spannung_v` (adorfer 22.10.2026): 48 V (Nennwert
+802.3af/at) und 54 V (Höchstwert am Injektor) sind dasselbe, ebenso 24 V und
+„22 bis 27 V“. `vertraeglich()` zerlegt jede Angabe in Bereiche (an Komma,
+Semikolon, und/oder/bzw.; Stromangaben in A und Normnamen wie 802.3af zählen
+nicht) und lässt Werte im PoE-Fenster 44 bis 57 V weg, weil die Norm schon in
+der PoE-Zeile steht. Liegt jeder Teil der einen Angabe in einem Bereich der
+anderen, ist es kein Widerspruch. Übrig bleiben echte Unterschiede zwischen
+Quellen, z. B. beim OM2P-LC 12 bis 18, 12 bis 20 und 18 bis 24 V passiv.
