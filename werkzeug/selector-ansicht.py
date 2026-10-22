@@ -271,23 +271,46 @@ def _texte(s, ks, alle):
     return schluessel(' '.join(text(t) for t in aus))
 
 
-def ram_klasse(s):
-    """Treiberklasse fuer den RAM-Bedarf aus WLAN-Chips und SoC, zuerst nur die gewaehlten Werte;
-    der Treiber-Eintrag nur, wenn die Chips nichts hergeben (er ist oefter falsch, z. B. ath10k bei
-    reinen QCA9533-Geraeten)."""
-    for t in (_texte(s, ('wlan_chips', 'soc'), False), _texte(s, ('wlan_chips', 'soc'), True),
-              _texte(s, ('wlan_treiber',), True)):
+def ram_klasse(s, roh=None):
+    """Treiberklasse fuer den RAM-Bedarf aus WLAN-Chips und SoC. Gesucht wird zuerst in den
+    gewaehlten Werten, dann in allen Werten nach der groessten Klasse: ein gewaehlter Wert, der nur
+    den SoC nennt (Archer C59: "QCA9561", der QCA9886 steht in einer anderen Quelle), darf das
+    Geraet nicht klein machen. Der Treiber-Eintrag zaehlt nur, wenn die Chips nichts hergeben (er
+    ist oefter falsch, z. B. ath10k bei reinen QCA9533-Geraeten).
+    QCA98xx (QCA9880/9882/9886/9888/9890/9896, frueher auch AR9880/AR9882, in Texten "QCA988x")
+    sind alle ath10k (22.10.2026: UAP-AC-M(-Pro), AP3825i, CPE710, MR1750 standen als klein)."""
+    def gross(t):
         if re.search(r'ath12k|qcn9274|ipq53\d\d|ipq95\d\d|mt799\d|be\d{4}', t):
             return 'wlan7'
         if re.search(r'ath11k|ipq807\d|ipq60\d\d|ipq50\d\d|qcn90\d\d|qcn61\d\d|qcn50\d\d', t):
             return 'ath11k'
         if re.search(r'mt79[0-9]\d|mt7915|mt7916', t):
             return 'mt76-ax'
-        if re.search(r'ath10k|ipq40\d\d|qca99\d\d|qca988\d|qca9887|qca9888|qca9886|qca401[89]', t):
+        if re.search(r'ath10k|ipq40\d\d|qca99\d\d|qca98[\dx][\dx]|ar988\d|qca401[89]', t):
             return 'ath10k'
-        if re.search(r'ath9k|mt76|mt7[0-9]{3}|rt[0-9]{4}|qca9[0-9]{3}|ar9[0-9]{3}|brcm|bcm', t):
-            return 'klein'
-    return 'klein'
+        return None
+    k = gross(_texte(s, ('wlan_chips', 'soc'), False))
+    if k:
+        return k
+    # In den uebrigen Werten muessen mindestens zwei dieselbe Klasse tragen: beim OM5P-AN nennt
+    # ein einzelnes Datenblatt die Chips des OM5P-AC.
+    # Gezaehlt werden die Rohwerte je Quelle (roh = Felder des Eintrags): die Auswahl fasst
+    # Werte zusammen, und beim Archer C59 bleibt dann nur "QCA9561" sichtbar.
+    werte = []
+    for kk in ('wlan_chips', 'soc'):
+        if roh and kk in roh:
+            werte += [e['wert'] for e in roh[kk]]
+        elif s.get(kk):
+            sel = s[kk]
+            werte += [sel['wert']] + [a['wert'] for a in sel['abweichend'] + sel.get('weitere', [])]
+    treffer = [gross(schluessel(text(w))) for w in werte]
+    for k in ('wlan7', 'ath11k', 'mt76-ax', 'ath10k'):
+        if treffer.count(k) >= 2:
+            return k
+    chips = _texte(s, ('wlan_chips', 'soc'), True)
+    if re.search(r'ath9k|mt76|mt7[0-9]{3}|rt[0-9]{4}|qca9[0-9]{3}|ar9[0-9]{3}|brcm|bcm', chips):
+        return 'klein'
+    return gross(_texte(s, ('wlan_treiber',), True)) or 'klein'
 
 
 def triband(s):
@@ -295,8 +318,8 @@ def triband(s):
     (IPQ40xx + QCA99xx/QCA988x, IPQ807x + QCA99xx/QCA988x/QCN90xx, MT7986 + MT7915/MT7916). Sie
     brauchen eine Stufe mehr RAM [abgeleitet]."""
     t = _texte(s, ('wlan_chips', 'soc'), False)
-    return bool(re.search(r'ipq40\d\d', t) and re.search(r'qca99\d\d|qca988\d|qca9886|qca9888', t)
-                or re.search(r'ipq807\d|ipq60\d\d', t) and re.search(r'qca99\d\d|qca988\d|qcn90\d\d', t)
+    return bool(re.search(r'ipq40\d\d', t) and re.search(r'qca99\d\d|qca98[\dx][\dx]|ar988\d', t)
+                or re.search(r'ipq807\d|ipq60\d\d', t) and re.search(r'qca99\d\d|qca98[\dx][\dx]|ar988\d|qcn90\d\d', t)
                 or re.search(r'mt798[16]', t) and re.search(r'mt791[56](?!e)', t))
 
 
@@ -362,7 +385,7 @@ def ansicht(d, idx):
     if karte:
         flash = KARTE_MB
     if ram and flash:
-        kl, drei = ram_klasse(s), triband(s)
+        kl, drei = ram_klasse(s, f), triband(s)
         stufe, fs, rs = speicherstufe(flash, ram, kl, drei)
         abst = abstriche_text(d['image'])
         if abst:
@@ -580,7 +603,7 @@ def facetten(d):
     fa['sd'] = sd_karte(s) or None
     fa['flash'] = KARTE_MB if fa['sd'] else zahl(s.get('flash_mb'))
     if fa['ram'] and fa['flash']:
-        st = speicherstufe(fa['flash'], fa['ram'], ram_klasse(s), triband(s))[0]
+        st = speicherstufe(fa['flash'], fa['ram'], ram_klasse(s, f), triband(s))[0]
         if abstriche_text(d['image']):
             st = min(st, 'knapp', key=REIHE.index)
         fa['speicher'] = STUFEN[st][0]

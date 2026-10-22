@@ -118,8 +118,14 @@ die schlechtere der beiden Stufen: zu wenig, knapp, ausreichend, gut, reichlich.
   | WLAN 6 von Qualcomm (ath11k) | IPQ807x, IPQ60xx, IPQ50xx, QCN90xx/61xx/50xx | 256 / 512 / 1024 / 2048 |
   | WLAN 7 | ath12k, IPQ53xx/95xx, MT799x | wie ath11k [abgeleitet] |
 
-  Erkannt wird an `wlan_chips` und `soc` (zuerst nur der gewählte Wert),
-  `wlan_treiber` nur als Rückfall, weil er öfter falsch ist. Drei
+  Erkannt wird an `wlan_chips` und `soc`: zuerst der gewählte Wert, dann
+  die übrigen Quellen, dort zählt eine größere Klasse aber nur, wenn
+  mindestens zwei Quellen sie nennen (beim OM5P-AN nennt ein einzelnes
+  Datenblatt die Chips des OM5P-AC). `wlan_treiber` nur als Rückfall, weil er
+  öfter falsch ist. QCA98xx (QCA9880 bis QCA9896, auch AR9880/AR9882 und
+  „QCA988x“ geschrieben) sind ath10k. Korrigiert am 22.10.2026 nach einer
+  Nutzerfrage (UAP-AC-Pro „knapp“, baugleicher UAP-AC-M-Pro „ausreichend“):
+  neun Geräte standen fälschlich eine Stufe zu gut. Drei
   Funkeinheiten (IPQ40xx oder IPQ807x mit Zusatzchip, MT7986 mit MT7915/MT7916)
   verdoppeln die Schwellen. Unter der Klassen-Schwelle bleibt es bei „knapp“,
   „zu wenig“ heißt höchstens 32 MB RAM oder unter 8 MB Flash.

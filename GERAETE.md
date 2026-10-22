@@ -170,7 +170,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 |---|---|---|---|---|
 | WS-AP3705i | `enterasys-ws-ap3705i` | [erfasst](daten/enterasys-ws-ap3705i.json): 86 Felder, 8 offene Fäden, teilweise | [L6](https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3705i.html) | recommended |
 | WS-AP3710i | `enterasys-ws-ap3710i` | [erfasst](daten/enterasys-ws-ap3710i.json): 72 Felder, 8 offene Fäden, teilweise | [L6](https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3710i.html) | recommended |
-| WS-AP3715i | `enterasys-ws-ap3715i` | [erfasst](daten/enterasys-ws-ap3715i.json): 79 Felder, 9 offene Fäden, teilweise |  | recommended |
+| WS-AP3715i | `enterasys-ws-ap3715i` | [erfasst](daten/enterasys-ws-ap3715i.json): 79 Felder, 9 offene Fäden, teilweise | [L6](https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3715i.html) | recommended |
 
 ## Extreme
 
