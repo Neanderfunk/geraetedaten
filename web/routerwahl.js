@@ -108,6 +108,11 @@
       { id: 'leistung', titel: 'Leistungsaufnahme', typ: 'max', werte: [['10', 'bis 10 W'], ['15', 'bis 15 W']] },
       { id: 'luefter', titel: 'lautlos (ohne Lüfter)', typ: 'nein' }
     ] },
+    /* Circa-Neupreis aus preise.json (werkzeug/preise-holen.py, Cron); Regler in 10-EUR-Schritten
+       (adorfer 23.10.2026). Geraete ohne Preis zaehlen als "Angabe fehlt". */
+    { titel: 'Preis', filter: [
+      { id: 'preis', titel: 'Neupreis höchstens (circa)', typ: 'regler', schritt: 10 }
+    ] },
     { titel: 'Einrichtung', filter: [
       { id: 'level', titel: 'Schwierigkeit', typ: 'max',
         werte: [['L1', 'bis L1: nur im Browser'], ['L3', 'bis L3: mit fester Adresse am Rechner'],
@@ -137,6 +142,7 @@
      den Geschwistern, damit klar ist, dass genau diese Version nicht geht. */
   var nichtKarten = [];
   var geraete = [];      // [{image, modell, ...facetten, level, ...}]
+  var preiseStand = '';  // Datum der preise.json, z. B. 23.10.2026
   var wahl = {};         // id -> [werte]
   /* Geraete mit fehlenden Angaben werden standardmaessig gezeigt (adorfer
      20.10.); das Haekchen blendet sie aus. */
@@ -223,6 +229,7 @@
         if (f.id === 'ip') return v[0] >= +w[0].charAt(0) && v[1] >= +w[0].charAt(1);
         return v >= +w[0];
       case 'max': return v <= +w[0];
+      case 'regler': return v <= +w[0];
       case 'ja': return v === true;
       case 'nein': return v === false;
     }
@@ -278,7 +285,9 @@
         kopf.appendChild(el('span', 'finder-abdeckung', ' Angaben für ' + bekannt + ' von ' + geraete.length + ' Geräten'));
         block.appendChild(kopf);
         var gewaehlt = wahl[f.id] || [];
-        if (f.typ === 'ja' || f.typ === 'nein') {
+        if (f.typ === 'regler') {
+          block.appendChild(regler(f, gewaehlt));
+        } else if (f.typ === 'ja' || f.typ === 'nein') {
           block.appendChild(option(f, 'checkbox', true, 'ja', gewaehlt.length > 0, zaehle(f, true)));
         } else {
           var art = (f.typ === 'min' || f.typ === 'max') ? 'radio' : 'checkbox';
@@ -299,6 +308,36 @@
       });
       ziel.appendChild(fs);
     });
+  }
+
+  /* Schieberegler fuer Hoechstwerte: Spanne aus den vorhandenen Werten, auf den Schritt
+     gerundet. Ganz rechts heisst "egal". Gefiltert wird erst beim Loslassen ("change"),
+     beim Ziehen wird nur die Beschriftung samt Trefferzahl nachgefuehrt. */
+  function regler(f, gewaehlt) {
+    var schritt = f.schritt || 10;
+    var werte = geraete.map(function (g) { return g[f.id]; }).filter(function (v) { return typeof v === 'number'; });
+    var box = el('div', 'finder-regler');
+    if (!werte.length) { box.appendChild(el('span', 'finder-leer', 'noch keine Angaben')); return box; }
+    var min = Math.floor(Math.min.apply(null, werte) / schritt) * schritt;
+    var max = Math.ceil(Math.max.apply(null, werte) / schritt) * schritt;
+    var inp = document.createElement('input');
+    inp.type = 'range'; inp.min = min; inp.max = max; inp.step = schritt;
+    inp.value = gewaehlt.length ? Math.min(max, Math.max(min, +gewaehlt[0])) : max;
+    inp.setAttribute('aria-label', f.titel);
+    var text = el('span', 'finder-regler-wert');
+    function beschriften() {
+      var v = +inp.value;
+      text.textContent = v >= max ? 'egal' : 'bis ' + v + ' € (' + zaehle(f, String(v)) + ')';
+    }
+    inp.addEventListener('input', beschriften);
+    inp.addEventListener('change', function () {
+      if (+inp.value >= max) delete wahl[f.id]; else wahl[f.id] = [String(inp.value)];
+      neu();
+    });
+    beschriften();
+    box.appendChild(inp);
+    box.appendChild(text);
+    return box;
   }
 
   function option(f, art, wert, text, an, zahl) {
@@ -339,6 +378,13 @@
     var name = suchname(g.modell);
     var version = (/\s(v\d+(\.\d+)?)\b/i.exec(g.modell) || [])[1];
     var p = el('p', 'finder-kaufen');
+    if (g.preis) {
+      var pr = el('span', 'finder-preis', 'Neu ab ca. ' + g.preis + ' €');
+      pr.title = 'Niedrigster Angebotspreis bei Geizhals ' + String(g.preis_ab).replace('.', ',') + ' € plus etwa 10 %, aufgerundet; Stand ' +
+        preiseStand + (g.preis_hinweis ? '. ' + g.preis_hinweis : '');
+      p.appendChild(pr);
+      p.appendChild(document.createTextNode(' (Stand ' + preiseStand + '). '));
+    }
     p.appendChild(document.createTextNode('Neu oder gebraucht suchen: '));
     var ziele = [
       ['Geizhals', g.geizhals || 'https://geizhals.de/?fs=' + encodeURIComponent(name) + '&hloc=de'],
@@ -692,6 +738,15 @@
           geraete.push(g);
         });
         legendeZeichnen();
+        holen('preise.json', function (pz) {
+        /* Fehlt die Datei (noch kein Cron-Lauf), bleibt alles wie vorher. */
+        if (pz && pz.geraete) {
+          preiseStand = (pz.stand || '').split('-').reverse().join('.');
+          geraete.forEach(function (g) {
+            var x = pz.geraete[g.image];
+            if (x) { g.preis = x.ca_eur; g.preis_ab = x.ab_eur; g.preis_hinweis = x.hinweis || ''; }
+          });
+        }
         holen('geraete/nicht-unterstuetzt.json', function (n) {
         nichtKarten = (n && n.karten) || [];
         zustandLesen();
@@ -707,6 +762,7 @@
           wahl = {}; nurGeraet = null; namensSuche = ''; $('#finder-name').value = ''; neu();
         });
         neu();
+        });
         });
       });
     });
