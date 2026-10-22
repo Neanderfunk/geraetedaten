@@ -481,6 +481,21 @@ def ansicht(d, idx):
     ]:
         technik.append(kombi(titel, teile, trenner=tr))
 
+    # Firmware-Namen (adorfer 22.10.2026): Gluon-Name des Images, Gluon-Target und daraus
+    # OpenWrt-Target/Subtarget (mediatek-filogic -> mediatek/filogic). Quelle des Targets:
+    # quellen/gluon-targets.json (Gluon-Targetdateien plus unsere Patches).
+    gt = TARGETS.get(d['image'])
+    wert = 'Gluon-Name ' + d['image']
+    if gt:
+        ow = gt.replace('-', '/', 1)
+        wert += ', Gluon-Target ' + gt + ', OpenWrt-Target ' + ow
+    technik.insert(0, {'titel': 'Firmware', 'wert': wert, 'belege': [{
+        'quelle': 'gluon_targets',
+        'url': 'https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/' + gt if gt else
+               'https://github.com/Neanderfunk/geraetedaten',
+        'stand': 'Gluon v2025.1.x mit gluon-patches-hardware', 'sicherheit': 'hoch'}],
+        'abweichend': [], 'weitere': []})
+
     links = []
     for k, name in [('toh_seite', 'OpenWrt-Geräteseite'), ('openwrt_wiki', 'OpenWrt-Wiki'), ('deviwiki', 'DeviWiki'),
                     ('wikidevi', 'WikiDevi'), ('hersteller_seite', 'Hersteller'), ('datenblatt', 'Datenblatt')]:
