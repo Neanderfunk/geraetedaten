@@ -567,7 +567,8 @@ def ansicht(d, idx):
     # Firmware-Namen (adorfer 22.10.2026): Gluon-Name des Images, Gluon-Target und daraus
     # OpenWrt-Target/Subtarget (mediatek-filogic -> mediatek/filogic). Quelle des Targets:
     # quellen/gluon-targets.json (Gluon-Targetdateien plus unsere Patches).
-    gt = TARGETS.get(d['image'])
+    # ERX: 2025.1 fuehrt das Geraet nur noch als -ka (neues Flash-Layout), der alte Name ist dasselbe Geraet
+    gt = TARGETS.get(d['image']) or TARGETS.get(d['image'] + '-ka')
     wert = 'Gluon-Name ' + d['image']
     if gt:
         ow = gt.replace('-', '/', 1)
@@ -846,7 +847,7 @@ def main():
         # mit der naechsten Version (routerwahl blendet es zunaechst aus).
         fac[d['image']]['stable'] = (d['image'] in STABLE) if STABLE else None
         # Gluon-Target, Namen wie in der Gluon-Doku (Filter Plattform, Nutzerwunsch 22.10.2026)
-        fac[d['image']]['plattform'] = TARGETS.get(d['image'])
+        fac[d['image']]['plattform'] = TARGETS.get(d['image']) or TARGETS.get(d['image'] + '-ka')
     # Nicht unterstuetzte Hardware-Versionen eines Modells, von dem wir eine
     # andere Version bauen: eigene schlichte Karten auf routerwahl, hinter den
     # unterstuetzten Geschwistern (adorfer 20.10.2026).
