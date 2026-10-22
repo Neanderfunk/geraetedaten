@@ -372,6 +372,8 @@
     var c = [];
     if (g.wlan) c.push('WLAN ' + g.wlan);
     if (g.streams) c.push(g.streams + '×' + g.streams);
+    /* Prozessor als Kerne x Takt neben dem RAM, z. B. 4×1300 MHz (adorfer 22.10.2026) */
+    if (g.mhz) c.push((g.kerne ? g.kerne + '×' : '') + g.mhz + ' MHz');
     if (g.ram) c.push(g.ram + ' MB RAM');
     if (g.sd) c.push('Speicherkarte');
     else if (g.flash) c.push(g.flash + ' MB Flash');
