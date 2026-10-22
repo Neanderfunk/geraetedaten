@@ -496,6 +496,7 @@ def ansicht(d, idx):
 VERSIONEN = {}   # 'Hersteller|Modell' -> {'bekannt': [...], 'nicht_unterstuetzt': [...]} aus dem Selector
 MODELLE = {}     # image -> {'hersteller', 'modell', ...} aus quellen/selector-modelle-*.json
 STABLE = set()   # Images im stable-Zweig, aus quellen/images-stable-*.txt
+TARGETS = {}     # Image -> Gluon-Target, aus quellen/gluon-targets.json (werkzeug/gluon-targets.py)
 ABSTRICHE = {}   # image -> {'ohne': [...], 'smallbuffers': bool} aus quellen/firmware-abstriche.json
 
 
@@ -610,6 +611,7 @@ def facetten(d):
     else:
         fa['speicher'] = None
     fa['kerne'] = zahl(s.get('cpu_kerne'))
+    fa['mhz'] = zahl(s.get('cpu_mhz'))   # Filter Prozessortakt (Nutzerwunsch 22.10.2026)
     ein = set()
     for t in alle('einsatzort'):
         o = ort(t)
@@ -708,6 +710,9 @@ def main():
         ab = json.load(open(ab, encoding='utf-8'))
         for img, e in ab['geraete'].items():
             ABSTRICHE[img] = dict(e, smallbuffers_text=ab['smallbuffers_text'])
+    gt = os.path.join(WURZEL, 'quellen', 'gluon-targets.json')
+    if os.path.exists(gt):
+        TARGETS.update(json.load(open(gt, encoding='utf-8')))
     st = sorted(glob.glob(os.path.join(WURZEL, 'quellen', 'images-stable-*.txt')))
     if st:   # werkzeug/image-liste.py stable
         STABLE.update(z.strip() for z in open(st[-1]) if z.strip())
@@ -737,6 +742,8 @@ def main():
         # Gibt es das Image im stable-Zweig? Sonst kommt die Firmware erst
         # mit der naechsten Version (routerwahl blendet es zunaechst aus).
         fac[d['image']]['stable'] = (d['image'] in STABLE) if STABLE else None
+        # Gluon-Target, Namen wie in der Gluon-Doku (Filter Plattform, Nutzerwunsch 22.10.2026)
+        fac[d['image']]['plattform'] = TARGETS.get(d['image'])
     # Nicht unterstuetzte Hardware-Versionen eines Modells, von dem wir eine
     # andere Version bauen: eigene schlichte Karten auf routerwahl, hinter den
     # unterstuetzten Geschwistern (adorfer 20.10.2026).

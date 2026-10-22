@@ -40,6 +40,9 @@
 - „Speicher für Updates“ seit 21.10.2026 fünfstufig (neu: „gut“), RAM je WLAN-Treiberklasse,
   Geräte mit Firmware-Abstrichen höchstens „knapp“. Regeln und Eichung in schema/felder.md.
   Nach Änderungen an image-customization.lua: `werkzeug/abstriche.py <FirmwareConfigs> <gluon>`.
+- Gluon-Target je Image (Filter „Plattform“ auf routerwahl, seit 22.10.2026):
+  `werkzeug/gluon-targets.py <gluon-klon> <gluon-patches-hardware-klon>` schreibt
+  `quellen/gluon-targets.json`; nach neuen Geräten oder Patches neu laufen lassen.
 - Neu erzeugen nach jeder Datenänderung: zuerst `werkzeug/lokale-pfade.py` (lokale Pfade aus
   Agentenläufen werden Links, Router-Werkstatt aufs GitLab, seit 22.10.2026), dann
   `werkzeug/selector-ansicht.py` und `werkzeug/geraeteliste.py --index <installer>/anleitungen/html/index.json`,
