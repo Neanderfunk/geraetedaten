@@ -245,6 +245,9 @@ STUFEN = {'reichlich': ('reichlich', 'viel Reserve, auch für künftige Versione
           'knapp': ('knapp', 'läuft noch, aber mit wenig Reserve für künftige Versionen'),
           'sackgasse': ('zu wenig', 'nur noch alte Firmware (Sackgasse)')}
 REIHE = ['sackgasse', 'knapp', 'reicht', 'gut', 'reichlich']
+# Geraete mit Abstrichen (lowmem, smallbuffers): Stufe knapp, aber eigenes Kennwort und eigener
+# Filterwert, damit man sie erkennt und ausblenden kann (adorfer 22.10.2026).
+REDUZIERT = 'knapp, reduzierte Funktionalität'
 # Flash nach adorfer 21.10.2026: 8 MB sehr knapp, 16 reicht, 32 gut, 64 reichlich.
 FLASH_SCHWELLEN = (8, 16, 32, 64)
 # RAM haengt vor allem am WLAN-Treiber. Mindest-RAM fuer knapp, ausreichend, gut, reichlich.
@@ -391,6 +394,8 @@ def ansicht(d, idx):
         if abst:
             stufe = min(stufe, 'knapp', key=REIHE.index)
         kennwort, rest = STUFEN[stufe]
+        if abst:
+            kennwort = REDUZIERT   # adorfer 22.10.2026: nicht nur "knapp"
         bei = RAM_KLASSEN[kl][0] + (', drei Funkeinheiten' if drei else '')
         erkl = '%s: %s; %g MB RAM bei %s: %s' % ('Speicherkarte' if karte else '%g MB Flash' % flash,
                                                 STUFEN[fs][0], ram, bei, STUFEN[rs][0])
@@ -620,9 +625,10 @@ def facetten(d):
     fa['flash'] = KARTE_MB if fa['sd'] else zahl(s.get('flash_mb'))
     if fa['ram'] and fa['flash']:
         st = speicherstufe(fa['flash'], fa['ram'], ram_klasse(s, f), triband(s))[0]
-        if abstriche_text(d['image']):
+        reduziert = bool(abstriche_text(d['image']))
+        if reduziert:
             st = min(st, 'knapp', key=REIHE.index)
-        fa['speicher'] = STUFEN[st][0]
+        fa['speicher'] = REDUZIERT if reduziert and st == 'knapp' else STUFEN[st][0]
     else:
         fa['speicher'] = None
     fa['kerne'] = zahl(s.get('cpu_kerne'))

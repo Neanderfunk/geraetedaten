@@ -138,7 +138,8 @@ die schlechtere der beiden Stufen: zu wenig, knapp, ausreichend, gut, reichlich.
   MediaTek, 128 MB) bei 92 %, Aruba AP-303 (IPQ4029, 512 MB) um 28 %. ath11k
   mit 256 MB lehnen Gluon und OpenWrt grundsätzlich ab (adorfer).
 - Abstriche: Wer die aktuelle Firmware nur gekürzt bekommt, ist höchstens
-  „knapp“, und die Erklärung nennt die Kürzungen. Die Feldmessung zeigt diese
+  „knapp“ und heißt dann „knapp, reduzierte Funktionalität“ (eigener
+  Filterwert, adorfer 22.10.2026); die Erklärung nennt die Kürzungen. Die Feldmessung zeigt diese
   Geräte schon ohne die gestrichenen Funktionen, also mit zu wenig Bedarf.
   Quelle ist `quellen/firmware-abstriche.json`, erzeugt von
   `werkzeug/abstriche.py` aus FirmwareConfigs `image-customization.lua`
