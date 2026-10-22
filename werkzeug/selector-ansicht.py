@@ -537,6 +537,9 @@ def ansicht(d, idx):
                        (lambda t: (t + (' Kern' if t == '1' else ' Kerne')) if t.isdigit() else t, s.get('cpu_kerne')),
                        (None if s.get('soc') and 'mhz' in schluessel(s['soc']['wert']) else einheit('MHz'),
                         s.get('cpu_mhz'))], ', '),
+        # Nutzerfrage 22.10.2026; Quellen und Zuordnung: werkzeug/vpn-werte.py
+        ('WireGuard-Durchsatz', [('Gluon mit WireGuard:', s.get('wireguard_gluon')),
+                                 ('nur Verschlüsselung auf dem Gerät:', s.get('wireguard_geraet'))], '; '),
         ('Speicher', [(lambda t: 'RAM ' + einheit('MB')(t), s.get('ram_mb')),
                       (lambda t: 'Flash ' + einheit('MB')(t) + (' (' + s['flash_typ']['wert'] + ')' if s.get('flash_typ') else ''),
                        s.get('flash_mb'))], ', '),
@@ -554,7 +557,12 @@ def ansicht(d, idx):
         ('Größe und Gewicht', [(mass, s.get('abmessungen_mm')), (einheit('g'), s.get('gewicht_g'))], ', '),
         ('FCC-ID', [('', s.get('fcc_id'))], '; '),
     ]:
-        technik.append(kombi(titel, teile, trenner=tr))
+        z = kombi(titel, teile, trenner=tr)
+        if z and titel == 'WireGuard-Durchsatz':
+            z['erklaerung'] = ('Messungen Dritter. „Gluon mit WireGuard“: Gluon übers Internet (FFMUC); '
+                               '„nur Verschlüsselung“: Rechentest auf dem Gerät, liegt deutlich höher. '
+                               'Neanderfunk nutzt tunneldigger ohne Verschlüsselung.')
+        technik.append(z)
 
     # Firmware-Namen (adorfer 22.10.2026): Gluon-Name des Images, Gluon-Target und daraus
     # OpenWrt-Target/Subtarget (mediatek-filogic -> mediatek/filogic). Quelle des Targets:

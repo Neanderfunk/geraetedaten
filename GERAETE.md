@@ -22,7 +22,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
 | HiveAP 121 | `aerohive-hiveap-121` | [erfasst](daten/aerohive-hiveap-121.json): 97 Felder, 7 offene Fäden, teilweise |  | recommended |
-| HiveAP 330 | `aerohive-hiveap-330` | [erfasst](daten/aerohive-hiveap-330.json): 92 Felder, 12 offene Fäden, teilweise |  | recommended |
+| HiveAP 330 | `aerohive-hiveap-330` | [erfasst](daten/aerohive-hiveap-330.json): 93 Felder, 12 offene Fäden, teilweise |  | recommended |
 
 ## Alfa
 
@@ -57,9 +57,9 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | RT-AC51U | `asus-rt-ac51u` | [erfasst](daten/asus-rt-ac51u.json): 82 Felder, 9 offene Fäden, teilweise |  | recommended |
 | RT-AC57U v1 | `asus-rt-ac57u-v1` | [erfasst](daten/asus-rt-ac57u-v1.json): 85 Felder, 7 offene Fäden, teilweise |  | recommended |
 | RT-AX52 | `asus-rt-ax52` | [erfasst](daten/asus-rt-ax52.json): 90 Felder, 7 offene Fäden, teilweise |  | recommended |
-| RT-AX53U | `asus-rt-ax53u` | [erfasst](daten/asus-rt-ax53u.json): 88 Felder, 8 offene Fäden, teilweise |  | recommended |
-| TUF-AX4200 | `asus-tuf-ax4200` | [erfasst](daten/asus-tuf-ax4200.json): 92 Felder, 10 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/asus-tuf-ax4200.html) | recommended |
-| TUF-AX6000 | `asus-tuf-ax6000` | [erfasst](daten/asus-tuf-ax6000.json): 93 Felder, 6 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/asus-tuf-ax6000.html) | recommended |
+| RT-AX53U | `asus-rt-ax53u` | [erfasst](daten/asus-rt-ax53u.json): 89 Felder, 8 offene Fäden, teilweise |  | recommended |
+| TUF-AX4200 | `asus-tuf-ax4200` | [erfasst](daten/asus-tuf-ax4200.json): 93 Felder, 10 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/asus-tuf-ax4200.html) | recommended |
+| TUF-AX6000 | `asus-tuf-ax6000` | [erfasst](daten/asus-tuf-ax6000.json): 94 Felder, 6 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/asus-tuf-ax6000.html) | recommended |
 
 ## AVM
 
@@ -68,17 +68,17 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | FRITZ!Box 3370 v2 Hynix | `avm-fritz-box-3370-rev-2-hynix-nand` | [erfasst](daten/avm-fritz-box-3370-rev-2-hynix-nand.json): 76 Felder, 7 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-3370-rev-2-hynix-nand.html) | recommended |
 | FRITZ!Box 3370 v2 Micron | `avm-fritz-box-3370-rev-2-micron-nand` | [erfasst](daten/avm-fritz-box-3370-rev-2-micron-nand.json): 86 Felder, 6 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-3370-rev-2-micron-nand.html) | recommended |
 | FRITZ!Box 3390 | `avm-fritz-box-3390` | [erfasst](daten/avm-fritz-box-3390.json): 80 Felder, 8 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-3390.html) | recommended |
-| FRITZ!Box 4020 | `avm-fritz-box-4020` | [erfasst](daten/avm-fritz-box-4020.json): 87 Felder, 8 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-4020.html) | recommended |
-| FRITZ!Box 4040 | `avm-fritz-box-4040` | [erfasst](daten/avm-fritz-box-4040.json): 82 Felder, 16 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-4040.html) | recommended |
+| FRITZ!Box 4020 | `avm-fritz-box-4020` | [erfasst](daten/avm-fritz-box-4020.json): 88 Felder, 8 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-4020.html) | recommended |
+| FRITZ!Box 4040 | `avm-fritz-box-4040` | [erfasst](daten/avm-fritz-box-4040.json): 84 Felder, 16 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-4040.html) | recommended |
 | FRITZ!Box 7312 | `avm-fritz-box-7312` | [erfasst](daten/avm-fritz-box-7312.json): 84 Felder, 5 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7312.html) | recommended |
 | FRITZ!Box 7360 SL | `avm-fritz-box-7360-sl` | [erfasst](daten/avm-fritz-box-7360-sl.json): 88 Felder, 8 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7360-sl.html) | recommended |
 | FRITZ!Box 7360 v1 | `avm-fritz-box-7360-v1` | [erfasst](daten/avm-fritz-box-7360-v1.json): 83 Felder, 9 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7360-v1.html) | recommended |
-| FRITZ!Box 7360 v2 | `avm-fritz-box-7360-v2` | [erfasst](daten/avm-fritz-box-7360-v2.json): 88 Felder, 6 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7360-v2.html) | recommended |
+| FRITZ!Box 7360 v2 | `avm-fritz-box-7360-v2` | [erfasst](daten/avm-fritz-box-7360-v2.json): 89 Felder, 6 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7360-v2.html) | recommended |
 | FRITZ!Box 7362 SL | `avm-fritz-box-7362-sl` | [erfasst](daten/avm-fritz-box-7362-sl.json): 81 Felder, 10 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7362-sl.html) | recommended |
 | FRITZ!Box 7412 | `avm-fritz-box-7412` | [erfasst](daten/avm-fritz-box-7412.json): 82 Felder, 9 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7412.html) | recommended |
-| FRITZ!Box 7430 | `avm-fritz-box-7430` | [erfasst](daten/avm-fritz-box-7430.json): 81 Felder, 10 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7430.html) | recommended |
-| FRITZ!Box 7520 | `avm-fritz-box-7520` | [erfasst](daten/avm-fritz-box-7520.json): 92 Felder, 10 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7520.html) | recommended |
-| FRITZ!Box 7530 | `avm-fritz-box-7530` | [erfasst](daten/avm-fritz-box-7530.json): 83 Felder, 8 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7530.html) | recommended |
+| FRITZ!Box 7430 | `avm-fritz-box-7430` | [erfasst](daten/avm-fritz-box-7430.json): 82 Felder, 10 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7430.html) | recommended |
+| FRITZ!Box 7520 | `avm-fritz-box-7520` | [erfasst](daten/avm-fritz-box-7520.json): 93 Felder, 10 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7520.html) | recommended |
+| FRITZ!Box 7530 | `avm-fritz-box-7530` | [erfasst](daten/avm-fritz-box-7530.json): 85 Felder, 8 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-box-7530.html) | recommended |
 | FRITZ!Repeater 1200 | `avm-fritz-repeater-1200` | [erfasst](daten/avm-fritz-repeater-1200.json): 77 Felder, 11 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-repeater-1200.html) | recommended |
 | FRITZ!Repeater 3000 | `avm-fritz-repeater-3000` | [erfasst](daten/avm-fritz-repeater-3000.json): 91 Felder, 12 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-repeater-3000.html) | recommended |
 | FRITZ!WLAN Repeater 1750E | `avm-fritz-wlan-repeater-1750e` | [erfasst](daten/avm-fritz-wlan-repeater-1750e.json): 67 Felder, 5 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/avm-fritz-wlan-repeater-1750e.html) | recommended |
@@ -115,15 +115,15 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | M3000 v2-with-motorcomm-yt8821 | `cudy-m3000-v2-with-motorcomm-yt8821` | [erfasst](daten/cudy-m3000-v2-with-motorcomm-yt8821.json): 93 Felder, 10 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/cudy-m3000-v2-with-motorcomm-yt8821.html) | recommended |
 | RE3000 v1 | `cudy-re3000-v1` | [erfasst](daten/cudy-re3000-v1.json): 64 Felder, 10 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/cudy-re3000-v1.html) | recommended |
 | TR1200 v1 | `cudy-tr1200-v1` | [erfasst](daten/cudy-tr1200-v1.json): 94 Felder, 8 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/cudy-tr1200-v1.html) | recommended |
-| TR3000 v1 | `cudy-tr3000-v1` | [erfasst](daten/cudy-tr3000-v1.json): 98 Felder, 10 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/cudy-tr3000-v1.html) | recommended |
+| TR3000 v1 | `cudy-tr3000-v1` | [erfasst](daten/cudy-tr3000-v1.json): 99 Felder, 10 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/cudy-tr3000-v1.html) | recommended |
 | TR3000-256MB v1 | `cudy-tr3000-256mb-v1` | [erfasst](daten/cudy-tr3000-256mb-v1.json): 92 Felder, 9 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/cudy-tr3000-256mb-v1.html) | recommended |
 | WR1000 v2 | `cudy-wr1000` | [erfasst](daten/cudy-wr1000.json): 96 Felder, 8 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/cudy-wr1000.html) | recommended |
 | WR1300 v1 | `cudy-wr1300-v1` | [erfasst](daten/cudy-wr1300-v1.json): 75 Felder, 7 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/cudy-wr1300-v1.html) | recommended |
 | WR2100 | `cudy-wr2100` | [erfasst](daten/cudy-wr2100.json): 83 Felder, 7 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/cudy-wr2100.html) | recommended |
 | WR3000 E v1 | `cudy-wr3000e-v1` | [erfasst](daten/cudy-wr3000e-v1.json): 96 Felder, 10 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/cudy-wr3000e-v1.html) | recommended |
-| WR3000 H (AX3000) v1 | `cudy-wr3000h-v1` | [erfasst](daten/cudy-wr3000h-v1.json): 106 Felder, 15 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/cudy-wr3000h-v1.html) | recommended |
+| WR3000 H (AX3000) v1 | `cudy-wr3000h-v1` | [erfasst](daten/cudy-wr3000h-v1.json): 107 Felder, 15 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/cudy-wr3000h-v1.html) | recommended |
 | WR3000 S v1 | `cudy-wr3000s-v1` | [erfasst](daten/cudy-wr3000s-v1.json): 80 Felder, 14 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/cudy-wr3000s-v1.html) | recommended |
-| WR3000 v1 | `cudy-wr3000-v1` | [erfasst](daten/cudy-wr3000-v1.json): 104 Felder, 9 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/cudy-wr3000-v1.html) | recommended |
+| WR3000 v1 | `cudy-wr3000-v1` | [erfasst](daten/cudy-wr3000-v1.json): 106 Felder, 9 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/cudy-wr3000-v1.html) | recommended |
 | X6 v1 | `cudy-x6-v1` | [erfasst](daten/cudy-x6-v1.json): 87 Felder, 10 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/cudy-x6-v1.html) | recommended |
 | X6 v2 | `cudy-x6-v2` | [erfasst](daten/cudy-x6-v2.json): 92 Felder, 8 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/cudy-x6-v2.html) | recommended |
 
@@ -137,15 +137,15 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| Aquila Pro AI M30 a1 | `d-link-aquila-pro-ai-m30-a1` | [erfasst](daten/d-link-aquila-pro-ai-m30-a1.json): 98 Felder, 9 offene Fäden, fertig | [L4](https://routersoftware.ffnef.de/anleitungen/de/d-link-aquila-pro-ai-m30-a1.html) | recommended |
+| Aquila Pro AI M30 a1 | `d-link-aquila-pro-ai-m30-a1` | [erfasst](daten/d-link-aquila-pro-ai-m30-a1.json): 99 Felder, 9 offene Fäden, fertig | [L4](https://routersoftware.ffnef.de/anleitungen/de/d-link-aquila-pro-ai-m30-a1.html) | recommended |
 | Aquila Pro AI M60 a1 | `d-link-aquila-pro-ai-m60-a1` | [erfasst](daten/d-link-aquila-pro-ai-m60-a1.json): 100 Felder, 6 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/d-link-aquila-pro-ai-m60-a1.html) | recommended |
-| COVR-X1860 a1 | `d-link-covr-x1860-a1` | [erfasst](daten/d-link-covr-x1860-a1.json): 81 Felder, 9 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/d-link-covr-x1860-a1.html) | recommended |
+| COVR-X1860 a1 | `d-link-covr-x1860-a1` | [erfasst](daten/d-link-covr-x1860-a1.json): 82 Felder, 9 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/d-link-covr-x1860-a1.html) | recommended |
 | DAP-1365 a1 | `d-link-dap-1365-a1` | [erfasst](daten/d-link-dap-1365-a1.json): 86 Felder, 10 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/d-link-dap-1365-a1.html) | recommended |
 | DAP-1620 b1 | `d-link-dap-1620-b1` | [erfasst](daten/d-link-dap-1620-b1.json): 93 Felder, 9 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/d-link-dap-1620-b1.html) | recommended |
 | DAP-2660 a1 | `d-link-dap-2660-a1` | [erfasst](daten/d-link-dap-2660-a1.json): 96 Felder, 7 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/d-link-dap-2660-a1.html) | recommended |
 | DAP-2680 a1 | `d-link-dap-2680-a1` | [erfasst](daten/d-link-dap-2680-a1.json): 90 Felder, 7 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/d-link-dap-2680-a1.html) | recommended |
 | DAP-2695 a1 | `d-link-dap-2695-a1` | [erfasst](daten/d-link-dap-2695-a1.json): 88 Felder, 11 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/d-link-dap-2695-a1.html) | recommended |
-| DAP-X1860 a1 | `d-link-dap-x1860-a1` | [erfasst](daten/d-link-dap-x1860-a1.json): 91 Felder, 8 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/d-link-dap-x1860-a1.html) | recommended |
+| DAP-X1860 a1 | `d-link-dap-x1860-a1` | [erfasst](daten/d-link-dap-x1860-a1.json): 92 Felder, 8 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/d-link-dap-x1860-a1.html) | recommended |
 | DIR-505 | `d-link-dir-505` | [erfasst](daten/d-link-dir-505.json): 92 Felder, 9 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/d-link-dir-505.html) | recommended |
 | DIR-825 b1 | `d-link-dir825b1` | [erfasst](daten/d-link-dir825b1.json): 83 Felder, 8 offene Fäden, teilweise |  | recommended |
 | DIR-860L b1 | `d-link-dir-860l-b1` | [erfasst](daten/d-link-dir-860l-b1.json): 82 Felder, 8 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/d-link-dir-860l-b1.html) | recommended |
@@ -169,8 +169,8 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
 | WS-AP3705i | `enterasys-ws-ap3705i` | [erfasst](daten/enterasys-ws-ap3705i.json): 86 Felder, 8 offene Fäden, teilweise | [L6](https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3705i.html) | recommended |
-| WS-AP3710i | `enterasys-ws-ap3710i` | [erfasst](daten/enterasys-ws-ap3710i.json): 72 Felder, 8 offene Fäden, teilweise | [L6](https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3710i.html) | recommended |
-| WS-AP3715i | `enterasys-ws-ap3715i` | [erfasst](daten/enterasys-ws-ap3715i.json): 79 Felder, 9 offene Fäden, teilweise | [L6](https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3715i.html) | recommended |
+| WS-AP3710i | `enterasys-ws-ap3710i` | [erfasst](daten/enterasys-ws-ap3710i.json): 73 Felder, 8 offene Fäden, teilweise | [L6](https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3710i.html) | recommended |
+| WS-AP3715i | `enterasys-ws-ap3715i` | [erfasst](daten/enterasys-ws-ap3715i.json): 80 Felder, 9 offene Fäden, teilweise | [L6](https://routersoftware.ffnef.de/anleitungen/de/enterasys-ws-ap3715i.html) | recommended |
 
 ## Extreme
 
@@ -183,17 +183,17 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
 | WS-AP3805i | `extreme-networks-ws-ap3805i` | [erfasst](daten/extreme-networks-ws-ap3805i.json): 91 Felder, 11 offene Fäden, fertig | [L7](https://routersoftware.ffnef.de/anleitungen/de/extreme-networks-ws-ap3805i.html) | recommended |
-| WS-AP3825i | `extreme-networks-ws-ap3825i` | [erfasst](daten/extreme-networks-ws-ap3825i.json): 93 Felder, 10 offene Fäden, teilweise | [L6](https://routersoftware.ffnef.de/anleitungen/de/extreme-networks-ws-ap3825i.html) | recommended |
+| WS-AP3825i | `extreme-networks-ws-ap3825i` | [erfasst](daten/extreme-networks-ws-ap3825i.json): 94 Felder, 10 offene Fäden, teilweise | [L6](https://routersoftware.ffnef.de/anleitungen/de/extreme-networks-ws-ap3825i.html) | recommended |
 | WS-AP3915i | `extreme-networks-ws-ap3915i` | [erfasst](daten/extreme-networks-ws-ap3915i.json): 80 Felder, 7 offene Fäden, teilweise |  | recommended |
 
 ## FriendlyElec
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| NanoPi R2C | `friendlyelec-nanopi-r2c` | [erfasst](daten/friendlyelec-nanopi-r2c.json): 57 Felder, 6 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/friendlyelec-nanopi-r2c.html) | recommended |
-| NanoPi R2S | `friendlyelec-nanopi-r2s` | [erfasst](daten/friendlyelec-nanopi-r2s.json): 47 Felder, 6 offene Fäden, fertig | [L4](https://routersoftware.ffnef.de/anleitungen/de/friendlyelec-nanopi-r2s.html) | recommended |
-| NanoPi R3S | `friendlyelec-nanopi-r3s` | [erfasst](daten/friendlyelec-nanopi-r3s.json): 56 Felder, 4 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/friendlyelec-nanopi-r3s.html) | recommended |
-| NanoPi R4S | `friendlyelec-nanopi-r4s` | [erfasst](daten/friendlyelec-nanopi-r4s.json): 76 Felder, 6 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/friendlyelec-nanopi-r4s.html) | recommended |
+| NanoPi R2C | `friendlyelec-nanopi-r2c` | [erfasst](daten/friendlyelec-nanopi-r2c.json): 58 Felder, 6 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/friendlyelec-nanopi-r2c.html) | recommended |
+| NanoPi R2S | `friendlyelec-nanopi-r2s` | [erfasst](daten/friendlyelec-nanopi-r2s.json): 49 Felder, 6 offene Fäden, fertig | [L4](https://routersoftware.ffnef.de/anleitungen/de/friendlyelec-nanopi-r2s.html) | recommended |
+| NanoPi R3S | `friendlyelec-nanopi-r3s` | [erfasst](daten/friendlyelec-nanopi-r3s.json): 58 Felder, 4 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/friendlyelec-nanopi-r3s.html) | recommended |
+| NanoPi R4S | `friendlyelec-nanopi-r4s` | [erfasst](daten/friendlyelec-nanopi-r4s.json): 78 Felder, 6 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/friendlyelec-nanopi-r4s.html) | recommended |
 
 ## Genexis
 
@@ -206,23 +206,23 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
 | 6416 | `gl.inet-6416` | [erfasst](daten/gl.inet-6416.json): 68 Felder, 7 offene Fäden, fertig | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-6416.html) | recommended |
-| GL-AP1300 | `gl.inet-gl-ap1300` | [erfasst](daten/gl.inet-gl-ap1300.json): 82 Felder, 7 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-ap1300.html) | recommended |
-| GL-AR150 | `gl.inet-gl-ar150` | [erfasst](daten/gl.inet-gl-ar150.json): 84 Felder, 10 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-ar150.html) | recommended |
+| GL-AP1300 | `gl.inet-gl-ap1300` | [erfasst](daten/gl.inet-gl-ap1300.json): 83 Felder, 7 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-ap1300.html) | recommended |
+| GL-AR150 | `gl.inet-gl-ar150` | [erfasst](daten/gl.inet-gl-ar150.json): 85 Felder, 10 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-ar150.html) | recommended |
 | GL-AR300M | `gl.inet-gl-ar300m-nor` | [erfasst](daten/gl.inet-gl-ar300m-nor.json): 66 Felder, 11 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-ar300m-nor.html) | recommended |
-| GL-AR300M Lite | `gl.inet-gl-ar300m-lite` | [erfasst](daten/gl.inet-gl-ar300m-lite.json): 86 Felder, 8 offene Fäden, teilweise | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-ar300m-lite.html) | recommended |
+| GL-AR300M Lite | `gl.inet-gl-ar300m-lite` | [erfasst](daten/gl.inet-gl-ar300m-lite.json): 87 Felder, 8 offene Fäden, teilweise | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-ar300m-lite.html) | recommended |
 | GL-AR750 | `gl.inet-gl-ar750` | [erfasst](daten/gl.inet-gl-ar750.json): 87 Felder, 6 offene Fäden, teilweise | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-ar750.html) | recommended |
-| GL-AR750S | `gl.inet-gl-ar750s-nor` | [erfasst](daten/gl.inet-gl-ar750s-nor.json): 93 Felder, 7 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-ar750s-nor.html) | recommended |
+| GL-AR750S | `gl.inet-gl-ar750s-nor` | [erfasst](daten/gl.inet-gl-ar750s-nor.json): 94 Felder, 7 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-ar750s-nor.html) | recommended |
 | GL-B1300 | `gl.inet-gl-b1300` | [erfasst](daten/gl.inet-gl-b1300.json): 83 Felder, 7 offene Fäden, teilweise | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-b1300.html) | recommended |
-| GL-E750 | `gl.inet-gl-e750` | [erfasst](daten/gl.inet-gl-e750.json): 87 Felder, 11 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-e750.html) | recommended |
-| GL-MT1300 | `gl.inet-gl-mt1300` | [erfasst](daten/gl.inet-gl-mt1300.json): 85 Felder, 8 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-mt1300.html) | recommended |
-| GL-MT2500 | `gl.inet-gl-mt2500` | [erfasst](daten/gl.inet-gl-mt2500.json): 58 Felder, 10 offene Fäden, teilweise | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-mt2500.html) | recommended |
-| GL-MT3000 | `gl.inet-gl-mt3000` | [erfasst](daten/gl.inet-gl-mt3000.json): 86 Felder, 9 offene Fäden, teilweise | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-mt3000.html) | recommended |
-| GL-MT300a | `gl-mt300a` | [erfasst](daten/gl-mt300a.json): 82 Felder, 6 offene Fäden, teilweise | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl-mt300a.html) | recommended |
-| GL-MT300n v1 | `gl-mt300n` | [erfasst](daten/gl-mt300n.json): 74 Felder, 7 offene Fäden, teilweise | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl-mt300n.html) | recommended |
-| GL-MT300n v2 | `gl-mt300n-v2` | [erfasst](daten/gl-mt300n-v2.json): 84 Felder, 7 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl-mt300n-v2.html) | recommended |
+| GL-E750 | `gl.inet-gl-e750` | [erfasst](daten/gl.inet-gl-e750.json): 88 Felder, 11 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-e750.html) | recommended |
+| GL-MT1300 | `gl.inet-gl-mt1300` | [erfasst](daten/gl.inet-gl-mt1300.json): 86 Felder, 8 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-mt1300.html) | recommended |
+| GL-MT2500 | `gl.inet-gl-mt2500` | [erfasst](daten/gl.inet-gl-mt2500.json): 59 Felder, 10 offene Fäden, teilweise | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-mt2500.html) | recommended |
+| GL-MT3000 | `gl.inet-gl-mt3000` | [erfasst](daten/gl.inet-gl-mt3000.json): 87 Felder, 9 offene Fäden, teilweise | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-mt3000.html) | recommended |
+| GL-MT300a | `gl-mt300a` | [erfasst](daten/gl-mt300a.json): 83 Felder, 6 offene Fäden, teilweise | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl-mt300a.html) | recommended |
+| GL-MT300n v1 | `gl-mt300n` | [erfasst](daten/gl-mt300n.json): 75 Felder, 7 offene Fäden, teilweise | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl-mt300n.html) | recommended |
+| GL-MT300n v2 | `gl-mt300n-v2` | [erfasst](daten/gl-mt300n-v2.json): 86 Felder, 7 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl-mt300n-v2.html) | recommended |
 | GL-MT750 | `gl-mt750` | [erfasst](daten/gl-mt750.json): 69 Felder, 12 offene Fäden, teilweise | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl-mt750.html) | recommended |
 | GL-USB150 | `gl.inet-gl-usb150` | [erfasst](daten/gl.inet-gl-usb150.json): 78 Felder, 6 offene Fäden, teilweise | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-usb150.html) | recommended |
-| GL-XE300 | `gl.inet-gl-xe300` | [erfasst](daten/gl.inet-gl-xe300.json): 76 Felder, 8 offene Fäden, fertig | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-xe300.html) | recommended |
+| GL-XE300 | `gl.inet-gl-xe300` | [erfasst](daten/gl.inet-gl-xe300.json): 77 Felder, 8 offene Fäden, fertig | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-xe300.html) | recommended |
 | microuter-N300 | `gl.inet-microuter-n300` | [erfasst](daten/gl.inet-microuter-n300.json): 67 Felder, 6 offene Fäden, teilweise | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-microuter-n300.html) | recommended |
 | VIXMINI | `gl.inet-vixmini` | [erfasst](daten/gl.inet-vixmini.json): 79 Felder, 8 offene Fäden, teilweise | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-vixmini.html) | recommended |
 
@@ -231,7 +231,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
 | gl.inet-gl-ar300m16 | `gl.inet-gl-ar300m16` | [erfasst](daten/gl.inet-gl-ar300m16.json): 80 Felder, 9 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-ar300m16.html) |  |
-| gl.inet-gl-mt6000 | `gl.inet-gl-mt6000` | [erfasst](daten/gl.inet-gl-mt6000.json): 102 Felder, 8 offene Fäden, fertig | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-mt6000.html) |  |
+| gl.inet-gl-mt6000 | `gl.inet-gl-mt6000` | [erfasst](daten/gl.inet-gl-mt6000.json): 103 Felder, 8 offene Fäden, fertig | [L0](https://routersoftware.ffnef.de/anleitungen/de/gl.inet-gl-mt6000.html) |  |
 
 ## Hewlett-Packard
 
@@ -255,10 +255,10 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| E8450 | `linksys-e8450-ubi` | [erfasst](daten/linksys-e8450-ubi.json): 74 Felder, 11 offene Fäden, teilweise |  | recommended |
+| E8450 | `linksys-e8450-ubi` | [erfasst](daten/linksys-e8450-ubi.json): 75 Felder, 11 offene Fäden, teilweise |  | recommended |
 | EA6350 v3 | `linksys-ea6350v3` | [erfasst](daten/linksys-ea6350v3.json): 96 Felder, 8 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/linksys-ea6350v3.html) | small kernel part |
 | EA8300 | `linksys-ea8300-dallas` | [erfasst](daten/linksys-ea8300-dallas.json): 78 Felder, 10 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/linksys-ea8300-dallas.html) | recommended |
-| linksys-mx5300 | `linksys-mx5300` | [erfasst](daten/linksys-mx5300.json): 88 Felder, 9 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/linksys-mx5300.html) |  |
+| linksys-mx5300 | `linksys-mx5300` | [erfasst](daten/linksys-mx5300.json): 89 Felder, 9 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/linksys-mx5300.html) |  |
 | linksys-vlp01 | `linksys-vlp01` | [erfasst](daten/linksys-vlp01.json): 93 Felder, 12 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/linksys-vlp01.html) |  |
 | linksys-whw01 | `linksys-whw01` | [erfasst](daten/linksys-whw01.json): 84 Felder, 8 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/linksys-whw01.html) |  |
 | linksys-whw03-v2-velop | `linksys-whw03-v2-velop` | [erfasst](daten/linksys-whw03-v2-velop.json): 61 Felder, 8 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/linksys-whw03-v2-velop.html) |  |
@@ -278,17 +278,17 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | mercusys-mr80x-v2 | `mercusys-mr80x-v2` | [erfasst](daten/mercusys-mr80x-v2.json): 84 Felder, 12 offene Fäden, teilweise |  |  |
 | mercusys-mr80x-v3 | `mercusys-mr80x-v3` | [erfasst](daten/mercusys-mr80x-v3.json): 58 Felder, 9 offene Fäden, teilweise |  |  |
 | MR70X v1 | `mercusys-mr70x-v1` | [erfasst](daten/mercusys-mr70x-v1.json): 92 Felder, 14 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/mercusys-mr70x-v1.html) | recommended |
-| MR90X v1 | `mercusys-mr90x-v1` | [erfasst](daten/mercusys-mr90x-v1.json): 92 Felder, 13 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/mercusys-mr90x-v1.html) | recommended |
+| MR90X v1 | `mercusys-mr90x-v1` | [erfasst](daten/mercusys-mr90x-v1.json): 93 Felder, 13 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/mercusys-mr90x-v1.html) | recommended |
 
 ## Mikrotik
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
 | mikrotik-routerboard-wap-g-5hacd2hnd | `mikrotik-routerboard-wap-g-5hacd2hnd` | [erfasst](daten/mikrotik-routerboard-wap-g-5hacd2hnd.json): 87 Felder, 8 offene Fäden, teilweise |  |  |
-| RB750Gr3 (hEX) | `mikrotik-routerboard-750gr3` | [erfasst](daten/mikrotik-routerboard-750gr3.json): 70 Felder, 10 offene Fäden, teilweise |  | recommended |
+| RB750Gr3 (hEX) | `mikrotik-routerboard-750gr3` | [erfasst](daten/mikrotik-routerboard-750gr3.json): 71 Felder, 10 offene Fäden, teilweise |  | recommended |
 | RB750Gr3 (hEX) | `mikrotik-routerboard-hex-v3` | [erfasst](daten/mikrotik-routerboard-hex-v3.json): 75 Felder, 9 offene Fäden, fertig |  | recommended |
 | RB951Ui-2nD (hAP) | `mikrotik-routerboard-951ui-2nd-hap` | [erfasst](daten/mikrotik-routerboard-951ui-2nd-hap.json): 84 Felder, 9 offene Fäden, teilweise |  | recommended |
-| RBD52G-5HacD2HnD-TC (hAP ac²) | `mikrotik-hap-ac2` | [erfasst](daten/mikrotik-hap-ac2.json): 87 Felder, 8 offene Fäden, teilweise |  | recommended |
+| RBD52G-5HacD2HnD-TC (hAP ac²) | `mikrotik-hap-ac2` | [erfasst](daten/mikrotik-hap-ac2.json): 88 Felder, 8 offene Fäden, teilweise |  | recommended |
 | RBDiscG-5acD (DISC Lite5 ac) | `mikrotik-discg-5acd` | [erfasst](daten/mikrotik-discg-5acd.json): 81 Felder, 8 offene Fäden, teilweise |  | recommended |
 | RBmAPL-2nD (mAP lite) | `mikrotik-routerboard-map-lite` | [erfasst](daten/mikrotik-routerboard-map-lite.json): 83 Felder, 8 offene Fäden, teilweise |  | recommended |
 | RBmAPL-2nD (mAP lite) | `mikrotik-routerboard-mapl-2nd` | [erfasst](daten/mikrotik-routerboard-mapl-2nd.json): 84 Felder, 10 offene Fäden, teilweise |  | recommended |
@@ -319,14 +319,14 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | netgear-srs60 | `netgear-srs60` | [erfasst](daten/netgear-srs60.json): 81 Felder, 9 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/netgear-srs60.html) |  |
 | netgear-wax218 | `netgear-wax218` | [erfasst](daten/netgear-wax218.json): 82 Felder, 8 offene Fäden, teilweise |  |  |
 | R6020 | `netgear-r6020` | [erfasst](daten/netgear-r6020.json): 78 Felder, 8 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/netgear-r6020.html) | recommended |
-| R6120 | `netgear-r6120` | [erfasst](daten/netgear-r6120.json): 92 Felder, 9 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/netgear-r6120.html) | recommended |
+| R6120 | `netgear-r6120` | [erfasst](daten/netgear-r6120.json): 93 Felder, 9 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/netgear-r6120.html) | recommended |
 | R6220 | `netgear-r6220` | [erfasst](daten/netgear-r6220.json): 82 Felder, 9 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/netgear-r6220.html) | recommended |
 | R6260 | `netgear-r6260` | [erfasst](daten/netgear-r6260.json): 92 Felder, 9 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/netgear-r6260.html) | recommended |
-| R7800 | `netgear-nighthawk-x4s-r7800` | [erfasst](daten/netgear-nighthawk-x4s-r7800.json): 90 Felder, 9 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/netgear-nighthawk-x4s-r7800.html) | recommended |
+| R7800 | `netgear-nighthawk-x4s-r7800` | [erfasst](daten/netgear-nighthawk-x4s-r7800.json): 91 Felder, 9 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/netgear-nighthawk-x4s-r7800.html) | recommended |
 | WAC104 | `netgear-wac104` | [erfasst](daten/netgear-wac104.json): 90 Felder, 6 offene Fäden, fertig | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/netgear-wac104.html) | recommended |
-| WAX202 | `netgear-wax202` | [erfasst](daten/netgear-wax202.json): 70 Felder, 8 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/netgear-wax202.html) | recommended |
-| WAX206 | `netgear-wax206` | [erfasst](daten/netgear-wax206.json): 80 Felder, 7 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/netgear-wax206.html) | recommended |
-| WAX220 | `netgear-wax220` | [erfasst](daten/netgear-wax220.json): 95 Felder, 6 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/netgear-wax220.html) | recommended |
+| WAX202 | `netgear-wax202` | [erfasst](daten/netgear-wax202.json): 71 Felder, 8 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/netgear-wax202.html) | recommended |
+| WAX206 | `netgear-wax206` | [erfasst](daten/netgear-wax206.json): 81 Felder, 7 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/netgear-wax206.html) | recommended |
+| WAX220 | `netgear-wax220` | [erfasst](daten/netgear-wax220.json): 97 Felder, 6 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/netgear-wax220.html) | recommended |
 | WNDR3700 v1 | `netgear-wndr3700` | [erfasst](daten/netgear-wndr3700.json): 92 Felder, 7 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/netgear-wndr3700.html) | recommended |
 | WNDR3700 v2 | `netgear-wndr3700-v2` | [erfasst](daten/netgear-wndr3700-v2.json): 91 Felder, 7 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/netgear-wndr3700-v2.html) | recommended |
 | WNDR3700 v4 | `netgear-wndr3700-v4` | [erfasst](daten/netgear-wndr3700-v4.json): 89 Felder, 8 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/netgear-wndr3700-v4.html) | recommended |
@@ -403,7 +403,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| One | `openwrt-one` | [erfasst](daten/openwrt-one.json): 89 Felder, 9 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/openwrt-one.html) | recommended |
+| One | `openwrt-one` | [erfasst](daten/openwrt-one.json): 90 Felder, 9 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/openwrt-one.html) | recommended |
 
 ## Plasma Cloud
 
@@ -418,8 +418,8 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| PI3 | `raspberrypi-3-model-b` | [erfasst](daten/raspberrypi-3-model-b.json): 76 Felder, 7 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/raspberrypi-3-model-b.html) | recommended |
-| PI4 | `raspberrypi-4-model-b` | [erfasst](daten/raspberrypi-4-model-b.json): 90 Felder, 8 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/raspberrypi-4-model-b.html) | recommended |
+| PI3 | `raspberrypi-3-model-b` | [erfasst](daten/raspberrypi-3-model-b.json): 77 Felder, 7 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/raspberrypi-3-model-b.html) | recommended |
+| PI4 | `raspberrypi-4-model-b` | [erfasst](daten/raspberrypi-4-model-b.json): 91 Felder, 8 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/raspberrypi-4-model-b.html) | recommended |
 
 ## RAVPower
 
@@ -466,7 +466,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | tp-link-archer-c50-v1 | `tp-link-archer-c50-v1` | [erfasst](daten/tp-link-archer-c50-v1.json): 87 Felder, 10 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c50-v1.html) |  |
 | tp-link-archer-c50-v6-ca-eu-ru | `tp-link-archer-c50-v6-ca-eu-ru` | [erfasst](daten/tp-link-archer-c50-v6-ca-eu-ru.json): 81 Felder, 8 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c50-v6-ca-eu-ru.html) |  |
 | tp-link-archer-c58-v1 | `tp-link-archer-c58-v1` | [erfasst](daten/tp-link-archer-c58-v1.json): 79 Felder, 9 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c58-v1.html) |  |
-| tp-link-cpe210-v1 | `tp-link-cpe210-v1` | [erfasst](daten/tp-link-cpe210-v1.json): 94 Felder, 8 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/tp-link-cpe210-v1.html) |  |
+| tp-link-cpe210-v1 | `tp-link-cpe210-v1` | [erfasst](daten/tp-link-cpe210-v1.json): 95 Felder, 8 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/tp-link-cpe210-v1.html) |  |
 | tp-link-cpe210-v2 | `tp-link-cpe210-v2` | [erfasst](daten/tp-link-cpe210-v2.json): 91 Felder, 5 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/tp-link-cpe210-v2.html) |  |
 | tp-link-cpe210-v3 | `tp-link-cpe210-v3` | [erfasst](daten/tp-link-cpe210-v3.json): 90 Felder, 9 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/tp-link-cpe210-v3.html) |  |
 | tp-link-cpe220-v3 | `tp-link-cpe220-v3` | [erfasst](daten/tp-link-cpe220-v3.json): 87 Felder, 9 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/tp-link-cpe220-v3.html) |  |
@@ -488,7 +488,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | Archer C20 v4 | `tp-link-archer-c20-v4` | [erfasst](daten/tp-link-archer-c20-v4.json): 92 Felder, 8 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c20-v4.html) | recommended |
 | Archer C20 v5 | `tp-link-archer-c20-v5` | [erfasst](daten/tp-link-archer-c20-v5.json): 87 Felder, 6 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c20-v5.html) | recommended |
 | Archer C20i | `tp-link-archer-c20i` | [erfasst](daten/tp-link-archer-c20i.json): 84 Felder, 6 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c20i.html) | recommended |
-| Archer C2600 v1 | `tp-link-archer-c2600` | [erfasst](daten/tp-link-archer-c2600.json): 95 Felder, 8 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c2600.html) | recommended |
+| Archer C2600 v1 | `tp-link-archer-c2600` | [erfasst](daten/tp-link-archer-c2600.json): 96 Felder, 8 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c2600.html) | recommended |
 | Archer C5 v1 | `tp-link-archer-c5-v1` | [erfasst](daten/tp-link-archer-c5-v1.json): 86 Felder, 9 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c5-v1.html) | recommended |
 | Archer C50 v3 | `tp-link-archer-c50-v3` | [erfasst](daten/tp-link-archer-c50-v3.json): 93 Felder, 7 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c50-v3.html) | recommended |
 | Archer C50 v4 | `tp-link-archer-c50-v4` | [erfasst](daten/tp-link-archer-c50-v4.json): 91 Felder, 10 offene Fäden, teilweise | [L5](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c50-v4.html) | recommended |
@@ -496,9 +496,9 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | Archer C6 v2 (EU/RU/JP) | `tp-link-archer-c6-v2-eu-ru-jp` | [erfasst](daten/tp-link-archer-c6-v2-eu-ru-jp.json): 88 Felder, 9 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c6-v2-eu-ru-jp.html) | recommended |
 | Archer C6 v3 | `tp-link-archer-c6-v3` | [erfasst](daten/tp-link-archer-c6-v3.json): 98 Felder, 11 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c6-v3.html) | recommended |
 | Archer C60 v1 | `tp-link-archer-c60-v1` | [erfasst](daten/tp-link-archer-c60-v1.json): 104 Felder, 11 offene Fäden, teilweise |  | ath10k lowmem |
-| Archer C7 v2 | `tp-link-archer-c7-v2` | [erfasst](daten/tp-link-archer-c7-v2.json): 89 Felder, 14 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c7-v2.html) | recommended |
+| Archer C7 v2 | `tp-link-archer-c7-v2` | [erfasst](daten/tp-link-archer-c7-v2.json): 91 Felder, 14 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c7-v2.html) | recommended |
 | Archer C7 v4 | `tp-link-archer-c7-v4` | [erfasst](daten/tp-link-archer-c7-v4.json): 84 Felder, 9 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c7-v4.html) | recommended |
-| Archer C7 v5 | `tp-link-archer-c7-v5` | [erfasst](daten/tp-link-archer-c7-v5.json): 95 Felder, 10 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c7-v5.html) | recommended |
+| Archer C7 v5 | `tp-link-archer-c7-v5` | [erfasst](daten/tp-link-archer-c7-v5.json): 96 Felder, 10 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-archer-c7-v5.html) | recommended |
 | Archer D50 v1 | `tp-link-archer-d50-v1` | [erfasst](daten/tp-link-archer-d50-v1.json): 83 Felder, 7 offene Fäden, teilweise |  | ath10k lowmem |
 | CPE710 v1 | `tp-link-cpe710-v1` | [erfasst](daten/tp-link-cpe710-v1.json): 86 Felder, 11 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/tp-link-cpe710-v1.html) | recommended |
 | CPE710 v2 | `tp-link-cpe710-v2` | [erfasst](daten/tp-link-cpe710-v2.json): 93 Felder, 10 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/tp-link-cpe710-v2.html) | recommended |
@@ -527,7 +527,7 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | TL-WR1043N/ND v4 | `tp-link-tl-wr1043nd-v4` | [erfasst](daten/tp-link-tl-wr1043nd-v4.json): 90 Felder, 7 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr1043nd-v4.html) | recommended |
 | TL-WR1043N/ND v5 | `tp-link-tl-wr1043n-v5` | [erfasst](daten/tp-link-tl-wr1043n-v5.json): 74 Felder, 8 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr1043n-v5.html) | recommended |
 | TL-WR2543N/ND | `tp-link-tl-wr2543n-nd` | [erfasst](daten/tp-link-tl-wr2543n-nd.json): 85 Felder, 10 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr2543n-nd.html) | recommended |
-| TL-WR841N/ND v13 | `tp-link-tl-wr841n-v13` | [erfasst](daten/tp-link-tl-wr841n-v13.json): 87 Felder, 8 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr841n-v13.html) | recommended |
+| TL-WR841N/ND v13 | `tp-link-tl-wr841n-v13` | [erfasst](daten/tp-link-tl-wr841n-v13.json): 88 Felder, 8 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr841n-v13.html) | recommended |
 | TL-WR842N/ND v3 | `tp-link-tl-wr842n-v3` | [erfasst](daten/tp-link-tl-wr842n-v3.json): 90 Felder, 6 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr842n-v3.html) | recommended |
 | TL-WR902AC v1 | `tp-link-tl-wr902ac-v1` | [erfasst](daten/tp-link-tl-wr902ac-v1.json): 64 Felder, 7 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr902ac-v1.html) | ath10k lowmem |
 | TL-WR902AC v3 | `tp-link-tl-wr902ac-v3` | [erfasst](daten/tp-link-tl-wr902ac-v3.json): 65 Felder, 8 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/tp-link-tl-wr902ac-v3.html) | recommended |
@@ -540,30 +540,30 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| EdgeRouter X | `ubiquiti-edgerouter-x` | [erfasst](daten/ubiquiti-edgerouter-x.json): 66 Felder, 6 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-edgerouter-x.html) | recommended |
-| EdgeRouter X-SFP | `ubiquiti-edgerouter-x-sfp` | [erfasst](daten/ubiquiti-edgerouter-x-sfp.json): 79 Felder, 6 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-edgerouter-x-sfp.html) | recommended |
+| EdgeRouter X | `ubiquiti-edgerouter-x` | [erfasst](daten/ubiquiti-edgerouter-x.json): 68 Felder, 6 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-edgerouter-x.html) | recommended |
+| EdgeRouter X-SFP | `ubiquiti-edgerouter-x-sfp` | [erfasst](daten/ubiquiti-edgerouter-x-sfp.json): 80 Felder, 6 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-edgerouter-x-sfp.html) | recommended |
 | NanoBeam AC Gen1 (XC) | `ubiquiti-nanobeam-ac-gen1-xc` | [erfasst](daten/ubiquiti-nanobeam-ac-gen1-xc.json): 64 Felder, 9 offene Fäden, teilweise |  | recommended |
 | NanoBeam M5 (XW) | `ubiquiti-nanobeam-m5-xw` | [erfasst](daten/ubiquiti-nanobeam-m5-xw.json): 58 Felder, 8 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-nanobeam-m5-xw.html) | recommended |
 | NanoStation Loco M2 (XW) | `ubiquiti-nanostation-loco-m-xw` | [erfasst](daten/ubiquiti-nanostation-loco-m-xw.json): 68 Felder, 8 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-nanostation-loco-m-xw.html) | recommended |
 | Rocket M (XM) | `ubiquiti-rocket-m-xm` | [erfasst](daten/ubiquiti-rocket-m-xm.json): 57 Felder, 8 offene Fäden, teilweise |  | recommended |
 | Swiss Army Knife Ultra | `ubiquiti-unifi-swiss-army-knife-ultra` | [erfasst](daten/ubiquiti-unifi-swiss-army-knife-ultra.json): 90 Felder, 9 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-swiss-army-knife-ultra.html) | recommended |
-| ubiquiti-edgerouter-x-ka | `ubiquiti-edgerouter-x-ka` | [erfasst](daten/ubiquiti-edgerouter-x-ka.json): 67 Felder, 7 offene Fäden, teilweise |  |  |
-| ubiquiti-edgerouter-x-sfp-ka | `ubiquiti-edgerouter-x-sfp-ka` | [erfasst](daten/ubiquiti-edgerouter-x-sfp-ka.json): 84 Felder, 5 offene Fäden, teilweise |  |  |
+| ubiquiti-edgerouter-x-ka | `ubiquiti-edgerouter-x-ka` | [erfasst](daten/ubiquiti-edgerouter-x-ka.json): 69 Felder, 7 offene Fäden, teilweise |  |  |
+| ubiquiti-edgerouter-x-sfp-ka | `ubiquiti-edgerouter-x-sfp-ka` | [erfasst](daten/ubiquiti-edgerouter-x-sfp-ka.json): 85 Felder, 5 offene Fäden, teilweise |  |  |
 | ubiquiti-nanostation-m-xw | `ubiquiti-nanostation-m-xw` | [erfasst](daten/ubiquiti-nanostation-m-xw.json): 83 Felder, 12 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-nanostation-m-xw.html) |  |
 | UniFi 6 Lite | `ubiquiti-unifi-6-lite` | [erfasst](daten/ubiquiti-unifi-6-lite.json): 90 Felder, 6 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-6-lite.html) | recommended |
 | UniFi 6 LR v1 | `ubiquiti-unifi-6-lr-v1` | [erfasst](daten/ubiquiti-unifi-6-lr-v1.json): 82 Felder, 8 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-6-lr-v1.html) | recommended |
 | UniFi 6 LR v2 | `ubiquiti-unifi-6-lr-v2` | [erfasst](daten/ubiquiti-unifi-6-lr-v2.json): 93 Felder, 7 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-6-lr-v2.html) | recommended |
 | UniFi 6 LR v3 | `ubiquiti-unifi-6-lr-v3` | [erfasst](daten/ubiquiti-unifi-6-lr-v3.json): 87 Felder, 11 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-6-lr-v3.html) | recommended |
-| UniFi 6+ | `ubiquiti-unifi-6-plus` | [erfasst](daten/ubiquiti-unifi-6-plus.json): 91 Felder, 7 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-6-plus.html) | recommended |
+| UniFi 6+ | `ubiquiti-unifi-6-plus` | [erfasst](daten/ubiquiti-unifi-6-plus.json): 92 Felder, 7 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-6-plus.html) | recommended |
 | UniFi AC HD | `ubiquiti-unifi-ac-hd` | [erfasst](daten/ubiquiti-unifi-ac-hd.json): 89 Felder, 7 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-ac-hd.html) | recommended |
-| UniFi AC Lite | `ubiquiti-unifi-ac-lite` | [erfasst](daten/ubiquiti-unifi-ac-lite.json): 80 Felder, 9 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-ac-lite.html) | recommended |
-| UniFi AC LR | `ubiquiti-unifi-ac-lr` | [erfasst](daten/ubiquiti-unifi-ac-lr.json): 88 Felder, 7 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-ac-lr.html) | recommended |
-| UniFi AC Mesh | `ubiquiti-unifi-ac-mesh` | [erfasst](daten/ubiquiti-unifi-ac-mesh.json): 95 Felder, 8 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-ac-mesh.html) | recommended |
+| UniFi AC Lite | `ubiquiti-unifi-ac-lite` | [erfasst](daten/ubiquiti-unifi-ac-lite.json): 81 Felder, 9 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-ac-lite.html) | recommended |
+| UniFi AC LR | `ubiquiti-unifi-ac-lr` | [erfasst](daten/ubiquiti-unifi-ac-lr.json): 90 Felder, 7 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-ac-lr.html) | recommended |
+| UniFi AC Mesh | `ubiquiti-unifi-ac-mesh` | [erfasst](daten/ubiquiti-unifi-ac-mesh.json): 96 Felder, 8 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-ac-mesh.html) | recommended |
 | UniFi AC Mesh Pro | `ubiquiti-unifi-ac-mesh-pro` | [erfasst](daten/ubiquiti-unifi-ac-mesh-pro.json): 92 Felder, 13 offene Fäden, fertig | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-ac-mesh-pro.html) | recommended |
 | UniFi AC Pro | `ubiquiti-unifi-ac-pro` | [erfasst](daten/ubiquiti-unifi-ac-pro.json): 94 Felder, 11 offene Fäden, fertig | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-ac-pro.html) | recommended |
 | UniFi AP | `ubiquiti-unifi-ap` | [erfasst](daten/ubiquiti-unifi-ap.json): 99 Felder, 8 offene Fäden, teilweise |  | recommended |
 | UniFi AP LR | `ubiquiti-unifi-ap-lr` | [erfasst](daten/ubiquiti-unifi-ap-lr.json): 70 Felder, 10 offene Fäden, teilweise |  | recommended |
-| UniFi AP Outdoor+ | `ubiquiti-unifi-ap-outdoor+` | [erfasst](daten/ubiquiti-unifi-ap-outdoor+.json): 86 Felder, 9 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-ap-outdoor+.html) | recommended |
+| UniFi AP Outdoor+ | `ubiquiti-unifi-ap-outdoor+` | [erfasst](daten/ubiquiti-unifi-ap-outdoor+.json): 87 Felder, 9 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-ap-outdoor+.html) | recommended |
 | UniFi AP Pro | `ubiquiti-unifi-ap-pro` | [erfasst](daten/ubiquiti-unifi-ap-pro.json): 91 Felder, 6 offene Fäden, fertig | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-ap-pro.html) | recommended |
 | UniFi nanoHD | `ubiquiti-unifi-nanohd` | [erfasst](daten/ubiquiti-unifi-nanohd.json): 88 Felder, 7 offene Fäden, teilweise | [L4](https://routersoftware.ffnef.de/anleitungen/de/ubiquiti-unifi-nanohd.html) | recommended |
 
@@ -592,21 +592,21 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 
 | Gerät | Image | Daten | Level | Kategorie |
 |---|---|---|---|---|
-| AX3200 (RB03) | `xiaomi-redmi-router-ax6s` | [erfasst](daten/xiaomi-redmi-router-ax6s.json): 59 Felder, 10 offene Fäden, teilweise |  | recommended |
+| AX3200 (RB03) | `xiaomi-redmi-router-ax6s` | [erfasst](daten/xiaomi-redmi-router-ax6s.json): 60 Felder, 10 offene Fäden, teilweise |  | recommended |
 | Mi RA75 | `xiaomi-mi-ra75` | [erfasst](daten/xiaomi-mi-ra75.json): 60 Felder, 5 offene Fäden, teilweise |  | recommended |
 | Mi Router 3G | `xiaomi-mi-router-3g` | [erfasst](daten/xiaomi-mi-router-3g.json): 70 Felder, 7 offene Fäden, teilweise |  | recommended |
 | Mi Router 3G v2 | `xiaomi-mi-router-3g-v2` | [erfasst](daten/xiaomi-mi-router-3g-v2.json): 61 Felder, 7 offene Fäden, teilweise |  | recommended |
-| Mi Router 4A (100M Edition) | `xiaomi-mi-router-4a-100m-edition` | [erfasst](daten/xiaomi-mi-router-4a-100m-edition.json): 83 Felder, 6 offene Fäden, teilweise |  | recommended |
+| Mi Router 4A (100M Edition) | `xiaomi-mi-router-4a-100m-edition` | [erfasst](daten/xiaomi-mi-router-4a-100m-edition.json): 84 Felder, 6 offene Fäden, teilweise |  | recommended |
 | Mi Router 4A (100M International Edition) | `xiaomi-mi-router-4a-100m-international-edition` | [erfasst](daten/xiaomi-mi-router-4a-100m-international-edition.json): 91 Felder, 9 offene Fäden, teilweise |  | recommended |
 | Mi Router 4A (100M International Edition) v2 | `xiaomi-mi-router-4a-100m-international-edition-v2` | [erfasst](daten/xiaomi-mi-router-4a-100m-international-edition-v2.json): 58 Felder, 5 offene Fäden, teilweise |  | recommended |
-| Mi Router 4A (Gigabit Edition) v1 | `xiaomi-mi-router-4a-gigabit-edition` | [erfasst](daten/xiaomi-mi-router-4a-gigabit-edition.json): 76 Felder, 9 offene Fäden, teilweise |  | recommended |
-| Mi Router 4A (Gigabit Edition) v2 | `xiaomi-mi-router-4a-gigabit-edition-v2` | [erfasst](daten/xiaomi-mi-router-4a-gigabit-edition-v2.json): 61 Felder, 9 offene Fäden, teilweise |  | recommended |
-| Mi Router 4C | `xiaomi-mi-router-4c` | [erfasst](daten/xiaomi-mi-router-4c.json): 82 Felder, 8 offene Fäden, teilweise |  | recommended |
+| Mi Router 4A (Gigabit Edition) v1 | `xiaomi-mi-router-4a-gigabit-edition` | [erfasst](daten/xiaomi-mi-router-4a-gigabit-edition.json): 77 Felder, 9 offene Fäden, teilweise |  | recommended |
+| Mi Router 4A (Gigabit Edition) v2 | `xiaomi-mi-router-4a-gigabit-edition-v2` | [erfasst](daten/xiaomi-mi-router-4a-gigabit-edition-v2.json): 62 Felder, 9 offene Fäden, teilweise |  | recommended |
+| Mi Router 4C | `xiaomi-mi-router-4c` | [erfasst](daten/xiaomi-mi-router-4c.json): 83 Felder, 8 offene Fäden, teilweise |  | recommended |
 | MiWiFi Mini | `xiaomi-miwifi-mini` | [erfasst](daten/xiaomi-miwifi-mini.json): 88 Felder, 8 offene Fäden, teilweise |  | recommended |
-| xiaomi-ax3600 | `xiaomi-ax3600` | [erfasst](daten/xiaomi-ax3600.json): 92 Felder, 9 offene Fäden, teilweise |  |  |
+| xiaomi-ax3600 | `xiaomi-ax3600` | [erfasst](daten/xiaomi-ax3600.json): 93 Felder, 9 offene Fäden, teilweise |  |  |
 | xiaomi-mi-router-ac2100 | `xiaomi-mi-router-ac2100` | [erfasst](daten/xiaomi-mi-router-ac2100.json): 79 Felder, 7 offene Fäden, teilweise |  |  |
-| xiaomi-mi-router-ax3000t | `xiaomi-mi-router-ax3000t` | [erfasst](daten/xiaomi-mi-router-ax3000t.json): 74 Felder, 8 offene Fäden, teilweise |  |  |
-| xiaomi-mi-router-ax3000t-openwrt-u-boot-layout | `xiaomi-mi-router-ax3000t-openwrt-u-boot-layout` | [erfasst](daten/xiaomi-mi-router-ax3000t-openwrt-u-boot-layout.json): 84 Felder, 6 offene Fäden, teilweise |  |  |
+| xiaomi-mi-router-ax3000t | `xiaomi-mi-router-ax3000t` | [erfasst](daten/xiaomi-mi-router-ax3000t.json): 75 Felder, 8 offene Fäden, teilweise |  |  |
+| xiaomi-mi-router-ax3000t-openwrt-u-boot-layout | `xiaomi-mi-router-ax3000t-openwrt-u-boot-layout` | [erfasst](daten/xiaomi-mi-router-ax3000t-openwrt-u-boot-layout.json): 85 Felder, 6 offene Fäden, teilweise |  |  |
 | xiaomi-redmi-router-ac2100 | `xiaomi-redmi-router-ac2100` | [erfasst](daten/xiaomi-redmi-router-ac2100.json): 84 Felder, 7 offene Fäden, teilweise |  |  |
 
 ## ZBT
@@ -632,9 +632,9 @@ Jeder Wert braucht eine Quelle mit Link; was keine Quelle belegt, bleibt weg.
 | NBG6617 | `zyxel-nbg6617` | [erfasst](daten/zyxel-nbg6617.json): 89 Felder, 5 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/zyxel-nbg6617.html) | recommended |
 | NBG6716 | `zyxel-nbg6716` | [erfasst](daten/zyxel-nbg6716.json): 91 Felder, 9 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/zyxel-nbg6716.html) | recommended |
 | NWA50AX | `zyxel-nwa50ax` | [erfasst](daten/zyxel-nwa50ax.json): 89 Felder, 14 offene Fäden, teilweise | [L0.1](https://routersoftware.ffnef.de/anleitungen/de/zyxel-nwa50ax.html) | recommended |
-| NWA50AX Pro | `zyxel-nwa50ax-pro` | [erfasst](daten/zyxel-nwa50ax-pro.json): 93 Felder, 8 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/zyxel-nwa50ax-pro.html) | recommended |
+| NWA50AX Pro | `zyxel-nwa50ax-pro` | [erfasst](daten/zyxel-nwa50ax-pro.json): 94 Felder, 8 offene Fäden, teilweise | [L3](https://routersoftware.ffnef.de/anleitungen/de/zyxel-nwa50ax-pro.html) | recommended |
 | NWA55AXE | `zyxel-nwa55axe` | [erfasst](daten/zyxel-nwa55axe.json): 73 Felder, 6 offene Fäden, fertig | [L3](https://routersoftware.ffnef.de/anleitungen/de/zyxel-nwa55axe.html) | recommended |
-| WSM20 | `zyxel-wsm20` | [erfasst](daten/zyxel-wsm20.json): 85 Felder, 7 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/zyxel-wsm20.html) | recommended |
+| WSM20 | `zyxel-wsm20` | [erfasst](daten/zyxel-wsm20.json): 86 Felder, 7 offene Fäden, teilweise | [L1](https://routersoftware.ffnef.de/anleitungen/de/zyxel-wsm20.html) | recommended |
 
 ## Zyxel
 

@@ -40,6 +40,9 @@
 - „Speicher für Updates“ seit 21.10.2026 fünfstufig (neu: „gut“), RAM je WLAN-Treiberklasse,
   Geräte mit Firmware-Abstrichen höchstens „knapp“. Regeln und Eichung in schema/felder.md.
   Nach Änderungen an image-customization.lua: `werkzeug/abstriche.py <FirmwareConfigs> <gluon>`.
+- WireGuard-Durchsatz (seit 22.10.2026): `werkzeug/vpn-werte.py` aus `quellen/vpn-durchsatz-<datum>.json`
+  (FFMUC-Wiki, OpenWrt-Forum wg-bench, wg-bench README, ToH-VPN-Ansicht) und der Handzuordnung
+  `quellen/vpn-zuordnung.tsv`. Neue Geräte in den Quellen: Abzug erneuern, Zuordnung ergänzen.
 - Gluon-Target je Image (Filter „Plattform“ auf routerwahl, seit 22.10.2026):
   `werkzeug/gluon-targets.py <gluon-klon> <gluon-patches-hardware-klon>` schreibt
   `quellen/gluon-targets.json`; nach neuen Geräten oder Patches neu laufen lassen.
