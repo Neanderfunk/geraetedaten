@@ -145,3 +145,16 @@ die schlechtere der beiden Stufen: zu wenig, knapp, ausreichend, gut, reichlich.
   `werkzeug/abstriche.py` aus FirmwareConfigs `image-customization.lua`
   (`lowmem_dualradio`, `lowmem_singleradio`, `lowflash`) und den Gluon-Targets
   (ath10k-smallbuffers). Ändern sich die Listen, `abstriche.py` neu laufen lassen.
+
+## Einsatzort und Montage: Außen/Mast nur mit Zubehör-Gehäuse
+
+Open-Mesh-Innengeräte (OM2P, OM5P, MR) nennen Mast und außen nur mit einem
+optionalen Außengehäuse aus dem Zubehör. `selector-ansicht.py` erkennt das an
+einem Abschnitt der Quelle, der Gehäuse, Optionalität und Mast/außen zugleich
+nennt. Solche Geräte stehen im Filter weder unter „außen“ noch unter „Mast“,
+auf der Karte steht „Mast/Outdoor: optional“, im Detail „außen und am Mast nur
+mit optionalem passendem Outdoor-Gehäuse“ (adorfer 22.10.2026).
+
+UniFi AC Pro und AC HD sind Dual-Use (innen und geschützt außen) und bleiben
+unter beiden, mit IP54 (Angabe adorfer, 22.10.2026).
+

@@ -194,6 +194,28 @@ def ort(t):
     return 'außen' if aus else ('innen' if innen else t)
 
 
+# Innengeraete, die nur mit einem Gehaeuse aus dem Zubehoer nach draussen oder an den Mast duerfen
+# (Open-Mesh OM/MR). In der Tabelle "Mast/Outdoor: optional", im Filter NICHT unter Mast oder
+# außen (adorfer 22.10.2026). Erkannt an einem Abschnitt (an ';' getrennt), der ein Gehaeuse,
+# dessen Optionalitaet und Mast/außen zugleich nennt; "optional" allein (Montagekits) reicht nicht.
+def _optional_teil(t):
+    k = schluessel(t)
+    gehaeuse = re.search(r'gehäuse|enclosure', k)
+    optional = re.search(r'optional|zubeh[oö]r|separat|\bnur\b|außengehäuse|outdoor', k)
+    draussen = re.search(r'mast|pole|außen|outdoor', k)
+    return bool(gehaeuse and optional and draussen)
+
+
+def outdoor_optional(f):
+    for kk in ('einsatzort', 'montage', 'montageloecher'):
+        for e in f.get(kk, []):
+            w = e.get('wert')
+            for t in (w if isinstance(w, list) else [w]):
+                if any(_optional_teil(teil) for teil in str(t).split(';')):
+                    return True
+    return False
+
+
 def poe(t):
     k = schluessel(t)
     if nein(t):
@@ -415,9 +437,16 @@ def ansicht(d, idx):
                      'abweichend': [], 'weitere': []})
     eo = s.get('einsatzort')
     aussen = eo and 'außen' in ort(eo['wert'])
-    oben.append(kombi('Einsatzort', [(ort, eo)] +
-                      ([('Schutzart', s.get('ip_schutzart')), ('Temperatur', s.get('temperatur_betrieb'))]
-                       if aussen else []), trenner=', '))
+    if outdoor_optional(f):
+        # Innengeraet, außen/Mast nur mit Gehaeuse aus dem Zubehoer (adorfer 22.10.2026)
+        z = kombi('Einsatzort', [(ort, eo)], trenner=', ')
+        if z:
+            z['wert'] = 'innen; außen und am Mast nur mit optionalem passendem Outdoor-Gehäuse'
+            oben.append(z)
+    else:
+        oben.append(kombi('Einsatzort', [(ort, eo)] +
+                          ([('Schutzart', s.get('ip_schutzart')), ('Temperatur', s.get('temperatur_betrieb'))]
+                           if aussen else []), trenner=', '))
     pe = s.get('poe_eingang')
     passiv = pe and 'passives' in poe(pe['wert'])
     strom = kombi('Stromversorgung', [
@@ -633,22 +662,26 @@ def facetten(d):
         fa['speicher'] = None
     fa['kerne'] = zahl(s.get('cpu_kerne'))
     fa['mhz'] = zahl(s.get('cpu_mhz'))   # Filter Prozessortakt (Nutzerwunsch 22.10.2026)
+    opt = outdoor_optional(f)
     ein = set()
     for t in alle('einsatzort'):
         o = ort(t)
         if 'innen' in o:
             ein.add('innen')
-        if 'außen' in o:
+        if 'außen' in o and not opt:
             ein.add('außen')
+    if opt:
+        ein.add('innen')
     fa['einsatz'] = sorted(ein) or None
     mon = set()
     for t in alle('montage') + alle('montageloecher'):
         k = schluessel(t)
         for wort, wert in (('tisch', 'Tisch'), ('desk', 'Tisch'), ('wand', 'Wand'), ('wall', 'Wand'),
                            ('decke', 'Decke'), ('ceiling', 'Decke'), ('mast', 'Mast'), ('pole', 'Mast')):
-            if wort in k:
+            if wort in k and not (opt and wert == 'Mast'):
                 mon.add(wert)
     fa['montage'] = sorted(mon) or None
+    fa['outdoor_optional'] = True if opt else None
     ip = None
     for t in alle('ip_schutzart')[:1]:
         m = re.search(r'IP\s*([0-9X])([0-9X])', t.upper())

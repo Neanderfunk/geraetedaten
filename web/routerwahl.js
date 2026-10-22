@@ -377,6 +377,7 @@
     else if (g.flash) c.push(g.flash + ' MB Flash');
     if (g.einsatz) c.push(g.einsatz.join(' und '));
     if (g.montage) c.push(g.montage.join(', '));
+    if (g.outdoor_optional) c.push('Mast/Outdoor: optional');
     if (g.poe && g.poe.indexOf('nein') < 0) c.push('PoE ' + g.poe.map(function (p) {
       return p === 'passiv' ? 'passiv' : '802.3' + p; }).join('/'));
     if (g.port_mbit) c.push(g.port_mbit >= 1000 ? (g.port_mbit / 1000) + ' Gbit/s' : g.port_mbit + ' Mbit/s');
