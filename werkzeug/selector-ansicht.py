@@ -573,7 +573,7 @@ def ansicht(d, idx):
     if gt:
         ow = gt.replace('-', '/', 1)
         wert += ', Gluon-Target ' + gt + ', OpenWrt-Target ' + ow
-    technik.insert(0, {'titel': 'Firmware', 'wert': wert, 'belege': [{
+    technik.insert(0, {'titel': 'Gluon/OpenWrt', 'wert': wert, 'belege': [{
         'quelle': 'gluon_targets',
         'url': 'https://github.com/freifunk-gluon/gluon/blob/v2025.1.x/targets/' + gt if gt else
                'https://github.com/Neanderfunk/geraetedaten',
