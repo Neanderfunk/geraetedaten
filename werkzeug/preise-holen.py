@@ -70,6 +70,8 @@ def main():
     ap.add_argument('--nur', help='nur dieses Image (zum Pruefen)')
     ap.add_argument('--mindestens', type=int, default=2, help='so viele Angebote, sonst kein Preis')
     a = ap.parse_args()
+    # Zeilenweise schreiben, damit ein Cron-Log den Fortschritt zeigt (sonst puffert Python bis zum Ende)
+    sys.stdout.reconfigure(line_buffering=True)
 
     heute = datetime.date.today().isoformat()
     aus = {'stand': heute, 'quelle': 'preisvergleich.heise.de (Geizhals)',
