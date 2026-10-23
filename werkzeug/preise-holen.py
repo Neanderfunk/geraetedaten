@@ -17,12 +17,13 @@ Abrufe langsam (Vorgabe 30 s Abstand, wie fuer Geizhals vereinbart), Lauf fuer g
 300 Seiten also gut zweieinhalb Stunden. Am Ende ein Bericht. Findet das Skript auf
 vielen Seiten mit HTTP 200 weder Angebote noch den Hinweis "keine Angebote", hat heise
 das Seitenlayout geaendert: dann Rueckgabe 2 und die alte Datei bleibt stehen.
+Laeuft das Skript schon, endet ein zweiter Start sofort mit Rueckgabe 3.
 
 Aufruf:
     werkzeug/preise-holen.py --aus /var/www/routerwahl.ffnef.de/preise.json
     werkzeug/preise-holen.py --nur gl.inet-gl-mt6000 --abstand 0 --aus /tmp/p.json
 """
-import argparse, datetime, glob, json, math, os, re, sys, time, urllib.request
+import argparse, datetime, fcntl, glob, json, math, os, re, sys, time, urllib.request
 
 WURZEL = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 UA = 'Mozilla/5.0 (X11; Linux x86_64) routerwahl.ffnef.de Preisabruf'
@@ -72,6 +73,15 @@ def main():
     a = ap.parse_args()
     # Zeilenweise schreiben, damit ein Cron-Log den Fortschritt zeigt (sonst puffert Python bis zum Ende)
     sys.stdout.reconfigure(line_buffering=True)
+    # Schutz gegen doppelten Lauf (Cron plus Handstart): Sperre auf die Skriptdatei
+    # selbst, so entsteht keine Sperrdatei im Webroot. Das Kernel-Lock faellt mit
+    # dem Prozess, auch nach kill -9 bleibt nichts haengen.
+    sperre = open(os.path.abspath(__file__), 'rb')
+    try:
+        fcntl.flock(sperre, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
+        print('### preise-holen laeuft schon, dieser Start endet ohne Abruf.', file=sys.stderr)
+        return 3
 
     heute = datetime.date.today().isoformat()
     aus = {'stand': heute, 'quelle': 'preisvergleich.heise.de (Geizhals)',

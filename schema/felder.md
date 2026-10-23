@@ -209,4 +209,9 @@ gewöhnliches Skript für Cron: `werkzeug/preise-holen.py`.
 - **Betrieb:** Cron auf dem Firmware-Server, wöchentlich:
   `0 3 * * 1  python3 /var/www/selector-geraetedaten/werkzeug/preise-holen.py --aus /var/www/routerwahl.ffnef.de/preise.json >> /var/log/preise-holen.log 2>&1`
   Prüfen einzelner Geräte: `--nur <image> --abstand 0 --aus /tmp/p.json`.
+  Doppelter Lauf ist gesperrt (`flock` auf die Skriptdatei, keine
+  Sperrdatei im Webroot): ein zweiter Start endet sofort mit Rückgabe 3,
+  auch ein Einzeltest mit `--nur`, solange der große Lauf noch arbeitet.
+  Jede Seite steht als eine Zeile im Log (Preis, „wenig“, „ohne“,
+  „unklar“).
 
