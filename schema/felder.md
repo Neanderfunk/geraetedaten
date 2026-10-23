@@ -183,9 +183,11 @@ gewöhnliches Skript für Cron: `werkzeug/preise-holen.py`.
 - **Regel (adorfer):** niedrigster Angebotspreis + 10 %, auf volle 10 €
   aufgerundet. Angezeigt als „Neu ab ca. X € (Stand …)“; wer es günstiger
   findet, freut sich.
-- **Kein Preis,** wenn die Seite weniger als 2 Angebote hat (ein
-  Restangebot ausgelaufener Geräte ist oft absurd teuer, UAP-AC-Lite:
-  416,50 €) oder 0 Angebote meldet.
+- **Kein Preis,** wenn die Seite weniger als 3 Angebote hat oder 0
+  Angebote meldet. Restangebote ausgelaufener Geräte sind oft absurd teuer
+  (UAP-AC-Lite: ein Angebot, 416,50 €; UniFi 6 Lite und 6 LR: je zwei
+  Angebote zum doppelten Marktpreis, deshalb seit 23.10.2026 drei statt
+  zwei).
 - **Mehrere Versionen auf einem Eintrag** (oder mehrere unserer Images mit
   derselben URL): nur das Image mit der höchsten Version bekommt den Preis,
   im Handel ist praktisch nur die neueste. Hinweis steht in der Datei.

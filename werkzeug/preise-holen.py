@@ -68,7 +68,7 @@ def main():
     ap.add_argument('--aus', required=True, help='Ziel, z. B. <routerwahl-webroot>/preise.json')
     ap.add_argument('--abstand', type=float, default=30.0, help='Sekunden zwischen zwei Abrufen')
     ap.add_argument('--nur', help='nur dieses Image (zum Pruefen)')
-    ap.add_argument('--mindestens', type=int, default=2, help='so viele Angebote, sonst kein Preis')
+    ap.add_argument('--mindestens', type=int, default=3, help='so viele Angebote, sonst kein Preis')
     a = ap.parse_args()
     # Zeilenweise schreiben, damit ein Cron-Log den Fortschritt zeigt (sonst puffert Python bis zum Ende)
     sys.stdout.reconfigure(line_buffering=True)
@@ -106,6 +106,8 @@ def main():
         if len(preise) < a.mindestens:
             # Ein einzelnes Restangebot eines ausgelaufenen Geraets ist oft absurd teuer
             # (UAP-AC-Lite 23.10.2026: ein Haendler, 416,50 EUR). Lieber kein Preis.
+            # Zwei reichen auch nicht: UniFi 6 Lite/6 LR hatten am 23.10. je zwei
+            # Restangebote zum doppelten Marktpreis. Seitdem mindestens 3 (adorfer).
             zaehler['zu_wenig'] += 1
             print('  wenig    %-45s %d Angebot(e), ab %.2f' % (ziel, len(preise), min(preise)))
             continue
