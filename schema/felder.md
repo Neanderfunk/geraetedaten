@@ -91,8 +91,9 @@ der Produktseite kommt unverändert nach `roh.geizhals` (Quelle `geizhals`,
 `sicherheit: mittel`), daraus z. B. `netzteil_daten`, `leistung_w_max`,
 `abmessungen_mm`, `antennen_anzahl`. Gilt ein Geizhals-Eintrag für mehrere
 Hardware-Versionen („verschiedene Revisionen“), wird nur der Link übernommen,
-keine versionsabhängigen Werte. Preise werden nicht gespeichert, sie veralten
-täglich. Abrufe langsam: höchstens 3 je Gerät, mindestens 30 s Abstand
+keine versionsabhängigen Werte. Preise werden nicht in `daten/` gespeichert,
+sie veralten täglich; dafür gibt es seit 23.10.2026 die eigene Datei
+`preise.json` (Abschnitt „Circa-Neupreise“ unten). Abrufe langsam: höchstens 3 je Gerät, mindestens 30 s Abstand
 (das Freifunk-Wiki drosselt seinen Preisvergleich auf 5 je Minute).
 
 Level, Risiko, Verwechslung, Kaufstatus und Anleitung kommen nicht von den
@@ -169,3 +170,41 @@ nicht) und lässt Werte im PoE-Fenster 44 bis 57 V weg, weil die Norm schon in
 der PoE-Zeile steht. Liegt jeder Teil der einen Angabe in einem Bereich der
 anderen, ist es kein Widerspruch. Übrig bleiben echte Unterschiede zwischen
 Quellen, z. B. beim OM2P-LC 12 bis 18, 12 bis 20 und 18 bis 24 V passiv.
+
+## Circa-Neupreise (seit 23.10.2026)
+
+Nutzerwunsch: ungefähre Preise auf routerwahl. Umsetzung ohne KI, ein
+gewöhnliches Skript für Cron: `werkzeug/preise-holen.py`.
+
+- **Quelle:** der Geizhals-Permalink aus `geizhals_url` (erste Angabe),
+  abgerufen über `preisvergleich.heise.de` (gleiche Seiten, sperrt nicht),
+  30 s Abstand je Seite. Ein Lauf über alle Geräte dauert gut zwei Stunden
+  und kostet keine Tokens.
+- **Regel (adorfer):** niedrigster Angebotspreis + 10 %, auf volle 10 €
+  aufgerundet. Angezeigt als „Neu ab ca. X € (Stand …)“; wer es günstiger
+  findet, freut sich.
+- **Kein Preis,** wenn die Seite weniger als 2 Angebote hat (ein
+  Restangebot ausgelaufener Geräte ist oft absurd teuer, UAP-AC-Lite:
+  416,50 €) oder 0 Angebote meldet.
+- **Mehrere Versionen auf einem Eintrag** (oder mehrere unserer Images mit
+  derselben URL): nur das Image mit der höchsten Version bekommt den Preis,
+  im Handel ist praktisch nur die neueste. Hinweis steht in der Datei.
+- **Nur Neupreise.** Gebrauchtpreise fehlen bewusst: Kleinanzeigen hat
+  keine API, eBay liefert über die API nur laufende Angebote, keine
+  Verkaufspreise. Später höchstens ein eBay-Pilot.
+- **Ausgabe:** `preise.json` (Stand, Quelle, Regel, je Image `ab_eur`,
+  `ca_eur`, `angebote`, `geizhals`, ggf. `hinweis`), nicht im Repo, sondern
+  direkt im Webroot von routerwahl. Ein Preisupdate braucht damit weder
+  Commit noch Neu-Erzeugen. Fehlt die Datei, zeigt routerwahl keine Preise.
+- **Layoutänderung bei heise:** Findet das Skript auf mehr als einem
+  Fünftel der Seiten weder Angebote noch die Angebotszahl 0, bricht es mit
+  Rückgabe 2 ab und lässt die alte Datei stehen. Dann Regex `OFFER` bzw.
+  `ANZAHL` im Skript an die neue Seite anpassen.
+- **Anzeige (`web/routerwahl.js`):** Preis in der Kaufen-Zeile der Karte,
+  Tooltip mit Geizhals-Tiefstpreis und Regel; Filter „Neupreis höchstens
+  (circa)“ als Schieberegler in 10-€-Schritten (Filtertyp `regler`),
+  ganz rechts = egal. Geräte ohne Preis zählen als „Angabe fehlt“.
+- **Betrieb:** Cron auf dem Firmware-Server, wöchentlich:
+  `0 3 * * 1  python3 /var/www/selector-geraetedaten/werkzeug/preise-holen.py --aus /var/www/routerwahl.ffnef.de/preise.json >> /var/log/preise-holen.log 2>&1`
+  Prüfen einzelner Geräte: `--nur <image> --abstand 0 --aus /tmp/p.json`.
+

@@ -40,6 +40,9 @@
 - „Speicher für Updates“ seit 21.10.2026 fünfstufig (neu: „gut“), RAM je WLAN-Treiberklasse,
   Geräte mit Firmware-Abstrichen höchstens „knapp“. Regeln und Eichung in schema/felder.md.
   Nach Änderungen an image-customization.lua: `werkzeug/abstriche.py <FirmwareConfigs> <gluon>`.
+- Circa-Neupreise (seit 23.10.2026): `werkzeug/preise-holen.py` schreibt `preise.json` in den
+  routerwahl-Webroot, Regel und Betrieb in `schema/felder.md` („Circa-Neupreise“). Offen: Cron auf
+  dem Firmware-Server eintragen (nach `deploy.sh`), erster voller Lauf lokal am 23.10.
 - WireGuard-Durchsatz (seit 22.10.2026): `werkzeug/vpn-werte.py` aus `quellen/vpn-durchsatz-<datum>.json`
   (FFMUC-Wiki, OpenWrt-Forum wg-bench, wg-bench README, ToH-VPN-Ansicht) und der Handzuordnung
   `quellen/vpn-zuordnung.tsv`. Neue Geräte in den Quellen: Abzug erneuern, Zuordnung ergänzen.
