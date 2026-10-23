@@ -206,8 +206,9 @@ gewöhnliches Skript für Cron: `werkzeug/preise-holen.py`.
   Tooltip mit Geizhals-Tiefstpreis und Regel; Filter „Neupreis höchstens
   (circa)“ als Schieberegler in 10-€-Schritten (Filtertyp `regler`),
   ganz rechts = egal. Geräte ohne Preis zählen als „Angabe fehlt“.
-- **Betrieb:** Cron auf dem Firmware-Server, wöchentlich:
-  `0 3 * * 1  python3 /var/www/selector-geraetedaten/werkzeug/preise-holen.py --aus /var/www/routerwahl.ffnef.de/preise.json >> /var/log/preise-holen.log 2>&1`
+- **Betrieb:** Cron auf dem Firmware-Server, wöchentlich, Datei `/etc/cron.d/preise-holen`
+  (seit 24.10.2026):
+  `0 3 * * 1  root  python3 /var/www/selector-geraetedaten/werkzeug/preise-holen.py --aus /var/www/routerwahl.ffnef.de/preise.json >> /var/log/preise-holen.log 2>&1`
   Prüfen einzelner Geräte: `--nur <image> --abstand 0 --aus /tmp/p.json`.
   Doppelter Lauf ist gesperrt (`flock` auf die Skriptdatei, keine
   Sperrdatei im Webroot): ein zweiter Start endet sofort mit Rückgabe 3,

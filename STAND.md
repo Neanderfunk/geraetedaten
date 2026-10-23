@@ -41,8 +41,9 @@
   Geräte mit Firmware-Abstrichen höchstens „knapp“. Regeln und Eichung in schema/felder.md.
   Nach Änderungen an image-customization.lua: `werkzeug/abstriche.py <FirmwareConfigs> <gluon>`.
 - Circa-Neupreise (seit 23.10.2026): `werkzeug/preise-holen.py` schreibt `preise.json` in den
-  routerwahl-Webroot, Regel und Betrieb in `schema/felder.md` („Circa-Neupreise“). Offen: Cron auf
-  dem Firmware-Server eintragen (nach `deploy.sh`), erster voller Lauf lokal am 23.10.
+  routerwahl-Webroot, Regel und Betrieb in `schema/felder.md` („Circa-Neupreise“). Cron seit 24.10.2026
+  in `/etc/cron.d/preise-holen` auf dem Firmware-Server (montags 3 Uhr); erster Serverlauf
+  23./24.10.: 262 Seiten, 84 mit Preis, 34 zu wenig Angebote, 144 ohne Angebot, 0 Fehler.
 - WireGuard-Durchsatz (seit 22.10.2026): `werkzeug/vpn-werte.py` aus `quellen/vpn-durchsatz-<datum>.json`
   (FFMUC-Wiki, OpenWrt-Forum wg-bench, wg-bench README, ToH-VPN-Ansicht) und der Handzuordnung
   `quellen/vpn-zuordnung.tsv`. Neue Geräte in den Quellen: Abzug erneuern, Zuordnung ergänzen.
