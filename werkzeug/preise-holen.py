@@ -96,11 +96,15 @@ def main():
         offers = OFFER.findall(html)
         anzahl = ANZAHL.search(html)
         if not offers:
+            # Jede Seite eine Zeile, sonst bleibt das Log bei vielen Geraeten ohne
+            # Angebot lange leer und man haelt den Lauf fuer haengend
             if (anzahl and anzahl.group(1) == '0') or KEINE.search(html):
                 zaehler['ohne_angebot'] += 1
+                print('  ohne     %s' % ziel)
             else:
                 zaehler['layout_unklar'] += 1
                 unklar.append(ziel)
+                print('  unklar   %s' % ziel)
             continue
         preise = [float(p.replace('.', '').replace(',', '.')) for _, p in offers]
         if len(preise) < a.mindestens:
