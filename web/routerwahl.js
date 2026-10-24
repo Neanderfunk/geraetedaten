@@ -700,14 +700,29 @@
     if (namensSuche) teile.push('name=' + encodeURIComponent(namensSuche));
     if (sortierung !== 'preis') teile.push('sort=' + sortierung);
     if (nurGeraet) teile.push('geraet=' + encodeURIComponent(nurGeraet));
-    history.replaceState(null, '', teile.length ? '?' + teile.join('&') : location.pathname);
+    history.replaceState(null, '', '?' + (teile.length ? teile.join('&') : 'alle'));
+  }
+
+  /* Voreinstellung beim Aufruf ohne Parameter (adorfer 24.10.2026): die Auswahl, die fuer die
+     meisten passt. Wer zuruecksetzt, bekommt "?alle", damit ein Neuladen nicht wieder vorbelegt. */
+  var VORGABE = { wahl: { wlan: ['6'], speicher: ['ausreichend'], level: ['L1'] }, unbekannt: false };
+  function istVorgabe() {
+    var k = Object.keys(wahl);
+    return mitUnbekannt === VORGABE.unbekannt && !namensSuche && !nurGeraet &&
+      k.length === Object.keys(VORGABE.wahl).length &&
+      k.every(function (x) { return VORGABE.wahl[x] && String(VORGABE.wahl[x]) === String(wahl[x]); });
   }
 
   function zustandLesen() {
+    if (!location.search.substring(1)) {
+      Object.keys(VORGABE.wahl).forEach(function (k) { wahl[k] = VORGABE.wahl[k].slice(); });
+      mitUnbekannt = VORGABE.unbekannt;
+    }
     location.search.substring(1).split('&').forEach(function (p) {
       if (!p) return;
       var kv = p.split('=');
       var k = decodeURIComponent(kv[0]), v = decodeURIComponent(kv[1] || '');
+      if (k === 'alle') return;
       if (k === 'unbekannt') { mitUnbekannt = v !== '0'; return; }
       if (k === 'name') { namensSuche = v; return; }
       if (k === 'nicht' || k === 'naechste') { mitNicht = v === '1'; return; }   // naechste: alter Name
@@ -725,6 +740,8 @@
 
   function neu() {
     zustandSchreiben();
+    var h = $('#finder-vorgabe');
+    if (h) h.hidden = !istVorgabe();
     filterZeichnen();
     listeZeichnen();
   }
@@ -770,7 +787,8 @@
           warte = setTimeout(function () { namensSuche = e.target.value.trim(); neu(); }, 200);
         });
         $('#finder-leeren').addEventListener('click', function () {
-          wahl = {}; nurGeraet = null; namensSuche = ''; $('#finder-name').value = ''; neu();
+          wahl = {}; nurGeraet = null; namensSuche = ''; $('#finder-name').value = '';
+          mitUnbekannt = true; $('#finder-unbekannt').checked = false; neu();
         });
         neu();
         });
