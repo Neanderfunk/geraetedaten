@@ -45,6 +45,31 @@
           ja/nein = Schalter. */
   /* Texte: Content, 19.10.2026 (freifunk-content vorschlaege/routerwahl-texte.md). */
   var GRUPPEN = [
+    /* Reihenfolge (adorfer 24.10.2026): Einrichtung zuerst, dann WLAN-Generation, dann Preis, Plattform ganz unten */
+    { titel: 'Einrichtung', filter: [
+      { id: 'level', titel: 'Schwierigkeit', typ: 'max',
+        werte: [['L1', 'bis L1: nur im Browser'], ['L3', 'bis L3: mit fester Adresse am Rechner'],
+                ['L4', 'bis L4: mit Network-Tools (TFTP, SSH)'], ['L6', 'bis L6: auch mit seriellem Kabel'],
+                /* umgekehrt, fuer Bastelnde: nur die schwierigeren */
+                ['ab:L5', 'ab L5: besondere Programme und mehr'], ['ab:L6', 'ab L6: serielles Kabel und mehr'],
+                ['ab:L7', 'ab L7: Gehäuse öffnen und mehr']] },
+      { id: 'erprobt', titel: 'von uns am Gerät erprobt', typ: 'ja' },
+      { id: 'ohne_bootloader', titel: 'Bootloader bleibt unangetastet', typ: 'ja' }
+    ] },
+    { titel: 'WLAN', filter: [
+      { id: 'wlan', titel: 'WLAN-Generation', typ: 'min',
+        werte: [['4', 'ab WLAN 4 (802.11n)'], ['5', 'ab WLAN 5 (802.11ac)'], ['6', 'ab WLAN 6 (802.11ax)'],
+                ['7', 'ab WLAN 7 (802.11be)']] },
+      { id: 'baender', titel: 'Frequenzbänder', typ: 'alle', werte: [['2.4', '2.4 GHz'], ['5', '5 GHz'], ['6', '6 GHz']] },
+      { id: 'streams', titel: 'Datenströme (Streams)', typ: 'min', werte: [['2', 'ab 2×2'], ['3', 'ab 3×3'], ['4', 'ab 4×4']] },
+      { id: 'antennen', titel: 'Antennen', typ: 'eins',
+        werte: [['intern', 'intern'], ['extern', 'extern, fest'], ['abnehmbar', 'extern, abnehmbar']] }
+    ] },
+    /* Circa-Neupreis aus preise.json (werkzeug/preise-holen.py, Cron); Regler in 10-EUR-Schritten
+       (adorfer 23.10.2026). Geraete ohne Preis zaehlen als "Angabe fehlt". */
+    { titel: 'Preis', filter: [
+      { id: 'preis', titel: 'Neupreis höchstens (circa)', typ: 'regler', schritt: 10 }
+    ] },
     { titel: 'Einsatz', filter: [
       { id: 'einsatz', titel: 'Einsatzort', typ: 'menge', werte: [['innen', 'innen'], ['außen', 'außen']] },
       { id: 'montage', titel: 'Montage', typ: 'menge',
@@ -57,15 +82,6 @@
         werte: [['af', '802.3af (PoE)'], ['at', '802.3at (PoE+)'], ['bt', '802.3bt (PoE++)'],
                 ['passiv', 'passives PoE'], ['nein', 'kein PoE']] },
       { id: 'netzteil', titel: 'Netzteil liegt bei', typ: 'ja' }
-    ] },
-    { titel: 'WLAN', filter: [
-      { id: 'wlan', titel: 'WLAN-Generation', typ: 'min',
-        werte: [['4', 'ab WLAN 4 (802.11n)'], ['5', 'ab WLAN 5 (802.11ac)'], ['6', 'ab WLAN 6 (802.11ax)'],
-                ['7', 'ab WLAN 7 (802.11be)']] },
-      { id: 'baender', titel: 'Frequenzbänder', typ: 'alle', werte: [['2.4', '2.4 GHz'], ['5', '5 GHz'], ['6', '6 GHz']] },
-      { id: 'streams', titel: 'Datenströme (Streams)', typ: 'min', werte: [['2', 'ab 2×2'], ['3', 'ab 3×3'], ['4', 'ab 4×4']] },
-      { id: 'antennen', titel: 'Antennen', typ: 'eins',
-        werte: [['intern', 'intern'], ['extern', 'extern, fest'], ['abnehmbar', 'extern, abnehmbar']] }
     ] },
     { titel: 'Anschlüsse', filter: [
       { id: 'port_mbit', titel: 'Geschwindigkeit am Kabel', typ: 'min',
@@ -88,6 +104,11 @@
       { id: 'kerne', titel: 'Prozessor', typ: 'min', werte: [['2', 'ab 2 Kernen'], ['4', 'ab 4 Kernen']] },
       { id: 'mhz', titel: 'Prozessortakt', typ: 'min',
         werte: [['1000', 'ab 1 GHz'], ['1300', 'ab 1.3 GHz'], ['2000', 'ab 2 GHz']] },
+      { id: 'leistung', titel: 'Leistungsaufnahme', typ: 'max', werte: [['10', 'bis 10 W'], ['15', 'bis 15 W']] },
+      { id: 'luefter', titel: 'lautlos (ohne Lüfter)', typ: 'nein' }
+    ] },
+    /* Plattform ganz unten (adorfer 24.10.2026): fuer die meisten unwichtig */
+    { titel: 'Plattform', filter: [
       /* Gluon-Target, Namen wie in der Gluon-Doku (supported_devices), Nutzerwunsch 22.10.2026 */
       { id: 'plattform', titel: 'Plattform (Gluon-Target)', typ: 'eins',
         werte: [['mediatek-filogic', 'mediatek-filogic (MediaTek MT7981/MT7986, WLAN 6)'],
@@ -108,24 +129,7 @@
                 ['mpc85xx-p1020', 'mpc85xx-p1020 (NXP)'],
                 ['rockchip-armv8', 'rockchip-armv8 (Rockchip, NanoPi)'],
                 ['bcm27xx-bcm2710', 'bcm27xx-bcm2710 (Raspberry Pi 3)'],
-                ['bcm27xx-bcm2711', 'bcm27xx-bcm2711 (Raspberry Pi 4)']] },
-      { id: 'leistung', titel: 'Leistungsaufnahme', typ: 'max', werte: [['10', 'bis 10 W'], ['15', 'bis 15 W']] },
-      { id: 'luefter', titel: 'lautlos (ohne Lüfter)', typ: 'nein' }
-    ] },
-    /* Circa-Neupreis aus preise.json (werkzeug/preise-holen.py, Cron); Regler in 10-EUR-Schritten
-       (adorfer 23.10.2026). Geraete ohne Preis zaehlen als "Angabe fehlt". */
-    { titel: 'Preis', filter: [
-      { id: 'preis', titel: 'Neupreis höchstens (circa)', typ: 'regler', schritt: 10 }
-    ] },
-    { titel: 'Einrichtung', filter: [
-      { id: 'level', titel: 'Schwierigkeit', typ: 'max',
-        werte: [['L1', 'bis L1: nur im Browser'], ['L3', 'bis L3: mit fester Adresse am Rechner'],
-                ['L4', 'bis L4: mit Network-Tools (TFTP, SSH)'], ['L6', 'bis L6: auch mit seriellem Kabel'],
-                /* umgekehrt, fuer Bastelnde: nur die schwierigeren */
-                ['ab:L5', 'ab L5: besondere Programme und mehr'], ['ab:L6', 'ab L6: serielles Kabel und mehr'],
-                ['ab:L7', 'ab L7: Gehäuse öffnen und mehr']] },
-      { id: 'erprobt', titel: 'von uns am Gerät erprobt', typ: 'ja' },
-      { id: 'ohne_bootloader', titel: 'Bootloader bleibt unangetastet', typ: 'ja' }
+                ['bcm27xx-bcm2711', 'bcm27xx-bcm2711 (Raspberry Pi 4)']] }
     ] }
   ];
   var FELDNAMEN = {
