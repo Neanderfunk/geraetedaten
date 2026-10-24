@@ -166,7 +166,7 @@
     /* freie Zeichenkette, irgendwo im Namen (adorfer) */
     return [g.modell, g.image].concat(g.namen || []).some(function (t) { return dicht(t).indexOf(n) > -1; });
   }
-  var sortierung = 'einfach';
+  var sortierung = 'preis';   // Vorgabe Preis (adorfer 24.10.2026)
   var nurGeraet = null;     // ?geraet=<image>: nur dieses Geraet, Daten gleich offen
 
   function $(w, wo) { return (wo || document).querySelector(w); }
@@ -698,7 +698,7 @@
     if (!mitUnbekannt) teile.push('unbekannt=0');
     if (mitNicht) teile.push('nicht=1');
     if (namensSuche) teile.push('name=' + encodeURIComponent(namensSuche));
-    if (sortierung !== 'einfach') teile.push('sort=' + sortierung);
+    if (sortierung !== 'preis') teile.push('sort=' + sortierung);
     if (nurGeraet) teile.push('geraet=' + encodeURIComponent(nurGeraet));
     history.replaceState(null, '', teile.length ? '?' + teile.join('&') : location.pathname);
   }
