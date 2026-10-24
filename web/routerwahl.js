@@ -446,6 +446,10 @@
     var lv = function (g) { var i = LEVEL_REIHE.indexOf(g.level); return i < 0 ? 99 : i; };
     var cmp = {
       einfach: function (a, b) { return lv(a.g) - lv(b.g) || (b.g.status === 'erprobt') - (a.g.status === 'erprobt'); },
+      /* Preis aufsteigend (adorfer 24.10.2026); Geraete ohne Preis ans Ende */
+      preis: function (a, b) {
+        return (a.g.preis || 1e9) - (b.g.preis || 1e9) || (a.g.preis_ab || 1e9) - (b.g.preis_ab || 1e9);
+      },
       ram: function (a, b) { return (b.g.ram || 0) - (a.g.ram || 0); },
       wlan: function (a, b) { return (b.g.wlan || 0) - (a.g.wlan || 0) || (b.g.streams || 0) - (a.g.streams || 0); },
       leistung: function (a, b) { return (a.g.leistung || 999) - (b.g.leistung || 999); },
