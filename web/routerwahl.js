@@ -75,9 +75,13 @@
       { id: 'sfp', titel: 'SFP-Modul', typ: 'ja' }
     ] },
     { titel: 'Ausstattung', filter: [
-      { id: 'speicher', titel: 'Speicher für Updates', typ: 'eins',
-        werte: [['reichlich', 'reichlich'], ['gut', 'gut'], ['ausreichend', 'ausreichend'], ['knapp', 'knapp'],
-                 ['knapp, reduzierte Funktionalität', 'knapp, reduzierte Funktionalität'], ['zu wenig', 'zu wenig']] },
+      /* Stufen von gut nach schlecht; gewaehlt wird "diese oder besser" (adorfer 24.10.2026).
+         Schluessel ohne Komma, weil die Auswahl kommagetrennt in der URL steht. */
+      { id: 'speicher', titel: 'Speicher für Updates', typ: 'stufe',
+        reihe: ['reichlich', 'gut', 'ausreichend', 'knapp', 'knapp, reduzierte Funktionalität', 'zu wenig'],
+        schluessel: { reduziert: 'knapp, reduzierte Funktionalität' },
+        werte: [['reichlich', 'reichlich'], ['gut', 'gut oder besser'], ['ausreichend', 'ausreichend oder besser'],
+                ['knapp', 'knapp oder besser'], ['reduziert', 'knapp, reduzierte Funktionalität, oder besser']] },
       { id: 'ram', titel: 'Arbeitsspeicher (RAM)', typ: 'min',
         werte: [['128', 'ab 128 MB'], ['256', 'ab 256 MB'], ['512', 'ab 512 MB']] },
       { id: 'flash', titel: 'Flash-Speicher', typ: 'min', werte: [['16', 'ab 16 MB'], ['128', 'ab 128 MB']] },
@@ -230,6 +234,9 @@
         return v >= +w[0];
       case 'max': return v <= +w[0];
       case 'regler': return v <= +w[0];
+      case 'stufe':
+        var stufe = (f.schluessel && f.schluessel[w[0]]) || w[0];
+        return f.reihe.indexOf(v) > -1 && f.reihe.indexOf(v) <= f.reihe.indexOf(stufe);
       case 'ja': return v === true;
       case 'nein': return v === false;
     }
@@ -290,7 +297,7 @@
         } else if (f.typ === 'ja' || f.typ === 'nein') {
           block.appendChild(option(f, 'checkbox', true, 'ja', gewaehlt.length > 0, zaehle(f, true)));
         } else {
-          var art = (f.typ === 'min' || f.typ === 'max') ? 'radio' : 'checkbox';
+          var art = (f.typ === 'min' || f.typ === 'max' || f.typ === 'stufe') ? 'radio' : 'checkbox';
           f.werte.forEach(function (wv, i) {
             /* Zwischenzeile vor den umgekehrten Stufen ("ab L5"), damit "bis" und "ab" nicht verwirren */
             if (String(wv[0]).indexOf('ab:') === 0 && !(i && String(f.werte[i - 1][0]).indexOf('ab:') === 0))
