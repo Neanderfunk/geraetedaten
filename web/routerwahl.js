@@ -396,7 +396,7 @@
       p.appendChild(pr);
       p.appendChild(document.createTextNode(' (Stand ' + preiseStand + '). '));
     }
-    p.appendChild(document.createTextNode('Neu oder gebraucht suchen: '));
+    p.appendChild(document.createTextNode('Kaufen: '));
     var ziele = [
       ['Geizhals', g.geizhals || 'https://geizhals.de/?fs=' + encodeURIComponent(name) + '&hloc=de'],
       ['eBay', 'https://www.ebay.de/sch/i.html?_nkw=' + encodeURIComponent(name)],
