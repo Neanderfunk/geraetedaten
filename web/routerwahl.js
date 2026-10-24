@@ -792,7 +792,9 @@
         });
         $('#finder-leeren').addEventListener('click', function () {
           wahl = {}; nurGeraet = null; namensSuche = ''; $('#finder-name').value = '';
-          mitUnbekannt = true; $('#finder-unbekannt').checked = false; neu();
+          mitUnbekannt = true; $('#finder-unbekannt').checked = false;
+          mitNicht = true; $('#finder-nicht').checked = true;   // zuruecksetzen = alles zeigen (adorfer 24.10.2026)
+          neu();
         });
         neu();
         });
