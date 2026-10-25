@@ -1,4 +1,4 @@
-# Stand (20.10.2026)
+# Stand (25.10.2026)
 
 ## Erledigt
 - Pilot mit 10 Geräten (Agenten, 19.10.), Bericht: [laeufe/2026-10-19-pilot.md](laeufe/2026-10-19-pilot.md).
@@ -50,6 +50,20 @@
 - Gluon-Target je Image (Filter „Plattform“ auf routerwahl, seit 22.10.2026):
   `werkzeug/gluon-targets.py <gluon-klon> <gluon-patches-hardware-klon>` schreibt
   `quellen/gluon-targets.json`; nach neuen Geräten oder Patches neu laufen lassen.
+- Bedienung routerwahl (24./25.10.2026, adorfer), alles in `web/`:
+  - Voreinstellung ohne URL-Parameter: WLAN 6, Speicher ab „ausreichend“, Einrichtung bis L1,
+    Geräte mit fehlenden Angaben ausgeblendet; gelber Hinweis oben, solange sie unverändert ist
+    (`VORGABE`, `istVorgabe()`). „Auswahl zurücksetzen“ leert alles, blendet nicht unterstützte
+    Geräte ein und schreibt `?alle` bzw. `?nicht=1`, damit ein Neuladen nicht wieder vorbelegt.
+  - Sortierung: Vorgabe „günstigster Neupreis (circa)“, Geräte ohne Preis am Ende.
+  - „Speicher für Updates“ als Radio-Buttons „Stufe oder besser“ (Filtertyp `stufe`, Schlüssel
+    `reduziert` für den Wert mit Komma, weil die Auswahl kommagetrennt in der URL steht).
+  - Filterreihenfolge: Einrichtung, WLAN, Preis, Ausstattung, Anschlüsse, Einsatz, Strom, Plattform
+    (Filter „Gluon-Target“, Klammern nur Hersteller/Chip, kein „WLAN 6“).
+  - Filter „Bootloader bleibt unangetastet“ entfernt; `risiko` bleibt in den Daten.
+  - Kaufzeile der Karten „Kaufen: Geizhals · eBay · Kleinanzeigen“ (keine Floskel „neu oder
+    gebraucht“ auf den Karten; in der Einleitung bleibt sie, adorfer).
+  - `preise-holen.py`: mindestens 3 Angebote, jede Seite eine Logzeile, Sperre gegen doppelten Lauf.
 - Neu erzeugen nach jeder Datenänderung: zuerst `werkzeug/lokale-pfade.py` (lokale Pfade aus
   Agentenläufen werden Links, Router-Werkstatt aufs GitLab, seit 22.10.2026), dann
   `werkzeug/selector-ansicht.py` und `werkzeug/geraeteliste.py --index <installer>/anleitungen/html/index.json`,
