@@ -45,7 +45,8 @@
           ja/nein = Schalter. */
   /* Texte: Content, 19.10.2026 (freifunk-content vorschlaege/routerwahl-texte.md). */
   var GRUPPEN = [
-    /* Reihenfolge (adorfer 24.10.2026): Einrichtung zuerst, dann WLAN-Generation, dann Preis, Plattform ganz unten */
+    /* Reihenfolge (adorfer 25.10.2026): Schwierigkeit, WLAN-Generation, Preis, Ausstattung,
+       Anschluesse, Einsatz (danach Strom), Plattform */
     { titel: 'Einrichtung', filter: [
       { id: 'level', titel: 'Schwierigkeit', typ: 'max',
         werte: [['L1', 'bis L1: nur im Browser'], ['L3', 'bis L3: mit fester Adresse am Rechner'],
@@ -53,8 +54,8 @@
                 /* umgekehrt, fuer Bastelnde: nur die schwierigeren */
                 ['ab:L5', 'ab L5: besondere Programme und mehr'], ['ab:L6', 'ab L6: serielles Kabel und mehr'],
                 ['ab:L7', 'ab L7: Gehäuse öffnen und mehr']] },
-      { id: 'erprobt', titel: 'von uns am Gerät erprobt', typ: 'ja' },
-      { id: 'ohne_bootloader', titel: 'Bootloader bleibt unangetastet', typ: 'ja' }
+      /* Filter "Bootloader bleibt unangetastet" entfernt (adorfer 25.10.2026); risiko bleibt in den Daten */
+      { id: 'erprobt', titel: 'von uns am Gerät erprobt', typ: 'ja' }
     ] },
     { titel: 'WLAN', filter: [
       { id: 'wlan', titel: 'WLAN-Generation', typ: 'min',
@@ -69,26 +70,6 @@
        (adorfer 23.10.2026). Geraete ohne Preis zaehlen als "Angabe fehlt". */
     { titel: 'Preis', filter: [
       { id: 'preis', titel: 'Neupreis höchstens (circa)', typ: 'regler', schritt: 10 }
-    ] },
-    { titel: 'Einsatz', filter: [
-      { id: 'einsatz', titel: 'Einsatzort', typ: 'menge', werte: [['innen', 'innen'], ['außen', 'außen']] },
-      { id: 'montage', titel: 'Montage', typ: 'menge',
-        werte: [['Tisch', 'Tisch'], ['Wand', 'Wand'], ['Decke', 'Decke'], ['Mast', 'Mast']] },
-      { id: 'ip', titel: 'Schutz gegen Wetter', typ: 'min',
-        werte: [['54', 'ab IP54 (Spritzwasser)'], ['65', 'ab IP65 (Strahlwasser, staubdicht)']] }
-    ] },
-    { titel: 'Strom', filter: [
-      { id: 'poe', titel: 'Strom über das Netzwerkkabel (PoE)', typ: 'menge',
-        werte: [['af', '802.3af (PoE)'], ['at', '802.3at (PoE+)'], ['bt', '802.3bt (PoE++)'],
-                ['passiv', 'passives PoE'], ['nein', 'kein PoE']] },
-      { id: 'netzteil', titel: 'Netzteil liegt bei', typ: 'ja' }
-    ] },
-    { titel: 'Anschlüsse', filter: [
-      { id: 'port_mbit', titel: 'Geschwindigkeit am Kabel', typ: 'min',
-        werte: [['1000', 'ab 1 Gbit/s'], ['2500', 'ab 2.5 Gbit/s']] },
-      { id: 'ports', titel: 'Netzwerkbuchsen', typ: 'min', werte: [['2', 'ab 2'], ['4', 'ab 4']] },
-      { id: 'usb', titel: 'USB', typ: 'ja' },
-      { id: 'sfp', titel: 'SFP-Modul', typ: 'ja' }
     ] },
     { titel: 'Ausstattung', filter: [
       /* Stufen von gut nach schlecht; gewaehlt wird "diese oder besser" (adorfer 24.10.2026).
@@ -106,6 +87,26 @@
         werte: [['1000', 'ab 1 GHz'], ['1300', 'ab 1.3 GHz'], ['2000', 'ab 2 GHz']] },
       { id: 'leistung', titel: 'Leistungsaufnahme', typ: 'max', werte: [['10', 'bis 10 W'], ['15', 'bis 15 W']] },
       { id: 'luefter', titel: 'lautlos (ohne Lüfter)', typ: 'nein' }
+    ] },
+    { titel: 'Anschlüsse', filter: [
+      { id: 'port_mbit', titel: 'Geschwindigkeit am Kabel', typ: 'min',
+        werte: [['1000', 'ab 1 Gbit/s'], ['2500', 'ab 2.5 Gbit/s']] },
+      { id: 'ports', titel: 'Netzwerkbuchsen', typ: 'min', werte: [['2', 'ab 2'], ['4', 'ab 4']] },
+      { id: 'usb', titel: 'USB', typ: 'ja' },
+      { id: 'sfp', titel: 'SFP-Modul', typ: 'ja' }
+    ] },
+    { titel: 'Einsatz', filter: [
+      { id: 'einsatz', titel: 'Einsatzort', typ: 'menge', werte: [['innen', 'innen'], ['außen', 'außen']] },
+      { id: 'montage', titel: 'Montage', typ: 'menge',
+        werte: [['Tisch', 'Tisch'], ['Wand', 'Wand'], ['Decke', 'Decke'], ['Mast', 'Mast']] },
+      { id: 'ip', titel: 'Schutz gegen Wetter', typ: 'min',
+        werte: [['54', 'ab IP54 (Spritzwasser)'], ['65', 'ab IP65 (Strahlwasser, staubdicht)']] }
+    ] },
+    { titel: 'Strom', filter: [
+      { id: 'poe', titel: 'Strom über das Netzwerkkabel (PoE)', typ: 'menge',
+        werte: [['af', '802.3af (PoE)'], ['at', '802.3at (PoE+)'], ['bt', '802.3bt (PoE++)'],
+                ['passiv', 'passives PoE'], ['nein', 'kein PoE']] },
+      { id: 'netzteil', titel: 'Netzteil liegt bei', typ: 'ja' }
     ] },
     /* Plattform ganz unten (adorfer 24.10.2026): fuer die meisten unwichtig */
     { titel: 'Plattform', filter: [
