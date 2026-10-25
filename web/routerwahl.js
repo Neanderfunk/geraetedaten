@@ -111,7 +111,7 @@
     /* Plattform ganz unten (adorfer 24.10.2026): fuer die meisten unwichtig */
     { titel: 'Plattform', filter: [
       /* Gluon-Target, Namen wie in der Gluon-Doku (supported_devices), Nutzerwunsch 22.10.2026 */
-      { id: 'plattform', titel: 'Plattform (Gluon-Target)', typ: 'eins',
+      { id: 'plattform', titel: 'Gluon-Target', typ: 'eins',
         werte: [['mediatek-filogic', 'mediatek-filogic (MediaTek MT7981/MT7986, WLAN 6)'],
                 ['mediatek-mt7622', 'mediatek-mt7622 (MediaTek MT7622)'],
                 ['ramips-mt7621', 'ramips-mt7621 (MediaTek MT7621)'],
