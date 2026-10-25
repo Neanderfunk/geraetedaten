@@ -112,7 +112,7 @@
     { titel: 'Plattform', filter: [
       /* Gluon-Target, Namen wie in der Gluon-Doku (supported_devices), Nutzerwunsch 22.10.2026 */
       { id: 'plattform', titel: 'Gluon-Target', typ: 'eins',
-        werte: [['mediatek-filogic', 'mediatek-filogic (MediaTek MT7981/MT7986, WLAN 6)'],
+        werte: [['mediatek-filogic', 'mediatek-filogic (MediaTek MT7981/MT7986)'],
                 ['mediatek-mt7622', 'mediatek-mt7622 (MediaTek MT7622)'],
                 ['ramips-mt7621', 'ramips-mt7621 (MediaTek MT7621)'],
                 ['ramips-mt76x8', 'ramips-mt76x8 (MediaTek MT7628/MT7688)'],
@@ -123,7 +123,7 @@
                 ['ipq40xx-generic', 'ipq40xx-generic (Qualcomm IPQ40xx)'],
                 ['ipq40xx-mikrotik', 'ipq40xx-mikrotik (MikroTik)'],
                 ['ipq806x-generic', 'ipq806x-generic (Qualcomm IPQ806x)'],
-                ['qualcommax-ipq807x', 'qualcommax-ipq807x (Qualcomm IPQ807x, WLAN 6)'],
+                ['qualcommax-ipq807x', 'qualcommax-ipq807x (Qualcomm IPQ807x)'],
                 ['lantiq-xrx200', 'lantiq-xrx200 (Lantiq, u. a. FRITZ!Box)'],
                 ['lantiq-xway', 'lantiq-xway (Lantiq)'],
                 ['mpc85xx-p1010', 'mpc85xx-p1010 (NXP)'],
