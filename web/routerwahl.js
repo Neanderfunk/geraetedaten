@@ -583,7 +583,7 @@
       var knoepfe = el('p', 'finder-knoepfe');
       if (ort) {
         var a = el('a', 'finder-knopf', 'Firmware');
-        a.href = 'https://routersoftware.ffnef.de/' + q(ort);
+        a.href = 'https://routersoftware.neanderfunk.de/' + q(ort);
         knoepfe.appendChild(a);
       }
       if (g.url) {

@@ -2,7 +2,7 @@
 
 Eine Geräte-Datenbank für die Router, für die Neanderfunk Gluon-Images baut.
 Sie liefert die Gerätedaten, die der Firmware-Selector
-(routersoftware.ffnef.de) nach der Gerätewahl einblendet: RAM, Flash, CPU,
+(routersoftware.neanderfunk.de) nach der Gerätewahl einblendet: RAM, Flash, CPU,
 WLAN mit Standard und Streams, Antennen, Anschlüsse, Stromversorgung (PoE,
 DC-Buchse, Leistung), innen oder außen, Montage, serielle Konsole.
 
@@ -55,5 +55,5 @@ RAM, Schwierigkeit der Installation ...), mit Trefferzahl je Option, Link in
 den Firmware-Selector und allen Daten je Gerät. Die Auswahl steht in der
 URL, `?geraet=<image>` zeigt ein einzelnes Gerät. Ausgeliefert wird sie vom
 `deploy.sh` in firmware-selector-config als zweiter Webroot neben
-routersoftware.ffnef.de; Bilder, Anleitungen und `devices.js` kommen von
+routersoftware.neanderfunk.de; Bilder, Anleitungen und `devices.js` kommen von
 dort, die Filterdaten aus `ausgabe/selector/facetten.json`.
