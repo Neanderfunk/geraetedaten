@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Holt Circa-Neupreise fuer routerwahl.ffnef.de (Nutzerwunsch, adorfer 23.10.2026).
+"""Holt Circa-Neupreise fuer router.neanderfunk.de (Nutzerwunsch, adorfer 23.10.2026).
 
 Ohne KI, fuer Cron gedacht. Liest die Geizhals-Permalinks aus daten/*.json, holt die
 Produktseite ueber preisvergleich.heise.de (gleiche Seiten wie Geizhals, sperrt nicht),
@@ -26,7 +26,7 @@ Aufruf:
 import argparse, datetime, fcntl, glob, json, math, os, re, sys, time, urllib.request
 
 WURZEL = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-UA = 'Mozilla/5.0 (X11; Linux x86_64) routerwahl.ffnef.de Preisabruf'
+UA = 'Mozilla/5.0 (X11; Linux x86_64) router.neanderfunk.de Preisabruf'
 OFFER = re.compile(r'id="offer-index-(\d+)".*?class="gh_price">\s*€\s*([\d.]+,\d\d)', re.S)
 ANZAHL = re.compile(r'product-offers-count"\s*>\s*(?:<a[^>]*>\s*)?<span class="count">(\d+)</span>')
 KEINE = re.compile(r'\b0 Angebote\b|keine Angebote|derzeit nicht lieferbar|Nicht mehr gelistet|noch keine Angebote', re.I)

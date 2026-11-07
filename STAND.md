@@ -4,7 +4,7 @@
 - Pilot mit 10 Geräten (Agenten, 19.10.), Bericht: [laeufe/2026-10-19-pilot.md](laeufe/2026-10-19-pilot.md).
 - Selector-Ansicht (`werkzeug/selector-ansicht.py`, je Gerät `ausgabe/selector/<image>.json`),
   Filterdaten (`ausgabe/selector/facetten.json`), Geräteliste ([GERAETE.md](GERAETE.md)).
-- routerwahl.ffnef.de (`web/`) ist live, ausgeliefert über `deploy.sh` in firmware-selector-config
+- router.neanderfunk.de (`web/`, bis 04.11.2026 routerwahl.ffnef.de, das als 301 bleibt) ist live, ausgeliefert über `deploy.sh` in firmware-selector-config
   als zweiter Webroot `/var/www/routerwahl.ffnef.de`. Texte von Content (freifunk-content
   `vorschlaege/routerwahl-texte.md`, `selector-geraetedaten-texte.md`).
 - Im Selector zeigt `ffnef-geraete.js` nur noch, was für die Installation zählt, und verlinkt auf routerwahl.

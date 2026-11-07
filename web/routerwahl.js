@@ -1,4 +1,4 @@
-/* Routerwahl (routerwahl.ffnef.de): Merkmale anklicken wie bei einer
+/* Routerwahl (router.neanderfunk.de): Merkmale anklicken wie bei einer
    Preissuchmaschine, die Liste zeigt die passenden Geraete.
 
    Daten: geraete/facetten.json aus Neanderfunk/geraetedaten

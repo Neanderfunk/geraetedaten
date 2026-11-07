@@ -47,7 +47,7 @@ stehen. Die Quelle jedes Werts steht im Eintrag.
 Die Werkzeuge unter `werkzeug/` stehen unter BSD-3-Clause
 (`werkzeug/LICENSE`).
 
-## routerwahl.ffnef.de
+## router.neanderfunk.de (vormals routerwahl.ffnef.de)
 
 `web/` ist die Seite für Leute, die noch einen Router suchen: Merkmale
 anklicken wie bei einer Preissuchmaschine (WLAN-Generation, Montage, PoE,
