@@ -2,13 +2,50 @@
    beim Firmware-Selector (app.css), damit beide Seiten zusammengehoeren,
    ohne voneinander abzuhaengen. */
 * { box-sizing: border-box; }
+/* Hell/Dunkel (farbmodus.js, farbmodus.css aus firmware-selector-config;
+   adorfer 12.11.2026): ohne Zutun die Systemeinstellung, der Knopf oben
+   rechts schaltet um. Farben im Dunklen wie auf neanderfunk.de: Grund
+   #16121a, Flaeche #211b24, Karten #2a2229, Linien #3b3140, Text #ece6ea,
+   Nebentext #b9adb5, Links #ff5aa5 (hover #ff8cc2); Magenta #dc0067 und
+   Gelb #ffb400 bleiben. Die dunklen Werte stehen zweimal: fuer den Knopf
+   und fuer die Systemeinstellung, solange niemand "hell" gewaehlt hat. */
 :root {
   --background-color: white; --text-color: #333; --shadow-color: #ccc;
   --table-alternate-color: #f3f3f3; --leise: #777; --markiert: #fff3b0;
+  --link: #337ab7; --link-hover: #23527c; --rot: #a33; --bildgrund: transparent;
+  --vorgabe-text: #6a5a00; --vorgabe-grund: #fff8d6; --vorgabe-linie: #e0c040;
+  --reichlich-grund: #bfb; --reichlich-text: #141;
+  --gut-grund: #cfc; --gut-text: #252;
+  --reicht-grund: #dfd; --reicht-text: #262;
+  --knapp-grund: #ffd; --knapp-text: #752;
+  --sackgasse-grund: #fdd; --sackgasse-text: #a33;
+}
+html[data-farbe="hell"] { color-scheme: light; }
+html[data-farbe="dunkel"] {
+  color-scheme: dark;
+  --background-color: #16121a; --text-color: #ece6ea; --shadow-color: #3b3140;
+  --table-alternate-color: #2a2229; --leise: #b9adb5; --markiert: #4a3d1a;
+  --link: #ff5aa5; --link-hover: #ff8cc2; --rot: #ff8a80; --bildgrund: #ece6ea;
+  --vorgabe-text: #f0dd8a; --vorgabe-grund: #2b2414; --vorgabe-linie: #e0c040;
+  --reichlich-grund: #1f3a22; --reichlich-text: #bfb;
+  --gut-grund: #1c3320; --gut-text: #cfc;
+  --reicht-grund: #1a2d1d; --reicht-text: #dfd;
+  --knapp-grund: #3a3318; --knapp-text: #ffd;
+  --sackgasse-grund: #3d1f22; --sackgasse-text: #fdd;
 }
 @media (prefers-color-scheme: dark) {
-  :root { --background-color: #333; --text-color: #ccc; --shadow-color: #222;
-          --table-alternate-color: #444; --leise: #999; --markiert: #5a5020; }
+  html:not([data-farbe="hell"]) {
+    color-scheme: dark;
+    --background-color: #16121a; --text-color: #ece6ea; --shadow-color: #3b3140;
+    --table-alternate-color: #2a2229; --leise: #b9adb5; --markiert: #4a3d1a;
+    --link: #ff5aa5; --link-hover: #ff8cc2; --rot: #ff8a80; --bildgrund: #ece6ea;
+    --vorgabe-text: #f0dd8a; --vorgabe-grund: #2b2414; --vorgabe-linie: #e0c040;
+    --reichlich-grund: #1f3a22; --reichlich-text: #bfb;
+    --gut-grund: #1c3320; --gut-text: #cfc;
+    --reicht-grund: #1a2d1d; --reicht-text: #dfd;
+    --knapp-grund: #3a3318; --knapp-text: #ffd;
+    --sackgasse-grund: #3d1f22; --sackgasse-text: #fdd;
+  }
 }
 body {
   margin: 0;
@@ -18,15 +55,15 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
 }
-a { color: #337ab7; text-decoration: none; }
-a:hover, a:focus { text-decoration: underline; }
+a { color: var(--link); text-decoration: none; }
+a:hover, a:focus { color: var(--link-hover); text-decoration: underline; }
 h1, h2 { font-weight: 500; line-height: 1.15; }
 h1 { color: #dc0067; }
 #wizard { padding: 0 16px 4em; }
 #wizard > a img { height: 90px; margin-top: 4px; }
 #wizard .pane { max-width: 1170px; margin: 0 auto; padding: 1em 0 1.5em 1.6em; border-left: 3px solid #dc0067; }
 button { font: inherit; cursor: pointer; }
-:focus-visible { outline: 2px solid #337ab7; outline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 .finder-details-knopf { padding: 0.25em 0.8em; }
 .finder-details { margin-top: 0.4em; }
 .finder-dl { display: grid; grid-template-columns: 12em 1fr; gap: 0.2em 0.8em; margin: 0.5em 0; }
@@ -34,7 +71,7 @@ button { font: inherit; cursor: pointer; }
 .finder-dl dd { margin: 0; overflow-wrap: anywhere; }
 .finder-quellen, .finder-quellen a { font-size: 0.85em; color: var(--leise); }
 .finder-erkl { color: var(--leise); }
-.finder-warnung { margin: 0.15em 0; font-weight: bold; color: #a33; }
+.finder-warnung { margin: 0.15em 0; font-weight: bold; color: var(--rot); }
 @media (max-width: 40em) { .finder-dl { grid-template-columns: 1fr; } }
 
 #finder-pane .finder-zurueck {
@@ -130,6 +167,10 @@ button { font: inherit; cursor: pointer; }
   width: 6em;
   height: 6em;
   object-fit: contain;
+  /* Geraetezeichnungen sind fuer hellen Grund gemacht: im Dunklen auf
+     einer hellen Kachel. */
+  background: var(--bildgrund);
+  border-radius: 4px;
 }
 
 /* Ohne Geraetebild (Image nicht in devices.js) bleibt der Text in der
@@ -168,7 +209,7 @@ button { font: inherit; cursor: pointer; }
 .finder-fehlt,
 .finder-unsicher {
   font-size: 0.9em;
-  color: #a33;
+  color: var(--rot);
 }
 
 .finder-knoepfe {
@@ -221,11 +262,11 @@ button { font: inherit; cursor: pointer; }
 }
 
 .finder .ffnef-stufe { padding: 0 0.4em; border-radius: 3px; font-weight: bold; }
-.finder .ffnef-stufe-reichlich { background: #bfb; color: #141; }
-.finder .ffnef-stufe-gut { background: #cfc; color: #252; }
-.finder .ffnef-stufe-reicht { background: #dfd; color: #262; }
-.finder .ffnef-stufe-knapp { background: #ffd; color: #752; }
-.finder .ffnef-stufe-sackgasse { background: #fdd; color: #a33; }
+.finder .ffnef-stufe-reichlich { background: var(--reichlich-grund); color: var(--reichlich-text); }
+.finder .ffnef-stufe-gut { background: var(--gut-grund); color: var(--gut-text); }
+.finder .ffnef-stufe-reicht { background: var(--reicht-grund); color: var(--reicht-text); }
+.finder .ffnef-stufe-knapp { background: var(--knapp-grund); color: var(--knapp-text); }
+.finder .ffnef-stufe-sackgasse { background: var(--sackgasse-grund); color: var(--sackgasse-text); }
 
 .finder-kaufen {
   font-size: 0.9em;
@@ -264,4 +305,4 @@ button { font: inherit; cursor: pointer; }
 .finder-preis { font-weight: bold; }
 
 /* Hinweis auf die Voreinstellung (adorfer 24.10.2026): klein, nicht aufdringlich */
-.finder-vorgabe { margin: 0 0 .5em; font-size: .85em; color: #6a5a00; background: #fff8d6; border-left: 3px solid #e0c040; padding: .25em .6em; }
+.finder-vorgabe { margin: 0 0 .5em; font-size: .85em; color: var(--vorgabe-text); background: var(--vorgabe-grund); border-left: 3px solid var(--vorgabe-linie); padding: .25em .6em; }
