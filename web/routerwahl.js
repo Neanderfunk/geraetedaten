@@ -701,7 +701,7 @@
     if (namensSuche) teile.push('name=' + encodeURIComponent(namensSuche));
     if (sortierung !== 'preis') teile.push('sort=' + sortierung);
     if (nurGeraet) teile.push('geraet=' + encodeURIComponent(nurGeraet));
-    history.replaceState(null, '', '?' + (teile.length ? teile.join('&') : 'alle'));
+    history.replaceState(null, '', '?' + (teile.length ? teile.join('&') : 'alle') + location.hash);
   }
 
   /* Voreinstellung beim Aufruf ohne Parameter (adorfer 24.10.2026): die Auswahl, die fuer die
@@ -791,6 +791,13 @@
           neu();
         });
         neu();
+        /* Links von aussen (?geraet=<image>, auch mit #geraet) springen an den Filtern
+           vorbei zur Karte; am Handy stehen die Filter sonst bildschirmlang davor
+           (adorfer 21.11.2026). Der Hash allein greift nicht, die Karten entstehen erst hier. */
+        if (nurGeraet || location.hash === '#geraet') {
+          var anker = document.getElementById('geraet');
+          if (anker) anker.scrollIntoView();
+        }
         });
         });
       });
