@@ -53,9 +53,10 @@
                 ['L4', 'bis L4: mit Network-Tools (TFTP, SSH)'], ['L6', 'bis L6: auch mit seriellem Kabel'],
                 /* umgekehrt, fuer Bastelnde: nur die schwierigeren */
                 ['ab:L5', 'ab L5: besondere Programme und mehr'], ['ab:L6', 'ab L6: serielles Kabel und mehr'],
-                ['ab:L7', 'ab L7: Gehäuse öffnen und mehr']] },
-      /* Filter "Bootloader bleibt unangetastet" entfernt (adorfer 25.10.2026); risiko bleibt in den Daten */
-      { id: 'erprobt', titel: 'von uns am Gerät erprobt', typ: 'ja' }
+                ['ab:L7', 'ab L7: Gehäuse öffnen und mehr']] }
+      /* Filter "Bootloader bleibt unangetastet" entfernt (adorfer 25.10.2026); risiko bleibt in den Daten.
+         Filter "von uns am Gerät erprobt" entfernt (adorfer 21.11.2026: ob etwas erprobt ist, ist eine
+         interne Notiz und kommt nicht mehr auf die Webseiten); status bleibt nur fuer die Sortierung. */
     ] },
     { titel: 'WLAN', filter: [
       { id: 'wlan', titel: 'WLAN-Generation', typ: 'min',
@@ -219,7 +220,6 @@
   function trifft(g, f, w) {
     if (!w || !w.length) return true;
     var v = g[f.id];
-    if (f.id === 'erprobt') return g.status ? g.status === 'erprobt' : null;
     if (f.id === 'ohne_bootloader') return g.risiko ? g.risiko !== 'bootloader' : null;
     if (f.id === 'level') {
       if (!g.level) return null;
@@ -286,7 +286,7 @@
       gr.filter.forEach(function (f) {
         var block = el('div', 'finder-block');
         var bekannt = geraete.filter(function (g) {
-          if (f.id === 'erprobt' || f.id === 'level') return !!g.level || !!g.status;
+          if (f.id === 'level') return !!g.level || !!g.status;
           if (f.id === 'ohne_bootloader') return !!g.risiko;
           return g[f.id] !== null && g[f.id] !== undefined;
         }).length;
@@ -482,7 +482,6 @@
     var k = el('span', 'finder-level-kenn', g.level + ' ' + (LEVEL[g.level] || ''));
     if (LEVEL_ERKL[g.level]) k.title = LEVEL_ERKL[g.level];
     p.appendChild(k);
-    if (g.status === 'erprobt') p.appendChild(document.createTextNode(', am Gerät erprobt'));
     return p;
   }
 
@@ -762,9 +761,6 @@
           g.image = img;
           var x = a[img];
           if (x) { g.level = x.level; g.risiko = x.risiko; g.status = x.status; g.url = x.url; }
-          /* Ohne Anleitung ist das Geraet auch nicht von uns erprobt; "unbekannt" wuerde
-             es bei eingeblendeten unvollstaendigen Angaben als Treffer zaehlen (adorfer). */
-          if (!g.status) g.status = 'ungeprüft';
           geraete.push(g);
         });
         legendeZeichnen();
